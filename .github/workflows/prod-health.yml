@@ -7,7 +7,9 @@
 #   can hold back a load, a build or a serve.
 # - main's code only, as eval-floors: the Hub token (HF_READ_TOKEN, else HF_TOKEN) is given to the one step that
 #   downloads, in a job with contents: read. The alert job has GITHUB_TOKEN with issues: write, never the Hub token.
-# - Each run's metrics and judgement are kept as the `prod-health` artifact (90 days) and in the run's summary.
+# - The lake is private and this repository public: the run summary, the log, the `prod-health` artifact and the
+#   issues carry metric names, statuses and bounds, never a measured value (docs/TRIAGE.md, Permissions and safety).
+# - A breach that config/prod_health_expected.toml acknowledges (an intended change, its PR) is reported, not paged.
 # - A run that couldn't measure (no LAKE_URL, the lake unreadable) opens the `pipeline:prod-health` issue instead.
 name: prod-health
 on:
@@ -48,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: prod-health
-          path: ${{ runner.temp }}/health
+          path: ${{ runner.temp }}/health/alerts.json  # names, statuses and bounds; metrics.json stays here
           if-no-files-found: ignore
           retention-days: 90
 

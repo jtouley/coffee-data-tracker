@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import math
 import statistics
 import sys
 import tomllib
@@ -265,23 +266,74 @@ def measure(lake: Path, today: date | None = None) -> dict[str, Any]:
 
 # --- thresholds ------------------------------------------------------------------------------------------------
 
+EXPECTED = ROOT / "config" / "prod_health_expected.toml"
+BREACH = ("warning", "critical")
+
 
 def load_config(path: Path = CONFIG) -> dict[str, Any]:
     cfg = tomllib.loads(path.read_text())
-    if cfg.get("version") != 1:
+    if cfg.get("version") != 2:
         raise SystemExit(f"{path}: unsupported config version {cfg.get('version')!r}")
     return cfg
 
 
-def judge(metrics: dict[str, float], cfg: dict[str, Any]) -> list[dict[str, Any]]:
-    """One result per configured metric: ok, warning or critical (or missing). Severity is the worst bound crossed."""
+def load_expected(path: Path = EXPECTED) -> list[dict[str, Any]]:
+    """The acknowledged shifts: a merged change that moves a metric on purpose (docs/TRIAGE.md)."""
+    if not path.exists():
+        return []
+    doc = tomllib.loads(path.read_text())
+    if doc.get("version") != 1:
+        raise SystemExit(f"{path}: unsupported version {doc.get('version')!r}")
+    for e in doc.get("expected", []):
+        missing = {"metric", "change", "by", "from_run", "until_run", "pr", "why"} - set(e)
+        if missing or e["change"] not in ("down", "up", "either"):
+            raise SystemExit(
+                f"{path}: entry {e.get('metric')!r} needs {sorted(missing) or 'change up/down/either'}"
+            )
+    return list(doc.get("expected", []))
+
+
+def _expected(r: dict[str, Any], expected: list[dict[str, Any]], run_date: str | None) -> dict | None:
+    """The acknowledged shift a breach matches: the metric (a glob), the release window, the direction, and a move
+    from the baseline no bigger than announced. A bigger move, or one outside the window, still alerts."""
+    from fnmatch import fnmatchcase
+
+    for e in expected:
+        if not fnmatchcase(r["metric"], e["metric"]):
+            continue
+        if run_date is None or not (str(e["from_run"]) <= run_date <= str(e["until_run"])):
+            continue
+        way = "down" if r["op"] == "<" else "up"
+        if e["change"] not in (way, "either"):
+            continue
+        base = r.get("baseline")
+        if base is None or abs(r["value"] - base) <= float(e["by"]):
+            return e
+    return None
+
+
+def judge(
+    metrics: dict[str, float],
+    cfg: dict[str, Any],
+    expected: list[dict[str, Any]] | None = None,
+    run_date: str | None = None,
+) -> list[dict[str, Any]]:
+    """One result per configured metric: ok, warning or critical; expected (a breach an acknowledged change
+    explains); or not_measured (a required one is a warning). Severity is the worst bound crossed."""
     results = []
     for m in cfg["metric"]:
         name, value = m["name"], metrics.get(m["name"])
-        r = {"metric": name, "rule": m["rule"], "value": value, "baseline": m.get("baseline"), "status": "ok"}
+        r: dict[str, Any] = {"metric": name, "rule": m["rule"], "value": value, "baseline": m.get("baseline")}
+        r["status"] = "ok"
         if value is None:
-            r["status"] = "warning" if m.get("required") else "missing"
-            r["why"] = "not measured in this release"
+            r["status"] = "warning" if m.get("required") else "not_measured"
+            r["why"] = (
+                "required, but not measured in this release"
+                if m.get("required")
+                else "not in this build's record (a build image older than the test)"
+                if name.startswith("build:test:")
+                else "not measured"
+            )
             results.append(r)
             continue
         for sev in ("critical", "warning"):
@@ -292,6 +344,8 @@ def judge(metrics: dict[str, float], cfg: dict[str, Any]) -> list[dict[str, Any]
             if hi is not None and value > hi:
                 r |= {"status": sev, "bound": hi, "op": ">"}
                 break
+        if r["status"] in BREACH and (e := _expected(r, expected or [], run_date)):
+            r |= {"status": "expected", "pr": e["pr"], "why": e["why"], "was": r["status"]}
         results.append(r)
     return results
 
@@ -299,15 +353,18 @@ def judge(metrics: dict[str, float], cfg: dict[str, Any]) -> list[dict[str, Any]
 def alerts(
     measured: dict[str, Any], results: list[dict[str, Any]], run_url: str | None, sha: str | None
 ) -> list[dict]:
-    """The triage alerts (coffeedata.triage's input), one per rule: firing with its breaches, or recovered."""
+    """The triage alerts (coffeedata.triage's input), one per rule: firing with its breaches, or recovered with the
+    checks that were measured. A metric not measured is left out, so it can never count as recovered. No measured
+    value goes into an alert (the lake is private): the metric, its status and its bound."""
     by_rule: dict[str, list[dict]] = {}
     for r in results:
-        if r["status"] != "missing":
+        if r["status"] != "not_measured":
             by_rule.setdefault(r["rule"], []).append(r)
     s = measured["served"]
     out = []
     for rule, rs in sorted(by_rule.items()):
-        bad = [r for r in rs if r["status"] in ("warning", "critical")]
+        bad = [r for r in rs if r["status"] in BREACH]
+        shown = bad + [r for r in rs if r["status"] == "expected"] if bad else rs
         out.append({
             "key": f"prod:{rule}",
             "kind": "prod",
@@ -317,7 +374,7 @@ def alerts(
             "summary": f"{len(bad)} metric(s) of `{rule}` breach their thresholds in release {s['build_id']}."
             if bad else "",
             "source": "config/prod_health.toml",
-            "checks": [_check_line(r) for r in (bad or rs)],
+            "checks": [_check_line(r) for r in shown],
             "context": {
                 "served release": f"{s['build_id']} (run {s['run_date']})",
                 "compared with": (s["previous"] or {}).get("build_id") or "no earlier run",
@@ -326,10 +383,6 @@ def alerts(
             },
         })  # fmt: skip
     return out
-
-
-def _unit(metric: str) -> str:
-    return "count" if metric.startswith(("rows:", "build:test:", "freshness:")) else "share"
 
 
 def _scope(metric: str) -> str:
@@ -343,46 +396,55 @@ def _scope(metric: str) -> str:
 
 
 def _check_line(r: dict) -> dict[str, Any]:
+    status = r["status"] if r["status"] != "warning" or "bound" in r else "not measured (required)"
     return {
         "set": _scope(r["metric"]),
-        "unit": _unit(r["metric"]),
         "name": r["metric"],
-        "status": r["status"],
-        "value": r["value"],
+        "status": status,
         "threshold": r.get("bound"),
         "op": r.get("op"),
-        "baseline": r.get("baseline"),
-        "why": r.get("why"),
+        "unit": "count" if r["metric"].startswith(("rows:", "build:test:", "freshness:")) else "share",
+        "pr": r.get("pr"),
     }
 
 
 def summary(measured: dict[str, Any], results: list[dict[str, Any]]) -> str:
-    """Every judged metric as a Markdown table, worst first: the run's page shows the week's health at a glance."""
-    order = {"critical": 0, "warning": 1, "missing": 2, "ok": 3}
+    """Every judged metric as a Markdown table, worst first, with its status and bound but not its value (the run
+    page is public; the values stay in the job: docs/TRIAGE.md)."""
+    order = {"critical": 0, "warning": 1, "expected": 2, "not_measured": 3, "ok": 4}
     s = measured["served"]
     lines = [
         f"### Production health: release {s['build_id']} (run {s['run_date']})",
         "",
-        "| Status | Rule | Metric | Value | Bound | Baseline |",
-        "|---|---|---|---|---|---|",
+        "| Status | Rule | Metric | Bound crossed | Note |",
+        "|---|---|---|---|---|",
     ]
     for r in sorted(results, key=lambda r: (order[r["status"]], r["rule"], r["metric"])):
-        v = "–" if r["value"] is None else f"{r['value']:.4g}"
         bound = f"{r['op']} {r['bound']:.4g}" if r.get("bound") is not None else ""
-        base = "" if r.get("baseline") is None else f"{r['baseline']:.4g}"
-        lines.append(f"| {r['status']} | {r['rule']} | `{r['metric']}` | {v} | {bound} | {base} |")
+        note = f"#{r['pr']}: {r['why']}" if r.get("pr") else r.get("why", "")
+        lines.append(f"| {r['status']} | {r['rule']} | `{r['metric']}` | {bound} | {note} |")
     return "\n".join(lines) + "\n"
 
 
 # --- baselines -------------------------------------------------------------------------------------------------
 
-# How a bound is set from the history (docs/TRIAGE.md, "Thresholds"): the worst value seen, widened by the larger
-# of k robust standard deviations (1.4826 x MAD) and a minimum margin. The margins follow the build's own bands
-# (dbt_project.yml band_min_share_halfwidth 0.05) for a warning, three times that for critical.
-MARGIN = {"warning": 0.05, "critical": 0.15}
-K = {"warning": 3.0, "critical": 6.0}
-VOLUME_MARGIN = {"warning": 0.10, "critical": 0.25}
-CADENCE_DAYS = {"warning": 8.0, "critical": 15.0}
+# How a bound is set from the history (docs/TRIAGE.md, "Thresholds"). The centre is the history's median, never its
+# worst value, so a regression already in the history doesn't widen the band; values outside the warning band are
+# listed as `flagged` instead. The margin is the largest of:
+#   - a relative drop from the median (REL), so a 3-point drop on a 96% fill rate warns;
+#   - K_SE binomial standard errors at the population size n, so a small platform isn't paged on noise;
+#   - K_MAD robust standard deviations of the history (1.4826 x MAD), for metrics that move week to week.
+# A low-fill platform keeps an absolute floor: a drop of a quarter always warns and of 55% (a halving) is critical.
+# Shares that should stay near 0 (abstain, changed) use an absolute margin instead; ratios centre on 1, median shifts
+# on 0.
+REL = {"warning": 0.03, "critical": 0.10}
+K_SE = {"warning": 4.0, "critical": 8.0}
+K_MAD = {"warning": 3.0, "critical": 6.0}
+CAP = {"warning": 0.25, "critical": 0.45}  # the most a margin can be, relative to the median
+LOW_MARGIN = {"warning": 0.02, "critical": 0.05}  # abstain and changed shares
+RATIO_MARGIN = {"warning": 0.10, "critical": 0.25}  # volume ratios
+MEDIAN_MARGIN = {"warning": 0.05, "critical": 0.15}  # median shifts
+CADENCE_DAYS = {"warning": 7.0, "critical": 14.0}  # served release older than a week: a missed weekly run
 MIN_VERDICT_SHARE = 0.85  # dbt_project.yml min_verdict_share: verdicts_cover_catalog's gate
 
 
@@ -400,36 +462,52 @@ def _rule_of(name: str) -> str:
         return "volume"
     if name.startswith(("shift:changed:", "shift:median:")):
         return rest.split(":")[1]
-    if name.startswith("build:test:"):
+    if name.startswith("build:test:") or name == "build:passed":
         return "build-tests"
     if kind == "build":
-        return "fetch" if name != "build:passed" else "build-tests"
+        return "fetch"
     return kind
 
 
-def bounds(name: str, history: list[float]) -> dict[str, Any]:
-    """The warning and critical bounds of one metric from its history, and which side is bad."""
-    lo, hi, sd = min(history), max(history), _sigma(history)
+def bounds(name: str, history: list[float], n: float | None = None) -> dict[str, Any]:
+    """The warning and critical bounds of one metric from its history (and population size n), and the bad side."""
+    m, sd = statistics.median(history), _sigma(history)
+    se = math.sqrt(m * (1 - m) / n) if n and 0 < m < 1 else 0.0
     b: dict[str, Any] = {}
     if name.startswith(("fill:", "shift:retained", "build:run", "build:adapter")):
         for sev in ("warning", "critical"):
-            b[f"{sev}_below"] = round(max(0.0, lo - max(K[sev] * sd, MARGIN[sev])), 4)
+            margin = min(max(REL[sev] * m, K_SE[sev] * se, K_MAD[sev] * sd), CAP[sev] * m)
+            b[f"{sev}_below"] = round(max(0.0, m - margin), 4)
+        b["critical_below"] = min(b["critical_below"], b["warning_below"])
     elif name.startswith(("abstain:", "shift:changed:")):
         for sev in ("warning", "critical"):
-            b[f"{sev}_above"] = round(min(1.0, hi + max(K[sev] * sd, MARGIN[sev])), 4)
-    elif name.startswith("shift:rows_ratio") or name.startswith("shift:median:"):
+            b[f"{sev}_above"] = round(min(1.0, m + max(LOW_MARGIN[sev], K_SE[sev] * se, K_MAD[sev] * sd)), 4)
+    elif name.startswith(("shift:rows_ratio", "shift:median:")):
+        centre = 1.0 if name.startswith("shift:rows_ratio") else 0.0
+        floor = RATIO_MARGIN if centre else MEDIAN_MARGIN
         for sev in ("warning", "critical"):
-            m = max(K[sev] * sd, VOLUME_MARGIN[sev])
-            # a ratio is centred on 1, a median shift on 0: the band always contains "no change"
-            centre = 1.0 if name.startswith("shift:rows_ratio") else 0.0
-            b[f"{sev}_below"] = round(min(lo, centre) - m, 4)
-            b[f"{sev}_above"] = round(max(hi, centre) + m, 4)
-    elif name.startswith("build:test:") or name == "build:passed":
-        if name == "build:passed":
-            b["warning_below"] = 1.0
-        else:
-            b["warning_above"] = round(hi, 4)
+            margin = max(floor[sev], K_MAD[sev] * sd)
+            b[f"{sev}_below"] = round(centre - margin, 4)
+            b[f"{sev}_above"] = round(centre + margin, 4)
+    elif name == "build:passed":
+        b["warning_below"] = 1.0
+    elif name.startswith("build:test:"):
+        b["warning_above"] = 0.0
     return b
+
+
+def _outside(x: float, b: dict[str, Any]) -> bool:
+    lo, hi = b.get("warning_below"), b.get("warning_above")
+    return (lo is not None and x < lo) or (hi is not None and x > hi)
+
+
+def _n_for(name: str, hist: dict[str, list[float]]) -> float | None:
+    """The population a share is over: the listed coffees of its platform (or all), as a median over the history."""
+    if not name.startswith(("fill:", "abstain:", "shift:changed:", "shift:retained")):
+        return None
+    platform = _scope(name)
+    counts = hist.get("rows:listed" if platform == "all" else f"rows:listed:{platform}")
+    return statistics.median(counts) if counts else None
 
 
 def baseline(
@@ -438,60 +516,82 @@ def baseline(
     served_builds: list[str],
     computed: str,
     labels: list[str] | None = None,
-) -> tuple[dict[str, list[float]], str]:
-    """Every metric's history over `releases` (oldest first; `labels` name them in the config) and consecutive
-    pairs, and the config's TOML text."""
+) -> tuple[dict[str, list[float]], str, list[str]]:
+    """Every metric's history over `releases` (oldest first; `labels` name them) and consecutive pairs, the config's
+    TOML text, and the history values that fall outside their own warning band (possible regressions to look at,
+    not baked into the bounds)."""
+    labels = labels or [str(r) for r in releases]
     hist: dict[str, list[float]] = {}
+    where: dict[str, list[str]] = {}
     for i, rel in enumerate(releases):
         ms = release_metrics(rel)
         if i:
-            ms |= shift_metrics(rel, releases[i - 1])
+            ms |= {k: v for k, v in shift_metrics(rel, releases[i - 1]).items()}
         for k, v in ms.items():
             hist.setdefault(k, []).append(v)
+            where.setdefault(k, []).append(
+                labels[i] if not k.startswith("shift:") else f"{labels[i - 1]} -> {labels[i]}"
+            )
     for b in served_builds:
         for k, v in build_metrics(builds, b).items():
             hist.setdefault(k, []).append(v)
-    # Without history: a warn-only band test is judged on any failure, the classifier's coverage on the build's own
-    # gate (dbt_project.yml min_verdict_share), and the release's age on the weekly cadence.
+            where.setdefault(k, []).append(f"build {b}")
+    # Without history: a warn-only band test warns on any failure, the classifier's coverage is judged on the
+    # build's own gate, and the release's age on the weekly cadence.
     fixed: dict[str, dict[str, Any]] = {f"build:test:{t}": {"warning_above": 0.0} for t in WARN_TESTS}
     fixed["freshness:served_age_days"] = {f"{k}_above": v for k, v in CADENCE_DAYS.items()}
     fixed["fill:classifier"] = {
         "warning_below": MIN_VERDICT_SHARE,
-        "critical_below": MIN_VERDICT_SHARE - MARGIN["critical"],
+        "critical_below": MIN_VERDICT_SHARE - 0.15,
     }
     lines = [
         "# Production-run health thresholds (coffeedata.prod_health; what each alert means: docs/TRIAGE.md).",
         "# Generated by `python -m coffeedata.prod_health baseline` from the release history in the lake, then",
         "# reviewed. Change a bound by regenerating from a longer history (and bump `revision`), never to silence an",
-        "# alert. Bounds: the worst value seen, widened by the larger of k x 1.4826 x MAD and a minimum margin",
-        f"# (share: warning {MARGIN['warning']}, critical {MARGIN['critical']}; volume and median ratios: "
-        f"{VOLUME_MARGIN['warning']} / {VOLUME_MARGIN['critical']}).",
+        "# alert; an intended shift goes in config/prod_health_expected.toml.",
+        "# Bounds centre on the history's median. Margin: the largest of a relative drop "
+        f"({REL['warning']:g} / {REL['critical']:g}),",
+        f"# {K_SE['warning']:g} / {K_SE['critical']:g} binomial standard errors at the platform's n, and "
+        f"{K_MAD['warning']:g} / {K_MAD['critical']:g} x 1.4826 x MAD, capped at",
+        f"# {CAP['warning']:g} / {CAP['critical']:g} of the median. Abstain and changed shares: median + "
+        f"{LOW_MARGIN['warning']:g} / {LOW_MARGIN['critical']:g} at least;",
+        f"# volume ratios: 1 +/- {RATIO_MARGIN['warning']:g} / {RATIO_MARGIN['critical']:g} at least; median shifts: "
+        f"0 +/- {MEDIAN_MARGIN['warning']:g} / {MEDIAN_MARGIN['critical']:g} at least.",
         "# Without history: a warn-only dbt band test warns on any failure, the classifier's coverage is judged",
         f"# on the build's own gate (min_verdict_share {MIN_VERDICT_SHARE}), the served release's age on the weekly",
-        f"# cadence ({CADENCE_DAYS['warning']:g} / {CADENCE_DAYS['critical']:g} days).",
-        "version = 1",
+        f"# cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; above {CADENCE_DAYS['critical']:g}: two).",
+        "# `flagged`: history values outside their own warning band, possible regressions to look at.",
+        "version = 2",
         f'revision = "{computed}"',
-        f"releases = {json.dumps(labels or [str(r) for r in releases])}",
+        f"releases = {json.dumps(labels)}",
         f"builds = {json.dumps(served_builds)}",
         "",
     ]
+    flagged_all: list[str] = []
     for name in sorted(set(hist) | set(fixed)):
         xs = hist.get(name, [])
-        bnd = bounds(name, xs) if xs else fixed[name]
+        n = _n_for(name, hist)
+        bnd = bounds(name, xs, n) if xs and name not in fixed else fixed.get(name, {})
         if not bnd:
             continue
         lines += ["[[metric]]", f'name = "{name}"', f'rule = "{_rule_of(name)}"']
-        if xs:
+        if xs and name not in fixed:
+            flagged = [f"{w} ({x:.4g})" for x, w in zip(xs, where[name], strict=True) if _outside(x, bnd)]
+            flagged_all += [f"{name}: {f}" for f in flagged]
             lines += [
                 f"baseline = {round(statistics.median(xs), 4)}",
                 f"history = {json.dumps([round(x, 4) for x in xs])}",
             ]
+            if n:
+                lines.append(f"n = {round(n)}")
+            if flagged:
+                lines.append(f"flagged = {json.dumps(flagged)}")
         else:
             lines.append('basis = "no history yet: a fixed bound (see the comment above)"')
         if name.startswith("fill:") and name.count(":") == 1 and name != "fill:classifier":
             lines.append("required = true")
         lines += [f"{k} = {v}" for k, v in bnd.items()] + [""]
-    return hist, "\n".join(lines)
+    return hist, "\n".join(lines), flagged_all
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -507,6 +607,7 @@ def main(argv: list[str] | None = None) -> int:
     j = sub.add_parser("judge")
     j.add_argument("metrics", type=Path)
     j.add_argument("--config", type=Path, default=CONFIG)
+    j.add_argument("--expected", type=Path, default=EXPECTED)
     j.add_argument("--out", type=Path)
     j.add_argument(
         "--summary", type=Path, help="append a Markdown table of every result (GITHUB_STEP_SUMMARY)"
@@ -531,12 +632,15 @@ def main(argv: list[str] | None = None) -> int:
         from . import lineage
 
         measured = json.loads(a.metrics.read_text())
-        results = judge(measured["metrics"], load_config(a.config))
-        for r in results:
-            if r["status"] in ("warning", "critical"):
+        expected = load_expected(a.expected)
+        results = judge(measured["metrics"], load_config(a.config), expected, measured["served"]["run_date"])
+        for r in results:  # names and bounds only: the log is public
+            if r["status"] in BREACH:
                 print(
-                    f"{r['status'].upper()} {r['rule']}: {r['metric']} = {r['value']} {r['op']} {r['bound']}"
+                    f"{r['status'].upper()} {r['rule']}: {r['metric']} {r.get('op', '')} {r.get('bound', r.get('why'))}"
                 )
+            elif r["status"] == "expected":
+                print(f"EXPECTED (#{r['pr']}) {r['rule']}: {r['metric']} {r['op']} {r['bound']}")
         firing = alerts(measured, results, lineage.ci_run()[1], os.environ.get("GITHUB_SHA"))
         if a.out:
             a.out.write_text(json.dumps(firing, indent=1) + "\n")
@@ -548,8 +652,10 @@ def main(argv: list[str] | None = None) -> int:
     else:
         builds = sorted(a.builds.glob("*/*.parquet")) if a.builds else []
         today = datetime.now(UTC).date().isoformat()
-        _, text = baseline(a.releases, builds, a.served_build, today, a.label or None)
+        _, text, flagged = baseline(a.releases, builds, a.served_build, today, a.label or None)
         a.out.write_text(text)
+        for line in flagged:
+            print(f"flagged {line}")
     return 0
 
 

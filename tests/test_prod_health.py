@@ -1,6 +1,7 @@
 """The production health check (coffeedata.prod_health, docs/TRIAGE.md) over synthetic lakes: what it measures, how
 the thresholds judge it, and the triage issues a breach opens and its recovery closes. Offline; no issue is created."""
 
+import json
 import shutil
 import tomllib
 from datetime import date
@@ -128,7 +129,7 @@ def test_a_release_without_newer_columns_has_no_metric_for_them(tmp_path):
 
 
 CONFIG = """
-version = 1
+version = 2
 [[metric]]
 name = "fill:grams"
 rule = "grams"
@@ -171,13 +172,13 @@ def cfg(tmp_path):
     ],
 )
 def test_thresholds_have_a_severity_on_each_side(cfg, metrics, expected):
-    got = {r["rule"]: r["status"] for r in ph.judge(metrics, cfg) if r["status"] != "missing"}
+    got = {r["rule"]: r["status"] for r in ph.judge(metrics, cfg) if r["status"] != "not_measured"}
     assert got == expected
 
 
 def test_an_unrequired_metric_not_measured_is_left_alone(cfg):
     r = next(r for r in ph.judge({}, cfg) if r["metric"] == "fill:classifier")
-    assert r["status"] == "missing"
+    assert r["status"] == "not_measured"
     rules = {
         a["key"]: a for a in ph.alerts({"served": _served()}, ph.judge({"fill:grams": 1.0}, cfg), None, None)
     }
@@ -201,7 +202,9 @@ def test_a_breach_opens_one_issue_per_rule_and_recovery_closes_it(cfg):
     issue = gh.store[0]
     assert issue["title"] == "[triage] prod health: grams"
     assert set(issue["labels"]) == {"triage", "prod-health", "severity:critical"}
-    assert "| all | `fill:grams` | critical | 70.00% | below 80.00% | 95.00% |" in issue["body"]
+    # the lake is private: the issue names the check and its bound, never the measured value or the baseline
+    assert "| all | `fill:grams` | critical | below 80.00% |" in issue["body"]
+    assert "70" not in issue["body"] and "95.00%" not in issue["body"]
     assert "served release: b2 (run 2026-11-09)" in issue["body"] and "- run: R1" in issue["body"]
     assert "When to roll back" in issue["body"]
     # next week, the same breach: updated in place, no new issue
@@ -218,6 +221,7 @@ def test_a_check_that_could_not_measure_opens_its_own_issue():
     assert triage.sync(triage.prod_pipeline_alert(False, "R", None), gh) == [
         ("opened", "pipeline:prod-health", 1)
     ]
+    assert "prod-health" in gh.store[0]["labels"] and "eval-regression" not in gh.store[0]["labels"]
     assert triage.sync(triage.prod_pipeline_alert(True, "R", None), gh) == [
         ("closed", "pipeline:prod-health", 1)
     ]
@@ -251,9 +255,9 @@ def test_fetch_only_downloads_the_served_and_previous_release(tmp_path):
 def test_baselines_from_history_do_not_alert_on_that_history(tmp_path):
     weeks = [_healthy(100), _healthy(104), _healthy(98)]
     paths = [_write(tmp_path / f"w{i}.parquet", rows) for i, rows in enumerate(weeks)]
-    hist, text = ph.baseline(paths, [], [], "2026-11-11", ["w0", "w1", "w2"])
+    hist, text, flagged = ph.baseline(paths, [], [], "2026-11-11", ["w0", "w1", "w2"])
     cfg = tomllib.loads(text)
-    assert cfg["version"] == 1 and cfg["releases"] == ["w0", "w1", "w2"]
+    assert cfg["version"] == 2 and cfg["releases"] == ["w0", "w1", "w2"] and flagged == []
     for i, p in enumerate(paths):
         metrics = ph.release_metrics(p) | (ph.shift_metrics(p, paths[i - 1]) if i else {})
         breaches = [r for r in ph.judge(metrics, cfg) if r["status"] in ("warning", "critical")]
@@ -267,9 +271,10 @@ def test_baselines_from_history_do_not_alert_on_that_history(tmp_path):
 
 def test_the_checked_in_thresholds():
     """config/prod_health.toml: versioned, every metric has a rule and a bound, every overall fill rule is required,
-    and no bound fires on the history it was computed from."""
+    bounds centre on the median, and a history value outside its own warning band is listed as flagged (a possible
+    regression to look at), never silently widening the band."""
     cfg = ph.load_config()
-    assert cfg["version"] == 1 and cfg["revision"]
+    assert cfg["version"] == 2 and cfg["revision"]
     names = [m["name"] for m in cfg["metric"]]
     assert len(names) == len(set(names))
     for m in cfg["metric"]:
@@ -277,21 +282,140 @@ def test_the_checked_in_thresholds():
         assert m["rule"] and bounds, m["name"]
         if m["name"].startswith("fill:") and m["name"].count(":") == 1 and m["name"] != "fill:classifier":
             assert m.get("required") is True, m["name"]
-        for x in m.get("history", []):
-            assert all(x >= v for k, v in bounds.items() if k.endswith("_below")), (m["name"], x)
-            assert all(x <= v for k, v in bounds.items() if k.endswith("_above")), (m["name"], x)
+        outside = [x for x in m.get("history", []) if ph._outside(x, bounds)]
+        assert len(outside) == len(m.get("flagged", [])), m["name"]
         for side in ("below", "above"):
             w, c = m.get(f"warning_{side}"), m.get(f"critical_{side}")
             if w is not None and c is not None:
                 assert (c <= w) if side == "below" else (c >= w), m["name"]
-    for rule in (
-        "origin",
-        "process",
-        "roast_level",
-        "grams",
-        "price_per_100g",
-        "classifier",
-        "enrichment",
-        "volume",
-    ):
+    for rule in ("origin", "process", "roast_level", "grams", "price_per_100g", "classifier", "enrichment", "volume",
+                 "fetch", "build-tests", "freshness"):  # fmt: skip
         assert any(m["rule"] == rule for m in cfg["metric"]), rule
+    for t in ph.WARN_TESTS:  # every warn-only band test is judged, whether or not a build has recorded it yet
+        assert f"build:test:{t}" in names
+
+
+def _base(cfg, name):
+    return next(m for m in cfg["metric"] if m["name"] == name)["baseline"]
+
+
+@pytest.mark.parametrize(
+    "metric,drop,status",
+    [
+        ("fill:grams:shopify", 0.03, "warning"),  # a 3-point drop on a ~96% fill rate
+        ("fill:grams:shopify", 0.04, "warning"),
+        ("fill:grams:shopify", 0.066, "warning"),  # #136's size
+        ("fill:grams:shopify", 0.15, "critical"),
+        ("fill:origin", 0.06, "warning"),
+        ("fill:grams:square_online", 0.5, "critical"),  # a halving on a low-fill platform
+        ("fill:price_per_100g:square_online", 0.5, "critical"),
+    ],
+)
+def test_the_checked_in_bounds_catch_moderate_drops(metric, drop, status):
+    """The reviewer's simulation, on the checked-in bounds: `drop` is absolute (points) for a high-fill metric and
+    relative (a halving) for the low-fill platform."""
+    cfg = ph.load_config()
+    base = _base(cfg, metric)
+    value = base * (1 - drop) if base < 0.5 else base - drop
+    r = next(r for r in ph.judge({metric: value}, cfg) if r["metric"] == metric)
+    assert r["status"] == status, (metric, base, value, r)
+
+
+def test_noise_at_the_baseline_does_not_page():
+    cfg = ph.load_config()
+    for m in cfg["metric"]:
+        if "baseline" in m and m["name"].startswith("fill:"):
+            r = next(r for r in ph.judge({m["name"]: m["baseline"] - 0.005}, cfg) if r["metric"] == m["name"])
+            assert r["status"] == "ok", m["name"]
+
+
+def test_freshness_alerts_after_one_missed_week():
+    cfg = ph.load_config()
+    status = {d: next(r for r in ph.judge({"freshness:served_age_days": d}, cfg) if r["rule"] == "freshness")["status"]
+              for d in (1.0, 7.0, 8.0, 15.0)}  # fmt: skip
+    assert status == {1.0: "ok", 7.0: "ok", 8.0: "warning", 15.0: "critical"}
+
+
+def _post_136(cfg):
+    """The first release after #136, as its PR measured it: Shopify grams -6.6 points, 22% of bag sizes and 15% of
+    prices per 100 g changed."""
+    return {
+        "fill:grams:shopify": _base(cfg, "fill:grams:shopify") - 0.066,
+        "fill:price_per_100g:shopify": _base(cfg, "fill:price_per_100g:shopify") - 0.05,
+        "fill:grams": _base(cfg, "fill:grams") + 0.01,
+        "fill:price_per_100g": _base(cfg, "fill:price_per_100g") + 0.018,
+        "shift:changed:grams": 0.22,
+        "shift:changed:price_per_100g": 0.15,
+    }
+
+
+def test_an_acknowledged_change_is_reported_not_paged():
+    cfg, expected = ph.load_config(), ph.load_expected()
+    results = ph.judge(_post_136(cfg), cfg, expected, "2026-11-16")
+    judged = {r["metric"]: r for r in results if r["metric"] in _post_136(cfg) and r["status"] != "ok"}
+    assert len(judged) == 4
+    assert {r["status"] for r in judged.values()} == {"expected"}
+    assert {r["pr"] for r in judged.values()} == {136}
+    out = ph.alerts({"served": _served()}, results, None, None)
+    assert not any(a["firing"] for a in out if a["key"] in ("prod:grams", "prod:price_per_100g"))
+    assert "expected" in ph.summary({"served": _served()}, results) and "#136" in ph.summary(
+        {"served": _served()}, results
+    )
+    # outside the window (a week later for the one-off shifts), or a bigger move than announced, still alerts
+    later = {r["metric"]: r["status"] for r in ph.judge(_post_136(cfg), cfg, expected, "2026-11-23")}
+    assert later["shift:changed:grams"] == "critical" and later["fill:grams:shopify"] == "expected"
+    worse = _post_136(cfg) | {"fill:grams:shopify": _base(cfg, "fill:grams:shopify") - 0.2}
+    assert (
+        next(r for r in ph.judge(worse, cfg, expected, "2026-11-16") if r["metric"] == "fill:grams:shopify")[
+            "status"
+        ]
+        == "critical"
+    )
+
+
+def test_the_expected_shifts_file_is_well_formed(tmp_path):
+    assert all(e["pr"] for e in ph.load_expected())
+    bad = tmp_path / "x.toml"
+    bad.write_text('version = 1\n[[expected]]\nmetric = "fill:grams"\nchange = "sideways"\n')
+    with pytest.raises(SystemExit):
+        ph.load_expected(bad)
+
+
+def test_judge_keeps_going_when_a_required_metric_is_missing(tmp_path, cfg):
+    """A required metric not measured is a warning that says so; the other metrics are still judged, and the
+    CLI writes its alerts rather than crashing."""
+    results = ph.judge({"shift:rows_ratio:listed": 0.5}, cfg)
+    by = {r["metric"]: r for r in results}
+    assert by["fill:grams"]["status"] == "warning" and "not measured" in by["fill:grams"]["why"]
+    assert by["shift:rows_ratio:listed"]["status"] == "critical"
+    metrics = tmp_path / "m.json"
+    metrics.write_text(json.dumps({"served": _served(), "metrics": {"shift:rows_ratio:listed": 0.5}}))
+    conf = tmp_path / "cfg.toml"
+    conf.write_text(CONFIG)
+    out = tmp_path / "alerts.json"
+    assert ph.main(["judge", str(metrics), "--config", str(conf), "--expected", str(tmp_path / "none.toml"),
+                    "--out", str(out)]) == 0  # fmt: skip
+    keys = {a["key"]: a for a in json.loads(out.read_text())}
+    assert (
+        keys["prod:grams"]["firing"]
+        and keys["prod:grams"]["checks"][0]["status"] == "not measured (required)"
+    )
+    assert keys["prod:volume"]["firing"]
+    assert "0.5" not in out.read_text()  # no measured value leaves the job
+
+
+def test_a_rule_closes_only_once_its_breached_metric_is_measured_again(cfg):
+    """prod:volume fired on the listed ratio; the next run has no previous release to compare with, so that metric
+    isn't measured: the issue stays open. Measured and back in band, it closes."""
+    gh = FakeGitHub()
+    fired = ph.alerts(
+        {"served": _served()}, ph.judge({"fill:grams": 0.95, "shift:rows_ratio:listed": 0.5}, cfg), "R", "s"
+    )
+    triage.sync(fired, gh, now="t")
+    n = next(i["number"] for i in gh.store if "volume" in i["title"])
+    unmeasured = ph.alerts({"served": _served()}, ph.judge({"fill:grams": 0.95}, cfg), "R", "s")
+    assert triage.sync(unmeasured, gh, now="t") == []
+    back = ph.alerts(
+        {"served": _served()}, ph.judge({"fill:grams": 0.95, "shift:rows_ratio:listed": 1.0}, cfg), "R", "s"
+    )
+    assert triage.sync(back, gh, now="t") == [("closed", "prod:volume", n)]
