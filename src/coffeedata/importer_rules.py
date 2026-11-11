@@ -130,9 +130,18 @@ def _month(s: str) -> int:
 
 
 def harvest_months(text: str) -> list[str] | None:
-    """Harvest months as three-letter names, from "Harvest: Nov - Feb"; None when not stated."""
+    """Harvest months as three-letter names, from "Harvest: Nov - Feb"; None when not stated. A lone "May" counts
+    only in a month context (after a colon or dash, "in" or "from", or in a range): "this harvest may be smaller"
+    is a verb."""
     m = _HARVEST.search(text)
     if not m:
+        return None
+    lead = m.group(0)[: m.start(1) - m.start(0)]
+    if (
+        m.group(1).lower() == "may"
+        and not m.group(2)
+        and not re.search(r"[:\-–]|\b(?:in|from)\b", lead, re.I)
+    ):
         return None
     a = _month(m.group(1))
     b = _month(m.group(2)) if m.group(2) else a
@@ -152,23 +161,24 @@ def grower(name: str | None) -> tuple[str | None, str | None]:
     return None, None
 
 
-def certifications(text: str) -> list[str] | None:
-    """The certifications the text claims, or [] when it marks every modeled one absent (Cafe Imports' "nft" and
-    "norg") and names nothing else. None (unknown) when it is silent, names a certification or program we don't
-    model, or both claims and denies one."""
+def certifications(text: str) -> tuple[list[str] | None, list[str] | None]:
+    """(claimed, marked absent): the modeled certifications the text claims, and those it marks absent (Cafe
+    Imports' "nft" and "norg": not fair trade, not organic). Each is None when there are none, so a certification the
+    text says nothing about stays unknown: "nft,norg" is (None, ["fair_trade", "organic"]), never "no certifications".
+    Both None (unknown) when the text names a certification or program we don't model, or claims and denies one."""
     if _OTHER_CERTS.search(text):
-        return None
-    found, denied_all = [], True
+        return None, None
+    claimed, absent = [], []
     for kind, yes, no in CERTIFICATIONS:
-        claimed = bool(re.search(yes, text, re.I))
-        denied = bool(no and re.search(no, text, re.I))
-        if claimed and denied:
-            return None
-        if claimed:
-            found.append(kind)
-        elif no is not None and not denied:
-            denied_all = False
-    return found if found or denied_all else None
+        c = bool(re.search(yes, text, re.I))
+        d = bool(no and re.search(no, text, re.I))
+        if c and d:
+            return None, None
+        if c:
+            claimed.append(kind)
+        elif d:
+            absent.append(kind)
+    return claimed or None, sorted(absent) or None
 
 
 def _safe(rule: Callable[..., Any], *args: Any, problems: list[str], default: Any = None) -> Any:
@@ -195,6 +205,11 @@ def normalize(importer: str, cells: dict[str, str | None], problems: list[str] |
         stated_process, cert_text = None, " ".join(filter(None, (g("Product"), g("Distinction"))))
     lo, hi = _safe(altitude, text, problems=problems, default=(None, None))
     kind, short = _safe(grower, name, problems=problems, default=(None, None))
+    certs, not_certs = (
+        _safe(certifications, cert_text, problems=problems, default=(None, None))
+        if cert_text
+        else (None, None)
+    )
     return {
         "process_type": _safe(process, stated_process, name, problems=problems),
         "varieties": _safe(varieties, name or "", origin, problems=problems),
@@ -203,6 +218,7 @@ def normalize(importer: str, cells: dict[str, str | None], problems: list[str] |
         "harvest_months": _safe(harvest_months, text, problems=problems),
         "grower_type": kind,
         "grower_name": short,
-        "certifications": _safe(certifications, cert_text, problems=problems) if cert_text else None,
+        "certifications": certs,  # organic, fair_trade, rainforest_alliance: claimed
+        "not_certified": not_certs,  # marked absent on the page; any other stays unknown
         "rules_version": RULES_VERSION,
     }

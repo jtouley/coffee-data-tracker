@@ -199,16 +199,36 @@ class Lot:
 
 
 # A header naming a price or cost: that column is never stored.
-PRICE_HEADER = re.compile(r"\bprices?\b|\bcosts?\b|\$|/\s*lb\b", re.IGNORECASE)
+PRICE_HEADER = re.compile(
+    r"\bprices?\b|\bcosts?\b|\$|/\s*lb\b|\bfob\b|\bdifferentials?\b|\bdiff\b|\bpremium\b", re.IGNORECASE
+)
 # A header-less column whose every non-empty cell is about prices ("Log In For Price") is a price column too.
 PRICE_TEXT = re.compile(r"\bprices?\b|\bpricing\b", re.IGNORECASE)
-# A currency amount: in a stored cell it means a price got past the column filter, so the run fails.
-CURRENCY = re.compile(r"[$€£]\s*\d|\bUSD\s*\d|\d\s*(?:USD|usd)\b")
+# A price in a kept cell means one got past the column filter, so the run fails: a currency symbol or code on either
+# side of a number ("$4.25", "4,50 €", "USD 4.10", "4.10 usd"), an amount per weight ("4.25/lb", "310 c/lb",
+# "4.10 per kg"), or a labelled price ("Price: 4.25"). Not caught: a bare number in a column whose header doesn't
+# say price (e.g. "4.10" under "Offer"); such a column has to be added to PRICE_HEADER.
+CURRENCY = re.compile(
+    r"[$€£¢]\s*\d|\d\s*[$€£¢]|\b(?:USD|EUR|GBP)\s*\d|\d\s*(?:USD|EUR|GBP)\b"
+    r"|\d\s*(?:c|cts|cents?|¢)?\s*(?:/|per\s+)\s*(?:lbs?|kgs?|kilos?|pounds?)\b"
+    r"|\bprices?\s*[:=]\s*[$€£]?\s*\d",
+    re.IGNORECASE,
+)
 
 
 def _verbatim(lines: list[str]) -> str | None:
     """A cell's text as the page shows it, line by line (whitespace runs collapsed, as a browser does)."""
     return "\n".join(lines) or None
+
+
+def unique(names: list[str]) -> list[str]:
+    """Header names made unique, so no cell is lost under a repeated one: the second "Name" is "Name (2)"."""
+    seen: dict[str, int] = {}
+    out = []
+    for n in names:
+        seen[n] = seen.get(n, 0) + 1
+        out.append(n if seen[n] == 1 else f"{n} ({seen[n]})")
+    return out
 
 
 def price_columns(table: Table, names: list[str]) -> set[int]:
@@ -224,7 +244,7 @@ def price_columns(table: Table, names: list[str]) -> set[int]:
 def lots(html: str, required: tuple[str, ...], page: str) -> tuple[list[Lot], int]:
     """Every row of the page's offer table as a Lot, and how many rows had the wrong number of cells (not kept)."""
     table = find_table(html, required)
-    names = [h or f"column {i + 1}" for i, h in enumerate(table.header)]  # a header cell with no text
+    names = unique([h or f"column {i + 1}" for i, h in enumerate(table.header)])  # a header cell with no text
     drop = price_columns(table, names)
     out: list[Lot] = []
     bad = 0
@@ -357,7 +377,7 @@ def parse(importer: str, html: str) -> Parsed:
         bad_cells += len(problems)
     total = len(found) + bad
     if not found or len(found) == bad:
-        raise LayoutChanged(f"{importer}: zero rows parsed ({bad} unreadable)")
+        raise LayoutChanged(f"{importer}: zero readable rows ({bad} unreadable)")
     if bad / total > MAX_BAD_SHARE:
         raise LayoutChanged(f"{importer}: {bad} of {total} rows unreadable (more than {MAX_BAD_SHARE:.0%})")
     if bad or bad_cells:
@@ -400,8 +420,11 @@ def derive(raw: dict) -> dict:
 
 def offers(lake: Lake) -> list[dict]:
     """Every stored lot, every week, derived now (`derive`): rebuilt from raw on each read, never stored."""
+    # a week staged and also in the dataset (a publish whose response was lost) is read once
     rel = lake.connect().sql(
-        f"select * from {lake.scan('importer_raw')} where importer is not null order by week, importer, row"
+        f"""select * from {lake.scan("importer_raw")} where importer is not null
+            qualify row_number() over (partition by week, importer, row order by fetched_at) = 1
+            order by week, importer, row"""
     )
     return [derive(dict(zip(rel.columns, r, strict=True))) for r in rel.fetchall()]
 

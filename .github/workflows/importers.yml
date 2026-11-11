@@ -18,15 +18,21 @@
 # Nothing passes silently: no token, a fetch that fails, a changed layout (a missing column, zero rows, rows without
 # their identity), a currency amount in a stored cell, or under half the lots of the importer's last stored week
 # fails the run, and that importer's week stays unwritten, so a dispatch the same week (after a fix, or with
-# accept_drop for a real drop) fetches it again. A week already stored is never fetched again.
+# importer and accept_drop for a real drop at that one importer) fetches it again. A week already stored is never
+# fetched again.
 name: importers
 on:
   schedule:
     - cron: "37 17 * * 3"  # Wednesdays 17:37 UTC
   workflow_dispatch:
     inputs:
+      importer:
+        description: "Only this importer (needed with accept_drop, so the override covers one importer)"
+        type: choice
+        options: [all, cafe_imports, interamerican]
+        default: all
       accept_drop:
-        description: "Store this week even with under half the lots of the last stored week (a real drop, checked by hand)"
+        description: "Store this importer's week even with under half the lots of its last stored week (a real drop, checked by hand)"
         type: boolean
         default: false
 permissions:
@@ -55,9 +61,11 @@ jobs:
           COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
           PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
           ACCEPT_DROP: ${{ inputs.accept_drop && '1' || '' }}
+          IMPORTER: ${{ inputs.importer }}  # a choice input, passed via env, never interpolated into the script
         run: |
           if [ -z "$HF_TOKEN" ]; then
             echo "::error title=Importer snapshots::HF_TOKEN is not set, so the private importers dataset can't be written."
             exit 1
           fi
-          uv run coffeedata importer-snapshot --require-hub ${ACCEPT_DROP:+--accept-drop}
+          if [ "$IMPORTER" = all ]; then IMPORTER=""; fi
+          uv run coffeedata importer-snapshot --require-hub ${IMPORTER:+--importer "$IMPORTER"} ${ACCEPT_DROP:+--accept-drop}

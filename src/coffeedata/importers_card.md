@@ -17,13 +17,14 @@ Raw only: one immutable file per importer per week, and a week already stored is
 | `raw/week=YYYY-MM-DD/importer=<name>.parquet` | Each lot word for word, as the page had it that week: every cell of its row under the page's header (null when empty), and its own page's URL |
 
 `week` is the Monday of the fetch's ISO week; `fetched_at` is when the page was fetched. Columns about prices are
-left out by their header, and a currency amount in any kept cell fails the run, so no price is stored. No page HTML
-or images either.
+left out by their header (price, cost, FOB, differential), and a price in any kept cell (a currency amount, an
+amount per weight, a labelled price) fails the run. No page HTML or images either.
 
 ## Derived, never stored
 
 The stated fields (lot ID, name, origin, region, process, status, estimated arrival, warehouse, bags, bag size) and
-our normalized values (process type, varieties, altitude, harvest months, grower type and name, certifications) are
+our normalized values (process type, varieties, altitude, harvest months, grower type and name, certifications
+claimed and those the page marks absent) are
 derived from this raw layer whenever they are read (`importers.offers()`), so a better rule re-derives every week.
 The rules (`src/coffeedata/importer_rules.py`) leave a value empty when the text doesn't settle it, and haven't been
 evaluated yet.
