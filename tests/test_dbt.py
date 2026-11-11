@@ -1277,8 +1277,12 @@ def test_suspected_bug_unit_tests(lake, tmp_path, unit_test):
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()  # dbt reads the inputs' column types from built tables
     r = run_dbt(lake, tmp_path, "test", "--select", unit_test)
-    if (
-        r.returncode and "differs from" not in r.stdout
-    ):  # not the suspected output: a broken test, never an xfail
+    # Only the expected failure is an xfail; anything else raises RuntimeError, which fails the test:
+    # - the named unit test must have been selected and run (renamed, deleted or disabled, dbt runs nothing and
+    #   exits 0, and the bug would go untracked);
+    # - a failure must be its output differing from the expected one, not a broken test.
+    if "TOTAL=1" not in r.stdout or f"::{unit_test}" not in r.stdout:
+        raise RuntimeError(f"{unit_test} wasn't selected and run:\n{r.stdout[-2000:]}")
+    if r.returncode and "differs from" not in r.stdout:
         raise RuntimeError(r.stdout[-2000:])
     assert r.returncode == 0 and "PASS=1 " in r.stdout, r.stdout[-2000:]

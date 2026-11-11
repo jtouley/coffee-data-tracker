@@ -560,8 +560,8 @@ unit_tests:
       above 0, available (null counts as available) and $0.50-$100 per 100 g, all bounds inclusive; else null.
       min_price_usd is the lowest price above 0 over every variant, sold out or wholesale included; bag_sizes_g
       every distinct size. P1 in band; P2 under 150 g; P3 2,500 g exactly; P4 over 2,500 g; P5 under $0.50/100 g;
-      P6 $100/100 g exactly; P7 over $100/100 g; P8 its cheaper-per-gram bag is sold out, so the available one
-      counts; P9 wholesale; P10 priced 0 and unpriced; P11 availability unknown; P12 sold out.
+      P6 $100/100 g exactly; P7 over $100/100 g; P8 its cheaper-per-gram bag ($2.94/100 g) is sold out, so the
+      available one ($4.00) counts; P9 wholesale; P10 priced 0 and unpriced; P11 availability unknown; P12 sold out.
     model: dim_coffee
     given:
       - input: ref('stg_snapshots')
@@ -579,7 +579,7 @@ unit_tests:
               ('r:P5', 'r', [{'variant_id': 'a', 'price_usd': 0.7, 'grams': 150, 'available': true}]),
               ('r:P6', 'r', [{'variant_id': 'a', 'price_usd': 150.0, 'grams': 150, 'available': true}]),
               ('r:P7', 'r', [{'variant_id': 'a', 'price_usd': 400.0, 'grams': 340, 'available': true}]),
-              ('r:P8', 'r', [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': false},
+              ('r:P8', 'r', [{'variant_id': 'a', 'price_usd': 10.0, 'grams': 340, 'available': false},
                              {'variant_id': 'b', 'price_usd': 40.0, 'grams': 1000, 'available': true}]),
               ('r:P9', 'r', [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
               ('r:P10', 'r', [{'variant_id': 'a', 'price_usd': 0.0, 'grams': 340, 'available': true},
@@ -622,7 +622,7 @@ unit_tests:
         - {coffee_id: "r:P5", price_per_100g: null, min_price_usd: 0.7, bag_sizes_g: "[150]", in_stock: true}
         - {coffee_id: "r:P6", price_per_100g: 100.0, min_price_usd: 150.0, bag_sizes_g: "[150]", in_stock: true}
         - {coffee_id: "r:P7", price_per_100g: null, min_price_usd: 400.0, bag_sizes_g: "[340]", in_stock: true}
-        - {coffee_id: "r:P8", price_per_100g: 4.0, min_price_usd: 20.0, bag_sizes_g: "[340, 1000]", in_stock: true}
+        - {coffee_id: "r:P8", price_per_100g: 4.0, min_price_usd: 10.0, bag_sizes_g: "[340, 1000]", in_stock: true}
         - {coffee_id: "r:P9", price_per_100g: null, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: true}
         - {coffee_id: "r:P10", price_per_100g: null, min_price_usd: null, bag_sizes_g: "[340, 454]", in_stock: true}
         - {coffee_id: "r:P11", price_per_100g: 5.0, min_price_usd: 17.0, bag_sizes_g: "[340]", in_stock: true}
