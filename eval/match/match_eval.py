@@ -85,15 +85,16 @@ def _predict(task: tuple[str, str]) -> tuple[str, str | None, float]:
     return task[0], got, time.perf_counter() - t
 
 
-def run(lake_dir: str, keys: list[str]) -> list[tuple[str, str | None, float]]:
-    """match_coffee on both queries of each key, on every CPU: (key|form, prediction, seconds)."""
+def run(lake_dir: str, keys: list[str], cat: dict | None = None) -> list[tuple[str, str | None, float]]:
+    """match_coffee on both queries of each key, on every CPU: (key|form, prediction, seconds). `cat`: the
+    catalog() already read, if the caller has it."""
     global _lake
     from coffeedata import shots
     from coffeedata.lake import Lake
 
     _lake = Lake(lake_dir)
     shots._index(_lake)  # load once, before the workers fork
-    cat = catalog(lake_dir)
+    cat = cat or catalog(lake_dir)
     tasks = [(f"{k}|{f}", query(f, cat[k][1], cat[k][2])) for k in keys for f in FORMS]
     with Pool() as pool:
         return pool.map(_predict, tasks, chunksize=8)

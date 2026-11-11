@@ -6,8 +6,9 @@ The floors' labels are in git; the listings and catalogs they score are private 
 reads them from the lake (`hf://datasets/jtouley/coffee-data`) at the exact revisions the evals were measured on,
 rebuilds each eval's input the way its own script does, and checks every file against the sha256 recorded here, so a
 floor never scores a different input than the one it was measured on. It only downloads (huggingface_hub
-`snapshot_download`, with the HF_TOKEN already in the environment): nothing is written to the Hub, and the raw
-download is deleted once the inputs are built.
+`snapshot_download`, with HF_TOKEN from the environment; .github/workflows/eval-floors.yml sets it from the
+HF_READ_TOKEN secret when there is one): nothing is written to the Hub, and the raw download is deleted once the
+inputs are built. Inputs already in <out-dir> with the recorded checksums (the workflow's cache) are kept as they are.
 
 It writes, under <out-dir>:
 - wholesale/work/population.json   (eval/wholesale/population.py, lake at df57f62)    -> WHOLESALE_EVAL_DIR
@@ -17,8 +18,9 @@ It writes, under <out-dir>:
 - dq/dim_coffee.parquet, dq/dim_roaster.parquet  (release 20261103T203218-956abd, the build eval/dq replayed;
                                     lake at b3bf5e8)                                    -> DQ_EVAL_DIR
 
-With --github-env, it appends those four variables to the file (GitHub Actions' $GITHUB_ENV). Any failure (no
-token, a revision gone, a checksum that differs) exits non-zero: CI fails rather than skipping a floor.
+With --github-env, it appends those four variables to the file (GitHub Actions' $GITHUB_ENV). Any failure (a
+refused token, a revision gone, a checksum that differs) exits non-zero: the run fails rather than skipping a floor.
+Network errors and 408/429/5xx answers are retried, with backoff and jitter; nothing else is.
 """
 
 from __future__ import annotations
@@ -27,6 +29,7 @@ import argparse
 import hashlib
 import json
 import logging
+import random
 import shutil
 import subprocess
 import sys
@@ -66,16 +69,22 @@ ENV = {
 ATTEMPTS = 4
 
 
-def _transient(e: BaseException) -> bool:
-    """Worth asking again: a network error, or the Hub answering 408, 429 or 5xx. A refused token, a missing repo or
-    revision (404), or a bug in this script won't change on a retry."""
-    import httpx
-    from huggingface_hub.errors import HfHubHTTPError
+def _transient(e: BaseException | None) -> bool:
+    """Worth asking again: a network error (huggingface_hub 2.x raises httpx2's), or the Hub answering 408, 429 or
+    5xx. snapshot_download catches a connection error or a 5xx while listing the revision and raises
+    LocalEntryNotFoundError from it, so that one is judged by its cause. A refused token, a missing repo or revision
+    (404), or a bug in this script won't change on a retry."""
+    import httpx2
+    from huggingface_hub.errors import HfHubHTTPError, LocalEntryNotFoundError, OfflineModeIsEnabled
 
+    if e is None or isinstance(e, OfflineModeIsEnabled):  # HF_HUB_OFFLINE: a setting, not a blip
+        return False
     if isinstance(e, HfHubHTTPError):
         status = getattr(e.response, "status_code", None)
         return status in (408, 429) or (status is not None and status >= 500)
-    return isinstance(e, httpx.TransportError | ConnectionError | TimeoutError)
+    if isinstance(e, LocalEntryNotFoundError):
+        return _transient(e.__cause__ or e.__context__)
+    return isinstance(e, httpx2.TransportError | ConnectionError | TimeoutError)
 
 
 def download(
@@ -83,8 +92,10 @@ def download(
     into: Path,
     get: Callable[..., Any] | None = None,
     sleep: Callable[[float], None] = time.sleep,
+    jitter: Callable[[], float] = random.random,
 ) -> Path:
-    """One pinned revision's files, read-only, retried with backoff on transient errors (network, 429, 5xx)."""
+    """One pinned revision's files, read-only, retried on transient errors with exponential backoff and jitter
+    (2, 4, 8 s, each scaled by 0.5-1.5), at most ATTEMPTS tries."""
     if get is None:
         from huggingface_hub import snapshot_download as get
     for attempt in range(1, ATTEMPTS + 1):
@@ -100,8 +111,8 @@ def download(
         except Exception as e:
             if not _transient(e) or attempt == ATTEMPTS:
                 raise
-            wait = 2.0**attempt
-            log.warning("download of %s failed (%s); retrying in %.0fs", revision[:7], type(e).__name__, wait)
+            wait = 2.0**attempt * (0.5 + jitter())
+            log.warning("download of %s failed (%s); retrying in %.1fs", revision[:7], type(e).__name__, wait)
             sleep(wait)
     raise AssertionError("unreachable")
 
@@ -130,6 +141,7 @@ def _origin_listings(lake: Path, out: Path) -> None:
         left join bodies b on b.body_hash = l.body_hash and l.body_hash <> ''
         order by d.coffee_id
     """).fetchall()
+    con.close()
     doc = {cid: {"roaster_id": rid, "title": t, "tags": list(tags or []), "body_text": body}
            for cid, rid, t, tags, body in rows}  # fmt: skip
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -140,32 +152,47 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _mismatches(out: Path) -> dict[str, str]:
+    """{file: why} for every input that is missing or whose sha256 isn't the recorded one."""
+    bad = {}
+    for rel, want in SHA256.items():
+        path = out / rel
+        got = sha256(path) if path.exists() else "missing"
+        if got != want:
+            bad[rel] = f"{got} != {want}"
+    return bad
+
+
 def build(out: Path, get: Callable[..., Any] | None = None) -> dict[str, Path]:
-    """Download, rebuild and check every input; returns {env var: folder}."""
+    """Download, rebuild and check every input; returns {env var: folder}. Inputs already there with the recorded
+    checksums (CI's cache) are kept and nothing is downloaded."""
     out.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(dir=out) as tmp:
-        raw = {rev: download(rev, Path(tmp) / rev[:7], get) for rev in DOWNLOADS}
-        a, b = raw[LAKE_1028], raw[LAKE_1103]
-        pop = out / "wholesale" / "work" / "population.json"
-        pop.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(
-            [sys.executable, str(HERE / "wholesale" / "population.py"), str(a), str(pop)],
-            check=True,
-            cwd=HERE / "wholesale",
+    if _mismatches(out):
+        with tempfile.TemporaryDirectory(dir=out) as tmp:
+            raw = {rev: download(rev, Path(tmp) / rev[:7], get) for rev in DOWNLOADS}
+            a, b = raw[LAKE_1028], raw[LAKE_1103]
+            pop = out / "wholesale" / "work" / "population.json"
+            pop.parent.mkdir(parents=True, exist_ok=True)
+            subprocess.run(
+                [sys.executable, str(HERE / "wholesale" / "population.py"), str(a), str(pop)],
+                check=True,
+                cwd=HERE / "wholesale",
+            )
+            _origin_listings(a, out / "origin" / "listings.json")
+            (out / "match" / "lake" / "marts").mkdir(parents=True, exist_ok=True)
+            shutil.copy(
+                a / "marts" / "dim_coffee.parquet", out / "match" / "lake" / "marts" / "dim_coffee.parquet"
+            )
+            (out / "dq").mkdir(parents=True, exist_ok=True)
+            for t in ("dim_coffee", "dim_roaster"):
+                shutil.copy(b / "marts" / f"{t}.parquet", out / "dq" / f"{t}.parquet")
+    else:
+        log.info("inputs already built with the recorded checksums: nothing downloaded")
+    if bad := _mismatches(out):
+        raise SystemExit(
+            "eval inputs differ from the measured ones:\n  "
+            + "\n  ".join(f"{k}: {v}" for k, v in bad.items())
         )
-        _origin_listings(a, out / "origin" / "listings.json")
-        (out / "match" / "lake" / "marts").mkdir(parents=True, exist_ok=True)
-        shutil.copy(
-            a / "marts" / "dim_coffee.parquet", out / "match" / "lake" / "marts" / "dim_coffee.parquet"
-        )
-        (out / "dq").mkdir(parents=True, exist_ok=True)
-        for t in ("dim_coffee", "dim_roaster"):
-            shutil.copy(b / "marts" / f"{t}.parquet", out / "dq" / f"{t}.parquet")
-    bad = [
-        f"{rel}: {sha256(out / rel)} != {want}" for rel, want in SHA256.items() if sha256(out / rel) != want
-    ]
-    if bad:
-        raise SystemExit("eval inputs differ from the measured ones:\n  " + "\n  ".join(bad))
     return {var: out / sub for var, sub in ENV.items()}
 
 

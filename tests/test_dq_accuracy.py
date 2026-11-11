@@ -22,6 +22,7 @@ import pytest
 
 from .evalfloor import eval_dir
 from .lakehelp import needs_dbt
+from .smoke import require_dbt
 
 pytestmark = [
     pytest.mark.private_eval,
@@ -48,9 +49,11 @@ CEILING = {  # dupes: distinct pairs flagged (count); price: weighted share of f
 
 
 @pytest.fixture(scope="module")
-def built(tmp_path_factory) -> tuple[duckdb.DuckDBPyConnection, Path, dict[str, set]]:
-    """The release's marts, int_current_catalog and both warnings' rows, from the SQL dbt compiles."""
+def built(tmp_path_factory) -> tuple[Path, dict[str, set]]:
+    """The eval's redrawn samples (its data dir) and both warnings' rows, from the SQL dbt compiles over the
+    release's marts."""
     src = eval_dir("DQ_EVAL_DIR")
+    require_dbt()  # module-scoped, so it runs before the tests' own dbt_installed check
     tmp = tmp_path_factory.mktemp("dq")
     db = tmp / "coffee.duckdb"
     r = subprocess.run(
@@ -81,7 +84,7 @@ def built(tmp_path_factory) -> tuple[duckdb.DuckDBPyConnection, Path, dict[str, 
 
     dupes_eval.cmd_items(str(db), data)
     price_eval.cmd_items(str(db), data)
-    return duckdb.connect(str(db), read_only=True), data, flags
+    return data, flags
 
 
 def _scores(rule: str, name: str, data: Path, flags: set) -> dict[str, float]:
@@ -120,7 +123,7 @@ def _scores(rule: str, name: str, data: Path, flags: set) -> dict[str, float]:
 
 @pytest.mark.parametrize("rule,name", sorted(FLOOR))
 def test_dq_warning_accuracy_does_not_regress(rule, name, built):
-    _, data, flags = built
+    data, flags = built
     s = _scores(rule, name, data, flags[rule])
     for metric, floor in FLOOR[rule, name].items():
         assert s[metric] >= floor, f"{rule} {name} {metric}: {s[metric]:.3f} < {floor}"

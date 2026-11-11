@@ -3,7 +3,7 @@
 The reference is mechanical (the coffee a query was made from; an ambiguous title-only query is right only when the
 matcher abstains), but the catalog is private lake data: MATCH_EVAL_DIR/lake/marts/dim_coffee.parquet, which
 eval/floor_inputs.py fetches from the lake, read-only, at the revision the eval was measured on. 2,000 queries a set
-take a few minutes on every CPU, so CI runs this in its eval-floors job. Only totals are printed.
+take a few minutes on every CPU, so the eval-floors workflow runs this, not ci. Only totals are printed.
 """
 
 import sys
@@ -32,7 +32,7 @@ def test_match_accuracy_does_not_regress(name):
     _, drawn = match_eval.draw(cat)
     ambiguous = match_eval.ambiguous_titles(cat)
     tally = Counter(
-        match_eval.outcome(cat, ambiguous, key, got) for key, got, _ in match_eval.run(lake, drawn[name])
+        match_eval.outcome(cat, ambiguous, key, got) for key, got, _ in match_eval.run(lake, drawn[name], cat)
     )
     assert sum(tally.values()) == 2000
     assert tally["right"] >= FLOOR_RIGHT[name], (
