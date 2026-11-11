@@ -39,6 +39,30 @@ STATUS_LABELS = {
     "opted_out": "Opted out",
 }
 
+# Which name the site shows for an origin country. The data (dim_coffee, the public tables, catalog.json's code) keeps
+# the ISO 3166-1 short name either way. "iso" (the default) shows it as is; "common" shows the name in
+# dbt/seeds/origin_display_name.csv where it has one ("Tanzania" for "Tanzania, United Republic of"). One switch,
+# COFFEEDATA_SITE_ORIGIN_NAMES, until the owner decides.
+ORIGIN_NAMES_ENV = "COFFEEDATA_SITE_ORIGIN_NAMES"
+
+
+def origin_display_names(con) -> dict[str, str]:
+    """ISO short name -> the name the site shows instead; empty unless the switch says "common" (or the build has
+    no display-name seed)."""
+    mode = os.environ.get(ORIGIN_NAMES_ENV, "iso").strip().lower()
+    if mode not in ("iso", "common"):
+        raise ValueError(f"{ORIGIN_NAMES_ENV} must be iso or common, not {mode!r}")
+    if mode == "iso":
+        return {}
+    try:
+        rows = con.execute(
+            "select i.iso_short_name, d.display_name from origin_display_name d join iso_3166_1 i using (alpha2)"
+        ).fetchall()
+    except Exception:  # a database built before the seed existed: ISO names
+        return {}
+    return dict(rows)
+
+
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
 
@@ -343,6 +367,9 @@ def build(db: Path, out: Path) -> Path:
     )[0]
     for r in new + catalog:
         r["url"] = safe_url(r["url"])
+    if names := origin_display_names(con):
+        for r in new + catalog + origin_price + origin_counts:
+            r["origin_country"] = names.get(r["origin_country"], r["origin_country"])
     new_count = _q(con, f"select count(*) as n from ({public_new})")[0]["n"]
     last_fetch = _q(con, "select max(last_fetch) as t from dim_roaster")[0]["t"]
     release = public.describe(con)

@@ -100,6 +100,25 @@ def test_new_guinea_and_puerto_rico_titles():
     )
 
 
+def test_a_place_in_a_list_of_places_is_not_a_stated_origin():
+    # "in New York, Puerto Rico, and El Paso" lists where the customers are; read as "in <place>, <country>" it made a
+    # Mexican coffee from a Puerto Rican roaster Puerto Rican (eval/origin validation, relabelled under the ISO change).
+    body = "Grown in Mexico, single origin. Loved by our customers in New York, Puerto Rico, and El Paso."
+    assert extract.rules(item("Tequila Infused Coffee Beans", body=body)).origin_country is None
+    assert extract._stated_origins("Customers in Austin, Mexico & Lima love it.") == []
+    # A place and its own country still state the origin.
+    assert extract._stated_origins("Grown in San Pedro, Honduras. Bright.") == ["Honduras"]
+    # Chosen on validation over a stricter list test: a comma after the country ends the claim too; the origin then
+    # comes from the one country the description names.
+    assert extract._stated_origins("Washed at a mill in San Pedro, Guatemala, at 1,600 m.") == []
+    assert (
+        extract.rules(
+            item("San Pedro", body="Washed at a mill in San Pedro, Guatemala, at 1,600 m.")
+        ).origin_country
+        == "Guatemala"
+    )
+
+
 def test_grab_bags_and_multi_country_titles_have_no_origin():
     multi = item("5 lb Single Origin Coffee — Puerto Rico Supremo, Mexico, or Colombia")
     assert extract.rules(multi).origin_country is None

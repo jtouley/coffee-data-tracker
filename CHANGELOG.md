@@ -96,8 +96,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   `dim_coffee.origin_country_raw`. A versioned seed (`dbt/seeds/origin_country_iso.csv`, source and version in its
   YAML) maps each captured spelling; a list of several origins, a continent or New Guinea has no country; a new
   spelling fails the build (`origin_countries_are_mapped`). The 2026-11-09 release's 52 market origins for about 46
-  countries become 45. Puerto Rico is its own country, and "New Guinea" no longer reads as Guinea. Public contract
-  3.0.0. Measured over the full census of 149 spellings in `eval/origin_iso`.
+  countries become 45. Puerto Rico is its own country, "New Guinea" no longer reads as Guinea, and a country inside a
+  list of places ("customers in New York, Puerto Rico, and El Paso") is no longer read as the origin. Public contract
+  3.0.0. Measured over the full census of 149 spellings in `eval/origin_iso`: all agree with the settled labels, 0
+  wrong. The site shows ISO names, or common names (Tanzania, Vietnam, DR Congoâ€¦) with
+  `COFFEEDATA_SITE_ORIGIN_NAMES=common`.
 
 - The weekly merge keeps each connector partition it merged for 30 days instead of deleting it: the files it read
   move, unchanged, to `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket, where nothing

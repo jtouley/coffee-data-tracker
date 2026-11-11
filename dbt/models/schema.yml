@@ -939,11 +939,12 @@ seeds:
       Each origin spelling the lake has captured (and each one the rules can produce, origins.py), mapped to ISO
       3166-1: kind country with the alpha-2 and alpha-3 codes and the ISO English short name, and the sub-national
       region the spelling names (Hawaii, Sumatra); not_a_country (a continent or a region larger than a country) and
-      ambiguous (a place two countries share) carry no code. A list of several places isn't listed: the transform
+      ambiguous (a place two countries share, or a name several use: bare "Guinea", also part of Guinea-Bissau,
+      Equatorial Guinea and Papua New Guinea) carry no code. Version .2: Guinea became ambiguous on the census labels. A list of several places isn't listed: the transform
       reads it part by part (macros/origin_iso.sql). Measured over the full census of spellings in eval/origin_iso.
     config:
       meta:
-        mapping_version: "2026-11-11.1"
+        mapping_version: "2026-11-11.2"
         iso_standard: "ISO 3166-1:2020"
         iso_source: >-
           English short names (iso_short_name) as published by the ISO 3166 Maintenance Agency, in Debian iso-codes'
@@ -978,4 +979,20 @@ seeds:
       - name: alpha3
         data_tests: [unique, not_null]
       - name: iso_short_name
+        data_tests: [unique, not_null]
+  - name: origin_display_name
+    description: >-
+      The name the site shows for an origin country whose ISO 3166-1 short name is a formal one, when the site's switch
+      COFFEEDATA_SITE_ORIGIN_NAMES is "common" (site.py). Display only: dim_coffee and the public tables keep the ISO
+      short name and code.
+    config:
+      column_types: {alpha2: varchar, display_name: varchar}
+    columns:
+      - name: alpha2
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments: {to: ref('iso_3166_1'), field: alpha2}
+      - name: display_name
         data_tests: [unique, not_null]

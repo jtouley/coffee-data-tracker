@@ -1053,6 +1053,29 @@ def test_dim_coffee_maps_origins_to_iso(lake, tmp_path):
     assert sorted(cells) == [("Brazil", "BR"), ("Puerto Rico", "PR"), ("Tanzania, United Republic of", "TZ"),
                              ("United States", "US")]  # fmt: skip
 
+    con.close()
+
+    # The site shows the ISO name by default, or the common name behind its one switch; the data keeps ISO's.
+    from coffeedata import site
+
+    def page(mode):
+        os.environ[site.ORIGIN_NAMES_ENV] = mode
+        try:
+            out = site.build(tmp_path / "coffee.duckdb", tmp_path / f"site-{mode}").parent
+        finally:
+            del os.environ[site.ORIGIN_NAMES_ENV]
+        catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+        i = catalog["columns"].index("origin_country")
+        # The page without its JSON-LD, which quotes the contract's column descriptions.
+        html = re.sub(r"<script.*?</script>", "", (out / "index.html").read_text(), flags=re.S)
+        return {r[i] for r in catalog["rows"]}, html
+
+    names, html = page("iso")
+    assert "Tanzania, United Republic of" in names and "Tanzania, United Republic of" in html
+    names, html = page("common")
+    assert "Tanzania" in names and "Tanzania, United Republic of" not in names and "Brazil" in names
+    assert "United Republic" not in html
+
     later = llm("A", "Narnia") | {"extracted_at": datetime(2026, 10, 19, 13, tzinfo=UTC)}
     lake.write_partition("enrichments", "2026-10-19", "llm2", [later])
     r = build(lake, tmp_path / "unmapped", check=False)

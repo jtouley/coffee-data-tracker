@@ -30,15 +30,16 @@ The mapping was frozen before any label existed: `origin_country_iso.csv` sha256
 - The census: every distinct non-null `origin_country` in `stg_products` (the rules) and in Claude's rows of
   `stg_enrichments`, in either build: 148 in main, 149 in the union (the change's rules also produce "Puerto Rico";
   "Guinea" is no longer produced by the rules but stays in the census and the seed).
-- Weights: the coffees in the change's dim_coffee carrying each spelling (21,928 coffees have one; a spelling only an
-  older product version carries weighs 0).
+- Weights: the coffees in the change's dim_coffee carrying each spelling (21,923 coffees have one at the final
+  commit; a spelling only an older product version carries weighs 0). Main's dim_coffee has 21,927.
 - The 2026-11-09 release had 52 values in public_market_weekly for about 46 countries; the change's build has 45 (one
   per country), and 45 distinct countries over all of public_coffee, down from 120 values.
 
 ## Labels
 
-- **Labelers:** Claude subagents on Claude Haiku (model chosen and approved by the owner), two independent labelers
-  (A, B) over the full packet and a third (C), blind to A and B, over the spellings they disagree on. The settled
+- **Labelers:** Claude subagents, all on Claude Haiku (`claude-haiku-5-5`, chosen and approved by the owner), each
+  blind to the mapping and to the others: two independent labelers (A, B) over the full packet and a third (C) over
+  the spellings they disagree on. The settled
   label is the one at least two of the three give; a three-way split is reported as unresolved. No person has
   labeled; a spot-check by one is still to come.
 - **Definition:** `GUIDE.md`. Each item is one spelling with up to five example listings (title, roaster, recorded
@@ -56,6 +57,30 @@ The mapping was frozen before any label existed: `origin_country_iso.csv` sha256
   guessing, CLAUDE.md step 7).
 - Wilson 95% intervals over spellings; the product-weighted share is a full-population figure.
 
+## Results (2026-11-11)
+
+**Agreement between labelers:** A and B agree on 148 of 149 spellings, 99.3% (Wilson 95% 96.3-99.9%). The one
+disagreement was bare "Guinea" (A: GN, B: AMBIGUOUS); C, blind to both, answered AMBIGUOUS, so it settled as
+AMBIGUOUS. No spelling was unresolved. Settled: 51 countries, 90 MULTIPLE, 6 NOT_A_COUNTRY, 2 AMBIGUOUS (Guinea, New
+Guinea).
+
+| | spellings agree | weighted by coffees | wrong mappings (spellings / coffees) |
+|---|---:|---:|---:|
+| main 0879254 (publishes the captured spelling) | 39 of 149, 26.2% (19.8-33.8%) | 97.1% of 21,927 (96.9-97.3%) | 110 spellings not ISO's; 98 of them (108 coffees) a list, region or shared place shown as one origin |
+| the frozen seed (version .1, hashes above) | 148 of 149, 99.3% (96.3-99.9%) | 100% of 21,923 | 1 / 0 |
+| **the change (seed version .2)** | **149 of 149, 100% (97.5-100%)** | **100% of 21,923** | **0 / 0** |
+
+- Main's row reads its published value as a name: it is right only where the captured spelling already is the label's
+  ISO short name. Its weighted score is high because most coffees carry a plain country name that is already ISO's.
+- The frozen seed's one wrong mapping was "Guinea" → GN, which no coffee in the change's build carries any more (the
+  same change stops the rules reading "New Guinea" as Guinea; 17 coffees in main). Version .2 makes bare "Guinea"
+  ambiguous, following the settled label. That change was made after the labels were read, and the census has no
+  held-out part, so the .2 row is fitted to these labels; the frozen row is the unfitted score.
+- **The owner's rule (at least 95% weighted by coffees, full population): met, 100%.**
+- No spelling is unmapped, so `origin_countries_are_mapped` passes on this data.
+- Floor: `tests/test_origin_iso_accuracy.py`, 149 of 149 spellings, at least 0.999 weighted, 0 wrong. It runs in the
+  ordinary test job (labels and seed are both in git).
+
 ## Commands
 
 ```
@@ -71,8 +96,10 @@ python origin_iso_eval.py score  <out-dir>                                   # t
 
 - **Display names.** ISO's short names include formal forms the site now shows: "Bolivia, Plurinational State of",
   "Tanzania, United Republic of", "Congo, The Democratic Republic of the", "Venezuela, Bolivarian Republic of",
-  "Lao People's Democratic Republic", "Viet Nam", "Côte d'Ivoire". The `iso_3166_1` seed carries iso-codes' common
-  names (Bolivia, Tanzania, Venezuela, Laos, Vietnam) if the site should show those while the data keeps ISO's.
+  "Lao People's Democratic Republic", "Viet Nam", "Côte d'Ivoire". The site can show common names instead (Bolivia,
+  Tanzania, Laos, Vietnam, Venezuela, DR Congo, Côte d'Ivoire; `dbt/seeds/origin_display_name.csv`) behind one
+  switch, `COFFEEDATA_SITE_ORIGIN_NAMES=common` (default `iso`); the data and catalog.json's codes keep ISO's either
+  way. Recommended: common names on the site, ISO in the data.
 - **New Guinea** (13 coffees, mostly the rules' "New Guinea Highlands" style titles) has no country: the island is
   Papua New Guinea and Indonesia's Papua. Most such coffee is Papua New Guinea's, but that is a guess the mapping
   doesn't make.
