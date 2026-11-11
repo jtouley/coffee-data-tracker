@@ -115,5 +115,19 @@ python dedup_eval.py score $DATA sealed test sealed/pred_main_test.json sealed/p
 
 ## Results
 
-Pending the labels. The change calls the same store: train 27 of 173 items, validation 6 of 49, test 4 of 23 (every
-H1 pair; no other stratum). `main` calls none.
+Labelled 2026-11-11 by two independent Claude subagents (claude-opus-5-5), A and B, blind to each other and to both
+rules' predictions. They agreed on every item (train 173/173, validation 49/49, test 23/23), so no tiebreak was
+needed. The test set was scored once, after `sha256sum -c SHA256SUMS` passed. Wilson 95% intervals.
+
+| Set | Rule | Called same store | Precision | Confidently wrong | Recall |
+| --- | --- | --- | --- | --- | --- |
+| train | main | 0 | n/a | n/a | 0/29 (0.00–0.12) |
+| train | change | 27 | 27/27 (0.88–1.00) | 0/27 (0.00–0.13) | 27/29 (0.78–0.98) |
+| validation | main | 0 | n/a | n/a | 0/6 (0.00–0.39) |
+| validation | change | 6 | 6/6 (0.61–1.00) | 0/6 (0.00–0.39) | 6/6 (0.61–1.00) |
+| test | main | 0 | n/a | n/a | 0/4 (0.00–0.49) |
+| test | change | 4 | 4/4 (0.51–1.00) | 0/4 (0.00–0.49) | 4/4 (0.51–1.00) |
+
+The change ships: on every set it is at least as accurate as `main`, with no confidently wrong merges. The two
+same-store pairs it misses on train do not share a resolved host (a rebrand and a sub-domain); they are the cases
+`alias_of` exists for. The test set is small (23 items, 4 same-store), so its intervals are wide.

@@ -1,0 +1,126 @@
+{
+ "meta": {
+  "labeler": "B",
+  "labelled_by": "Claude subagent",
+  "model": "claude-opus-5-5",
+  "set": "test",
+  "date": "2026-11-11"
+ },
+ "labels": [
+  {
+   "id": "bluechipcoffeeroaster.com|visiblecoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Shared supplier-style generic titles but different names, towns and hosts."
+  },
+  {
+   "id": "haerfestcoffee.com|whiffroasters.com",
+   "label": "different_store",
+   "reason": "Only generic titles shared."
+  },
+  {
+   "id": "uncommoncoffeeroasters.com|uncommongroundsspecialtyroaster.com",
+   "label": "different_store",
+   "reason": "No shared titles; different states."
+  },
+  {
+   "id": "coffeeam.com|millmountaincoffee.com",
+   "label": "different_store",
+   "reason": "Only common flavored titles shared."
+  },
+  {
+   "id": "cbrccoffee.com|chesapeake.coffee",
+   "label": "same_store",
+   "reason": "A redirects to chesapeake.coffee in the same state with near-identical catalog and prices."
+  },
+  {
+   "id": "halfwitcoffee.com|tocroasters.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "coffeeam.com|mainstreetroasters.com",
+   "label": "different_store",
+   "reason": "Common supplier flavored titles at different prices; different states."
+  },
+  {
+   "id": "coffeeam.com|colipsecoffee.com",
+   "label": "different_store",
+   "reason": "Only generic titles shared at very different prices."
+  },
+  {
+   "id": "mainstreetcoffee.co|mainstreetroasters.com",
+   "label": "different_store",
+   "reason": "No shared titles; different states and hosts."
+  },
+  {
+   "id": "caffemedici.com|mediciroasting.com",
+   "label": "same_store",
+   "reason": "Café domain redirects to mediciroasting.com in the same town with identical catalog."
+  },
+  {
+   "id": "cascadiaroasters.com|extractocoffee.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "martinhenrycoffee.com|verenastreet.com",
+   "label": "different_store",
+   "reason": "Two generic titles shared."
+  },
+  {
+   "id": "jenningsjava.com|missioncoffeeco.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "atlascoffeeclub.com|mediciroasting.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "bluestrawberrycoffee.com|thecafeconnection.com",
+   "label": "different_store",
+   "reason": "Only generic flavored titles shared at different prices."
+  },
+  {
+   "id": "methodicalcoffee.com|westendcoffee.com",
+   "label": "different_store",
+   "reason": "One shared importer lot at different prices."
+  },
+  {
+   "id": "troubadourcoffee.com|troubadourcoffeeroasters.com",
+   "label": "same_store",
+   "reason": "A redirects to troubadourcoffeeroasters.com in the same area with identical catalog."
+  },
+  {
+   "id": "pitotticoffee.com|revel77coffee.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "armadilloroasters.com|atlascoffeeclub.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "armisticecoffeeco.com|kumacoffee.com",
+   "label": "different_store",
+   "reason": "No shared titles."
+  },
+  {
+   "id": "uncommoncoffeeroasters.com|uncommongroundsllc.com",
+   "label": "different_store",
+   "reason": "No shared titles; different states."
+  },
+  {
+   "id": "cartelcoffeelab.com|cartelroasting.co",
+   "label": "same_store",
+   "reason": "Café domain redirects to cartelroasting.co in the same metro with identical catalog."
+  },
+  {
+   "id": "adkcoffeeroasters.com|thecafeconnection.com",
+   "label": "different_store",
+   "reason": "Common flavored titles at different prices; different states."
+  }
+ ]
+}

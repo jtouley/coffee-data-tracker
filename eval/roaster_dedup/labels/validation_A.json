@@ -1,0 +1,256 @@
+{
+ "meta": {
+  "labeler": "A",
+  "labelled_by": "Claude subagent",
+  "model": "claude-opus-5-5",
+  "set": "validation",
+  "date": "2026-11-11"
+ },
+ "labels": [
+  {
+   "id": "lostsockroasters.com|smallplanescoffee.com",
+   "label": "different_store",
+   "reason": "Different DC roasters, no shared titles."
+  },
+  {
+   "id": "heartwoodcoffee.com|heartwoodroastery.com",
+   "label": "same_store",
+   "reason": "Same name; both resolve to heartwoodroastery.com with identical catalog in nearby Ohio towns."
+  },
+  {
+   "id": "lotuscoffee.com|reconstructioncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "lotuscoffee.com|plantationcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "downeastcoffee.com|oceancoffee.com",
+   "label": "same_store",
+   "reason": "oceancoffee.com resolves to downeastcoffee.com with an identical catalog and prices in Rhode Island."
+  },
+  {
+   "id": "csrcoffee.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "greencastlecoffee.com|theroasterie.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles at different prices."
+  },
+  {
+   "id": "pacifikcoffee.com|sigbrew.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "plantationcoffee.com|reconstructioncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "cashuacoffee.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "beanandbeancoffee.com|oslocoffee.com",
+   "label": "different_store",
+   "reason": "Different NYC businesses, no shared titles."
+  },
+  {
+   "id": "bendroasting.com|coffee4kids.org",
+   "label": "different_store",
+   "reason": "Different Bend businesses, no shared titles."
+  },
+  {
+   "id": "ohiopylecoffee.com|ohioroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "aguadulcecafe.com|frenchtownroasters.com",
+   "label": "same_store",
+   "reason": "Same Monroe business; both resolve to frenchtownroasters.com with identical catalog."
+  },
+  {
+   "id": "oldworldcoffee.co|oldworldcoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Two locations of one company; both resolve to oldworldcoffeeroasters.com with identical catalog."
+  },
+  {
+   "id": "actualbrewing.com|reconstructioncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "anvilcoffee.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "lionheadcoffee.com|reconstructioncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "calibercoffeeinc.com|reconstructioncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "colonialcoffee.com|greatcirclecoffee.com",
+   "label": "different_store",
+   "reason": "Different Miami businesses, no shared titles."
+  },
+  {
+   "id": "1802roasters.com|groundworkcoffee.com",
+   "label": "different_store",
+   "reason": "Different LA businesses, no shared titles."
+  },
+  {
+   "id": "81301coffee.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "northcoastroasting.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "lionheadcoffee.com|lotuscoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "summitcoffee.com|summitsedgecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; B resolves to an unrelated water/pod store."
+  },
+  {
+   "id": "looneybean.com|looneybeanmammoth.com",
+   "label": "different_store",
+   "reason": "Same brand name but different towns, hosts and catalogs."
+  },
+  {
+   "id": "headrushroasters.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "laddercoffee.com|laddercoffeespokane.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to laddercoffee.com with identical catalog."
+  },
+  {
+   "id": "noblecoyotecoffee.com|nobleroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "artiscoffee.com|fourbarrelcoffee.com",
+   "label": "different_store",
+   "reason": "Different SF businesses, no shared titles."
+  },
+  {
+   "id": "actualbrewing.com|plantationcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "blackwaterjava.com|blackwaterroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "javacentral.coffee|javacoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "biggunscoffee.com|pacifikcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins at different prices."
+  },
+  {
+   "id": "calibercoffeeinc.com|lotuscoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "calibercoffeeinc.com|plantationcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "actualbrewing.com|calibercoffeeinc.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "calibercoffeeinc.com|lionheadcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "headrushroasters.com|sigbrew.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "actualbrewing.com|lotuscoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "1802roasters.com|boxxcoffee.la",
+   "label": "different_store",
+   "reason": "Different LA businesses, no shared titles."
+  },
+  {
+   "id": "lionheadcoffee.com|plantationcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "java-gourmet.com|javacoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; two generic titles."
+  },
+  {
+   "id": "hortiprocess.com|javacoffee.com",
+   "label": "different_store",
+   "reason": "Different Houston businesses, no shared titles."
+  },
+  {
+   "id": "javacoffee.com|javadreampv.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "thecoffeeroaster.sg|theroasterie.com",
+   "label": "different_store",
+   "reason": "Different businesses in different countries, no shared titles."
+  },
+  {
+   "id": "actualbrewing.com|lionheadcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked hugedomains.com page."
+  },
+  {
+   "id": "coffeetree.com|coffeetree.store",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to coffeetree.store with identical catalog."
+  },
+  {
+   "id": "conversatiocoffee.com|wildroastcoffeeco.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  }
+ ]
+}

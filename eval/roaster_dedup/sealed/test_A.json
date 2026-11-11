@@ -1,0 +1,126 @@
+{
+ "meta": {
+  "labeler": "A",
+  "labelled_by": "Claude subagent",
+  "model": "claude-opus-5-5",
+  "set": "test",
+  "date": "2026-11-11"
+ },
+ "labels": [
+  {
+   "id": "bluechipcoffeeroaster.com|visiblecoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states; generic titles only."
+  },
+  {
+   "id": "haerfestcoffee.com|whiffroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "uncommoncoffeeroasters.com|uncommongroundsspecialtyroaster.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "coffeeam.com|millmountaincoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles."
+  },
+  {
+   "id": "cbrccoffee.com|chesapeake.coffee",
+   "label": "same_store",
+   "reason": "cbrccoffee.com resolves to chesapeake.coffee with identical catalog and prices in Maryland; a rebrand."
+  },
+  {
+   "id": "halfwitcoffee.com|tocroasters.com",
+   "label": "different_store",
+   "reason": "Different Chicago businesses, no shared titles."
+  },
+  {
+   "id": "coffeeam.com|mainstreetroasters.com",
+   "label": "different_store",
+   "reason": "Separate businesses sharing common supplier titles at their own prices."
+  },
+  {
+   "id": "coffeeam.com|colipsecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles at different prices."
+  },
+  {
+   "id": "mainstreetcoffee.co|mainstreetroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, hosts and towns, no shared titles."
+  },
+  {
+   "id": "caffemedici.com|mediciroasting.com",
+   "label": "same_store",
+   "reason": "Medici location domain resolves to mediciroasting.com with identical catalog in Austin."
+  },
+  {
+   "id": "cascadiaroasters.com|extractocoffee.com",
+   "label": "different_store",
+   "reason": "Different Portland businesses, no shared titles."
+  },
+  {
+   "id": "martinhenrycoffee.com|verenastreet.com",
+   "label": "different_store",
+   "reason": "Different businesses; two generic titles."
+  },
+  {
+   "id": "jenningsjava.com|missioncoffeeco.com",
+   "label": "different_store",
+   "reason": "Different Columbus businesses, no shared titles."
+  },
+  {
+   "id": "atlascoffeeclub.com|mediciroasting.com",
+   "label": "different_store",
+   "reason": "Different Austin businesses, no shared titles."
+  },
+  {
+   "id": "bluestrawberrycoffee.com|thecafeconnection.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles at different prices."
+  },
+  {
+   "id": "methodicalcoffee.com|westendcoffee.com",
+   "label": "different_store",
+   "reason": "Different Greenville roasters; one importer lot at different prices."
+  },
+  {
+   "id": "troubadourcoffee.com|troubadourcoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Same name; both resolve to troubadourcoffeeroasters.com with identical catalog in the Cleveland area."
+  },
+  {
+   "id": "pitotticoffee.com|revel77coffee.com",
+   "label": "different_store",
+   "reason": "Different Spokane businesses, no shared titles."
+  },
+  {
+   "id": "armadilloroasters.com|atlascoffeeclub.com",
+   "label": "different_store",
+   "reason": "Different Austin businesses, no shared titles."
+  },
+  {
+   "id": "armisticecoffeeco.com|kumacoffee.com",
+   "label": "different_store",
+   "reason": "Different Seattle businesses, no shared titles."
+  },
+  {
+   "id": "uncommoncoffeeroasters.com|uncommongroundsllc.com",
+   "label": "different_store",
+   "reason": "Different businesses, hosts and states."
+  },
+  {
+   "id": "cartelcoffeelab.com|cartelroasting.co",
+   "label": "same_store",
+   "reason": "Cartel Coffee Lab domain resolves to cartelroasting.co with identical catalog in the Phoenix area."
+  },
+  {
+   "id": "adkcoffeeroasters.com|thecafeconnection.com",
+   "label": "different_store",
+   "reason": "Separate businesses sharing common flavored titles at different prices."
+  }
+ ]
+}
