@@ -23,10 +23,18 @@ from coffeedata.registry import normalize_domain
 from .catalog import FACET_VALUES, PAGE, Filters, _one
 from .queries import safe_url, store_url
 
-CACHE_VERSION = "v2"
+CACHE_VERSION = "v3"
 # A registry roaster with more stores than this is a chain unless the owner flags it otherwise: dbt's var
 # chain_store_threshold (int_roaster_state.is_chain), which tests/test_admin_chains.py holds this to.
 CHAIN_STORES = 20
+# A registry roaster's chain status on the page (the column `chain`, a facet): the served release's (dim_roaster
+# .is_chain: what customers get now) against the next Publish's (the owner's flag, else the store count). Codes, not
+# words: the page words them (part_sources.html), so a wording change never touches the logic.
+#   chain         a chain now and after the next Publish
+#   to_chain      public now; a chain from the next Publish
+#   to_not_chain  a chain now; not one from the next Publish
+#   not_chain     flagged not a chain, and not one now
+CHAIN_CODES = ("chain", "to_chain", "to_not_chain", "not_chain")
 EMPTY = ("(select null::timestamptz as added_at, null::varchar as source, null::varchar as roaster_id, "
          "null::varchar as name, null::varchar as city, null::varchar as state, null::varchar as website, "
          "null::varchar[] as tags, null::boolean as roast_in_name where false)")  # fmt: skip
@@ -139,14 +147,15 @@ class SourceList:
             latest = _one(con, "select max(added_at)::varchar from c")
             reg = "select null::varchar as roaster_id, null::varchar as name, null::varchar as city, " \
                   "null::varchar as state, null::varchar as sources, null::integer as locations, " \
-                  "null::bigint as coffees_listed where false"  # fmt: skip
+                  "null::bigint as coffees_listed, null::boolean as is_chain where false"  # fmt: skip
             if roasters:
                 # the store count and the listed coffees, where the release has them (a release from before
                 # dim_roaster carried them reads null: no count, so no chain by count)
                 src = f"read_parquet('{roasters.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
                 have = {r[0] for r in con.execute(f"describe select * from {src}").fetchall()}
                 more = ", ".join(f"{c}::{t} as {c}" if c in have else f"null::{t} as {c}"
-                                 for c, t in (("locations", "integer"), ("coffees_listed", "bigint")))  # fmt: skip
+                                 for c, t in (("locations", "integer"), ("coffees_listed", "bigint"),
+                                              ("is_chain", "boolean")))  # fmt: skip
                 reg = f"select roaster_id, roaster_name as name, city, state, sources, {more} from {src}"
             con.execute(f"""
                 create table places as
@@ -176,7 +185,8 @@ class SourceList:
                        k.first_seen, k.last_seen,
                        case when k.first_seen = r.latest and r.previous is not null then 'new'
                             when k.last_seen < r.latest and k.last_seen >= r.previous then 'gone' end as change,
-                       g.roaster_id is not null as in_registry, g.locations as stores, g.coffees_listed
+                       g.roaster_id is not null as in_registry, g.locations as stores, g.coffees_listed,
+                       coalesce(g.is_chain, false) as published_chain
                 from cand k full outer join reg g using (roaster_id)
                 cross join last2 r""")
             con.execute("drop table c")
@@ -213,12 +223,14 @@ class SourceList:
                 "roaster_id": list(chains or {}), "chain_flag": [v["flag"] for v in (chains or {}).values()],
                 "chain_reason": [v["reason"] for v in (chains or {}).values()],
             }, schema=pa.schema([("roaster_id", pa.string()), ("chain_flag", pa.string()), ("chain_reason", pa.string())])))  # fmt: skip
-            # A registry roaster's chain status, as the next published draft decides it: the owner's flag, else its
-            # store count (CHAIN_STORES). Only a chain, or a flagged non-chain, has one (a facet value and a word).
+            # A registry roaster's chain status (CHAIN_CODES): the served release's against the next Publish's (the
+            # owner's flag, else its store count, CHAIN_STORES). Only a chain, or a flagged non-chain, has one.
+            nxt = f"coalesce(h.chain_flag = 'chain', p.stores > {CHAIN_STORES}, false)"
             chain = (f"""case when not p.in_registry then null
-                             when h.chain_flag = 'chain' then 'flagged a chain'
-                             when h.chain_flag = 'not_chain' then 'flagged not a chain'
-                             when p.stores > {CHAIN_STORES} then 'over {CHAIN_STORES} stores' end"""
+                             when p.published_chain and {nxt} then 'chain'
+                             when {nxt} then 'to_chain'
+                             when p.published_chain then 'to_not_chain'
+                             when h.chain_flag = 'not_chain' then 'not_chain' end"""
                      if chains is not None else "null::varchar")  # fmt: skip
             # Every registry roaster inherits the roaster flag; an explicit flag, either way, wins.
             status = ("""case when f.flag = 'not_roaster' then 'not a roaster' when f.flag = 'roaster' then 'roaster'
@@ -231,8 +243,8 @@ class SourceList:
             matching = _one(con, f"select count(*) from {view} {where}", params)
             cur = con.execute(
                 f"""select roaster_id, name, city, state, website, tag, hint, sources, status, change, batch_id,
-                           in_registry, first_seen, last_seen, stores, coffees_listed, chain, chain_flag,
-                           chain_reason from {view} {where}
+                           in_registry, first_seen, last_seen, stores, coffees_listed, published_chain, chain,
+                           chain_flag, chain_reason from {view} {where}
                     order by {order_by(f.sort, f.desc)}
                     limit {PAGE} offset {(f.page - 1) * PAGE}""",
                 params,

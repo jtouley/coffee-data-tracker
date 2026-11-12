@@ -27,8 +27,8 @@ SEED = ROOT / "dbt" / "seeds" / "chain_overrides.csv"
 
 @pytest.fixture
 def lake(tmp_path):
-    """The served release's registry: two curated chains the seed flags (one with a low count, one with 21), a chain
-    by its count alone, and an independent roaster; one café in the source list."""
+    """The served release's registry (with its published is_chain): two curated chains the seed flags (one with a
+    low count, one with 21), a chain by its count alone, and an independent roaster; one café in the source list."""
     lake = build_lake(tmp_path / "lake")
     from coffeedata.lake import Lake
 
@@ -37,13 +37,13 @@ def lake(tmp_path):
     rel = lake.root / "releases" / f"run_date={W1}" / f"build={B1}" / "dim_roaster.parquet"
     pq.write_table(pa.Table.from_pylist([
         {"roaster_id": "peets.com", "roaster_name": "Peet's Coffee", "city": "Emeryville", "state": "CA",
-         "sources": "curated", "locations": 1, "coffees_listed": 105},
+         "sources": "curated", "locations": 1, "coffees_listed": 105, "is_chain": True},
         {"roaster_id": "coffeebean.com", "roaster_name": "The Coffee Bean & Tea Leaf", "city": "Los Angeles",
-         "state": "CA", "sources": "overture-2026-10", "locations": 21, "coffees_listed": 43},
+         "state": "CA", "sources": "overture-2026-10", "locations": 21, "coffees_listed": 43, "is_chain": True},
         {"roaster_id": "farmerbros.com", "roaster_name": "Farmer Brothers", "city": "Northlake", "state": "TX",
-         "sources": "overture-2026-10", "locations": 62, "coffees_listed": 0},
+         "sources": "overture-2026-10", "locations": 62, "coffees_listed": 0, "is_chain": True},
         {"roaster_id": "lacolombe.com", "roaster_name": "La Colombe", "city": "Philadelphia", "state": "PA",
-         "sources": "curated+overture-2026-10", "locations": 13, "coffees_listed": 25},
+         "sources": "curated+overture-2026-10", "locations": 13, "coffees_listed": 25, "is_chain": False},
     ]), rel)  # fmt: skip
     return lake
 
@@ -79,35 +79,69 @@ def test_sources_shows_each_chain_and_why(tmp_path, lake, pg_url):
     _, c, _ = make(tmp_path, lake.root, pg_url)
     page = c.get("/part/sources").text
     text = _text(page)
-    assert "3 chains, crawled but not public" in text  # peets and coffeebean flagged, farmerbros by its count
+    assert "3 chains, crawled but not public" in text and "next Publish)" not in text  # nothing pending yet
     assert text.count("· Chain") == 6  # each chain's word, on a desktop and in a phone's line
-    assert "A chain: 62 stores counted, more than 20." in text
-    assert "Not a chain: 13 stores counted, 20 or fewer." in text
-    assert "A chain, flagged by hand (1 store counted): Peet" in text
-    assert "flagged a chain (2)" in text and "over 20 stores (1)" in text  # the facet's values
-    assert "(none)" not in page.split('name="chain"')[1].split("</select>")[0]
-    flagged = _text(c.get("/part/sources?chain=flagged+a+chain").text)
-    assert "2 of 5 places" in flagged and "La Colombe" not in flagged and "chain: flagged a chain" in flagged
+    assert "A chain: not public. 62 stores counted: more than 20." in text
+    assert "Not a chain. 13 stores counted: 20 or fewer." in text
+    assert (
+        "A chain: not public. Flagged a chain by hand (1 store counted)." in text
+    )  # "1 store", not "1 stores"
+    assert (
+        "The reason" in text and "Coffee runs hundreds of US coffeehouses" in page
+    )  # folded under its summary
+    assert "a chain (3)" in text  # the facet's words; its value is the code
+    assert 'value="chain"' in page.split('name="chain"')[1].split("</select>")[0]
+    flagged = _text(c.get("/part/sources?chain=chain").text)
+    assert "3 of 5 places" in flagged and "La Colombe" not in flagged and "chain: a chain" in flagged
+    # the chain flag is a group of its own in the menu, after the roaster flag
+    peets = page[page.index("Actions for Peet") :].split("</details></td>")[0]
+    assert (
+        peets.index("Not a roaster") < peets.index('class="menugroup"') < peets.index("Clear the chain flag")
+    )
     # each status offers the other way, and a flag can be cleared
-    assert "Mark as a chain…" in page and "Not a chain…" in page and "Clear the chain flag…" in page
+    assert (
+        "Clear the chain flag on Peet" in peets and "Not a chain…" not in peets
+    )  # its count already says not
+    bean = page[page.index("Actions for The Coffee Bean") :].split("</details></td>")[0]
+    assert "Not a chain…" in bean and "Clear the chain flag…" in bean  # its count (21) agrees with its flag
     assert "Mark La Colombe as a chain?" in page and "Mark Farmer Brothers as not a chain?" in page
     assert "Its 25 listed coffees leave the public data" in page
-    # peets.com: flagged, and its count (1) says not a chain, so Clear is its one way back (no second, redundant flag)
-    peets = page[page.index("Actions for Peet") :].split("</details>")[0]
-    assert "Clear the chain flag on Peet" in peets and "Not a chain…" not in peets
-    # coffeebean.com: flagged, and its count (21) agrees, so Not a chain, and Clear (the count decides from then on)
-    bean = page[page.index("Actions for The Coffee Bean") :].split("</details>")[0]
-    assert "Not a chain…" in bean and "Clear the chain flag…" in bean
+    assert "Its store count decides again: 1 store, so not a chain" in page
     assert (
         "Cafe" in text and text.count("Mark as a chain…") == 1
     )  # a café of the source list has no chain menu
 
 
+def test_a_pending_flag_reads_as_pending_until_it_is_published(tmp_path, lake, pg_url):
+    """The page says what customers get now (the served release's is_chain) and marks what the next Publish changes:
+    a flag recorded since never reads as already in effect."""
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    post(c, "/api/roasters/lacolombe.com/chain",
+         {"key": "k1", "chain": "chain", "seen": "none", "reason": "far more than 20 cafes"})  # fmt: skip
+    post(c, "/api/roasters/farmerbros.com/chain",
+         {"key": "k2", "chain": "not_chain", "seen": "none", "reason": "a distributor"})  # fmt: skip
+    text = _text(c.get("/part/sources").text)
+    assert "3 chains, crawled but not public (2 changes at the next Publish)" in text
+    assert "La Colombe · Chain (pending)" in text
+    assert "Farmer Brothers · Not a chain (pending)" in text
+    assert "Public now; a chain, so not public, from the next Publish." in text
+    assert "A chain now, so not public; public again from the next Publish." in text
+
+
 def test_a_chain_flag_is_reasoned_idempotent_conflict_checked_and_audited(tmp_path, lake, pg_url):
     app, c, _ = make(tmp_path, lake.root, pg_url)
     url = "/api/roasters/farmerbros.com/chain"
-    assert post(c, url, {"key": "k0", "chain": "not_chain", "reason": ""}).status_code == 400
-    assert post(c, url, {"key": "k1", "chain": "maybe", "reason": "why not"}).status_code == 400
+    assert post(c, url, {"key": "k0", "chain": "not_chain", "seen": "none", "reason": ""}).status_code == 400
+    assert (
+        post(c, url, {"key": "k1", "chain": "maybe", "seen": "none", "reason": "why not"}).status_code == 400
+    )
+    blind = post(c, url, {"key": "k1b", "chain": "not_chain", "reason": "no seen"})
+    assert blind.status_code == 400 and "Reload the page" in blind.json()["detail"]  # seen is required
+    stranger = post(c, "/api/roasters/unknown.example/chain",
+                    {"key": "k1c", "chain": "chain", "seen": "none", "reason": "not in the registry"})  # fmt: skip
+    assert (
+        stranger.status_code == 400 and "isn't in the served release's registry" in stranger.json()["detail"]
+    )
     body = {
         "key": "k2",
         "chain": "not_chain",
@@ -118,43 +152,73 @@ def test_a_chain_flag_is_reasoned_idempotent_conflict_checked_and_audited(tmp_pa
     assert r1.status_code == 200 and r1.json() == r2.json() == {"ok": True, "roaster_id": "farmerbros.com",
                                                                 "chain": "not_chain"}  # fmt: skip
     stale = post(c, url, body | {"key": "k3", "chain": "chain"})
-    assert (
-        stale.status_code == 409 and "changed after this page loaded" in stale.json()["detail"]
-    )  # another tab flagged it
+    assert stale.status_code == 409 and "changed after this page loaded" in stale.json()["detail"]
     again = post(c, url, body | {"key": "k4", "seen": "not_chain"})
     assert again.status_code == 400 and "already" in again.json()["detail"]
     assert post(c, "/api/roasters/x%2F..%2Fy/chain", body | {"key": "k5"}).status_code in (400, 404)
     rows = [a for a in audit(app) if a["action"] == "chain_flag"]
     assert [a["subject"] for a in rows] == ["farmerbros.com"]
     page = _text(c.get("/part/sources?q=farmer").text)
-    assert (
-        "· Not a chain" in page and "Not a chain, flagged by hand (62 stores counted): a distributor" in page
-    )
+    assert "· Not a chain (pending)" in page and "Flagged not a chain by hand (62 stores counted)." in page
     cleared = post(c, url, {"key": "k6", "chain": "clear", "seen": "not_chain", "reason": "counted again"})
-    assert cleared.status_code == 200 and "A chain: 62 stores counted" in _text(
-        c.get("/part/sources?q=farmer").text
-    )
+    assert cleared.status_code == 200
+    assert "62 stores counted: more than 20" in _text(c.get("/part/sources?q=farmer").text)
     nothing = post(c, url, {"key": "k7", "chain": "clear", "seen": "none", "reason": "nothing to clear"})
     assert nothing.status_code == 400
 
 
-def test_the_next_draft_carries_the_chain_flags_and_release_says_so(tmp_path, lake, pg_url):
+def test_release_compares_with_the_seed_until_a_snapshot_carries_chain_flags(tmp_path, lake, pg_url):
+    """The served build has no chain flags in its snapshot, so it read dbt's seed: the seed's flags are no change,
+    and clearing one is (Release lists it, and a draft carries every flag in effect, as a version 2 snapshot)."""
     _, c, _ = make(tmp_path, lake.root, pg_url)
-    release = _text(c.get("/part/release").text)
-    assert "4 chain flags not in it" in release  # the served snapshot is from before chain flags
-    assert "peets.com becomes a chain" in release
+    assert "chain flag" not in _text(
+        c.get("/part/release").text
+    )  # the flags are the seed's: nothing to build
     post(c, "/api/roasters/farmerbros.com/chain",
          {"key": "k1", "chain": "not_chain", "seen": "none", "reason": "a distributor"})  # fmt: skip
     post(
         c, "/api/roasters/peets.com/chain", {"key": "k2", "chain": "clear", "seen": "chain", "reason": "test"}
     )
     release = _text(c.get("/part/release").text)
-    assert "4 chain flags not in it" in release and "farmerbros.com becomes not a chain" in release
+    assert "2 chain flags not in it" in release
+    assert "farmerbros.com becomes not a chain; peets.com goes back to its store count" in release
     d = post(c, "/api/drafts", {"key": "k3"}).json()
     doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
+    assert doc["version"] == decisions.CHAINS_VERSION
     assert decisions.chain_flags(doc) == [
         {"roaster_id": "cariboucoffee.com", "chain": True}, {"roaster_id": "cleaneatz.com", "chain": True},
         {"roaster_id": "coffeebean.com", "chain": True}, {"roaster_id": "farmerbros.com", "chain": False}]  # fmt: skip
+
+
+def test_publish_counts_the_public_coffees_a_chain_flag_moves(tmp_path, lake, pg_url):
+    """Change size (CLAUDE.md step 9) counts every public coffee of a roaster whose chain flag the draft changes:
+    the coffees release_changes shows joining or leaving with it."""
+    from coffeedata.lake import SCHEMAS, Lake
+
+    from .test_admin import W3
+    from .test_admin_actions import _draft_build
+
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    post(
+        c, "/api/roasters/peets.com/chain", {"key": "k1", "chain": "clear", "seen": "chain", "reason": "test"}
+    )
+    d = post(c, "/api/drafts", {"key": "k2"}).json()
+    doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
+    b3 = _draft_build(lake.root, d["draft_id"], doc)
+    # the draft build's release_changes, as the build would write them: Peet's three coffees join with it
+    rows = [{"build_id": b3, "table_name": "public_coffee", "item": f"peets.com:{i}", "change": "added",
+             "reason": "roaster_joined"} for i in range(3)]  # fmt: skip
+    ops = (
+        Lake(str(lake.root)).root
+        / "releases"
+        / f"run_date={W3}"
+        / f"build={b3}"
+        / "ops"
+        / "release_changes.parquet"
+    )
+    pq.write_table(pa.Table.from_pylist(rows, SCHEMAS["release_changes"]), ops)
+    page = _text(c.get(f"/part/release?build={b3}").text)
+    assert "this draft changes 3 public coffees (all through chain flags)" in page
 
 
 def test_without_the_control_plane_no_chain_is_shown(tmp_path, lake):
@@ -162,7 +226,7 @@ def test_without_the_control_plane_no_chain_is_shown(tmp_path, lake):
 
     dead = ControlPlane(url_connect("postgresql://nobody@127.0.0.1:1/none"))
     _, c, _ = make(tmp_path, lake.root, "postgresql://nobody@127.0.0.1:1/none", control_plane=dead)
-    page = c.get("/part/sources?chain=flagged+a+chain").text
+    page = c.get("/part/sources?chain=chain").text
     assert (
         "Peet" in page
         and "· Chain" not in page
@@ -173,19 +237,33 @@ def test_without_the_control_plane_no_chain_is_shown(tmp_path, lake):
 
 def test_the_snapshot_carries_chains_only_when_given():
     doc = decisions.snapshot("s1", "t", [], chains=[{"roaster_id": "b.example", "chain": False},
-                                                     {"roaster_id": "a.example", "chain": 1}])  # fmt: skip
+                                                     {"roaster_id": "a.example", "chain": True}])  # fmt: skip
     assert doc["chains"] == [
         {"roaster_id": "a.example", "chain": True},
         {"roaster_id": "b.example", "chain": False},
     ]
     assert (
+        doc["version"] == decisions.CHAINS_VERSION
+    )  # an older pipeline refuses it, rather than drop the flags
+    assert (
         decisions.chain_flags(decisions.snapshot("s2", "t", [], chains=[])) == []
     )  # no override: not the seed
-    assert "chains" not in decisions.snapshot("s3", "t", []) and decisions.chain_flags(None) is None
-    for bad in ([{"roaster_id": "a.example"}], [{"roaster_id": "a.example", "chain": "yes"}],
-                [{"roaster_id": "a.example", "chain": True}] * 2):  # fmt: skip
+    plain = decisions.snapshot("s3", "t", [])
+    assert (
+        "chains" not in plain
+        and plain["version"] == decisions.VERSION
+        and decisions.chain_flags(None) is None
+    )
+    for bad in ([{"roaster_id": "a.example"}], [{"roaster_id": "a.example", "chain": "false"}],
+                [{"roaster_id": "a.example", "chain": 1}], [{"roaster_id": "a.example", "chain": True}] * 2):  # fmt: skip
         with pytest.raises(decisions.SnapshotError, match="chains"):
             decisions.check(doc | {"chains": bad})
+    with pytest.raises(decisions.SnapshotError, match="chains"):  # no coercion: "false" is no False
+        decisions.snapshot("s4", "t", [], chains=[{"roaster_id": "a.example", "chain": "false"}])
+    with pytest.raises(decisions.SnapshotError, match="version 2"):
+        decisions.check(plain | {"chains": []})  # chains on a version 1 snapshot
+    with pytest.raises(decisions.SnapshotError, match="version 2"):
+        decisions.check({k: v for k, v in doc.items() if k != "chains"})
 
 
 @pytest.mark.parametrize("chains", [None, [{"roaster_id": "peets.com", "chain": False}]])

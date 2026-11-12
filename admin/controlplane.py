@@ -474,6 +474,14 @@ class ControlPlane:
         return {r[0]: dict(zip(("roaster_id", "flag", "reason", "actor", "at"), r, strict=True))
                 for r in cur.fetchall()}  # fmt: skip
 
+    def seed_chains(self) -> dict[str, bool]:
+        """The chain flags migration 0006 started with: dbt/seeds/chain_overrides.csv, which dbt reads while the served
+        snapshot carries no chain flags (the baseline Release compares against until one does)."""
+        with self.tx() as cur:
+            cur.execute("select roaster_id, flag from control.chain_flags where actor = 'seed' and client = 'migration' "
+                        "order by id")  # fmt: skip
+            return {r[0]: r[1] == "chain" for r in cur.fetchall()}
+
     def chain_flags(self, roaster_ids: list[str] | None = None) -> dict[str, dict]:
         """The chain flags in effect: roaster_id -> {flag (chain or not_chain), reason, actor, at}. A roaster with
         none is decided by its store count."""

@@ -207,7 +207,7 @@ table.sources th.act { width: 44px; }
 table.sources th.act, table.sources td.act { padding-inline-end: 4px; text-align: end; overflow: visible; position: relative; }
 table.sources .narrow { display: none; }
 @media (min-width: 760px) {
-  table.sources .c-name { width: 22%; } table.sources .c-domain { width: 18%; } table.sources .c-city { width: 11%; }
+  table.sources .c-name { width: 26%; } table.sources .c-domain { width: 15%; } table.sources .c-city { width: 11%; }
   table.sources .c-state { width: 4.5rem; } table.sources .c-tag { width: 7.5rem; } table.sources .c-hint { width: 13%; }
   table.sources .c-status { width: 9.5rem; } table.sources .c-seen { width: 6.5rem; }
   table.sources .nameline .pname { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
@@ -226,6 +226,13 @@ html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row n
   background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; text-align: start; }
 .rowmenu .menu .inline-form { display: block; }
 .rowmenu .menu .btn { width: 100%; justify-content: flex-start; padding: 0 12px; }
+/* A second flag in the same menu (the chain flag under the roaster flag): its own group under a hairline, so two
+   near-identical labels for different flags never sit side by side. Its reason folds (details), so the action stays
+   in view on a phone. */
+.rowmenu .menugroup { border-top: 1px solid var(--rule); margin-top: 4px; padding-top: 4px; }
+.rowmenu .menugroup + .btn, .rowmenu .menugroup + a.btn { border-top: 1px solid var(--rule); margin-top: 4px; border-radius: 0; }
+.rowmenu .menugroup details.reason > summary { min-height: 44px; font-size: 0.8125rem; color: var(--ink-2); }
+.rowmenu .menugroup details.reason > p { padding-top: 0; }
 dialog.panel h2 { margin-top: 0; }
 @media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sorts[data-narrow-only] { display: none; } }
 dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }

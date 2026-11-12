@@ -588,8 +588,10 @@ const errors = [];
       await page.goto(`${cfg.act}/sources?q=onyxcoffeelab.com`);
       await settled(page);
       const row = page.locator("table.sources tbody tr", { hasText: "onyxcoffeelab.com" });
-      await row.locator("summary").click();
-      assert.match(await row.locator(".menu").textContent(), /Not a chain: \d+ stores? counted, 20 or fewer\./);
+      await row.locator("details[data-rowmenu] > summary").click();
+      assert.match(await row.locator(".menu").textContent(), /Not a chain\. \d+ stores? counted: 20 or fewer\./);
+      // the chain flag is its own group, under the roaster flag
+      assert.ok(await row.locator(".menu .menugroup[role=group][aria-label=Chain] button:text-is('Mark as a chain…')").count());
       await shoot(page, "sources-chain-menu", true);
       await row.locator("button:text-is('Mark as a chain…')").click();
       await page.waitForSelector("dialog#confirm[open] #confirm-reason");
@@ -609,8 +611,8 @@ const errors = [];
       await page.click("[data-confirm-go]");
       await toast(page, /Marked onyxcoffeelab\.com as a chain\. It takes effect when a draft of it is published\./);
       await settled(page);
-      assert.match(await page.textContent("table.sources tbody tr"), /Chain/);
-      await page.goto(`${cfg.act}/sources?chain=${encodeURIComponent("flagged a chain")}`);
+      assert.match(await page.textContent("table.sources tbody tr"), /Chain \(pending\)/); // pending until published
+      await page.goto(`${cfg.act}/sources?chain=to_chain`);
       await settled(page);
       assert.match(await page.textContent("table.sources"), /onyxcoffeelab\.com/);
       await shoot(page, "sources-chain-filtered");

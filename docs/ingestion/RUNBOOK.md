@@ -1232,6 +1232,22 @@ must not name it.
 **Stop it:** `gcloud scheduler jobs pause registry-coffee-fetch-health --location $REGION`.
 Nothing else depends on it: with re-fetch off the crawl passes never read its rows.
 
+## 9. Chain flags (admin Sources): deploy the pipeline image first
+
+The admin's chain flags reach the build through the draft's snapshot (`chains`, dbt var `chain_flags`, #146 and
+#149). A snapshot that carries them is **version 2**, which only a pipeline image with #149's `decisions.check`
+reads; an older image refuses it ("not a decisions snapshot (version 1)") and the draft build fails, so a flag is
+never recorded as applied when it wasn't. Ship in this order:
+1. The pipeline: rebuild and push the ingest image from a commit with #146 and #149 (the `build` job reads the
+   snapshot and passes `chain_flags`; dbt's `int_roaster_state` reads it), and pin its digest in `ingest_image`
+   (section 1). Apply. Builds without a chain-flag snapshot are unchanged: dbt reads its seed.
+2. Then the admin image (docs/admin/README.md, Deploying). Its first start applies migration `0006_chains.sql`.
+3. Check: Release on the admin lists the chain flags that differ from the seed (none, at first). Build a draft with
+   one flag; its build must pass and its `dim_roaster` show the flag.
+
+A rollback of the admin image alone is safe (the migration is additive). A rollback of the pipeline image to one
+before #149 makes every draft carrying chain flags fail until the image is current again.
+
 ## Cost
 
 About +$1–2/month for the non-Shopify jobs, and about $4–6/month for each of the two Cloud NAT gateways, mostly

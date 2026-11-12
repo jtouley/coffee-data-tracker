@@ -33,6 +33,10 @@ from . import classify, rules
 log = logging.getLogger(__name__)
 
 VERSION = 1
+# A snapshot carrying chain flags (`chains`) is version 2, so a pipeline image from before chain flags refuses it
+# ("not a decisions snapshot (version 1)") and the draft build fails, rather than building with the seed and recording
+# the snapshot, chains included, as applied. Deploy the pipeline image first, then the admin (docs/admin/README.md).
+CHAINS_VERSION = 2
 SUBJECTS = ("coffee_id", "input_hash")
 ACTIONS = ("include", "exclude")
 SNAPSHOT_ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
@@ -59,10 +63,12 @@ def check(doc: object) -> list[dict]:
     roasters, when present, must be readable by this code."""
     if (
         not isinstance(doc, dict)
-        or doc.get("version") != VERSION
+        or doc.get("version") not in (VERSION, CHAINS_VERSION)
         or not isinstance(doc.get("decisions"), list)
     ):
-        raise SnapshotError("not a decisions snapshot (version 1)")
+        raise SnapshotError("not a decisions snapshot (version 1 or 2)")
+    if ("chains" in doc) != (doc["version"] == CHAINS_VERSION):
+        raise SnapshotError("a snapshot carries chains exactly when it is version 2")
     if "settings" in doc:
         try:
             rules.check(doc["settings"], strict=False)
@@ -139,8 +145,10 @@ def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], setti
     if kf := classify.keyword_filters(keyword_filters):
         doc["prefilter"] = [f.as_dict() for f in kf]
     if chains is not None:
-        doc["chains"] = sorted(({"roaster_id": c["roaster_id"], "chain": bool(c["chain"])} for c in chains),
-                               key=lambda c: c["roaster_id"])  # fmt: skip
+        # as given (check() refuses a chain that isn't a JSON boolean: "false" is no False)
+        doc["version"] = CHAINS_VERSION
+        doc["chains"] = sorted(({"roaster_id": c.get("roaster_id"), "chain": c.get("chain")} for c in chains),
+                               key=lambda c: str(c["roaster_id"]))  # fmt: skip
     check(doc)
     return doc
 

@@ -463,3 +463,25 @@ state scrolls sideways at 390 px.
 - `better-interface`: the review ran in the order above; nothing left at HIGH.
 - Not changed, from before this pass: the confirm's label says "3 to 300 characters" while the control plane accepts
   up to 500 (the field and the API both stop at 300, so it is never wrong for the owner).
+
+### The review round (#149's specialist review)
+
+- **Published, then pending.** The page claimed a recorded flag was already in effect. Now the row's word and the count
+  are the served release's (`dim_roaster.is_chain`); a flag that changes it at the next Publish reads " · Chain
+  (pending)" or " · Not a chain (pending)", the menu says it in full ("Public now; a chain, so not public, from the next
+  Publish."), and the count line adds "(N changes at the next Publish)". The facet's values are codes
+  (`sources.CHAIN_CODES`), worded by the template, so a wording change never touches the logic.
+- **Two flags, two groups.** The chain flag is its own group in the ⋯ menu (`role=group`, a hairline above it),
+  after the roaster flag, so "Not a roaster" and "Not a chain…" never sit side by side.
+- **The reason folds.** The menu's first chain line is short ("A chain: not public. Flagged a chain by hand (1 store
+  counted)."); the stored reason is behind "The reason", so the action stays in view at 390 px.
+- **The row word stays short.** "Chain (pending)", not "Chain from the next Publish": the long form squeezed a desktop
+  name to one letter. The Name column is wider (26%, Domain 15%: a domain already ends in an ellipsis with its
+  full text in a title), so a name keeps room beside the longest word; the name ends in an ellipsis, the word never.
+- **Copy.** "1 store", not "1 stores"; "2 changes", not "2 change"; Release words a cleared flag "goes back to its
+  store count".
+- Skills applied again to the rendered build (72 states, 390 px and desktop, light and dark, axe clean):
+  `critique-information-density` (the folded reason), `critique-visual-hierarchy` (the group rule; status stays
+  text), `better-interface`, `better-layout` (the squeezed name, the group), `better-accessibility` (the group's
+  role and name; `details` is native and keyboard-reachable), `ux-writing` (pending wording, plurals),
+  `no-ai-design-slop` (no badge or colour added), `responsive-design` (phone meta line carries the same word).

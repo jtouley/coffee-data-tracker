@@ -490,7 +490,13 @@ document.addEventListener("keydown", (e) => {
   if (e.target.id === "confirm-reason" && e.key === "Enter" && !e.isComposing) e.preventDefault();
 });
 document.addEventListener("input", (e) => {
-  if (e.target.id === "confirm-reason" && /[\r\n]/.test(e.target.value)) e.target.value = e.target.value.replace(/\s*[\r\n]+\s*/g, " ");
+  const t = e.target;
+  if (t.id !== "confirm-reason" || !/[\r\n]/.test(t.value)) return;
+  // the caret stays where it was, less what the joins took out before it
+  const one = (s) => s.replace(/\s*[\r\n]+\s*/g, " ");
+  const at = one(t.value.slice(0, t.selectionEnd)).length;
+  t.value = one(t.value);
+  t.setSelectionRange(at, at);
 });
 
 // One confirm dialog for every write form: data-confirm (text) or data-preview (the plan from the server), an
