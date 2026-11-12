@@ -2,8 +2,8 @@
 to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo. Shots are
 private and never appear here; they are only in the app.
 
-Only the public roasters (dbt model `public_roaster`: not opted out, and not known only from OpenStreetMap) that aren't
-chains (INCLUDE_CHAINS) and their coffees appear, except in the roaster status counts and the registry total, which
+Only the public roasters (dbt model `public_roaster`: not opted out, not a chain, and not known only from
+OpenStreetMap) and their coffees appear, except in the roaster status counts and the registry total, which
 count every roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
 from the public contract) for search engines, and the site has a robots.txt and a sitemap.xml."""
 
@@ -64,11 +64,11 @@ def origin_display_column(con) -> str:
     return "origin_country"
 
 
-# Which roasters the site shows: the public roasters (public_roaster: not opted out, not known only from
-# OpenStreetMap), less chain roasters (dim_roaster.is_chain). Chains are still crawled but left out of what's
-# published. INCLUDE_CHAINS is the one switch: every count, chart, list and the catalog read site_roaster or
-# site_coffee. (public_market_weekly still counts chains; its strict xfail test_public_market_weekly_leaves_out_chains
-# and docs/RULES.md rule 77 are a separate change.) Temporary views: the database itself stays read-only.
+# Which roasters the site shows: the public roasters (public_roaster: not opted out, not a chain, not known only
+# from OpenStreetMap). Chains are still crawled but left out of what's published: public_roaster decides that for
+# every public table (public_market_weekly included) and so for the site; the is_chain filter below repeats it, so
+# INCLUDE_CHAINS can no longer bring chains back on its own. Every count, chart, list and the catalog read
+# site_roaster or site_coffee. Temporary views: the database itself stays read-only.
 INCLUDE_CHAINS = False
 SITE_VIEWS = (
     "create temp view site_roaster as select roaster_id from public_roaster"
@@ -87,6 +87,8 @@ SITE_VIEWS = (
 # - SINGLE_ORIGIN: LISTED, not a blend, origin known. The origin count and all three charts (in stock by origin, by
 #   process, and the median price by origin). Over the same roasters it selects public_market_weekly's coffees
 #   (tests/test_dbt.py checks the two cell for cell).
+# dbt states the same two rules once, as macros (dbt/macros/catalog_rules.sql: is_current, is_single_origin), which
+# int_current_catalog, public_market_weekly and release_changes use; the site reads its views with these strings.
 LISTED = "is_listed and catalog_status <> 'archived' and not is_wholesale"
 SINGLE_ORIGIN = f"{LISTED} and not is_blend and origin_country is not null"
 

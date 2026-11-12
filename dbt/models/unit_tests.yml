@@ -380,6 +380,8 @@ unit_tests:
       businesses on their own domains) are not aliases.
     model: int_roaster_state
     given:
+      - input: ref('chain_overrides')  # no override: every roaster's count decides
+        rows: []
       - input: ref('shared_hosts')
         rows:
           - {host: expireddomains.com, kind: parked}
@@ -442,6 +444,8 @@ unit_tests:
       is canonical before one the lake added later (L1).
     model: int_roaster_state
     given:
+      - input: ref('chain_overrides')  # no override: every roaster's count decides
+        rows: []
       - input: ref('shared_hosts')
         rows:
           - {host: expireddomains.com, kind: parked}
@@ -501,6 +505,8 @@ unit_tests:
       read a catalog and magnumcoffee.com never did (no_catalog): the store's id is the one that read it.
     model: int_roaster_state
     given:
+      - input: ref('chain_overrides')  # no override: every roaster's count decides
+        rows: []
       - input: ref('shared_hosts')
         rows:
           - {host: expireddomains.com, kind: parked}
@@ -587,7 +593,7 @@ unit_tests:
           - {roaster_id: r, roaster_name: R, country: US}
       - input: ref('int_roaster_state')
         format: sql
-        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
       - input: ref('int_origin_country')  # no origins in these cases
         format: sql
         rows: >-
@@ -658,10 +664,10 @@ unit_tests:
           - {roaster_id: r, run_date: 2026-10-19, is_current: true}
       - input: ref('stg_registry')
         rows:
-          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+          - {roaster_id: r, roaster_name: R, country: US}
       - input: ref('int_roaster_state')
         format: sql
-        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
       - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
         format: sql
         rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
@@ -716,10 +722,10 @@ unit_tests:
           - {roaster_id: r, run_date: 2026-10-19, is_current: true}
       - input: ref('stg_registry')
         rows:
-          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+          - {roaster_id: r, roaster_name: R, country: US}
       - input: ref('int_roaster_state')
         format: sql
-        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
       - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
         format: sql
         rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
@@ -745,8 +751,9 @@ unit_tests:
   - name: market_weekly_cells_leave_out_archived_blends_and_unknown_origins
     description: >-
       public_market_weekly counts public coffees that are listed, not archived, not wholesale, not blends and have
-      an origin; a missing process is its own cell, 'unknown'. (It counts chains, unlike mart_market and the site:
-      tests/test_dbt.py's xfail test_public_market_weekly_leaves_out_chains, a suspected bug.)
+      an origin; a missing process is its own cell, 'unknown'. A chain's coffees never reach it: public_coffee holds
+      public roasters' coffees only, and public_roaster leaves chains out (public_roaster_leaves_out_chains;
+      tests/test_dbt.py::test_public_market_weekly_leaves_out_chains end to end).
     model: public_market_weekly
     given:
       - input: ref('public_coffee')
@@ -868,10 +875,10 @@ unit_tests:
           - {roaster_id: r, run_date: 2026-10-19, is_current: true}
       - input: ref('stg_registry')
         rows:
-          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+          - {roaster_id: r, roaster_name: R, country: US}
       - input: ref('int_roaster_state')
         format: sql
-        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
       - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
         format: sql
         rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
@@ -908,6 +915,169 @@ unit_tests:
     expect:
       rows:
         - {bag_id: b2, shot_count: 0, shots_in_window: 0}
+
+  # --- Chains: more than chain_store_threshold (20) stores, or a hand-checked override; never public. -------------
+
+  - name: a_chain_has_more_than_20_stores_unless_overridden
+    description: >-
+      The owner's rule: a chain is anything with over 20 stores (stg_registry.locations). 20 stores is not a chain;
+      21 is. seeds/chain_overrides.csv decides over the count either way: a chain of cafes whose count reads 1 (the
+      count reads roastery places only), and a roaster the count calls a chain that isn't one.
+    model: int_roaster_state
+    given:
+      - input: ref('shared_hosts')
+        rows: []
+      - input: ref('chain_overrides')
+        rows:
+          - {roaster_id: cafes.com, is_chain: true, reason: "hundreds of cafes, one roastery place"}
+          - {roaster_id: notachain.com, is_chain: false, reason: "a wholesaler's warehouses, not stores"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: twenty.com, locations: 20, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: twentyone.com, locations: 21, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: one.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: cafes.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: notachain.com, locations: 62, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows: []
+      - input: ref('int_fetches')
+        rows: []
+    expect:
+      rows:
+        - {roaster_id: twenty.com, locations: 20, is_chain: false}
+        - {roaster_id: twentyone.com, locations: 21, is_chain: true}
+        - {roaster_id: one.com, locations: 1, is_chain: false}
+        - {roaster_id: cafes.com, locations: 1, is_chain: true}
+        - {roaster_id: notachain.com, locations: 62, is_chain: false}
+
+  - name: a_snapshots_chain_flags_replace_the_seed
+    description: >-
+      Once the build's snapshot carries chain flags (var chain_flags, the admin's Sources page), they are the
+      overrides and the seed is not read: peets.com, a chain only by the seed, is decided by its count again, and a
+      flag either way decides over the count.
+    model: int_roaster_state
+    overrides:
+      vars:
+        chain_flags:
+          - {roaster_id: one.com, chain: true}
+          - {roaster_id: notachain.com, chain: false}
+    given:
+      - input: ref('shared_hosts')
+        rows: []
+      - input: ref('chain_overrides')
+        rows:
+          - {roaster_id: peets.com, is_chain: true, reason: "the seed's override"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: peets.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: one.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: notachain.com, locations: 62, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: twentyone.com, locations: 21, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows: []
+      - input: ref('int_fetches')
+        rows: []
+    expect:
+      rows:
+        - {roaster_id: peets.com, is_chain: false}
+        - {roaster_id: one.com, is_chain: true}
+        - {roaster_id: notachain.com, is_chain: false}
+        - {roaster_id: twentyone.com, is_chain: true}
+
+  - name: an_empty_chain_flags_list_means_no_override
+    description: >-
+      chain_flags is [] when the owner has cleared every chain flag and published it: no override at all, so the
+      store count decides every roaster. It is not "no snapshot": the seed is not read (peets.com, a chain only by
+      the seed, is not a chain).
+    model: int_roaster_state
+    overrides:
+      vars:
+        chain_flags: []
+    given:
+      - input: ref('shared_hosts')
+        rows: []
+      - input: ref('chain_overrides')
+        rows:
+          - {roaster_id: peets.com, is_chain: true, reason: "the seed's override"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: peets.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: twentyone.com, locations: 21, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows: []
+      - input: ref('int_fetches')
+        rows: []
+    expect:
+      rows:
+        - {roaster_id: peets.com, is_chain: false}
+        - {roaster_id: twentyone.com, is_chain: true}
+
+  - name: public_roaster_leaves_out_chains
+    description: >-
+      public_roaster is the one place that decides "public": a chain (dim_roaster.is_chain) is left out however
+      publishable it is otherwise, next to the opted-out, OSM-only and non-US roasters it already left out. Every
+      other public table follows it.
+    model: public_roaster
+    given:
+      - input: ref('dim_roaster')
+        rows:
+          - {roaster_id: indie.com, roaster_name: Indie, is_chain: false, opted_out: false, sources: overture, country: US}
+          - {roaster_id: chain.com, roaster_name: Chain, is_chain: true, opted_out: false, sources: curated+overture, country: US}
+          - {roaster_id: optedout.com, roaster_name: Opted, is_chain: false, opted_out: true, sources: overture, country: US}
+          - {roaster_id: osmonly.com, roaster_name: OSM, is_chain: false, opted_out: false, sources: osm, country: US}
+      - input: ref('dim_coffee')
+        rows:
+          - {roaster_id: indie.com}
+          - {roaster_id: chain.com}
+          - {roaster_id: optedout.com}
+          - {roaster_id: osmonly.com}
+    expect:
+      rows:
+        - {roaster_id: indie.com, roaster_name: Indie}
+
+  - name: public_coffee_follows_public_roaster
+    description: >-
+      public_coffee holds the public roasters' coffees only (it joins public_roaster), so a coffee of a roaster
+      public_roaster leaves out (a chain here) is not published. It tests that the table follows its parent, which
+      decides chains (public_roaster_leaves_out_chains); it holds on main too.
+    model: public_coffee
+    given:
+      - input: ref('dim_coffee')
+        rows:
+          - {coffee_id: "indie.com:1", roaster_id: indie.com, title: Kenya, url: "https://indie.com/p/1", is_chain: false}
+          - {coffee_id: "chain.com:1", roaster_id: chain.com, title: Kenya, url: "https://chain.com/p/1", is_chain: true}
+      - input: ref('public_roaster')
+        rows:
+          - {roaster_id: indie.com, roaster_name: Indie}
+    expect:
+      rows:
+        - {coffee_id: "indie.com:1", roaster_id: indie.com, roaster_name: Indie, coffee_name: Kenya}
+
+  - name: public_price_event_follows_public_coffee
+    description: >-
+      public_price_event holds public coffees' events only, so the events of a coffee public_coffee leaves out (a
+      chain's here) are not published. It tests that the table follows its parent; it holds on main too.
+    model: public_price_event
+    given:
+      - input: ref('fct_price_event')
+        rows:
+          - {run_date: 2026-11-09, coffee_id: "indie.com:1", roaster_id: indie.com, variant_id: v1, event: new, price_usd: 20.0}
+          - {run_date: 2026-11-09, coffee_id: "chain.com:1", roaster_id: chain.com, variant_id: v1, event: new, price_usd: 18.0}
+      - input: ref('public_coffee')
+        rows:
+          - {coffee_id: "indie.com:1", roaster_id: indie.com}
+    expect:
+      rows:
+        - {run_date: 2026-11-09, coffee_id: "indie.com:1", roaster_id: indie.com, variant_id: v1, event: new, price_usd: 20.0}
 
   - name: origin_spellings_resolve_to_iso_3166_1
     description: >-

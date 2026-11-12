@@ -1028,7 +1028,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=24 " in r.stdout
+    assert "PASS=30 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1380,12 +1380,14 @@ GUARD_BREAKS = {
     "public_tables_are_facts_only": "alter table public_coffee add column tags varchar[]",
     # a latest version with no bag-weight row (#136): dim_coffee would silently keep its stored grams
     "variant_grams_are_valid": "delete from stg_variant_grams",
+    # a published roaster that is a chain: public_roaster would have stopped leaving chains out
+    "public_tables_have_no_chain": "update dim_roaster set is_chain = true where roaster_id = 'onyxcoffeelab.com'",
 }
 
 
 def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path):
-    """price_per_100g_in_range, sane_coffee_listings, unique_runs, public_tables_are_facts_only and
-    variant_grams_are_valid pass on every synthetic build, since the models never produce such a row. Each is made to fail here, so a guard that stopped
+    """price_per_100g_in_range, sane_coffee_listings, unique_runs, public_tables_are_facts_only,
+    variant_grams_are_valid and public_tables_have_no_chain pass on every synthetic build, since the models never produce such a row. Each is made to fail here, so a guard that stopped
     selecting anything (a renamed column, a dropped ref) would show."""
     rid = "onyxcoffeelab.com"
     probe(lake, "2026-10-18", rid)
@@ -1405,7 +1407,8 @@ def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path)
 
 
 def _build_with_a_chain(lake, tmp_path):
-    """onyxcoffeelab.com and intelligentsia.com each list one Kenya; the seed marks intelligentsia.com a chain."""
+    """onyxcoffeelab.com and intelligentsia.com each list one Kenya; the seed gives intelligentsia.com 21 stores,
+    one over chain_store_threshold, so it is a chain."""
     import csv
 
     config = tmp_path / "config"
@@ -1413,7 +1416,7 @@ def _build_with_a_chain(lake, tmp_path):
     with (FIX / "roasters.csv").open() as f:
         rows = list(csv.DictReader(f))
     for r in rows:
-        r["is_chain"] = "true" if r["roaster_id"] == "intelligentsia.com" else r["is_chain"]
+        r["locations"] = "21" if r["roaster_id"] == "intelligentsia.com" else r["locations"]
     with (config / "roasters.csv").open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
@@ -1426,7 +1429,7 @@ def _build_with_a_chain(lake, tmp_path):
 
 
 def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
-    """is_chain (the seed's flag): mart_market and everything on the site (the catalog, the headline counts, the
+    """is_chain (more than 20 stores): mart_market and everything on the site (the catalog, the headline counts, the
     charts and the states) leave a chain's coffees out."""
     from coffeedata import site
 
@@ -1453,22 +1456,63 @@ def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
     assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1", "1"]
 
 
-# --- Suspected bugs (docs/RULES.md): what the models should output. Strict xfails: each fails once fixed. ---------
+def test_every_chain_override_names_a_registry_roaster():
+    """An override for a roaster_id the registry doesn't list would decide nothing, silently: each one of
+    dbt/seeds/chain_overrides.csv names a roaster of config/roasters.csv, with a reason."""
+    import csv
+
+    with (ROOT / "config" / "roasters.csv").open(newline="") as f:
+        registry = {r["roaster_id"] for r in csv.DictReader(f)}
+    with (ROOT / "dbt" / "seeds" / "chain_overrides.csv").open(newline="") as f:
+        overrides = list(csv.DictReader(f))
+    assert overrides and all(o["roaster_id"] in registry for o in overrides), [
+        o["roaster_id"] for o in overrides if o["roaster_id"] not in registry
+    ]
+    assert all(o["is_chain"] in ("true", "false") and len(o["reason"]) >= 3 for o in overrides)
 
 
-@pytest.mark.xfail(
-    strict=True,
-    raises=AssertionError,
-    reason="suspected bug: public_market_weekly reads public_coffee, which has no is_chain, so it counts a chain's "
-    "coffees that mart_market and the site leave out (today the Kenya cell is 2 coffees from 2 roasters)",
-)
 def test_public_market_weekly_leaves_out_chains(lake, tmp_path):
+    """Formerly a strict xfail (docs/RULES.md rule 77): public_market_weekly counted a chain's coffees that
+    mart_market and the site left out. public_roaster now leaves chains out, so the Kenya cell is onyx's alone."""
     con = _build_with_a_chain(lake, tmp_path)
     got = con.execute(
         "select coffees, roasters from public_market_weekly where origin_country = 'Kenya'"
     ).fetchall()
     con.close()
     assert got == [(1, 1)]
+
+
+def test_a_chain_is_crawled_and_kept_internally_but_never_public(lake, tmp_path):
+    """The owner's decision: chains are still scraped, but filtered from the public result. The chain's coffee and
+    price events stay in dim_coffee and fct_price_event; no public table, and not the site, has its rows."""
+    from coffeedata import public, site
+
+    con = _build_with_a_chain(lake, tmp_path)
+    chain, indie = "intelligentsia.com", "onyxcoffeelab.com"
+    row = con.execute(
+        "select is_chain, coffees_listed from dim_roaster where roaster_id = ?", [chain]
+    ).fetchone()
+    assert row == (True, 1)
+    assert con.execute("select count(*) from fct_price_event where roaster_id = ?", [chain]).fetchone()[0] > 0
+    # public_market_weekly has no roaster_id: test_public_market_weekly_leaves_out_chains covers it
+    assert set(public.PUBLIC_TABLES) - {"public_market_weekly"} == {
+        "public_roaster",
+        "public_coffee",
+        "public_price_event",
+    }
+    sql = "select count(*) filter (where roaster_id = ?), count(*) filter (where roaster_id = ?) from {}"
+    for table in ("public_roaster", "public_coffee", "public_price_event"):
+        chains, indies = con.execute(sql.format(table), [chain, indie]).fetchone()
+        assert chains == 0 and indies > 0, table
+    con.close()
+    ok = run_dbt(lake, tmp_path, "test", "--select", "public_tables_have_no_chain")
+    assert ok.returncode == 0 and "PASS=1 " in ok.stdout, ok.stdout[-2000:]
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    assert chain not in (out / "catalog" / "catalog.json").read_text()
+
+
+# --- Suspected bugs (docs/RULES.md): what the models should output. Strict xfails: each fails once fixed. ---------
 
 
 @pytest.mark.xfail(
