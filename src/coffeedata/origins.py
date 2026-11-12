@@ -44,6 +44,12 @@ COUNTRIES = [
     "Nicaragua",
     "Panama",
     "Papua New Guinea",
+    # Misspellings of Papua New Guinea seen in listings, and the island's own name, which two countries share (Papua
+    # New Guinea and Indonesia's Papua): before these, "New Guinea" matched "Guinea", the West African country.
+    "Papa New Guinea",
+    "Papau New Guinea",
+    "Paupau New Guinea",
+    "New Guinea",
     "Paraguay",
     "Peru",
     "Philippines",
@@ -72,7 +78,10 @@ ALIASES = {
     "flores": "Indonesia",
     "kona": "United States",
     "hawaii": "United States",
-    "puerto rico": "United States",
+    # Puerto Rico is its own ISO 3166-1 country (PR), so it stays "Puerto Rico" (dbt/seeds/origin_country_iso.csv).
+    "papa new guinea": "Papua New Guinea",
+    "papau new guinea": "Papua New Guinea",
+    "paupau new guinea": "Papua New Guinea",
     "dr congo": "Democratic Republic of the Congo",
     "congo": "Democratic Republic of the Congo",
     "east timor": "Timor-Leste",

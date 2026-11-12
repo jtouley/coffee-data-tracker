@@ -1,8 +1,9 @@
 # Weekly private snapshots of green-coffee importers' public offer lists (src/coffeedata/importers.py): one pass a
 # week, one public page per importer, into a private Hugging Face dataset of its own. The snapshot is raw only: each
 # lot word for word (every cell of its row, and its URL), one immutable file per importer per week. Stated fields and
-# normalized values are derived from it at read time, never stored. No prices, page HTML or images. Backend-only:
-# dbt, the release, the site and the public export never read it.
+# normalized values are derived from it by a private dbt project (dbt_importers/, `coffeedata importer-build`), never
+# stored in it. No prices, page HTML or images. Backend-only: the main dbt project, the release, the site and the
+# public export never read it.
 #
 # Why GitHub Actions and not the Cloud Run jobs: two page fetches and one small upload a week need no NAT IP, no
 # staging bucket and no crawl window, and a Cloud Run job would need new GCP resources (a job, a scheduler trigger,

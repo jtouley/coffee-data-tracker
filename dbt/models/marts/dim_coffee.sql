@@ -79,7 +79,14 @@ select
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
     l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
     run.is_current as is_listed,
-    a.origin_country, a.origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
+    -- Origin as ISO 3166-1 (int_origin_country): the short name and alpha-2 code, null when the captured value
+    -- isn't one country (a blend's list, a continent, an unmapped spelling); the captured value stays beside them. A
+    -- sub-national place the spelling names (Hawaii) fills origin_region when the extraction gave none.
+    -- origin_country_display is the name the site shows (var origin_names: the ISO name or a common one). A blank
+    -- captured origin counts as none.
+    iso.iso_short_name as origin_country, iso.alpha2 as origin_country_code,
+    iso.display_name as origin_country_display, if(trim(a.origin_country) = '', null, a.origin_country) as origin_country_raw,
+    coalesce(a.origin_region, iso.region) as origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
     a.enrichment_method, a.is_wholesale,
@@ -112,6 +119,7 @@ join {{ ref('stg_runs') }} run using (roaster_id, run_date)
 left join {{ ref('stg_registry') }} r using (roaster_id)
 left join notes n using (coffee_id)
 left join prices p using (coffee_id)
+left join {{ ref('int_origin_country') }} iso on iso.raw_value = a.origin_country
 -- One store's coffees once: an alias's (int_roaster_state: another roaster_id serves the same store) are the
 -- canonical id's own products, so every consumer of this table (the public tables, the marts, the quality tests,
 -- dim_roaster's counts) counts the canonical id's alone.
