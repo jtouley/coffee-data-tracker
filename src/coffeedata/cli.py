@@ -1025,7 +1025,11 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     # One page per host for the HTML importers; Royal's listing pages wait ROYAL_PAGE_INTERVAL (importers.read_royal)
     # on top of the client's spacing. A slow page gets a minute. This is the one client allowed to reach a host only
     # the scheduled importers job fetches (http.schedule_only_host); importers.royal_listing_url decides whether it does.
-    with PoliteClient(timeout=60.0, retries=3, schedule_only_ok=True) as client:
+    # The run stops at IMPORTERS_DEADLINE_S, a little under the workflow's job timeout, so a long Royal pass ends as a
+    # recorded failure (DeadlineReached) instead of a killed job.
+    with PoliteClient(
+        timeout=60.0, retries=3, schedule_only_ok=True, deadline_s=importers.IMPORTERS_DEADLINE_S
+    ) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
     return all(r["status"] != "failed" for r in results)
