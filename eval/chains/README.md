@@ -38,7 +38,9 @@ The Coffee Bean & Tea Leaf), as the owner's decision asks; that is the decision,
 `coffee_roastery`, or a coffee place with "roast" in its name (`discover.overture`). The seed recorded it when it was
 built from an Overture release. Discovery writes its own count to the lake's `registry` table on each run, but
 `stg_registry` takes the seed's value for a seeded roaster (`coalesce(s.locations, a.locations, 1)`): **a seeded
-roaster's count is frozen at seeding**, and only a roaster the lake alone lists follows discovery. So no seeded roaster
+roaster's count is frozen at seeding**. A roaster the lake alone lists takes **the highest count discovery ever recorded**
+(`max(locations)` over every registry row), so its count can only go up: one inflated discovery count makes it a chain
+until it is overridden (no roaster is affected today: the lake registry has no data rows). So no seeded roaster
 crosses the threshold by itself (Coffee Bean's override guards against a change that can't come through this path
 today); the owner decided the count stays as discovery records it, and this README says so rather than changing it. Nothing new is crawled to decide `is_chain`, and no
 backfill is needed: every roaster has a count (1 when unknown, and for OpenStreetMap-only roasters).
@@ -80,7 +82,7 @@ coffee and roaster totals now do too.
   store's canonical id. A chain domain that is an alias of a non-chain canonical id would leave that store's coffees
   public. None exists today: no seed alias touches a chain, and release 971bfe has no alias rows. If one appears,
   decide it per store (`bool_or(is_chain) over (partition by canonical_roaster_id)`).
-- **The seeded count is frozen** (above).
+- **The seeded count is frozen, and a lake-only count only goes up** (above).
 
 ## Likely chains the count misses (the owner's decision)
 

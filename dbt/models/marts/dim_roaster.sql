@@ -4,7 +4,7 @@ with coffees as (
     -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
     -- Wholesale listings (a roaster's wholesale twin of a retail coffee) aren't counted as more coffees.
     select roaster_id,
-           count(*) filter (where is_listed and catalog_status <> 'archived' and not is_wholesale) as coffees_listed,
+           count(*) filter (where {{ is_current() }} and not is_wholesale) as coffees_listed,
            count(*) filter (where in_stock and not is_wholesale) as coffees_in_stock,
            count(*) filter (where catalog_status = 'archived' and not is_wholesale) as coffees_archived
     from {{ ref('dim_coffee') }} group by roaster_id
