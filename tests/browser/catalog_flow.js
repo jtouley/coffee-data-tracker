@@ -14,7 +14,8 @@ try { AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8"); } c
 
 const loaded = (page) => page.waitForFunction(() => !/^Loading/.test(document.getElementById("count").textContent));
 
-async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  // fail: how many requests fail first
+// fail: how the first requests fail, in turn: "network" (no response) or an HTTP status such as 500.
+async function open(browser, viewport, scheme, errors, slow = 0, fail = []) {
   const context = await browser.newContext({ viewport, colorScheme: scheme });
   const fetched = [];
   await context.route("**/*", async (route) => {
@@ -22,7 +23,9 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
     if (url.hostname !== "127.0.0.1") { errors.push(`outside request: ${url}`); return route.abort(); }
     if (url.pathname.endsWith("/catalog.json")) {
       fetched.push(url.search);
-      if (fetched.length <= fail) return route.fulfill({ status: 500, body: "oops" });
+      const how = fail[fetched.length - 1];
+      if (how === "network") return route.abort("internetdisconnected");
+      if (how) return route.fulfill({ status: how, body: "oops" });
       if (slow) await new Promise((r) => setTimeout(r, slow));
     }
     return route.continue();
@@ -48,12 +51,12 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
       await context.close();
     }
     // A failed one says what to do, and Try again does it: the button keeps focus while it loads (the count says
-    // "Loading…"), then hides and focus moves to the search box. Twice failed, it says so again.
+    // "Loading…"), then hides and focus moves to the search box. No response blames the connection; a 500 doesn't.
     {
-      const { context, page, fetched } = await open(browser, { width: 390, height: 844 }, "light", errors, 1000, 2);
-      const failed = "Couldn’t load the catalog. Check your connection, then try again.";
+      const { context, page, fetched } = await open(browser, { width: 390, height: 844 }, "light", errors, 1000, ["network", 500]);
+      const failed = "Couldn’t load the catalog. Try again in a few minutes.";
       await loaded(page);
-      assert.equal(await page.textContent("#count"), failed);
+      assert.equal(await page.textContent("#count"), "Couldn’t load the catalog. Check your connection, then try again.");
       const again = page.locator("#retry");
       assert.ok(await again.isVisible());
       assert.equal(await again.textContent(), "Try again");
@@ -70,6 +73,10 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
       assert.ok(await again.isHidden());
       assert.equal(await page.evaluate(() => document.activeElement.id), "q");
       assert.equal(fetched.length, 3);
+      // The controls were attached once: Show more draws each row once after two retries.
+      const total = Number((await page.textContent("#count")).match(/^[\d,]+/)[0].replace(/,/g, ""));
+      await page.click("#more");
+      assert.equal(await page.$$eval("#rows tr", (t) => t.length), total);
       await context.close();
     }
 
@@ -242,9 +249,14 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
     assert.equal(await count(), "1 coffee matching “blend” from 1 Kansas roaster. Highest price per 100 g first.");
     assert.equal(await fbtn.textContent(), "Filters · Kansas");
     await page.uncheck("#stock");
-    assert.equal(await fbtn.textContent(), "Filters · Kansas, sold out too");
+    assert.equal(await fbtn.textContent(), "Filters · Kansas, incl. sold out");
     await page.check("#stock");
     await page.selectOption("#state", "");
+    // Roaster A–Z is by name, ignoring case: "little seed coffee" sits with the L's, though the file has it last.
+    await page.selectOption("#sort", "roaster");
+    await search("zebra");
+    assert.deepEqual(await titles(), ["Capitol Roast", "Seed Roast", "Brand New Roast"]);
+    await page.selectOption("#sort", "desc");
     // A new sort starts at the first page again: past 500, Show more, then a change of sort.
     const total = Number((await search("")).match(/^[\d,]+/)[0].replace(/,/g, ""));
     await page.locator("#more").click();

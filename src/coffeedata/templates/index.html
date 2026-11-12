@@ -43,12 +43,15 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 th.num { white-space: nowrap; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .filters input, .filters select { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border);
-  background: var(--surface-0); color: var(--text-primary); }
+  background: var(--surface-0); color: var(--text-primary); line-height: 1.25; min-height: 44px; }  /* every control 44 px, one height a row */
 .filters input[type=search] { flex: 1 1 220px; min-width: 0; }  /* min-width: it shrinks to the row at 320 px */
-/* Search and Sort on the first row; the filters, which narrow, on their own row. On a phone the filters fold behind a
-   "Filters" button (a disclosure: aria-expanded), whose label lists the ones that are on, and Sort stays beside it. */
+/* Search and Sort, which find and order, on the first row; the filters, which narrow, on the second. One row would
+   squeeze the search box to about 250 px and clip a chosen origin, and it never fits the 1120 px page without that.
+   On a phone the filters fold behind a "Filters" button (a disclosure: aria-expanded), whose label lists the ones
+   that are on, and Sort stays beside it. */
 .filters .sort { flex: 0 1 auto; min-width: 0; }
-.filters .sort select { min-width: 0; }
+.filters select { height: 44px; }  /* a select ignores line-height; its height is set */
+.filters .sort select { min-width: 0; }  /* 13 px, as its label: beside Filters on a 390 px phone, even in DejaVu Sans */
 #panel { display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 100%; min-width: 0; }
 #fbtn { display: none; }
 .status { font-size: 12px; white-space: nowrap; }
@@ -86,13 +89,14 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   .filters select { flex: 1 1 40%; min-width: 0; }
   .filters input[type=search] { flex-basis: 100%; }
   #fbtn { display: flex; align-items: center; gap: 6px; flex: 1 1 7rem; min-width: 0; min-height: 44px; font: inherit;
-    padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-0);
-    color: var(--text-primary); text-align: left; cursor: pointer; }
+    padding: 6px 10px; border-radius: 6px; border: 1px solid var(--text-muted); background: var(--surface-0);
+    color: var(--text-primary); text-align: left; cursor: pointer; }  /* the edge at 3:1 or more: the one way to the filters */
   #fbtn .on { color: var(--text-secondary); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
   #fbtn::after { content: "▾"; content: "▾" / ""; margin-left: auto; padding-left: 4px; color: var(--text-secondary); }
   #fbtn[aria-expanded="true"]::after { content: "▴"; content: "▴" / ""; }
   #panel[hidden] { display: none; }
-  .filters .sort select { min-height: 44px; } }
+}
+@media (max-width: 360px) { #panel select { flex-basis: 100%; } }  /* one filter a row, so "All processes" reads whole */
 </style>
 </head>
 <body>
@@ -323,8 +327,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     // breaks ties the same way. Coffees with no price go last in both directions.
     const sort = $("sort").value, dir = sort === "desc" ? -1 : 1, price = r => r[C.price_per_100g];
     let unpriced = 0;
-    if (sort === "roaster") hits.sort((a, b) => a.i - b.i);
-    else {
+    if (sort !== "roaster") {  // Roaster A–Z is the rows' own order, which the filter keeps
       hits.sort((a, b) => (price(a) == null) - (price(b) == null) || dir * (price(a) - price(b)) || a.i - b.i);
       for (const r of hits) if (price(r) == null) unpriced++;
     }
@@ -332,7 +335,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     if (sort === "roaster") th.removeAttribute("aria-sort"); else th.setAttribute("aria-sort", sort === "asc" ? "ascending" : "descending");
     $("arrow").textContent = {asc: " ↑", desc: " ↓"}[sort] || "";
     // The Filters button (on a phone) names the filters that are on.
-    const on = [o, p, st && STATES[st], !s && "sold out too"].filter(Boolean);
+    const on = [o, p, st && STATES[st], !s && "incl. sold out"].filter(Boolean);
     $("fon").textContent = on.length ? " · " + on.join(", ") : "";
     $("rows").textContent = "";
     draw(0);
@@ -354,10 +357,21 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     $("fbtn").setAttribute("aria-expanded", open); $("panel").hidden = !open;
   });
   $("panel").hidden = true;
-  const load = () => fetch("catalog.json{% if data_key %}?b={{ data_key }}{% endif %}").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+  // The controls, attached once; they wait for the catalog.
+  let ready = false;
+  $("q").addEventListener("input", () => { if (ready) typed(); });
+  ["origin", "process", "state", "stock", "sort"].forEach(id => $(id).addEventListener("input", () => { if (ready) render(); }));
+  $("more").addEventListener("click", () => { const first = draw(shown); if (first) first.focus(); });
+
+  function setup(d) {
     d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
+    // Roaster A–Z: the names in the reader's locale, ignoring case and accents ("little seed", "trücup"). The sort is
+    // stable, so each roaster's coffees stay together in the file's order (roaster_id, then title).
+    const names = [...new Set(rows.map(r => r[C.roaster_name] ?? ""))].sort(new Intl.Collator(undefined, {sensitivity: "base"}).compare);
+    const rank = new Map(names.map((name, i) => [name, i]));
+    rows.sort((a, b) => rank.get(a[C.roaster_name] ?? "") - rank.get(b[C.roaster_name] ?? ""));
+    rows.forEach((r, i) => r.i = i);
     const cities = new Set();
-    rows.forEach((r, i) => r.i = i);  // the file's order: roaster, then title
     for (const r of rows) {
       const city = r[C.roaster_city] || "";
       r.city = city.toLowerCase(); r.place = [city, r[C.roaster_state]].filter(Boolean).join(", ");
@@ -373,15 +387,20 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     fill("origin", distinct("origin_country")); fill("process", distinct("process"));
     // The roasters' states by name; render() writes each option's name and count.
     fill("state", distinct("roaster_state").filter(v => STATES[v]).sort((a, b) => STATES[a].localeCompare(STATES[b])));
-    $("q").addEventListener("input", typed);
-    ["origin", "process", "state", "stock", "sort"].forEach(id => $(id).addEventListener("input", render));
-    $("more").addEventListener("click", () => { const first = draw(shown); if (first) first.focus(); });
+    ready = true;
     render();
-  }).then(() => { const again = $("retry"); if (document.activeElement === again) $("q").focus(); again.hidden = true; }, failed);
-  // A failed load says what to do, and Try again does it, without reloading the page. The button keeps focus while it
-  // loads, and on success focus moves to the search box.
-  function failed() {
-    $("count").textContent = "Couldn’t load the catalog. Check your connection, then try again.";
+    const again = $("retry"); if (document.activeElement === again) $("q").focus(); again.hidden = true;
+  }
+  // Only the request and the file can fail here, and each says what to do. A failure in setup() is a bug, not the
+  // reader's connection, so it isn't caught as one.
+  const load = () => fetch("catalog.json{% if data_key %}?b={{ data_key }}{% endif %}")
+    .then(r => r.ok ? r.json().catch(() => Promise.reject("file")) : Promise.reject("status"), () => Promise.reject("network"))
+    .then(setup, failed);
+  // Try again fetches the file again, without reloading the page. The button keeps focus while it loads, and on
+  // success focus moves to the search box.
+  function failed(why) {
+    $("count").textContent = why === "network" ? "Couldn’t load the catalog. Check your connection, then try again."
+      : "Couldn’t load the catalog. Try again in a few minutes.";
     const again = $("retry"); again.removeAttribute("aria-disabled"); again.hidden = false;
   }
   $("retry").addEventListener("click", () => {

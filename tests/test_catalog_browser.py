@@ -42,7 +42,8 @@ ROASTERS = [
     ("plaza.coffee", "Plaza Roasters", "Kansas City", "MO"),
     ("hill.coffee", "Strawberry Hill Roasters", "Kansas City", "KS"),
     ("sumatrahouse.coffee", "Sumatra House", "Portland", "OR"),
-    ("yorkbeans.coffee", "York Beans", "York", "PA"),  # "new york" is the state, not York, PA
+    ("yorkbeans.coffee", "York Beans", "York", "PA"),
+    ("littleseed.coffee", "little seed coffee", "Boise", "ID"),  # "new york" is the state, not York, PA
 ]
 # main's columns, then the two added at the end
 COLUMNS = ["coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
@@ -67,7 +68,7 @@ def catalog() -> dict:
     site's order (roaster, then title). One Michigan coffee is a "City Roast", which "michigan city coffee" mustn't
     find."""
     rows = [
-        coffee("capitolbeans.com", "Capitol Roast"),
+        coffee("capitolbeans.com", "Capitol Roast", notes=("zebra",)),
         coffee("drycreek.coffee", "Dry Creek Blend", price=None),
         coffee("empire.coffee", "Empire Blend", notes=("vermont maple",), price=9.0),
         coffee("gotham.coffee", "Gotham Blend", price=None),
@@ -88,7 +89,9 @@ def catalog() -> dict:
         coffee("plaza.coffee", "Plaza Espresso"),
         coffee("hill.coffee", "Hill Blend", price=4.0),
         coffee("sumatrahouse.coffee", "Indonesia Sumatra", notes=("dried fig", "made in small batches")),
-        coffee("yorkbeans.coffee", "Brand New Roast"),
+        coffee("yorkbeans.coffee", "Brand New Roast", notes=("zebra",)),
+        # A lower-case name, last in the file as a binary sort would put it; the page puts it with the L's.
+        coffee("littleseed.coffee", "Seed Roast", notes=("zebra",)),
     ]
     return {
         "release": {"release_build_id": BUILD},

@@ -117,15 +117,20 @@ def _hbar_narrow(rows: list[tuple[str, float, str]], unit: str, label: str) -> s
     ]
     for i, (cat, v, tip) in enumerate(rows):
         y = i * row_h
-        pct = max(v / vmax * most, 1)
+        pct = max(v / vmax * most, 0.5)
         out.append(
             f'<g class="mark" data-tip="{escape(tip)}">'
             f'<rect class="hit" x="0" y="{y}" width="100%" height="{row_h}"/>'
             f'<text class="cat" x="0" y="{y + 12}">{escape(cat)}</text>'
-            # A 4px rounded data end, square at the baseline: a rounded bar, its baseline end squared off.
-            f'<rect class="bar" x="0" y="{y + text_h}" width="{pct:.1f}%" height="{bar_h}" rx="4"/>'
-            f'<rect class="bar" x="0" y="{y + text_h}" width="4" height="{bar_h}"/>'
-            f'<text class="val" x="{pct:.1f}%" dx="6" y="{y + text_h + bar_h / 2}" dominant-baseline="central">'
+            # A 4px rounded data end, square at the baseline: a rounded bar, its baseline end squared off. A short bar
+            # (under 3% of the width, about 10 px on a phone) is a plain rectangle, so the cap never lengthens it.
+            + (
+                f'<rect class="bar" x="0" y="{y + text_h}" width="{pct:.1f}%" height="{bar_h}" rx="4"/>'
+                f'<rect class="bar" x="0" y="{y + text_h}" width="4" height="{bar_h}"/>'
+                if pct >= 3
+                else f'<rect class="bar" x="0" y="{y + text_h}" width="{pct:.1f}%" height="{bar_h}"/>'
+            )
+            + f'<text class="val" x="{pct:.1f}%" dx="6" y="{y + text_h + bar_h / 2}" dominant-baseline="central">'
             f"{escape(unit.format(v))}</text>"
             "</g>"
         )
@@ -410,7 +415,9 @@ def build(db: Path, out: Path) -> Path:
                -- the stable roaster key, and the roaster's city as public_roaster stores it.
                c.roaster_id, r.city as roaster_city
         from site_coffee c join public_roaster r using (roaster_id)
-        where c.is_listed and not c.is_wholesale order by c.roaster_name, c.title""",
+        where c.is_listed and not c.is_wholesale
+        -- Each roaster's coffees together, in a stable order; the page sorts the names A–Z in the reader's locale.
+        order by c.roaster_name, c.roaster_id, c.title, c.coffee_id""",
     )
     # The states are the listed coffees' roasters' (the same roasters as totals.roasters); the origins are the
     # single-origin listings' countries.

@@ -13,7 +13,7 @@
     sync();
   });
 
-  // Tooltips: hover and keyboard focus, textContent only.
+  // Tooltips: on hover, textContent only; each chart's Table carries the numbers.
   const tip = document.getElementById("tip");
   const show = (el, x, y) => { tip.textContent = el.dataset.tip; tip.style.display = "block";
     tip.style.left = Math.min(x + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (y + 12) + "px"; };
