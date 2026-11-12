@@ -323,3 +323,12 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - #145 broke this: it was merged without re-review. A post-merge review is running before Royal's first scheduled run (Wednesday 11-18, 17:37 UTC).
 - No changes to shared crawler code without the owner's approval. Royal is "just another crawler": robots.txt is handled exactly as for every roaster.
 - Importer derivation belongs in dbt, in a private target (Option A).
+
+## 2026-11-12 owner decisions (cont.)
+- #144: merge now; the Snowflake migrate (weekly, snowflake_migrate) runs after the 11-17 load. #148: merged as a private view; its evaluation is owed before any use.
+- #139: build the real 95% gate (a fresh ~500-coffee sealed population sample on published prices), plus a census stratum of the coffees #139 changes.
+- Labelers: A and B on Haiku; the tiebreaker C on Sonnet.
+- AI may read and label the Royal text already stored privately: it's our scraped data. Only fetching Royal's site stays off-limits to agents.
+- Investigate the WooCommerce enrichment-abstain jump (11-09).
+- Weekly importer-build: in GitHub Actions after each snapshot, writing only to the private dataset.
+- The private importers dataset was created on 2026-11-12 with the session token (it verified create and write access).
