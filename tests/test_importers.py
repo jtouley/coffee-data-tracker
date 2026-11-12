@@ -32,6 +32,12 @@ MON = date(2026, 11, 9)  # its week
 NEXT = datetime(2026, 11, 18, 17, 37, tzinfo=UTC)  # the next week
 
 
+@pytest.fixture(autouse=True)
+def _checkout(tmp_path, monkeypatch):
+    """Each test's private database lives in its own tmp_path (importers.ROOT), never the real checkout's build/."""
+    monkeypatch.setattr(importers, "ROOT", tmp_path.resolve())
+
+
 def _stated(name: str, html: str) -> list[dict]:
     """The page's lots with the fields it states (importers.stated, as the private dbt project reads them)."""
     out = []
@@ -659,6 +665,7 @@ def test_the_build_command_prints_counts_only_and_keeps_dbts_output_in_its_file(
 def test_a_failed_build_publishes_nothing_and_exits_1(tmp_path, monkeypatch, capsys):
     from coffeedata import cli
 
+    monkeypatch.chdir(tmp_path)  # the remote lake stages under build/ here
     monkeypatch.setenv("COFFEEDATA_IMPORTERS", "hf://datasets/someone/importers")
     monkeypatch.setattr(importers, "build", lambda *a, **k: False)
     monkeypatch.setattr(importers, "run_counts", lambda target: {"model": {"error": 1, "skipped": 3}})
@@ -843,6 +850,117 @@ def test_the_private_build_never_deletes_a_database_it_does_not_own(tmp_path, mo
     _private_build_refused(tmp_path, monkeypatch, "doesn't own")
     with duckdb.connect(str(db), read_only=True) as con:
         assert con.execute("select x from dim_coffee").fetchall() == [(1,)]
+
+
+@needs_dbt
+def test_the_private_database_is_the_checkouts_whatever_the_working_directory(tmp_path, monkeypatch):
+    """DB is anchored to the checkout (importers.ROOT): a build run from another folder, with a lake path relative to
+    that folder, writes the checkout's build/importers.duckdb and nothing where it runs."""
+    repo, elsewhere = tmp_path / "repo", tmp_path / "elsewhere"
+    repo.mkdir()
+    elsewhere.mkdir()
+    monkeypatch.setattr(importers, "ROOT", repo.resolve())
+    lake = _two_weeks(elsewhere)
+    monkeypatch.chdir(elsewhere)
+    assert importers.private_db() == repo.resolve() / importers.DB
+    assert importers.build(Lake("importers", tables=IMPORTER_TABLES))  # relative to the working directory
+    assert (repo / importers.DB).is_file() and not (elsewhere / "build").exists()
+    assert lake.root == elsewhere / "importers"
+
+
+def test_the_private_database_refuses_a_link_on_its_fixed_path(tmp_path, monkeypatch):
+    """Neither the file nor its build/ folder may be a link: the fixed path is the file itself."""
+    repo, other = tmp_path / "repo", tmp_path / "other"
+    repo.mkdir()
+    other.mkdir()
+    monkeypatch.setattr(importers, "ROOT", repo.resolve())
+    (repo / "build").symlink_to(other, target_is_directory=True)
+    with pytest.raises(ValueError, match="build is a link"):
+        importers.private_db()
+    with pytest.raises(ValueError, match="is a link"):
+        importers.build(_local(tmp_path))
+    assert list(other.iterdir()) == []
+    (repo / "build").unlink()
+    (repo / "build").mkdir()
+    (repo / importers.DB).symlink_to(other / "x.duckdb")
+    with pytest.raises(ValueError, match="importers.duckdb is a link"):
+        importers.private_db()
+
+
+def test_dbts_work_tables_from_an_interrupted_build_are_the_projects_own():
+    """An interrupted build leaves `<model>__dbt_tmp` or `<model>__dbt_backup` behind: those don't lock the next
+    build, but a work table for anything that isn't one of the project's models is still foreign."""
+    models = importers.private_models()
+    assert "importer_offers" in models
+    for name in ("importer_offers", "importer_offers__dbt_tmp", "stg_importer_lots__dbt_backup"):
+        assert importers.own_table(name, models), name
+    for name in ("dim_coffee", "dim_coffee__dbt_tmp", "__dbt_tmp", "importer_offers__dbt_tmpx"):
+        assert not importers.own_table(name, models), name
+
+
+@needs_dbt
+def test_an_interrupted_builds_work_tables_never_stop_the_next(tmp_path):
+    """Both guards accept them: importers.build replaces the database, and the project's own on-run-start (run
+    directly on a database still holding them) goes on, while a foreign table stops it."""
+    import subprocess
+
+    import duckdb
+
+    lake = _two_weeks(tmp_path)
+    db = tmp_path / importers.DB
+    db.parent.mkdir(exist_ok=True)
+
+    def leave(*tables: str) -> None:
+        db.unlink(missing_ok=True)
+        with duckdb.connect(str(db)) as con:
+            for t in tables:
+                con.execute(f"create table {t} as select 1 as x")
+
+    leave("importer_offers__dbt_tmp", "stg_importer_lots__dbt_backup")
+    assert importers.build(lake)
+    with duckdb.connect(str(db), read_only=True) as con:
+        assert con.execute("select count(*) from importer_offers").fetchone() == (16,)
+
+    project = str(Path(__file__).parent.parent / "dbt_importers")
+    sources = json.dumps({"importer_sources": [str(s) for s in lake.sources("importer_raw")]})
+    for tables, ok in ((("importer_offers__dbt_tmp",), True), (("dim_coffee__dbt_tmp",), False)):
+        leave(*tables)
+        r = subprocess.run(
+            ["dbt", "run", "--select", "stg_importer_lots", "--project-dir", project, "--profiles-dir", project,
+             "--target-path", str(tmp_path / "t"), "--log-path", str(tmp_path / "l"), "--vars", sources],
+            cwd=tmp_path, env={**os.environ, "COFFEEDATA_IMPORTERS_DB": importers.DB}, capture_output=True, text=True,
+        )  # fmt: skip
+        assert (r.returncode == 0) is ok, r.stdout[-2000:]
+        if not ok:
+            assert "holds tables the importers project doesn't own (dim_coffee__dbt_tmp)" in r.stdout
+
+
+@needs_dbt
+def test_a_lot_stored_with_no_cells_stays_an_offer_with_null_values(tmp_path):
+    """No lot drops out of importer_offers: one stored with no cells (an empty list, or none) is an offer with its
+    keys and null values, and the project's row-count test (every_lot_is_an_offer) holds."""
+    lake = _local(tmp_path)
+    base = {
+        "week": MON,
+        "fetched_at": NOW.replace(microsecond=0),
+        "source_url": "https://example.test/",
+        "parser_version": "2",
+    }
+    for name, cells in (("cafe_imports", []), ("interamerican", None)):
+        rows = [base | {"importer": name, "row": 0, "url": None, "cells": cells},
+                base | {"importer": name, "row": 1, "url": None, "cells": _cells({"Name": "A", "Product": "A"})}]  # fmt: skip
+        lake.write("importer_raw", importers.path(name, MON), rows)
+    offers = importer_offers(lake, tmp_path)
+    assert [(o["importer"], o["row"]) for o in offers] == [
+        ("cafe_imports", 0), ("cafe_imports", 1), ("interamerican", 0), ("interamerican", 1)
+    ]  # fmt: skip
+    for empty in (o for o in offers if o["row"] == 0):
+        assert empty["week"] == MON and empty["rules_version"] == rules.RULES_VERSION
+        for field in ("lot_id", "name", "origin", "process", "process_type", "varieties", "certifications",
+                      "not_certified", "grower_type", "altitude_min_m", "harvest_months"):  # fmt: skip
+            assert empty[field] is None, (empty["importer"], field)
+    tests = (Path(__file__).parent.parent / "dbt_importers/tests/every_lot_is_an_offer.sql").read_text()
+    assert "ref('stg_importer_lots')" in tests and "ref('importer_offers')" in tests
 
 
 @needs_dbt

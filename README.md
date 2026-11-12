@@ -246,7 +246,7 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
 | `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
 | `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by the main dbt project or released. Only the private one (`dbt_importers/`, `coffeedata importer-build`) reads it, and `coffeedata importer-build --publish` keeps its latest `importer_offers` there under `derived/` |
-| `COFFEEDATA_IMPORTERS_DB` | none | The private importers project's database file. `coffeedata importer-build` sets it to `build/importers.duckdb`, its only allowed value; the project refuses any other, and the command refuses a public database, a link, or a file holding tables it doesn't own |
+| `COFFEEDATA_IMPORTERS_DB` | none | The private importers project's database file. `coffeedata importer-build` sets it to `build/importers.duckdb` under the checkout (whatever the working directory; dbt runs from there), its only allowed value; the project refuses any other, and the command refuses a public database, a link (the file or its `build/` folder), or a file holding tables it doesn't own (dbt's own work tables for its models, left by an interrupted build, aside) |
 | `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
 | `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
@@ -385,7 +385,7 @@ text. No prices, page HTML or images. The stated fields and our normalized value
 dbt project of its own, `dbt_importers/` (`coffeedata importer-build`): staging unnests each lot's cells, and
 intermediate models apply the rules (SQL over the vocabulary in `importer_rules.py`, `extract.py` and `origins.py`,
 handed to dbt by a Python model; dbt unit tests in `dbt_importers/models/unit_tests.yml`) into `importer_offers`. It
-builds into its own database file, only ever `build/importers.duckdb`, which the main build, the release, the site, the
+builds into its own database file, only ever the checkout's `build/importers.duckdb`, which the main build, the release, the site, the
 exports, the contracts and the MCP server never open (`tests/test_importers.py`). Each build re-derives the whole
 history from raw, so a better rule applies to every week. After each weekly snapshot that passes, the workflow's `build` job runs
 `coffeedata importer-build --publish` and keeps the latest build's `importer_offers` in the same private dataset, as
