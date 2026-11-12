@@ -1,0 +1,683 @@
+{
+ "Africa": {
+  "label": "NOT_A_COUNTRY",
+  "products": 1
+ },
+ "Bolivia": {
+  "label": "BO",
+  "products": 115
+ },
+ "Bolivia, Colombia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Bolivia, Plurinational State of": {
+  "label": "BO",
+  "products": 0,
+  "round": 2
+ },
+ "Brasil": {
+  "label": "BR",
+  "products": 1
+ },
+ "Brazil": {
+  "label": "BR",
+  "products": 1551
+ },
+ "Brazil, Colombia": {
+  "label": "MULTIPLE",
+  "products": 3
+ },
+ "Brazil, Colombia, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Brazil, Colombia, Peru, Bolivia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Brazil, El Salvador": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Brazil, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 3
+ },
+ "Brazil, Kenya, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Brazil, Mexico": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Brazil, Peru": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Brazil, Peru, India": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Burundi": {
+  "label": "BI",
+  "products": 244
+ },
+ "Burundi, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Cameroon": {
+  "label": "CM",
+  "products": 13
+ },
+ "Central African Republic": {
+  "label": "CF",
+  "products": 0,
+  "round": 2
+ },
+ "Central America": {
+  "label": "NOT_A_COUNTRY",
+  "products": 1
+ },
+ "Central America And Indonesia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Central America, Indonesia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Central American": {
+  "label": "NOT_A_COUNTRY",
+  "products": 0,
+  "round": 2
+ },
+ "Central American, Indonesia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "China": {
+  "label": "CN",
+  "products": 27
+ },
+ "Colombia": {
+  "label": "CO",
+  "products": 4580
+ },
+ "Colombia & Peru": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Brazil": {
+  "label": "MULTIPLE",
+  "products": 2
+ },
+ "Colombia, Brazil, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Costa Rica": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Costa Rica, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Colombia, El Salvador": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 4
+ },
+ "Colombia, Ethiopia, Nicaragua": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 4
+ },
+ "Colombia, Honduras": {
+  "label": "MULTIPLE",
+  "products": 3
+ },
+ "Colombia, Honduras, Costa Rica": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Indonesia": {
+  "label": "MULTIPLE",
+  "products": 2
+ },
+ "Colombia, Mexico": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Mexico, Brazil": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Mexico, Costa Rica": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Colombia, Mexico, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Colombia, Nicaragua": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Papua New Guinea, India": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Peru": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia, Sumatra": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Colombia/Costa Rica": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Congo, The Democratic Republic of the": {
+  "label": "CD",
+  "products": 0,
+  "round": 2
+ },
+ "Costa Rica": {
+  "label": "CR",
+  "products": 1154
+ },
+ "Costa Rica & Colombia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Costa Rica / Peru": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Costa Rica, El Salvador": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Costa Rica, Ethiopia, Brazil": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Costa Rica, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Costa Rica, Honduras": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Costa Rica, Mexico": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Cuba": {
+  "label": "CU",
+  "products": 10
+ },
+ "Côte d'Ivoire": {
+  "label": "CI",
+  "products": 0,
+  "round": 2
+ },
+ "DR Congo": {
+  "label": "CD",
+  "products": 0,
+  "round": 2
+ },
+ "Democratic Republic Of Congo": {
+  "label": "CD",
+  "products": 2
+ },
+ "Democratic Republic of the Congo": {
+  "label": "CD",
+  "products": 60
+ },
+ "Dominican Republic": {
+  "label": "DO",
+  "products": 37
+ },
+ "East Africa": {
+  "label": "NOT_A_COUNTRY",
+  "products": 1
+ },
+ "Ecuador": {
+  "label": "EC",
+  "products": 208
+ },
+ "El Salvador": {
+  "label": "SV",
+  "products": 322
+ },
+ "El Salvador, Honduras": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "El Salvador, Mexico, Brazil": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "El Salvador, Nicaragua, Honduras": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Ethiopia": {
+  "label": "ET",
+  "products": 2879
+ },
+ "Ethiopia, Honduras": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Ethiopia, Mexico, Brazil": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Ethiopia, Peru": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Gabon": {
+  "label": "GA",
+  "products": 0,
+  "round": 2
+ },
+ "Guatemala": {
+  "label": "GT",
+  "products": 1713
+ },
+ "Guatemala, Brazil": {
+  "label": "MULTIPLE",
+  "products": 2
+ },
+ "Guatemala, Brazil, Nicaragua": {
+  "label": "MULTIPLE",
+  "products": 2
+ },
+ "Guatemala, Colombia": {
+  "label": "MULTIPLE",
+  "products": 3
+ },
+ "Guatemala, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Guatemala, Honduras": {
+  "label": "MULTIPLE",
+  "products": 2
+ },
+ "Guatemala, Indonesia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Guatemala, Mexico": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Guatemala, Peru": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Guinea": {
+  "label": "AMBIGUOUS",
+  "products": 0
+ },
+ "Haiti": {
+  "label": "HT",
+  "products": 26
+ },
+ "Hawaii": {
+  "label": "US",
+  "products": 0,
+  "round": 2
+ },
+ "Hawaii, Usa": {
+  "label": "US",
+  "products": 2
+ },
+ "Honduras": {
+  "label": "HN",
+  "products": 1150
+ },
+ "Honduras, Brazil, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Honduras, Colombia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Honduras, Nicaragua, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "India": {
+  "label": "IN",
+  "products": 162
+ },
+ "India, Colombia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Indonesia": {
+  "label": "ID",
+  "products": 1637
+ },
+ "Indonesia, Africa": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Indonesia, Costa Rica, Brazil": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Indonesia, Costa Rica, Kenya": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Indonesia, Honduras": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Indonesia, Mexico": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Indonesia, Yemen": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Ivory Coast": {
+  "label": "CI",
+  "products": 1
+ },
+ "Jamaica": {
+  "label": "JM",
+  "products": 78
+ },
+ "Jamaica, Haiti": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Jamaica, United States": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Kenya": {
+  "label": "KE",
+  "products": 823
+ },
+ "Kenya, Colombia, Costa Rica": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Kenya, Hawaii (Usa)": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Kenya, Tanzania, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Lao People's Democratic Republic": {
+  "label": "LA",
+  "products": 0,
+  "round": 2
+ },
+ "Laos": {
+  "label": "LA",
+  "products": 6
+ },
+ "Latin America": {
+  "label": "NOT_A_COUNTRY",
+  "products": 0
+ },
+ "Madagascar": {
+  "label": "MG",
+  "products": 16
+ },
+ "Malawi": {
+  "label": "MW",
+  "products": 10
+ },
+ "Malaysia": {
+  "label": "MY",
+  "products": 4
+ },
+ "Mexico": {
+  "label": "MX",
+  "products": 1364
+ },
+ "Mexico, Colombia, Ethiopia": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Mexico, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Mexico, Honduras": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Myanmar": {
+  "label": "MM",
+  "products": 12
+ },
+ "Nepal": {
+  "label": "NP",
+  "products": 3
+ },
+ "New Guinea": {
+  "label": "AMBIGUOUS",
+  "products": 13
+ },
+ "Nicaragua": {
+  "label": "NI",
+  "products": 612
+ },
+ "Nicaragua, Colombia, Sumatra": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Nicaragua, Sumatra, Costa Rica": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "North America": {
+  "label": "NOT_A_COUNTRY",
+  "products": 1
+ },
+ "Panama": {
+  "label": "PA",
+  "products": 272
+ },
+ "Papua New Guinea": {
+  "label": "PG",
+  "products": 381
+ },
+ "Papua New Guinea, El Salvador": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Papua New Guinea, India": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Papua New Guinea, Peru": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Paraguay": {
+  "label": "PY",
+  "products": 0
+ },
+ "Peru": {
+  "label": "PE",
+  "products": 1001
+ },
+ "Peru & Colombia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Peru, Honduras": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Peru, India, Nicaragua": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Peru, India, Nicaragua, Guatemala": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Peru, Indonesia": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Peru, Mexico": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Peru, Sumatra": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Perú": {
+  "label": "PE",
+  "products": 0
+ },
+ "Philippines": {
+  "label": "PH",
+  "products": 21
+ },
+ "Puerto Rico": {
+  "label": "PR",
+  "products": 2
+ },
+ "Rwanda": {
+  "label": "RW",
+  "products": 307
+ },
+ "Rwanda, Uganda": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "Sierra Leone": {
+  "label": "SL",
+  "products": 0,
+  "round": 2
+ },
+ "South America": {
+  "label": "NOT_A_COUNTRY",
+  "products": 1
+ },
+ "Sri Lanka": {
+  "label": "LK",
+  "products": 0,
+  "round": 2
+ },
+ "Sumatra": {
+  "label": "ID",
+  "products": 0,
+  "round": 2
+ },
+ "Sumatra, Brazil": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Tanzania": {
+  "label": "TZ",
+  "products": 281
+ },
+ "Tanzania, India": {
+  "label": "MULTIPLE",
+  "products": 1
+ },
+ "Tanzania, United Republic of": {
+  "label": "TZ",
+  "products": 0,
+  "round": 2
+ },
+ "Thailand": {
+  "label": "TH",
+  "products": 39
+ },
+ "Timor-Leste": {
+  "label": "TL",
+  "products": 26
+ },
+ "Trinidad and Tobago": {
+  "label": "TT",
+  "products": 0,
+  "round": 2
+ },
+ "Uganda": {
+  "label": "UG",
+  "products": 166
+ },
+ "Uganda, Kenya, Rwanda, Burundi": {
+  "label": "MULTIPLE",
+  "products": 0
+ },
+ "United States": {
+  "label": "US",
+  "products": 353
+ },
+ "Usa": {
+  "label": "US",
+  "products": 0,
+  "round": 2
+ },
+ "Venezuela": {
+  "label": "VE",
+  "products": 4
+ },
+ "Venezuela, Bolivarian Republic of": {
+  "label": "VE",
+  "products": 0,
+  "round": 2
+ },
+ "Viet Nam": {
+  "label": "VN",
+  "products": 0,
+  "round": 2
+ },
+ "Vietnam": {
+  "label": "VN",
+  "products": 60
+ },
+ "Việt Nam": {
+  "label": "VN",
+  "products": 0
+ },
+ "Yemen": {
+  "label": "YE",
+  "products": 56
+ },
+ "Zambia": {
+  "label": "ZM",
+  "products": 27
+ },
+ "Zimbabwe": {
+  "label": "ZW",
+  "products": 2
+ }
+}

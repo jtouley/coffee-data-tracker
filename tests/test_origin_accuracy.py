@@ -33,8 +33,11 @@ EVAL = Path(__file__).parent.parent / "eval" / "origin"
 # Measured 2026-11-11 on main 0cfa4d9. Train: weighted agreement 0.9596, wrong-country 0.0394 (RESULTS.md: 96.0% /
 # 3.9%). Validation: 97 of 111 agree, 11 wrong-country. Raise the floors and lower the ceilings when the rules
 # improve; never move them the other way to pass.
+# Raised 2026-11-11 by #144: validation 98 of 111 agree, 9 wrong-country (main 0879254 scores 96 / 12 on the same
+# labels). One validation label was corrected first, by two blind relabels that agreed (eval/origin/README.md): the
+# 787 Coffee listing is Mexican, not "United States"; main had matched the old label by reading customers' cities.
 TRAIN_FLOOR, TRAIN_CEILING = 0.959, 0.040
-VALIDATION_AGREE, VALIDATION_WRONG = 97, 11
+VALIDATION_AGREE, VALIDATION_WRONG = 98, 9
 
 
 def _predictions(name: str) -> tuple[dict, dict]:
