@@ -5,6 +5,8 @@ public."""
 
 from __future__ import annotations
 
+import json
+import os
 import re
 import types
 from datetime import UTC, date, datetime
@@ -262,6 +264,23 @@ def test_snapshot_stores_raw_once_per_week(tmp_path):
     assert [r["status"] for r in again] == ["skipped", "skipped", "skipped"] and calls == []
     with pytest.raises(FileExistsError):  # immutable, as every lake file
         lake.write("importer_raw", importers.path("cafe_imports", MON), t)
+
+
+def test_the_rules_whitespace_is_pythons():
+    """RE2's \\s is ASCII only; the rules' whitespace (importer_rules.WS, the dbt macro ws()) is exactly what Python's
+    \\s and str.strip() take, a non-breaking space included, so the SQL rules read text as main's Python did."""
+    import duckdb
+
+    chars = [chr(i) for i in range(0x3100) if not 0xD800 <= i < 0xE000]
+    python = {c for c in chars if re.fullmatch(r"\s", c)}
+    with duckdb.connect() as con:
+        re2 = {c for (c,) in con.execute(
+            "select c from unnest(?) t(c) where regexp_full_match(c, ?)", [chars, f"[{rules.WS}]"]
+        ).fetchall()}  # fmt: skip
+    assert re2 == python and "\u00a0" in python
+    macro = (Path(__file__).parent.parent / "dbt_importers/macros/rule_helpers.sql").read_text()
+    assert f"macro ws_inner() -%}}{rules.WS}{{%- endmacro" in macro
+    assert rules.re2(r"^\s*(a)[\s,]\S") == rf"^[{rules.WS}]*(a)[{rules.WS},][^{rules.WS}]"
 
 
 NOT_FT_ORG = (None, ["fair_trade", "organic"])
@@ -542,8 +561,14 @@ def test_nothing_from_the_importers_can_reach_anything_public():
             for f in ("public.py", "site.py", "snowflake_load.py", "mcp_server.py")
         ),
     ]
+    generated = {
+        "__pycache__",
+        "target",
+        "logs",
+        "dbt_packages",
+    }  # dbt's and Python's output, never committed
     for f in sources:
-        if f.is_file() and "__pycache__" not in f.parts:
+        if f.is_file() and not generated & set(f.relative_to(root).parts):
             text = f.read_text(errors="ignore").lower()
             assert "importer" not in text and "coffeedata_importers" not in text, f
             # Royal Coffee too: its key, its address variable and its store
@@ -578,19 +603,116 @@ def test_importer_models_are_built_only_in_their_own_project_and_database():
     profile = yaml.safe_load((root / "dbt_importers/profiles.yml").read_text())
     outputs = profile[private["profile"]]["outputs"]
     assert [o["path"] for o in outputs.values()] == ["{{ env_var('COFFEEDATA_IMPORTERS_DB') }}"]
-    assert importers.DB != importers.MAIN_DB
+    # ... and the project refuses, before building anything, any value but its one fixed file
+    assert private["on-run-start"] == ["{{ refuse_unless_private_target() }}"]
+    macro = (root / "dbt_importers/macros/private_target.sql").read_text()
+    assert f"set fixed = '{importers.DB}'" in macro
+    assert importers.DB == "build/importers.duckdb"
+    assert importers.DB not in (importers.MAIN_DB, importers.SERVED_DB)
+    from coffeedata import cli as cli_module
+    from coffeedata import quality
+
+    assert str(cli_module.SERVED_DB) == importers.SERVED_DB
+    assert inspect.signature(quality.materialize).parameters["db"].default == Path(importers.SERVED_DB)
 
 
-@pytest.mark.parametrize("db", ["build/coffee.duckdb", "elsewhere/main.duckdb"])
-def test_the_private_build_refuses_the_main_database(tmp_path, monkeypatch, db):
-    monkeypatch.setenv("COFFEEDATA_DB", "elsewhere/main.duckdb")
-    with pytest.raises(ValueError, match="main build's database"):
-        importers.build(_local(tmp_path), Path(db))
+def test_only_the_importer_command_in_the_cli_reaches_the_private_project():
+    """#140 banned any call to the read-time transform from cli.py; its successor: only cmd_importer_build refers to
+    importers.build, the private database or project, so no public command can open or build them."""
+    import ast
+
+    root = Path(__file__).parent.parent
+    tree = ast.parse((root / "src/coffeedata/cli.py").read_text())
+    private = {"build", "DB", "DBT_PROJECT", "private_db", "private_models"}
+    users = set()
+    for fn in ast.walk(tree):
+        if not isinstance(fn, ast.FunctionDef):
+            continue
+        for node in ast.walk(fn):
+            names_it = (
+                isinstance(node, ast.Attribute)
+                and isinstance(node.value, ast.Name)
+                and node.value.id == "importers"
+                and node.attr in private
+            )
+            says_it = isinstance(node, ast.Constant) and any(
+                w in str(node.value) for w in ("importers.duckdb", "dbt_importers")
+            )
+            if names_it or says_it:
+                users.add(fn.name)
+    assert users == {"cmd_importer_build"}
+    # no other module but importers.py names the private database or project, the tests aside
+    for f in (root / "src/coffeedata").rglob("*.py"):
+        if f.name not in ("importers.py", "cli.py"):
+            text = f.read_text()
+            assert "importers.duckdb" not in text and "importers.build(" not in text, f
+
+
+def _private_build_refused(tmp_path, monkeypatch, match):
+    monkeypatch.chdir(tmp_path)
+    with pytest.raises(ValueError, match=match):
+        importers.build(_local(tmp_path))
+
+
+def test_the_private_build_refuses_a_public_database_or_folder(tmp_path, monkeypatch):
+    """Its one file, build/importers.duckdb, is never the main build's or the served release's database (by
+    COFFEEDATA_DB, or a link), nor inside a folder a public job uploads; nothing is deleted when it refuses."""
+    (tmp_path / "build").mkdir()
+    monkeypatch.setenv("COFFEEDATA_DB", "build/importers.duckdb")  # the MCP server would read it
+    _private_build_refused(tmp_path, monkeypatch, "public build's database")
+    monkeypatch.delenv("COFFEEDATA_DB")
+    served = tmp_path / importers.SERVED_DB
+    served.write_bytes(b"served release")
+    (tmp_path / importers.DB).symlink_to(served)
+    _private_build_refused(tmp_path, monkeypatch, "is a link")
+    assert served.read_bytes() == b"served release"
+    (tmp_path / importers.DB).unlink()
+    monkeypatch.setenv("PUBLIC_EXPORT_URL", "build")  # a public export of the whole build folder
+    _private_build_refused(tmp_path, monkeypatch, "folder a public job uploads")
+
+
+def test_the_private_build_never_deletes_a_database_it_does_not_own(tmp_path, monkeypatch):
+    import duckdb
+
+    db = tmp_path / importers.DB
+    db.parent.mkdir()
+    with duckdb.connect(str(db)) as con:
+        con.execute("create table dim_coffee as select 1 as x")
+    _private_build_refused(tmp_path, monkeypatch, "doesn't own")
+    with duckdb.connect(str(db), read_only=True) as con:
+        assert con.execute("select x from dim_coffee").fetchall() == [(1,)]
+
+
+@needs_dbt
+@pytest.mark.parametrize(
+    "target", ["build/coffee.duckdb", "build/served.duckdb", "build/site/importers.duckdb", "x.duckdb"]
+)
+def test_the_private_project_itself_refuses_any_other_database(tmp_path, monkeypatch, target):
+    """Run directly with COFFEEDATA_IMPORTERS_DB set wrong, the private project stops at on-run-start: no model is
+    built and no table is written there."""
+    import subprocess
+
+    import duckdb
+
+    root = Path(__file__).parent.parent
+    (tmp_path / "build/site").mkdir(parents=True)
+    project = str(root / "dbt_importers")
+    r = subprocess.run(
+        ["dbt", "run", "--project-dir", project, "--profiles-dir", project,
+         "--target-path", str(tmp_path / "t"), "--log-path", str(tmp_path / "l"),
+         "--vars", json.dumps({"importer_sources": [f"{tmp_path}/none/*.parquet"]})],
+        cwd=tmp_path, env={**os.environ, "COFFEEDATA_IMPORTERS_DB": target}, capture_output=True, text=True,
+    )  # fmt: skip
+    assert r.returncode != 0 and "builds only into build/importers.duckdb" in r.stdout, r.stdout[-2000:]
+    path = tmp_path / target
+    if path.exists():
+        with duckdb.connect(str(path), read_only=True) as con:
+            assert con.execute("select count(*) from information_schema.tables").fetchall() == [(0,)]
 
 
 def test_mcp_run_sql_cannot_reach_the_private_database(tmp_path, monkeypatch):
-    """MCP's run_sql opens only the main build's database, read-only, without file access: the private database
-    file, its tables and the importers dataset's files are out of its reach whatever the query says."""
+    """MCP's run_sql opens the main build's database read-only with external access off. Each query here reads the
+    private data when that protection is taken away (a plain read-only connection), and is refused with it."""
     import duckdb
 
     from coffeedata import mcp_server
@@ -598,23 +720,40 @@ def test_mcp_run_sql_cannot_reach_the_private_database(tmp_path, monkeypatch):
     private = tmp_path / "importers.duckdb"
     with duckdb.connect(str(private)) as con:
         con.execute("create table importer_offers as select 'secret' as name")
+        con.execute(f"copy importer_offers to '{tmp_path}/offers.parquet' (format parquet)")
+        con.execute(f"copy importer_offers to '{tmp_path}/offers.csv' (header)")
+    (tmp_path / "offers.txt").write_text("secret")
     main = tmp_path / "coffee.duckdb"
     with duckdb.connect(str(main)) as con:
         con.execute("create table dim_coffee as select 1 as x")
     monkeypatch.setattr(mcp_server, "DB", main)
     run = getattr(mcp_server.run_sql, "fn", mcp_server.run_sql)
     assert run("select x from dim_coffee")["rows"] == [[1]]
-    for sql in (
-        "select * from importer_offers",
-        f"select * from '{private}'",
-        f"select * from read_parquet('{tmp_path}/*.parquet')",
-        f"select * from read_text('{private}')",
-        "select * from importers.importer_offers",
-        f"attach '{private}' as p",
-    ):
-        with pytest.raises(Exception):  # noqa: B017 - any refusal will do; none may return rows
+
+    def unprotected(*stmts: str) -> list:
+        with duckdb.connect(str(main), read_only=True) as con:
+            for stmt in stmts[:-1]:
+                con.execute(stmt)
+            return con.execute(stmts[-1]).fetchall()
+
+    selects = (
+        f"select name from '{tmp_path}/offers.parquet'",
+        f"select name from read_parquet('{tmp_path}/*.parquet')",
+        f"select name from read_csv('{tmp_path}/offers.csv')",
+        f"select content as name from read_text('{tmp_path}/offers.txt')",
+    )
+    for sql in selects:
+        assert unprotected(sql) == [("secret",)], sql  # the query reaches the data without the protection
+        with pytest.raises(duckdb.PermissionException):
             run(sql)
-    assert Path(mcp_server.DB).resolve() != Path(importers.DB).resolve()
+    # ATTACH reaches the private database itself without the protection; run_sql takes only one SELECT
+    attach = f"attach '{private}' as p (read_only)"
+    assert unprotected(attach, "select name from p.importer_offers") == [("secret",)]
+    with pytest.raises(ValueError, match="only a single SELECT"):
+        run(attach)
+    with pytest.raises(duckdb.CatalogException):  # and nothing attached it before
+        run("select name from p.importer_offers")
+    assert Path(importers.DB).resolve() != Path(importers.MAIN_DB).resolve()
 
 
 # --- the command and the workflow -----------------------------------------------------------------------------------
