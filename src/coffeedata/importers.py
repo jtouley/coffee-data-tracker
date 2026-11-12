@@ -418,8 +418,11 @@ ROYAL_WORKFLOW = "importers"
 # The most products a /products.json page holds (adapters.shopify.PAGE_LIMIT, from Shopify's REST pagination docs), so
 # the listing takes the fewest pages.
 ROYAL_PAGE_LIMIT = 250
-# A listing that needs more pages than this has changed under us (or pages forever): fail, don't keep asking.
-ROYAL_MAX_PAGES = 20
+# A listing that needs more pages than this has changed under us (or pages forever): fail, don't keep asking. Sized for
+# a large Shopify catalog: Royal's listing holds more than 5,000 products (20 pages of 250 weren't enough), sold-out
+# lots included. At ROYAL_PAGE_INTERVAL a full pass of 100 pages takes about 25 minutes; the workflow's job timeout
+# covers it even at the longest Crawl-delay the client honors (tests/test_importer_royal.py).
+ROYAL_MAX_PAGES = 100
 # Seconds read_royal waits before each listing page after the first. The client's own per-host spacing applies on
 # top: its min_interval, or the store's robots.txt Crawl-delay up to http.MAX_CRAWL_DELAY (60 s).
 ROYAL_PAGE_INTERVAL = 15.0

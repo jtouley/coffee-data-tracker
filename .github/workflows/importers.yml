@@ -57,7 +57,9 @@ jobs:
     # main's code only: a dispatch from another branch would run that branch's scripts and lockfile with the token
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Royal's listing is read up to 100 pages, 15 s apart (about 25 minutes), or up to 60 s apart if its robots.txt
+    # asks a Crawl-delay (about 100 minutes)
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}

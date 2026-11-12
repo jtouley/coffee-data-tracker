@@ -556,6 +556,13 @@ def test_royals_address_is_only_in_the_scheduled_step_of_the_importers_workflow(
         if wf_file.name != "importers.yml":
             assert importers.ROYAL_URL_VAR not in wf_file.read_text(), wf_file
     assert wf["name"] == importers.ROYAL_WORKFLOW
+    # the job's timeout covers a full pass of Royal's listing, even at the longest Crawl-delay the client honors
+    from coffeedata.http import MAX_CRAWL_DELAY
+
+    worst = importers.ROYAL_MAX_PAGES * max(importers.ROYAL_PAGE_INTERVAL, MAX_CRAWL_DELAY)
+    assert (
+        wf["jobs"]["snapshot"]["timeout-minutes"] * 60 >= worst + 15 * 60
+    )  # plus the other importers and upload
 
 
 def _workflow_host() -> str:
