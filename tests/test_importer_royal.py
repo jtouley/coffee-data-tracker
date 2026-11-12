@@ -750,15 +750,15 @@ def test_a_malformed_host_never_breaks_discovery_the_registry_or_add_roaster(
 
 # The synthetic products predate the real listing's shapes (their titles say "Lot 70412 - Harborview Warehouse" and
 # their facts sit in "Label: value" lines, which Royal's real bodies don't have), so on them the rules mostly abstain:
-# no five-digit lot ID part, no warehouse code, no labels read. Origin is the first place the title names.
+# no five-digit lot ID part, so none reads as a lot (is_lot false) and none gets an origin, warehouse or status.
 EXPECTED = [
-    # (origin, process as stated, process type, certifications, available)
-    ("Colombia", None, "washed", None, True),
-    ("Ethiopia", "Natural", "natural", ["rainforest_alliance"], True),
-    ("Peru", None, None, None, True),  # decaf
-    ("Costa Rica", None, None, None, True),  # two processes; a blend of one country's lots
-    ("Brazil", None, "anaerobic", None, False),  # two process tags as written; anaerobic wins
-    (None, None, None, None, True),  # not a lot at all
+    # (process as stated, process type, certifications, available)
+    (None, "washed", None, True),
+    ("Natural", "natural", ["rainforest_alliance"], True),
+    (None, None, None, True),  # decaf
+    (None, None, None, True),  # two processes
+    (None, "anaerobic", None, False),  # two process tags as written; anaerobic wins
+    (None, None, None, True),  # not a lot at all
 ]  # fmt: skip
 
 
@@ -793,21 +793,22 @@ def derived(tmp_path_factory) -> dict[int, dict]:
 @pytest.mark.parametrize("i", range(len(PRODUCTS)))
 def test_rules_on_the_synthetic_products(i, derived):
     got = dict(derived[i])
-    origin, process, process_type, certs, available = EXPECTED[i]
+    process, process_type, certs, available = EXPECTED[i]
     assert got.pop("problems") == []
     assert {k: got[k] for k in (
-        "name", "lot_id", "warehouse", "status", "est_arrival", "bags", "origin", "origin_as_written", "region",
+        "name", "is_lot", "lot_id", "warehouse", "status", "est_arrival", "bags", "origin", "origin_as_written", "region",
         "process", "process_type", "varieties", "altitude_min_m", "altitude_max_m", "harvest_months", "grower_type",
         "grower_name", "certifications", "not_certified", "is_available", "currently_offered", "lot_key",
         "rules_version",
     )} == {
         "name": PRODUCTS[i]["title"],
+        "is_lot": False,
         "lot_id": None,
         "warehouse": None,
         "status": None,
         "est_arrival": None,
         "bags": None,  # Royal's listing never states a bag count
-        "origin": origin,
+        "origin": None,
         "origin_as_written": None,
         "region": None,  # the body is prose: region, varieties, altitude and harvest are left for Claude
         "process": process,
@@ -854,6 +855,8 @@ CASES = [
     (_cells("Peru Example - 34568 - May 2027 Shipment - EXAMPLEWHSE"), "status", None),  # not there yet
     (_cells("Peru Example - 34569 - SPOT EXAMPLEWHSE"), "status", "spot"),
     (_cells("Ethiopia Example Natural - 34570 - Sample"), "warehouse", None),  # not a warehouse code
+    (_cells("Ethiopia Example Natural - 10574 - ORGANIC"), "warehouse", None),  # a word in capitals
+    (_cells("Event: Example Tasting for Panama Relief"), "origin", None),  # not a lot
     (_cells("Brazil Example - 34571 - ETA: Dec 12, 2026 - EXAMPLEWHSE"), "arrival", "Dec 12, 2026"),
     (_cells("Brazil Example - 10573 - Intend Ship: Dec 12, 2026 - EXAMPLEWHSE"), "arrival", None),
     (_cells("PAPUA NEW GUINEA EXAMPLE A - 45678 - SPOT EXAMPLEWHSE"), "origin", "Papua New Guinea"),

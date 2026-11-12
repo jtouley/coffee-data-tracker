@@ -13,15 +13,9 @@ with vocab as (
     select * from {{ ref('stg_importer_vocab') }}
 ),
 
--- a country or alias as written (lowercase) and the catalog's country for it, as the catalog reads origins
-country_of as (
-    select map_from_entries(list({'key': term, 'value': value})) as country_of
-    from vocab
-    where kind = 'country'
-),
-
-catalog as (
-    select list(value) as countries from vocab where kind = 'catalog_country'
+-- a place's country, as every importer reads it (macros/catalog_country.sql)
+places as (
+    {{ catalog_places() }}
 )
 
 select
@@ -33,18 +27,15 @@ select
     coalesce(s.lot_id, y.lot_id) as lot_id,
     s.name,
     -- one convention for every importer: the catalog's country, or null when the text doesn't name one
-    coalesce(
-        if(list_contains(c.countries, m.country_of[lower({{ strip('s.origin') }})]),
-            m.country_of[lower({{ strip('s.origin') }})], null),
-        n.origin,
-        y.origin
-    ) as origin,
+    coalesce({{ catalog_country('s.origin', 'p') }}, n.origin, y.origin) as origin,
     s.origin as origin_as_written,
     coalesce(s.region, n.region) as region,
     coalesce(s.process, n.process, y.process) as process,
     n.grade,
     n.screen,
     coalesce(s.status, y.status) as status,
+    -- a coffee lot, not a class or merchandise: Royal's title has a lot ID part; the others' pages list only lots
+    if(l.importer = 'royal_coffee', y.is_lot, true) as is_lot,
     k.lot_key,
     k.is_available,
     d.currently_offered,
@@ -76,5 +67,4 @@ left join {{ ref('int_importer_name_rules') }} as n using (week, importer, "row"
 left join {{ ref('int_royal_rules') }} as y using (week, importer, "row")
 inner join {{ ref('int_importer_lots') }} as k using (week, importer, "row")
 inner join {{ ref('dim_importer_lot') }} as d on d.importer = l.importer and d.lot_key = k.lot_key
-cross join country_of as m
-cross join catalog as c
+cross join places as p

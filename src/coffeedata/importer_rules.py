@@ -105,8 +105,14 @@ ROYAL_PROCESS_TAG = (
 # Places a Royal title can lead with that the catalog's lists (origins.COUNTRIES, ALIASES) don't spell this way, and
 # their country. Bare "Timor" is Timor-Leste in a coffee name (West Timor's coffee is sold as Indonesian).
 ROYAL_PLACES = {"timor leste": "Timor-Leste", "timor": "Timor-Leste", "komodo": "Indonesia"}
-# A first place that names no one country: the island two countries share, and "Congo" (two countries).
-ROYAL_AMBIGUOUS_PLACES = ("new guinea", "congo")
+# A place that names no one country: the island two countries share, and "Congo" (two countries). Every importer's
+# origin abstains on these (importer_offers and int_royal_rules read origins through one macro, catalog_country).
+AMBIGUOUS_PLACES = ("new guinea", "congo")
+# Words a title's last part can be in capitals that are no warehouse code ("- ORGANIC", "- SAMPLE").
+ROYAL_NOT_A_WAREHOUSE = (
+    r"^(?:ORGANIC|SAMPLES?|DECAF|WASHED|NATURAL|HONEY|ANAEROBIC|BLEND|ESPRESSO|GRADE|LOT|SPOT|FT|FTO|RFA|"
+    r"SHB|SHG|EP|HG|AA|AB|PB|BAGS?|BOXE?S?|TBD|TBC|NEW|SOLD|OUT)$"
+)
 ROYAL_DECAF = (
     r"\bdecaf|\bdecaffeinated\b|\bswiss water\b|\bmountain water\b|\bsugar ?cane\b|\bethyl acetate\b|\bco2\b"
 )
@@ -128,7 +134,8 @@ ROYAL_CERT_NEGATED = (
 def _royal_origin_lead() -> str:
     """The first place a Royal title's name part names, the longest name first ("Papua New Guinea" before "New
     Guinea" and "Guinea", "Timor Leste" before "Timor"), as group 1."""
-    return rf"\b({_alternation([*COUNTRIES, *ROYAL_PLACES])}){_WORD_END}"
+    # a name's spaces match any whitespace run (a non-breaking space or two spaces in "Papua New Guinea")
+    return rf"\b({_alternation([*COUNTRIES, *ROYAL_PLACES]).replace(chr(92) + ' ', r'\s+')}){_WORD_END}"
 
 
 def catalog_countries() -> list[str]:
@@ -217,7 +224,7 @@ def vocabulary() -> list[dict]:
     - region: a one-country growing region (lowercase) and its country (origins.REGIONS);
     - country_name: a name in origins.COUNTRIES as written, its country, and (value2) "alias" for an island or state;
     - royal_place: a place a Royal title can lead with that the catalog spells otherwise, and its country;
-    - royal_ambiguous_place: a first place in a Royal title that names no one country;
+    - ambiguous_place: a place that names no one country, where every importer's origin abstains;
     - catalog_country: a country the catalog's origins resolve to (catalog_countries()), the only values an origin
       may take;
     - title_place_ok: an alias that means one origin in an InterAmerican name;
@@ -244,6 +251,7 @@ def vocabulary() -> list[dict]:
         "royal_title_parts": ROYAL_TITLE_PARTS,
         "royal_lot_id": ROYAL_LOT_ID,
         "royal_warehouse": ROYAL_WAREHOUSE,
+        "royal_not_a_warehouse": ROYAL_NOT_A_WAREHOUSE,
         "royal_arrival": ROYAL_ARRIVAL,
         "royal_bag_weight": ROYAL_BAG_WEIGHT,
         "royal_bag_part": ROYAL_BAG_PART,
@@ -280,7 +288,7 @@ def vocabulary() -> list[dict]:
         for c in COUNTRIES
     ]
     rows += [{"kind": "royal_place", "term": k, "value": v} for k, v in ROYAL_PLACES.items()]
-    rows += [{"kind": "royal_ambiguous_place", "term": t, "value": t} for t in ROYAL_AMBIGUOUS_PLACES]
+    rows += [{"kind": "ambiguous_place", "term": t, "value": t} for t in AMBIGUOUS_PLACES]
     rows += [{"kind": "catalog_country", "term": c, "value": c} for c in catalog_countries()]
     rows += [{"kind": "title_place_ok", "term": t, "value": t} for t in TITLE_PLACES_OK]
     rows += [

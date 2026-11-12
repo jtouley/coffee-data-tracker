@@ -8,11 +8,15 @@ models:
   - name: stg_importer_lots
     description: >-
       One row per stored lot (the importers dataset's raw layer, importer_raw), every stored week, read once even
-      when a week is both staged and published. Its cells are the page's, word for word.
+      when a week is both staged and published: only the week's first fetch, so two fetches' rows never mix. Its
+      cells are the page's, word for word. (week, importer, row) is the grain every model joins on.
     data_tests:
       - unique:
           arguments:
             column_name: "week::varchar || '/' || importer || '/' || \"row\""
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || source_key"
     columns:
       - name: week
         description: The Monday of the week the page was fetched.
@@ -31,8 +35,8 @@ models:
         data_tests: [not_null]
       - name: source_key
         description: >-
-          What a week stored twice is read once by: Royal's Shopify product id (its listing position can change
-          between two reads), else the row's position.
+          What a lot is read once by within its week's first fetch: Royal's Shopify product id, else the row's
+          position.
         data_tests: [not_null]
       - name: cells
         description: Every cell of the lot's row under the page's header (Royal, every kept field), verbatim.
@@ -84,7 +88,9 @@ models:
   - name: dim_importer_lot
     description: >-
       One row per importer lot ever stored, available or not: first and last week seen, weeks seen, and flags.
-      Rebuilt from every stored week at each build; the week-by-week values are importer_offers'.
+      For Royal a row is one Shopify product, not one Royal lot ID: a sample box and a full bag of one lot are two
+      products, so two rows. Rebuilt from every stored week at each build; the week-by-week values are
+      importer_offers'.
     data_tests:
       - unique:
           arguments:
@@ -121,6 +127,19 @@ models:
           (tests/importer_origin_is_a_catalog_country).
       - name: origin_as_written
         description: Cafe Imports' origin column, as written ("Sumatra"); null for the others, whose pages have none.
+      - name: is_lot
+        description: >-
+          A coffee lot: Royal's title has a lot ID part (its classes and merchandise are kept, flagged false, with no
+          origin); always true for Cafe Imports and InterAmerican, whose pages list only lots.
+      - name: status
+        description: >-
+          Where the page says the lot is: spot, afloat, at_origin, in_store. For Royal only `spot` (its title says
+          SPOT), the stated location, not whether it is still for sale: most of Royal's SPOT products are sold out.
+          Read it with is_available or currently_offered.
+      - name: bag_kg
+        description: >-
+          The bag's weight in kg as the page states it. Royal: the title's weight when it states one (the nominal
+          bag), else its one variant's grams (a measured weight, which can be a few hundred grams off the nominal).
       - name: lot_key
         description: The lot's stable key across weeks (int_importer_lots).
         data_tests:

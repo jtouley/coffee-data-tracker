@@ -5,17 +5,21 @@
 -- null, left for Claude. Each value abstains (null) when the text doesn't settle it.
 --   lot_id: the one title part that is Royal's five-digit lot ID ("12345", a split lot's "12345-2"); null for none or
 --     two that differ. Never a producer's "Lot 3" or a starred contract number.
---   warehouse: the last title part when it is a warehouse code in capitals, on a title with a lot ID part, without its
---     "SPOT" ("SPOT EXAMPLEWHSE" is EXAMPLEWHSE).
---   status: 'spot' when that part says SPOT (the lot is in the warehouse now), the other importers' word for it; null
---     otherwise: a shipment month doesn't say whether the lot has left origin.
+--   is_lot: the title has a lot ID part, so it is a coffee lot, not a class or merchandise (kept, flagged).
+--   warehouse: the last title part, after a lot ID part, when it is a warehouse code in capitals and not a word
+--     ("ORGANIC", "SAMPLE": importer_rules.ROYAL_NOT_A_WAREHOUSE), without its "SPOT" ("SPOT EXAMPLEWHSE" is
+--     EXAMPLEWHSE).
+--   status: 'spot' when that part says SPOT, the other importers' word for it; null otherwise: a shipment month
+--     doesn't say whether the lot has left origin. SPOT is where the lot is stated to be, not whether it is still
+--     for sale: most SPOT products are sold out, so read status with available.
 --   est_arrival: an "ETA: Nov 30, 2026" or "January 2027 Delivery" part, as written, when it parses as a date or
 --     month; "... Shipment" and "Intend Ship:" are when a lot leaves origin, so they give none.
 --   bag_size: the title part naming the packaging, as written ("69.0 kg GrainPro Bags").
---   bag_kg: the one weight the title states ("69.0 kg", "22 Lb" in kg), else the one variant's grams in kg.
+--   bag_kg: the one weight the title states ("69.0 kg", "22 Lb" in kg), the nominal bag; else the one variant's grams
+--     in kg to 0.1, a measured weight that can differ from the nominal by a few hundred grams.
 --   available: whether any variant is available (Shopify's variants.available): the lot is offered now.
---   origin: the first place the title's name part names, as the catalog's country, longest name first ("Papua New
---     Guinea", never "Guinea"); island names as the catalog reads them (Java, Bali, Flores, Sumatra: Indonesia) and
+--   origin: on a lot, the first place the title's name part names, as the catalog's country (macros/catalog_country,
+--     as every importer), longest name first, whatever the spacing ("Papua New Guinea", never "Guinea"); island names as the catalog reads them (Java, Bali, Flores, Sumatra: Indonesia) and
 --     Royal's TIMOR LESTE, bare TIMOR and KOMODO (importer_rules.ROYAL_PLACES). Null for a blend that names two
 --     countries, a first place that names no one country ("New Guinea", "Congo"), or none.
 --   process: the tag that is a process and nothing else ("washed", "wet-hulled"), as written.
@@ -34,6 +38,7 @@ patterns as (
         max(value) filter (where kind = 'pattern' and term = 'royal_title_parts') as title_parts,
         max(value) filter (where kind = 'pattern' and term = 'royal_lot_id') as lot_id_re,
         max(value) filter (where kind = 'pattern' and term = 'royal_warehouse') as warehouse_re,
+        max(value) filter (where kind = 'pattern' and term = 'royal_not_a_warehouse') as not_a_warehouse_re,
         max(value) filter (where kind = 'pattern' and term = 'royal_arrival') as arrival_re,
         max(value) filter (where kind = 'pattern' and term = 'royal_bag_weight') as bag_weight_re,
         max(value) filter (where kind = 'pattern' and term = 'royal_bag_part') as bag_part_re,
@@ -55,18 +60,9 @@ patterns as (
     from vocab
 ),
 
--- a place's country: the catalog's countries and aliases (lowercase), and Royal's own spellings
+-- a place's country, as every importer reads it (macros/catalog_country.sql)
 places as (
-    select
-        map_from_entries(list({'key': term, 'value': value}) filter (where kind in ('country', 'royal_place')))
-            as country_of,
-        list(term) filter (where kind = 'royal_ambiguous_place') as ambiguous
-    from vocab
-    where kind in ('country', 'royal_place', 'royal_ambiguous_place')
-),
-
-catalog as (
-    select list(value) as countries from vocab where kind = 'catalog_country'
+    {{ catalog_places() }}
 ),
 
 cells as (
@@ -104,7 +100,15 @@ title_fields as (
         importer,
         "row",
         list_distinct(list_filter(parts, lambda part: regexp_matches(part, lot_id_re))) as lot_ids,
-        if(len(parts) >= 2 and regexp_matches(parts[-1], warehouse_re), parts[-1], null) as warehouse_part,
+        -- the last part, when it comes after a lot ID part and is a warehouse code, not a word in capitals
+        if(
+            len(parts) >= 2
+            and list_bool_or(list_transform(parts[2:-1], lambda part: regexp_matches(part, lot_id_re)))
+            and regexp_matches(parts[-1], warehouse_re)
+            and not regexp_matches(regexp_extract(parts[-1], warehouse_re, 2), not_a_warehouse_re),
+            parts[-1],
+            null
+        ) as warehouse_part,
         list_filter(
             list_transform(
                 list_filter(parts[2:], lambda part: regexp_matches(part, arrival_re, 'i')),
@@ -129,8 +133,9 @@ stated as (
         f.importer,
         f."row",
         if(len(f.lot_ids) = 1, f.lot_ids[1], null) as lot_id,
-        if(len(f.lot_ids) >= 1, regexp_extract(f.warehouse_part, f.warehouse_re, 2), null) as warehouse,
-        if(len(f.lot_ids) >= 1 and regexp_extract(f.warehouse_part, f.warehouse_re, 1) != '', 'spot', null) as status,
+        len(f.lot_ids) >= 1 as is_lot,
+        regexp_extract(f.warehouse_part, f.warehouse_re, 2) as warehouse,
+        if(regexp_extract(f.warehouse_part, f.warehouse_re, 1) != '', 'spot', null) as status,
         if(len(list_distinct(f.arrivals)) = 1, f.arrivals[1], null) as est_arrival,
         if(len(f.bag_parts) = 1, f.bag_parts[1], null) as bag_size,
         case
@@ -157,9 +162,7 @@ origin as (
         l.week,
         l.importer,
         l."row",
-        list_transform(
-            regexp_extract_all(coalesce(l.parts[1], ''), l.origin_lead, 1, 'i'), lambda v: lower(v)
-        ) as places,
+        regexp_extract_all(coalesce(l.parts[1], ''), l.origin_lead, 1, 'i') as places,
         regexp_matches(coalesce(l.parts[1], ''), l.blend_re, 'i') as blend
     from lots as l
 ),
@@ -170,15 +173,17 @@ origin_country as (
         o.importer,
         o."row",
         case
-            when len(o.places) = 0 or list_contains(p.ambiguous, o.places[1]) then null
+            -- not a lot (a class, merchandise): no origin, whatever place its name mentions
+            when not st.is_lot or len(o.places) = 0 then null
             -- a blend of one country's lots is that country's; of two countries', none
-            when o.blend and len(list_distinct(list_transform(o.places, lambda v: coalesce(p.country_of[v], v)))) != 1
-                then null
-            when list_contains(c.countries, p.country_of[o.places[1]]) then p.country_of[o.places[1]]
+            when o.blend and len(list_distinct(list_transform(o.places, lambda v: coalesce(
+                p.country_of[{{ place_key('v') }}], {{ place_key('v') }}
+            )))) != 1 then null
+            else {{ catalog_country('o.places[1]', 'p') }}
         end as origin
     from origin as o
+    inner join stated as st using (week, importer, "row")
     cross join places as p
-    cross join catalog as c
 ),
 
 -- process type
@@ -271,6 +276,7 @@ select
     s.bag_size,
     s.bag_kg,
     s.available,
+    s.is_lot,
     o.origin,
     s.process,
     pt.process_type,
