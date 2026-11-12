@@ -906,3 +906,42 @@ def test_rules_abstain_when_unsure(k, derived):
         "region": got["region"],
     }[field]
     assert value == expected
+
+
+@needs_dbt
+def test_a_week_stored_twice_is_read_from_its_first_fetch_once(tmp_path):
+    """stg_importer_lots' dedupe, which a dbt unit test can't reach (raw is read_parquet over the lake's globs): a week
+    stored three times (the first fetch, a copy of it, and a later fetch that lists the products in another order and
+    adds one) derives once, from the first fetch only: every product once, no two products sharing a row."""
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+
+    def rows(fetched_at: datetime, ids: list[str]) -> list[dict]:
+        return [
+            {
+                "week": MON,
+                "fetched_at": fetched_at,
+                "importer": "royal_coffee",
+                "source_url": LISTING,
+                "parser_version": "t",
+                "row": i,
+                "url": None,
+                "cells": [
+                    {"column": "id", "text": pid},
+                    {"column": "title", "text": f"Peru Example - 1{pid[-4:]} - SPOT EXAMPLEWHSE"},
+                    {"column": "variants", "text": '[{"available": true, "grams": 69000}]'},
+                ],
+            }
+            for i, pid in enumerate(ids)
+        ]
+
+    first = rows(NOW, ["9900000000101", "9900000000102"])
+    lake.write("importer_raw", importers.path(importers.ROYAL, MON), first)
+    week = importers.path(importers.ROYAL, MON).rsplit("/", 1)[0]
+    lake.write("importer_raw", f"{week}/importer=royal_coffee-copy.parquet", first)
+    later = rows(NOW + timedelta(hours=2), ["9900000000102", "9900000000101", "9900000000103"])
+    lake.write("importer_raw", f"{week}/importer=royal_coffee-refetch.parquet", later)
+    offers = importer_offers(lake, tmp_path)
+    assert [(o["row"], o["lot_key"], o["fetched_at"]) for o in offers] == [
+        (0, "royal_coffee:9900000000101", NOW),
+        (1, "royal_coffee:9900000000102", NOW),
+    ]

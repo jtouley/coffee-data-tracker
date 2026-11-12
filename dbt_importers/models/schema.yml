@@ -43,33 +43,61 @@ models:
 
   - name: stg_importer_cells
     description: One row per cell of each lot (column_name, the page's header; cell_text, verbatim, null when empty).
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\" || '/' || cell_index"
 
   - name: stg_importer_vocab
     description: >-
       The rules' words and patterns, from importer_rules.vocabulary() and the catalog's extract.py and origins.py
       (kind, term, value, value2, ord). One copy of each vocabulary, read by every rule here.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "kind || '/' || term"
 
   - name: int_importer_stated
     description: >-
       The fields each lot's page states, read from its cells by importers.stated, the code the weekly snapshot uses to
       check a page. Royal's listing states only its name this way; int_royal_rules reads the rest from its title and
       variants.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
 
   - name: int_importer_inputs
     description: What the Cafe Imports and InterAmerican rules read from each lot's cells; null for any other importer.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
 
   - name: int_importer_rules
     description: >-
       Process type, varieties, altitude, harvest months, grower and certifications (Cafe Imports, InterAmerican).
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
 
   - name: int_importer_name_rules
     description: What an InterAmerican product name states (origin, region, process, grade, screen).
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
 
   - name: int_royal_rules
     description: >-
       Royal's lot ID, warehouse, status, arrival, bags, availability, origin, process, process type and
       certifications, from its title, tags, product type and variants. Its body is prose and isn't read: region,
       varieties, altitude and harvest months are null, left for Claude.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
 
   - name: int_importer_lots
     description: >-
@@ -78,6 +106,9 @@ models:
       - unique:
           arguments:
             column_name: "week::varchar || '/' || lot_key"
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
     columns:
       - name: lot_key
         description: >-
@@ -109,73 +140,125 @@ models:
   - name: importer_offers
     description: >-
       Every stored lot, every week, as an offer: the fields its page states and our model's normalized values, derived
-      from raw at this build. The rules abstain (null) when the text doesn't settle a value.
+      from raw at this build. The rules abstain (null) when the text doesn't settle a value. Its columns and types
+      are a contract (enforced at every build), because the importers workflow sends this table to the private
+      dataset as derived/importer_offers.parquet: a change to them is a change to that file, made here on purpose.
+    config:
+      contract: {enforced: true}
     data_tests:
       - unique:
           arguments:
             column_name: "week::varchar || '/' || importer || '/' || \"row\""
     columns:
       - name: week
+        data_type: date
         data_tests: [not_null]
+      - name: fetched_at
+        data_type: timestamp with time zone
       - name: importer
+        data_type: varchar
         data_tests: [not_null]
       - name: row
+        data_type: integer
         data_tests: [not_null]
+      - name: url
+        data_type: varchar
+      - name: lot_id
+        data_type: varchar
+      - name: name
+        data_type: varchar
       - name: origin
+        data_type: varchar
         description: >-
           The catalog's country (importer_rules.catalog_countries()) for every importer: Cafe Imports' origin column
           read as the catalog reads it ("Sumatra" is Indonesia), the country an InterAmerican name leads with, the
           first place a Royal title names. Null when the text names no one country
           (tests/importer_origin_is_a_catalog_country).
       - name: origin_as_written
+        data_type: varchar
         description: Cafe Imports' origin column, as written ("Sumatra"); null for the others, whose pages have none.
-      - name: is_lot
+      - name: region
+        data_type: varchar
+        description: The page's region, or the one an InterAmerican name gives, as written. Null for Royal.
+      - name: process
+        data_type: varchar
         description: >-
-          A coffee lot: Royal's title has a lot ID part (its classes and merchandise are kept, flagged false, with no
-          origin); always true for Cafe Imports and InterAmerican, whose pages list only lots.
+          The process as stated: Cafe Imports' column; the process words of an InterAmerican name ("Natural",
+          "Honey Natural", "Decaf"); Royal's process tag ("washed", "wet-hulled", "decaf").
+      - name: grade
+        data_type: varchar[]
+        description: InterAmerican's grade and preparation words ("G1", "SHB", "EP", "EP10", "AA", "Supremo").
+      - name: screen
+        data_type: varchar
+        description: InterAmerican's screen size range ("17/18").
       - name: status
+        data_type: varchar
         description: >-
           Where the page says the lot is: spot, afloat, at_origin, in_store. For Royal only `spot` (its title says
           SPOT), the stated location, not whether it is still for sale: most of Royal's SPOT products are sold out.
           Read it with is_available or currently_offered.
-      - name: bag_kg
+      - name: is_lot
+        data_type: boolean
         description: >-
-          The bag's weight in kg as the page states it. Royal: the title's weight when it states one (the nominal
-          bag), else its one variant's grams (a measured weight, which can be a few hundred grams off the nominal).
+          A coffee lot: Royal's title has a lot ID part (its classes and merchandise are kept, flagged false, with no
+          origin); always true for Cafe Imports and InterAmerican, whose pages list only lots.
       - name: lot_key
+        data_type: varchar
         description: The lot's stable key across weeks (int_importer_lots).
         data_tests:
           - not_null
           - relationships:
               arguments: {to: ref('dim_importer_lot'), field: lot_key}
       - name: is_available
+        data_type: boolean
         description: >-
           Offered that week: Royal's variants say so; Cafe Imports' and InterAmerican's pages list the bags still
           available. Null when the page doesn't say. Every lot is a row either way.
       - name: currently_offered
+        data_type: boolean
         description: From dim_importer_lot, the same on every week's row of a lot. Filter on it for today's offers.
-      - name: region
-        description: The page's region, or the one an InterAmerican name gives, as written. Null for Royal.
-      - name: process
+      - name: est_arrival
+        data_type: varchar
+      - name: warehouse
+        data_type: varchar
+      - name: bags
+        data_type: bigint
+      - name: bag_size
+        data_type: varchar
+      - name: bag_kg
+        data_type: double
         description: >-
-          The process as stated: Cafe Imports' column; the process words of an InterAmerican name ("Natural",
-          "Honey Natural", "Decaf"); Royal's process tag ("washed", "wet-hulled", "decaf").
-      - name: grade
-        description: InterAmerican's grade and preparation words ("G1", "SHB", "EP", "EP10", "AA", "Supremo").
-      - name: screen
-        description: InterAmerican's screen size range ("17/18").
+          The bag's weight in kg as the page states it. Royal: the title's weight when it states one (the nominal
+          bag), else its one variant's grams (a measured weight, which can be a few hundred grams off the nominal).
       - name: process_type
+        data_type: varchar
         description: washed, natural, honey or anaerobic, in the catalog's model; null when unclear or decaf.
         data_tests:
           - accepted_values: {arguments: {values: [washed, natural, honey, anaerobic]}}
+      - name: varieties
+        data_type: varchar[]
+      - name: altitude_min_m
+        data_type: integer
+      - name: altitude_max_m
+        data_type: integer
+      - name: harvest_months
+        data_type: varchar[]
       - name: grower_type
+        data_type: varchar
         data_tests:
           - accepted_values: {arguments: {values: [micromill, washing_station, cooperative, farm]}}
+      - name: grower_name
+        data_type: varchar
       - name: certifications
+        data_type: varchar[]
         description: >-
           The modeled certifications claimed (organic, fair_trade, rainforest_alliance); null when unknown.
       - name: not_certified
+        data_type: varchar[]
         description: Those the page marks absent (Cafe Imports' "nft", "norg"); null when it marks none.
       - name: rules_version
+        data_type: varchar
         description: importer_rules.RULES_VERSION, or ROYAL_RULES_VERSION for Royal.
         data_tests: [not_null]
+      - name: problems
+        data_type: varchar[]
