@@ -121,11 +121,11 @@ def test_a_pending_flag_reads_as_pending_until_it_is_published(tmp_path, lake, p
     post(c, "/api/roasters/farmerbros.com/chain",
          {"key": "k2", "chain": "not_chain", "seen": "none", "reason": "a distributor"})  # fmt: skip
     text = _text(c.get("/part/sources").text)
-    assert "3 chains, crawled but not public (2 changes at the next Publish)" in text
+    assert "3 chains, crawled but not public (2 chain flags change at the next Publish)" in text
     assert "La Colombe · Chain (pending)" in text
     assert "Farmer Brothers · Not a chain (pending)" in text
-    assert "Public now; a chain, so not public, from the next Publish." in text
-    assert "A chain now, so not public; public again from the next Publish." in text
+    assert "Public now. From the next Publish: a chain, so not public." in text
+    assert "Not public now (a chain). From the next Publish: public again." in text
 
 
 def test_a_chain_flag_is_reasoned_idempotent_conflict_checked_and_audited(tmp_path, lake, pg_url):

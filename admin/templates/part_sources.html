@@ -23,8 +23,8 @@
 {% set chain_facet = {"chain": "a chain", "to_chain": "a chain from the next Publish", "to_not_chain": "not a chain from the next Publish", "not_chain": "flagged not a chain"} %}
 {% macro chain_now(r) -%}
 {%- if r.chain == "chain" -%}A chain: not public.
-{%- elif r.chain == "to_chain" -%}Public now; a chain, so not public, from the next Publish.
-{%- elif r.chain == "to_not_chain" -%}A chain now, so not public; public again from the next Publish.
+{%- elif r.chain == "to_chain" -%}Public now. From the next Publish: a chain, so not public.
+{%- elif r.chain == "to_not_chain" -%}Not public now (a chain). From the next Publish: public again.
 {%- else -%}Not a chain.
 {%- endif -%}
 {%- endmacro %}
@@ -71,7 +71,7 @@
   {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, raw in chips %}{% set text = ("chain: " ~ chain_facet.get(f.values.chain, f.values.chain)) if key == "chain" else raw %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}</ul>{% endif %}
   {% if flags_read %}
   <p class="answer" data-answer>{{ n(st.get("unreviewed", 0)) }} to review of {{ many(data.total, "place", "places") }}{% if data.meta.latest_run %} · {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone in the {{ data.meta.latest_run[:10] }} run{% endif %}</p>
-  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}{% if chains_read %}{% set cc = data.counts.chain %}{% set now_n = cc.get("chain", 0) + cc.get("to_not_chain", 0) %}{% set next_n = cc.get("to_chain", 0) + cc.get("to_not_chain", 0) %} · {{ many(now_n, "chain", "chains") }}, crawled but not public{% if next_n %} ({{ many(next_n, "change", "changes") | trim }} at the next Publish){% endif %}{% endif %}</p>
+  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}{% if chains_read %}{% set cc = data.counts.chain %}{% set now_n = cc.get("chain", 0) + cc.get("to_not_chain", 0) %}{% set next_n = cc.get("to_chain", 0) + cc.get("to_not_chain", 0) %} · {{ many(now_n, "chain", "chains") }}, crawled but not public{% if next_n %} ({{ many(next_n, "chain flag changes", "chain flags change") | trim }} at the next Publish){% endif %}{% endif %}</p>
   {% else %}
   <p class="answer" data-answer>{{ many(data.total, "place", "places") }} · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}

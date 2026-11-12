@@ -468,8 +468,8 @@ state scrolls sideways at 390 px.
 
 - **Published, then pending.** The page claimed a recorded flag was already in effect. Now the row's word and the count
   are the served release's (`dim_roaster.is_chain`); a flag that changes it at the next Publish reads " · Chain
-  (pending)" or " · Not a chain (pending)", the menu says it in full ("Public now; a chain, so not public, from the next
-  Publish."), and the count line adds "(N changes at the next Publish)". The facet's values are codes
+  (pending)" or " · Not a chain (pending)", the menu says it in full ("Public now. From the next Publish: a chain, so
+  not public."), and the count line adds "(N chain flags change at the next Publish)". The facet's values are codes
   (`sources.CHAIN_CODES`), worded by the template, so a wording change never touches the logic.
 - **Two flags, two groups.** The chain flag is its own group in the ⋯ menu (`role=group`, a hairline above it),
   after the roaster flag, so "Not a roaster" and "Not a chain…" never sit side by side.

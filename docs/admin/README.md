@@ -144,7 +144,7 @@ way the Catalog does, and searches and pages there (100 rows a page; about 47,00
   first rows), so a flag the seed already had is no change and clearing one is. A snapshot with `chains` is version
   2 (deploy the pipeline image first: Deploying). The page shows what customers get now (the served release's
   `dim_roaster.is_chain`) and marks what the next Publish changes: " · Chain (pending)", " · Not a chain (pending)"
-  (the menu says it in full), and the count line's "(N changes at the next Publish)". The chain flag is a group of
+  (the menu says it in full), and the count line's "(N chain flags change at the next Publish)". The chain flag is a group of
   its own in the ⋯ menu, under the roaster flag, with the owner's reason folded. Publish's change size counts the
   public coffees a chain flag moves. A flag is refused for a domain the served release's registry doesn't list.
   Without the control plane, Sources shows no chain word, no chain count and no Chain filter.

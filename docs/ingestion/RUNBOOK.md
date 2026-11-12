@@ -1246,7 +1246,12 @@ never recorded as applied when it wasn't. Ship in this order:
    one flag; its build must pass and its `dim_roaster` show the flag.
 
 A rollback of the admin image alone is safe (the migration is additive). A rollback of the pipeline image to one
-before #149 makes every draft carrying chain flags fail until the image is current again.
+before #149 makes every draft carrying chain flags fail until the image is current again, and, **once a draft with
+chain flags has been published, it stops the weekly build too**: the weekly build applies the served snapshot, which
+is version 2, and the older image refuses it ("not a decisions snapshot (version 1)"). That is the safe failure (no
+build ever runs without the published flags); recover by deploying the current pipeline image, not by editing the
+snapshot. Keep #146's dbt in the same image: a pipeline image with #149 but without #146 passes the var to a dbt that
+ignores it, which the version gate can't see.
 
 ## Cost
 
