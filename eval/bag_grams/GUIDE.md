@@ -15,7 +15,10 @@ Write the answer as a whole number of grams, or `unknown`, or `unclear`.
   1 lb are 454, 2 lb is 907, 5 lb is 2268, 8 oz and 1/2 lb are 227. A listing that gives both ("12 oz (340 g)",
   "1 kg (2.2 lb)") means one weight: write the metric one if it gives one, else convert.
 - When the price buys several bags, write the total: "2 x 12 oz" is 680, "12 oz bags x 3" is 1020, "case of 6
-  10 oz bags" is 1701, "5x 1lb bags" is 2268. Only when the listing says how many and how big.
+  10 oz bags" is 1701, "5x 1lb bags" is 2268. Only when the listing says how many and how big. A count written as
+  bags counts the same way: "Two 12 oz bags" and "2 Bags - 12 oz" are 680, a listing titled "... 12oz Whole Beans
+  ... x 2 Bags" is 680, and an option "3 bags" on a listing whose title says each bag is 12 oz is 1020. An option
+  "5 bags" whose bag size the listing doesn't give is `unknown`.
 - An option that varies only by grind, roast level or decaf, with no weight of its own, has the weight the listing
   title or description gives for the coffee, if it gives one. If the options also differ in size (different
   prices, or titles like "Small" / "Large") and the listing doesn't say which size this option is, it's `unknown`.
@@ -54,7 +57,8 @@ sparingly: a confident wrong number is worse than `unclear`. Unclear items are l
 ## Format
 
 One JSON object per labeler: `{"<coffee_id>": 340, "<coffee_id>": "unknown", ...}`, a key for every item in the
-packet. Label each item on its own: don't look at another labeler's file, at any prediction, or at the scoring
+packet. A packet item that names several options (`label_these_options`) is answered once per option, keyed
+`"<coffee_id>|<variant_id>"`: `{"<coffee_id>|<variant_id>": 340, ...}`, a key for every option it names. Label each item on its own: don't look at another labeler's file, at any prediction, or at the scoring
 script's output.
 
 ## Changes
@@ -62,3 +66,5 @@ script's output.
 - 2026-11-11, after the first labeling round, for the second test set: portion packs follow the packs rule (count
   × size), and tags and the URL handle are named as sources, settling the two questions the labelers raised. The
   first round's labels were made under the earlier text and are not changed.
+- 2026-11-11, round 3 (bag counts): examples of counts written as bags, which the packs rule already covered. The
+  earlier labels are not changed.
