@@ -195,6 +195,33 @@ change acknowledged in `config/prod_health_expected.toml` lands. Bump `revision`
 The eval floors and ceilings stay where they are, in each `tests/test_*_accuracy.py`. The alerts read them from
 the test run's report (`EVAL_REPORT`, `tests/evalfloor.py`) and never copy them.
 
+## importers: the private importer build failed
+
+**`pipeline:importer-build`** (label `importers`, warning), raised by the `alert` job of `importers.yml` after
+the `build` job, which follows each importers run's snapshot on main once it has passed. It fires when the private dbt build
+(`coffeedata importer-build --publish`) fails, or when it passes but its copy can't be sent to the dataset, and
+closes on the next build that passes. The issue gives the build's status, the run and the commit: nothing from a lot.
+
+- **What isn't affected.** The snapshot job finished before the build started, so every week it stored stays stored
+  (raw files are never rewritten). The private dataset's `derived/importer_offers.parquet` stays the last build that
+  passed: a failed build sends nothing.
+- **Reading the run.** The repository and its logs are public, so the build step prints counts only: dbt's nodes by
+  status (model, test, unit_test) and, when sent, the lots, lots per importer, weeks and latest week. dbt's own output
+  went to a file on the runner, never printed or uploaded, since a failing query's error can quote a lot's value.
+- **Reproduce** with read access to the private dataset:
+  `COFFEEDATA_IMPORTERS=<its hf:// URL> uv run coffeedata importer-build` prints dbt's output on your own console.
+  In the issue and its comments, give the failing model or test and the kind of error, never a value.
+- **Recover.** Fix it on main. The next Wednesday's run builds again; to build sooner, dispatch
+  `gh workflow run importers` (a dispatch never fetches Royal, and stored weeks are skipped). Never re-run a
+  scheduled run for Royal's sake: a re-run never fetches Royal either.
+- **Token or privacy refusal.** `HF_TOKEN is not set`, `not private` or `holds files this job didn't write`: the same
+  checks as the snapshot (`importers.ensure_private`), which the build passes before sending anything. The dataset may
+  hold `raw/`, `README.md`, `.gitattributes` and, under `derived/`, only `importer_offers.parquet`.
+
+To see the issue without touching GitHub: `PYTHONPATH=src python3 -m coffeedata.importer_build_alert failure
+--dry-run`. `tests/test_importer_build_alert.py` covers opening, updating, closing and reopening against an
+in-memory GitHub.
+
 ## Permissions and safety
 
 - The alert jobs use `GITHUB_TOKEN` with `issues: write` and `contents: read` only, install nothing, and run main's

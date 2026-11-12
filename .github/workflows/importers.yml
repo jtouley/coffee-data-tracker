@@ -1,9 +1,11 @@
 # Weekly private snapshots of green-coffee importers' public offer lists (src/coffeedata/importers.py): one pass a
 # week, one public page per importer, into a private Hugging Face dataset of its own. The snapshot is raw only: each
 # lot word for word (every cell of its row, and its URL), one immutable file per importer per week. Stated fields and
-# normalized values are derived from it by a private dbt project (dbt_importers/, `coffeedata importer-build`), never
-# stored in it. No prices, page HTML or images. Backend-only: the main dbt project, the release, the site and the
-# public export never read it.
+# normalized values are derived from it by a private dbt project (dbt_importers/, `coffeedata importer-build`): the
+# `build` job, after the snapshot, rebuilds them from the whole raw history and keeps the latest build's
+# importer_offers in the same private dataset, as one file replaced each week (derived/importer_offers.parquet).
+# No prices, page HTML or images. Backend-only: the main dbt project, the release, the site and the public export
+# never read it.
 #
 # Why GitHub Actions and not the Cloud Run jobs: two page fetches and one small upload a week need no NAT IP, no
 # staging bucket and no crawl window, and a Cloud Run job would need new GCP resources (a job, a scheduler trigger,
@@ -32,6 +34,18 @@
 # under pytest. A real drop at Royal is accepted by the repository variable ROYAL_ACCEPT_DROP_WEEK set to the value
 # the failure names (the failed week's Monday, YYYY-MM-DD): the next weekly run accepts it, read on a scheduled first
 # attempt only, and it expires a week later.
+#
+# The build (`build` job), after a snapshot on main that passed: `coffeedata importer-build --publish`, with the Hub
+# token on that one step as above. After a failed snapshot it waits for the dispatch that recovers that importer, or
+# for next week's run; a dispatch with `all` builds even when every week is already stored (each is skipped). The
+# build never fetches an importer and holds no store address. It reads the private dataset and, only when every dbt
+# model and test passed, replaces derived/importer_offers.parquet there (importers.publish_derived, after the same
+# privacy checks as the snapshot). This repository is public, so its log and artifacts are too: dbt's
+# own output goes to a file on the runner, never printed or uploaded (an error can quote a lot's value), the log shows
+# counts only, and nothing here uploads an artifact. A failed build fails only its own job: the raw weeks are already
+# stored and stay as they are, the derived copy stays the last one that passed, and the `alert` job keeps the
+# `pipeline:importer-build` triage issue open until a build passes (coffeedata.importer_build_alert, docs/TRIAGE.md;
+# GITHUB_TOKEN with issues: write, never the Hub token).
 name: importers
 on:
   schedule:
@@ -87,3 +101,50 @@ jobs:
           fi
           if [ "$IMPORTER" = all ]; then IMPORTER=""; fi
           uv run coffeedata importer-snapshot --require-hub ${IMPORTER:+--importer "$IMPORTER"} ${ACCEPT_DROP:+--accept-drop}
+
+  build:
+    # after a snapshot that passed, main's code only, as the snapshot (a job holding the Hub token runs on main and
+    # nothing else)
+    needs: snapshot
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - name: build the derived importer offers and keep the latest in the private dataset (counts only)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          COFFEEDATA_IMPORTERS: ${{ vars.IMPORTERS_URL || format('hf://datasets/{0}/coffee-data-importers', github.repository_owner) }}
+          # importers.ensure_private refuses to write to any of these
+          COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
+          PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "::error title=Importer build::HF_TOKEN is not set, so the private importers dataset can't be read."
+            exit 1
+          fi
+          # dbt's own output stays on this runner (never printed, never uploaded): the log gets counts only
+          uv run coffeedata importer-build --publish --log-file "$RUNNER_TEMP/importer-build/dbt.log"
+
+  alert:
+    # the build's result as a triage issue: opened or updated on a failure, closed by the next build that passes
+    needs: build
+    if: always() && github.ref == 'refs/heads/main' && (needs.build.result == 'success' || needs.build.result == 'failure')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - name: open, update or close the importer-build triage issue
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+          RESULT: ${{ needs.build.result }}
+        run: python3 -m coffeedata.importer_build_alert "$RESULT"

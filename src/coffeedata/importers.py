@@ -20,11 +20,13 @@ product: every cell of its row under the page's header, and the lot's own page U
 out by their header (a header-less column, by what all its cells say), and a currency amount in any kept cell fails
 the run, so no price is ever stored. No page HTML or images either.
 
-Derived (transform), never stored in the dataset: a private dbt project of its own (dbt_importers/, `build()`,
-`coffeedata importer-build`) reads the whole raw history into its own database file (build/importers.duckdb) and
-derives each lot's stated fields (`stated`, called from a dbt Python model) and our model's normalized values (SQL
-rules over importer_rules' vocabulary), so a better rule re-derives every week. Those rules abstain when unsure and
-aren't evaluated yet (CLAUDE.md): nothing relies on them.
+Derived (transform): a private dbt project of its own (dbt_importers/, `build()`, `coffeedata importer-build`) reads
+the whole raw history into its own database file (build/importers.duckdb) and derives each lot's stated fields
+(`stated`, called from a dbt Python model) and our model's normalized values (SQL rules over importer_rules'
+vocabulary), so a better rule re-derives every week. Those rules abstain when unsure and aren't evaluated yet
+(CLAUDE.md): nothing relies on them. After each weekly snapshot the workflow builds it and `publish_derived` keeps
+the latest build's importer_offers in the same private dataset, as one file (DERIVED) replaced at each build: a
+copy of the latest derivation, never an input to anything, and never read back by the build.
 
 Backend-only, for internal use and a future roaster portal (which may show only the normalized values, never the
 importer's wording): the main dbt project, the release, the public tables and contracts, the site, the public dataset
@@ -693,7 +695,7 @@ def private_db() -> Path:
     return db
 
 
-def build(lake: Lake, target: Path | None = None, unit_tests: bool = False) -> bool:
+def build(lake: Lake, target: Path | None = None, unit_tests: bool = False, log: Path | None = None) -> bool:
     """Build the private dbt project (dbt_importers/) over the importers dataset into its own database file (DB,
     `private_db`), rebuilt from raw each time. Reads the dataset (its staged files, and the Hub when it is remote),
     never writes it. A database already there is replaced only when it holds nothing but the private project's tables
@@ -702,7 +704,9 @@ def build(lake: Lake, target: Path | None = None, unit_tests: bool = False) -> b
     The rules are SQL over fixed patterns, so they don't fail lot by lot as the Python rules could: an error in one
     (a pattern RE2 rejects, a model that no longer compiles) fails the whole build, loudly, and leaves no database
     behind, so no stale or half-built view is ever read. dbt's unit tests check the rules over hand-written rows, so
-    they run only when asked (the tests). Returns whether every model and check passed."""
+    they run only when asked (the tests). With `log`, dbt's own output goes to that file instead of the console:
+    dbt prints a failing query's error, and a DuckDB error can quote a value it read, so the workflow (a public log)
+    keeps it on the runner and prints only `run_counts`. Returns whether every model and check passed."""
     import json
     import subprocess
 
@@ -725,13 +729,95 @@ def build(lake: Lake, target: Path | None = None, unit_tests: bool = False) -> b
     where = ["--target-path", str(target.resolve())] if target else []
     skip = [] if unit_tests else ["--exclude", "resource_type:unit_test"]
     sources = json.dumps({"importer_sources": lake.sources("importer_raw")})
-    r = subprocess.run(
-        ["dbt", "build", *skip, "--project-dir", project_dir, "--profiles-dir", project_dir, *where, "--vars", sources],
-        env=env,
-    )  # fmt: skip
+    cmd = ["dbt", "build", *skip, "--project-dir", project_dir, "--profiles-dir", project_dir, *where, "--vars", sources]  # fmt: skip
+    if log is None:
+        r = subprocess.run(cmd, env=env)
+    else:
+        log.parent.mkdir(parents=True, exist_ok=True)
+        with log.open("w") as out:
+            r = subprocess.run(cmd, env=env, stdout=out, stderr=subprocess.STDOUT)
     if r.returncode != 0:
         db.unlink(missing_ok=True)  # never leave a half-built view
     return r.returncode == 0
+
+
+def run_counts(target: Path) -> dict[str, dict[str, int]]:
+    """How many of the build's nodes ended in each status, by kind (model, test, unit_test, ...), from dbt's
+    run_results.json in `target`: counts only. A node's message is never read, since a failing query's error can
+    quote a value it read. Empty when dbt wrote no results (it stopped before running anything)."""
+    import json
+
+    try:
+        results = json.loads((target / "run_results.json").read_text())["results"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    counts: dict[str, dict[str, int]] = {}
+    for r in results:
+        kind = str(r.get("unique_id", "")).split(".")[0] or "unknown"
+        status = str(r.get("status"))
+        counts.setdefault(kind, {}).setdefault(status, 0)
+        counts[kind][status] += 1
+    return counts
+
+
+# The derived copy in the private importers dataset: the latest build's importer_offers, one file, replaced at each
+# build (publish_derived). Nothing else is ever written under derived/ (ensure_private refuses a dataset holding
+# anything else there).
+DERIVED = "derived/importer_offers.parquet"
+DERIVED_FILES = {DERIVED}
+
+
+def publish_derived(lake: Lake, sha: str | None = None) -> dict:
+    """Send the private database's importer_offers (a build that passed: `build`) to the private importers dataset
+    as DERIVED, replacing the file there, after the same checks as the snapshot (`ensure_private`). Only to a
+    remote (Hugging Face) dataset: ValueError otherwise. The file is skipped when the dataset already holds the same
+    bytes. Returns counts only (lots, lots per importer, weeks, the latest week's Monday) and whether it was sent:
+    the workflow prints them to a public log, so never a lot's value."""
+    import duckdb
+
+    if not lake.remote:
+        raise ValueError(f"publish_derived sends to the private Hugging Face dataset only, not {lake.url!r}")
+    db = private_db()
+    if not db.exists():
+        raise FileNotFoundError(f"{db} isn't built: run the build first (a failed build leaves no database)")
+    ensure_private(lake)
+    from huggingface_hub import HfApi
+
+    api = HfApi(token=os.environ.get("HF_TOKEN"))
+    repo = lake._repo_id()
+    with tempfile.TemporaryDirectory() as d, duckdb.connect(str(db), read_only=True) as con:
+        local = Path(d) / "importer_offers.parquet"
+        con.execute(
+            f"copy (select * from importer_offers order by week, importer, \"row\") to '{local}' "
+            "(format parquet, compression zstd)"
+        )
+        row = con.execute("select count(*), count(distinct week), max(week) from importer_offers").fetchone()
+        assert row is not None  # an aggregate always returns a row
+        lots, weeks, latest = row
+        by_importer = dict(
+            con.execute("select importer, count(*) from importer_offers group by 1 order by 1").fetchall()
+        )
+        latest_week = latest.isoformat() if latest else None
+        there = _hub(api.get_paths_info, repo, [DERIVED], repo_type="dataset")
+        sent = not (there and _same_file(there[0], local))
+        if sent:
+            _hub(
+                api.upload_file,
+                path_or_fileobj=str(local),
+                path_in_repo=DERIVED,
+                repo_id=repo,
+                repo_type="dataset",
+                commit_message=f"importer_offers: {lots} lots, {weeks} weeks through {latest_week}"
+                + (f", built from {sha[:12]}" if sha else ""),
+            )
+    return {
+        "path": DERIVED,
+        "lots": lots,
+        "lots_by_importer": by_importer,
+        "weeks": weeks,
+        "latest_week": latest_week,
+        "sent": sent,
+    }
 
 
 # --- the weekly job -----------------------------------------------------------------------------------------------
@@ -785,14 +871,16 @@ OTHER_DATASETS = {
     "COFFEEDATA_PHOTOS": "hf://datasets/jtouley/coffee-data-photos",
     "COFFEEDATA_USERS": "hf://datasets/jtouley/coffee-data-users",
 }
-# What an importers dataset may hold. An existing dataset with anything else is someone else's: refused.
-OWN_TOP_LEVEL = {"raw", "README.md", ".gitattributes"}
+# What an importers dataset may hold: the raw snapshots, the derived copy (derived/, DERIVED_FILES alone), the card.
+# An existing dataset with anything else is someone else's: refused.
+OWN_TOP_LEVEL = {"raw", "derived", "README.md", ".gitattributes"}
 
 
 def ensure_private(lake: Lake) -> None:
     """Make sure the importers dataset is a private one of its own before anything is fetched or written:
     - its name is none of OTHER_DATASETS' (their variables' values and the defaults), compared case-insensitively;
-    - an existing dataset holds nothing but this job's files (OWN_TOP_LEVEL); a missing one is created private;
+    - an existing dataset holds nothing but this job's files (OWN_TOP_LEVEL, and under derived/ only
+      DERIVED_FILES); a missing one is created private;
     - the Hub says it is private (`private is True`; anything else is refused);
     then send the dataset card if it is missing or changed. A local lake needs none of this."""
     if not lake.remote:
@@ -809,9 +897,11 @@ def ensure_private(lake: Lake) -> None:
     api = HfApi(token=os.environ.get("HF_TOKEN"))
     if _hub(api.repo_exists, repo, repo_type="dataset"):
         files = _hub(api.list_repo_files, repo, repo_type="dataset")
-        if foreign := sorted({f.split("/")[0] for f in files} - OWN_TOP_LEVEL):
+        foreign = {f.split("/")[0] for f in files} - OWN_TOP_LEVEL
+        foreign |= {f for f in files if f.startswith("derived/") and f not in DERIVED_FILES}
+        if foreign:
             raise RuntimeError(
-                f"{repo} holds files this job didn't write ({', '.join(foreign)}); refusing to use it"
+                f"{repo} holds files this job didn't write ({', '.join(sorted(foreign))}); refusing to use it"
             )
     else:
         _hub(api.create_repo, repo, repo_type="dataset", private=True, exist_ok=True)
