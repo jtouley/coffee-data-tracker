@@ -107,8 +107,8 @@ EVAL = ROOT / "eval" / "bag_grams"
 def _gate_sets() -> dict[str, list[dict]]:
     rows = [json.loads(x) for x in GATE.read_text().splitlines()] if GATE.exists() else []
     out: dict[str, list[dict]] = defaultdict(list)
-    for r in rows:
-        out[r["set"]].append(r)
+    for r in rows:  # a gate set's census part is scored with it
+        out[r["set"].removesuffix(bag_eval.CENSUS)].append(r)
     return dict(out)
 
 
@@ -121,9 +121,10 @@ def _rules_grams(r: dict, damaged: bool = False) -> dict:
 
 
 def _gate(name: str, rows: list[dict], damage: set[str] = frozenset()) -> dict:
-    meta = json.loads((EVAL / f"items_{name}.json").read_text())
-    main = meta["rules"]["main"]
-    sealed = json.loads((EVAL / f"pred_{main}_{name}.json").read_text())
+    main = json.loads((EVAL / f"items_{name}.json").read_text())["rules"]["main"]
+    sealed = {}
+    for part in bag_eval.gate_parts(name):
+        sealed |= json.loads((EVAL / f"pred_{main}_{part}.json").read_text())
     by_main: dict[str, list[tuple[str, str]]] = defaultdict(list)
     for r in rows:
         price = {o[0]: o[2] for o in r["options"]}.get(r["drawn"])
@@ -131,7 +132,7 @@ def _gate(name: str, rows: list[dict], damage: set[str] = frozenset()) -> dict:
             (r["store"], bag_eval.gate_outcome(sealed[r["coffee_id"]], r["labels"], r["drawn"], price))
         )
     now = bag_eval.gate_outcomes(rows, lambda r: _rules_grams(r, r["coffee_id"] in damage))
-    return bag_eval.gate_result({"main": by_main, "now": now}, meta["stratum_sizes"], "main", "now")
+    return bag_eval.gate_result({"main": by_main, "now": now}, bag_eval.gate_sizes(name), "main", "now")
 
 
 @pytest.mark.skipif(not _gate_sets(), reason="no scored gate set yet (eval/bag_grams/README.md)")

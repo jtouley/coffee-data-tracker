@@ -559,6 +559,80 @@ def cmd_gate_sample(data: Path, split: str, main: str, change: str) -> None:
     )
 
 
+CENSUS = (
+    "-census"  # gate-<change>-census: the gate set's census of the coffees the change publishes differently
+)
+
+
+def cmd_gate_census(data: Path, split: str, main: str, change: str) -> None:
+    """The gate set's census part (items_gate-<change>-census.json, ids only): every coffee of the population whose
+    published price_per_100g or its option differs between main and the change, labeled fresh whatever earlier sets
+    hold (the owner's choice for #139), with the same options to label as gate-sample. It is one stratum,
+    "changed", of its population size; each platform stratum of the gate set then stands for its platform less its
+    changed coffees (platform_sizes), so the strata add up to the whole population and nothing is counted twice.
+    Refuses when the platform sample holds a changed coffee."""
+    here = Path(__file__).parent
+    base = split.removesuffix(CENSUS)
+    if not split.endswith(CENSUS) or not (here / f"items_{base}.json").exists():
+        sys.exit(f"name the census <gate>{CENSUS}, after drawing <gate>")
+    if (here / f"items_{split}.json").exists():
+        sys.exit(f"items_{split}.json exists: a census is drawn once")
+    pm, pc = pred(data, main), pred(data, change)
+    rows = load(data)
+    platform = Counter(r["platform"] for r in rows)
+    drawn, changed = [], Counter()
+    for r in rows:
+        c = r["coffee_id"]
+        (xm, vm), (xc, vc) = published(r, pm[c]), published(r, pc[c])
+        if (xm, vm) == (xc, vc):
+            continue
+        changed[r["platform"]] += 1
+        label = [v for v in (vm, vc) if v]
+        if vm is None or vc is None:
+            label.append(r["item_variant_id"])
+        drawn.append(
+            {"coffee_id": c, "stratum": "changed", "store": r["group"], "label": list(dict.fromkeys(label))}
+        )
+    sample = {it["coffee_id"] for it in json.loads((here / f"items_{base}.json").read_text())["items"]}
+    if sample & {d["coffee_id"] for d in drawn}:
+        sys.exit(f"{base}'s platform sample holds changed coffees: the strata would overlap")
+    (here / f"items_{split}.json").write_text(
+        json.dumps(
+            {
+                "set": split,
+                "part_of": base,
+                "rules": {"main": main, "change": change},
+                "stratum_sizes": {"changed": len(drawn)},
+                "platform_sizes": {k: n - changed[k] for k, n in platform.items()},
+                "items": sorted(drawn, key=lambda d: d["coffee_id"]),
+            },
+            indent=1,
+            sort_keys=True,
+        )
+        + "\n"
+    )
+    print(
+        f"{split}: {len(drawn)} coffees, {sum(len(d['label']) for d in drawn)} options to label; changed by platform {dict(changed)}"
+    )
+
+
+def gate_parts(gate: str) -> list[str]:
+    """A gate set's parts: the platform sample, and its census when there is one."""
+    here = Path(__file__).parent
+    return [gate] + ([gate + CENSUS] if (here / f"items_{gate}{CENSUS}.json").exists() else [])
+
+
+def gate_sizes(gate: str) -> dict[str, int]:
+    """Stratum sizes for scoring a gate set: with a census, each platform less its changed coffees plus the census
+    (the whole population); without one, the platform sample's frame."""
+    here = Path(__file__).parent
+    parts = gate_parts(gate)
+    if len(parts) == 1:
+        return json.loads((here / f"items_{gate}.json").read_text())["stratum_sizes"]
+    census = json.loads((here / f"items_{parts[1]}.json").read_text())
+    return census["platform_sizes"] | census["stratum_sizes"]
+
+
 def cmd_gate_seal(data: Path, split: str, names: list[str]) -> None:
     """Each rule's published value for a gate set's coffees (pred_<name>_<set>.json: price_per_100g, the option it
     comes from and its grams), written before any label so SHA256SUMS pins them."""
@@ -686,53 +760,69 @@ def cmd_gate_fixture(data: Path, split: str, out: Path) -> None:
     print(out, len(rows), "rows")
 
 
-def cmd_gate_score(data: Path, split: str, labels_file: Path, final: bool) -> None:
-    """Score a gate set once (--final), main against the change named in its items file, from the sealed
-    predictions (the seal is checked against the rules on PYTHONPATH's predictions). Totals only."""
+def cmd_gate_score(data: Path, gate: str, final: bool) -> None:
+    """Score a gate set once (--final), with its census part when it has one: main against the change named in
+    its items file, from the sealed predictions (checked against these rules' predictions) and each part's
+    labels/labels_ref_<part>.json. Totals only."""
     if not final:
         sys.exit("a gate set is scored once, with --final")
     here = Path(__file__).parent
-    meta = json.loads((here / f"items_{split}.json").read_text())
-    labels = json.loads(labels_file.read_text())
+    parts = gate_parts(gate)
+    metas = {part: json.loads((here / f"items_{part}.json").read_text()) for part in parts}
+    main, change = metas[gate]["rules"]["main"], metas[gate]["rules"]["change"]
     pop = {r["coffee_id"]: r for r in load(data)}
-    main, change = meta["rules"]["main"], meta["rules"]["change"]
-    outcomes: dict[str, dict[str, list[tuple[str, str]]]] = {}
-    for name in (main, change):
-        sealed = json.loads((here / f"pred_{name}_{split}.json").read_text())
-        pr = pred(data, name)
-        per: dict[str, list[tuple[str, str]]] = defaultdict(list)
-        for it in meta["items"]:
-            c = it["coffee_id"]
-            x, v = published(pop[c], pr[c])
-            if sealed[c] != {"p100": x, "variant_id": v, "grams": pr[c].get(v) if v else None}:
-                sys.exit(f"{name}'s predictions differ from pred_{name}_{split}.json")
-            labs = {o: labels[f"{c}|{o}"] for o in it["label"]}
-            price = {o["variant_id"]: o["price"] for o in pop[c]["variants"]}.get(pop[c]["item_variant_id"])
-            per[it["stratum"]].append(
-                (it["store"], gate_outcome(sealed[c], labs, pop[c]["item_variant_id"], price))
-            )
-        outcomes[name] = per
-    res = gate_result(outcomes, meta["stratum_sizes"], main, change)
-    print(f"{split}: {len(meta['items'])} coffees; strata {meta['stratum_sizes']}")
+    outcomes: dict[str, dict[str, list[tuple[str, str]]]] = {
+        main: defaultdict(list),
+        change: defaultdict(list),
+    }
+    for part, meta in metas.items():
+        labels = json.loads((here / "labels" / f"labels_ref_{part}.json").read_text())
+        for name in (main, change):
+            sealed = json.loads((here / f"pred_{name}_{part}.json").read_text())
+            pr = pred(data, name)
+            for it in meta["items"]:
+                c = it["coffee_id"]
+                x, v = published(pop[c], pr[c])
+                if sealed[c] != {"p100": x, "variant_id": v, "grams": pr[c].get(v) if v else None}:
+                    sys.exit(f"{name}'s predictions differ from pred_{name}_{part}.json")
+                labs = {o: labels[f"{c}|{o}"] for o in it["label"]}
+                price = {o["variant_id"]: o["price"] for o in pop[c]["variants"]}.get(
+                    pop[c]["item_variant_id"]
+                )
+                outcomes[name][it["stratum"]].append(
+                    (it["store"], gate_outcome(sealed[c], labs, pop[c]["item_variant_id"], price))
+                )
+    sizes = gate_sizes(gate)
+    res = gate_result(outcomes, sizes, main, change)
+    print(
+        f"{gate} ({' + '.join(parts)}): {sum(len(m['items']) for m in metas.values())} coffees; strata {sizes}"
+    )
     for name in (main, change):
         print(f"== {name}")
         for k in sorted(outcomes[name]):
             xs = [o for _, o in outcomes[name][k]]
-            cells = [
-                f"{o} {xs.count(o)}/{len(xs)} [{100 * wilson(xs.count(o), len(xs))[0]:.1f}, {100 * wilson(xs.count(o), len(xs))[1]:.1f}]"
-                for o in OUTCOMES
-            ]
+            cells = []
+            for o in OUTCOMES:
+                lo, hi = wilson(xs.count(o), len(xs))
+                cells.append(f"{o} {xs.count(o)}/{len(xs)} [{100 * lo:.1f}, {100 * hi:.1f}]")
             print(f"  {k}: " + "; ".join(cells))
         for label in ("accuracy", "wrong"):
             est, lo, hi, clo, chi = res[(name, label)]
             print(
-                f"  weighted {label}: {100 * est:.2f}%  normal [{100 * lo:.2f}, {100 * hi:.2f}]  store-clustered [{100 * clo:.2f}, {100 * chi:.2f}]"
+                f"  weighted {label}: {100 * est:.2f}%  normal [{100 * lo:.2f}, {100 * hi:.2f}]"
+                f"  store-clustered [{100 * clo:.2f}, {100 * chi:.2f}]"
             )
     for label in ("accuracy", "wrong"):
         est, lo, hi, clo, chi = res[("paired", label)]
         print(
-            f"paired {label}, {change} - {main}: {100 * est:+.2f} points  normal [{100 * lo:+.2f}, {100 * hi:+.2f}]  store-clustered [{100 * clo:+.2f}, {100 * chi:+.2f}]"
+            f"paired {label}, {change} - {main}: {100 * est:+.2f} points  normal [{100 * lo:+.2f}, {100 * hi:+.2f}]"
+            f"  store-clustered [{100 * clo:+.2f}, {100 * chi:+.2f}]"
         )
+    if "changed" in outcomes[main]:
+        for label, ok in (("accuracy", ("right", "abstain_ok")), ("wrong", ("wrong",))):
+            m = [o in ok for _, o in outcomes[main]["changed"]]
+            c = [o in ok for _, o in outcomes[change]["changed"]]
+            print(f"changed stratum {label}: {main} {sum(m)}/{len(m)}, {change} {sum(c)}/{len(c)}")
     print(
         "gate:",
         "passes" if res["passes"] else "FAILS",
@@ -1088,8 +1178,10 @@ def main() -> None:
         cmd_gate_seal(data, a[2], a[3:])
     elif cmd == "gate-fixture":
         cmd_gate_fixture(data, a[2], Path(a[3]))
+    elif cmd == "gate-census":
+        cmd_gate_census(data, a[2], a[3], a[4])
     elif cmd == "gate-score":
-        cmd_gate_score(data, a[2], Path(a[3]), "--final" in a)
+        cmd_gate_score(data, a[2], "--final" in a)
     elif cmd == "fixture":
         cmd_fixture(data, Path(a[2]), a[3:])
     elif cmd == "seal":
