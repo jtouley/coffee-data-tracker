@@ -61,8 +61,7 @@ def _store(pages: list[list[dict]], calls: list[httpx.Request], robots: str = "U
         body = {"products": pages[n - 1] if n <= len(pages) else []}
         return httpx.Response(200, json=body)
 
-    # robots_query: as the weekly command builds it (robots.txt checked on the path and the query)
-    return PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler), robots_query=True)
+    return PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler))
 
 
 def _pages_of(n: int) -> list[list[dict]]:
@@ -150,29 +149,13 @@ def test_a_listing_that_never_ends_fails_instead_of_paging_forever(monkeypatch):
 
 
 @pytest.mark.parametrize(
-    "robots",
-    [
-        "User-agent: *\nDisallow: /\n",
-        # a rule about the query only: matched against the path and the query we send (RFC 9309)
-        "User-agent: *\nDisallow: /*page=\n",
-        "User-agent: *\nDisallow: /products.json?limit=\n",
-    ],
+    "robots", ["User-agent: *\nDisallow: /\n", "User-agent: *\nDisallow: /products.json\n"]
 )
-def test_robots_disallow_is_honored_on_the_path_and_the_query(robots):
+def test_robots_disallow_is_honored(robots):
     calls: list[httpx.Request] = []
     with _store(_pages_of(250), calls, robots=robots) as client, pytest.raises(FetchError):
         importers.read_royal(client, LISTING)
     assert [c.url.path for c in calls] == ["/robots.txt"]
-
-
-def test_the_query_aware_robots_check_is_the_importers_clients_only():
-    """Scoped to the importers job's client in this PR: what it would change for the roaster crawl hasn't been
-    measured, so every other client still checks robots.txt against the path, as before."""
-    calls: list[httpx.Request] = []
-    with _store(_pages_of(250), calls, robots="User-agent: *\nDisallow: /*page=\n") as client:
-        client.robots_query = False
-        assert len(importers.read_royal(client, LISTING).lots) == 6
-    assert PoliteClient().robots_query is False
 
 
 def test_a_full_page_with_nothing_keyable_fails_at_once(monkeypatch):
@@ -201,7 +184,6 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
 
     def fake(lake, client, *a, **k):
         seen["ok"] = client.schedule_only_ok
-        seen["robots_query"] = client.robots_query
         return []
 
     monkeypatch.setattr(importers, "snapshot", fake)
@@ -209,7 +191,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
         cli.main(["importer-snapshot"])
     except SystemExit as e:
         assert e.code in (0, None)
-    assert seen == {"ok": True, "robots_query": True}
+    assert seen == {"ok": True}
     assert PoliteClient().schedule_only_ok is False  # every other client refuses it
 
 

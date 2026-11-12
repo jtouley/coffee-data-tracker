@@ -565,15 +565,11 @@ class PoliteClient:
         max_response_bytes: int | None = None,
         deadline_s: float | None = None,
         schedule_only_ok: bool = False,
-        robots_query: bool = False,
     ):
         self.min_interval = min_interval
         # Only the scheduled importers job builds a client that may reach SCHEDULE_ONLY_HOSTS; every other one (the
         # crawl, the probe, discovery) refuses them outright, robots.txt included (ScheduleOnlyHost).
         self.schedule_only_ok = schedule_only_ok
-        # Whether robots.txt is checked against the path *and* the query sent (RFC 9309). On only for the importers
-        # job's client for now: what it changes for the roaster crawl hasn't been measured yet.
-        self.robots_query = robots_query
         # deadline_s: seconds from now after which no request is sent (DeadlineReached): the crawl job's window, so a
         # catalog still being read when it ends stops there and is stored as partial, instead of running past the job.
         self.deadline = None if deadline_s is None else time.monotonic() + deadline_s
@@ -884,9 +880,7 @@ class PoliteClient:
                 raise ScheduleOnlyHost(
                     f"{urlparse(url).hostname}: fetched only by the scheduled importers job"
                 )
-            # robots.txt rules match the path and the query (RFC 9309), so the params we'll send are checked too
-            checked = str(httpx.URL(url).copy_merge_params(params)) if params and self.robots_query else url
-            if not robots and not self._allowed(checked):
+            if not robots and not self._allowed(url):
                 raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
             r = self._send_retrying(url, params, page=not robots)
             if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):

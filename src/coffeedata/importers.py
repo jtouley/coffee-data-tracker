@@ -495,7 +495,7 @@ def read_royal(
     client: PoliteClient, url: str, last: int | None = None, sleep: Callable[[float], None] | None = None
 ) -> Parsed:
     """Every product in the store's public listing, one page after another at ROYAL_PAGE_LIMIT a page and
-    ROYAL_PAGE_INTERVAL apart, with the crawler's client (our user agent, robots.txt honored on the path and query,
+    ROYAL_PAGE_INTERVAL apart, with the crawler's client (our user agent, robots.txt honored,
     bounded retries; never logged in). Then parse_royal.
 
     - An empty page ends the listing.
