@@ -317,3 +317,9 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - Producer/farm/lot extraction: yes, once the crawlers are updated (after cutover2).
 - Royal: the owner questioned whether its terms bind a public, no-login page. Not crawled until decided.
 - Catalog location (state column/filter, city, metro): feasibility study running.
+
+## 2026-11-12 review rule (owner)
+- A final review that requests changes goes back to that reviewer before merge. Any change made after the last review is reviewed too. Green CI alone is never enough.
+- #145 broke this: it was merged without re-review. A post-merge review is running before Royal's first scheduled run (Wednesday 11-18, 17:37 UTC).
+- No changes to shared crawler code without the owner's approval. Royal is "just another crawler": robots.txt is handled exactly as for every roaster.
+- Importer derivation belongs in dbt, in a private target (Option A).
