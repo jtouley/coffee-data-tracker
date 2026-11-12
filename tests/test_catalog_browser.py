@@ -1,6 +1,7 @@
 """The catalog's search and filters in a real browser (tests/browser/catalog_flow.js), at 390 px and on desktop, light
-and dark: the roaster's city and state in the search box (cities and state names, two-letter codes as whole words
-only), the State filter, "Show more" past the first 500 rows, a slow catalog.json and a failed one. The page is the real template, rendered as the site renders it; its catalog.json is a small one written
+and dark, and at 320 px with the charts: the roaster's city and state in the search box (cities and state names,
+two-letter codes as whole words only), the State filter, "Show more" past the first 500 rows, a slow catalog.json and a
+failed one with Try again. The page is the real template, rendered as the site renders it; its catalog.json is a small one written
 here. Needs Node with Playwright (skipped without it, except under REQUIRE_BROWSER, as in CI); axe runs where
 axe-core is installed. CATALOG_SCREENSHOTS=<dir> keeps the screenshots."""
 
@@ -41,7 +42,8 @@ ROASTERS = [
     ("plaza.coffee", "Plaza Roasters", "Kansas City", "MO"),
     ("hill.coffee", "Strawberry Hill Roasters", "Kansas City", "KS"),
     ("sumatrahouse.coffee", "Sumatra House", "Portland", "OR"),
-    ("yorkbeans.coffee", "York Beans", "York", "PA"),  # "new york" is the state, not York, PA
+    ("yorkbeans.coffee", "York Beans", "York", "PA"),
+    ("littleseed.coffee", "little seed coffee", "Boise", "ID"),  # "new york" is the state, not York, PA
 ]
 # main's columns, then the two added at the end
 COLUMNS = ["coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
@@ -52,12 +54,12 @@ KEY = "0123abcd4567"  # site.build passes a hash of catalog.json
 
 
 def coffee(
-    roaster: str, title: str, process: str = "washed", notes=("cocoa",), in_stock: bool = True
+    roaster: str, title: str, process: str = "washed", notes=("cocoa",), in_stock: bool = True, price=6.5
 ) -> dict:
     rid, name, city, state = next(r for r in ROASTERS if r[0] == roaster)
     return {"coffee_id": f"{rid}:{title}", "roaster_name": name, "roaster_state": state, "title": title,
             "url": f"https://{rid}/", "origin_country": "Ethiopia", "process": process, "roast_level": "light",
-            "tasting_notes": list(notes), "price_per_100g": 6.5, "min_price_usd": 22.0, "in_stock": in_stock,
+            "tasting_notes": list(notes), "price_per_100g": price, "min_price_usd": 22.0, "in_stock": in_stock,
             "catalog_status": "active", "first_seen": "2026-10-26", "roaster_id": rid, "roaster_city": city}  # fmt: skip
 
 
@@ -66,10 +68,10 @@ def catalog() -> dict:
     site's order (roaster, then title). One Michigan coffee is a "City Roast", which "michigan city coffee" mustn't
     find."""
     rows = [
-        coffee("capitolbeans.com", "Capitol Roast"),
-        coffee("drycreek.coffee", "Dry Creek Drip"),
-        coffee("empire.coffee", "Empire Blend", notes=("vermont maple",)),
-        coffee("gotham.coffee", "Gotham Blend"),
+        coffee("capitolbeans.com", "Capitol Roast", notes=("zebra",)),
+        coffee("drycreek.coffee", "Dry Creek Blend", price=None),
+        coffee("empire.coffee", "Empire Blend", notes=("vermont maple",), price=9.0),
+        coffee("gotham.coffee", "Gotham Blend", price=None),
         coffee("lapaloma.coffee", "Paloma House"),
         coffee("littlehavana.coffee", "Miami Nights", notes=("mild", "cacao")),
         coffee("littlehavana.coffee", "Michigan Cherry"),
@@ -85,9 +87,11 @@ def catalog() -> dict:
         coffee("northside.coffee", "Windy City Espresso"),
         coffee("ozark.coffee", "Ozark Morning"),
         coffee("plaza.coffee", "Plaza Espresso"),
-        coffee("hill.coffee", "Hill Blend"),
+        coffee("hill.coffee", "Hill Blend", price=4.0),
         coffee("sumatrahouse.coffee", "Indonesia Sumatra", notes=("dried fig", "made in small batches")),
-        coffee("yorkbeans.coffee", "Brand New Roast"),
+        coffee("yorkbeans.coffee", "Brand New Roast", notes=("zebra",)),
+        # A lower-case name, last in the file as a binary sort would put it; the page puts it with the L's.
+        coffee("littleseed.coffee", "Seed Roast", notes=("zebra",)),
     ]
     return {
         "release": {"release_build_id": BUILD},
@@ -97,12 +101,21 @@ def catalog() -> dict:
 
 
 def render(out: Path) -> None:
-    """The catalog page as site.build renders it, with empty charts and counts."""
+    """The catalog page as site.build renders it, with its two charts drawn by site.hbar_chart (they set the page's
+    width at 320 px) and empty counts."""
+    origins = [("Papua New Guinea", 4.51), ("Ethiopia", 5.07), ("Colombia", 4.71), ("Kenya", 5.51)]
+    processes = [("not stated", 11033), ("washed", 2389), ("natural", 1423), ("anaerobic", 284)]
+    charts = {
+        "origin_price": site.hbar_chart(
+            [(o, v, f"{o}: ${v:.2f}") for o, v in origins], "${:.2f}", "Price by origin"
+        ),
+        "process": site.hbar_chart([(p, n, f"{p}: {n:,}") for p, n in processes], "{:,.0f}", "By process"),
+    }
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
     html = env.get_template("index.html").render(
         links=site.links(), jsonld="", totals={"coffees": 0, "in_stock": 0, "roasters": 0}, status_rows=[],
-        charts={"origin_price": "", "process": ""}, new=[], coverage={"registry": {}}, origin_price=[],
-        processes=[], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
+        charts=charts, new=[], coverage={"registry": {}}, origin_price=[{"origin_country": o, "n": 5, "med": v} for o, v in origins],
+        processes=[{"process": p, "n": n} for p, n in processes], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
         state_words=site.STATE_WORDS,
     )  # fmt: skip
     (out / "catalog").mkdir(parents=True)
@@ -127,7 +140,9 @@ def test_catalog_search_and_state_filter_in_a_browser(tmp_path):
         thread.join()
     assert r.returncode == 0, r.stderr[-3000:]
     assert {p.name for p in shots.iterdir()} == {
-        f"catalog-michigan-{w}-{scheme}.png" for w in ("390", "desktop") for scheme in ("light", "dark")
+        f"catalog-michigan-{w}-{scheme}.png"
+        for w in ("320", "390", "desktop", "zoom200")
+        for scheme in ("light", "dark")
     }
 
 
