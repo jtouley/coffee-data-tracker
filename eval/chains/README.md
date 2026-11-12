@@ -59,7 +59,7 @@ public store counts as generally known; nobody labeled, and nobody counted store
 
 | roaster_id | Name in the registry | Store count | Coffees (public) | Status | Source | Chain by | Hand check |
 |---|---|---|---|---|---|---|---|
-| dutchbros.com | Hebron | 1,114 | 0 | no_catalog | overture | count | Dutch Bros, about a thousand drive-throughs: yes. The registry's name is one place's name, not the brand's. |
+| dutchbros.com | Dutch Bros Coffee | 1,114 | 0 | no_catalog | overture | count | Dutch Bros, about a thousand drive-throughs: yes. The seed had one place's name ("Hebron"); renamed to the brand. |
 | farmerbros.com | Farmer Brothers | 62 | 0 | unreachable | overture | count | A foodservice roaster and distributor: its places are likely branches and customers' sites, not stores. **Noisy**; no public effect while it publishes nothing. |
 | pjscoffee.com | PJ's Coffee of New Orleans | 41 | 0 | no_catalog | overture | count | A franchise of well over 20 cafés: yes. |
 | blankstreet.com | Blank Street Coffee | 31 | 0 | unreachable | overture | count | Dozens of cafés: yes. |
