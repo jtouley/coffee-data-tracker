@@ -530,6 +530,18 @@ prediction; C, the blind tiebreak on their disagreements, is claude-sonnet-5-5.
 population they differ on 81 of 30,022), and 142 publish nothing under both, so their drawn option is labeled.
 `items_gate-139.json`, `pred_branch2_gate-139.json` and `pred_branch5_gate-139.json` are in `SHA256SUMS`.
 
+**Labels for the platform sample:** A and B agreed on 491/500 (98.2%, Wilson [96.6, 99.1]); C (claude-sonnet-5-5)
+settled the 9 others. 500 reference labels: 368 weights, 132 `unknown`.
+
+**The census part, `gate-139-census`** (the owner's choice for #139): every coffee whose published value differs
+between `main` and #139, 81 of 30,022, from 27 stores (the largest 17), with all 138 options labeled fresh by new
+labelers (A and B claude-haiku-5-5, C claude-sonnet-5-5), blind to every earlier label. 80 of the 81 are in earlier
+sets (#139's own census sets and `test2`), so this stratum is not unseen, only freshly labeled; it gives the gate the
+change's own coffees, which a population sample of 500 expects one of. Scored with the platform sample as one set:
+the census at 81 of 30,022, each platform at its size less its changed coffees (`platform_sizes`: shopify 21,389,
+squarespace 2,736, woocommerce 2,588, generic 1,936, square_online 1,292). Its items and both rules' predictions are
+in `SHA256SUMS`, sealed before any label. `bag_eval.py gate-census <data> <gate>-census <main> <change>` draws one.
+
 ## Review of #139: H1 and L1–L5 (step 9's light path)
 
 The specialist review (H1): a count of bags next to a weight that is already the total was multiplied. `2 Bags (24
