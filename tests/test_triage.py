@@ -470,7 +470,8 @@ def test_the_alert_jobs_hold_only_issues_write_and_never_a_hub_token():
     workflows = ROOT / ".github" / "workflows"
     ci = yaml.safe_load((workflows / "ci.yml").read_text())
     assert "alert" not in ci["jobs"] and "issues" not in (workflows / "ci.yml").read_text()
-    for name in ("ci.yml", "eval-floors.yml", "prod-health.yml", "eval-alerts.yml"):
+    for name in ("ci.yml", "eval-floors.yml", "prod-health.yml", "eval-alerts.yml", "importers.yml",
+                 "importers-alerts.yml"):  # fmt: skip
         wf = yaml.safe_load((workflows / name).read_text())
         assert wf["permissions"] == {"contents": "read"}, name
         for job_name, job in wf["jobs"].items():
@@ -493,3 +494,214 @@ def test_the_alert_jobs_hold_only_issues_write_and_never_a_hub_token():
     assert set(alerts[True]) == {"workflow_run"} and alerts[True]["workflow_run"]["workflows"] == ["ci"]
     download = next(s for s in alerts["jobs"]["alert"]["steps"] if "download-artifact" in s.get("uses", ""))
     assert download["with"]["run-id"] == "${{ github.event.workflow_run.id }}"  # that run's artifact only
+
+
+# --- the importers' weekly snapshots (importers-alerts.yml) --------------------------------------------------------
+
+UTC = triage.UTC
+IMPORTERS = ["cafe_imports", "interamerican", "royal_coffee"]
+CHECK = "https://github.com/o/r/actions/runs/900"
+
+
+def _at(s):
+    return triage.datetime.fromisoformat(s).replace(tzinfo=UTC)
+
+
+def _weeks(**latest):
+    return {"dataset": "found", "latest": {n: latest.get(n) for n in IMPORTERS}}
+
+
+def _run(created, conclusion="failure", status="completed", event="schedule", n=7):
+    return {"event": event, "status": status, "conclusion": conclusion if status == "completed" else None,
+            "created_at": created, "html_url": f"https://github.com/o/r/actions/runs/{n}"}  # fmt: skip
+
+
+def _isync(gh, weeks, runs, now):
+    alerts = triage.importer_alerts(weeks, runs, _at(now), CHECK, "abc123")
+    return triage.sync(alerts, gh, now="2026-11-19")
+
+
+@pytest.mark.parametrize(
+    ("now", "runs", "due"),
+    [
+        ("2026-11-12T12:00", [], None),  # before the first scheduled run: no week is due
+        ("2026-11-18T17:40", [], None),  # the first run is due, not done: last week, which predates it
+        (
+            "2026-11-18T19:00",
+            [_run("2026-11-18T17:41:00Z", "success")],
+            "2026-11-16",
+        ),  # it completed: judged now
+        ("2026-11-18T19:00", [_run("2026-11-18T17:41:00Z", status="in_progress")], None),  # still running
+        ("2026-11-18T21:38", [], "2026-11-16"),  # no run, and the grace after 17:37 has passed
+        ("2026-11-19T09:23", [], "2026-11-16"),  # Thursday's check
+        ("2026-11-23T09:00", [], "2026-11-16"),  # the next Monday: still that week until its Wednesday
+        ("2026-11-26T09:23", [], "2026-11-23"),
+    ],
+)
+def test_the_due_week_follows_the_wednesday_schedule(now, runs, due):
+    got = triage.importers_due_week(_at(now), runs)
+    assert (got.isoformat() if got else None) == due
+
+
+def test_a_failed_scheduled_run_opens_one_issue_with_keys_and_statuses_only():
+    """The week's scheduled run failed at Royal: the check that follows it (workflow_run) opens the issue at once.
+    Its text is importer keys, statuses, Mondays and run links: nothing from a lot, no store address."""
+    gh = FakeGitHub()
+    weeks = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16")
+    runs = [_run("2026-11-18T17:52:10Z", "failure")]
+    assert _isync(gh, weeks, runs, "2026-11-18T19:30") == [("opened", "importers:weekly", 1)]
+    issue = gh.store[0]
+    assert issue["title"] == "[triage] importers: a weekly snapshot is missing"
+    assert set(issue["labels"]) == {"triage", "importers", "severity:warning"}
+    body = issue["body"]
+    assert "<!-- triage-key: importers:weekly -->" in body
+    assert "| Importer | Status | Last stored week |" in body
+    assert "| `royal_coffee` | missing 1 week | none |" in body
+    assert "| `cafe_imports` | ok | 2026-11-16 |" in body
+    assert "royal_coffee: no stored week for 2026-11-16. The scheduled run for the week of 2026-11-16 ended " \
+        "`failure`." in body  # fmt: skip
+    assert "https://github.com/o/r/actions/runs/7" in body and CHECK in body
+    assert "never dispatch or re-run for it" in body
+    table_and_text = body.lower()
+    for word in ("http://", "royalcoffee", "shopify", "products.json", "price"):
+        assert word not in table_and_text.replace("https://github.com/o/r/", ""), word
+
+
+def test_a_run_that_never_happened_is_caught_by_thursdays_check_and_counted_weekly():
+    gh = FakeGitHub()
+    last_week = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16", royal_coffee="2026-11-16")
+    assert _isync(gh, last_week, [], "2026-11-26T09:23") == [("opened", "importers:weekly", 1)]
+    body = gh.store[0]["body"]
+    assert "No scheduled importers run started for the week of 2026-11-23 (Wednesday 2026-11-25)." in body
+    assert "| `interamerican` | missing 1 week | 2026-11-16 |" in body
+
+    # the same state at the next check: no new comment
+    assert _isync(gh, last_week, [], "2026-11-26T15:00") == [("updated", "importers:weekly", 1)]
+    assert gh.comments.get(1) is None
+    # a second week missed: the statuses change, so a comment says so
+    _isync(gh, last_week, [], "2026-12-03T09:23")
+    assert "missing 2 weeks" in gh.store[0]["body"] and len(gh.comments[1]) == 1
+    assert "royal_coffee missing 2 weeks" in gh.comments[1][0]
+
+
+def test_a_dispatch_mends_the_html_importers_and_the_issue_closes_on_the_next_full_week():
+    gh = FakeGitHub()
+    runs = [_run("2026-11-18T17:52:10Z", "failure")]
+    _isync(gh, _weeks(), runs, "2026-11-18T19:30")  # nothing stored on the first run
+    # a dispatch the same day stores cafe_imports and interamerican (Royal is skipped on a dispatch)
+    runs.insert(0, _run("2026-11-18T20:10:00Z", "success", event="workflow_dispatch", n=8))
+    fixed = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16")
+    assert _isync(gh, fixed, runs, "2026-11-18T20:30") == [("updated", "importers:weekly", 1)]
+    assert (
+        gh.store[0]["state"] == "open" and "| `royal_coffee` | missing 1 week | none |" in gh.store[0]["body"]
+    )
+    # the next scheduled run stores every importer: recovered, closed
+    runs.insert(0, _run("2026-11-25T17:45:00Z", "success", n=9))
+    full = _weeks(cafe_imports="2026-11-23", interamerican="2026-11-23", royal_coffee="2026-11-23")
+    assert _isync(gh, full, runs, "2026-11-25T19:00") == [("closed", "importers:weekly", 1)]
+    assert gh.comments[1][-1].startswith("Recovered")
+    # and a missed week later reopens the same issue
+    assert _isync(gh, full, runs, "2026-12-03T09:23") == [("reopened", "importers:weekly", 1)]
+
+
+def test_an_unlisted_dataset_opens_the_pipeline_issue_and_leaves_the_importers_issue_alone():
+    gh = FakeGitHub()
+    _isync(gh, _weeks(), [], "2026-11-19T09:23")
+    assert _isync(gh, None, [], "2026-11-26T09:23") == [("opened", "pipeline:importers-health", 2)]
+    assert gh.store[0]["state"] == "open" and "missing 1 week" in gh.store[0]["body"]  # untouched
+    assert set(gh.store[1]["labels"]) == {"triage", "importers", "severity:warning"}
+    # listed again, everything stored: both close
+    full = _weeks(cafe_imports="2026-11-23", interamerican="2026-11-23", royal_coffee="2026-11-23")
+    assert sorted(_isync(gh, full, [], "2026-11-26T10:00")) == [
+        ("closed", "importers:weekly", 1), ("closed", "pipeline:importers-health", 2)
+    ]  # fmt: skip
+
+
+def test_a_missing_dataset_says_so_and_before_the_first_week_nothing_fires():
+    assert [a["key"] for a in triage.importer_alerts(_weeks(), [], _at("2026-11-13T09:23"), None, None)] == [
+        "pipeline:importers-health"
+    ]  # fmt: skip
+    missing = {"dataset": "missing", "latest": dict.fromkeys(IMPORTERS)}
+    a = triage.importer_alerts(missing, [], _at("2026-11-19T09:23"), None, None)[1]
+    assert a["firing"] and "wasn't found" in a["summary"]
+
+
+def test_importer_weeks_reads_file_names_only(monkeypatch):
+    """The latest week per importer from the dataset's file names; nothing is downloaded. A dataset the token
+    can't see reads as missing. A mock HfApi: no network."""
+    import httpx2
+    import huggingface_hub
+    from huggingface_hub.errors import RepositoryNotFoundError
+
+    calls = []
+
+    class FakeApi:
+        def __init__(self, token=None):
+            pass
+
+        def list_repo_files(self, repo, repo_type):
+            calls.append((repo, repo_type))
+            if repo == "o/none":
+                raise RepositoryNotFoundError(
+                    "404",
+                    response=httpx2.Response(404, request=httpx2.Request("GET", "https://hub.invalid/")),
+                )
+            return ["README.md", "raw/week=2026-11-16/importer=cafe_imports.parquet",
+                    "raw/week=2026-11-23/importer=cafe_imports.parquet",
+                    "raw/week=2026-11-16/importer=royal_coffee.parquet",
+                    "raw/week=0000-00-00/importer=interamerican.parquet",  # a schema file
+                    "raw/week=2026-11-23/importer=someone_else.parquet"]  # fmt: skip
+
+        def __getattr__(self, name):
+            raise AssertionError(f"only file names are listed, not {name}")
+
+    monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
+    got = triage.importer_weeks("hf://datasets/o/importers@main", IMPORTERS)
+    assert got == {"dataset": "found", "latest": {"cafe_imports": "2026-11-23", "interamerican": None,
+                                                    "royal_coffee": "2026-11-16"}}  # fmt: skip
+    assert calls == [("o/importers", "dataset")]
+    assert triage.importer_weeks("hf://datasets/o/none", IMPORTERS)["dataset"] == "missing"
+
+
+def test_the_importers_command_dry_run_calls_nothing(tmp_path):
+    (tmp_path / "weeks.json").write_text(json.dumps(_weeks(cafe_imports="2026-11-16")))
+    (tmp_path / "runs.json").write_text(json.dumps([_run("2026-11-18T17:52:10Z")]))
+    env = {k: v for k, v in os.environ.items() if k not in ("GITHUB_TOKEN", "GH_TOKEN")}
+    r = subprocess.run(
+        [sys.executable, "-m", "coffeedata.triage", "importers", str(tmp_path), "--dry-run",
+         "--now", "2026-11-19T09:23"],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
+    assert r.returncode == 0, r.stderr
+    assert "would open issue '[triage] importers: a weekly snapshot is missing'" in r.stdout
+    assert "1 alert(s) firing: importers:weekly" in r.stdout
+    r = subprocess.run(
+        [sys.executable, "-m", "coffeedata.triage", "importers", str(tmp_path / "none"), "--dry-run"],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
+    assert "1 alert(s) firing: pipeline:importers-health" in r.stdout
+
+
+def test_the_importers_alerts_workflow_and_the_importers_queue():
+    """importers-alerts follows importers runs on main and a Thursday schedule; the Hub token is on its one listing
+    step, which runs `importers-weeks` (file names only); the alert job runs the stdlib triage. importers.yml keeps
+    every pending run in its queue, so a dispatch can't cancel a pending scheduled run."""
+    import yaml
+
+    workflows = ROOT / ".github" / "workflows"
+    wf = yaml.safe_load((workflows / "importers-alerts.yml").read_text())
+    assert set(wf[True]) == {"workflow_run", "schedule", "workflow_dispatch"}
+    assert wf[True]["workflow_run"] == {
+        "workflows": ["importers"],
+        "types": ["completed"],
+        "branches": ["main"],
+    }
+    assert wf["jobs"]["check"]["permissions"] == {"contents": "read", "actions": "read"}
+    hub = [s for s in wf["jobs"]["check"]["steps"] if "HF_TOKEN" in json.dumps(s)]
+    assert len(hub) == 1 and "coffeedata.triage importers-weeks" in hub[0]["run"]
+    assert "importer-snapshot" not in (workflows / "importers-alerts.yml").read_text()
+    alert = wf["jobs"]["alert"]
+    assert "HF_TOKEN" not in json.dumps(alert) and alert["needs"] == "check"
+    assert "python3 -m coffeedata.triage importers " in alert["steps"][-1]["run"]
+    importers = yaml.safe_load((workflows / "importers.yml").read_text())
+    assert importers["concurrency"] == {"group": "importers", "cancel-in-progress": False, "queue": "max"}

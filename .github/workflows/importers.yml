@@ -19,7 +19,9 @@
 # their identity), a currency amount in a stored cell, or under half the lots of the importer's last stored week
 # fails the run, and that importer's week stays unwritten, so a dispatch the same week (after a fix, or with
 # importer and accept_drop for a real drop at that one importer) fetches it again. A week already stored is never
-# fetched again.
+# fetched again. importers-alerts.yml checks the dataset after every run and each Thursday, and opens the
+# `importers:weekly` triage issue while any importer's week is missing, whether a run failed or never started
+# (docs/TRIAGE.md).
 #
 # Royal Coffee (royal_coffee) is fetched on the scheduled run only. Its terms restrict automated access and AI tools;
 # the owner chose to include it, and no AI agent may ever access the site. So its address appears nowhere but here,
@@ -49,16 +51,23 @@ on:
         default: false
 permissions:
   contents: read
+# One run at a time, and every waiting run keeps its place (`queue: max`, as deploy.yml): with GitHub's default
+# (`queue: single`) only one run may be pending and a newer one cancels it, so a dispatch made while a run is in
+# progress would cancel a pending scheduled run, and Royal would miss its week.
 concurrency:
   group: importers
   cancel-in-progress: false
+  queue: max
 jobs:
   snapshot:
     # main's code only: a dispatch from another branch would run that branch's scripts and lockfile with the token
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    # Royal's listing is read up to 100 pages, 15 s apart (about 25 minutes), or up to 60 s apart if its robots.txt
-    # asks a Crawl-delay (about 100 minutes)
+    # The run itself stops at importers.IMPORTERS_DEADLINE_S (105 minutes from the client's start, all importers
+    # together); this leaves 15 for the checkout, uv sync, the last request and the upload. Royal's listing is read up
+    # to 100 pages, 15 s apart (about 25 minutes). If its robots.txt asks the longest Crawl-delay honored (60 s), a
+    # full 100-page pass takes about 100 of those 105 minutes, too long with the other importers and the Hub calls:
+    # it ends as a recorded DeadlineReached with nothing written, not a stored week (about 90 pages fit).
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1

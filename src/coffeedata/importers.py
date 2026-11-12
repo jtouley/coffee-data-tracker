@@ -420,8 +420,10 @@ ROYAL_WORKFLOW = "importers"
 ROYAL_PAGE_LIMIT = 250
 # A listing that needs more pages than this has changed under us (or pages forever): fail, don't keep asking. Sized for
 # a large Shopify catalog: Royal's listing holds more than 5,000 products (20 pages of 250 weren't enough), sold-out
-# lots included. At ROYAL_PAGE_INTERVAL a full pass of 100 pages takes about 25 minutes; the workflow's job timeout
-# covers it even at the longest Crawl-delay the client honors (tests/test_importer_royal.py).
+# lots included. At ROYAL_PAGE_INTERVAL a full pass of 100 pages takes about 25 minutes, well inside
+# IMPORTERS_DEADLINE_S. At the longest Crawl-delay the client honors (60 s) only about 90 pages fit in the deadline
+# beside the other importers, so a full 100-page pass then ends as a recorded DeadlineReached, nothing written
+# (tests/test_importer_royal.py).
 ROYAL_MAX_PAGES = 100
 # The weekly command's whole run (cli.cmd_importer_snapshot's client deadline): no request is sent after this many
 # seconds, so a pass that runs long fails as DeadlineReached, recorded, nothing written, well inside the workflow's

@@ -1,10 +1,12 @@
-"""Triage issues for failed eval floors and production-health breaches: one GitHub issue per alert key, updated in
-place, closed when the alert recovers (docs/TRIAGE.md).
+"""Triage issues for failed eval floors, production-health breaches and missing importer weeks: one GitHub issue per
+alert key, updated in place, closed when the alert recovers (docs/TRIAGE.md).
 
     python -m coffeedata.triage evals <report.json> --workflow <name> [--dry-run]
     python -m coffeedata.triage prod <alerts.json> [--dry-run]
+    python -m coffeedata.triage importers <dir> [--dry-run]       (dir: importers-weeks' and the runs' JSON)
+    python -m coffeedata.triage importers-weeks <hf://datasets/...> --out <weeks.json>
 
-An alert has a key (`eval:origin`, `prod:grams`, `pipeline:eval-floors`). The issue for a key is found by the marker
+An alert has a key (`eval:origin`, `prod:grams`, `importers:weekly`, `pipeline:eval-floors`). The issue for a key is found by the marker
 `<!-- triage-key: <key> -->` in its body, among the issues labelled `triage` (open or closed) that the workflows'
 bot opened (TRIAGE_AUTHOR, default github-actions[bot]), never by a search (GitHub's search index lags, and two runs
 close together would open two issues). The bot rewrites the body on every run: notes go in comments. Then:
@@ -17,7 +19,9 @@ close together would open two issues). The bot rewrites the body on every run: n
   skipped floor, a metric not in this release) leaves the issue as it is.
 
 It needs only GITHUB_TOKEN with `issues: write` and GITHUB_REPOSITORY; it reads nothing else and runs no tested code.
-`--dry-run` prints what it would do and calls nothing.
+`--dry-run` prints what it would do and calls nothing. The one exception is `importers-weeks`, which runs in the
+importers-alerts check job (never the alert job): with the Hub token, it lists the private importers dataset's file
+names and keeps only each importer's latest stored week, never a file's contents.
 """
 
 from __future__ import annotations
@@ -26,23 +30,33 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
+from datetime import time as dtime
 from pathlib import Path
 from typing import Any, Protocol
 
 TRIAGE = "triage"
 AUTHOR = "github-actions[bot]"  # who opens triage issues: GITHUB_TOKEN in the alert jobs
-KIND_LABEL = {"eval": "eval-regression", "pipeline": "eval-regression", "prod": "prod-health"}
+KIND_LABEL = {
+    "eval": "eval-regression",
+    "pipeline": "eval-regression",
+    "prod": "prod-health",
+    "importers": "importers",
+}
+# Kinds whose issues name each check and its status, never a measured value (the data behind them is private).
+NO_VALUES = ("prod", "importers")
 SEVERITIES = ("critical", "warning")
 OK = ("ok", "expected")  # a check that isn't failing: passed, or a breach an acknowledged change explains
 LABELS = {
     TRIAGE: ("d93f0b", "Opened by an alert: triage with docs/TRIAGE.md"),
     "eval-regression": ("b60205", "An accuracy floor or ceiling failed on main or in eval-floors"),
     "prod-health": ("fbca04", "A production build's health metric breached its threshold"),
+    "importers": ("c5def5", "A weekly importer snapshot failed, didn't run, or is stale"),
     "severity:critical": ("b60205", "Act this week: the data customers get is likely wrong"),
     "severity:warning": ("fef2c0", "Look before the next weekly run"),
 }
@@ -72,6 +86,19 @@ FIRST_STEPS = {
         "Customers get bad data that no change explains (a critical fill, price or volume breach that build-diff "
         "confirms): roll back with `gh workflow run weekly -f rollback_to=previous` (docs/TRIAGE.md, When to roll "
         "back). The pipeline itself is never blocked by this alert.",
+    ],
+    "importers": [
+        "Read the summary: no scheduled run that week, a run that failed, or a run that stored only some importers. "
+        "Open the linked run and read the importer-snapshot step's line per importer (its status and error). In "
+        "comments here give the importer and its status only: an error can name a store's address.",
+        "cafe_imports or interamerican: fix the cause, then dispatch them the same week "
+        "(`gh workflow run importers -f importer=<key>`); a real drop needs `-f accept_drop=true` after a check by "
+        "hand. The check that follows the run closes this issue once every importer's week is stored.",
+        "royal_coffee: never dispatch or re-run for it (only a scheduled first attempt may fetch it), so its "
+        "missed week stays missed. Fix the cause before next Wednesday's run; a real drop is accepted by the "
+        "ROYAL_ACCEPT_DROP_WEEK variable set to the Monday the failure names (docs/TRIAGE.md).",
+        "No scheduled run: check that the importers workflow is enabled (Actions tab; GitHub disables scheduled "
+        "workflows in a repository with no activity for 60 days) and that nothing failed before its job started.",
     ],
 }
 
@@ -244,6 +271,9 @@ def _row(c: dict[str, Any], values: bool = True) -> str:
     ci_text = f"[{ci[0]:.1%}, {ci[1]:.1%}]" if ci else "–"
     base = _fmt(c.get("baseline"), unit) if "baseline" in c else None
     status = c["status"] + (f" (#{c['pr']})" if c.get("pr") else "")
+    # an importer: its key, its status and its last stored week (a Monday), nothing from a lot
+    if "last" in c:
+        return f"| `{c['name']}` | {status} | {c['last'] or 'none'} |"
     if (
         not values
     ):  # a production metric: the lake is private, so the issue names the check and its bound only
@@ -255,12 +285,11 @@ def _row(c: dict[str, Any], values: bool = True) -> str:
 
 def render(alert: dict[str, Any], now: str) -> str:
     kind = alert["kind"]
-    prod = kind == "prod"
-    head = (
-        ["Platform", "Check", "Status", "Bound"]
-        if prod
-        else ["Set", "Check", "Status", "Measured", "Bound", "Wilson 95%"]
-    )
+    prod = kind in NO_VALUES
+    head = {
+        "prod": ["Platform", "Check", "Status", "Bound"],
+        "importers": ["Importer", "Status", "Last stored week"],
+    }.get(kind, ["Set", "Check", "Status", "Measured", "Bound", "Wilson 95%"])
     lines = [
         _marker("key", alert["key"]),
         _marker("fingerprint", fingerprint(alert)),
@@ -352,7 +381,7 @@ def sync(
 
 def _failing(a: dict[str, Any]) -> str:
     bad = [c for c in a["checks"] if c["status"] not in OK]
-    values = a["kind"] != "prod"
+    values = a["kind"] not in NO_VALUES
     return "; ".join(
         f"{c.get('set') or ''} {c['name']} {_fmt(c.get('value'), c.get('unit')) if values else c['status']}".strip()
         for c in bad
@@ -456,6 +485,146 @@ def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) ->
     }]  # fmt: skip
 
 
+# --- the importers' weekly snapshots ------------------------------------------------------------------------------
+
+# When importers.yml's schedule fires (Wednesdays 17:37 UTC), and how long after it a week still counts as in progress:
+# the job's 120-minute timeout plus room for a late scheduled start. A completed scheduled run makes its week due at
+# once, so the check that follows it (workflow_run) judges it without waiting for this.
+IMPORTERS_SCHEDULE = (2, 17, 37)  # weekday (Monday 0), hour, minute, UTC
+IMPORTERS_GRACE = timedelta(hours=4)
+# The first week a scheduled run stores (Wednesday 2026-11-18's): earlier weeks are never due.
+IMPORTERS_FIRST_WEEK = date(2026, 11, 16)
+IMPORTERS_WORKFLOW = ".github/workflows/importers.yml"
+_WEEK_FILE = re.compile(r"raw/week=(\d{4}-\d{2}-\d{2})/importer=([a-z0-9_]+)\.parquet")
+
+
+def importer_weeks(url: str, names: list[str]) -> dict[str, Any]:
+    """Each importer's latest stored week in the private importers dataset, from its file names alone
+    (raw/week=<Monday>/importer=<key>.parquet, importers.path): no file is opened. A dataset that doesn't exist, or
+    that this token can't see (the Hub answers both alike), is "missing", with no week for anyone; any other Hub
+    error raises, so the check job fails and the pipeline issue opens."""
+    from huggingface_hub import HfApi
+    from huggingface_hub.errors import RepositoryNotFoundError
+
+    repo = url.removeprefix("hf://datasets/").split("@")[0].rstrip("/")
+    latest: dict[str, str | None] = dict.fromkeys(names)
+    try:
+        files = HfApi(token=os.environ.get("HF_TOKEN") or None).list_repo_files(repo, repo_type="dataset")
+    except RepositoryNotFoundError:
+        return {"dataset": "missing", "latest": latest}
+    for f in files:
+        if (m := _WEEK_FILE.fullmatch(f)) and m.group(2) in latest and "0000-00-00" not in f:
+            week, name = m.groups()
+            latest[name] = max(latest[name] or week, week)
+    return {"dataset": "found", "latest": latest}
+
+
+def _monday(t: datetime) -> date:
+    return t.date() - timedelta(days=t.weekday())
+
+
+def _scheduled_at(week: date) -> datetime:
+    day, hour, minute = IMPORTERS_SCHEDULE
+    return datetime.combine(week + timedelta(days=day), dtime(hour, minute), UTC)
+
+
+def _when(s: str) -> datetime:
+    return datetime.fromisoformat(s.replace("Z", "+00:00"))
+
+
+def importers_due_week(now: datetime, runs: list[dict[str, Any]] | None = None) -> date | None:
+    """The latest week every importer should have stored by `now`: this week once its scheduled run has completed
+    or IMPORTERS_GRACE has passed since the schedule, else the week before. None before IMPORTERS_FIRST_WEEK."""
+    week = _monday(now)
+    scheduled = [
+        r for r in runs or [] if r.get("event") == "schedule" and r.get("status") == "completed"
+        and _monday(_when(r["created_at"])) == week
+    ]  # fmt: skip
+    if not scheduled and now < _scheduled_at(week) + IMPORTERS_GRACE:
+        week -= timedelta(days=7)
+    return week if week >= IMPORTERS_FIRST_WEEK else None
+
+
+def _scheduled_run(week: date, runs: list[dict[str, Any]] | None) -> dict[str, Any] | None:
+    """The scheduled run meant to store `week` (the newest one created that week), if GitHub started one."""
+    start = datetime.combine(week + timedelta(days=IMPORTERS_SCHEDULE[0]), dtime(), UTC)  # its Wednesday
+    found = [
+        r for r in runs or [] if r.get("event") == "schedule"
+        and start <= _when(r["created_at"]) < datetime.combine(week + timedelta(days=7), dtime(), UTC)
+    ]  # fmt: skip
+    return max(found, key=lambda r: r["created_at"]) if found else None
+
+
+def importer_alerts(
+    weeks: dict[str, Any] | None,
+    runs: list[dict[str, Any]] | None,
+    now: datetime,
+    run_url: str | None,
+    sha: str | None,
+) -> list[dict]:
+    """The importers' weekly snapshots as alerts: `importers:weekly`, one check per importer, firing while any
+    importer has no stored week for the due week (importers_due_week), however that happened: the scheduled run
+    failed, it never ran (a dropped schedule, a disabled workflow, a run displaced from its concurrency group), or
+    it stored only some importers. Each missing importer's status counts the weeks missed in a row, so a week missed
+    again comments on the issue. `pipeline:importers-health` fires when the dataset couldn't be listed (`weeks` is
+    None). The issue carries importer keys, statuses, weeks (Mondays) and run links: nothing from a lot."""
+    ctx = {"check": run_url, "commit": sha}
+    out = [{
+        "key": "pipeline:importers-health", "kind": "pipeline", "label": "importers",
+        "title": "importers-alerts: the check didn't run",
+        "severity": "warning", "firing": weeks is None, "source": ".github/workflows/importers-alerts.yml",
+        "summary": "The importers check couldn't list the private importers dataset, so no week was judged.",
+        "checks": [{"name": "importers dataset listed", "status": "ok" if weeks is not None else "warning"}],
+        "context": ctx,
+        "steps": [
+            "Open the run and read the first failing step: the Hub token (HF_READ_TOKEN, else HF_TOKEN) or the "
+            "IMPORTERS_URL variable, or a Hub outage.",
+            "Re-run importers-alerts by hand once fixed (`gh workflow run importers-alerts`); this issue closes on "
+            "the next run that lists the dataset. It never fetches an importer.",
+        ],
+    }]  # fmt: skip
+    due = importers_due_week(now, runs)
+    if weeks is None or due is None:
+        return out  # nothing listed, or no week due yet: an open importers issue stays as it is
+    checks, missing = [], []
+    for name, last in sorted(weeks["latest"].items()):
+        if last and date.fromisoformat(last) >= due:
+            checks.append({"name": name, "status": "ok", "last": last})
+            continue
+        first = max(date.fromisoformat(last) + timedelta(days=7) if last else IMPORTERS_FIRST_WEEK,
+                    IMPORTERS_FIRST_WEEK)  # fmt: skip
+        n = (due - first).days // 7 + 1
+        checks.append({"name": name, "status": f"missing {n} week{'s' if n > 1 else ''}", "last": last})
+        missing.append(name)
+    run = _scheduled_run(due, runs)
+    wed = due + timedelta(days=IMPORTERS_SCHEDULE[0])
+    if run is None:
+        how = f"No scheduled importers run started for the week of {due} (Wednesday {wed})."
+    elif run.get("status") != "completed":
+        how = f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}."
+    else:
+        how = f"The scheduled run for the week of {due} ended `{run.get('conclusion')}`."
+    if weeks.get("dataset") == "missing":
+        how += " The importers dataset wasn't found: not created yet, or the check's token can't see it."
+    ctx = {
+        "due week": f"{due} (scheduled Wednesday {wed} 17:37 UTC)",
+        "scheduled run": f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}"
+        if run
+        else None,
+        **ctx,
+    }
+    out.append({
+        "key": "importers:weekly", "kind": "importers", "title": "importers: a weekly snapshot is missing",
+        "severity": "warning", "firing": bool(missing), "source": IMPORTERS_WORKFLOW, "checks": checks,
+        "summary": f"{', '.join(missing)}: no stored week for {due}. {how}" if missing else "", "context": ctx,
+    })  # fmt: skip
+    return out
+
+
+def _read_json(path: Path) -> Any:
+    return json.loads(path.read_text()) if path.exists() else None
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="python -m coffeedata.triage", description=__doc__.split("\n")[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -470,11 +639,30 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--scope", choices=("in-git", "private"), help="the evals this workflow owns")
     pr = sub.add_parser("prod", help="issues from coffeedata.prod_health judge --out")
     pr.add_argument("alerts", type=Path)
-    for s in (e, pr):
+    im = sub.add_parser(
+        "importers", help="issues from the importers check (weeks.json and runs.json in one folder)"
+    )
+    im.add_argument(
+        "dir", type=Path, help="holds weeks.json (importers-weeks) and runs.json (the workflow's runs)"
+    )
+    im.add_argument("--now", help="judge as of this ISO time (default: now)")
+    wk = sub.add_parser(
+        "importers-weeks", help="each importer's latest stored week, from file names (Hub token)"
+    )
+    wk.add_argument("url", help="the private importers dataset, hf://datasets/<owner>/<name>")
+    wk.add_argument("--out", type=Path, required=True)
+    for s in (e, pr, im):
         s.add_argument("--dry-run", action="store_true")
         s.add_argument("--run-url", help="the run the alert is about (default: this run)")
         s.add_argument("--sha", help="the commit it ran on (default: GITHUB_SHA)")
     a = p.parse_args(argv)
+    if a.cmd == "importers-weeks":
+        from .importers import IMPORTERS
+
+        a.out.parent.mkdir(parents=True, exist_ok=True)
+        a.out.write_text(json.dumps(importer_weeks(a.url, sorted(IMPORTERS)), indent=1) + "\n")
+        print(a.out.read_text())  # importer keys and Mondays only
+        return 0
     server, repo, run_id = (
         os.environ.get(k) for k in ("GITHUB_SERVER_URL", "GITHUB_REPOSITORY", "GITHUB_RUN_ID")
     )
@@ -483,6 +671,12 @@ def main(argv: list[str] | None = None) -> int:
     if a.cmd == "evals":
         report = json.loads(a.report.read_text()) if a.report.exists() else None
         alerts = eval_alerts(report, a.workflow, run_url, sha, a.alert_if_missing, a.scope)
+    elif a.cmd == "importers":
+        now = (
+            datetime.fromisoformat(a.now).replace(tzinfo=UTC) if a.now else datetime.now(UTC)
+        )  # --now in UTC
+        weeks, runs = _read_json(a.dir / "weeks.json"), _read_json(a.dir / "runs.json")
+        alerts = importer_alerts(weeks, runs, now, run_url, sha)
     else:
         alerts = prod_pipeline_alert(a.alerts.exists(), run_url, sha)
         alerts += json.loads(a.alerts.read_text()) if a.alerts.exists() else []

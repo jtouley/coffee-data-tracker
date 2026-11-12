@@ -558,13 +558,19 @@ def test_royals_address_is_only_in_the_scheduled_step_of_the_importers_workflow(
         if wf_file.name != "importers.yml":
             assert importers.ROYAL_URL_VAR not in wf_file.read_text(), wf_file
     assert wf["name"] == importers.ROYAL_WORKFLOW
-    # the job's timeout covers a full pass of Royal's listing, even at the longest Crawl-delay the client honors
+    # What bounds a pass is the run's deadline (IMPORTERS_DEADLINE_S, from the client's start, all importers
+    # together), not the job timeout. Leave 15 minutes of it for robots.txt, the other importers and the Hub calls.
     from coffeedata.http import MAX_CRAWL_DELAY
 
-    worst = importers.ROYAL_MAX_PAGES * max(importers.ROYAL_PAGE_INTERVAL, MAX_CRAWL_DELAY)
-    assert (
-        wf["jobs"]["snapshot"]["timeout-minutes"] * 60 >= worst + 15 * 60
-    )  # plus the other importers and upload
+    room = importers.IMPORTERS_DEADLINE_S - 15 * 60
+    # at Royal's own pace a full pass fits
+    assert room >= importers.ROYAL_MAX_PAGES * importers.ROYAL_PAGE_INTERVAL
+    # at the longest Crawl-delay the client honors it doesn't: about 90 pages fit, and a longer pass ends as a
+    # recorded DeadlineReached with nothing written (test_a_run_past_its_deadline_is_a_recorded_failure). The
+    # workflow's comment says so; if the deadline or the page cap changes, update it with this.
+    fit = int(room // max(importers.ROYAL_PAGE_INTERVAL, MAX_CRAWL_DELAY))
+    assert fit == 90 < importers.ROYAL_MAX_PAGES
+    assert "about 90 pages fit" in (ROOT / ".github/workflows/importers.yml").read_text()
     # and the run itself stops a little before the job is killed, so a long pass is a recorded failure
     timeout_s = wf["jobs"]["snapshot"]["timeout-minutes"] * 60
     assert timeout_s - 20 * 60 <= importers.IMPORTERS_DEADLINE_S <= timeout_s - 10 * 60
