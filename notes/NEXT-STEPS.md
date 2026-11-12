@@ -332,3 +332,12 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - Investigate the WooCommerce enrichment-abstain jump (11-09).
 - Weekly importer-build: in GitHub Actions after each snapshot, writing only to the private dataset.
 - The private importers dataset was created on 2026-11-12 with the session token (it verified create and write access).
+
+## 2026-11-12 owner: no new PRs, finish the open ones
+Open PRs to finish: #139, #146, #149 (admin stack, after cutover2), #150, #151.
+Backlog, not started until the owner says so:
+- pin roaster names so discovery can't overwrite them (Dutch Bros "Hebron");
+- #144 leftovers: MCP ISO names, stale counts in docs, stray punctuation;
+- Claude enrichment queue ordering (prioritise current listed products);
+- price-sort tail junk / non-coffee leak cleanup;
+- missing regions (Popayán, Pitalito, Limmu…).
