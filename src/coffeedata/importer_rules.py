@@ -106,7 +106,7 @@ ROYAL_NOT_A_NAME = r"^(?:(?:not|no|out of)\s+)?(?:in|at|ex|our|the|a|stored at|f
 ROYAL_NEGATED = r"\b(?:not|non|without|out of)\b|\bno(?:[^.\pL\pN_]|$)"  # "No. 2 Warehouse" is a number
 # Island and state names (origins.ALIASES) that mean one origin in a coffee title; the rest (Java, Flores, Bali,
 # Congo) are also a variety, a farm name or two countries, so on a title alone they abstain.
-ROYAL_TITLE_PLACES_OK = ("sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor")
+ROYAL_TITLE_PLACES_OK = ("sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor", "dr congo")
 ROYAL_DECAF = (
     r"\bdecaf|\bdecaffeinated\b|\bswiss water\b|\bmountain water\b|\bsugar ?cane\b|\bethyl acetate\b|\bco2\b"
 )

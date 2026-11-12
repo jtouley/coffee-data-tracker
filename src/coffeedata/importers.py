@@ -432,6 +432,10 @@ ROYAL_PAGE_LIMIT = 250
 # lots included. At ROYAL_PAGE_INTERVAL a full pass of 100 pages takes about 25 minutes; the workflow's job timeout
 # covers it even at the longest Crawl-delay the client honors (tests/test_importer_royal.py).
 ROYAL_MAX_PAGES = 100
+# The weekly command's whole run (cli.cmd_importer_snapshot's client deadline): no request is sent after this many
+# seconds, so a pass that runs long fails as DeadlineReached, recorded, nothing written, well inside the workflow's
+# 120-minute job timeout (the checkout, uv sync and the upload take the rest).
+IMPORTERS_DEADLINE_S = 105 * 60
 # Seconds read_royal waits before each listing page after the first. The client's own per-host spacing applies on
 # top: its min_interval, or the store's robots.txt Crawl-delay up to http.MAX_CRAWL_DELAY (60 s).
 ROYAL_PAGE_INTERVAL = 15.0
