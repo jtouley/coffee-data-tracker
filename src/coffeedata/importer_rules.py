@@ -72,56 +72,49 @@ OTHER_CERTS = (
     r"\bdemeter\b|\bbiodynamic\b|\bkosher\b"
 )
 
-# --- Royal Coffee (a Shopify product listing; importers.royal_cells): its title, tags and body text ------------------
-# Built only from invented products in Shopify's documented /products.json shape
-# (tests/fixtures/importers/royal_synthetic_products.json): nothing here was seen on the store's site. Region,
-# varieties, altitude and harvest read only labelled text ("Region: Huila", "Altitude: 1,800 masl"); lot number and
-# warehouse read a "Lot 12345" or "<Name> Warehouse" part of the title; origin, process and certifications also read
-# the title and the tags that are one word or name (int_royal_rules).
+# --- Royal Coffee (a Shopify product listing; importers.royal_cells): its title, tags, product type and variants ----
+# Royal's titles are " - "-separated parts: the coffee's name, which leads with its origin ("COLOMBIA FT-FLO/USA HUILA",
+# "Decaf Peru Organic ..."), then any of a contract or ICO number ("*12345*"), Royal's own lot ID (five digits, with a
+# split suffix: "12345", "12345-2"), the bags ("69.0 kg GrainPro Bags"), a shipment or arrival date ("May 2027
+# Shipment", "ETA: Nov 30, 2026"), and last the warehouse, in capitals, after "SPOT" when the lot is there now
+# ("SPOT EXAMPLEWHSE"). The body is prose (no "Label: value" lines), so region, varieties, altitude and harvest are
+# left for Claude. The rules (int_royal_rules) were written against the real listing's shapes; every example here and
+# in the tests is invented.
 
-ROYAL_RULES_VERSION = "royal-3"
+ROYAL_RULES_VERSION = "royal-4"
 
-# "Label: value" in a tag or at the start of a body line (or of a sentence in one: "... lot. Certifications: Organic").
-ROYAL_LABELS = {
-    "process": r"process(?:ing)?(?: method)?",
-    "region": r"region",
-    "origin": r"origin|country",
-    "variety": r"variet(?:y|ies|als?)|cultivars?",
-    "altitude": r"altitude|elevation|growing altitude",
-    "harvest": r"harvest(?: season| period| months?)?",
-    "certification": r"certifications?|certified",
-    "warehouse": r"warehouse",  # never "Location:", which on a coffee listing is usually the farm
-}
-# Where a line holds another label: after a full stop or semicolon, before a capitalized word and a colon. Case
-# matters.
-ROYAL_PART_BREAK = r"([.;])\s+([A-Z][a-z]+:)"
-ROYAL_TITLE_PARTS = r"\s+[-–|/]\s+|\s*\|\s*"
-ROYAL_LOT = r"\blot\s*(?:no\.?|number|#)?\s*#?\s*(\d{3,7}(?:-\d{1,3})?)\b"
-ROYAL_YEAR = r"^(?:19|20)\d\d$"  # "Harvest Lot 2025": a year, not a lot number
-ROYAL_WAREHOUSE = (
-    r"^(?:(?:in|at|ex|stored at)\s+)?([A-Z][\pL\pN_.' ]{1,40}?)\s+warehouse$"
-    r"|^warehouse\s*:?\s+([A-Z][\pL\pN_.' ]{1,40})$"
+ROYAL_TITLE_PARTS = r"\s+[-–]\s+"
+# A part that is exactly Royal's lot ID: five digits, and a split lot's suffix. Never a producer's "Lot 3", a starred
+# contract number or a year.
+ROYAL_LOT_ID = r"^\d{5}(?:-\d{1,2})?$"
+# The last part, when it is a warehouse code in capitals, optionally after SPOT (the lot is in that warehouse now) and
+# with a bay suffix ("SPOT EXAMPLEWHSE B2"). Case matters: a name part is never all capitals and digits like this.
+ROYAL_WAREHOUSE = r"(?-i)^(SPOT\s+)?([A-Z][A-Z0-9]{3,}(?:\s+[A-Z][0-9])?)$"
+# When a lot that isn't in a warehouse yet is due: an "ETA: Nov 30, 2026" part (group 1), or a "January 2027 Delivery"
+# part (group 2). A "... Shipment" or "Intend Ship: ..." part is when it leaves origin, not when it arrives, so it
+# says nothing about arrival.
+ROYAL_ARRIVAL = r"^(?:eta\s*:\s*(\pL{3,9}\.?\s+\d{1,2},\s*\d{4})|(\pL{3,9}\s+\d{4})\s+delivery)$"
+# A bag weight the title states: "69.0 kg Bags", "1000.0 kg Super Sack", "22 Lb" (group 1 the number, 2 the unit).
+ROYAL_BAG_WEIGHT = r"\b(\d+(?:\.\d+)?)\s*(kg|lb)s?\b"
+# The title part that names the packaging, as written: "69.0 kg GrainPro Bags", "Ecotact Bags", "20.0 kg Boxes".
+ROYAL_BAG_PART = r"\b(?:bags?|box(?:es)?|super ?sacks?)$"
+# A tag that is a process and nothing else ("washed", "honey-processed", "wet-hulled", "decaf"): the process as stated.
+ROYAL_PROCESS_TAG = (
+    r"^(?:washed|natural|honey|anaerobic|decaf|wet-?hulled|semi-?washed|pulped-?natural)(?:-?processed)?$"
 )
-# A warehouse "name" that is only a preposition or a negation ("In Warehouse", "Not In Warehouse"): no name at all.
-ROYAL_NOT_A_NAME = r"^(?:(?:not|no|out of)\s+)?(?:in|at|ex|our|the|a|stored at|from)?$"
-ROYAL_NEGATED = r"\b(?:not|non|without|out of)\b|\bno(?:[^.\pL\pN_]|$)"  # "No. 2 Warehouse" is a number
-# Island and state names (origins.ALIASES) that mean one origin in a coffee title or product name; the rest (Java,
-# Flores, Bali, Congo) are also a variety, a farm name or two countries, so they never count as an origin there
-# (Royal's titles, InterAmerican's names).
-TITLE_PLACES_OK = ("sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor", "dr congo")
+# Places a Royal title can lead with that the catalog's lists (origins.COUNTRIES, ALIASES) don't spell this way, and
+# their country. Bare "Timor" is Timor-Leste in a coffee name (West Timor's coffee is sold as Indonesian).
+ROYAL_PLACES = {"timor leste": "Timor-Leste", "timor": "Timor-Leste", "komodo": "Indonesia"}
+# A first place that names no one country: the island two countries share, and "Congo" (two countries).
+ROYAL_AMBIGUOUS_PLACES = ("new guinea", "congo")
 ROYAL_DECAF = (
     r"\bdecaf|\bdecaffeinated\b|\bswiss water\b|\bmountain water\b|\bsugar ?cane\b|\bethyl acetate\b|\bco2\b"
 )
 ROYAL_HONEY = r"\b(honey|pulped natural|semi-?washed|semi washed|wet-?hulled|giling basah)\b"
-ROYAL_HARVEST = rf"^\s*{_MONTH}(?:\s*(?:-|–|to|through|until)\s*{_MONTH})?\s*(?:\d{{4}}(?:/\d{{2,4}})?)?\s*$"
-_ROYAL_NUM = r"(\d{1,2},\d{3}|\d{3,4})"
-ROYAL_ALTITUDE = (
-    rf"^\s*{_ROYAL_NUM}(?:\s*(?:-|–|to)\s*{_ROYAL_NUM})?\s*(?:m|masl|m\.a\.s\.l\.?|meters|metres)"
-    r"(?:\s+above sea level)?\.?\s*$"
-)
 ROYAL_CERTS = (
     ("organic", r"\b(?:usda |certified )?organic\b"),
-    ("fair_trade", r"\bfair ?trade(?: usa| certified)?\b"),
+    # Royal writes fair trade as FT, FT-FLO, FT-USA or FT-FLO/USA (case matters: "ft" is also feet)
+    ("fair_trade", r"\bfair ?trade(?: usa| certified)?\b|(?-i:\bFT\b)"),
     ("rainforest_alliance", r"\brainforest alliance(?: certified)?\b|\bRFA\b"),
 )
 # "FTO" alone can mean Fair Trade Organic or only Fair Trade: it counts only alongside both spelled out. Case matters.
@@ -130,13 +123,26 @@ ROYAL_FTO = r"\bFTO\b"
 ROYAL_CERT_NEGATED = (
     r"\b(?:non|not|no|without)[\s-]+(?:certified\s+)?(?:usda\s+)?(?:organic|fair ?trade|rainforest)"
 )
-# What may sit beside the names in a "Variety:" or "Certification:" label; anything else is a name we don't know.
-ROYAL_VARIETY_FILLER = r"[\s,;&/+]|\band\b"
-ROYAL_CERT_FILLER = r"[\s,;&/+.]|\band\b|\bcertified\b"
+
+
+def _royal_origin_lead() -> str:
+    """The first place a Royal title's name part names, the longest name first ("Papua New Guinea" before "New
+    Guinea" and "Guinea", "Timor Leste" before "Timor"), as group 1."""
+    return rf"\b({_alternation([*COUNTRIES, *ROYAL_PLACES])}){_WORD_END}"
+
+
+def catalog_countries() -> list[str]:
+    """The countries the catalog's origins resolve to (origins.canonical_country over COUNTRIES), without the
+    island two countries share ("New Guinea", which canonical_country leaves as it is)."""
+    return sorted({canonical_country(c) for c in COUNTRIES} - {"New Guinea"})
+
 
 # --- an InterAmerican product name: "Brazil Oberon 17/18 Natural", "Guatemala Huehuetenango ASDECAFE SHB EP Organic"
 
 BLEND = r"\bblend\b"
+# Island and state names (origins.ALIASES) that mean one origin in a product name; the rest (Java, Flores, Bali, Congo)
+# are also a variety, a farm name or two countries, so they never count as an origin there.
+TITLE_PLACES_OK = ("sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor", "dr congo")
 # A farm's name ("Finca Santa Barbara") says nothing about where the farm is (as extract._FARM_NAME).
 FARM_WORD = r"\b(?:finca|hacienda|fazenda|s[ií]tio|beneficio|estate|farm)\s+"
 # The grade and preparation words of the coffee trade, as importers write them. Case matters for the abbreviations
@@ -210,8 +216,11 @@ def vocabulary() -> list[dict]:
     - country: a country or alias (lowercase) and the catalog's country for it;
     - region: a one-country growing region (lowercase) and its country (origins.REGIONS);
     - country_name: a name in origins.COUNTRIES as written, its country, and (value2) "alias" for an island or state;
-    - royal_label: a Royal label's name and its "Label: value" line pattern (group 1 is the value);
-    - title_place_ok: an alias that means one origin in a Royal title or an InterAmerican name;
+    - royal_place: a place a Royal title can lead with that the catalog spells otherwise, and its country;
+    - royal_ambiguous_place: a first place in a Royal title that names no one country;
+    - catalog_country: a country the catalog's origins resolve to (catalog_countries()), the only values an origin
+      may take;
+    - title_place_ok: an alias that means one origin in an InterAmerican name;
     - royal_certification: a certification and its pattern in Royal's wording;
     - rules_version: RULES_VERSION (term rules_version) and ROYAL_RULES_VERSION (term royal_rules_version)."""
     patterns = {
@@ -232,21 +241,18 @@ def vocabulary() -> list[dict]:
         "country": _words(_alternation(COUNTRIES)),
         "region": _words(_alternation(list(REGIONS))),
         # Royal Coffee
-        "royal_part_break": ROYAL_PART_BREAK,
         "royal_title_parts": ROYAL_TITLE_PARTS,
-        "royal_lot": ROYAL_LOT,
-        "royal_year": ROYAL_YEAR,
+        "royal_lot_id": ROYAL_LOT_ID,
         "royal_warehouse": ROYAL_WAREHOUSE,
-        "royal_not_a_name": ROYAL_NOT_A_NAME,
-        "royal_negated": ROYAL_NEGATED,
+        "royal_arrival": ROYAL_ARRIVAL,
+        "royal_bag_weight": ROYAL_BAG_WEIGHT,
+        "royal_bag_part": ROYAL_BAG_PART,
+        "royal_process_tag": ROYAL_PROCESS_TAG,
+        "royal_origin_lead": _royal_origin_lead(),
         "royal_decaf": ROYAL_DECAF,
         "royal_honey": ROYAL_HONEY,
-        "royal_harvest": ROYAL_HARVEST,
-        "royal_altitude": ROYAL_ALTITUDE,
         "royal_fto": ROYAL_FTO,
         "royal_cert_negated": ROYAL_CERT_NEGATED,
-        "royal_variety_filler": ROYAL_VARIETY_FILLER,
-        "royal_cert_filler": ROYAL_CERT_FILLER,
     }
     rows: list[dict[str, str | int | None]] = [
         {"kind": "pattern", "term": k, "value": v} for k, v in patterns.items()
@@ -273,10 +279,9 @@ def vocabulary() -> list[dict]:
         }
         for c in COUNTRIES
     ]
-    rows += [
-        {"kind": "royal_label", "term": k, "value": rf"^(?:{v})\s*[:：]\s*(.+?)\s*$"}
-        for k, v in ROYAL_LABELS.items()
-    ]
+    rows += [{"kind": "royal_place", "term": k, "value": v} for k, v in ROYAL_PLACES.items()]
+    rows += [{"kind": "royal_ambiguous_place", "term": t, "value": t} for t in ROYAL_AMBIGUOUS_PLACES]
+    rows += [{"kind": "catalog_country", "term": c, "value": c} for c in catalog_countries()]
     rows += [{"kind": "title_place_ok", "term": t, "value": t} for t in TITLE_PLACES_OK]
     rows += [
         {"kind": "royal_certification", "term": k, "value": v, "ord": i}
@@ -289,7 +294,6 @@ def vocabulary() -> list[dict]:
         "process",
         "grower_type",
         "certification",
-        "royal_label",
         "royal_certification",
     }
     for r in rows:

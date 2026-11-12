@@ -199,37 +199,14 @@ unit_tests:
         - {row: 26, origin: Democratic Republic of the Congo, region: null, process: Washed, grade: null, screen: null}
         - {row: 27, origin: null, region: null, process: Washed, grade: null, screen: null}
 
-  - name: royal_labels_are_read_from_tags_and_body_lines
+  # Royal Coffee: titles in the real listing's shapes, every value invented (no real title, lot ID, warehouse or
+  # producer). The shapes: "<ORIGIN ...name> - [*contract*] - <lot ID> - [bags] - [shipment or ETA] - [SPOT] <WAREHOUSE>".
+  - name: royal_title_states_lot_warehouse_status_and_arrival
     description: >-
-      "Label: value" at the start of a tag or body line, or of a sentence in one; trailing punctuation dropped, so
-      "Region: Huila." and "Region: Huila" are one value; the tags first; prose isn't a label. A non-breaking or other
-      Unicode space is whitespace, as it is to Python.
-    model: int_royal_labels
-    given:
-      - input: ref('stg_importer_vocab')
-        format: sql
-        rows: select * from main.stg_importer_vocab
-      - input: ref('stg_importer_cells')
-        rows:
-          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: tags, cell_text: "Region: Huila\nOrganic"}
-          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: body_text, cell_text: "Region: Huila. Process: Washed.\nAltitude： 1,800 masl"}
-          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: body_text, cell_text: "Varieties grown nearby include Gesha"}
-          - {week: 2026-11-09, row: 3, importer: interamerican, column_name: body_text, cell_text: "Region: Huila"}
-          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: tags, cell_text: "Origin:\u00a0Colombia\nRegion:\u00a0Huila\u2009\nProcess: Natural\u00a0"}
-    expect:
-      rows:
-        - {row: 1, label: region, label_value: Huila}
-        - {row: 1, label: process, label_value: Washed}
-        - {row: 1, label: altitude, label_value: "1,800 masl"}
-        - {row: 4, label: origin, label_value: Colombia}
-        - {row: 4, label: region, label_value: Huila}
-        - {row: 4, label: process, label_value: Natural}
-
-  - name: royal_rules_read_the_title_and_labels
-    description: >-
-      Lot number and warehouse from the title, origin from the title's one country (Java is a variety there), a bare
-      FTO only beside both claims spelled out, a variety label naming one the catalog doesn't know abstains. A
-      non-breaking or other Unicode space in a title or tag is whitespace, as it is to Python.
+      Royal's lot ID is the part that is five digits (a split lot's suffix kept), never a producer's "Lot 3" or a
+      starred contract number; two different IDs abstain. The warehouse is the last part in capitals, without SPOT,
+      only on a title with a lot ID part (a year isn't one); SPOT is status spot. An ETA date or a delivery month is the arrival, as written,
+      when it parses; a shipment month is when the lot leaves origin, so it gives none.
     model: int_royal_rules
     given:
       - input: ref('stg_importer_vocab')
@@ -237,23 +214,258 @@ unit_tests:
         rows: select * from main.stg_importer_vocab
       - input: ref('stg_importer_cells')
         rows:
-          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: title, cell_text: "Colombia Huila Washed - Lot 70412 - Harborview Warehouse"}
-          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: title, cell_text: "Java Natural - Lot 2025 - In Warehouse"}
-          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: title, cell_text: Nicaragua Java Natural}
-          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: tags, cell_text: FTO}
-          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: title, cell_text: Kenya AA - No. 2 Warehouse}
-          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: tags, cell_text: "Fair Trade\nOrganic\nFTO"}
-          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: title, cell_text: "Kenya AA\u00a0-\u00a0Harborview Warehouse"}
-          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: tags, cell_text: "\u00a0Organic\u00a0\nNatural\u3000"}
-      - input: ref('int_royal_labels')
-        rows:
-          - {week: 2026-11-09, row: 1, importer: royal_coffee, label: variety, label_value: "Castillo, Caturra", position: [1, 1, 1]}
-          - {week: 2026-11-09, row: 4, importer: royal_coffee, label: variety, label_value: "Bourbon, Mystery Hybrid", position: [1, 1, 1]}
-          - {week: 2026-11-09, row: 4, importer: royal_coffee, label: warehouse, label_value: No. 2, position: [1, 2, 1]}
+          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: title, cell_text: "COLOMBIA FT-FLO/USA ORGANIC HUILA EXAMPLE - *54321* - 12345 - 69.0 kg GrainPro Bags - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: title, cell_text: "Papua New Guinea Example Highlands A - 23456-2 - GrainPro Bags - May 2027 Shipment - EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: title, cell_text: "TIMOR LESTE FT ORGANIC EXAMPLE - 34567 - ETA: Nov 30, 2026 - EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: title, cell_text: "TIMOR FT-FLO EXAMPLE VILLAGE - 34568 - January 2027 Delivery - SPOT EXAMPLEWHSE B2"}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: title, cell_text: "Honduras Example Producer Lot 3 SHG - 56789 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 6, importer: royal_coffee, column_name: title, cell_text: "Kenya Example AA - 11111 - 22222 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 7, importer: royal_coffee, column_name: title, cell_text: "Class: Example Roasting Workshop"}
+          - {week: 2026-11-09, row: 8, importer: royal_coffee, column_name: title, cell_text: "Ethiopia Example Natural - 12349 - Sample"}
+          - {week: 2026-11-09, row: 9, importer: royal_coffee, column_name: title, cell_text: "Ethiopia Example Natural - 12350 - ETA: TBD 99, 2026 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 10, importer: royal_coffee, column_name: title, cell_text: "Brazil Example Natural - 12351 - Intend Ship: Dec 12, 2026 - EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 11, importer: royal_coffee, column_name: title, cell_text: "Kenya Example AB - 2026 - SPOT EXAMPLEWHSE"}
     expect:
       rows:
-        - {row: 1, lot_id: 70412, warehouse: Harborview, origin: Colombia, process_type: washed, varieties: "[Castillo, Caturra]", certifications: null}
-        - {row: 2, lot_id: null, warehouse: null, origin: null, process_type: natural, varieties: null, certifications: null}
-        - {row: 3, lot_id: null, warehouse: null, origin: Nicaragua, process_type: natural, varieties: null, certifications: null}
-        - {row: 4, lot_id: null, warehouse: No. 2, origin: Kenya, process_type: null, varieties: null, certifications: "[organic, fair_trade]"}
-        - {row: 5, lot_id: null, warehouse: Harborview, origin: Kenya, process_type: natural, varieties: null, certifications: "[organic]"}
+        - {row: 1, lot_id: "12345", warehouse: EXAMPLEWHSE, status: spot, est_arrival: null}
+        - {row: 2, lot_id: 23456-2, warehouse: EXAMPLEWHSE, status: null, est_arrival: null}
+        - {row: 3, lot_id: "34567", warehouse: EXAMPLEWHSE, status: null, est_arrival: "Nov 30, 2026"}
+        - {row: 4, lot_id: "34568", warehouse: EXAMPLEWHSE B2, status: spot, est_arrival: January 2027}
+        - {row: 5, lot_id: "56789", warehouse: EXAMPLEWHSE, status: spot, est_arrival: null}
+        - {row: 6, lot_id: null, warehouse: EXAMPLEWHSE, status: spot, est_arrival: null}
+        - {row: 7, lot_id: null, warehouse: null, status: null, est_arrival: null}
+        - {row: 8, lot_id: "12349", warehouse: null, status: null, est_arrival: null}
+        - {row: 9, lot_id: "12350", warehouse: EXAMPLEWHSE, status: spot, est_arrival: null}
+        - {row: 10, lot_id: "12351", warehouse: EXAMPLEWHSE, status: null, est_arrival: null}
+        - {row: 11, lot_id: null, warehouse: null, status: null, est_arrival: null}
+
+  - name: royal_bags_and_availability_from_title_and_variants
+    description: >-
+      The packaging part as written; the one weight the title states (a pound weight in kg), else the one variant's
+      grams in kg to 0.1; none for a product with several variants or no weight. Available when any variant is.
+    model: int_royal_rules
+    given:
+      - input: ref('stg_importer_vocab')
+        format: sql
+        rows: select * from main.stg_importer_vocab
+      - input: ref('stg_importer_cells')
+        rows:
+          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: title, cell_text: "Brazil Example Natural - 12347 - 30.0 kg Bags - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: variants, cell_text: '[{"id": 1, "title": "Default Title", "available": true, "grams": 30105}]'}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: title, cell_text: "Peru Example Organic - 12348 - Ecotact Bags - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: variants, cell_text: '[{"id": 2, "title": "Default Title", "available": false, "grams": 69041}]'}
+          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: title, cell_text: "Example Gem Peru Organic 22 Lb - 12348-1 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: variants, cell_text: '[{"id": 3, "title": "Default Title", "available": true, "grams": 9979}]'}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: title, cell_text: "Class: Example Roasting Workshop"}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: variants, cell_text: '[{"id": 4, "title": "A", "available": false, "grams": 0}, {"id": 5, "title": "B", "available": true, "grams": 0}]'}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: title, cell_text: "Kenya Example AA - 12352 - 20.0 kg Boxes - SPOT EXAMPLEWHSE"}
+    expect:
+      rows:
+        - {row: 1, bag_size: 30.0 kg Bags, bag_kg: 30.0, available: true}
+        - {row: 2, bag_size: Ecotact Bags, bag_kg: 69.0, available: false}
+        - {row: 3, bag_size: null, bag_kg: 9.98, available: true}
+        - {row: 4, bag_size: null, bag_kg: null, available: true}
+        - {row: 5, bag_size: 20.0 kg Boxes, bag_kg: 20.0, available: null}
+
+  - name: royal_origin_is_the_first_place_the_name_names
+    description: >-
+      The first place in the name part, longest name first: Papua New Guinea (never Guinea or New Guinea), TIMOR LESTE
+      and bare TIMOR (Timor-Leste), the islands as the catalog reads them (Indonesia), Hawaii (United States). A place
+      later in the name (a producer called Flores, a variety called Java) doesn't count. A blend of two countries, an
+      island two countries share, Congo alone and a name with no place abstain.
+    model: int_royal_rules
+    given:
+      - input: ref('stg_importer_vocab')
+        format: sql
+        rows: select * from main.stg_importer_vocab
+      - input: ref('stg_importer_cells')
+        rows:
+          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: title, cell_text: "PAPUA NEW GUINEA ORGANIC EXAMPLE A - 10001 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: title, cell_text: "TIMOR LESTE EXAMPLE - 10002 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: title, cell_text: "DECAF TIMOR FT EXAMPLE - 10003 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: title, cell_text: "Decaf Komodo Organic Example Water Process - 10004 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: title, cell_text: "Bali Example Natural - 10005 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 6, importer: royal_coffee, column_name: title, cell_text: "Java Example Estate - 10006 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 7, importer: royal_coffee, column_name: title, cell_text: "FLORES ORGANIC EXAMPLE - 10007 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 8, importer: royal_coffee, column_name: title, cell_text: "Sumatra Example Grade 1 - 10008 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 9, importer: royal_coffee, column_name: title, cell_text: "Honduras Example Producer Flores SHG - 10009 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 10, importer: royal_coffee, column_name: title, cell_text: "Colombia Example Java Washed - 10010 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 11, importer: royal_coffee, column_name: title, cell_text: "Ethiopia Example Station Blend - 10011 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 12, importer: royal_coffee, column_name: title, cell_text: "Colombia Peru Example Blend - 10012 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 13, importer: royal_coffee, column_name: title, cell_text: "Example Espresso Blend - 10013 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 14, importer: royal_coffee, column_name: title, cell_text: "New Guinea Example - 10014 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 15, importer: royal_coffee, column_name: title, cell_text: "Congo Example Kivu - 10015 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 16, importer: royal_coffee, column_name: title, cell_text: "Hawaii Kona Example - 10016 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 17, importer: royal_coffee, column_name: title, cell_text: "Example Gem Guinea Example - 10017 - SPOT EXAMPLEWHSE"}
+    expect:
+      rows:
+        - {row: 1, origin: Papua New Guinea}
+        - {row: 2, origin: Timor-Leste}
+        - {row: 3, origin: Timor-Leste}
+        - {row: 4, origin: Indonesia}
+        - {row: 5, origin: Indonesia}
+        - {row: 6, origin: Indonesia}
+        - {row: 7, origin: Indonesia}
+        - {row: 8, origin: Indonesia}
+        - {row: 9, origin: Honduras}
+        - {row: 10, origin: Colombia}
+        - {row: 11, origin: Ethiopia}
+        - {row: 12, origin: null}
+        - {row: 13, origin: null}
+        - {row: 14, origin: null}
+        - {row: 15, origin: null}
+        - {row: 16, origin: United States}
+        - {row: 17, origin: Guinea}
+
+  - name: royal_process_and_certifications_from_title_and_tags
+    description: >-
+      The process tag as written; decaf only from the title, tags or product type (sugar cane in the body's prose
+      doesn't null a natural lot); anaerobic wins; a title naming another process than its tag abstains. FT, FT-FLO,
+      FT-USA and FT-FLO/USA are fair trade; a program we don't model (Bird Friendly) makes the list unknown.
+    model: int_royal_rules
+    given:
+      - input: ref('stg_importer_vocab')
+        format: sql
+        rows: select * from main.stg_importer_vocab
+      - input: ref('stg_importer_cells')
+        rows:
+          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: title, cell_text: "COLOMBIA FT-FLO/USA ORGANIC HUILA EXAMPLE - 20001 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: tags, cell_text: "offline-only\nwashed"}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: title, cell_text: "Bali Example Natural - 20002 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: tags, cell_text: natural}
+          - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: body_text, cell_text: "Invented prose: the farm also grows sugar cane and uses mountain water."}
+          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: title, cell_text: "Decaf Komodo Organic Example Water Process - 20003 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: tags, cell_text: decaf}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: title, cell_text: "Sumatra Example Grade 1 - 20004 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: tags, cell_text: wet-hulled}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: title, cell_text: "Brazil Example Anaerobic Natural - 20005 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: tags, cell_text: natural}
+          - {week: 2026-11-09, row: 6, importer: royal_coffee, column_name: title, cell_text: "Ethiopia Example Natural - 20006 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 6, importer: royal_coffee, column_name: tags, cell_text: washed}
+          - {week: 2026-11-09, row: 7, importer: royal_coffee, column_name: title, cell_text: "PERU FT EXAMPLE - 20007 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 7, importer: royal_coffee, column_name: tags, cell_text: honey-processed}
+          - {week: 2026-11-09, row: 8, importer: royal_coffee, column_name: title, cell_text: "HONDURAS FT-USA EXAMPLE SHG EP - 20008 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 9, importer: royal_coffee, column_name: title, cell_text: "GUATEMALA FT-FLO ORGANIC BIRD FRIENDLY EXAMPLE - 20009 - SPOT EXAMPLEWHSE"}
+          - {week: 2026-11-09, row: 10, importer: royal_coffee, column_name: title, cell_text: "Mexico Example 30 ft Terraces - 20010 - SPOT EXAMPLEWHSE"}
+    expect:
+      rows:
+        - {row: 1, process: washed, process_type: washed, certifications: "[organic, fair_trade]"}
+        - {row: 2, process: natural, process_type: natural, certifications: null}
+        - {row: 3, process: decaf, process_type: null, certifications: "[organic]"}
+        - {row: 4, process: wet-hulled, process_type: honey, certifications: null}
+        - {row: 5, process: natural, process_type: anaerobic, certifications: null}
+        - {row: 6, process: washed, process_type: null, certifications: null}
+        - {row: 7, process: honey-processed, process_type: honey, certifications: "[fair_trade]"}
+        - {row: 8, process: null, process_type: null, certifications: "[fair_trade]"}
+        - {row: 9, process: null, process_type: null, certifications: null}
+        - {row: 10, process: null, process_type: null, certifications: null}
+
+  - name: offers_origin_is_one_convention
+    description: >-
+      Every importer's origin is the catalog's country: Cafe Imports' "Sumatra" is Indonesia and "DR Congo" the
+      Democratic Republic of the Congo, kept as written in origin_as_written; a spelling the catalog doesn't know is
+      null. Every lot stays a row, with its key and flags carried from int_importer_lots and dim_importer_lot.
+    model: importer_offers
+    given:
+      - input: ref('stg_importer_vocab')
+        format: sql
+        rows: select * from main.stg_importer_vocab
+      - input: ref('stg_importer_lots')
+        rows:
+          - {week: 2026-11-09, importer: cafe_imports, row: 1}
+          - {week: 2026-11-09, importer: cafe_imports, row: 2}
+          - {week: 2026-11-09, importer: cafe_imports, row: 3}
+          - {week: 2026-11-09, importer: interamerican, row: 4}
+          - {week: 2026-11-09, importer: royal_coffee, row: 5}
+      - input: ref('int_importer_stated')
+        rows:
+          - {week: 2026-11-09, importer: cafe_imports, row: 1, origin: Sumatra}
+          - {week: 2026-11-09, importer: cafe_imports, row: 2, origin: "DR Congo "}
+          - {week: 2026-11-09, importer: cafe_imports, row: 3, origin: Atlantis}
+          - {week: 2026-11-09, importer: interamerican, row: 4, origin: null}
+          - {week: 2026-11-09, importer: royal_coffee, row: 5, origin: null}
+      - input: ref('int_importer_rules')
+        rows:
+          - {week: 2026-11-09, importer: cafe_imports, row: 1}
+          - {week: 2026-11-09, importer: cafe_imports, row: 2}
+          - {week: 2026-11-09, importer: cafe_imports, row: 3}
+          - {week: 2026-11-09, importer: interamerican, row: 4}
+          - {week: 2026-11-09, importer: royal_coffee, row: 5}
+      - input: ref('int_importer_name_rules')
+        rows:
+          - {week: 2026-11-09, importer: interamerican, row: 4, origin: Brazil}
+      - input: ref('int_royal_rules')
+        rows:
+          - {week: 2026-11-09, importer: royal_coffee, row: 5, origin: Timor-Leste}
+      - input: ref('int_importer_lots')
+        rows:
+          - {week: 2026-11-09, importer: cafe_imports, row: 1, lot_key: "cafe_imports:10001", is_available: true}
+          - {week: 2026-11-09, importer: cafe_imports, row: 2, lot_key: "cafe_imports:10002", is_available: false}
+          - {week: 2026-11-09, importer: cafe_imports, row: 3, lot_key: "cafe_imports:10003", is_available: null}
+          - {week: 2026-11-09, importer: interamerican, row: 4, lot_key: "interamerican:x#1", is_available: true}
+          - {week: 2026-11-09, importer: royal_coffee, row: 5, lot_key: "royal_coffee:9001", is_available: false}
+      - input: ref('dim_importer_lot')
+        rows:
+          - {importer: cafe_imports, lot_key: "cafe_imports:10001", currently_offered: true}
+          - {importer: cafe_imports, lot_key: "cafe_imports:10002", currently_offered: false}
+          - {importer: cafe_imports, lot_key: "cafe_imports:10003", currently_offered: false}
+          - {importer: interamerican, lot_key: "interamerican:x#1", currently_offered: true}
+          - {importer: royal_coffee, lot_key: "royal_coffee:9001", currently_offered: false}
+    expect:
+      rows:
+        - {row: 1, origin: Indonesia, origin_as_written: Sumatra, is_available: true, currently_offered: true}
+        - {row: 2, origin: Democratic Republic of the Congo, origin_as_written: "DR Congo ", is_available: false, currently_offered: false}
+        - {row: 3, origin: null, origin_as_written: Atlantis, is_available: null, currently_offered: false}
+        - {row: 4, origin: Brazil, origin_as_written: null, is_available: true, currently_offered: true}
+        - {row: 5, origin: Timor-Leste, origin_as_written: null, is_available: false, currently_offered: false}
+
+  - name: lots_keep_a_stable_key_and_say_whether_offered
+    description: >-
+      Royal's key is its Shopify id, Cafe Imports' its lot ID, InterAmerican's its name, warehouse and bag size with
+      an ordinal for identical rows. Royal is available when a variant is; the others when bags remain.
+    model: int_importer_lots
+    given:
+      - input: ref('stg_importer_lots')
+        rows:
+          - {week: 2026-11-09, importer: royal_coffee, row: 1, source_key: "9000000000001"}
+          - {week: 2026-11-09, importer: cafe_imports, row: 2, source_key: "2"}
+          - {week: 2026-11-09, importer: interamerican, row: 3, source_key: "3"}
+          - {week: 2026-11-09, importer: interamerican, row: 4, source_key: "4"}
+          - {week: 2026-11-09, importer: cafe_imports, row: 5, source_key: "5"}
+      - input: ref('int_importer_stated')
+        rows:
+          - {week: 2026-11-09, importer: royal_coffee, row: 1, lot_id: null, name: Example, bags: null}
+          - {week: 2026-11-09, importer: cafe_imports, row: 2, lot_id: 12345-2, name: Example, bags: 0}
+          - {week: 2026-11-09, importer: interamerican, row: 3, name: Brazil Example Natural, warehouse: Example Port, bag_size: 60 Kg, bags: 4}
+          - {week: 2026-11-09, importer: interamerican, row: 4, name: Brazil Example Natural, warehouse: Example Port, bag_size: 60 Kg, bags: 2}
+          - {week: 2026-11-09, importer: cafe_imports, row: 5, lot_id: null, name: Example Lot, bags: null}
+      - input: ref('int_royal_rules')
+        rows:
+          - {week: 2026-11-09, importer: royal_coffee, row: 1, available: true}
+    expect:
+      rows:
+        - {row: 1, lot_key: "royal_coffee:9000000000001", is_available: true}
+        - {row: 2, lot_key: "cafe_imports:12345-2", is_available: false}
+        - {row: 3, lot_key: "interamerican:brazil example natural|example port|60 kg#1", is_available: true}
+        - {row: 4, lot_key: "interamerican:brazil example natural|example port|60 kg#2", is_available: true}
+        - {row: 5, lot_key: "cafe_imports:name:example lot", is_available: null}
+
+  - name: dim_lot_keeps_every_lot_and_flags_the_ones_offered_now
+    description: >-
+      Every lot ever stored is a row, available or not. is_available is its last seen week's; currently_offered only
+      when that week is its importer's latest and it was available then.
+    model: dim_importer_lot
+    given:
+      - input: ref('int_importer_lots')
+        rows:
+          - {week: 2026-11-09, importer: royal_coffee, row: 1, lot_key: "royal_coffee:1", is_available: true}
+          - {week: 2026-11-16, importer: royal_coffee, row: 1, lot_key: "royal_coffee:1", is_available: false}
+          - {week: 2026-11-09, importer: royal_coffee, row: 2, lot_key: "royal_coffee:2", is_available: true}
+          - {week: 2026-11-16, importer: royal_coffee, row: 3, lot_key: "royal_coffee:3", is_available: true}
+          - {week: 2026-11-09, importer: cafe_imports, row: 1, lot_key: "cafe_imports:1", is_available: true}
+    expect:
+      rows:
+        - {lot_key: "royal_coffee:1", first_seen_week: 2026-11-09, last_seen_week: 2026-11-16, weeks_seen: 2, is_available: false, currently_offered: false}
+        - {lot_key: "royal_coffee:2", first_seen_week: 2026-11-09, last_seen_week: 2026-11-09, weeks_seen: 1, is_available: true, currently_offered: false}
+        - {lot_key: "royal_coffee:3", first_seen_week: 2026-11-16, last_seen_week: 2026-11-16, weeks_seen: 1, is_available: true, currently_offered: true}
+        - {lot_key: "cafe_imports:1", first_seen_week: 2026-11-09, last_seen_week: 2026-11-09, weeks_seen: 1, is_available: true, currently_offered: true}

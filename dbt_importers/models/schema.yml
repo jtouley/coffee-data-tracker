@@ -29,6 +29,11 @@ models:
       - name: row
         description: The lot's position on the page (Royal, in the listing) that week.
         data_tests: [not_null]
+      - name: source_key
+        description: >-
+          What a week stored twice is read once by: Royal's Shopify product id (its listing position can change
+          between two reads), else the row's position.
+        data_tests: [not_null]
       - name: cells
         description: Every cell of the lot's row under the page's header (Royal, every kept field), verbatim.
 
@@ -43,7 +48,8 @@ models:
   - name: int_importer_stated
     description: >-
       The fields each lot's page states, read from its cells by importers.stated, the code the weekly snapshot uses to
-      check a page. Royal's listing states only its name this way; int_royal_rules reads the rest.
+      check a page. Royal's listing states only its name this way; int_royal_rules reads the rest from its title and
+      variants.
 
   - name: int_importer_inputs
     description: What the Cafe Imports and InterAmerican rules read from each lot's cells; null for any other importer.
@@ -55,13 +61,42 @@ models:
   - name: int_importer_name_rules
     description: What an InterAmerican product name states (origin, region, process, grade, screen).
 
-  - name: int_royal_labels
-    description: >-
-      Royal's "Label: value" pairs from its tags and body lines, in order, each once per label.
-
   - name: int_royal_rules
     description: >-
-      Royal's lot, warehouse, origin, region, process and normalized values, from its title, tags and labels.
+      Royal's lot ID, warehouse, status, arrival, bags, availability, origin, process, process type and
+      certifications, from its title, tags, product type and variants. Its body is prose and isn't read: region,
+      varieties, altitude and harvest months are null, left for Claude.
+
+  - name: int_importer_lots
+    description: >-
+      Each stored lot's stable key across weeks (lot_key) and whether it was offered that week (is_available).
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || lot_key"
+    columns:
+      - name: lot_key
+        description: >-
+          The importer, then its own stable key: Royal's Shopify product id; Cafe Imports' lot ID (else its name);
+          InterAmerican's product name, warehouse and bag size with an ordinal for identical rows in one week.
+        data_tests: [not_null]
+
+  - name: dim_importer_lot
+    description: >-
+      One row per importer lot ever stored, available or not: first and last week seen, weeks seen, and flags.
+      Rebuilt from every stored week at each build; the week-by-week values are importer_offers'.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: lot_key
+    columns:
+      - name: lot_key
+        data_tests: [not_null]
+      - name: is_available
+        description: Whether the lot was available in the last week it was seen; null when its page didn't say.
+      - name: currently_offered
+        description: Seen in its importer's latest stored week and available then.
+        data_tests: [not_null]
 
   - name: importer_offers
     description: >-
@@ -80,14 +115,30 @@ models:
         data_tests: [not_null]
       - name: origin
         description: >-
-          The page's origin (Cafe Imports, as written: "Sumatra"), the country an InterAmerican name leads with, or
-          Royal's labelled or title country, in the catalog's spelling.
+          The catalog's country (importer_rules.catalog_countries()) for every importer: Cafe Imports' origin column
+          read as the catalog reads it ("Sumatra" is Indonesia), the country an InterAmerican name leads with, the
+          first place a Royal title names. Null when the text names no one country
+          (tests/importer_origin_is_a_catalog_country).
+      - name: origin_as_written
+        description: Cafe Imports' origin column, as written ("Sumatra"); null for the others, whose pages have none.
+      - name: lot_key
+        description: The lot's stable key across weeks (int_importer_lots).
+        data_tests:
+          - not_null
+          - relationships:
+              arguments: {to: ref('dim_importer_lot'), field: lot_key}
+      - name: is_available
+        description: >-
+          Offered that week: Royal's variants say so; Cafe Imports' and InterAmerican's pages list the bags still
+          available. Null when the page doesn't say. Every lot is a row either way.
+      - name: currently_offered
+        description: From dim_importer_lot, the same on every week's row of a lot. Filter on it for today's offers.
       - name: region
-        description: The page's region, or the one an InterAmerican name or a Royal "Region:" label gives, as written.
+        description: The page's region, or the one an InterAmerican name gives, as written. Null for Royal.
       - name: process
         description: >-
           The process as stated: Cafe Imports' column; the process words of an InterAmerican name ("Natural",
-          "Honey Natural", "Decaf"); Royal's "Process:" label.
+          "Honey Natural", "Decaf"); Royal's process tag ("washed", "wet-hulled", "decaf").
       - name: grade
         description: InterAmerican's grade and preparation words ("G1", "SHB", "EP", "EP10", "AA", "Supremo").
       - name: screen

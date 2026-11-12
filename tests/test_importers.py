@@ -289,6 +289,27 @@ def test_the_rules_whitespace_is_pythons():
     assert rules.re2(r"^\s*(a)[\s,]\S") == rf"^[{rules.WS}]*(a)[{rules.WS},][^{rules.WS}]"
 
 
+def test_an_importer_origin_is_one_of_the_catalogs_countries():
+    """The countries an importer origin may take (importer_rules.catalog_countries(), which the dbt test
+    importer_origin_is_a_catalog_country reads) are the catalog's: each one an ISO 3166-1 country in the main project's
+    origin_country_iso seed. Guinea is there as ambiguous only because "New Guinea" used to read as it; as a whole name
+    it is the country."""
+    import csv
+
+    seed = {
+        r["raw_value"]: r
+        for r in csv.DictReader((Path(__file__).parent.parent / "dbt/seeds/origin_country_iso.csv").open())
+    }
+    countries = rules.catalog_countries()
+    assert "New Guinea" not in countries
+    assert {"Indonesia", "Timor-Leste", "Papua New Guinea"} <= set(countries)
+    assert all(seed[c]["kind"] == "country" for c in countries if c != "Guinea"), [
+        c for c in countries if seed.get(c, {}).get("kind") != "country"
+    ]
+    # every place a Royal title can lead with that the catalog spells otherwise names one of them
+    assert set(rules.ROYAL_PLACES.values()) <= set(countries)
+
+
 NOT_FT_ORG = (None, ["fair_trade", "organic"])
 
 

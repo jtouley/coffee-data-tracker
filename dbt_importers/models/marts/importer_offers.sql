@@ -1,13 +1,27 @@
 -- Every stored lot, every week, as an offer: its keys, the fields its page states, and our model's normalized
 -- values, all derived from raw at this build. Private: this project's database file holds it, and the importers
 -- workflow keeps the latest build's copy in the private importers dataset (derived/, importers.publish_derived),
--- which no build reads back.
---   Cafe Imports: its table's columns (int_importer_stated) and int_importer_rules.
+-- which no build reads back. Every stored lot stays a row (raw is append-only and a word-for-word record of the
+-- page), with its lot's key and flags: is_available (offered that week) and currently_offered (dim_importer_lot:
+-- offered in its importer's latest stored week).
+--   Cafe Imports: its table's columns (int_importer_stated) and int_importer_rules. Its origin column is kept as
+--     written in origin_as_written, and read as the catalog's country in origin.
 --   InterAmerican: its table has no origin, region or process column, so its product name's (int_importer_name_rules)
 --     fill them, with grade and screen; the rest as Cafe Imports.
---   Royal Coffee: its title is the name; everything else is int_royal_rules', from its title, tags and labelled text.
+--   Royal Coffee: its title is the name; everything else is int_royal_rules', from its title, tags and variants.
 with vocab as (
     select * from {{ ref('stg_importer_vocab') }}
+),
+
+-- a country or alias as written (lowercase) and the catalog's country for it, as the catalog reads origins
+country_of as (
+    select map_from_entries(list({'key': term, 'value': value})) as country_of
+    from vocab
+    where kind = 'country'
+),
+
+catalog as (
+    select list(value) as countries from vocab where kind = 'catalog_country'
 )
 
 select
@@ -18,22 +32,32 @@ select
     l.url,
     coalesce(s.lot_id, y.lot_id) as lot_id,
     s.name,
-    coalesce(s.origin, n.origin, y.origin) as origin,
-    coalesce(s.region, n.region, y.region) as region,
+    -- one convention for every importer: the catalog's country, or null when the text doesn't name one
+    coalesce(
+        if(list_contains(c.countries, m.country_of[lower({{ strip('s.origin') }})]),
+            m.country_of[lower({{ strip('s.origin') }})], null),
+        n.origin,
+        y.origin
+    ) as origin,
+    s.origin as origin_as_written,
+    coalesce(s.region, n.region) as region,
     coalesce(s.process, n.process, y.process) as process,
     n.grade,
     n.screen,
-    s.status,
-    s.est_arrival,
+    coalesce(s.status, y.status) as status,
+    k.lot_key,
+    k.is_available,
+    d.currently_offered,
+    coalesce(s.est_arrival, y.est_arrival) as est_arrival,
     coalesce(s.warehouse, y.warehouse) as warehouse,
     s.bags,
-    s.bag_size,
-    s.bag_kg,
+    coalesce(s.bag_size, y.bag_size) as bag_size,
+    coalesce(s.bag_kg, y.bag_kg) as bag_kg,
     if(l.importer = 'royal_coffee', y.process_type, r.process_type) as process_type,
-    if(l.importer = 'royal_coffee', y.varieties, r.varieties) as varieties,
-    if(l.importer = 'royal_coffee', y.altitude_min_m, r.altitude_min_m) as altitude_min_m,
-    if(l.importer = 'royal_coffee', y.altitude_max_m, r.altitude_max_m) as altitude_max_m,
-    if(l.importer = 'royal_coffee', y.harvest_months, r.harvest_months) as harvest_months,
+    r.varieties,
+    r.altitude_min_m,
+    r.altitude_max_m,
+    r.harvest_months,
     r.grower_type,
     r.grower_name,
     if(l.importer = 'royal_coffee', y.certifications, r.certifications) as certifications,
@@ -50,3 +74,7 @@ inner join {{ ref('int_importer_stated') }} as s using (week, importer, "row")
 inner join {{ ref('int_importer_rules') }} as r using (week, importer, "row")
 left join {{ ref('int_importer_name_rules') }} as n using (week, importer, "row")
 left join {{ ref('int_royal_rules') }} as y using (week, importer, "row")
+inner join {{ ref('int_importer_lots') }} as k using (week, importer, "row")
+inner join {{ ref('dim_importer_lot') }} as d on d.importer = l.importer and d.lot_key = k.lot_key
+cross join country_of as m
+cross join catalog as c
