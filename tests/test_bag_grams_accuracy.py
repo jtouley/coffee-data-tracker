@@ -9,6 +9,7 @@ the scores weight each stratum by its size in the set (eval/bag_grams/items_<set
 lower any accuracy or raise any confidently wrong share.
 """
 
+import hashlib
 import importlib.util
 import json
 from collections import defaultdict
@@ -89,43 +90,74 @@ def _outcome(g: int | None, label: int | str) -> str:
     return "ok"
 
 
-# The full-population gate (CLAUDE.md step 7): the estimated share of the eval's population whose drawn option the
-# rules get right or rightly leave blank must be at least bag_eval.GATE. The coffees a round's change touches
-# (eval/bag_grams/gate_d.json) are counted exactly from their census labels; every other coffee is estimated from
-# bag_eval.GATE_SETS. The formula and the population are bag_eval's (full_population, POPULATION), not repeated here.
+# The full-population gate (CLAUDE.md step 7; eval/bag_grams/README.md "The full-population gate"). Each rules change
+# draws a fresh, sealed gate set: coffees of the whole population, stratified by platform, disjoint from every earlier
+# set, labeled for the option each rule's published price_per_100g comes from. tests/fixtures/bag_grams_gate.jsonl
+# holds the scored gate sets; main's published values at the time are the sealed pred_<main>_<set>.json. On every
+# gate set the current rules must reach bag_eval.GATE_ACCURACY, weighted by platform size, with their confidently
+# wrong share at most bag_eval.GATE_RISE above that main's. bag_eval is loaded by path (nothing goes on sys.path).
 _spec = importlib.util.spec_from_file_location("bag_grams_eval", ROOT / "eval" / "bag_grams" / "bag_eval.py")
 assert _spec and _spec.loader
-bag_eval = importlib.util.module_from_spec(_spec)  # loaded by path, so nothing is put on sys.path (review N1)
+bag_eval = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(bag_eval)
+GATE = Path(__file__).parent / "fixtures" / "bag_grams_gate.jsonl"
+EVAL = ROOT / "eval" / "bag_grams"
 
 
-def _population_estimate() -> float:
-    d = set(json.loads((ROOT / "eval" / "bag_grams" / "gate_d.json").read_text()))
-    rows = [json.loads(x) for x in LABELS.read_text().splitlines()]
-    d_ok = {
-        r["coffee_id"]: bag_eval.is_ok(_grams(r), r["label"])
-        for r in rows
-        if r["coffee_id"] in d and r["drawn"]
-    }
-    assert set(d_ok) == d, "every changed coffee needs a label for its drawn option"
-    per: dict[str, list[float]] = defaultdict(list)
-    sizes: dict[str, int] = {}
-    for split in bag_eval.GATE_SETS:
-        meta = json.loads((ROOT / "eval" / "bag_grams" / f"items_{split}.json").read_text())
-        sizes |= {f"{split}:{k}": v for k, v in meta["stratum_sizes"].items()}
-    names = {bag_eval.FIXTURE_SETS[x]: x for x in bag_eval.GATE_SETS}
+def _gate_sets() -> dict[str, list[dict]]:
+    rows = [json.loads(x) for x in GATE.read_text().splitlines()] if GATE.exists() else []
+    out: dict[str, list[dict]] = defaultdict(list)
     for r in rows:
-        if r["set"] in names and r["coffee_id"] not in d and r["label"] != "unclear":
-            per[f"{names[r['set']]}:{r['stratum']}"].append(float(bag_eval.is_ok(_grams(r), r["label"])))
-    a_u, _, _ = bag_eval.weighted(per, sizes)
-    return bag_eval.full_population(sum(d_ok.values()), len(d), a_u)
+        out[r["set"]].append(r)
+    return dict(out)
 
 
-def test_full_population_accuracy_meets_the_gate():
-    est = _population_estimate()
-    assert est >= bag_eval.GATE, (
-        f"full-population accuracy {est:.4f} < {bag_eval.GATE} (eval/bag_grams/README.md)"
+def _rules_grams(r: dict, damaged: bool = False) -> dict:
+    opts = [(o[1], o[2], o[3]) for o in r["options"]]
+    grams = product_grams(r["title"], r["body"], opts, r["tags"], r["handle"])
+    if damaged:  # the mutation check: this coffee's weights doubled
+        grams = [g * 2 if g else g for g in grams]
+    return dict(zip([o[0] for o in r["options"]], grams, strict=True))
+
+
+def _gate(name: str, rows: list[dict], damage: set[str] = frozenset()) -> dict:
+    meta = json.loads((EVAL / f"items_{name}.json").read_text())
+    main = meta["rules"]["main"]
+    sealed = json.loads((EVAL / f"pred_{main}_{name}.json").read_text())
+    by_main: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for r in rows:
+        price = {o[0]: o[2] for o in r["options"]}.get(r["drawn"])
+        by_main[r["stratum"]].append(
+            (r["store"], bag_eval.gate_outcome(sealed[r["coffee_id"]], r["labels"], r["drawn"], price))
+        )
+    now = bag_eval.gate_outcomes(rows, lambda r: _rules_grams(r, r["coffee_id"] in damage))
+    return bag_eval.gate_result({"main": by_main, "now": now}, meta["stratum_sizes"], "main", "now")
+
+
+@pytest.mark.skipif(not _gate_sets(), reason="no scored gate set yet (eval/bag_grams/README.md)")
+@pytest.mark.parametrize("name", sorted(_gate_sets()) or ["none"])
+def test_full_population_accuracy_meets_the_gate(name):
+    res = _gate(name, _gate_sets()[name])
+    acc, rise = res[("now", "accuracy")][0], res[("paired", "wrong")][0]
+    assert acc >= bag_eval.GATE_ACCURACY, (
+        f"full-population accuracy {acc:.4f} < {bag_eval.GATE_ACCURACY} (eval/bag_grams/README.md)"
     )
+    assert rise <= bag_eval.GATE_RISE, (
+        f"full-population wrong rise {rise:.4f} > ceiling {bag_eval.GATE_RISE} (eval/bag_grams/README.md)"
+    )
+
+
+@pytest.mark.skipif(not _gate_sets(), reason="no scored gate set yet (eval/bag_grams/README.md)")
+@pytest.mark.parametrize("name", sorted(_gate_sets()) or ["none"])
+def test_the_gate_fails_when_one_percent_of_answers_are_damaged(name):
+    # The mutation check (review M2 of #139): double the weights of 1% of the gate set's coffees (the lowest
+    # sha256 of their ids) and the gate must fail, through accuracy or through the rise in confidently wrong answers.
+    rows = _gate_sets()[name]
+    k = max(1, round(0.01 * len(rows)))
+    damage = set(
+        sorted((r["coffee_id"] for r in rows), key=lambda c: hashlib.sha256(c.encode()).hexdigest())[:k]
+    )
+    assert not _gate(name, rows, damage)["passes"], f"{name}: the gate still passes with {k} coffees damaged"
 
 
 @pytest.mark.parametrize("name", sorted(FLOOR))

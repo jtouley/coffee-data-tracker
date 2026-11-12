@@ -131,6 +131,8 @@ def item_vid(it: dict, r: dict) -> str:
 
 def load(data: Path, split: str | None = None) -> list[dict]:
     rows = json.loads((data / "population.json").read_text())
+    if split and split.startswith("gate-"):  # a gate set is drawn from the whole population
+        return rows
     split = POPULATION_SET.get(split, split) if split else split
     return [r for r in rows if split is None or r["set"] == split]
 
@@ -186,6 +188,19 @@ def p100(r: dict, grams: dict) -> float | None:
             if PRICE_BAND[0] <= x <= PRICE_BAND[1]:
                 vals.append(round(x, 2))
     return min(vals) if vals else None
+
+
+def published(r: dict, grams: dict) -> tuple[float | None, str | None]:
+    """dim_coffee's price_per_100g with these grams, and the option it comes from (the first, in the listing's order,
+    of the options at that price per 100 g); (None, None) when nothing is published."""
+    best: tuple[float, str] | None = None
+    for v in r["variants"]:
+        g, p = grams.get(v["variant_id"]), v["price"]
+        if g and p and p > 0 and v["available"] is not False and BAG_BAND[0] <= g <= BAG_BAND[1]:
+            x = round(p / g * 100, 2)
+            if PRICE_BAND[0] <= p / g * 100 <= PRICE_BAND[1] and (best is None or x < best[0]):
+                best = (x, v["variant_id"])
+    return best if best else (None, None)
 
 
 def cmd_coverage(data: Path, split: str, names: list[str]) -> None:
@@ -469,6 +484,262 @@ def cmd_gate(data: Path, names: list[str]) -> None:
         )
 
 
+# ---- The full-population gate (README "The full-population gate"; CLAUDE.md step 7) --------------------------------
+# For each rules change, once its rules are frozen: a fresh sealed sample of coffees from the whole population,
+# stratified by platform and disjoint from every set labeled before. What is scored is what dim_coffee publishes:
+# each coffee's price_per_100g, through the grams of the option it comes from, under main's rules and the change's.
+GATE_N = 500  # coffees per gate set
+GATE_MIN = 40  # per platform, before the rest is shared by stratum size
+GATE_ACCURACY = 0.95  # the change's weighted accuracy must reach this
+GATE_RISE = (
+    0.005  # and its weighted confidently wrong share may exceed main's by at most this (point estimate)
+)
+GATE_PREFIX = "gate-"  # gate sets are named gate-<change>, e.g. gate-139
+
+
+def _labeled_coffees() -> set[str]:
+    here = Path(__file__).parent
+    out: set[str] = set()
+    for f in here.glob("items_*.json"):
+        out |= {it["coffee_id"] for it in json.loads(f.read_text())["items"]}
+    return out
+
+
+def cmd_gate_sample(data: Path, split: str, main: str, change: str) -> None:
+    """Draw a gate set (items_<gate-...>.json, ids only): GATE_N coffees of the whole population, none labeled in
+    any earlier set, stratified by platform (GATE_MIN each, the rest in proportion to each platform's size), each
+    platform drawn by the lowest sha256("<split>:" + coffee_id). Each item lists the options to label: the one each
+    rule's price_per_100g comes from, and, when a rule publishes none, the coffee's drawn option (to tell a rightly
+    blank price from a missed one). Run only once the change's rules are frozen and committed."""
+    if not split.startswith(GATE_PREFIX):
+        sys.exit(f"a gate set is named {GATE_PREFIX}<change>")
+    here = Path(__file__).parent
+    if (here / f"items_{split}.json").exists():
+        sys.exit(f"items_{split}.json exists: a gate set is drawn once")
+    used = _labeled_coffees()
+    pm, pc = pred(data, main), pred(data, change)
+    frame: dict[str, list[dict]] = defaultdict(list)
+    for r in load(data):
+        if r["coffee_id"] not in used:
+            frame[r["platform"]].append(r)
+    sizes = {k: len(v) for k, v in frame.items()}
+    total = sum(sizes.values())
+    alloc = {k: min(GATE_MIN, n) for k, n in sizes.items()}
+    rest = GATE_N - sum(alloc.values())
+    for k, n in sizes.items():
+        alloc[k] = min(n, alloc[k] + round(rest * n / total))
+    drawn = []
+    for k, rows in sorted(frame.items()):
+        rows.sort(key=lambda r: hashlib.sha256(f"{split}:{r['coffee_id']}".encode()).hexdigest())
+        for r in rows[: alloc[k]]:
+            c = r["coffee_id"]
+            _, vm = published(r, pm[c])
+            _, vc = published(r, pc[c])
+            label = [v for v in (vm, vc) if v]
+            if vm is None or vc is None:
+                label.append(r["item_variant_id"])
+            label = list(dict.fromkeys(label))
+            drawn.append({"coffee_id": c, "stratum": k, "store": r["group"], "label": label})
+    (here / f"items_{split}.json").write_text(
+        json.dumps(
+            {
+                "set": split,
+                "rules": {"main": main, "change": change},
+                "stratum_sizes": sizes,
+                "items": sorted(drawn, key=lambda d: d["coffee_id"]),
+            },
+            indent=1,
+            sort_keys=True,
+        )
+        + "\n"
+    )
+    n_opts = sum(len(d["label"]) for d in drawn)
+    print(
+        f"{split}: {len(drawn)} coffees, {n_opts} options to label; per platform {dict(Counter(d['stratum'] for d in drawn))}"
+    )
+
+
+def cmd_gate_seal(data: Path, split: str, names: list[str]) -> None:
+    """Each rule's published value for a gate set's coffees (pred_<name>_<set>.json: price_per_100g, the option it
+    comes from and its grams), written before any label so SHA256SUMS pins them."""
+    items = json.loads((Path(__file__).parent / f"items_{split}.json").read_text())["items"]
+    pop = {r["coffee_id"]: r for r in load(data)}
+    for name in names:
+        pr = pred(data, name)
+        out = {}
+        for it in items:
+            c = it["coffee_id"]
+            x, v = published(pop[c], pr[c])
+            out[c] = {"p100": x, "variant_id": v, "grams": pr[c].get(v) if v else None}
+        path = Path(__file__).parent / f"pred_{name}_{split}.json"
+        path.write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
+        print(path.name, len(out))
+
+
+def gate_outcome(pub: dict, labels: dict[str, int | str], drawn: str, price: float | None = None) -> str:
+    """A rule's outcome on one gate coffee. Published: "right" when the option's grams are within 2% of its label,
+    else "wrong" (confidently wrong; also when the option has no label: a gate never passes on what it can't
+    see). Not published: "abstain_ok" when the drawn option's label gives no publishable weight (unknown, unclear,
+    or outside dim_coffee's bands at that option's price), else "missed"."""
+    if pub["variant_id"] is not None:
+        lab = labels.get(pub["variant_id"])
+        if lab is None or isinstance(lab, str):
+            return "wrong"
+        return "right" if abs(pub["grams"] - int(lab)) <= 0.02 * int(lab) else "wrong"
+    lab = labels.get(drawn)
+    if lab is None or isinstance(lab, str):
+        return "abstain_ok"
+    if not BAG_BAND[0] <= int(lab) <= BAG_BAND[1]:
+        return "abstain_ok"
+    if price and not PRICE_BAND[0] <= price / int(lab) * 100 <= PRICE_BAND[1]:
+        return "abstain_ok"
+    return "missed"
+
+
+def gate_result(
+    outcomes: dict[str, dict[str, list[tuple[str, str]]]], sizes: dict[str, int], main: str, change: str
+) -> dict:
+    """Weighted accuracy and confidently wrong share per rule, and change minus main, from outcomes[rule][stratum]
+    = [(store, outcome)]; with normal and store-clustered 95% intervals, and the verdict."""
+    out: dict = {}
+    for name, per in outcomes.items():
+        for label, ok in (("accuracy", ("right", "abstain_ok")), ("wrong", ("wrong",))):
+            xs = {k: [float(o in ok) for _, o in v] for k, v in per.items()}
+            est, lo, hi = weighted(xs, sizes)
+            clo, chi = clustered({k: [(st, float(o in ok)) for st, o in v] for k, v in per.items()}, sizes)
+            out[(name, label)] = (est, lo, hi, clo, chi)
+    for label, ok in (("accuracy", ("right", "abstain_ok")), ("wrong", ("wrong",))):
+        diff = {
+            k: [
+                float(b in ok) - float(m in ok)
+                for (_, m), (_, b) in zip(outcomes[main][k], outcomes[change][k], strict=True)
+            ]
+            for k in outcomes[main]
+        }
+        est, lo, hi = weighted(diff, sizes)
+        clo, chi = clustered(
+            {
+                k: [(st, x) for (st, _), x in zip(outcomes[main][k], xs, strict=True)]
+                for k, xs in diff.items()
+            },
+            sizes,
+        )
+        out[("paired", label)] = (est, lo, hi, clo, chi)
+    acc, rise = out[(change, "accuracy")][0], out[("paired", "wrong")][0]
+    out["passes"] = acc >= GATE_ACCURACY and rise <= GATE_RISE
+    return out
+
+
+def gate_outcomes(rows: list[dict], grams_of) -> dict[str, list[tuple[str, str]]]:
+    """Per stratum, [(store, outcome)] of one rule over gate fixture rows; grams_of(row) gives the rule's grams per
+    option (a dict variant_id -> grams)."""
+    per: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for r in rows:
+        listing = {"variants": [{"variant_id": o[0], "price": o[2], "available": o[4]} for o in r["options"]]}
+        grams = grams_of(r)
+        x, v = published(listing, grams)
+        price = {o[0]: o[2] for o in r["options"]}.get(r["drawn"])
+        o = gate_outcome(
+            {"variant_id": v, "grams": grams.get(v) if v else None}, r["labels"], r["drawn"], price
+        )
+        per[r["stratum"]].append((r["store"], o))
+    return per
+
+
+def cmd_gate_fixture(data: Path, split: str, out: Path) -> None:
+    """Append a scored gate set to the gate fixture (tests/fixtures/bag_grams_gate.jsonl): per coffee, what the rules
+    read (title, description cut after its last weight line, tags, handle, every option with title, price, stored
+    grams and availability), its stratum and store, the drawn option and the reference label of every labeled
+    option. tests/test_bag_grams_accuracy.py scores the current rules on it."""
+    from coffeedata.bag_weight import mentions
+
+    here = Path(__file__).parent
+    meta = json.loads((here / f"items_{split}.json").read_text())
+    ref = json.loads((here / "labels" / f"labels_ref_{split}.json").read_text())
+    pop = {r["coffee_id"]: r for r in load(data)}
+    rows = [json.loads(x) for x in out.read_text().splitlines()] if out.exists() else []
+    rows = [x for x in rows if x["set"] != split]
+    for it in meta["items"]:
+        r = pop[it["coffee_id"]]
+        body = r["body_text"] or ""
+        ends = [m.end for m in mentions(body)] if body else []
+        body = (body if (nl := body.find("\n", max(ends))) < 0 else body[:nl]) if ends else ""
+        rows.append(
+            {
+                "set": split,
+                "coffee_id": r["coffee_id"],
+                "stratum": it["stratum"],
+                "store": it["store"],
+                "drawn": r["item_variant_id"],
+                "labels": {v: ref[f"{r['coffee_id']}|{v}"] for v in it["label"]},
+                "title": r["title"],
+                "body": body,
+                "tags": r["tags"],
+                "handle": r["handle"],
+                "options": [
+                    [v["variant_id"], v["title"], v["price"], v["grams"], v["available"]]
+                    for v in r["variants"]
+                ],
+            }
+        )
+    out.write_text("".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n" for x in rows))
+    print(out, len(rows), "rows")
+
+
+def cmd_gate_score(data: Path, split: str, labels_file: Path, final: bool) -> None:
+    """Score a gate set once (--final), main against the change named in its items file, from the sealed
+    predictions (the seal is checked against the rules on PYTHONPATH's predictions). Totals only."""
+    if not final:
+        sys.exit("a gate set is scored once, with --final")
+    here = Path(__file__).parent
+    meta = json.loads((here / f"items_{split}.json").read_text())
+    labels = json.loads(labels_file.read_text())
+    pop = {r["coffee_id"]: r for r in load(data)}
+    main, change = meta["rules"]["main"], meta["rules"]["change"]
+    outcomes: dict[str, dict[str, list[tuple[str, str]]]] = {}
+    for name in (main, change):
+        sealed = json.loads((here / f"pred_{name}_{split}.json").read_text())
+        pr = pred(data, name)
+        per: dict[str, list[tuple[str, str]]] = defaultdict(list)
+        for it in meta["items"]:
+            c = it["coffee_id"]
+            x, v = published(pop[c], pr[c])
+            if sealed[c] != {"p100": x, "variant_id": v, "grams": pr[c].get(v) if v else None}:
+                sys.exit(f"{name}'s predictions differ from pred_{name}_{split}.json")
+            labs = {o: labels[f"{c}|{o}"] for o in it["label"]}
+            price = {o["variant_id"]: o["price"] for o in pop[c]["variants"]}.get(pop[c]["item_variant_id"])
+            per[it["stratum"]].append(
+                (it["store"], gate_outcome(sealed[c], labs, pop[c]["item_variant_id"], price))
+            )
+        outcomes[name] = per
+    res = gate_result(outcomes, meta["stratum_sizes"], main, change)
+    print(f"{split}: {len(meta['items'])} coffees; strata {meta['stratum_sizes']}")
+    for name in (main, change):
+        print(f"== {name}")
+        for k in sorted(outcomes[name]):
+            xs = [o for _, o in outcomes[name][k]]
+            cells = [
+                f"{o} {xs.count(o)}/{len(xs)} [{100 * wilson(xs.count(o), len(xs))[0]:.1f}, {100 * wilson(xs.count(o), len(xs))[1]:.1f}]"
+                for o in OUTCOMES
+            ]
+            print(f"  {k}: " + "; ".join(cells))
+        for label in ("accuracy", "wrong"):
+            est, lo, hi, clo, chi = res[(name, label)]
+            print(
+                f"  weighted {label}: {100 * est:.2f}%  normal [{100 * lo:.2f}, {100 * hi:.2f}]  store-clustered [{100 * clo:.2f}, {100 * chi:.2f}]"
+            )
+    for label in ("accuracy", "wrong"):
+        est, lo, hi, clo, chi = res[("paired", label)]
+        print(
+            f"paired {label}, {change} - {main}: {100 * est:+.2f} points  normal [{100 * lo:+.2f}, {100 * hi:+.2f}]  store-clustered [{100 * clo:+.2f}, {100 * chi:+.2f}]"
+        )
+    print(
+        "gate:",
+        "passes" if res["passes"] else "FAILS",
+        f"(accuracy >= {GATE_ACCURACY}, wrong rise <= {GATE_RISE})",
+    )
+
+
 FIXTURE_SETS = {
     "train": "train",
     "validation": "validation",
@@ -561,8 +832,12 @@ def cmd_packet(data: Path, split: str) -> None:
                     }
                     for v in r["variants"]
                 ],
-                "label_this_option": item_vid(it, r),
             }
+            | (
+                {"label_these_options": it["label"]}
+                if "label" in it
+                else {"label_this_option": item_vid(it, r)}
+            )
         )
     random.Random(f"{SALT}:packet:{split}").shuffle(out)
     p = data / f"to_label_{split}.json"
@@ -577,14 +852,23 @@ def same(a: int | str, b: int | str) -> bool:
     return abs(a - b) <= 0.02 * max(a, b)
 
 
+def label_keys(it: dict) -> list[str]:
+    """The keys a labeler answers for an item: its coffee_id, or for a gate set (several options per coffee)
+    "<coffee_id>|<variant_id>" per option to label."""
+    if "label" in it:
+        return [f"{it['coffee_id']}|{v}" for v in it["label"]]
+    return [it["coffee_id"]]
+
+
 def cmd_agree(split: str, a: Path, b: Path) -> None:
     """Agreement of two independent labelers (totals), and the items a third must settle (to_settle_<set>.json,
     ids only, written next to the labels)."""
     la, lb = json.loads(a.read_text()), json.loads(b.read_text())
     items = [
-        it["coffee_id"]
+        k
         for it in json.loads((Path(__file__).parent / f"items_{split}.json").read_text())["items"]
         if "label_from" not in it
+        for k in label_keys(it)
     ]
     missing = [i for i in items if i not in la or i not in lb]
     stray = sorted((set(la) | set(lb)) - set(items))
@@ -608,18 +892,19 @@ def cmd_settle(split: str, a: Path, b: Path, c: Path, out: Path) -> None:
     here = Path(__file__).parent
     earlier: dict[str, dict] = {}
     for it in json.loads((here / f"items_{split}.json").read_text())["items"]:
-        i = it["coffee_id"]
         if "label_from" in it:  # an earlier round's reference label for the same option
-            src = it["label_from"]
+            i, src = it["coffee_id"], it["label_from"]
             if src not in earlier:
                 earlier[src] = json.loads((here / "labels" / f"labels_ref_{src}.json").read_text())
             ref[i] = earlier[src][i]
-        elif i in la and i in lb and same(la[i], lb[i]):
-            ref[i] = la[i]
-        elif i in lc:
-            ref[i] = lc[i]
-        else:
-            sys.exit(f"{i}: A and B disagree or one has no label, and C has no label")
+            continue
+        for i in label_keys(it):
+            if i in la and i in lb and same(la[i], lb[i]):
+                ref[i] = la[i]
+            elif i in lc:
+                ref[i] = lc[i]
+            else:
+                sys.exit(f"{i}: A and B disagree or one has no label, and C has no label")
     out.write_text(json.dumps(ref, indent=1, sort_keys=True) + "\n")
     print(
         split,
@@ -797,6 +1082,14 @@ def main() -> None:
         cmd_gate_d(data, a[2], a[3], Path(a[4]))
     elif cmd == "gate":
         cmd_gate(data, a[2:])
+    elif cmd == "gate-sample":
+        cmd_gate_sample(data, a[2], a[3], a[4])
+    elif cmd == "gate-seal":
+        cmd_gate_seal(data, a[2], a[3:])
+    elif cmd == "gate-fixture":
+        cmd_gate_fixture(data, a[2], Path(a[3]))
+    elif cmd == "gate-score":
+        cmd_gate_score(data, a[2], Path(a[3]), "--final" in a)
     elif cmd == "fixture":
         cmd_fixture(data, Path(a[2]), a[3:])
     elif cmd == "seal":

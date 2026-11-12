@@ -57,7 +57,8 @@ sparingly: a confident wrong number is worse than `unclear`. Unclear items are l
 ## Format
 
 One JSON object per labeler: `{"<coffee_id>": 340, "<coffee_id>": "unknown", ...}`, a key for every item in the
-packet. Label each item on its own: don't look at another labeler's file, at any prediction, or at the scoring
+packet. A packet item that names several options (`label_these_options`) is answered once per option, keyed
+`"<coffee_id>|<variant_id>"`: `{"<coffee_id>|<variant_id>": 340, ...}`, a key for every option it names. Label each item on its own: don't look at another labeler's file, at any prediction, or at the scoring
 script's output.
 
 ## Changes
