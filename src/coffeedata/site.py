@@ -102,7 +102,7 @@ def _hbar_narrow(rows: list[tuple[str, float, str]], unit: str, label: str) -> s
         y = i * row_h
         pct = max(v / vmax * most, 1)
         out.append(
-            f'<g class="mark" tabindex="0" data-tip="{escape(tip)}">'
+            f'<g class="mark" data-tip="{escape(tip)}">'
             f'<rect class="hit" x="0" y="{y}" width="100%" height="{row_h}"/>'
             f'<text class="cat" x="0" y="{y + 12}">{escape(cat)}</text>'
             # A 4px rounded data end, square at the baseline: a rounded bar, its baseline end squared off.
@@ -126,7 +126,7 @@ def _hbar_wide(rows: list[tuple[str, float, str]], unit: str, label: str, width:
         y = 4 + i * (bar_h + gap)
         w = max(v * scale, 2)
         out.append(
-            f'<g class="mark" tabindex="0" data-tip="{escape(tip)}">'
+            f'<g class="mark" data-tip="{escape(tip)}">'
             f'<rect class="hit" x="0" y="{y - 4}" width="{width}" height="{bar_h + 8}"/>'
             f'<text class="cat" x="{left - 8}" y="{y + bar_h / 2}" text-anchor="end" dominant-baseline="central">{escape(cat)}</text>'
             # 4px rounded data end, square at the baseline.

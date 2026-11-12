@@ -53,12 +53,12 @@ KEY = "0123abcd4567"  # site.build passes a hash of catalog.json
 
 
 def coffee(
-    roaster: str, title: str, process: str = "washed", notes=("cocoa",), in_stock: bool = True
+    roaster: str, title: str, process: str = "washed", notes=("cocoa",), in_stock: bool = True, price=6.5
 ) -> dict:
     rid, name, city, state = next(r for r in ROASTERS if r[0] == roaster)
     return {"coffee_id": f"{rid}:{title}", "roaster_name": name, "roaster_state": state, "title": title,
             "url": f"https://{rid}/", "origin_country": "Ethiopia", "process": process, "roast_level": "light",
-            "tasting_notes": list(notes), "price_per_100g": 6.5, "min_price_usd": 22.0, "in_stock": in_stock,
+            "tasting_notes": list(notes), "price_per_100g": price, "min_price_usd": 22.0, "in_stock": in_stock,
             "catalog_status": "active", "first_seen": "2026-10-26", "roaster_id": rid, "roaster_city": city}  # fmt: skip
 
 
@@ -68,9 +68,9 @@ def catalog() -> dict:
     find."""
     rows = [
         coffee("capitolbeans.com", "Capitol Roast"),
-        coffee("drycreek.coffee", "Dry Creek Drip"),
-        coffee("empire.coffee", "Empire Blend", notes=("vermont maple",)),
-        coffee("gotham.coffee", "Gotham Blend"),
+        coffee("drycreek.coffee", "Dry Creek Blend", price=None),
+        coffee("empire.coffee", "Empire Blend", notes=("vermont maple",), price=9.0),
+        coffee("gotham.coffee", "Gotham Blend", price=None),
         coffee("lapaloma.coffee", "Paloma House"),
         coffee("littlehavana.coffee", "Miami Nights", notes=("mild", "cacao")),
         coffee("littlehavana.coffee", "Michigan Cherry"),
@@ -86,7 +86,7 @@ def catalog() -> dict:
         coffee("northside.coffee", "Windy City Espresso"),
         coffee("ozark.coffee", "Ozark Morning"),
         coffee("plaza.coffee", "Plaza Espresso"),
-        coffee("hill.coffee", "Hill Blend"),
+        coffee("hill.coffee", "Hill Blend", price=4.0),
         coffee("sumatrahouse.coffee", "Indonesia Sumatra", notes=("dried fig", "made in small batches")),
         coffee("yorkbeans.coffee", "Brand New Roast"),
     ]
@@ -138,7 +138,7 @@ def test_catalog_search_and_state_filter_in_a_browser(tmp_path):
     assert r.returncode == 0, r.stderr[-3000:]
     assert {p.name for p in shots.iterdir()} == {
         f"catalog-michigan-{w}-{scheme}.png"
-        for w in ("320", "390", "desktop")
+        for w in ("320", "390", "desktop", "zoom200")
         for scheme in ("light", "dark")
     }
 

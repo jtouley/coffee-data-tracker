@@ -26,8 +26,7 @@ section { background: var(--surface-1); border: 1px solid var(--border); border-
 .chart .val { fill: var(--text-primary); font-variant-numeric: tabular-nums; }
 .chart .bar { fill: var(--series-1); }
 .chart .hit { fill: transparent; }
-.chart .mark:hover .bar, .chart .mark:focus .bar { fill: var(--series-1-hover); }
-.chart .mark:focus { outline: none; }
+.chart .mark:hover .bar { fill: var(--series-1-hover); }
 .chart .axis { stroke: var(--border); }
 .chart .grid { stroke: var(--grid); }
 /* Each chart is drawn twice (site.hbar_chart): the wide drawing where it has room, the narrow one, whose text stays
@@ -45,7 +44,13 @@ th.num { white-space: nowrap; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .filters input, .filters select { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border);
   background: var(--surface-0); color: var(--text-primary); }
-.filters input[type=search] { flex: 1 1 220px; }
+.filters input[type=search] { flex: 1 1 220px; min-width: 0; }  /* min-width: it shrinks to the row at 320 px */
+/* Search and Sort on the first row; the filters, which narrow, on their own row. On a phone the filters fold behind a
+   "Filters" button (a disclosure: aria-expanded), whose label lists the ones that are on, and Sort stays beside it. */
+.filters .sort { flex: 0 1 auto; min-width: 0; }
+.filters .sort select { min-width: 0; }
+#panel { display: flex; flex-wrap: wrap; gap: 8px; flex: 1 1 100%; min-width: 0; }
+#fbtn { display: none; }
 .status { font-size: 12px; white-space: nowrap; }
 .status::before { content: " · "; content: " · " / ""; }  /* decorative: empty alt text hides it from screen readers; the first line is for browsers without alt text */
 .filters label { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); font-size: 13px; }
@@ -55,14 +60,11 @@ th.num { white-space: nowrap; }
    wraps as one piece. On a phone the roaster column drops and the roaster sits under the coffee, as in "New since
    last week". */
 #rows td { line-height: 1.4; }
+#rows td:first-child { overflow-wrap: anywhere; }  /* a long unbroken title never widens the table past 320 px */
 .place { color: var(--text-muted); font-size: 12px; white-space: nowrap; }
 .place::before { content: " · "; content: " · " / ""; }
 .browse th.roaster { width: 30%; }  /* room for most names and places on one line: desktop rows stay one line, as on main */
 .by { display: none; color: var(--text-secondary); }
-/* On a phone the origin and process columns drop too, so they sit on one quiet line under the roaster, as the
-   landing page's "Just arrived" names them. */
-.from { display: block; font-size: 12px; }
-.from span::before { content: " · "; content: " · " / ""; }
 .more { font: inherit; font-size: 14px; margin-top: 12px; padding: 12px 16px; min-height: 48px; border-radius: 6px;
   border: 1px solid var(--border); background: var(--surface-0); color: var(--accent); cursor: pointer; }
 #retry { margin: 0 0 12px; }  /* under the error line it answers, clear of the table */
@@ -78,8 +80,19 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 .beta-note p { margin: 0; }
 .beta-note b { color: var(--text-primary); }
 .beta-note a { font-weight: 600; white-space: nowrap; }
+/* Notes, the least needed column, drop below 860 px (and at 200% zoom on a laptop), so the table fits its box. */
+@media (max-width: 860px) { .hide-md { display: none; } }
 @media (max-width: 600px) { .hide-sm { display: none; } .by { display: block; }
-  .filters select { flex: 1 1 40%; min-width: 0; } }
+  .filters select { flex: 1 1 40%; min-width: 0; }
+  .filters input[type=search] { flex-basis: 100%; }
+  #fbtn { display: flex; align-items: center; gap: 6px; flex: 1 1 7rem; min-width: 0; min-height: 44px; font: inherit;
+    padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-0);
+    color: var(--text-primary); text-align: left; cursor: pointer; }
+  #fbtn .on { color: var(--text-secondary); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  #fbtn::after { content: "▾"; content: "▾" / ""; margin-left: auto; padding-left: 4px; color: var(--text-secondary); }
+  #fbtn[aria-expanded="true"]::after { content: "▴"; content: "▴" / ""; }
+  #panel[hidden] { display: none; }
+  .filters .sort select { min-height: 44px; } }
 </style>
 </head>
 <body>
@@ -136,16 +149,22 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   <h2 class="serif">Browse coffees</h2>
   <div class="filters">
     <input type="search" id="q" placeholder="Search coffee, roaster, city, state…" aria-label="Search the catalog">
-    <select id="origin" aria-label="Origin"><option value="">All origins</option></select>
-    <select id="process" aria-label="Process"><option value="">All processes</option></select>
-    <select id="state" aria-label="Roaster state (number of roasters)"><option value="">All states</option></select>
-    <label><input type="checkbox" id="stock" checked> In stock</label>
+    <button type="button" id="fbtn" aria-expanded="false" aria-controls="panel">Filters<span class="on" id="fon"></span></button>
+    <label class="sort">Sort <select id="sort"><option value="roaster">Roaster A–Z</option>
+      <option value="asc">Lowest $/100 g</option><option value="desc">Highest $/100 g</option></select></label>
+    <div id="panel" role="group" aria-label="Filters">
+      <select id="origin" aria-label="Origin"><option value="">All origins</option></select>
+      <select id="process" aria-label="Process"><option value="">All processes</option></select>
+      <select id="state" aria-label="Roaster state (number of roasters)"><option value="">All states</option></select>
+      <label><input type="checkbox" id="stock" checked> In stock</label>
+    </div>
   </div>
   <p class="note" id="count" role="status">Loading…</p>
   <button type="button" class="more" id="retry" hidden>Try again</button>
   <div class="scroll"><table class="browse"><thead><tr><th>Coffee</th><th class="hide-sm roaster">Roaster</th><th class="hide-sm">Origin</th><th class="hide-sm">Process</th>
-    <th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <th class="hide-sm hide-md">Notes</th><th class="num" id="price">$/100 g<span id="arrow" aria-hidden="true"></span></th></tr></thead><tbody id="rows"></tbody></table></div>
   <button type="button" class="more" id="more" hidden></button>
+  <p class="note">$/100 g is each coffee’s cheapest bag by weight, often the largest bag.</p>
 </section>
 
 <section>
@@ -177,6 +196,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   const STATES = {{ state_titles | tojson }};  // "MI": "Michigan"
   const STATE_WORDS = {{ state_words | tojson }};  // ["west virginia", "WV"], longest first
   let rows = [], C = {}, CITIES = [], CITY_SET = new Set(), hits = [], shown = 0, wait;
+  const ORDER = {asc: "Lowest price per 100 g first.", desc: "Highest price per 100 g first."};
   const STATUS = {preorder: "preorder", sold_out: "sold out", archived: "past offering"};
   const cell = (tr, text, cls) => { const td = tr.insertCell(); if (cls) td.className = cls; td.textContent = text ?? ""; return td; };
   const word = w => new RegExp("(^|[^\\p{L}\\p{N}])" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=$|[^\\p{L}\\p{N}])", "u");
@@ -270,13 +290,8 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
         el.append(r[C.roaster_name] ?? "");
         if (r.place) { const p = document.createElement("span"); p.className = "place"; p.textContent = r.place; el.appendChild(p); }
       }
-      if (r[C.origin_country] || r[C.process]) {  // on a phone, where their columns drop: "Ethiopia · washed"
-        const from = document.createElement("span"); from.className = "from"; by.appendChild(from);
-        from.append(r[C.origin_country] || "");
-        if (r[C.process]) { const p = document.createElement("span"); p.textContent = r[C.process]; from.append(r[C.origin_country] ? p : r[C.process]); }
-      }
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
-      cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");
+      cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm hide-md notes");
       cell(tr, r[C.price_per_100g] != null ? r[C.price_per_100g].toFixed(2) : "", "num");
     }
     shown = Math.min(hits.length, from + PAGE);
@@ -304,9 +319,26 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     });
     for (const opt of $("state").options)
       if (opt.value) opt.textContent = STATES[opt.value] + " (" + (perState[opt.value]?.size ?? 0).toLocaleString() + ")";
+    // The order. catalog.json comes by roaster, then title (Roaster A–Z), and r.i keeps that place, so a price sort
+    // breaks ties the same way. Coffees with no price go last in both directions.
+    const sort = $("sort").value, dir = sort === "desc" ? -1 : 1, price = r => r[C.price_per_100g];
+    let unpriced = 0;
+    if (sort === "roaster") hits.sort((a, b) => a.i - b.i);
+    else {
+      hits.sort((a, b) => (price(a) == null) - (price(b) == null) || dir * (price(a) - price(b)) || a.i - b.i);
+      for (const r of hits) if (price(r) == null) unpriced++;
+    }
+    const th = $("price");
+    if (sort === "roaster") th.removeAttribute("aria-sort"); else th.setAttribute("aria-sort", sort === "asc" ? "ascending" : "descending");
+    $("arrow").textContent = {asc: " ↑", desc: " ↓"}[sort] || "";
+    // The Filters button (on a phone) names the filters that are on.
+    const on = [o, p, st && STATES[st], !s && "sold out too"].filter(Boolean);
+    $("fon").textContent = on.length ? " · " + on.join(", ") : "";
     $("rows").textContent = "";
     draw(0);
-    $("count").textContent = summary(terms, byPlace);
+    let text = summary(terms, byPlace);
+    if (hits.length && ORDER[sort]) text += " " + ORDER[sort] + (unpriced ? " " + n(unpriced, "with no price is listed last.", "with no price are listed last.") : "");
+    $("count").textContent = text;
   }
   // Typing waits for a pause, so the table and the count change together, once. A lone two-letter code waits longer,
   // in any case (phones capitalise the first letter): "Mi" on the way to "Mild" shouldn't flash Michigan's coffees.
@@ -316,9 +348,16 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     wait = setTimeout(render, /^[a-z]{2}$/i.test(v) && STATES[v.toUpperCase()] ? 700 : 150);
   }
 
+  // Filters, on a phone: a disclosure button that shows or hides the panel. On a wider screen the panel always shows.
+  $("fbtn").addEventListener("click", () => {
+    const open = $("fbtn").getAttribute("aria-expanded") !== "true";
+    $("fbtn").setAttribute("aria-expanded", open); $("panel").hidden = !open;
+  });
+  $("panel").hidden = true;
   const load = () => fetch("catalog.json{% if data_key %}?b={{ data_key }}{% endif %}").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
     d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
     const cities = new Set();
+    rows.forEach((r, i) => r.i = i);  // the file's order: roaster, then title
     for (const r of rows) {
       const city = r[C.roaster_city] || "";
       r.city = city.toLowerCase(); r.place = [city, r[C.roaster_state]].filter(Boolean).join(", ");
@@ -334,7 +373,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     // The roasters' states by name; render() writes each option's name and count.
     fill("state", distinct("roaster_state").filter(v => STATES[v]).sort((a, b) => STATES[a].localeCompare(STATES[b])));
     $("q").addEventListener("input", typed);
-    ["origin", "process", "state", "stock"].forEach(id => $(id).addEventListener("input", render));
+    ["origin", "process", "state", "stock", "sort"].forEach(id => $(id).addEventListener("input", render));
     $("more").addEventListener("click", () => { const first = draw(shown); if (first) first.focus(); });
     render();
   }).then(() => { const again = $("retry"); if (document.activeElement === again) $("q").focus(); again.hidden = true; }, failed);

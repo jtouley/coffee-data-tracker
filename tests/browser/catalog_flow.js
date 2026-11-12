@@ -75,6 +75,16 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
 
     const { context, page } = await open(browser, { width: 390, height: 844 }, "light", errors);
     await loaded(page);
+    // On a phone the filters fold behind a "Filters" button (a disclosure), with Sort beside it.
+    const fbtn = page.locator("#fbtn");
+    assert.equal(await fbtn.getAttribute("aria-expanded"), "false");
+    assert.ok(await fbtn.isVisible() && (await page.isHidden("#origin")) && (await page.isVisible("#sort")));
+    assert.ok((await fbtn.boundingBox()).height >= 44);
+    const sameRow = async () => Math.abs((await fbtn.boundingBox()).y - (await page.locator("#sort").boundingBox()).y) < 4;
+    assert.ok(await sameRow());
+    await fbtn.click();
+    assert.equal(await fbtn.getAttribute("aria-expanded"), "true");
+    assert.ok((await page.isVisible("#origin")) && (await sameRow()));  // Sort stays beside it, open or closed
     // Typing waits for a pause (longer for a lone two-letter code), then the table and the count change together.
     const search = async (q) => { await page.fill("#q", q); await page.waitForTimeout(900); return page.textContent("#count"); };
     const count = async () => { await page.waitForTimeout(100); return page.textContent("#count"); };
@@ -90,12 +100,8 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
     assert.deepEqual(await page.$$eval("#rows tr td:nth-child(2) .place", (ps) => ps.map((p) => p.textContent)), ["TX"]);
     await search("detroit");
     assert.equal(await page.textContent("#rows tr:first-child td:nth-child(2) .place"), "Detroit, MI");
-    // On a phone the roaster column drops and the roaster and place sit under the coffee; the origin and process
-    // columns drop too, and sit on the line under that.
-    assert.equal(await page.textContent("#rows tr:first-child .by"), "Mitten Coffee CoDetroit, MIEthiopianatural");
-    assert.equal(await page.textContent("#rows tr:first-child .from"), "Ethiopianatural");  // "Ethiopia · natural"
-    assert.match(await page.$eval("#rows tr:first-child .from span", (s) => getComputedStyle(s, "::before").content), /^" · "/);
-    assert.ok(await page.isVisible("#rows tr:first-child .from"));
+    // On a phone the roaster column drops and the roaster and place sit under the coffee: two lines a row.
+    assert.equal(await page.textContent("#rows tr:first-child .by"), "Mitten Coffee CoDetroit, MI");
     assert.ok(!(await page.isVisible("#rows tr:first-child td:nth-child(3)")));
     assert.ok(await page.isVisible("#rows tr:first-child .by") && !(await page.isVisible("#rows tr:first-child td:nth-child(2)")));
 
@@ -216,19 +222,55 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
     await search("mitten");
     assert.equal(await rowCount(), 500);
 
-    // Keyboard: the filters in order, each with a name.
+    // Sort: Roaster A–Z (the file's order), or by $/100 g either way; coffees with no price come last in both, in
+    // roaster order, and the line says how many. The header carries aria-sort and an arrow.
+    const priceTh = page.locator("#price");
+    assert.equal(await search("blend"), "5 coffees matching “blend” from 5 roasters.");
+    assert.deepEqual(await titles(), ["Dry Creek Blend", "Empire Blend", "Gotham Blend", "Lakefront Blend", "Hill Blend"]);
+    assert.equal(await priceTh.getAttribute("aria-sort"), null);
+    await page.selectOption("#sort", "asc");
+    assert.equal(await count(), "5 coffees matching “blend” from 5 roasters. Lowest price per 100 g first. 2 with no price are listed last.");
+    assert.deepEqual(await titles(), ["Hill Blend", "Lakefront Blend", "Empire Blend", "Dry Creek Blend", "Gotham Blend"]);
+    assert.equal(await priceTh.getAttribute("aria-sort"), "ascending");
+    assert.equal(await priceTh.textContent(), "$/100 g ↑");
+    await page.selectOption("#sort", "desc");
+    assert.equal(await count(), "5 coffees matching “blend” from 5 roasters. Highest price per 100 g first. 2 with no price are listed last.");
+    assert.deepEqual(await titles(), ["Empire Blend", "Lakefront Blend", "Hill Blend", "Dry Creek Blend", "Gotham Blend"]);
+    assert.equal(await priceTh.getAttribute("aria-sort"), "descending");
+    // With the filters: the State filter, and the Filters button names what's on.
+    await page.selectOption("#state", "KS");
+    assert.equal(await count(), "1 coffee matching “blend” from 1 Kansas roaster. Highest price per 100 g first.");
+    assert.equal(await fbtn.textContent(), "Filters · Kansas");
+    await page.uncheck("#stock");
+    assert.equal(await fbtn.textContent(), "Filters · Kansas, sold out too");
+    await page.check("#stock");
+    await page.selectOption("#state", "");
+    // A new sort starts at the first page again: past 500, Show more, then a change of sort.
+    const total = Number((await search("")).match(/^[\d,]+/)[0].replace(/,/g, ""));
+    await page.locator("#more").click();
+    assert.ok(total > 500 && (await rowCount()) === total);
+    await page.selectOption("#sort", "asc");
+    assert.equal(await rowCount(), 500);
+    assert.equal(await page.locator("#more").textContent(), `Show ${total - 500} more (500 of ${total} shown)`);
+    assert.equal(await page.textContent("#rows tr:first-child td:first-child a"), "Hill Blend");  // the cheapest
+    await page.selectOption("#sort", "roaster");
+    assert.equal(await priceTh.textContent(), "$/100 g");
+
+    // Keyboard: the controls in order, each with a name.
     await page.focus("#q");
     const order = [];
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
       await page.keyboard.press("Tab");
-      order.push(await page.evaluate(() => [document.activeElement.id, document.activeElement.getAttribute("aria-label") || document.activeElement.labels?.[0]?.textContent.trim()]));
+      order.push(await page.evaluate(() => { const el = document.activeElement, label = el.labels?.[0];
+        return [el.id, el.getAttribute("aria-label") || (label ? [...label.childNodes].filter((c) => c.nodeType === 3).map((c) => c.textContent).join("").trim() : el.textContent.trim())]; }));
     }
-    assert.deepEqual(order, [["origin", "Origin"], ["process", "Process"], ["state", "Roaster state (number of roasters)"], ["stock", "In stock"]]);
+    assert.deepEqual(order, [["fbtn", "Filters"], ["sort", "Sort"], ["origin", "Origin"], ["process", "Process"], ["state", "Roaster state (number of roasters)"], ["stock", "In stock"]]);
     await context.close();
 
     // Each width and theme: the roaster's column on desktop, no sideways scroll (the charts' grid scrolled 16 px at
     // 320 px), chart text at 12 px or more, axe, a screenshot.
-    for (const [tag, viewport] of [["320", { width: 320, height: 720 }], ["390", { width: 390, height: 844 }], ["desktop", { width: 1280, height: 800 }]]) {
+    for (const [tag, viewport] of [["320", { width: 320, height: 720 }], ["390", { width: 390, height: 844 }], ["desktop", { width: 1280, height: 800 }],
+      ["zoom200", { width: 640, height: 400 }]]) {  // a 1280 x 800 window at 200% zoom
       for (const scheme of ["light", "dark"]) {
         const { context, page } = await open(browser, viewport, scheme, errors);
         await loaded(page);
@@ -237,7 +279,18 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  //
         if (tag === "desktop") {
           assert.ok(await page.isVisible("#rows tr:first-child td:nth-child(2) .place"));
           assert.ok(!(await page.isVisible("#rows tr:first-child .by")));
+          // Wide enough: no Filters button, the filters show.
+          assert.ok((await page.isHidden("#fbtn")) && (await page.isVisible("#origin")));
         }
+        // The search field and the table stay inside the section (the field ran 3 px past it at 320 px).
+        const inside = await page.evaluate(() => {
+          const sec = document.getElementById("q").closest("section").getBoundingClientRect(), pad = 20;
+          const box = document.querySelector(".scroll");
+          return document.getElementById("q").getBoundingClientRect().right <= sec.right - pad + 0.5 && box.scrollWidth <= box.clientWidth;
+        });
+        assert.ok(inside, `${tag}: the search field or the table runs past the section`);
+        // The charts' marks take no keyboard focus: their numbers are in each chart's table.
+        assert.equal(await page.$$eval(".chart .mark[tabindex]", (m) => m.length), 0);
         const wide = await page.evaluate(() => document.documentElement.scrollWidth);
         assert.ok(wide <= viewport.width, `the catalog scrolls sideways at ${tag} (${wide} px wide)`);
         // The text of each chart that shows, in screen pixels: a viewBox scales it with the chart's width.
