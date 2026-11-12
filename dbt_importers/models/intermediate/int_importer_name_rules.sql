@@ -3,7 +3,9 @@
 -- a region, a mark or farm, a grade or screen, a process and certifications (int_importer_rules reads those). Each
 -- value abstains (null) when the name doesn't settle it.
 --   origin: the catalog's country (origins.COUNTRIES and its aliases) when the name leads with a country or alias and
---     names no other one; null for a blend, or a name that doesn't start with one (a misspelling, "Guatemalal").
+--     names no other one; null for a blend, or a name that doesn't start with one (a misspelling, "Guatemalal"). Of
+--     the aliases, only those that mean one place in a name count (importer_rules.TITLE_PLACES_OK, as Royal's titles):
+--     "Java" is also a variety and "Flores" a farm name, so "Nicaragua Java Natural" is Nicaragua and "Java G1" none.
 --   region: as the name writes it, one of the catalog's one-country regions (origins.REGIONS) of the lot's country,
 --     else an alias of that country that isn't the name's leading word ("Indonesia Sumatra"); null when the name
 --     gives none, several, one of another country, or a farm named after one ("Finca Santa Barbara").
@@ -11,7 +13,8 @@
 --     "Decaf" for a decaffeinated lot, as Cafe Imports' process column has it; null when it names none.
 --   grade: the grade and preparation words it states, in order: "G1", "UG", "SHB", "EP", "EP10", "TP", "AA",
 --     "Supremo", "Peaberry".
---   screen: a screen size range, "17/18", when the name has exactly one.
+--   screen: a screen size range, "17/18", when the name has exactly one; never two adjacent sizes from 18 up ("19/20"
+--     reads as a crop year).
 with vocab as (
     select * from {{ ref('stg_importer_vocab') }}
 ),
@@ -41,6 +44,12 @@ regions as (
     select term, value as country from vocab where kind = 'region'
 ),
 
+not_a_place as (
+    select term from vocab
+    where kind = 'country_name' and value2 = 'alias'
+        and lower(term) not in (select term from vocab where kind = 'title_place_ok')
+),
+
 names as (
     select i.week, i.importer, i."row", i.rule_name as product, p.*
     from {{ ref('int_importer_inputs') }} as i
@@ -56,7 +65,9 @@ country_mentions as (
         n."row",
         m.mention,
         m.position,
-        c.country
+        c.country,
+        -- an alias that is also a variety, a farm name or two countries never counts as an origin
+        lower(m.mention) not in (select lower(term) from not_a_place) as counts
     from names as n,
         unnest(regexp_extract_all(n.product, n.country, 1, 'i')) with ordinality as m (mention, position)
     inner join countries as c on c.term = lower(m.mention)
@@ -70,7 +81,8 @@ origin as (
         case
             when regexp_matches(n.product, n.blend, 'i') then null
             when not regexp_matches(n.product, n.country_lead, 'i') then null
-            when count(distinct cm.country) = 1 then any_value(cm.country)
+            when not bool_or(cm.position = 1 and cm.counts) then null  -- it leads with "Java", not a country
+            when count(distinct cm.country) filter (where cm.counts) = 1 then any_value(cm.country) filter (where cm.counts)
         end as origin
     from names as n
     left join country_mentions as cm using (week, importer, "row")
@@ -162,6 +174,9 @@ select
             and split_part(s.numbers[1], '/', 1)::int between 12 and 20
             and split_part(s.numbers[1], '/', 2)::int between 12 and 20
             and split_part(s.numbers[1], '/', 2)::int - split_part(s.numbers[1], '/', 1)::int between 1 and 4
+            -- "19/20", "18/19": a crop year as likely as a screen
+            and not (split_part(s.numbers[1], '/', 1)::int >= 18
+                and split_part(s.numbers[1], '/', 2)::int - split_part(s.numbers[1], '/', 1)::int = 1)
             then s.numbers[1]
     end as screen
 from stated as s

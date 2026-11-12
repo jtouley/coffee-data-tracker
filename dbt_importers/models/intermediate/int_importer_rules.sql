@@ -62,14 +62,6 @@ process_inputs as (
     from inputs
 ),
 
-process_found as (
-    select
-        *,
-        regexp_matches(process_source, honey, 'i') as has_honey,
-        regexp_replace(process_source, honey, ' ', 'gi') as process_rest
-    from process_inputs
-),
-
 process_type as (
     select
         week,
@@ -79,13 +71,9 @@ process_type as (
             when regexp_matches(process_text, decaf, 'i') then null
             when regexp_matches(process_text, anaerobic, 'i') then 'anaerobic'
             when process_source is null then null
-            when has_honey::int + regexp_matches(process_rest, natural_re, 'i')::int
-                + regexp_matches(process_rest, washed, 'i')::int != 1 then null
-            when has_honey then 'honey'
-            when regexp_matches(process_rest, natural_re, 'i') then 'natural'
-            else 'washed'
+            else {{ process_kind('process_source', 'anaerobic', 'honey', 'natural_re', 'washed') }}
         end as process_type
-    from process_found
+    from process_inputs
 ),
 
 -- varieties
@@ -96,7 +84,7 @@ variety_matches as (
         "row",
         unnest(regexp_extract_all(coalesce(rule_name, ''), varietal, 1, 'i')) as matched,
         regexp_matches(coalesce(rule_origin, '') || ' ' || coalesce(rule_name, ''), '\bindonesia', 'i')
-        or lower(trim(coalesce(rule_origin, ''))) = 'java' as is_indonesian
+        or lower({{ strip("coalesce(rule_origin, '')") }}) = 'java' as is_indonesian
     from inputs
 ),
 
@@ -107,7 +95,7 @@ varieties as (
         m."row",
         list_sort(list_distinct(list(coalesce(n.varietal, m.matched)))) as varieties
     from variety_matches as m
-    left join varietal_names as n on n.spelling_key = regexp_replace(lower(m.matched), '[\s-]', '', 'g')
+    left join varietal_names as n on n.spelling_key = regexp_replace(lower(m.matched), '[{{ ws_inner() }}-]', '', 'g')
     where not (m.is_indonesian and coalesce(n.varietal, m.matched) = 'Java')
     group by all
 ),
@@ -163,12 +151,8 @@ harvest_index as (
     select
         *,
         whole[1:strpos(lower(whole), m1) - 1] as lead,
-        list_position(
-            ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'], m1[1:3]
-        ) - 1 as a,
-        coalesce(list_position(
-            ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'], nullif(m2, '')[1:3]
-        ) - 1, a) as b
+        {{ month_index('m1') }} as a,
+        coalesce({{ month_index('m2') }}, a) as b
     from harvest_groups
 ),
 
@@ -181,12 +165,7 @@ harvest_months as (
             when m1 = '' then null
             -- "this harvest may be smaller": a verb, unless in a month context
             when m1 = 'may' and m2 = '' and not regexp_matches(lead, '[:\-–]|\b(?:in|from)\b', 'i') then null
-            else list_transform(
-                range(((b - a) % 12 + 12) % 12 + 1),
-                lambda i: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'][
-                    (a + i) % 12 + 1
-                ]
-            )
+            else {{ month_range('a', 'b') }}
         end as harvest_months
     from harvest_index
 ),
@@ -203,7 +182,7 @@ grower_parts as (
                 -- each part without its packaging ("(GrainPro)") and surrounding whitespace
                 list_transform(
                     string_split(coalesce(rule_name, ''), ' - '),
-                    lambda part: regexp_replace(regexp_replace(part, packaging, '', 'i'), '^\s+|\s+$', '', 'g')
+                    lambda part: {{ strip("regexp_replace(part, packaging, '', 'i')") }}
                 ),
                 lambda part: {
                     'part': part,

@@ -18,10 +18,14 @@ models:
         description: The Monday of the week the page was fetched.
         data_tests: [not_null]
       - name: importer
-        description: cafe_imports, interamerican or royal_coffee.
+        description: >-
+          cafe_imports, interamerican or royal_coffee. A new importer only warns: its lots are derived with every
+          rule abstaining (int_importer_inputs gives it no inputs) until rules are written for it.
         data_tests:
           - not_null
-          - accepted_values: {arguments: {values: [cafe_imports, interamerican, royal_coffee]}}
+          - accepted_values:
+              arguments: {values: [cafe_imports, interamerican, royal_coffee]}
+              config: {severity: warn}
       - name: row
         description: The lot's position on the page (Royal, in the listing) that week.
         data_tests: [not_null]

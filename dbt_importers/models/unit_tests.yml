@@ -68,6 +68,7 @@ unit_tests:
           - {week: 2026-11-09, importer: cafe_imports, row: 11, rule_name: x, rule_text: "Harvest: May"}
           - {week: 2026-11-09, importer: cafe_imports, row: 12, rule_name: x, rule_text: harvested in May}
           - {week: 2026-11-09, importer: cafe_imports, row: 13, rule_name: x, rule_text: Harvest May - Aug}
+          - {week: 2026-11-09, importer: cafe_imports, row: 14, rule_name: "Washed (GrainPro)", rule_text: Graham with mild kahlua}
     expect:
       rows:
         - {row: 1, varieties: "[Yellow Bourbon]", altitude_min_m: 1700, altitude_max_m: 1900, harvest_months: null}
@@ -83,6 +84,7 @@ unit_tests:
         - {row: 11, varieties: null, altitude_min_m: null, altitude_max_m: null, harvest_months: "[may]"}
         - {row: 12, varieties: null, altitude_min_m: null, altitude_max_m: null, harvest_months: "[may]"}
         - {row: 13, varieties: null, altitude_min_m: null, altitude_max_m: null, harvest_months: "[may, jun, jul, aug]"}
+        - {row: 14, varieties: null, altitude_min_m: null, altitude_max_m: null, harvest_months: null}
 
   - name: importer_grower_and_certifications_abstain_when_unsure
     description: >-
@@ -107,6 +109,9 @@ unit_tests:
           - {week: 2026-11-09, importer: cafe_imports, row: 9, rule_name: x, rule_cert_text: Colombia Popayan Supremo}
           - {week: 2026-11-09, importer: cafe_imports, row: 10, rule_name: x, rule_cert_text: Certified}
           - {week: 2026-11-09, importer: cafe_imports, row: 11, rule_name: x, rule_cert_text: null}
+          - {week: 2026-11-09, importer: cafe_imports, row: 12, rule_name: x, rule_cert_text: Indonesia Sumatra Mandheling G1 TP Fairtrade USA Organic Certified}
+          - {week: 2026-11-09, importer: cafe_imports, row: 13, rule_name: x, rule_cert_text: "nft,norg,Microlot,Microlot nft,norg,"}
+          - {week: 2026-11-09, importer: cafe_imports, row: 14, rule_name: x, rule_cert_text: Bird Friendly}
     expect:
       rows:
         - {row: 1, grower_type: farm, grower_name: Fazenda Santa Lucia, certifications: null, not_certified: "[fair_trade, organic]"}
@@ -120,13 +125,17 @@ unit_tests:
         - {row: 9, grower_type: null, grower_name: null, certifications: null, not_certified: null}
         - {row: 10, grower_type: null, grower_name: null, certifications: null, not_certified: null}
         - {row: 11, grower_type: null, grower_name: null, certifications: null, not_certified: null}
+        - {row: 12, grower_type: null, grower_name: null, certifications: "[organic, fair_trade]", not_certified: null}
+        - {row: 13, grower_type: null, grower_name: null, certifications: null, not_certified: "[fair_trade, organic]"}
+        - {row: 14, grower_type: null, grower_name: null, certifications: null, not_certified: null}
 
   - name: interamerican_name_states_origin_region_process_grade_and_screen
     description: >-
       The country leads (an alias read as its country); a region of that country from the catalog's list, else an
       island alias after the country; the process words as written ("Decaf" for a decaf); grade and preparation words;
       one screen range. Abstains on a misspelled country, a blend, two countries, a region of another country or not in
-      the catalog's list, a farm named after a region, a bare letter grade and a number that isn't a screen range.
+      the catalog's list, a farm named after a region, a bare letter grade and a number that isn't a screen range or
+      may be a crop year (19/20). Java and Flores are a variety and a farm name there, never a second country.
     model: int_importer_name_rules
     given:
       - input: ref('stg_importer_vocab')
@@ -153,6 +162,14 @@ unit_tests:
           - {week: 2026-11-09, row: 17, importer: interamerican, rule_name: Costa Rica Tarrazú SHB 15/18}
           - {week: 2026-11-09, row: 18, importer: interamerican, rule_name: Indonesia Sulawesi Toraja Sapan Minanga G1}
           - {week: 2026-11-09, row: 19, importer: cafe_imports, rule_name: Brazil 17/18 Natural}
+          - {week: 2026-11-09, row: 20, importer: interamerican, rule_name: Nicaragua Java Natural}
+          - {week: 2026-11-09, row: 21, importer: interamerican, rule_name: Rwanda Java Washed}
+          - {week: 2026-11-09, row: 22, importer: interamerican, rule_name: Honduras Finca Las Flores SHG}
+          - {week: 2026-11-09, row: 23, importer: interamerican, rule_name: Java G1}
+          - {week: 2026-11-09, row: 24, importer: interamerican, rule_name: Brazil Cerrado 19/20 Natural}
+          - {week: 2026-11-09, row: 25, importer: interamerican, rule_name: Brazil 18/19 Natural}
+          - {week: 2026-11-09, row: 26, importer: interamerican, rule_name: DR Congo Kivu Washed}
+          - {week: 2026-11-09, row: 27, importer: interamerican, rule_name: Congo Kivu Washed}
     expect:
       rows:
         - {row: 1, origin: Brazil, region: null, process: Natural, grade: null, screen: 17/18}
@@ -173,11 +190,20 @@ unit_tests:
         - {row: 16, origin: Kenya, region: null, process: null, grade: "[AA]", screen: null}
         - {row: 17, origin: Costa Rica, region: Tarrazú, process: null, grade: "[SHB]", screen: 15/18}
         - {row: 18, origin: Indonesia, region: Toraja, process: null, grade: "[G1]", screen: null}
+        - {row: 20, origin: Nicaragua, region: null, process: Natural, grade: null, screen: null}
+        - {row: 21, origin: Rwanda, region: null, process: Washed, grade: null, screen: null}
+        - {row: 22, origin: Honduras, region: null, process: null, grade: "[SHG]", screen: null}
+        - {row: 23, origin: null, region: null, process: null, grade: "[G1]", screen: null}
+        - {row: 24, origin: Brazil, region: null, process: Natural, grade: null, screen: null}
+        - {row: 25, origin: Brazil, region: null, process: Natural, grade: null, screen: null}
+        - {row: 26, origin: Democratic Republic of the Congo, region: null, process: Washed, grade: null, screen: null}
+        - {row: 27, origin: null, region: null, process: Washed, grade: null, screen: null}
 
   - name: royal_labels_are_read_from_tags_and_body_lines
     description: >-
       "Label: value" at the start of a tag or body line, or of a sentence in one; trailing punctuation dropped, so
-      "Region: Huila." and "Region: Huila" are one value; the tags first; prose isn't a label.
+      "Region: Huila." and "Region: Huila" are one value; the tags first; prose isn't a label. A non-breaking or other
+      Unicode space is whitespace, as it is to Python.
     model: int_royal_labels
     given:
       - input: ref('stg_importer_vocab')
@@ -189,16 +215,21 @@ unit_tests:
           - {week: 2026-11-09, row: 1, importer: royal_coffee, column_name: body_text, cell_text: "Region: Huila. Process: Washed.\nAltitude： 1,800 masl"}
           - {week: 2026-11-09, row: 2, importer: royal_coffee, column_name: body_text, cell_text: "Varieties grown nearby include Gesha"}
           - {week: 2026-11-09, row: 3, importer: interamerican, column_name: body_text, cell_text: "Region: Huila"}
+          - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: tags, cell_text: "Origin:\u00a0Colombia\nRegion:\u00a0Huila\u2009\nProcess: Natural\u00a0"}
     expect:
       rows:
         - {row: 1, label: region, label_value: Huila}
         - {row: 1, label: process, label_value: Washed}
         - {row: 1, label: altitude, label_value: "1,800 masl"}
+        - {row: 4, label: origin, label_value: Colombia}
+        - {row: 4, label: region, label_value: Huila}
+        - {row: 4, label: process, label_value: Natural}
 
   - name: royal_rules_read_the_title_and_labels
     description: >-
       Lot number and warehouse from the title, origin from the title's one country (Java is a variety there), a bare
-      FTO only beside both claims spelled out, a variety label naming one the catalog doesn't know abstains.
+      FTO only beside both claims spelled out, a variety label naming one the catalog doesn't know abstains. A
+      non-breaking or other Unicode space in a title or tag is whitespace, as it is to Python.
     model: int_royal_rules
     given:
       - input: ref('stg_importer_vocab')
@@ -212,6 +243,8 @@ unit_tests:
           - {week: 2026-11-09, row: 3, importer: royal_coffee, column_name: tags, cell_text: FTO}
           - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: title, cell_text: Kenya AA - No. 2 Warehouse}
           - {week: 2026-11-09, row: 4, importer: royal_coffee, column_name: tags, cell_text: "Fair Trade\nOrganic\nFTO"}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: title, cell_text: "Kenya AA\u00a0-\u00a0Harborview Warehouse"}
+          - {week: 2026-11-09, row: 5, importer: royal_coffee, column_name: tags, cell_text: "\u00a0Organic\u00a0\nNatural\u3000"}
       - input: ref('int_royal_labels')
         rows:
           - {week: 2026-11-09, row: 1, importer: royal_coffee, label: variety, label_value: "Castillo, Caturra", position: [1, 1, 1]}
@@ -223,3 +256,4 @@ unit_tests:
         - {row: 2, lot_id: null, warehouse: null, origin: null, process_type: natural, varieties: null, certifications: null}
         - {row: 3, lot_id: null, warehouse: null, origin: Nicaragua, process_type: natural, varieties: null, certifications: null}
         - {row: 4, lot_id: null, warehouse: No. 2, origin: Kenya, process_type: null, varieties: null, certifications: "[organic, fair_trade]"}
+        - {row: 5, lot_id: null, warehouse: Harborview, origin: Kenya, process_type: natural, varieties: null, certifications: "[organic]"}

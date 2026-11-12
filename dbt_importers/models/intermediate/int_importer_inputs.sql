@@ -4,7 +4,8 @@
 --   rule_text: the free text altitude and harvest months are read from
 --   rule_stated_process: the page's process column, where it has one
 --   rule_cert_text: where certifications are stated
--- An importer these rules don't know yet gets no inputs, so every rule abstains for it.
+-- An importer these rules don't know yet gets no inputs, so every rule here abstains for it (stg_importer_lots' test
+-- on the importer only warns, so its lots still build).
 with lots as (
     select
         week,

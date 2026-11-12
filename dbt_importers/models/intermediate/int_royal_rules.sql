@@ -7,7 +7,7 @@
 --     part is only a preposition or a negation ("In Warehouse", "Not In Warehouse").
 --   origin: an "Origin:" label's country (an alias read as its country: "Origin: Sumatra" is Indonesia), else the one
 --     country the title names; of the island and state names only those that mean one place in a coffee title
---     (importer_rules.ROYAL_TITLE_PLACES_OK): "Java" is also a variety and "Flores" a farm name.
+--     (importer_rules.TITLE_PLACES_OK): "Java" is also a variety and "Flores" a farm name.
 --   region: a "Region:" label, as written. process: a "Process:" label, as written.
 --   process_type: washed, natural, honey or anaerobic. Decaf anywhere abstains. Anaerobic (or carbonic) in a label,
 --     the title or a process tag wins. Otherwise "Process:" labels decide when there are any (all must agree); else
@@ -162,7 +162,7 @@ origin_in_title as (
     from lots as l
     inner join vocab as n
         on n.kind = 'country_name'
-        and (n.value2 is null or lower(n.term) in (select term from vocab where kind = 'royal_title_place_ok'))
+        and (n.value2 is null or lower(n.term) in (select term from vocab where kind = 'title_place_ok'))
         and regexp_matches(l.title, '\b' || regexp_escape(n.term) || '\b', 'i')
     group by all
 ),
@@ -189,7 +189,7 @@ process_inputs as (
         list_filter(
             plain_tags,
             lambda t: {{ process_kind('t', 'anaerobic', 'honey', 'natural_re', 'washed_re') }} is not null
-            and len(string_split_regex({{ strip('t') }}, '\s+')) <= 3
+            and len(string_split_regex({{ strip('t') }}, '{{ ws() }}+')) <= 3
         ) as process_tags
     from lots
 ),
@@ -253,7 +253,7 @@ variety_names as (
         v."row",
         bool_or(len(v.matched) = 0 or v.leftover != '') as unknown_name,
         list_sort(list_distinct(flatten(list(list_transform(v.matched, lambda m: coalesce(
-            n.names[regexp_replace(lower(m), '[\s-]', '', 'g')], m
+            n.names[regexp_replace(lower(m), '[{{ ws_inner() }}-]', '', 'g')], m
         )))))) as varieties
     from variety_values as v
     cross join (
@@ -320,13 +320,13 @@ cert_claims as (
         list_bool_or(list_transform(cert_sources, lambda t: regexp_matches(t, fto_re))) as fto,
         list_bool_or(list_transform(label_claims, lambda c: c.leftover != '')) as unknown_label,
         list_bool_or(list_transform(label_claims, lambda c: c.organic))
-        or list_bool_or(list_transform(plain_tags, lambda t: regexp_full_match(t, '\s*(?:' || organic_re || ')\s*', 'i')))
+        or list_bool_or(list_transform(plain_tags, lambda t: regexp_full_match(t, '{{ ws() }}*(?:' || organic_re || '){{ ws() }}*', 'i')))
         or regexp_matches(title, organic_re, 'i') as organic,
         list_bool_or(list_transform(label_claims, lambda c: c.fair_trade))
-        or list_bool_or(list_transform(plain_tags, lambda t: regexp_full_match(t, '\s*(?:' || fair_trade_re || ')\s*', 'i')))
+        or list_bool_or(list_transform(plain_tags, lambda t: regexp_full_match(t, '{{ ws() }}*(?:' || fair_trade_re || '){{ ws() }}*', 'i')))
         or regexp_matches(title, fair_trade_re, 'i') as fair_trade,
         list_bool_or(list_transform(label_claims, lambda c: c.rainforest_alliance))
-        or list_bool_or(list_transform(plain_tags, lambda t: regexp_full_match(t, '\s*(?:' || rainforest_re || ')\s*', 'i')))
+        or list_bool_or(list_transform(plain_tags, lambda t: regexp_full_match(t, '{{ ws() }}*(?:' || rainforest_re || '){{ ws() }}*', 'i')))
         or regexp_matches(title, rainforest_re, 'i') as rainforest_alliance
     from cert_texts
 ),

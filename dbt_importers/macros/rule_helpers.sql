@@ -1,8 +1,13 @@
 {#- Small pieces the rules share. Each takes SQL expressions and returns one. -#}
 
+{#- Whitespace as Python's str.strip() and \s see it, which RE2's \s (ASCII only) doesn't: also a non-breaking space
+    and the other Unicode spaces (importer_rules.WS). ws_inner() is the same for use inside a character class. -#}
+{% macro ws_inner() -%}\s\p{Z}\x{0b}\x{85}\x{1c}-\x{1f}{%- endmacro %}
+{% macro ws() -%}[{{ ws_inner() }}]{%- endmacro %}
+
 {#- Text without whitespace at either end, in any script (trim() only takes spaces). -#}
 {% macro strip(text) -%}
-regexp_replace({{ text }}, '^\s+|\s+$', '', 'g')
+regexp_replace({{ text }}, '^{{ ws() }}+|{{ ws() }}+$', '', 'g')
 {%- endmacro %}
 
 {#- A text's non-empty lines, each stripped, in order; [] for null. -#}
@@ -16,7 +21,7 @@ list_filter(list_transform(string_split(coalesce({{ text }}, ''), chr(10)), lamb
 (case
     when len(list_distinct(list_transform(
         list_filter({{ values }}, lambda v: {{ strip('v') }} != ''),
-        lambda v: lower(regexp_replace({{ strip('v') }}, '\s+', ' ', 'g'))
+        lambda v: lower(regexp_replace({{ strip('v') }}, '{{ ws() }}+', ' ', 'g'))
     ))) = 1
     then {{ strip("list_filter(" ~ values ~ ", lambda v: " ~ strip('v') ~ " != '')[-1]") }}
 end)

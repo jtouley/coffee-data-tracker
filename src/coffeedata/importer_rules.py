@@ -104,9 +104,10 @@ ROYAL_WAREHOUSE = (
 # A warehouse "name" that is only a preposition or a negation ("In Warehouse", "Not In Warehouse"): no name at all.
 ROYAL_NOT_A_NAME = r"^(?:(?:not|no|out of)\s+)?(?:in|at|ex|our|the|a|stored at|from)?$"
 ROYAL_NEGATED = r"\b(?:not|non|without|out of)\b|\bno(?:[^.\pL\pN_]|$)"  # "No. 2 Warehouse" is a number
-# Island and state names (origins.ALIASES) that mean one origin in a coffee title; the rest (Java, Flores, Bali,
-# Congo) are also a variety, a farm name or two countries, so on a title alone they abstain.
-ROYAL_TITLE_PLACES_OK = ("sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor", "dr congo")
+# Island and state names (origins.ALIASES) that mean one origin in a coffee title or product name; the rest (Java,
+# Flores, Bali, Congo) are also a variety, a farm name or two countries, so they never count as an origin there
+# (Royal's titles, InterAmerican's names).
+TITLE_PLACES_OK = ("sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor", "dr congo")
 ROYAL_DECAF = (
     r"\bdecaf|\bdecaffeinated\b|\bswiss water\b|\bmountain water\b|\bsugar ?cane\b|\bethyl acetate\b|\bco2\b"
 )
@@ -156,6 +157,37 @@ def _alternation(words: list[str]) -> str:
 _WORD_END = r"([^\pL\pN_]|$)"
 
 
+# Whitespace as Python's \s sees it in a str pattern, which RE2's \s (ASCII only) doesn't: also a non-breaking space
+# and the other Unicode spaces (the Z categories), U+0085 and U+001C-U+001F. Royal's tags and titles are stored as the
+# store wrote them, so "Origin:<NBSP>Colombia" must read as "Origin: Colombia" (dbt_importers' ws() macro is the same).
+WS = r"\s\p{Z}\x{0b}\x{85}\x{1c}-\x{1f}"
+
+
+def re2(pattern: str) -> str:
+    r"""A Python pattern with its \s and \S meaning what they mean in Python (Unicode whitespace), for RE2."""
+    out, in_class, i = [], False, 0
+    while i < len(pattern):
+        c = pattern[i]
+        if c == "\\" and i + 1 < len(pattern):
+            nxt = pattern[i + 1]
+            if nxt == "s":
+                out.append(WS if in_class else f"[{WS}]")
+            elif nxt == "S":
+                assert not in_class, pattern
+                out.append(f"[^{WS}]")
+            else:
+                out.append(c + nxt)
+            i += 2
+            continue
+        if c == "[" and not in_class:
+            in_class = True
+        elif c == "]" and in_class:
+            in_class = False
+        out.append(c)
+        i += 1
+    return "".join(out)
+
+
 def _words(alternation: str) -> str:
     return rf"\b({alternation}){_WORD_END}"
 
@@ -178,7 +210,7 @@ def vocabulary() -> list[dict]:
     - region: a one-country growing region (lowercase) and its country (origins.REGIONS);
     - country_name: a name in origins.COUNTRIES as written, its country, and (value2) "alias" for an island or state;
     - royal_label: a Royal label's name and its "Label: value" line pattern (group 1 is the value);
-    - royal_title_place_ok: an alias that means one origin in a Royal title;
+    - title_place_ok: an alias that means one origin in a Royal title or an InterAmerican name;
     - royal_certification: a certification and its pattern in Royal's wording;
     - rules_version: RULES_VERSION (term rules_version) and ROYAL_RULES_VERSION (term royal_rules_version)."""
     patterns = {
@@ -244,11 +276,24 @@ def vocabulary() -> list[dict]:
         {"kind": "royal_label", "term": k, "value": rf"^(?:{v})\s*[:：]\s*(.+?)\s*$"}
         for k, v in ROYAL_LABELS.items()
     ]
-    rows += [{"kind": "royal_title_place_ok", "term": t, "value": t} for t in ROYAL_TITLE_PLACES_OK]
+    rows += [{"kind": "title_place_ok", "term": t, "value": t} for t in TITLE_PLACES_OK]
     rows += [
         {"kind": "royal_certification", "term": k, "value": v, "ord": i}
         for i, (k, v) in enumerate(ROYAL_CERTS)
     ]
     rows.append({"kind": "rules_version", "term": "rules_version", "value": RULES_VERSION})
     rows.append({"kind": "rules_version", "term": "royal_rules_version", "value": ROYAL_RULES_VERSION})
+    pattern_kinds = {
+        "pattern",
+        "process",
+        "grower_type",
+        "certification",
+        "royal_label",
+        "royal_certification",
+    }
+    for r in rows:
+        if r["kind"] in pattern_kinds:
+            r["value"] = re2(str(r["value"]))
+            if r.get("value2"):
+                r["value2"] = re2(str(r["value2"]))
     return [{"value2": None, "ord": None} | r for r in rows]
