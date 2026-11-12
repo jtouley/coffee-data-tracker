@@ -5,16 +5,48 @@ the lake. It follows the classifier's precedent (`tests/test_classifier_accuracy
 the products are split before any result is read, the rules are tuned on train, chosen on validation and scored
 once on a sealed test set. The results are in `RESULTS.md`.
 
-**Running total (CLAUDE.md step 9):** 0 products whose `origin_country` changed since the last full evaluation, which
-is this one. Add each later change's count here.
+**Running total (CLAUDE.md step 9):** 26 products whose rules `origin_country` changed since the last full evaluation,
+which is this one. Add each later change's count here.
 - 0: decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
   versions, 51 roasters) and the output of `origin_country` of none: built from main and from the change on a local
   copy of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were
   identical. 0 of them in the test set.
+- 20: the ISO 3166-1 mapping (`eval/origin_iso`) fixed two aliases the rules apply before anything is stored
+  (`origins.py`), compared with main 0879254 on one local copy of the lake (runs to 2026-11-09, stored verdicts):
+  "New Guinea" had matched "Guinea", the West African country, and Puerto Rico was folded into the United States.
+  Of the 20 coffees (34 product versions in `stg_products`): Guinea → New Guinea 12 (ISO: no single country, so
+  no public origin), Guinea → Papua New Guinea 5 ("Papa"/"Papau"/"Paupau New Guinea", "Papua New Guinean"),
+  United States → Puerto Rico 2, none → Papua New Guinea 1 ("Papa New Guinea Kongo"). Each was checked by hand
+  against its title and description: all 20 are right after the change (one, a blend "Espresso" with "coffee from
+  New Guinea", was and still is a blend's component, now without a country rather than with the wrong one). 5 of
+  them are in the sealed test set (count only). Unit tests: `test_extract.py::test_new_guinea_and_puerto_rico_titles`
+  and the alias cases.
+- 6 more, same PR: "in <place>, <country>" no longer states an origin when the country goes on into a list ("our
+  customers in New York, Puerto Rico, and El Paso"). Found through validation: one listing labelled "United States"
+  (787 Coffee, a Puerto Rican roaster) read "Puerto Rico" after the alias fix. Two blind relabels (Claude Haiku,
+  `claude-haiku-5-5`) both said Mexico ("Grown in Mexico"), so `labels_validation.json` now says Mexico; main had
+  matched the old label only by reading the customers' cities. Two candidate list tests were compared on validation
+  aggregates only: any comma, "&" or "and" after the country (98 of 111 agree, 9 wrong-country) against also
+  requiring a capitalised next place (97, 10); the first is in. The 6 changed coffees, each checked by hand: 3 blends
+  or tours listing origins ("from South America, Indonesia, and India") lose a single country, a Mexican artist's
+  label ("in Tijuana, Mexico, …") no longer makes an Ethiopian coffee Mexican, a Villa Sarchi lot goes from Costa Rica
+  (the variety's home) to Nicaragua, and one is in the sealed test set (count only; 6 of the 26 are).
+  The floor (`tests/test_origin_accuracy.py`, same labels): main 0879254 96 of 111 agree, 12 wrong-country; this
+  change 98 and 9; train unchanged (0.9596 / 0.0394). The validation floor is raised to 98 and 9.
+  **Not a clean measure (review of #144):** this rule changes how the place-comma rule decides, and it was designed
+  after a targeted relabel of the one validation listing that moved against the change, then compared on validation.
+  So validation no longer measures it cleanly; the next sealed test set drawn for origin is its first clean measure.
+  To make the validation figure honest, every validation listing whose prediction differs between main and the
+  change (4, including the relabelled one) was labelled again, blind, by two labelers on Claude Haiku
+  (`claude-haiku-5-5`) with a tiebreak ready (packets hashed in `eval/origin_iso/SHA256SUMS`, round2/). A and B agreed
+  on all 4, and every settled label equals the one already in `labels_validation.json` (2 none, Mexico, Nicaragua),
+  so the file is unchanged. Scored on it: main 0879254's rules 96 of 111 agree, 12 wrong-country; this change 98 and
+  9. The validation floor stays at 98 / 9, set from this result.
+  The rule's "and" is matched in any case since the review; on validation that changes nothing (98 / 9).
 
 ## Floor
 
-`tests/test_origin_accuracy.py` holds the rules to this eval's train and validation labels (CLAUDE.md step 8): on train, stratum-weighted agreement at least 0.959 and wrong-country at most 0.040, which reproduces the train row of RESULTS.md (96.0% / 3.9%; strata in `floor_strata.json`, the two predictions the train sample was drawn from). Validation's sample can't be redrawn from any committed rule set (the closest shares 59 of its 111 keys), so its weights and RESULTS.md's 88.0% / 11.6% can't be reproduced; its floor is a count over the 111 fixed labelled listings instead: at least 97 agree, at most 11 wrong-country (measured 2026-11-11, main 0cfa4d9). The listings are private: `eval/floor_inputs.py` rebuilds them from the lake at df57f62, and the eval-floors workflow runs the floor (`docs/RULES.md`).
+`tests/test_origin_accuracy.py` holds the rules to this eval's train and validation labels (CLAUDE.md step 8): on train, stratum-weighted agreement at least 0.959 and wrong-country at most 0.040, which reproduces the train row of RESULTS.md (96.0% / 3.9%; strata in `floor_strata.json`, the two predictions the train sample was drawn from). Validation's sample can't be redrawn from any committed rule set (the closest shares 59 of its 111 keys), so its weights and RESULTS.md's 88.0% / 11.6% can't be reproduced; its floor is a count over the 111 fixed labelled listings instead: at least 98 agree, at most 9 wrong-country (raised by #144 after one label was corrected by two blind relabels; first set at 97 / 11 on main 0cfa4d9). The listings are private: `eval/floor_inputs.py` rebuilds them from the lake at df57f62, and the eval-floors workflow runs the floor (`docs/RULES.md`).
 
 The floor's sensitivity is low: in train the `unchanged` stratum carries 97% of the weight on 25 labels, so one label there is worth about 3.9 points, and a regression that touches none of the labelled listings doesn't show. It catches a change on the labelled listings, not a change elsewhere.
 

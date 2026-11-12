@@ -1035,6 +1035,15 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     return all(r["status"] != "failed" for r in results)
 
 
+def cmd_importer_build(args: argparse.Namespace) -> bool:
+    """The importers' derived view: the private dbt project (dbt_importers/) over $COFFEEDATA_IMPORTERS, read only,
+    into its own database file, build/importers.duckdb (importers.DB, the only place it builds). Exits 1 if a model or
+    check failed."""
+    from . import importers
+
+    return importers.build(Lake.importers())
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1296,6 +1305,12 @@ def main(argv: list[str] | None = None) -> None:
     )
     imp.add_argument(
         "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
+    )
+
+    add(
+        "importer-build",
+        cmd_importer_build,
+        "derive importer offers (private dbt project) from $COFFEEDATA_IMPORTERS into their own private database",
     )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")

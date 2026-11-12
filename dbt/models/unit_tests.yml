@@ -594,6 +594,11 @@ unit_tests:
       - input: ref('int_roaster_state')
         format: sql
         rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
+      - input: ref('int_origin_country')  # no origins in these cases
+        format: sql
+        rows: >-
+          select null::varchar as raw_value, null::varchar as kind, null::varchar as alpha2, null::varchar as alpha3,
+                 null::varchar as iso_short_name, null::varchar as region, null::varchar as display_name where false
       - input: ref('flavor_lexicon')
         rows: []
     expect:
@@ -666,6 +671,11 @@ unit_tests:
       - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
         format: sql
         rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('int_origin_country')  # no origins in these cases
+        format: sql
+        rows: >-
+          select null::varchar as raw_value, null::varchar as kind, null::varchar as alpha2, null::varchar as alpha3,
+                 null::varchar as iso_short_name, null::varchar as region, null::varchar as display_name where false
       - input: ref('flavor_lexicon')
         rows: []
     expect:
@@ -719,6 +729,11 @@ unit_tests:
       - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
         format: sql
         rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('int_origin_country')  # no origins in these cases
+        format: sql
+        rows: >-
+          select null::varchar as raw_value, null::varchar as kind, null::varchar as alpha2, null::varchar as alpha3,
+                 null::varchar as iso_short_name, null::varchar as region, null::varchar as display_name where false
       - input: ref('flavor_lexicon')  # rows as in seeds/flavor_lexicon.csv
         rows:
           - {note: blackberry, category: berry}
@@ -867,6 +882,11 @@ unit_tests:
       - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
         format: sql
         rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('int_origin_country')  # no origins in these cases
+        format: sql
+        rows: >-
+          select null::varchar as raw_value, null::varchar as kind, null::varchar as alpha2, null::varchar as alpha3,
+                 null::varchar as iso_short_name, null::varchar as region, null::varchar as display_name where false
       - input: ref('flavor_lexicon')
         rows:
           - {note: lemon, category: citrus}
@@ -1058,3 +1078,107 @@ unit_tests:
     expect:
       rows:
         - {run_date: 2026-11-09, coffee_id: "indie.com:1", roaster_id: indie.com, variant_id: v1, event: new, price_usd: 20.0}
+
+  - name: origin_spellings_resolve_to_iso_3166_1
+    description: >-
+      Tricky origin spellings from the 2026-11-09 release (eval/origin_iso), resolved by the real origin_country_iso
+      seed: a spelling and its accented or Portuguese form are one country; the ISO short name is ISO's, however
+      awkward; Puerto Rico is its own country; a list of several countries is multiple, never its first; a list naming
+      one country twice is that country, keeping the sub-national place; a continent, alone or in a list, has no
+      country; a country whose name has "and" in it isn't split; New Guinea, shared by two countries, has none; an unknown spelling is unmapped, never title-cased into a
+      country. With var origin_names common (the default), display_name is the origin_display_name
+      seed's name where it has one, else the ISO short name. Only Claude's rows (method llm) count from stg_enrichments.
+    model: int_origin_country
+    given:
+      - input: ref('stg_products')
+        rows:
+          - {origin_country: Brazil}
+          - {origin_country: Puerto Rico}
+          - {origin_country: New Guinea}
+          - {origin_country: Tanzania}
+          - {origin_country: Trinidad and Tobago}
+          - {origin_country: null}
+      - input: ref('stg_enrichments')
+        rows:
+          - {method: llm, origin_country: Brasil}
+          - {method: llm, origin_country: Democratic Republic Of Congo}
+          - {method: llm, origin_country: Việt Nam}
+          - {method: llm, origin_country: "Hawaii, Usa"}
+          - {method: llm, origin_country: "Kenya, Hawaii (Usa)"}
+          - {method: llm, origin_country: "Colombia & Peru"}
+          - {method: llm, origin_country: "Colombia/Costa Rica"}
+          - {method: llm, origin_country: "Central America And Indonesia"}
+          - {method: llm, origin_country: "Uganda, Kenya, Rwanda, Burundi"}
+          - {method: llm, origin_country: East Africa}
+          - {method: llm, origin_country: "Peru, Atlantis"}
+          - {method: llm, origin_country: Narnia}
+          - {method: rules, origin_country: Wakanda}
+      - input: ref('origin_country_iso')  # rows as in seeds/origin_country_iso.csv
+        rows:
+          - {raw_value: Brazil, kind: country, alpha2: BR, alpha3: BRA, iso_short_name: Brazil, region: null}
+          - {raw_value: Brasil, kind: country, alpha2: BR, alpha3: BRA, iso_short_name: Brazil, region: null}
+          - {raw_value: Colombia, kind: country, alpha2: CO, alpha3: COL, iso_short_name: Colombia, region: null}
+          - {raw_value: Costa Rica, kind: country, alpha2: CR, alpha3: CRI, iso_short_name: Costa Rica, region: null}
+          - {raw_value: Democratic Republic of Congo, kind: country, alpha2: CD, alpha3: COD, iso_short_name: "Congo, The Democratic Republic of the", region: null}
+          - {raw_value: Hawaii, kind: country, alpha2: US, alpha3: USA, iso_short_name: United States, region: Hawaii}
+          - {raw_value: Indonesia, kind: country, alpha2: ID, alpha3: IDN, iso_short_name: Indonesia, region: null}
+          - {raw_value: Kenya, kind: country, alpha2: KE, alpha3: KEN, iso_short_name: Kenya, region: null}
+          - {raw_value: Peru, kind: country, alpha2: PE, alpha3: PER, iso_short_name: Peru, region: null}
+          - {raw_value: Puerto Rico, kind: country, alpha2: PR, alpha3: PRI, iso_short_name: Puerto Rico, region: null}
+          - {raw_value: Rwanda, kind: country, alpha2: RW, alpha3: RWA, iso_short_name: Rwanda, region: null}
+          - {raw_value: Burundi, kind: country, alpha2: BI, alpha3: BDI, iso_short_name: Burundi, region: null}
+          - {raw_value: Tanzania, kind: country, alpha2: TZ, alpha3: TZA, iso_short_name: "Tanzania, United Republic of", region: null}
+          - {raw_value: Trinidad and Tobago, kind: country, alpha2: TT, alpha3: TTO, iso_short_name: Trinidad and Tobago, region: null}
+          - {raw_value: Uganda, kind: country, alpha2: UG, alpha3: UGA, iso_short_name: Uganda, region: null}
+          - {raw_value: Usa, kind: country, alpha2: US, alpha3: USA, iso_short_name: United States, region: null}
+          - {raw_value: Việt Nam, kind: country, alpha2: VN, alpha3: VNM, iso_short_name: Viet Nam, region: null}
+          - {raw_value: Central America, kind: not_a_country, alpha2: null, alpha3: null, iso_short_name: null, region: null}
+          - {raw_value: East Africa, kind: not_a_country, alpha2: null, alpha3: null, iso_short_name: null, region: null}
+          - {raw_value: New Guinea, kind: ambiguous, alpha2: null, alpha3: null, iso_short_name: null, region: null}
+      - input: ref('origin_display_name')  # rows as in seeds/origin_display_name.csv
+        rows:
+          - {alpha2: CD, display_name: DR Congo}
+          - {alpha2: TZ, display_name: Tanzania}
+          - {alpha2: VN, display_name: Vietnam}
+    expect:
+      rows:
+        - {raw_value: Brazil, kind: country, alpha2: BR, alpha3: BRA, iso_short_name: Brazil, region: null, display_name: Brazil}
+        - {raw_value: Brasil, kind: country, alpha2: BR, alpha3: BRA, iso_short_name: Brazil, region: null, display_name: Brazil}
+        - {raw_value: Puerto Rico, kind: country, alpha2: PR, alpha3: PRI, iso_short_name: Puerto Rico, region: null, display_name: Puerto Rico}
+        - {raw_value: New Guinea, kind: ambiguous, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: Tanzania, kind: country, alpha2: TZ, alpha3: TZA, iso_short_name: "Tanzania, United Republic of", region: null, display_name: Tanzania}
+        - {raw_value: Trinidad and Tobago, kind: country, alpha2: TT, alpha3: TTO, iso_short_name: Trinidad and Tobago, region: null, display_name: Trinidad and Tobago}
+        - {raw_value: Democratic Republic Of Congo, kind: country, alpha2: CD, alpha3: COD, iso_short_name: "Congo, The Democratic Republic of the", region: null, display_name: DR Congo}
+        - {raw_value: Việt Nam, kind: country, alpha2: VN, alpha3: VNM, iso_short_name: Viet Nam, region: null, display_name: Vietnam}
+        - {raw_value: "Hawaii, Usa", kind: country, alpha2: US, alpha3: USA, iso_short_name: United States, region: Hawaii, display_name: United States}
+        - {raw_value: "Kenya, Hawaii (Usa)", kind: multiple, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: "Colombia & Peru", kind: multiple, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: "Colombia/Costa Rica", kind: multiple, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: "Central America And Indonesia", kind: multiple, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: "Uganda, Kenya, Rwanda, Burundi", kind: multiple, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: East Africa, kind: not_a_country, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: "Peru, Atlantis", kind: unmapped, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+        - {raw_value: Narnia, kind: unmapped, alpha2: null, alpha3: null, iso_short_name: null, region: null, display_name: null}
+
+  - name: origin_display_name_follows_the_origin_names_var
+    description: >-
+      With var origin_names iso, the display name is the ISO short name even where the origin_display_name seed has a
+      common one.
+    model: int_origin_country
+    overrides:
+      vars: {origin_names: iso}
+    given:
+      - input: ref('stg_products')
+        rows:
+          - {origin_country: Tanzania}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('origin_country_iso')
+        rows:
+          - {raw_value: Tanzania, kind: country, alpha2: TZ, alpha3: TZA, iso_short_name: "Tanzania, United Republic of", region: null}
+      - input: ref('origin_display_name')
+        rows:
+          - {alpha2: TZ, display_name: Tanzania}
+    expect:
+      rows:
+        - {raw_value: Tanzania, alpha2: TZ, iso_short_name: "Tanzania, United Republic of", display_name: "Tanzania, United Republic of"}

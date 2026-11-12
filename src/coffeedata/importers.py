@@ -20,13 +20,16 @@ product: every cell of its row under the page's header, and the lot's own page U
 out by their header (a header-less column, by what all its cells say), and a currency amount in any kept cell fails
 the run, so no price is ever stored. No page HTML or images either.
 
-Derived (transform), never stored: `offers()` reads the whole raw history and derives each lot's stated fields
-(`stated`) and our model's normalized values (importer_rules.normalize) at read time, so a better rule re-derives
-every week. Those rules abstain when unsure and aren't evaluated yet (CLAUDE.md): nothing relies on them.
+Derived (transform), never stored in the dataset: a private dbt project of its own (dbt_importers/, `build()`,
+`coffeedata importer-build`) reads the whole raw history into its own database file (build/importers.duckdb) and
+derives each lot's stated fields (`stated`, called from a dbt Python model) and our model's normalized values (SQL
+rules over importer_rules' vocabulary), so a better rule re-derives every week. Those rules abstain when unsure and
+aren't evaluated yet (CLAUDE.md): nothing relies on them.
 
 Backend-only, for internal use and a future roaster portal (which may show only the normalized values, never the
-importer's wording): dbt never reads the dataset, and nothing in the public tables, the release, the site or the
-public dataset does (tests/test_importers.py). A week already stored is never fetched again.
+importer's wording): the main dbt project, the release, the public tables and contracts, the site, the public dataset
+and the MCP server never read the dataset or the private database (tests/test_importers.py). A week already stored is
+never fetched again.
 
 A changed page fails loudly (LayoutChanged), and that importer's week stays unwritten so a run later that week
 fetches it again:
@@ -34,8 +37,8 @@ fetches it again:
 - a currency amount in a stored cell;
 - fewer than MIN_SHARE_OF_LAST_WEEK of the rows the last stored week had (a thinned page), unless the run is told to
   accept the drop (`--accept-drop`, the workflow's `accept_drop` input).
-A single cell that can't be read (bags that aren't a number, a rule that fails on odd text) is null in the derived
-view and counted; it never fails the week.
+A single cell that can't be read (bags that aren't a number) is null in the derived view and counted; it never fails
+the week.
 
 What these snapshots are for (arrival-to-roaster lag, after a year or more of history): the green-importer
 feasibility check, recommendation 2. .github/workflows/importers.yml runs it each week.
@@ -319,14 +322,20 @@ def _bags(text: str | None, problems: list[str]) -> int | None:
     return None
 
 
+STATED_FIELDS = (
+    "lot_id", "name", "origin", "region", "process", "status", "est_arrival", "warehouse", "bags", "bag_size", "bag_kg",
+)  # fmt: skip
+
+
 def stated(importer: str, cells: dict[str, str | None], problems: list[str] | None = None) -> dict:
     """The fields the page states for one lot, read from its stored cells. A cell that can't be read is None and
-    noted in `problems`; `lot_id` and `name` are None when the row lacks its identity."""
+    noted in `problems`; `lot_id` and `name` are None when the row lacks its identity.
+
+    Royal's listing has no column for any of them but its title (the name): its lot number, warehouse, origin, region
+    and process are read from its title and labelled text by the private dbt project's rules (int_royal_rules)."""
     problems = [] if problems is None else problems
     if importer == ROYAL:
-        from .importer_rules import royal_stated
-
-        return royal_stated(cells, problems)
+        return dict.fromkeys(STATED_FIELDS) | {"name": " ".join((cells.get("title") or "").split()) or None}
     g = cells.get
     if importer == "cafe_imports":
         lot = _whole(g("ID"))
@@ -641,30 +650,88 @@ IMPORTERS = {
 SCHEDULE_ONLY = (ROYAL,)
 
 
-# --- the read-time transform --------------------------------------------------------------------------------------
+# --- the derived view: a private dbt project with a database file of its own --------------------------------------
+
+DBT_PROJECT = "dbt_importers"
+# The private database's one name and place, relative to where the command runs (like the main build's): the build
+# writes nowhere else, and the project itself refuses any other target (dbt_importers/macros/private_target.sql).
+DB = "build/importers.duckdb"
+# Databases and folders a public job reads or uploads: the main build's database (cli.cmd_build's default and
+# COFFEEDATA_DB; the MCP server's run_sql reads it), the served release's (the site and the public export), the site
+# and the public export's folders. The private database is never one of them, nor inside one.
+MAIN_DB = "build/coffee.duckdb"
+SERVED_DB = "build/served.duckdb"
+PUBLIC_FOLDERS = ("build/site", "build/public")
 
 
-def derive(raw: dict) -> dict:
-    """One stored lot (an importer_raw row) as an offer: its keys, the stated fields and our normalized values.
-    `problems` lists what read as null."""
-    from .importer_rules import normalize
-
-    cells = {c["column"]: c["text"] for c in raw["cells"]}
-    problems: list[str] = []
-    keys = {k: raw[k] for k in ("week", "fetched_at", "importer", "row", "url")}
-    fields = stated(raw["importer"], cells, problems)
-    return keys | fields | normalize(raw["importer"], cells, problems) | {"problems": problems}
+def _project_dir() -> Path:
+    """The checkout's private project, wherever this runs from."""
+    project = Path(__file__).resolve().parents[2] / DBT_PROJECT
+    return project if project.is_dir() else Path(DBT_PROJECT)
 
 
-def offers(lake: Lake) -> list[dict]:
-    """Every stored lot, every week, derived now (`derive`): rebuilt from raw on each read, never stored."""
-    # a week staged and also in the dataset (a publish whose response was lost) is read once
-    rel = lake.connect().sql(
-        f"""select * from {lake.scan("importer_raw")} where importer is not null
-            qualify row_number() over (partition by week, importer, row order by fetched_at) = 1
-            order by week, importer, row"""
-    )
-    return [derive(dict(zip(rel.columns, r, strict=True))) for r in rel.fetchall()]
+def private_models() -> set[str]:
+    """The names of the private project's models: the only tables its database may hold."""
+    return {p.stem for p in (_project_dir() / "models").rglob("*") if p.suffix in (".sql", ".py")}
+
+
+def private_db() -> Path:
+    """The private database's path (DB, from the working directory), after checking it is none of the public
+    databases or folders and isn't a link to somewhere else. ValueError otherwise."""
+    db = Path(DB)
+    if db.is_symlink():
+        raise ValueError(f"{db} is a link; the importers' private database is a file of its own")
+    target = db.resolve()
+    public = {Path(p).resolve() for p in (MAIN_DB, SERVED_DB, os.environ.get("COFFEEDATA_DB") or MAIN_DB)}
+    if target in public:
+        raise ValueError(f"{db} is a public build's database; the importers' derived view has its own")
+    folders = [Path(f).resolve() for f in PUBLIC_FOLDERS]
+    if (export := os.environ.get("PUBLIC_EXPORT_URL")) and "://" not in export:
+        folders.append(Path(export).resolve())
+    if any(target.is_relative_to(f) for f in folders):
+        raise ValueError(f"{db} is inside a folder a public job uploads")
+    return db
+
+
+def build(lake: Lake, target: Path | None = None, unit_tests: bool = False) -> bool:
+    """Build the private dbt project (dbt_importers/) over the importers dataset into its own database file (DB,
+    `private_db`), rebuilt from raw each time. Reads the dataset (its staged files, and the Hub when it is remote),
+    never writes it. A database already there is replaced only when it holds nothing but the private project's tables
+    (ValueError otherwise: it isn't ours to delete).
+
+    The rules are SQL over fixed patterns, so they don't fail lot by lot as the Python rules could: an error in one
+    (a pattern RE2 rejects, a model that no longer compiles) fails the whole build, loudly, and leaves no database
+    behind, so no stale or half-built view is ever read. dbt's unit tests check the rules over hand-written rows, so
+    they run only when asked (the tests). Returns whether every model and check passed."""
+    import json
+    import subprocess
+
+    import duckdb
+
+    db = private_db()
+    if db.exists():
+        with duckdb.connect(str(db), read_only=True) as con:
+            tables = {
+                t for (t,) in con.execute("select table_name from information_schema.tables").fetchall()
+            }
+        if foreign := tables - private_models():
+            raise ValueError(
+                f"{db} holds tables the importers project doesn't own ({', '.join(sorted(foreign))})"
+            )
+        db.unlink()  # derived: always rebuilt from raw
+    db.parent.mkdir(parents=True, exist_ok=True)
+    env = {k: v for k, v in os.environ.items() if k != "COFFEEDATA_DB"} | {"COFFEEDATA_IMPORTERS_DB": str(db)}
+    project_dir = str(_project_dir())
+    where = ["--target-path", str(target.resolve())] if target else []
+    skip = [] if unit_tests else ["--exclude", "resource_type:unit_test"]
+    sources = json.dumps({"importer_sources": lake.sources("importer_raw")})
+    r = subprocess.run(
+        ["dbt", "build", *skip, "--project-dir", project_dir, "--profiles-dir", project_dir, *where, "--vars", sources],
+        env=env,
+    )  # fmt: skip
+    if r.returncode != 0:
+        db.unlink(missing_ok=True)  # never leave a half-built view
+    return r.returncode == 0
 
 
 # --- the weekly job -----------------------------------------------------------------------------------------------

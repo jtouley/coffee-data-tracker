@@ -164,6 +164,12 @@ basis = "no history yet: a fixed bound (see the comment above)"
 warning_above = 0.0
 
 [[metric]]
+name = "build:test:origin_countries_are_mapped"
+rule = "build-tests"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_above = 0.0
+
+[[metric]]
 name = "fill:classifier"
 rule = "classifier"
 basis = "no history yet: a fixed bound (see the comment above)"
