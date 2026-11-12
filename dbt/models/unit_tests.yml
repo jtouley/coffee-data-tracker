@@ -970,6 +970,37 @@ unit_tests:
         - {roaster_id: notachain.com, is_chain: false}
         - {roaster_id: twentyone.com, is_chain: true}
 
+  - name: an_empty_chain_flags_list_means_no_override
+    description: >-
+      chain_flags is [] when the owner has cleared every chain flag and published it: no override at all, so the
+      store count decides every roaster. It is not "no snapshot": the seed is not read (peets.com, a chain only by
+      the seed, is not a chain).
+    model: int_roaster_state
+    overrides:
+      vars:
+        chain_flags: []
+    given:
+      - input: ref('shared_hosts')
+        rows: []
+      - input: ref('chain_overrides')
+        rows:
+          - {roaster_id: peets.com, is_chain: true, reason: "the seed's override"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: peets.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: twentyone.com, locations: 21, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows: []
+      - input: ref('int_fetches')
+        rows: []
+    expect:
+      rows:
+        - {roaster_id: peets.com, is_chain: false}
+        - {roaster_id: twentyone.com, is_chain: true}
+
   - name: public_roaster_leaves_out_chains
     description: >-
       public_roaster is the one place that decides "public": a chain (dim_roaster.is_chain) is left out however
@@ -993,10 +1024,11 @@ unit_tests:
       rows:
         - {roaster_id: indie.com, roaster_name: Indie}
 
-  - name: public_coffee_has_no_chains_coffees
+  - name: public_coffee_follows_public_roaster
     description: >-
-      public_coffee holds the public roasters' coffees only (it joins public_roaster), so a chain's coffee, still in
-      dim_coffee, is not published.
+      public_coffee holds the public roasters' coffees only (it joins public_roaster), so a coffee of a roaster
+      public_roaster leaves out (a chain here) is not published. It tests that the table follows its parent, which
+      decides chains (public_roaster_leaves_out_chains); it holds on main too.
     model: public_coffee
     given:
       - input: ref('dim_coffee')
@@ -1010,10 +1042,10 @@ unit_tests:
       rows:
         - {coffee_id: "indie.com:1", roaster_id: indie.com, roaster_name: Indie, coffee_name: Kenya}
 
-  - name: public_price_event_has_no_chains_events
+  - name: public_price_event_follows_public_coffee
     description: >-
-      public_price_event holds public coffees' events only, so a chain's price events, still in fct_price_event, are
-      not published.
+      public_price_event holds public coffees' events only, so the events of a coffee public_coffee leaves out (a
+      chain's here) are not published. It tests that the table follows its parent; it holds on main too.
     model: public_price_event
     given:
       - input: ref('fct_price_event')

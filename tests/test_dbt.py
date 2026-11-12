@@ -1019,7 +1019,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=27 " in r.stdout
+    assert "PASS=28 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1362,6 +1362,21 @@ def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
     assert "Kenya: 1 coffees in stock" in landing and "Gichathaini" not in landing
     # The process chart: the chain's in-stock Kenya isn't counted either.
     assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1"]
+
+
+def test_every_chain_override_names_a_registry_roaster():
+    """An override for a roaster_id the registry doesn't list would decide nothing, silently: each one of
+    dbt/seeds/chain_overrides.csv names a roaster of config/roasters.csv, with a reason."""
+    import csv
+
+    with (ROOT / "config" / "roasters.csv").open(newline="") as f:
+        registry = {r["roaster_id"] for r in csv.DictReader(f)}
+    with (ROOT / "dbt" / "seeds" / "chain_overrides.csv").open(newline="") as f:
+        overrides = list(csv.DictReader(f))
+    assert overrides and all(o["roaster_id"] in registry for o in overrides), [
+        o["roaster_id"] for o in overrides if o["roaster_id"] not in registry
+    ]
+    assert all(o["is_chain"] in ("true", "false") and len(o["reason"]) >= 3 for o in overrides)
 
 
 def test_public_market_weekly_leaves_out_chains(lake, tmp_path):
