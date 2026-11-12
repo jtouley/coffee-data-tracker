@@ -1000,6 +1000,41 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
 
 
+def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
+    """This week's private snapshot of each importer's public offer list (importers.py). Exits 1 if any failed."""
+    from . import importers
+    from .http import PoliteClient
+
+    if unknown := set(args.importer or ()) - set(importers.IMPORTERS):
+        raise SystemExit(
+            f"no importer {', '.join(sorted(unknown))}; known: {', '.join(sorted(importers.IMPORTERS))}"
+        )
+    if args.accept_drop and (scheduled := set(args.importer or ()) & set(importers.SCHEDULE_ONLY)):
+        raise SystemExit(
+            f"{', '.join(sorted(scheduled))} is fetched only by the scheduled run; a drop there can't be accepted"
+            " on a dispatch"
+        )
+    if args.accept_drop and len(set(args.importer or ())) != 1:
+        raise SystemExit(
+            "--accept-drop needs exactly one --importer: the override covers the importer checked by hand"
+        )
+    lake = Lake.importers()
+    if args.require_hub and not lake.remote:
+        # a local lake on a CI runner is thrown away with it: the run would report "stored" and keep nothing
+        raise SystemExit(f"COFFEEDATA_IMPORTERS must be an hf://datasets/ URL here, not {lake.url!r}")
+    # One page per host for the HTML importers; Royal's listing pages wait ROYAL_PAGE_INTERVAL (importers.read_royal)
+    # on top of the client's spacing. A slow page gets a minute. This is the one client allowed to reach a host only
+    # the scheduled importers job fetches (http.schedule_only_host); importers.royal_listing_url decides whether it does.
+    # The run stops at IMPORTERS_DEADLINE_S, a little under the workflow's job timeout, so a long Royal pass ends as a
+    # recorded failure (DeadlineReached) instead of a killed job.
+    with PoliteClient(
+        timeout=60.0, retries=3, schedule_only_ok=True, deadline_s=importers.IMPORTERS_DEADLINE_S
+    ) as client:
+        results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
+    _print(results)
+    return all(r["status"] != "failed" for r in results)
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1241,6 +1276,26 @@ def main(argv: list[str] | None = None) -> None:
         "--skip-if-unserved",
         action="store_true",
         help="with --served: build nothing and exit 0 when no release is served yet (the site workflow)",
+    )
+
+    imp = add(
+        "importer-snapshot",
+        cmd_importer_snapshot,
+        "this week's private snapshot of green importers' public offer lists ($COFFEEDATA_IMPORTERS)",
+    )
+    imp.add_argument(
+        "--importer",
+        action="append",
+        help="only this importer (repeatable): cafe_imports, interamerican, royal_coffee (scheduled runs only)",
+    )
+    imp.add_argument(
+        "--accept-drop",
+        action="store_true",
+        help="with one --importer: store its week even with under half the lots of its last stored week (a real "
+        "drop, checked by hand)",
+    )
+    imp.add_argument(
+        "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
     )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")

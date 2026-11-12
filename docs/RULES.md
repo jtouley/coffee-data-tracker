@@ -53,6 +53,11 @@ main, weekly and by hand, then runs `pytest -m private_eval` with `REQUIRE_EVALS
 
 Locally, a floor whose folder isn't set is skipped with the reason.
 
+**Alerts.** A floor states its checks through `tests/evalfloor.py`'s `floors(eval, set)`, so a failure names the
+eval, the set, the measured value and the floor or ceiling (with the Wilson 95% interval for a count), on a PR too.
+On main and in the eval-floors runs, a failed floor opens or updates one triage issue per eval, and a passing run
+closes it (docs/TRIAGE.md). The thresholds stay in the test files; the alerts read them from the test report.
+
 **Not floored, and why:**
 - eval/dq #11 (per-adapter volume bands): it scores per-adapter metrics of five replayed builds that never existed
   in the lake (the change added those metrics), so its inputs can't be rebuilt from it. `tests/test_dq_rules.py`

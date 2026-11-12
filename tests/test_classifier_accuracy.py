@@ -16,6 +16,8 @@ import pytest
 from coffeedata.classify import is_coffee
 from coffeedata.models import CatalogItem, Variant
 
+from .evalfloor import floors
+
 LABELS = Path(__file__).parent / "fixtures" / "classifier_labels.jsonl"
 # Measured on 2026-10-27; raise these when the classifier improves, never lower them to pass.
 FLOOR = {"train": 0.985, "validation": 0.935}
@@ -47,6 +49,6 @@ def test_accuracy_does_not_regress(name):
     accuracy = 1 - len(wrong) / len(rows)
     # Only the train set's misses are shown: validation is judged on its total, never example by example.
     misses = "\n".join(f"  {r['label']:10} {r['title'][:80]}" for r in wrong) if name == "train" else ""
-    assert accuracy >= FLOOR[name], (
-        f"{name}: {accuracy:.1%} < {FLOOR[name]:.1%} ({len(wrong)} wrong)\n{misses}"
-    )
+    with floors("classifier", name) as f:
+        f.detail = misses
+        f.at_least("accuracy", accuracy, FLOOR[name], n=len(rows), k=len(rows) - len(wrong))
