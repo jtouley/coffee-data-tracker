@@ -373,6 +373,11 @@ function describe(out) {
   if (out.filter_change) return `${out.event === "added" ? "Added" : "Removed"} the filter “${out.phrase}”. Build a draft on Release to see it in the catalog; Undo is under Recent changes.`;
   if (out.reviewed) return `Marked ${out.mark === "keep_excluded" ? "keep excluded" : "drop the filter"}.`;
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
+  if ("chain" in out) {
+    const what = { chain: `Marked ${out.roaster_id} as a chain`, not_chain: `Marked ${out.roaster_id} as not a chain`,
+      clear: `Cleared the chain flag on ${out.roaster_id}: its store count decides` }[out.chain];
+    return `${what}. It takes effect when a draft of it is published.`;
+  }
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
   return "Done.";
 }
@@ -478,6 +483,15 @@ function renderPlan(box, plan) {
     box.append(w);
   }
 }
+
+// The confirm's reason is one line (the server's rule) that wraps on screen, so a long one can be read whole: Enter
+// adds no line break (and confirms nothing, as in the one-line field it replaced), and a pasted one becomes a space.
+document.addEventListener("keydown", (e) => {
+  if (e.target.id === "confirm-reason" && e.key === "Enter" && !e.isComposing) e.preventDefault();
+});
+document.addEventListener("input", (e) => {
+  if (e.target.id === "confirm-reason" && /[\r\n]/.test(e.target.value)) e.target.value = e.target.value.replace(/\s*[\r\n]+\s*/g, " ");
+});
 
 // One confirm dialog for every write form: data-confirm (text) or data-preview (the plan from the server), an
 // optional typed value (data-type), then the POST. The idempotency key comes with the form, so a double click, a

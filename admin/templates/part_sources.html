@@ -7,6 +7,25 @@
   <button class="btn {{ cls }} inline" type="submit" data-busy="Flagging…">{{ label }}</button>
 </form>
 {%- endmacro %}
+{# The chain flag of one registry roaster (its ⋯ menu): over its store count, either way, or cleared. A reason is
+   asked in the confirm sheet; `seen` is the flag this page showed, so another tab's change since is refused. #}
+{% macro chain_flag(r, name, value, label, title, confirm) -%}
+<form class="inline-form" data-write="/api/roasters/{{ r.roaster_id }}/chain" data-ask="reason" data-confirm-title="{{ title }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}">
+  <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="chain" value="{{ value }}"><input type="hidden" name="seen" value="{{ r.chain_flag or 'none' }}">
+  <button class="btn text inline" type="submit" data-busy="Recording…">{{ label }}…</button>
+</form>
+{%- endmacro %}
+{# A registry roaster's chain status in words: why it is or isn't a chain (the ⋯ menu's first line, and the title of
+   the row's word). #}
+{% macro chain_why(r) -%}
+{%- set count = (n(r.stores) ~ " store" ~ ("s" if r.stores != 1 else "") ~ " counted") if r.stores is not none else "no store count" -%}
+{%- if r.chain_flag == "chain" -%}A chain, flagged by hand ({{ count }}): {{ r.chain_reason }}
+{%- elif r.chain_flag == "not_chain" -%}Not a chain, flagged by hand ({{ count }}): {{ r.chain_reason }}
+{%- elif r.chain -%}A chain: {{ count }}, more than {{ chain_stores }}.
+{%- else -%}Not a chain: {{ count }}{{ ", " ~ chain_stores ~ " or fewer" if r.stores is not none }}.
+{%- endif -%}
+{%- endmacro %}
+{% set chain_word = {"over " ~ chain_stores ~ " stores": "Chain", "flagged a chain": "Chain", "flagged not a chain": "Not a chain"} %}
 {% macro many(n_, one, more) %}{{ n(n_) }} {{ one if n_ == 1 else more }}{% endmacro %}
 {% set label = {"roaster": "Roaster", "roaster (inherited)": "Roaster (inherited)", "not a roaster": "Not a roaster", "unreviewed": "Unreviewed"} %}
 <div class="sources-page" data-state="{{ 'data' if data and data.matching else 'empty' }}">
@@ -42,7 +61,7 @@
   {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}</ul>{% endif %}
   {% if flags_read %}
   <p class="answer" data-answer>{{ n(st.get("unreviewed", 0)) }} to review of {{ many(data.total, "place", "places") }}{% if data.meta.latest_run %} · {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone in the {{ data.meta.latest_run[:10] }} run{% endif %}</p>
-  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}</p>
+  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}{% if chains_read %}{% set nc = data.counts.chain.get("over " ~ chain_stores ~ " stores", 0) + data.counts.chain.get("flagged a chain", 0) %} · {{ many(nc, "chain", "chains") }}, crawled but not public{% endif %}</p>
   {% else %}
   <p class="answer" data-answer>{{ many(data.total, "place", "places") }} · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}
@@ -59,8 +78,8 @@
     <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Select every place on this page"></th>{% endif %}{{ head("name", "c-name") }}{{ head("domain", "wide c-domain") }}{{ head("city", "wide c-city") }}{{ head("state", "wide c-state") }}{{ head("tag", "wide c-tag") }}{{ head("hint", "wide c-hint") }}{{ head("status", "wide c-status") }}{{ head("first_seen", "wide c-seen") }}<th scope="col" class="act"><span class="vh">Actions</span></th></tr></thead>
     <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}{% set name = r.name or r.roaster_id %}{% set where = [r.city, r.state] | select | join(", ") %}<tr data-row>
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Select {{ name }}"></td>{% endif %}
-      <th scope="row" class="c-name" title="{{ name }}"><span class="pname">{{ name }}</span>
-        <span class="meta narrow">{{ [r.roaster_id, where] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %} · <span class="status">{{ label[r.status] }}</span>{% endif %}</span></th>
+      <th scope="row" class="c-name" title="{{ name }}"><span class="nameline"><span class="pname">{{ name }}</span>{% if r.chain %}<span class="wide status chainword" title="{{ chain_why(r) }}"> · {{ chain_word[r.chain] }}</span>{% endif %}</span>
+        <span class="meta narrow">{{ [r.roaster_id, where] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %} · <span class="status">{{ label[r.status] }}</span>{% endif %}{% if r.chain %} · <span class="status">{{ chain_word[r.chain] }}</span>{% endif %}</span></th>
       <td class="wide c-domain" title="{{ r.roaster_id }}">{% if r.url %}<a class="ev" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.roaster_id }}</a>{% else %}{{ r.roaster_id }}{% endif %}</td>
       <td class="wide c-city" title="{{ r.city or '' }}">{{ r.city or "—" }}</td>
       <td class="wide c-state">{{ r.state or "—" }}</td>
@@ -70,7 +89,28 @@
       <td class="wide c-seen">{{ (r.first_seen | string)[:10] if r.first_seen else "—" }}</td>
       <td class="act"><details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="Actions for {{ name }}">⋯</summary>
         <div class="menu">
+          {% if r.in_registry and chains_read %}<p class="meta">{{ chain_why(r) }}</p>{% endif %}
           {% if r.status and not writes_off %}{% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Clear the flag", [item]) }}{% endif %}{% if r.status == "roaster" %}<button class="btn text inline" type="button" data-pull-one="{{ r.roaster_id }}">Pull now</button>{% endif %}{% endif %}
+          {% if r.in_registry and chains_read and not writes_off %}
+            {# The way to the other status: Clear when clearing the flag gives it (the count decides the other way), else
+               a flag. A flag that the count agrees with can also be cleared, so the count decides from then on. #}
+            {% set coffees = r.coffees_listed or 0 %}
+            {% set listed = many(coffees, "listed coffee", "listed coffees") | trim %}
+            {% set by_count = r.stores is not none and r.stores > chain_stores %}
+            {% set is_chain = r.chain in ("over " ~ chain_stores ~ " stores", "flagged a chain") %}
+            {% set when = "when a draft with this flag is published." %}
+            {% set clear_text = "Its store count decides again: " ~ (n(r.stores) ~ " stores, so " if r.stores is not none else "") ~ ("a chain" if by_count else "not a chain") ~ ", " ~ when %}
+            {% if r.chain_flag and is_chain != by_count %}
+              {{ chain_flag(r, name, "clear", "Clear the chain flag", "Clear the chain flag on " ~ name ~ "?", clear_text) }}
+            {% else %}
+              {% if is_chain %}
+                {{ chain_flag(r, name, "not_chain", "Not a chain", "Mark " ~ name ~ " as not a chain?", (("Its " ~ listed ~ " can be public again " ~ when) if coffees else ("It lists no coffee now; its coffees can be public " ~ when)) ~ (" It counts " ~ n(r.stores) ~ " stores; the flag decides over the count." if by_count else "")) }}
+              {% else %}
+                {{ chain_flag(r, name, "chain", "Mark as a chain", "Mark " ~ name ~ " as a chain?", "It stays crawled. " ~ (("Its " ~ listed ~ " " ~ ("leaves" if coffees == 1 else "leave")) if coffees else "It lists no coffee now; from then on its coffees stay out of") ~ " the public data, the site and the shares " ~ when) }}
+              {% endif %}
+              {% if r.chain_flag %}{{ chain_flag(r, name, "clear", "Clear the chain flag", "Clear the chain flag on " ~ name ~ "?", clear_text) }}{% endif %}
+            {% endif %}
+          {% endif %}
           {% if r.url %}<a class="btn text inline" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">Open site</a>{% endif %}
         </div></details></td>
     </tr>{% endfor %}</tbody>

@@ -17,7 +17,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
 | Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
-| Sources | Every place discovery has listed (lake `candidates`: roastery-tagged places, and cafés and coffee shops with a storefront website) and every roaster in the registry, one row per domain, with its status (Roaster (inherited), Roaster, Not a roaster, Unreviewed), its hints (tag, "roast" in the name), and what the last discovery run added or dropped | Search (a pasted address finds its domain); one Filter / Sort panel (status, origin, tag, state, city); on a desktop a table whose headers sort by Name, Domain, City, State, Tag, Hints, Status or First seen (on a phone, the sheet's sort options); select rows (box or tap) and flag them Roaster or Not a roaster from the action bar, or one place from its ⋯ menu (also Clear the flag, Open site); Undo | the lake's `candidates`, the served release's `dim_roaster`, the control plane |
+| Sources | Every place discovery has listed (lake `candidates`: roastery-tagged places, and cafés and coffee shops with a storefront website) and every roaster in the registry, one row per domain, with its status (Roaster (inherited), Roaster, Not a roaster, Unreviewed), whether a registry roaster is a chain, its hints (tag, "roast" in the name), and what the last discovery run added or dropped | Search (a pasted address finds its domain); one Filter / Sort panel (status, chain, origin, tag, state, city); on a desktop a table whose headers sort by Name, Domain, City, State, Tag, Hints, Status or First seen (on a phone, the sheet's sort options); select rows (box or tap) and flag them Roaster or Not a roaster from the action bar, or one place from its ⋯ menu (also Clear the flag, Open site); a registry roaster's chain flag, with a reason, from its ⋯ menu; Undo | the lake's `candidates`, the served release's `dim_roaster`, the control plane |
 | Log | Every write: who, when, what, the outcome | download the decisions (for `coffeedata decide export-labels`) | the control plane |
 
 The Catalog copies a build's two files into a local DuckDB file once (releases are immutable) and filters there.
@@ -130,6 +130,19 @@ way the Catalog does, and searches and pages there (100 rows a page; about 47,00
 - **Fails closed.** If the served release's `dim_roaster` can't be read while there are flags, Release says so and
   refuses a draft, rather than treating the registry as empty. If the flags can't be read (control plane down),
   Sources still lists the places but shows no status and no flag counts.
+- **Chain flags.** The owner's decision: chains are still crawled, but left out of the public data, and a chain is
+  anything with more than 20 stores (dbt `int_roaster_state.is_chain`, var `chain_store_threshold`; the store count
+  is the registry's `locations`). A registry roaster's ⋯ menu says whether it is a chain and why (its count, or the
+  flag and its reason), and offers the way to the other status: Mark as a chain, Not a chain, or Clear the chain
+  flag where clearing gives the other status (the count decides again). Each asks a reason in the confirm sheet. The
+  flag is written to `control.chain_flags` (append-only; migration `0006_chains.sql` starts it with the four rows of
+  `dbt/seeds/chain_overrides.csv`), CSRF-checked, idempotent on its key, audited (`chain_flag`) in the same
+  transaction, and refused with 409 if another tab changed the roaster's flag since the page loaded. The next draft's
+  snapshot carries every flag in effect as `chains` ([{roaster_id, chain}], even when empty), and `coffeedata build`
+  passes it to dbt as var `chain_flags`, which then replaces the seed (#146). A snapshot from before chain flags
+  carries none, and dbt keeps reading the seed. Release counts the chain flags not in the served release, so the
+  first draft after this ships carries the four seed rows. Without the control plane, Sources shows no chain word,
+  no chain count and no Chain filter.
 - **Hints never flag anything.** The hints are the Overture tag and "roast" in the name. The evidence from the
   screening experiment (#130) is not shown: it is not in the lake, and the admin reads only the lake.
 
@@ -172,7 +185,7 @@ defaults.
 
 Postgres (`admin/controlplane.py`, migrations in `admin/migrations/*.sql`): the audit trail, decisions as events,
 job runs, snapshots, drafts, rule settings versions, keyword filters (as events) and the owner's review of what a
-filter change excludes, crawl flags and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
+filter change excludes, crawl flags, chain flags and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
 TRUNCATE). The admin applies its migrations on its first use of the database after it starts (the first page or write
 that needs it), once each, under an advisory lock, in a `control` schema it creates and owns. They are additive and
 forward-only, so rolling the admin's image back to an earlier one leaves a schema it can still use.

@@ -14,7 +14,7 @@ from coffeedata import classify, decisions
 from coffeedata.lake import SCHEMAS, Lake
 
 from .test_admin import B1, W1, W3, _ops, build_lake, tree
-from .test_admin_actions import _draft_build, audit, make, post
+from .test_admin_actions import _draft_build, audit, chains_published, make, post
 
 # The served build B1's products. "apron" on titles newly excludes c1 (a public coffee Claude calls coffee), x2 (not
 # public; Claude calls it not coffee) and x7 (not public; no verdict yet); not x3 (the code already excludes a mug),
@@ -350,6 +350,7 @@ def _drafted(tmp_path, c, lake, fake, phrase="apron", event="add", based_on=""):
 
 
 def test_a_draft_carries_the_filters_and_publish_takes_the_short_path_at_50_or_fewer(tmp_path, lake, pg_url):
+    chains_published(lake.root)  # the seed's chain flags are served: only this test's change is pending
     app, c, fake = make(tmp_path, lake.root, pg_url)
     _add(c)
     page = c.get("/part/release").text

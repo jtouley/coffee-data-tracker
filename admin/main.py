@@ -43,7 +43,7 @@ from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
 from .logs import emit
 from .runjobs import JobsError
-from .sources import COLUMNS, SORTS, SourceFilters, SourceList
+from .sources import CHAIN_STORES, COLUMNS, SORTS, SourceFilters, SourceList
 from .store import StoreError
 from .writes import StartedUnrecorded, Writes
 
@@ -63,7 +63,7 @@ READS = {
     "sources": "candidates, the served release's dim_roaster and the source flags",
     "log": "the control plane's audit",
 }
-AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag",
+AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag", "chain_flag",
            "source_flag", "source_flag_undo", "keyword_filter", "keyword_filter_undo", "prefilter_review")  # fmt: skip
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
@@ -844,11 +844,15 @@ def create_app(
 
             async def flags():
                 await on().ready()
-                return await asyncio.to_thread(on().control.source_flags)
+                return await asyncio.gather(asyncio.to_thread(on().control.source_flags),
+                                            asyncio.to_thread(on().control.chain_flags))  # fmt: skip
 
-            marks = await plane(flags, None, off) if writes else None  # None: not read, statuses unknown
+            # None: not read, so no status and no chain flag is shown (an inherited or a counted label could be wrong)
+            marks, chains = (await plane(flags, None, off) if writes else None) or (None, None)
             try:
-                data = await reader.run(lambda _lake, _con: sources.search(served.get("build_id"), f, marks))
+                data = await reader.run(
+                    lambda _lake, _con: sources.search(served.get("build_id"), f, marks, chains)
+                )
             except Exception as e:  # noqa: BLE001 - no discovery run has written the source list yet
                 if not (no_files(e) or "HTTP 404" in str(e)):
                     raise
@@ -856,9 +860,10 @@ def create_app(
             facets = (
                 SourceFilters.FACETS
                 if marks is not None
-                else tuple(x for x in SourceFilters.FACETS if x != "status")
+                else tuple(x for x in SourceFilters.FACETS if x not in ("status", "chain"))
             )
             return {"data": data, "f": f, "facets": facets, "writes_off": off, "flags_read": marks is not None,
+                    "chains_read": chains is not None and marks is not None, "chain_stores": CHAIN_STORES,
                     "sorts": SORTS, "columns": COLUMNS,
                     "qs": _qs(request, f, None, "/sources")}  # fmt: skip
 
@@ -1009,6 +1014,10 @@ def create_app(
         return await write(
             request, lambda a, k, b: on().classify_review(a, k, draft_id, b.get("override") or None)
         )
+
+    @app.post("/api/roasters/{roaster_id}/chain")
+    async def chain_flag(request: Request, roaster_id: str):
+        return await write(request, lambda a, k, b: on().set_chain(a, k, roaster_id, b))
 
     @app.post("/api/roasters/{roaster_id}/crawl")
     async def crawl_flag(request: Request, roaster_id: str):

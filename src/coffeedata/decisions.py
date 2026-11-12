@@ -78,6 +78,20 @@ def check(doc: object) -> list[dict]:
         prefilter(doc)
     except (ValueError, TypeError, KeyError) as e:
         raise SnapshotError(f"its keyword filters can't be read: {e}") from e
+    chains_ = doc.get("chains", [])
+    if (
+        not isinstance(chains_, list)
+        or not all(
+            isinstance(c, dict)
+            and set(c) == {"roaster_id", "chain"}
+            and isinstance(c["roaster_id"], str)
+            and c["roaster_id"]
+            and isinstance(c["chain"], bool)
+            for c in chains_
+        )
+        or len({c["roaster_id"] for c in chains_}) != len(chains_)
+    ):
+        raise SnapshotError("chains must be a list of {roaster_id, chain}, one per roaster")
     for k in ("sources", "not_roasters"):
         listed = doc.get(k, [])
         if not isinstance(listed, list) or not all(isinstance(r, str) and r for r in listed):
@@ -99,12 +113,15 @@ def check(doc: object) -> list[dict]:
 
 def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], settings: dict | None = None,
              roasters: Iterable[dict] = (), sources: Iterable[str] = (),
-             not_roasters: Iterable[str] = (), keyword_filters: Iterable[dict] = ()) -> dict:  # fmt: skip
+             not_roasters: Iterable[str] = (), keyword_filters: Iterable[dict] = (),
+             chains: Iterable[dict] | None = None) -> dict:  # fmt: skip
     """A snapshot document. `decisions` are effective decisions (one per subject); `settings` the rule settings
     version to build with (left out: the defaults); `roasters` each roaster's current crawl flag where it was set;
     `sources` the source-list places the owner flagged as roasters (the registry adds them: registry.current);
     `not_roasters` the registry's roasters the owner flagged not a roaster (the registry drops them);
-    `keyword_filters` the owner's keyword filters ({phrase, field}; left out when there are none)."""
+    `keyword_filters` the owner's keyword filters ({phrase, field}; left out when there are none); `chains` the
+    owner's chain flags ({roaster_id, chain}: over the store count, either way), kept even when empty, since an
+    empty list means "no override", not "the seed's" (None: left out, as before chain flags existed)."""
     if not SNAPSHOT_ID.fullmatch(snapshot_id):
         raise ValueError("bad snapshot id")
     doc = {"version": VERSION, "snapshot_id": snapshot_id, "created_at": created_at,
@@ -121,8 +138,19 @@ def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], setti
         doc["not_roasters"] = not_roasters
     if kf := classify.keyword_filters(keyword_filters):
         doc["prefilter"] = [f.as_dict() for f in kf]
+    if chains is not None:
+        doc["chains"] = sorted(({"roaster_id": c["roaster_id"], "chain": bool(c["chain"])} for c in chains),
+                               key=lambda c: c["roaster_id"])  # fmt: skip
     check(doc)
     return doc
+
+
+def chain_flags(doc: dict | None) -> list[dict] | None:
+    """The chain flags a snapshot builds with ([{roaster_id, chain}], dbt var chain_flags), or None when it carries
+    none (a snapshot from before chain flags, or no snapshot): dbt then reads its seed, dbt/seeds/chain_overrides.csv."""
+    if not doc or "chains" not in doc:
+        return None
+    return [dict(c) for c in doc["chains"]]
 
 
 def prefilter(doc: dict | None) -> tuple[classify.KeywordFilter, ...]:

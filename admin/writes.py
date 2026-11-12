@@ -620,6 +620,22 @@ class Writes:
         plan, _n_unseen = await self.classify_review_plan(draft_id)
         return await self._start(actor, key, plan, override)
 
+    # --- chain flags (Sources' row menu) --------------------------------------------------------------------------
+
+    async def set_chain(self, actor: str, key: str, roaster_id: str, body: dict) -> dict:
+        """Flag a registry roaster a chain or not a chain (over its store count), or clear its flag. A reason is
+        required; `seen` is the flag the page showed, so a change made since in another tab is a Conflict."""
+        await self.ready()
+        flag = body.get("chain")
+        if flag not in ("chain", "not_chain", "clear"):
+            raise ValueError("chain is chain, not_chain or clear")
+        seen = body.get("seen")
+        out = await asyncio.to_thread(self.control.set_chain, actor, key, roaster_id, flag,
+                                      reason_of(body.get("reason")),
+                                      seen if seen in ("chain", "not_chain", "none") else None)  # fmt: skip
+        written(action="chain_flag", subject=roaster_id, outcome="ok", chain=flag)
+        return out
+
     # --- the source list's flags ---------------------------------------------------------------------------------
 
     async def flag_sources(self, actor: str, key: str, body: dict) -> dict:
@@ -654,12 +670,13 @@ class Writes:
         """The effective decisions, rule settings, crawl flags and source-list roasters against the served build's
         snapshot: what a draft would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
-        effective, settings, states, flags, kf = await asyncio.gather(
+        effective, settings, states, flags, kf, chain_rows = await asyncio.gather(
             asyncio.to_thread(self.control.effective),
             asyncio.to_thread(self.control.settings),
             asyncio.to_thread(self.control.roaster_states),
             asyncio.to_thread(self.control.source_flags),
             asyncio.to_thread(self.control.keyword_filters),
+            asyncio.to_thread(self.control.chain_flags),
         )
         if served is None:
             served = await self.read(queries.served)
@@ -707,7 +724,14 @@ class Writes:
             )
         sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
                                  | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
-        mine = (now, now_settings, set(off), sources, dropped, prefilter)
+        # The chain flags (Sources): each roaster's flag over its store count. A served snapshot from before chain
+        # flags carries none, so every flag is a change until a draft carries them.
+        chains = {r: f["flag"] == "chain" for r, f in chain_rows.items()}
+        was_chains = {c["roaster_id"]: c["chain"] for c in snap.chain_flags(served_doc) or []}
+        chains_changed = [{"roaster_id": r, "flag": "clear" if r not in chains else
+                           ("chain" if chains[r] else "not_chain")}
+                          for r in sorted(set(chains) | set(was_chains)) if chains.get(r) != was_chains.get(r)]  # fmt: skip
+        mine = (now, now_settings, set(off), sources, dropped, prefilter, chains)
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -719,7 +743,8 @@ class Writes:
             got = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
             if got and ({(x["subject_kind"], x["subject"], x["action"]) for x in got["decisions"]},
                         snap.settings_of(got), snap.crawl_off(got), snap.source_roasters(got),
-                        snap.not_roasters(got), snap.prefilter(got)) == mine:  # fmt: skip
+                        snap.not_roasters(got), snap.prefilter(got),
+                        {c["roaster_id"]: c["chain"] for c in snap.chain_flags(got) or []}) == mine:  # fmt: skip
                 drafted = d["draft_id"]
             break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
@@ -727,6 +752,8 @@ class Writes:
                 "crawl_off": off, "crawl_changed": crawl_changed, "sources": sources, "not_roasters": dropped,
                 "sources_changed": sources_changed, "sources_error": sources_error,
                 "prefilter": [x.as_dict() for x in prefilter], "prefilter_changed": prefilter_changed,
+                "chains": [{"roaster_id": r, "chain": c} for r, c in sorted(chains.items())],
+                "chains_changed": chains_changed,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
@@ -734,13 +761,13 @@ class Writes:
         if p["sources_error"]:
             raise registry.Refused([p["sources_error"]])
         if not (p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
-                or p["prefilter_changed"]):  # fmt: skip
-            raise ValueError("Nothing to build: the decisions, rule settings, keyword filters, crawl flags and source "
+                or p["prefilter_changed"] or p["chains_changed"]):  # fmt: skip
+            raise ValueError("Nothing to build: the decisions, rule settings, keyword filters, crawl, source and chain "
                              "flags are the served release's")  # fmt: skip
         sid, did = new_id("s").lower(), new_id("draft").lower()
         doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"], p["settings"],
                             [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]], p["sources"],
-                            p["not_roasters"], p["prefilter"])  # fmt: skip
+                            p["not_roasters"], p["prefilter"], p["chains"])  # fmt: skip
         digest = snap.digest(doc)
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]
