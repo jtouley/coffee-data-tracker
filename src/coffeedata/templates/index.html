@@ -312,7 +312,8 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     CITIES = [...cities].sort((a, b) => b.length - a.length || a.localeCompare(b));  // "michigan city" before "michigan"
     const fill = (id, values) => values.forEach(v => {
       const opt = document.createElement("option"); opt.value = v; opt.textContent = v; $(id).appendChild(opt); });
-    const distinct = col => [...new Set(rows.map(r => r[C[col]]).filter(Boolean))].sort();
+    // Alphabetical by the reader's locale: origins are ISO 3166-1 short names, some not ASCII ("Côte d'Ivoire").
+    const distinct = col => [...new Set(rows.map(r => r[C[col]]).filter(Boolean))].sort((a, b) => a.localeCompare(b));
     fill("origin", distinct("origin_country")); fill("process", distinct("process"));
     // The roasters' states by name; render() writes each option's name and count.
     fill("state", distinct("roaster_state").filter(v => STATES[v]).sort((a, b) => STATES[a].localeCompare(STATES[b])));

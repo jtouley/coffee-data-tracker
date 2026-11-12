@@ -91,7 +91,7 @@ value. The lake is private and this repository is public. Get the values locally
 | `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (enrichment not run, a key change), not a slow backlog, which only climbs |
 | `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing |
 | `fetch` | `build:run_ok_share`, `build:run_catalog_ok_share`, `build:adapter_ok_share:<platform>` (mart_build_profile, reused) | fetches failing. fetch-health (RUNBOOK.md §8) should have said so too |
-| `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
+| `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`, `origin_countries_are_mapped`: an origin spelling the ISO seed doesn't have, published with no country until it is labelled and added, eval/origin_iso); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
 | `freshness` | `freshness:served_age_days`: days from the served release's run (a Monday) to the check (Tuesday) | warning above 7 (one missed week), critical above 14 (two). No build passed, or nothing was served |
 
 First checks:
@@ -267,8 +267,7 @@ regressed. It is now the rules' own abstain rate, from `dim_coffee.rules_complet
 rules' `extract.needs_llm`). Releases built before that column are read from their values: Claude's rows (Claude is
 only asked when the rules abstain) plus the rules' rows that fail the same test. Over the four releases in the
 history it is 0.88–0.93 on every platform, flat. Claude's progress moved to `coverage:enrichment`, which went 0,
-0, 0.046, 0.074 overall. Judged with these bounds, the 11-09 release breaches neither. A short entry in
-`config/prod_health_expected.toml` also covers the old climb for runs up to 2026-11-16.
+0, 0.046, 0.074 overall. Judged with these bounds, the 11-09 release breaches neither.
 
 **Simulated on the 11-09 release** (a copy, blanking Shopify grams):
 - a 3-point drop warns, and so does a 4-point drop;

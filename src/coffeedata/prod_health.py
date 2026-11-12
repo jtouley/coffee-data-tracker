@@ -100,6 +100,7 @@ WARN_TESTS = (
     "adapter_volume_in_band",
     "coverage_claims_match_build",
     "verdicts_cover_catalog",
+    "origin_countries_are_mapped",  # a captured origin spelling the ISO seed doesn't have (published with no country)
 )
 
 

@@ -77,18 +77,3 @@ from_run = "2026-11-16"
 until_run = "2026-11-16"
 pr = 136
 why = "bag weights re-read: the median bag size and price per 100 g may move once (the PR saw market medians move 0)"
-
-# The enrichment backlog, not a regression: abstain:enrichment counted the coffees Claude had filled in
-# (enrichment_method = 'llm'), so it climbed as Claude's 2,000-a-week backlog advanced. In the 11-09 release blocked
-# WooCommerce stores reached the front of the oldest-first queue and WooCommerce went 0.013 -> 0.196. The metric now
-# measures the rules' own abstain rate and coverage:enrichment Claude's progress (the PR that split them), with
-# baselines regenerated; this covers the climb for the releases served before that is in place. Short window.
-
-[[expected]]
-metric = "abstain:enrichment*"
-change = "up"
-by = 0.20
-from_run = "2026-11-09"
-until_run = "2026-11-16"
-pr = 150
-why = "Claude's enrichment backlog advancing (WooCommerce 0.013 -> 0.196 in run 2026-11-09), counted as abstain"
