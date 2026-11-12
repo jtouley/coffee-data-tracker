@@ -523,6 +523,9 @@ rule), with `main` = `branch2` (`main`'s rules, unchanged since `a4baff0`) and t
 | square_online | 1,177 | 52 |
 | **all** | **28,269** (30,022 less 1,753 labeled before) | **500** (378 stores, largest 7) |
 
+Labelers (Claude subagents): A and B are claude-haiku-5-5, independent and blind to each other and to every
+prediction; C, the blind tiebreak on their disagreements, is claude-sonnet-5-5.
+
 500 options to label, one per coffee: the two rules publish the same value and option for all 500 coffees (across the
 population they differ on 81 of 30,022), and 142 publish nothing under both, so their drawn option is labeled.
 `items_gate-139.json`, `pred_branch2_gate-139.json` and `pred_branch5_gate-139.json` are in `SHA256SUMS`.
