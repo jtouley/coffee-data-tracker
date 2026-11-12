@@ -13,6 +13,7 @@ import random
 import re
 import threading
 import time
+import unicodedata
 from collections import Counter
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
@@ -271,16 +272,34 @@ def _schedule_only_name(name: str) -> bool:
     )
 
 
+def _host_spellings(h: str) -> set[str]:
+    """Every host `h` (a host, domain or URL) can name: the host the HTTP library will connect to (httpx.URL, which
+    maps other dot characters to "." and applies IDNA) and the host urlsplit reads, for the text as written and for
+    its compatibility-normalized form (NFKC: full-width letters and dots). Where either can't read it, also its
+    host-like parts, so a malformed value that contains the store is still refused."""
+    names: set[str] = set()
+    for text in dict.fromkeys((h, unicodedata.normalize("NFKC", h))):
+        target = text if "//" in text else f"//{text}"
+        failed = False
+        try:
+            names.add(httpx.URL(target).raw_host.decode("ascii", "replace"))
+        except (httpx.InvalidURL, ValueError, TypeError, UnicodeError):
+            failed = True
+        try:
+            names.add(urlsplit(target).hostname or "")
+        except ValueError:
+            failed = True
+        if failed:
+            names |= set(re.findall(r"[a-z0-9][a-z0-9.-]*", text.lower()))
+    return {n.lower().strip(".") for n in names if n}
+
+
 def schedule_only_host(host: str | None) -> bool:
-    """Whether `host` (a host, domain or URL) is, or is under, one of SCHEDULE_ONLY_HOSTS_SHA256. Never raises: a
-    value urlsplit can't read ("[www.roaster.example](http", an unmatched bracket) is refused when any host-like part
-    of it is the store, and is otherwise not the store."""
-    h = (host or "").strip().lower()
-    try:
-        name = urlsplit(h if "//" in h else f"//{h}").hostname or ""
-    except ValueError:
-        return any(_schedule_only_name(part) for part in re.findall(r"[a-z0-9][a-z0-9.-]*", h))
-    return _schedule_only_name(name)
+    """Whether `host` (a host, domain or URL) is, or is under, one of SCHEDULE_ONLY_HOSTS_SHA256, in any spelling the
+    HTTP library treats as that host (_host_spellings). Never raises: a malformed value ("[www.roaster.example](http",
+    an unmatched bracket) is refused when any host-like part of it is the store, and is otherwise not the store."""
+    h = (host or "").strip()
+    return any(_schedule_only_name(name) for name in _host_spellings(h))
 
 
 # What Shopify's closed or deactivated storefront page says (lowercased). Read only on a non-200, non-JSON answer
@@ -877,9 +896,8 @@ class PoliteClient:
         sent_params: set[str] = set()
         for hop in range(MAX_REDIRECTS + 1):
             if not self.schedule_only_ok and schedule_only_host(url):
-                raise ScheduleOnlyHost(
-                    f"{urlparse(url).hostname}: fetched only by the scheduled importers job"
-                )
+                # the message never parses the URL again: a malformed one is refused as cleanly as any other
+                raise ScheduleOnlyHost("refused: a host only the scheduled importers job may fetch")
             if not robots and not self._allowed(url):
                 raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
             r = self._send_retrying(url, params, page=not robots)

@@ -8,6 +8,7 @@ no AI agent may access Royal's site, so nothing in this file was built from it.
 
 from __future__ import annotations
 
+import contextlib
 import dataclasses
 import hashlib
 import json
@@ -184,6 +185,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
 
     def fake(lake, client, *a, **k):
         seen["ok"] = client.schedule_only_ok
+        seen["deadline"] = client.deadline is not None
         return []
 
     monkeypatch.setattr(importers, "snapshot", fake)
@@ -191,7 +193,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
         cli.main(["importer-snapshot"])
     except SystemExit as e:
         assert e.code in (0, None)
-    assert seen == {"ok": True}
+    assert seen == {"ok": True, "deadline": True}
     assert PoliteClient().schedule_only_ok is False  # every other client refuses it
 
 
@@ -563,6 +565,9 @@ def test_royals_address_is_only_in_the_scheduled_step_of_the_importers_workflow(
     assert (
         wf["jobs"]["snapshot"]["timeout-minutes"] * 60 >= worst + 15 * 60
     )  # plus the other importers and upload
+    # and the run itself stops a little before the job is killed, so a long pass is a recorded failure
+    timeout_s = wf["jobs"]["snapshot"]["timeout-minutes"] * 60
+    assert timeout_s - 20 * 60 <= importers.IMPORTERS_DEADLINE_S <= timeout_s - 10 * 60
 
 
 def _workflow_host() -> str:
@@ -571,6 +576,88 @@ def _workflow_host() -> str:
     m = ROYAL_HOST.search(text)
     assert m
     return m.group(0)
+
+
+def _equivalent_spellings(host: str) -> list[str]:
+    """Spellings the HTTP library reads as `host` (it maps other dot characters to "." and ignores case, a trailing
+    dot, userinfo and the port), and compatibility forms (full-width) a client could be handed."""
+    dots = ("\u3002", "\uff0e", "\uff61")
+    full = "".join(chr(ord(c) + 0xFEE0) if "!" <= c <= "~" else c for c in host)
+    return [
+        host.upper(),
+        f"{host}.",
+        *(host.replace(".", d) for d in dots),
+        *(f"www{d}{host.replace('.', d)}" for d in dots),
+        full,
+        f"https://user@{host}:443/products.json",
+        f"https://{host.upper()}./",
+        f"https://{host.replace('.', dots[0])}/robots.txt",
+    ]
+
+
+def test_every_spelling_the_http_library_treats_as_the_store_is_refused(lake):
+    """The refusal compares the host the HTTP library will actually connect to, so no equivalent spelling slips
+    past it (a mock transport records any request; nothing leaves this machine either way)."""
+    from datetime import UTC, datetime
+
+    from coffeedata import http, registry
+
+    host = _workflow_host()
+    forms = _equivalent_spellings(host)
+    for form in forms:
+        assert http.schedule_only_host(form), ascii(form)
+        url = form if "//" in form else f"https://{form}/products.json"
+        with contextlib.suppress(
+            httpx.InvalidURL
+        ):  # the library reads it as the store, or rejects it outright
+            assert httpx.URL(url).raw_host.decode().rstrip(".").removeprefix("www.") == host, ascii(form)
+    calls: list[httpx.Request] = []
+    transport = httpx.MockTransport(lambda r: calls.append(r) or httpx.Response(200, text=""))
+    with PoliteClient(min_interval=0, retries=1, transport=transport) as client:
+        for form in forms:
+            url = form if "//" in form else f"https://{form}/products.json"
+            with pytest.raises(http.ScheduleOnlyHost):
+                client.get(url)
+    assert calls == []
+    # the roaster crawl's side: never a storefront, never in the registry, whatever the spelling
+    for form in forms:
+        assert not registry.is_storefront_host(registry.normalize_domain(form)), ascii(form)
+    lake.write("registry", "registry/source=manual/x.parquet", [
+        {"added_at": datetime.now(UTC), "source": "manual", "roaster_id": rid, "name": "Added"}
+        for rid in [*(registry.normalize_domain(f) for f in forms), "realroaster.com"]
+    ])  # fmt: skip
+    ids = {s.roaster.roaster_id for s in registry.current(lake)}
+    assert ids & {registry.normalize_domain(f) for f in forms} == set() and "realroaster.com" in ids
+    # look-alikes that aren't the store stay allowed
+    for other in (f"not{host}", f"{host}.evil.example", f"https://x.example/?ref={host}", "shop.example"):
+        assert not http.schedule_only_host(other), other
+
+
+def test_a_malformed_url_naming_the_store_is_refused_as_such(monkeypatch):
+    """ScheduleOnlyHost (a Blocked, which callers handle), never a ValueError from parsing the URL again."""
+    from coffeedata import http
+
+    host = _workflow_host()
+    calls: list[httpx.Request] = []
+    transport = httpx.MockTransport(lambda r: calls.append(r) or httpx.Response(200))
+    with PoliteClient(min_interval=0, retries=1, transport=transport) as client:
+        for url in (f"https://[{host}/products.json", f"https://{host}]/", f"https://[x]({host})/"):
+            with pytest.raises(http.ScheduleOnlyHost):
+                client.get(url)
+    assert calls == []
+
+
+def test_a_run_past_its_deadline_is_a_recorded_failure(tmp_path, monkeypatch):
+    """The weekly command's client stops at IMPORTERS_DEADLINE_S: a pass still running then fails as
+    DeadlineReached, recorded per importer, nothing written, instead of the job being killed."""
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    calls: list[httpx.Request] = []
+    with _store(_pages_of(250), calls) as client:
+        client.deadline = 0.0  # already passed
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert res[0]["status"] == "failed" and "DeadlineReached" in res[0]["error"] and calls == []
+    assert not (lake.root / importers.path(importers.ROYAL, MON)).exists()
 
 
 def test_no_other_client_can_reach_the_store_and_the_roaster_crawl_never_lists_it(lake, monkeypatch):
@@ -765,6 +852,8 @@ def _cells(title: str = "Invented Lot", tags: list[str] = (), body: str = "") ->
         (_cells("Finca Las Flores Microlot - Lot 70412"), "origin", None),  # not Flores, Indonesia
         (_cells("Java Natural - Lot 70412"), "origin", None),  # Java is a variety too
         (_cells("Nicaragua Java Natural"), "origin", "Nicaragua"),
+        (_cells("DR Congo Kivu Washed - Lot 70412"), "origin", "Democratic Republic of the Congo"),
+        (_cells("Congo Kivu Washed - Lot 70412"), "origin", None),  # Congo alone: two countries
         (_cells("Kenya AA - No. 2 Warehouse", ["Warehouse: No. 2"]), "warehouse", "No. 2"),  # a number
         (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
         (_cells("Kenya Harvest Lot 2025"), "lot", None),  # a year, not a lot number

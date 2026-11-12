@@ -262,7 +262,9 @@ _WAREHOUSE = re.compile(
 )
 # Island and state names (origins.ALIASES) that mean one origin in a coffee title; the rest (Java, Flores, Bali,
 # Congo) are also a variety, a farm name or two countries, so on a title alone they abstain.
-_TITLE_PLACES_OK = frozenset({"sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor"})
+_TITLE_PLACES_OK = frozenset(
+    {"sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor", "dr congo"}
+)
 _ROYAL_DECAF = re.compile(
     r"\bdecaf|\bdecaffeinated\b|\bswiss water\b|\bmountain water\b|\bsugar ?cane\b|\bethyl acetate\b|\bco2\b",
     re.I,
