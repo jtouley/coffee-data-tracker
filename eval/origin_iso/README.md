@@ -78,22 +78,29 @@ Guinea).
   held-out part, so the .2 row is fitted to these labels; the frozen row is the unfitted score.
 - **The owner's rule (at least 95% weighted by coffees, full population): met, 100%.**
 - No spelling is unmapped, so `origin_countries_are_mapped` passes on this data.
-- Floor: `tests/test_origin_iso_accuracy.py`, 149 of 149 spellings, at least 0.999 weighted, 0 wrong. It runs in the
+- Floor: `tests/test_origin_iso_accuracy.py`, 166 of 166 spellings since round 2 (149 at first), at least 0.999 weighted, 0 wrong. It runs in the
   ordinary test job (labels and seed are both in git).
 
-## Round 2 (review of #144): pending labels
+## Round 2 (review of #144)
 
-- **Seed rows without a census label.** 17 spellings: the ISO and common forms of every seeded country that weren't
-  already spellings ("Tanzania, United Republic of", "Viet Nam", "DR Congo", "Côte d'Ivoire", …), and 9 seed rows the
-  rules can produce or that only appear as parts of lists (Central African Republic, Gabon, Hawaii, Sierra Leone,
-  Sri Lanka, Sumatra, Trinidad and Tobago, Usa, Central American). Same guide, same blind protocol (two labelers on
-  Claude Haiku, a tiebreak), with no example listings. The 8 new forms join the seed only once labelled;
-  `test_every_seed_row_has_a_label` is a strict xfail until then.
+- **What was labelled.** 17 seed spellings without a census label: the ISO and common forms of seeded countries that
+  weren't already spellings ("Bolivia, Plurinational State of", "Congo, The Democratic Republic of the", "DR Congo",
+  "Côte d'Ivoire", "Lao People's Democratic Republic", "Tanzania, United Republic of", "Venezuela, Bolivarian
+  Republic of", "Viet Nam"), and 9 seed rows the rules can produce or that appear only inside lists (Central African
+  Republic, Gabon, Hawaii, Sierra Leone, Sri Lanka, Sumatra, Trinidad and Tobago, Usa, Central American). Same guide,
+  no example listings.
+- **Labelers:** Claude subagents on Claude Haiku (`claude-haiku-5-5`), blind to the mapping and to each other: A and B
+  over the packet, C for any disagreement. A and B agreed on 17 of 17 (Wilson 95% 81.6-100%), so C had nothing to
+  settle. Their files are not byte-identical (the notes differ); the labels are.
+- **Result.** The 9 existing rows agree with their labels. The 8 new forms joined the seed with their labelled codes
+  (seed version 2026-11-12.3), and `test_every_seed_row_has_a_label` now passes. Over all 166 labelled spellings:
+  166 agree (100%, Wilson 95% 97.7-100%), 0 wrong; weighted by coffees 100% of 21,923 (the new forms carry none, as
+  no coffee is captured with them yet). The floor is raised to 166 of 166.
 - The six spellings the review found missing in a seed restricted to the first batch (North America, Perú, Latin
-  America, Paraguay, Việt Nam, South America) are already in the census and the seed, labelled in round 1.
+  America, Paraguay, Việt Nam, South America) were already in the census and the seed, labelled in round 1.
 - `SHA256SUMS` holds the round-1 packet, census and guide hashes (written before any label) and round 2's packets and
-  prompts (prefix round2/). The packets quote product titles and descriptions, so they stay out of git; the hashes
-  let them be checked.
+  prompts (prefix round2/), written before round 2's labels. The packets quote product titles and descriptions, so
+  they stay out of git.
 
 ## Commands
 

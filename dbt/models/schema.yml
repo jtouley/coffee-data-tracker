@@ -946,11 +946,11 @@ seeds:
       3166-1: kind country with the alpha-2 and alpha-3 codes and the ISO English short name, and the sub-national
       region the spelling names (Hawaii, Sumatra); not_a_country (a continent or a region larger than a country) and
       ambiguous (a place two countries share, or a name several use: bare "Guinea", also part of Guinea-Bissau,
-      Equatorial Guinea and Papua New Guinea) carry no code. Version .2: Guinea became ambiguous on the census labels. A list of several places isn't listed: the transform
+      Equatorial Guinea and Papua New Guinea) carry no code. Version .2: Guinea became ambiguous on the census labels; .3 adds the ISO short and common forms of seeded countries, each blind-labelled first (eval/origin_iso round 2). A list of several places isn't listed: the transform
       reads it part by part (macros/origin_iso.sql). Measured over the full census of spellings in eval/origin_iso.
     config:
       meta:
-        mapping_version: "2026-11-11.2"
+        mapping_version: "2026-11-12.3"
         iso_standard: "ISO 3166-1:2020"
         iso_source: >-
           English short names (iso_short_name) as published by the ISO 3166 Maintenance Agency, in Debian iso-codes'

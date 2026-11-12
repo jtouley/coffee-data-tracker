@@ -37,8 +37,11 @@ which is this one. Add each later change's count here.
   after a targeted relabel of the one validation listing that moved against the change, then compared on validation.
   So validation no longer measures it cleanly; the next sealed test set drawn for origin is its first clean measure.
   To make the validation figure honest, every validation listing whose prediction differs between main and the
-  change (4, including the relabelled one) is being labelled again, blind, by two labelers and a tiebreak (packets
-  hashed in `eval/origin_iso/SHA256SUMS`, round2/); the validation floor is then set from that result, never lowered.
+  change (4, including the relabelled one) was labelled again, blind, by two labelers on Claude Haiku
+  (`claude-haiku-5-5`) with a tiebreak ready (packets hashed in `eval/origin_iso/SHA256SUMS`, round2/). A and B agreed
+  on all 4, and every settled label equals the one already in `labels_validation.json` (2 none, Mexico, Nicaragua),
+  so the file is unchanged. Scored on it: main 0879254's rules 96 of 111 agree, 12 wrong-country; this change 98 and
+  9. The validation floor stays at 98 / 9, set from this result.
   The rule's "and" is matched in any case since the review; on validation that changes nothing (98 / 9).
 
 ## Floor

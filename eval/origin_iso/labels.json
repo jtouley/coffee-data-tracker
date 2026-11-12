@@ -11,6 +11,11 @@
   "label": "MULTIPLE",
   "products": 0
  },
+ "Bolivia, Plurinational State of": {
+  "label": "BO",
+  "products": 0,
+  "round": 2
+ },
  "Brasil": {
   "label": "BR",
   "products": 1
@@ -67,6 +72,11 @@
   "label": "CM",
   "products": 13
  },
+ "Central African Republic": {
+  "label": "CF",
+  "products": 0,
+  "round": 2
+ },
  "Central America": {
   "label": "NOT_A_COUNTRY",
   "products": 1
@@ -78,6 +88,11 @@
  "Central America, Indonesia": {
   "label": "MULTIPLE",
   "products": 1
+ },
+ "Central American": {
+  "label": "NOT_A_COUNTRY",
+  "products": 0,
+  "round": 2
  },
  "Central American, Indonesia": {
   "label": "MULTIPLE",
@@ -175,6 +190,11 @@
   "label": "MULTIPLE",
   "products": 1
  },
+ "Congo, The Democratic Republic of the": {
+  "label": "CD",
+  "products": 0,
+  "round": 2
+ },
  "Costa Rica": {
   "label": "CR",
   "products": 1154
@@ -210,6 +230,16 @@
  "Cuba": {
   "label": "CU",
   "products": 10
+ },
+ "Côte d'Ivoire": {
+  "label": "CI",
+  "products": 0,
+  "round": 2
+ },
+ "DR Congo": {
+  "label": "CD",
+  "products": 0,
+  "round": 2
  },
  "Democratic Republic Of Congo": {
   "label": "CD",
@@ -263,6 +293,11 @@
   "label": "MULTIPLE",
   "products": 1
  },
+ "Gabon": {
+  "label": "GA",
+  "products": 0,
+  "round": 2
+ },
  "Guatemala": {
   "label": "GT",
   "products": 1713
@@ -306,6 +341,11 @@
  "Haiti": {
   "label": "HT",
   "products": 26
+ },
+ "Hawaii": {
+  "label": "US",
+  "products": 0,
+  "round": 2
  },
  "Hawaii, Usa": {
   "label": "US",
@@ -394,6 +434,11 @@
  "Kenya, Tanzania, Ethiopia": {
   "label": "MULTIPLE",
   "products": 1
+ },
+ "Lao People's Democratic Republic": {
+  "label": "LA",
+  "products": 0,
+  "round": 2
  },
  "Laos": {
   "label": "LA",
@@ -535,9 +580,24 @@
   "label": "MULTIPLE",
   "products": 0
  },
+ "Sierra Leone": {
+  "label": "SL",
+  "products": 0,
+  "round": 2
+ },
  "South America": {
   "label": "NOT_A_COUNTRY",
   "products": 1
+ },
+ "Sri Lanka": {
+  "label": "LK",
+  "products": 0,
+  "round": 2
+ },
+ "Sumatra": {
+  "label": "ID",
+  "products": 0,
+  "round": 2
  },
  "Sumatra, Brazil": {
   "label": "MULTIPLE",
@@ -551,6 +611,11 @@
   "label": "MULTIPLE",
   "products": 1
  },
+ "Tanzania, United Republic of": {
+  "label": "TZ",
+  "products": 0,
+  "round": 2
+ },
  "Thailand": {
   "label": "TH",
   "products": 39
@@ -558,6 +623,11 @@
  "Timor-Leste": {
   "label": "TL",
   "products": 26
+ },
+ "Trinidad and Tobago": {
+  "label": "TT",
+  "products": 0,
+  "round": 2
  },
  "Uganda": {
   "label": "UG",
@@ -571,9 +641,24 @@
   "label": "US",
   "products": 353
  },
+ "Usa": {
+  "label": "US",
+  "products": 0,
+  "round": 2
+ },
  "Venezuela": {
   "label": "VE",
   "products": 4
+ },
+ "Venezuela, Bolivarian Republic of": {
+  "label": "VE",
+  "products": 0,
+  "round": 2
+ },
+ "Viet Nam": {
+  "label": "VN",
+  "products": 0,
+  "round": 2
  },
  "Vietnam": {
   "label": "VN",
