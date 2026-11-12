@@ -35,7 +35,8 @@ chain_overrides as (
 {%- else %}
     select null::varchar as roaster_id, null::boolean as is_chain where false
     {%- for f in chain_flags %}
-    union all select '{{ f.roaster_id | replace("'", "''") }}', {{ 'true' if f.chain else 'false' }}
+    {# `chain` is a JSON boolean (decisions.check): rendered as true or false, and cast, so anything else fails #}
+    union all select '{{ f.roaster_id | replace("'", "''") }}', cast('{{ f.chain | string | lower }}' as boolean)
     {%- endfor %}
 {%- endif %}
 ),
