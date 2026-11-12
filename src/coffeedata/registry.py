@@ -23,11 +23,12 @@ SEED_FIELDS = [
     "city",
     "state",
     "sources",
+    # the store count (US Overture roastery places listing the site, discover.overture): dbt's int_roaster_state calls
+    # a roaster with more than chain_store_threshold of them a chain, unless dbt/seeds/chain_overrides.csv says not
     "locations",
     "confidence",
     "tagged_roastery",
     "roast_in_name",
-    "is_chain",
     "opted_out",
     "final_host",
     "platform",
@@ -103,8 +104,8 @@ def load_seed(path: Path = SEED) -> list[dict]:
 STATE_SQL = r"""
 with seed as (
     select roaster_id, name, coalesce(nullif(city, ''), null) as city, nullif(state, '') as state,
-           coalesce(try_cast(locations as integer), 1) as locations, coalesce(is_chain, 'false') = 'true' as is_chain,
-           coalesce(opted_out, 'false') = 'true' as opted_out, nullif(final_host, '') as final_host,
+           coalesce(try_cast(locations as integer), 1) as locations, coalesce(opted_out, 'false') = 'true' as opted_out,
+           nullif(final_host, '') as final_host,
            nullif(platform, '') as platform, try_cast(nullif(last_probed, '') as date) as last_probed,
            sources, nullif(country, '') as country, nullif(lower(trim(alias_of)), '') as alias_of
     from read_csv(?, header = true, all_varchar = true)
@@ -121,7 +122,7 @@ shared_hosts as (select host, kind from read_csv('{shared_hosts}', header = true
 roasters as (
     select coalesce(s.roaster_id, a.roaster_id) as roaster_id, coalesce(a.name, s.name) as name,
            coalesce(a.city, s.city) as city, coalesce(a.state, s.state) as state,
-           coalesce(s.locations, a.locations, 1) as locations, coalesce(s.is_chain, false) as is_chain,
+           coalesce(s.locations, a.locations, 1) as locations,
            coalesce(a.opted_out, false) or coalesce(s.opted_out, false) as opted_out,
            s.final_host as seed_host, s.platform as seed_platform, s.last_probed as seed_probed,
            concat_ws('+', s.sources, a.sources) as sources, coalesce(s.country, 'US') as country, s.alias_of,
@@ -170,7 +171,7 @@ last_ok as (
 ),
 base as (
 select
-    r.roaster_id, r.name, r.city, r.state, r.locations, r.is_chain, r.opted_out, r.sources, r.country, r.alias_of,
+    r.roaster_id, r.name, r.city, r.state, r.locations, r.opted_out, r.sources, r.country, r.alias_of,
     r.first_added, rc.first_catalog_run, coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
     -- A failed probe never erases a platform we already know; only fetch history decides unreachability.
     coalesce(g.platform, r.seed_platform) as platform,
@@ -200,7 +201,7 @@ canonical as (
 {canonical}
 )
 select
-    b.roaster_id, b.name, b.city, b.state, b.locations, b.is_chain, b.opted_out, b.host, b.platform, b.last_probed,
+    b.roaster_id, b.name, b.city, b.state, b.locations, b.opted_out, b.host, b.platform, b.last_probed,
     case when b.status <> 'opted_out' and c.canonical_roaster_id <> b.roaster_id then 'alias' else b.status end
         as status,
     c.canonical_roaster_id
@@ -326,7 +327,6 @@ def _current(lake: Lake, seed: Path, dropped: frozenset[str] | set[str] = frozen
             state=r["state"] or "",
             host=r["host"],
             platform=r["platform"] or "",
-            is_chain=bool(r["is_chain"]),
         )
         out.append(
             RoasterState(

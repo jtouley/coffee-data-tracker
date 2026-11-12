@@ -6,6 +6,7 @@ dbt test fails the build if any of them ever exposes descriptions, images, store
 - Product descriptions, images, handles, tags and the shot log are excluded.
 - Opted-out roasters are excluded.
 - Roasters known only from OpenStreetMap are excluded.
+- Chains (more than 20 stores, or marked by hand in `dbt/seeds/chain_overrides.csv`) are excluded.
 
 `coffeedata export-public --to <dest>` writes them as Parquet. With `PUBLIC_EXPORT_URL` set, the weekly run does
 it automatically. A directory or Hugging Face export also writes `manifest.json`: the release (`release_build_id`,

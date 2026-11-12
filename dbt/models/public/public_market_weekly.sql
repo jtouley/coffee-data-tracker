@@ -1,7 +1,6 @@
 -- Market summary by origin x process for coffees listed now (public coffees only). Origin is the ISO 3166-1 short name
 -- and code (dim_coffee): a blend's or a multi-origin offer's list, or a continent, has none and stays out.
-with c as (select * from {{ ref('public_coffee') }} where is_listed and catalog_status <> 'archived' and not is_wholesale and not is_blend
-                 and origin_country is not null)
+with c as (select * from {{ ref('public_coffee') }} where {{ is_single_origin() }})
 select
     (select max(last_seen) from {{ ref('public_coffee') }}) as as_of_run,
     origin_country, origin_country_code, coalesce(process, 'unknown') as process,
