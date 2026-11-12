@@ -148,6 +148,22 @@ def test_admin_in_a_browser(tmp_path, built):
     assert not any(empty_lake.iterdir())
 
 
+def _add_example_roaster(lake: Path, build: str) -> None:
+    """A made-up roaster in a copy of the served release's registry (dim_roaster), for the chain flag's check: a
+    hand-flag example on a real roaster would read as a decision about it."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from coffeedata import quality
+
+    path = quality.release_files(Lake(str(lake), read_only=True), build)["dim_roaster"]
+    table = pq.read_table(path)
+    rows = table.to_pylist()
+    rows.append(dict(rows[0]) | {"roaster_id": "example-roasters.test", "roaster_name": "Example Roasters",
+                                 "city": "Exampleton", "locations": 3, "coffees_listed": 0, "is_chain": False})  # fmt: skip
+    pq.write_table(pa.Table.from_pylist(rows, schema=table.schema), path)
+
+
 class _Control:
     """The browser test's handle on the fake Cloud Run (tests/admin_fakes.py): GET /finish?job=&status=&message=,
     /refuse?job= and /down?on=1|0, on a port of its own. Test-only: the admin has no such route."""
@@ -209,6 +225,9 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
     flag_served_build(lake, w1, built["builds"][w1])
     list_sources(lake, datetime(2026, 10, 1, tzinfo=UTC))
     chains_published(lake, w1, built["builds"][w1])  # the seed's chain flags are served
+    _add_example_roaster(
+        lake, built["builds"][w1]
+    )  # the chain flag's check flags a made-up roaster, never a real one
     fakes = {k: FakeJobs() for k in ("act", "window", "slow")}
     fakes["slow"].delay_s = 3
     fakes["act"].on_finish = Pipeline(lake, tmp_path / "act" / "snapshots", w3)
