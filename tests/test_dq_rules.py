@@ -266,6 +266,50 @@ def test_an_ordinary_week_explains_itself_and_a_rewritten_past_price_does_not(la
     assert not any(reason == "history_changed" for _, _, reason in changes), changes
 
 
+def test_a_roaster_that_becomes_a_chain_leaves_explained_and_comes_back_explained(lake, tmp_path):
+    """A roaster that crosses chain_store_threshold leaves public_roaster as `chain` (its coffees as roaster_left, its
+    events as coffee_left): the release notes say why, nothing is unexplained. When it stops being a chain it comes
+    back with its coffees (first_coffee, roaster_joined, coffee_joined)."""
+    import csv
+
+    from .test_dbt import FIX
+
+    def config(locations: str):
+        d = tmp_path / f"config-{locations}"
+        if d.exists():
+            return str(d)
+        d.mkdir()
+        with (FIX / "roasters.csv").open() as f:
+            rows = list(csv.DictReader(f))
+        for r in rows:
+            r["locations"] = locations if r["roaster_id"] == "intelligentsia.com" else r["locations"]
+        with (d / "roasters.csv").open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows)
+        return str(d)
+
+    for rid in ("onyxcoffeelab.com", "intelligentsia.com"):
+        run(lake, WEEK1, rid, [product("A")])
+    manifest(lake, WEEK1, ["onyxcoffeelab.com", "intelligentsia.com"])
+    week = {"as_of_run": WEEK1, "previous_release_run_date": WEEK1}
+    build(lake, tmp_path, config_dir=config("3"), **week).close()
+    served = _release(tmp_path, "independent", run_date=WEEK1)
+    r = build(lake, tmp_path, check=False, config_dir=config("21"), previous_release=served, **week)
+    assert r.returncode == 0 and re.search(r"PASS release_changes_explained", r.stdout), r.stdout[-3000:]
+    changes = _changes(tmp_path)
+    assert changes[("public_roaster", "removed", "chain")] == 1
+    assert changes[("public_coffee", "removed", "roaster_left")] == 1
+    assert not any(reason == "unexplained" for _, _, reason in changes), changes
+    chain = _release(tmp_path, "chain", run_date=WEEK1)
+    r = build(lake, tmp_path, check=False, config_dir=config("3"), previous_release=chain, **week)
+    assert r.returncode == 0 and re.search(r"PASS release_changes_explained", r.stdout), r.stdout[-3000:]
+    changes = _changes(tmp_path)
+    assert changes[("public_roaster", "added", "first_coffee")] == 1
+    assert changes[("public_coffee", "added", "roaster_joined")] == 1
+    assert not any(reason == "unexplained" for _, _, reason in changes), changes
+
+
 def test_a_served_release_missing_a_column_still_reconciles_and_warns(lake, tmp_path):
     """A release written before a compared column existed reads that column as null: the rest is still reconciled,
     the missing column is reported (change 'schema'), and nothing fails."""
