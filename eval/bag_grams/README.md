@@ -509,7 +509,7 @@ estimate (the changed coffees counted exactly from their census labels, the rest
 for `main`, 95.57% at #139's head. Validation and test2 aren't sealed and the estimate can't see a change it
 gates (review M1, M2 of #139), so no test enforces it.
 
-### `gate-139` (drawn 2026-11-12, labels pending)
+### `gate-139` (drawn and scored 2026-11-12)
 
 Drawn after the freeze of #139's rules (`src` unchanged since `1be1eeb`; the merge of `main` at `3c100ba` touched no
 rule), with `main` = `branch2` (`main`'s rules, unchanged since `a4baff0`) and the change = `branch5` (#139's head).
@@ -612,3 +612,45 @@ price per bag ($1.85) agrees with the other boxes', and count times stated size 
 - F6: a blend or grade number before `N oz bags` (`House Blend #2 12 oz bags`, `Blend No. 5 12oz bags`), `Lot 12
   Bags` anywhere in a title, a counted case over 25 kg in a description (`12 x 5 lb bags`), and a `2 bags` tag
   beside a size tag: read confidently wrong or blank.
+
+**Census labels:** A and B agreed on 136/138 options (98.6%, Wilson [94.9, 99.6]); C settled the 2 B had marked
+`unclear`. 138 reference labels, all weights. A labeled no census option `unknown`; B, independently, none either
+(2 `unclear`), and C chose A's weights on both, so the reference equals A's labels on all 138.
+
+**Scored once, 2026-11-12** (`gate-score <data> gate-139 --final`, after `sha256sum -c SHA256SUMS` passed): 581
+coffees, the platform sample and its census, weighted to the whole population (30,022). `main` is `branch2`, #139 is
+`branch5`.
+
+| Rule | Weighted accuracy | Confidently wrong |
+|---|---|---|
+| `main` | 98.20%, normal [97.02, 99.39], store-clustered [96.64, 99.47] | 0.83%, normal [0.12, 1.53], store-clustered [0.10, 1.78] |
+| **#139** | **98.27%, normal [97.09, 99.45], store-clustered [96.72, 99.53]** | **0.74%, normal [0.04, 1.44], store-clustered [0.00, 1.68]** |
+
+Paired, #139 minus `main`: accuracy +0.07 points (normal [+0.04, +0.09], store-clustered [+0.03, +0.14]);
+confidently wrong -0.09 points (normal [-0.12, -0.06], store-clustered [-0.17, -0.04]).
+
+Per stratum (right / wrong / rightly blank / missed, the same for both rules on every platform):
+
+| Stratum | Weight | main | #139 |
+|---|---|---|---|
+| shopify | 21,389 | 229 / 1 / 26 / 3 of 259 | same |
+| squarespace | 2,736 | 56 / 0 / 10 / 0 of 66 | same |
+| woocommerce | 2,588 | 45 / 1 / 18 / 0 of 64 | same |
+| generic | 1,936 | 12 / 3 / 43 / 1 of 59 | same |
+| square_online | 1,292 | 11 / 0 / 41 / 0 of 52 | same |
+| **changed** (census) | 81 | 42 / **27** / 2 / 10 of 81: accuracy 44/81 [43.5, 64.7] | 63 / **0** / 1 / 17 of 81: accuracy 64/81 [68.9, 86.5] |
+
+Wilson 95% per stratum in `gate-score`'s output; on the changed stratum, wrong 27/81 [24.0, 44.1] for `main` and
+0/81 [0.0, 4.5] for #139, missed 10/81 [6.8, 21.3] and 17/81 [13.5, 31.1].
+
+**The gate passes:** #139's weighted accuracy 98.27% ≥ 95%, and its confidently wrong share falls (-0.09 points ≤
++0.5). On the coffees it changes, #139 removes all 27 confidently wrong published prices of `main` and leaves 7 more
+blank.
+
+**Mutation check** (`test_the_gate_fails_when_one_percent_of_answers_are_damaged`): doubling the weights of 6 of the
+581 coffees (1%) gives accuracy 97.45% and a confidently wrong rise of +0.74 points, so the gate fails, through the
+rise. The old estimate-based gate passed with every changed coffee wrong and failed only at about 4% damage (review
+M2 of #139).
+
+`gate-139` and `gate-139-census` are in `tests/fixtures/bag_grams_gate.jsonl` (581 rows; the current rules
+reproduce the sealed score on it: 98.27% / 0.74%). The next rules change draws its own gate set.
