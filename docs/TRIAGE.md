@@ -1,6 +1,6 @@
-# Triage: eval and production-health alerts
+# Triage: eval, production-health and importer alerts
 
-Owner: jtouley. Last checked against `main` 0879254 on 2026-11-11.
+Owner: jtouley. Last checked against `main` 060cd16 on 2026-11-12.
 
 Alerts arrive as GitHub issues labelled `triage`, one issue per alert key, opened by the workflows' bot. The alert
 job updates an issue in place while the alert keeps firing, comments only when what fails changes, reopens it if it
@@ -18,7 +18,7 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 - [ ] 2. Open the linked run, and check whether the commit or the release named there is still the latest.
 - [ ] 3. **Was it intended?** Read the PRs merged since the previous release (their Effect sections) and the
       CHANGELOG ([Was it intended?](#was-it-intended)).
-- [ ] 4. Use the section below for the issue's label (`eval-regression` or `prod-health`) and key.
+- [ ] 4. Use the section below for the issue's label (`eval-regression`, `prod-health` or `importers`) and key.
 - [ ] 5. Critical `prod-health` that no change explains: decide on a rollback today
       ([When to roll back](#when-to-roll-back)).
 - [ ] 6. Fix the cause. The next run that measures it closes the issue: every check it failed on passes again, or
@@ -34,6 +34,9 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 | `pipeline:eval-floors` | `eval-floors.yml` | the run scored no private floor (no report, an empty one, or every floor skipped: no Hub token, a failed download, a changed checksum, a collection error) | warning |
 | `prod:<rule>` | `prod-health.yml` (Tuesdays 11:43 UTC, by hand) | a metric of the served release crosses its bound in `config/prod_health.toml` | warning or critical, per bound |
 | `pipeline:prod-health` | `prod-health.yml` | the served release couldn't be measured | warning |
+| `importers:weekly` | `importers-alerts.yml`, after every `importers` run on main and Thursdays 09:23 UTC (by hand too) | an importer has no stored week for the due week: its run failed, the scheduled run never started, or the week is stale | warning |
+| `pipeline:importer-build` | `importers.yml` job `alert`, after the `build` job that follows each snapshot on main | the private importer build (`coffeedata importer-build --publish`) failed, or its copy couldn't be sent; the stored weeks aren't affected | warning |
+| `pipeline:importers-health` | `importers-alerts.yml` | the check couldn't judge the week: no Hub token, a failed dataset or runs listing, or (once a week is due) a dataset the Hub calls "not found" | warning |
 
 Each workflow judges only the evals it owns: ci never touches a private eval's issue (its private floors skip), and
 eval-floors never touches an in-git one. Only the floor files (`tests/test_<eval>_accuracy.py`) are reported, so a
@@ -85,7 +88,7 @@ value. The lake is private and this repository is public. Get the values locally
 | `grams` | `fill:grams[:<platform>]` (a bag weight read); `shift:changed:grams`; `shift:median:grams` | a bag_weight change (#136, #139), or a platform's variant titles changed shape |
 | `price_per_100g` | `fill:price_per_100g[:<platform>]`; `shift:changed:price_per_100g`; `shift:median:price_per_100g` | a lost weight or price, a currency or unit error, or a price wipe on one platform |
 | `classifier` | `fill:classifier`: the share decided by Claude's verdict, judged on the build's own `min_verdict_share` 0.85 | verdicts missing or late, or no verdict model. Starts once a release carries `classified_by` |
-| `enrichment` | `abstain:enrichment[:<platform>]`: the share the rules left to Claude (high is bad) | the extraction rules abstaining more, so Claude's spend and backlog grow |
+| `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (a wiped enrichments table, a key change). A stalled enrichment job keeps its rows, so coverage stays flat or sinks slowly and may not alert |
 | `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing |
 | `fetch` | `build:run_ok_share`, `build:run_catalog_ok_share`, `build:adapter_ok_share:<platform>` (mart_build_profile, reused) | fetches failing. fetch-health (RUNBOOK.md §8) should have said so too |
 | `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`, `origin_countries_are_mapped`: an origin spelling the ISO seed doesn't have, published with no country until it is labelled and added, eval/origin_iso); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
@@ -132,6 +135,83 @@ Before treating a breach as a regression, check whether a merged change meant it
 **`pipeline:prod-health`**: check the `LAKE_URL` variable and the Hub token, and that `marts/release.parquet`
 names a release whose `dim_coffee` is in the lake (RUNBOOK.md §5).
 
+## importers: a weekly snapshot is missing
+
+The importers workflow (`importers.yml`) stores one private file a week per importer
+(`raw/week=<Monday>/importer=<key>.parquet`) from its Wednesday 17:37 UTC scheduled run. `importers-alerts.yml`
+judges the dataset, not the run: after every importers run on main, and each Thursday morning in case no run
+happened, it lists the dataset's file names (never a file) and keeps one `importers:weekly` issue open while any
+importer lacks the due week.
+
+**Objective.** Every importer's week is stored by the Thursday check: 3 of 3 (importer, week) pairs a week. A missed
+`cafe_imports` or `interamerican` week can be fetched again the same week. A missed `royal_coffee` week can't: only a
+scheduled first attempt may fetch it, so it is lost, and the next chance is the following Wednesday. That makes
+detection the gate that matters, and why the check also runs when no importers run happened.
+
+**The due week.** This week's Monday once its scheduled run has completed, or 4 hours after 17:37 UTC on Wednesday
+(the job's 2-hour timeout and room for a late start), whichever comes first; until then, last week's. Weeks before
+2026-11-16, the first scheduled run's, are never due.
+
+**What the issue shows.** One row per importer: its key, `ok` or `missing <n> week(s)` (weeks missed in a row) and
+its last stored week (a Monday), the due week, and the scheduled run that should have stored it (its conclusion and
+link, or that none started). Nothing from a lot, and no store address. A new week missed changes the statuses, so it
+adds a comment; the same state at the next check doesn't.
+
+Quick checklist:
+
+1. Read the summary. Which of the three is it?
+   - **No scheduled run started.** Check that `importers` is enabled in the Actions tab: someone may have disabled
+     it by hand. GitHub can also drop or delay a scheduled event under load. Since `queue: max`, a dispatch no
+     longer cancels a pending scheduled run.
+   - **The run failed.** Open the linked run and read the `importer-snapshot` step's line per importer, its status and
+     error. In comments here, give the importer and its status only: an error can name a store's address. A run
+     also ends `failure` when only its `build` job failed. That stores every week, so it opens
+     `pipeline:importer-build` instead of this issue; this issue lists only the weeks the dataset lacks.
+   - **The run succeeded but a week is missing.** Royal was skipped (the address went only to a scheduled first
+     attempt: a re-run, or a dispatch, skips it), or the run stored the week after this check ran (the next check
+     closes the issue).
+2. Fix the cause. The importer's line names it: a fetch failure, a changed layout, prices in a cell, a thinned
+   listing (under half the last stored week) or `DeadlineReached`.
+3. Recover:
+   - `cafe_imports`, `interamerican`: dispatch the same week, `gh workflow run importers -f importer=<key>`. For a
+     real drop, checked by hand, add `-f accept_drop=true`.
+   - `royal_coffee`: **never dispatch or re-run for it.** No AI agent may access its site. The week is lost: fix the
+     cause before next Wednesday. A real drop is accepted by the `ROYAL_ACCEPT_DROP_WEEK` repository variable, set
+     to the Monday the failure names; the next scheduled run reads it.
+4. Verify. The check that follows each importers run lists the dataset again and closes the issue once every
+   importer has the due week. A fix that waits for next Wednesday closes it then. To check by hand without fetching
+   anything: `gh workflow run importers-alerts`.
+5. Escalate. Two weeks missed in a row for one importer (`missing 2 weeks`) means the fix didn't hold: look before
+   the next Wednesday, not after.
+
+The issue is never closed by hand while a week is still missing. The next check would reopen it.
+
+**What this check can't see.** GitHub automatically disables the scheduled workflows of a public repository with
+no activity for 60 days. That stops importers-alerts' Thursday schedule along with importers', and with no
+importers run there's no `workflow_run` either, so no issue opens. In a repository this active it's unlikely. If
+the repository goes quiet, re-enable both workflows in the Actions tab.
+
+**`pipeline:importers-health`**: the check couldn't judge the week, so `importers:weekly` is left as it is. The
+summary says which:
+- **No Hub token**: neither `HF_READ_TOKEN` nor `HF_TOKEN` is set.
+- **"Not found"**: `IMPORTERS_URL` names the wrong dataset, or the token can't read the private importers dataset.
+  The Hub answers both the same way. Before the first due week (2026-11-16) this stays silent, since the dataset
+  may not exist yet.
+- **The dataset listing failed**: a Hub outage or a rejected token. Transient errors are retried first.
+- **The runs listing failed**: the Actions API. The weeks step runs anyway (`if: ${{ !cancelled() }}`), so the
+  weeks are still judged, by the time alone.
+
+Check the token's read access and `IMPORTERS_URL` before anything else, then re-run `gh workflow run
+importers-alerts`.
+
+**Owner check before the first scheduled run.** After the first dispatch of `importers`, open the
+`importers-health` artifact of the importers-alerts run that follows it. Confirm that `weeks.json` says
+`"dataset": "found"`. That is the only proof, before 2026-11-18, that the check's token can read the dataset.
+
+To try it without touching GitHub, put the check's two files in a folder and run
+`PYTHONPATH=src python3 -m coffeedata.triage importers <folder> --dry-run --now 2026-11-19T09:23`. The files are the
+`importers-health` artifact of an importers-alerts run (`weeks.json`, `runs.json`).
+
 ## When to roll back
 
 Roll back the served release (`gh workflow run weekly -f rollback_to=previous`, RUNBOOK.md §5) when **all** of
@@ -167,16 +247,30 @@ around it:
 
   So a 3-point drop on Shopify's 96% grams fill warns. A halving on a low-fill platform is always critical.
   Ordinary sampling noise doesn't page.
+- **Claude's coverage** (`coverage:enrichment`, low side): judged like a fill rate, with `n` the listed coffees the
+  rules abstained on (`rows:needs_llm`). The backlog only climbs, so the floor sits under the history's median and
+  pages only on a real drop. Releases with no Claude row at all (from before the enrichment ran) are left out of its
+  history, so their zeros don't sink the floor.
 - **Abstain and changed shares** (high side): the median plus at least 0.02 for a warning and 0.05 for critical.
 - **Volume ratios**: 1 ± at least 0.10 / 0.25. **Median shifts**: 0 ± at least 0.05 / 0.15.
 - **Fixed, with no history**: a warn-only band test warns on any failure, and the classifier is judged on
   `min_verdict_share` 0.85. Release age warns above 7 days and is critical above 14.
 
 **Flagged history.** A history value outside its own warning band is not used to widen the band. It is listed as
-`flagged` in the config, as a possible regression to look into. At revision 2026-11-11 two are flagged:
-- `abstain:enrichment:woocommerce` went from 0.013 to 0.196 in run 2026-11-09. It breaches as served: the first
-  prod-health run will open `prod:enrichment`, and that is the first thing to triage;
+`flagged` in the config, as a possible regression to look into. At revision 2026-11-12:
+- `coverage:enrichment:square_online` and `:woocommerce` in run 2026-11-02 (0.014 each), below a band centred
+  between it and run 2026-11-09. The backlog was earlier, not a regression;
 - `shift:rows_ratio:listed:generic` was 1.17 between the 10-27 and 10-28 marts.
+
+**The enrichment split (revision 2026-11-12).** Until then `abstain:enrichment` counted the coffees Claude had
+filled in (`enrichment_method = 'llm'`). That measures the backlog, not the rules: in run 2026-11-09 WooCommerce
+went from 0.013 to 0.196 because blocked stores reached the front of Claude's oldest-first queue, and nothing
+regressed. It is now the rules' own abstain rate, from `dim_coffee.rules_complete` (`stg_products.needs_llm`, the
+rules' `extract.needs_llm`). Releases built before that column are read from their values: Claude's rows (Claude is
+only asked when the rules abstain) plus the rules' rows that fail the same test. Over the four releases in the
+history it is 0.88–0.93 on every platform, flat. Claude's progress moved to `coverage:enrichment`, which went 0,
+0, 0.046, 0.074 overall. The two zeros are left out of its history, so its floor is 0.045 overall (warning)
+instead of 0.017. Judged with these bounds, the 11-09 release breaches neither.
 
 **Simulated on the 11-09 release** (a copy, blanking Shopify grams):
 - a 3-point drop warns, and so does a 4-point drop;
@@ -195,11 +289,38 @@ change acknowledged in `config/prod_health_expected.toml` lands. Bump `revision`
 The eval floors and ceilings stay where they are, in each `tests/test_*_accuracy.py`. The alerts read them from
 the test run's report (`EVAL_REPORT`, `tests/evalfloor.py`) and never copy them.
 
+## importers: the private importer build failed
+
+**`pipeline:importer-build`** (label `importers`, warning), raised by the `alert` job of `importers.yml` after
+the `build` job, which follows each importers run's snapshot on main once it has passed. It fires when the private dbt build
+(`coffeedata importer-build --publish`) fails, or when it passes but its copy can't be sent to the dataset, and
+closes on the next build that passes. The issue gives the build's status, the run and the commit: nothing from a lot.
+
+- **What isn't affected.** The snapshot job finished before the build started, so every week it stored stays stored
+  (raw files are never rewritten). The private dataset's `derived/importer_offers.parquet` stays the last build that
+  passed: a failed build sends nothing.
+- **Reading the run.** The repository and its logs are public, so the build step prints counts only: dbt's nodes by
+  status (model, test, unit_test) and, when sent, the lots, lots per importer, weeks and latest week. dbt's own output
+  went to a file on the runner, never printed or uploaded, since a failing query's error can quote a lot's value.
+- **Reproduce** with read access to the private dataset:
+  `COFFEEDATA_IMPORTERS=<its hf:// URL> uv run coffeedata importer-build` prints dbt's output on your own console.
+  In the issue and its comments, give the failing model or test and the kind of error, never a value.
+- **Recover.** Fix it on main. The next Wednesday's run builds again; to build sooner, dispatch
+  `gh workflow run importers` (a dispatch never fetches Royal, and stored weeks are skipped). Never re-run a
+  scheduled run for Royal's sake: a re-run never fetches Royal either.
+- **Token or privacy refusal.** `HF_TOKEN is not set`, `not private` or `holds files this job didn't write`: the same
+  checks as the snapshot (`importers.ensure_private`), which the build passes before sending anything. The dataset may
+  hold `raw/`, `README.md`, `.gitattributes` and, under `derived/`, only `importer_offers.parquet`.
+
+To see the issue without touching GitHub: `PYTHONPATH=src python3 -m coffeedata.importer_build_alert failure
+--dry-run`. `tests/test_importer_build_alert.py` covers opening, updating, closing and reopening against an
+in-memory GitHub.
+
 ## Permissions and safety
 
 - The alert jobs use `GITHUB_TOKEN` with `issues: write` and `contents: read` only, install nothing, and run main's
   `coffeedata/triage.py`, which uses only the standard library. eval-alerts' job also has `actions: read`, to
-  download that one ci run's report.
+  download that one ci run's report. importers-alerts' alert job reads only the artifact its own check job made.
 - eval-alerts skips a ci run that isn't on main's tip. If the tip's own ci fails before its tests (lint), the
   floors' alert waits for the next commit that reaches them, so it is delayed, never lost. This is left as is.
 - They never run on a pull request, so no PR code runs with the token. eval-alerts runs on `workflow_run`, which
@@ -215,9 +336,13 @@ the test run's report (`EVAL_REPORT`, `tests/evalfloor.py`) and never copy them.
     they should stay private.
   - Eval issues show the floors' scores, which `docs/RULES.md` already publishes.
 - The Hub token stays on its one download step, in jobs that only run on main (eval-floors' `floors`,
-  prod-health's `measure`), and those jobs have no `issues: write`.
+  prod-health's `measure`, importers-alerts' `check`), and those jobs have no `issues: write`. importers-alerts'
+  check only lists the importers dataset's file names (`triage importers-weeks`); it never fetches an importer and
+  never dispatches `importers`.
+- **Importers.** The issue, the log and the `importers-health` artifact carry importer keys, statuses, Mondays and
+  run links, never a lot or a store's address.
 - The Cloud Run jobs get no GitHub token, and no GCP resource was added. prod-health reads the lake read-only and
   never writes to it.
 - To test without touching GitHub: `python -m coffeedata.triage evals <report.json> --workflow ci --dry-run`
   prints the issue it would open. `tests/test_triage.py` and `tests/test_prod_health.py` cover deduplication,
-  updates, reopening and recovery against an in-memory GitHub.
+  updates, reopening and recovery against an in-memory GitHub, and the importers' check against a mock Hub.

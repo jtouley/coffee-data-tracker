@@ -1128,6 +1128,9 @@ def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
         "natural",
         "llm",
     )
+    # Claude's row doesn't change what the rules said: they left it incomplete (prod-health's abstain:enrichment)
+    assert con.execute("select rules_complete from dim_coffee").fetchone() == (False,)
+    assert con.execute("select needs_llm from stg_products where is_coffee").fetchone() == (True,)
 
 
 def test_dim_coffee_maps_origins_to_iso(lake, tmp_path):

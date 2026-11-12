@@ -3,8 +3,9 @@
 Production has no labels, so a rule's health is read from proxies (docs/TRIAGE.md):
 - fill and abstain rates per rule and per platform, over the listed retail coffees of the served release's
   dim_coffee (is_listed, not wholesale): origin, process, roast level, bag grams, price_per_100g, the classifier's
-  verdict coverage (classified_by = 'claude', once a release carries it), and the extraction rules' abstain rate
-  (enrichment_method = 'llm': the rules left the coffee to Claude);
+  verdict coverage (classified_by = 'claude', once a release carries it), the extraction rules' abstain rate (the
+  share the rules leave incompletely described, dim_coffee.rules_complete false, whether or not Claude has reached
+  it) and Claude's coverage of those (the share with a Claude row: how far the weekly enrichment backlog has got);
 - distribution shift against the previous run's served release: listed volume ratio, the share of previous coffees
   still listed, the share of common coffees whose value changed, and the median shift of price_per_100g and grams;
 - the build's own record (the lake's builds table): mart_build_profile's fetch shares and the dbt band tests that
@@ -56,8 +57,25 @@ NEEDS = {
     "price_per_100g": "price_per_100g",
     "classifier": "classified_by",
 }
-# The extraction rules abstained and Claude filled the coffee in (high is bad).
-ABSTAIN = {"enrichment": "coalesce(enrichment_method = 'llm', false)"}
+# The extraction rules abstain: they leave the coffee incompletely described (extract.needs_llm), whether or not
+# Claude has filled it in yet (high is bad). dim_coffee.rules_complete carries the rules' own answer. A release
+# built before that column is read from what it has: Claude's rows (only coffees the rules left incomplete are sent),
+# and the rules' rows whose own attributes are incomplete, by extract.needs_llm's test.
+RULES_INCOMPLETE = (
+    "not ((nullif(origin_country, '') is not null or coalesce(is_blend, false)) and nullif(process, '') is not null"
+    " and len(coalesce(tasting_notes, [])) > 0)"
+)
+
+
+def _needs_llm(cols: set[str]) -> str | None:
+    """The SQL that says the rules abstained on a listed coffee, or None if the release can't say."""
+    if "rules_complete" in cols:
+        return "not rules_complete"
+    if {"enrichment_method", "origin_country", "is_blend", "process", "tasting_notes"} <= cols:
+        return f"(coalesce(enrichment_method = 'llm', false) or {RULES_INCOMPLETE})"
+    return None
+
+
 # Rule -> the value compared between two releases, for the share of common coffees that changed.
 # Rule -> (the column, the value compared, with {t} for the table alias).
 COMPARED = {
@@ -112,8 +130,14 @@ def release_metrics(dim_coffee: Path) -> dict[str, float]:
     # A column a release doesn't have yields no metric; for a required one (config) that is itself an alert.
     rules = {r: sql for r, sql in FILLED.items() if NEEDS[r] in cols}
     exprs = [f'avg(({sql})::int) as "fill:{r}"' for r, sql in rules.items()]
-    if "enrichment_method" in cols:
-        exprs += [f'avg(({sql})::int) as "abstain:{r}"' for r, sql in ABSTAIN.items()]
+    if needs := _needs_llm(cols):
+        # abstain: the rules' rate; coverage: the share of those Claude has filled in (low is bad: the backlog
+        # lost ground); rows:needs_llm: its population, for the coverage bounds' standard error
+        exprs += [
+            f'avg(({needs})::int) as "abstain:enrichment"',
+            f'count(*) filter (where {needs}) as "rows:needs_llm"',
+            f"avg(coalesce(enrichment_method = 'llm', false)::int) filter (where {needs}) as \"coverage:enrichment\"",
+        ]
     # grouping(platform) tells the catalog-wide row from a platform's; a listed coffee with no platform is its own
     # "unknown" row, never mistaken for the whole catalog
     q = (
@@ -395,7 +419,7 @@ def alerts(
 def _scope(metric: str) -> str:
     """The platform a per-platform metric is about, else "all"."""
     parts = metric.split(":")
-    if parts[0] in ("fill", "abstain", "rows") and len(parts) == 3:
+    if parts[0] in ("fill", "abstain", "coverage", "rows") and len(parts) == 3:
         return parts[2]
     if metric.startswith(("shift:rows_ratio:listed:", "build:adapter_ok_share:")):
         return parts[-1]
@@ -443,8 +467,9 @@ def summary(measured: dict[str, Any], results: list[dict[str, Any]]) -> str:
 #   - K_MAD robust standard deviations of the history (1.4826 x MAD), for metrics that move week to week.
 # A low-fill platform keeps an absolute floor: a drop of a quarter always warns, and of more than 45% (so a
 # halving) is critical.
-# Shares that should stay near 0 (abstain, changed) use an absolute margin instead; ratios centre on 1, median shifts
-# on 0.
+# Claude's coverage is judged like a fill rate (low side; n is the coffees the rules abstained on). Shares where only
+# a rise is bad (the rules' abstain rate, changed values) use an absolute margin above the median instead; ratios
+# centre on 1, median shifts on 0.
 REL = {"warning": 0.03, "critical": 0.10}
 K_SE = {"warning": 4.0, "critical": 8.0}
 K_MAD = {"warning": 3.0, "critical": 6.0}
@@ -464,7 +489,7 @@ def _sigma(xs: list[float]) -> float:
 def _rule_of(name: str) -> str:
     kind, _, rest = name.partition(":")
     head = rest.split(":")[0]
-    if kind in ("fill", "abstain"):
+    if kind in ("fill", "abstain", "coverage"):
         return head
     if kind == "rows" or name.startswith(("shift:rows_ratio", "shift:retained")):
         return "volume"
@@ -482,7 +507,7 @@ def bounds(name: str, history: list[float], n: float | None = None) -> dict[str,
     m, sd = statistics.median(history), _sigma(history)
     se = math.sqrt(m * (1 - m) / n) if n and 0 < m < 1 else 0.0
     b: dict[str, Any] = {}
-    if name.startswith(("fill:", "shift:retained", "build:run", "build:adapter")):
+    if name.startswith(("fill:", "coverage:", "shift:retained", "build:run", "build:adapter")):
         for sev in ("warning", "critical"):
             margin = min(max(REL[sev] * m, K_SE[sev] * se, K_MAD[sev] * sd), CAP[sev] * m)
             b[f"{sev}_below"] = round(max(0.0, m - margin), 4)
@@ -510,11 +535,13 @@ def _outside(x: float, b: dict[str, Any]) -> bool:
 
 
 def _n_for(name: str, hist: dict[str, list[float]]) -> float | None:
-    """The population a share is over: the listed coffees of its platform (or all), as a median over the history."""
-    if not name.startswith(("fill:", "abstain:", "shift:changed:", "shift:retained")):
+    """The population a share is over: the listed coffees of its platform (or all), or for coverage the listed
+    coffees the rules abstained on, as a median over the history."""
+    if not name.startswith(("fill:", "abstain:", "coverage:", "shift:changed:", "shift:retained")):
         return None
     platform = _scope(name)
-    counts = hist.get("rows:listed" if platform == "all" else f"rows:listed:{platform}")
+    base = "rows:needs_llm" if name.startswith("coverage:") else "rows:listed"
+    counts = hist.get(base if platform == "all" else f"{base}:{platform}")
     return statistics.median(counts) if counts else None
 
 
@@ -533,6 +560,10 @@ def baseline(
     where: dict[str, list[str]] = {}
     for i, rel in enumerate(releases):
         ms = release_metrics(rel)
+        if ms.get("coverage:enrichment") == 0:
+            # no Claude row in the whole catalog: a release from before the enrichment ran says nothing about the
+            # backlog, and its zeros would sink the coverage floor, so it is left out of every coverage history
+            ms = {k: v for k, v in ms.items() if not k.startswith("coverage:")}
         if i:
             ms |= {k: v for k, v in shift_metrics(rel, releases[i - 1]).items()}
         for k, v in ms.items():
@@ -561,10 +592,11 @@ def baseline(
         f"({REL['warning']:g} / {REL['critical']:g}),",
         f"# {K_SE['warning']:g} / {K_SE['critical']:g} binomial standard errors at the platform's n, and "
         f"{K_MAD['warning']:g} / {K_MAD['critical']:g} x 1.4826 x MAD, capped at",
-        f"# {CAP['warning']:g} / {CAP['critical']:g} of the median. Abstain and changed shares: median + "
-        f"{LOW_MARGIN['warning']:g} / {LOW_MARGIN['critical']:g} at least;",
+        f"# {CAP['warning']:g} / {CAP['critical']:g} of the median (fill and coverage shares, low side). Abstain and "
+        f"changed shares: median + {LOW_MARGIN['warning']:g} / {LOW_MARGIN['critical']:g} at least;",
         f"# volume ratios: 1 +/- {RATIO_MARGIN['warning']:g} / {RATIO_MARGIN['critical']:g} at least; median shifts: "
         f"0 +/- {MEDIAN_MARGIN['warning']:g} / {MEDIAN_MARGIN['critical']:g} at least.",
+        "# Claude's coverage leaves out releases with no Claude row at all (from before the enrichment ran).",
         "# Without history: a warn-only dbt band test warns on any failure, the classifier's coverage is judged",
         f"# on the build's own gate (min_verdict_share {MIN_VERDICT_SHARE}), the served release's age on the weekly",
         f"# cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; above {CADENCE_DAYS['critical']:g}: two).",

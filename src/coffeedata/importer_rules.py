@@ -4,8 +4,9 @@ The rules themselves are SQL models there (int_importer_rules: process, varietie
 certifications; int_importer_name_rules: what an InterAmerican product name states), tested by dbt unit tests. Their
 words and patterns live here and in the catalog's own vocabularies (extract.py, origins.py), so an importer lot and a
 roaster listing are described in the same terms; `vocabulary()` hands them all to dbt as one table
-(stg_importer_vocab.py), the way stg_products.py calls the catalog's rules. Nothing derived is stored in the
-importers dataset: every build re-derives every stored week, so a better rule applies to all of them.
+(stg_importer_vocab.py), the way stg_products.py calls the catalog's rules. Every build re-derives every stored
+week from raw, so a better rule applies to all of them; the importers dataset keeps only the latest build's copy
+(importers.DERIVED), which nothing reads back.
 
 Patterns are RE2 (DuckDB's regex engine): no lookarounds or backreferences. The rules match them case-insensitively,
 except GRADE, which says where case matters.

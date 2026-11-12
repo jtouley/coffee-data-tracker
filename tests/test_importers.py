@@ -32,6 +32,12 @@ MON = date(2026, 11, 9)  # its week
 NEXT = datetime(2026, 11, 18, 17, 37, tzinfo=UTC)  # the next week
 
 
+@pytest.fixture(autouse=True)
+def _checkout(tmp_path, monkeypatch):
+    """Each test's private database lives in its own tmp_path (importers.ROOT), never the real checkout's build/."""
+    monkeypatch.setattr(importers, "ROOT", tmp_path.resolve())
+
+
 def _stated(name: str, html: str) -> list[dict]:
     """The page's lots with the fields it states (importers.stated, as the private dbt project reads them)."""
     out = []
@@ -397,6 +403,8 @@ class FakeApi:
             [],
             exists or bool(existing),
         )
+        self.messages: list[str] = []
+        self.store = Path(".")  # set by _remote
 
     def repo_exists(self, repo_id, repo_type):
         return self.exists
@@ -412,11 +420,25 @@ class FakeApi:
         return sorted(self.existing)
 
     def get_paths_info(self, repo_id, paths, repo_type):
-        return [types.SimpleNamespace(path=p, lfs=None, blob_id=None) for p in paths if p in self.existing]
+        import hashlib
+
+        def blob_id(p):  # git's blob id of a file this fake holds (None, "unknown", for one it only lists)
+            f = self.store / p
+            data = f.read_bytes() if f.is_file() else None
+            return None if data is None else hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
+
+        return [
+            types.SimpleNamespace(path=p, lfs=None, blob_id=blob_id(p)) for p in paths if p in self.existing
+        ]
 
     def upload_file(self, path_or_fileobj, path_in_repo, repo_id, repo_type, commit_message):
-        self.calls.append(("card", path_in_repo))
+        import shutil
+
+        self.calls.append(("card", path_in_repo) if path_in_repo == "README.md" else ("upload", path_in_repo))
         self.existing.add(path_in_repo)
+        (self.store / path_in_repo).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(path_or_fileobj, self.store / path_in_repo)
+        self.messages.append(commit_message)
 
     def hf_hub_download(self, repo_id, filename, repo_type, local_dir):
         return str(self.store / filename)
@@ -488,6 +510,27 @@ def test_refuses_a_dataset_holding_anything_else(tmp_path, monkeypatch):
     assert api.calls == []  # no card replaced, nothing created
 
 
+def test_the_dataset_may_hold_the_derived_copy_and_nothing_else_new(tmp_path, monkeypatch):
+    """derived/ is the importers dataset's own, but only its one file: anything else there, or any other new folder,
+    is refused before anything is written."""
+    own = ("README.md", importers.path("cafe_imports", MON), importers.DERIVED)
+    importers.ensure_private(_remote(tmp_path, monkeypatch, FakeApi(existing=own)))
+    assert {"derived/importer_offers.parquet"} == importers.DERIVED_FILES
+    assert {"raw", "derived", "README.md", ".gitattributes"} == importers.OWN_TOP_LEVEL
+    for other, named in (
+        ("derived/importers.duckdb", "derived/importers.duckdb"),
+        (
+            "derived/week=2026-11-09/importer_offers.parquet",
+            "derived/week=2026-11-09/importer_offers.parquet",
+        ),
+        ("marts/importer_offers.parquet", "marts"),
+    ):
+        api = FakeApi(existing=(*own, other))
+        with pytest.raises(RuntimeError, match=f"holds files this job didn't write \\({re.escape(named)}\\)"):
+            importers.ensure_private(_remote(tmp_path, monkeypatch, api))
+        assert api.calls == []
+
+
 @pytest.mark.parametrize("var", list(importers.OTHER_DATASETS))
 def test_refuses_the_lake_or_any_other_dataset(tmp_path, monkeypatch, var):
     # by its variable, compared case-insensitively
@@ -525,6 +568,132 @@ def test_hub_calls_retry_only_transient_failures(monkeypatch):
         with pytest.raises(httpx.HTTPStatusError):
             importers._hub(fn)
         assert len(calls) == tries, code
+
+
+def _two_weeks(tmp_path) -> Lake:
+    lake = _local(tmp_path)
+    with _client(_pages(), []) as client:
+        importers.snapshot(lake, client, now=lambda: NOW)
+        importers.snapshot(lake, client, now=lambda: NEXT)
+    return lake
+
+
+# lot values the fixtures hold: none may reach the console or a commit message (a public log)
+LOT_WORDS = ("Gakenke", "Oberon", "Mandheling", "La Paz", "25973")
+
+
+@needs_dbt
+def test_the_build_is_kept_in_the_private_dataset_under_derived_alone(tmp_path, monkeypatch):
+    """After a build that passed, importer_offers goes to derived/importer_offers.parquet in the private dataset (the
+    same checks as the snapshot first), replacing the file there; the raw weeks are never touched; the same build
+    sent again is skipped; and what comes back is counts only."""
+    import contextlib
+
+    import duckdb
+
+    lake = _two_weeks(tmp_path)
+    log = tmp_path / "logs" / "dbt.log"
+    with contextlib.chdir(tmp_path):
+        assert importers.build(lake, target=tmp_path / "t", log=log)
+        db = Path(importers.DB).resolve()
+    counts = importers.run_counts(tmp_path / "t")
+    assert counts["model"] == {"success": len(importers.private_models())} and "error" not in str(counts)
+    assert "Running with dbt" in log.read_text()  # dbt's own output, kept in the file
+
+    raw = (importers.path("cafe_imports", MON), importers.path("interamerican", MON))
+    api = FakeApi(existing=raw)
+    remote = _remote(tmp_path, monkeypatch, api)
+    monkeypatch.chdir(tmp_path)
+    sent = importers.publish_derived(remote, sha="0123456789abcdef")
+    assert sent == {
+        "path": "derived/importer_offers.parquet",
+        "lots": 16,
+        "lots_by_importer": {"cafe_imports": 8, "interamerican": 8},
+        "weeks": 2,
+        "latest_week": "2026-11-16",
+        "sent": True,
+    }
+    assert api.calls == [("card", "README.md"), ("upload", importers.DERIVED)]  # nothing under raw/
+    with duckdb.connect(str(db), read_only=True) as con:
+        built = con.execute('select * from importer_offers order by week, importer, "row"').fetchall()
+    assert pq.read_table(api.store / importers.DERIVED).to_pylist() == [
+        dict(zip(pq.read_schema(api.store / importers.DERIVED).names, r, strict=True)) for r in built
+    ]
+    assert api.messages[-1] == "importer_offers: 16 lots, 2 weeks through 2026-11-16, built from 0123456789ab"
+    assert not any(w in json.dumps(sent) + api.messages[-1] for w in LOT_WORDS)
+
+    # the same build again: nothing sent; the dataset keeps its one derived file
+    assert importers.publish_derived(remote)["sent"] is False
+    assert [c for c in api.calls if c[0] == "upload"] == [("upload", importers.DERIVED)]
+
+    # never to a dataset that isn't private, nor to a local lake; and nothing without a build
+    api = FakeApi(private=False, existing=raw)
+    with pytest.raises(RuntimeError, match="not private"):
+        importers.publish_derived(_remote(tmp_path, monkeypatch, api))
+    assert not any(c[0] == "upload" for c in api.calls)
+    with pytest.raises(ValueError, match="private Hugging Face dataset only"):
+        importers.publish_derived(lake)
+    db.unlink()
+    with pytest.raises(FileNotFoundError, match="isn't built"):
+        importers.publish_derived(_remote(tmp_path, monkeypatch, FakeApi(existing=raw)))
+
+
+@needs_dbt
+def test_the_build_command_prints_counts_only_and_keeps_dbts_output_in_its_file(tmp_path, monkeypatch, capfd):
+    """`importer-build --log-file` (the workflow's): dbt's output, which can quote a value in an error, goes to the
+    file; the console (a public log) gets the result and counts."""
+    from coffeedata import cli
+
+    lake = _two_weeks(tmp_path)
+    monkeypatch.setenv("COFFEEDATA_IMPORTERS", str(lake.root))
+    monkeypatch.chdir(tmp_path)
+    log = tmp_path / "runner" / "dbt.log"
+    cli.main(["importer-build", "--log-file", str(log)])
+    out, err = capfd.readouterr()
+    summary = json.loads(out)
+    assert summary["build"] == "passed" and summary["dbt"]["model"] == {
+        "success": len(importers.private_models())
+    }
+    assert set(summary["dbt"]) <= {"model", "test", "operation", "unit_test", "seed"}
+    assert "Running with dbt" in log.read_text() and "Running with dbt" not in out + err
+    assert not any(w in out + err for w in LOT_WORDS)
+    # --publish only to the private Hugging Face dataset
+    with pytest.raises(SystemExit, match="--publish needs COFFEEDATA_IMPORTERS to be an hf://datasets/ URL"):
+        cli.main(["importer-build", "--publish"])
+
+
+def test_a_failed_build_publishes_nothing_and_exits_1(tmp_path, monkeypatch, capsys):
+    from coffeedata import cli
+
+    monkeypatch.chdir(tmp_path)  # the remote lake stages under build/ here
+    monkeypatch.setenv("COFFEEDATA_IMPORTERS", "hf://datasets/someone/importers")
+    monkeypatch.setattr(importers, "build", lambda *a, **k: False)
+    monkeypatch.setattr(importers, "run_counts", lambda target: {"model": {"error": 1, "skipped": 3}})
+
+    def never(*a, **k):
+        raise AssertionError("a failed build is never published")
+
+    monkeypatch.setattr(importers, "publish_derived", never)
+    with pytest.raises(SystemExit) as e:
+        cli.main(["importer-build", "--publish", "--log-file", str(tmp_path / "dbt.log")])
+    assert e.value.code == 1
+    assert json.loads(capsys.readouterr().out) == {
+        "build": "failed",
+        "dbt": {"model": {"error": 1, "skipped": 3}},
+    }
+
+
+def test_run_counts_reads_statuses_never_messages(tmp_path):
+    (tmp_path / "run_results.json").write_text(json.dumps({"results": [
+        {"unique_id": "model.coffeedata_importers.importer_offers", "status": "error",
+         "message": "Conversion Error: Could not convert string 'Gakenke' to INT32"},
+        {"unique_id": "model.coffeedata_importers.stg_importer_lots", "status": "success", "message": None},
+        {"unique_id": "test.coffeedata_importers.not_null_x", "status": "pass", "message": None},
+        {"unique_id": "test.coffeedata_importers.unique_y", "status": "fail", "message": "Got 2 results"},
+    ]}))  # fmt: skip
+    counts = importers.run_counts(tmp_path)
+    assert counts == {"model": {"error": 1, "success": 1}, "test": {"pass": 1, "fail": 1}}
+    assert importers.run_counts(tmp_path / "none") == {}
 
 
 # --- never public ---------------------------------------------------------------------------------------------------
@@ -684,6 +853,117 @@ def test_the_private_build_never_deletes_a_database_it_does_not_own(tmp_path, mo
 
 
 @needs_dbt
+def test_the_private_database_is_the_checkouts_whatever_the_working_directory(tmp_path, monkeypatch):
+    """DB is anchored to the checkout (importers.ROOT): a build run from another folder, with a lake path relative to
+    that folder, writes the checkout's build/importers.duckdb and nothing where it runs."""
+    repo, elsewhere = tmp_path / "repo", tmp_path / "elsewhere"
+    repo.mkdir()
+    elsewhere.mkdir()
+    monkeypatch.setattr(importers, "ROOT", repo.resolve())
+    lake = _two_weeks(elsewhere)
+    monkeypatch.chdir(elsewhere)
+    assert importers.private_db() == repo.resolve() / importers.DB
+    assert importers.build(Lake("importers", tables=IMPORTER_TABLES))  # relative to the working directory
+    assert (repo / importers.DB).is_file() and not (elsewhere / "build").exists()
+    assert lake.root == elsewhere / "importers"
+
+
+def test_the_private_database_refuses_a_link_on_its_fixed_path(tmp_path, monkeypatch):
+    """Neither the file nor its build/ folder may be a link: the fixed path is the file itself."""
+    repo, other = tmp_path / "repo", tmp_path / "other"
+    repo.mkdir()
+    other.mkdir()
+    monkeypatch.setattr(importers, "ROOT", repo.resolve())
+    (repo / "build").symlink_to(other, target_is_directory=True)
+    with pytest.raises(ValueError, match="build is a link"):
+        importers.private_db()
+    with pytest.raises(ValueError, match="is a link"):
+        importers.build(_local(tmp_path))
+    assert list(other.iterdir()) == []
+    (repo / "build").unlink()
+    (repo / "build").mkdir()
+    (repo / importers.DB).symlink_to(other / "x.duckdb")
+    with pytest.raises(ValueError, match="importers.duckdb is a link"):
+        importers.private_db()
+
+
+def test_dbts_work_tables_from_an_interrupted_build_are_the_projects_own():
+    """An interrupted build leaves `<model>__dbt_tmp` or `<model>__dbt_backup` behind: those don't lock the next
+    build, but a work table for anything that isn't one of the project's models is still foreign."""
+    models = importers.private_models()
+    assert "importer_offers" in models
+    for name in ("importer_offers", "importer_offers__dbt_tmp", "stg_importer_lots__dbt_backup"):
+        assert importers.own_table(name, models), name
+    for name in ("dim_coffee", "dim_coffee__dbt_tmp", "__dbt_tmp", "importer_offers__dbt_tmpx"):
+        assert not importers.own_table(name, models), name
+
+
+@needs_dbt
+def test_an_interrupted_builds_work_tables_never_stop_the_next(tmp_path):
+    """Both guards accept them: importers.build replaces the database, and the project's own on-run-start (run
+    directly on a database still holding them) goes on, while a foreign table stops it."""
+    import subprocess
+
+    import duckdb
+
+    lake = _two_weeks(tmp_path)
+    db = tmp_path / importers.DB
+    db.parent.mkdir(exist_ok=True)
+
+    def leave(*tables: str) -> None:
+        db.unlink(missing_ok=True)
+        with duckdb.connect(str(db)) as con:
+            for t in tables:
+                con.execute(f"create table {t} as select 1 as x")
+
+    leave("importer_offers__dbt_tmp", "stg_importer_lots__dbt_backup")
+    assert importers.build(lake)
+    with duckdb.connect(str(db), read_only=True) as con:
+        assert con.execute("select count(*) from importer_offers").fetchone() == (16,)
+
+    project = str(Path(__file__).parent.parent / "dbt_importers")
+    sources = json.dumps({"importer_sources": [str(s) for s in lake.sources("importer_raw")]})
+    for tables, ok in ((("importer_offers__dbt_tmp",), True), (("dim_coffee__dbt_tmp",), False)):
+        leave(*tables)
+        r = subprocess.run(
+            ["dbt", "run", "--select", "stg_importer_lots", "--project-dir", project, "--profiles-dir", project,
+             "--target-path", str(tmp_path / "t"), "--log-path", str(tmp_path / "l"), "--vars", sources],
+            cwd=tmp_path, env={**os.environ, "COFFEEDATA_IMPORTERS_DB": importers.DB}, capture_output=True, text=True,
+        )  # fmt: skip
+        assert (r.returncode == 0) is ok, r.stdout[-2000:]
+        if not ok:
+            assert "holds tables the importers project doesn't own (dim_coffee__dbt_tmp)" in r.stdout
+
+
+@needs_dbt
+def test_a_lot_stored_with_no_cells_stays_an_offer_with_null_values(tmp_path):
+    """No lot drops out of importer_offers: one stored with no cells (an empty list, or none) is an offer with its
+    keys and null values, and the project's row-count test (every_lot_is_an_offer) holds."""
+    lake = _local(tmp_path)
+    base = {
+        "week": MON,
+        "fetched_at": NOW.replace(microsecond=0),
+        "source_url": "https://example.test/",
+        "parser_version": "2",
+    }
+    for name, cells in (("cafe_imports", []), ("interamerican", None)):
+        rows = [base | {"importer": name, "row": 0, "url": None, "cells": cells},
+                base | {"importer": name, "row": 1, "url": None, "cells": _cells({"Name": "A", "Product": "A"})}]  # fmt: skip
+        lake.write("importer_raw", importers.path(name, MON), rows)
+    offers = importer_offers(lake, tmp_path)
+    assert [(o["importer"], o["row"]) for o in offers] == [
+        ("cafe_imports", 0), ("cafe_imports", 1), ("interamerican", 0), ("interamerican", 1)
+    ]  # fmt: skip
+    for empty in (o for o in offers if o["row"] == 0):
+        assert empty["week"] == MON and empty["rules_version"] == rules.RULES_VERSION
+        for field in ("lot_id", "name", "origin", "process", "process_type", "varieties", "certifications",
+                      "not_certified", "grower_type", "altitude_min_m", "harvest_months"):  # fmt: skip
+            assert empty[field] is None, (empty["importer"], field)
+    tests = (Path(__file__).parent.parent / "dbt_importers/tests/every_lot_is_an_offer.sql").read_text()
+    assert "ref('stg_importer_lots')" in tests and "ref('importer_offers')" in tests
+
+
+@needs_dbt
 @pytest.mark.parametrize(
     "target", ["build/coffee.duckdb", "build/served.duckdb", "build/site/importers.duckdb", "x.duckdb"]
 )
@@ -806,10 +1086,46 @@ def test_workflow_runs_on_main_only_and_never_on_pull_requests():
         *(k for k in importers.IMPORTERS if k not in importers.SCHEDULE_ONLY),
     ]
     assert wf["permissions"] == {"contents": "read"}
-    for name, job in wf["jobs"].items():
-        assert job.get("if") == "github.ref == 'refs/heads/main'", name
+    jobs = wf["jobs"]
+    assert set(jobs) == {"snapshot", "build", "alert"}
+    # every job runs main's code only; the build follows a snapshot that passed, and the alert follows a build that
+    # ran (passed or failed), so a failed build never touches the snapshot job or what it stored
+    assert jobs["snapshot"]["if"] == jobs["build"]["if"] == "github.ref == 'refs/heads/main'"
+    assert jobs["build"]["needs"] == "snapshot"
+    assert jobs["alert"]["needs"] == "build"
+    assert jobs["alert"]["if"] == (
+        "always() && github.ref == 'refs/heads/main' "
+        "&& (needs.build.result == 'success' || needs.build.result == 'failure')"
+    )
+    command = {"snapshot": "importer-snapshot --require-hub", "build": "importer-build --publish --log-file"}
+    for name, job in jobs.items():
         assert job["steps"][0]["with"]["persist-credentials"] is False
-        # the token goes to the one step that needs it, never to the whole job
+        # the token goes to the one step that needs it, never to the whole job, and never to the alert
         assert "HF_TOKEN" not in str(job.get("env", {}))
         holders = [s for s in job["steps"] if "HF_TOKEN" in str(s.get("env", {}))]
-        assert len(holders) == 1 and "importer-snapshot --require-hub" in holders[0]["run"]
+        if name == "alert":
+            assert holders == [] and "secrets." not in yaml.safe_dump(job)
+            assert job["permissions"] == {"contents": "read", "issues": "write"}
+            assert job["steps"][-1]["run"] == 'python3 -m coffeedata.importer_build_alert "$RESULT"'
+            continue
+        assert "permissions" not in job  # contents: read, from the workflow
+        assert len(holders) == 1 and command[name] in holders[0]["run"]
+        # the private dataset, never any other: the variables ensure_private refuses, beside it
+        assert {"COFFEEDATA_IMPORTERS", "COFFEEDATA_LAKE", "PUBLIC_EXPORT_URL"} <= set(holders[0]["env"])
+    # the build holds no store address and fetches nothing (Royal's address: test_importer_royal.py)
+    assert importers.ROYAL_URL_VAR not in yaml.safe_dump(jobs["build"])
+    assert "importer-snapshot" not in yaml.safe_dump(jobs["build"])
+
+
+def test_the_workflow_never_uploads_an_artifact_or_prints_the_build():
+    """This repository is public, and so are its runs' artifacts and logs: the importers workflow uploads no artifact
+    and no cache, and the build's dbt output goes to a file on the runner (--log-file), never to the log."""
+    text = (Path(__file__).parent.parent / ".github/workflows/importers.yml").read_text()
+    wf = yaml.safe_load(text)
+    uses = [s.get("uses", "") for job in wf["jobs"].values() for s in job["steps"]]
+    assert not any(u.startswith(("actions/upload-artifact", "actions/cache")) for u in uses), uses
+    build = next(s for s in wf["jobs"]["build"]["steps"] if "importer-build" in s.get("run", ""))
+    log = '--log-file "$RUNNER_TEMP/importer-build/dbt.log"'
+    assert log in build["run"] and build["run"].count("dbt.log") == 1  # written there, never read back out
+    # nothing in the build is sent anywhere but the private dataset's derived file
+    assert importers.DERIVED == "derived/importer_offers.parquet"

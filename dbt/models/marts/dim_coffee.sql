@@ -41,7 +41,8 @@ attrs as (
         if(e.roaster_id is null, p.tasting_notes, e.tasting_notes) as tasting_notes,
         if(e.roaster_id is null, p.is_blend, e.is_blend) as is_blend,
         if(e.roaster_id is null, p.is_decaf, e.is_decaf) as is_decaf,
-        if(e.roaster_id is null, 'rules', 'llm') as enrichment_method
+        if(e.roaster_id is null, 'rules', 'llm') as enrichment_method,
+        not p.needs_llm as rules_complete
     from latest l
     join {{ ref('stg_products') }} p using (input_hash)
     left join llm e using (roaster_id, product_id, body_hash)
@@ -89,7 +90,7 @@ select
     coalesce(a.origin_region, iso.region) as origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
-    a.enrichment_method, a.is_wholesale,
+    a.enrichment_method, a.rules_complete, a.is_wholesale,
     -- What decided that the latest version is coffee: Claude's verdict (and its model) or the rules
     -- (verdicts_cover_catalog checks the share).
     l.classified_by, l.verdict_model,
