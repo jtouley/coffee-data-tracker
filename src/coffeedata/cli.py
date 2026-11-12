@@ -1009,6 +1009,11 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
         raise SystemExit(
             f"no importer {', '.join(sorted(unknown))}; known: {', '.join(sorted(importers.IMPORTERS))}"
         )
+    if args.accept_drop and (scheduled := set(args.importer or ()) & set(importers.SCHEDULE_ONLY)):
+        raise SystemExit(
+            f"{', '.join(sorted(scheduled))} is fetched only by the scheduled run; a drop there can't be accepted"
+            " on a dispatch"
+        )
     if args.accept_drop and len(set(args.importer or ())) != 1:
         raise SystemExit(
             "--accept-drop needs exactly one --importer: the override covers the importer checked by hand"
@@ -1017,8 +1022,10 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     if args.require_hub and not lake.remote:
         # a local lake on a CI runner is thrown away with it: the run would report "stored" and keep nothing
         raise SystemExit(f"COFFEEDATA_IMPORTERS must be an hf://datasets/ URL here, not {lake.url!r}")
-    # One page per host, so the client's per-host spacing never applies; a slow page gets a minute.
-    with PoliteClient(timeout=60.0, retries=3) as client:
+    # One page per host for the HTML importers; Royal's listing pages wait ROYAL_PAGE_INTERVAL (importers.read_royal)
+    # on top of the client's spacing. A slow page gets a minute. This is the one client allowed to reach a host only
+    # the scheduled importers job fetches (http.schedule_only_host); importers.royal_listing_url decides whether it does.
+    with PoliteClient(timeout=60.0, retries=3, schedule_only_ok=True) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
     return all(r["status"] != "failed" for r in results)
@@ -1273,7 +1280,9 @@ def main(argv: list[str] | None = None) -> None:
         "this week's private snapshot of green importers' public offer lists ($COFFEEDATA_IMPORTERS)",
     )
     imp.add_argument(
-        "--importer", action="append", help="only this importer (repeatable): cafe_imports, interamerican"
+        "--importer",
+        action="append",
+        help="only this importer (repeatable): cafe_imports, interamerican, royal_coffee (scheduled runs only)",
     )
     imp.add_argument(
         "--accept-drop",

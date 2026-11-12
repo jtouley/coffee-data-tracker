@@ -86,7 +86,11 @@ def not_a_roaster_site(domain: str) -> bool:
 
 
 def is_storefront_host(domain: str) -> bool:
-    return "." in domain and not not_a_roaster_site(domain)
+    """A domain that can be a roaster's own storefront: not a NOT_A_ROASTER_SITE host, and never a host only the
+    scheduled importers job may fetch (http.schedule_only_host: Royal Coffee), so discovery and add-roaster refuse it."""
+    from .http import schedule_only_host
+
+    return "." in domain and not not_a_roaster_site(domain) and not schedule_only_host(domain)
 
 
 def load_seed(path: Path = SEED) -> list[dict]:
@@ -308,8 +312,13 @@ def _current(lake: Lake, seed: Path, dropped: frozenset[str] | set[str] = frozen
     cur = con.execute(state_sql(lake, dropped) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []
+    from .http import schedule_only_host
+
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
+        # a host only the scheduled importers job may fetch is never a roaster, from the seed or a lake addition
+        if schedule_only_host(r["roaster_id"]) or schedule_only_host(r["host"]):
+            continue
         roaster = Roaster(
             roaster_id=r["roaster_id"],
             name=r["name"] or r["roaster_id"],
