@@ -653,29 +653,75 @@ SCHEDULE_ONLY = (ROYAL,)
 # --- the derived view: a private dbt project with a database file of its own --------------------------------------
 
 DBT_PROJECT = "dbt_importers"
+# The private database's one name and place, relative to where the command runs (like the main build's): the build
+# writes nowhere else, and the project itself refuses any other target (dbt_importers/macros/private_target.sql).
 DB = "build/importers.duckdb"
-# The main build's database (cli.cmd_build's default and COFFEEDATA_DB), which the site, the release and the MCP server
-# read: the private build never writes there.
+# Databases and folders a public job reads or uploads: the main build's database (cli.cmd_build's default and
+# COFFEEDATA_DB; the MCP server's run_sql reads it), the served release's (the site and the public export), the site
+# and the public export's folders. The private database is never one of them, nor inside one.
 MAIN_DB = "build/coffee.duckdb"
+SERVED_DB = "build/served.duckdb"
+PUBLIC_FOLDERS = ("build/site", "build/public")
 
 
-def build(lake: Lake, db: Path, target: Path | None = None, unit_tests: bool = False) -> bool:
-    """Build the private dbt project (dbt_importers/) over the importers dataset into `db`, a database file of its
-    own, rebuilt from raw each time. Reads the dataset (its staged files, and the Hub when it is remote), never writes
-    it. Refuses the main build's database. dbt's unit tests check the rules over hand-written rows, so they run only
-    when asked (the tests). Returns whether every model and check passed."""
+def _project_dir() -> Path:
+    """The checkout's private project, wherever this runs from."""
+    project = Path(__file__).resolve().parents[2] / DBT_PROJECT
+    return project if project.is_dir() else Path(DBT_PROJECT)
+
+
+def private_models() -> set[str]:
+    """The names of the private project's models: the only tables its database may hold."""
+    return {p.stem for p in (_project_dir() / "models").rglob("*") if p.suffix in (".sql", ".py")}
+
+
+def private_db() -> Path:
+    """The private database's path (DB, from the working directory), after checking it is none of the public
+    databases or folders and isn't a link to somewhere else. ValueError otherwise."""
+    db = Path(DB)
+    if db.is_symlink():
+        raise ValueError(f"{db} is a link; the importers' private database is a file of its own")
+    target = db.resolve()
+    public = {Path(p).resolve() for p in (MAIN_DB, SERVED_DB, os.environ.get("COFFEEDATA_DB") or MAIN_DB)}
+    if target in public:
+        raise ValueError(f"{db} is a public build's database; the importers' derived view has its own")
+    folders = [Path(f).resolve() for f in PUBLIC_FOLDERS]
+    if (export := os.environ.get("PUBLIC_EXPORT_URL")) and "://" not in export:
+        folders.append(Path(export).resolve())
+    if any(target.is_relative_to(f) for f in folders):
+        raise ValueError(f"{db} is inside a folder a public job uploads")
+    return db
+
+
+def build(lake: Lake, target: Path | None = None, unit_tests: bool = False) -> bool:
+    """Build the private dbt project (dbt_importers/) over the importers dataset into its own database file (DB,
+    `private_db`), rebuilt from raw each time. Reads the dataset (its staged files, and the Hub when it is remote),
+    never writes it. A database already there is replaced only when it holds nothing but the private project's tables
+    (ValueError otherwise: it isn't ours to delete).
+
+    The rules are SQL over fixed patterns, so they don't fail lot by lot as the Python rules could: an error in one
+    (a pattern RE2 rejects, a model that no longer compiles) fails the whole build, loudly, and leaves no database
+    behind, so no stale or half-built view is ever read. dbt's unit tests check the rules over hand-written rows, so
+    they run only when asked (the tests). Returns whether every model and check passed."""
     import json
     import subprocess
 
-    db = Path(db)
-    main = {Path(MAIN_DB).resolve(), Path(os.environ.get("COFFEEDATA_DB") or MAIN_DB).resolve()}
-    if db.resolve() in main:
-        raise ValueError(f"{db} is the main build's database; the importers' derived view has its own")
+    import duckdb
+
+    db = private_db()
+    if db.exists():
+        with duckdb.connect(str(db), read_only=True) as con:
+            tables = {
+                t for (t,) in con.execute("select table_name from information_schema.tables").fetchall()
+            }
+        if foreign := tables - private_models():
+            raise ValueError(
+                f"{db} holds tables the importers project doesn't own ({', '.join(sorted(foreign))})"
+            )
+        db.unlink()  # derived: always rebuilt from raw
     db.parent.mkdir(parents=True, exist_ok=True)
-    db.unlink(missing_ok=True)  # derived: always rebuilt from raw
     env = {k: v for k, v in os.environ.items() if k != "COFFEEDATA_DB"} | {"COFFEEDATA_IMPORTERS_DB": str(db)}
-    project = Path(__file__).resolve().parents[2] / DBT_PROJECT  # the checkout's, wherever this runs from
-    project_dir = str(project) if project.is_dir() else DBT_PROJECT
+    project_dir = str(_project_dir())
     where = ["--target-path", str(target.resolve())] if target else []
     skip = [] if unit_tests else ["--exclude", "resource_type:unit_test"]
     sources = json.dumps({"importer_sources": lake.sources("importer_raw")})
@@ -683,6 +729,8 @@ def build(lake: Lake, db: Path, target: Path | None = None, unit_tests: bool = F
         ["dbt", "build", *skip, "--project-dir", project_dir, "--profiles-dir", project_dir, *where, "--vars", sources],
         env=env,
     )  # fmt: skip
+    if r.returncode != 0:
+        db.unlink(missing_ok=True)  # never leave a half-built view
     return r.returncode == 0
 
 

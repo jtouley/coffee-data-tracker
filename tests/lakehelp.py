@@ -209,16 +209,18 @@ def manifest(lake: Lake, run_date: str, roasters: list[str], mode: str = "full")
 
 
 def importer_offers(lake: Lake, tmp, unit_tests: bool = False) -> list[dict]:
-    """Build the private importers dbt project (dbt_importers/) over an importers lake into its own database file
-    under `tmp`, and read its importer_offers, ordered by week, importer and row."""
+    """Build the private importers dbt project (dbt_importers/) over an importers lake, from `tmp` (so into
+    tmp/build/importers.duckdb, its one place), and read its importer_offers, ordered by week, importer and row."""
+    import contextlib
     from pathlib import Path
 
     import duckdb
 
     from coffeedata import importers
 
-    db = Path(tmp) / "importers.duckdb"
-    assert importers.build(lake, db, target=Path(tmp) / "importers-target", unit_tests=unit_tests)
+    with contextlib.chdir(tmp):
+        assert importers.build(lake, target=Path("importers-target"), unit_tests=unit_tests)
+        db = Path(importers.DB).resolve()
     with duckdb.connect(str(db), read_only=True) as con:
         rel = con.sql('select * from importer_offers order by week, importer, "row"')
         return [dict(zip(rel.columns, r, strict=True)) for r in rel.fetchall()]
