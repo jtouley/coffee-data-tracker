@@ -5,7 +5,9 @@ chain anything with over 20 stores."
 
 The field is `is_chain` (`dbt/models/intermediate/int_roaster_state.sql`): more than `chain_store_threshold` (20)
 stores, where the store count is `stg_registry.locations`, unless `dbt/seeds/chain_overrides.csv` says otherwise,
-either way, with a reason. `public_roaster` leaves a chain out, so its coffees, price events and market counts leave
+either way, with a reason. Once the admin's chain flags are published (Sources; the snapshot's `chains`, passed
+to dbt as var `chain_flags`), they replace the seed, whose four rows are their initial values. `public_roaster`
+leaves a chain out, so its coffees, price events and market counts leave
 every public table, the site, the public dataset and the shares. A chain is still crawled and stays in the lake and
 the internal marts (`dim_roaster`, `dim_coffee`, `fct_price_event`; `mart_market` already left chains out).
 

@@ -20,6 +20,8 @@ vars:
   # The store count is stg_registry.locations; seeds/chain_overrides.csv decides over it, either way, with a reason.
   # A chain is still crawled and stays in the internal marts; public_roaster leaves it out of every public output.
   chain_store_threshold: 20
+  # chain_flags (not set here): the build's snapshot's chain flags, [{roaster_id, chain}], from the admin's Sources
+  # page. `coffeedata build` passes them once a published snapshot carries them; they then replace the seed.
   # Who owns shots logged before accounts existed (their user_id is null). The build passes the real id.
   owner_user_id: "owner"
   # Claude's verdicts to use (verdict.py); empty means the rules alone. The build passes the configured ones.

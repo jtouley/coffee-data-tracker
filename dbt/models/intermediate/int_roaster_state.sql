@@ -25,6 +25,20 @@ recent as (
            min(run_date) filter (where ok and products > 0) as first_catalog_run
     from runs group by roaster_id
 ),
+-- The chain overrides: the build's snapshot's chain flags (var chain_flags, the admin's Sources page, which
+-- `coffeedata build` passes once a published snapshot carries them), else seeds/chain_overrides.csv. A flag decides
+-- over the store count, either way; a roaster with none is decided by its count.
+{%- set chain_flags = var('chain_flags', none) %}
+chain_overrides as (
+{%- if chain_flags is none %}
+    select roaster_id, is_chain from {{ ref('chain_overrides') }}
+{%- else %}
+    select null::varchar as roaster_id, null::boolean as is_chain where false
+    {%- for f in chain_flags %}
+    union all select '{{ f.roaster_id | replace("'", "''") }}', {{ 'true' if f.chain else 'false' }}
+    {%- endfor %}
+{%- endif %}
+),
 last_ok as (
     select * from {{ ref('int_fetches') }} where status = 'ok'
     qualify row_number() over (partition by roaster_id order by fetched_at desc, batch_id desc) = 1
@@ -32,7 +46,7 @@ last_ok as (
 base as (
 select
     r.roaster_id, r.roaster_name, r.city, r.state, r.country, r.locations,
-    -- A chain: more than chain_store_threshold stores (locations), unless seeds/chain_overrides.csv says otherwise.
+    -- A chain: more than chain_store_threshold stores (locations), unless an override (chain_overrides) says otherwise.
     -- Still crawled and kept in the internal marts; public_roaster leaves a chain out of every public output.
     coalesce(o.is_chain, r.locations > {{ var('chain_store_threshold') }}) as is_chain,
     r.opted_out, r.sources,
@@ -53,7 +67,7 @@ select
         else 'no_catalog'
     end as crawl_status
 from {{ ref('stg_registry') }} r
-left join {{ ref('chain_overrides') }} o using (roaster_id)
+left join chain_overrides o using (roaster_id)
 left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join recent rc using (roaster_id)

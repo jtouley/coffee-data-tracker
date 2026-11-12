@@ -888,7 +888,8 @@ seeds:
       Hand-checked chain status that decides over the store-count rule (int_roaster_state.is_chain: more than
       chain_store_threshold stores), either way: true for a chain whose store count reads low (discovery counts only
       Overture places that are roasteries, so a chain of cafes is undercounted), false for a roaster the count calls
-      a chain that isn't one. Every row says why.
+      a chain that isn't one. Every row says why. Read only until a published snapshot carries the admin's chain
+      flags (var chain_flags, the Sources page), which then replace it; its four rows are the flags' initial values.
     config:
       column_types: {roaster_id: varchar, is_chain: boolean, reason: varchar}
     columns:

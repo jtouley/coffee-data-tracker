@@ -933,6 +933,43 @@ unit_tests:
         - {roaster_id: cafes.com, locations: 1, is_chain: true}
         - {roaster_id: notachain.com, locations: 62, is_chain: false}
 
+  - name: a_snapshots_chain_flags_replace_the_seed
+    description: >-
+      Once the build's snapshot carries chain flags (var chain_flags, the admin's Sources page), they are the
+      overrides and the seed is not read: peets.com, a chain only by the seed, is decided by its count again, and a
+      flag either way decides over the count.
+    model: int_roaster_state
+    overrides:
+      vars:
+        chain_flags:
+          - {roaster_id: one.com, chain: true}
+          - {roaster_id: notachain.com, chain: false}
+    given:
+      - input: ref('shared_hosts')
+        rows: []
+      - input: ref('chain_overrides')
+        rows:
+          - {roaster_id: peets.com, is_chain: true, reason: "the seed's override"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: peets.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: one.com, locations: 1, sources: curated, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: notachain.com, locations: 62, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: twentyone.com, locations: 21, sources: overture, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows: []
+      - input: ref('int_fetches')
+        rows: []
+    expect:
+      rows:
+        - {roaster_id: peets.com, is_chain: false}
+        - {roaster_id: one.com, is_chain: true}
+        - {roaster_id: notachain.com, is_chain: false}
+        - {roaster_id: twentyone.com, is_chain: true}
+
   - name: public_roaster_leaves_out_chains
     description: >-
       public_roaster is the one place that decides "public": a chain (dim_roaster.is_chain) is left out however
