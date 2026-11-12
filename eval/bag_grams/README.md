@@ -45,7 +45,11 @@ totals, and a fresh sealed test set (`test2`). Once `test2` is scored, the total
   coffees and the `price_per_100g` of 75–87 (the chosen rules: 152 and 87), so it goes through the full process
   again (`test3`). Once `test3` was scored the total was 0.
 - Review of #139, H1 and L1–L3 (below): **15** coffees change against round 3's frozen rules (14 with another
-  `price_per_100g`), within step 9's light path. **Running total since the last full evaluation: 15.**
+  `price_per_100g`), within step 9's light path. The final review's F1 (below) adds 2 more. **Running total since
+  the last full evaluation: 17.** Why the light path (the final review's F2, for the owner to accept): step 9's
+  count is met, and although H1 changes how a rule decides, on this population the fix round makes no new confident
+  answer (every changed output returns to `main`'s value, goes blank, or is the count times the stated bag), and
+  every changed test-split coffee is already in a scored fixture, so no unseen coffee is left for a fresh test set.
 
 ## Data
 
@@ -423,10 +427,15 @@ predictions, agreeing on 83/83 (Wilson [95.6, 100.0]; round 2's test2: 488/496),
 settle. Scored once with `--final` after `sha256sum -c SHA256SUMS` passed for all 9 files. 83 items, none unclear,
 from 8 stores (the largest 23).
 
+Frozen round-3 rules (`28314a0`), the sealed score:
+
 | Rule | Right | Confidently wrong | Missed | Accuracy | Confidently wrong share |
 |---|---|---|---|---|---|
 | main (`branch2`) | 13/83 [9.4, 25.0] | 67/83 [71.0, 87.8] | 3/83 [1.2, 10.1] | 15.7%, normal [7.8, 23.5], store-clustered [0.0, 55.3] | 80.7%, normal [72.2, 89.3], store-clustered [38.7, 98.3] |
 | **change (`branch3`)** | **56/83 [56.8, 76.6]** | **13/83 [9.4, 25.0]** | 14/83 [10.3, 26.3] | **67.5%, normal [57.3, 77.6], store-clustered [17.5, 95.9]** | **15.7%, normal [7.8, 23.5], store-clustered [0.0, 55.3]** |
+
+The head of #139 (after the review fixes below), on `test3` as a regression fixture, not a second sealed score: right
+**68/83 [72.3, 88.7]**, confidently wrong **0/83 [0.0, 4.4]**, missed 15/83 [11.3, 27.7].
 
 Right, wrong and missed carry Wilson 95% intervals; no item was `unknown`, so none can be rightly blank. Paired,
 change minus main: accuracy +51.8 points (normal [+35.6, +68.0], store-clustered [-33.3, +94.4]); confidently wrong
@@ -473,7 +482,8 @@ A = ( #right in D  +  (N - |D|) * a_U ) / N
 | Rule | Full-population accuracy | Normal 95% | Store-clustered 95% | D right |
 |---|---|---|---|---|
 | main before #139 (`branch2`) | 95.37% | [93.55, 97.19] | [92.89, 97.20] | 10/96 |
-| **#139 (`branch3`)** | **95.55%** | [93.73, 97.37] | [93.07, 97.38] | 64/96 |
+| #139 as frozen in round 3 (`branch3`) | 95.55% | [93.73, 97.37] | [93.07, 97.38] | 64/96 |
+| **#139 at its head (after the review fixes)** | **95.57%** | [93.75, 97.39] | [93.08, 97.40] | 69/96 |
 
 The gate is on the estimate. Both lower bounds are below 95%: the data can't show that the population is above it,
 only that the best estimate is. A later rules change adds its own census to D (a new test set covers its changed
@@ -502,15 +512,15 @@ count-only option alone is compared with the other options' prices as one bag ea
 abstains. **L4**, an `unclear` label in D counts as not right instead of crashing. **L5**, the gate test takes
 `POPULATION` and the formula (`full_population`, `is_ok`) from `bag_eval.py`.
 
-**The 15 changed coffees, each checked by hand** (all in `test3`, a scored fixture now, or in validation; no other
-test-split coffee changes):
+**The 15 changed coffees, each checked by hand** (14 in the test split, every one in a scored fixture: `test3` or
+`test2`; 1 in validation). Against `main`, the head changes 142 coffees (round 3's frozen rules: 152).
 
 | Coffees | Option | Round 3 | Now | Label | Check |
 |---|---|---|---|---|---|
 | 12 at ironmulecoffee.com (12 in `test3`) | `2 Bags (24 oz total)` (30 options) | 1361 | 680 | 680 on all 12 | right |
-| haobaobaocoffee.com (`test3`) | `5lb (4 bags or more)` (3 options) | 9072 | blank | 2268 | wrong → missed |
-| galaxygirlcoffee.com (`test`, labeled) | `1-2-lb` at $14.45 | 544 | blank | 454 | wrong → missed |
-| pourcityroasters.com (validation) | `1-4-lb ` at $5.50 | 635 | blank | none | 1.4 lb at $5.50 is implausible (a quarter pound is likelier): right to abstain |
+| haobaobaocoffee.com (`test3`), H1 | `5lb (4 bags or more)` (3 options) | 9072 | blank | 2268 | wrong → missed; against `main` (2268), **right → missed** |
+| galaxygirlcoffee.com (`test2`), L2 | `1-2-lb` at $14.45 (not its drawn option) | 544 | blank | none for this option (the 454 label is the drawn `1-lb` option's) | most likely half a pound, so 544 was wrong: wrong → blank, as on `main` (544) it was wrong too |
+| pourcityroasters.com (validation), L2 | `1-4-lb ` at $5.50 | 635 | blank | none | 1.4 lb at $5.50 is implausible (a quarter pound is likelier): right to abstain |
 
 Measured on the fixture with these rules (floors and ceilings only move toward passing more strictly):
 
@@ -530,3 +540,22 @@ train-3 packet `459cffe555e45eeb`, validation-3 `11af0c8e4a495066`, C's train-3 
 `abe0095a3af63ac3`; prompts A `16ac7a4601fcb87e`, B `92a4b27860a1836f`, C `ce15f826fc595cf1` (round 3, phase 1), A
 `d4aef819ec8d9800`, B `306a7a9503cf9c19` (phase 2). test3's A and B files are byte-identical (all 83 values agree,
 and both kept the packet's key order).
+
+### The final review of #139: F1, and the shapes left latent
+
+**F1** (round 3's own regression): bendixcoffee.com's `Bulk Box (100 bags $1.85/ea)` read no count, since a count
+had at most two digits, and took the title's one 2 oz sample bag (57 g). A count of bags may now have three digits,
+so the option joins its listing's other count-only boxes (20, 35, 50, 75 bags) in the count-fill check and gets 100
+x 57 = 5700, as the 20-bag box gets 1140 (labeled 1134); a longer count blocks. 2 coffees change (both in `test3`,
+whose labeled options, the `Large Box` and `Small Box`, are unchanged), 24 options 57 → 5700, checked by hand: the
+price per bag ($1.85) agrees with the other boxes', and count times stated size is what GUIDE asks. Their
+`price_per_100g` doesn't change (5700 g is outside its bag band); `bag_sizes_g` no longer publishes 57.
+
+**Known latent shapes (F4–F6), 0 coffees today, left for a later change:**
+- F4: any text with the word `bag` and a tier phrase anywhere blanks (`12 oz Bag + Free Shipping`, `12 oz Bag -
+  Minimum roast`): abstentions, not wrong answers.
+- F5: total wording is checked before `each` and matches shipping times and prices (`2 Bags - 12oz each, ships in
+  2-3 days`, `Two 12 oz bags ($30 total)`, `2 Bags - 12 oz - packed in nitrogen` read 340, not 680), as on `main`.
+- F6: a blend or grade number before `N oz bags` (`House Blend #2 12 oz bags`, `Blend No. 5 12oz bags`), `Lot 12
+  Bags` anywhere in a title, a counted case over 25 kg in a description (`12 x 5 lb bags`), and a `2 bags` tag
+  beside a size tag: read confidently wrong or blank.

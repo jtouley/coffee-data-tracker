@@ -55,8 +55,10 @@ _WORDS = {"½": 0.5, "¼": 0.25, "¾": 0.75, "half": 0.5, "quarter": 0.25, "one"
 _WORDS |= {"four": 4, "five": 5}
 _COUNT_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6}
 _COUNT_WORDS |= {"seven": 7, "eight": 8, "nine": 9, "ten": 10, "twelve": 12}
-# A count of bags: a number or a number word, then "bags" ("2 Bags", "Two bags", "5-bags").
-_N = r"(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten|twelve)"
+# A count of bags: a number or a number word, then "bags" ("2 Bags", "Two bags", "5-bags", "Bulk Box (100 bags").
+_N = r"(\d{1,3}|one|two|three|four|five|six|seven|eight|nine|ten|twelve)"
+# A count of bags too long to be one: blocks, rather than leaving the option to take one bag's weight (review F1).
+_UNREAD_COUNT = re.compile(r"\d{4,}[\s-]*bags?\b", re.I)
 
 # An explicit count of bags, right before a weight: "4 x 12 oz", "20/2.00oz", "8 / 1 lb", "Case of 6 - 10 oz",
 # "6 count case (12 oz", "Variety 3 Pack - 12oz", "(TWO 16 oz)". A grind or blend number isn't one ("No. 4 / 5 lbs").
@@ -363,6 +365,8 @@ def read(
         + ([_TITLE_ONLY] if where == "title" else [])
     )
     if any(p.search(text) for p in stops):
+        return Reading(None, True)
+    if _UNREAD_COUNT.search(text):
         return Reading(None, True)
     if _TIER.search(text) and _BAGS_WORD.search(text):
         return Reading(

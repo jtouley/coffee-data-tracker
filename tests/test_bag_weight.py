@@ -311,6 +311,20 @@ def test_a_listing_whose_two_bag_option_states_the_total():
     assert product_grams("Frosted Muzzle - Medium Roast", "", opts) == [340, 680, 2268]
 
 
+def test_a_three_digit_count_of_bags_is_a_count():
+    # review F1 of #139 (bendixcoffee.com's sample boxes): "100 bags" is read with the other boxes, never as one
+    # sample bag; a count too long to read blocks
+    opts = [
+        ("Small Box (20 bags $2.50/ea) / Ground", 50.0, None),
+        ("Large Box (50 Bags $2/ea / Ground", 100.0, None),
+        ("Bulk Box (100 bags $1.85/ea) / Ground", 185.0, None),
+    ]
+    assert product_grams("Corporate Gifts - 2oz Sample", "", opts) == [1140, 2850, 5700]
+    assert product_grams(
+        "Corporate Gifts - 2oz Sample", "", [("Pallet (1000 bags) / Ground", 1700.0, None)]
+    ) == [None]
+
+
 def test_a_handle_with_a_count_before_its_weight():
     # review L2 of #139: "2-1-lb" is not 2.1 lb; in a handle it reads as two 1 lb bags
     assert product_grams("Kenya", "", [("Whole Bean", 30.0, None)], handle="kenya-2-1-lb-bags") == [907]

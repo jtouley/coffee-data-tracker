@@ -9,8 +9,8 @@ the scores weight each stratum by its size in the set (eval/bag_grams/items_<set
 lower any accuracy or raise any confidently wrong share.
 """
 
+import importlib.util
 import json
-import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -93,8 +93,10 @@ def _outcome(g: int | None, label: int | str) -> str:
 # rules get right or rightly leave blank must be at least bag_eval.GATE. The coffees a round's change touches
 # (eval/bag_grams/gate_d.json) are counted exactly from their census labels; every other coffee is estimated from
 # bag_eval.GATE_SETS. The formula and the population are bag_eval's (full_population, POPULATION), not repeated here.
-sys.path.insert(0, str(ROOT / "eval" / "bag_grams"))
-import bag_eval  # noqa: E402
+_spec = importlib.util.spec_from_file_location("bag_grams_eval", ROOT / "eval" / "bag_grams" / "bag_eval.py")
+assert _spec and _spec.loader
+bag_eval = importlib.util.module_from_spec(_spec)  # loaded by path, so nothing is put on sys.path (review N1)
+_spec.loader.exec_module(bag_eval)
 
 
 def _population_estimate() -> float:
