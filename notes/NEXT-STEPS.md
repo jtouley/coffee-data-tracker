@@ -341,3 +341,7 @@ Backlog, not started until the owner says so:
 - Claude enrichment queue ordering (prioritise current listed products);
 - price-sort tail junk / non-coffee leak cleanup;
 - missing regions (Popayán, Pitalito, Limmu…).
+- Leftovers parked by the "finish, don't widen" rule:
+  - #139: C1 (the census gate should also require accuracy at least main's), C2 ("1,500 bags" count parsing).
+  - #151: iOS zoom on the 13 px Sort select, a truncated Filters label with a sort on, and the nav's `row-gap` having no effect.
+  - #150: no test for the WAL cleanup, and the coverage baseline drops releases by "overall = 0".
