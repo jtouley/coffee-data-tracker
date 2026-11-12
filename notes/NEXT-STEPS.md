@@ -345,6 +345,9 @@ Backlog, not started until the owner says so:
   - #139: C1 (the census gate should also require accuracy at least main's), C2 ("1,500 bags" count parsing).
   - #151: iOS zoom on the 13 px Sort select, a truncated Filters label with a sort on, and the nav's `row-gap` having no effect.
   - #150: no test for the WAL cleanup, and the coverage baseline drops releases by "overall = 0".
-  - Royal derivation gaps (local run on main, 2026-11-12; private dbt only): `status` 0% though each variant states
-    `available` (1,310 of 14,282 lots available); `bag_kg` 0% though every variant states `grams`; `region` 0% because
-    Royal writes regions in prose under "Regional Details", not as "Region:" labels. Origin 93%, process 88%.
+  - Royal derivation gaps (local run on main, 2026-11-12; private dbt only). The build passed, but `int_royal_labels`
+    is empty: its rules expect "Label: value" lines, and the real bodies are HTML prose (1 of 14,282 has such a line).
+    Filled: name 100%, process_type 88%, origin 93%, certifications 40%. Empty: lot_id (1%), region, process, warehouse,
+    bags, bag_kg, status, altitude, varieties, grower. Each variant states `available` (1,310 of 14,282) and `grams`.
+    No dbt test catches an empty Royal branch; a fill-rate floor per importer would. Raw is kept word for word, so a
+    fix re-derives every stored week.
