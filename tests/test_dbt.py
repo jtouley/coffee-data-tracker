@@ -1027,7 +1027,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=22 " in r.stdout
+    assert "PASS=24 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1127,6 +1127,88 @@ def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
         "natural",
         "llm",
     )
+
+
+def test_dim_coffee_maps_origins_to_iso(lake, tmp_path):
+    """dim_coffee and the public tables carry the ISO 3166-1 short name and alpha-2 code (int_origin_country), the
+    captured spelling stays in origin_country_raw, a list of several countries has no country (and leaves the market
+    table), and the place a spelling names fills an empty origin_region. The site, built from the release tables
+    alone, shows dbt's display name. An unmapped spelling warns and gets no country."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    titles = {"A": "Tanzania Peaberry", "B": "Cerrado Coffee Roast", "C": "Kona Extra Fancy", "D": "Duo Coffee Roast",
+              "E": "Puerto Rico Yauco Selecto"}  # fmt: skip
+    run(lake, "2026-10-19", rid, [product(k, title=t) for k, t in titles.items()])
+
+    def llm(pid, origin, region=None):
+        return {"extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC), "roaster_id": rid, "product_id": pid,
+                "body_hash": f"b{pid}", "method": "llm", "needs_llm": False, "origin_country": origin,
+                "origin_region": region, "process": "washed", "is_blend": False}  # fmt: skip
+
+    lake.write_partition("enrichments", "2026-10-19", "llm1",
+                         [llm("B", "Brasil"), llm("C", "Hawaii, Usa"), llm("D", "Colombia, Honduras")])  # fmt: skip
+    con = build(lake, tmp_path)
+    got = {r[0]: r[1:] for r in con.execute(
+        "select product_id, origin_country, origin_country_code, origin_country_raw, origin_region from dim_coffee"
+    ).fetchall()}  # fmt: skip
+    assert got == {
+        "A": ("Tanzania, United Republic of", "TZ", "Tanzania", None),
+        "B": ("Brazil", "BR", "Brasil", None),
+        "C": ("United States", "US", "Hawaii, Usa", "Hawaii"),
+        "D": (None, None, "Colombia, Honduras", None),
+        "E": ("Puerto Rico", "PR", "Puerto Rico", None),
+    }
+    public = con.execute(
+        "select origin_country, origin_country_code from public_coffee order by 1"
+    ).fetchall()
+    assert ("Brazil", "BR") in public and (None, None) in public
+    cells = con.execute(
+        "select distinct origin_country, origin_country_code from public_market_weekly"
+    ).fetchall()
+    assert sorted(cells) == [("Brazil", "BR"), ("Puerto Rico", "PR"), ("Tanzania, United Republic of", "TZ"),
+                             ("United States", "US")]  # fmt: skip
+
+    con.close()
+
+    # The name the site shows comes from dbt (dim_coffee.origin_country_display; var origin_names, default common),
+    # read from the served release: a database holding only the release tables, as quality.materialize writes it.
+    from coffeedata import quality, site
+
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert con.execute("select origin_country_display from dim_coffee where product_id = 'A'").fetchone() == (
+        "Tanzania",
+    )
+    served = duckdb.connect(str(tmp_path / "served.duckdb"))
+    for t in quality.RELEASE_TABLES:
+        served.execute(f"create table {t} as select * from read_parquet('{_export(con, t, tmp_path)}')")
+    served.close()
+    con.close()
+    out = site.build(tmp_path / "served.duckdb", tmp_path / "site").parent
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    names = {r[catalog["columns"].index("origin_country")] for r in catalog["rows"]}
+    # The page without its JSON-LD, which quotes the contract's column descriptions.
+    html = re.sub(r"<script.*?</script>", "", (out / "index.html").read_text(), flags=re.S)
+    assert "Tanzania" in names and "Tanzania, United Republic of" not in names and "Brazil" in names
+    assert "Tanzania" in html and "United Republic" not in html
+
+    # An unmapped spelling warns and is published without a country: it never holds back a release.
+    later = llm("A", "Narnia") | {"extracted_at": datetime(2026, 10, 19, 13, tzinfo=UTC)}
+    lake.write_partition("enrichments", "2026-10-19", "llm2", [later])
+    con = build(lake, tmp_path / "unmapped")
+    assert con.execute(
+        "select origin_country, origin_country_code, origin_country_raw from dim_coffee where product_id = 'A'"
+    ).fetchone() == (None, None, "Narnia")
+    con.close()
+    log = (tmp_path / "unmapped" / "logs" / "dbt.log").read_text()
+    assert re.search(r"WARN 1 origin_countries_are_mapped", log), "the unmapped spelling must warn"
+
+
+def _export(con, table, tmp_path):
+    """A release table as a parquet file, as a release in the lake holds it."""
+    path = tmp_path / "release" / f"{table}.parquet"
+    path.parent.mkdir(exist_ok=True)
+    con.execute(f"copy {table} to '{path}' (format parquet)")
+    return path
 
 
 def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tmp_path, monkeypatch):

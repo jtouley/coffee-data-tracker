@@ -124,6 +124,11 @@ vars:
   price_outlier_high_z: 6
   price_outlier_min_group: 30
   claim_tolerance: 0.15
+  # The name dim_coffee.origin_country_display (and so the site) gives an origin country: `common` takes
+  # seeds/origin_display_name.csv where it has one ("Tanzania" for "Tanzania, United Republic of"), `iso` the ISO
+  # 3166-1 short name. Display only: origin_country and origin_country_code stay ISO's in every table. The owner's
+  # one switch; `coffeedata build` (the weekly run) and the site, which reads the served release, both follow it.
+  origin_names: common
 
 models:
   coffeedata:
