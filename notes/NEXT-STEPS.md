@@ -345,9 +345,8 @@ Backlog, not started until the owner says so:
   - #139: C1 (the census gate should also require accuracy at least main's), C2 ("1,500 bags" count parsing).
   - #151: iOS zoom on the 13 px Sort select, a truncated Filters label with a sort on, and the nav's `row-gap` having no effect.
   - #150: no test for the WAL cleanup, and the coverage baseline drops releases by "overall = 0".
-  - Royal derivation gaps (local run on main, 2026-11-12; private dbt only). The build passed, but `int_royal_labels`
-    is empty: its rules expect "Label: value" lines, and the real bodies are HTML prose (1 of 14,282 has such a line).
-    Filled: name 100%, process_type 88%, origin 93%, certifications 40%. Empty: lot_id (1%), region, process, warehouse,
-    bags, bag_kg, status, altitude, varieties, grower. Each variant states `available` (1,310 of 14,282) and `grams`.
-    No dbt test catches an empty Royal branch; a fill-rate floor per importer would. Raw is kept word for word, so a
-    fix re-derives every stored week.
+- Royal derivation: fixed in #152 (owner asked, 2026-11-12). Reviewed, CI green, held as draft for the held-out score:
+  per CLAUDE.md it waits for the first scheduled week after 11-18 (week 11-09 was read while building). Then score main
+  and #152 on a hash split grouped by lot, two labelers plus a tiebreak, Wilson intervals; merge if not worse.
+- Real importer values in older test fixtures and unit tests on main (from #140/#148): owner decided 2026-11-12 to
+  leave them (public on the importers' sites, a few lots, not the dataset). New tests use invented values only.
