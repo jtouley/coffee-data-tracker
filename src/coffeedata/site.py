@@ -70,6 +70,8 @@ SITE_VIEWS = (
 # - SINGLE_ORIGIN: LISTED, not a blend, origin known. The origin count and all three charts (in stock by origin, by
 #   process, and the median price by origin). Over the same roasters it selects public_market_weekly's coffees
 #   (tests/test_dbt.py checks the two cell for cell).
+# dbt states the same two rules once, as macros (dbt/macros/catalog_rules.sql: is_current, is_single_origin), which
+# int_current_catalog, public_market_weekly and release_changes use; the site reads its views with these strings.
 LISTED = "is_listed and catalog_status <> 'archived' and not is_wholesale"
 SINGLE_ORIGIN = f"{LISTED} and not is_blend and origin_country is not null"
 

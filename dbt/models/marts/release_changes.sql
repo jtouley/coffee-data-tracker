@@ -137,8 +137,7 @@ roaster_changes as (
     where {{ row_hash('p', roaster_cols) }} <> {{ row_hash('c', roaster_cols) }}
 ),
 -- A market cell's qualifying coffees (public_market_weekly's filter), and what each contributes.
-{%- set qualifies = "is_listed and catalog_status <> 'archived' and not is_wholesale and not is_blend
-      and origin_country is not null" %}
+{%- set qualifies = is_single_origin() %}
 qualifying as (
     {%- for side, rel in [('prev', 'prev_coffee'), ('cur', 'cur_coffee')] %}
     select '{{ side }}' as side, origin_country, coalesce(process, 'unknown') as process,
