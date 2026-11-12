@@ -18,6 +18,9 @@ grant create share on account to role coffee_loader;  -- the share's views are o
 -- weekly workflow, and/or a Claude environment).
 
 -- 2. Share: secure views over the loaded tables, so table internals can change without breaking consumers.
+--    These `select *` views start with the tables' lower-case column names; the next `coffeedata load-snowflake`
+--    recreates them (copy grants) with upper-case columns, which consumers write without quotes, and their
+--    descriptions.
 use role coffee_loader;
 create schema if not exists coffee_data.share;
 create or replace secure view coffee_data.share.coffee as select * from coffee_data.market.public_coffee;

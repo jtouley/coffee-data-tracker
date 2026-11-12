@@ -5,10 +5,15 @@ dbt test fails the build if any of them ever exposes descriptions, images, store
 
 - Product descriptions, images, handles, tags and the shot log are excluded.
 - Opted-out roasters are excluded.
-- Roasters known only from OpenStreetMap are excluded, so ODbL share-alike doesn't apply.
+- Roasters known only from OpenStreetMap are excluded.
 
 `coffeedata export-public --to <dest>` writes them as Parquet. With `PUBLIC_EXPORT_URL` set, the weekly run does
-it automatically.
+it automatically. A directory or Hugging Face export also writes `manifest.json`: the release (`release_build_id`,
+`release_run_date`), the contract id and version, the data licence (`CDLA-Permissive-2.0`,
+[`licenses/CDLA-Permissive-2.0.txt`](../licenses/CDLA-Permissive-2.0.txt)) and each Parquet file's `sha256` and row
+count, with the licence text beside it as `LICENSE`. An `s3://` or `gs://` export writes only the Parquet files. A Hugging Face export of a release build tags its commit `release-<run date>`
+(the Monday run; a newer build of the same run moves the tag to its commit), so consumers can pin a week:
+`hf://datasets/<you>/us-coffee-market@release-2026-11-02/data/public_coffee.parquet`.
 
 | Destination | `--to` / `PUBLIC_EXPORT_URL` | Credentials |
 |---|---|---|
@@ -41,9 +46,50 @@ never holds the site back):
   prints what the checks read (tables, share views, owners, grants), whether it would refuse, and every
   statement it would run.
 - It replaces each table in one transaction.
+- On every load, a migration included, it then writes each table's, share view's and column's description
+  from the public contract, read at load time, so **the listing's data dictionary comes from
+  `contracts/public-catalog.odcs.yaml`**: `comment on table` / `comment on view`, and `alter table|view ... alter
+  column ... comment` for columns (Snowflake refuses `comment on column` with a qualified name). A migration
+  writes the view's descriptions into its definition (`create or replace secure view ... (col comment '...', ...)
+  copy grants comment = '...' as select ...`), so recreating a view can't drop them. A column in the export that
+  the contract doesn't describe fails the load before anything changes; a contract column Snowflake doesn't have
+  yet is skipped with a warning. To change a description, change the contract; the next load applies it.
 - It fails if the row counts differ from the export.
+- The tables in `MARKET` keep the export's lower-case column names (quoted identifiers, as `infer_schema` makes
+  them). The share views rename them to upper case (`create or replace secure view SHARE.COFFEE (RELEASE_RUN_DATE
+  comment '...', ...) copy grants comment = '...' as select "release_run_date", ... from MARKET.public_coffee`),
+  so consumers write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes. Columns are compared in any case.
+  A share view with the export's columns that isn't upper case yet (made by `admin_setup.sql` part 2, or before
+  this change) is recreated by any load; no `--migrate` is needed. Unlike a migration, an ordinary load never
+  stops for it: if another role owns the view, the share is missing it and COFFEE_LOADER can't grant it, or its
+  grants can't be read, the load leaves that view lower case, loads the data, and warns (on stderr and as a
+  warning on the workflow run's summary page) with the statement that fixes it. After recreating a view, the load
+  reads its grants back and fails the job if the view is no longer in the share. To re-case before the Tuesday
+  `site` run, `gh workflow run weekly -f snowflake_migrate=true` works too, but it is the strict path: it stops,
+  loading nothing, if any view can't be recreated. Run `coffeedata load-snowflake --migrate --dry-run` first to
+  see what it would refuse; a dry run only records the `grant … to share` statements, so a share grant that would
+  fail shows only in the real run.
 
 Databricks loads from S3 or GCS.
+
+## Coverage claims
+
+`LISTING.md` is the source of truth for the listing copy. The Snowflake listing's attribute boxes are typed by
+hand from it, so nothing else would notice when a number there goes stale. Its `coverage-claims` comment maps
+each number in the copy to a `mart_build_profile` metric (a `listed_coffees: <the copy's words>` line), and
+every build compares them. `listed_coffees` counts the coffees currently listed for sale, not
+wholesale (not `PUBLIC_COFFEE`'s rows), and `roasters_with_coffee` the roasters with at least one of them:
+- `coverage_claims_match_build` warns when a claim is more than 15% (`claim_tolerance` in
+  `dbt/dbt_project.yml`) from this build's metric, and `coffeedata build` prints the file and line to update
+  and the build's number rounded for the copy ("about 41,000 now"). It never holds a release back. Update the copy and the comment together, then retype the number in Snowflake.
+- `coverage_claims_name_metrics` fails the build when a claim names a metric the profile doesn't have: that's a
+  bug in the claim or the profile, not drift.
+- A claim whose text isn't in the copy, or has no number, fails CI
+  (`test_the_listings_coverage_claims_parse_and_point_at_their_copy`). In a build it's logged and skipped, and
+  a missing `LISTING.md` is logged and checks nothing: the ingest image copies the file, but the check never
+  stops a build.
+
+Both results are in the build's record (`builds/`, like every other check) and in the job log.
 
 ## Order of operations
 
@@ -58,8 +104,8 @@ Databricks loads from S3 or GCS.
 
 ## Before going public
 
-- License: the dataset card proposes CDLA-Permissive-2.0, matching Overture. Change it if you prefer
-  CC BY 4.0.
+- License: the public data is CDLA-Permissive-2.0
+  ([`licenses/CDLA-Permissive-2.0.txt`](../licenses/CDLA-Permissive-2.0.txt)), matching Overture; the code is MIT. Use the same licence in every listing.
 - Terms of service: some roasters' terms restrict automated collection or commercial reuse. A free
   listing of facts with links back and an opt-out is the safer option. Get legal advice before charging.
 - Support contact: put a support email in `LISTING.md`.

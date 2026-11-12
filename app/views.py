@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from datetime import datetime, tzinfo
 from html import escape
+from math import ceil, floor, log10
 from urllib.parse import parse_qsl, urlencode, urlsplit
 
 from coffeedata.models import SAFE_ID, Shot
@@ -86,37 +87,45 @@ def sequence(shots: list[Shot]) -> str:
 
 
 def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: bool = True) -> str:
-    """The dial-in target: time across (18–38 s), ratio up (1:1.6–1:2.5), the window shaded, each shot a mark
-    numbered in order and joined oldest to newest, the newest ringed. With `sequence=False` (a coffee's page, many
-    shots across bags) the marks are plain: neither numbered nor joined."""
+    """Time across, ratio up, and the 25–32 s, 1:1.8–2.3 window shaded. The axes expand to include all shown
+    shots, numbered in order and joined oldest to newest, the newest ringed. With `sequence=False` (a coffee's page,
+    many shots across bags) the marks are plain: neither numbered nor joined."""
     left, right, top, bottom = 32, 350, 8, height - 24
+    shown = shots[-8:] if sequence else shots
+    times = [s.time_s for s in shown]
+    ratios = [ratio(s) for s in shown]
+    tmin = max(0.0, min(18.0, min(times, default=18.0) - 2)) if times and min(times) < 18 else 18.0
+    tmax = max(38.0, max(times, default=38.0) + 2) if times and max(times) > 38 else 38.0
+    rmin = max(0.0, min(1.6, min(ratios) - 0.1)) if ratios and min(ratios) < 1.6 else 1.6
+    rmax = max(2.5, max(ratios) + 0.1) if ratios and max(ratios) > 2.5 else 2.5
 
     def x(t: float) -> float:
-        return left + (min(max(t, 18), 38) - 18) / 20 * (right - left)
+        return left + (t - tmin) / (tmax - tmin) * (right - left)
 
     def y(r: float) -> float:
-        return top + (2.5 - min(max(r, 1.6), 2.5)) / 0.9 * (bottom - top)
+        return top + (rmax - r) / (rmax - rmin) * (bottom - top)
 
     aria = label or "Shots by time and ratio against the 25 to 32 second, 1:1.8 to 1:2.3 window"
     out = [f'<svg class="target" viewBox="0 0 358 {height}" role="img" aria-label="{escape(aria)}">']
-    for t in (20, 25, 30, 35):
+    for t in (20, 25, 30, 35) if (tmin, tmax) == (18, 38) else _ticks(tmin, tmax):
         out.append(
             f'<line class="tick" x1="{x(t):.1f}" x2="{x(t):.1f}" y1="{top}" y2="{bottom}"/>'
-            f'<text x="{x(t):.1f}" y="{height - 6}" text-anchor="middle">{t} s</text>'
+            f'<text x="{x(t):.1f}" y="{height - 6}" text-anchor="middle">{g(t)} s</text>'
         )
-    for r in (1.8, 2.0, 2.2, 2.4):
+    default_ratio = (rmin, rmax) == (1.6, 2.5)
+    for r in (1.8, 2.0, 2.2, 2.4) if default_ratio else _ticks(rmin, rmax):
         out.append(
             f'<line class="tick" x1="{left}" x2="{right}" y1="{y(r):.1f}" y2="{y(r):.1f}"/>'
-            f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{r:.1f}</text>'
+            f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{f"{r:.1f}" if default_ratio else g(r)}</text>'
         )
     (t0, t1), (r0, r1) = TARGET_TIME, TARGET_RATIO
     out.append(
         f'<rect class="win" x="{x(t0):.1f}" y="{y(r1):.1f}" width="{x(t1) - x(t0):.1f}" '
         f'height="{y(r0) - y(r1):.1f}" rx="4"/>'
-        f'<text class="wl" x="{x(t1) - 6:.1f}" y="{y(r0) - 6:.1f}" text-anchor="end">window</text>'
         f'<line class="ax" x1="{left}" x2="{right}" y1="{bottom}" y2="{bottom}"/>'
     )
-    pts = [(x(s.time_s), y(ratio(s)), s) for s in (shots[-8:] if sequence else shots)]
+    pts = [(x(s.time_s), y(ratio(s)), s) for s in shown]
+    label_at = len(out)  # the window's label goes under the marks, once its place is known
     if sequence and len(pts) > 1:
         out.append(f'<polyline class="path" points="{" ".join(f"{px:.1f},{py:.1f}" for px, py, _ in pts)}"/>')
     placed: list[tuple[float, float, float, float]] = []  # label boxes so far: x0, y0, x1, y1
@@ -166,8 +175,74 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
     if sequence and pts:
         px, py, _ = pts[-1]
         out.append(f'<circle class="now" cx="{px:.1f}" cy="{py:.1f}" r="10"/>')
+    spot = _label_spot((x(t0), y(r1), x(t1), y(r0)), (left, top, right, bottom), pts, sequence, placed)
+    if spot:
+        tx, ty, anchor = spot
+        out.insert(
+            label_at, f'<text class="wl" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}">window</text>'
+        )
     out.append("</svg>")
     return "".join(out)
+
+
+_LABEL_W = 42  # "window" in the chart's 12 px semibold, with a little room
+
+
+def label_box(tx: float, ty: float, anchor: str) -> tuple[float, float, float, float]:
+    """The box the window's label covers, from its text position and anchor."""
+    x0 = tx - _LABEL_W if anchor == "end" else tx
+    return (x0, ty - 10, x0 + _LABEL_W, ty + 2)
+
+
+def _label_spot(
+    win: tuple[float, float, float, float],
+    plot: tuple[float, float, float, float],
+    pts: list[tuple[float, float, Shot]],
+    joined: bool,
+    numbers: list[tuple[float, float, float, float]],
+) -> tuple[float, float, str] | None:
+    """Where the window's label goes: inside the box's lower-right corner when the box is tall enough, else just
+    outside it (above, below, right, left), in the first spot clear of every mark, the newest shot's ring, the path
+    and the order numbers. None when no spot is clear; the label is then left out."""
+    wx0, wy0, wx1, wy1 = win
+    spots = [(wx1 - 6, wy1 - 6, "end")] if wy1 - wy0 >= 24 else []
+    spots += [
+        (wx1, wy0 - 4, "end"),
+        (wx1, wy1 + 13, "end"),
+        (wx1 + 6, (wy0 + wy1) / 2 + 4, "start"),
+        (wx0 - 6, (wy0 + wy1) / 2 + 4, "end"),
+    ]
+    segs = list(zip(pts, pts[1:], strict=False)) if joined else []
+    for tx, ty, anchor in spots:
+        box = label_box(tx, ty, anchor)
+        if box[0] < plot[0] or box[2] > plot[2] or box[1] < plot[1] - 4 or box[3] > plot[3]:
+            continue
+        if any(_gap(box, (px, py, px, py)) < 7 for px, py, _ in pts):
+            continue
+        if joined and pts and _gap(box, (pts[-1][0], pts[-1][1]) * 2) < 12:
+            continue
+        if any(_gap(box, n) < 2 for n in numbers):
+            continue
+        if any(_seg_gap(box, a[:2], b[:2]) < 3 for a, b in segs):
+            continue
+        return tx, ty, anchor
+    return None
+
+
+def _seg_gap(box: tuple[float, float, float, float], a: tuple[float, float], b: tuple[float, float]) -> float:
+    """The distance between a box and the line segment a-b, sampled every pixel or so."""
+    n = max(1, ceil(max(abs(b[0] - a[0]), abs(b[1] - a[1]))))
+    return min(
+        _gap(box, (a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n) * 2) for k in range(n + 1)
+    )
+
+
+def _ticks(low: float, high: float) -> list[float]:
+    """At most five readable grid labels, with round steps, on an expanded axis."""
+    raw = (high - low) / 4
+    magnitude = 10 ** floor(log10(raw))
+    step = next(n * magnitude for n in (1, 2, 5, 10) if n * magnitude >= raw)
+    return [round(i * step, 6) for i in range(ceil(low / step), floor(high / step) + 1)]
 
 
 def _gap(a: tuple[float, float, float, float], b: tuple[float, float, float, float]) -> float:

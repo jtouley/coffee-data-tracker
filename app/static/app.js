@@ -11,6 +11,36 @@ document.cookie = `tz=${encodeURIComponent(Intl.DateTimeFormat().resolvedOptions
 
 const ME = document.querySelector('meta[name="user"]')?.content ?? null;
 
+// Cached Today and Log pages contain a specific bag. Never reuse them after a selection changes.
+async function clearBagPages() {
+  if (!("caches" in window)) return;
+  const cache = await caches.open("pages");
+  await Promise.all([cache.delete("/"), cache.delete("/log")]);
+}
+function selectedBag() {
+  try {
+    const value = localStorage.getItem(`selected-bag:${ME}`);
+    if (!value) return null;
+    try { return JSON.parse(value); } catch { return { id: value, at: 0 }; }
+  } catch { return null; }
+}
+function rememberBag(id, at = Date.now()) {
+  try { localStorage.setItem(`selected-bag:${ME}`, JSON.stringify({ id, at })); } catch { /* storage is optional */ }
+}
+// Choosing a bag is remembered on this phone only once the server has accepted it: a failed /use (offline, a bag
+// finished elsewhere) leaves the old value, and the server's selection is what Log shot uses either way.
+document.addEventListener("click", async (event) => {
+  const link = event.target.closest("[data-select-bag]");
+  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  let r = null;
+  try { r = await fetch(link.href, { headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
+  if (!r || !r.ok) return location.assign(link.href);
+  rememberBag(link.dataset.selectBag);
+  await clearBagPages().catch(() => {});
+  location.assign(r.url);
+});
+
 const DB = new Promise((resolve, reject) => {
   const r = indexedDB.open("registry-coffee", 1);
   r.onupgradeneeded = () => r.result.createObjectStore("outbox", { keyPath: "key" });
@@ -55,14 +85,35 @@ function deliver(entry) {
   return p;
 }
 
+// A write that landed makes the pages shown before it out of date: a page the browser brings back from history
+// (Back) loads again if it was made before the write (stale(), below). The time is the server's (its Date header),
+// as the page's own (meta "rendered"), so the phone's clock doesn't matter. The pages kept for offline use stay:
+// online, the service worker fetches pages from the network first, so they're only shown offline.
+function wrote(r) {
+  const at = Date.parse(r.headers.get("date") || "") || Date.now();
+  try { localStorage.setItem("wrote-at", String(at)); } catch { /* storage is optional */ }
+}
+
 async function deliverOnce(entry) {
   // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
+  // X-Expected-User binds the write to the account that made it: after an account switch (another tab, a sign-out)
+  // the server answers 403 and the entry is held until that person signs in again. An entry from before entries
+  // carried an account goes as the signed-in person, as it always did (mine() already counts it as theirs).
   const r = await fetch(entry.url, {
     method: "POST",
-    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
+    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch", "X-Expected-User": entry.user ?? ME },
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
+    wrote(r);
+    if (entry.url === "/api/bags" && entry.body?.finished_on) {
+      try {
+        if (selectedBag()?.id === entry.body.bag_id) {
+          localStorage.removeItem(`selected-bag:${ME}`);
+          await clearBagPages();
+        }
+      } catch { /* storage is optional */ }
+    }
     await store("readwrite", (s) => s.delete(entry.key));
     return r.json();
   }
@@ -194,12 +245,20 @@ function go(url, notice) {
   else location.replace(url); // also this same screen again, after a change on it
 }
 
-// Stepping back to the screen a save came from, the browser shows its copy from before the save (from memory, or
-// from its cache, which Back doesn't check): load it again, so it shows the change, and the notice with it.
+// Stepping back to a screen, the browser shows its copy from before (from memory, or from its cache, which Back
+// doesn't check): if a save is waiting to be announced on it, or any write landed after the copy was made (a shot
+// moved to another bag, from a screen further on), load it again, so it shows the change, and the notice with it.
 function stale(persisted) {
   try {
     const back = persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward";
-    return Boolean(back && sessionStorage.getItem("notice"));
+    if (!back) return false;
+    if (!navigator.onLine) return false; // offline, a reload would only find "No connection": keep what's shown
+    if (sessionStorage.getItem("notice")) return true;
+    const at = Number(localStorage.getItem("wrote-at"));
+    const made = Number(document.querySelector('meta[name="rendered"]')?.content) * 1000;
+    // Both in whole seconds, and a server's Date header can lag its clock by a second (uvicorn's is set once a
+    // second), so a page made up to 2 s after the write is loaded again too: one reload too many, never one too few.
+    return Boolean(at && made && at + 2000 >= made);
   } catch {
     return false; // storage blocked: nothing waiting
   }
@@ -407,7 +466,9 @@ function logShot(form) {
       notes: $("notes").value.trim() || null,
     };
     for (const k of Object.keys(body)) if (body[k] == null) delete body[k];
+    const label = save.textContent;
     save.disabled = true;
+    save.textContent = "Saving…"; // the lake commit can take seconds: the tap shows at once
     try {
       await send(`shot:${body.shot_id}`, "/api/shots", body);
       tick(8);
@@ -418,6 +479,7 @@ function logShot(form) {
       if (err instanceof Rejected) {
         hint(form, err.message);
         save.disabled = false;
+        save.textContent = label;
         return;
       }
       tick(8);
@@ -543,15 +605,17 @@ function roastDays(iso) {
   return Math.round((today - new Date(`${iso}T12:00:00`)) / 86400000);
 }
 
-// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future isn't saved, and one more
-// than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say, or "" to save.
-// `kept` is the date the bag already has: it's saved as it is, like the server does, so the weight or Finished can
-// change on a bag whose date predates this check. "Future" is the server's rule, past tomorrow in UTC, so a phone
-// ahead of UTC or behind it never offers a date the server then refuses.
+// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future or over a year ago isn't
+// saved, and one more than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say,
+// or "" to save. `kept` is the date the bag already has: it's saved as it is, like the server does, so the weight or
+// Finished can change on a bag whose date predates this check. "Future" and "over a year" are the server's rules,
+// past tomorrow or before 366 days ago in UTC, so a phone ahead of UTC or behind it never offers a date the server
+// then refuses.
 function roastCheck(form, save, label, kept = null) {
   const v = form.roast_date.value;
   if (!v || v === kept) return "";
   if (v > new Date(Date.now() + 86400000).toISOString().slice(0, 10)) return "That roast date is in the future. Check the year.";
+  if (v < new Date(Date.now() - 366 * 86400000).toISOString().slice(0, 10)) return "That roast date is over a year ago. Check the year.";
   const days = roastDays(v);
   if (days > 90 && save.textContent === label) {
     save.textContent = `Save with day ${days}?`; // like "Save with 29 s?" on Log shot
@@ -572,6 +636,71 @@ function bagEdit(form) {
   const rec = JSON.parse(document.getElementById("bag-record").textContent);
   const save = form.querySelector('[type="submit"]');
   const label = armRoastCheck(form, save);
+  const search = form.querySelector("[data-search]");
+  const query = form.querySelector("#catalog-query");
+  const results = form.querySelector("[data-search-results]");
+  const status = form.querySelector("[data-search-status]");
+  const match = form.querySelector("[data-match]");
+  let selected = null;
+  let request = 0;
+  form.querySelector("[data-search-open]").addEventListener("click", () => {
+    search.hidden = false;
+    query.value = form.coffee_freetext.value;
+    query.focus();
+  });
+  query.addEventListener("input", () => { request++; results.replaceChildren(); status.textContent = ""; });
+  query.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); form.querySelector("[data-search-submit]").click(); }
+  });
+  form.coffee_freetext.addEventListener("input", () => {
+    selected = null;
+    match.textContent = form.coffee_freetext.value.trim() === (rec.coffee_freetext || "").trim()
+      ? (rec.coffee_id ? "The existing catalog match will be kept." : "Not matched to the catalog")
+      : "The name will be matched when you save, unless you select a catalog result.";
+  });
+  form.querySelector("[data-search-submit]").addEventListener("click", async () => {
+    const term = query.value.trim();
+    const id = ++request;
+    results.replaceChildren();
+    if (term.length < 2) { status.textContent = "Type at least two characters."; return; }
+    status.textContent = "Searching the catalog…";
+    try {
+      const response = await fetch(`/api/coffees/search?q=${encodeURIComponent(term)}`);
+      if (response.status === 503) {
+        if (id === request) status.textContent = "The catalog isn’t available right now. Try again shortly.";
+        return;
+      }
+      if (!response.ok) throw new Error();
+      const data = await response.json();
+      if (id !== request) return;
+      status.textContent = data.coffees.length ? "Choose the coffee on your bag." : "No coffees found. Try another search.";
+      for (const coffee of data.coffees) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "pickrow";
+        const name = document.createElement("span");
+        name.className = "name";
+        name.textContent = coffee.title;
+        const detail = document.createElement("span");
+        detail.className = "meta";
+        detail.textContent = [coffee.roaster, coffee.origin, coffee.past ? "past offering" : coffee.in_stock == null ? "" : coffee.in_stock ? "in stock" : "sold out"].filter(Boolean).join(" · ");
+        name.append(detail);
+        button.append(name);
+        button.addEventListener("click", () => {
+          request++;
+          selected = coffee;
+          form.coffee_freetext.value = coffee.title;
+          match.textContent = `Selected: ${[coffee.roaster, coffee.title].filter(Boolean).join(" · ")}. Save the bag to match it.`;
+          search.hidden = true;
+          results.replaceChildren();
+          status.textContent = "";
+        });
+        results.append(button);
+      }
+    } catch {
+      if (id === request) status.textContent = "Couldn’t search the catalog. Check your connection and try again.";
+    }
+  });
   const finished = form.querySelector("[data-finished]");
   finished.addEventListener("click", (e) => {
     const b = e.target.closest("button");
@@ -595,8 +724,11 @@ function bagEdit(form) {
       weight_g: weight ? Math.round(Number(weight)) : null,
       finished_on: pressed(finished) === "true" ? rec.finished_on || today : null,
     };
-    if (coffee !== (rec.coffee_freetext || "")) Object.assign(body, { coffee_id: null, match_score: null });
+    if (selected) Object.assign(body, { coffee_id: selected.coffee_id, match_score: null });
+    else if (coffee !== (rec.coffee_freetext || "")) Object.assign(body, { coffee_id: null, match_score: null });
+    const shown = save.textContent;
     save.disabled = true;
+    save.textContent = "Saving…"; // as on Log shot: the lake commit can take seconds
     try {
       await send(`bag:${rec.bag_id}`, "/api/bags", body);
       go(form.dataset.next, `Bag saved: ${coffee}`);
@@ -604,6 +736,7 @@ function bagEdit(form) {
       if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. It’ll sync when you’re back online.`);
       hint(form, err.message);
       save.disabled = false;
+      save.textContent = shown;
     }
   });
 }
@@ -636,6 +769,13 @@ function newBag(root) {
     const name = body.coffee_freetext;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
+      // Saved online: it's the bag on the grinder now. A bag saved offline is picked with Switch once it syncs.
+      try {
+        if ((await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`)).ok) {
+          rememberBag(body.bag_id);
+          await clearBagPages();
+        }
+      } catch { /* the server's bag stays selected */ }
       go("/log", `Bag saved: ${name}`); // on to the first shot of it
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
@@ -777,11 +917,13 @@ function newBag(root) {
     try {
       const r = await fetch(`/api/photos/${id}`, {
         method: "POST",
-        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch" },
+        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch", "X-Expected-User": ME },
         body: photo,
       });
       const body = await r.json().catch(() => ({}));
       if (mine !== attempt) return;
+      // 403 (another account signed in meanwhile, or the origin check): held in the outbox like an offline photo.
+      if (r.status === 403) throw new Held(body.detail || "The server refused this for now.");
       if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
       read = body;
       tick(8);
@@ -796,7 +938,7 @@ function newBag(root) {
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
       if (mine !== attempt) return;
-      // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
+      // Offline (or held): the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
       await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
       read = { photo_id: id, raw: null, pending: true }; // not read yet: the server may match it later
       showSync();
@@ -861,38 +1003,447 @@ function equipment(form) {
   retire?.addEventListener("click", () => confirmTap(retire, () => save({ retired: true }))); // it leaves the pickers
 }
 
+// --- The sign-up rules --------------------------------------------------------------------------------
+// The same rules and words as the server (app/rules.py), from the page's JSON block, so a verdict here is the
+// server's verdict (tests/test_rules.py holds the two to that). Each check returns every failing rule.
+
+const RULES = (() => {
+  try {
+    return JSON.parse(document.getElementById("rules")?.textContent || "null");
+  } catch {
+    return null;
+  }
+})();
+const COMMON = new Set(RULES?.common || []);
+const points = (s) => [...s].length; // code points, as Python's len()
+
+function ruleError(rule, message = null) {
+  return { field: RULES.rules[rule].field, rule, message: message || RULES.rules[rule].message };
+}
+
+function cleanUsername(name) {
+  return name.normalize("NFC").trim().toLowerCase();
+}
+
+function usernameSuggestion(name) {
+  if (!name.includes("@")) return null;
+  const s = cleanUsername(name).split("@")[0].replace(new RegExp(`[^${RULES.username.chars}]`, "gu"), "").slice(0, RULES.username.max);
+  return points(s) >= RULES.username.min ? s : null;
+}
+
+function checkUsername(name) {
+  const u = cleanUsername(name);
+  const out = [];
+  if (u.includes("@")) {
+    const s = usernameSuggestion(u);
+    out.push(ruleError("u.email", s ? RULES.suggest.replace("{suggestion}", s) : null));
+  }
+  const n = points(u);
+  if (n < RULES.username.min || n > RULES.username.max) out.push(ruleError("u.length"));
+  const allowed = new RegExp(`^[${RULES.username.chars}]$`, "u");
+  if ([...u].some((c) => !allowed.test(c))) out.push(ruleError("u.chars"));
+  return out;
+}
+
+function checkPassword(password, username = "") {
+  const pw = password.normalize("NFC");
+  const name = cleanUsername(username);
+  const out = [];
+  const n = points(pw);
+  if (n < RULES.password.min) out.push(ruleError("p.length"));
+  else if (n > RULES.password.max) out.push(ruleError("p.length", RULES.too_long));
+  const folded = pw.toLowerCase();
+  if (COMMON.has(folded)) out.push(ruleError("p.common"));
+  if (name && folded.includes(name)) out.push(ruleError("p.username"));
+  if (new Set([...pw]).size < RULES.password.distinct) out.push(ruleError("p.variety"));
+  return out;
+}
+
+// What rules.TRIM holds: JavaScript's trim() set, so "no spaces" means the same on both sides.
+const SPACES = new RegExp("[\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]", "u");
+
+function cleanEmail(email) {
+  const e = email.normalize("NFC").trim();
+  const at = e.lastIndexOf("@");
+  return at < 0 ? e : `${e.slice(0, at)}@${e.slice(at + 1).toLowerCase()}`;
+}
+
+// rules.check_email: one @, something before it, a dot inside the part after it, no spaces, at most 254.
+function checkEmail(email, required = false) {
+  const e = cleanEmail(email);
+  if (!e) return required ? [ruleError("e.required")] : [];
+  const at = e.indexOf("@");
+  const local = at < 0 ? e : e.slice(0, at);
+  const domain = at < 0 ? "" : e.slice(at + 1);
+  const ok = (e.match(/@/g) || []).length === 1 && local !== "" && domain.replace(/^\.+|\.+$/g, "").includes(".")
+    && points(e) <= RULES.email_max && !SPACES.test(e);
+  return ok ? [] : [ruleError("e.syntax")];
+}
+
+// --- Forms: errors under their fields, busy and slow states ---------------------------------------------
+
+const UNREACHABLE = "Couldn’t reach the app. Nothing you typed is lost. Try again in a moment.";
+const OUR_SIDE = "Something went wrong on our side. Try again.";
+const SLOW = "Still working. The app may be waking up, which can take a minute or two. Keep this page open.";
+const SLOWER = "Still working. Saving can take a little longer when the app has just woken up.";
+const SLOW_SAVE = "Still saving. This takes a few seconds when the app has just woken up.";
+const RETRY_WAITS = [2000, 5000, 10000]; // a lost reply is sent again, the same body, this far apart
+const sleep = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
+
+// The form-level line (role="alert"): emptied, then filled a moment later, so the same words twice are read again.
+function say(root, text) {
+  const el = root.querySelector("[data-hint]");
+  if (!el) return;
+  el.textContent = "";
+  if (text) setTimeout(() => hint(root, text), 100);
+}
+
+// One field's error line, under it, and aria-invalid on the field. A hint that doubles as the error line (the
+// invite code's) goes back to its own words when cleared. "Already used" links "sign in" to the sign-in screen.
+function setError(form, field, message = "", rule = null, mark = true) {
+  const slot = form.querySelector(`[data-error-for="${field}"]`);
+  const input = form.querySelector(`[name="${field}"]`);
+  if (input) {
+    if (message && mark) input.setAttribute("aria-invalid", "true");
+    else input.removeAttribute("aria-invalid");
+  }
+  if (!slot) return Boolean(input && message);
+  if (slot.dataset.idle === undefined) slot.dataset.idle = slot.textContent;
+  const text = message || slot.dataset.idle;
+  slot.classList.toggle("is-error", Boolean(message) && !slot.classList.contains("ferr")); // a hint that now says what's wrong
+  const [before, after] = text.split("sign in");
+  if (rule === "c.used" && after !== undefined) {
+    const a = document.createElement("a");
+    a.href = "/signin";
+    a.textContent = "sign in";
+    slot.replaceChildren(before, a, after);
+  } else {
+    slot.textContent = text;
+  }
+  return true;
+}
+
+function clearErrors(form) {
+  for (const slot of form.querySelectorAll("[data-error-for]")) setError(form, slot.dataset.errorFor);
+  for (const el of form.querySelectorAll("[aria-invalid]")) el.removeAttribute("aria-invalid");
+}
+
+// Field errors in place; anything that belongs to no field in the form's line. Focus goes to the first field that
+// failed, in screen order, so the keyboard doesn't hide the message.
+function showErrors(form, errors, text = "") {
+  let loose = text;
+  for (const e of errors) {
+    const slot = form.querySelector(`[data-error-for="${e.field}"]`);
+    if (slot && slot.dataset.shown !== "1") {
+      setError(form, e.field, e.message, e.rule);
+      slot.dataset.shown = "1";
+    } else if (!slot && !setError(form, e.field, e.message)) {
+      loose = loose || e.message;
+    }
+  }
+  for (const slot of form.querySelectorAll("[data-shown]")) delete slot.dataset.shown;
+  say(form, loose);
+  form.querySelector('[aria-invalid="true"]')?.focus();
+}
+
+// Leaving a field shows its errors, which moves what's below it. When the field was left by a tap (on the terms box,
+// or the button), that waits until the tap is over, so the layout doesn't shift under the finger and the tap lands.
+let pointerDown = false;
+let afterTap = [];
+addEventListener("pointerdown", () => { pointerDown = true; }, true);
+addEventListener("pointerup", () => {
+  pointerDown = false;
+  const run = afterTap;
+  afterTap = [];
+  setTimeout(() => { for (const fn of run) fn(); }, 0); // after the click this pointerup ends
+}, true);
+const whenTapEnds = (fn) => (pointerDown ? afterTap.push(fn) : fn());
+
+// The ✓/✗ list under a field and its error line. While typing, rules only turn met (and the others wait until the
+// length is met); a failed rule turns red when the field is left or the form sent (validate on blur). Nothing is
+// announced per keystroke: the list and the error are read with the field (aria-describedby).
+function liveRules(form) {
+  const user = form.querySelector('[data-check="username"]');
+  const pass = form.querySelector('[data-check="password"]');
+  const mail = form.querySelector('[data-check="email"]');
+  if (!RULES || (!user && !pass && !mail)) return null;
+  const strict = new Set();
+  const nameHint = form.querySelector("[data-username-hint]");
+  const suggest = form.querySelector("[data-suggest]");
+  const failed = (input) => (input === user ? checkUsername(input.value)
+    : input === mail ? checkEmail(input.value, input.dataset.required !== undefined && strict.has(input))
+      : checkPassword(input.value, user ? user.value : form.dataset.username || ""));
+  // The email has no rule list: its one error shows on blur or submit, and goes as soon as it's fixed.
+  const paintMail = () => {
+    const fails = failed(mail);
+    if (strict.has(mail)) setError(form, "email", fails[0]?.message || "");
+    else if (!fails.length) setError(form, "email");
+    return fails;
+  };
+  const paint = (input) => {
+    if (input === mail) return paintMail();
+    const fails = failed(input);
+    const ids = new Set(fails.map((e) => e.rule));
+    const lengthRule = input === user ? "u.length" : "p.length";
+    const lengthMet = input.value !== "" && !ids.has(lengthRule);
+    const loud = strict.has(input);
+    for (const li of document.querySelectorAll(`#${input.id}-rules li`)) {
+      const rule = li.dataset.rule;
+      // While the "@" line shows, the characters rule it breaks shows as failed too.
+      const now = loud || (rule === "u.chars" && ids.has("u.email"));
+      const state = ids.has(rule) ? (now ? "unmet" : "") : input.value && (rule === lengthRule || lengthMet) ? "met" : "";
+      li.dataset.state = state;
+      li.querySelector("[data-said]").textContent = state === "met" ? ", met" : state === "unmet" ? ", not met" : "";
+    }
+    // "@" is answered at once, with a one-tap fix; the rest waits for blur.
+    const email = fails.find((e) => e.rule === "u.email");
+    if (loud) setError(form, input.name, fails[0]?.message || "");
+    else setError(form, input.name, email ? email.message : "", null, false);
+    if (loud && !fails.length) input.removeAttribute("aria-invalid");
+    if (input === user) {
+      const s = email && usernameSuggestion(input.value);
+      suggest.hidden = !s;
+      if (s) suggest.querySelector("button").textContent = `Use ${s}`;
+      const lower = cleanUsername(input.value);
+      nameHint.textContent = lower !== input.value.trim() && !fails.length ? `You’ll sign in as ${lower}.` : "You’ll sign in with it. Not your email.";
+    }
+    return fails;
+  };
+  for (const input of [user, mail, pass].filter(Boolean)) {
+    input.addEventListener("input", () => { paint(input); if (input === user && pass) paint(pass); });
+    input.addEventListener("blur", () => whenTapEnds(() => { if (input.value) strict.add(input); paint(input); }));
+  }
+  suggest?.querySelector("button").addEventListener("click", () => {
+    user.value = usernameSuggestion(user.value) || user.value;
+    strict.add(user);
+    paint(user);
+    if (pass) paint(pass);
+    user.focus();
+  });
+  return {
+    check() {
+      const out = [];
+      for (const input of [user, mail, pass].filter(Boolean)) {
+        strict.add(input);
+        out.push(...paint(input).map((e) => ({ ...e, field: input.name })));
+      }
+      return out;
+    },
+  };
+}
+
+// The bag page's filling cup in a busy button, before its label; gone again when it's done.
+function busyCup(b, on) {
+  b.querySelector(":scope > .cup")?.remove();
+  const cup = on && document.getElementById("busy-cup")?.content.firstElementChild;
+  if (cup) b.prepend(cup.cloneNode(true));
+}
+
+// Busy: the button says what's happening and ignores more taps (aria-disabled, so focus stays on it), the fields
+// can't change underneath the request, and a line under the button explains a wait past 4 s.
+function busyState(form, submit) {
+  const idle = submit.textContent;
+  const status = form.querySelector("[data-status]");
+  let timers = [];
+  let locked = [];
+  return {
+    get on() { return submit.getAttribute("aria-disabled") === "true"; },
+    start(text) {
+      submit.setAttribute("aria-disabled", "true");
+      submit.textContent = text;
+      busyCup(submit, true);
+      locked = [...form.querySelectorAll("input:not([type=checkbox]):not([readonly])")];
+      for (const el of locked) el.readOnly = true;
+      timers = [setTimeout(() => { if (status) status.textContent = SLOW; }, 4000),
+        setTimeout(() => { if (status) status.textContent = SLOWER; }, 45000)];
+    },
+    stop(text = idle) {
+      for (const t of timers) clearTimeout(t);
+      if (status) status.textContent = "";
+      submit.removeAttribute("aria-disabled");
+      submit.textContent = text;
+      busyCup(submit, false);
+      for (const el of locked) el.readOnly = false;
+      locked = [];
+    },
+  };
+}
+
+// The form's body: each named input's value, and a checkbox's tick.
+function formBody(form) {
+  const body = {};
+  for (const el of form.querySelectorAll("input[name]")) body[el.name] = el.type === "checkbox" ? el.checked : el.value;
+  return body;
+}
+
+// Join is idempotent on the server, so a reply that never arrived (a timeout, a dropped connection, a 502/503/504
+// while the app wakes) is sent again, the identical body, up to three times.
+async function postRetrying(url, body) {
+  for (let i = 0; ; i++) {
+    try {
+      return await post(url, body);
+    } catch (err) {
+      if (!(err instanceof Unreachable) || i >= RETRY_WAITS.length) throw err;
+      await sleep(RETRY_WAITS[i]);
+    }
+  }
+}
+
+// Sign in, owner setup, join, reset, accepting new terms and changing the password: one pattern. `done` runs on
+// success; by default the page moves on to Today.
+function accountForm(form, done = null) {
+  const submit = form.querySelector('[type="submit"]');
+  const busy = busyState(form, submit);
+  const live = liveRules(form);
+  // Sign-up's optional email: asked about once, on submit, when it's empty (spec §5). Add email goes to the field;
+  // Skip sends the form as it is.
+  const nudge = form.querySelector("[data-email-nudge]");
+  let nudged = false;
+  if (nudge) {
+    nudge.querySelector("[data-nudge-add]").addEventListener("click", () => {
+      nudge.hidden = true;
+      form.querySelector('[name="email"]').focus();
+    });
+    nudge.querySelector("[data-nudge-skip]").addEventListener("click", () => {
+      nudge.hidden = true;
+      form.requestSubmit(submit);
+    });
+  }
+  // A tick can't change while the request is out.
+  form.addEventListener("click", (e) => { if (busy.on && e.target.matches?.("input[type=checkbox]")) e.preventDefault(); });
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (busy.on) return; // repeat taps do nothing
+    clearErrors(form);
+    const errors = live ? live.check() : [];
+    let empty = false;
+    for (const el of form.querySelectorAll("input[required]")) {
+      if (el.type === "checkbox") {
+        if (!el.checked) errors.push(ruleError("terms", form.id === "agree-form" ? RULES.terms_again : null));
+      } else if (!el.dataset.check && !el.value.trim()) {
+        errors.push({ field: el.name, message: el.dataset.empty || "" }); // its own words, or the form's line
+        empty = empty || !el.dataset.empty;
+      }
+    }
+    if (errors.length) {
+      for (const err of errors.filter((x) => !x.message)) form.querySelector(`[name="${err.field}"]`)?.setAttribute("aria-invalid", "true");
+      // Errors are shown in the order of the fields on screen.
+      const order = [...form.querySelectorAll("input[name]")].map((el) => el.name);
+      errors.sort((a, b) => order.indexOf(a.field) - order.indexOf(b.field));
+      return showErrors(form, errors.filter((err) => err.message), empty ? "Fill in every field." : "");
+    }
+    if (nudge && !nudged && !form.querySelector('[name="email"]').value.trim()) {
+      nudged = true;
+      nudge.hidden = false;
+      nudge.querySelector("#nudge-text").focus(); // read out, and the two choices are next
+      return;
+    }
+    nudge && (nudge.hidden = true);
+    const body = formBody(form);
+    busy.start(form.dataset.busy || "Saving…");
+    try {
+      const url = form.dataset.api || "/api/signin";
+      const reply = await (form.dataset.retry !== undefined ? postRetrying(url, body) : post(url, body));
+      busy.stop(form.dataset.done || submit.textContent);
+      submit.setAttribute("aria-disabled", "true"); // nothing more to send from this page
+      busyCup(submit, true); // the next page is loading
+      if (done) return done(reply, body);
+      try {
+        sessionStorage.removeItem("join-code");
+        sessionStorage.removeItem("reset-code");
+        if (form.id === "join" || form.dataset.ownerSetup === "true") {
+          const welcome = `Welcome, ${cleanUsername(body.username)}.`;
+          // From what they typed, not the reply, which doesn't say whether a link went (review M2).
+          sessionStorage.setItem("notice", body.email?.trim() ? `${welcome} Check your inbox for a link to confirm your email.` : welcome);
+        }
+        if (reply.signin) { // a reset link from email ends on sign-in, with the username filled in (spec §4)
+          sessionStorage.setItem("notice", "Password changed. Sign in with the new one.");
+          sessionStorage.setItem("signin-username", reply.signin);
+        }
+      } catch { /* storage is optional */ }
+      if (reply.signin) return location.replace("/signin");
+      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
+      // Some WebViews have no `caches` at all; the account is made by now, so that mustn't look like a failure.
+      try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
+      location.replace("/");
+    } catch (err) {
+      if (err instanceof Unreachable) {
+        busy.stop("Try again");
+        return say(form, UNREACHABLE);
+      }
+      busy.stop();
+      if (err.status >= 500) return say(form, OUR_SIDE);
+      if (err.errors?.length) return showErrors(form, err.errors);
+      say(form, err.message);
+    }
+  });
+}
+
 // --- Joining and inviting -----------------------------------------------------------------------------
 
-// The invite link carries its code after #, which never reaches the server; fill it in and say if it's good.
-async function joinCode(form) {
+// A link carries its code after #, which never reaches the server. It's kept for this tab (sessionStorage) before
+// it leaves the address bar, so a reload still has it; it's cleared once the account is made.
+function codeFromLink(form, key, check = null) {
   const input = form.querySelector("#code");
-  const status = form.querySelector("[data-code-status]");
-  const check = async () => {
-    if (!input.value.trim()) return;
-    try {
-      const r = await post("/api/invites/check", { code: input.value });
-      status.textContent = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
-      input.removeAttribute("aria-invalid");
-    } catch (err) {
-      status.textContent = err.message;
-      input.setAttribute("aria-invalid", "true");
-    }
-  };
   let fromLink = "";
   try {
     fromLink = decodeURIComponent(location.hash.slice(1));
   } catch {
     // A link that was cut or mangled in the message: say so, and keep it out of history.
     history.replaceState(null, "", location.pathname);
-    status.textContent = "That link didn’t come through whole. Type the code from the message.";
-    input.setAttribute("aria-invalid", "true");
+    setError(form, "code", "That link didn’t come through whole. Type the code from the message.");
+    return;
   }
   if (fromLink) {
+    try { sessionStorage.setItem(key, fromLink); } catch { /* storage is optional */ }
     input.value = fromLink;
     history.replaceState(null, "", location.pathname); // keep the code out of history and screenshots
-    check();
+  } else if (!input.value) {
+    try { input.value = sessionStorage.getItem(key) || ""; } catch { /* storage is optional */ }
   }
+  if (input.value && check) check();
+}
+
+// The join screen says whether the code is good, or already used (with a way to sign in).
+function joinCode(form) {
+  const input = form.querySelector("#code");
+  const status = form.querySelector("[data-code-status]");
+  const check = async () => {
+    if (!input.value.trim()) return;
+    try {
+      const r = await post("/api/invites/check", { code: input.value });
+      // What the line goes back to when other errors are cleared on submit.
+      status.dataset.idle = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
+      setError(form, "code");
+    } catch (err) {
+      const e = err.errors?.[0];
+      setError(form, "code", e ? e.message : err instanceof Rejected ? err.message : UNREACHABLE, e?.rule);
+    }
+  };
+  codeFromLink(form, "join-code", check);
   input.addEventListener("change", check);
+}
+
+// In Instagram's or Facebook's browser: copy this page's link (the code from the field, if any) to open elsewhere.
+// If the clipboard says no, the link is shown to press and hold.
+function inAppBanner(box) {
+  const button = box.querySelector("[data-copy-link]");
+  button.addEventListener("click", async () => {
+    const code = document.getElementById("code")?.value.trim();
+    const link = `${location.origin}${location.pathname}${code ? `#${code}` : ""}`;
+    if (await copyText(link)) {
+      button.textContent = "Copied";
+      setTimeout(() => { button.textContent = "Copy link"; }, 2000);
+      return;
+    }
+    const fallback = box.querySelector("[data-copy-fallback]");
+    const field = fallback.querySelector("input");
+    fallback.hidden = false;
+    field.value = link;
+    field.focus();
+    field.select();
+    field.scrollLeft = 0; // the start of the link (the host) in view
+  });
 }
 
 async function copyText(text) {
@@ -904,61 +1455,185 @@ async function copyText(text) {
   }
 }
 
+// An invite's "For" note: what it'll be stored as (trimmed, spaces collapsed), counted as the server counts.
+// The same cleaning as rules.clean_label: control characters (other than whitespace) dropped, NFC, then split on
+// what Python's str.split() counts as whitespace.
+const PY_SPACE = "\\t\\n\\v\\f\\r\\x1c-\\x1f \\x85\\xa0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000";
+const cleanNote = (text) => text.replace(new RegExp(`(?![${PY_SPACE}])[\\x00-\\x1f\\x7f-\\x9f]`, "g"), "").normalize("NFC")
+  .split(new RegExp(`[${PY_SPACE}]+`)).filter(Boolean).join(" ");
+const noteText = (input) => cleanNote(input.value);
+function noteCounter(input) {
+  const count = input.closest("[data-new-note], [data-note-edit]").querySelector("[data-count]");
+  const update = () => { count.textContent = `${points(noteText(input))} of ${RULES.label_max}`; };
+  input.addEventListener("input", update);
+  update();
+}
+
 function invites() {
   const box = document.querySelector("[data-codebox]");
   const primary = document.querySelector("[data-new-invite]");
   const another = document.querySelector("[data-another]");
   const intro = document.querySelector("[data-code-intro]");
-  const say = (text) => hint(document.querySelector("main"), text);
+  const status = document.querySelector("main [data-status]");
+  const note = document.querySelector("[data-new-note]");
+  const main = document.querySelector("main");
+  const tooLong = () => RULES.rules["i.label"].message;
   const show = (r, name) => {
-    const link = `${location.origin}/join#${r.code}`;
     const join = r.kind === "join";
+    const link = `${location.origin}/${join ? "join" : "reset"}#${r.code}`;
     const groups = r.code.split("-");
     const [a, b] = box.querySelectorAll("[data-code] span");
     a.textContent = `${groups[0]}-${groups[1]}`; // two groups per line, never broken inside one
     b.textContent = `${groups[2]}-${groups[3]}`;
-    box.querySelector("[data-code-label]").textContent = join ? "Invite code" : `Reset code for ${name}`;
+    const label = box.querySelector("[data-code-label]");
+    label.textContent = join ? (r.for_label ? `Invite for ${r.for_label}` : "Invite code") : `Reset link for ${name}`;
     box.querySelector("[data-code-note]").textContent = join
       ? `${location.host}/join · until ${r.expires}. Shown only once: send it before you leave this screen.`
-      : `Give ${name} this code. It works once, until ${r.expires}, and signs them out everywhere.`;
-    intro.textContent = join
-      ? `Share the link. It works once and expires ${r.expires}.`
-      : `Give ${name} the code below.`;
+      : `${location.host}/reset · Send it to ${name}. It works once, until ${r.expires}, and signs them out everywhere.`;
+    intro.textContent = join ? `Share the link. It works once and expires ${r.expires}.` : `Send ${name} the link below.`;
     box.hidden = false;
-    // The one filled button now sends this code; making another one is a text button with a second tap.
-    const share = join && navigator.share;
-    primary.textContent = share ? "Share link" : join ? "Copy link" : "Copy code";
+    note.hidden = true;
+    note.querySelector("input").value = "";
+    note.querySelector("input").dispatchEvent(new Event("input"));
+    // The one filled button now sends this link; making another one is a text button with a second tap.
+    const share = Boolean(navigator.share);
+    const idle = share ? "Share link" : "Copy link";
+    primary.textContent = idle;
     primary.onclick = async () => {
       if (share) return navigator.share({ title: "registry.coffee", url: link }).catch(() => {});
-      say((await copyText(join ? link : r.code)) ? "" : "Couldn’t copy. Press and hold the code to copy it.");
-      if (!share) primary.textContent = "Copied";
+      if (await copyText(link)) {
+        say(main, "");
+        primary.textContent = "Copied";
+        setTimeout(() => { primary.textContent = idle; }, 2000);
+      } else {
+        say(main, "Couldn’t copy. Press and hold the code to copy it.");
+      }
     };
     another.hidden = !join;
     box.scrollIntoView({ block: "center" });
+    label.focus({ preventScroll: true });
+    status.textContent = join ? "Invite link ready. It’s shown only once." : "Reset link ready. It’s shown only once.";
   };
-  const act = async (url, body, after) => {
+  // Every action: its own busy label, no second request while one is out, and a line if it takes a while.
+  const act = async (b, busyText, url, body, after) => {
+    if (b.getAttribute("aria-disabled") === "true") return;
+    const idle = b.textContent;
+    b.setAttribute("aria-disabled", "true");
+    b.textContent = busyText;
+    busyCup(b, true);
+    say(main, "");
+    status.textContent = "";
+    const slow = setTimeout(() => { status.textContent = SLOW_SAVE; }, 4000);
     try {
-      after(await post(url, body));
+      const r = await post(url, body);
+      clearTimeout(slow);
+      status.textContent = "";
+      if (b.textContent === busyText) b.textContent = idle;
+      b.removeAttribute("aria-disabled");
+      busyCup(b, false);
+      after(r);
     } catch (err) {
-      say(err.message);
+      clearTimeout(slow);
+      status.textContent = "";
+      b.textContent = idle;
+      b.removeAttribute("aria-disabled");
+      busyCup(b, false);
+      const e = err.errors?.[0];
+      if (e?.field === "for_label") {
+        const scope = b.closest("[data-note-edit]") || note;
+        setError(scope, "for_label", e.message);
+        scope.querySelector("input").setAttribute("aria-invalid", "true");
+        scope.querySelector("input").focus();
+      } else {
+        say(main, e ? e.message : err instanceof Rejected ? err.message : UNREACHABLE);
+      }
     }
   };
-  const makeOne = () => act("/api/invites", {}, (r) => show(r));
-  primary.onclick = makeOne;
-  another.onclick = () => confirmTap(another, makeOne);
+  const noteField = note.querySelector("input");
+  noteField.name = "for_label";
+  noteCounter(noteField);
+  const makeOne = (b) => {
+    setError(note, "for_label");
+    const label = noteText(noteField);
+    if (points(label) > RULES.label_max) {
+      setError(note, "for_label", tooLong());
+      noteField.setAttribute("aria-invalid", "true");
+      return noteField.focus();
+    }
+    return act(b, "Making a link…", "/api/invites", label ? { for_label: label } : {}, (r) => show(r));
+  };
+  primary.onclick = () => makeOne(primary);
+  // "Make another link" brings the For box back first; the second tap makes the link, with its note.
+  another.onclick = () => {
+    note.hidden = false;
+    confirmTap(another, () => makeOne(another));
+  };
   for (const b of document.querySelectorAll("[data-reset]")) {
-    b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
+    b.onclick = () => confirmTap(b, () => act(b, "Making a reset link…", "/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name)));
   }
   for (const b of document.querySelectorAll("[data-renew]")) {
-    b.onclick = () => act(`/api/invites/${b.dataset.renew}/renew`, {}, (r) => { b.previousElementSibling.hidden = true; b.nextElementSibling.hidden = true; b.hidden = true; show(r); });
+    b.onclick = () => act(b, "Making a new link…", `/api/invites/${b.dataset.renew}/renew`, {}, (r) => {
+      b.previousElementSibling.hidden = true;
+      b.nextElementSibling.hidden = true;
+      b.hidden = true;
+      show(r);
+    });
   }
   for (const b of document.querySelectorAll("[data-revoke]")) {
-    b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => go(location.pathname, "Invite revoked"));
+    b.onclick = () => act(b, "Revoking…", `/api/invites/${b.dataset.revoke}/revoke`, {}, () => go(location.pathname, "Invite revoked"));
+  }
+  for (const b of document.querySelectorAll("[data-remove-email]")) {
+    b.onclick = () => confirmTap(b, () => act(b, "Removing…", `/api/people/${b.dataset.removeEmail}/email/remove`, {},
+      () => go(location.pathname, `${b.dataset.name}’s email removed`)));
   }
   for (const b of document.querySelectorAll("[data-person]")) {
     const off = b.dataset.disabled === "true";
-    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: off },
+    b.onclick = () => confirmTap(b, () => act(b, off ? "Turning off…" : "Turning on…", `/api/people/${b.dataset.person}`, { disabled: off },
       () => go(location.pathname, off ? `${b.dataset.name}’s account is turned off` : `${b.dataset.name}’s account is back on`)));
+  }
+  // Edit note, in place: Save (empty clears it) or Cancel.
+  for (const row of document.querySelectorAll("[data-invite]")) {
+    const edit = row.querySelector("[data-note-edit]");
+    const open = row.querySelector("[data-edit-note]");
+    const field = edit.querySelector("input");
+    const shown = row.querySelector("[data-label]");
+    field.name = "for_label";
+    noteCounter(field);
+    const close = () => {
+      edit.hidden = true;
+      open.hidden = false;
+      open.setAttribute("aria-expanded", "false");
+      setError(edit, "for_label");
+      open.focus();
+    };
+    open.onclick = () => {
+      edit.hidden = false;
+      open.hidden = true; // Save and Cancel close it
+      open.setAttribute("aria-expanded", "true");
+      field.focus();
+    };
+    edit.querySelector("[data-cancel-note]").onclick = () => {
+      field.value = shown.dataset.saved ?? (shown.textContent === "Invite" ? "" : shown.textContent);
+      field.dispatchEvent(new Event("input"));
+      close();
+    };
+    const save = edit.querySelector("[data-save-note]");
+    save.onclick = () => {
+      setError(edit, "for_label");
+      const label = noteText(field);
+      if (points(label) > RULES.label_max) {
+        setError(edit, "for_label", tooLong());
+        field.setAttribute("aria-invalid", "true");
+        return field.focus();
+      }
+      return act(save, "Saving…", `/api/invites/${row.dataset.invite}/label`, { for_label: label }, (r) => {
+        shown.textContent = r.for_label || "Invite";
+        shown.dataset.saved = r.for_label || "";
+        field.value = r.for_label || "";
+        close();
+        status.textContent = r.for_label ? "Note saved." : "Note cleared.";
+      });
+    };
   }
 }
 
@@ -1022,15 +1697,36 @@ function preference(group, name, plain) {
 
 // --- Signing in and the account -----------------------------------------------------------------------
 
-async function post(url, body) {
-  const r = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
-    body: JSON.stringify(body),
-  });
+class Unreachable extends Error {} // no reply: offline, timed out, or a gateway error while the app wakes up
+
+// A JSON POST with a deadline: past it (130 s, just over Cloud Run's 120 s request limit) the request is given up.
+// A refusal carries the server's words: a plain string, or a list of {field, rule, message} for errors that belong
+// to a field.
+async function post(url, body, { timeout = 130000 } = {}) {
+  const ctrl = typeof AbortController === "function" ? new AbortController() : null;
+  const timer = ctrl && setTimeout(() => ctrl.abort(), timeout);
+  let r;
+  try {
+    r = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
+      body: JSON.stringify(body),
+      signal: ctrl?.signal,
+    });
+  } catch {
+    throw new Unreachable(UNREACHABLE);
+  } finally {
+    clearTimeout(timer);
+  }
   if (r.ok) return r.json();
+  if ([502, 503, 504].includes(r.status)) throw new Unreachable(UNREACHABLE);
   const detail = (await r.json().catch(() => ({}))).detail;
-  throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || "Something went wrong. Try again.");
+  const list = Array.isArray(detail) ? detail : [];
+  const words = typeof detail === "string" ? detail : list.map((d) => (typeof d === "string" ? d : d?.message)).filter(Boolean).join(" ");
+  const err = new Rejected(words || (r.status >= 500 ? OUR_SIDE : "Something went wrong. Try again."));
+  err.status = r.status;
+  err.errors = list.filter((d) => d && typeof d === "object" && d.field);
+  return Promise.reject(err);
 }
 
 function showPassword(button) {
@@ -1043,60 +1739,38 @@ function showPassword(button) {
   });
 }
 
-function signIn(form) {
-  const submit = form.querySelector('[type="submit"]');
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const body = {};
-    for (const el of form.querySelectorAll("input")) body[el.name] = el.value;
-    for (const el of form.querySelectorAll("input")) el.removeAttribute("aria-invalid");
-    const empty = [...form.querySelectorAll("input")].find((el) => !el.value.trim());
-    if (empty) {
-      empty.setAttribute("aria-invalid", "true");
-      empty.focus();
-      return hint(form, "Fill in every field.");
-    }
-    submit.disabled = true;
-    try {
-      await post(form.dataset.api || "/api/signin", body);
-      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
-      await caches.delete("pages").catch(() => {});
-      location.replace("/");
-    } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
-      if (err instanceof Rejected) {
-        for (const el of form.querySelectorAll("input")) {
-          el.setAttribute("aria-invalid", "true");
-          el.setAttribute("aria-errormessage", "signin-hint");
-        }
-      }
-      submit.disabled = false;
-    }
-  });
-}
-
 function account() {
   const form = document.getElementById("password-form");
-  form?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    try {
-      await post("/api/password", { current: form.current.value, new: form.new.value });
+  if (form) {
+    accountForm(form, (reply, body) => {
       form.reset();
-      hint(form, "");
+      form.querySelector('[type="submit"]').removeAttribute("aria-disabled");
+      form.querySelector('[type="submit"]').textContent = "Change password";
+      for (const li of form.querySelectorAll(".rules li")) li.dataset.state = "";
       form.closest("details").open = false;
       notify("Password changed. You’re signed out on your other devices.");
       scrollTo(0, 0);
-    } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
-    }
-  });
+      return body;
+    });
+  }
   for (const b of document.querySelectorAll("[data-signout]")) {
     // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
-        await post(b.dataset.signout, {});
+        // 401: the session had already ended (signed out on another phone, or expired); for this phone's sign-out
+        // that is signed out too. Not for "Sign out on all devices": the other sessions are untouched, so say so.
+        // A session the server couldn't check answers 503 instead, which stays an error here.
+        const everywhere = b.dataset.signout !== "/api/signout";
+        const ended = await post(b.dataset.signout, {}).then(() => false, (err) => {
+          if (err.status !== 401) throw err;
+          return true;
+        });
+        if (ended && everywhere) {
+          b.textContent = "This phone was already signed out. Sign in, then sign out on all devices.";
+          return;
+        }
         // Kept pages hold this person's data: they go with the session, once the server has signed it out.
-        await caches.delete("pages").catch(() => {});
+        try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
         navigator.serviceWorker?.controller?.postMessage("signed-out");
         location.replace("/signin");
       } catch {
@@ -1104,6 +1778,134 @@ function account() {
       }
     }));
   }
+}
+
+// --- Email: recovery, verification and the Setup row (docs/app/signup-ux-spec.md §4, §5) -------------
+
+// One reply for an account with a verified email and for no account at all (owner decision, 2026-11-08: only an
+// account with no verified email is told so, on the field).
+const SENT = "If that account has a verified email, we’ve sent a link to it. It works for 30 minutes. Check your spam folder if it isn’t there in a few minutes.";
+
+function forgotForm(form) {
+  const submit = form.querySelector('[type="submit"]');
+  const idle = submit.textContent;
+  accountForm(form, () => {
+    submit.removeAttribute("aria-disabled");
+    busyCup(submit, false);
+    submit.textContent = idle;
+    // Its own line above the form (not the screen's top notice): shown empty, then filled, so it's read out.
+    const sent = document.querySelector("[data-sent]");
+    sent.textContent = "";
+    sent.hidden = false;
+    setTimeout(() => { sent.textContent = SENT; }, 100);
+  });
+}
+
+// A verify link carries its token after #, which never reaches the server's logs; it leaves the address bar at once.
+async function verifyPage(box) {
+  const title = box.querySelector("[data-verify-title]");
+  const status = box.querySelector("[data-verify-status]");
+  const next = document.querySelector("[data-verify-next]");
+  let token = "";
+  try { token = decodeURIComponent(location.hash.slice(1)); } catch { /* a mangled link: treated as expired */ }
+  history.replaceState(null, "", location.pathname);
+  const expired = () => {
+    title.textContent = "Link expired";
+    const a = document.createElement("a");
+    a.href = "/setup#email";
+    a.textContent = "Send a new one from Setup";
+    status.replaceChildren("That link has expired or was already used. ", a, ".");
+  };
+  if (!token) return expired();
+  try {
+    const reply = await post("/api/verify", { token });
+    title.textContent = "Email verified";
+    // The owner's email is for notices only: the owner resets with the setup code.
+    status.textContent = reply.notices_only ? "It’s used for account notices." : "You can now reset your password by email.";
+    next.hidden = false;
+  } catch (err) {
+    if (err instanceof Unreachable) {
+      // Offline or the app waking up: say so, keep the token for a reload, and offer one (review L8).
+      const again = document.createElement("button");
+      again.type = "button";
+      again.className = "btn text start";
+      again.textContent = "Try again";
+      again.addEventListener("click", () => location.reload());
+      status.replaceChildren(UNREACHABLE, again);
+      history.replaceState(null, "", `${location.pathname}#${encodeURIComponent(token)}`);
+      return;
+    }
+    expired();
+  }
+  title.focus();
+}
+
+function emailSettings() {
+  const form = document.getElementById("email-form");
+  if (!form) return;
+  const edit = form.closest("details");
+  if (location.hash === "#email" && !document.querySelector("[data-email-remove-box]")) {
+    edit.open = true; // "Add email" from Today
+    form.querySelector('[name="email"]').focus();
+  }
+  accountForm(form, (reply) => go("/setup", reply.verified ? "Email saved." : `Check your inbox for a link to confirm ${reply.email}.`));
+  const resend = document.querySelector("[data-email-resend]");
+  resend?.addEventListener("click", async () => {
+    if (resend.getAttribute("aria-disabled") === "true") return;
+    const idle = [...resend.childNodes].map((n) => n.cloneNode(true));
+    resend.setAttribute("aria-disabled", "true");
+    resend.textContent = "Sending…";
+    busyCup(resend, true);
+    try {
+      await post("/api/email/resend", {});
+      resend.replaceChildren(...idle);
+      notify("Sent. The new link works for 24 hours; the old one no longer does.");
+    } catch (err) {
+      resend.replaceChildren(...idle);
+      notify(err instanceof Rejected ? err.message : UNREACHABLE);
+    }
+    resend.removeAttribute("aria-disabled");
+    scrollTo(0, 0);
+  });
+  // Removing it takes the current password too (review M3), so it's a small form, not a second tap.
+  const remove = document.getElementById("email-remove-form");
+  if (remove) accountForm(remove, () => go("/setup", remove.dataset.doneNotice));
+  // The marketing box saves as it's ticked; the line under it says so (or puts the tick back).
+  const quiet = document.querySelector("[data-marketing-status]")?.textContent || "";
+  autosave(document.querySelector("[data-marketing]"), document.querySelector("[data-marketing-status]"), "/api/marketing", "marketing",
+    `Saved: you’ll get them${quiet ? " once your email is verified" : ""}.`, "Saved: you won’t get them.");
+}
+
+// A Setup box that saves as it's ticked (marketing email, roaster insights): "Saving…", then what was saved, in
+// the line under it (role="status"); a refusal puts the tick back and says why.
+function autosave(box, said, url, field, onText, offText) {
+  if (!box || !said) return;
+  box.addEventListener("change", async () => {
+    const on = box.checked;
+    said.textContent = "Saving…";
+    try {
+      await post(url, { [field]: on });
+      said.textContent = on ? onText : offText;
+    } catch (err) {
+      box.checked = !on;
+      said.textContent = err instanceof Rejected ? err.message : UNREACHABLE;
+    }
+  });
+}
+
+function insightsSetting() {
+  autosave(document.querySelector("[data-insights]"), document.querySelector("[data-insights-status]"), "/api/insights", "insights",
+    "Saved: later reports will count your shots and bags.", "Saved: later reports will leave out your shots and bags.");
+}
+
+// Today's "Add an email" notice: Not now hides it for 90 days (the server reads the cookie).
+function emailPrompt(box) {
+  box.querySelector("[data-not-now]").addEventListener("click", () => {
+    document.cookie = `nudge-email=1; path=/; max-age=${90 * 86400}; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
+    box.remove();
+    const heading = document.querySelector("main h1"); // focus stays on the page, not lost with the notice
+    if (heading) { heading.tabIndex = -1; heading.focus(); }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1128,12 +1930,60 @@ document.addEventListener("DOMContentLoaded", () => {
   if (theme) preference(theme, "theme", "auto");
   const hand = document.querySelector("[data-hand-choice]");
   if (hand) preference(hand, "hand", "right");
-  for (const id of ["signin", "join", "reset"]) {
-    const f = document.getElementById(id);
-    if (f) signIn(f);
+  // On the sign-in screen nobody is signed in, however the last session ended (signed out, expired, ended on
+  // another phone): the pages kept for offline use held that person's data, so they go too.
+  // Not after "couldn't check your sign-in": that was a failed lookup, and the session may still be good.
+  // Guarded like sign-out's (some WebViews have no caches): a throw here must never stop the forms being wired
+  // below. Their method="post" means an unwired form still never puts a password in the URL.
+  // data-purge says when that is settled ("done" or "skipped"), for the browser tests.
+  const signin = document.getElementById("signin");
+  if (signin && signin.dataset.ended === "failed") {
+    signin.dataset.purge = "skipped";
+  } else if (signin) {
+    try {
+      navigator.serviceWorker?.controller?.postMessage("signed-out");
+      Promise.resolve(globalThis.caches?.delete("pages"))
+        .catch(() => { /* nothing kept */ })
+        .finally(() => { signin.dataset.purge = "done"; });
+    } catch {
+      signin.dataset.purge = "done"; // no caches here: nothing kept
+    }
   }
+  if (signin && signin.dataset.ownerSetup !== "true") {
+    try { // after a reset by email: the username they reset, filled in
+      const name = sessionStorage.getItem("signin-username");
+      sessionStorage.removeItem("signin-username");
+      if (name) {
+        signin.querySelector("#username").value = name;
+        signin.querySelector("#password").focus();
+      }
+    } catch { /* storage is optional */ }
+  }
+  for (const id of ["signin", "join", "reset", "agree-form"]) {
+    const f = document.getElementById(id);
+    if (f) accountForm(f);
+  }
+  const forgot = document.getElementById("forgot");
+  if (forgot) forgotForm(forgot);
+  const verify = document.querySelector("[data-verify]");
+  if (verify) verifyPage(verify);
+  emailSettings();
+  insightsSetting();
+  const prompt = document.querySelector("[data-email-prompt]");
+  if (prompt) emailPrompt(prompt);
   const join = document.getElementById("join");
   if (join) joinCode(join);
+  const reset = document.getElementById("reset");
+  if (reset) {
+    codeFromLink(reset, "reset-code");
+    // An emailed token is case-sensitive, so it isn't shown in capitals; owner codes are (the server reads either).
+    const field = reset.querySelector("#code");
+    const mark = () => { field.toggleAttribute("data-token", field.value.trim().startsWith("E-")); };
+    field.addEventListener("input", mark);
+    mark();
+  }
+  const inApp = document.querySelector("[data-in-app]");
+  if (inApp) inAppBanner(inApp);
   if (document.querySelector("[data-new-invite]")) invites();
   for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);

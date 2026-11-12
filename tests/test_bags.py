@@ -358,7 +358,9 @@ def test_a_resent_photo_is_not_read_twice_and_its_id_stays_with_its_owner(catalo
     first = upload(c).json()
     assert upload(c).json() == first and len(fake.calls) == 1
     other = c.post(
-        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+        "/api/photos/p1",
+        content=jpeg(),
+        headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya", "X-Expected-User": "maya"},
     )
     assert other.status_code == 409
 
@@ -383,7 +385,7 @@ def test_a_typed_match_wins_and_another_persons_photo_is_ignored(catalog, tmp_pa
     )
     assert r.json()["coffee_id"] == "onyx.com:1"
     # Someone else citing that photo id gets nothing from it.
-    maya = W | {"x-test-user": "maya"}
+    maya = W | {"x-test-user": "maya", "X-Expected-User": "maya"}
     r = c.post(
         "/api/bags", json={"bag_id": "b2", "coffee_freetext": "something", "photo_id": "p1"}, headers=maya
     )
@@ -424,7 +426,9 @@ def test_reads_are_capped_per_day(catalog, tmp_path):
     assert statuses[:10] == ["read"] * 10 and statuses[10] == "limit" and len(fake.calls) == 10
     # Another person has their own allowance.
     r = c.post(
-        "/api/photos/q1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+        "/api/photos/q1",
+        content=jpeg(),
+        headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya", "X-Expected-User": "maya"},
     )
     assert r.json()["status"] == "read"
 
@@ -561,6 +565,99 @@ def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
     shots._catalog_cache.clear()
 
 
+def test_catalog_search_reports_unavailable(lake, monkeypatch):
+    c = TestClient(create_app(lake, HeaderAuth()))
+    monkeypatch.setattr(shots, "_load", lambda lake=None: shots._Catalog(ok=False))
+    assert c.get("/api/coffees/search", params={"q": "x"}).json() == {"coffees": []}
+    r = c.get("/api/coffees/search", params={"q": "coffee"})
+    assert r.status_code == 503
+    assert r.json()["detail"] == "The catalog isn’t available right now. Try again shortly."
+
+
+def test_search_and_explicitly_relink_a_bag_keeps_its_shots(lake):
+    from .test_app import setup, shot
+
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true, 'available'),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false, 'archived')
+    ) t(coffee_id, roaster_name, title, in_stock, catalog_status)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    setup(c)
+    bag = {"bag_id": "bag1", "coffee_id": "cc:gesha", "coffee_freetext": "Finca El Puente - Gesha Variety"}
+    assert c.post("/api/bags", json=bag, headers=W).status_code == 200
+    assert c.post("/api/shots", json=shot(1), headers=W).status_code == 200
+    assert c.get("/api/coffees/search", params={"q": "x"}).json() == {"coffees": []}
+    hits = c.get("/api/coffees/search", params={"q": "Counter Culture Finca El Puente"}).json()["coffees"]
+    assert {hit["coffee_id"] for hit in hits} == {"cc:honey", "cc:gesha"}
+    assert next(hit for hit in hits if hit["coffee_id"] == "cc:gesha")["past"] is True
+    edit = c.get("/bag/bag1/edit")
+    assert "Search catalog" in edit.text
+    fixed = bag | {"coffee_id": "cc:honey", "coffee_freetext": "Finca El Puente - Honey Processed"}
+    assert c.post("/api/bags", json=fixed, headers=W).json()["coffee_id"] == "cc:honey"
+    detail = c.get("/coffee/bag1").text
+    assert "Finca El Puente - Honey Processed" in detail
+    assert "This bag" in detail and "/shot/s1" in detail
+    shots._catalog_cache.clear()
+
+
+def test_catalog_search_offers_only_real_candidates_sold_now_first(lake):
+    """A query that matches nothing offers nothing, so the screen says so instead of listing unrelated coffees;
+    lots that tie come in stock first, then sold out, then past, as match_bag orders them."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:anaerobic', 'Counter Culture Coffee', 'Finca El Puente – Anaerobic Washed', false, 'archived'),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false, 'archived'),
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true, 'available'),
+        ('cc:natural', 'Counter Culture Coffee', 'Finca El Puente - Natural', false, 'available'),
+        ('onyx:sw', 'Onyx Coffee Lab', 'Southern Weather', true, 'available'),
+        ('onyx:geo', 'Onyx Coffee Lab', 'Geometry', true, 'available')
+    ) t(coffee_id, roaster_name, title, in_stock, catalog_status)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    assert c.get("/api/coffees/search", params={"q": "zzzzqq"}).json() == {"coffees": []}
+    hits = c.get("/api/coffees/search", params={"q": "El Puente"}).json()["coffees"]
+    assert [h["coffee_id"] for h in hits][:2] == ["cc:honey", "cc:natural"]
+    assert {h["coffee_id"] for h in hits[2:]} == {"cc:anaerobic", "cc:gesha"}
+    assert all(m["score"] >= shots.CANDIDATE_SCORE for m in shots.search_catalog("El Puente", lake=lake))
+    shots._catalog_cache.clear()
+
+
+def test_catalog_search_leaves_out_wholesale_twins(lake):
+    """A wholesale twin's title contains its retail coffee's, so it outscored it and was offered first."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('o:guji', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('o:guji-w', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    hits = c.get("/api/coffees/search", params={"q": "Onyx Ethiopia Guji"}).json()["coffees"]
+    assert [h["coffee_id"] for h in hits] == ["o:guji"]
+    asked = c.get("/api/coffees/search", params={"q": "Onyx Wholesale Ethiopia Guji"}).json()["coffees"]
+    assert asked[0]["coffee_id"] == "o:guji-w"
+    shots._catalog_cache.clear()
+
+
+def test_catalog_search_reports_unavailable_facts(lake, monkeypatch):
+    """The index read but a coffee's facts didn't: unavailable, not "No coffees found"."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute(
+        "create table c as select * from (values ('o:guji', 'Onyx Coffee Lab', 'Ethiopia Guji')) t(coffee_id, roaster_name, title)"
+    )
+    lake.write_mart("dim_coffee", con, "select * from c")
+    app = create_app(lake, HeaderAuth())
+    monkeypatch.setattr(app.state.store, "coffee", lambda coffee_id: None)
+    c = TestClient(app)
+    assert c.get("/api/coffees/search", params={"q": "Ethiopia Guji"}).status_code == 503
+    shots._catalog_cache.clear()
+
+
 def test_the_lot_sold_now_survives_the_cut_to_three(lake):
     """Counter Culture's five El Puente lots as in the live catalog: four tie at 97 under the plain (archived)
     "Finca El Puente". Sorted by name, the cut to 3 dropped the one lot still sold."""
@@ -623,7 +720,9 @@ def test_a_photo_lock_goes_when_its_uploads_end(catalog, tmp_path, monkeypatch):
     c = TestClient(app, raise_server_exceptions=False)
     assert upload(c).status_code == upload(c).status_code == 200  # a read, then a resend from last_reply
     other = c.post(
-        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+        "/api/photos/p1",
+        content=jpeg(),
+        headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya", "X-Expected-User": "maya"},
     )
     assert other.status_code == 409
     for i in range(10):

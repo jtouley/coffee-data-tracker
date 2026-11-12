@@ -1,26 +1,52 @@
-# Rebuild and deploy the public site when its templates or site.py change on main, so a copy or layout change
-# doesn't wait for Monday's weekly run. It reads the lake (dbt build) but never publishes to it: the marts it
-# writes stay on the runner. Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a
-# queued site build there would cancel a queued shot log or weekly run. A newer push supersedes an older site build.
+# Rebuild and deploy the public site: each Tuesday after the Cloud Run build, and when its templates, site.py,
+# public.py or the public contract change on main, so a copy or layout change doesn't wait for the week. Everything
+# `coffeedata site` writes to build/site is deployed: the pages, catalog/catalog.json, robots.txt and sitemap.xml.
+# It renders the release customers get now (the served release), never a fresh build of the lake: that would re-run
+# the release checks on the newest run, which may have failed them. It reads the lake but never writes to it, and
+# never contacts a roaster.
+#
+# The Tuesday run also does what weekly.yml did after a passing build, from the same served release: the facts-only
+# public export (PUBLIC_EXPORT_URL, a separate dataset or bucket, not the lake) and the Snowflake load. The weekly
+# pipeline, crawl to release, runs on Cloud Run (docs/ingestion/RUNBOOK.md): every connector crawls on Monday, and
+# its `build` job is scheduled for Tuesday 06:17 UTC (src/terraform/ingestion.tf) and must end by 10:17 (240-minute limit), so 11:17 runs after it. The
+# Tuesday run fails, without exporting, if no release is served or the served one is older than this week's Monday
+# run: it never re-exports last week's release in silence. Push and manual runs only render and deploy.
+#
+# Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a queued site build there would
+# cancel a queued shot log or weekly run. A newer push supersedes an older site build. The Tuesday run has a group of
+# its own, so a push can't cancel its export or Snowflake load halfway; a push run at the same time renders the same
+# served release.
 name: site
 on:
+  schedule:
+    - cron: "17 11 * * 2"  # Tuesdays, after the Cloud Run build (06:17, ends by 10:17)
   push:
     branches: [main]
-    paths: ["src/coffeedata/templates/**", "src/coffeedata/site.py", ".github/workflows/site.yml"]
+    # The contract and public.py too: the pages' schema.org Dataset (JSON-LD) and catalog.json's release header are
+    # built from them.
+    paths:
+      - "src/coffeedata/templates/**"
+      - "src/coffeedata/site.py"
+      - "src/coffeedata/public.py"
+      - "contracts/public-catalog.odcs.yaml"
+      - ".github/workflows/site.yml"
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: site
-  cancel-in-progress: true
+  group: ${{ github.event_name == 'schedule' && 'site-weekly' || 'site' }}
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60  # the Tuesday run's export and Snowflake load have their own limits below
+    outputs:
+      served: ${{ steps.site.outputs.served }}
     env:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
-      HF_TOKEN: ${{ secrets.HF_TOKEN }}
       COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}
+      # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
+      # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
       PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
       SITE_URL: ${{ vars.SITE_URL }}
       APP_URL: ${{ vars.APP_URL }}
@@ -29,17 +55,97 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
-      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
         with: {python-version: "3.12"}
-      - run: uv sync --locked
+      - run: uv sync --locked --extra snowflake
       - name: Check lake config
         run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
-      - name: Build the site from the lake
-        run: uv run coffeedata build && uv run coffeedata site
-      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
+      # Until a weekly run serves the first release there is nothing to render: say so and end green, without
+      # deploying. Any other failure still fails the job.
+      - name: Build the site from the served release
+        id: site
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # on the steps that read the lake or write an hf:// export only
+        run: |
+          uv run coffeedata site --served --skip-if-unserved
+          if [ -f build/site/index.html ]; then
+            echo "served=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Nothing is served yet; the site isn't rebuilt until a weekly run serves a release"
+            echo "served=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.site.outputs.served == 'true'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         with: {path: build/site}
+      # Tuesday only: fail loudly, and export nothing, if this week's release isn't served. The served release's
+      # run_date (marts/release.parquet) must be this week's Monday or later, the run Cloud Run crawled. The site
+      # artifact is already uploaded, so deploy still runs (it re-deploys the release customers already get).
+      - name: Check the served release is this week's
+        if: github.event_name == 'schedule'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          uv run python - <<'EOF'
+          import sys
+          from datetime import UTC, date, datetime, timedelta
+
+          from coffeedata import quality
+          from coffeedata.lake import Lake
+
+          today = datetime.now(UTC).date()
+          monday = today - timedelta(days=today.weekday())
+          release = quality.served(Lake())
+          if release is None:
+              print(f"::error::No release is served: this week's run ({monday}) has no passing build. Nothing exported.")
+              sys.exit(1)
+          run = date.fromisoformat(str(release["run_date"])[:10])
+          if run < monday:
+              print(
+                  f"::error::The served release {release['build_id']} is from run {run}, older than this week's "
+                  f"Monday ({monday}): this week's build is late or failed its checks. Nothing exported."
+              )
+              sys.exit(1)
+          print(f"served release {release['build_id']} is from run {run} (this week: {monday})")
+          EOF
+      # After the site artifact is uploaded and the check passes, so neither step holds back the site. Both read the
+      # served release that the site step just materialized (build/served.duckdb); nothing is crawled or rebuilt.
+      # build/public is what Snowflake loads; the PUBLIC_EXPORT_URL copy is a step of its own, so a failure there
+      # (such as the Hugging Face release tag, made after the data is committed) fails the job but doesn't skip the
+      # Snowflake load.
+      - name: Export the public tables from the served release
+        id: export
+        if: github.event_name == 'schedule' && steps.site.outputs.served == 'true'
+        timeout-minutes: 10
+        run: uv run coffeedata export-public --to build/public
+      - name: Publish the export to PUBLIC_EXPORT_URL
+        if: >-
+          steps.export.outcome == 'success' && vars.PUBLIC_EXPORT_URL != ''
+          && vars.PUBLIC_EXPORT_URL != 'build/public'
+        timeout-minutes: 20
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # for an hf:// PUBLIC_EXPORT_URL
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
+        run: uv run coffeedata export-public --to "$PUBLIC_EXPORT_URL"
+      # Optional: load the public tables into Snowflake each week (marketplace/snowflake/README.md). A contract
+      # change that needs --migrate turns this red without holding back the site; run weekly.yml with
+      # snowflake_migrate for that. It runs whenever build/public was exported, even if the publish step failed;
+      # that step's failure still turns the job red.
+      - name: Load Snowflake
+        if: >-
+          !cancelled() && github.event_name == 'schedule' && steps.export.outcome == 'success'
+          && vars.SNOWFLAKE_ACCOUNT != ''
+        timeout-minutes: 30  # the deploy job waits for this one, so a hung load mustn't hold the site for hours
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ vars.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ vars.SNOWFLAKE_USER }}
+          SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+        run: uv run coffeedata load-snowflake
   deploy:
     needs: build
+    # Deploys whenever the build job rendered the site, even if a later step (the export or Snowflake) failed.
+    if: ${{ !cancelled() && needs.build.outputs.served == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write

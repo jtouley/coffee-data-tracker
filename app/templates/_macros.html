@@ -4,3 +4,84 @@
 {% macro nav(on) %}<nav class="nav"><a class="{{ 'on' if on == 'today' }}" href="/"{% if on == 'today' %} aria-current="page"{% endif %}>Today</a><a class="{{ 'on' if on == 'coffees' }}" href="/coffees"{% if on == 'coffees' %} aria-current="page"{% endif %}>Coffees</a><a class="{{ 'on' if on == 'setup' }}" href="/setup"{% if on == 'setup' %} aria-current="page"{% endif %}>Setup</a></nav>{% endmacro %}
 {% macro shotrow(s, day, via="") %}<a class="item" href="/shot/{{ s.shot_id }}{{ via }}"><span class="t">{{ day(s.brewed_at) }}</span><span class="num n20 grow">{{ g(s.time_s) }}<span class="u"> s</span> · 1:{{ "%.2f" | format(ratio(s)) }} · grind {{ g(s.grinder_setting) }}</span>{{ taste(s.taste) }}{{ chevron() }}</a>{% endmacro %}
 {% macro legal() %}<p class="meta legal"><a class="ext tap" href="{{ site.site }}/privacy/">Privacy Policy</a><a class="ext tap" href="{{ site.site }}/terms/">Terms</a></p>{% endmacro %}
+{# Sign-up pieces (docs/app/signup-ux-spec.md §3, §9). The rules come from app/rules.py, through the JSON block. #}
+{% macro rules_json() %}<script type="application/json" id="rules">{{ rules | tojson }}</script>{% endmacro %}
+{% macro rule_list(id, ids) %}<ul class="rules" id="{{ id }}-rules">{% for r in ids %}<li data-rule="{{ r }}">{{ rules.rules[r].shown }}<span class="visually-hidden" data-said></span></li>{% endfor %}</ul>{% endmacro %}
+{% macro username_field(id="username", value="") %}
+    <label class="flabel" for="{{ id }}">Username</label>
+    <input class="input" id="{{ id }}" name="{{ id }}"{% if value %} value="{{ value }}"{% endif %} data-check="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
+    <div class="ferr-line"><p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p><span class="fsuggest" data-suggest hidden><button class="ext" type="button"></button></span></div>
+    <div class="fhint" id="{{ id }}-h" data-username-hint>You’ll sign in with it. Not your email.</div>
+    {{ rule_list(id, ("u.length", "u.chars")) }}
+{%- endmacro %}
+{% macro new_password(id="password", label="Password", hint="Any characters, spaces and symbols included. A password manager’s suggestion or a few unrelated words work well.", knows_username=True) %}
+    <label class="flabel" for="{{ id }}">{{ label }}</label>
+    <div class="pw">
+      <input class="input" id="{{ id }}" name="{{ id }}" type="password" data-check="password" autocomplete="new-password" passwordrules="minlength: {{ rules.password.min }}; maxlength: {{ rules.password.max }}; allowed: unicode;" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
+      <button type="button" data-show aria-controls="{{ id }}" aria-pressed="false">Show</button>
+    </div>
+    <p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p>
+    <div class="fhint" id="{{ id }}-h">{{ hint }}</div>
+    {{ rule_list(id, ("p.length", "p.common", "p.username", "p.variety") if knows_username else ("p.length", "p.common", "p.variety")) }}
+{%- endmacro %}
+{% macro agree_box() %}
+    <div class="agree">
+      <input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">
+      <label for="agree">I’ve read and agree to the <a class="ext" href="{{ site.site }}/terms/" target="_blank" rel="noopener">Terms</a> and <a class="ext" href="{{ site.site }}/privacy/" target="_blank" rel="noopener">Privacy Policy</a></label>
+    </div>
+    <p class="ferr" id="agree-error" data-error-for="agree"></p>
+{%- endmacro %}
+{% macro in_app_banner(name) %}{% if name %}
+  <div class="notice stack" data-in-app>
+    <p><strong>Opening from {{ name }}?</strong> Its browser can cover this form and won’t keep your <span class="nobr">sign-in</span>. Tap ••• and choose <em>Open in external browser</em>, or copy the link and paste it into Safari or Chrome.</p>
+    <button class="btn text start" type="button" data-copy-link>Copy link</button>
+    <div data-copy-fallback hidden>
+      <input class="input" readonly aria-label="This page’s link" aria-describedby="copy-h">
+      <div class="fhint" id="copy-h">Press and hold to copy.</div>
+    </div>
+  </div>
+{% endif %}{% endmacro %}
+{# Under the main button: what a slow request is doing. Present and empty from the start, so it's announced. #}
+{% macro status_line() %}<p class="meta center mt4" data-status role="status"></p>{% endmacro %}
+{# Email (spec §5): optional on sign-up, required where it's the point of the form (forgot, Setup). The same live
+   syntax check as the server (rules.check_email), on blur. #}
+{% macro email_field(id="email", hint="", required=False, value="") %}
+    <label class="flabel" for="{{ id }}">Email</label>
+    <input class="input" id="{{ id }}" name="email" type="email" data-check="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" maxlength="{{ rules.email_max + 20 }}" value="{{ value }}" aria-describedby="{{ id }}-error {{ id }}-h"{% if required %} required data-required{% endif %}>
+    <p class="ferr" id="{{ id }}-error" data-error-for="email"></p>
+    <div class="fhint" id="{{ id }}-h">{{ hint }}</div>
+{%- endmacro %}
+{# Marketing email (spec §7.1): separate from the terms box, ticked unless the person unticks it. #}
+{% macro marketing_box(checked=True) %}
+    <div class="agree">
+      <input type="checkbox" id="marketing" name="marketing"{% if checked %} checked{% endif %}>
+      <label for="marketing">Send me occasional emails about new coffees and features</label>
+    </div>
+{%- endmacro %}
+{# Asked once, on submit, when the optional email is empty. #}
+{% macro email_nudge() %}
+    <div class="notice stack nudge" data-email-nudge hidden>
+      <p id="nudge-text" tabindex="-1">Add an email so you can reset your password yourself?</p>
+      <div class="pair"><button class="btn text start" type="button" data-nudge-add>Add email</button><button class="btn text" type="button" data-nudge-skip>Skip</button></div>
+    </div>
+{%- endmacro %}
+{# Today, for a member with no email yet (spec §5): one dismissible notice. Not now hides it for 90 days. #}
+{% macro email_prompt() %}<div class="notice stack" data-email-prompt>
+    <p>Add an email so you can reset your password yourself.</p>
+    <div class="pair"><a class="btn text start" href="/setup#email">Add email</a><button class="btn text" type="button" data-not-now>Not now</button></div>
+  </div>{% endmacro %}
+
+{# A form app.js didn't wire, submitted natively: shown right above the form, where the sign-in screen's notices sit. #}
+{% macro unloaded_notice(unloaded) %}{% if unloaded %}
+  <p class="notice" id="unloaded-notice">The page didn’t finish loading, so {{ unloaded }}.</p>
+{%- endif %}{% endmacro %}
+{# Re-authentication before an email change or removal (review M3). Show, like every password field. #}
+{% macro current_password(id) %}
+    <label class="flabel" for="{{ id }}">Current password</label>
+    <div class="pw">
+      <input class="input" id="{{ id }}" name="current" type="password" autocomplete="current-password" data-empty="Enter your current password." aria-describedby="{{ id }}-error {{ id }}-h" required>
+      <button type="button" data-show aria-controls="{{ id }}" aria-pressed="false">Show</button>
+    </div>
+    <p class="ferr" id="{{ id }}-error" data-error-for="current"></p>
+    <div class="fhint" id="{{ id }}-h">So nobody else with this phone can change it.</div>
+{%- endmacro %}

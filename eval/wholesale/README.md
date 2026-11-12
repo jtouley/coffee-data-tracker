@@ -10,6 +10,13 @@ requires, and the test set was scored twice. Both are explained below.
 
 **Running total (CLAUDE.md step 9):** 0 products changed since the last full evaluation, which is this one
 (snapshot df57f62). Add each later change's count here.
+- 0: decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
+  versions, 51 roasters) and the output of `is_wholesale` of none: built from main and from the change on a local copy
+  of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were identical.
+
+## Floor
+
+`tests/test_wholesale_accuracy.py` (CLAUDE.md step 8). `eval/floor_inputs.py` rebuilds `work/population.json` from the lake at df57f62 and checks it against `SHA256SUMS`'s hash; the eval-floors workflow runs the floor with it on every push to main, weekly and by hand, so the floor no longer goes unrun (`docs/RULES.md`).
 
 ## Data
 

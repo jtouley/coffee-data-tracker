@@ -1,0 +1,10 @@
+Reset your password
+
+Someone, hopefully you, asked to reset the password for {{ username }}.
+
+Choose a new password:
+{{ link }}
+
+The link works once, for 30 minutes. If it wasn’t you, ignore this; your password stays as it is.
+
+registry.coffee

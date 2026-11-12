@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.1.0
+version: 2.6.0
 status: active
 domain: coffee
 description:
@@ -15,14 +15,68 @@ description:
   limitations: >-
     Built from roasters' public stores, weekly. The raw lake is append-only and every table is derived from it,
     so any past release can be rebuilt.
-tags: [coffee, specialty-coffee, prices, weekly]
+tags: [coffee, specialty-coffee, prices, weekly, open-data]
+authoritativeDefinitions:
+  - type: license
+    url: https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt
+    description: >-
+      CDLA-Permissive-2.0, the licence of the public data (the public tables, their exports, the site's catalog JSON
+      and the marketplace shares). The code is MIT.
+  - type: attribution
+    url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
+    description: Data attribution (Overture Maps, OpenStreetMap, roasters' storefronts).
+inputPorts:
+  - name: overture-maps-places
+    tags: [roaster-discovery]
+    customProperties:
+      - property: description
+        value: >-
+          Overture Maps Places, read monthly to discover US roasters. Each registry row records the release it came
+          from (source overture-<release>).
+      - property: license
+        value: CDLA-Permissive-2.0
+    authoritativeDefinitions:
+      - type: canonicalUrl
+        url: https://docs.overturemaps.org/guides/places/
+        description: Overture Maps Places (© Overture Maps Foundation).
+  - name: openstreetmap
+    tags: [roaster-discovery]
+    customProperties:
+      - property: description
+        value: >-
+          OpenStreetMap via the Overpass API, read to discover US roasters (registry source osm). Roasters known only
+          from OpenStreetMap are excluded from the public tables (dbt/models/public/public_roaster.sql).
+      - property: license
+        value: ODbL-1.0
+      - property: inPublicTables
+        value: false
+    authoritativeDefinitions:
+      - type: canonicalUrl
+        url: https://www.openstreetmap.org/copyright
+        description: © OpenStreetMap contributors.
+  - name: roaster-storefronts
+    tags: [product-catalogs]
+    customProperties:
+      - property: description
+        value: >-
+          Each roaster's own public storefront feed, read weekly following robots.txt: Shopify /products.json, the
+          WooCommerce Store API, Squarespace collection JSON, Square Online, or schema.org Product markup. Only
+          facts a shopper sees are published, each coffee linked back to its roaster by source_url; product
+          descriptions and images belong to the roasters and are not published.
+    authoritativeDefinitions:
+      - type: implementation
+        url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
+        description: How product catalogs are read and attributed.
 outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.1.0
+    version: 2.6.0
     contractId: coffee-data-public-catalog
 customProperties:
+  - property: license
+    value: CDLA-Permissive-2.0
+    description: SPDX identifier of the public data's licence (licenses/CDLA-Permissive-2.0.txt). The code is MIT.
   - property: glossary
     value:
       bag (public tables): One size option of a coffee in a store's catalog, e.g. a 10 oz or 2 lb bag. Stores give
@@ -46,6 +100,95 @@ customProperties:
           listings stay in the public data, flagged, rather than filtered out upstream, so readers can count them or
           leave them out; public_market_weekly leaves them out. Snowflake's PUBLIC_COFFEE gets the column through
           the one-time snowflake_migrate run (marketplace/README.md).
+      - topic: public_coffee is_listed and partial catalogs
+        decided: "2026-11-01"
+        outcome: >-
+          is_listed now also holds for a coffee from the latest complete fetch when the fetches after it read only
+          part of the catalog (raw fetches.partial; public-catalog contract 2.2.0). A partial catalog lists what it
+          read and doesn't delist what it didn't read. No column, type or enum changes, and nothing changes until a
+          source lands partial catalogs. public_roaster.status is unchanged.
+      - topic: public-catalog contract's link to this product
+        decided: "2026-11-01"
+        outcome: >-
+          Removed the top-level dataProduct field from contracts/public-catalog.odcs.yaml; ODCS deprecated it in
+          v3.1.0. This product's output port (contractId coffee-data-public-catalog, version 2.2.0) is now the only
+          link between product and contract. Contract version stays 2.2.0: no table, column, type, enum or rule
+          that a consumer reads changed.
+      - topic: public-catalog contract's AI context
+        decided: "2026-11-02"
+        outcome: >-
+          Added ODCS context for AI agents to contracts/public-catalog.odcs.yaml (public-catalog contract 2.2.1, a
+          patch: documentation only and additive). Contract-level and per-table instructions, constraints (not live,
+          facts only, no quality verdicts, no purchasing, no opted-out roasters), canonical questions without
+          answers, and synonyms on public_coffee, public_roaster and four columns; an authoritative definition for
+          data attribution (docs/ATTRIBUTION.md). Also corrected descriptions: min_price_usd may be a sold-out bag,
+          public_roaster holds only published roasters (not the whole registry), and public_price_event.roaster_id
+          names public_roaster.roaster_id. No table, column, type, enum or rule changed. The data license is still
+          the owner's decision (CDLA-Permissive-2.0 proposed); the code is MIT.
+      - topic: data licence and contract metadata
+        decided: "2026-11-02"
+        outcome: >-
+          The owner decided the public data's licence: CDLA-Permissive-2.0 (licenses/CDLA-Permissive-2.0.txt),
+          covering the public tables, their exports, the site's catalog JSON and the marketplace shares; the code stays MIT. The
+          public-catalog contract goes to 2.2.2, a patch (documentation only, additive): a license authoritative
+          definition and SPDX id, servers (the public Hugging Face dataset and the Snowflake share, both planned),
+          team, tags, and units as customProperties (currency USD per ISO 4217 on price columns; UCUM g and m on
+          bag sizes and elevations; per 100.g on per-100 g prices). This product gains inputPorts (Overture Maps
+          Places, OpenStreetMap, excluded from the public tables, and roaster storefronts), a team, a licence and
+          attribution. No table, column, type, enum or rule changed, so Snowflake needs no migrate: its load
+          compares column names only and its comments read descriptions only.
+      - topic: release rules on the public tables
+        decided: "2026-11-04"
+        outcome: >-
+          Four quality rules join the public-catalog contract (2.3.0, a minor version: rules added, none changed or
+          removed). A release is served only if public_coffee's newest last_seen is the run the build checked
+          (public_coffee_is_fresh), every public row carries the build's release_build_id and release_run_date
+          (public_tables_are_one_release), and the public tables hold their invariants (public_tables_invariants:
+          quantiles in order, counts within counts, first_seen <= last_seen, price events that change a price, new
+          events with no previous price). fill_and_freshness_in_band warns, never blocks, on a drop in the filled
+          shares of origin_country, process, roast_level and price_per_100g or in the share seen this run. No
+          table, column, type or enum changed, so Snowflake needs no migrate. A week with partial, quarantined
+          or closed stores passes every error rule; their unread coffees stay listed, so the share seen this run
+          can warn (#82).
+      - topic: currencies and roasters outside the US
+        decided: "2026-11-04"
+        outcome: >-
+          Prices stay as the store states them in the raw lake, now with their currency (raw contract 1.6.0,
+          snapshots.variants.currency). The public tables publish a price only when it is in USD: stated as USD, or
+          with no currency stated by a US roaster, which is how every older row of a US roaster reads, so nothing
+          changes for them. A store outside the US (aromacoffee.co.za in rand, lacabra.dk in krone, a hand-checked
+          registry correction, config/roasters.csv country) leaves the public tables entirely, as the product's US
+          scope says. public-catalog contract 2.4.0, a minor version: no table, column, type or enum changed; a new
+          quality rule (tests/public_prices_are_usd.sql) and fewer rows.
+      - topic: release gate on Claude's verdicts
+        decided: "2026-11-04"
+        outcome: >-
+          Added the quality rule verdicts_cover_catalog and its threshold min_verdict_share (0.85) to
+          contracts/public-catalog.odcs.yaml (public-catalog contract 2.5.0, a minor version: a quality rule added,
+          none changed or removed). A release is served only if the build had a verdict model and at least 85% of listed
+          coffees were decided by Claude's coffee-or-not verdict; until 2026-11 every release was the rules alone.
+          No table, column, type or enum changed, so Snowflake needs no migrate.
+      - topic: one store, one roaster
+        decided: "2026-11-10"
+        outcome: >-
+          35 stores were published twice or three times, under 71 roaster_ids: a second domain (an old name, a
+          café's domain, a rebrand) that redirects to the store's own. A roaster_id whose resolved host has the same
+          key as another roaster's (lower case, without www/shop/store) is now an alias: never crawled, never
+          public, with its coffees and price events (the same store's products, which the canonical id carries
+          under its own coffee_ids; no history is moved across). Grouping never reads the crawl status (an outage
+          never splits a store) and skips shared hosts (parked, shorteners, platforms); the canonical id is sticky:
+          an opted-out one, then a publishable one, then the one read first, then the one equal to the host.
+          White-label stores (one supplier's catalog sold by separate businesses on their own domains) are separate
+          stores and stay. public-catalog contract
+          2.6.0, a minor version: a quality rule added (tests/public_roasters_unique_by_host.sql, error), fewer
+          rows, no table, column, type or enum changed, so Snowflake needs no migrate. Measured in
+          eval/roaster_dedup (main against the change, on held-out roaster pairs).
+team:
+  name: registry.coffee
+  members:
+    - username: jtouley
+      name: Jason Touleyrou
+      role: owner
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues

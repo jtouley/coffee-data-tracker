@@ -1,6 +1,7 @@
 """The Cloud Run deploy: every write needs a signed-in account, the logs are JSON with a trace and no ids or
 secrets, and the rate-limit address can't be spoofed behind Cloud Run's front end."""
 
+import base64
 import json
 import logging
 import os
@@ -19,7 +20,17 @@ from coffeedata.lake import Lake
 from .test_app import HeaderAuth, W, setup
 from .test_invites import accounts, app, client, owner  # noqa: F401 - fixtures
 
-PUBLIC_WRITES = {"/api/signin", "/api/join", "/api/reset", "/api/invites/check"}  # before an account exists
+PUBLIC_WRITES = {
+    "/api/signin",
+    "/api/join",
+    "/api/reset",
+    "/api/invites/check",
+    "/api/forgot",
+    "/api/verify",
+}  # before an account exists
+# A form app.js didn't wire posts to its own page, which only shows it again with a notice and writes nothing
+# (tests/test_auth_gate.py: test_an_unwired_form_comes_back_with_a_notice_keeping_only_the_username).
+PUBLIC_WRITES |= {"/signin", "/join", "/reset", "/forgot"}
 
 
 def test_every_write_route_refuses_a_request_without_an_account(app):  # noqa: F811
@@ -53,7 +64,7 @@ def test_health_answers_on_a_path_googles_front_end_passes_through(app):  # noqa
 def test_signed_in_writes_only_reach_the_writers_own_data(lake):
     c = TestClient(create_app(lake, HeaderAuth()))
     setup(c)
-    maya = W | {"x-test-user": "maya"}
+    maya = W | {"x-test-user": "maya", "X-Expected-User": "maya"}
     # Maya can't log a shot with the owner's grinder, or retract the owner's shot.
     body = {"shot_id": "s1", "brewed_at": "2026-10-20T07:00:00Z", "grinder_id": "g1", "basket_id": "g1-basket",
             "dose_g": 18, "yield_g": 36, "time_s": 28, "grinder_setting": 11, "rating": 4}  # fmt: skip
@@ -127,7 +138,8 @@ def test_secrets_stored_with_a_trailing_newline_still_work(monkeypatch, tmp_path
     from app.auth import SECRETS
 
     values = {"HF_TOKEN": "hf_x", "ANTHROPIC_API_KEY": "sk-x", "AUTH_PEPPER": "p" * 20, "SESSION_SECRET": "s" * 40,
-              "OWNER_SETUP_CODE": "SETUP-CODE-9"}  # fmt: skip
+              "OWNER_SETUP_CODE": "SETUP-CODE-9", "EMAIL_KEY": base64.b64encode(b"k" * 32).decode(),
+              "RESEND_API_KEY": "re_x"}  # fmt: skip
     for name in SECRETS:
         monkeypatch.setenv(name, values[name] + "\n")
     monkeypatch.setenv("K_SERVICE", "registry-coffee")
@@ -138,7 +150,12 @@ def test_secrets_stored_with_a_trailing_newline_still_work(monkeypatch, tmp_path
     c = TestClient(hosted_app, base_url="https://testserver")
     r = c.post(
         "/api/signin",
-        json={"setup_code": "SETUP-CODE-9", "username": "jtouley", "password": "kettle orbit marble"},
+        json={
+            "agree": True,
+            "setup_code": "SETUP-CODE-9",
+            "username": "jtouley",
+            "password": "kettle orbit marble",
+        },
         headers=W,
     )
     assert r.status_code == 200, r.text  # the setup code matches as typed

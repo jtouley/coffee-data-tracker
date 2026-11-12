@@ -10,9 +10,11 @@ make app                     # http://127.0.0.1:8000 over ./lake, signed in as t
 HOST=0.0.0.0 make app        # reachable from a phone on the same network
 ```
 
-Without `SESSION_SECRET` the app uses a stub that treats every request as the owner (`COFFEEDATA_OWNER_ID`,
-default `owner`). Anyone who can reach it can log shots, so keep it on your own network. The stub refuses to start on
-Cloud Run (or a Hugging Face Space).
+`make app` sets `COFFEEDATA_LOCAL_OWNER=1`, which, without `SESSION_SECRET`, uses a stub that treats every request
+as the owner (`COFFEEDATA_OWNER_ID`, default `owner`). Anyone who can reach it can log shots, so keep it on your own
+network. The stub runs only when asked for by that variable, and refuses to start on Cloud Run (or a Hugging Face
+Space). Started any other way without `SESSION_SECRET` and `AUTH_PEPPER`, the app serves nothing but a "not set up"
+notice.
 
 To try real sign-in locally, with accounts in `./lake-users`:
 
@@ -22,7 +24,17 @@ SESSION_SECRET=$(openssl rand -hex 32) AUTH_PEPPER=$(openssl rand -hex 16) OWNER
 ```
 
 `COFFEEDATA_INSECURE_COOKIES=1` drops the cookie's `Secure` flag, which plain http on a LAN address needs. Chrome
-accepts Secure cookies on `localhost` without it.
+accepts Secure cookies on `localhost` without it. On Cloud Run (or a Space) the app refuses to start while it is set.
+
+Every screen and API call needs a signed-in session except the few listed in `PUBLIC` (`app/auth.py`): health,
+sign-in, join, reset, the offline page and the static files. A new route is private until it is added there, and
+`tests/test_auth_gate.py` checks every registered route. Pages and photos for a signed-in person are sent with
+`Cache-Control: no-store, private` and `Vary: Cookie`, so no browser HTTP cache or shared cache keeps them. The
+app's own service worker is the exception: it keeps the last copy of the screens used at the machine (Today, Log
+shot, New bag, Coffees, a coffee, History, Settings), and up to 60 bag photos, so they open offline. It clears them
+on sign-out and whenever the sign-in screen opens (except after "couldn't check your sign-in", when the session may
+still be good). The password forms post: if app.js didn't wire one, the page comes back with a notice and the
+username as typed, and nothing is done with what was sent.
 
 ## Sign-in
 
@@ -52,15 +64,22 @@ it, in `src/terraform/` (the original GCP setup's place and style):
 - the Cloud Run service: scales to zero, at most **one** instance, 1 GiB, CPU only during requests, startup CPU
   boost, up to 250 requests at once, a 120 s request timeout, and a startup probe that allows about two minutes.
   One instance because shots, accounts, the write lock and the sign-in limits live in memory;
-- Secret Manager secrets for the five app secrets, mounted as environment variables, readable only by the
-  service's own runtime account;
+- Secret Manager secrets for the five app secrets (seven once email is on, below), mounted as environment variables,
+  readable only by the service's own runtime account;
 - Workload Identity Federation, so GitHub Actions on `main` can deploy without a JSON key;
 - the domain mapping for `app.registry.coffee`;
-- a $5 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/health` every
+- a $20 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/health` every
   15 minutes, all emailed to the owner.
 
-`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it pushes
-the image and deploys it, once the variables below are set.
+`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it waits
+for `ci` to pass on the push, then pushes the image and deploys it by digest, once the variables below are set. It
+deploys only main's newest commit, so an older commit whose `ci` finished late never replaces a newer one, and it
+deploys after docs-only merges too (the same app, restarted). Running the workflow by hand from `main` deploys main's
+newest commit if `ci` passed on it; with `force` checked, even if it didn't. With the variable `GCP_ADMIN_SERVICE`
+set, the same image then goes to the admin service, through the `admin` environment, where a required reviewer can
+be added in the repository's settings, as long as the app still runs that image (a later run's deploy carries on
+from there), so the app and the admin never stay on different images. A deploy while traffic is pinned (Rolling
+back, below) ends with a warning on the run, and leaves the admin where it is.
 
 ### Owner's steps
 
@@ -122,6 +141,8 @@ Nothing here was created for you. Once, in this order:
 | `AUTH_PEPPER` | 16+ random characters mixed into every password hash. Changing it breaks every password |
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
 | `OWNER_SETUP_CODE` | Creates the owner's account, or resets the owner's password on the reset screen. Each value works once; set a new one to use it again. It needs a value for the service to start, even once the owner exists |
+| `EMAIL_KEY` | Email only (`email = true`). 32 random bytes, base64 (`openssl rand -base64 32`). Seals members' email addresses and keys their lookup hash. Losing it makes every stored email unreadable; rotate it with `app.rekey` (Email, below), never by just replacing it. Missing or malformed: the email features are hidden and the app still starts |
+| `RESEND_API_KEY` | Email only. A Resend API key with "Sending access" to the sending domain only. Without it, on Cloud Run, the email features are hidden |
 
 `python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER`,
 `SESSION_SECRET` and `HF_TOKEN` are set, every page returns 503 and names the missing secrets, never their values.
@@ -161,6 +182,56 @@ gcloud logging read "$S AND jsonPayload.message=\"saved\"" --freshness=1d       
 A request's trace id is on its access line (`logging.googleapis.com/trace`). Errors also appear in Error
 Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines.
 
+### Rolling back
+
+Every deploy makes a new revision, and each revision keeps the image digest it was deployed with.
+
+**Before you start.** You need `gcloud` signed in as an account with `roles/run.developer` (or Owner) on the project,
+and the project set: `gcloud config set project <project_id>` (the `project_id` in Terraform's variables). With the
+repository variables `GCP_SERVICE` or `GCP_REGION` set, use their values instead of `registry-coffee` and
+`us-central1` below.
+
+**App and admin together.** They run the same image, so a bad change in shared code (anything outside `admin/`)
+is bad in both: roll back both, to revisions with the same image. The admin service (`registry-coffee-admin`, when
+`GCP_ADMIN_SERVICE` is set) rolls back the same way, with its own name in place of `registry-coffee`.
+
+**Stored data.** A rollback changes the code, not the data. Before going back past a change to what the app writes
+(the users dataset's tables, `USER_TABLES` in `src/coffeedata/lake.py`, or the shot and bag records), check that
+the older code can read what the newer one wrote. A new column is ignored by older readers; a changed meaning or
+type isn't. Each image is pushed with its commit as its tag, so the revision's commit is:
+
+```bash
+image=$(gcloud run revisions describe <previous> --region us-central1 --format='value(spec.containers[0].image)')
+gcloud artifacts docker tags list "${image%@*}" --filter="version~${image#*@}" --format='value(tag)'
+git log -p <that commit>..main -- src/coffeedata/lake.py app/accounts.py
+```
+
+To go back to the last good revision while the fix is made:
+
+```bash
+gcloud run revisions list --service registry-coffee --region us-central1    # newest first: pick the last good one
+gcloud run services update-traffic registry-coffee --region us-central1 --to-revisions=<previous>=100
+```
+
+**Check it worked.** `curl -fsS https://app.registry.coffee/health` answers 200, `gcloud run services describe
+registry-coffee --region us-central1` shows 100% on `<previous>`, and the "registry.coffee: errors" alert stops
+firing (Monitoring, Alerting; it closes on its own once the errors stop).
+
+> **Pinned traffic stays pinned.** Once traffic is sent to a named revision, every later deploy makes a new revision
+> that gets **0%** of the traffic. The deploy job still succeeds, with a warning that traffic is pinned ("all
+> subsequent deployments use that traffic split pattern going forward", in Cloud Run's
+> [rollouts and rollbacks](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration)). So the fix's own
+> deploy changes nothing until traffic is moved back.
+
+Once the fix is on `main` and its deploy has finished, send traffic back to the newest revision, and check it the
+same way:
+
+```bash
+gcloud run services update-traffic registry-coffee --region us-central1 --to-latest
+gcloud run services describe registry-coffee --region us-central1    # 100% to the latest revision
+curl -fsS https://app.registry.coffee/health
+```
+
 ### Deleting a person's data
 
 The privacy policy promises deletion within 30 days of a request.
@@ -181,8 +252,192 @@ The privacy policy promises deletion within 30 days of a request.
 It removes every version of that person's shots, bags, equipment, photos, account and invites, and rewrites the
 private exports that carry their rows (`marts/fct_shot.parquet`, `marts/mart_bag.parquet`) without them, so the app
 can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
-isn't turned off (`--force` skips that check when the app isn't running). The datasets' version history still holds
-the old commits, as the policy says.
+isn't turned off (`--force` skips that check when the app isn't running). The main and photo datasets' version
+history still holds the old commits, as the policy says. The users dataset's history is squashed afterwards, so the
+person's email (sealed) goes from its history too.
+
+## Email
+
+_Last verified against the code: 2026-11-08 (PR #134, after the final review). Check it again whenever
+`app/mail.py`, `app/accounts.py`'s email section or `src/terraform/` change._
+
+Email recovery (docs/app/signup-ux-spec.md §4, §5): members can add an email, confirm it from a link, and reset a
+forgotten password from `/forgot` with their username or email. The app sends four emails, verify, reset,
+password changed and email changed, through [Resend](https://resend.com), inside the request that asks for them
+(Cloud Run gives an instance no CPU after its reply). Until `EMAIL_KEY` and `RESEND_API_KEY` are both set, the
+email features are hidden: no email field, no marketing box, and `/forgot` shows only "ask the person who invited
+you". The app starts either way.
+
+| What | Where | Value |
+|---|---|---|
+| `EMAIL_KEY` secret | Secret Manager: always exists, mounted when `email = true` | 32 random bytes, base64. Keep a copy offline (a password manager): without it no stored email can be read |
+| `RESEND_API_KEY` secret | Secret Manager: always exists, mounted when `email = true` | A Resend key with "Sending access", limited to the sending domain |
+| `email` | `terraform.tfvars` | `true` mounts the two secrets and adds the "email not sent" alert; `false` only unmounts them |
+| `EMAIL_FROM` env var (optional) | Cloud Run | Default `registry.coffee <hello@send.registry.coffee>`; set it only if the Resend domain differs |
+| `SUPPORT_EMAIL` env var (already set) | Cloud Run | The reply-to address of every email |
+| DNS records | the registrar, by hand | Resend's DKIM `TXT`, the SPF `TXT` and `MX` for the sending subdomain, and DMARC (below) |
+
+### Turning email on
+
+1. **Resend.** Make an account and add the domain `send.registry.coffee` (a sending subdomain keeps the root
+   domain's reputation apart). In the domain's settings, turn **off** open tracking and click tracking: the emails
+   carry no pixels and their links go straight to the app.
+2. **DNS**, by hand, like the app's CNAME. Copy each record exactly as Resend shows it:
+   - the DKIM `TXT` record (`resend._domainkey…`);
+   - the SPF `TXT` record and the `MX` record for the bounce subdomain;
+   - DMARC at `_dmarc.registry.coffee`: `TXT` `v=DMARC1; p=none; rua=mailto:<SUPPORT_EMAIL>`. Read the reports for
+     two weeks, then raise it to `p=quarantine`. Gmail asks every sender for SPF or DKIM, and bulk senders for
+     DMARC too.
+
+   Wait until Resend shows the domain as verified.
+3. **The key.** In Resend, API Keys → Create: permission "Sending access", domain `send.registry.coffee`.
+4. **Secrets, then Terraform.** The two secrets exist from any apply (empty, unmounted). The service reads every
+   secret at version `latest`, so they need values before `email = true` mounts them. Nothing below prints a key:
+
+   ```bash
+   terraform apply   # with email = false (the default): creates the two empty secrets if they aren't there yet
+   (umask 077; openssl rand -base64 32 | tr -d '\n' > email_key.txt)   # copy it into your password manager now
+   gcloud secrets versions add EMAIL_KEY --data-file=email_key.txt && shred -u email_key.txt
+   gcloud secrets versions add RESEND_API_KEY --data-file=-   # paste the Resend key, then Ctrl-D
+   ```
+
+   Then set `email = true` in `terraform.tfvars` and `terraform apply`: it mounts both and adds the alert, and Cloud
+   Run makes a new revision.
+
+5. **Check it.** In the app: Setup → Add email, with your own address. The confirm email arrives (check the spam
+   folder too); open its link. Sign out, Forgot your password? → your username: the reset email arrives and its link
+   works once. Resend's Emails log shows each as delivered.
+
+The privacy policy's update (with `LEGAL_UPDATED`) ships in the same deploy as the email field. Every member then
+accepts the new Terms and Privacy Policy once, on `/agree`.
+
+### Sending limits
+
+- **Resend's free tier:** 100 emails a day and 3,000 a month. The app stops at **90 in any 24 hours**
+  (`app/mail.py`, `DAILY_CAP`), counting every kind that was sent (a failed send gives its place back), and logs
+  "email not sent: the daily limit is reached" past it. Resend's own quota is the hard stop: Resend answers 429
+  past it.
+- **`/forgot`:** at most 3 requests an hour for one username or one email, 3 an hour for one account however it's
+  named, 10 an hour from one IP address, and 20 "no verified email" answers an hour in all. Past any of them the
+  reply is the same as for an unknown account and nothing is sent. Every answer takes at least 2 s
+  (`FORGOT_FLOOR`), so the reply's timing doesn't say whether a link went.
+- **The owner never resets by email** (owner decision, 2026-11-09): `/forgot` answers for the owner like any account
+  that can't get a link, and sends nothing. The owner's email, if added, is for notices; the owner's password resets
+  with `OWNER_SETUP_CODE` on `/reset`.
+- **Verify links:** 3 an hour per account (Send again, and changing the email).
+- **"No email came", and the limits.** Because the limits are shared, someone else can use up a name's 3 an hour,
+  or the 20 "no verified email" answers an hour in all. A real member is then told "we've sent a link" (or, with
+  no email, isn't told to ask you) and nothing goes. If a member reports that, check the logs for a burst of
+  `/api/forgot` and make them a reset link on the People screen.
+- **What the limits are worth.** They're counted in memory, per instance, and every cold start of this
+  scale-to-zero service starts them again. They stop a quick run of guesses from one place and cap how many
+  accounts a scan can confirm in an instance-hour. They don't stop a slow scan spread over many addresses and many
+  hours. The "no verified email" answer, which says an account exists, is the owner's choice for an invite-only
+  app, made knowing that.
+- **Links:** a reset link works once, for 30 minutes; a newer one replaces it. It's signed, not stored, so the
+  "newer one replaces it" part is kept in memory: after a restart an older link works again until its 30 minutes
+  are up. A verify link works once, for 24 hours.
+
+If the cap is hit by real use, Resend's paid tier ($20 a month for 50,000) lifts it: raise `DAILY_CAP` with it.
+
+### Bounces and complaints (weekly, two minutes)
+
+In Resend's dashboard, Emails, filter on **Bounced** and **Complained** for the last 7 days.
+
+- Resend adds hard-bounced and complaining addresses to its suppression list by itself, so they aren't sent to
+  again.
+- A bounced verify email is usually a typo: the member's Setup row says "not verified yet", and they can fix it
+  there. Nothing to do.
+- Keep complaints under 0.1% of sends (Gmail's line is 0.3%) and hard bounces under 4%. Over that, stop and look at
+  what's being sent before anything else goes.
+- Read the DMARC reports (they go to `SUPPORT_EMAIL`) for anyone sending as the domain who isn't Resend.
+
+The app doesn't receive Resend's webhooks yet. If bounces become routine, add a webhook endpoint that marks the
+contact unverified.
+
+### Rotating keys
+
+- **`RESEND_API_KEY`:** make a new key in Resend (as in step 3), add it as a new version, then redeploy (run the
+  deploy workflow from `main`, or `gcloud run services update registry-coffee --region us-central1` to start a new
+  revision). Once an email goes out, delete the old key in Resend. Do it at once if the key may have leaked.
+- **`EMAIL_KEY`:** never just replace it: every stored email is sealed under it. At a quiet time, from a laptop
+  with `HF_TOKEN` and `COFFEEDATA_USERS` set. Keys go through files, never the command line or the screen:
+
+  ```bash
+  umask 077
+  gcloud secrets versions access latest --secret EMAIL_KEY > old_key.txt
+  openssl rand -base64 32 | tr -d '\n' > new_key.txt      # copy it into your password manager now
+  EMAIL_KEY=$(cat old_key.txt) EMAIL_KEY_NEW=$(cat new_key.txt) uv run python -m app.rekey   # prints counts only
+  EMAIL_KEY=$(cat new_key.txt) uv run python -m app.rekey --check   # "N of N emails open with this EMAIL_KEY."
+  gcloud secrets versions add EMAIL_KEY --data-file=new_key.txt
+  gcloud run services update registry-coffee --region us-central1   # restart on the new key at once
+  shred -u old_key.txt new_key.txt
+  ```
+
+  Between `app.rekey` and the restart, the running app still holds the old key: an email added in that minute is
+  sealed under it. Run `--check` again after the restart.
+- **If `--check` reports emails that don't open** (an address added mid-rotation, or the wrong key deployed): the
+  app treats each as "no email" and logs `an email doesn't open with this EMAIL_KEY` with the user id. With the key
+  it was sealed under, run `app.rekey` again from that key to the current one. If that key is gone, the address
+  can't be recovered: ask the member to add it again in Setup (adding replaces the unreadable record).
+
+### When the app is slow and `/api/forgot` traffic is high
+
+Every `/forgot` answer that gets past the limits waits until 2 s have passed (an async wait: it holds no worker
+thread, so other routes go on), and its send runs in the thread pool. A flood of requests is answered at once once
+past the per-IP limit. If the app is still slow:
+
+1. `gcloud logging read 'resource.type="cloud_run_revision" AND jsonPayload.route="/api/forgot"' --limit 50 --freshness 1h`
+   shows the volume and where it's from.
+2. Many addresses at a low rate each are what the in-memory limits don't stop. Lower `FORGOT_PER_IP` or
+   `NO_EMAIL_PER_HOUR` (app/accounts.py) and deploy, or turn email off (`email = false`) until it passes: members
+   can still get a reset link from you.
+
+### When Resend is down or refusing
+
+**Quick checklist** for the "email not sent" alert (severity: a member can't recover their password by email; the
+owner's reset link still works, so nobody is locked out):
+
+1. `gcloud logging read 'resource.type="cloud_run_revision" AND jsonPayload.logger="app.mail"' --limit 20 --freshness 1d`
+   says which: "the daily limit is reached", or a stack trace ending in Resend's status.
+2. Resend's status page and its Emails log.
+3. Act on the status: a `429` is Resend's rate limit or its daily quota (wait for tomorrow, or move to the paid
+   tier); any other 4xx is the key (rotate it, above) or the domain (DNS changed, the domain no longer verified); a
+   5xx or a timeout is Resend itself (each send was tried 3 times).
+4. Check it's fixed: request a reset for your own username and see it arrive.
+
+- **What people see meanwhile:** `/forgot` gives its usual reply, but no email arrives; a new member still joins,
+  without a confirm email. Every unsent email logs "email not sent" at ERROR (the daily cap at WARNING), with
+  Resend's status code and never the address.
+- **Meanwhile:** the owner makes reset links on the People screen, as before email. Members can press "Send again"
+  in Setup once it's back. Links that weren't sent don't need cleaning up: they expire.
+- **For a long outage:** Postmark is the planned swap (spec §5). A `PostmarkMailer` is one class beside
+  `ResendMailer` in `app/mail.py`, with its own key and DNS records.
+- **To turn email off:** set `email = false` and apply. That unmounts both secrets and the features hide again.
+  The secrets and their versions stay in Secret Manager (Terraform never destroys them), so stored emails come
+  back when it's on again.
+
+### Members' emails
+
+- Stored only sealed (AES-256-GCM, `app/contacts.py`), in the users dataset's `contacts` table, with a keyed hash
+  for lookup. Nobody reading the dataset sees an address. The app shows a member their own email, and the owner
+  every member's, on the People screen.
+- Removing or changing an email (both need the member's current password, and the old address is told), and
+  `delete-user`, delete every file of the record in one commit, then squash the users dataset's history
+  (`HfApi.super_squash_history`), so no old revision holds it. A squash is tried 3 times, then logged at ERROR.
+- **If a commit fails.** The member is told it failed ("Something went wrong on our side. Try again."), and the
+  dataset is as it was. The delete list waits in the staging folder (`deletes.pending.json`) and goes with the next
+  commit on that instance. Staging is in the instance's memory, so the list is lost if the instance stops first.
+  For that, every start checks the dataset: contact files from a member's older email (a different lookup hash
+  from the current record's) are deleted in one commit and the history squashed. The log line is "deleted contact
+  files left from changed emails".
+- Logs never carry an address or a link: only which email it was and the user id.
+
+**Roaster insights.** No report has been sold yet. The privacy policy lets a member turn off "Include my shots and
+bags in roaster insights" (Setup → Account; on by default). The choice is in the latest `consents` row per member (`insights`, `insights_at`,
+`insights_version`; null means never changed, which counts as on). There's no export job yet. When there is, it
+must leave out every member with `insights = false` (`Accounts.insights_excluded()`), and keep a record of each report
+it releases, as the policy says.
 
 ## Using it on the phone
 

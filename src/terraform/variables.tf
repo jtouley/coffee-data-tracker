@@ -45,13 +45,19 @@ variable "owner_email" {
 }
 
 variable "budget_usd" {
-  description = "Monthly budget; alerts at 50%, 90% and 100%."
+  description = "Monthly budget; alerts at 50%, 90% and 100%. The runbook estimates $9-14 a month (app + ingestion jobs + two Cloud NAT gateways and their static IPs, docs/ingestion/RUNBOOK.md, Cost), so the first email ($10) can fire in a normal month; raise this if it is noise."
   type        = number
-  default     = 5
+  default     = 20
 }
 
 variable "service" {
   description = "Name of the Cloud Run service and its Artifact Registry repository."
   type        = string
   default     = "registry-coffee"
+}
+
+variable "email" {
+  description = "Email recovery (docs/app/signup-ux-spec.md §5): mounts the EMAIL_KEY and RESEND_API_KEY secrets on the app and adds the \"email not sent\" alert. The secrets themselves always exist; turning this off only unmounts them. Turn on after the Resend domain is verified and both secrets have values (RUNNING.md, \"Email\")."
+  type        = bool
+  default     = false
 }

@@ -1,0 +1,57 @@
+{
+ "meta": {
+  "labeler": "C",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "price",
+  "n": 9,
+  "note": "train and validation only; the test labels are in sealed/"
+ },
+ "labels": [
+  {
+   "id": "artizancoffee.com:10511425274129",
+   "label": "wrong",
+   "reason": "Identical $50.95 for 4 oz to 2 lb shows broken pricing; 2.2 matches no listed available variant."
+  },
+  {
+   "id": "dandylion.coffee:9585647780070",
+   "label": "right",
+   "reason": "8 oz coffee in an art canister for $22 is plausible."
+  },
+  {
+   "id": "dillanos.com:10293679063334",
+   "label": "unsure",
+   "reason": "75 single-serve pods; 1497 g (20 g/pod) may be gross weight rather than coffee content, so per-100g is uncertain."
+  },
+  {
+   "id": "firedeptcoffee.com:7468149932211",
+   "label": "unsure",
+   "reason": "Bundle pack; unclear whether 1928 g is the true coffee weight or shipping weight."
+  },
+  {
+   "id": "frothymonkeycoffee.com:14877112402284",
+   "label": "right",
+   "reason": "Single-serve product, $19 for 227 g gives a plausible $8.37/100g."
+  },
+  {
+   "id": "iconikcoffee.com:15446753706272",
+   "label": "right",
+   "reason": "Rare SL9 washed Peru micro-lot; consistent pricing across sizes, plausible."
+  },
+  {
+   "id": "ironbrewcoffee.com:6881391083649",
+   "label": "wrong",
+   "reason": "\"6X\" suggests a case of six bags priced against a single 2 lb weight."
+  },
+  {
+   "id": "owlcoffeeroasters.com:9592305778932",
+   "label": "unsure",
+   "reason": "Expensive single lot at $55/12oz with no indication of a rare variety or process."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4784820486193",
+   "label": "right",
+   "reason": "Three-month supply; 850 g appears to cover all three bags, so the per-100g is plausible."
+  }
+ ]
+}

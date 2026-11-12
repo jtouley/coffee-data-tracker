@@ -6,7 +6,8 @@ unit_tests:
   - name: suspect_run_boundaries
     description: >-
       Suspect means below suspect_drop_ratio (0.5) of the median of the last counted weeks, once that median is at
-      least suspect_min_products (20). No history is never suspect.
+      least suspect_min_products (20). No history is never suspect, and neither is a partial run (a catalog read only
+      in part is short by design).
     model: stg_run_quality
     given:
       - input: ref('stg_run_walk')
@@ -20,6 +21,7 @@ unit_tests:
           - {run_date: 2026-11-02, products: 9, history: "[20, 20, 20, 20]"}  # the minimum median is enough
           - {run_date: 2026-11-09, products: 17, history: "[10, 30, 40, 100]"}  # median 35, not the mean (45)
           - {run_date: 2026-11-16, products: 18, history: "[10, 30, 40, 100]"}
+          - {run_date: 2026-11-23, products: 1, history: "[40, 40, 40, 40]", partial: true}  # partial: never suspect
     expect:
       rows:
         - {run_date: 2026-10-05, baseline_products: null, suspect: false}
@@ -31,6 +33,7 @@ unit_tests:
         - {run_date: 2026-11-02, baseline_products: 20, suspect: true}
         - {run_date: 2026-11-09, baseline_products: 35, suspect: true}
         - {run_date: 2026-11-16, baseline_products: 35, suspect: false}
+        - {run_date: 2026-11-23, baseline_products: 40, suspect: false}
 
   - name: price_event_types
     description: >-
@@ -39,19 +42,22 @@ unit_tests:
       price that then gets one.
     model: fct_price_event
     given:
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
       - input: ref('stg_snapshots')
         format: sql
         rows: |
           select * from (values
-              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true}]),
-              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true}]),
-              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false}]),
-              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
-              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
-              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
-              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
-              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true}]),
-              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true}])
+              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true, 'is_usd': true}]),
+              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false, 'is_usd': true}]),
+              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true, 'is_usd': true}]),
+              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true, 'is_usd': true}])
           ) t(coffee_id, roaster_id, run_date, input_hash, variants)
           cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
       - input: ref('stg_products')
@@ -59,9 +65,9 @@ unit_tests:
           - {input_hash: h, is_coffee: true}
       - input: ref('stg_runs')
         rows:
-          - {roaster_id: r, run_date: 2026-10-05, prev_run: null, next_run: 2026-10-12}
-          - {roaster_id: r, run_date: 2026-10-12, prev_run: 2026-10-05, next_run: 2026-10-19}
-          - {roaster_id: r, run_date: 2026-10-19, prev_run: 2026-10-12, next_run: null}
+          - {roaster_id: r, run_date: 2026-10-05, prev_complete_run: null, next_complete_run: 2026-10-12}
+          - {roaster_id: r, run_date: 2026-10-12, prev_complete_run: 2026-10-05, next_complete_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-19, prev_complete_run: 2026-10-12, next_complete_run: null}
     expect:
       rows:
         - {run_date: 2026-10-05, coffee_id: "r:A", event: new, price_usd: 20.0, previous_price_usd: null}
@@ -74,3 +80,811 @@ unit_tests:
         - {run_date: 2026-10-19, coffee_id: "r:C", event: removed, price_usd: null, previous_price_usd: 15.0}
         - {run_date: 2026-10-12, coffee_id: "r:D", event: new, price_usd: null, previous_price_usd: null}
         - {run_date: 2026-10-19, coffee_id: "r:D", event: price, price_usd: 16.0, previous_price_usd: null}
+
+  - name: price_events_skip_partial_runs
+    description: >-
+      Complete 10-05, partial 10-12, complete 10-19, partial 10-26. A partial run can't show a bag is gone: P, unread
+      in the partial 10-12 and back on 10-19, gets no removed and no relisted event. Q, gone from both later runs, is
+      removed at the next complete run (10-19), not at the partial one. R, gone from the complete 10-19 and read
+      again in the partial 10-26, is relisted there. S, first read in a partial run, is new.
+    model: fct_price_event
+    given:
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select * from (values
+              ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-05', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-12', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-26', 'h', [{'variant_id': 'R', 'price_usd': 16.0, 'available': true, 'is_usd': true}]),
+              ('r:S', 'r', date '2026-10-12', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true, 'is_usd': true}]),
+              ('r:S', 'r', date '2026-10-19', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true, 'is_usd': true}])
+          ) t(coffee_id, roaster_id, run_date, input_hash, variants)
+          cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: h, is_coffee: true}
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-05, prev_complete_run: null, next_complete_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-12, prev_complete_run: 2026-10-05, next_complete_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-19, prev_complete_run: 2026-10-05, next_complete_run: null}
+          - {roaster_id: r, run_date: 2026-10-26, prev_complete_run: 2026-10-19, next_complete_run: null}
+    expect:
+      rows:
+        - {run_date: 2026-10-05, coffee_id: "r:P", event: new, price_usd: 20.0, previous_price_usd: null}
+        - {run_date: 2026-10-05, coffee_id: "r:Q", event: new, price_usd: 18.0, previous_price_usd: null}
+        - {run_date: 2026-10-19, coffee_id: "r:Q", event: removed, price_usd: null, previous_price_usd: 18.0}
+        - {run_date: 2026-10-05, coffee_id: "r:R", event: new, price_usd: 15.0, previous_price_usd: null}
+        - {run_date: 2026-10-19, coffee_id: "r:R", event: removed, price_usd: null, previous_price_usd: 15.0}
+        - {run_date: 2026-10-26, coffee_id: "r:R", event: relisted, price_usd: 16.0, previous_price_usd: 15.0}
+        - {run_date: 2026-10-12, coffee_id: "r:S", event: new, price_usd: 12.0, previous_price_usd: null}
+
+  - name: run_sequence_skips_partial_runs_for_complete_neighbours
+    description: >-
+      prev/next_complete_run are the roaster's nearest counted runs that weren't partial (stg_runs). Roaster q has no
+      partial run: they equal prev/next_run.
+    model: stg_runs
+    given:
+      - input: ref('stg_run_quality')
+        rows:
+          - {roaster_id: p, run_date: 2026-10-05, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-12, partial: true, counted: true}
+          - {roaster_id: p, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-26, partial: true, counted: true}
+          - {roaster_id: q, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: q, run_date: 2026-10-26, partial: false, counted: true}
+    expect:
+      rows:
+        - {roaster_id: p, run_date: 2026-10-05, prev_run: null, next_run: 2026-10-12, prev_complete_run: null, next_complete_run: 2026-10-19}
+        - {roaster_id: p, run_date: 2026-10-12, prev_run: 2026-10-05, next_run: 2026-10-19, prev_complete_run: 2026-10-05, next_complete_run: 2026-10-19}
+        - {roaster_id: p, run_date: 2026-10-19, prev_run: 2026-10-12, next_run: 2026-10-26, prev_complete_run: 2026-10-05, next_complete_run: null}
+        - {roaster_id: p, run_date: 2026-10-26, prev_run: 2026-10-19, next_run: null, prev_complete_run: 2026-10-19, next_complete_run: null}
+        - {roaster_id: q, run_date: 2026-10-19, prev_run: null, next_run: 2026-10-26, prev_complete_run: null, next_complete_run: 2026-10-26}
+        - {roaster_id: q, run_date: 2026-10-26, prev_run: 2026-10-19, next_run: null, prev_complete_run: 2026-10-19, next_complete_run: null}
+
+  - name: partial_runs_keep_unread_products_listed
+    description: >-
+      A partial run (a catalog read only in part, fetches.partial) lists what it read and leaves the products it
+      didn't read as they were. Roaster p: complete 10-05, complete 10-12, then partial 10-19 and 10-26, so every run
+      since 10-12 is current (a product last seen on 10-12 stays listed). Roaster q has no partial run: only its
+      latest run is current, as before. Roaster s has only partial runs: all of them are current.
+    model: stg_runs
+    given:
+      - input: ref('stg_run_quality')
+        rows:
+          - {roaster_id: p, run_date: 2026-10-05, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-12, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-19, partial: true, counted: true}
+          - {roaster_id: p, run_date: 2026-10-26, partial: true, counted: true}
+          - {roaster_id: q, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: q, run_date: 2026-10-26, partial: false, counted: true}
+          - {roaster_id: s, run_date: 2026-10-19, partial: true, counted: true}
+          - {roaster_id: s, run_date: 2026-10-26, partial: true, counted: true}
+    expect:
+      rows:
+        - {roaster_id: p, run_date: 2026-10-05, is_latest_run: false, is_current: false}
+        - {roaster_id: p, run_date: 2026-10-12, is_latest_run: false, is_current: true}
+        - {roaster_id: p, run_date: 2026-10-19, is_latest_run: false, is_current: true}
+        - {roaster_id: p, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+        - {roaster_id: q, run_date: 2026-10-19, is_latest_run: false, is_current: false}
+        - {roaster_id: q, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+        - {roaster_id: s, run_date: 2026-10-19, is_latest_run: false, is_current: true}
+        - {roaster_id: s, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+
+  - name: fetch_coffees_are_recorded_else_counted
+    description: >-
+      dim_roaster's status reads int_fetches.coffees: the count the crawl recorded (kaldi.com 10-26: 3,459, though
+      today's rules call its capped first 5,000 products equipment), else, for an ELT fetch with no recorded count,
+      the count int_fetch_coffees makes with the crawl's rule. A failed fetch keeps its own value.
+    model: int_fetches
+    given:
+      - input: ref('stg_fetches')
+        rows:
+          - {roaster_id: kaldi.com, batch_id: k1, status: ok, products: 5000, coffees: 3459}
+          - {roaster_id: kaldi.com, batch_id: k2, status: error, products: 0, coffees: 0}
+          - {roaster_id: elt.com, batch_id: e1, status: ok, products: 2, coffees: null}
+          - {roaster_id: gear.com, batch_id: g1, status: ok, products: 2, coffees: null}
+      - input: ref('int_fetch_coffees')
+        rows:
+          - {roaster_id: elt.com, batch_id: e1, coffees: 1}
+          - {roaster_id: gear.com, batch_id: g1, coffees: 0}
+    expect:
+      rows:
+        - {roaster_id: kaldi.com, batch_id: k1, coffees: 3459}
+        - {roaster_id: kaldi.com, batch_id: k2, coffees: 0}
+        - {roaster_id: elt.com, batch_id: e1, coffees: 1}
+        - {roaster_id: gear.com, batch_id: g1, coffees: 0}
+
+  - name: unavailable_stores_have_no_catalog_this_run
+    description: >-
+      run_completeness.has_catalog, its first branch: a store found closed this run (unavailable) is left out of the
+      ok rates even though earlier runs read products from it. A store that failed the same way without being
+      closed still counts against the run.
+    model: run_completeness
+    overrides:
+      vars:
+        as_of_run: "2026-11-02"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: closed.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, adapter: shopify, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: closed.com, run_date: 2026-11-02, ok: false, products: null, unavailable: true, adapter: shopify, first_at: "2026-11-02 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, adapter: shopify, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-11-02, ok: false, products: null, unavailable: false, adapter: shopify, first_at: "2026-11-02 09:00:00+00"}
+      - input: ref('dim_roaster')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::varchar as platform where false
+      - input: ref('stg_registry')
+        format: sql
+        rows: select null::varchar as roaster_id, null::timestamptz as first_added where false
+    expect:
+      rows:
+        - {roaster_id: closed.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, unavailable: true}
+        - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, unavailable: false}
+
+  - name: quarantined_stores_have_no_catalog_this_run
+    description: >-
+      run_completeness.has_catalog: a store quarantined this run (fetch status crashed: it crashed its crawl twice)
+      is left out of the ok rates like a closed one, and flagged quarantined. Not a platform failure.
+    model: run_completeness
+    overrides:
+      vars:
+        as_of_run: "2026-11-02"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: pill.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, quarantined: false, adapter: generic, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: pill.com, run_date: 2026-11-02, ok: false, products: null, unavailable: false, quarantined: true, adapter: generic, first_at: "2026-11-02 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, quarantined: false, adapter: generic, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-11-02, ok: false, products: null, unavailable: false, quarantined: false, adapter: generic, first_at: "2026-11-02 09:00:00+00"}
+      - input: ref('dim_roaster')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::varchar as platform where false
+      - input: ref('stg_registry')
+        format: sql
+        rows: select null::varchar as roaster_id, null::timestamptz as first_added where false
+    expect:
+      rows:
+        - {roaster_id: pill.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, quarantined: true}
+        - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, quarantined: false}
+
+  - name: roaster_runs_carry_partial_and_challenge
+    description: >-
+      int_roaster_runs, for the fetch-health check: a run whose ok attempts all read part of the catalog is partial,
+      with the latest one's reason; a complete ok attempt the same week means it isn't. A run with no ok attempt
+      keeps the edge of its latest challenged one; a challenge before an ok attempt is no challenge.
+    model: int_roaster_runs
+    given:
+      - input: ref('stg_fetches')
+        rows:
+          - {roaster_id: part.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, partial: true, error: "partial: page 3", products: 40, challenge: null}
+          - {roaster_id: part.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: ok, partial: true, error: "partial: page 5", products: 60, challenge: null}
+          - {roaster_id: whole.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, partial: true, error: "partial: page 3", products: 40, challenge: null}
+          - {roaster_id: whole.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: ok, partial: false, error: null, products: 90, challenge: null}
+          - {roaster_id: sg.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: error, partial: false, error: "HTTP 202 (a challenge)", products: 0, challenge: siteground}
+          - {roaster_id: sg.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: error, partial: false, error: "ReadTimeout", products: 0, challenge: null}
+          - {roaster_id: later.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: error, partial: false, error: "HTTP 202 (a challenge)", products: 0, challenge: cloudflare}
+          - {roaster_id: later.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: ok, partial: false, error: null, products: 9, challenge: null}
+    expect:
+      rows:
+        - {roaster_id: part.com, ok: true, partial: true, partial_reason: "partial: page 5", challenge: null}
+        - {roaster_id: whole.com, ok: true, partial: false, partial_reason: null, challenge: null}
+        - {roaster_id: sg.com, ok: false, partial: false, partial_reason: null, challenge: siteground}
+        - {roaster_id: later.com, ok: true, partial: false, partial_reason: null, challenge: null}
+
+  - name: snapshot_tags_are_decoded
+    description: >-
+      stg_snapshots decodes HTML entities in tags (decode_html_entities), as the real lake has them: WooCommerce's
+      escaped term names ("Parts &amp; Equipment", "Coffee &gt; Single Origin"), a tag escaped twice
+      (decode_html_entities runs exactly three rounds, so up to three levels of escaping are undone), and a number.
+      A bare '&' and an unknown name stay as they are, and null and empty lists stay so. input_hash stays over the
+      raw tags, so stored verdicts and enrichments still join (the hashes are md5 over the raw values).
+    model: stg_snapshots
+    overrides:
+      macros:
+        # The lake's snapshots: the model reads them with lake('snapshots'), the only lake table it reads.
+        lake: >-
+          (select * from (values
+              ('P', ['Parts &amp; Equipment', 'Coffee &gt; Single Origin']),
+              ('Q', ['Education &amp;amp; Display', 'Light &#8211; Medium', 'R&D', null]),
+              ('R', null),
+              ('S', []::varchar[])
+          ) t(product_id, tags)
+          cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
+              timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
+              'Kenya AA' as title, '' as product_type, 'b' as body_hash, 'kenya-aa' as handle,
+              [{'variant_id': 'v', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true,
+                'currency': 'USD'}] as variants))
+    given:
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r.com, country: US}
+    expect:
+      rows:
+        - {coffee_id: "r.com:P", tags: "['Parts & Equipment', 'Coffee > Single Origin']", input_hash: 06662042c205f4a3c208c887873c8b34}
+        - {coffee_id: "r.com:Q", tags: "['Education & Display', 'Light – Medium', 'R&D', NULL]", input_hash: 5eea2c56221c71c2e5b3c3bed77c478a}
+        - {coffee_id: "r.com:R", tags: null, input_hash: 6917f7444f9e455268154e8ddbf2d243}
+        - {coffee_id: "r.com:S", tags: "[]", input_hash: 7fb87725be5e4f4ffd6c4f555de8ec36}
+
+  - name: dial_in_best_recipe_is_one_shot_whatever_the_order
+    description: >-
+      The best recipe is one shot's: the highest rating, the latest brewed among equal ratings, then the larger
+      shot_id (two shots brewed in the same second), so every best_* value comes from the same shot however the
+      shots are read. arg_max(x, rating) alone took the first top-rated shot it read, here a's. The label is the
+      latest shot's spelling of the coffee (the key is lower-cased).
+    model: mart_dial_in
+    given:
+      - input: ref('fct_shot')
+        rows:
+          - {shot_id: a, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-20 07:00:00+00", rating: 5, grinder_setting: 10.0, dose_g: 18.0, yield_g: 36.0, time_s: 28.0}
+          - {shot_id: c, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-21 07:00:00+00", rating: 5, grinder_setting: 11.0, dose_g: 19.0, yield_g: 38.0, time_s: 30.0}
+          - {shot_id: b, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-21 07:00:00+00", rating: 5, grinder_setting: 12.0, dose_g: 18.5, yield_g: 37.0, time_s: 29.0}
+          - {shot_id: d, user_id: u1, coffee_freetext: House espresso, brewed_at: "2026-10-22 07:00:00+00", rating: 3, grinder_setting: 14.0, dose_g: 18.0, yield_g: 40.0, time_s: 25.0}
+    expect:
+      rows:
+        - {grain: coffee, key: "freetext:house espresso", label: House espresso, shots: 4, best_rating: 5, best_grind: 11.0, best_dose_g: 19.0, best_yield_g: 38.0, best_time_s: 30.0}
+
+  - name: verdict_tie_prefers_coffee
+    description: >-
+      Of a product's verdicts, the latest wins (P: a later not_coffee over an earlier coffee). Two stored in the same
+      second: coffee wins whatever the other label and whichever is read first (Q and R: not_coffee; S: unsure), so
+      a tie with coffee never removes a product. A tie without coffee goes by the label (U: not_coffee before
+      unsure; the owner's rule covers only coffee). Verdicts for another model or definition are ignored (T).
+    model: stg_verdicts
+    overrides:
+      vars:
+        verdict_model: m
+        verdict_definition: d
+      macros:
+        # The lake's verdicts: the model reads them with lake('verdicts'), the only lake table it reads.
+        lake: >-
+          (select * from (values
+              ('P', 'coffee', 'm', 'd', timestamptz '2026-11-01 12:00:00+00'),
+              ('P', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('Q', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('Q', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('R', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('R', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('S', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('S', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('T', 'coffee', 'other', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('T', 'coffee', 'm', 'old', timestamptz '2026-11-02 12:00:00+00'),
+              ('U', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('U', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00')
+          ) t(input_hash, label, model, definition, decided_at))
+    given: []
+    expect:
+      rows:
+        - {input_hash: P, label: not_coffee, model: m}
+        - {input_hash: Q, label: coffee, model: m}
+        - {input_hash: R, label: coffee, model: m}
+        - {input_hash: S, label: coffee, model: m}
+        - {input_hash: U, label: not_coffee, model: m}
+
+  - name: one_store_one_canonical_roaster
+    description: >-
+      int_roaster_state.canonical_roaster_id (eval/roaster_dedup, macros/roaster_alias.sql): ids whose resolved hosts
+      share a key serve one store. Jones: three ids, one host spelled www.Jonescoffeeroasters.com, so case must not
+      matter; all were first read in the same run, so the canonical is the id equal to the host. wonderstate/kickapoo:
+      a rebrand, both curated, so curated can't decide; the id equal to the host does. Union: no id equals
+      unionroasters.com, so the one sharing its first label. Two white-label stores (one supplier's catalog, separate
+      businesses on their own domains) are not aliases.
+    model: int_roaster_state
+    given:
+      - input: ref('shared_hosts')
+        rows:
+          - {host: expireddomains.com, kind: parked}
+          - {host: facebook.com, kind: not_a_roaster}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: jonescoffee.com, sources: overture, seed_host: www.Jonescoffeeroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: jonescoffeeroasters.com, sources: overture, seed_host: www.jonescoffeeroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: thebestcoffee.com, sources: overture, seed_host: www.jonescoffeeroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: kickapoocoffee.com, sources: curated, seed_host: wonderstate.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: wonderstate.com, sources: curated, seed_host: wonderstate.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: silvercupcoffeeroasters.com, sources: overture, seed_host: unionroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: unionroasters.co, sources: overture, seed_host: unionroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: bluechipcoffeeroaster.com, sources: overture, seed_host: bluechipcoffeeroaster.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: piatanoirroast.com, sources: overture, seed_host: www.piatanoirroast.com, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: jonescoffee.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 30}
+          - {roaster_id: jonescoffeeroasters.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 30}
+          - {roaster_id: thebestcoffee.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 30}
+          - {roaster_id: kickapoocoffee.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 25}
+          - {roaster_id: wonderstate.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 25}
+          - {roaster_id: silvercupcoffeeroasters.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 9}
+          - {roaster_id: unionroasters.co, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 9}
+          - {roaster_id: bluechipcoffeeroaster.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 40}
+          - {roaster_id: piatanoirroast.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 40}
+      - input: ref('int_fetches')
+        rows:
+          - {roaster_id: jonescoffee.com, batch_id: b0, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 30, coffees: 29}
+          - {roaster_id: jonescoffeeroasters.com, batch_id: b1, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 30, coffees: 29}
+          - {roaster_id: thebestcoffee.com, batch_id: b2, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 30, coffees: 29}
+          - {roaster_id: kickapoocoffee.com, batch_id: b3, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 25, coffees: 23}
+          - {roaster_id: wonderstate.com, batch_id: b4, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 25, coffees: 23}
+          - {roaster_id: silvercupcoffeeroasters.com, batch_id: b5, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 9, coffees: 8}
+          - {roaster_id: unionroasters.co, batch_id: b6, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 9, coffees: 8}
+          - {roaster_id: bluechipcoffeeroaster.com, batch_id: b7, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 40, coffees: 38}
+          - {roaster_id: piatanoirroast.com, batch_id: b8, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 40, coffees: 38}
+    expect:
+      rows:
+        - {roaster_id: jonescoffee.com, status: alias, canonical_roaster_id: jonescoffeeroasters.com}
+        - {roaster_id: jonescoffeeroasters.com, status: active, canonical_roaster_id: jonescoffeeroasters.com}
+        - {roaster_id: thebestcoffee.com, status: alias, canonical_roaster_id: jonescoffeeroasters.com}
+        - {roaster_id: kickapoocoffee.com, status: alias, canonical_roaster_id: wonderstate.com}
+        - {roaster_id: wonderstate.com, status: active, canonical_roaster_id: wonderstate.com}
+        - {roaster_id: silvercupcoffeeroasters.com, status: alias, canonical_roaster_id: unionroasters.co}
+        - {roaster_id: unionroasters.co, status: active, canonical_roaster_id: unionroasters.co}
+        - {roaster_id: bluechipcoffeeroaster.com, status: active, canonical_roaster_id: bluechipcoffeeroaster.com}
+        - {roaster_id: piatanoirroast.com, status: active, canonical_roaster_id: piatanoirroast.com}
+
+  - name: a_new_domain_never_takes_over_a_published_store
+    description: >-
+      The canonical id is sticky (review of #137, M2). coffeemasters.shop (added by discovery, its id equal to the
+      host) was read once on 11-09 ("Pull now", or before this change): thecafeconnection.com's catalog was read first
+      (10-26), so it keeps the store and its history. Parked domains (expireddomains.com, a shared host) never group,
+      whatever their status. A hand-checked alias_of (a rebrand that doesn't redirect) decides over the host. An
+      OSM-only id equal to the key never hides a publishable one (L2). A seed-only id (first_added null: the oldest)
+      is canonical before one the lake added later (L1).
+    model: int_roaster_state
+    given:
+      - input: ref('shared_hosts')
+        rows:
+          - {host: expireddomains.com, kind: parked}
+          - {host: facebook.com, kind: not_a_roaster}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: thecafeconnection.com, sources: overture, seed_host: www.coffeemasters.shop, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: coffeemasters.shop, sources: overture, seed_host: www.coffeemasters.shop, seed_platform: shopify, first_added: "2026-11-01 06:00:00+00", opted_out: false, country: US}
+          - {roaster_id: altruisticjoe.com, sources: overture, seed_host: expireddomains.com, seed_platform: other, opted_out: false, country: US}
+          - {roaster_id: timbertowncoffee.com, sources: overture, seed_host: www.expireddomains.com, seed_platform: other, opted_out: false, country: US}
+          - {roaster_id: oldname.com, sources: curated, seed_host: oldname.com, seed_platform: shopify, alias_of: newname.com, opted_out: false, country: US}
+          - {roaster_id: newname.com, sources: overture, seed_host: newname.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: osmonly.com, sources: osm, seed_host: osmonly.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: bean-and-co.com, sources: overture, seed_host: osmonly.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: roasterone.com, sources: overture, seed_host: beanbag.coffee, seed_platform: shopify, first_added: "2026-11-01 06:00:00+00", opted_out: false, country: US}
+          - {roaster_id: roastertwo.com, sources: overture, seed_host: beanbag.coffee, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: thecafeconnection.com, run_date: 2026-10-26, ok: true, last_at: "2026-10-26 09:00:00+00", products: 12}
+          - {roaster_id: thecafeconnection.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 12}
+          - {roaster_id: coffeemasters.shop, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 12}
+          - {roaster_id: altruisticjoe.com, run_date: 2026-11-02, ok: true, last_at: "2026-11-02 09:00:00+00", products: 0}
+          - {roaster_id: timbertowncoffee.com, run_date: 2026-11-02, ok: true, last_at: "2026-11-02 09:00:00+00", products: 0}
+          - {roaster_id: oldname.com, run_date: 2026-11-02, ok: true, last_at: "2026-11-02 09:00:00+00", products: 12}
+          - {roaster_id: newname.com, run_date: 2026-11-02, ok: true, last_at: "2026-11-02 09:00:00+00", products: 12}
+      - input: ref('int_fetches')
+        rows:
+          - {roaster_id: thecafeconnection.com, batch_id: b1, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 12, coffees: 10}
+          - {roaster_id: coffeemasters.shop, batch_id: b2, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 12, coffees: 10}
+          - {roaster_id: altruisticjoe.com, batch_id: b3, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 0, coffees: 0}
+          - {roaster_id: timbertowncoffee.com, batch_id: b4, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 0, coffees: 0}
+          - {roaster_id: oldname.com, batch_id: b5, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 12, coffees: 10}
+          - {roaster_id: newname.com, batch_id: b6, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 12, coffees: 10}
+    expect:
+      rows:
+        - {roaster_id: thecafeconnection.com, status: active, canonical_roaster_id: thecafeconnection.com}
+        - {roaster_id: coffeemasters.shop, status: alias, canonical_roaster_id: thecafeconnection.com}
+        - {roaster_id: altruisticjoe.com, status: no_catalog, canonical_roaster_id: altruisticjoe.com}
+        - {roaster_id: timbertowncoffee.com, status: no_catalog, canonical_roaster_id: timbertowncoffee.com}
+        - {roaster_id: oldname.com, status: alias, canonical_roaster_id: newname.com}
+        - {roaster_id: newname.com, status: active, canonical_roaster_id: newname.com}
+        - {roaster_id: osmonly.com, status: alias, canonical_roaster_id: bean-and-co.com}
+        - {roaster_id: bean-and-co.com, status: pending, canonical_roaster_id: bean-and-co.com}
+        - {roaster_id: roasterone.com, status: alias, canonical_roaster_id: roastertwo.com}
+        - {roaster_id: roastertwo.com, status: pending, canonical_roaster_id: roastertwo.com}
+
+  - name: a_store_keeps_its_aliases_through_an_outage
+    description: >-
+      Grouping never reads the crawl status (review of #137, H1 and M7). wonderstate.com failed its last 3 runs
+      (unreachable) and kickapoocoffee.com's last read is stale (active, never crawled since it became the alias):
+      still one store, under wonderstate.com. vervecoffee.com's last read had products but no coffee (no_coffee):
+      vervecoffeeroasters.com stays its alias. intelligentsia.com opted out: the opt-out covers the store, so its
+      other domain is an alias, never crawled or published. javaboulevard.com (its shop is shop.magnumcoffee.com)
+      read a catalog and magnumcoffee.com never did (no_catalog): the store's id is the one that read it.
+    model: int_roaster_state
+    given:
+      - input: ref('shared_hosts')
+        rows:
+          - {host: expireddomains.com, kind: parked}
+          - {host: facebook.com, kind: not_a_roaster}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: wonderstate.com, sources: curated, seed_host: wonderstate.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: kickapoocoffee.com, sources: curated, seed_host: wonderstate.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: vervecoffee.com, sources: overture, seed_host: vervecoffee.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: vervecoffeeroasters.com, sources: overture, seed_host: www.vervecoffee.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: intelligentsia.com, sources: overture, seed_host: intelligentsia.com, seed_platform: shopify, opted_out: true, country: US}
+          - {roaster_id: intelligentsiacoffee.com, sources: overture, seed_host: www.intelligentsia.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: javaboulevard.com, sources: overture, seed_host: shop.magnumcoffee.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: magnumcoffee.com, sources: overture, seed_host: magnumcoffee.com, seed_platform: other, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: wonderstate.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 25}
+          - {roaster_id: wonderstate.com, run_date: 2026-10-26, ok: false, last_at: "2026-10-26 09:00:00+00", products: null}
+          - {roaster_id: wonderstate.com, run_date: 2026-11-02, ok: false, last_at: "2026-11-02 09:00:00+00", products: null}
+          - {roaster_id: wonderstate.com, run_date: 2026-11-09, ok: false, last_at: "2026-11-09 09:00:00+00", products: null}
+          - {roaster_id: kickapoocoffee.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 25}
+          - {roaster_id: vervecoffee.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 40}
+          - {roaster_id: vervecoffee.com, run_date: 2026-11-09, ok: true, last_at: "2026-11-09 09:00:00+00", products: 40}
+          - {roaster_id: vervecoffeeroasters.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 40}
+          - {roaster_id: intelligentsia.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 50}
+          - {roaster_id: intelligentsiacoffee.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 50}
+          - {roaster_id: javaboulevard.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 20}
+          - {roaster_id: magnumcoffee.com, run_date: 2026-10-19, ok: true, last_at: "2026-10-19 09:00:00+00", products: 0}
+      - input: ref('int_fetches')
+        rows:
+          - {roaster_id: wonderstate.com, batch_id: b1, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 25, coffees: 23}
+          - {roaster_id: kickapoocoffee.com, batch_id: b2, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 25, coffees: 23}
+          - {roaster_id: vervecoffee.com, batch_id: b3, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 40, coffees: 0}
+          - {roaster_id: vervecoffeeroasters.com, batch_id: b4, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 40, coffees: 30}
+          - {roaster_id: intelligentsia.com, batch_id: b5, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 50, coffees: 45}
+          - {roaster_id: intelligentsiacoffee.com, batch_id: b6, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 50, coffees: 45}
+          - {roaster_id: javaboulevard.com, batch_id: b7, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 20, coffees: 18}
+          - {roaster_id: magnumcoffee.com, batch_id: b8, run_date: 2026-10-19, fetched_at: "2026-10-19 09:00:00+00", status: ok, products: 0, coffees: 0}
+    expect:
+      rows:
+        - {roaster_id: wonderstate.com, status: unreachable, canonical_roaster_id: wonderstate.com}
+        - {roaster_id: kickapoocoffee.com, status: alias, canonical_roaster_id: wonderstate.com}
+        - {roaster_id: vervecoffee.com, status: no_coffee, canonical_roaster_id: vervecoffee.com}
+        - {roaster_id: vervecoffeeroasters.com, status: alias, canonical_roaster_id: vervecoffee.com}
+        - {roaster_id: intelligentsia.com, status: opted_out, canonical_roaster_id: intelligentsia.com}
+        - {roaster_id: intelligentsiacoffee.com, status: alias, canonical_roaster_id: intelligentsia.com}
+        - {roaster_id: javaboulevard.com, status: active, canonical_roaster_id: javaboulevard.com}
+        - {roaster_id: magnumcoffee.com, status: alias, canonical_roaster_id: javaboulevard.com}
+
+  - name: coffee_prices_use_the_rules_grams_by_position
+    description: >-
+      dim_coffee prices bags with stg_variant_grams's grams, matched to the variants by position (1-based): the
+      crawler stored 907 g for a "1/2 lb" option and none for a 5 lb one; the rules read 227 g and 2268 g. A coffee
+      whose version has no stg_variant_grams row keeps its stored grams (variant_grams_are_valid fails that build).
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select * from (values
+              ('r:A', 'A', 'kA', [{'variant_id': 'a1', 'title': '1/2 lb', 'price_usd': 10.0, 'grams': 907, 'available': true},
+                                  {'variant_id': 'a2', 'title': '5-lb-bag', 'price_usd': 70.0, 'grams': null, 'available': true}]),
+              ('r:B', 'B', 'kB', [{'variant_id': 'b1', 'title': '12 oz', 'price_usd': 17.0, 'grams': 340, 'available': true}])
+          ) t(coffee_id, product_id, grams_key, variants)
+          cross join (select 'r' as roaster_id, date '2026-10-19' as run_date, 'h' as input_hash, 'b' as body_hash,
+              'h' as handle, 'https://r/p' as url, null::varchar as image, 'shopify' as platform,
+              []::varchar[] as tags, null::timestamptz as published_at)
+      - input: ref('stg_variant_grams')
+        format: sql
+        rows: select 'kA' as grams_key, 2 as options, [227, 2268]::integer[] as grams
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: h, is_coffee: true, classified_by: rules, is_wholesale: false, clean_title: Kenya}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:A", price_per_100g: 3.09, bag_sizes_g: "[227, 2268]"}
+        - {coffee_id: "r:B", price_per_100g: 5.0, bag_sizes_g: "[340]"}
+
+  # --- Rules pinned by the rules audit (docs/RULES.md) ---------------------------------------------------------------
+
+  - name: price_per_100g_band_size_window_and_availability
+    description: >-
+      dim_coffee's prices. price_per_100g is the lowest of a coffee's variants that are retail, 150-2,500 g, priced
+      above 0, available (null counts as available) and $0.50-$100 per 100 g, all bounds inclusive; else null.
+      min_price_usd is the lowest price above 0 over every variant, sold out or wholesale included; bag_sizes_g
+      every distinct size. P1 in band; P2 under 150 g; P3 2,500 g exactly; P4 over 2,500 g; P5 under $0.50/100 g;
+      P6 $100/100 g exactly; P7 over $100/100 g; P8 its cheaper-per-gram bag ($2.94/100 g) is sold out, so the
+      available one ($4.00) counts; P9 wholesale; P10 priced 0 and unpriced; P11 availability unknown; P12 sold out.
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
+                 'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
+                 []::varchar[] as tags, null::timestamptz as published_at, coffee_id as input_hash, 'b' as body_hash,
+                 coffee_id as grams_key,
+                 variants::struct(variant_id varchar, title varchar, price_usd double, grams integer,
+                                  available boolean)[] as variants
+          from (values
+              ('r:P1', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
+              ('r:P2', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 10.0, 'grams': 100, 'available': true}]),
+              ('r:P3', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 50.0, 'grams': 2500, 'available': true}]),
+              ('r:P4', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 60.0, 'grams': 2600, 'available': true}]),
+              ('r:P5', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 0.7, 'grams': 150, 'available': true}]),
+              ('r:P6', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 150.0, 'grams': 150, 'available': true}]),
+              ('r:P7', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 400.0, 'grams': 340, 'available': true}]),
+              ('r:P8', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 10.0, 'grams': 340, 'available': false},
+                             {'variant_id': 'b', 'title': 'Bag', 'price_usd': 40.0, 'grams': 1000, 'available': true}]),
+              ('r:P9', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
+              ('r:P10', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 0.0, 'grams': 340, 'available': true},
+                              {'variant_id': 'b', 'title': 'Bag', 'price_usd': null, 'grams': 454, 'available': true}]),
+              ('r:P11', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 17.0, 'grams': 340, 'available': null}]),
+              ('r:P12', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': false}])
+          ) t(coffee_id, roaster_id, variants)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:P1", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P2", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P3", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P4", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P5", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P6", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P7", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P8", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P9", is_coffee: true, is_wholesale: true}
+          - {input_hash: "r:P10", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P11", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P12", is_coffee: true, is_wholesale: false}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:P1", price_per_100g: 5.88, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P2", price_per_100g: null, min_price_usd: 10.0, bag_sizes_g: "[100]", in_stock: true}
+        - {coffee_id: "r:P3", price_per_100g: 2.0, min_price_usd: 50.0, bag_sizes_g: "[2500]", in_stock: true}
+        - {coffee_id: "r:P4", price_per_100g: null, min_price_usd: 60.0, bag_sizes_g: "[2600]", in_stock: true}
+        - {coffee_id: "r:P5", price_per_100g: null, min_price_usd: 0.7, bag_sizes_g: "[150]", in_stock: true}
+        - {coffee_id: "r:P6", price_per_100g: 100.0, min_price_usd: 150.0, bag_sizes_g: "[150]", in_stock: true}
+        - {coffee_id: "r:P7", price_per_100g: null, min_price_usd: 400.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P8", price_per_100g: 4.0, min_price_usd: 10.0, bag_sizes_g: "[340, 1000]", in_stock: true}
+        - {coffee_id: "r:P9", price_per_100g: null, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P10", price_per_100g: null, min_price_usd: null, bag_sizes_g: "[340, 454]", in_stock: true}
+        - {coffee_id: "r:P11", price_per_100g: 5.0, min_price_usd: 17.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P12", price_per_100g: null, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: false}
+
+  - name: flavor_categories_come_from_the_lexicon
+    description: >-
+      dim_coffee.flavor_categories: each tasting note looked up in the flavor_lexicon seed (rows copied from it),
+      the distinct categories sorted. A note the seed doesn't list adds nothing; no notes, or none known, is an
+      empty list, never null. (The lookup is case-sensitive today: flavor_lookup_ignores_case, a suspected bug.)
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+                 date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
+                 'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
+                 coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+          from (values ('r:F1'), ('r:F2'), ('r:F3'), ('r:F4')) t(coffee_id)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['milk chocolate', 'blackberry', 'chocolate', 'lemon', 'not a note']"}
+          - {input_hash: "r:F2", is_coffee: true, is_wholesale: false, tasting_notes: "['lemon', 'jasmine']"}
+          - {input_hash: "r:F3", is_coffee: true, is_wholesale: false, tasting_notes: "[]"}
+          - {input_hash: "r:F4", is_coffee: true, is_wholesale: false, tasting_notes: null}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('flavor_lexicon')  # rows as in seeds/flavor_lexicon.csv
+        rows:
+          - {note: blackberry, category: berry}
+          - {note: chocolate, category: chocolate}
+          - {note: milk chocolate, category: chocolate}
+          - {note: lemon, category: citrus}
+          - {note: jasmine, category: floral}
+    expect:
+      rows:
+        - {coffee_id: "r:F1", flavor_categories: "['berry', 'chocolate', 'citrus']"}
+        - {coffee_id: "r:F2", flavor_categories: "['citrus', 'floral']"}
+        - {coffee_id: "r:F3", flavor_categories: "[]"}
+        - {coffee_id: "r:F4", flavor_categories: "[]"}
+
+  - name: market_weekly_cells_leave_out_archived_blends_and_unknown_origins
+    description: >-
+      public_market_weekly counts public coffees that are listed, not archived, not wholesale, not blends and have
+      an origin; a missing process is its own cell, 'unknown'. (It counts chains, unlike mart_market and the site:
+      tests/test_dbt.py's xfail test_public_market_weekly_leaves_out_chains, a suspected bug.)
+    model: public_market_weekly
+    given:
+      - input: ref('public_coffee')
+        rows:
+          - {coffee_id: "a:1", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 6.0, last_seen: 2026-10-19}
+          - {coffee_id: "k:1", roaster_id: k, origin_country: Kenya, process: washed, is_listed: true, catalog_status: sold_out, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 8.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:2", roaster_id: a, origin_country: Kenya, process: null, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 5.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:3", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: archived, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 9.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:4", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: true, in_stock: true, price_per_100g: 9.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:5", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: available, is_wholesale: true, is_blend: false, in_stock: true, price_per_100g: null, last_seen: 2026-10-19}
+          - {coffee_id: "a:6", roaster_id: a, origin_country: null, process: washed, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:7", roaster_id: a, origin_country: Kenya, process: washed, is_listed: false, catalog_status: delisted, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 9.0, last_seen: 2026-10-26}
+    expect:
+      rows:
+        - {as_of_run: 2026-10-26, origin_country: Kenya, process: washed, coffees: 2, roasters: 2, in_stock: 1, median_price_per_100g: 7.0}
+        - {as_of_run: 2026-10-26, origin_country: Kenya, process: unknown, coffees: 1, roasters: 1, in_stock: 1, median_price_per_100g: 5.0}
+
+  - name: mart_market_is_us_retail_single_origins_without_chains
+    description: >-
+      mart_market counts the current catalog's coffees from US roasters that aren't chains, wholesale or blends and
+      have an origin; a missing process is 'unknown'. top_notes_for_origin: the origin's five most frequent notes
+      over those coffees, ties by note, across all its processes.
+    model: mart_market
+    given:
+      - input: ref('int_current_catalog')
+        rows:
+          - {coffee_id: "a:1", roaster_id: a, origin_country: Kenya, process: washed, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 6.0, tasting_notes: "['blackcurrant', 'tomato', 'grapefruit']"}
+          - {coffee_id: "b:1", roaster_id: b, origin_country: Kenya, process: null, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 8.0, tasting_notes: "['blackcurrant', 'tomato', 'cola', 'honey', 'lime', 'rhubarb']"}
+          - {coffee_id: "k:1", roaster_id: k, origin_country: Kenya, process: washed, is_chain: true, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, tasting_notes: "['chain note']"}
+          - {coffee_id: "c:1", roaster_id: c, origin_country: Kenya, process: washed, is_chain: false, roaster_country: CA, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, tasting_notes: "['canada note']"}
+          - {coffee_id: "a:2", roaster_id: a, origin_country: Kenya, process: washed, is_chain: false, roaster_country: US, is_wholesale: true, is_blend: false, in_stock: true, price_per_100g: null, tasting_notes: "['wholesale note']"}
+          - {coffee_id: "a:3", roaster_id: a, origin_country: Kenya, process: washed, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: true, in_stock: true, price_per_100g: 9.0, tasting_notes: "['blend note']"}
+          - {coffee_id: "a:4", roaster_id: a, origin_country: null, process: washed, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, tasting_notes: "['no origin']"}
+    expect:
+      rows:
+        - {origin_country: Kenya, process: washed, coffees: 1, roasters: 1, in_stock: 1, median_price_per_100g: 6.0, top_notes_for_origin: "['blackcurrant', 'tomato', 'cola', 'grapefruit', 'honey']"}
+        - {origin_country: Kenya, process: unknown, coffees: 1, roasters: 1, in_stock: 0, median_price_per_100g: 8.0, top_notes_for_origin: "['blackcurrant', 'tomato', 'cola', 'grapefruit', 'honey']"}
+
+  - name: extraction_time_bucket_boundaries
+    description: >-
+      fct_shot.extraction_time_bucket: under 25 s is fast, 25 to 32 s inclusive is target, over 32 s (or no time)
+      is slow; brew_ratio is yield over dose to 2 places.
+    model: fct_shot
+    given:
+      - input: ref('stg_shots')
+        rows:
+          - {shot_id: s1, user_id: u, time_s: 24.9, dose_g: 18.0, yield_g: 36.0}
+          - {shot_id: s2, user_id: u, time_s: 25.0, dose_g: 18.0, yield_g: 40.0}
+          - {shot_id: s3, user_id: u, time_s: 32.0, dose_g: 18.0, yield_g: 45.0}
+          - {shot_id: s4, user_id: u, time_s: 32.1, dose_g: 18.0, yield_g: 27.0}
+          - {shot_id: s5, user_id: u, time_s: null, dose_g: 18.0, yield_g: null}
+      - input: ref('stg_bags')
+        rows: []
+      - input: ref('dim_equipment')
+        rows: []
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {shot_id: s1, extraction_time_bucket: fast, brew_ratio: 2.0}
+        - {shot_id: s2, extraction_time_bucket: target, brew_ratio: 2.22}
+        - {shot_id: s3, extraction_time_bucket: target, brew_ratio: 2.5}
+        - {shot_id: s4, extraction_time_bucket: slow, brew_ratio: 1.5}
+        - {shot_id: s5, extraction_time_bucket: slow, brew_ratio: null}
+
+  - name: shots_in_window_counts_target_shots_per_bag
+    description: >-
+      mart_bag.shots_in_window: a bag's shots whose extraction_time_bucket is target (fct_shot: 25-32 s); shots
+      with no bag aren't counted. (A bag with no shots gets null, not 0: a_bag_with_no_shots_has_none_in_window, a
+      suspected bug.)
+    model: mart_bag
+    given:
+      - input: ref('stg_bags')
+        rows:
+          - {bag_id: b1, user_id: u}
+      - input: ref('fct_shot')
+        rows:
+          - {shot_id: s1, user_id: u, bag_id: b1, extraction_time_bucket: target, time_s: 28.0, rating: 4}
+          - {shot_id: s2, user_id: u, bag_id: b1, extraction_time_bucket: fast, time_s: 20.0, rating: 2}
+          - {shot_id: s3, user_id: u, bag_id: b1, extraction_time_bucket: target, time_s: 32.0, rating: 3}
+          - {shot_id: s4, user_id: u, bag_id: null, extraction_time_bucket: target, time_s: 30.0, rating: 5}
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {bag_id: b1, shot_count: 3, shots_in_window: 2, best_shot_id: s1}
+
+  # --- Suspected bugs: what these models should output, failing today --------------------------------------------
+  # Tagged suspected_bug, so test_dbt_unit_tests leaves them out; tests/test_dbt.py runs each as a strict xfail, which
+  # fails once the model is fixed, so the fix moves the test into the passing set above.
+
+  - name: flavor_lookup_ignores_case
+    description: >-
+      A tasting note matches the flavor lexicon whatever its case ('Lemon' is lemon). Today the lookup is exact, so a
+      capitalised note (Claude's or a tag's) gets no category.
+    model: dim_coffee
+    config:
+      tags: [suspected_bug]
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
+                 'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
+                 []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
+                 'r:F1' as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['Lemon', 'Jasmine']"}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('flavor_lexicon')
+        rows:
+          - {note: lemon, category: citrus}
+          - {note: jasmine, category: floral}
+    expect:
+      rows:
+        - {coffee_id: "r:F1", flavor_categories: "['citrus', 'floral']"}
+
+  - name: a_bag_with_no_shots_has_none_in_window
+    description: >-
+      A bag with no shots has shots_in_window 0, as its shot_count is 0. Today it is null: shot_count is coalesced
+      and shots_in_window isn't.
+    model: mart_bag
+    config:
+      tags: [suspected_bug]
+    given:
+      - input: ref('stg_bags')
+        rows:
+          - {bag_id: b2, user_id: u}
+      - input: ref('fct_shot')
+        rows: []
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {bag_id: b2, shot_count: 0, shots_in_window: 0}

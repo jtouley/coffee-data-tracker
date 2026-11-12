@@ -1,3 +1,5 @@
+import pytest
+
 from coffeedata.classify import is_coffee
 from coffeedata.models import CatalogItem, Variant
 
@@ -207,3 +209,26 @@ def test_wholesale_patterns_found_on_the_real_catalog():
     for tags in (["wholesale-available"], ["B2B Available"], ["retail-only"]):
         assert not is_wholesale(item("House Blend", tags=tags, grams=340)), tags
     assert says_wholesale("Wholesale - 5LB Ethiopia Guji") and not says_wholesale("Ethiopia Guji 5lb")
+
+
+@pytest.mark.parametrize(
+    "title", ["Green Coffee Beans - Ethiopia Yirgacheffe", "Burr Grinder", "Coffee Subscription"]
+)
+@pytest.mark.parametrize("label", ["coffee", "not_coffee", "unsure", None])
+def test_decide_never_lets_a_verdict_overrule_an_exclusion(title, label):
+    """products.decide (stg_products): a product the rules exclude outright stays not coffee whatever Claude's
+    stored verdict says, and the rules are recorded as what decided it."""
+    from coffeedata import products
+
+    assert products.decide(item(title, grams=340), label) == (False, "rules")
+
+
+def test_decide_takes_claudes_coffee_or_not_coffee_and_the_rules_otherwise():
+    from coffeedata import products
+
+    kenya = item("Kenya AA", grams=340)
+    assert products.decide(kenya, "coffee") == (True, "claude")
+    assert products.decide(kenya, "not_coffee") == (False, "claude")
+    # unsure, or no verdict: the rules decide
+    assert products.decide(kenya, "unsure") == (True, "rules")
+    assert products.decide(kenya, None) == (True, "rules")

@@ -20,7 +20,7 @@ from app.accounts import Accounts
 from app.auth import Sessions
 from app.main import create_app
 from coffeedata import shots
-from coffeedata.lake import Lake
+from coffeedata.lake import USER_TABLES, Lake
 from tests.test_bags import LABEL, FakeClient, jpeg
 
 HERE = Path(__file__).parent
@@ -28,9 +28,10 @@ BROWSER = HERE / "browser"
 PW = "kettle orbit marble"
 
 
-def _playwright() -> bool:
+def _playwright(axe: bool = True) -> bool:
+    """Node can load Playwright (and axe-core, unless axe=False) from tests/browser or a global install."""
     node = shutil.which("node")
-    check = "require('playwright'); require.resolve('axe-core')"
+    check = "require('playwright')" + ("; require.resolve('axe-core')" if axe else "")
     return (
         bool(node) and subprocess.run([node, "-e", check], cwd=BROWSER, capture_output=True).returncode == 0
     )
@@ -42,14 +43,19 @@ pytestmark = pytest.mark.skipif(
 
 
 def _accounts(root: Path) -> Accounts:
-    users = Lake(str(root), tables=("users", "invites"))
+    users = Lake(str(root), tables=USER_TABLES)
     return Accounts(users, "browser-test-pepper", "browser-test-session-secret-0123456789", "SETUP-CODE-1234")
 
 
-def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
+def _free_port() -> int:
+    """A port free on 127.0.0.1 a moment ago (another process can take it before it is bound again)."""
     with socket.socket() as s:
         s.bind(("127.0.0.1", 0))
-        port = s.getsockname()[1]
+        return s.getsockname()[1]
+
+
+def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
+    port = _free_port()
     server = uvicorn.Server(uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning"))
     thread = threading.Thread(target=server.run, daemon=True)
     thread.start()
@@ -60,7 +66,7 @@ def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
 
 def test_app_in_a_browser(lake, tmp_path):
     accounts = _accounts(tmp_path / "users")
-    accounts.create_owner("SETUP-CODE-1234", "jtouley", PW)
+    accounts.create_owner("SETUP-CODE-1234", "jtouley", PW, agree=True)
     # Label reads answer in turn: a clear match, an unclear one, an unreadable label, then the photo sent offline.
     reader = FakeClient([LABEL | {"roaster": "Larkspur Roasting"}, LABEL | {"roaster": "Larkspur Roasting", "coffee": "Hambela"},
                          {"legible": False, "roaster": None, "coffee": None}, LABEL | {"roaster": "Larkspur Roasting"},
@@ -75,7 +81,7 @@ def test_app_in_a_browser(lake, tmp_path):
         Lake(str(tmp_path / "fresh-lake")), Sessions(_accounts(tmp_path / "fresh-users"), secure=False)
     )
     c = TestClient(app)
-    w = {"X-Requested-With": "test"}
+    w = {"X-Requested-With": "test", "X-Expected-User": "owner"}
     assert c.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=w).status_code == 200
     # A bag matched to a (one-row) catalog, with a few days of shots, so the screenshots look like real use. The
     # latest, two days ago, is what the saved screen compares with.

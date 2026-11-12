@@ -1,18 +1,20 @@
-"""Claude enrichment for coffees the rules couldn't fully describe.
+"""Claude enrichment for coffees the rules couldn't fully describe: the post-load enrichment job.
 
-Work is derived, not tracked: a (roaster, product, body_hash) needs Claude when its rules row says so and
-no llm row exists yet, and it isn't in a submitted-but-uncollected batch. Anything skipped (over the cap,
-API error, failed batch item) is simply picked up again next run.
+ELT: it runs after the connectors' raw rows land (after the weekly merge), reads raw snapshots and bodies from the
+lake, and decides as the build does (coffeedata.products, dbt's stg_products): a product version is a candidate
+when it is a coffee whose rule attributes are incomplete (extract.needs_llm). Work is derived, not tracked: a
+(roaster, product, body_hash) is pending when no llm row exists yet and it isn't in a submitted-but-uncollected
+batch. Anything skipped (over the cap, API error, failed batch item) is simply picked up again next run. Its
+output is the enrichment contract: llm rows in the enrichments table.
 """
 
 from __future__ import annotations
 
-import json
 import logging
 from datetime import UTC, date, datetime
 from typing import cast
 
-from . import extract
+from . import extract, products
 from .lake import Lake, new_batch_id
 from .models import Enrichment
 
@@ -20,47 +22,72 @@ log = logging.getLogger(__name__)
 
 SYNC_LIMIT = 100
 
-PENDING_SQL = """
+# Every product version's latest snapshot with its description and Claude's coffee verdict, minus those already
+# enriched by Claude or in flight. products.needs_claude then picks the candidates, in Python, as stg_products would.
+CANDIDATES_SQL = """
 with e as (select * from {enrichments}),
-rules as (select * from e where method = 'rules' and needs_llm),
 llm as (select distinct roaster_id, product_id, body_hash from e where method = 'llm'),
 b as (select * from {llm_batches}),
 in_flight as (
     select distinct roaster_id, product_id, body_hash from b where state = 'submitted'
       and batch_id not in (select batch_id from b where state = 'collected')
 ),
+verdicts as (
+    select input_hash, label from {verdicts} where model = ? and definition = ?
+    qualify row_number() over (partition by input_hash order by decided_at desc) = 1
+),
 latest as (
-    select roaster_id, product_id, body_hash, title, tags from {snapshots}
+    select s.*, {input_hash} as input_hash from {snapshots} s where s.roaster_id is not null
     qualify row_number() over (partition by roaster_id, product_id, body_hash order by fetched_at desc) = 1
 )
-select r.roaster_id, r.product_id, r.body_hash, l.title, l.tags, bo.body_text,
-       to_json(r) as base
-from rules r
-join latest l using (roaster_id, product_id, body_hash)
+select l.roaster_id, l.product_id, l.body_hash, l.title, l.product_type, l.tags,
+       list_transform(l.variants, lambda v: v.grams) as grams, bo.body_text, v.label, l.fetched_at
+from latest l
 join (select body_hash, any_value(body_text) as body_text from {bodies} group by 1) bo using (body_hash)
+left join verdicts v using (input_hash)
 anti join llm using (roaster_id, product_id, body_hash)
 anti join in_flight using (roaster_id, product_id, body_hash)
 where coalesce(bo.body_text, '') <> ''
-order by r.extracted_at, r.roaster_id, r.product_id
-limit {limit}
+order by l.fetched_at, l.roaster_id, l.product_id
 """
 
-BASE_FIELDS = list(Enrichment.model_fields)
+
+def _verdict_config() -> tuple[str, str]:
+    from . import verdict
+
+    return verdict.model() or "", verdict.DEFINITION_VERSION
 
 
-def pending(lake: Lake, limit: int) -> list[dict]:
-    sql = PENDING_SQL.format(
-        **{t: lake.scan(t) for t in ("enrichments", "llm_batches", "snapshots", "bodies")}, limit=int(limit)
-    )
-    cur = lake.connect().execute(sql)
+def candidates(lake: Lake, limit: int | None = None, keys: set[tuple] | None = None) -> list[dict]:
+    """Claude's candidates from the raw lake, each with its rule attributes as `base`. keys: only these
+    (roaster_id, product_id, body_hash), ignoring whether they are already enriched (to rebuild a batch's bases)."""
+    tables = ("enrichments", "llm_batches", "snapshots", "bodies", "verdicts")
+    sql = CANDIDATES_SQL.format(**{t: lake.scan(t) for t in tables}, input_hash=products.input_hash_sql("s"))
+    if keys is not None:  # the anti joins don't apply when rebuilding a submitted batch's bases
+        sql = sql.replace("anti join llm using (roaster_id, product_id, body_hash)\n", "")
+        sql = sql.replace("anti join in_flight using (roaster_id, product_id, body_hash)\n", "")
+    cur = lake.connect().execute(sql, list(_verdict_config()))
     cols = [d[0] for d in cur.description]
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
-        base = json.loads(r.pop("base"))
-        r["base"] = Enrichment(**{k: base.get(k) for k in BASE_FIELDS if base.get(k) is not None})
-        out.append(r)
+        if keys is not None and (r["roaster_id"], r["product_id"], r["body_hash"]) not in keys:
+            continue
+        it = products.item(
+            r["title"], r["product_type"], r["tags"], r["grams"], r["body_hash"], r["body_text"]
+        )
+        base = products.rules(it, r["label"]) if keys is not None else products.needs_claude(it, r["label"])
+        if base is None:
+            continue
+        out.append({k: r[k] for k in ("roaster_id", "product_id", "body_hash", "title", "tags", "body_text")}
+                   | {"base": base})  # fmt: skip
+        if limit is not None and len(out) >= limit:
+            break
     return out
+
+
+def pending(lake: Lake, limit: int) -> list[dict]:
+    return candidates(lake, limit)
 
 
 def _row(p: dict, e: Enrichment, at: datetime) -> dict:
@@ -196,16 +223,8 @@ def _batch_meta(con, lake: Lake, batch_id: str) -> dict[str, dict]:
 
 
 def _bases(con, lake: Lake, keys: list[dict]) -> dict[tuple, Enrichment]:
-    cur = con.execute(
-        f"select roaster_id, product_id, body_hash, to_json(e) from {lake.scan('enrichments')} e "
-        "where method = 'rules'"
-    )
+    """The rule attributes each Claude result builds on, recomputed from raw (the crawl stores none)."""
     wanted = {(k["roaster_id"], k["product_id"], k["body_hash"]) for k in keys}
-    out = {}
-    for rid, pid, bh, j in cur.fetchall():
-        if (rid, pid, bh) in wanted:
-            base = json.loads(j)
-            out[(rid, pid, bh)] = Enrichment(
-                **{k: base.get(k) for k in BASE_FIELDS if base.get(k) is not None}
-            )
-    return out
+    return {
+        (c["roaster_id"], c["product_id"], c["body_hash"]): c["base"] for c in candidates(lake, keys=wanted)
+    }

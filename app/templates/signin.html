@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import legal %}
+{% from "_macros.html" import legal, rules_json, username_field, new_password, agree_box, status_line, unloaded_notice %}
 {% block title %}{{ "Set up" if owner_setup else "Sign in" }} · registry.coffee{% endblock %}
 {% block main %}
   <h1 class="mt48 serif wordmark"><a class="home" href="{{ site.site }}/">registry.coffee</a></h1>
@@ -8,30 +8,41 @@
   {% else %}
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
-  <form id="signin" class="fill" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" novalidate>
+  {% if ended == "ended" %}
+  <p class="notice">You’ve been signed out. Sign in again to continue.</p>
+  {% elif ended == "failed" %}
+  <p class="notice">We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in.</p>
+  {% endif %}
+  {{ unloaded_notice(unloaded) }}
+  <form id="signin" class="fill" method="post" data-ended="{{ ended or '' }}" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" data-busy="{{ 'Creating account…' if owner_setup else 'Signing in…' }}" novalidate>
     {% if owner_setup %}
     <label class="flabel" for="setup_code">Setup code</label>
-    <input class="input" id="setup_code" name="setup_code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
-    {% endif %}
+    <input class="input" id="setup_code" name="setup_code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="setup_code-error" required>
+    <p class="ferr" id="setup_code-error" data-error-for="setup_code"></p>
+    {{ username_field(value=username) }}
+    {{ new_password() }}
+    {{ agree_box() }}
+    {% else %}
     <label class="flabel" for="username">Username</label>
-    <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
-    {% if owner_setup %}<div class="fhint" id="username-h">3 to 32 lower-case letters, digits, - or _.</div>{% endif %}
+    <input class="input" id="username" name="username"{% if username %} value="{{ username }}"{% endif %} autocomplete="username" autocapitalize="none" spellcheck="false" required>
     <label class="flabel" for="password">Password</label>
     <div class="pw">
-      <input class="input" id="password" name="password" type="password" autocomplete="{{ 'new-password' if owner_setup else 'current-password' }}" required{% if owner_setup %} aria-describedby="password-h"{% endif %}>
+      <input class="input" id="password" name="password" type="password" autocomplete="current-password"{% if unloaded %} aria-describedby="unloaded-notice"{% endif %}{% if username %} autofocus{% endif %} required>
       <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
     </div>
-    {% if owner_setup %}<div class="fhint" id="password-h">At least 10 characters. A few unrelated words work well.</div>{% endif %}
+    {% endif %}
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
     <div class="spacer"></div>
     <div class="dock">
       <button class="btn primary" type="submit">{{ "Create account" if owner_setup else "Sign in" }}</button>
+      {{ status_line() }}
       {% if not owner_setup %}
       <a class="btn text" href="/join">Have an invite? Create an account</a>
-      <a class="btn text" href="/reset">Forgot your password? Use a reset code</a>
+      <a class="btn text" href="/forgot">Forgot your password?</a>
       <a class="btn text small" href="{{ site.beta }}">No invite? Ask for one</a>
       {% endif %}
     </div>
     {{ legal() }}
   </form>
+  {% if owner_setup %}{{ rules_json() }}{% endif %}
 {% endblock %}

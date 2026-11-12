@@ -5,13 +5,18 @@ on:
     branches: [main]
 permissions:
   contents: read
+# A newer push to a PR cancels that PR's older run (the 10-minute test job included); pushes to main, grouped by
+# commit, all finish.
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
-      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
         with: {python-version: "3.12"}
       - run: uv sync --locked  # fails if uv.lock is out of date
       # Playwright and axe for the browser test (tests/test_app_browser.py), which must run here, not skip.
@@ -22,6 +27,64 @@ jobs:
           cache-dependency-path: tests/browser/package-lock.json
       - run: npm ci && npx playwright install --with-deps chromium
         working-directory: tests/browser
-      - run: make test           # pre-commit hooks on every file, then the tests
-        env:
+      - run: make test           # pre-commit hooks on every file, then every test but the smoke job's
+        env:  # a missing dbt or browser fails the tests that need it instead of skipping them
+          REQUIRE_DBT: "1"
           REQUIRE_BROWSER: "1"
+          EVAL_REPORT: ${{ runner.temp }}/eval-report.json  # every accuracy floor's outcome (tests/evalfloor.py)
+      # On main, the floors' report is kept for eval-alerts.yml, which runs once ci completes (so alerting never
+      # changes ci's result, which deploy waits on). On a pull request a failed floor fails this job, and its
+      # message and annotation name the eval, the set, the measured value and the floor.
+      - if: always() && github.event_name == 'push'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: eval-report
+          path: ${{ runner.temp }}/eval-report.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+  # The fast check on every PR and push (`make smoke`): three parts in parallel, over the recorded fixtures, with no
+  # network. Branch protection requires `smoke`, the job below that waits for all three.
+  smoke-part:
+    name: smoke (${{ matrix.part }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [dbt, ingest, web]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      # DuckDB's httpfs (dbt's profile loads it) is installed before the tests, which then make no outside request.
+      - if: matrix.part != 'ingest'
+        run: uv run python -c "import duckdb; duckdb.connect().install_extension('httpfs')"
+      - if: matrix.part == 'dbt'
+        name: the contracts are what make contracts writes
+        run: make contracts && git diff --exit-code -- contracts/
+      - if: matrix.part == 'web'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tests/browser/package-lock.json
+      - if: matrix.part == 'web'
+        run: npm ci && npx playwright install --with-deps chromium
+        working-directory: tests/browser
+      - run: make smoke PART=${{ matrix.part }}
+        env:  # a missing dbt or browser fails the part instead of skipping it
+          REQUIRE_DBT: "1"
+          REQUIRE_BROWSER: "1"
+
+  smoke:
+    needs: smoke-part
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: test "$RESULT" = success
+        env:
+          RESULT: ${{ needs.smoke-part.result }}

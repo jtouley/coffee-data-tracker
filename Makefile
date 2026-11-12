@@ -1,7 +1,14 @@
 # Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
+# Claude's verdicts are required for a release: `coffeedata classify`, `build` and `weekly` fail without
+# COFFEEDATA_VERDICT_MODEL and an Anthropic key. A local lake is for development, so make opts out explicitly
+# (COFFEEDATA_ALLOW_RULES_ONLY=1: classify skips, the build's verdict gate is off); a remote lake (hf://, s3://)
+# never does. Override with `make build COFFEEDATA_ALLOW_RULES_ONLY=`.
+ifeq ($(findstring ://,$(COFFEEDATA_LAKE)),)
+export COFFEEDATA_ALLOW_RULES_ONLY ?= 1
+endif
 
-.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app lint test clean
+.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app contracts lint test smoke clean
 
 install:
 	uv sync
@@ -38,7 +45,7 @@ mcp:
 	uv run coffeedata mcp
 
 app:  ## the shot-logging app on http://localhost:8000, over the local lake (signed in as the owner unless SESSION_SECRET is set)
-	uv run uvicorn app.main:app --reload --host $${HOST:-127.0.0.1} --port $${PORT:-8000}
+	COFFEEDATA_LOCAL_OWNER=1 uv run uvicorn app.main:app --reload --host $${HOST:-127.0.0.1} --port $${PORT:-8000}
 
 hooks:  ## install the git pre-commit hooks
 	uv run pre-commit install
@@ -47,11 +54,17 @@ fmt:
 	uv run ruff check --fix src app tests
 	uv run ruff format src app tests
 
+contracts:  ## regenerate the internal ODCS contracts (contracts/internal/) from lake.SCHEMAS and contract_docs.py
+	uv run python -m coffeedata.raw_contracts --all
+
 lint:  ## the same checks as the pre-commit hooks, on every file
 	uv run pre-commit run --all-files
 
-test: lint  ## offline: unit tests + dbt builds over synthetic lakes
-	uv run pytest -q
+test: lint  ## offline: unit tests + dbt builds over synthetic lakes, one pytest-xdist worker per CPU; `make smoke` runs the rest
+	uv run pytest -q -n auto -m "not smoke"
+
+smoke:  ## the fast smoke suite CI requires on every PR: dbt, ingestion and web over the recorded fixtures, no network
+	uv run pytest -q -m smoke $(if $(PART),tests/test_smoke_$(PART).py)
 
 clean:
 	rm -rf build dbt/target dbt/logs

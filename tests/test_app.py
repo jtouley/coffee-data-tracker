@@ -1,6 +1,8 @@
 """The app over a synthetic local lake: prefill, save, undo, retries, the cache and per-user scoping."""
 
+import json
 import re
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from fastapi import Request
@@ -11,10 +13,11 @@ from app.auth import LocalOwner, User
 from app.main import create_app
 from coffeedata import shots
 from coffeedata.lake import Lake
+from coffeedata.models import Shot
 
 from .lakehelp import old_shot
 
-W = {"X-Requested-With": "test"}
+W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 
 
 class HeaderAuth:
@@ -29,6 +32,8 @@ class HeaderAuth:
 
 def setup(c: TestClient, headers: dict | None = None, grinder: str = "g1") -> None:
     h = W | (headers or {})
+    if headers and "x-test-user" in headers:
+        h["X-Expected-User"] = headers["x-test-user"]
     for body in (
         {
             "equipment_id": grinder,
@@ -131,6 +136,71 @@ def test_save_shows_saved_and_today_without_grind_advice(client, lake):
     assert (s.user_id, s.source, s.grinder_id, s.bag_id) == ("owner", "app", "g1", "bag1")
 
 
+def test_default_chart_keeps_one_decimal_on_ratio_ticks():
+    assert ">1:2.0</text>" in views.target_svg([])
+
+
+def _bag(spec: list[tuple[float, float, str | None]]) -> list[Shot]:
+    t0 = datetime(2026, 10, 26, 7, 0, tzinfo=UTC)
+    return [
+        Shot(
+            shot_id=f"s{i}",
+            brewed_at=t0 + timedelta(days=i),
+            grinder_setting=11,
+            dose_g=18,
+            yield_g=y,
+            time_s=t,
+            rating=4,
+            taste=taste,
+        )
+        for i, (y, t, taste) in enumerate(spec)
+    ]
+
+
+@pytest.mark.parametrize(
+    "spec",
+    [
+        [
+            (36, 26, "sour"),
+            (36.4, 28, "balanced"),
+            (90, 16, "sour"),
+            (90, 18, "balanced"),
+            (90, 20, "balanced"),
+        ],
+        [(36, 28, "balanced"), (144, 20, "balanced")],
+        [(36 + i * 0.3, 24 + i, "balanced") for i in range(7)] + [(90, 18, "balanced")],
+        [(36, 24, "sour"), (36.5, 27, "balanced"), (36, 29, "balanced")],
+    ],
+)
+@pytest.mark.parametrize(("height", "joined"), [(150, True), (196, True), (196, False)])
+def test_window_label_never_sits_on_a_mark_or_the_path(spec, height, joined):
+    svg = views.target_svg(_bag(spec), height, sequence=joined)
+    m = re.search(r'<text class="wl" x="([\d.]+)" y="([\d.]+)" text-anchor="(\w+)"', svg)
+    assert m, "the label is shown in every case here"
+    box = views.label_box(float(m[1]), float(m[2]), m[3])
+    marks = [
+        (float(a), float(b)) for a, b in re.findall(r'class="s-[a-z]+" c?x="([\d.]+)" c?y="([\d.]+)"', svg)
+    ]
+    assert len(marks) == len(spec[-8:])
+    for mx, my in marks:  # squares give their corner; allow for it
+        assert views._gap(box, (mx, my, mx + 9, my + 9)) >= 2
+    path = re.search(r'<polyline class="path" points="([^"]+)"', svg)
+    if path:
+        pts = [tuple(map(float, p.split(","))) for p in path[1].split()]
+        for a, b in zip(pts, pts[1:], strict=False):
+            assert views._seg_gap(box, a, b) >= 3
+
+
+def test_shots_outside_the_default_range_are_plotted_where_they_were_pulled(client):
+    client.post("/api/shots", json=shot(1, yield_g=54, time_s=15), headers=W)
+    client.post("/api/shots", json=shot(2, yield_g=72, time_s=12), headers=W)
+    for path in ("/", "/saved/s2", "/coffee/bag1"):
+        page = client.get(path).text
+        # Both times and both ratios must get distinct positions instead of being clamped together.
+        marks = re.findall(r'<circle class="s-balanced" cx="([\d.]+)" cy="([\d.]+)"', page)
+        assert len(marks) == 2 and marks[0][0] != marks[1][0] and marks[0][1] != marks[1][1]
+
+
 def test_same_shot_id_twice_writes_once(client, lake):
     """The outbox resends a shot whose acknowledgement was lost: no second record."""
     assert client.post("/api/shots", json=shot(1), headers=W).json()["written"] is True
@@ -169,7 +239,7 @@ def test_cache_is_seeded_from_the_lake(client, lake, monkeypatch):
 
 
 def test_users_see_and_change_only_their_own(client, lake):
-    bob = W | {"x-test-user": "bob"}
+    bob = W | {"x-test-user": "bob", "X-Expected-User": "bob"}
     client.post("/api/shots", json=shot(1), headers=W)
     assert client.post("/api/shots/s1/retract", headers=bob).status_code == 404
     assert client.post("/api/shots", json=shot(1, rating=1), headers=bob).status_code == 404  # no takeover
@@ -338,3 +408,226 @@ def test_a_bag_stored_with_a_future_date_can_still_be_saved_unchanged(client, la
     assert client.post("/api/bags", json=same, headers=W).status_code == 200
     later = same | {"roast_date": (future + timedelta(days=1)).isoformat()}
     assert client.post("/api/bags", json=later, headers=W).status_code == 422
+
+
+def test_switch_open_bag_uses_its_own_shots_and_stays_selected(client):
+    client.post("/api/shots", json=shot(1, grinder_setting=12), headers=W)
+    client.post("/api/bags", json={"bag_id": "bag2", "coffee_freetext": "Other coffee"}, headers=W)
+    client.post("/api/shots", json=shot(2, bag_id="bag2", grinder_setting=20), headers=W)
+    assert "Switch coffee" in client.get("/").text
+    assert "Onyx Geometry" in client.get("/bags/switch").text
+    assert client.get("/bag/bag1/use", follow_redirects=False).status_code == 303
+    assert "Onyx Geometry" in client.get("/").text
+    p = prefill(client)
+    assert p["bag_id"] == "bag1" and p["grinder_setting"] == 12
+    client.get("/bag/bag2/use")
+    assert prefill(client)["bag_id"] == "bag2" and prefill(client)["grinder_setting"] == 20
+    assert client.get("/bag/bag1/use", headers={"x-test-user": "bob"}).status_code == 404
+    client.post(
+        "/api/bags",
+        json={"bag_id": "bag2", "coffee_freetext": "Other coffee", "finished_on": "2026-10-28"},
+        headers=W,
+    )
+    assert prefill(client)["bag_id"] == "bag1"
+    assert client.get("/bag/bag2/use").status_code == 404
+
+
+def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selected_one(client):
+    # Before bags could be switched, shots went to the newest bag (B) even when pulled from A.
+    client.post("/api/bags", json={"bag_id": "bagB", "coffee_freetext": "Other coffee"}, headers=W)
+    for i in (1, 2):
+        client.post("/api/shots", json=shot(i, bag_id="bagB", coffee_freetext="Other coffee"), headers=W)
+    client.get("/bag/bagB/use")
+    store = client.app.state.store
+    assert prefill(client)["bag_id"] == "bagB"
+
+    # The correct form lists the open bags with the shot's own one current; picking one only reloads the form.
+    log = client.get("/log?correct=s1").text
+    assert 'href="/log?correct=s1&amp;bag=bag1"' in log and "data-select-bag" not in log
+    assert 'href="/log?correct=s1&amp;bag=bagB" aria-current="true"' in log
+
+    moved = client.get("/log?correct=s1&bag=bag1")
+    assert "Onyx Geometry" in moved.text
+    form = json.loads(
+        re.search(r'<script id="prefill" type="application/json">(.*?)</script>', moved.text, re.S)[1]
+    )
+    assert (form["bag_id"], form["coffee_freetext"]) == ("bag1", "Onyx Geometry")
+    assert "selected_bag" not in moved.headers.get("set-cookie", "")
+
+    # Saved with the old coffee still in the body: the server takes the new bag's coffee.
+    r = client.post("/api/shots", json=shot(1, bag_id="bag1", coffee_freetext="Other coffee"), headers=W)
+    assert r.status_code == 200 and r.json()["written"]
+    s1 = store.shot("owner", "s1")
+    # No roast date of its own: fct_shot takes the bag's (coalesce(s.roast_date, b.roast_date)), so a bag's date
+    # isn't copied into the shot, where a later fix to the bag's date wouldn't reach it.
+    assert (s1.bag_id, s1.coffee_freetext, s1.roast_date) == ("bag1", "Onyx Geometry", None)
+    bag_a, bag_b = store.bag("owner", "bag1"), store.bag("owner", "bagB")
+    assert [s.shot_id for s in store.bag_shots("owner", bag_a, None)] == ["s1"]
+    assert [s.shot_id for s in store.bag_shots("owner", bag_b, None)] == ["s2"]
+    assert [s.shot_id for s in store.coffee_shots("owner", bag_a)] == ["s1"]
+    assert [s.shot_id for s in store.coffee_shots("owner", bag_b)] == ["s2"]
+    assert "/shot/s1" in client.get("/coffee/bag1").text and "/shot/s1" not in client.get("/coffee/bagB").text
+    assert "/shot/s2" in client.get("/coffee/bagB").text
+    assert prefill(client)["bag_id"] == "bagB"  # the bag on the grinder didn't change
+
+    # Only the person's own bags.
+    assert client.get("/log?correct=s1&bag=nope").status_code == 404
+    assert client.post("/api/shots", json=shot(1, bag_id="nope"), headers=W).status_code == 404
+    bob = {"x-test-user": "bob"} | W
+    client.post("/api/bags", json={"bag_id": "bobs", "coffee_freetext": "Bob's"}, headers=bob)
+    assert client.get("/log?correct=s1&bag=bobs").status_code == 404
+    assert client.post("/api/shots", json=shot(1, bag_id="bobs"), headers=W).status_code == 404
+    assert store.shot("owner", "s1").bag_id == "bag1"
+
+
+def test_a_moved_shot_keeps_its_own_roast_date_and_drops_only_a_copy_of_its_old_bags(client):
+    """An earlier move copied the bag's date into the shot; moving it again drops that copy. A date entered with
+    the shot (an import) isn't the bag's, and stays."""
+    from datetime import date
+
+    store = client.app.state.store
+    client.post(
+        "/api/bags", json={"bag_id": "bagB", "coffee_freetext": "B", "roast_date": "2026-10-01"}, headers=W
+    )
+    client.post("/api/shots", json=shot(1), headers=W)
+    client.post("/api/shots", json=shot(2), headers=W)
+    for sid, roast in (("s1", date(2026, 10, 18)), ("s2", date(2026, 9, 30))):  # bag1's date, then its own
+        store._commit(
+            store.shots, sid, store.shot("owner", sid).model_copy(update={"roast_date": roast}), "shots"
+        )
+    for i in (1, 2):
+        assert client.post("/api/shots", json=shot(i, bag_id="bagB"), headers=W).json()["written"]
+    assert store.shot("owner", "s1").roast_date is None  # follows bagB's
+    assert store.shot("owner", "s2").roast_date == date(2026, 9, 30)
+
+
+def test_a_roast_date_over_a_year_ago_is_refused(client):
+    from datetime import date, timedelta
+
+    today = date.today()
+    old = (today - timedelta(days=400)).isoformat()
+    r = client.post(
+        "/api/bags", json={"bag_id": "bag9", "coffee_freetext": "x", "roast_date": old}, headers=W
+    )
+    assert (
+        r.status_code == 422 and r.json()["detail"] == "That roast date is over a year ago. Check the year."
+    )
+    edit = {"bag_id": "bag1", "coffee_freetext": "Onyx Geometry", "roast_date": old}
+    assert client.post("/api/bags", json=edit, headers=W).status_code == 422
+    year = (today - timedelta(days=365)).isoformat()  # a year ago, and a day's grace for the phone's zone
+    ok = {"bag_id": "bag9", "coffee_freetext": "x", "roast_date": year}
+    assert client.post("/api/bags", json=ok, headers=W).status_code == 200
+
+
+def test_a_bag_stored_with_an_old_date_can_still_be_saved_unchanged(client):
+    from datetime import date, timedelta
+
+    from app.store import Bag
+
+    store = client.app.state.store
+    old = date.today() - timedelta(days=900)
+    store._commit(
+        store.bags, "old", Bag(bag_id="old", user_id="owner", coffee_freetext="x", roast_date=old), "bags"
+    )
+    same = {"bag_id": "old", "coffee_freetext": "x", "roast_date": old.isoformat(), "weight_g": 340}
+    assert client.post("/api/bags", json=same, headers=W).status_code == 200
+
+
+def test_the_correct_form_offers_bags_finished_in_the_last_30_days(client):
+    from datetime import date, timedelta
+
+    client.post("/api/shots", json=shot(1), headers=W)
+    lately = (date.today() - timedelta(days=10)).isoformat()
+    long_ago = (date.today() - timedelta(days=60)).isoformat()
+    for bid, finished in (("lately", lately), ("long-ago", long_ago)):
+        body = {"bag_id": bid, "coffee_freetext": f"Bag {bid}", "finished_on": finished}
+        assert client.post("/api/bags", json=body, headers=W).status_code == 200
+    log = client.get("/log?correct=s1").text
+    assert 'href="/log?correct=s1&amp;bag=lately"' in log
+    assert 'href="/log?correct=s1&amp;bag=long-ago"' not in log
+    # Moved to the finished bag: it takes that bag's coffee.
+    assert client.post("/api/shots", json=shot(1, bag_id="lately"), headers=W).json()["written"]
+    assert client.app.state.store.shot("owner", "s1").coffee_freetext == "Bag lately"
+
+
+def _slow_publish(store, monkeypatch, fail_first: bool = False):
+    """The lake commit held open until released, so a resend arrives while it's in flight."""
+    import threading
+
+    started, release, calls = threading.Event(), threading.Event(), []
+    real = store.lake.publish
+
+    def publish(*a, **kw):
+        calls.append(a)
+        if len(calls) == 1:
+            started.set()
+            release.wait(5)
+            if fail_first:
+                raise RuntimeError("Hugging Face said no")
+        return real(*a, **kw)
+
+    monkeypatch.setattr(store.lake, "publish", publish)
+    return started, release, calls
+
+
+def test_a_resend_while_the_first_save_is_publishing_writes_one_record(client, lake, monkeypatch):
+    """Leaving a page mid-save, the next page resends the write. The first is still uploading, so the stored
+    record is the old one: the resend must wait for it, not write the same record again (#7x duplicates)."""
+    import threading
+
+    store = client.app.state.store
+    started, release, _ = _slow_publish(store, monkeypatch)
+    before = len(files(lake, "shots"))
+    out = []
+    first = threading.Thread(target=lambda: out.append(store.save_shot("owner", shot(1))[1]))
+    first.start()
+    assert started.wait(5)
+    second = threading.Thread(target=lambda: out.append(store.save_shot("owner", shot(1))[1]))
+    second.start()
+    second.join(0.3)
+    assert second.is_alive()  # waiting on the first upload, not writing
+    release.set()
+    first.join(5)
+    second.join(5)
+    assert sorted(out) == [False, True]
+    assert len(files(lake, "shots")) == before + 1
+    assert store._pending == {}
+    # A resend after it landed is a no-op too, through the API as the outbox sends it.
+    r = client.post("/api/shots", json=shot(1), headers=W)
+    assert r.status_code == 200 and not r.json()["written"]
+    assert len(files(lake, "shots")) == before + 1
+    # A different record for the same id while one is in flight is a correction, and is written.
+    started, release, _ = _slow_publish(store, monkeypatch)
+    first = threading.Thread(target=lambda: store.save_shot("owner", shot(1, rating=2)))
+    first.start()
+    assert started.wait(5)
+    assert store.save_shot("owner", shot(1, rating=3))[1]
+    release.set()
+    first.join(5)
+    assert store.shot("owner", "s1").rating == 3
+
+
+def test_a_failed_publish_doesnt_leave_the_record_marked(client, lake, monkeypatch):
+    import threading
+
+    store = client.app.state.store
+    started, release, calls = _slow_publish(store, monkeypatch, fail_first=True)
+    errors, out = [], []
+
+    def first():
+        try:
+            store.save_shot("owner", shot(1))
+        except RuntimeError as e:
+            errors.append(e)
+
+    t1 = threading.Thread(target=first)
+    t1.start()
+    assert started.wait(5)
+    t2 = threading.Thread(target=lambda: out.append(store.save_shot("owner", shot(1))[1]))
+    t2.start()
+    release.set()
+    t1.join(5)
+    t2.join(5)
+    # The first upload failed: the resend waiting on it writes the record itself, and it's stored.
+    assert errors and out == [True] and len(calls) == 2
+    assert store.shot("owner", "s1").shot_id == "s1" and store._pending == {}

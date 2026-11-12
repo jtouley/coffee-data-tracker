@@ -1,0 +1,1202 @@
+{
+ "meta": {
+  "labeler": "B",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "price",
+  "n": 238,
+  "note": "train and validation only; the test labels are in sealed/"
+ },
+ "labels": [
+  {
+   "id": "406roasters.com:19bb73aff4de",
+   "label": "unsure",
+   "reason": "5 lb for $15 is very cheap; possibly green coffee or a misread price."
+  },
+  {
+   "id": "406roasters.com:c3e8f800e05b",
+   "label": "unsure",
+   "reason": "$15 for 5 lb is implausibly cheap for roasted coffee; possibly green coffee or a misread price."
+  },
+  {
+   "id": "5thdegreenorth.com:7489957396549",
+   "label": "right",
+   "reason": "5 lb bulk bag at $39.69 is a plausible low bulk price."
+  },
+  {
+   "id": "802coffee.com:15409132699731",
+   "label": "right",
+   "reason": "Normal pricing; the 5lb bag gives a plausible $4.54/100g."
+  },
+  {
+   "id": "abednegocoffee.com:61",
+   "label": "right",
+   "reason": "Normal blend pricing, 2 lb at $34.50."
+  },
+  {
+   "id": "adkcoffeeroasters.com:8750117454020",
+   "label": "unsure",
+   "reason": "$11 for 567g is an odd size; the weight may be misread, but it could be real."
+  },
+  {
+   "id": "aguadulcecafe.com:8725679341790",
+   "label": "wrong",
+   "reason": "AeroPress Go is a brewing device, not coffee."
+  },
+  {
+   "id": "aharoncoffee.com:5383931035808",
+   "label": "wrong",
+   "reason": "Subscription delivering two bags per shipment; price covers two bags but the weight counts only one."
+  },
+  {
+   "id": "alsultansgate.com:29542",
+   "label": "wrong",
+   "reason": "Salted pumpkin seeds, not coffee."
+  },
+  {
+   "id": "alsultansgate.com:29573",
+   "label": "wrong",
+   "reason": "Salted corn is a snack sold by a roastery, not coffee."
+  },
+  {
+   "id": "alsultansgate.com:29584",
+   "label": "wrong",
+   "reason": "Salted sunflower seeds, not coffee."
+  },
+  {
+   "id": "alsultansgate.com:29587",
+   "label": "wrong",
+   "reason": "BBQ-flavored corn, not coffee."
+  },
+  {
+   "id": "alteredgrounds.com:10024257913016",
+   "label": "right",
+   "reason": "$19.50 for a 10 oz bag is plausible."
+  },
+  {
+   "id": "aromacoffee.co.za:2288",
+   "label": "wrong",
+   "reason": "South African store pricing in rand, not US dollars."
+  },
+  {
+   "id": "aromaridge.com:7534642626801",
+   "label": "right",
+   "reason": "Jamaica-containing island blend at $58.95/lb is plausible for a Blue Mountain blend."
+  },
+  {
+   "id": "aromaridge.com:7534652555505",
+   "label": "right",
+   "reason": "$39/lb honey-process Costa Rica gives a plausible $8.59/100g."
+  },
+  {
+   "id": "artizancoffee.com:10390151135505",
+   "label": "wrong",
+   "reason": "Travel bag equipment item, not coffee."
+  },
+  {
+   "id": "artizancoffee.com:10390165258513",
+   "label": "wrong",
+   "reason": "Roaster exhaust fan is equipment, not coffee."
+  },
+  {
+   "id": "artizancoffee.com:10511425274129",
+   "label": "unsure",
+   "reason": "Variant prices are inconsistent (4 oz costs the same as 2 lb), and the computed value doesn't match visible variants."
+  },
+  {
+   "id": "atlascoffeeclub.com:760699524",
+   "label": "wrong",
+   "reason": "Monthly subscription of 8 x 12 oz bags; weight misread and price covers recurring shipments."
+  },
+  {
+   "id": "baristicoffeeroasters.com:277324791829",
+   "label": "wrong",
+   "reason": "\"Lemon Linguini\" at $6.45 for 1 lb looks like a pasta product, not coffee."
+  },
+  {
+   "id": "baristicoffeeroasters.com:4399582675042",
+   "label": "unsure",
+   "reason": "Nespresso capsule product; true coffee weight in the pack is unclear, so whether $65 for 454 g is real can't be confirmed."
+  },
+  {
+   "id": "barnyardcoffee.com:3923103023215",
+   "label": "wrong",
+   "reason": "Four 8 oz bags priced as one 227 g bag; the true price is about $4.62/100g."
+  },
+  {
+   "id": "birdrockcoffee.com:15462886080555",
+   "label": "right",
+   "reason": "Yemeni coffees are expensive; $47 for 6 oz is plausible."
+  },
+  {
+   "id": "birdrockcoffee.com:15462944833579",
+   "label": "right",
+   "reason": "A Panama 6 oz lot at $89 is consistent with a premium Gesha."
+  },
+  {
+   "id": "birdrockcoffee.com:7839522947115",
+   "label": "wrong",
+   "reason": "Two 10 oz bags priced as one 283 g bag; the real price is about $8.75/100g."
+  },
+  {
+   "id": "birdrockcoffee.com:7839523078187",
+   "label": "right",
+   "reason": "Two-coffee bundle totaling 567g for $47.50; $8.38/100g plausible."
+  },
+  {
+   "id": "blackfoxcoffee.com:9625211371803",
+   "label": "right",
+   "reason": "250g for $27, US store; $10.80/100g plausible specialty price."
+  },
+  {
+   "id": "bluestrawberrycoffee.com:63b647bbe7fc2375fa1a519b",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was misread as 907 g; the real price is about $6.17 per 100 g."
+  },
+  {
+   "id": "bluestrawberrycoffee.com:63b64c3acb2d5c34e9871114",
+   "label": "wrong",
+   "reason": "1/2 lb bag misread as 907 g; the real cheapest is around $3.48 per 100 g."
+  },
+  {
+   "id": "bluestrawberrycoffee.com:65d0d93401bf5919d451b788",
+   "label": "wrong",
+   "reason": "1/2 lb variants read as 907g; real price around $3.75/100g."
+  },
+  {
+   "id": "bluestrawberrycoffee.com:67c49082bf1bd44ef8795c8d",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was misread as 907 g, giving a falsely low $1.54/100g."
+  },
+  {
+   "id": "bouquetcoffeeroasters.com:7414844784695",
+   "label": "right",
+   "reason": "A 10 oz bag at $23 gives $8.13/100g, plausible."
+  },
+  {
+   "id": "briosocoffee.com:7511744774231",
+   "label": "wrong",
+   "reason": "The 'dimebag' variant at $10 is read as 354 g, which is implausible; a dimebag is a small sample. Real price is about $7.50/100g."
+  },
+  {
+   "id": "buddhabeanscoffee.com:7148571459770",
+   "label": "right",
+   "reason": "CBD-infused coffee bag at $25 per 8oz; plausible real price."
+  },
+  {
+   "id": "buddhabeanscoffee.com:8530514772154",
+   "label": "right",
+   "reason": "12 oz bag at $28 is plausible for an infused specialty coffee."
+  },
+  {
+   "id": "bwblacksmith.com:8254824808635",
+   "label": "wrong",
+   "reason": "Title says 6 lb bags but weight read as 680 g."
+  },
+  {
+   "id": "caffebristot.us:6615573954734",
+   "label": "right",
+   "reason": "$20.99 for 499 g is a plausible $4.21 per 100 g."
+  },
+  {
+   "id": "caffeumbria.com:3198787205",
+   "label": "wrong",
+   "reason": "5 lb bag read as 340 g; real price about $4.23/100g."
+  },
+  {
+   "id": "caffeumbria.com:3207192965",
+   "label": "wrong",
+   "reason": "Title says 5 lb bag but grams read as 340; real price about $4.23/100g."
+  },
+  {
+   "id": "capecodcoffee.com:4724473725065",
+   "label": "wrong",
+   "reason": "5 lb variants carry 1 lb price $18.25; real 5 lb price is $83.25."
+  },
+  {
+   "id": "catandcloud.com:10455336321314",
+   "label": "right",
+   "reason": "5 lb at $199.94 is $8.81/100g, consistent with the other sizes."
+  },
+  {
+   "id": "chromaticcoffee.com:10358121562418",
+   "label": "right",
+   "reason": "Consistent pricing across 10 oz, 2 lb and 5 lb at about $12.7/100g; plausible for a premium micro-lot."
+  },
+  {
+   "id": "chromaticcoffee.com:15405381189938",
+   "label": "right",
+   "reason": "Premium anniversary blend with prices consistent across sizes; about $13\u201314/100g is plausible."
+  },
+  {
+   "id": "claytoncoffee.com:9189345100",
+   "label": "right",
+   "reason": "The computed $4.63 matches $21 per lb (and $10.50 per half lb); the value is correct."
+  },
+  {
+   "id": "claytoncoffee.com:9189346892",
+   "label": "wrong",
+   "reason": "The .5 lb bag was misread as 2,268 g, producing $0.51 per 100 g."
+  },
+  {
+   "id": "coffeebean.com:8157444669593",
+   "label": "wrong",
+   "reason": "Drinkware cup, not coffee."
+  },
+  {
+   "id": "coffeebean.com:8488346124441",
+   "label": "wrong",
+   "reason": "Lunch box is merchandise, not coffee."
+  },
+  {
+   "id": "coffeefactoryroasters.com:368077930528",
+   "label": "wrong",
+   "reason": "1/2 pound misread as 907 g, which gives an impossibly low price."
+  },
+  {
+   "id": "coffeekinginc.com:9165007552758",
+   "label": "wrong",
+   "reason": "Lemon yerba mate is a tea product, not coffee."
+  },
+  {
+   "id": "coffeekinginc.com:9165007585526",
+   "label": "unsure",
+   "reason": "Coded item at $7.15/lb; unclear whether it is flavored coffee or tea."
+  },
+  {
+   "id": "coffeekinginc.com:9165007749366",
+   "label": "wrong",
+   "reason": "Gunpowder Green is a tea, not coffee."
+  },
+  {
+   "id": "coltercoffee.com:4467029180527",
+   "label": "right",
+   "reason": "12 oz bag at $16.99 is a normal price."
+  },
+  {
+   "id": "commonroomroasters.com:7081566306488",
+   "label": "wrong",
+   "reason": "Drinking chocolate, not a coffee product."
+  },
+  {
+   "id": "contemporoast.com:15410623152363",
+   "label": "right",
+   "reason": "Honey-process micro-lot 8oz tin at $34; plausible premium."
+  },
+  {
+   "id": "contrabandcoffee.com:7240053686317",
+   "label": "right",
+   "reason": "5 lb bulk bag at $95 gives $4.19/100g, consistent with the 12 oz price."
+  },
+  {
+   "id": "coppercanyoncoffeeroasters.com:8078127137082",
+   "label": "right",
+   "reason": "5 lb bag at $88.90 gives a plausible bulk price; 1 lb at $20.55 is consistent."
+  },
+  {
+   "id": "coppermooncoffee.com:4512911982645",
+   "label": "wrong",
+   "reason": "Four 12 oz bags for $53 are read as one 340 g bag; the real price is about $3.90/100g."
+  },
+  {
+   "id": "csrcoffee.com:1588921499763",
+   "label": "wrong",
+   "reason": "The 1/2 pound bag was misread as 907 g, making the price per 100 g far too low."
+  },
+  {
+   "id": "csrcoffee.com:4759078535301",
+   "label": "wrong",
+   "reason": "1/2 pound bag misread as 907 g; the real price is about $4.30/100g."
+  },
+  {
+   "id": "csrcoffee.com:4759190601861",
+   "label": "wrong",
+   "reason": "1/2 pound bag misread as 907 g, understating the price."
+  },
+  {
+   "id": "csrcoffee.com:4759275274373",
+   "label": "wrong",
+   "reason": "The 1/2 pound bag was read as 907 g, so $9.50 is divided by twice the real weight."
+  },
+  {
+   "id": "csrcoffee.com:7922160959734",
+   "label": "wrong",
+   "reason": "Espresso tamping tool is equipment, not a bag of coffee."
+  },
+  {
+   "id": "csrcoffee.com:8242721325302",
+   "label": "wrong",
+   "reason": "An Airscape storage canister, an equipment item rather than coffee."
+  },
+  {
+   "id": "csrcoffee.com:830268047475",
+   "label": "wrong",
+   "reason": "1/2 pound bag misread as 907 g, giving a false $0.99 per 100 g."
+  },
+  {
+   "id": "csrcoffee.com:830287544435",
+   "label": "wrong",
+   "reason": "Half-pound variant misread as 907 g; the real price is about $3.75/100g or more."
+  },
+  {
+   "id": "csrcoffee.com:8544135708918",
+   "label": "wrong",
+   "reason": "Fellow Atmos vacuum canister is equipment, not coffee."
+  },
+  {
+   "id": "csrcoffee.com:9411060891894",
+   "label": "wrong",
+   "reason": "WDT distribution tool is equipment, not coffee."
+  },
+  {
+   "id": "cultivarcoffee.com:8338500223162",
+   "label": "right",
+   "reason": "Cup of Excellence winning lot at roughly $24-27/100g is plausible for a competition coffee."
+  },
+  {
+   "id": "dandylion.coffee:9585647780070",
+   "label": "right",
+   "reason": "8oz coffee in decorative canister at $22; plausible per-100g price."
+  },
+  {
+   "id": "davidsroasting.com:129",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was read as 907 g, giving a falsely low price."
+  },
+  {
+   "id": "davidsroasting.com:1840",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was read as 907 g, producing a misleadingly low price."
+  },
+  {
+   "id": "davidsroasting.com:2475",
+   "label": "wrong",
+   "reason": "1/2 lb variant read as 907 g, producing an absurdly low price."
+  },
+  {
+   "id": "davidsroasting.com:33",
+   "label": "wrong",
+   "reason": "1/2 lb variant read as 907g; real price around $5.29/100g."
+  },
+  {
+   "id": "dayglow.coffee:8431860121666",
+   "label": "right",
+   "reason": "$25 for 250 g single-producer lot is typical specialty pricing."
+  },
+  {
+   "id": "dayglow.coffee:8445356474434",
+   "label": "right",
+   "reason": "Takesi is a renowned Bolivian Gesha farm; $58 for 200 g is plausible."
+  },
+  {
+   "id": "dayglow.coffee:8484091330626",
+   "label": "unsure",
+   "reason": "$61 for 250 g Ethiopian lot is high; Dayglow sells premium lots, but nothing confirms this is a rare lot."
+  },
+  {
+   "id": "deercampcoffee.com:7009152008326",
+   "label": "right",
+   "reason": "5 lb bulk bag at $85 gives a plausible $3.75/100g."
+  },
+  {
+   "id": "denimcoffeecompany.com:7631228502064",
+   "label": "right",
+   "reason": "$25 per pound for a Kenyan coffee is plausible."
+  },
+  {
+   "id": "denimcoffeecompany.com:7930009649200",
+   "label": "right",
+   "reason": "Kenya AB at $16.50 per 12 oz or $33 per 2 lb is in the normal price range."
+  },
+  {
+   "id": "devocion.com:7332906041459",
+   "label": "right",
+   "reason": "Rare Omblig\u00f3n variety micro-lot; $67.50 per 12 oz plausible for Devoci\u00f3n specialty lot."
+  },
+  {
+   "id": "dillanos.com:10293679063334",
+   "label": "wrong",
+   "reason": "75 single-serve pods; 1497 g is likely shipping weight, not coffee weight."
+  },
+  {
+   "id": "downeastcoffee.com:6705626087556",
+   "label": "right",
+   "reason": "$9.99 per pound is a plausible low-end retail price."
+  },
+  {
+   "id": "dragonflycoffeeroasters.com:3684227022932",
+   "label": "right",
+   "reason": "310g blend at $25; normal price."
+  },
+  {
+   "id": "dragonflycoffeeroasters.com:7734472245332",
+   "label": "right",
+   "reason": "Panama Geisha at $125 for 170 g is plausible for a rare lot."
+  },
+  {
+   "id": "drinkcoffeedostuff.com:9617687806183",
+   "label": "wrong",
+   "reason": "Apparel tank top, not coffee."
+  },
+  {
+   "id": "eliteroastersofatlanta.com:10266611613936",
+   "label": "right",
+   "reason": "A 1 lb bag at $14 is about $3/100g, plausible; the small weight discrepancy hardly matters."
+  },
+  {
+   "id": "equalexchange.coop:8407430824126",
+   "label": "wrong",
+   "reason": "Six 9 oz bags total about 1531 g, not 2041 g; the weight is misread and understates the price."
+  },
+  {
+   "id": "equalexchange.coop:8407448125630",
+   "label": "wrong",
+   "reason": "Six 9oz bags total 1531 g, not 2041 g; the real price is about $3.04/100g."
+  },
+  {
+   "id": "espressorepublic.com:1562417463332",
+   "label": "wrong",
+   "reason": "5 lb ground variants priced at the 12 oz price of $19.5; the real 5 lb price is $113."
+  },
+  {
+   "id": "espressorepublic.com:1562527531044",
+   "label": "wrong",
+   "reason": "Ground 5lb variants carry the 12oz price; $0.94/100g is a misread."
+  },
+  {
+   "id": "ethosroasters.com:5ea48ea889503f2e4814f65e",
+   "label": "right",
+   "reason": "5 lb bag at $110 gives a plausible $4.85 per 100 g."
+  },
+  {
+   "id": "fausthausrc.com:ETYKAY12OZ",
+   "label": "right",
+   "reason": "12 oz bag at $20 gives a plausible $5.88 per 100 g."
+  },
+  {
+   "id": "fingerlakescoffee.com:7529506635995",
+   "label": "unsure",
+   "reason": "Bag of 10 cups (pods); 159 g may be the shipping weight rather than coffee weight, so true per-100g is unclear."
+  },
+  {
+   "id": "fingerlakescoffee.com:7529516105947",
+   "label": "unsure",
+   "reason": "A bag of 10 single-serve cups; 159 g may be package weight, so the coffee weight is unclear."
+  },
+  {
+   "id": "firedeptcoffee.com:3959952048231",
+   "label": "wrong",
+   "reason": "Metal sign is merchandise, not coffee."
+  },
+  {
+   "id": "firedeptcoffee.com:7468149932211",
+   "label": "right",
+   "reason": "Multi-bag coffee pack priced on its total weight; $2.07 per 100 g is plausible for a bundle."
+  },
+  {
+   "id": "font-mag.com:68191158281",
+   "label": "right",
+   "reason": "5 lb bag at $50 is $2.20/100g, plausible bulk pricing."
+  },
+  {
+   "id": "fortitudecoffeecompany.com:8659696615740",
+   "label": "right",
+   "reason": "5 lb bulk bag at $79.95 gives a plausible $3.53/100g."
+  },
+  {
+   "id": "fortyweightcoffee.com:616de81d16153f2fc3af3ad4",
+   "label": "right",
+   "reason": "5 lb bag at $65 is a plausible bulk price."
+  },
+  {
+   "id": "freshroastedcoffee.com:11687435460",
+   "label": "right",
+   "reason": "5 lb bulk bag at $54.99 gives a plausible $2.42 per 100 g."
+  },
+  {
+   "id": "freshroastedcoffee.com:6641194205319",
+   "label": "right",
+   "reason": "5 lb bulk bag at $56.99; consistent cheap bulk pricing."
+  },
+  {
+   "id": "freshroastedcoffee.com:7479457513607",
+   "label": "wrong",
+   "reason": "Butterfly pea flower botanical powder, not coffee."
+  },
+  {
+   "id": "frothymonkeycoffee.com:14877112402284",
+   "label": "unsure",
+   "reason": "Single-serve product with no clear net weight; the 227 g figure may not reflect the contents."
+  },
+  {
+   "id": "fulcrumcoffee.com:10413897449794",
+   "label": "right",
+   "reason": "Pink Bourbon at $35.50 for 12 oz is plausible for a premium varietal."
+  },
+  {
+   "id": "gaiacoffee.com:8694248866092",
+   "label": "wrong",
+   "reason": "A case of ten 2 lb bags was priced as one 907 g bag."
+  },
+  {
+   "id": "globalgourmetcoffee.com:9642537648375",
+   "label": "right",
+   "reason": "16 oz flavored coffee at $12.45 is plausible."
+  },
+  {
+   "id": "globalgourmetcoffee.com:9644303515895",
+   "label": "right",
+   "reason": "A 16 oz flavored coffee at $12.45 gives a plausible $2.74 per 100 g."
+  },
+  {
+   "id": "goodboybob.com:9546563190924",
+   "label": "right",
+   "reason": "Colombian Gesha at $85 per 6 oz is a plausible premium lot price."
+  },
+  {
+   "id": "greatcirclecoffee.com:8965310185641",
+   "label": "right",
+   "reason": "Rare Bourbon Aj\u00ed micro-lot at $30 for 6 oz is plausible."
+  },
+  {
+   "id": "greencastlecoffee.com:7426345697460",
+   "label": "wrong",
+   "reason": "1/4 lb and 1/2 lb misread as large weights; real price is about $3.6-5.7/100g."
+  },
+  {
+   "id": "greencastlecoffee.com:7436655067316",
+   "label": "wrong",
+   "reason": "The 1/4 lb bag was misread as 1814 g, making the price per 100 g far too low."
+  },
+  {
+   "id": "greencastlecoffee.com:7436658835636",
+   "label": "wrong",
+   "reason": "1/4 lb variant is misread as 1814 g; the real price is about $3.90/100g."
+  },
+  {
+   "id": "greencastlecoffee.com:7442800279732",
+   "label": "wrong",
+   "reason": "1/4 lb variant misread as 1814 g, yielding an implausible $1.16."
+  },
+  {
+   "id": "greencastlecoffee.com:7549598204084",
+   "label": "wrong",
+   "reason": "Fractional-pound bags were misread: 1/4 lb as 1814 g and 1/2 lb as 907 g."
+  },
+  {
+   "id": "greencastlecoffee.com:7767470506164",
+   "label": "wrong",
+   "reason": "The 1/4 lb bag was misread as 1814 g, producing a falsely low price."
+  },
+  {
+   "id": "guilfordroastingcompany.com:15418635813038",
+   "label": "wrong",
+   "reason": "Gift basket priced at $119.99, not a single bag of coffee."
+  },
+  {
+   "id": "hawaiicoffee.net:8777746907364",
+   "label": "wrong",
+   "reason": "Single-serve cup packs with misread weights; 12 pods aren't 907 g, and the 24 pack lists fewer grams."
+  },
+  {
+   "id": "hawaiicoffee.net:8778339746020",
+   "label": "wrong",
+   "reason": "Coffee pods (12-pack) read as 907 g; actual coffee weight is far lower."
+  },
+  {
+   "id": "hawaiicoffee.net:8832450003172",
+   "label": "right",
+   "reason": "100% Maui coffee at about $13/100g is consistent with Hawaiian pricing."
+  },
+  {
+   "id": "hawaiicoffee.net:8832453935332",
+   "label": "right",
+   "reason": "100% Maui coffee at $13/100g is plausible for Hawaiian coffee."
+  },
+  {
+   "id": "headcountcoffee.com:10437332304146",
+   "label": "wrong",
+   "reason": "Polo shirt, not coffee."
+  },
+  {
+   "id": "headframecoffees.com:8196999217344",
+   "label": "wrong",
+   "reason": "Weights scrambled: the 1/4 lb variant was read as 1814 g, producing an artificially low price."
+  },
+  {
+   "id": "headframecoffees.com:8409418662080",
+   "label": "wrong",
+   "reason": "The 1/4 lb bag was misread as 1,814 g, producing $0.69 per 100 g."
+  },
+  {
+   "id": "headframecoffees.com:8639451594944",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was read as 907 g; the real price is about $6.84/100g."
+  },
+  {
+   "id": "hemispherecoffeeroasters.com:10468646748353",
+   "label": "wrong",
+   "reason": "This is an espresso tamper, equipment rather than coffee."
+  },
+  {
+   "id": "hemispherecoffeeroasters.com:10881601011905",
+   "label": "right",
+   "reason": "5 lb decaf bulk bag at $95 is plausible."
+  },
+  {
+   "id": "hemispherecoffeeroasters.com:10882707488961",
+   "label": "right",
+   "reason": "Flavored coffee 360g for $14.30; $3.97/100g plausible."
+  },
+  {
+   "id": "hemispherecoffeeroasters.com:4259573596225",
+   "label": "right",
+   "reason": "A 5 lb bulk bag for $89.25 is about $3.9 per 100 g, which is plausible."
+  },
+  {
+   "id": "hscoffeeroasters.com:7430249578554",
+   "label": "right",
+   "reason": "A 5 lb bulk bag at $50 is a plausible bulk price."
+  },
+  {
+   "id": "hscoffeeroasters.com:7586957164602",
+   "label": "right",
+   "reason": "Bourbon Aji Colombian micro-lot at $41 per 250 g; about $16 per 100 g is plausible for a rare variety."
+  },
+  {
+   "id": "hscoffeeroasters.com:7657015967802",
+   "label": "right",
+   "reason": "Colombian producer micro-lot at $39 for 250 g is plausible specialty pricing."
+  },
+  {
+   "id": "hscoffeeroasters.com:7657035595834",
+   "label": "right",
+   "reason": "Named producer micro-lot with consistent 125g/250g tiers; expensive but plausible specialty lot."
+  },
+  {
+   "id": "hyper-goat.com:10855156547889",
+   "label": "right",
+   "reason": "Limited-edition Colombian single lot at $30 for 8oz; plausible premium price."
+  },
+  {
+   "id": "iconikcoffee.com:15446753706272",
+   "label": "unsure",
+   "reason": "Consistent pricing across sizes, but $17+/100g for a washed Peru SL9 is unusual; can't confirm it's a premium lot."
+  },
+  {
+   "id": "indabacoffee.com:9110101164163",
+   "label": "right",
+   "reason": "8oz blend at $20; normal specialty price."
+  },
+  {
+   "id": "intelligentsia.com:7800513757244",
+   "label": "wrong",
+   "reason": "A 12-pack of ready-to-drink cold coffee is not a bag of coffee, and the weight is not comparable."
+  },
+  {
+   "id": "intelligentsiacoffee.com:7800513757244",
+   "label": "wrong",
+   "reason": "12-pack of canned cold coffee drinks, not a bag of coffee; weight doesn't reflect the product."
+  },
+  {
+   "id": "iowacr.com:404973027367",
+   "label": "right",
+   "reason": "5 lb bag $58 at 2268g gives $2.56/100g; bulk pricing plausible."
+  },
+  {
+   "id": "ironbrewcoffee.com:6881391083649",
+   "label": "wrong",
+   "reason": "'6X' indicates a pack of six bags priced against 907 g; the weight is misread."
+  },
+  {
+   "id": "ironbrewcoffee.com:6881394983041",
+   "label": "wrong",
+   "reason": "'6X' indicates a multi-bag pack priced against a single 907 g weight."
+  },
+  {
+   "id": "irvingfarm.com:2116143045",
+   "label": "right",
+   "reason": "5 lb decaf at $110.50 is plausible bulk pricing."
+  },
+  {
+   "id": "ithacacoffee.com:10197832761666",
+   "label": "wrong",
+   "reason": "BULK at $21.99 is read as 2495 g; it is likely a per-pound bulk price, since the 5 lb bag costs $109.95."
+  },
+  {
+   "id": "jamescoffeeco.com:7177014018091",
+   "label": "wrong",
+   "reason": "Growler is likely a cold brew or refill container, not a 2 lb bag of coffee."
+  },
+  {
+   "id": "javacoffee.com:8442ba62d375",
+   "label": "unsure",
+   "reason": "$8 per pound Harrar is unusually cheap; could be real or a misread price."
+  },
+  {
+   "id": "javaestate.com:7619265396806",
+   "label": "right",
+   "reason": "5 lb bag at about $59 gives a plausible $2.49/100g."
+  },
+  {
+   "id": "jubileeroastingco.com:6860116066476",
+   "label": "wrong",
+   "reason": "Twelve-month subscription with a misread weight on one variant."
+  },
+  {
+   "id": "kahacoffee.com:15406483669228",
+   "label": "wrong",
+   "reason": "3-pack of 2 lb bags priced as one 340 g bag; the true price is about $4.56/100g."
+  },
+  {
+   "id": "kinshipcoffeeroasters.com:15512116887788",
+   "label": "right",
+   "reason": "1 kg bag at $95 gives a plausible $9.50 per 100 g."
+  },
+  {
+   "id": "klatchcoffee.com:8349489397849",
+   "label": "right",
+   "reason": "Thermo-shock micro-lot at $29.95/170g is plausible."
+  },
+  {
+   "id": "konacoffee.nyc:9479655194926",
+   "label": "right",
+   "reason": "Kona peaberry at $49 for about 12.8 oz is plausible at $13.50/100g."
+  },
+  {
+   "id": "lakeandriverroasters.com:15400986017865",
+   "label": "wrong",
+   "reason": "Coffee-of-the-month subscription; $45 likely covers multiple shipments, not one 12oz bag."
+  },
+  {
+   "id": "leapknot.com:6065462116536",
+   "label": "right",
+   "reason": "5 lb decaf at $90 is a plausible bulk price."
+  },
+  {
+   "id": "loreroasters.com:10352917709116",
+   "label": "right",
+   "reason": "Panama Geisha at $50 per 8 oz is a realistic Gesha price."
+  },
+  {
+   "id": "macacotostadores.com:5019565",
+   "label": "wrong",
+   "reason": "Prices like 190 for 250g Mexican coffee look like Mexican pesos."
+  },
+  {
+   "id": "macacotostadores.com:5019691",
+   "label": "wrong",
+   "reason": "190 for 250 g only makes sense as Mexican pesos; Spanish-named store."
+  },
+  {
+   "id": "macacotostadores.com:5019723",
+   "label": "wrong",
+   "reason": "220 for 250 g of Oaxaca coffee only makes sense as Mexican pesos, not USD."
+  },
+  {
+   "id": "mariescoffeeandgifts.com:10020943757616",
+   "label": "wrong",
+   "reason": "Item is fusilli pasta, not coffee."
+  },
+  {
+   "id": "mariescoffeeandgifts.com:10029836796208",
+   "label": "wrong",
+   "reason": "Pasta, not coffee."
+  },
+  {
+   "id": "mariescoffeeandgifts.com:10030282080560",
+   "label": "wrong",
+   "reason": "Pasta, not coffee."
+  },
+  {
+   "id": "mariescoffeeandgifts.com:10077003448624",
+   "label": "wrong",
+   "reason": "Olive oil container, not coffee."
+  },
+  {
+   "id": "mellobeans.com:7061757657240",
+   "label": "wrong",
+   "reason": "Caf\u00e9 drink (Americano cup sizes), not a bag of coffee."
+  },
+  {
+   "id": "meritcoffee.com:8484628725845",
+   "label": "unsure",
+   "reason": "$7.71 for 12 oz is unusually low for a named lot; it could be a sale or a misread."
+  },
+  {
+   "id": "methodicalcoffee.com:8157667950809",
+   "label": "right",
+   "reason": "5 lb decaf at $115.67 gives $5.10/100g, consistent across sizes and plausible."
+  },
+  {
+   "id": "monarchcoffee.com:5fd3d7cffccde05851eb29ec",
+   "label": "right",
+   "reason": "Hawaiian estate Gesha at about $22/100g is plausible."
+  },
+  {
+   "id": "monarchcoffee.com:6075f7bb7348351cc7eb2e64",
+   "label": "right",
+   "reason": "Hawaiian estate Pacamara at $50.95 per 8 oz; high prices for Hawaii-grown coffee are plausible."
+  },
+  {
+   "id": "moonrisecoffeeroasters.com:7496423637051",
+   "label": "right",
+   "reason": "$40/lb blend gives $8.81/100g, within plausible specialty range."
+  },
+  {
+   "id": "mountainroaster.com:7913136488697",
+   "label": "wrong",
+   "reason": "Raspberry fruit beverage base syrup, not a bag of coffee."
+  },
+  {
+   "id": "nomadiccoffee.com:6576302620739",
+   "label": "wrong",
+   "reason": "Box of four 12 oz bags priced as a single 340 g bag."
+  },
+  {
+   "id": "oceancoffee.com:6705626054788",
+   "label": "right",
+   "reason": "1 lb flavored coffee at $9.99 is a plausible cheap retail price."
+  },
+  {
+   "id": "oceancoffee.com:6705626153092",
+   "label": "right",
+   "reason": "Flavored coffee at $9.99/lb is plausible budget pricing."
+  },
+  {
+   "id": "ojaicoffeeroasters.com:7385133613214",
+   "label": "right",
+   "reason": "$115 for a 5 lb bag gives about $5/100g, normal specialty pricing."
+  },
+  {
+   "id": "oldbisbeeroasters.com:7437511363",
+   "label": "wrong",
+   "reason": "A prepaid yearly subscription covering many shipments, priced as one bag."
+  },
+  {
+   "id": "olympiacoffee.com:8017576100040",
+   "label": "right",
+   "reason": "5 lb bag at $145.20 gives a plausible $6.40 per 100 g."
+  },
+  {
+   "id": "owlcoffeeroasters.com:9592305778932",
+   "label": "right",
+   "reason": "Premium Honduran micro-lot at $55/12oz; plausible for a specialty lot."
+  },
+  {
+   "id": "pangeacoffeeroasters.com:593844f76a4963aa411bf99b",
+   "label": "wrong",
+   "reason": "1/2 LB variant read as 907g; real cheapest about $4.51/100g."
+  },
+  {
+   "id": "pangeacoffeeroasters.com:5938454c9de4bb16a6bbd343",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was misread as 907 g; the real price is about $5 per 100 g."
+  },
+  {
+   "id": "pangeacoffeeroasters.com:596c24b3e3df283933de16d1",
+   "label": "wrong",
+   "reason": "1/2 LB bag misread as 907 g, producing an absurdly low price."
+  },
+  {
+   "id": "paradiseroasters.com:9598778570",
+   "label": "right",
+   "reason": "Hawaiian anaerobic micro-lot at $140 per 12oz; rare Hawaiian lots plausibly reach $40/100g."
+  },
+  {
+   "id": "phillyfairtrade.com:7021473792155",
+   "label": "right",
+   "reason": "5 lb bulk bag $48.50; $2.14/100g plausible bulk price."
+  },
+  {
+   "id": "port2050coffeeroasters.com:7997838065723",
+   "label": "right",
+   "reason": "Colombian single-farm lot at $25 per 250 g, $10/100g, is plausible."
+  },
+  {
+   "id": "portolacoffeelab.com:672",
+   "label": "wrong",
+   "reason": "A 12 oz mocha at $8 is likely a cafe drink menu item, not a bag of coffee."
+  },
+  {
+   "id": "praxiscoffee.com:100",
+   "label": "right",
+   "reason": "5 lb bulk bag at $52 is $2.29/100g, plausible for bulk."
+  },
+  {
+   "id": "prestacoffee.com:7302310330443",
+   "label": "wrong",
+   "reason": "Fanny pack/handlebar bag, not coffee."
+  },
+  {
+   "id": "quillscoffee.com:9992904573241",
+   "label": "unsure",
+   "reason": "'The Home Barista' at $46 for 12 oz may be a bundle or kit; unclear contents."
+  },
+  {
+   "id": "raoucheroastery.com:9446037782812",
+   "label": "wrong",
+   "reason": "Roasted sunflower kernels, not coffee."
+  },
+  {
+   "id": "readingcoffee.com:8957929717812",
+   "label": "wrong",
+   "reason": "Cocktail mixer cubes, not a bag of coffee."
+  },
+  {
+   "id": "reanimatorcoffee.com:10314361012360",
+   "label": "right",
+   "reason": "Consistent bag sizes and prices; about $8.73 per 100 g is plausible."
+  },
+  {
+   "id": "redrockroasters.com:7974217449765",
+   "label": "right",
+   "reason": "5 lb bag at $90 gives a plausible $3.97 per 100 g."
+  },
+  {
+   "id": "regentcoffee.com:9252166271253",
+   "label": "right",
+   "reason": "$27.50 for 12 oz gives $8.09/100g, plausible for a specialty blend."
+  },
+  {
+   "id": "riseupcoffee.com:7755524505645",
+   "label": "wrong",
+   "reason": "Variants sized Small to XXL indicate apparel or merchandise, not a bag of coffee."
+  },
+  {
+   "id": "riverrockroasters.com:6711986552934",
+   "label": "wrong",
+   "reason": "The 3/4 lb bag was read as 1814 g; the real cheapest is about $3.18/100g."
+  },
+  {
+   "id": "riversbendcoffeeroasters.com:2087",
+   "label": "wrong",
+   "reason": "3-pack bundle priced as one 12 oz bag; the price likely covers three bags."
+  },
+  {
+   "id": "roast808.com:6853837881499",
+   "label": "right",
+   "reason": "12oz at $25; normal specialty price."
+  },
+  {
+   "id": "roastery.coffee:8551164641415",
+   "label": "wrong",
+   "reason": "Price taken from the green/unroasted variant; roasted coffee sells for about $4.4-5/100g."
+  },
+  {
+   "id": "roastingplant.com:9896749760824",
+   "label": "right",
+   "reason": "$42 per 16 oz gives a plausible $9.25/100g."
+  },
+  {
+   "id": "ronnoco.com:248320397",
+   "label": "right",
+   "reason": "Ground canister around 12 oz at $12.30; plausible."
+  },
+  {
+   "id": "safaricoffee.com:8454836060441",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was misread as 907 g, giving a falsely low $1.54/100g."
+  },
+  {
+   "id": "safaricoffee.com:8454848184601",
+   "label": "wrong",
+   "reason": "1/2 lb read as 907 g; real price is about $5.5/100g."
+  },
+  {
+   "id": "safaricoffee.com:8454877643033",
+   "label": "wrong",
+   "reason": "The 1/2 LB bag was read as 907 g, giving a falsely low price per 100 g."
+  },
+  {
+   "id": "safaricoffee.com:8860947382553",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was read as 907 g; the real price is about $5.50/100g."
+  },
+  {
+   "id": "seycoffee.com:8104485486846",
+   "label": "wrong",
+   "reason": "The DiFluid R2 is a refractometer, an equipment item rather than coffee."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4784820486193",
+   "label": "wrong",
+   "reason": "A 3-month supply is a subscription covering several shipments, not one bag's weight."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791726407729",
+   "label": "wrong",
+   "reason": "A 6-month supply subscription priced against a single bag's weight."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791727849521",
+   "label": "wrong",
+   "reason": "One-year supply subscription priced against a single bag's weight."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791728898097",
+   "label": "wrong",
+   "reason": "Six-month supply covers several shipments; the price is not per one bag's weight."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791731290161",
+   "label": "wrong",
+   "reason": "Year-supply subscription priced as a single 850g bag."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791732076593",
+   "label": "wrong",
+   "reason": "6-month supply subscription price covering multiple shipments, priced against 850 g."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791732535345",
+   "label": "wrong",
+   "reason": "Year-supply subscription covering many bags, priced as one 850g bag."
+  },
+  {
+   "id": "shelburnefallscoffee.com:4791734206513",
+   "label": "wrong",
+   "reason": "A 1-year supply subscription priced against a single bag's weight."
+  },
+  {
+   "id": "socoffee.co:8931711615229",
+   "label": "wrong",
+   "reason": "T-shirt, not coffee."
+  },
+  {
+   "id": "starbeanscoffeeroasters.com:2181",
+   "label": "wrong",
+   "reason": "Bundle of three 12oz bags priced as one 340 g bag."
+  },
+  {
+   "id": "starbeanscoffeeroasters.com:2183",
+   "label": "wrong",
+   "reason": "Bundle of three 12 oz bags priced as a single 340 g bag."
+  },
+  {
+   "id": "strangelywarmed.com:29db568f3a68",
+   "label": "wrong",
+   "reason": "Five 6oz bags priced as one 170 g bag; real price about $4.70/100g."
+  },
+  {
+   "id": "sypcoffee.com:8529736466605",
+   "label": "wrong",
+   "reason": "Jura cleaning and maintenance supplies, not coffee."
+  },
+  {
+   "id": "tectoniccoffee.com:9340968796468",
+   "label": "right",
+   "reason": "Co-fermented Geisha at $55 for 6 oz is plausible."
+  },
+  {
+   "id": "tectoniccoffee.com:9340968894772",
+   "label": "right",
+   "reason": "Washed Geisha 6 oz at $45; plausible for a Gesha lot."
+  },
+  {
+   "id": "templecoffee.com:15245122339186",
+   "label": "right",
+   "reason": "Reserve single-origin 6 oz lot at $60; high but plausible for a premium reserve micro-lot."
+  },
+  {
+   "id": "templecoffee.com:4638655250522",
+   "label": "right",
+   "reason": "5 lb bag at $117.25 gives a normal specialty price per 100g."
+  },
+  {
+   "id": "templecoffee.com:4691413729370",
+   "label": "wrong",
+   "reason": "24 oz misread as 794 g (24 oz = 680 g), and the case weight is unclear; the value is understated."
+  },
+  {
+   "id": "themusecoffee.co:8432141467845",
+   "label": "right",
+   "reason": "5 lb bag at $55 gives a plausible bulk $2.43/100g."
+  },
+  {
+   "id": "theroasthauscoffeeco.com:8912246800627",
+   "label": "wrong",
+   "reason": "The 1/2 lb bag was misread as 907 g, giving an implausible $0.94 per 100 g."
+  },
+  {
+   "id": "tobracoffee.com:5267064619148",
+   "label": "wrong",
+   "reason": "Used burlap sacks, not coffee."
+  },
+  {
+   "id": "touringcoffeeroasters.com:68e13bab5ecd",
+   "label": "wrong",
+   "reason": "Two 12 oz bags priced as one 340 g bag."
+  },
+  {
+   "id": "touringcoffeeroasters.com:7e386a78c95b",
+   "label": "wrong",
+   "reason": "Three 12oz bags for $54 priced as one 340 g bag."
+  },
+  {
+   "id": "troubadourcoffeeroasters.com:8930777530596",
+   "label": "right",
+   "reason": "1 lb $32.50 gives $7.16/100g; normal specialty price."
+  },
+  {
+   "id": "truecoffeeroasters.com:7823642231026",
+   "label": "wrong",
+   "reason": "Klean Kanteen bottle is equipment, not coffee."
+  },
+  {
+   "id": "truestonecoffee.com:10759252574511",
+   "label": "wrong",
+   "reason": "Bundle of three 12oz bags priced as a single 340 g bag."
+  },
+  {
+   "id": "unlockedcoffee.com:7447116644519",
+   "label": "wrong",
+   "reason": "Three 12 oz bags priced as one 340 g bag; the true price is about $5.59/100g."
+  },
+  {
+   "id": "upperleftroasters.com:10579893518623",
+   "label": "wrong",
+   "reason": "The title says 2 lb, but the weight was read as 283 g; the true price is about $7.17/100g."
+  },
+  {
+   "id": "usroast.com:6617329827925",
+   "label": "right",
+   "reason": "Cheap 12 oz bag at $8, consistent with its 5 lb price; plausible."
+  },
+  {
+   "id": "usroast.com:8562008916251",
+   "label": "right",
+   "reason": "$8 for a 12 oz dark roast is cheap but plausible value pricing; the 5 lb price is consistent."
+  },
+  {
+   "id": "varietycoffeeroasters.com:15394105589910",
+   "label": "right",
+   "reason": "Gesha at $49/300g is plausible."
+  },
+  {
+   "id": "varracoroasting.com:8864567001111",
+   "label": "right",
+   "reason": "2 lb for $75 gives $8.27/100g, consistent with the 12 oz price; plausible specialty pricing."
+  },
+  {
+   "id": "viavolcan.com:QTEKYOD4GIO3BXAX2EGAHHHY",
+   "label": "right",
+   "reason": "Geisha natural at $38 for 8 oz is plausible for a rare lot."
+  },
+  {
+   "id": "vignettecoffee.com:7911012073642",
+   "label": "wrong",
+   "reason": "Oat milk, not coffee."
+  },
+  {
+   "id": "wavelength-coffee.com:10478134263940",
+   "label": "right",
+   "reason": "A 255 g bag at $19 is plausible specialty pricing."
+  },
+  {
+   "id": "whiterhinocoffee.com:8504247222435",
+   "label": "right",
+   "reason": "5 lb bulk bag at $59.50 is a plausible price."
+  }
+ ]
+}

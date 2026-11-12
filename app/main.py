@@ -10,10 +10,11 @@ import hashlib
 import json
 import logging
 import os
+import re
 import time
 from collections import OrderedDict
 from collections.abc import AsyncIterator
-from datetime import UTC, date, datetime, tzinfo
+from datetime import UTC, date, datetime, timedelta, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
 from urllib.parse import unquote, urlsplit
@@ -31,17 +32,33 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from coffeedata import shots
 from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
+from coffeedata.site import APP
 from coffeedata.site import links as site_links
 
-from . import labels, logs, photos, views, web
+from . import labels, logs, mail, photos, rules, views, web
 from .accounts import AccountError
-from .auth import COOKIE, Auth, Sessions, User, clean_secrets, from_env, missing_secrets
+from .auth import (
+    COOKIE,
+    Auth,
+    RequireSession,
+    Sessions,
+    User,
+    clean_secrets,
+    current_user,
+    from_env,
+    hosted,
+    missing_secrets,
+)
 from .store import Invalid, NotFound, Store, coffee_key
 
 HERE = Path(__file__).parent
+STARTED = (
+    time.monotonic()
+)  # when this module was imported, close to the process start: cold starts are logged from it
 MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
 READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
 PHOTO_MISS_TTL = 300  # seconds an unknown photo id answers 404 without another lookup
+RECENTLY_FINISHED_DAYS = 30  # a correction can move a shot to a bag finished this recently
 log = logging.getLogger(__name__)
 
 
@@ -49,13 +66,33 @@ class SignIn(Exception):
     """A screen asked for while signed out: go to the sign-in screen."""
 
 
+class Agree(Exception):
+    """A screen asked for by someone who hasn't accepted the current Terms and Privacy Policy: go to /agree."""
+
+
+# Instagram's and Facebook's in-app browsers (spec §9): their own autofill sheet can cover the form, and they don't
+# keep the sign-in. Instagram; Facebook as FBAN/FBAV on iOS and FB_IAB on Android; Messenger.
+IN_APP = re.compile(r"\b(Instagram)\b|(FBAN/|FBAV/|FB_IAB/|FBIOS)|(MessengerForiOS)")
+# Paths someone who still has to accept the new terms may write to.
+AGREE_FREE = {"/api/agree", "/api/signout", "/api/signout-everywhere"}
+FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes at least: a lookup plus a send fits well inside
+NUDGE_COOKIE = "nudge-email"  # "Not now" on Today's add-an-email prompt, for 90 days (spec §5)
+
+
+def in_app_browser(user_agent: str | None) -> str | None:
+    """The name of the in-app browser a User-Agent belongs to, or None."""
+    m = IN_APP.search(user_agent or "")
+    if not m:
+        return None
+    return "Instagram" if m.group(1) else "Facebook" if m.group(2) else "Messenger"
+
+
 def not_configured(missing: list[str]) -> FastAPI:
     """What the hosted app shows until its secrets are set: their names, never their values."""
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     text = (
-        "This app isn't set up yet. Add these secrets (Secret Manager, see RUNNING.md), then deploy again: "
-        + ", ".join(missing)
-        + "."
+        "This app isn't set up yet. Fix these settings (Secret Manager, see docs/app/RUNNING.md), then deploy "
+        "again: " + ", ".join(missing) + "."
     )
 
     @app.middleware("http")
@@ -81,6 +118,7 @@ def create_app(
     auth: Auth | None = None,
     photos_lake: Lake | None = None,
     labels_client: Any = None,
+    mailer: mail.Mailer | None = None,
 ) -> FastAPI:
     if auth is None:
         clean_secrets()
@@ -89,6 +127,7 @@ def create_app(
             log.error("not configured; missing secrets: %s", ", ".join(missing))
             return not_configured(missing)
         auth = from_env()
+        mailer = mailer or mail.from_env(hosted())
     lake = lake or Lake()
     # Records from before accounts (user_id null) belong to the owner.
     store = Store(lake, shots.owner_user_id())
@@ -97,14 +136,29 @@ def create_app(
     sessions = auth if isinstance(auth, Sessions) else None
     app = FastAPI(title="registry.coffee", docs_url=None, redoc_url=None, openapi_url=None)
     app.state.store = store
+    # Email features show only with a key to seal addresses (EMAIL_KEY) and a way to send (spec §5).
+    email_on = bool(sessions and sessions.accounts.email_on and mailer is not None)
+    # Links in emails are built on the app's fixed address, never the request's Host header (OWASP Forgot Password,
+    # "Host Header Injection").
+    app_url = (os.environ.get("APP_URL") or APP).rstrip("/")
+    # Emails go out inside the request (review H1): Cloud Run gives an instance CPU only while it serves a request
+    # (cpu_idle), so work left for after the reply could stall until the next request, or be lost when the instance
+    # stops. Where a reply mustn't say whether an email went (forgot, and an address verified on another account),
+    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad).
+    app.state.forgot_floor = FORGOT_FLOOR
+    app.state.mailer = mailer
     assets = web.Assets()
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
     # The public site's address and the beta-invite email, from the same settings the site is built with.
     templates.env.globals.update(site=site_links())
+    templates.env.globals.update(rules=rules.for_page())  # the sign-up rules, for the page script (rules.py)
+    templates.env.globals.update(email_on=email_on)
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
+    # Default deny: outside the body limit, so a signed-out request is refused before its body is read.
+    app.add_middleware(RequireSession, routes=lambda: app.router.routes, auth=auth, tag=logs.set_user)
 
     async def on_error(request: Request) -> Response:
         log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
@@ -120,18 +174,31 @@ def create_app(
     def ip(request: Request) -> str:
         return web.client_ip(request, hops)
 
+    # RequireSession has already refused anyone signed out; these check again, from the same lookup.
     def user(request: Request) -> User:
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             raise HTTPException(401, "sign in first")
         logs.set_user(u.user_id)
         return u
 
+    def must_agree(u: User) -> bool:
+        """If the check itself fails, the answer is yes: nothing is shown until acceptance can be confirmed."""
+        if sessions is None:
+            return False
+        try:
+            return sessions.accounts.needs_agree(u.user_id)
+        except Exception:  # noqa: BLE001 - fail closed
+            log.exception("checking the terms acceptance failed")
+            return True
+
     def screen_user(request: Request) -> User:
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             raise SignIn()
         logs.set_user(u.user_id)
+        if must_agree(u):
+            raise Agree()
         return u
 
     def same_origin(request: Request, x_requested_with: str | None) -> None:
@@ -146,14 +213,33 @@ def create_app(
             raise HTTPException(403, "cross-site request")
 
     def writer(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> User:
+        """Until the current terms are accepted, writes answer 403, which the phone's outbox keeps and sends again
+        (Held in app.js)."""
         same_origin(request, x_requested_with)
-        return user(request)
+        u = user(request)
+        if request.url.path not in AGREE_FREE and must_agree(u):
+            raise HTTPException(
+                403, "Accept the updated Terms and Privacy Policy first. This is kept and sent then."
+            )
+        return u
+
+    def outbox_writer(
+        request: Request,
+        x_requested_with: Annotated[str | None, Header()] = None,
+        x_expected_user: Annotated[str | None, Header()] = None,
+    ) -> User:
+        """Bind a phone's queued write to the account that created it, including across browser tabs."""
+        me = writer(request, x_requested_with)
+        if not x_expected_user or x_expected_user != me.user_id:
+            raise HTTPException(403, "Sign in as the person who made this save to sync it.")
+        return me
 
     def anyone(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> None:
         same_origin(request, x_requested_with)
 
     Me = Annotated[User, Depends(screen_user)]
     Writer = Annotated[User, Depends(writer)]
+    OutboxWriter = Annotated[User, Depends(outbox_writer)]
 
     def tz(request: Request) -> tzinfo:
         # The phone writes its zone URL-encoded ("America%2FNew_York"), and cookies arrive as written.
@@ -182,6 +268,10 @@ def create_app(
     @app.exception_handler(SignIn)
     async def to_sign_in(request: Request, exc: SignIn) -> Response:
         return RedirectResponse("/signin", 303)
+
+    @app.exception_handler(Agree)
+    async def to_agree(request: Request, exc: Agree) -> Response:
+        return RedirectResponse("/agree", 303)
 
     @app.exception_handler(StarletteHTTPException)
     async def http_error(request: Request, exc: StarletteHTTPException) -> Response:
@@ -277,10 +367,15 @@ def create_app(
 
     @app.get("/signin", response_class=HTMLResponse, response_model=None)
     def signin(request: Request) -> HTMLResponse | RedirectResponse:
-        if auth.user(request):
+        if current_user(auth, request):
             return RedirectResponse("/", 303)
         s = accounts_only()
-        return page(request, "signin.html", owner_setup=s.accounts.needs_owner)
+        # A cookie that no longer signs anyone in: say why they're here. It's left alone (signing in replaces
+        # it): during a deploy a new revision may not know an account the old one just made.
+        ended = None
+        if request.cookies.get(COOKIE):
+            ended = "failed" if getattr(request.state, "auth_failed", False) else "ended"
+        return page(request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended)
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:
@@ -289,15 +384,38 @@ def create_app(
         try:
             if s.accounts.needs_owner:
                 acct = s.accounts.create_owner(
-                    str(body.get("setup_code") or ""), username, password, ip(request)
+                    str(body.get("setup_code") or ""),
+                    username,
+                    password,
+                    ip(request),
+                    agree=body.get("agree") is True,
                 )
             else:
                 acct = s.accounts.sign_in(username, password, ip(request))
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
+
+    @app.get("/agree", response_class=HTMLResponse, response_model=None)
+    def agree_page(request: Request) -> HTMLResponse | RedirectResponse:
+        """The Terms or Privacy Policy changed since this account last accepted them: Accept, or Sign out."""
+        s = accounts_only()
+        u = current_user(auth, request)
+        if u is None:
+            return RedirectResponse("/signin", 303)
+        if not must_agree(u):
+            return RedirectResponse("/", 303)
+        return page(request, "agree.html", updated=s.accounts.legal)
+
+    @app.post("/api/agree")
+    def post_agree(body: dict, me: Writer) -> dict:
+        s = accounts_only()
+        if body.get("agree") is not True:
+            raise HTTPException(400, [rules.error("terms", rules.TERMS_AGAIN)])
+        s.accounts.accept(me.user_id)
+        return {"ok": True}
 
     @app.post("/api/signout")
     def post_signout(me: Writer) -> Response:
@@ -321,7 +439,7 @@ def create_app(
                 me.user_id, str(body.get("current") or ""), str(body.get("new") or "")
             )
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)  # this phone stays signed in; the others don't
         return response
@@ -340,12 +458,47 @@ def create_app(
     def join_page(request: Request) -> HTMLResponse:
         # The code is after # in the link, so it never reaches the server or its logs; the page's script reads it.
         accounts_only()
-        return page(request, "join.html")
+        return page(request, "join.html", in_app=in_app_browser(request.headers.get("user-agent")))
 
     @app.get("/reset", response_class=HTMLResponse)
     def reset_page(request: Request) -> HTMLResponse:
         accounts_only()
-        return page(request, "reset.html")
+        return page(request, "reset.html", in_app=in_app_browser(request.headers.get("user-agent")))
+
+    # A native submit of a form app.js didn't wire (it failed to load, or threw first). The forms post, so the
+    # password never goes in a URL; it is dropped here, unread. The page comes back with a notice and the username
+    # as typed, never the password or a code. Nothing is signed in, created or changed.
+    async def typed_username(request: Request) -> str:
+        try:
+            value = (await request.form()).get("username")
+        except Exception:  # noqa: BLE001 - not a form: nothing to keep
+            return ""
+        return value[:64] if isinstance(value, str) else ""
+
+    @app.post("/signin", response_class=HTMLResponse)
+    async def signin_unwired(request: Request) -> HTMLResponse:
+        s = accounts_only()
+        username = await typed_username(request)
+        return page(
+            request,
+            "signin.html",
+            400,
+            owner_setup=s.accounts.needs_owner,
+            unloaded="you’re not signed in yet. Enter your password and sign in again",
+            username=username,
+        )
+
+    @app.post("/join", response_class=HTMLResponse)
+    async def join_unwired(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "join.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="your account wasn’t created. Fill in the form and create it again", username=await typed_username(request))  # fmt: skip
+
+    @app.post("/reset", response_class=HTMLResponse)
+    async def reset_unwired(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "reset.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="your password wasn’t set. Enter the code and a new password again")  # fmt: skip
 
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
@@ -353,36 +506,212 @@ def create_app(
         try:
             inv = s.accounts.lookup(str(body.get("code") or ""), ip(request))
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         exp = inv.expires_at.astimezone(tz(request))  # the viewer's day, as on the invite screen
         return {"kind": inv.kind, "expires": f"{exp:%B} {exp.day}"}
+
+    # --- email: sending, recovery and verification (spec §4, §5) ---------------------------------------
+
+    def send_verify(user_id: str, link: tuple[str, str] | None, asked: bool = True) -> None:
+        """The verify email. `asked` but no link (the address is verified on another account): wait about as long
+        as a send takes instead, so the reply's timing doesn't say so either (review M2)."""
+        if not email_on:
+            return
+        if link:
+            address, token = link
+            acct = accounts_only().accounts.get(user_id)
+            mail.deliver(mailer, "verify", address, user_id, link=f"{app_url}/verify#{token}",
+                         notices_only=bool(acct and acct.role == "owner"))  # fmt: skip
+        elif asked:
+            mail.pad()
+
+    def send_changed(acct: Any) -> None:
+        """NIST 800-63B §4.2: account recovery notifies the account's verified address."""
+        if not email_on:
+            return
+        address = accounts_only().accounts.verified_email(acct.user_id)
+        if address:
+            mail.deliver(mailer, "changed", address, acct.user_id, username=acct.username, app=app_url)
+
+    def send_email_changed(acct: Any, previous: str | None, removed: bool, by_owner: bool = False) -> None:
+        """The address that was on the account hears when it's changed or removed (review M3), so a change made
+        from a stolen session doesn't go unnoticed."""
+        if previous and email_on:
+            mail.deliver(mailer, "email_changed", previous, acct.user_id, username=acct.username,
+                         removed=removed, by_owner=by_owner)  # fmt: skip
+
+    def send_reset(user_id: str) -> None:
+        accounts = accounts_only().accounts
+        hit = accounts.reset_link(user_id)
+        if hit:
+            address, acct, token, issued = hit
+            if mail.deliver(mailer, "reset", address, acct.user_id, username=acct.username,
+                            link=f"{app_url}/reset#{token}"):  # fmt: skip
+                accounts.link_sent(acct.user_id, issued)
+
+    def email_only() -> Sessions:
+        s = accounts_only()
+        if not email_on:
+            raise HTTPException(404, "email isn’t set up on this app")
+        return s
 
     @app.post("/api/join", dependencies=[Depends(anyone)])
     def post_join(body: dict, request: Request) -> Response:
         s = accounts_only()
         try:
-            acct = s.accounts.join(
+            acct, link = s.accounts.join_sending(
                 str(body.get("code") or ""),
                 str(body.get("username") or ""),
                 str(body.get("password") or ""),
                 ip(request),
+                agree=body.get("agree") is True,
+                email=str(body.get("email") or "") if email_on else "",
+                marketing=body.get("marketing") is True,
             )
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
+        # One reply whether or not a link went (review M2): an address verified on another account gets none.
+        send_verify(acct.user_id, link, asked=bool(email_on and str(body.get("email") or "").strip()))
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
 
     @app.post("/api/reset", dependencies=[Depends(anyone)])
     def post_reset(body: dict, request: Request) -> Response:
+        """An owner's reset link signs in, as it always has. One from email ends on sign-in instead, with the
+        username filled in (OWASP Forgot Password: don't sign in automatically)."""
         s = accounts_only()
         try:
-            acct = s.accounts.reset(str(body.get("code") or ""), str(body.get("password") or ""), ip(request))
+            acct, by_email = s.accounts.reset_by(
+                str(body.get("code") or ""), str(body.get("password") or ""), ip(request)
+            )
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
+        send_changed(acct)
+        if by_email:
+            return JSONResponse({"ok": True, "signin": acct.username})
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
+
+    @app.get("/forgot", response_class=HTMLResponse)
+    def forgot_page(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "forgot.html", in_app=in_app_browser(request.headers.get("user-agent")))
+
+    @app.post("/forgot", response_class=HTMLResponse)
+    async def forgot_unwired(request: Request) -> HTMLResponse:
+        """The forgot form submitted natively (app.js didn't wire it): nothing is looked up or sent."""
+        accounts_only()
+        return page(request, "forgot.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="no link was sent. Enter your username or email and send it again")  # fmt: skip
+
+    @app.post("/api/forgot", dependencies=[Depends(anyone)])
+    async def post_forgot(body: dict, request: Request) -> dict:
+        """A username or an email. One reply for an account with a verified email and for no account at all; an
+        account with no verified email is told so on the form (owner decision; see Accounts.forgot). The link is
+        sent inside the request (review H1), and every answer that gets past the limits is held to the same floor
+        (FORGOT_FLOOR), so those alike replies take the same time unless sending runs past it. The floor is an
+        async sleep and the work runs in the thread pool, so a burst of requests holds no worker thread while it
+        waits (final review N1). An answer refused by a limit comes back at once, with the same words."""
+        s = email_only()
+        started = time.monotonic()
+        who = str(body.get("account") or "")
+        if not who.strip():
+            raise HTTPException(400, [rules.error("f.required")])
+        if "@" in who and rules.check_email(who):  # not an address: says nothing about any account
+            raise HTTPException(400, [rules.error("e.syntax") | {"field": "account"}])
+        answer, acct = await run_in_threadpool(s.accounts.forgot, who, ip(request))
+        if answer == "limited":
+            return {"ok": True}
+        try:
+            if answer == "send" and acct is not None:
+                await run_in_threadpool(send_reset, acct.user_id)
+        finally:
+            await asyncio.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
+        if answer == "no_email":
+            raise HTTPException(400, [rules.error("f.no_email")])
+        return {"ok": True}
+
+    @app.get("/verify", response_class=HTMLResponse)
+    def verify_page(request: Request) -> HTMLResponse:
+        # The token is after # in the link: the page's script posts it, so it never reaches a log.
+        accounts_only()
+        return page(request, "verify.html", me=current_user(auth, request))
+
+    @app.post("/api/verify", dependencies=[Depends(anyone)])
+    def post_verify(body: dict, request: Request) -> dict:
+        s = email_only()
+        try:
+            acct = s.accounts.verify_email(str(body.get("token") or ""), ip(request))
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        # The owner's email is for notices only: the owner resets with the setup code (owner decision, N9).
+        return {"ok": True, "notices_only": True} if acct.role == "owner" else {"ok": True}
+
+    @app.post("/api/email")
+    def post_email(body: dict, me: Writer) -> dict:
+        """Add or change your email, with your current password (review M3). The reply is the same whether or not
+        the address is on another account. The previous verified address is told."""
+        s = email_only()
+        try:
+            link, previous = s.accounts.set_email(
+                me.user_id, str(body.get("email") or ""), str(body.get("current") or "")
+            )
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_verify(me.user_id, link)
+        send_email_changed(me, previous, removed=False)
+        view = s.accounts.email(me.user_id)
+        return {"email": view.address if view else None, "verified": bool(view and view.verified)}
+
+    @app.post("/api/email/resend")
+    def resend_email(me: Writer) -> dict:
+        s = email_only()
+        try:
+            link = s.accounts.resend_verify(me.user_id)
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_verify(me.user_id, link)
+        return {"ok": True}
+
+    @app.post("/api/email/remove")
+    def remove_email(body: dict, me: Writer) -> dict:
+        """Remove your email, with your current password (review M3); the address is told it was removed."""
+        s = email_only()
+        try:
+            previous = s.accounts.remove_email(me.user_id, me.user_id, str(body.get("current") or ""))
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_email_changed(me, previous, removed=True)
+        return {"ok": True}
+
+    @app.post("/api/people/{user_id}/email/remove")
+    def remove_member_email(user_id: str, me: Writer) -> dict:
+        """The owner removes a member's email (spec §6). The member's address is told who did it."""
+        s = email_only()
+        target = s.accounts.get(user_id)
+        previous = owner_call(s.accounts.remove_email, me.user_id, user_id)
+        if target is not None:
+            send_email_changed(target, previous, removed=True, by_owner=True)
+        return {"ok": True}
+
+    @app.post("/api/insights")
+    def post_insights(body: dict, me: Writer) -> dict:
+        """ "Include my shots in roaster insights" (privacy policy). Not tied to email: every member has it."""
+        s = accounts_only()
+        if not isinstance(body.get("insights"), bool):
+            raise HTTPException(422, "insights must be true or false")
+        s.accounts.set_insights(me.user_id, body["insights"])
+        return {"insights": body["insights"]}
+
+    @app.post("/api/marketing")
+    def post_marketing(body: dict, me: Writer) -> dict:
+        s = email_only()
+        if not isinstance(body.get("marketing"), bool):
+            raise HTTPException(422, "marketing must be true or false")
+        s.accounts.set_marketing(me.user_id, body["marketing"])
+        return {"marketing": body["marketing"]}
 
     @app.get("/invite", response_class=HTMLResponse)
     def invite_page(request: Request, me: Me) -> HTMLResponse:
@@ -396,9 +725,11 @@ def create_app(
             "invite.html",
             me=me,
             people=[a for a in s.accounts.people() if a.role != "owner"],
-            pending=s.accounts.pending(),
+            log=s.accounts.invite_log(),
             shots_of=lambda uid: mine.get(uid, 0),
+            email_of=s.accounts.email if email_on else (lambda uid: None),
             date=lambda d: f"{d.astimezone(z):%A, %B} {d.astimezone(z).day}",
+            short=lambda d: f"{d.astimezone(z):%b} {d.astimezone(z).day}",
         )
 
     def counts_by_user() -> dict[str, int]:
@@ -412,19 +743,32 @@ def create_app(
         try:
             return fn(*args)
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
 
     def code_reply(request: Request, inv: Any, code: str) -> dict:
         z = tz(request)
         e = inv.expires_at.astimezone(z)
-        return {"invite_id": inv.invite_id, "kind": inv.kind, "code": code, "expires": f"{e:%A, %B} {e.day}"}
+        return {
+            "invite_id": inv.invite_id,
+            "kind": inv.kind,
+            "code": code,
+            "expires": f"{e:%A, %B} {e.day}",
+            "for_label": inv.for_label,
+        }
 
     @app.post("/api/invites")
     def post_invite(body: dict, request: Request, me: Writer) -> dict:
         s = accounts_only()
         kind = "reset" if body.get("kind") == "reset" else "join"
-        inv, code = owner_call(s.accounts.invite, me.user_id, kind, body.get("for_user_id"))
+        inv, code = owner_call(
+            s.accounts.invite, me.user_id, kind, body.get("for_user_id"), body.get("for_label")
+        )
         return code_reply(request, inv, code)
+
+    @app.post("/api/invites/{invite_id}/label")
+    def label_invite(invite_id: str, body: dict, me: Writer) -> dict:
+        inv = owner_call(accounts_only().accounts.set_label, me.user_id, invite_id, body.get("for_label"))
+        return {"invite_id": inv.invite_id, "for_label": inv.for_label}
 
     @app.post("/api/invites/{invite_id}/renew")
     def renew_invite(invite_id: str, request: Request, me: Writer) -> dict:
@@ -447,10 +791,19 @@ def create_app(
 
     @app.get("/", response_class=HTMLResponse)
     def today(request: Request, me: Me) -> HTMLResponse:
-        p = store.prefill(me.user_id)
+        p = store.prefill(me.user_id, bag_id=request.cookies.get("selected_bag"))
         bag, last = p["bag"], p["last"]
+        nudge = (
+            email_on
+            and sessions is not None
+            and not request.cookies.get(NUDGE_COOKIE)
+            and not sessions.accounts.contacts.get(me.user_id)
+            and me.role != "owner"  # the owner resets with the setup code, not by email (N9)
+        )
         if not bag and not last:
-            return page(request, "first_run.html", me=me, grinder=p["grinder"], basket=p["basket"])
+            return page(
+                request, "first_run.html", me=me, grinder=p["grinder"], basket=p["basket"], nudge=nudge
+            )
         name, facts = coffee_name(bag, p["coffee_id"], p["coffee_freetext"])
         pulled = store.bag_shots(me.user_id, bag, last)
         z = tz(request)
@@ -458,6 +811,7 @@ def create_app(
         return page(
             request,
             "today.html",
+            open_bags=[b for b in store.bags_of(me.user_id) if not b.finished_on],
             p=p,
             name=name,
             facts=facts,
@@ -466,6 +820,7 @@ def create_app(
             target=views.target_svg(pulled) if pulled else "",
             summary=views.summary(pulled[-1], prev, z) if pulled else "",
             me=me,
+            nudge=nudge,
             grinder_of=lambda s: store.gear(me.user_id, s.grinder_id),
             days_off=(datetime.now(z).date() - bag.roast_date).days if bag and bag.roast_date else None,
             day=lambda d: views.day(d, z),
@@ -476,6 +831,29 @@ def create_app(
             ),
         )
 
+    @app.get("/bags/switch", response_class=HTMLResponse)
+    def switch_bag(request: Request, me: Me) -> HTMLResponse:
+        bags = [b for b in store.bags_of(me.user_id) if not b.finished_on]
+        selected = store.prefill(me.user_id, bag_id=request.cookies.get("selected_bag"))["bag"]
+        lines = [bag_line(b, []) for b in bags]
+        return page(request, "switch_bag.html", me=me, lines=lines, selected=selected)
+
+    @app.get("/bag/{bag_id}/use")
+    def use_bag(request: Request, bag_id: str, me: Me, next: str = "today") -> RedirectResponse:
+        bag = store.bag(me.user_id, bag_id)
+        if not bag or bag.finished_on:
+            raise HTTPException(404, "no such open bag")
+        response = RedirectResponse("/log" if next == "log" else "/", status_code=303)
+        response.set_cookie(
+            "selected_bag",
+            bag.bag_id,
+            max_age=365 * 24 * 3600,
+            httponly=True,
+            samesite="lax",
+            secure=request.url.scheme == "https",
+        )
+        return response
+
     @app.get("/log", response_class=HTMLResponse, response_model=None)
     def log_shot(
         request: Request,
@@ -484,8 +862,9 @@ def create_app(
         basket: str | None = None,
         machine: str | None = None,
         correct: str | None = None,
+        bag: str | None = None,
     ) -> HTMLResponse | RedirectResponse:
-        fixing = None
+        fixing = fixing_bag = None
         if (
             correct
         ):  # Correct: the same form, filled from that shot, saved under its id (a new record, latest wins)
@@ -494,7 +873,7 @@ def create_app(
             except NotFound:
                 raise HTTPException(404, "no such shot") from None
             grinder, basket, machine = fixing.grinder_id, fixing.basket_id, fixing.machine_id
-        p = store.prefill(me.user_id, grinder, basket, machine)
+        p = store.prefill(me.user_id, grinder, basket, machine, request.cookies.get("selected_bag"))
         if not p["grinder"] or not p["basket"]:
             return RedirectResponse("/setup", 303)
         if not p["bag"] and not p["last"]:
@@ -549,11 +928,35 @@ def create_app(
                     "notes": fixing.notes,
                 },
             }
-            bag = store.bag(me.user_id, fixing.bag_id)
-            name, _ = coffee_name(bag, fixing.coffee_id, fixing.coffee_freetext)
+            fixing_bag = store.bag(me.user_id, fixing.bag_id)
+            name, _ = coffee_name(fixing_bag, fixing.coffee_id, fixing.coffee_freetext)
+            if bag and bag != fixing.bag_id:  # moved to another bag: its coffee follows the bag
+                fixing_bag = store.bag(me.user_id, bag)
+                if fixing_bag is None:
+                    raise HTTPException(404, "no such bag")
+                form |= {
+                    "bag_id": bag,
+                    "coffee_id": fixing_bag.coffee_id,
+                    "coffee_freetext": fixing_bag.coffee_freetext,
+                }
+                name, _ = coffee_name(fixing_bag, fixing_bag.coffee_id, fixing_bag.coffee_freetext)
         z = tz(request)
         when = f"{views.date(fixing.brewed_at, z)}, {views.clock(fixing.brewed_at, z)}" if fixing else None
-        return page(request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when)
+        # A shot can move to an open bag or one finished lately: the shot was often pulled before it ran out.
+        recent = datetime.now(z).date() - timedelta(days=RECENTLY_FINISHED_DAYS)
+        return page(
+            request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when,
+            fixing_bag=fixing_bag,
+            bag_lines=[
+                bag_line(b, [])
+                for b in store.bags_of(me.user_id)
+                if not b.finished_on
+                or b.finished_on >= recent
+                or b.bag_id in (fixing.bag_id, fixing_bag and fixing_bag.bag_id)
+            ]
+            if fixing
+            else [],
+        )  # fmt: skip
 
     @app.get("/saved/{shot_id}", response_class=HTMLResponse)
     def saved(request: Request, shot_id: str, me: Me, new: bool = False) -> HTMLResponse:
@@ -688,7 +1091,7 @@ def create_app(
 
     @app.get("/photos/{photo_id}")
     async def photo(photo_id: str, me: Me) -> Response:
-        """A bag photo, to its owner only. Photos never change, so the browser keeps them (privately)."""
+        """A bag photo, to its owner only. Never stored by the browser or anything between it and the app."""
         if not SAFE_ID.fullmatch(photo_id):
             raise HTTPException(404, "not found")
         hit = photo_cache.get(photo_id)
@@ -707,22 +1110,40 @@ def create_app(
         photo_cache.move_to_end(photo_id)
         if hit[0] != me.user_id:
             raise HTTPException(404, "not found")
-        return Response(
-            hit[1], media_type="image/jpeg", headers={"Cache-Control": "private, max-age=31536000, immutable"}
-        )
+        return Response(hit[1], media_type="image/jpeg", headers={"Cache-Control": web.PRIVATE})
 
     def counts(user_id: str) -> dict[str, int]:
         return gear_counts(store.shots_of(user_id))
 
-    @app.get("/setup", response_class=HTMLResponse)
-    def setup(request: Request, me: Me) -> HTMLResponse:
+    def setup_page(request: Request, me: User, unloaded: str = "") -> HTMLResponse:
         return page(
             request,
             "setup.html",
+            400 if unloaded else 200,
             me=me,
             auth_name=getattr(auth, "name", ""),
+            email=sessions.accounts.email(me.user_id) if email_on and sessions else None,
+            marketing=sessions.accounts.marketing(me.user_id) if email_on and sessions else None,
+            insights=sessions.accounts.insights(me.user_id) if sessions else True,
             gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
             counts=counts(me.user_id),
+            unloaded=unloaded,
+        )
+
+    @app.get("/setup", response_class=HTMLResponse)
+    def setup(request: Request, me: Me) -> HTMLResponse:
+        return setup_page(request, me)
+
+    @app.post("/setup", response_class=HTMLResponse)
+    def setup_unwired(request: Request, me: Me, form: str = "") -> HTMLResponse:
+        """Change password's form, or the email forms (?form=email), unwired (see signin_unwired): what was typed,
+        passwords included, is dropped, unread."""
+        if form == "email":
+            return setup_page(
+                request, me, unloaded="your email wasn’t changed. Enter it and your password again"
+            )
+        return setup_page(
+            request, me, unloaded="your password wasn’t changed. Enter both passwords and change it again"
         )
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)
@@ -753,7 +1174,7 @@ def create_app(
         machine: str | None = None,
     ) -> HTMLResponse:
         """The chip on Log shot: which grinder, machine and basket this shot is on."""
-        p = store.prefill(me.user_id, grinder, basket, machine)
+        p = store.prefill(me.user_id, grinder, basket, machine, request.cookies.get("selected_bag"))
         return page(
             request,
             "pick_gear.html",
@@ -796,20 +1217,20 @@ def create_app(
             raise HTTPException(422, str(e)) from None
 
     @app.post("/api/shots")
-    def post_shot(body: dict, me: Writer) -> dict:
+    def post_shot(body: dict, me: OutboxWriter) -> dict:
         shot, written = run(store.save_shot, me.user_id, body)
         return {"shot_id": shot.shot_id, "written": written}
 
     @app.post("/api/shots/{shot_id}/retract")
-    def retract(shot_id: str, me: Writer) -> dict:
+    def retract(shot_id: str, me: OutboxWriter) -> dict:
         return {"shot_id": shot_id, "written": run(store.retract_shot, me.user_id, shot_id)}
 
     @app.post("/api/shots/{shot_id}/restore")
-    def restore(shot_id: str, me: Writer) -> dict:
+    def restore(shot_id: str, me: OutboxWriter) -> dict:
         return {"shot_id": shot_id, "written": run(store.restore_shot, me.user_id, shot_id)}
 
     @app.post("/api/equipment")
-    def post_equipment(body: dict, me: Writer) -> dict:
+    def post_equipment(body: dict, me: OutboxWriter) -> dict:
         return {"equipment_id": run(store.save_equipment, me.user_id, body).equipment_id}
 
     photo_lake = photos_lake or Lake.photos()
@@ -858,8 +1279,24 @@ def create_app(
             "in_stock": c.get("in_stock"),
         }
 
+    @app.get("/api/coffees/search")
+    def search_coffees(me: Me, q: str = Query("", max_length=120)) -> dict:
+        """Offer catalog candidates for an explicit choice; never silently change a bag's match."""
+        query = q.strip()
+        if len(query) < 2:
+            return {"coffees": []}
+        unavailable = "The catalog isn’t available right now. Try again shortly."
+        try:
+            candidates = shots.search_catalog(query, limit=12, lake=lake)
+        except RuntimeError:
+            raise HTTPException(503, unavailable) from None
+        coffees = [describe(m["coffee_id"]) for m in candidates]
+        if None in coffees:  # in the catalog's index, but its facts couldn't be read
+            raise HTTPException(503, unavailable)
+        return {"coffees": coffees}
+
     @app.post("/api/photos/{photo_id}")
-    async def post_photo(photo_id: str, request: Request, me: Writer) -> dict:
+    async def post_photo(photo_id: str, request: Request, me: OutboxWriter) -> dict:
         """A bag photo: checked, re-encoded without metadata, saved, then read by Claude and matched in Python.
         Reading needs ANTHROPIC_API_KEY and is capped per account per day; without either, the person types it."""
         if not SAFE_ID.fullmatch(photo_id):
@@ -940,7 +1377,7 @@ def create_app(
         }
 
     @app.post("/api/bags")
-    def post_bag(body: dict, me: Writer) -> dict:
+    def post_bag(body: dict, me: OutboxWriter) -> dict:
         # Only a bag typed before its photo was read (offline) takes the photo's match. A bag typed after seeing the
         # read chose not to use it, and keeps what was typed (#20-1).
         pending = bool(body.pop("read_pending", False))
@@ -950,6 +1387,8 @@ def create_app(
             bag = store.bag(me.user_id, bag.bag_id) or bag
         return {"bag_id": bag.bag_id, "coffee_id": bag.coffee_id, "matches": matches}
 
+    # Cold starts (spec §10): how long from this module's import to a built app, the lake and the accounts read.
+    logs.event("ready", seconds=round(time.monotonic() - STARTED, 2))
     return app
 
 

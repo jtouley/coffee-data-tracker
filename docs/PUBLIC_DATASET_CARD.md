@@ -28,12 +28,14 @@ began. Built by [coffee-data-tracker](https://github.com/jtouley/coffee-data-tra
 | `market_weekly` | origin × process | coffees, roasters, in stock, median / p10 / p90 price per 100 g |
 | `roasters` | one row per roaster | name, city, state, storefront platform, status, coffees listed (its current retail catalog: listed, not archived, not wholesale), coffees in stock |
 
-`manifest.json` gives the run date and row counts of the current export.
+`manifest.json` says which release the export is (`release_build_id`, `release_run_date`), its contract version and
+data licence, and each file's sha256 and row count. Each weekly release is tagged `release-<run date>` (the Monday
+run), so a past week can be read with `@release-2026-11-02` after the repo id.
 
 ```sql
 -- DuckDB, no download needed
 select origin_country, process, coffees, median_price_per_100g
-from 'hf://datasets/<owner>/<name>/data/public_market_weekly.parquet' order by coffees desc limit 10;
+from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' order by coffees desc limit 10;
 ```
 
 ## Not included
@@ -41,17 +43,40 @@ from 'hf://datasets/<owner>/<name>/data/public_market_weekly.parquet' order by c
 - Product descriptions and images. They're the roasters' own content; every coffee links back through `source_url`.
 - Store-internal ids other than the product id in `coffee_id` (`<roaster domain>:<store product id>`, stable across weeks).
 - Personal data, and roasters that opted out.
-- Roasters known only from OpenStreetMap, so ODbL share-alike terms don't apply.
+- Roasters known only from OpenStreetMap.
 
 ## Method and caveats
 
 - Source: each roaster's own public storefront feed, read once a week (Shopify, WooCommerce, Squarespace, Square Online, or schema.org markup), following robots.txt.
 - Coverage: only roasters whose storefront publishes a readable catalog, about half of the US roasters whose sites respond. Treat counts as a sample, not a census.
 - Attributes: origin, process, notes and the rest come from structured tags and text rules, with Claude filling gaps (`attributes_source` = `rules` or `llm`). They can be wrong; the roaster's listing is authoritative.
-- Prices: USD as listed, before discounts and shipping. `price_per_100g` uses the cheapest in-stock bag of 150 g to 2.5 kg.
+- Prices: USD as listed, before discounts and shipping. A price the store states in another currency is never published, and roasters outside the US aren't in the public tables. `price_per_100g` uses the cheapest in-stock bag of 150 g to 2.5 kg.
 
 ## License and attribution
 
-The compilation is released under CDLA-Permissive-2.0. Roaster discovery uses Overture Maps Places
-(© Overture Maps Foundation, CDLA-Permissive-2.0). Coffee names and prices are facts published by each roaster.
+The dataset is released under the [Community Data License Agreement – Permissive 2.0](https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt)
+(CDLA-Permissive-2.0); the code that builds it is MIT. The same licence covers these tables, the site's catalog
+JSON and the marketplace shares. Roaster discovery uses Overture Maps Places (© Overture Maps Foundation,
+CDLA-Permissive-2.0); roasters known only from OpenStreetMap are left out. Coffee names and prices are facts
+published by each roaster. See [ATTRIBUTION](https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md).
 Roasters can opt out via the [repository's issue form](https://github.com/jtouley/coffee-data-tracker/issues/new/choose).
+
+## Citation
+
+If you use this dataset, please cite it, with the `release_run_date` of the release you used:
+
+> Touleyrou, J. registry.coffee: US specialty coffee market dataset (weekly release of YYYY-MM-DD).
+> https://registry.coffee. Hugging Face: https://huggingface.co/datasets/jtouley/us-coffee-market.
+> CDLA-Permissive-2.0.
+
+```bibtex
+@misc{registry_coffee,
+  author       = {Touleyrou, Jason},
+  title        = {registry.coffee: US specialty coffee market dataset},
+  howpublished = {\url{https://huggingface.co/datasets/jtouley/us-coffee-market}},
+  url          = {https://registry.coffee},
+  note         = {Weekly releases; licensed under CDLA-Permissive-2.0}
+}
+```
+
+[`CITATION.cff`](https://github.com/jtouley/coffee-data-tracker/blob/main/CITATION.cff) in the repository has the same citation.

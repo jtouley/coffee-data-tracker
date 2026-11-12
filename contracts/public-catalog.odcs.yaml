@@ -4,22 +4,72 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.1.0
+version: 2.6.0
 status: active
 domain: coffee
-dataProduct: coffee-data
+tags: [coffee, specialty-coffee, prices, weekly, open-data]
 description:
   purpose: 'Weekly facts about US specialty coffee roasters'' catalogs: what is listed, in stock, at what price,
     and how that changes.'
   usage: Analysis of the specialty coffee market. Every coffee links back to its roaster.
   limitations: Weekly snapshots. Attributes come from rules and an LLM over roasters' own text. catalog_status 'archived'
     relies on roasters' tags; untagged back catalog shows as sold_out.
+context:
+  instructions: >-
+    Weekly facts about the public catalogs of US specialty coffee roasters in this project's registry, not every US
+    roaster. Every row is as of one weekly run (release_run_date), which was at most max_run_age_days (8) days old
+    when its release was built; it is never live, and if a later release fails its checks the previous one stays
+    served, so always say which release_run_date a row is as of. Prices are USD as listed on the roaster's own store.
+    Origin, process, varietals, roast level and tasting notes come from rules or an LLM reading the roaster's own
+    text (attributes_source), so they can be wrong or missing; a null means not stated, never "none" (is_blend and
+    is_decaf read false, and flavor_categories empty, when the text doesn't say). When recommending a coffee, give
+    its source_url so the user can check the roaster's own page. public_coffee and public_price_event join to
+    public_roaster on roaster_id; public_price_event joins to public_coffee on coffee_id. The data is licensed
+    under CDLA-Permissive-2.0
+    (https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt), with attribution
+    in docs/ATTRIBUTION.md; the code is MIT.
+  constraints:
+  - id: not-live
+    constraint: Do not present any row as current stock or price; say which release_run_date it is as of.
+  - id: facts-only
+    constraint: Do not reproduce or reconstruct roasters' product descriptions, images or store handles, and do not
+      look for personal data.
+  - id: no-quality-verdicts
+    constraint: Do not rank or judge roasters or coffees as best or worst; the data holds catalog facts, not quality.
+  - id: no-purchasing
+    constraint: Do not claim to buy, order or reserve coffee; point to the coffee's source_url on the roaster's store.
+  - id: no-opted-out-roasters
+    constraint: Never mention roasters with status opted_out, or their coffees, or count them, even in questions
+      about the registry.
+  verifiedStatements:
+  - id: new-this-week
+    question: What coffees appeared this week?
 schema:
 - name: public_coffee
   physicalName: public_coffee
   physicalType: table
   description: One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived
     coffees stay, marked by catalog_status.
+  synonyms:
+  - synonym: beans
+  - synonym: coffees
+  - synonym: listings
+  context:
+    instructions: >-
+      One row per coffee ever seen, including sold out, archived and delisted ones. For coffees someone can buy
+      now, filter catalog_status IN ('available', 'preorder') AND is_wholesale = false; wholesale listings are also
+      left out of market counts and new arrivals. Match broad flavours (e.g. fruity) on flavor_categories.
+      tasting_notes are normalized descriptors taken from the roaster's text (lowercased, split and shortened),
+      not the roaster's exact words. For price questions give both, labelled: price_per_100g
+      (the cheapest available retail bag of 150 g to 2.5 kg, per 100 g) to compare coffees, and min_price_usd for
+      the cheapest listed bag (any size, possibly sold out).
+    verifiedStatements:
+    - id: washed-ethiopian-now
+      question: Which washed Ethiopian coffees can I buy right now?
+    - id: fruity-light-under-20
+      question: Show me fruity light roasts under $20 a bag.
+    - id: single-origin-decaf
+      question: Which roasters sell a single-origin decaf?
   properties:
   - name: coffee_id
     logicalType: string
@@ -54,7 +104,9 @@ schema:
   - name: is_listed
     logicalType: boolean
     physicalType: boolean
-    description: In the roaster's latest successful catalog fetch.
+    description: In the roaster's latest successful catalog fetch, or, when the fetches since then read only part
+      of the catalog (partial), in one of those or in the latest complete fetch before them. A roaster whose
+      fetches have all been partial keeps every coffee it ever listed until a complete fetch lands.
     required: true
   - name: in_stock
     logicalType: boolean
@@ -103,6 +155,8 @@ schema:
     logicalType: string
     physicalType: varchar
     description: washed, natural, honey, anaerobic or other.
+    synonyms:
+    - synonym: processing method
   - name: varietals
     logicalType: array
     physicalType: varchar[]
@@ -113,18 +167,28 @@ schema:
     logicalType: integer
     physicalType: integer
     description: Lowest growing elevation, metres above sea level.
+    customProperties:
+    - property: unit
+      value: m
+      description: UCUM unit code (metres above sea level).
   - name: elevation_masl_max
     logicalType: integer
     physicalType: integer
     description: Highest growing elevation, metres above sea level.
+    customProperties:
+    - property: unit
+      value: m
+      description: UCUM unit code (metres above sea level).
   - name: roast_level
     logicalType: string
     physicalType: varchar
     description: light, medium or dark.
+    synonyms:
+    - synonym: roast
   - name: tasting_notes
     logicalType: array
     physicalType: varchar[]
-    description: Tasting notes as the roaster words them.
+    description: Tasting notes as normalized descriptors taken from the roaster's text (lowercased, split, shortened).
     items:
       logicalType: string
   - name: flavor_categories
@@ -144,15 +208,35 @@ schema:
   - name: min_price_usd
     logicalType: number
     physicalType: double
-    description: Cheapest listed bag, USD.
+    description: Cheapest listed bag of any size, USD; the bag may be sold out.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
+    synonyms:
+    - synonym: bag price
+    - synonym: cheapest bag
   - name: price_per_100g
     logicalType: number
     physicalType: double
     description: Cheapest available retail bag (150 g to 2.5 kg) per 100 g, USD.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
+    - property: perQuantity
+      value: '100.g'
+      description: UCUM unit code; the price is per 100 grams of coffee.
+    synonyms:
+    - synonym: unit price
   - name: bag_sizes_g
     logicalType: array
     physicalType: integer[]
     description: Bag sizes on offer, grams.
+    customProperties:
+    - property: unit
+      value: g
+      description: UCUM unit code (grams, for each bag size).
     items:
       logicalType: integer
   - name: attributes_source
@@ -222,14 +306,76 @@ schema:
     description: The newest counted run is at most max_run_age_days old.
   - type: custom
     engine: dbt
+    implementation: tests/verdicts_cover_catalog.sql
+    dimension: accuracy
+    severity: error
+    description: Claude's coffee-or-not verdicts ran for the release. The build has a verdict model, and at least
+      min_verdict_share of listed coffees were decided by a verdict (about 95% expected; this week's new product
+      versions get theirs a week later). Off only for an explicitly rules-only build, which is never served
+      publicly.
+  - type: custom
+    engine: dbt
     implementation: tests/public_tables_are_facts_only.sql
     dimension: conformity
     severity: error
     description: No descriptions, images, store handles or personal data in any public table.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_coffee_is_fresh.sql
+    dimension: timeliness
+    severity: error
+    description: The newest last_seen in public_coffee is the run the build checked (release_run_date); an empty
+      catalog is left to the volume check.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_tables_are_one_release.sql
+    dimension: consistency
+    severity: error
+    description: Every row of every public table carries this build's release_build_id and release_run_date.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_tables_invariants.sql
+    dimension: accuracy
+    severity: error
+    description: In public_market_weekly p10 <= median <= p90, in_stock <= coffees and roasters <= coffees;
+      first_seen <= last_seen in public_coffee; a price event's prices differ and a new event has no previous
+      price in public_price_event.
+  - type: custom
+    engine: dbt
+    implementation: tests/fill_and_freshness_in_band.sql
+    dimension: completeness
+    severity: warning
+    description: The shares of listed coffees with origin_country, process, roast_level and price_per_100g filled
+      in, and the share last seen in the run, lie above median - band_k x 1.4826 x MAD of the recent passing builds
+      (the bands of build_metrics_in_band, low side only). Warns only, always.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_prices_are_usd.sql
+    dimension: conformity
+    severity: error
+    description: Every public price is one the store states in USD (or, with no currency stated, a US roaster's);
+      a price in another currency stays in the raw lake only. Every public roaster is in the US.
 - name: public_roaster
   physicalName: public_roaster
   physicalType: table
-  description: One row per roaster in the registry.
+  description: >-
+    One row per published roaster from the registry: in the US, not opted out, with at least one coffee seen, and
+    known from a source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap
+    alone). A store outside the US (a registry correction) is never published. One store is one row: a second
+    domain serving the same store (an alias) is never published, nor its coffees.
+  synonyms:
+  - synonym: roasteries
+  - synonym: coffee roasters
+  context:
+    instructions: >-
+      One row per published roaster in the registry (opted-out roasters are never in it). Treat only status =
+      'active' as current roasters; mention other statuses only if asked, and never opted_out. state is a US state
+      code.
+    verifiedStatements:
+    - id: colorado-in-stock
+      question: Which roasters in Colorado have coffee in stock?
+    - id: roaster-current-catalog
+      question: What does a given roaster currently sell?
   properties:
   - name: roaster_id
     logicalType: string
@@ -286,10 +432,21 @@ schema:
     logicalType: date
     physicalType: date
     description: The weekly run that build checked; every row of a release has the same value.
+  quality:
+  - type: custom
+    engine: dbt
+    implementation: tests/public_roasters_unique_by_host.sql
+    dimension: uniqueness
+    severity: error
+    description: One store is one public roaster. No two public roasters have resolved hosts with the same key
+      (lower case, without a leading www, shop or store label); a second domain of a store is an alias, left out
+      with its coffees and price events.
 - name: public_price_event
   physicalName: public_price_event
   physicalType: table
   description: Price, availability and listing changes between consecutive successful weekly fetches, per bag size.
+    A fetch that read only part of a catalog (partial) never removes a bag; removals and relistings are read
+    against complete fetches, so they agree with public_coffee.is_listed.
   properties:
   - name: run_date
     logicalType: date
@@ -308,7 +465,7 @@ schema:
   - name: roaster_id
     logicalType: string
     physicalType: varchar
-    description: The roaster.
+    description: The roaster (public_roaster.roaster_id).
     required: true
   - name: variant_id
     logicalType: string
@@ -336,10 +493,18 @@ schema:
     logicalType: number
     physicalType: double
     description: Price after the change, USD.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
   - name: previous_price_usd
     logicalType: number
     physicalType: double
     description: Price before the change, USD.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
   - name: available
     logicalType: boolean
     physicalType: boolean
@@ -393,14 +558,35 @@ schema:
     logicalType: number
     physicalType: double
     description: Median price per 100 g, USD.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
+    - property: perQuantity
+      value: '100.g'
+      description: UCUM unit code; the price is per 100 grams of coffee.
   - name: p10_price_per_100g
     logicalType: number
     physicalType: double
     description: 10th percentile price per 100 g, USD.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
+    - property: perQuantity
+      value: '100.g'
+      description: UCUM unit code; the price is per 100 grams of coffee.
   - name: p90_price_per_100g
     logicalType: number
     physicalType: double
     description: 90th percentile price per 100 g, USD.
+    customProperties:
+    - property: currency
+      value: USD
+      description: ISO 4217 currency code.
+    - property: perQuantity
+      value: '100.g'
+      description: UCUM unit code; the price is per 100 grams of coffee.
   - name: release_build_id
     logicalType: string
     physicalType: varchar
@@ -439,8 +625,66 @@ customProperties:
   value: 6
 - property: max_run_age_days
   value: 8
+- property: min_verdict_share
+  value: 0.85
 - property: servingPolicy
   value: A release is served only when every quality rule passes; otherwise the previous release stays served.
+- property: license
+  value: CDLA-Permissive-2.0
+  description: SPDX identifier of the public data's licence (licenses/CDLA-Permissive-2.0.txt). The code is MIT.
+authoritativeDefinitions:
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt
+  type: license
+  description: CDLA-Permissive-2.0, the licence of the public data (these tables, their exports, the site's catalog
+    JSON and the marketplace shares). The code is MIT.
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
+  type: attribution
+  description: Data attribution (Overture Maps, OpenStreetMap, roasters' storefronts). The data is licensed under
+    CDLA-Permissive-2.0 (licenses/CDLA-Permissive-2.0.txt); the code is MIT.
+servers:
+- id: huggingface
+  server: huggingface-public-dataset
+  type: custom
+  environment: planned
+  description: 'Planned, not yet published: the public Hugging Face dataset jtouley/us-coffee-market, one Parquet
+    file per table under data/ and manifest.json, replaced by each weekly release. Read it over HTTPS or as
+    hf://datasets/jtouley/us-coffee-market/data/<table>.parquet.'
+  location: https://huggingface.co/datasets/jtouley/us-coffee-market
+  path: data/{model}.parquet
+  format: parquet
+  customProperties:
+  - property: status
+    value: planned
+- id: snowflake-share
+  server: snowflake-marketplace
+  type: custom
+  environment: planned
+  description: 'Planned: the Snowflake share COFFEE_DATA_SHARE of COFFEE_DATA.SHARE, secure views over the loaded
+    tables in COFFEE_DATA.MARKET (marketplace/snowflake/admin_setup.sql). The views drop the public_ prefix:
+    coffee_data.share.coffee is public_coffee, share.price_event is public_price_event, share.market_weekly is
+    public_market_weekly and share.roaster is public_roaster (see the viewMapping property). The Marketplace listing
+    is a draft (marketplace/LISTING.md).'
+  database: COFFEE_DATA
+  schema: SHARE
+  customProperties:
+  - property: status
+    value: planned
+  - property: platform
+    value: snowflake
+  - property: share
+    value: COFFEE_DATA_SHARE
+  - property: viewMapping
+    value:
+      coffee_data.share.coffee: public_coffee
+      coffee_data.share.price_event: public_price_event
+      coffee_data.share.market_weekly: public_market_weekly
+      coffee_data.share.roaster: public_roaster
+team:
+  name: registry.coffee
+  members:
+  - username: jtouley
+    name: Jason Touleyrou
+    role: owner
 support:
 - channel: issues
   url: https://github.com/jtouley/coffee-data-tracker/issues

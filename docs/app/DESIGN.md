@@ -234,7 +234,8 @@ numeric keypad. A left-hand setting mirrors the steppers to the left edge.
 Starts empty: "Not timed · last 29 s". Start/Stop (120 wide) and Type (56) sit where the steppers
 are. While the timer runs, the numeral ticks once a second and the button reads Stop. Saving with no time changes
 the Save button to "Save with 29 s?"; a second tap saves with the last time, recorded as copied
-(`time_source` = `copied`) so it never counts as measured.
+(`time_source` = `copied`) so it never counts as measured. Once tapped, Save reads "Saving…" until the server
+replies (the shot is committed to the lake first, which can take seconds); a refusal puts the label back.
 
 #### Same as last
 
@@ -259,11 +260,15 @@ doesn't look like a row of filters.
 
 #### Dial-in target
 
-SVG, 18 to 38 s across, 1:1.6 to 1:2.5 up, gridlines at 20/25/30/35 s and 1:1.8/2.0/2.2/2.4. The
-window is a dashed rectangle with a light fill and the word "window" inside its lower-right corner. On Today and
-Saved, the marks are numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the newest has a
-ring. On the coffee page they're neither numbered nor joined. It has an `aria-label`, and the sentence under it
-says the same thing in words.
+SVG, time across and ratio up. By default it runs 18 to 38 s and 1:1.6 to 1:2.5, with gridlines at 20/25/30/35 s and
+1:1.8/2.0/2.2/2.4. When a shown shot falls outside that range (a 1:5 shot, a 60 s shot, a 1:1 ristretto), the axes
+grow to include it, never below 0 s, with at most five round gridlines on each grown axis; a shot is plotted where it
+was pulled, never pinned to the edge. The window is a dashed rectangle with a light fill and the word "window" inside
+its lower-right corner when the box is at least 24 px tall and that corner is clear; otherwise above, below, right or
+left of the box, in the first spot clear of every mark, the newest shot's ring, the path and the order numbers, and
+left out if none is clear. On Today and Saved, the marks are numbered in the order pulled and joined by a dashed 1.5
+px `--ink-2` line, and the newest has a ring. On the coffee page they're neither numbered nor joined. It has an
+`aria-label`, and the sentence under it says the same thing in words.
 
 #### Chips
 
@@ -360,8 +365,9 @@ that shrinks over 5 s. Undo writes a retraction record.
 
 An accent "Edit bag" text link (56 px tall, ending on the gutter) after the roast line on Today and on the coffee
 page. The form: roaster and coffee, roast date, weight, and "Still using it" / "Finished". Saving writes a new record
-under the same id (the shots stay with it) and returns to the screen it was opened from, with a notice. A roast date
-in the future isn't saved; one more than 90 days old asks "Save with day N?".
+under the same id (the shots stay with it) and returns to the screen it was opened from, with a notice. Once tapped,
+Save reads "Saving…" until the server replies, as on Log shot; a refusal puts the label back. A roast date in the
+future or over a year ago isn't saved; one more than 90 days old asks "Save with day N?".
 
 #### Notice
 
@@ -370,6 +376,13 @@ What the last save did, at the top of the screen it lands on: "Bag saved: Onyx G
 so it's read out (shown empty, then filled, so screen readers announce it). A save queued offline says so: "Saved on
 this phone. It’ll sync when you’re back online."; a bag names itself, since Today may still show the last one until
 it syncs: "Bag saved on this phone: Onyx Geometry. It’ll sync when you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
+The sign-in screen's notices ("You’ve been signed out", "We couldn’t check your sign-in") are different: they're in
+the page as it's sent, not filled in afterwards, so they have no `role="status"` (a live region announces changes,
+not text present at load) and are read in order before the form. So is the notice for a form submitted before app.js
+wired it (the password forms post, and the page comes back, with the notice in the same place, just above the form):
+"The page didn’t finish loading, so you’re not signed in yet. Enter your password and sign in again.", naming what
+didn't happen and what to fill in again (the returned page works, so not "reload": that would resend the form), with the username kept and the password field empty (focused, on
+sign-in).
 
 Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker
 on Log shot), stepping back in history, or else replaces the form, so Back never reopens what was just saved.
@@ -394,6 +407,27 @@ Errors say what happened and what to do next, and keep what was typed:
 | Reading failed | The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee. |
 | Daily read limit | You’ve used today’s 10 bag reads. Type the coffee, or try again tomorrow. |
 | Offline save | Saved on this phone. It’ll sync when you’re back online. |
+| Forgot, sent (or no such account) | If that account has a verified email, we’ve sent a link to it. It works for 30 minutes. Check your spam folder if it isn’t there in a few minutes. |
+| Forgot, no verified email (owner's choice; see the note below) | This account has no verified email, so we can’t send a link. Ask the person who invited you for a reset link. |
+| Forgot, empty | Enter your username or email. |
+| Email, not an address | That doesn’t look like an email address. Check for typos. |
+| Verify link, expired or used | That link has expired or was already used. Send a new one from Setup. |
+| Verify link, done | Email verified. You can now reset your password by email. |
+| Send again, over the limit | You’ve asked for 3 links in the last hour. Try again in an hour. |
+| Email removed (member) | Email removed. The owner can still make you a reset link. |
+| Reset by email, done | Password changed. Sign in with the new one. |
+
+Email recovery's copy (docs/app/signup-ux-spec.md §4, §5) keeps one vocabulary: a **reset link** (never "code" in
+the email path), **Email** as the field label, **confirm** for the action in an email and **verified** / **not
+verified yet** for the status in Setup and on the People screen. Prompts to add an email ask once and offer a way
+out: "Add an email so you can reset your password yourself?" with Add email / Skip on sign-up, and the same
+sentence with Add email / Not now on Today (Not now lasts 90 days). The marketing box names what ticking it does:
+"Send me occasional emails about new coffees and features".
+
+`/forgot` takes a username or an email. Its reply is the same for an account with a verified email and for no
+account at all; only an account with no verified email is told so, on the field, so the person knows to ask the
+owner. That tells whoever asks that the account exists, which OWASP's uniform reply avoids; the owner chose it for an
+invite-only app. Limits come first: 3 an hour per name or address and per account, 10 an hour per IP, and 20 such answers an hour in all; past them the error is hidden. They're in memory, so they slow a scan rather than stop one (RUNNING.md, "Email").
 
 The share text for an invite: "Log your espresso shots with me on registry.coffee: app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE
 (works once, until November 3)."

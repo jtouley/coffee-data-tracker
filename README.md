@@ -2,15 +2,16 @@
 
 [![ci](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Data license: CDLA-Permissive-2.0](https://img.shields.io/badge/Data-CDLA--Permissive--2.0-blue.svg)](licenses/CDLA-Permissive-2.0.txt)
 
 A weekly catalog of what US specialty roasters sell online, and a phone app that links each espresso shot to a
 coffee in it.
 
 Every roaster runs its own online store, so there's no single place to compare origins, processes and prices, or to
 see when a coffee's price changes or it sells out. A paper shot log isn't tied to a specific coffee or grinder. This
-project reads each roaster's public store once a week, starting from a seed list of about 3,200 US roasters, keeps
+project reads each roaster's public store once a week, starting from a seed list of US roasters, keeps
 every weekly snapshot, and turns them into tables you can query with SQL: what's listed now, what changed, and how
-your shots of a given coffee went. The weekly job runs on a GitHub Actions schedule and needs no server. The data lives in a lake
+your shots of a given coffee went. The weekly crawl runs as scheduled Cloud Run jobs, and GitHub Actions publishes the site. The data lives in a lake
 of Parquet files: a Hugging Face dataset or a local folder.
 
 **Catalog site:** [registry.coffee](https://registry.coffee/catalog/)
@@ -21,7 +22,6 @@ of Parquet files: a Hugging Face dataset or a local folder.
 <!-- More links: each one stays commented out until it works. -->
 <!-- Uncomment once the public dataset is published: **Public dataset:** [Hugging Face](https://huggingface.co/datasets/jtouley/<name>) -->
 <!-- Uncomment once the listing is approved: **Snowflake Marketplace:** [<listing name>](<listing URL>) -->
-<!-- Uncomment once the Space is live: **App:** [Hugging Face Space](https://huggingface.co/spaces/jtouley/<name>) -->
 <!-- Uncomment once the post is up: **Substack:** [<post title>](<Substack URL>) -->
 
 <p>
@@ -71,8 +71,8 @@ built build/coffee.duckdb; exported dim_coffee, dim_roaster, mart_market, fct_pr
 ```
 
 You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.duckdb` (the dbt models),
-`build/site/` (the launch page `index.html`, the catalog in `catalog/index.html` with `catalog/catalog.json`, and
-the `privacy/` and `terms/` pages) and `build/public/` (the public tables). Open `build/site/catalog/index.html` in
+`build/site/` (the launch page `index.html`, the catalog in `catalog/index.html` with `catalog/catalog.json`, the
+`privacy/` and `terms/` pages, `robots.txt` and `sitemap.xml`) and `build/public/` (the public tables). Open `build/site/catalog/index.html` in
 a browser (`open` on macOS, `xdg-open` on Linux).
 
 ## Usage
@@ -226,9 +226,11 @@ you pass `--public`).
 | `make build` / `make site` | `coffeedata build` / `site` | dbt build and mart export / the static site (runs `build` first) |
 | `make publish` | `coffeedata publish` | Upload staged files to a remote lake |
 | `make mcp` | `coffeedata mcp` | Run the MCP server over stdio |
+| `make contracts` | `python -m coffeedata.raw_contracts --all` | Regenerate the internal ODCS contracts at their versions; refuses a change to names, types, required or enums without a new version |
 
-The CLI also has `build-diff`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
-connector; with `--no-dev`, add `--extra snowflake`), `shot add|from-issue` and `add-roaster`. `uv run coffeedata
+The CLI also has `build-diff`, `build-hashes`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
+connector; with `--no-dev`, add `--extra snowflake`; it also writes the table, view and column descriptions
+that make the Snowflake listing's data dictionary, from the public contract), `shot add|from-issue` and `add-roaster`. `uv run coffeedata
 <command> --help` lists each command's flags.
 
 ## Configuration
@@ -243,6 +245,8 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads. `build` and `weekly` take `--db` instead (same default); `site` and `export-public` default to `build/served.duckdb`, the served release |
 | `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
 | `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
+| `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by the main dbt project or released. Only the private one (`dbt_importers/`, `coffeedata importer-build`) reads it |
+| `COFFEEDATA_IMPORTERS_DB` | none | The private importers project's database file. `coffeedata importer-build` sets it to `build/importers.duckdb`, its only allowed value; the project refuses any other, and the command refuses a public database, a link, or a file holding tables it doesn't own |
 | `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
 | `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
@@ -252,19 +256,22 @@ Everything is set through environment variables. Nothing is required for a local
 | `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages. The app links to the same `SITE_URL` and sends beta-invite requests to `SUPPORT_EMAIL` (set on Cloud Run by Terraform, `site_url` and `support_email`) |
 | `APP_URL` | `https://app.registry.coffee` | The app the site's Sign in links point to (a fork or a staging build) |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
-| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the weekly workflow loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change). A local `coffeedata weekly` doesn't: run `coffeedata load-snowflake` after it |
+| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the Tuesday `site` workflow (and a manual `weekly` run) loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change). A local `coffeedata weekly` doesn't: run `coffeedata load-snowflake` after it |
 | `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
 | `SNOWFLAKE_SHARE` | `COFFEE_DATA_SHARE` | The share whose views `load-snowflake --migrate` recreates and grants again |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
 | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |
 
-The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
-list. Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and
-this file stays as it is.
+The seed list is [`config/roasters.csv`](config/roasters.csv): roasters from Overture Maps and a curated list.
+Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and this
+file stays as it is. The site counts them all each week ("roasters in the registry" on
+[registry.coffee](https://registry.coffee/)).
 
 ## Run it on GitHub
 
-The `weekly` workflow runs every Monday, keeps the data in a Hugging Face dataset and deploys the site to Pages.
+The weekly crawl runs every Monday on Cloud Run ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md)), and
+the `site` workflow publishes the site to Pages on Tuesday. The `weekly` workflow is the manual fallback: run by
+hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
 
 1. Create a write token at huggingface.co → Settings → Access Tokens.
 2. Create the dataset once, from any machine. It's private unless you add `--public`; keep it private, because
@@ -273,23 +280,39 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Optionally add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`); the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them, unless the variable `ALLOW_RULES_ONLY` is `1` (a rules-only catalog, for a fork without Claude). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
 4. Under Settings → Pages, set Source to GitHub Actions.
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
-6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
+6. Run the `weekly` workflow by hand with `sample: 50`. It has no schedule: the Cloud Run jobs crawl on Monday and
+   the `site` workflow publishes on Tuesday. A fork without the Cloud Run jobs ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md))
+   has no scheduled crawl: run `weekly` by hand each Monday, or the Tuesday `site` run fails its freshness check.
 
-The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
-`jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own
-secrets are in [`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
+The `deploy` workflow runs when a change touches the app. On a pull request it builds the app's image and checks
+its Terraform; on a push to `main` it also deploys it to Cloud Run at `app.registry.coffee`. It skips the deploy
+until the `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE` variables are set; setup and the app's secrets are in
+[`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
 `make app` with `COFFEEDATA_LAKE` and `HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
 
 ## The site
 
-The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
+The Tuesday `site` workflow deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
 `/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
+
+Its coffees, prices and charts cover the same roasters as the public tables (`public_roaster`: not opted out, not
+known only from OpenStreetMap). The roaster status counts and the registry total are the exception: they count every
+roaster in the registry, opted-out and OpenStreetMap-only ones included. For search engines, both pages carry a schema.org
+[Dataset](https://developers.google.com/search/docs/appearance/structured-data/dataset) in JSON-LD, built from the
+public contract at each build: name and description, the data licence
+([`licenses/CDLA-Permissive-2.0.txt`](licenses/CDLA-Permissive-2.0.txt), CDLA-Permissive-2.0), coverage (US, from
+the 2026-10-26 run on), every contract column as a variable, the downloads (`catalog.json`, and the Hugging Face
+files when `PUBLIC_EXPORT_URL` is an `hf://` dataset), and the release (`dateModified` is its run date, `version` its build id). The site also has a `robots.txt` that allows
+everything and a `sitemap.xml` of its pages. `catalog/catalog.json` starts with a `release` object (build id, run
+date, contract id and version, licence) before its `columns` and `rows`. Each row is one coffee; columns are only ever added
+at the end (`roaster_id` and `roaster_city`, the roaster's city as `public_roaster` stores it, came after `first_seen`),
+so look them up by name in `columns`.
 
 ## How it works
 
@@ -351,6 +374,37 @@ Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parque
 `Image` layout, so a photo is never in the main lake. The app writes one when a bag's label is photographed.
 Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt never reads.
 
+Green importers' offer lists have a private dataset of their own too (`COFFEEDATA_IMPORTERS`,
+[`src/coffeedata/importers_card.md`](src/coffeedata/importers_card.md), its dataset card). **They are backend-only,
+for internal use and a future roaster portal**: never in the public release, the `public_*` tables, the site or the
+public dataset, and the main dbt project never reads them. Even in that portal, only the normalized values may be
+shown, never the importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
+pass a week over each importer's public offer page and stores it raw: one immutable `raw/` file per importer and
+week, each lot word for word (every cell of its row and its URL), as the roaster adapters keep a product's whole
+text. No prices, page HTML or images. The stated fields and our normalized values are derived from raw by a private
+dbt project of its own, `dbt_importers/` (`coffeedata importer-build`): staging unnests each lot's cells, and
+intermediate models apply the rules (SQL over the vocabulary in `importer_rules.py`, `extract.py` and `origins.py`,
+handed to dbt by a Python model; dbt unit tests in `dbt_importers/models/unit_tests.yml`) into `importer_offers`. It
+builds into its own database file, only ever `build/importers.duckdb`, which the main build, the release, the site, the
+exports, the contracts and the MCP server never open (`tests/test_importers.py`). Nothing derived is stored in the
+dataset, so a better rule re-derives the whole history. InterAmerican's table has no origin, region, process or
+grade column, so those are read from its product names ("Brazil Oberon 17/18 Natural"); it states no lot ID. The
+rules abstain when unsure and haven't been evaluated yet (CLAUDE.md; status and running totals in
+[`eval/importers/README.md`](eval/importers/README.md)).
+
+Royal Coffee, a Shopify store, is the third importer: its public `/products.json` listing is read one page of 250
+after another, 15 s apart, and each product is kept word for word (its fields, tags, options, variants without
+prices, and `body_html`'s text; no prices or images; a field that mentions a price is left out of that product).
+Its values (lot number, warehouse, origin, region, process, varieties, altitude, harvest months, certifications) are
+derived by the same private dbt project (`int_royal_labels`, `int_royal_rules`), never stored. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
+access Royal's site.** Its address is only in the importers workflow, passed to a scheduled run's first attempt
+alone (never a dispatch or a re-run). `importers.royal_listing_url` refuses it anywhere else; that check reads
+environment values, so it stops accidents, not a deliberate run. Every HTTP client but the importers job's, and the
+roaster registry and discovery, refuse the host outright (`http.schedule_only_host`). Its tests use invented
+products only (`tests/fixtures/importers/royal_synthetic_products.json`). **Owner step for a real drop at Royal:**
+set the repository variable `ROYAL_ACCEPT_DROP_WEEK` to the value the failure names (the failed week's Monday,
+`YYYY-MM-DD`); the next weekly run stores the thinned listing, and the value expires by itself a week later.
+
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
 - **A site being down never looks like a delisting.** A failed fetch is recorded with no products, and price
@@ -378,9 +432,49 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     TODO, at that point (about 8 weeks of history): replace the fixed suspect-week rule (below half the median of
     the last 4 counted weeks) with per-roaster MAD bands, both sides, warn-only, active once a roaster has 6 or
     more counted weeks and reset on accept or override, the same pattern as these bands;
+  - `fill_and_freshness_in_band` (warn only, and it never blocks, even once the bands above can): the same bands,
+    low side only, on the share of listed coffees with `origin_country`, `process`, `roast_level` and
+    `price_per_100g` filled in (a drop is an extraction or enrichment break, which `accepted_values` lets through
+    as nulls) and on the share of listed coffees last seen in this run;
+  - `adapter_volume_in_band` (warn only): the same bands, low side only, at least 0.10 below the median, on three
+    per-adapter metrics: the ok share of the roasters the run *tried* (unlike `adapter_ok_share`, it doesn't fall
+    when a run just tries fewer roasters), and the same stores' products and priced products against their
+    previous fetch (a platform whose fetches "succeed" with less, or a price wipe on one platform). Measured in
+    `eval/dq`;
+  - `public_roasters_unique_by_host` and `roaster_aliases_resolve`: one store is one public roaster. A roaster_id
+    whose site resolves to another roaster's store (the same host, any case, without `www.`/`shop.`/`store.`) is
+    an alias (`dim_roaster.status`, `canonical_roaster_id`): the crawl skips it and no public table lists it.
+    A rebrand whose old domain doesn't redirect is set by hand (`alias_of` in `config/roasters.csv`). Measured in
+    `eval/roaster_dedup`;
+  - `near_duplicate_roasters`, `price_per_100g_outliers`, `public_tables_reconcile` and
+    `release_changes_explained` (all warn only, measured in `eval/dq`): one catalog listed under two roaster_ids; a
+    price per 100 g far from coffees of the same origin and process (robust z of its log, below −3 or above 6);
+    totals that two public tables state separately (roaster counts, the listed total, a price event's roaster, a
+    price event with no coffee row that isn't a reclassified product); and every row this build adds, removes or
+    changes against the served release with a reason (`release_changes`, run after the gate as a report so it
+    can never fail a build; the build prints the counts per reason as `release notes:` and records them in
+    `builds` as `kind = 'release_change'`);
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
+  - `verdicts_cover_catalog`: Claude's verdicts ran: the build has a verdict model, and at least 85% of listed
+    coffees were decided by a verdict (`dim_coffee.classified_by = 'claude'`; about 95% is expected, as this
+    week's new versions get theirs a week later). Off only for an explicit rules-only build (`--allow-rules-only`
+    or `COFFEEDATA_ALLOW_RULES_ONLY=1`; RUNBOOK §5.5);
+  - `public_coffee_is_fresh`: the public catalog's newest `last_seen` is the run the build checked (an empty catalog
+    is left to the volume check);
+  - `public_tables_are_one_release`: every row of every public table carries this build's `release_build_id`
+    and `release_run_date`;
+  - `public_tables_invariants`: rules the public tables hold by construction (in `public_market_weekly` p10 ≤
+    median ≤ p90, `in_stock` ≤ `coffees` and `roasters` ≤ `coffees`; `first_seen` ≤ `last_seen`; a `price` event's
+    prices differ; a `new` event has no previous price), so a row breaking one is a bug in the SQL;
+  - `run_manifest_mode_values`: every run manifest's `mode` is `full`, `sample`, `only` or `retry_failed`
+    (`run_completeness` takes the expected set from the full ones);
+  - `coverage_claims_match_build`: the coverage numbers we publish (`marketplace/LISTING.md`'s coverage-claims
+    comment, one `metric: text` line per number) are within 15% (`claim_tolerance`) of this build's
+    `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update, with the
+    build's number rounded for the copy;
+    `coverage_claims_name_metrics` fails the build if a claim names a metric the profile doesn't have;
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 
   Every build appends its record to `builds/` (each dbt node's checksum and test result, metrics, manifest and
@@ -389,7 +483,11 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   weekly job ends red. `coffeedata rollback [--to BUILD]`, or the weekly workflow's `rollback_to` input, serves an
   earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
   results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
-  against the last passing one before it. After reviewing a real change, run the weekly workflow with
+  against the last passing one before it. `coffeedata build-hashes [ID] [--against ID] [--verify]` prints a
+  build's row count and content hash per release table and compares them with another build's, or with its
+  release files as they are now; the same lake and code always give the same hashes
+  (`tests/test_reproducible.py`), so a served release can be rebuilt from raw and checked
+  (`docs/ingestion/RUNBOOK.md` §5.6). After reviewing a real change, run the weekly workflow with
   `accept_volume_change` (or `build --accept-volume-change`) to let it through the volume check and the bands and
   make it the new baseline.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.
@@ -415,10 +513,18 @@ in `lake.py`, which is where another object store would plug in.
 Four facts-only tables (`dbt/models/public/`): `public_coffee` (attributes, sizes, prices, stock and a link back to
 the roaster), `public_price_event`, `public_market_weekly` and `public_roaster`. Descriptions and images belong to
 the roasters, so they stay in the private lake. The tables leave out opted-out roasters and roasters known only from
-OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole table. The
-`public_tables_are_facts_only` dbt test fails the build if a public table has a column on its denylist:
-descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder and photo
-IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
+OpenStreetMap. The `public_tables_are_facts_only` dbt test fails the build if a public table has a column on its
+denylist: descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder
+and photo IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
+
+A directory or Hugging Face export describes itself in `manifest.json`: the release (`release_build_id`,
+`release_run_date`), the contract id and version, the data licence (id and URL) and each file's `sha256` and row
+count. The licence text goes with it as `LICENSE` (the licence asks that its text travel with the data). An `s3://`
+or `gs://` export writes only the Parquet files. A Hugging Face export of a release build also tags its commit `release-<run date>`
+(the Monday run), so a past week stays readable by name
+(`hf://datasets/<owner>/<name>@release-2026-11-02/data/public_coffee.parquet`). The tag follows the release served
+for that run: a re-export of the same build leaves it, a newer build of the same run moves it to its own commit. An
+export of a build without release ids (a plain `dbt build`) is not tagged.
 
 The tables are a data product with a contract, in the Bitol open standards:
 [`contracts/coffee-data.odps.yaml`](contracts/coffee-data.odps.yaml) (ODPS v1.1.0) describes the product and its
@@ -426,16 +532,32 @@ output port, and [`contracts/public-catalog.odcs.yaml`](contracts/public-catalog
 the four tables: columns and types, keys, required columns, allowed values, quality rules and SLAs (weekly, at most
 8 days old, a 4-week rollback window). The contract is the definition and dbt enforces it: `tests/test_contracts.py`
 validates both files against Bitol's JSON schemas and fails if dbt's enforced contracts, tests or thresholds
-disagree with the contract. So a change to a public table starts in the contract.
+disagree with the contract. So a change to a public table starts in the contract. The contract also carries
+context for AI agents (instructions, constraints, canonical questions and synonyms), so an assistant reading the
+tables knows they are weekly, not live, and what not to claim.
+
+The pipeline's internal contracts (raw, manifest and enrichment) are ODCS too, in
+[`contracts/internal/`](contracts/internal/), generated by `make contracts`: columns and types from `lake.SCHEMAS`,
+descriptions and quality rules from `src/coffeedata/contract_docs.py`. They are not published;
+`tests/test_raw_contracts.py` fails when they drift from the code. A change to names, types, required or enums needs
+a new version (`python -m coffeedata.raw_contracts --write <name> <version>`); `make contracts` refuses it at the
+old one, and writes a description-only change at the same version.
 
 ### Scraping etiquette
 
 - Each store feed is read once a week, because catalogs change slowly and that keeps the load on small roaster
-  sites low. Requests use a User-Agent that names this project and links to this repo.
+  sites low. Requests identify as `RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)`;
+  [registry.coffee/bot](https://registry.coffee/bot) says what it crawls and how to opt out.
 - `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
   without its rules: if `robots.txt` answers 429, 430 or 5xx, or can't be fetched at all, even after retries, the
   site is skipped and asked again 15 minutes later, so a site whose `robots.txt` never answers is never crawled.
-  Catalog requests to a host are at least 1 second apart, platform probes at least 0.5 seconds apart.
+  Requests to a host, robots.txt, catalog fetches and platform probes alike, are at least 1 second apart.
+- robots.txt is read as RFC 9309 says, by our own matcher (`http.RobotsRules`): the groups for `RegistryCoffeeBot`
+  apply, or the `*` group when none names it (product-token matching: case-insensitive, the exact token), and any
+  groups for the old token `coffee-data` apply as well; a URL is fetched only if all of them allow it. The longest
+  matching rule decides (allow on a tie), and `*` and `$` wildcards are honoured. A `Crawl-delay` from those groups
+  replaces the spacing when it is longer, up to 60 seconds: a longer one, or one with no readable number, is capped at
+  60 seconds (`10s` reads as 10), and the cap is recorded in `fetches.crawl_delays`. A host's Crawl-delay is never waited out past the crawl's deadline.
 - Only what a shopper can see is stored, and every coffee links back to its roaster.
 - Roasters who want to be left out can open an issue. The owner records the opt-out with the "Exclude this
   roaster" box on the "Add a roaster" form, and the site is never fetched again.
@@ -460,6 +582,7 @@ disagree with the contract. So a change to a public table starts in the contract
 make hooks   # once: install the pre-commit hooks
 make test    # make lint, then pytest: unit tests (Python and dbt), app tests and dbt builds over synthetic multi-week lakes
 make fmt     # ruff fix and format over src, app and tests
+make contracts  # regenerate contracts/internal/ after a change to lake.SCHEMAS or contract_docs.py
 make clean   # remove build/ and dbt artifacts
 ```
 
@@ -468,13 +591,16 @@ make clean   # remove build/ and dbt artifacts
 - One browser test (`tests/test_app_browser.py`) drives owner setup, sign-in and Log shot → Saved → Undo at phone
   width and runs axe on each screen; it needs Node with Playwright and axe-core (`npm ci` in `tests/browser`) and is
   skipped without them, except in CI.
-- `make lint` runs the pre-commit hooks on every file (whitespace, YAML/TOML, large-file and private-key checks,
-  `uv.lock` in step with `pyproject.toml`, ruff and mypy over `src` and `app`); the first run downloads the hook
-  repos, so it needs network once.
+- `make lint` runs the pre-commit hooks on every file except `tests/fixtures/`, `eval/sealed/` and
+  `contracts/schemas/`: whitespace, YAML/TOML, merge-conflict, large-file and private-key checks, `uv.lock` in step
+  with `pyproject.toml`, ruff and ruff format on the Python files, and mypy over `src` and `app`. The first run
+  downloads the hook repos, so it needs network once.
 - CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, installs Playwright and Chromium, and runs `make test`
   with `REQUIRE_BROWSER=1` on every pull request and push to `main`.
 
-Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues).
+Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues), and
+vulnerabilities privately, as [SECURITY.md](SECURITY.md) describes. Before opening a pull request, read
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## History
 
@@ -486,6 +612,11 @@ with dbt and DuckDB, and logs shots from a phone app, Claude (MCP) and issue for
 
 ## License
 
-The code is released under the [MIT License](LICENSE). Roaster data comes from Overture Maps Places
-(CDLA-Permissive-2.0) and OpenStreetMap (ODbL, © OpenStreetMap contributors); product names, descriptions and
-images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+The code is released under the [MIT License](LICENSE). The public dataset (the public tables, their exports, the
+site's catalog JSON and the marketplace shares) is released under the
+[Community Data License Agreement – Permissive 2.0](licenses/CDLA-Permissive-2.0.txt) (CDLA-Permissive-2.0).
+
+Roaster discovery uses Overture Maps Places (© Overture Maps Foundation, CDLA-Permissive-2.0) and OpenStreetMap
+(ODbL, © OpenStreetMap contributors); roasters known only from OpenStreetMap are left out of the public tables.
+Product names, descriptions and images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+To cite the dataset, use [`CITATION.cff`](CITATION.cff).

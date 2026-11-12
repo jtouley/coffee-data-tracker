@@ -1,66 +1,626 @@
 version: 2
 
 models:
+  - name: stg_fetches
+    description: One row per fetch attempt (raw fetches, raw contract 1.2.0), ok or not.
+    columns:
+      - name: run_date
+        description: The weekly run the attempt belongs to (its Monday).
+        data_tests: [not_null]
+      - name: batch_id
+        description: The write batch that holds the attempt and its snapshots.
+        data_tests: [not_null]
+      - name: fetched_at
+        description: When the attempt started (UTC).
+      - name: roaster_id
+        description: The roaster fetched.
+        data_tests: [not_null]
+      - name: adapter
+        description: The catalog adapter used (shopify, woocommerce, squarespace, square_online, generic).
+      - name: status
+        description: >-
+          ok (the catalog was read); error (any failure or block, retried in later passes); unavailable (the store
+          is closed, deactivated or password-protected, or its robots.txt disallows the whole site: not retried
+          that run, and left out of run_ok_rate and adapter_ok_rate); crashed (not fetched: quarantined for the
+          week after it was in flight in two attempts of its crawl that died, crashguard; not retried that week,
+          and left out of run_ok_rate and adapter_ok_rate).
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [ok, error, unavailable, crashed]}}
+      - name: error
+        description: >-
+          The failure, for a status other than ok; for an ok fetch marked partial, the reason it is partial (how far
+          it got, or what it couldn't read).
+      - name: products
+        description: Products the attempt read.
+      - name: coffees
+        description: >-
+          Coffees among them as the crawl counted them (classify.is_coffee). Null for a fetch from an ELT crawl,
+          which loads without classifying; int_fetches fills it in.
+      - name: partial
+        description: >-
+          True when an ok fetch read only part of the catalog: the products it didn't read keep their listing
+          (stg_runs.is_current). False for files from before raw contract 1.2.0.
+        data_tests: [not_null]
+      - name: challenge
+        description: >-
+          A failed fetch (status error) that an edge answered with its anti-bot challenge instead of the catalog,
+          when a recorded block names the edge: siteground (SiteGround's sg-captcha header, raw contract 1.4.0) or
+          cloudflare (cf-mitigated challenge). Null otherwise, a bare 202 included: it names no edge, so it stays a
+          plain failure. The fetch-health check names the edge on the roaster's entry; a challenge is an ordinary
+          failed fetch.
+        data_tests:
+          - accepted_values: {arguments: {values: [siteground, cloudflare]}}
+  - name: int_fetches
+    description: >-
+      stg_fetches with every ok fetch's coffee count: as its crawl recorded it, else as int_fetch_coffees counts it
+      with the same rule. dim_roaster's status reads it.
+    columns:
+      - name: run_date
+        description: The weekly run's date (stg_fetches.run_date).
+      - name: batch_id
+        description: The write batch that holds the attempt (stg_fetches.batch_id).
+      - name: fetched_at
+        description: When the attempt started, UTC (stg_fetches.fetched_at).
+      - name: roaster_id
+        description: The roaster's normalized domain (stg_fetches.roaster_id).
+        data_tests: [not_null]
+      - name: adapter
+        description: The catalog adapter used (stg_fetches.adapter).
+      - name: status
+        description: ok, error, unavailable or crashed (stg_fetches.status).
+      - name: error
+        description: >-
+          The failure message, for a status other than ok; for an ok fetch marked partial, the reason it is partial
+          (stg_fetches.error).
+      - name: products
+        description: Products the attempt read (stg_fetches.products).
+      - name: coffees
+        description: >-
+          stg_fetches.coffees where the crawl recorded it, else int_fetch_coffees.coffees (null only for a fetch
+          that isn't ok, or an ok fetch with no snapshots).
+      - name: partial
+        description: An ok fetch that read only part of the catalog (stg_fetches.partial).
+        data_tests: [not_null]
+  - name: int_fetch_product_inputs
+    description: >-
+      The products of every ok fetch whose crawl recorded no coffee count (ELT), one row per fetch and product,
+      with what the crawl's coffee rule reads.
+    data_tests:
+      - unique:
+          arguments: {column_name: "roaster_id || '|' || batch_id || '|' || product_id"}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [not_null]
+      - name: batch_id
+        description: The ingest batch that wrote the fetch (fetches.batch_id; one per chunk of up to 200 roasters).
+        data_tests: [not_null]
+      - name: product_id
+        description: The product within the roaster's catalog.
+        data_tests: [not_null]
+      - name: input_hash
+        description: The product version's key (product_input_hash), so each version is classified once.
+        data_tests: [not_null]
+      - name: title
+        description: The product's title.
+      - name: product_type
+        description: The store's product type.
+      - name: tags
+        description: The store's tags, HTML entities decoded (decode_html_entities; the lake keeps the raw value).
+      - name: body_hash
+        description: The description's hash (raw bodies).
+      - name: grams
+        description: Each variant's bag size in grams, where known.
+      - name: body_text
+        description: The description as text.
+  - name: int_escaped_tag_inputs
+    description: >-
+      Every product version in the lake whose tags decoding changes, one row per roaster, product and version, with
+      the raw tags (what registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
+    columns:
+      - name: input_hash
+        description: The product-version key, over the raw tags (as stg_snapshots.input_hash).
+        data_tests: [not_null]
+      - name: raw_tags
+        description: The tags as the lake has them.
+      - name: tags
+        description: The same tags decoded (decode_html_entities_list).
+  - name: int_tag_decoding_parity
+    description: >-
+      The rows of int_escaped_tag_inputs where the rules decide differently on the raw and the decoded tags, so
+      the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
+      fails the build on any row, and `coffeedata build` prints them.
+    columns:
+      - name: differs
+        description: >-
+          The outputs that differ: is_coffee (classify.is_coffee: registry.py's coffee count), excluded
+          (classify.excluded: whether a stored verdict applies), rules and rules_with_coffee_verdict
+          (products.rules with no verdict and with a "coffee" one: enrich.py's candidates and their bases).
+  - name: int_fetch_coffees
+    description: >-
+      Coffees per ok fetch without a recorded count, counted as the crawl counted them before ELT:
+      classify.is_coffee, the rules alone (no stored verdicts, no listing or suspect-run filter).
+    data_tests:
+      - unique:
+          arguments: {column_name: "roaster_id || '|' || batch_id"}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [not_null]
+      - name: batch_id
+        description: The ingest batch that wrote the fetch (fetches.batch_id; one per chunk of up to 200 roasters).
+        data_tests: [not_null]
+      - name: coffees
+        description: Distinct products in the fetch that the rule calls coffee.
+        data_tests: [not_null]
+  - name: int_roaster_state
+    description: >-
+      One row per roaster in the registry: its crawl status from probe and fetch history, and the store it serves
+      (canonical_roaster_id, macros/roaster_alias.sql). registry.STATE_SQL decides both the same way for the crawl.
+      Upstream of dim_coffee, which leaves aliases out; dim_roaster adds the coffee counts.
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [unique, not_null]
+      - name: host
+        description: "The store's host: the last ok probe's, else the seed's, else the roaster_id. A failed probe never moves it."
+      - name: first_catalog_run
+        description: "The first run that read a catalog (an ok fetch with products); null: never. History, so it only ever moves earlier: the canonical id's sticky rank."
+      - name: crawl_status
+        description: "The status from history alone, before aliases (dim_roaster.status's values but alias)."
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+      - name: status
+        description: "crawl_status, or alias when another roaster_id serves the same store (an opted-out id keeps opted_out)."
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: "The one roaster_id its store is crawled and published under (macros/roaster_alias.sql); roaster_id itself when it is its store's."
+        data_tests: [not_null]
+  - name: int_roaster_runs
+    description: One row per roaster and run, over all of the run's attempts (a run counts, not an attempt).
+    data_tests:
+      - unique:
+          arguments: {column_name: "roaster_id || '|' || run_date"}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [not_null]
+      - name: run_date
+        description: The weekly run's date (the Monday of its week).
+        data_tests: [not_null]
+      - name: ok
+        description: Any attempt in the run was ok.
+        data_tests: [not_null]
+      - name: first_at
+        description: The run's first attempt.
+      - name: last_at
+        description: The run's last attempt.
+      - name: adapter
+        description: The latest attempt's adapter.
+      - name: products
+        description: The most products an ok attempt read in the run.
+      - name: unavailable
+        description: >-
+          The store was found closed in the run (fetch status unavailable) and no attempt was ok. Such a run says
+          nothing about whether the crawl worked.
+        data_tests: [not_null]
+      - name: quarantined
+        description: >-
+          The store was quarantined in the run (fetch status crashed: in flight in two attempts of its crawl that
+          died) and no attempt was ok. One store's problem, not the platform's: left out of the ok rates.
+        data_tests: [not_null]
+      - name: partial
+        description: >-
+          The run's ok attempts all read only part of the catalog (stg_fetches.partial), none of it whole. Still ok
+          for the ok rates when it brought back products.
+        data_tests: [not_null]
+      - name: partial_reason
+        description: Why, for a partial run (the latest partial ok attempt's stg_fetches.error); null otherwise.
+      - name: challenge
+        description: >-
+          No attempt was ok and an edge answered a failed one with a challenge: the edge of the latest such attempt
+          (stg_fetches.challenge). Null otherwise.
   - name: stg_runs
     description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
+    data_tests:
+      - unique:
+          arguments: {column_name: "roaster_id || '|' || run_date"}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [not_null]
+      - name: run_date
+        description: The weekly run's date (the Monday of its week).
+        data_tests: [not_null]
+      - name: batch_id
+        description: The batch that counts for the run.
+        data_tests: [not_null]
+      - name: fetched_at
+        description: When that batch's fetch started.
+      - name: partial
+        description: The counted fetch read only part of the catalog (stg_fetches.partial).
+        data_tests: [not_null]
+      - name: prev_run
+        description: The roaster's previous counted run.
+      - name: next_run
+        description: The roaster's next counted run.
+      - name: prev_complete_run
+        description: >-
+          The roaster's previous counted run that wasn't partial (equals prev_run without partial runs).
+          fct_price_event reads relistings against it.
+      - name: next_complete_run
+        description: >-
+          The roaster's next counted run that wasn't partial (equals next_run without partial runs). fct_price_event
+          reads removals at it, so a partial run never removes a bag.
+      - name: is_latest_run
+        description: The roaster's latest counted run.
+        data_tests: [not_null]
+      - name: is_current
+        description: >-
+          A product seen in this run is listed now: the latest run, or any run since the latest complete
+          (non-partial) one. Equals is_latest_run when the roaster has no partial runs. A roaster whose counted runs
+          are all partial has every run current, so nothing it ever listed is delisted until a complete run lands.
+        data_tests: [not_null]
   - name: stg_run_quality
     description: Every roaster-week with a successful fetch, the batch that counts, and whether it looks broken.
     data_tests:
       - unique:
           arguments: {column_name: "roaster_id || '|' || run_date"}
     columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: run_date
+        description: The weekly run's date (the Monday of its week).
+      - name: batch_id
+        description: The batch that counts for the week (the latest ok one, or the one an override pins).
+      - name: fetched_at
+        description: When that batch's fetch started.
+      - name: products
+        description: Products in that batch.
+      - name: coffees
+        description: Coffees as the crawl recorded them (null from an ELT crawl).
+      - name: partial
+        description: The batch read only part of the catalog; a partial week is never suspect.
+        data_tests: [not_null]
+      - name: baseline_products
+        description: The median product count of the roaster's last 4 counted, complete weeks.
+      - name: suspect
+        description: The product count fell far below the baseline (suspect_run), and the week isn't partial.
+        data_tests: [not_null]
       - name: override_action
+        description: A person's decision on the week, if any.
         data_tests:
           - accepted_values: {arguments: {values: [accept, reject, use_batch]}}
+      - name: override_reason
+        description: The free-text reason the person gave with `coffeedata override`.
+      - name: counted
+        description: >-
+          The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
+        data_tests: [not_null]
   - name: stg_run_walk
     description: Each roaster-week in order, whether it counts, and the counted weeks it was judged against.
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: run_date
+        description: The weekly run's date (the Monday of its week).
+      - name: batch_id
+        description: The batch that counts for the week.
+      - name: fetched_at
+        description: When that batch's fetch started.
+      - name: products
+        description: Products in that batch.
+      - name: coffees
+        description: Coffees as the crawl recorded them (null from an ELT crawl).
+      - name: partial
+        description: The batch read only part of the catalog; it counts, but never enters the baseline.
+        data_tests: [not_null]
+      - name: history
+        description: The product counts of the counted, complete weeks before this one (the baseline's input).
+      - name: override_action
+        description: A person's decision on the week, if any.
+      - name: override_reason
+        description: The free-text reason the person gave with `coffeedata override`.
+      - name: counted
+        description: >-
+          The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
+  - name: stg_snapshots
+    description: Every product a store listed at a counted fetch, with prices in USD only and tags decoded.
+    columns:
+      - name: input_hash
+        description: "Everything the classifier and the extraction rules read (macro product_input_hash)."
+      - name: grams_key
+        description: >-
+          Everything the bag-weight rules read (macro variant_grams_key): the title, description hash, raw tags,
+          handle, and each option's title, stated price and stored grams. stg_variant_grams runs once per value.
+  - name: stg_variant_grams_inputs
+    description: >-
+      One row per distinct input of the bag-weight rules (grams_key) among each coffee's latest run: what
+      coffeedata.bag_weight reads. Its grain differs from stg_product_inputs (input_hash), which leaves out the
+      options' titles and prices, the tags' order and the handle.
+    columns:
+      - name: grams_key
+        description: "stg_snapshots.grams_key (macro variant_grams_key)."
+        data_tests: [unique, not_null]
+      - name: variants
+        description: "Each option's title, price as the store states it, and the grams the crawler stored."
+  - name: stg_variant_grams
+    description: >-
+      The bag-weight rules (coffeedata.bag_weight), run once per stg_variant_grams_inputs row: each variant's
+      grams, in the snapshot's order. dim_coffee prices bags with them. variant_grams_are_valid checks the lengths
+      and the range.
+    columns:
+      - name: grams_key
+        data_tests: [unique, not_null]
+      - name: options
+        description: "How many options the version has: the length grams must have."
+      - name: grams
+        description: >-
+          One per variant, by position: what the option's price buys, from the option's own title; else the one
+          weight the product title, size tags, description or URL handle states when the options cost the same; a
+          stored weight the listing doesn't state is dropped; null where the text doesn't say (eval/bag_grams).
   - name: stg_products
     description: The classifier and extraction rules, run once per distinct product version (input_hash).
     columns:
       - name: input_hash
         data_tests: [unique, not_null]
+      - name: classified_by
+        description: "claude (a stored verdict decided) or rules."
+      - name: verdict_model
+        description: "The verdict's model when classified_by = claude, else null."
   - name: mart_market
+    description: >-
+      One row per origin_country x process over the current catalog (int_current_catalog): non-wholesale, non-blend
+      coffees with an origin from US, non-chain roasters, each store counted once (canonical roaster ids only,
+      dim_roaster.canonical_roaster_id), with coffee and roaster counts, price per 100 g quantiles and the origin's
+      top tasting notes.
     data_tests:
       - unique:
           arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
   - name: run_completeness
     description: One row per roaster the latest (or as_of_run) run should have tried, and whether it did.
     columns:
+      - name: run_date
+        description: "The run being judged: as_of_run, else the latest run with a fetch or a manifest."
       - name: roaster_id
+        description: A roaster the run should have tried.
         data_tests: [unique, not_null]
+      - name: attempted
+        description: The run has a fetch for it.
+      - name: ok
+        description: An attempt in the run was ok.
+      - name: expected_from
+        description: Where the expected set came from (manifest or reconstructed).
+      - name: adapter
+        description: The adapter that counts for it in adapter_ok_rate.
+      - name: has_catalog
+        description: >-
+          It counts in run_ok_rate and adapter_ok_rate: not a roaster known to have no catalog, not one found
+          closed in this run (unavailable), and not one quarantined in this run (quarantined).
+        data_tests: [not_null]
+      - name: catalog_ok
+        description: The run fetched it and got products.
+        data_tests: [not_null]
+      - name: unavailable
+        description: >-
+          Found closed in this run (fetch status unavailable, no ok attempt): attempted, but left out of the ok
+          rates.
+        data_tests: [not_null]
+      - name: quarantined
+        description: >-
+          Quarantined in this run (fetch status crashed, no ok attempt): it crashed its crawl twice and wasn't
+          fetched. Attempted, but left out of the ok rates; mart_build_profile counts them (run_quarantined).
+        data_tests: [not_null]
+      - name: partial
+        description: >-
+          This run read only part of its catalog (int_roaster_runs.partial). Counted ok in the ok rates when it
+          brought back products; the fetch-health check lists it apart, never as a failure.
+        data_tests: [not_null]
+      - name: partial_reason
+        description: Why it is partial (int_roaster_runs.partial_reason); null otherwise.
+      - name: challenge
+        description: >-
+          Failed this run behind an edge's challenge (int_roaster_runs.challenge: siteground or cloudflare);
+          null otherwise. A failure for the ok rates; the fetch-health check names it on the roaster's entry,
+          an ordinary failed fetch.
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'
       volume check and anomaly bands read them.
     columns:
       - name: metric
         data_tests: [unique, not_null]
+  - name: release_changes
+    description: Every row this build's public tables add, remove or change against the release customers get now
+      (var previous_release), with the reason the build can show for it, and a row for each comparison that couldn't
+      be made in full. Empty when nothing is served. Report only (tag report_only), run after the gate. The build
+      prints the counts per reason and records them (builds, kind release_change) as the release's notes;
+      release_changes_explained warns on the unexplained and incomplete ones.
+    columns:
+      - name: table_name
+        description: The public table (public_coffee, public_price_event, public_roaster, public_market_weekly), or
+          'release' when the served release couldn't be read.
+        data_tests: [not_null]
+      - name: item
+        description: "The row's key: coffee_id; coffee_id|variant_id|run_date|event; roaster_id; origin|process;
+          for a schema row the missing column or table."
+        data_tests: [not_null]
+      - name: change
+        description: The row is in this build and not the served release (added), the other way round (removed), or
+          in both with different values (changed); schema when a compared column or table is missing from the served
+          release, not_reconciled when it couldn't be read.
+        data_tests:
+          - accepted_values: {arguments: {values: [added, removed, changed, schema, not_reconciled]}}
+      - name: reason
+        description: Why, from the two releases and this build (see the model's header); 'unexplained' when nothing
+          shows why.
+        data_tests: [not_null]
   - name: dim_coffee
     description: Every coffee ever seen, with its latest listing; delisted coffees stay with is_listed = false.
     columns:
       - name: coffee_id
+        description: "<roaster domain>:<store product id>."
         data_tests: [unique, not_null]
+      - name: roaster_id
+        description: "The roaster's normalized domain."
+      - name: roaster_name
+        description: "The roaster's name."
+      - name: roaster_state
+        description: "The roaster's US state, where known."
+      - name: roaster_country
+        description: "The roaster's country (ISO 3166-1 alpha-2, stg_registry; null for a roaster no longer in the registry). The public tables keep US only."
+      - name: is_chain
+        description: "The roaster is a chain."
+      - name: product_id
+        description: "The store's product id."
+      - name: handle
+        description: "The store's URL handle."
+      - name: title
+        description: "The coffee's name, cleaned of markup."
+      - name: url
+        description: "The coffee's page on the store (http or https only)."
+      - name: image
+        description: "The coffee's first image."
+      - name: platform
+        description: "The store's platform."
+      - name: first_seen
+        description: "The first counted run it was listed in."
+      - name: last_seen
+        description: "The last counted run it was listed in."
+      - name: weeks_listed
+        description: "Counted runs it was listed in."
+      - name: origin_country
+        description: "Origin country (Claude's extraction where there is one, else the rules)."
+      - name: origin_region
+        description: "The region within the origin country (Claude's extraction where there is one, else the rules)."
+      - name: producer
+        description: "Farm, washing station or producer."
+      - name: varietals
+        description: "The coffee plant varieties named in the listing (e.g. Bourbon, Gesha)."
+      - name: elevation_masl_min
+        description: "Lowest growing elevation (m)."
+      - name: elevation_masl_max
+        description: "Highest growing elevation (m)."
+      - name: tasting_notes
+        description: "The roaster's tasting notes."
+      - name: flavor_categories
+        description: "The tasting notes' flavor-wheel categories (flavor_lexicon)."
+      - name: is_blend
+        description: "The coffee is a blend of several origins (rules or Claude, per enrichment_method)."
+      - name: is_decaf
+        description: "The coffee is decaffeinated (rules or Claude, per enrichment_method)."
+      - name: is_wholesale
+        description: "A wholesale listing (a bulk twin of a retail coffee)."
+      - name: published_at
+        description: "The store's latest publish time (Shopify only)."
+      - name: min_price_usd
+        description: "The lowest bag price in USD; a price the store states in another currency is never used."
+      - name: price_per_100g
+        description: "The lowest plausible retail price per 100 g of an available bag, from USD prices only."
+      - name: bag_sizes_g
+        description: "The bag sizes offered, in grams (stg_variant_grams: an option's weight, or the one the product title or description states)."
+      - name: release_build_id
+        description: "The build that made this release."
+      - name: release_run_date
+        description: "The run the release is built from."
       - name: process
+        description: "washed, natural, honey, anaerobic or other."
         data_tests:
           - accepted_values: {arguments: {values: [washed, natural, honey, anaerobic, other]}}
       - name: roast_level
+        description: "light, medium or dark."
         data_tests:
           - accepted_values: {arguments: {values: [light, medium, dark]}}
+      - name: is_listed
+        description: >-
+          Listed now: seen in a current run of its roaster (stg_runs.is_current), so a partial run keeps the
+          products it didn't read listed.
+        data_tests: [not_null]
+      - name: in_stock
+        description: Listed now, with a variant available.
+        data_tests: [not_null]
       - name: catalog_status
+        description: available, preorder, sold_out, archived, or delisted (not listed now).
         data_tests:
           - not_null
           - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
       - name: enrichment_method
+        description: "rules or llm: what the attributes come from."
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: classified_by
+        description: >-
+          claude or rules: what decided that the latest version is coffee. claude is a stored verdict for the
+          build's verdict model and definition (stg_verdicts); rules is the rules alone (no verdict yet, an unsure
+          verdict, or a rules-only build). verdicts_cover_catalog checks the share of listed coffees with claude.
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [claude, rules]}}
+      - name: verdict_model
+        description: "The Claude model whose verdict decided it (classified_by = claude); null for the rules."
   - name: dim_roaster
+    description: One row per roaster in the registry, with its site, platform, status and coffee counts.
     columns:
       - name: roaster_id
+        description: "The roaster's normalized domain."
         data_tests: [unique, not_null]
+      - name: roaster_name
+        description: "The roaster's name."
+      - name: city
+        description: "City, where known."
+      - name: state
+        description: "US state, where known."
+      - name: country
+        description: "Country (ISO 3166-1 alpha-2): the seed's, US unless corrected; public_roaster keeps US only."
+        data_tests: [not_null]
+      - name: locations
+        description: "Number of locations."
+      - name: is_chain
+        description: "The roaster runs multiple retail locations (the registry's is_chain)."
+      - name: opted_out
+        description: "The roaster asked not to be crawled."
+      - name: sources
+        description: "Where the registry knows it from (overture, curated, manual, osm), joined with +."
+      - name: host
+        description: "The store's host (the last good probe's, else the seed's)."
+      - name: platform
+        description: "The store's platform."
+      - name: last_probed
+        description: "The last probe that answered."
+      - name: last_ok_run
+        description: "The run of its last ok fetch."
+      - name: last_fetch
+        description: "Its last fetch attempt."
+      - name: coffees_listed
+        description: "Coffees listed now, without archived and wholesale listings."
+      - name: coffees_in_stock
+        description: "Listed coffees in stock."
+      - name: coffees_archived
+        description: "Coffees the roaster tags as archived."
+      - name: release_build_id
+        description: "The build that made this release."
+      - name: release_run_date
+        description: "The run the release is built from."
       - name: status
+        description: >-
+          As on main, from the last ok fetch's coffee count (int_fetches.coffees: as the crawl recorded it, else
+          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md). alias: another
+          roaster_id serves the same store (canonical_roaster_id); an alias is never crawled (registry.STATE_SQL
+          decides the same), has no coffee in dim_coffee and is never public. The site's coverage table counts
+          aliases on a row of their own.
         data_tests:
-          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: >-
+          The one roaster_id its store is crawled and published under (int_roaster_state; the rule and its order
+          are in macros/roaster_alias.sql): roasters whose resolved hosts share a key (macro host_key), whatever
+          their status, unless the key is a shared host (seed shared_hosts), are one store; alias_of overrides the
+          host. The canonical id is sticky: an opted-out one, then a publishable one, then the one whose catalog was
+          read first. dim_coffee and fct_price_event keep only roasters equal to it.
+        data_tests: [not_null]
   - name: mart_bag
     columns:
       - name: bag_id
@@ -108,6 +668,8 @@ models:
       - name: event
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
+      - name: previous_price_run
+        description: "The run previous_price_usd comes from: the bag's previous USD observation for a USD price, else its previous observation (public_prices_are_usd checks it was in USD)."
 
   - name: public_coffee
     description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."
@@ -201,7 +763,7 @@ models:
       - name: release_run_date
         data_type: date
   - name: public_roaster
-    description: "One row per roaster in the registry."
+    description: "One row per published roaster: in the US, not opted out, with a coffee seen, from a redistributable source."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
@@ -317,6 +879,19 @@ models:
         data_type: date
 
 seeds:
+  - name: shared_hosts
+    description: >-
+      Hosts many unrelated domains resolve to, so sharing one is no evidence of one store (macros/roaster_alias.sql):
+      not_a_roaster (registry.NOT_A_ROASTER_SITE: social, listing and ordering sites, never a roaster's storefront),
+      platform (a platform's own home page, where a closed store can redirect), parked (domains for sale),
+      shortener and directory. A host covers its subdomains. registry.py reads the same file.
+    columns:
+      - name: host
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [not_a_roaster, platform, parked, shortener, directory]}}
   - name: flavor_lexicon
     description: Tasting note -> SCA flavor-wheel-style category. Unknown notes stay uncategorized.
     columns:

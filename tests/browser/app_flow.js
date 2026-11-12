@@ -45,7 +45,8 @@ async function noticeOf(page) {
 }
 
 async function newPage(browser, errors) {
-  const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  const page = await context.newPage();
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => { if (/Content Security Policy|Refused to/.test(m.text())) errors.push(m.text()); });
   return page;
@@ -61,10 +62,12 @@ async function newPage(browser, errors) {
     assert.equal(new URL(first.url()).pathname, "/signin");
     await shoot(first, "owner-setup");
     await first.getByRole("button", { name: "Create account" }).click();
-    assert.equal(await first.textContent("[data-hint]"), "Fill in every field.");
+    await first.waitForFunction(() => document.querySelector("[data-hint]").textContent === "Fill in every field.");
+    assert.equal(await first.evaluate(() => document.activeElement.id), "setup_code"); // the first field that failed
     await first.fill("#setup_code", "SETUP-CODE-1234");
     await first.fill("#username", "jtouley");
     await first.fill("#password", "kettle orbit marble");
+    await first.check("#agree");
     await first.getByRole("button", { name: "Show" }).click();
     assert.equal(await first.getAttribute("#password", "type"), "text");
     await first.getByRole("button", { name: "Create account" }).click();
@@ -131,8 +134,21 @@ async function newPage(browser, errors) {
     await page.locator('[data-rating] [data-v="5"]').click();
     await shoot(page, "log-shot");
 
+    // A bag remembered on this phone that the server no longer selects (finished on another device, a cleared
+    // cookie, a failed switch) never blocks the save: the server's bag wins.
+    await page.evaluate(() => localStorage.setItem(`selected-bag:${document.querySelector('meta[name="user"]').content}`,
+      JSON.stringify({ id: "finished-elsewhere", at: Date.now() })));
+    // A slow save (the lake commit) shows at once: the button reads Saving… until the Saved page.
+    let release;
+    const slowSave = new Promise((ok) => { release = ok; });
+    await page.route("**/api/shots", async (route) => { await slowSave; await route.continue(); });
     await page.getByRole("button", { name: "Save shot" }).click();
+    const busy = page.locator("[data-save]");
+    assert.equal(await busy.textContent(), "Saving…");
+    assert.equal(await busy.isDisabled(), true);
+    release();
     await page.waitForURL(/\/saved\/.+\?new=1$/);
+    await page.unroute("**/api/shots");
     const saved = await page.textContent("main");
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
@@ -159,12 +175,28 @@ async function newPage(browser, errors) {
     await page.getByRole("link", { name: "Edit bag" }).click();
     await page.waitForURL(`${base}/bag/bag1/edit?from=today`);
     await shoot(page, "bag-edit");
+    // Searching the catalog for a coffee it doesn't have says so, rather than offering unrelated coffees.
+    await page.getByRole("button", { name: "Search catalog" }).click();
+    await page.fill("#catalog-query", "zzzzqq");
+    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page.waitForFunction(() => document.querySelector("[data-search-status]").textContent !== "Searching the catalog…");
+    assert.equal(await page.textContent("[data-search-status]"), "No coffees found. Try another search.");
+    assert.equal(await page.locator("[data-search-results] .pickrow").count(), 0);
+    await page.fill("#catalog-query", "Hambela");
+    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page.waitForSelector("[data-search-results] .pickrow");
+    assert.equal(await page.textContent("[data-search-status]"), "Choose the coffee on your bag.");
     await page.fill("#roast_date", iso(5));
     await page.getByRole("button", { name: "Save bag" }).click();
     assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is in the future. Check the year.");
+    // Over a year old, the year is wrong: not saved, as the server refuses it too. Over 90 days asks once.
     await page.fill("#roast_date", "2016-10-15");
     await page.getByRole("button", { name: "Save bag" }).click();
-    assert.match(await page.textContent("#bagedit [type=submit]"), /^Save with day \d{4}\?$/);
+    assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is over a year ago. Check the year.");
+    assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
+    await page.fill("#roast_date", iso(-120));
+    await page.getByRole("button", { name: "Save bag" }).click();
+    assert.match(await page.textContent("#bagedit [type=submit]"), /^Save with day \d+\?$/);
     assert.equal(new URL(page.url()).pathname, "/bag/bag1/edit");
     await page.fill("#roast_date", iso(-6));
     assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
@@ -180,8 +212,24 @@ async function newPage(browser, errors) {
     await page.waitForURL(`${base}/`);
     await page.getByRole("link", { name: "Edit bag" }).click();
     await page.fill("#weight_g", "340");
+    // Like Log shot: "Saving…" while the write is in flight, and a refusal puts the label back, with the reason.
+    await page.route("**/api/bags", (r) => r.fulfill({ status: 422, contentType: "application/json", body: '{"detail":"That roast date is over a year ago. Check the year."}' }));
     await page.getByRole("button", { name: "Save bag" }).click();
+    await page.waitForFunction(() => document.querySelector("#bagedit [data-hint]").textContent !== "");
+    assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is over a year ago. Check the year.");
+    assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
+    assert.equal(await page.isDisabled("#bagedit [type=submit]"), false);
+    await page.unroute("**/api/bags");
+    await page.evaluate(() => store("readwrite", (s) => s.clear())); // the refused write, shown as couldn't save
+    let releaseBag;
+    const slowBag = new Promise((ok) => { releaseBag = ok; });
+    await page.route("**/api/bags", async (route) => { await slowBag; await route.continue(); });
+    await page.getByRole("button", { name: "Save bag" }).click();
+    assert.equal(await page.textContent("#bagedit [type=submit]"), "Saving…");
+    assert.equal(await page.isDisabled("#bagedit [type=submit]"), true);
+    releaseBag();
     await page.waitForURL(`${base}/`);
+    await page.unroute("**/api/bags");
     assert.equal(await noticeOf(page), "Bag saved: Hambela Alaka");
     // Back from Today doesn't reopen Saved or the form: the save replaced them in history.
     await page.goBack();
@@ -221,8 +269,23 @@ async function newPage(browser, errors) {
     await page.getByText("More").click();
     await page.fill("#notes", "puck was wet");
     await shoot(page, "correct");
+    // The correction shows "Saving…" like Log shot, and a refusal puts the label back.
+    await page.route("**/api/shots", (r) => r.fulfill({ status: 422, contentType: "application/json", body: '{"detail":"Dose is too low."}' }));
     await page.getByRole("button", { name: "Save correction" }).click();
+    await page.waitForFunction(() => document.querySelector("#shot [data-hint]").textContent === "Dose is too low.");
+    assert.equal((await page.textContent("[data-save]")).trim(), "Save correction");
+    assert.equal(await page.isDisabled("[data-save]"), false);
+    await page.unroute("**/api/shots");
+    await page.evaluate(() => store("readwrite", (s) => s.clear()));
+    let releaseFix;
+    const slowFix = new Promise((ok) => { releaseFix = ok; });
+    await page.route("**/api/shots", async (route) => { await slowFix; await route.continue(); });
+    await page.getByRole("button", { name: "Save correction" }).click();
+    assert.equal(await page.textContent("[data-save]"), "Saving…");
+    assert.equal(await page.isDisabled("[data-save]"), true);
+    releaseFix();
     await page.waitForURL(`${base}/shot/first`);
+    await page.unroute("**/api/shots");
     assert.match(await page.textContent("main"), /puck was wet/);
     assert.equal(await noticeOf(page), "Correction saved");
     // Retract goes at once and offers Undo; Undo brings the shot back.
@@ -318,11 +381,29 @@ async function newPage(browser, errors) {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
       };
     }));
+    // An online save doesn't drop the kept pages: Log shot, kept before it, still opens offline.
+    await page.goto(`${base}/log`);
+    await page.goto(`${base}/setup/gear/g1`);
+    await page.getByRole("button", { name: "Save", exact: true }).click();
+    await page.waitForURL(`${base}/setup`);
+    // Offline, Back to a page the service worker doesn't keep: signed-in pages are sent no-store, so the browser
+    // keeps no copy of its own either, and the offline screen shows (no stale or half-drawn page).
+    await page.goto(`${base}/shot/first`); // not kept by the service worker
+    await page.goto(`${base}/history`);
+    await page.evaluate(() => send("equipment:g1", "/api/equipment", { equipment_id: "g1", kind: "grinder", name: "DF64 V2" }));
+    await page.context().setOffline(true);
+    await page.goBack();
+    await page.waitForTimeout(500); // a reload, if one started, has replaced the page by now
+    assert.equal(new URL(page.url()).pathname, "/shot/first");
+    assert.match(await page.textContent("h1"), /No connection/);
+    await page.context().setOffline(false);
     await page.goto(`${base}/bag/new`); // kept for later, like the screens visited above
     await page.evaluate(() => navigator.serviceWorker.ready);
     await page.context().setOffline(true);
     await page.goto(`${base}/history`);
     assert.match(await page.textContent("main"), /History/);
+    await page.goto(`${base}/log`);
+    assert.equal(await page.isVisible("#shot"), true);
     const offlineShot = async () => {
       await page.goto(`${base}/log`);
       await page.getByRole("button", { name: "Type" }).click();
@@ -362,6 +443,20 @@ async function newPage(browser, errors) {
       };
     }), null, { timeout: 15000, polling: 250 });
 
+    // Switching bags offline fails, and the kept Today and Log shot pages still open afterwards.
+    await page.goto(`${base}/log`);
+    await page.goto(`${base}/`);
+    await page.goto(`${base}/bags/switch`);
+    await page.context().setOffline(true);
+    await page.locator("a.bagrow").first().click();
+    await page.waitForURL(/\/bag\/[\w-]+\/use$/);
+    assert.match(await page.textContent("h1"), /No connection/);
+    await page.goto(`${base}/log`);
+    assert.equal(await page.isVisible("#shot"), true);
+    await page.goto(`${base}/`);
+    assert.doesNotMatch(await page.textContent("h1"), /No connection/);
+    await page.context().setOffline(false);
+
     // A date read off the label with the year wrong moves to the latest past one, and asks once before saving.
     await page.goto(`${base}/bag/new`);
     await page.setInputFiles("#photo", bagPhoto);
@@ -396,6 +491,7 @@ async function newPage(browser, errors) {
     await guest.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("someone else's"))));
     await guest.fill("#username", "maya");
     await guest.fill("#password", "lantern quarry velvet");
+    await guest.check("#agree");
     await guest.getByRole("button", { name: "Create account" }).click();
     await guest.waitForURL(`${base}/`);
     assert.match(await guest.textContent("main"), /Nothing on the grinder yet/);
@@ -405,6 +501,51 @@ async function newPage(browser, errors) {
     await other.close();
     await page.goto(`${base}/invite`);
     assert.match(await page.textContent("main"), /maya/);
+    await page.goto(`${base}/setup`);
+
+    // A second tab changes the shared cookie while the first tab still has the owner's rendered page.
+    const switcher = await page.context().newPage();
+    const signInAs = async (username, password) => {
+      await switcher.goto(`${base}/setup`);
+      await switcher.getByRole("button", { name: "Sign out", exact: true }).click();
+      await switcher.waitForURL(`${base}/signin`);
+      await switcher.fill("#username", username);
+      await switcher.fill("#password", password);
+      await switcher.getByRole("button", { name: "Sign in" }).click();
+      await switcher.waitForURL(`${base}/`);
+    };
+    await signInAs("maya", "lantern quarry velvet");
+    const mismatch = await page.evaluate(async () => {
+      const err = await send("bag:account-switch", "/api/bags", { bag_id: "account-switch", coffee_freetext: "Account switch test" }).catch((e) => e);
+      return [err.constructor.name, Boolean(await store("readonly", (s) => s.get("bag:account-switch")))];
+    });
+    assert.deepEqual(mismatch, ["Held", true]); // kept on the phone, not saved as Maya
+    await switcher.goto(`${base}/coffees`);
+    assert.doesNotMatch(await switcher.textContent("main"), /Account switch test/);
+    // An entry from before entries carried an account goes as the signed-in person, as before.
+    await page.route("**/api/probe", (r) => r.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ as: r.request().headers()["x-expected-user"] }) }));
+    const legacy = await page.evaluate(async () => {
+      await store("readwrite", (s) => s.put({ key: "probe:legacy", url: "/api/probe", body: {}, at: Date.now() }));
+      return [await deliver(await store("readonly", (s) => s.get("probe:legacy"))), await store("readonly", (s) => s.get("probe:legacy"))];
+    });
+    assert.deepEqual(legacy, [{ as: "owner" }, undefined]);
+    await page.unroute("**/api/probe");
+    await signInAs("jtouley", "kettle orbit marble");
+    await page.evaluate(() => flush());
+    assert.equal(await page.evaluate(() => store("readonly", (s) => s.get("bag:account-switch"))), undefined);
+    await switcher.close();
+    // A live label photo the server holds (403: another account, or the origin check) waits in the outbox, not dropped.
+    await page.goto(`${base}/bag/new`);
+    await page.route("**/api/photos/*", (r) => r.fulfill({ status: 403, contentType: "application/json", body: '{"detail":"Sign in as the person who made this save to sync it."}' }));
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="queued"]:not([hidden])');
+    const heldPhotos = await page.evaluate(async () => {
+      const photos = (await store("readonly", (s) => s.getAll())).filter((e) => e.key.startsWith("photo:"));
+      for (const e of photos) await store("readwrite", (s) => s.delete(e.key));
+      return photos.map((e) => [e.user, e.blob instanceof Blob]);
+    });
+    assert.deepEqual(heldPhotos, [["owner", true]]);
+    await page.unroute("**/api/photos/*");
     await page.goto(`${base}/setup`);
 
     // The shell is cached by the service worker.
@@ -464,6 +605,33 @@ async function newPage(browser, errors) {
     await page.waitForSelector("[data-failed]", { state: "hidden" });
     await page.unroute("**/api/probe");
 
+    // A shot moved to a bag finished lately (the correct form offers those too): Back to its old bag's page shows
+    // it gone, not the copy from before the move.
+    const finished = new Date(Date.now() - 5 * 86400000).toISOString().slice(0, 10);
+    await page.evaluate((day) => send("bag:moveto", "/api/bags", { bag_id: "moveto", coffee_freetext: "Move target", finished_on: day }), finished);
+    await page.goto(`${base}/coffee/bag1`);
+    await page.evaluate(() => navigator.serviceWorker.ready);
+    assert.equal(await page.locator('a[href^="/shot/dial0"]').count(), 1);
+    await page.goto(`${base}/log?correct=dial0`);
+    await page.locator('a.bagrow[href$="bag=moveto"]').click();
+    await page.waitForURL(/bag=moveto$/);
+    await page.getByRole("button", { name: "Save correction" }).click();
+    await page.waitForURL(`${base}/shot/dial0`);
+    assert.equal(await page.textContent("a.back"), "‹ Move target");
+    // Back past the correct form to the bag's page: a copy from before the move is loaded again, whether the browser
+    // kept it in memory or in its cache. Polled: the reload replaces the page a wait would run in.
+    await page.evaluate(() => history.go(-2));
+    await page.waitForURL(`${base}/coffee/bag1`);
+    let current = false;
+    for (let i = 0; i < 40 && !current; i++) {
+      await page.waitForTimeout(125);
+      current = await page.evaluate(() => document.readyState === "complete" && document.querySelector('a[href^="/shot/"]') !== null
+        && !document.querySelector('a[href^="/shot/dial0"]')).catch(() => false);
+    }
+    assert.ok(current, "Back to the bag's page still shows the moved shot");
+    assert.match(await page.textContent("main"), /Hambela Alaka/);
+    await page.goto(`${base}/setup`);
+
     // Times show in the phone's zone: the zone cookie arrives URL-encoded ("Asia%2FKolkata"), and read as is it
     // was UTC everywhere. Kolkata is UTC+5:30 all year.
     const clockIn = async (timezoneId) => {
@@ -477,8 +645,74 @@ async function newPage(browser, errors) {
     };
     assert.equal(((await clockIn("Asia/Kolkata")) - (await clockIn("UTC")) + 1440) % 1440, 330);
 
+    // A kept screen's bag photo opens offline too: the service worker keeps it with the pages (it's sent no-store).
+    await page.goto(`${base}/coffees`);
+    const thumb = await page.getAttribute('img[src^="/photos/"]', "src");
+    assert.ok(thumb, "a bag with a photo on Coffees");
+    await page.evaluate(async () => navigator.serviceWorker.ready);
+    assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.status), thumb), 200);
+    await page.context().setOffline(true);
+    assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.status, () => "failed"), thumb), 200);
+    await page.context().setOffline(false);
+
+    // Sign out after the session already ended elsewhere (here: its cookie is gone) is signed out, not an error.
+    await page.goto(`${base}/setup`);
+    await page.context().clearCookies();
+    // Signed out, the photo's URL redirects to sign-in: that page must not replace the kept photo.
+    assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.redirected), thumb), true);
+    await page.waitForTimeout(300); // the worker keeps a photo after answering
+    assert.match(await page.evaluate((u) => caches.open("pages").then(async (c) => (await c.match(u))?.headers.get("content-type") ?? ""), thumb), /^image\//);
+    // "Sign out on all devices" with this phone's session gone ended nothing: it says so, and stays.
+    const everywhere = page.getByRole("button", { name: "Sign out on all devices" });
+    await everywhere.click();
+    await page.getByRole("button", { name: /Tap again/ }).click();
+    await page.getByText("This phone was already signed out").waitFor();
+    assert.equal(new URL(page.url()).pathname, "/setup");
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);
+    assert.equal(await page.evaluate(() => caches.has("pages")), false); // the photo went with the pages
+
+    // An unwired sign-in form (app.js failed to load) posts: the password never goes in the URL.
+    const noScript = await browser.newContext({ javaScriptEnabled: false, serviceWorkers: "block" });
+    const bare = await noScript.newPage();
+    await bare.goto(`${base}/signin`);
+    await bare.fill("#username", "owner");
+    await bare.fill("#password", "never in a url");
+    const [sent] = await Promise.all([
+      bare.waitForRequest((r) => r.isNavigationRequest() && new URL(r.url()).pathname === "/signin"),
+      bare.press("#password", "Enter"),
+    ]);
+    assert.equal(sent.method(), "POST");
+    assert.doesNotMatch(sent.url(), /never|password/);
+    // ...and isn't a dead end: the page comes back saying what happened, with the username, never the password.
+    await bare.waitForLoadState("load");
+    assert.match(await bare.textContent("main"), /didn’t finish loading/);
+    assert.equal(await bare.inputValue("#username"), "owner");
+    assert.equal(await bare.inputValue("#password"), "");
+    await noScript.close();
+
+    // "We couldn't check your sign-in" keeps the offline pages (the session may still be good); a sign-out doesn't.
+    const check = await browser.newContext({ serviceWorkers: "block" });
+    const lookup = await check.newPage();
+    lookup.on("pageerror", (e) => errors.push(e.message));
+    await lookup.goto(`${base}/offline`);
+    await lookup.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("kept"))));
+    const kept = () => lookup.evaluate(() => caches.open("pages").then(async (c) => (await c.match("/history"))?.text() ?? null));
+    await lookup.route(`${base}/signin`, async (route) => {
+      const r = await route.fetch();
+      await route.fulfill({ response: r, body: (await r.text()).replace(/data-ended="[^"]*"/, 'data-ended="failed"') });
+    });
+    // data-purge says when the screen's decision has settled, so neither check can pass on a purge still running.
+    await lookup.goto(`${base}/signin`);
+    await lookup.waitForSelector("#signin[data-purge]");
+    assert.equal(await lookup.getAttribute("#signin", "data-purge"), "skipped");
+    assert.equal(await kept(), "kept");
+    await lookup.unroute(`${base}/signin`);
+    await lookup.goto(`${base}/signin`);
+    await lookup.waitForSelector("#signin[data-purge]");
+    assert.equal(await lookup.getAttribute("#signin", "data-purge"), "done");
+    assert.equal(await kept(), null);
+    await check.close();
     assert.deepEqual(errors, []);
     assert.deepEqual(problems, [], `axe found serious or critical issues:\n${problems.join("\n")}`);
   } finally {

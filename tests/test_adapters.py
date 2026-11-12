@@ -119,30 +119,41 @@ def _page(ids):
     )
 
 
-def test_shopify_short_pages_are_not_the_end(mock):
-    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first.
+@pytest.mark.parametrize("known, asks_page_3", [(None, True), (991, True), (496, False)])
+def test_shopify_short_pages_end_the_catalog_only_at_its_known_size(mock, known, asks_page_3):
+    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first. A short
+    # page ends the catalog only once the products so far reach the store's last known count, so a store known to
+    # be bigger (991), or with no history, is never cut short.
     pages = {"1": range(0, 249), "2": range(250, 497), "3": [], "4": range(900, 910)}
+    routes = {}
     for n, ids in pages.items():
-        mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
+        routes[n] = mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == 249 + 247  # an empty page ends it
+        assert len(shopify.fetch(c, _r(), known_products=known)) == 249 + 247  # an empty page ends it
+    assert routes["3"].call_count == int(asks_page_3)
 
 
 def test_shopify_store_that_ignores_page_stops(mock):
-    route = mock.get("https://x.com/products.json").mock(return_value=_page(range(10)))
+    route = mock.get("https://x.com/products.json").mock(
+        return_value=_page(range(250))
+    )  # full, so not the last
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == 10
+        assert len(shopify.fetch(c, _r())) == 250
     assert route.call_count == 2
 
 
-def test_shopify_page_limit_without_an_empty_page_is_an_error(mock, monkeypatch):
-    monkeypatch.setattr(shopify, "MAX_PAGES", 2)
-    for n in (1, 2):
+def test_shopify_has_no_page_cap(mock):
+    """kaldi.com lists more than 60 pages of 250 (it failed the cap of 60 on 2026-11-02): every page is read, to the
+    empty one."""
+    assert not hasattr(shopify, "MAX_PAGES")
+    for n in range(1, 71):
         mock.get("https://x.com/products.json", params={"page": str(n)}).mock(
-            return_value=_page(range(n * 100, n * 100 + 50))
+            return_value=_page(range(n * 1000, n * 1000 + 250))
         )
-    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="after 2 pages"):
-        shopify.fetch(c, _r())  # never a silently truncated catalog
+    last = mock.get("https://x.com/products.json", params={"page": "71"}).mock(return_value=_page([]))
+    with PoliteClient(min_interval=0) as c:
+        assert len(shopify.fetch(c, _r())) == 70 * 250
+    assert last.call_count == 1
 
 
 def test_shopify_empty_catalog_is_an_answer(mock):
@@ -208,6 +219,28 @@ def test_woocommerce_fixture_fetch(mock, roasters):
     with PoliteClient(min_interval=0) as c:
         items = woocommerce.fetch(c, roasters["anaheimcoffee.com"])
     assert len(items) == 8 and all(1 < (v.price_usd or 2) < 500 for i in items for v in i.variants)
+
+
+def test_woocommerce_catalog_behind_a_redirect_that_drops_the_query(mock):
+    # x.com 302s to www.x.com without the query; the Store API's default page is 10 products (#56).
+    products = [
+        {"id": i, "name": f"Coffee {i}", "slug": f"c{i}", "prices": {"price": "1800"}} for i in range(150)
+    ]
+
+    def store_api(request):
+        per_page = int(request.url.params.get("per_page", 10))
+        page = int(request.url.params.get("page", 1))
+        return httpx.Response(200, json=products[(page - 1) * per_page : page * per_page])
+
+    mock.get(url__regex=r"https://x\.com/wp-json/wc/store/v1/products").mock(
+        return_value=httpx.Response(
+            302, headers={"location": "https://www.x.com/wp-json/wc/store/v1/products"}
+        )
+    )
+    mock.get(url__regex=r"https://www\.x\.com/wp-json/wc/store/v1/products").mock(side_effect=store_api)
+    with PoliteClient(min_interval=0) as c:
+        items = woocommerce.fetch(c, _r(platform="woocommerce"))
+    assert len(items) == 150
 
 
 def test_squarespace_fixture_fetch(mock, roasters):

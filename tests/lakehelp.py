@@ -2,7 +2,14 @@
 
 from datetime import UTC, date, datetime
 
+import pytest
+
 from coffeedata.lake import Lake
+
+# Tests that build with dbt skip where it isn't installed, except under REQUIRE_DBT=1 (CI's test and smoke jobs):
+# there a missing dbt fails them, "REQUIRE_DBT is set, but dbt isn't installed" (smoke.require, via conftest's
+# dbt_installed fixture), so CI never passes green having built nothing.
+needs_dbt = pytest.mark.usefixtures("dbt_installed")
 
 _n = [0]
 
@@ -48,8 +55,16 @@ def run(
     products: list[dict] | None,
     hour: int = 12,
     adapter: str = "shopify",
+    status: str | None = None,
+    partial: bool | None = None,
+    coffees: int | None = -1,
+    error: str | None = None,
+    blocks: list[dict] | None = None,
 ) -> str:
-    """Record one fetch attempt: products=None means the fetch failed."""
+    """Record one fetch attempt: products=None means the fetch failed (status: e.g. "unavailable" instead of
+    "error"); partial: an ok fetch that read only part of the catalog. coffees: the count the crawl recorded
+    (default: the products' is_coffee; None: none recorded, as an ELT crawl writes). error: the fetch's error (a
+    failure's default is "boom"; on a partial ok fetch, its reason); blocks: the refused responses it recorded."""
     b = batch()
     fetched = at(run_date, hour)
     lake.write_partition(
@@ -63,10 +78,12 @@ def run(
                 "fetched_at": fetched,
                 "roaster_id": roaster,
                 "adapter": adapter,
-                "status": "error" if products is None else "ok",
-                "error": "boom" if products is None else None,
+                "status": status or ("error" if products is None else "ok"),
+                "partial": partial,
+                "error": error or ("boom" if products is None else None),
+                "blocks": blocks,
                 "products": len(products or []),
-                "coffees": sum(p["is_coffee"] for p in products or []),
+                "coffees": sum(p["is_coffee"] for p in products or []) if coffees == -1 else coffees,
             }
         ],
     )
@@ -89,7 +106,14 @@ def run(
     return b
 
 
-def probe(lake: Lake, run_date: str, roaster: str, status: str = "ok", platform: str = "shopify") -> None:
+def probe(
+    lake: Lake,
+    run_date: str,
+    roaster: str,
+    status: str = "ok",
+    platform: str = "shopify",
+    final_host: str | None = None,
+) -> None:
     b = batch()
     lake.write_partition(
         "probes",
@@ -102,7 +126,7 @@ def probe(lake: Lake, run_date: str, roaster: str, status: str = "ok", platform:
                 "probed_at": at(run_date, 6),
                 "roaster_id": roaster,
                 "status": status,
-                "final_host": roaster if status == "ok" else "",
+                "final_host": (final_host or roaster) if status == "ok" else "",
                 "platform": platform if status == "ok" else "",
             }
         ],
@@ -182,3 +206,21 @@ def manifest(lake: Lake, run_date: str, roasters: list[str], mode: str = "full")
     lake.write_partition("run_manifests", run_date, b, [
         {"run_date": date.fromisoformat(run_date), "manifest_id": b, "started_at": at(run_date, 6),
          "roaster_id": r, "status": "active", "adapter": "shopify", "mode": mode} for r in roasters])  # fmt: skip
+
+
+def importer_offers(lake: Lake, tmp, unit_tests: bool = False) -> list[dict]:
+    """Build the private importers dbt project (dbt_importers/) over an importers lake, from `tmp` (so into
+    tmp/build/importers.duckdb, its one place), and read its importer_offers, ordered by week, importer and row."""
+    import contextlib
+    from pathlib import Path
+
+    import duckdb
+
+    from coffeedata import importers
+
+    with contextlib.chdir(tmp):
+        assert importers.build(lake, target=Path("importers-target"), unit_tests=unit_tests)
+        db = Path(importers.DB).resolve()
+    with duckdb.connect(str(db), read_only=True) as con:
+        rel = con.sql('select * from importer_offers order by week, importer, "row"')
+        return [dict(zip(rel.columns, r, strict=True)) for r in rel.fetchall()]

@@ -3,17 +3,27 @@
 -- from stg_products (the current rules over the raw snapshots), so rebuilding from the same lake gives the same
 -- table.
 with s as (
-    select s.*, p.is_coffee from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
+    select s.*, p.is_coffee, p.classified_by, p.verdict_model
+    from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
 seen as (
     select coffee_id, min(run_date) as first_seen, max(run_date) as last_seen, count(*) as weeks_listed
     from s where is_coffee group by coffee_id
 ),
 -- The latest record decides: a product the classifier no longer considers coffee drops out entirely.
+-- Each variant's grams are the bag-weight rules' (stg_variant_grams, by position): the crawler's reading of the
+-- option's title, corrected where it misread it, and filled from the product title or description where the
+-- options state no weight (coffeedata.bag_weight; eval/bag_grams).
+-- A coffee whose version has no row there keeps its stored grams (variant_grams_are_valid fails the build first).
 latest as (
-    select * from (
+    select l.* replace (
+        if(g.grams is null, l.variants,
+           list_transform(l.variants, lambda v, i: struct_update(v, grams := g.grams[i]))) as variants)
+    from (
         select * from s qualify row_number() over (partition by coffee_id order by run_date desc) = 1
-    ) where is_coffee
+    ) l
+    left join {{ ref('stg_variant_grams') }} g using (grams_key)
+    where l.is_coffee
 ),
 -- Claude's extraction of a description, where there is one, replaces the rules' attributes for it.
 llm as (select * from {{ ref('stg_enrichments') }} where method = 'llm'),
@@ -63,20 +73,24 @@ notes as (
     group by a.coffee_id
 )
 select
-    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.is_chain, l.product_id, l.handle,
+    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.country as roaster_country, r.is_chain,
+    l.product_id, l.handle,
     -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
     l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
-    run.is_latest_run as is_listed,
+    run.is_current as is_listed,
     a.origin_country, a.origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
     a.enrichment_method, a.is_wholesale,
-    run.is_latest_run and coalesce(p.any_available, false) as in_stock,
+    -- What decided that the latest version is coffee: Claude's verdict (and its model) or the rules
+    -- (verdicts_cover_catalog checks the share).
+    l.classified_by, l.verdict_model,
+    run.is_current and coalesce(p.any_available, false) as in_stock,
     -- What a shopper can get now versus the roaster's back catalog. Every coffee is kept either way; a sold-out
     -- coffee the roaster tags as archived or a past offering is history, not "out of stock for now".
     case
-        when not run.is_latest_run then 'delisted'
+        when not run.is_current then 'delisted'
         -- A preorder tag whose ship date (e.g. preorder-ship-date:2026-11-05) has passed is left over: available.
         when coalesce(p.any_available, false) and list_bool_or(list_transform(l.tags, lambda t:
             regexp_matches(lower(t), '\bpre[-_ ]?(order|sale)|\bupcoming\b|coming[-_ ]soon')))
@@ -98,3 +112,9 @@ join {{ ref('stg_runs') }} run using (roaster_id, run_date)
 left join {{ ref('stg_registry') }} r using (roaster_id)
 left join notes n using (coffee_id)
 left join prices p using (coffee_id)
+-- One store's coffees once: an alias's (int_roaster_state: another roaster_id serves the same store) are the
+-- canonical id's own products, so every consumer of this table (the public tables, the marts, the quality tests,
+-- dim_roaster's counts) counts the canonical id's alone.
+where l.roaster_id not in (
+    select roaster_id from {{ ref('int_roaster_state') }} where roaster_id <> canonical_roaster_id
+)

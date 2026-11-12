@@ -97,7 +97,23 @@ details > summary.btn.text, .btn.text.start { justify-content: flex-start; }
 details + .section.group { margin-top: 24px; }
 .btn .sub { font-weight: 400; font-size: 0.9375rem; opacity: .85; font-stretch: 85%; font-variant-numeric: tabular-nums; }
 .btn, .step, .chip, .seg button, .pips button { transition: transform 100ms ease-out, background-color 120ms ease-out; }
-.btn:active:not(:disabled), .step:active, .chip:active { transform: scale(.97); }
+.btn:active:not(:disabled):not([aria-disabled="true"]), .step:active, .chip:active { transform: scale(.97); }
+/* Busy: the bag page's filling cup (.cup, below), small, before the label, which says what's happening ("Creating
+   account…"), at full contrast; repeat taps do nothing. Under reduced motion the cup stands still, half full. A truly
+   disabled button fades. */
+.btn[aria-disabled="true"], .link[aria-disabled="true"] { cursor: progress; }
+.btn .cup, .link .cup { width: 1.15em; height: 1.15em; margin-top: -0.2em; }
+.btn .cup .rim, .link .cup .rim { stroke: currentColor; stroke-width: 5; }
+.btn .cup .stream rect, .btn .cup .pour, .link .cup .stream rect, .link .cup .pour { fill: currentColor; }
+.btn .cup .stream rect, .link .cup .stream rect { width: 4px; x: 21.25px; }
+@media (prefers-reduced-motion: no-preference) {
+  /* In a button the wait can be long: the cup fills again and again, so it never looks stopped. */
+  .btn .cup .pour, .link .cup .pour { animation: pour 2.4s cubic-bezier(.2, .6, .35, 1) infinite; }
+}
+.link[aria-disabled="true"] { justify-content: flex-start; gap: 8px; }
+.link[aria-disabled="true"] > svg:not(.cup) { display: none; }
+.cup-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.btn:disabled { opacity: .72; }
 .dock { background: var(--paper); padding: 12px 16px calc(16px + env(safe-area-inset-bottom)); margin: 0 -16px;
   display: grid; gap: 4px; position: relative; }
 .dock.sticky { position: sticky; bottom: 0; }
@@ -210,7 +226,7 @@ details + .section.group { margin-top: 24px; }
 .pw { position: relative; }
 .pw .input { padding-right: 80px; }
 .pw button { position: absolute; right: 0; top: 0; height: 56px; min-width: 72px; color: var(--accent); font-weight: 600; }
-.input[aria-invalid="true"] { border-color: var(--danger); }
+.input[aria-invalid="true"] { border-color: var(--danger); box-shadow: inset 0 0 0 1px var(--danger); }
 
 /* Equipment rows */
 .gear { padding: 16px 0; border-bottom: 1px solid var(--rule); }
@@ -356,3 +372,74 @@ details.disclose[open] [data-more-summary] { display: none; }
 .failed { border: 1px solid var(--danger); border-radius: 8px; padding: 12px 16px; margin: 8px 0 16px; }
 .failed ul { margin: 8px 0 0; padding-left: 18px; font-size: 0.875rem; }
 .failed li .btn { min-height: 56px; padding: 0 8px; }
+/* Sign-up (docs/app/signup-ux-spec.md §9): the error under its field, the rules under the hint. Each rule's mark is
+   drawn, not a glyph: a ring while it's still to do, a --balanced dot once met, a --danger square when it fails on
+   leaving the field. The words stay --ink-2 either way, and say "met" or "not met" to screen readers. */
+.ferr { font-size: 0.8125rem; color: var(--danger); margin-top: 8px; }
+.ferr:empty { display: none; }
+.fhint.is-error { color: var(--danger); }
+.fhint.is-error a { color: inherit; text-decoration: underline; }
+/* "@" in a username: the fix sits at the end of its error line */
+.ferr-line { margin-top: 8px; font-size: 0.8125rem; line-height: 1.45; }
+.ferr-line:has(.ferr:empty) { margin-top: 0; }
+.ferr-line .ferr { display: inline; margin: 0; }
+.ferr-line .ferr:empty { display: none; }
+.fsuggest button { display: inline-flex; align-items: center; font-size: inherit; min-height: 44px; margin: -14px 0; padding: 0; vertical-align: baseline; }
+.ferr a { color: inherit; text-decoration: underline; }
+.fhint a { color: var(--accent); font-weight: 500; }
+.rules { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; font-size: 0.8125rem; color: var(--ink-2); }
+.rules li { display: flex; align-items: center; gap: 8px; }
+.rules li::before { content: ""; box-sizing: border-box; flex: none; width: 8px; height: 8px; margin: 0 1px; border-radius: 50%;
+  border: 1.5px solid var(--control); }
+/* ✓ and ✗ as shapes, so a met rule and a failed one differ by more than colour */
+.rules li[data-state]:not([data-state=""])::before { width: 10px; height: 10px; margin: 0; border: 0; border-radius: 0;
+  -webkit-mask: var(--mark) center / contain no-repeat; mask: var(--mark) center / contain no-repeat; }
+.rules li[data-state="met"]::before { background: var(--balanced);
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M1.5 5.5l2.5 2.5 4.5-6' fill='none' stroke='%23000' stroke-width='1.8'/%3E%3C/svg%3E"); }
+.rules li[data-state="unmet"]::before { background: var(--danger);
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 2l6 6M8 2l-6 6' fill='none' stroke='%23000' stroke-width='1.8'/%3E%3C/svg%3E"); }
+/* The required terms box, in the radio rows' look, square */
+.agree { display: flex; align-items: flex-start; gap: 12px; padding: 16px 0 4px; font-size: 0.9375rem; line-height: 1.45; }
+.agree input { appearance: none; margin: 0; width: 24px; height: 24px; flex: none; border: 2px solid var(--control);
+  border-radius: 4px; background: var(--sheet); display: grid; place-items: center; cursor: pointer; }
+.agree input:checked { background: var(--ink); border-color: var(--ink); }
+.agree input:checked::after { content: ""; width: 6px; height: 11px; border: solid var(--paper); border-width: 0 2px 2px 0;
+  transform: translateY(-1px) rotate(45deg); }
+.agree input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.agree input[aria-invalid="true"] { border-color: var(--danger); }
+.agree label { cursor: pointer; text-wrap: pretty; }
+/* A notice with more than one line, and a button under it (the in-app browser banner) */
+.notice.stack { display: block; margin-bottom: 24px; }
+.nobr { white-space: nowrap; }
+.notice.stack p { margin: 0; }
+.notice.stack .btn { margin-bottom: -8px; }
+.fhint.count { font-variant-numeric: tabular-nums; white-space: nowrap; }
+[data-code-label]:focus:not(:focus-visible) { outline: none; }
+/* Text links in a dock that wrap stay centred, like the one-line ones */
+.dock .btn.text { text-align: center; }
+/* The invite list: the note and its date on the left, Edit note beside them; a link's own actions sit under it,
+   without a divider between */
+.gear.invite { display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; }
+.gear.invite [data-edit-note] { grid-column: 2; grid-row: 1 / span 2; margin-right: -8px; }
+.gear.invite .n, .gear.invite .d { grid-column: 1; }
+.gear.invite .edit { grid-column: 1 / -1; margin-top: 8px; }
+.invite-group > .gear:not(:last-child) { border-bottom: 0; padding-bottom: 0; }
+.invite-group > .link { min-height: 48px; border-bottom: 0; padding-left: 16px; }
+.invite-group:has(> .link) { border-bottom: 1px solid var(--rule); }
+/* Email (docs/app/signup-ux-spec.md §4, §5): the two choices under a notice (Add email / Skip, Add email / Not now)
+   side by side, start-aligned like the in-app banner's button; an address breaks anywhere rather than overflow. */
+.notice.stack .pair { display: flex; gap: 24px; margin-bottom: -8px; }
+.notice.stack .pair .btn { width: auto; min-height: 48px; margin: 0; }
+.dock .notice.nudge { margin: 0 0 8px; text-align: left; }
+.notice.stack p:focus { outline: none; }
+.addr { overflow-wrap: anywhere; }
+/* The marketing box in Setup: a row like the others, the line under its label saying what was saved */
+.agree.setting { padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.agree.setting .fhint { margin-top: 4px; }
+.agree.setting .fhint:empty { display: none; }
+/* Headings that take focus after a change (verify's outcome, Today's heading after Not now) are read, not acted on */
+[data-verify-title]:focus, main h1[tabindex="-1"]:focus { outline: none; }
+/* A link inside a sentence (verify's "Send a new one from Setup") looks like one: accent and underlined */
+[data-verify-status] a { color: var(--accent); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+/* An emailed reset link's token (E-…) is case-sensitive: shown as it is, not in the owner code's capitals */
+.input.code[data-token] { text-transform: none; }

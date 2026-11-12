@@ -418,3 +418,142 @@ def test_multi_origin_blend_bodies_abstain():
 def test_varietal_spellings():
     e = extract.rules(item("Kiambu", body="SL-28, SL 34, Ruiru11 and Batian."))
     assert e.varietals == ["Batian", "Ruiru 11", "SL28", "SL34"]
+
+
+# --- Rules pinned by the rules audit (docs/RULES.md): what each outputs today --------------------------------------
+
+
+@pytest.mark.parametrize(
+    "title,tags,body,want",
+    [
+        ("Ethiopia Light Roast", (), "", "light"),
+        ("Nordic roast Kenya", (), "", "light"),
+        ("Light-Medium Roast", (), "", "light"),
+        ("French Roast", (), "", "dark"),
+        ("Italian Roast", (), "", "dark"),
+        ("City Roast Colombia", (), "", "medium"),
+        ("House", (), "Roast: light", "light"),
+        ("House", (), "Roasted: Dark", "dark"),
+        ("X", ("roastlevel__light-roast",), "", "light"),
+        ("X", ("roastlevel__dark",), "", "dark"),
+        # "dark roast" sits inside "medium-dark roast", and dark is checked before medium
+        ("Medium-Dark Roast Blend", (), "", "dark"),
+        ("X", ("roast:Medium Dark",), "", "dark"),
+        # light is checked first: a listing naming both is light
+        ("X", (), "Not a dark roast, a light roast.", "light"),
+        ("Kenya AA", (), "", None),
+        ("X", (), "lightly roasted", None),
+    ],
+)
+def test_roast_level(title, tags, body, want):
+    assert extract.rules(item(title, tags=tags, body=body)).roast_level == want
+
+
+@pytest.mark.parametrize(
+    "title,tags,body,want",
+    [
+        ("Ethiopia Guji Natural", (), "", "natural"),
+        ("X", (), "Process: Dry Processed", "natural"),
+        ("Sumatra Semi-Washed", (), "", "honey"),
+        ("Sumatra wet-hulled", (), "", "honey"),
+        ("Brazil Pulped Natural", (), "", "honey"),
+        ("Carbonic Maceration Geisha", (), "", "anaerobic"),
+        ("Co-ferment Lychee", (), "", "anaerobic"),
+        ("X", (), "Processing - Fully Washed", "washed"),
+        ("X", (), "Process: wet process", "washed"),
+        # precedence within one text: anaerobic > honey > natural > washed
+        ("Colombia Anaerobic Natural", (), "", "anaerobic"),
+        ("X Honey Washed", (), "", "honey"),
+        ("X Natural Washed", (), "", "natural"),
+        # precedence across sources: the process tag, then the title, then a labelled "Process:" in the body
+        ("X Natural", ("process:washed",), "", "washed"),
+        ("X Natural", (), "Process: Washed", "natural"),
+        ("X", (), "this natural coffee", None),  # an unlabelled body mention isn't read
+    ],
+)
+def test_process(title, tags, body, want):
+    assert extract.rules(item(title, tags=tags, body=body)).process == want
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="possible bug: tag_values turns '-' into ' ', so a 'process:sun-dried' tag reads 'sun dried', which "
+    "_PROCESS's 'sun-?dried' doesn't match; today process is None",
+)
+def test_a_sun_dried_process_tag_is_natural():
+    assert extract.rules(item("X", tags=["process:sun-dried"])).process == "natural"
+
+
+@pytest.mark.parametrize(
+    "title,tags,want",
+    [
+        ("Colombia Decaf", (), True),
+        ("Decaffeinated Peru", (), True),
+        ("Peru", ("decaf",), True),
+        ("Peru", ("caffeine:Decaf",), True),
+        ("Peru", ("caffeine:full",), False),
+        ("Peru nodecaf", (), False),  # \bdecaf: a word that starts with it
+        ("Half-Caf Blend", (), False),
+        ("Peru Swiss Water Process", (), False),  # the method alone isn't read
+    ],
+)
+def test_is_decaf(title, tags, want):
+    assert extract.rules(item(title, tags=tags)).is_decaf is want
+
+
+def test_is_decaf_reads_the_title_and_tags_not_the_body():
+    assert extract.rules(item("Peru", body="A decaf for evenings")).is_decaf is False
+
+
+@pytest.mark.parametrize(
+    "body,want",
+    [
+        ("at 1850 meters", (1850, 1850)),
+        ("2,000 m.a.s.l.", (2000, 2000)),
+        ("300 to 3000 m", (300, 3000)),  # both ends of the 300-3,000 m range are kept
+        ("Grown at 200 masl", (None, None)),  # below 300: not an elevation
+        ("Grown at 3500 masl", (None, None)),  # above 3,000
+        ("1200-3500 masl", (1200, None)),  # each end is clamped on its own
+        ("5,000 feet", (None, None)),  # feet aren't read
+    ],
+)
+def test_elevation_range_clamp(body, want):
+    e = extract.rules(item("X", body=body))
+    assert (e.elevation_masl_min, e.elevation_masl_max) == want
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="possible bug: '1.800 masl' (a dot as the thousands separator, common in Latin American listings) "
+    "is read as 1.8 m, so the elevation is dropped (None) instead of 1,800",
+)
+def test_a_dot_thousands_separator_is_an_elevation():
+    e = extract.rules(item("X", body="Altitude: 1.800 masl"))
+    assert (e.elevation_masl_min, e.elevation_masl_max) == (1800, 1800)
+
+
+@pytest.mark.parametrize(
+    "name,want",
+    [
+        ("Sumatra", "Indonesia"),
+        ("java", "Indonesia"),
+        ("Sulawesi", "Indonesia"),
+        ("Bali", "Indonesia"),
+        ("Flores", "Indonesia"),
+        ("Kona", "United States"),
+        ("Hawaii", "United States"),
+        ("Puerto Rico", "United States"),
+        ("DR Congo", "Democratic Republic of the Congo"),
+        ("Congo", "Democratic Republic of the Congo"),
+        (" east timor ", "Timor-Leste"),
+        ("KENYA", "Kenya"),
+        ("costa rica", "Costa Rica"),
+        ("Narnia", "Narnia"),  # not a country: title-cased, passed through
+    ],
+)
+def test_canonical_country_aliases(name, want):
+    from coffeedata.origins import canonical_country
+
+    assert canonical_country(name) == want

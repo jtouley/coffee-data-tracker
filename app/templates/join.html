@@ -1,32 +1,32 @@
 {% extends "base.html" %}
+{% from "_macros.html" import rules_json, username_field, new_password, agree_box, in_app_banner, status_line, unloaded_notice, email_field, marketing_box, email_nudge %}
 {% block title %}Join · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="meta home" href="{{ site.site }}/">registry.coffee</a></div>
+  {{ in_app_banner(in_app) }}
   <h1 class="serif title mt8">You’re invited</h1>
   <p class="body">Pick a username and password to start logging your shots.</p>
-  <form id="join" class="fill" data-api="/api/join" novalidate>
+  {{ unloaded_notice(unloaded) }}
+  <form id="join" class="fill" method="post" data-api="/api/join" data-retry data-busy="Creating account…" data-done="Account created" novalidate>
     <label class="flabel" for="code">Invite code</label>
     <input class="input code" id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
-    <div class="fhint" id="code-h" data-code-status role="status">From the invite link you were sent.</div>
-    <label class="flabel" for="username">Username</label>
-    <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="username-h" required>
-    <div class="fhint" id="username-h">Lower-case letters, digits, - or _. You’ll sign in with it.</div>
-    <label class="flabel" for="password">Password</label>
-    <div class="pw">
-      <input class="input" id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-h" required>
-      <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
-    </div>
-    <div class="fhint" id="password-h">At least 10 characters. A phrase you’ll remember is fine.</div>
+    <div class="fhint" id="code-h" data-code-status data-error-for="code" role="status">From the invite link you were sent.</div>
+    {{ username_field(value=username) }}
+    {% if email_on %}{{ email_field(hint="Optional. For resetting your password and account notices, and for news unless you untick the box below. Never for signing in. Only the owner, and our email provider, see it.") }}{% endif %}
+    {{ new_password() }}
     <p class="meta mt24">Your shots, bags and photos are kept in the owner’s private Hugging Face datasets. The app
-      shows them only to you; the owner can read the datasets. By joining you agree to the
-      <a class="ext" href="{{ site.site }}/terms/">Terms</a> and
-      <a class="ext" href="{{ site.site }}/privacy/">Privacy Policy</a>.</p>
+      shows them only to you; the owner can read the datasets.</p>
+    {{ agree_box() }}
+    {% if email_on %}{{ marketing_box() }}{% endif %}
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
     <div class="spacer"></div>
     <div class="dock">
+      {% if email_on %}{{ email_nudge() }}{% endif %}
       <button class="btn primary" type="submit">Create account</button>
+      {{ status_line() }}
       <a class="btn text" href="/signin">Already have an account? Sign in</a>
       <a class="btn text small" href="{{ site.beta }}">No invite? Ask for one</a>
     </div>
   </form>
+  {{ rules_json() }}
 {% endblock %}

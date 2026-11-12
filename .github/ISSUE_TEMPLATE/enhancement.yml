@@ -1,0 +1,44 @@
+# Product enhancements. Applies only `enhancement`, so the issue-forms workflow, which acts only on the `shot` and
+# `roaster` labels, never processes these issues.
+name: Enhancement
+description: Propose a product change. State who it's for, the problem, a measurable outcome and evidence of demand.
+title: "Enhancement: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An enhancement is triaged on its user, outcome and evidence. Report bugs with the Bug form, and
+        vulnerabilities privately per [SECURITY.md](https://github.com/jtouley/coffee-data-tracker/blob/main/SECURITY.md).
+  - type: input
+    id: target_user
+    attributes:
+      label: Target user
+      description: Who benefits? E.g. a home barista using the app, a Snowflake listing consumer, a roaster, the owner.
+      placeholder: "Snowflake listing consumers comparing prices"
+    validations: {required: true}
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can't they do today, or what goes wrong? Describe the problem, not the solution.
+    validations: {required: true}
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Measurable outcome
+      description: The metric that shows it worked, its current value if known, and the target.
+      placeholder: "Roasters with coffee in Canada: 0 today, at least 100 within two releases"
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence of demand
+      description: Links to requests, issues, messages or data showing people need this. "I'd use it" counts; say so.
+    validations: {required: true}
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: Optional. How you'd build it, and what you've ruled out.
+    validations: {required: false}

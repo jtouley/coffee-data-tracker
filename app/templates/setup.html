@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import nav, chevron, legal %}
+{% from "_macros.html" import nav, chevron, legal, new_password, rules_json, status_line, unloaded_notice, email_field, current_password %}
 {% block title %}Setup · registry.coffee{% endblock %}
 {% macro describe(e) -%}
   {%- if e.kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer
@@ -34,16 +34,57 @@
   <div class="rows">
     <div class="gear"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>
     {% if auth_name != "local" %}
+    {% if email_on %}
+    <div class="gear" id="email"><div class="n">Email</div><div class="d addr" data-email-status>{% if email %}{{ email.address }} · {{ "verified" if email.verified else "not verified yet" }}{% else %}No email{% endif %}</div></div>
+    <details class="disclose" data-email-edit><summary class="link"><span>{{ "Change email" if email else "Add email" }}</span>{{ chevron() }}</summary>
+      <form id="email-form" class="mt8" method="post" action="/setup?form=email" data-api="/api/email" data-busy="Sending link…" novalidate>
+        {%- if me.role == "owner" %}
+        {{ email_field(id="new-email", required=True, hint="For account notices. Your password is reset with the setup code, never by email. We’ll send a link to confirm it.") }}
+        {%- else %}
+        {{ email_field(id="new-email", required=True, hint=("We’ll send a link to the new address. Until you confirm it, you can’t reset your password by email." if email else "For resetting your password yourself. We’ll send a link to confirm it; it works for 24 hours.")) }}
+        {%- endif %}
+        {{ current_password("email-current") }}
+        <div class="hint" data-hint role="alert"></div>
+        <button class="btn secondary mt8" type="submit">Send link</button>
+        {{ status_line() }}
+      </form>
+    </details>
+    {% if email and not email.verified %}<button class="link" type="button" data-email-resend>Send again<span class="meta">The link in your inbox works for 24 hours</span></button>{% endif %}
+    {% if email %}
+    <details class="disclose" data-email-remove-box><summary class="link danger"><span>Remove email</span>{{ chevron() }}</summary>
+      <form id="email-remove-form" class="mt8" method="post" action="/setup?form=email" data-api="/api/email/remove" data-busy="Removing…" data-done-notice="{{ 'Email removed.' if me.role == 'owner' else 'Email removed. The owner can still make you a reset link.' }}" novalidate>
+        {{ current_password("remove-current") }}
+        <div class="hint" data-hint role="alert"></div>
+        <button class="btn secondary danger mt8" type="submit">Remove email</button>
+        {{ status_line() }}
+      </form>
+    </details>
+    {% endif %}
+    <div class="agree setting">
+      <input type="checkbox" id="marketing" data-marketing aria-describedby="marketing-h"{% if marketing %} checked{% endif %}>
+      <div><label for="marketing">Send me occasional emails about new coffees and features</label>
+      <p class="fhint" id="marketing-h" data-marketing-status role="status">{% if not (email and email.verified) %}Sent only to a verified email.{% endif %}</p></div>
+    </div>
+    {% endif %}
+    {# Roaster insights (privacy policy, "Insights for roasters"): on unless the member turns it off. Nothing reads
+       it yet: a future insights export must leave out members who turned it off (Accounts.insights_excluded). #}
+    <div class="agree setting">
+      <input type="checkbox" id="insights" data-insights aria-describedby="insights-h insights-s"{% if insights %} checked{% endif %}>
+      <div><label for="insights">Include my shots and bags in roaster insights</label>
+      <p class="fhint" id="insights-h">Totals across at least 11 members. None sold yet. <a href="{{ site.site }}/privacy/">Privacy Policy</a></p>
+      <p class="fhint" id="insights-s" data-insights-status role="status"></p></div>
+    </div>
     {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
-    <details class="disclose"><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
-      <form id="password-form" class="mt8" novalidate>
+    {{ unloaded_notice(unloaded) }}
+    <details class="disclose"{% if unloaded %} open{% endif %}><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
+      <form id="password-form" class="mt8" method="post" data-api="/api/password" data-username="{{ me.username }}" data-busy="Changing password…" novalidate>
         <label class="flabel" for="current">Current password</label>
-        <input class="input" id="current" name="current" type="password" autocomplete="current-password" required>
-        <label class="flabel" for="new">New password</label>
-        <input class="input" id="new" name="new" type="password" autocomplete="new-password" aria-describedby="new-h" required>
-        <div class="fhint" id="new-h">At least 10 characters. Changing it signs you out on your other devices.</div>
+        <input class="input" id="current" name="current" type="password" autocomplete="current-password" aria-describedby="current-error" required>
+        <p class="ferr" id="current-error" data-error-for="current"></p>
+        {{ new_password(id="new", label="New password", hint="Any characters, spaces and symbols included. Changing it signs you out on your other devices.") }}
         <div class="hint" data-hint role="alert"></div>
         <button class="btn secondary mt8" type="submit">Change password</button>
+        {{ status_line() }}
       </form>
     </details>
     <button class="link" type="button" data-signout="/api/signout">Sign out</button>
@@ -52,5 +93,6 @@
   </div>
   {{ legal() }}
   <div class="mt24"></div>
+  {% if auth_name != "local" %}{{ rules_json() }}{% endif %}
 {% endblock %}
 {% block nav %}{{ nav('setup') }}{% endblock %}

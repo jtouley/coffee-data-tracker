@@ -35,6 +35,8 @@ small grind change) the timer plus three taps, and makes a new bag two taps: the
 - Bluetooth scales and machine integrations (Acaia, Decent, Gaggiuino). Chrome on Android does support Web
   Bluetooth, so a scale is possible later; for now typing two numbers is fine.
 - Pour-over and filter recipes beyond what `brew_method` already stores. The UI is espresso-first.
+- A reference per drink type. Lungo, Lance Hedrick's "soup" shot and pour-over such as V60 may later get their own;
+  for now there's one window.
 - Editing or deleting lake files. Corrections and retractions stay new records.
 - Buying coffee. The coffee page links to the roaster's product page and stops there.
 - Replacing the MCP server or the issue form. They keep working and gain the new fields where it's cheap.
@@ -174,7 +176,7 @@ What Terraform in `src/terraform/` manages:
 - Workload Identity Federation for GitHub Actions: a pool and provider that trust this repo's workflows, and a deploy
   service account they can impersonate. Deploys need no JSON key. A workflow on pushes to `main` that touch `app/`
   or `src/` builds the image, pushes it to Artifact Registry and deploys a new revision.
-- A budget of $5 a month on the project, with alert emails at 50%, 90% and 100%. A budget only warns; it doesn't
+- A budget of $20 a month on the project (it was $5, below the weekly pipeline's estimate), with alert emails at 50%, 90% and 100%. A budget only warns; it doesn't
   stop spending. Max instances 1 is what keeps a runaway bill unlikely.
 - Terraform's own state lives in a GCS bucket, created once before the first `terraform apply`.
 

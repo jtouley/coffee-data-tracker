@@ -1,13 +1,19 @@
+# The manual fallback. The scheduled weekly crawl now runs on Cloud Run (docs/ingestion/RUNBOOK.md, and
+# src/terraform/ingestion.tf), and site.yml deploys the site, the public export and the Snowflake load each Tuesday
+# at 11:17 UTC. This workflow has no schedule: it runs only when dispatched, for one week as a fallback, and its crawl
+# is removed after one good week on Cloud Run (RUNBOOK.md §4).
+#
 # The weekly run: discover (first week of the month), probe stale roasters, fetch every catalog, enrich,
 # build, publish to the lake, deploy the site. Nothing is committed to git; data lives in the lake.
 name: weekly
 on:
-  schedule:
-    - cron: "17 9 * * 1"   # Mondays
   workflow_dispatch:
     inputs:
       sample:
         description: "Only N roasters (blank = all)"
+        required: false
+      run_date:
+        description: "Run date YYYY-MM-DD (blank = today, UTC). To resume a week, give its Monday"
         required: false
       rollback_to:
         description: "Instead of a weekly run: serve an earlier release ('previous', or a build id from build-diff); 'served' re-exports the current one"
@@ -38,7 +44,11 @@ jobs:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
       COFFEEDATA_ANTHROPIC_API_KEY: ${{ secrets.COFFEEDATA_ANTHROPIC_API_KEY }}
-      COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}  # Claude model for coffee-or-not verdicts; unset = rules only
+      # Claude's coffee-or-not verdicts are required: without VERDICT_MODEL and the Anthropic key the run fails at
+      # its start (coffeedata weekly), before crawling. ALLOW_RULES_ONLY=1 is the explicit opt-out, for a fork
+      # without Claude only; a release built that way keeps about 4x the non-coffee (docs/ingestion/RUNBOOK.md).
+      COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}
+      COFFEEDATA_ALLOW_RULES_ONLY: ${{ vars.ALLOW_RULES_ONLY }}
       # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
       # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
       PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
@@ -56,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
-      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
         with: {python-version: "3.12"}
       - run: uv sync --locked --extra snowflake
       - name: Check lake config
@@ -64,14 +74,15 @@ jobs:
       - name: Weekly run
         env:
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
+          RUN_DATE: ${{ inputs.run_date }}  # validated by the CLI's --run-date
           ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
           ROLLBACK_TO: ${{ inputs.rollback_to }}
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: |
           # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
           if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then
-            if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE" ]; then
-              echo "snowflake_migrate runs no crawl, so sample and accept_volume_change would be ignored: unset them"
+            if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE$RUN_DATE" ]; then
+              echo "snowflake_migrate runs no crawl, so sample, run_date and accept_volume_change would be ignored: unset them"
               exit 1
             fi
             ROLLBACK_TO=served
@@ -82,7 +93,8 @@ jobs:
             if [ "$ROLLBACK_TO" = previous ]; then uv run coffeedata rollback --reason "manual rollback ($GITHUB_ACTOR)"
             else uv run coffeedata rollback --to "$ROLLBACK_TO" --reason "manual rollback ($GITHUB_ACTOR)"; fi
           else
-            uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
+            uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${RUN_DATE:+--run-date "$RUN_DATE"} \
+              ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
           fi
       - name: Site built
         id: site

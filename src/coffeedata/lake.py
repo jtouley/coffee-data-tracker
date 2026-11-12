@@ -23,6 +23,13 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
 
     users/<user_id>__<time>.parquet                       one file per sign-up or account change
     invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
+    consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
+    contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
+
+Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
+by dbt and never released:
+
+    raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
@@ -33,6 +40,7 @@ checkpoint (each ingest chunk and each weekly step).
 
 from __future__ import annotations
 
+import contextlib
 import hashlib
 import json
 import logging
@@ -58,11 +66,42 @@ VARIANT = pa.struct(
         ("price_usd", pa.float64()),
         ("grams", pa.int32()),
         ("available", pa.bool_()),
+        # The price's currency as the store states it (ISO 4217); added in raw 1.6.0, null in older files.
+        ("currency", pa.string()),
     ]
 )
 
 # One HTTP status a fetch saw, and how many responses had it.
+# fetches.status: fetched; failed (any error or block, retried in later passes); the store is closed, deactivated or
+# password-protected (http.Unavailable: not retried this run, and left out of the run's ok rates); or quarantined
+# for the week, not fetched, after it was in flight in two attempts of its crawl that died (crashguard: not retried
+# this run, and left out of the ok rates).
+FETCH_STATUSES = ("ok", "error", "unavailable", "crashed")
 HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
+# A host whose robots.txt asked us a Crawl-delay: the value as written, the spacing its requests got, and whether
+# the 60 s cap applied (http.RequestStats.crawl_delays).
+CRAWL_DELAY = pa.struct(
+    [("host", pa.string()), ("asked", pa.string()), ("applied_s", pa.float64()), ("capped", pa.bool_())]
+)
+# One refused or blocked response (202/403/429/430/503, or another edge challenge), with the headers that tell a rate
+# limit from an edge challenge (Cloudflare's cf-mitigated, SiteGround's sg-captcha) and that Shopify Support asks
+# for, and the egress IP it left from (http.block_record). sg_captcha: added in raw 1.4.0 (null in older files).
+BLOCK = pa.struct(
+    [
+        ("at", pa.timestamp("s", tz="UTC")),
+        ("status", pa.int32()),
+        ("host", pa.string()),
+        ("path", pa.string()),
+        ("server", pa.string()),
+        ("cf_mitigated", pa.string()),
+        ("content_type", pa.string()),
+        ("retry_after", pa.string()),
+        ("cf_ray", pa.string()),
+        ("x_request_id", pa.string()),
+        ("egress_ip", pa.string()),
+        ("sg_captcha", pa.string()),
+    ]
+)
 
 # Hugging Face's Image feature: the dataset viewer shows a thumbnail for a struct of bytes and path.
 IMAGE = pa.struct([("bytes", pa.binary()), ("path", pa.string())])
@@ -125,6 +164,16 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("rate_limited", pa.int32()),
             ("duration_s", pa.float64()),
             ("code_version", pa.string()),
+            # Added with raw contract 1.1.0 (older files read back as null): each refused or blocked response.
+            ("blocks", pa.list_(BLOCK)),
+            # Added with raw contract 1.2.0 (older files read back as null): true when the fetch read only part of
+            # the catalog (a secondary crawl stopped mid-way). Its products are listed; the products it didn't
+            # read keep their listing (dbt stg_runs.is_current), instead of reading as delisted.
+            ("partial", pa.bool_()),
+            # Added with raw contract 1.5.0 (older files read back as null): each host whose robots.txt asked a
+            # Crawl-delay, the value as written, the spacing used (capped at http.MAX_CRAWL_DELAY), and whether the
+            # cap applied.
+            ("crawl_delays", pa.list_(CRAWL_DELAY)),
         ]
     ),
     "probes": pa.schema(
@@ -211,7 +260,10 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
     # One file per dbt build: a row per dbt node (its manifest checksum and test result, so two builds' code
     # and test outcomes can be compared), a row per catalog metric (the baseline the next build's volume check
-    # reads), and the build's manifest.json and run_results.json as text, so `dbt --state` can use them later.
+    # reads), a row per release table (kind table_hash: its row count in rows, its content hash in checksum and the
+    # hash method in payload, quality.table_hash), a row per release change count (kind release_change: rows of a
+    # public table added, removed or changed against the served release, per reason; the release's notes), and the
+    # build's manifest.json and run_results.json as text, so `dbt --state` can use them later.
     "builds": pa.schema(
         [
             ("build_id", pa.string()),
@@ -240,6 +292,37 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
     # What an ingest set out to fetch, written before its first request: one row per roaster it intends to
     # fetch, with that roaster's status at that moment. run_completeness reads it as the run's expected set.
+    # The control plane (design B): one row when a job starts and one when it ends: crawl, crawl-retry, merge or
+    # enrich, per connector and week. Services read it instead of calling each other; the weekly merge rolls a
+    # week's rows into one file. Never read by dbt.
+    "job_manifests": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("job", pa.string()),
+            ("connector", pa.string()),
+            ("shard", pa.string()),
+            ("attempt_id", pa.string()),
+            ("started_at", pa.timestamp("s", tz="UTC")),
+            ("ended_at", pa.timestamp("s", tz="UTC")),
+            ("status", pa.string()),  # running, done, deadline, failed
+            ("todo", pa.int32()),
+            ("ok", pa.int32()),
+            ("errors", pa.int32()),
+            ("parked", pa.int32()),
+            ("skipped", pa.int32()),
+            ("requests", pa.int32()),
+            ("http_429", pa.int32()),
+            ("http_430", pa.int32()),
+            ("egress_ips", pa.list_(pa.string())),
+            # per egress IP: stores contacted, and those that refused (429/430) their first catalog request
+            (
+                "refusals",
+                pa.list_(pa.struct([("ip", pa.string()), ("stores", pa.int32()), ("refused", pa.int32())])),
+            ),
+            ("code_version", pa.string()),
+            ("detail", pa.string()),  # JSON: the job's own summary
+        ]
+    ),
     "run_manifests": pa.schema(
         [
             ("run_date", pa.date32()),
@@ -382,12 +465,70 @@ SCHEMAS["invites"] = pa.schema(
         ("used_by", pa.string()),
         ("used_at", pa.timestamp("s", tz="UTC")),
         ("revoked", pa.bool_()),
+        ("for_label", pa.string()),  # the owner's note on a join link ("For"), up to 60 characters
+        ("created_at", pa.timestamp("s", tz="UTC")),  # null in files from before it was kept
+        ("revoked_at", pa.timestamp("s", tz="UTC")),  # null in files from before it was kept
+    ]
+)
+# Which Terms and Privacy Policy each account accepted, and when: one file per acceptance, latest wins.
+SCHEMAS["consents"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("terms_version", pa.string()),  # the Terms' "Last updated" date (site.LEGAL_UPDATED)
+        ("privacy_version", pa.string()),  # the Privacy Policy's
+        ("terms_at", pa.timestamp("s", tz="UTC")),
+        ("source", pa.string()),  # signup, reaccept or settings
+        # Marketing email (spec §7.1): the member's choice, when it was made and the Privacy Policy version they saw.
+        # Null where it was never offered (accounts from before it, owner setup, the app without email).
+        ("marketing", pa.bool_()),
+        ("marketing_at", pa.timestamp("s", tz="UTC")),
+        ("marketing_version", pa.string()),
+        # Roaster insights (privacy policy): whether this member's shots may be counted in the aggregate reports
+        # sold to roasters. On by default: null means never changed, and counts as on. Set from Setup.
+        ("insights", pa.bool_()),
+        ("insights_at", pa.timestamp("s", tz="UTC")),
+        ("insights_version", pa.string()),
+    ]
+)
+# Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
+# never the address itself. One file per change, latest wins; removing or changing it deletes every file.
+SCHEMAS["contacts"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("email_hmac", pa.string()),  # HMAC-SHA256 under a key derived from EMAIL_KEY
+        ("email_enc", pa.string()),  # AES-256-GCM, the user id as associated data
+        ("verified_at", pa.timestamp("s", tz="UTC")),
+        ("verify_sha256", pa.string()),  # the open verify link's token, hashed
+        ("verify_expires", pa.timestamp("s", tz="UTC")),
     ]
 )
 
-# Tables that live in the photo dataset or the users dataset rather than the main lake.
+# Green-coffee importers' public offer lists (importers.py): raw only, one immutable file per importer per week. Each
+# lot word for word, as the roaster adapters keep a product: every cell of its row under the page's header (null when
+# empty), and its own page's URL. Columns about prices are left out; no page HTML or images. Private, in its own
+# dataset (Lake.importers()): never a source of the main dbt project, never released, backend-only (for internal use
+# and a future roaster portal, which may show only the normalized values). Stated fields and normalized values are
+# derived from it by a private dbt project of its own (dbt_importers/, `coffeedata importer-build`, into its own
+# database file), never stored in the dataset, so a better rule re-derives the whole history.
+SCHEMAS["importer_raw"] = pa.schema(
+    [
+        ("week", pa.date32()),  # the Monday of the fetch's ISO week: one snapshot per importer per week
+        ("fetched_at", pa.timestamp("s", tz="UTC")),
+        ("importer", pa.string()),  # importers.IMPORTERS key
+        ("source_url", pa.string()),
+        ("parser_version", pa.string()),
+        ("row", pa.int32()),  # the lot's position in the page's table, from 0
+        ("url", pa.string()),  # the lot's own page on the importer's site, when the row links to one
+        ("cells", pa.list_(pa.struct([("column", pa.string()), ("text", pa.string())]))),
+    ]
+)
+
+# Tables that live in the photo, users or importers dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites")
+USER_TABLES = ("users", "invites", "consents", "contacts")
+IMPORTER_TABLES = ("importer_raw",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -403,6 +544,7 @@ GLOBS = {
     "run_overrides": "run_overrides/*.parquet",
     "builds": "builds/*/*.parquet",
     "run_manifests": "run_manifests/*/*.parquet",
+    "job_manifests": "job_manifests/*/*.parquet",
     "serving_log": "serving_log/*.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
@@ -410,6 +552,9 @@ GLOBS = {
     "photos": "photos/*.parquet",
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
+    "consents": "consents/*.parquet",
+    "contacts": "contacts/*.parquet",
+    "importer_raw": "raw/*/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -425,6 +570,7 @@ SCHEMA_FILES = {
     "run_overrides": "run_overrides/override_id=schema.parquet",
     "builds": "builds/run_date=0000-00-00/build=schema.parquet",
     "run_manifests": "run_manifests/run_date=0000-00-00/batch=schema.parquet",
+    "job_manifests": "job_manifests/run_date=0000-00-00/attempt=schema.parquet",
     "serving_log": "serving_log/serve_id=schema.parquet",
     # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
     # only old shot files still has every column.
@@ -434,8 +580,14 @@ SCHEMA_FILES = {
     "photos": "photos/photo_id=schema.parquet",
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
+    "consents": "consents/user_id=schema.parquet",
+    "contacts": "contacts/user_id=schema.parquet",
+    "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
 }
-LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
+PENDING_DELETES = (
+    "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset
+)
+LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES)
 
 
 _REMOTE_FOLDERS: dict[str, frozenset[str] | None] = {}
@@ -468,6 +620,35 @@ def no_files(e: Exception) -> bool:
     return "No files found" in msg or ("error listing" in msg and "404" in msg)
 
 
+# What a dropped connection to the remote lake looks like in DuckDB's httpfs error text (a NAT out of ports, a
+# connection reset, a timeout, a 5xx). A missing file or a 4xx is never transient.
+TRANSIENT_MARKERS = ("could not connect", "connection", "timed out", "timeout", "reset by peer", "http 5")
+RETRY_WAITS = (2.0, 6.0, 18.0)  # seconds before each retry of a remote read at a job's start
+
+
+def transient(e: Exception) -> bool:
+    """A remote read failed on the connection, not on the data: worth a short retry."""
+    msg = str(e).lower()
+    return not no_files(e) and any(m in msg for m in TRANSIENT_MARKERS)
+
+
+def retry_transient(fn, *args, **kwargs):
+    """fn(*args, **kwargs), retried after RETRY_WAITS on a transient connection error (`transient`). The jobs'
+    first reads of the hf:// lake (the registry state, what this run already fetched) go through it, so one dropped
+    connection doesn't fail a whole crawl before its first request."""
+    for i, wait in enumerate((*RETRY_WAITS, None)):
+        try:
+            return fn(*args, **kwargs)
+        except Exception as e:
+            if wait is None or not transient(e):
+                raise
+            log.warning(
+                "remote lake read failed (%s); retry %d of %d in %.0fs", e, i + 1, len(RETRY_WAITS), wait
+            )
+            time.sleep(wait)
+    raise AssertionError("unreachable")
+
+
 def _same_file(info, path: Path) -> bool:
     """Whether a dataset file (a get_paths_info entry) has a local file's content: by its LFS sha256, or else its
     git blob id. A file whose hash isn't known counts as the same, so it's never replaced on a guess."""
@@ -479,13 +660,29 @@ def _same_file(info, path: Path) -> bool:
     return blob_id is None or blob_id == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 
+def _field_paths(schema: pa.Schema) -> frozenset[str]:
+    """Every column and nested field by dotted path (a struct's fields, and those of a list's struct items), so a
+    field added inside a struct, like snapshots' variants.currency, counts as an added column."""
+
+    def walk(prefix: str, t: pa.DataType):
+        if pa.types.is_list(t) or pa.types.is_large_list(t) or pa.types.is_fixed_size_list(t):
+            yield from walk(prefix, t.value_type)
+        elif pa.types.is_struct(t):
+            for f in t:
+                yield f"{prefix}.{f.name}"
+                yield from walk(f"{prefix}.{f.name}", f.type)
+
+    return frozenset(path for f in schema for path in (f.name, *walk(f.name, f.type)))
+
+
 def _stale_schema(api, repo_id: str, rel: str, info, path: Path) -> bool:
-    """Whether the dataset's schema file at `rel` has fewer columns than the staged one at `path`: only then is it
-    replaced. Identical bytes skip the download; other bytes (another pyarrow's created_by) compare by name."""
+    """Whether the dataset's schema file at `rel` has fewer columns (or nested fields) than the staged one at
+    `path`: only then is it replaced. Identical bytes skip the download; other bytes (another pyarrow's created_by)
+    compare by name."""
     if _same_file(info, path):
         return False
     remote = pq.read_schema(api.hf_hub_download(repo_id, rel, repo_type="dataset"))
-    return set(remote.names) < set(pq.read_schema(path).names)
+    return _field_paths(remote) < _field_paths(pq.read_schema(path))
 
 
 def new_batch_id(now: datetime | None = None) -> str:
@@ -522,23 +719,34 @@ class Lake:
         url = os.environ.get("COFFEEDATA_USERS") or "lake-users"
         return cls(url, staging="build/users-staging", tables=USER_TABLES)
 
+    @classmethod
+    def importers(cls) -> Lake:
+        """The private importers dataset: COFFEEDATA_IMPORTERS, or ./lake-importers. Never a source of the main dbt project
+        (dbt/): only the private one (dbt_importers/, `coffeedata importer-build`) reads it, into its own database."""
+        url = os.environ.get("COFFEEDATA_IMPORTERS") or "lake-importers"
+        return cls(url, staging="build/importers-staging", tables=IMPORTER_TABLES)
+
     # --- writing -------------------------------------------------------------------------------------
 
     def ensure_schemas(self) -> None:
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
             # A zero-row schema file from before a column was added is refreshed in place, so globs always see
-            # every column. That is the pattern for added columns; a changed type or meaning still gets a new schema
+            # every column, nested struct fields included (a glob's union_by_name never adds a nested field that no
+            # file has). That is the pattern for added columns; a changed type or meaning still gets a new schema
             # file beside the old one (like shots' schema-v2), since names are all this compares (Parquet stores
             # timestamp[s] as [ms], so comparing full schemas would never match).
-            if not p.exists() or pq.read_schema(p).names != SCHEMAS[table].names:
+            if not p.exists() or _field_paths(pq.read_schema(p)) != _field_paths(SCHEMAS[table]):
                 p.parent.mkdir(parents=True, exist_ok=True)
                 # A unique temp file in the same folder: two Lake()s refreshing at once never share one, and a
                 # reader globbing *.parquet never sees a half-written file.
                 fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".schema-", suffix=".tmp")
                 os.close(fd)
                 pq.write_table(SCHEMAS[table].empty_table(), tmp)
-                os.chmod(tmp, 0o644)  # mkstemp makes it owner-only; schema files are read like any lake file
+                # mkstemp makes it owner-only; schema files are read like any lake file. GCSFuse (Cloud Run's
+                # /mnt/staging) refuses chmod, and its mount's file-mode applies there instead.
+                with contextlib.suppress(OSError):
+                    os.chmod(tmp, 0o644)
                 os.replace(tmp, p)
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
@@ -676,7 +884,68 @@ class Lake:
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path
 
-    def publish(self, message: str, attempts: int = 5, schemas: bool = False) -> int:
+    def record_files(self, table: str, key: str | None = None) -> list[str]:
+        """Every file (path within the dataset) of one record of a per-record table (`<key>__<time>.parquet`), or
+        of every record with no key: staged here and, for a remote lake, already in the dataset. One listing."""
+        prefix = GLOBS[table].split("/")[0]
+        mine = f"{key}__" if key is not None else None
+        out = {
+            f"{prefix}/{p.name}"
+            for p in (self.root / prefix).glob("*__*.parquet")
+            if mine is None or p.name.startswith(mine)
+        }
+        if self.remote:
+            from huggingface_hub import HfApi
+
+            api = HfApi(token=os.environ.get("HF_TOKEN"))
+            try:
+                tree = list(api.list_repo_tree(self._repo_id(), path_in_repo=prefix, repo_type="dataset"))
+            except Exception as e:  # noqa: BLE001 - a folder the dataset doesn't have yet
+                if "404" not in str(e) and "not found" not in str(e).lower():
+                    raise
+                tree = []
+            names = ((f.path, f.path.rsplit("/", 1)[-1]) for f in tree)
+            out |= {path for path, name in names if "__" in name and (mine is None or name.startswith(mine))}
+        return sorted(out)
+
+    def file_rows(self, table: str, cols: tuple[str, ...]) -> list[dict]:
+        """Every row of a table with the file it's in (path within the dataset), staged and remote."""
+        out: list[dict] = []
+        for src in self.sources(table):
+            scan = f"read_parquet('{src}', union_by_name = true, hive_partitioning = false, filename = true)"
+            try:
+                rows = self.connect().execute(f"select filename, {', '.join(cols)} from {scan}").fetchall()
+            except Exception as e:  # noqa: BLE001 - duckdb.IOException: no files in this source
+                if no_files(e):
+                    continue
+                raise
+            for name, *values in rows:
+                rel = (
+                    name[len(self.url) + 1 :]
+                    if self.remote and name.startswith(self.url + "/")
+                    else Path(name).resolve().relative_to(self.root.resolve()).as_posix()
+                )
+                out.append({"file": rel} | dict(zip(cols, values, strict=True)))
+        return out
+
+    def _repo_id(self) -> str:
+        return self.url.removeprefix("hf://datasets/").split("@")[0]
+
+    def squash(self, message: str) -> None:
+        """Drop the dataset's version history (one commit holding what's there now), so files deleted from it can't
+        be read from an old revision. For the small private users dataset only."""
+        if not self.remote:
+            return
+        from huggingface_hub import HfApi
+
+        with self._publishing:
+            HfApi(token=os.environ.get("HF_TOKEN")).super_squash_history(
+                self._repo_id(), repo_type="dataset", commit_message=message
+            )
+
+    def publish(
+        self, message: str, attempts: int = 5, schemas: bool = False, delete: tuple[str, ...] | list[str] = ()
+    ) -> int:
         """Upload staged files to the remote lake in one commit, then clear the staging area.
 
         A file already in the dataset is never replaced (except the derived marts/). Staged paths carry a batch
@@ -691,13 +960,31 @@ class Lake:
         reader of the dataset alone sees every column. Like ensure_schemas, that compares column names, so a
         process running older code (fewer columns) never replaces a newer schema file. This is checked once per
         process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
+
+        `delete` names files (paths within the dataset) to remove in the same commit: an email changed or removed
+        goes in one step with whatever replaces it. Their staged copies go too. In a local lake they're simply
+        removed. For a remote lake they're kept in staging (PENDING_DELETES) until a commit has removed them, so a
+        failed publish doesn't lose them: the next publish tries again (review M6).
         """
+        for rel in delete:
+            path = self.root / rel
+            if not path.resolve().is_relative_to(self.root.resolve()):
+                raise ValueError(f"path escapes the lake: {rel}")
+            path.unlink(missing_ok=True)
         if not self.remote:
             return 0
         with self._publishing:
-            return self._publish(message, attempts, schemas)
+            pending = self.root / PENDING_DELETES
+            waiting = json.loads(pending.read_text()) if pending.exists() else []
+            todo = tuple(dict.fromkeys([*waiting, *delete]))
+            if todo:
+                pending.parent.mkdir(parents=True, exist_ok=True)
+                pending.write_text(json.dumps(list(todo)))
+            n = self._publish(message, attempts, schemas, todo)
+            pending.unlink(missing_ok=True)
+            return n
 
-    def _publish(self, message: str, attempts: int, schemas: bool) -> int:
+    def _publish(self, message: str, attempts: int, schemas: bool, delete: tuple[str, ...] = ()) -> int:
         schema_paths = {SCHEMA_FILES[t] for t in self.tables}
         check_schemas = schemas or not self._schemas_checked
         files = [
@@ -705,9 +992,9 @@ class Lake:
             for p in self.staged_files()
             if check_schemas or p.relative_to(self.root).as_posix() not in schema_paths
         ]
-        if not files:
+        if not files and not delete:
             return 0  # nothing new: no API calls
-        from huggingface_hub import CommitOperationAdd, HfApi
+        from huggingface_hub import CommitOperationAdd, CommitOperationDelete, HfApi
 
         repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
         api = HfApi(token=os.environ.get("HF_TOKEN"))
@@ -720,13 +1007,21 @@ class Lake:
                     for i in range(0, len(rels), 500)
                     for f in api.get_paths_info(repo_id, rels[i : i + 500], repo_type="dataset")
                 }
-                ops = [
+                # A job sharing this staging folder (the confirmation run's concurrent arms) may have sent and
+                # removed a file since it was listed: it is in the dataset now, or goes with that job's commit.
+                ops: list = [
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
-                    if rel not in existing
-                    or rel.startswith("marts/")
-                    or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
+                    if p.exists()
+                    and (
+                        rel not in existing
+                        or rel.startswith("marts/")
+                        or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
+                    )
                 ]
+                if delete:
+                    there = {f.path for f in api.get_paths_info(repo_id, list(delete), repo_type="dataset")}
+                    ops += [CommitOperationDelete(path_in_repo=rel) for rel in delete if rel in there]
                 if ops:
                     api.create_commit(
                         repo_id=repo_id, repo_type="dataset", operations=ops, commit_message=message
@@ -741,5 +1036,5 @@ class Lake:
         _REMOTE_FOLDERS.pop(self.url, None)  # new folders may exist now
         for p, rel in zip(files, rels, strict=True):
             if rel not in schema_paths:
-                p.unlink()
+                p.unlink(missing_ok=True)
         return len(ops)

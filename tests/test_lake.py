@@ -96,6 +96,39 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
     assert lake.staged_files() == sorted(lake.root / SCHEMA_FILES[t] for t in LAKE_TABLES)  # staging cleared
 
 
+def test_publish_skips_a_staged_mart_another_job_already_sent_and_removed(tmp_path, monkeypatch):
+    """Concurrent jobs share one staging folder: a marts/ file listed for this commit may be gone by commit time.
+    It isn't added (a missing file would fail the commit on every retry)."""
+    commits = []
+    lake = None
+
+    class FakeApi:
+        def __init__(self, token=None):
+            pass
+
+        def get_paths_info(self, repo_id, paths, repo_type):
+            (lake.root / "marts" / "dim_coffee.parquet").unlink()  # the other job's publish, meanwhile
+            return [
+                types.SimpleNamespace(path=p) for p in paths if p in {SCHEMA_FILES[t] for t in LAKE_TABLES}
+            ]
+
+        def create_commit(self, repo_id, repo_type, operations, commit_message):
+            commits.append(sorted(op.path_in_repo for op in operations))
+
+    import duckdb
+    import huggingface_hub
+
+    monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+    row = {"run_date": date(2026, 11, 2), "batch_id": "b2", "roaster_id": "x.com", "status": "ok"}
+    lake.write_partition("fetches", "2026-11-02", "b2", [row])
+    (lake.root / "marts").mkdir()
+    lake.write_mart("dim_coffee", duckdb.connect(), "select 1 as x")
+    lake.publish("test")
+    assert commits == [["fetches/run_date=2026-11-02/batch=b2.parquet"]]
+
+
 def test_publish_replaces_a_stale_remote_schema_file(tmp_path, monkeypatch):
     # The dataset's snapshots schema file is from before payload_hash; ensure_schemas refreshed only staging's.
     import hashlib
@@ -316,3 +349,93 @@ def test_schema_refresh_uses_a_unique_temp_file(lake, monkeypatch):
     assert made and made[0]["dir"] == p.parent and pq.read_schema(p).names == SCHEMAS["snapshots"].names
     assert not list(p.parent.glob("*.tmp"))
     assert p.stat().st_mode & 0o777 == 0o644  # readable like any other lake file, not mkstemp's 0600
+
+
+def test_a_dropped_connection_at_a_jobs_first_lake_read_is_retried(monkeypatch):
+    """Arm 2 crashed on its first hf:// read ("Could not connect to server", the NAT out of ports): the registry
+    state and this run's done/tried reads retry a transient connection error, never a missing file or a bad query."""
+    import duckdb
+
+    from coffeedata import lake as lake_mod
+
+    waits = []
+    monkeypatch.setattr(lake_mod.time, "sleep", waits.append)
+    calls = []
+
+    def flaky():
+        calls.append(1)
+        if len(calls) < 3:
+            raise duckdb.IOException("IO Error: Could not connect to server: HEAD https://huggingface.co/x")
+        return "rows"
+
+    assert lake_mod.retry_transient(flaky) == "rows" and waits == list(lake_mod.RETRY_WAITS[:2])
+    with pytest.raises(duckdb.BinderException):
+        lake_mod.retry_transient(lambda: (_ for _ in ()).throw(duckdb.BinderException("no column x")))
+    with pytest.raises(
+        duckdb.IOException
+    ):  # a table with no files yet is an answer, not a dropped connection
+        lake_mod.retry_transient(
+            lambda: (_ for _ in ()).throw(duckdb.IOException("No files found that match"))
+        )
+    always = lambda: (_ for _ in ()).throw(duckdb.IOException("Could not connect to server"))  # noqa: E731
+    waits.clear()
+    with pytest.raises(duckdb.IOException):
+        lake_mod.retry_transient(always)
+    assert waits == list(lake_mod.RETRY_WAITS)
+
+
+class _FlakyConnection:
+    """A DuckDB connection whose first query matching `needle` fails like a NAT out of ports."""
+
+    def __init__(self, con, needle, failures):
+        self.con, self.needle, self.failures = con, needle, failures
+
+    def execute(self, q, *a):
+        import duckdb
+
+        if self.needle in q and self.failures:
+            self.failures.pop()
+            raise duckdb.IOException("IO Error: Could not connect to server: HEAD https://huggingface.co/x")
+        return self.con.execute(q, *a)
+
+    def __getattr__(self, name):
+        return getattr(self.con, name)
+
+
+def _flaky(monkeypatch, lk, needle, times=1):
+    from coffeedata import lake as lake_mod
+
+    waits: list[float] = []
+    monkeypatch.setattr(lake_mod.time, "sleep", waits.append)
+    failures = [1] * times
+    connect = lk.connect
+    monkeypatch.setattr(lk, "connect", lambda *a, **k: _FlakyConnection(connect(*a, **k), needle, failures))
+    return waits, failures
+
+
+def test_ingest_runs_known_bodies_scan_retries_a_dropped_connection(tmp_path, monkeypatch):
+    """R3: the bodies scan right after the manifest's publish is a crawl's widest read; a dropped connection there
+    is retried (2, 6, 18 s) like the job's other first reads."""
+    from coffeedata import ingest
+
+    lk = Lake(str(tmp_path / "lake"))
+    waits, failures = _flaky(monkeypatch, lk, "select distinct body_hash from", times=2)
+    out = ingest.run(lk, [], "2026-11-02", workers=1)
+    assert out["roasters"] == 0 and failures == [] and waits == [2.0, 6.0]
+
+
+def test_select_parked_done_query_retries_a_dropped_connection(tmp_path, monkeypatch):
+    """R3: crawl-retry's first read (this run's done stores) is retried too, through the shared done/tried query."""
+    from coffeedata import ingest, registry
+    from coffeedata.models import Roaster
+
+    lk = Lake(str(tmp_path / "lake"))
+    ingest.save_parked(lk, "2026-11-02", "parked.example", {"page": 3, "items": []})
+    state = registry.RoasterState(Roaster(roaster_id="parked.example", name="P", host="parked.example",
+                                          platform="shopify"), "active", None)  # fmt: skip
+    monkeypatch.setattr(registry, "current", lambda lake: [state])
+    waits, failures = _flaky(monkeypatch, lk, "status in ('ok', 'unavailable', 'crashed')")
+    states, resume = ingest.select_parked(lk, "2026-11-02")
+    assert [s.roaster.roaster_id for s in states] == ["parked.example"]
+    assert resume["parked.example"]["page"] == 3
+    assert failures == [] and waits == [2.0]

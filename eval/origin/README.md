@@ -5,6 +5,19 @@ the lake. It follows the classifier's precedent (`tests/test_classifier_accuracy
 the products are split before any result is read, the rules are tuned on train, chosen on validation and scored
 once on a sealed test set. The results are in `RESULTS.md`.
 
+**Running total (CLAUDE.md step 9):** 0 products whose `origin_country` changed since the last full evaluation, which
+is this one. Add each later change's count here.
+- 0: decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
+  versions, 51 roasters) and the output of `origin_country` of none: built from main and from the change on a local
+  copy of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were
+  identical. 0 of them in the test set.
+
+## Floor
+
+`tests/test_origin_accuracy.py` holds the rules to this eval's train and validation labels (CLAUDE.md step 8): on train, stratum-weighted agreement at least 0.959 and wrong-country at most 0.040, which reproduces the train row of RESULTS.md (96.0% / 3.9%; strata in `floor_strata.json`, the two predictions the train sample was drawn from). Validation's sample can't be redrawn from any committed rule set (the closest shares 59 of its 111 keys), so its weights and RESULTS.md's 88.0% / 11.6% can't be reproduced; its floor is a count over the 111 fixed labelled listings instead: at least 97 agree, at most 11 wrong-country (measured 2026-11-11, main 0cfa4d9). The listings are private: `eval/floor_inputs.py` rebuilds them from the lake at df57f62, and the eval-floors workflow runs the floor (`docs/RULES.md`).
+
+The floor's sensitivity is low: in train the `unchanged` stratum carries 97% of the weight on 25 labels, so one label there is worth about 3.9 points, and a regression that touches none of the labelled listings doesn't show. It catches a change on the labelled listings, not a change elsewhere.
+
 ## Data
 
 - Source: `hf://datasets/jtouley/coffee-data`, downloaded with `huggingface_hub.snapshot_download(repo_type=

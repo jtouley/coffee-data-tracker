@@ -4,19 +4,19 @@ the build records and mart history that `coffeedata build-diff` compares."""
 import argparse
 import json
 import re
-import shutil
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+import duckdb
 import pytest
 
 from coffeedata import quality
 from coffeedata.lake import Lake
 
-from .lakehelp import manifest, old_file, product, run
-from .test_dbt import build
+from .lakehelp import manifest, needs_dbt, old_file, product, run
+from .test_dbt import build, run_dbt
 
-pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+pytestmark = needs_dbt
 RID = "onyxcoffeelab.com"
 FULL = [product(str(i)) for i in range(40)]
 
@@ -298,6 +298,90 @@ def test_one_adapters_total_outage_fails_the_run(lake, tmp_path):
     build(lake, tmp_path, **gate).close()  # squarespace 1 of 2 is at the floor; woocommerce isn't judged
 
 
+def test_unavailable_stores_do_not_count_against_the_ok_rates(lake, tmp_path):
+    """A closed or deactivated store (fetch status unavailable: Big Guns, 2026-10-31) is attempted, but it says
+    nothing about whether the run worked: run_ok_rate and adapter_ok_rate leave it out. As errors, the same
+    stores fail both gates."""
+    shops, closed = [f"shop{i}.com" for i in range(3)], [f"closed{i}.com" for i in range(3)]
+    manifest(lake, "2026-10-26", [*shops, *closed])
+    for rid in shops + closed:
+        run(lake, "2026-10-19", rid, FULL[:5])  # all had catalogs a week ago
+    for rid in shops:
+        run(lake, "2026-10-26", rid, FULL[:5])
+    for rid in closed:
+        run(lake, "2026-10-26", rid, None, status="unavailable")
+    gate = {
+        "as_of_run": "2026-10-26",
+        "min_ok_share": 0.9,
+        "min_adapter_roasters": 2,
+        "min_adapter_ok_share": 0.9,
+    }
+    con = build(lake, tmp_path, **gate)
+    got = con.execute(
+        "select roaster_id, attempted, has_catalog, unavailable from run_completeness order by 1"
+    )
+    assert got.fetchall() == [(r, True, r in shops, r in closed) for r in sorted(shops + closed)]
+    con.close()
+    lake2 = Lake(str(tmp_path / "lake2"))  # the same stores as plain errors: half the run failed
+    manifest(lake2, "2026-10-26", [*shops, *closed])
+    for rid in shops + closed:
+        run(lake2, "2026-10-19", rid, FULL[:5])
+    for rid in shops:
+        run(lake2, "2026-10-26", rid, FULL[:5])
+    for rid in closed:
+        run(lake2, "2026-10-26", rid, None)
+    r = build(lake2, tmp_path / "b2", check=False, **gate)
+    assert r.returncode != 0 and re.search(r"FAIL 1 run_ok_rate", r.stdout)
+    assert re.search(r"FAIL 1 adapter_ok_rate", r.stdout)
+
+
+def test_a_partial_fetch_keeps_unread_products_listed(lake, tmp_path):
+    """A partial catalog (fetches.partial: the secondary crawler stopped mid-way) lists what it read and leaves the
+    products it didn't read as they were. The same short catalog as a complete fetch delists them."""
+    run(lake, "2026-10-19", "p.com", FULL[:30])
+    run(lake, "2026-10-26", "p.com", FULL[:3], partial=True)  # 3 of 30 read before the store stopped us
+    run(lake, "2026-10-19", "c.com", FULL[:30])
+    run(lake, "2026-10-26", "c.com", FULL[:20])  # complete: 10 delisted
+    con = build(lake, tmp_path)
+    listed = dict(
+        con.execute(
+            "select roaster_id, count(*) filter (where is_listed) from dim_coffee group by 1"
+        ).fetchall()
+    )
+    assert listed == {"p.com": 30, "c.com": 20}
+    q = con.execute(
+        "select run_date, partial, suspect, counted from stg_run_quality where roaster_id = 'p.com' order by 1"
+    )
+    assert [(str(d), p, s, c) for d, p, s, c in q.fetchall()] == [
+        ("2026-10-19", False, False, True), ("2026-10-26", True, False, True),
+    ]  # fmt: skip  # a partial week is short by design: never suspect
+    con.close()
+
+
+def test_partial_weeks_never_remove_or_relist_and_a_complete_batch_wins_its_week(lake, tmp_path):
+    """fct_price_event agrees with dim_coffee across a partial week: complete, partial (3 of 30), complete reads no
+    bag as removed and then relisted. And a week with a complete batch and a later partial one (a secondary crawler)
+    counts the complete one (stg_run_walk), so the products only it saw keep their weeks."""
+    run(lake, "2026-10-19", "p.com", FULL[:30])
+    run(lake, "2026-10-26", "p.com", FULL[:3], partial=True)
+    run(lake, "2026-11-02", "p.com", FULL[:30])
+    run(lake, "2026-10-19", "h.com", FULL[:30])
+    complete = run(lake, "2026-10-26", "h.com", FULL[:30], hour=9)
+    run(lake, "2026-10-26", "h.com", FULL[:3], hour=18, partial=True)
+    con = build(lake, tmp_path)
+    events = con.execute(
+        "select roaster_id, event, count(*) from fct_price_event group by all order by all"
+    ).fetchall()
+    assert events == [("h.com", "new", 30), ("p.com", "new", 30)]
+    assert con.execute(
+        "select batch_id from stg_runs where roaster_id = 'h.com' and run_date = '2026-10-26'"
+    ).fetchone() == (complete,)
+    weeks = con.execute("select roaster_id, min(weeks_listed), count(*) filter (where is_listed) from dim_coffee "
+                        "group by 1 order by 1").fetchall()  # fmt: skip
+    assert weeks == [("h.com", 2, 30), ("p.com", 2, 30)]
+    con.close()
+
+
 def _passing_builds(lake, metrics: list[dict], first: str = "2026-09-07"):
     """One passing build per weekly run from `first` on, recording each dict of metrics."""
     for i, m in enumerate(metrics):
@@ -551,6 +635,14 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert current.read_bytes() == first_release
     assert quality.served(Lake())["build_id"] == b1
     assert quality.served(Lake())["reason"] == "bad prices from one roaster"
+    # The site workflow renders the served release and writes nothing to the lake.
+    before = sorted((p.as_posix(), p.stat().st_mtime_ns) for p in lake.root.rglob("*") if p.is_file())
+    site_db, site_out = tmp_path / "site.duckdb", tmp_path / "site"
+    cli.main(["site", "--served", "--db", str(site_db), "--out", str(site_out)])
+    assert (site_out / "index.html").exists()
+    assert {r[0] for r in duckdb.connect(str(site_db), read_only=True).execute(
+        "select distinct release_build_id from public_coffee").fetchall()} == {b1}  # fmt: skip
+    assert sorted((p.as_posix(), p.stat().st_mtime_ns) for p in lake.root.rglob("*") if p.is_file()) == before
     # marts/release.parquet holds only the current release; the serving log keeps every serve and rollback.
     log = (
         Lake().connect()
@@ -759,3 +851,265 @@ def test_remote_globs_only_for_folders_the_dataset_has(tmp_path, monkeypatch):
     assert not any(s.startswith("hf://") for s in remote.sources("builds"))  # not published yet: staging only
     monkeypatch.setitem(lake_mod._REMOTE_FOLDERS, remote.url, None)  # unknown: read it remotely, as before
     assert any(s.startswith("hf://") for s in remote.sources("builds"))
+
+
+def test_the_site_from_the_served_release_needs_one(tmp_path, monkeypatch, capsys):
+    from coffeedata import cli
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    site = ["site", "--served", "--db", str(tmp_path / "s.duckdb"), "--out", str(tmp_path / "site")]
+    with pytest.raises(SystemExit, match="nothing is served yet"):
+        cli.main(site)
+    # The site workflow asks to skip instead: it says why, exits 0 and builds nothing (so nothing is deployed).
+    cli.main([*site, "--skip-if-unserved"])
+    assert "nothing is served yet" in capsys.readouterr().err
+    assert not (tmp_path / "site").exists() and not (tmp_path / "s.duckdb").exists()
+
+
+ORIGINS = [
+    product("E1", title="Ethiopia Guji Washed Light Roast"),
+    product("E2", 30.0, title="Ethiopia Yirgacheffe Washed Light Roast"),
+    product("E3", 40.0, available=False, title="Ethiopia Sidama Washed Light Roast"),
+    product("BL", None, title="House Coffee"),  # nothing the rules can read, and no price
+]
+
+
+def _metrics(con, prefix: str) -> dict[str, float]:
+    return dict(
+        con.execute("select metric, value from mart_build_profile where metric like ?", [prefix]).fetchall()
+    )
+
+
+def test_the_profile_has_filled_shares_and_the_share_seen_this_run(lake, tmp_path):
+    """filled_share:<column> is the share of listed coffees with the column filled in; listed_seen_this_run_share
+    the share last seen in this run, which a partial fetch keeps below 1 (its unread products stay listed)."""
+    run(lake, "2026-10-19", RID, ORIGINS)
+    run(lake, "2026-10-26", RID, ORIGINS[:2], partial=True)  # E3 and BL unread: still listed, last seen 10-19
+    manifest(lake, "2026-10-26", [RID])
+    con = build(lake, tmp_path, as_of_run="2026-10-26")
+    assert _metrics(con, "filled_share:%") == {
+        "filled_share:origin_country": 0.75,
+        "filled_share:process": 0.75,
+        "filled_share:roast_level": 0.75,
+        "filled_share:price_per_100g": 0.5,  # BL has no price, E3 no available bag
+    }
+    assert _metrics(con, "listed_seen%") == {"listed_seen_this_run_share": 0.5}
+    con.close()
+
+
+def test_a_drop_in_a_filled_share_warns_and_never_fails(lake, tmp_path):
+    """fill_and_freshness_in_band: the anomaly bands of build_metrics_in_band, low side only, and warn only."""
+    run(lake, "2026-10-26", RID, ORIGINS)
+    manifest(lake, "2026-10-26", [RID])
+    _passing_builds(lake, [{
+        "filled_share:origin_country": 0.75, "filled_share:process": 0.75, "filled_share:roast_level": 0.75,
+        "filled_share:price_per_100g": 0.1,  # this build's 0.5 is a rise: no problem
+        "listed_seen_this_run_share": 1.0,
+    }] * 6)  # fmt: skip
+    floors = {"as_of_run": "2026-10-26", "volume_tolerance": 1e9}
+    r = build(lake, tmp_path, check=False, **floors)
+    assert r.returncode == 0 and re.search(r"PASS fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    # Extraction broke: no title reads any more, so origin, process and roast level fall from 0.75 to 0.
+    run(lake, "2026-10-26", RID, [p | {"title": f"Coffee {p['product_id']}"} for p in ORIGINS], hour=13)
+    r = build(lake, tmp_path, check=False, **floors)
+    assert r.returncode == 0 and re.search(r"WARN 3 fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert _metrics(con, "filled_share:%")["filled_share:origin_country"] == 0
+    con.close()
+
+
+def _break(tmp_path, *statements: str) -> None:
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"))
+    for s in statements:
+        con.execute(s)
+    con.close()
+
+
+def _test(lake, tmp_path, name: str, **dbt_vars):
+    return run_dbt(lake, tmp_path, "test", "--select", name, **dbt_vars)
+
+
+def test_the_public_tables_hold_their_invariants(lake, tmp_path):
+    """public_tables_invariants: rows that the SQL can't produce, written into a built database by hand."""
+    run(lake, "2026-10-19", RID, ORIGINS)
+    run(lake, "2026-10-26", RID, [ORIGINS[0] | {"variants": [ORIGINS[0]["variants"][0] | {"price_usd": 22.0}]},
+                                  *ORIGINS[1:]])  # fmt: skip  # E1's price changed
+    build(lake, tmp_path).close()
+    assert _test(lake, tmp_path, "public_tables_invariants").returncode == 0
+    _break(
+        tmp_path,
+        "update public_market_weekly set p10_price_per_100g = median_price_per_100g + 1",  # p10 above the median
+        "update public_market_weekly set in_stock = coffees + 1, roasters = coffees + 1",
+        f"update public_coffee set first_seen = last_seen + 7 where coffee_id = '{RID}:E2'",
+        "update public_price_event set previous_price_usd = price_usd where event = 'price'",
+        "update public_price_event set previous_price_usd = 1 where event = 'new' and coffee_id like '%:E3'",
+    )
+    r = _test(lake, tmp_path, "public_tables_invariants")
+    assert r.returncode != 0 and re.search(r"FAIL 6 public_tables_invariants", r.stdout), r.stdout[-3000:]
+
+
+def test_every_public_row_is_this_builds_release(lake, tmp_path):
+    run(lake, "2026-10-26", RID, ORIGINS)
+    manifest(lake, "2026-10-26", [RID])
+    release = {"build_id": "b1", "as_of_run": "2026-10-26"}
+    build(lake, tmp_path, **release).close()  # every release column is this build's
+    assert _test(lake, tmp_path, "public_tables_are_one_release", **release).returncode == 0
+    r = _test(lake, tmp_path, "public_tables_are_one_release", build_id="b2", as_of_run="2026-10-26")
+    assert re.search(r"FAIL 4 public_tables_are_one_release", r.stdout), r.stdout[-3000:]  # another build's
+    _break(
+        tmp_path,
+        f"update public_coffee set release_run_date = date '2026-10-19' where coffee_id = '{RID}:E1'",
+    )
+    r = _test(lake, tmp_path, "public_tables_are_one_release", **release)  # a mixed release
+    assert re.search(r"FAIL 1 public_tables_are_one_release", r.stdout), r.stdout[-3000:]
+
+
+def test_the_public_catalog_is_from_the_run_the_build_checked(lake, tmp_path):
+    run(lake, "2026-10-19", RID, ORIGINS)
+    run(lake, "2026-10-26", RID, None)  # the run failed: the catalog is still last week's
+    build(lake, tmp_path).close()
+    assert _test(lake, tmp_path, "public_coffee_is_fresh", as_of_run="2026-10-19").returncode == 0
+    r = _test(lake, tmp_path, "public_coffee_is_fresh", as_of_run="2026-10-26")
+    assert re.search(r"FAIL 1 public_coffee_is_fresh", r.stdout), r.stdout[-3000:]
+    r = _test(lake, tmp_path, "public_coffee_is_fresh", as_of_run="2026-10-12")  # a newer run in the lake
+    assert re.search(r"FAIL 1 public_coffee_is_fresh", r.stdout)
+
+
+def test_run_manifest_modes_are_the_writers(lake, tmp_path):
+    run(lake, "2026-10-26", RID, ORIGINS)
+    for mode in ("full", "sample", "only", "retry_failed"):
+        manifest(lake, "2026-10-26", [RID], mode=mode)
+    build(lake, tmp_path).close()
+    assert _test(lake, tmp_path, "run_manifest_mode_values").returncode == 0
+    manifest(lake, "2026-10-26", [RID], mode="partial")  # not a mode: run_completeness wouldn't know it
+    r = _test(lake, tmp_path, "run_manifest_mode_values")
+    assert r.returncode != 0 and re.search(r"FAIL 1 run_manifest_mode_values", r.stdout), r.stdout[-3000:]
+
+
+def test_a_partial_a_quarantined_and_a_closed_store_pass_every_release_rule(lake, tmp_path):
+    """A legitimate week with main's newer fetch states: one store read in part (fetches.partial), one quarantined
+    after crashing the crawl (status crashed), one closed (unavailable). None of the release rules fails: the
+    public tables stay one fresh release and hold their invariants, and the share seen this run only warns."""
+    stores = {"part": "counterculturecoffee.com", "pill": "intelligentsia.com", "closed": "anaheimcoffee.com"}
+    for rid in (RID, *stores.values()):
+        run(lake, "2026-10-19", rid, ORIGINS)
+    run(lake, "2026-10-26", RID, [ORIGINS[0] | {"variants": [ORIGINS[0]["variants"][0] | {"price_usd": 22.0}]},
+                                  *ORIGINS[1:]])  # fmt: skip  # E1's price changed
+    # Read in part, with a price change: E3 and BL unread, so still listed from last week, and never removed.
+    run(lake, "2026-10-26", stores["part"], [ORIGINS[0], ORIGINS[1] | {"variants": [
+        ORIGINS[1]["variants"][0] | {"price_usd": 31.0}]}], partial=True)  # fmt: skip
+    run(lake, "2026-10-26", stores["pill"], None, status="crashed")
+    run(lake, "2026-10-26", stores["closed"], None, status="unavailable")
+    manifest(lake, "2026-10-26", [RID, *stores.values()])
+    _passing_builds(lake, [{"listed_seen_this_run_share": 1.0}] * 6)
+    release = {"build_id": "b1", "as_of_run": "2026-10-26", "volume_tolerance": 1e9}
+    r = build(lake, tmp_path, check=False, **release)
+    assert r.returncode == 0, r.stdout[-4000:]
+    for rule in ("public_coffee_is_fresh", "public_tables_are_one_release", "public_tables_invariants",
+                 "run_manifest_mode_values", "run_ok_rate", "run_is_complete"):  # fmt: skip
+        assert re.search(rf"PASS {rule}\b", r.stdout), rule
+    assert re.search(r"WARN 1 fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    # Seen this run: the 4 of the full store, 2 of the partial one; not the quarantined or closed store's 4 each.
+    assert _metrics(con, "listed_seen%") == {"listed_seen_this_run_share": 6 / 16}
+    assert _metrics(con, "run_quarantined") == {"run_quarantined": 1}
+    assert con.execute(
+        "select count(*) from public_price_event where event = 'removed' and roaster_id = ?", [stores["part"]]
+    ).fetchone() == (0,)
+    con.close()
+
+
+def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
+    claims = {c["metric"]: c for c in quality.coverage_claims()}
+    assert {m: c["value"] for m, c in claims.items()} == {
+        "listed_coffees": 38000.0,
+        "roasters_with_coffee": 1800.0,
+    }
+    for c in claims.values():  # the line named is the copy, not the claims comment
+        path, line = c["source"].rsplit(":", 1)
+        assert path == "marketplace/LISTING.md"  # shown from the checkout's root
+        copy = (quality.ROOT / path).read_text().splitlines()[int(line) - 1]
+        assert c["text"] in copy and "coverage-claims" not in copy and not copy.startswith("listed_coffees")
+
+
+@pytest.mark.parametrize(
+    ("claim", "error"),
+    [
+        ("listed_coffees: about 50,000 coffees", "is not in the copy"),
+        ("listed_coffees: coffees", "has no number"),
+    ],
+)
+def test_a_coverage_claim_must_match_its_copy(tmp_path, claim, error):
+    listing = tmp_path / "LISTING.md"
+    listing.write_text(
+        f"<!-- coverage-claims: notes\n{claim}\n-->\nWeekly prices for about 45,000 coffees.\n"
+    )
+    with pytest.raises(ValueError, match=error):
+        quality.coverage_claims(listing)
+
+
+def _claim(metric: str, value: float) -> dict:
+    return {
+        "metric": metric,
+        "value": value,
+        "text": f"about {value:,.0f}",
+        "source": "marketplace/LISTING.md:9",
+    }
+
+
+def test_coverage_claims_pass_inside_the_tolerance_warn_outside_it_and_fail_on_an_unknown_metric(
+    lake, tmp_path
+):
+    run(lake, "2026-10-26", RID, FULL)  # lists 40 coffees from 1 roaster
+    inside = [_claim("listed_coffees", 45), _claim("roasters_with_coffee", 1)]  # 45 is 12.5% over 40
+    r = build(lake, tmp_path, check=False, coverage_claims=inside)
+    assert r.returncode == 0 and not re.search(r"WARN \d+ coverage_claims", r.stdout)
+    assert quality.coverage_claim_messages(tmp_path / "coffee.duckdb") == []
+
+    # Drift only warns, and names the line to update.
+    r = build(lake, tmp_path, check=False, coverage_claims=[_claim("listed_coffees", 45000)])
+    assert r.returncode == 0 and re.search(r"WARN 1 coverage_claims_match_build", r.stdout)
+    [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
+    assert msg.startswith("marketplace/LISTING.md:9: 'about 45,000'") and "listed_coffees (40;" in msg
+    tight = {
+        "coverage_claims": [_claim("listed_coffees", 45)],
+        "claim_tolerance": 0.1,
+    }  # the tolerance is a var
+    assert re.search(
+        r"WARN 1 coverage_claims_match_build", build(lake, tmp_path, check=False, **tight).stdout
+    )
+
+    r = build(lake, tmp_path, check=False, coverage_claims=[_claim("coffees_listed", 40)])
+    assert r.returncode != 0 and re.search(r"FAIL 1 coverage_claims_name_metrics", r.stdout)  # a bug: fails
+    [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
+    assert "names coffees_listed, which mart_build_profile doesn't have" in msg
+
+
+def test_a_build_from_a_directory_without_marketplace_warns_and_is_still_recorded(
+    lake, monkeypatch, tmp_path, caplog
+):
+    """The ingest image before LISTING.md was copied in: the build runs, warns and records its release."""
+    from coffeedata import cli
+
+    image = tmp_path / "image"  # the checkout without marketplace/
+    image.mkdir()
+    for entry in quality.ROOT.iterdir():
+        if entry.name not in ("marketplace", ".git"):
+            (image / entry.name).symlink_to(entry)
+    monkeypatch.chdir(image)
+    monkeypatch.setattr(quality, "LISTING", image / "marketplace" / "LISTING.md")
+    real_dbt_build = cli.dbt_build
+    monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    run(lake, "2026-10-26", RID, FULL)
+    args = argparse.Namespace(
+        db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-26", accept_volume_change=False
+    )
+    assert cli.cmd_build(args) is True
+    assert "coverage claims not checked: " in caplog.text and "LISTING.md can't be read" in caplog.text
+    [(build_id, _, _)] = quality.builds(Lake())
+    assert quality.served(Lake())["build_id"] == build_id
