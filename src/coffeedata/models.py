@@ -21,7 +21,6 @@ class Roaster(BaseModel):
     platform: str = ""  # from the latest successful probe: shopify, woocommerce, squarespace?, wix?, ...
     city: str = ""
     state: str = ""
-    is_chain: bool = False
 
     @property
     def adapter(self) -> Platform:
