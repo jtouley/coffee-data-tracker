@@ -15,6 +15,15 @@ There is no labeled evaluation of this field. This README keeps the running tota
 
 ## Running total (CLAUDE.md step 9)
 
+**Why steps 2–7 don't apply here.** Step 9 asks for the full process when a change alters how a rule decides, and
+this one does: `is_chain` moves from a hand-set flag to "more than 20 stores, unless overridden". It is measured here
+by hand instead, for three reasons. The rule is the owner's own definition, verbatim, not a heuristic tuned to data;
+the owner also decided that the store count stays as discovery records it, so there is no alternative count to
+compare; and there is no independent labeled set of store counts to score it against. What can be checked was: on all
+3,203 seed roasters the rule plus its four overrides gives exactly the nine chains `main` flagged by hand (0
+changed), each hand-checked below. A labeled evaluation would need real store counts per roaster, which no source in
+the lake has.
+
 | Change | Roasters whose `is_chain` changed | public_roaster | public_coffee | public_price_event |
 |---|---|---|---|---|
 | Store-count rule with overrides; chains leave the public tables (2026-11-11) | **0** | -2 | -149 | -438 |
@@ -27,8 +36,11 @@ The Coffee Bean & Tea Leaf), as the owner's decision asks; that is the decision,
 
 `locations` is the number of US Overture places whose website is the roaster's and that are roasteries: tagged
 `coffee_roastery`, or a coffee place with "roast" in its name (`discover.overture`). The seed recorded it when it was
-built from an Overture release; discovery writes the same count to the lake's `registry` table on each run, and
-`stg_registry` takes the seed's value for a seeded roaster. Nothing new is crawled to decide `is_chain`, and no
+built from an Overture release. Discovery writes its own count to the lake's `registry` table on each run, but
+`stg_registry` takes the seed's value for a seeded roaster (`coalesce(s.locations, a.locations, 1)`): **a seeded
+roaster's count is frozen at seeding**, and only a roaster the lake alone lists follows discovery. So no seeded roaster
+crosses the threshold by itself (Coffee Bean's override guards against a change that can't come through this path
+today); the owner decided the count stays as discovery records it, and this README says so rather than changing it. Nothing new is crawled to decide `is_chain`, and no
 backfill is needed: every roaster has a count (1 when unknown, and for OpenStreetMap-only roasters).
 
 It is a count of roastery places, not of stores. A café that serves the roaster's coffee but isn't tagged as a
@@ -61,6 +73,14 @@ public store counts as generally known; nobody labeled, and nobody counted store
 44; 148 of them listed); public_price_event 309,316 → 308,878 (-438); public_market_weekly keeps all 196 cells, 35 of
 them with lower counts (19,964 → 19,889 coffees). The site's catalog already left these 149 coffees out; its headline
 coffee and roaster totals now do too.
+
+## Known limits
+
+- **One status per roaster_id, not per store.** `is_chain` is decided per id, and `public_roaster` publishes each
+  store's canonical id. A chain domain that is an alias of a non-chain canonical id would leave that store's coffees
+  public. None exists today: no seed alias touches a chain, and release 971bfe has no alias rows. If one appears,
+  decide it per store (`bool_or(is_chain) over (partition by canonical_roaster_id)`).
+- **The seeded count is frozen** (above).
 
 ## Likely chains the count misses (the owner's decision)
 
