@@ -15,6 +15,8 @@ import pytest
 
 from coffeedata import classify, products
 
+from .evalfloor import floors
+
 SEALED = Path(__file__).parent.parent / "eval" / "sealed"
 # Measured 2026-11-11 on main 0cfa4d9: decide 0.9827 (kept 8 false coffee, dropped 3 missed), the rules 0.9405
 # (kept 32 / dropped 2 false coffee and 5 missed). Raise these when the classifier improves, never lower them.
@@ -52,4 +54,5 @@ def _predictions(which: str) -> dict[int, bool]:
 @pytest.mark.parametrize("which", sorted(FLOOR))
 def test_sealed_set_accuracy_does_not_regress(which):
     acc = _weighted_accuracy(_predictions(which))
-    assert acc >= FLOOR[which], f"{which}: weighted accuracy {acc:.2%} < {FLOOR[which]:.1%}"
+    with floors("sealed", which) as f:
+        f.at_least("weighted accuracy", acc, FLOOR[which])

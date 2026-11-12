@@ -350,6 +350,7 @@ def test_snapshot_stores_raw_once_per_week_and_offers_are_derived_on_read(tmp_pa
     assert [(r["importer"], r["status"], r.get("rows"), r.get("null_cells")) for r in first] == [
         ("cafe_imports", "stored", 4, 0),
         ("interamerican", "stored", 4, 0),
+        ("royal_coffee", "skipped", None, None),  # fetched by the scheduled workflow only
     ]
     assert len([c for c in calls if not c.endswith("/robots.txt")]) == 2
     # raw only: one file per importer and week, nothing else
@@ -373,7 +374,7 @@ def test_snapshot_stores_raw_once_per_week_and_offers_are_derived_on_read(tmp_pa
     calls.clear()
     with _client(_pages(), calls) as client:
         again = importers.snapshot(lake, client, now=lambda: datetime(2026, 11, 15, tzinfo=UTC))
-    assert [r["status"] for r in again] == ["skipped", "skipped"] and calls == []
+    assert [r["status"] for r in again] == ["skipped", "skipped", "skipped"] and calls == []
     with pytest.raises(FileExistsError):  # immutable, as every lake file
         lake.write("importer_raw", importers.path("cafe_imports", MON), t)
 
@@ -397,7 +398,7 @@ def test_a_thinned_page_fails_unless_the_drop_is_accepted(tmp_path):
     thin = _pages(ia=_rows(IA_HTML, 1))  # 1 lot where last week had 4
     with _client(thin, []) as client:
         res = importers.snapshot(lake, client, now=lambda: NEXT)
-    assert [r["status"] for r in res] == ["stored", "failed"]
+    assert [r["status"] for r in res] == ["stored", "failed", "skipped"]
     assert "under 50% of the 4" in res[1]["error"] and "--accept-drop" in res[1]["error"]
     assert not (lake.root / importers.path("interamerican", date(2026, 11, 16))).exists()
     with _client(thin, []) as client:
@@ -413,7 +414,7 @@ def test_a_changed_page_fails_that_importer_and_writes_nothing_for_it(tmp_path):
     lake = _local(tmp_path)
     with _client(_pages(ci="<html><body>maintenance</body></html>"), []) as client:
         res = importers.snapshot(lake, client, now=lambda: NOW)
-    assert [r["status"] for r in res] == ["failed", "stored"]
+    assert [r["status"] for r in res] == ["failed", "stored", "skipped"]
     assert "LayoutChanged" in res[0]["error"]
     assert not (lake.root / importers.path("cafe_imports", MON)).exists()
 
@@ -426,7 +427,8 @@ def test_a_failed_fetch_fails_loudly(tmp_path):
 
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
         res = importers.snapshot(_local(tmp_path), client, now=lambda: NOW)
-    assert [r["status"] for r in res] == ["failed", "failed"] and all("HTTP 403" in r["error"] for r in res)
+    assert [r["status"] for r in res] == ["failed", "failed", "skipped"]
+    assert all("HTTP 403" in r["error"] for r in res[:2])
 
 
 def test_robots_disallow_is_respected(tmp_path):
@@ -438,7 +440,7 @@ def test_robots_disallow_is_respected(tmp_path):
 
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
         res = importers.snapshot(_local(tmp_path), client, now=lambda: NOW)
-    assert all(r["status"] == "failed" for r in res)
+    assert [r["status"] for r in res] == ["failed", "failed", "skipped"]
     assert set(calls) == {"/robots.txt"}  # never the page itself
 
 
@@ -503,7 +505,7 @@ def test_remote_dataset_is_created_private_and_written_once_per_week(tmp_path, m
     lake = _remote(tmp_path, monkeypatch, api)
     with _client(_pages(), []) as client:
         res = importers.snapshot(lake, client, now=lambda: NOW)
-    assert [r["status"] for r in res] == ["stored", "stored"]
+    assert [r["status"] for r in res] == ["stored", "stored", "skipped"]
     assert api.calls[:2] == [("create", "someone/importers", True, True), ("card", "README.md")]
     commits = [c[1] for c in api.calls if c[0] == "commit"]
     schema = "raw/week=0000-00-00/importer=schema.parquet"
@@ -517,7 +519,7 @@ def test_remote_dataset_is_created_private_and_written_once_per_week(tmp_path, m
     calls: list[str] = []
     with _client(_pages(), calls) as client:  # a fresh runner later that week: the dataset already has it
         again = importers.snapshot(lake, client, now=lambda: NOW)
-    assert [r["status"] for r in again] == ["skipped", "skipped"] and calls == []
+    assert [r["status"] for r in again] == ["skipped", "skipped", "skipped"] and calls == []
     assert sum(c == ("card", "README.md") for c in api.calls) == 1  # sent once; unchanged since
 
     # next week's thinned page is checked against the stored week read back from the dataset
@@ -619,8 +621,17 @@ def test_nothing_from_the_importers_can_reach_anything_public():
         if f.is_file() and "__pycache__" not in f.parts:
             text = f.read_text(errors="ignore").lower()
             assert "importer" not in text and "coffeedata_importers" not in text, f
+            # Royal Coffee too: its key, its address variable and its store
+            assert "royal_coffee" not in text and "royal_url" not in text and "royalcoffee" not in text, f
     cli = (root / "src/coffeedata/cli.py").read_text()
     assert cli.count("Lake.importers()") == 1  # importer-snapshot, nothing else
+    # Royal is stored like the others, raw only, in the importers dataset, and its values are derived on read by the
+    # same transform (offers(), derive()), which nothing public calls
+    assert importers.path("royal_coffee", MON).startswith("raw/")
+    for f in [*sources, root / "src/coffeedata/cli.py"]:
+        if f.is_file() and "__pycache__" not in f.parts:
+            text = f.read_text(errors="ignore")
+            assert not any(n in text for n in ("offers(", "derive(", "normalize_royal", "royal_stated")), f
 
 
 # --- the command and the workflow -----------------------------------------------------------------------------------
@@ -655,6 +666,9 @@ def test_cli_refuses_a_local_lake_in_ci_and_an_unknown_importer(tmp_path, monkey
     ):
         with pytest.raises(SystemExit, match="exactly one --importer"):
             cli.main(["importer-snapshot", *argv])
+    # Royal only fetches on the schedule: a dispatch can't accept a drop there
+    with pytest.raises(SystemExit, match="fetched only by the scheduled run"):
+        cli.main(["importer-snapshot", "--importer", "royal_coffee", "--accept-drop"])
 
 
 def test_workflow_runs_on_main_only_and_never_on_pull_requests():
@@ -663,7 +677,12 @@ def test_workflow_runs_on_main_only_and_never_on_pull_requests():
     assert set(wf[True]) == {"schedule", "workflow_dispatch"}  # YAML 1.1 reads `on:` as True
     inputs = wf[True]["workflow_dispatch"]["inputs"]
     assert set(inputs) == {"importer", "accept_drop"}
-    assert inputs["importer"]["options"] == ["all", *importers.IMPORTERS]
+    # every importer but the ones only the schedule fetches (Royal): those are never offered on a dispatch
+    assert importers.SCHEDULE_ONLY == ("royal_coffee",)
+    assert inputs["importer"]["options"] == [
+        "all",
+        *(k for k in importers.IMPORTERS if k not in importers.SCHEDULE_ONLY),
+    ]
     assert wf["permissions"] == {"contents": "read"}
     for name, job in wf["jobs"].items():
         assert job.get("if") == "github.ref == 'refs/heads/main'", name

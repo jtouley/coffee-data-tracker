@@ -31,6 +31,17 @@ jobs:
         env:  # a missing dbt or browser fails the tests that need it instead of skipping them
           REQUIRE_DBT: "1"
           REQUIRE_BROWSER: "1"
+          EVAL_REPORT: ${{ runner.temp }}/eval-report.json  # every accuracy floor's outcome (tests/evalfloor.py)
+      # On main, the floors' report is kept for eval-alerts.yml, which runs once ci completes (so alerting never
+      # changes ci's result, which deploy waits on). On a pull request a failed floor fails this job, and its
+      # message and annotation name the eval, the set, the measured value and the floor.
+      - if: always() && github.event_name == 'push'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: eval-report
+          path: ${{ runner.temp }}/eval-report.json
+          if-no-files-found: ignore
+          retention-days: 30
 
   # The fast check on every PR and push (`make smoke`): three parts in parallel, over the recorded fixtures, with no
   # network. Branch protection requires `smoke`, the job below that waits for all three.

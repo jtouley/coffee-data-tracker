@@ -20,6 +20,17 @@
 # fails the run, and that importer's week stays unwritten, so a dispatch the same week (after a fix, or with
 # importer and accept_drop for a real drop at that one importer) fetches it again. A week already stored is never
 # fetched again.
+#
+# Royal Coffee (royal_coffee) is fetched on the scheduled run only. Its terms restrict automated access and AI tools;
+# the owner chose to include it, and no AI agent may ever access the site. So its address appears nowhere but here,
+# and only a scheduled run's first attempt gets it: COFFEEDATA_ROYAL_URL below is empty on a dispatch and on a re-run
+# (a re-run keeps the `schedule` event, so the attempt number is checked too). So neither dispatching nor re-running
+# this workflow makes it fetch Royal; a failed Royal week waits for the next schedule. It isn't offered in the
+# dispatch `importer` choice (a dispatch with `all`, or a re-run, reports it skipped), and importers.royal_listing_url
+# refuses the address outside GitHub Actions, in another workflow, on any event but `schedule`, on a re-run, and
+# under pytest. A real drop at Royal is accepted by the repository variable ROYAL_ACCEPT_DROP_WEEK set to the value
+# the failure names (the failed week's Monday, YYYY-MM-DD): the next weekly run accepts it, read on a scheduled first
+# attempt only, and it expires a week later.
 name: importers
 on:
   schedule:
@@ -29,6 +40,7 @@ on:
       importer:
         description: "Only this importer (needed with accept_drop, so the override covers one importer)"
         type: choice
+        # every importer but royal_coffee, which only the schedule fetches (importers.SCHEDULE_ONLY)
         options: [all, cafe_imports, interamerican]
         default: all
       accept_drop:
@@ -45,7 +57,9 @@ jobs:
     # main's code only: a dispatch from another branch would run that branch's scripts and lockfile with the token
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Royal's listing is read up to 100 pages, 15 s apart (about 25 minutes), or up to 60 s apart if its robots.txt
+    # asks a Crawl-delay (about 100 minutes)
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
@@ -60,6 +74,9 @@ jobs:
           # importers.ensure_private refuses to write to any of these
           COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
           PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+          # Royal's store, for the scheduled run alone (see the note above `name:`)
+          COFFEEDATA_ROYAL_URL: ${{ github.event_name == 'schedule' && github.run_attempt == '1' && 'https://royalcoffee.com' || '' }}
+          ROYAL_ACCEPT_DROP_WEEK: ${{ github.event_name == 'schedule' && github.run_attempt == '1' && vars.ROYAL_ACCEPT_DROP_WEEK || '' }}
           ACCEPT_DROP: ${{ inputs.accept_drop && '1' || '' }}
           IMPORTER: ${{ inputs.importer }}  # a choice input, passed via env, never interpolated into the script
         run: |

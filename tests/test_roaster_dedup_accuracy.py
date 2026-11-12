@@ -14,6 +14,8 @@ import pytest
 
 from coffeedata import registry
 
+from .evalfloor import floors
+
 ROOT = Path(__file__).parent.parent
 EVAL = ROOT / "eval" / "roaster_dedup"
 sys.path.insert(0, str(EVAL))
@@ -49,6 +51,7 @@ def test_roaster_dedup_accuracy_does_not_regress(name, canonical):
     wrong = sum(ref[k] == "different_store" for k in called)
     same = [k for k in ref if ref[k] == "same_store"]
     recall = sum(pred[k] for k in same) / len(same)
-    assert right >= FLOOR[name]["called_right"], f"{name}: {right} same-store pairs called"
-    assert recall >= FLOOR[name]["recall"], f"{name}: recall {recall:.3f}"
-    assert wrong <= CEILING_WRONG[name], f"{name}: {wrong} different-store pairs called the same store"
+    with floors("roaster_dedup", name) as f:
+        f.at_least("same-store pairs called", right, FLOOR[name]["called_right"], unit="count")
+        f.at_least("recall", recall, FLOOR[name]["recall"], n=len(same), k=sum(pred[k] for k in same))
+        f.at_most("different-store pairs called the same store", wrong, CEILING_WRONG[name], unit="count")

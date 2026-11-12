@@ -26,7 +26,7 @@ import pytest
 from coffeedata.extract import rules
 from coffeedata.models import CatalogItem
 
-from .evalfloor import eval_dir
+from .evalfloor import eval_dir, floors
 
 pytestmark = pytest.mark.private_eval
 EVAL = Path(__file__).parent.parent / "eval" / "origin"
@@ -69,15 +69,15 @@ def test_origin_train_accuracy_does_not_regress():
         if keys:
             agree += size / total * sum(got[k] == labels[k] for k in keys) / len(keys)
             wrong += size / total * sum(_wrong(got[k], labels[k]) for k in keys) / len(keys)
-    assert agree >= TRAIN_FLOOR, f"train: weighted agreement {agree:.2%} < floor {TRAIN_FLOOR:.1%}"
-    assert wrong <= TRAIN_CEILING, f"train: weighted wrong-country {wrong:.2%} > ceiling {TRAIN_CEILING:.1%}"
+    with floors("origin", "train") as f:
+        f.at_least("weighted agreement", agree, TRAIN_FLOOR)
+        f.at_most("weighted wrong-country", wrong, TRAIN_CEILING)
 
 
 def test_origin_validation_accuracy_does_not_regress():
     labels, got = _predictions("validation")
     agree = sum(got[k] == labels[k] for k in labels)
     wrong = sum(_wrong(got[k], labels[k]) for k in labels)
-    assert agree >= VALIDATION_AGREE, f"validation: {agree} of {len(labels)} agree < {VALIDATION_AGREE}"
-    assert wrong <= VALIDATION_WRONG, (
-        f"validation: {wrong} of {len(labels)} wrong-country > {VALIDATION_WRONG}"
-    )
+    with floors("origin", "validation") as f:
+        f.at_least("listings that agree", agree, VALIDATION_AGREE, unit="count", n=len(labels))
+        f.at_most("wrong-country listings", wrong, VALIDATION_WRONG, unit="count", n=len(labels))
