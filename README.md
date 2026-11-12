@@ -245,7 +245,8 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads. `build` and `weekly` take `--db` instead (same default); `site` and `export-public` default to `build/served.duckdb`, the served release |
 | `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
 | `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
-| `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by dbt or released |
+| `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by the main dbt project or released. Only the private one (`dbt_importers/`, `coffeedata importer-build`) reads it |
+| `COFFEEDATA_IMPORTERS_DB` | none | The private importers project's database file; `coffeedata importer-build` sets it from `--db` (default `build/importers.duckdb`), never the main build's |
 | `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
 | `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
@@ -376,19 +377,25 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
 Green importers' offer lists have a private dataset of their own too (`COFFEEDATA_IMPORTERS`,
 [`src/coffeedata/importers_card.md`](src/coffeedata/importers_card.md), its dataset card). **They are backend-only,
 for internal use and a future roaster portal**: never in the public release, the `public_*` tables, the site or the
-public dataset, and dbt never reads them. Even in that portal, only the normalized values may be shown, never the
-importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
+public dataset, and the main dbt project never reads them. Even in that portal, only the normalized values may be
+shown, never the importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
 pass a week over each importer's public offer page and stores it raw: one immutable `raw/` file per importer and
 week, each lot word for word (every cell of its row and its URL), as the roaster adapters keep a product's whole
-text. The stated fields and our normalized values are derived from raw when read (`importers.offers()`), never
-stored, so a better rule re-derives the whole history. No prices, page HTML or images.
+text. No prices, page HTML or images. The stated fields and our normalized values are derived from raw by a private
+dbt project of its own, `dbt_importers/` (`coffeedata importer-build`): staging unnests each lot's cells, and
+intermediate models apply the rules (SQL over the vocabulary in `importer_rules.py`, `extract.py` and `origins.py`,
+handed to dbt by a Python model; dbt unit tests in `dbt_importers/models/unit_tests.yml`) into `importer_offers`. It
+builds into its own database file (`build/importers.duckdb`), which the main build, the release, the site, the
+exports, the contracts and the MCP server never open (`tests/test_importers.py`). Nothing derived is stored in the
+dataset, so a better rule re-derives the whole history. InterAmerican's table has no origin, region, process or
+grade column, so those are read from its product names ("Brazil Oberon 17/18 Natural"); it states no lot ID. The
+rules abstain when unsure and haven't been evaluated yet (CLAUDE.md).
 
 Royal Coffee, a Shopify store, is the third importer: its public `/products.json` listing is read one page of 250
 after another, 15 s apart, and each product is kept word for word (its fields, tags, options, variants without
 prices, and `body_html`'s text; no prices or images; a field that mentions a price is left out of that product).
 Its values (lot number, warehouse, origin, region, process, varieties, altitude, harvest months, certifications) are
-derived on read like the others' (`importers.offers()`, `importer_rules.royal_stated` and `normalize_royal`), never
-stored. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
+derived by the same private dbt project (`int_royal_labels`, `int_royal_rules`), never stored. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
 access Royal's site.** Its address is only in the importers workflow, passed to a scheduled run's first attempt
 alone (never a dispatch or a re-run). `importers.royal_listing_url` refuses it anywhere else; that check reads
 environment values, so it stops accidents, not a deliberate run. Every HTTP client but the importers job's, and the

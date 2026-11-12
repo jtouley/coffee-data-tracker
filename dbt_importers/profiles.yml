@@ -1,0 +1,14 @@
+coffeedata_importers:
+  target: importers
+  outputs:
+    importers:
+      type: duckdb
+      # No default: only `coffeedata importer-build` (importers.build) sets it, to a file that isn't the main build's.
+      path: "{{ env_var('COFFEEDATA_IMPORTERS_DB') }}"
+      threads: 2
+      extensions: [httpfs]
+      settings:
+        TimeZone: UTC
+      secrets:
+        - type: huggingface
+          token: "{{ env_var('HF_TOKEN', 'none') }}"

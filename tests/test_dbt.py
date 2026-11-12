@@ -18,6 +18,8 @@ from .lakehelp import needs_dbt, probe, product, run
 
 ROOT = Path(__file__).parent.parent
 FIX = Path(__file__).parent / "fixtures"
+# Every model of the private importers project, which only its own database file may hold.
+PRIVATE_MODELS = {p.stem for p in (ROOT / "dbt_importers/models").rglob("*") if p.suffix in (".sql", ".py")}
 pytestmark = needs_dbt
 
 
@@ -53,7 +55,13 @@ def build(lake, tmp_path, check=True, **extra_vars):
     if not check:
         return r
     assert r.returncode == 0, r.stdout[-4000:]
-    return duckdb.connect(str(db), read_only=True)
+    con = duckdb.connect(str(db), read_only=True)
+    # The main build's database (what the release, the site, the exports and the MCP server read) never holds a table
+    # of the private importers project (dbt_importers/).
+    built = {t for (t,) in con.execute("select table_name from information_schema.tables").fetchall()}
+    assert not built & PRIVATE_MODELS, built & PRIVATE_MODELS
+    assert not any("importer" in t or "royal" in t for t in built), built
+    return con
 
 
 def test_history_is_derived_from_successful_runs(lake, tmp_path):

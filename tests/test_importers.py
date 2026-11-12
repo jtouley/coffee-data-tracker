@@ -20,6 +20,8 @@ from coffeedata import importers
 from coffeedata.http import PoliteClient
 from coffeedata.lake import GLOBS, IMPORTER_TABLES, LAKE_TABLES, SCHEMAS, Lake
 
+from .lakehelp import importer_offers, needs_dbt
+
 FIXTURES = Path(__file__).parent / "fixtures" / "importers"
 CI_HTML = (FIXTURES / "cafeimports.html").read_text()
 IA_HTML = (FIXTURES / "interamerican.html").read_text()
@@ -28,14 +30,17 @@ MON = date(2026, 11, 9)  # its week
 NEXT = datetime(2026, 11, 18, 17, 37, tzinfo=UTC)  # the next week
 
 
-def _offers(name: str, html: str) -> list[dict]:
-    """The page's lots as the read-time transform derives them."""
-    p = importers.parse(name, html)
-    base = {"week": MON, "fetched_at": NOW, "importer": name}
-    return [
-        importers.derive(base | {"row": lot.row, "url": lot.url, "cells": _cells(lot.cells)})
-        for lot in p.lots
-    ]
+def _stated(name: str, html: str) -> list[dict]:
+    """The page's lots with the fields it states (importers.stated, as the private dbt project reads them)."""
+    out = []
+    for lot in importers.parse(name, html).lots:
+        problems: list[str] = []
+        out.append(
+            {"row": lot.row, "url": lot.url}
+            | importers.stated(name, lot.cells, problems)
+            | {"problems": problems}
+        )
+    return out
 
 
 def _cells(cells: dict) -> list[dict]:
@@ -56,7 +61,7 @@ def _rows(html: str, keep: int) -> str:
 
 
 def test_cafe_imports_lots():
-    by_lot = {o["lot_id"]: o for o in _offers("cafe_imports", CI_HTML)}
+    by_lot = {o["lot_id"]: o for o in _stated("cafe_imports", CI_HTML)}
     assert list(by_lot) == ["25973", "26784", "26453", "25748-2"]
     lot = by_lot["25973"]
     assert {
@@ -80,14 +85,15 @@ def test_cafe_imports_lots():
 
 
 def test_interamerican_lots():
-    offers = _offers("interamerican", IA_HTML)
+    offers = _stated("interamerican", IA_HTML)
     assert [(o["warehouse"], o["status"], o["bags"], o["bag_kg"]) for o in offers] == [
         ("Continental Terminals Annex", "afloat", 11, 59.0),
         ("Continental Terminals Annex", "in_store", 100, 60.0),
         ("Dupuy Houston", "afloat", 175, 59.0),
         ("Continental Terminals NJ", "afloat", 17, 1000.0),  # "1MT Supersacks"
     ]
-    # the page has no lot, origin, region, process or arrival column
+    # the page has no lot, origin, region, process or arrival column (the private dbt project reads origin, region
+    # and process from the product name: test_the_private_dbt_project_derives_every_stored_week)
     assert all(o[k] is None for o in offers for k in ("lot_id", "origin", "region", "process", "est_arrival"))
     assert all(o["url"].startswith("https://interamericancoffee.com/") for o in offers)
 
@@ -194,131 +200,13 @@ def test_a_bad_cell_is_null_and_counted_not_a_failed_week():
     page = IA_HTML.replace('<td style="">11</td>', '<td style="">n/a</td>')
     parsed = importers.parse("interamerican", page)
     assert len(parsed.lots) == 4 and parsed.bad_cells == 1 and parsed.unreadable_rows == 0
-    first = _offers("interamerican", page)[0]
+    first = _stated("interamerican", page)[0]
     assert first["bags"] is None and first["problems"] == ["bags"]
-    # a rule that fails on odd text abstains for that value only
-    assert rules.altitude("Lot 1.2.3 m") == (None, None)
-    problems: list[str] = []
-    out = rules.normalize("cafe_imports", {"Name": None, "Notes": "x", "Process": "Washed"}, problems)
-    assert out["process_type"] == "washed" and problems == []
 
 
-def test_a_failing_rule_never_fails_the_lot(monkeypatch):
-    def boom(*a):
-        raise ValueError("odd text")
-
-    boom.__name__ = "altitude"
-    monkeypatch.setattr(rules, "altitude", boom)
-    problems: list[str] = []
-    out = rules.normalize("cafe_imports", {"Name": "Natural (GrainPro)", "Process": "Natural"}, problems)
-    assert out["altitude_min_m"] is None and out["process_type"] == "natural"
-    assert problems == ["altitude: ValueError"]
-
-
-# --- the normalized values: decide or abstain -----------------------------------------------------------------------
-
-
-@pytest.mark.parametrize(
-    "stated, name, want",
-    [
-        ("Natural", "Karana - Carbonic Maceration - Anaerobic - Natural", "anaerobic"),
-        ("Wet-Hulled", "Sumatra Lintong", "honey"),
-        ("Pulped Natural", "Fazenda X", "honey"),
-        ("Semi-Washed", "Sumatra", "honey"),
-        ("Washed", "Gakenke - Kayanza - Washed", "washed"),
-        (None, "Ethiopia Yirgacheffe G2 Washed", "washed"),
-        # abstain: decaf, a mix, a misspelling, nothing stated
-        ("Decaf", "Mountain Water Process", None),
-        ("Washed", "Colombia Decaf Sugarcane", None),
-        (None, "Mexico Mountain Water Decaf Natural", None),
-        (None, "Costa Rica Sonora Honey Natural", None),
-        (None, "Brazil Cerrado 17/18 Natrual", None),
-        (None, "Colombia Supremo", None),
-    ],
-)
-def test_process(stated, name, want):
-    assert rules.process(stated, name) == want
-
-
-def test_other_rules_decide_or_abstain():
-    # varieties, in the catalog's spelling; Java is a variety except on an Indonesian lot
-    assert rules.varieties("Natural - Fazenda Santa Lucia - Yellow Bourbon (GrainPro)") == ["Yellow Bourbon"]
-    assert rules.varieties("Rwanda Java Washed", "Rwanda") == ["Java"]
-    assert rules.varieties("Indonesia Java G1") is None
-    assert rules.varieties("Karana - Natural", "Java") is None
-    assert rules.varieties("Washed (GrainPro)") is None
-    # altitude only in an altitude context
-    assert rules.altitude("grown at 1,700-1,900 masl") == (1700, 1900)
-    assert rules.altitude("Altitude: 1500") == (1500, 1500)
-    assert rules.altitude("1800 masl") == (1800, 1800)
-    assert rules.altitude("Bags of 1,000 m") == (None, None)
-    assert rules.altitude("Screen 16+") == (None, None)
-    # harvest months only when stated, as whole month words
-    assert rules.harvest_months("Harvest: Nov - Feb") == ["nov", "dec", "jan", "feb"]
-    assert rules.harvest_months("Harvested December through March") == ["dec", "jan", "feb", "mar"]
-    assert rules.harvest_months("This harvest declined because of rain") is None
-    assert rules.harvest_months("This harvest may be smaller") is None  # a verb
-    assert rules.harvest_months("Harvest: May") == ["may"]
-    assert rules.harvest_months("harvested in May") == ["may"]
-    assert rules.harvest_months("Harvest May - Aug") == ["may", "jun", "jul", "aug"]
-    assert rules.harvest_months("Graham with mild kahlua") is None
-    # grower: a part of the name with a grower word; a placeholder keeps the type but not the name
-    assert rules.grower("Natural - Fazenda Santa Lucia - Yellow Bourbon (GrainPro)") == (
-        "farm",
-        "Fazenda Santa Lucia",
-    )
-    assert rules.grower("Natural - Fazenda TBC (SC Bags)") == ("farm", None)
-    assert rules.grower("Gakenke - Kayanza - Washed (Ecotact)") == (None, None)
-    assert rules.grower("Guatemala Huehuetenango ASDECAFE SHB EP Organic") == (None, None)
-
-
-NOT_FT_ORG = (None, ["fair_trade", "organic"])
-
-
-@pytest.mark.parametrize(
-    "text, want",
-    [
-        # "nft,norg": not fair trade, not organic; anything else (Rainforest Alliance) stays unknown
-        ("nft,norg", NOT_FT_ORG),
-        ("nft,norg,Microlot,Microlot nft,norg,", NOT_FT_ORG),
-        (
-            "Fair Trade,Fairtrade,Organic,FTO Norte FTO Fair Trade,Fairtrade,Organic,FTO",
-            (["organic", "fair_trade"], None),
-        ),
-        (
-            "Indonesia Sumatra Mandheling G1 TP Fairtrade USA Organic Certified",
-            (["organic", "fair_trade"], None),
-        ),
-        ("nft,Organic,Organic Microlot", (["organic"], ["fair_trade"])),
-        # unknown
-        ("nft,Organic,Organic La Paz nft,norg,", (None, None)),  # claimed and denied
-        ("C.A.F.E. Practices", (None, None)),  # a program we don't model
-        ("Bird Friendly", (None, None)),
-        ("nft,norg,Bird Friendly", (None, None)),
-        ("Colombia Popayan Supremo", (None, None)),  # silent
-        ("Certified", (None, None)),
-    ],
-)
-def test_certifications(text, want):
-    assert rules.certifications(text) == want
-
-
-def test_fixture_lots_normalized():
-    ci = _offers("cafe_imports", CI_HTML)
-    assert [(o["process_type"], o["grower_type"], o["certifications"], o["not_certified"]) for o in ci] == [
-        ("washed", "cooperative", None, None),  # its cell says both "Organic" and "norg"
-        ("washed", None, *NOT_FT_ORG),
-        ("natural", None, *NOT_FT_ORG),
-        ("honey", "micromill", *NOT_FT_ORG),
-    ]
-    ia = _offers("interamerican", IA_HTML)
-    assert [(o["process_type"], o["certifications"], o["not_certified"]) for o in ia] == [
-        ("natural", None, None),
-        (None, ["organic", "fair_trade"], None),
-        ("natural", None, None),
-        ("natural", None, None),
-    ]
-    assert {o["rules_version"] for o in ci + ia} == {rules.RULES_VERSION}
+# --- the derived values: the private dbt project (dbt_importers/) ----------------------------------------------------
+# The rules themselves are dbt unit tests (dbt_importers/models/unit_tests.yml), run here by
+# test_the_private_dbt_project_derives_every_stored_week.
 
 
 # --- the weekly job -------------------------------------------------------------------------------------------------
@@ -342,7 +230,7 @@ def _local(tmp_path) -> Lake:
     return Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
 
 
-def test_snapshot_stores_raw_once_per_week_and_offers_are_derived_on_read(tmp_path):
+def test_snapshot_stores_raw_once_per_week(tmp_path):
     lake = _local(tmp_path)
     calls: list[str] = []
     with _client(_pages(), calls) as client:
@@ -365,10 +253,7 @@ def test_snapshot_stores_raw_once_per_week_and_offers_are_derived_on_read(tmp_pa
     assert {r["fetched_at"] for r in t} == {NOW.replace(microsecond=0)}
     assert {"column": "Name", "text": "Gakenke - Kayanza - Washed (Ecotact)"} in t[1]["cells"]
 
-    # the transform reads raw and derives each lot now; nothing derived is stored
-    offers = importers.offers(lake)
-    assert len(offers) == 8 and offers[0]["importer"] == "cafe_imports" and offers[0]["lot_id"] == "25973"
-    assert offers[0]["process_type"] == "washed"
+    # nothing derived is stored: the private dbt project derives it (test_the_private_dbt_project_derives_...)
 
     # later the same week: nothing is fetched, nothing rewritten
     calls.clear()
@@ -379,16 +264,54 @@ def test_snapshot_stores_raw_once_per_week_and_offers_are_derived_on_read(tmp_pa
         lake.write("importer_raw", importers.path("cafe_imports", MON), t)
 
 
-def test_a_better_rule_rederives_every_stored_week(tmp_path, monkeypatch):
+NOT_FT_ORG = (None, ["fair_trade", "organic"])
+
+
+@needs_dbt
+def test_the_private_dbt_project_derives_every_stored_week(tmp_path):
+    """Two stored weeks of both pages, derived by the private dbt project into its own database file: every week
+    re-derived from raw at each build, with the rules' dbt unit tests passing first."""
     lake = _local(tmp_path)
     with _client(_pages(), []) as client:
         importers.snapshot(lake, client, now=lambda: NOW)
         importers.snapshot(lake, client, now=lambda: NEXT)
-    monkeypatch.setattr(rules, "RULES_VERSION", "99")
-    monkeypatch.setattr(rules, "process", lambda stated, name: "washed")
-    offers = importers.offers(lake)
+    offers = importer_offers(lake, tmp_path, unit_tests=True)
     assert len(offers) == 16 and {o["week"] for o in offers} == {MON, date(2026, 11, 16)}
-    assert {(o["rules_version"], o["process_type"]) for o in offers} == {("99", "washed")}
+    this_week = [o for o in offers if o["week"] == MON]
+    ci = [o for o in this_week if o["importer"] == "cafe_imports"]
+    ia = [o for o in this_week if o["importer"] == "interamerican"]
+    # the stated fields, as the pages state them (importers.stated)
+    assert [o["lot_id"] for o in ci] == ["25973", "26784", "26453", "25748-2"]
+    assert (ci[0]["origin"], ci[0]["region"], ci[0]["process"], ci[0]["bags"]) == (
+        "Bolivia",
+        "La Paz",
+        "Washed",
+        64,
+    )
+    assert [(o["process_type"], o["grower_type"], o["certifications"], o["not_certified"]) for o in ci] == [
+        ("washed", "cooperative", None, None),  # its cell says both "Organic" and "norg"
+        ("washed", None, *NOT_FT_ORG),
+        ("natural", None, *NOT_FT_ORG),
+        ("honey", "micromill", *NOT_FT_ORG),
+    ]
+    # InterAmerican: what the product name states, where its table has no column for it
+    assert [(o["name"], o["origin"], o["region"], o["process"], o["grade"], o["screen"]) for o in ia] == [
+        ("Brazil Oberon 17/18 Natural", "Brazil", None, "Natural", None, "17/18"),
+        (
+            "Indonesia Sumatra Mandheling G1 TP Fairtrade USA Organic",
+            "Indonesia", "Sumatra", None, ["G1", "TP"], None,
+        ),
+        ("Brazil Oberon 17/18 Natural", "Brazil", None, "Natural", None, "17/18"),
+        ("Brazil 14/16 Natural", "Brazil", None, "Natural", None, "14/16"),
+    ]  # fmt: skip
+    assert [(o["process_type"], o["certifications"], o["not_certified"]) for o in ia] == [
+        ("natural", None, None),
+        (None, ["organic", "fair_trade"], None),
+        ("natural", None, None),
+        ("natural", None, None),
+    ]
+    assert {o["rules_version"] for o in offers} == {rules.RULES_VERSION}
+    assert all(o["problems"] == [] for o in offers)
 
 
 def test_a_thinned_page_fails_unless_the_drop_is_accepted(tmp_path):
@@ -589,13 +512,14 @@ def test_hub_calls_retry_only_transient_failures(monkeypatch):
 
 
 def test_nothing_from_the_importers_can_reach_anything_public():
-    """The importer table lives only in its own dataset: not a main-lake table (so dbt's lake roots and macro never
-    name it), not referenced by any dbt model, contract, export, the site or the MCP server, and the release's public
-    tables are the four public_* ones."""
+    """The importer table lives only in its own dataset: not a main-lake table (so the main dbt project's lake roots
+    and macro never name it), not referenced by any main dbt model, contract, export, the site or the MCP server, and
+    the release's public tables are the four public_* ones. Only the private dbt project (dbt_importers/, a project of
+    its own) reads it: the checks on that project, its database file and the MCP server follow."""
     from coffeedata import public
 
     assert not set(IMPORTER_TABLES) & set(LAKE_TABLES)
-    assert Lake.importers.__doc__ and "Never a dbt source" in Lake.importers.__doc__
+    assert Lake.importers.__doc__ and "Never a source of the main dbt project" in Lake.importers.__doc__
     assert public.PUBLIC_TABLES == [
         "public_coffee",
         "public_roaster",
@@ -609,6 +533,7 @@ def test_nothing_from_the_importers_can_reach_anything_public():
     sources = [
         *(root / "dbt").rglob("*.sql"),
         *(root / "dbt").rglob("*.yml"),
+        *(root / "dbt").rglob("*.py"),
         *(root / "contracts").rglob("*.*"),
         *(root / "marketplace").rglob("*.*"),
         *(root / "src/coffeedata/templates").rglob("*.*"),
@@ -624,14 +549,72 @@ def test_nothing_from_the_importers_can_reach_anything_public():
             # Royal Coffee too: its key, its address variable and its store
             assert "royal_coffee" not in text and "royal_url" not in text and "royalcoffee" not in text, f
     cli = (root / "src/coffeedata/cli.py").read_text()
-    assert cli.count("Lake.importers()") == 1  # importer-snapshot, nothing else
-    # Royal is stored like the others, raw only, in the importers dataset, and its values are derived on read by the
-    # same transform (offers(), derive()), which nothing public calls
+    assert cli.count("Lake.importers()") == 2  # importer-snapshot and importer-build, nothing else
+    # Royal is stored like the others, raw only, in the importers dataset
     assert importers.path("royal_coffee", MON).startswith("raw/")
-    for f in [*sources, root / "src/coffeedata/cli.py"]:
-        if f.is_file() and "__pycache__" not in f.parts:
-            text = f.read_text(errors="ignore")
-            assert not any(n in text for n in ("offers(", "derive(", "normalize_royal", "royal_stated")), f
+
+
+def test_importer_models_are_built_only_in_their_own_project_and_database():
+    """The private dbt project is a project of its own: the main one (dbt/, which `coffeedata build` runs and the
+    release, the site, the exports and the MCP server read) never reaches into it, and it builds only into its own
+    database file, never the main build's."""
+    root = Path(__file__).parent.parent
+    main = yaml.safe_load((root / "dbt/dbt_project.yml").read_text())
+    private = yaml.safe_load((root / "dbt_importers/dbt_project.yml").read_text())
+    # the main project's paths are all inside dbt/, and it installs no package (a package could be the private one)
+    for key in ("model-paths", "macro-paths", "seed-paths", "test-paths"):
+        assert all(".." not in p and not Path(p).is_absolute() for p in main.get(key, [])), key
+    assert not (root / "dbt/packages.yml").exists() and not (root / "dbt/dependencies.yml").exists()
+    assert main["profile"] != private["profile"] and main["name"] != private["name"]
+    # the main build runs the main project only
+    import inspect
+
+    from coffeedata import cli
+
+    build_src = inspect.getsource(cli.dbt_build)
+    assert set(re.findall(r'"--project-dir",\s*"([^"]+)"', build_src)) == {"dbt"}
+    assert "importer" not in build_src
+    # the private project's database is only COFFEEDATA_IMPORTERS_DB, which has no default (importers.build sets it)
+    profile = yaml.safe_load((root / "dbt_importers/profiles.yml").read_text())
+    outputs = profile[private["profile"]]["outputs"]
+    assert [o["path"] for o in outputs.values()] == ["{{ env_var('COFFEEDATA_IMPORTERS_DB') }}"]
+    assert importers.DB != importers.MAIN_DB
+
+
+@pytest.mark.parametrize("db", ["build/coffee.duckdb", "elsewhere/main.duckdb"])
+def test_the_private_build_refuses_the_main_database(tmp_path, monkeypatch, db):
+    monkeypatch.setenv("COFFEEDATA_DB", "elsewhere/main.duckdb")
+    with pytest.raises(ValueError, match="main build's database"):
+        importers.build(_local(tmp_path), Path(db))
+
+
+def test_mcp_run_sql_cannot_reach_the_private_database(tmp_path, monkeypatch):
+    """MCP's run_sql opens only the main build's database, read-only, without file access: the private database
+    file, its tables and the importers dataset's files are out of its reach whatever the query says."""
+    import duckdb
+
+    from coffeedata import mcp_server
+
+    private = tmp_path / "importers.duckdb"
+    with duckdb.connect(str(private)) as con:
+        con.execute("create table importer_offers as select 'secret' as name")
+    main = tmp_path / "coffee.duckdb"
+    with duckdb.connect(str(main)) as con:
+        con.execute("create table dim_coffee as select 1 as x")
+    monkeypatch.setattr(mcp_server, "DB", main)
+    run = getattr(mcp_server.run_sql, "fn", mcp_server.run_sql)
+    assert run("select x from dim_coffee")["rows"] == [[1]]
+    for sql in (
+        "select * from importer_offers",
+        f"select * from '{private}'",
+        f"select * from read_parquet('{tmp_path}/*.parquet')",
+        f"select * from read_text('{private}')",
+        "select * from importers.importer_offers",
+        f"attach '{private}' as p",
+    ):
+        with pytest.raises(Exception):  # noqa: B017 - any refusal will do; none may return rows
+            run(sql)
+    assert Path(mcp_server.DB).resolve() != Path(importers.DB).resolve()
 
 
 # --- the command and the workflow -----------------------------------------------------------------------------------

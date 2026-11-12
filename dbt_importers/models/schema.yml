@@ -1,0 +1,105 @@
+version: 2
+
+# The importers' derived view. Private: this project builds only into its own database file
+# (COFFEEDATA_IMPORTERS_DB), which nothing public opens. Not evaluated yet: the rules' values need a CLAUDE.md
+# evaluation (held-out split, double labels, Wilson intervals) before anything relies on them.
+
+models:
+  - name: stg_importer_lots
+    description: >-
+      One row per stored lot (the importers dataset's raw layer, importer_raw), every stored week, read once even
+      when a week is both staged and published. Its cells are the page's, word for word.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
+    columns:
+      - name: week
+        description: The Monday of the week the page was fetched.
+        data_tests: [not_null]
+      - name: importer
+        description: cafe_imports, interamerican or royal_coffee.
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [cafe_imports, interamerican, royal_coffee]}}
+      - name: row
+        description: The lot's position on the page (Royal, in the listing) that week.
+        data_tests: [not_null]
+      - name: cells
+        description: Every cell of the lot's row under the page's header (Royal, every kept field), verbatim.
+
+  - name: stg_importer_cells
+    description: One row per cell of each lot (column_name, the page's header; cell_text, verbatim, null when empty).
+
+  - name: stg_importer_vocab
+    description: >-
+      The rules' words and patterns, from importer_rules.vocabulary() and the catalog's extract.py and origins.py
+      (kind, term, value, value2, ord). One copy of each vocabulary, read by every rule here.
+
+  - name: int_importer_stated
+    description: >-
+      The fields each lot's page states, read from its cells by importers.stated, the code the weekly snapshot uses to
+      check a page. Royal's listing states only its name this way; int_royal_rules reads the rest.
+
+  - name: int_importer_inputs
+    description: What the Cafe Imports and InterAmerican rules read from each lot's cells; null for any other importer.
+
+  - name: int_importer_rules
+    description: >-
+      Process type, varieties, altitude, harvest months, grower and certifications (Cafe Imports, InterAmerican).
+
+  - name: int_importer_name_rules
+    description: What an InterAmerican product name states (origin, region, process, grade, screen).
+
+  - name: int_royal_labels
+    description: >-
+      Royal's "Label: value" pairs from its tags and body lines, in order, each once per label.
+
+  - name: int_royal_rules
+    description: >-
+      Royal's lot, warehouse, origin, region, process and normalized values, from its title, tags and labels.
+
+  - name: importer_offers
+    description: >-
+      Every stored lot, every week, as an offer: the fields its page states and our model's normalized values, derived
+      from raw at this build. The rules abstain (null) when the text doesn't settle a value.
+    data_tests:
+      - unique:
+          arguments:
+            column_name: "week::varchar || '/' || importer || '/' || \"row\""
+    columns:
+      - name: week
+        data_tests: [not_null]
+      - name: importer
+        data_tests: [not_null]
+      - name: row
+        data_tests: [not_null]
+      - name: origin
+        description: >-
+          The page's origin (Cafe Imports, as written: "Sumatra"), the country an InterAmerican name leads with, or
+          Royal's labelled or title country, in the catalog's spelling.
+      - name: region
+        description: The page's region, or the one an InterAmerican name or a Royal "Region:" label gives, as written.
+      - name: process
+        description: >-
+          The process as stated: Cafe Imports' column; the process words of an InterAmerican name ("Natural",
+          "Honey Natural", "Decaf"); Royal's "Process:" label.
+      - name: grade
+        description: InterAmerican's grade and preparation words ("G1", "SHB", "EP", "EP10", "AA", "Supremo").
+      - name: screen
+        description: InterAmerican's screen size range ("17/18").
+      - name: process_type
+        description: washed, natural, honey or anaerobic, in the catalog's model; null when unclear or decaf.
+        data_tests:
+          - accepted_values: {arguments: {values: [washed, natural, honey, anaerobic]}}
+      - name: grower_type
+        data_tests:
+          - accepted_values: {arguments: {values: [micromill, washing_station, cooperative, farm]}}
+      - name: certifications
+        description: >-
+          The modeled certifications claimed (organic, fair_trade, rainforest_alliance); null when unknown.
+      - name: not_certified
+        description: Those the page marks absent (Cafe Imports' "nft", "norg"); null when it marks none.
+      - name: rules_version
+        description: importer_rules.RULES_VERSION, or ROYAL_RULES_VERSION for Royal.
+        data_tests: [not_null]
