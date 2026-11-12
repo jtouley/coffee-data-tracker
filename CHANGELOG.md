@@ -18,6 +18,15 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- Chains leave the public data. A roaster is a chain when it has more than 20 stores (dbt var
+  `chain_store_threshold`; the store count is the registry's `locations`, from discovery's Overture scan), unless
+  `dbt/seeds/chain_overrides.csv` decides otherwise, either way, with a reason. `int_roaster_state.is_chain` decides
+  it; a chain is still crawled and stays in the lake and the internal marts, and `public_roaster` leaves it out, so
+  its coffees, price events and market counts leave every public table, the site, the public dataset and the
+  shares (`public_market_weekly` no longer counts them). The seed's `is_chain` column is gone: its four curated
+  chains whose count is 20 or fewer are overrides now. Public contract 3.1.0 adds the error rule
+  `public_tables_have_no_chain`.
+
 - One store, one roaster: a roaster_id whose site resolves to another roaster's store (the same host, any case,
   without www/shop/store; never a parked, shortener, directory or platform host, `dbt/seeds/shared_hosts.csv`) is an
   alias (`dim_roaster.status`, `canonical_roaster_id`), never crawled, never in `dim_coffee`, `fct_price_event` or
