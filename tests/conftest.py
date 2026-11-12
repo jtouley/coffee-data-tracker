@@ -9,6 +9,15 @@ from coffeedata.adapters import shopify, squarespace, woocommerce
 from coffeedata.lake import Lake
 from coffeedata.models import Roaster
 
+# The accuracy floors' report and annotations (tests/evalfloor.py, docs/TRIAGE.md).
+from .evalfloor import (  # noqa: F401
+    pytest_itemcollected,
+    pytest_runtest_call,
+    pytest_runtest_logreport,
+    pytest_sessionfinish,
+    pytest_terminal_summary,
+)
+
 FIX = Path(__file__).parent / "fixtures"
 
 

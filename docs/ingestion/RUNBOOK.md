@@ -1082,6 +1082,11 @@ merge or enrich-week before it) fires the job alert; a build slot that doesn't s
 `site.yml`'s Tuesday 11:17 run fails red, without exporting, when the served release isn't this week's (GitHub
 emails a failed scheduled run). Left uncovered by email from Cloud Monitoring: a paused or deleted Scheduler entry.
 
+**Beyond email.** A build that passes with worse data sends none of these. `prod-health.yml` measures each served
+release's per-rule fill, abstain, shift and volume metrics against `config/prod_health.toml` on Tuesdays, and opens
+a GitHub triage issue per rule that breaches, read from the lake by a GitHub workflow with no new GCP resource
+(docs/TRIAGE.md).
+
 **Apply.** With `terraform.tfvars` as after the cutover (`ingest_schedule_enabled = true`, `ingest_image` pinned):
 
 ```sh

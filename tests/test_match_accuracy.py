@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pytest
 
-from .evalfloor import eval_dir
+from .evalfloor import eval_dir, floors
 
 pytestmark = pytest.mark.private_eval
 sys.path.insert(0, str(Path(__file__).parent.parent / "eval" / "match"))
@@ -35,9 +35,6 @@ def test_match_accuracy_does_not_regress(name):
         match_eval.outcome(cat, ambiguous, key, got) for key, got, _ in match_eval.run(lake, drawn[name], cat)
     )
     assert sum(tally.values()) == 2000
-    assert tally["right"] >= FLOOR_RIGHT[name], (
-        f"{name}: right {tally['right']} < {FLOOR_RIGHT[name]} of 2,000"
-    )
-    assert tally["wrong"] <= CEILING_WRONG[name], (
-        f"{name}: wrong {tally['wrong']} > {CEILING_WRONG[name]} of 2,000"
-    )
+    with floors("match", name) as f:
+        f.at_least("right", tally["right"], FLOOR_RIGHT[name], unit="count", n=2000)
+        f.at_most("confidently wrong", tally["wrong"], CEILING_WRONG[name], unit="count", n=2000)
