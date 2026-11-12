@@ -144,7 +144,7 @@ def catalog_countries() -> list[str]:
     return sorted({canonical_country(c) for c in COUNTRIES} - {"New Guinea"})
 
 
-# --- an InterAmerican product name: "Brazil Oberon 17/18 Natural", "Guatemala Huehuetenango ASDECAFE SHB EP Organic"
+# --- an InterAmerican product name: "Colombia Examplemill 17/18 Washed", "Peru Exampleregion SHB EP Natural Organic"
 
 BLEND = r"\bblend\b"
 # Island and state names (origins.ALIASES) that mean one origin in a product name; the rest (Java, Flores, Bali, Congo)

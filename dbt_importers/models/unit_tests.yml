@@ -304,7 +304,7 @@ unit_tests:
           - {week: 2026-11-09, row: 16, importer: royal_coffee, column_name: title, cell_text: "Hawaii Kona Example - 10016 - SPOT EXAMPLEWHSE"}
           - {week: 2026-11-09, row: 17, importer: royal_coffee, column_name: title, cell_text: "Example Gem Guinea Example - 10017 - SPOT EXAMPLEWHSE"}
           - {week: 2026-11-09, row: 18, importer: royal_coffee, column_name: title, cell_text: "Papua\u00a0New  Guinea Example - 10018 - SPOT EXAMPLEWHSE"}
-          - {week: 2026-11-09, row: 19, importer: royal_coffee, column_name: title, cell_text: "Event: Example Tasting for Panama Relief"}
+          - {week: 2026-11-09, row: 19, importer: royal_coffee, column_name: title, cell_text: "Workshop: Invented Cupping Night About Kenya"}
     expect:
       rows:
         - {row: 1, origin: Papua New Guinea}
@@ -477,8 +477,9 @@ unit_tests:
   - name: dim_lot_keeps_every_lot_and_flags_the_ones_offered_now
     description: >-
       Every lot ever stored is a row, available or not. is_available is its last seen week's, null when that week
-      didn't say (never an earlier week's true); currently_offered only when that week is its importer's latest and
-      it was available then.
+      didn't say (never an earlier week's true); currently_offered only when that week is the latest stored for any
+      importer and it was available then, so an importer that stopped fetching (here Cafe Imports, last stored a week
+      before Royal) has none.
     model: dim_importer_lot
     given:
       - input: ref('int_importer_lots')
@@ -495,5 +496,5 @@ unit_tests:
         - {lot_key: "royal_coffee:1", first_seen_week: 2026-11-09, last_seen_week: 2026-11-16, weeks_seen: 2, is_available: false, currently_offered: false}
         - {lot_key: "royal_coffee:2", first_seen_week: 2026-11-09, last_seen_week: 2026-11-09, weeks_seen: 1, is_available: true, currently_offered: false}
         - {lot_key: "royal_coffee:3", first_seen_week: 2026-11-16, last_seen_week: 2026-11-16, weeks_seen: 1, is_available: true, currently_offered: true}
-        - {lot_key: "cafe_imports:1", first_seen_week: 2026-11-09, last_seen_week: 2026-11-09, weeks_seen: 1, is_available: true, currently_offered: true}
+        - {lot_key: "cafe_imports:1", first_seen_week: 2026-11-09, last_seen_week: 2026-11-09, weeks_seen: 1, is_available: true, currently_offered: false}
         - {lot_key: "royal_coffee:4", first_seen_week: 2026-11-09, last_seen_week: 2026-11-16, weeks_seen: 2, is_available: null, currently_offered: false}

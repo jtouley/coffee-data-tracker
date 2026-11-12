@@ -3,7 +3,7 @@
 -- workflow keeps the latest build's copy in the private importers dataset (derived/, importers.publish_derived),
 -- which no build reads back. Every stored lot stays a row (raw is append-only and a word-for-word record of the
 -- page), with its lot's key and flags: is_available (offered that week) and currently_offered (dim_importer_lot:
--- offered in its importer's latest stored week).
+-- offered in the latest week stored for any importer).
 --   Cafe Imports: its table's columns (int_importer_stated) and int_importer_rules. Its origin column is kept as
 --     written in origin_as_written, and read as the catalog's country in origin.
 --   InterAmerican: its table has no origin, region or process column, so its product name's (int_importer_name_rules)

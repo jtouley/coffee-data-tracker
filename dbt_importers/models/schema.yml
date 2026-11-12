@@ -101,7 +101,9 @@ models:
       - name: is_available
         description: Whether the lot was available in the last week it was seen; null when its page didn't say.
       - name: currently_offered
-        description: Seen in its importer's latest stored week and available then.
+        description: >-
+          Seen in the latest week stored for any importer, and available then; false for every lot of an importer
+          whose fetch stopped or failed that week.
         data_tests: [not_null]
 
   - name: importer_offers

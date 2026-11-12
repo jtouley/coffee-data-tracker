@@ -3,13 +3,14 @@
 -- seen, and flags for whether it is offered. Rebuilt from every stored week at each build (raw is append-only, so
 -- this is the lot's whole history, never a stateful snapshot); a lot's week-by-week values stay in importer_offers.
 --   is_available: whether the lot was available in the last week it was seen; null when that week didn't say.
---   currently_offered: seen in its importer's latest stored week and available then.
+--   currently_offered: seen in the latest week stored for any importer, and available then. An importer whose fetch
+--     stopped or failed that week has no lot currently offered: its last page is no longer current.
 with lots as (
     select * from {{ ref('int_importer_lots') }}
 ),
 
 latest as (
-    select importer, max(week) as latest_week from lots group by importer
+    select max(week) as latest_week from lots
 ),
 
 history as (
@@ -34,4 +35,4 @@ select
     h.is_available,
     h.last_seen_week = l.latest_week and coalesce(h.is_available, false) as currently_offered
 from history as h
-inner join latest as l using (importer)
+cross join latest as l

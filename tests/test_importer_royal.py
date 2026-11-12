@@ -856,7 +856,7 @@ CASES = [
     (_cells("Peru Example - 34569 - SPOT EXAMPLEWHSE"), "status", "spot"),
     (_cells("Ethiopia Example Natural - 34570 - Sample"), "warehouse", None),  # not a warehouse code
     (_cells("Ethiopia Example Natural - 10574 - ORGANIC"), "warehouse", None),  # a word in capitals
-    (_cells("Event: Example Tasting for Panama Relief"), "origin", None),  # not a lot
+    (_cells("Workshop: Invented Cupping Night About Kenya"), "origin", None),  # not a lot
     (_cells("Brazil Example - 34571 - ETA: Dec 12, 2026 - EXAMPLEWHSE"), "arrival", "Dec 12, 2026"),
     (_cells("Brazil Example - 10573 - Intend Ship: Dec 12, 2026 - EXAMPLEWHSE"), "arrival", None),
     (_cells("PAPUA NEW GUINEA EXAMPLE A - 45678 - SPOT EXAMPLEWHSE"), "origin", "Papua New Guinea"),
