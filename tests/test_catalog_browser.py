@@ -1,6 +1,7 @@
 """The catalog's search and filters in a real browser (tests/browser/catalog_flow.js), at 390 px and on desktop, light
-and dark: the roaster's city and state in the search box (cities and state names, two-letter codes as whole words
-only), the State filter, "Show more" past the first 500 rows, a slow catalog.json and a failed one. The page is the real template, rendered as the site renders it; its catalog.json is a small one written
+and dark, and at 320 px with the charts: the roaster's city and state in the search box (cities and state names,
+two-letter codes as whole words only), the State filter, "Show more" past the first 500 rows, a slow catalog.json and a
+failed one with Try again. The page is the real template, rendered as the site renders it; its catalog.json is a small one written
 here. Needs Node with Playwright (skipped without it, except under REQUIRE_BROWSER, as in CI); axe runs where
 axe-core is installed. CATALOG_SCREENSHOTS=<dir> keeps the screenshots."""
 
@@ -97,12 +98,21 @@ def catalog() -> dict:
 
 
 def render(out: Path) -> None:
-    """The catalog page as site.build renders it, with empty charts and counts."""
+    """The catalog page as site.build renders it, with its two charts drawn by site.hbar_chart (they set the page's
+    width at 320 px) and empty counts."""
+    origins = [("Papua New Guinea", 4.51), ("Ethiopia", 5.07), ("Colombia", 4.71), ("Kenya", 5.51)]
+    processes = [("not stated", 11033), ("washed", 2389), ("natural", 1423), ("anaerobic", 284)]
+    charts = {
+        "origin_price": site.hbar_chart(
+            [(o, v, f"{o}: ${v:.2f}") for o, v in origins], "${:.2f}", "Price by origin"
+        ),
+        "process": site.hbar_chart([(p, n, f"{p}: {n:,}") for p, n in processes], "{:,.0f}", "By process"),
+    }
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
     html = env.get_template("index.html").render(
         links=site.links(), jsonld="", totals={"coffees": 0, "in_stock": 0, "roasters": 0}, status_rows=[],
-        charts={"origin_price": "", "process": ""}, new=[], coverage={"registry": {}}, origin_price=[],
-        processes=[], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
+        charts=charts, new=[], coverage={"registry": {}}, origin_price=[{"origin_country": o, "n": 5, "med": v} for o, v in origins],
+        processes=[{"process": p, "n": n} for p, n in processes], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
         state_words=site.STATE_WORDS,
     )  # fmt: skip
     (out / "catalog").mkdir(parents=True)
@@ -127,7 +137,9 @@ def test_catalog_search_and_state_filter_in_a_browser(tmp_path):
         thread.join()
     assert r.returncode == 0, r.stderr[-3000:]
     assert {p.name for p in shots.iterdir()} == {
-        f"catalog-michigan-{w}-{scheme}.png" for w in ("390", "desktop") for scheme in ("light", "dark")
+        f"catalog-michigan-{w}-{scheme}.png"
+        for w in ("320", "390", "desktop")
+        for scheme in ("light", "dark")
     }
 
 

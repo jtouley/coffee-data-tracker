@@ -847,7 +847,8 @@ def test_the_sites_single_origin_definition_selects_public_market_weeklys_coffee
     assert re.search(r'<div class="n">4</div><div class="l">coffees listed</div>', landing)  # K, E, B, U
     assert "Kenya: 1 coffees in stock" in landing and "Colombia, Brazil" not in landing
     # The catalog page's process chart counts the same in-stock single origins as the landing's origin chart.
-    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1"]
+    # Once in each of the chart's two drawings (wide and narrow).
+    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1", "1"]
 
 
 # A release's vars without the run checks (the fixture registry lists roasters these lakes never fetch).
@@ -1358,7 +1359,8 @@ def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
         assert f'<div class="n">{n}</div><div class="l">{label}</div>' in landing
     assert "Kenya: 1 coffees in stock" in landing and "Gichathaini" not in landing
     # The process chart: the chain's in-stock Kenya isn't counted either.
-    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1"]
+    # Once in each of the chart's two drawings (wide and narrow).
+    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1", "1"]
 
 
 # --- Suspected bugs (docs/RULES.md): what the models should output. Strict xfails: each fails once fixed. ---------

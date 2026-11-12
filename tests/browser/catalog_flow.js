@@ -1,8 +1,8 @@
 // The catalog's Browse coffees in Chromium (tests/test_catalog_browser.py): search by the roaster's city and state,
 // the State filter, and "Show more" past the first 500 rows, over a small catalog.json written by the test. The
-// behaviour is checked at 390 px; then each of 390 px and desktop, light and dark, gets the no-sideways-scroll check,
-// a screenshot and axe (where axe-core is installed, as in CI). Also a slow catalog.json and a failed one. Any
-// request off 127.0.0.1 fails the run.
+// behaviour is checked at 390 px; then each of 320 px, 390 px and desktop, light and dark, gets the no-sideways-scroll
+// check (the charts included), legible chart text, a screenshot and axe (where axe-core is installed, as in CI). Also a
+// slow catalog.json, and a failed one with Try again. Any request off 127.0.0.1 fails the run.
 // Usage: node catalog_flow.js <site url> <screenshot dir> <the page's catalog.json key>
 const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
@@ -14,7 +14,7 @@ try { AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8"); } c
 
 const loaded = (page) => page.waitForFunction(() => !/^Loading/.test(document.getElementById("count").textContent));
 
-async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
+async function open(browser, viewport, scheme, errors, slow = 0, fail = 0) {  // fail: how many requests fail first
   const context = await browser.newContext({ viewport, colorScheme: scheme });
   const fetched = [];
   await context.route("**/*", async (route) => {
@@ -22,7 +22,7 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
     if (url.hostname !== "127.0.0.1") { errors.push(`outside request: ${url}`); return route.abort(); }
     if (url.pathname.endsWith("/catalog.json")) {
       fetched.push(url.search);
-      if (fail) return route.fulfill({ status: 500, body: "oops" });
+      if (fetched.length <= fail) return route.fulfill({ status: 500, body: "oops" });
       if (slow) await new Promise((r) => setTimeout(r, slow));
     }
     return route.continue();
@@ -47,11 +47,29 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
       assert.deepEqual(fetched, [`?b=${key}`]);
       await context.close();
     }
-    // A failed one says so.
+    // A failed one says what to do, and Try again does it: the button keeps focus while it loads (the count says
+    // "Loading…"), then hides and focus moves to the search box. Twice failed, it says so again.
     {
-      const { context, page } = await open(browser, { width: 390, height: 844 }, "light", errors, 0, true);
+      const { context, page, fetched } = await open(browser, { width: 390, height: 844 }, "light", errors, 1000, 2);
+      const failed = "Couldn’t load the catalog. Check your connection, then try again.";
       await loaded(page);
-      assert.equal(await page.textContent("#count"), "Couldn't load the catalog.");
+      assert.equal(await page.textContent("#count"), failed);
+      const again = page.locator("#retry");
+      assert.ok(await again.isVisible());
+      assert.equal(await again.textContent(), "Try again");
+      assert.ok((await again.boundingBox()).height >= 44);
+      await again.focus();
+      await page.keyboard.press("Enter");
+      await page.waitForFunction((t) => document.getElementById("count").textContent === t, failed);
+      assert.ok(await again.isVisible() && (await again.getAttribute("aria-disabled")) === null);
+      await page.keyboard.press("Enter");
+      assert.equal(await page.textContent("#count"), "Loading…");
+      assert.equal(await again.getAttribute("aria-disabled"), "true");
+      await loaded(page);
+      assert.match(await page.textContent("#count"), /^\d[\d,]* coffees? from/);
+      assert.ok(await again.isHidden());
+      assert.equal(await page.evaluate(() => document.activeElement.id), "q");
+      assert.equal(fetched.length, 3);
       await context.close();
     }
 
@@ -72,8 +90,13 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
     assert.deepEqual(await page.$$eval("#rows tr td:nth-child(2) .place", (ps) => ps.map((p) => p.textContent)), ["TX"]);
     await search("detroit");
     assert.equal(await page.textContent("#rows tr:first-child td:nth-child(2) .place"), "Detroit, MI");
-    // On a phone the roaster column drops and the roaster and place sit under the coffee.
-    assert.equal(await page.textContent("#rows tr:first-child .by"), "Mitten Coffee CoDetroit, MI");
+    // On a phone the roaster column drops and the roaster and place sit under the coffee; the origin and process
+    // columns drop too, and sit on the line under that.
+    assert.equal(await page.textContent("#rows tr:first-child .by"), "Mitten Coffee CoDetroit, MIEthiopianatural");
+    assert.equal(await page.textContent("#rows tr:first-child .from"), "Ethiopianatural");  // "Ethiopia · natural"
+    assert.match(await page.$eval("#rows tr:first-child .from span", (s) => getComputedStyle(s, "::before").content), /^" · "/);
+    assert.ok(await page.isVisible("#rows tr:first-child .from"));
+    assert.ok(!(await page.isVisible("#rows tr:first-child td:nth-child(3)")));
     assert.ok(await page.isVisible("#rows tr:first-child .by") && !(await page.isVisible("#rows tr:first-child td:nth-child(2)")));
 
     // A lone two-letter code is the state and nothing else, in any case: not Miami, not notes with "mi" in them.
@@ -203,8 +226,9 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
     assert.deepEqual(order, [["origin", "Origin"], ["process", "Process"], ["state", "Roaster state (number of roasters)"], ["stock", "In stock"]]);
     await context.close();
 
-    // Each width and theme: the roaster's column on desktop, no sideways scroll, axe, a screenshot.
-    for (const [tag, viewport] of [["390", { width: 390, height: 844 }], ["desktop", { width: 1280, height: 800 }]]) {
+    // Each width and theme: the roaster's column on desktop, no sideways scroll (the charts' grid scrolled 16 px at
+    // 320 px), chart text at 12 px or more, axe, a screenshot.
+    for (const [tag, viewport] of [["320", { width: 320, height: 720 }], ["390", { width: 390, height: 844 }], ["desktop", { width: 1280, height: 800 }]]) {
       for (const scheme of ["light", "dark"]) {
         const { context, page } = await open(browser, viewport, scheme, errors);
         await loaded(page);
@@ -216,6 +240,12 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
         }
         const wide = await page.evaluate(() => document.documentElement.scrollWidth);
         assert.ok(wide <= viewport.width, `the catalog scrolls sideways at ${tag} (${wide} px wide)`);
+        // The text of each chart that shows, in screen pixels: a viewBox scales it with the chart's width.
+        const sizes = await page.$$eval(".chart", (cs) => cs.filter((c) => c.getBoundingClientRect().width).map((c) => {
+          const vb = c.viewBox.baseVal, k = vb && vb.width ? c.getBoundingClientRect().width / vb.width : 1;
+          return parseFloat(getComputedStyle(c.querySelector("text")).fontSize) * k; }));
+        assert.equal(sizes.length, 2, `${tag}: one drawing of each chart shows`);
+        assert.ok(sizes.every((px) => px >= 11.5), `${tag}: chart text at ${sizes.map((px) => px.toFixed(1))} px`);
         if (AXE) {
           await page.evaluate(AXE);  // over the DevTools protocol, which the page's CSP doesn't apply to
           const r = await page.evaluate(async () => (await window.axe.run(document, { resultTypes: ["violations"] })).violations

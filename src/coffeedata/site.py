@@ -77,14 +77,51 @@ SINGLE_ORIGIN = f"{LISTED} and not is_blend and origin_country is not null"
 
 
 def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width: int = 460) -> str:
-    """Horizontal bars: rows of (category, value, tooltip). Value labels at the bar end."""
+    """Horizontal bars: rows of (category, value, tooltip). Value labels at the bar end.
+
+    Two drawings of the same bars, and the page's container query shows the one that fits (.chart-box): the wide one
+    scales with its viewBox, so in a narrow box its 12 px text would shrink to about 8 px. The narrow one has no
+    viewBox, so its text stays 12 px at any width: each label sits on its own line above its bar, and the bars are
+    drawn in percent of the width."""
     if not rows:
         return '<p class="empty">Not enough data yet.</p>'
+    return f'<div class="chart-box">{_hbar_wide(rows, unit, label, width)}{_hbar_narrow(rows, unit, label)}</div>'
+
+
+def _hbar_narrow(rows: list[tuple[str, float, str]], unit: str, label: str) -> str:
+    text_h, bar_h, gap = 16, 12, 10  # label line, bar, space before the next label
+    row_h = text_h + bar_h + gap
+    height = len(rows) * row_h
+    vmax = max(v for _, v, _ in rows) or 1
+    most = 72  # percent of the width for the longest bar, leaving room for its value label on a 320 px screen
+    out = [
+        f'<svg class="chart narrow" width="100%" height="{height}" style="height:{height}px" role="img"'
+        f' aria-label="{escape(label)}">'
+    ]
+    for i, (cat, v, tip) in enumerate(rows):
+        y = i * row_h
+        pct = max(v / vmax * most, 1)
+        out.append(
+            f'<g class="mark" tabindex="0" data-tip="{escape(tip)}">'
+            f'<rect class="hit" x="0" y="{y}" width="100%" height="{row_h}"/>'
+            f'<text class="cat" x="0" y="{y + 12}">{escape(cat)}</text>'
+            # A 4px rounded data end, square at the baseline: a rounded bar, its baseline end squared off.
+            f'<rect class="bar" x="0" y="{y + text_h}" width="{pct:.1f}%" height="{bar_h}" rx="4"/>'
+            f'<rect class="bar" x="0" y="{y + text_h}" width="4" height="{bar_h}"/>'
+            f'<text class="val" x="{pct:.1f}%" dx="6" y="{y + text_h + bar_h / 2}" dominant-baseline="central">'
+            f"{escape(unit.format(v))}</text>"
+            "</g>"
+        )
+    out.append("</svg>")
+    return "".join(out)
+
+
+def _hbar_wide(rows: list[tuple[str, float, str]], unit: str, label: str, width: int) -> str:
     bar_h, gap, left, right = 18, 2 + 6, 120, 56
     height = len(rows) * (bar_h + gap) + 8
     vmax = max(v for _, v, _ in rows) or 1
     scale = (width - left - right) / vmax
-    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">']
+    out = [f'<svg class="chart wide" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">']
     for i, (cat, v, tip) in enumerate(rows):
         y = 4 + i * (bar_h + gap)
         w = max(v * scale, 2)
@@ -427,6 +464,8 @@ def build(db: Path, out: Path) -> Path:
         week=week | {"new": new_count},
         new=new[:6],
         charts=charts,
+        # The origin chart's numbers as a table, for screen readers and anyone who'd rather read them.
+        origin_counts=origin_counts,
         links=link,
         public_tables=len(public.PUBLIC_TABLES),
         generated=f"{generated:%B} {generated.day}, {generated:%Y}",

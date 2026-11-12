@@ -19,7 +19,7 @@ section { background: var(--surface-1); border: 1px solid var(--border); border-
 .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
 .tile .n { font-size: 28px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .tile .l { color: var(--text-secondary); font-size: 13px; }
-.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px; }  /* one column, never wider than the screen, at 320 px */
 .grid2 section { margin-top: 0; }
 .chart { width: 100%; height: auto; display: block; overflow: visible; }
 .chart text { font-size: 12px; fill: var(--text-secondary); }
@@ -30,6 +30,11 @@ section { background: var(--surface-1); border: 1px solid var(--border); border-
 .chart .mark:focus { outline: none; }
 .chart .axis { stroke: var(--border); }
 .chart .grid { stroke: var(--grid); }
+/* Each chart is drawn twice (site.hbar_chart): the wide drawing where it has room, the narrow one, whose text stays
+   12 px, below 440 px. Without container queries the wide one shows, as before. */
+.chart-box { container-type: inline-size; }
+.chart.narrow { display: none; }
+@container (max-width: 439px) { .chart.wide { display: none; } .chart.narrow { display: block; } }
 .empty, .note { color: var(--text-muted); font-size: 13px; }
 details { margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
@@ -54,8 +59,14 @@ th.num { white-space: nowrap; }
 .place::before { content: " · "; content: " · " / ""; }
 .browse th.roaster { width: 30%; }  /* room for most names and places on one line: desktop rows stay one line, as on main */
 .by { display: none; color: var(--text-secondary); }
+/* On a phone the origin and process columns drop too, so they sit on one quiet line under the roaster, as the
+   landing page's "Just arrived" names them. */
+.from { display: block; font-size: 12px; }
+.from span::before { content: " · "; content: " · " / ""; }
 .more { font: inherit; font-size: 14px; margin-top: 12px; padding: 12px 16px; min-height: 48px; border-radius: 6px;
   border: 1px solid var(--border); background: var(--surface-0); color: var(--accent); cursor: pointer; }
+#retry { margin: 0 0 12px; }  /* under the error line it answers, clear of the table */
+.more[aria-disabled] { color: var(--text-muted); cursor: progress; }  /* Try again, while it loads */
 #tip { position: fixed; pointer-events: none; background: var(--surface-1); color: var(--text-primary);
   border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 4px 16px rgb(0 0 0 / .12);
   display: none; max-width: 280px; z-index: 10; }
@@ -131,6 +142,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     <label><input type="checkbox" id="stock" checked> In stock</label>
   </div>
   <p class="note" id="count" role="status">Loading…</p>
+  <button type="button" class="more" id="retry" hidden>Try again</button>
   <div class="scroll"><table class="browse"><thead><tr><th>Coffee</th><th class="hide-sm roaster">Roaster</th><th class="hide-sm">Origin</th><th class="hide-sm">Process</th>
     <th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody id="rows"></tbody></table></div>
   <button type="button" class="more" id="more" hidden></button>
@@ -258,6 +270,11 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
         el.append(r[C.roaster_name] ?? "");
         if (r.place) { const p = document.createElement("span"); p.className = "place"; p.textContent = r.place; el.appendChild(p); }
       }
+      if (r[C.origin_country] || r[C.process]) {  // on a phone, where their columns drop: "Ethiopia · washed"
+        const from = document.createElement("span"); from.className = "from"; by.appendChild(from);
+        from.append(r[C.origin_country] || "");
+        if (r[C.process]) { const p = document.createElement("span"); p.textContent = r[C.process]; from.append(r[C.origin_country] ? p : r[C.process]); }
+      }
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
       cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");
       cell(tr, r[C.price_per_100g] != null ? r[C.price_per_100g].toFixed(2) : "", "num");
@@ -299,7 +316,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     wait = setTimeout(render, /^[a-z]{2}$/i.test(v) && STATES[v.toUpperCase()] ? 700 : 150);
   }
 
-  fetch("catalog.json{% if data_key %}?b={{ data_key }}{% endif %}").then(r => r.json()).then(d => {
+  const load = () => fetch("catalog.json{% if data_key %}?b={{ data_key }}{% endif %}").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
     d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
     const cities = new Set();
     for (const r of rows) {
@@ -320,7 +337,19 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     ["origin", "process", "state", "stock"].forEach(id => $(id).addEventListener("input", render));
     $("more").addEventListener("click", () => { const first = draw(shown); if (first) first.focus(); });
     render();
-  }).catch(() => $("count").textContent = "Couldn't load the catalog.");
+  }).then(() => { const again = $("retry"); if (document.activeElement === again) $("q").focus(); again.hidden = true; }, failed);
+  // A failed load says what to do, and Try again does it, without reloading the page. The button keeps focus while it
+  // loads, and on success focus moves to the search box.
+  function failed() {
+    $("count").textContent = "Couldn’t load the catalog. Check your connection, then try again.";
+    const again = $("retry"); again.removeAttribute("aria-disabled"); again.hidden = false;
+  }
+  $("retry").addEventListener("click", () => {
+    const again = $("retry");
+    if (again.hasAttribute("aria-disabled")) return;
+    again.setAttribute("aria-disabled", "true"); $("count").textContent = "Loading…"; load();
+  });
+  load();
 })();
 </script>
 </body>
