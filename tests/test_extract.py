@@ -106,6 +106,7 @@ def test_a_place_in_a_list_of_places_is_not_a_stated_origin():
     body = "Grown in Mexico, single origin. Loved by our customers in New York, Puerto Rico, and El Paso."
     assert extract.rules(item("Tequila Infused Coffee Beans", body=body)).origin_country is None
     assert extract._stated_origins("Customers in Austin, Mexico & Lima love it.") == []
+    assert extract._stated_origins("Sold in Austin, Mexico AND Lima.") == []  # "and" in any case
     # A place and its own country still state the origin.
     assert extract._stated_origins("Grown in San Pedro, Honduras. Bright.") == ["Honduras"]
     # Chosen on validation over a stricter list test: a comma after the country ends the claim too; the origin then

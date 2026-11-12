@@ -82,7 +82,10 @@ select
     -- Origin as ISO 3166-1 (int_origin_country): the short name and alpha-2 code, null when the captured value
     -- isn't one country (a blend's list, a continent, an unmapped spelling); the captured value stays beside them. A
     -- sub-national place the spelling names (Hawaii) fills origin_region when the extraction gave none.
-    iso.iso_short_name as origin_country, iso.alpha2 as origin_country_code, a.origin_country as origin_country_raw,
+    -- origin_country_display is the name the site shows (var origin_names: the ISO name or a common one). A blank
+    -- captured origin counts as none.
+    iso.iso_short_name as origin_country, iso.alpha2 as origin_country_code,
+    iso.display_name as origin_country_display, if(trim(a.origin_country) = '', null, a.origin_country) as origin_country_raw,
     coalesce(a.origin_region, iso.region) as origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,

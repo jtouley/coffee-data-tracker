@@ -81,6 +81,20 @@ Guinea).
 - Floor: `tests/test_origin_iso_accuracy.py`, 149 of 149 spellings, at least 0.999 weighted, 0 wrong. It runs in the
   ordinary test job (labels and seed are both in git).
 
+## Round 2 (review of #144): pending labels
+
+- **Seed rows without a census label.** 17 spellings: the ISO and common forms of every seeded country that weren't
+  already spellings ("Tanzania, United Republic of", "Viet Nam", "DR Congo", "Côte d'Ivoire", …), and 9 seed rows the
+  rules can produce or that only appear as parts of lists (Central African Republic, Gabon, Hawaii, Sierra Leone,
+  Sri Lanka, Sumatra, Trinidad and Tobago, Usa, Central American). Same guide, same blind protocol (two labelers on
+  Claude Haiku, a tiebreak), with no example listings. The 8 new forms join the seed only once labelled;
+  `test_every_seed_row_has_a_label` is a strict xfail until then.
+- The six spellings the review found missing in a seed restricted to the first batch (North America, Perú, Latin
+  America, Paraguay, Việt Nam, South America) are already in the census and the seed, labelled in round 1.
+- `SHA256SUMS` holds the round-1 packet, census and guide hashes (written before any label) and round 2's packets and
+  prompts (prefix round2/). The packets quote product titles and descriptions, so they stay out of git; the hashes
+  let them be checked.
+
 ## Commands
 
 ```
@@ -96,10 +110,15 @@ python origin_iso_eval.py score  <out-dir>                                   # t
 
 - **Display names.** ISO's short names include formal forms the site now shows: "Bolivia, Plurinational State of",
   "Tanzania, United Republic of", "Congo, The Democratic Republic of the", "Venezuela, Bolivarian Republic of",
-  "Lao People's Democratic Republic", "Viet Nam", "Côte d'Ivoire". The site can show common names instead (Bolivia,
-  Tanzania, Laos, Vietnam, Venezuela, DR Congo, Côte d'Ivoire; `dbt/seeds/origin_display_name.csv`) behind one
-  switch, `COFFEEDATA_SITE_ORIGIN_NAMES=common` (default `iso`); dim_coffee and the public tables keep ISO's either
-  way. Recommended: common names on the site, ISO in the data.
+  "Lao People's Democratic Republic", "Viet Nam", "Côte d'Ivoire". dbt gives each origin a display name,
+  `dim_coffee.origin_country_display` (also in `mart_new_arrivals`), which is what the site shows: with the dbt var
+  `origin_names: common` (the default, recommended) a common name from `dbt/seeds/origin_display_name.csv` (Bolivia,
+  Tanzania, Laos, Vietnam, Venezuela, DR Congo, Côte d'Ivoire), with `iso` the ISO short name. One switch in
+  `dbt/dbt_project.yml`; the weekly build and the site, which reads the served release, follow it.
+  `origin_country` and `origin_country_code` stay ISO's in every table.
+- **Chart labels.** The site's bar charts leave a fixed label column; an ISO short name as long as "Tanzania, United
+  Republic of" would spill past it. With common names no label is that long, and no long ISO name is in the top 8 or
+  12 today; left as is (review of #144).
 - **New Guinea** (13 coffees, mostly the rules' "New Guinea Highlands" style titles) has no country: the island is
   Papua New Guinea and Indonesia's Papua. Most such coffee is Papua New Guinea's, but that is a guess the mapping
   doesn't make.

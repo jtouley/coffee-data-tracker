@@ -6,4 +6,15 @@ with captured as (
     union
     select origin_country from {{ ref('stg_enrichments') }} where method = 'llm'
 )
-select * from ({{ origin_iso('captured', ref('origin_country_iso')) }})
+{%- set names = var('origin_names') %}
+{%- if names not in ['iso', 'common'] %}
+{{ exceptions.raise_compiler_error("var origin_names must be iso or common, not " ~ names) }}
+{%- endif %}
+-- display_name: what the site shows (var origin_names): the ISO short name, or with `common` the
+-- origin_display_name seed's name where it has one.
+select
+    o.*,
+    {% if names == 'common' %}coalesce(d.display_name, o.iso_short_name){% else %}o.iso_short_name{% endif %}
+        as display_name
+from ({{ origin_iso('captured', ref('origin_country_iso')) }}) o
+left join {{ ref('origin_display_name') }} d on d.alpha2 = o.alpha2

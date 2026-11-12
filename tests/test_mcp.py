@@ -124,6 +124,9 @@ def test_search_finds_an_origin_by_its_iso_name_spelling_or_code(lake):
     for asked in ("Viet Nam", "vietnam", "VN", "vn"):
         assert [r["title"] for r in search(origin=asked)] == ["Da Lat"], asked
     assert search(origin="Laos") == []
+    assert (
+        search(origin="am") == []
+    )  # two letters are a code, matched exactly, never a substring of "Viet Nam"
 
 
 def test_search_reads_old_and_new_exports_together(lake, monkeypatch):

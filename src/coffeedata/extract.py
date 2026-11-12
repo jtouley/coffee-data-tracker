@@ -232,11 +232,12 @@ _PLACE_COMMA = re.compile(
 )
 # ...unless the country goes on into a list of places ("customers in New York, Puerto Rico, and El Paso"): then the
 # place and the country are two items of the list, not a place and its country.
-# Anything after the country that can continue a list (a comma, "&", "and") counts: on eval/origin's validation set
-# this scored better (98 of 111 agree, 9 wrong-country) than also requiring a capitalised next place (97, 10). A
-# place and its country followed by a comma ("in San Pedro, Guatemala, at 1,600 m") then falls back to the countries
-# the description names.
-_LIST_GOES_ON = re.compile(r"\s*(?:,|&|\band\b)")
+# Anything after the country that can continue a list (a comma, "&", "and", in any case) counts. It was chosen over
+# also requiring a capitalised next place on eval/origin's validation set, after a targeted relabel there
+# (eval/origin/README.md), so validation is not a clean measure of it; the next sealed test set is. A place and its
+# country followed by a comma ("in San Pedro, Guatemala, at 1,600 m") then falls back to the countries the
+# description names.
+_LIST_GOES_ON = re.compile(r"\s*(?:,|&|\band\b)", re.I)
 # A title country that is part of a variety's name: "Kenya SL-28", "Kenyan SL-28", "Ethiopia Landrace".
 _VARIETY_NEXT = re.compile(
     rf"^[\s-]*(?:{_VARIETAL.pattern}|\bvariet(?:y|al)\b|\bcultivar\b|\blandrace\b)", re.I

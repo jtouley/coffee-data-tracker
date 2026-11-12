@@ -1,8 +1,9 @@
 {#-
   Each distinct raw origin spelling in `raw_values` (a relation or CTE with a raw_value column), resolved to ISO 3166-1
   through `spellings` (the origin_country_iso seed). One row per spelling: raw_value, kind, alpha2, alpha3,
-  iso_short_name, region. Plain SQL and Jinja only, so tests/test_origin_iso.py renders it outside dbt, over the
-  labeled census, and scores the same code the build runs.
+  iso_short_name, region. Plain SQL and Jinja only, so eval/origin_iso/origin_iso_eval.py (and through it
+  tests/test_origin_iso_accuracy.py) renders it outside dbt, over the labeled census, and scores the same code the
+  build runs.
 
   1. The whole spelling, compared trimmed and in lower case, when the seed has it ("Trinidad and Tobago" is one
      country, never split). Its kind is the seed's: country, not_a_country (a continent or a region larger than a
@@ -14,7 +15,7 @@
      - Two or more countries, or a country with a region or an ambiguous place: multiple. Several origins are a blend
        or a multi-origin offer (extract.py's rule for a title naming several countries), never one country.
   3. Anything else (a single unknown spelling, or a list with an unknown part) is unmapped: no code, never a guess.
-     origin_countries_are_mapped fails the build on an unmapped spelling in dim_coffee.
+     origin_countries_are_mapped warns on an unmapped spelling in dim_coffee, and triage opens an issue for it.
 -#}
 {% macro origin_iso(raw_values, spellings) -%}
 with raw as (

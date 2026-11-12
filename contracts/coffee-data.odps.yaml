@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.6.0
+version: 3.0.0
 status: active
 domain: coffee
 description:
@@ -192,10 +192,12 @@ customProperties:
           "Côte d'Ivoire", and Puerto Rico is its own country, PR). The 2026-11-09 release carried 52 origin values
           in public_market_weekly for about 46 countries (Brasil and Brazil, two spellings of DR Congo, "Hawaii,
           Usa"). A versioned seed (dbt/seeds/origin_country_iso.csv) maps each captured spelling; a list of several
-          origins, a continent or New Guinea has no country; a new spelling fails the build until mapped (two quality
-          rules added). The raw captured value stays in the private lake. Snowflake's PUBLIC_COFFEE and
+          origins, a continent or New Guinea has no country; a new spelling warns and is published with no country until mapped (two
+          quality rules added). The raw captured value stays in the private lake. Snowflake's PUBLIC_COFFEE and
           PUBLIC_MARKET_WEEKLY get the new column through snowflake_migrate (marketplace/README.md). Measured over the
-          full census of captured spellings in eval/origin_iso.
+          full census of captured spellings in eval/origin_iso. A spelling not in the seed warns (published with no
+          country) and opens a triage issue rather than holding back the release. The site shows a common name
+          for some countries (Tanzania, Vietnam, DR Congo…) by the dbt var origin_names; the data keeps ISO's.
 team:
   name: registry.coffee
   members:

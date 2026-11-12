@@ -33,6 +33,13 @@ which is this one. Add each later change's count here.
   (the variety's home) to Nicaragua, and one is in the sealed test set (count only; 6 of the 26 are).
   The floor (`tests/test_origin_accuracy.py`, same labels): main 0879254 96 of 111 agree, 12 wrong-country; this
   change 98 and 9; train unchanged (0.9596 / 0.0394). The validation floor is raised to 98 and 9.
+  **Not a clean measure (review of #144):** this rule changes how the place-comma rule decides, and it was designed
+  after a targeted relabel of the one validation listing that moved against the change, then compared on validation.
+  So validation no longer measures it cleanly; the next sealed test set drawn for origin is its first clean measure.
+  To make the validation figure honest, every validation listing whose prediction differs between main and the
+  change (4, including the relabelled one) is being labelled again, blind, by two labelers and a tiebreak (packets
+  hashed in `eval/origin_iso/SHA256SUMS`, round2/); the validation floor is then set from that result, never lowered.
+  The rule's "and" is matched in any case since the review; on validation that changes nothing (98 / 9).
 
 ## Floor
 

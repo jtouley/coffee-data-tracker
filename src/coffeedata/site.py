@@ -12,6 +12,7 @@ from __future__ import annotations
 import base64
 import hashlib
 import json
+import logging
 import os
 import re
 import shutil
@@ -47,29 +48,20 @@ STATUS_LABELS = {
     "opted_out": "Opted out",
 }
 
-# Which name the site shows for an origin country, everywhere it shows one (the two origin charts and their tables,
-# the new arrivals, and the catalog's rows and origin filter, from catalog.json). The data (dim_coffee, the public
-# tables) keeps the ISO 3166-1 short name and code either way; the origin count is the same under either name. "iso" (the default) shows it as is; "common" shows the name in
-# dbt/seeds/origin_display_name.csv where it has one ("Tanzania" for "Tanzania, United Republic of"). One switch,
-# COFFEEDATA_SITE_ORIGIN_NAMES, until the owner decides.
-ORIGIN_NAMES_ENV = "COFFEEDATA_SITE_ORIGIN_NAMES"
+# The name the site shows for an origin country is dbt's: dim_coffee.origin_country_display (and mart_new_arrivals'),
+# the ISO 3166-1 short name or a common one by the dbt var origin_names. Both are release tables, so the served
+# release carries it. The site counts and groups by the ISO name (origin_country), which is one-to-one with it.
+ORIGIN_DISPLAY = "origin_country_display"
 
 
-def origin_display_names(con) -> dict[str, str]:
-    """ISO short name -> the name the site shows instead; empty unless the switch says "common" (or the build has
-    no display-name seed)."""
-    mode = os.environ.get(ORIGIN_NAMES_ENV, "iso").strip().lower()
-    if mode not in ("iso", "common"):
-        raise ValueError(f"{ORIGIN_NAMES_ENV} must be iso or common, not {mode!r}")
-    if mode == "iso":
-        return {}
-    try:
-        rows = con.execute(
-            "select i.iso_short_name, d.display_name from origin_display_name d join iso_3166_1 i using (alpha2)"
-        ).fetchall()
-    except Exception:  # a database built before the seed existed: ISO names
-        return {}
-    return dict(rows)
+def origin_display_column(con) -> str:
+    """The column to show origins from: origin_country_display, or origin_country for a release built before it
+    existed (a rollback to an older release), said so in the log rather than failing the site."""
+    cols = {r[0] for r in con.execute("describe dim_coffee").fetchall()}
+    if ORIGIN_DISPLAY in cols:
+        return ORIGIN_DISPLAY
+    logging.warning("dim_coffee has no %s (a release before it): the site shows ISO names", ORIGIN_DISPLAY)
+    return "origin_country"
 
 
 # Which roasters the site shows: the public roasters (public_roaster: not opted out, not known only from
@@ -335,10 +327,11 @@ def build(db: Path, out: Path) -> Path:
     con = duckdb.connect(str(db), read_only=True)
     for view in SITE_VIEWS:
         con.execute(view)
+    shown = origin_display_column(con)
     origin_price = _q(
         con,
         f"""
-        select origin_country, count(*) as n, median(price_per_100g) as med
+        select {shown} as origin_country, count(*) as n, median(price_per_100g) as med
         from site_coffee where {SINGLE_ORIGIN} and in_stock and price_per_100g is not null
         group by 1 having count(*) >= 5 order by n desc limit 12""",
     )
@@ -352,7 +345,16 @@ def build(db: Path, out: Path) -> Path:
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
     # The filter doesn't keep the mart's order, so it is restated (the model's own order).
     public_new = "select * from mart_new_arrivals where coffee_id in (select coffee_id from site_coffee)"
-    new = _q(con, f"{public_new} order by first_seen desc, roaster_name, title, coffee_id limit 25")
+    shown_new = (
+        shown
+        if shown in {r[0] for r in con.execute("describe mart_new_arrivals").fetchall()}
+        else "origin_country"
+    )
+    new = _q(
+        con,
+        f"select * replace ({shown_new} as origin_country) from ({public_new}) "
+        "order by first_seen desc, roaster_name, title, coffee_id limit 25",
+    )
     totals = _q(
         con,
         f"""
@@ -363,8 +365,8 @@ def build(db: Path, out: Path) -> Path:
     )[0]
     catalog = _q(
         con,
-        """
-        select c.coffee_id, c.roaster_name, c.roaster_state, c.title, c.url, c.origin_country, c.process,
+        f"""
+        select c.coffee_id, c.roaster_name, c.roaster_state, c.title, c.url, c.{shown} as origin_country, c.process,
                c.roast_level, c.tasting_notes, c.price_per_100g, c.min_price_usd, c.in_stock, c.catalog_status,
                c.first_seen,
                -- Added after main's columns, so readers that look columns up by position or name keep working:
@@ -390,7 +392,7 @@ def build(db: Path, out: Path) -> Path:
     origin_counts = _q(
         con,
         f"""
-        select origin_country, count(*) as n from site_coffee where {SINGLE_ORIGIN} and in_stock
+        select {shown} as origin_country, count(*) as n from site_coffee where {SINGLE_ORIGIN} and in_stock
         group by 1 order by n desc, 1 limit 8""",
     )
     week = _q(
@@ -405,9 +407,6 @@ def build(db: Path, out: Path) -> Path:
     )[0]
     for r in new + catalog:
         r["url"] = safe_url(r["url"])
-    if names := origin_display_names(con):
-        for r in new + catalog + origin_price + origin_counts:
-            r["origin_country"] = names.get(r["origin_country"], r["origin_country"])
     new_count = _q(con, f"select count(*) as n from ({public_new})")[0]["n"]
     last_fetch = _q(con, "select max(last_fetch) as t from dim_roaster")[0]["t"]
     release = public.describe(con)

@@ -176,6 +176,8 @@ models:
         description: "ISO 3166-1 English short name; null unless kind is country."
       - name: region
         description: "The sub-national place the spelling names (Hawaii, Sumatra), if any."
+      - name: display_name
+        description: "What the site shows: the origin_display_name seed's name under var origin_names common, else iso_short_name."
   - name: int_roaster_state
     description: >-
       One row per roaster in the registry: its crawl status from probe and fetch history, and the store it serves
@@ -521,6 +523,10 @@ models:
           multi-origin offer's list, a continent, or a place two countries share.
       - name: origin_country_code
         description: "The origin country's ISO 3166-1 alpha-2 code; null exactly when origin_country is."
+      - name: origin_country_display
+        description: >-
+          The name the site shows for the origin (int_origin_country.display_name): a common name under the dbt var
+          origin_names common (the default), else the ISO short name. Null exactly when origin_country is.
       - name: origin_country_raw
         description: "The origin as captured, before the ISO mapping (any spelling, or a list of several)."
       - name: origin_region
@@ -982,9 +988,9 @@ seeds:
         data_tests: [unique, not_null]
   - name: origin_display_name
     description: >-
-      The name the site shows for an origin country whose ISO 3166-1 short name is a formal one, when the site's switch
-      COFFEEDATA_SITE_ORIGIN_NAMES is "common" (site.py). Display only: dim_coffee and the public tables keep the ISO
-      short name and code.
+      The common name for an origin country whose ISO 3166-1 short name is a formal one: int_origin_country.display_name
+      and dim_coffee.origin_country_display use it when the dbt var origin_names is common (the default). Display only:
+      origin_country and origin_country_code keep the ISO short name and code.
     config:
       column_types: {alpha2: varchar, display_name: varchar}
     columns:
