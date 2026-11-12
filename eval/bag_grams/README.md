@@ -224,7 +224,8 @@ label, shuffled, with no stratum or prediction.
 ```
 
 Round 1's rules were frozen at commit `e46a730`, round 2's at `a4baff0`, round 3's at `28314a0`. `SHA256SUMS` also
-pins round 3's `test3` (`items_test3.json`, `pred_branch2_test3.json` for `main`'s rules, `pred_branch3_test3.json`).
+pins round 3's `test3` (`items_test3.json`, `pred_branch2_test3.json` for `main`'s rules, `pred_branch3_test3.json`). It also pins
+the gate set `gate-139` (`items_gate-139.json`, `pred_branch2_gate-139.json`, `pred_branch5_gate-139.json`).
 
 ## Commands
 
@@ -461,33 +462,70 @@ change minus main: accuracy +51.8 points (normal [+35.6, +68.0], store-clustered
 
 ## The full-population gate
 
-The bar of CLAUDE.md step 7 for this field, as the owner set it on 2026-11-11: the estimated share of all current
-coffees (the population above, N = 30,022) whose drawn option the rules get right or rightly leave blank must be at
-least 95%. `tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate` holds it, and
-`bag_eval.py gate <data> <rule>...` prints it with intervals.
+The bar of CLAUDE.md step 7 for this field: a rules change ships only if what `dim_coffee` publishes is right for at
+least 95% of the whole population of current coffees, measured on a sealed set drawn for that change, with no
+meaningful rise in confidently wrong answers against `main`. Every rules change follows this procedure, on top of
+the change's own evaluation (the census or stratified sets above) and the floors.
 
-```
-A = ( #right in D  +  (N - |D|) * a_U ) / N
-```
+**Procedure** (`bag_eval.py`, run with the change's `src` on the path):
 
-- **D** (`gate_d.json`, ids only): the coffees whose drawn option a round's change gave other grams, each with a
-  reference label for that option (round 3's census; `bag_eval.py gate-d <data> <main> <change> gate_d.json` adds a
-  round's coffees and refuses one without such a label). Counted exactly, with no sampling error. Round 3: 96.
-- **a_U**: accuracy on every other coffee, from `validation` and `test2`, the two sets stratified over their whole
-  split that no rule was tuned on (train was), leaving out their items in D. Each is stratum-weighted by its stratum
-  sizes; the two are combined by those sizes (6,830 and 5,228 coffees). Splits are by store hash, so either
-  split's coffees stand for the whole population.
-- The interval comes from a_U alone: normal over the strata, and store-clustered (stores resampled within strata).
+1. **Freeze and commit the change's rules.** Predict both: `predict <data> <main>` and `predict <data> <change>`.
+2. **Draw the gate set**, `gate-sample <data> gate-<change> <main> <change>` (writes `items_gate-<change>.json`, ids
+   only). GATE_N = 500 coffees from the whole population (the eval's frozen 2026-11-02 snapshot, below), leaving out
+   every coffee of every earlier set (`items_*.json`). Stratified by platform: 40 per platform, the other 300 shared
+   in proportion to platform size; within a platform, the lowest `sha256("gate-<change>:" + coffee_id)`. Each item
+   names the options to label: the option each rule's `price_per_100g` comes from (`published`, which mirrors
+   `dim_coffee`: available options, 150–2,500 g, $0.50–$100 per 100 g, the lowest), and, when a rule publishes
+   nothing, the coffee's drawn option. A gate set is drawn once.
+3. **Seal it before any label:** `gate-seal <data> gate-<change> <main> <change>` writes each rule's published value
+   (price per 100 g, option, grams) per coffee; add the items file and both prediction files to `SHA256SUMS`, and
+   commit.
+4. **Label it** with `packet <data> gate-<change>`, by `GUIDE.md` (one answer per named option, keyed
+   `"<coffee_id>|<variant_id>"`): A and B independently and blind to each other and to every prediction, then C,
+   blind, on their disagreements (`agree`, `settle`, which key each option).
+5. **Score it once:** `gate-score <data> gate-<change> labels_ref_gate-<change>.json --final`. Per rule and platform:
+   `right` (the published option's grams within 2% of its label), `wrong` (otherwise, or an option without a label),
+   `abstain_ok` (nothing published, and the drawn option's label gives no publishable weight: `unknown`, `unclear`,
+   or outside the bag or price band), `missed` (nothing published, but it does). Weighted by platform size:
+   accuracy (`right` + `abstain_ok`), the confidently wrong share, and change minus main, each with Wilson
+   intervals per platform, a normal and a store-clustered 95% interval.
+6. **The gate:** the change's weighted accuracy is at least `GATE_ACCURACY` (0.95), and its weighted confidently
+   wrong share is at most `GATE_RISE` (0.5 points) above main's (point estimates; the intervals are reported).
+7. **Keep it:** `gate-fixture <data> gate-<change> ../../tests/fixtures/bag_grams_gate.jsonl` adds the scored set
+   to the gate fixture. `tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate` scores the
+   current rules on every gate set in it against that set's sealed `main` values, and
+   `test_the_gate_fails_when_one_percent_of_answers_are_damaged` doubles the weights of 1% of its coffees and
+   requires the gate to fail.
 
-| Rule | Full-population accuracy | Normal 95% | Store-clustered 95% | D right |
-|---|---|---|---|---|
-| main before #139 (`branch2`) | 95.37% | [93.55, 97.19] | [92.89, 97.20] | 10/96 |
-| #139 as frozen in round 3 (`branch3`) | 95.55% | [93.73, 97.37] | [93.07, 97.38] | 64/96 |
-| **#139 at its head (after the review fixes)** | **95.57%** | [93.75, 97.39] | [93.08, 97.40] | 69/96 |
+**What this measures and what it doesn't.** The gate set is a sample of what is published across the population, so
+it sees a change that damages many coffees a little. It sees a change that touches few coffees only through their
+share: a change publishing other values for 0.27% of coffees (round 3, below) is expected to put one coffee in a
+500-coffee gate set, so such a change's own coffees are measured by its census (step 1 of its evaluation), and the
+gate guards the level of everything else. The population is the eval's frozen snapshot, not the live catalogue; a
+newer snapshot needs a new `population.json` (its sha256 recorded above) before the next gate set.
 
-The gate is on the estimate. Both lower bounds are below 95%: the data can't show that the population is above it,
-only that the best estimate is. A later rules change adds its own census to D (a new test set covers its changed
-coffees) and must keep A at or above 0.95; the slice sets' floors stay at their measured values.
+**The old estimate (a cheap diagnostic, not the gate).** `bag_eval.py gate` and `gate_d.json` still print round 3's
+estimate (the changed coffees counted exactly from their census labels, the rest from validation and test2): 95.37%
+for `main`, 95.57% at #139's head. Validation and test2 aren't sealed and the estimate can't see a change it
+gates (review M1, M2 of #139), so no test enforces it.
+
+### `gate-139` (drawn 2026-11-12, labels pending)
+
+Drawn after the freeze of #139's rules (`src` unchanged since `1be1eeb`; the merge of `main` at `3c100ba` touched no
+rule), with `main` = `branch2` (`main`'s rules, unchanged since `a4baff0`) and the change = `branch5` (#139's head).
+
+| Platform | Population (frame) | Drawn |
+|---|---|---|
+| shopify | 20,671 | 259 |
+| squarespace | 2,454 | 66 |
+| woocommerce | 2,220 | 64 |
+| generic | 1,747 | 59 |
+| square_online | 1,177 | 52 |
+| **all** | **28,269** (30,022 less 1,753 labeled before) | **500** (378 stores, largest 7) |
+
+500 options to label, one per coffee: the two rules publish the same value and option for all 500 coffees (across the
+population they differ on 81 of 30,022), and 142 publish nothing under both, so their drawn option is labeled.
+`items_gate-139.json`, `pred_branch2_gate-139.json` and `pred_branch5_gate-139.json` are in `SHA256SUMS`.
 
 ## Review of #139: H1 and L1–L5 (step 9's light path)
 
