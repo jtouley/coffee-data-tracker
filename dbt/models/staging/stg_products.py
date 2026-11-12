@@ -30,9 +30,11 @@ SCHEMA = pa.schema(
         ("tasting_notes", pa.list_(pa.string())),
         ("is_blend", pa.bool_()),
         ("is_decaf", pa.bool_()),
+        # The rules leave the coffee incompletely described (extract.needs_llm), so Claude is asked for it.
+        ("needs_llm", pa.bool_()),
     ]
 )
-ATTRS = [f.name for f in SCHEMA][6:]
+ATTRS = [f.name for f in SCHEMA][6:-1]
 
 
 def row(r: dict, verdicts: dict[str, tuple[str, str]]) -> dict:
@@ -49,7 +51,11 @@ def row(r: dict, verdicts: dict[str, tuple[str, str]]) -> dict:
         "clean_title": item.title,
     }
     e = extract.rules(item) if out["is_coffee"] else None
-    return out | {a: getattr(e, a) if e else None for a in ATTRS}
+    return (
+        out
+        | {a: getattr(e, a) if e else None for a in ATTRS}
+        | {"needs_llm": extract.needs_llm(e) if e else None}
+    )
 
 
 def model(dbt, session):

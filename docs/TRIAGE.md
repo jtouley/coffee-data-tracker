@@ -87,7 +87,7 @@ value. The lake is private and this repository is public. Get the values locally
 | `grams` | `fill:grams[:<platform>]` (a bag weight read); `shift:changed:grams`; `shift:median:grams` | a bag_weight change (#136, #139), or a platform's variant titles changed shape |
 | `price_per_100g` | `fill:price_per_100g[:<platform>]`; `shift:changed:price_per_100g`; `shift:median:price_per_100g` | a lost weight or price, a currency or unit error, or a price wipe on one platform |
 | `classifier` | `fill:classifier`: the share decided by Claude's verdict, judged on the build's own `min_verdict_share` 0.85 | verdicts missing or late, or no verdict model. Starts once a release carries `classified_by` |
-| `enrichment` | `abstain:enrichment[:<platform>]`: the share the rules left to Claude (high is bad) | the extraction rules abstaining more, so Claude's spend and backlog grow |
+| `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (enrichment not run, a key change), not a slow backlog, which only climbs |
 | `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing |
 | `fetch` | `build:run_ok_share`, `build:run_catalog_ok_share`, `build:adapter_ok_share:<platform>` (mart_build_profile, reused) | fetches failing. fetch-health (RUNBOOK.md §8) should have said so too |
 | `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
@@ -243,16 +243,29 @@ around it:
 
   So a 3-point drop on Shopify's 96% grams fill warns. A halving on a low-fill platform is always critical.
   Ordinary sampling noise doesn't page.
+- **Claude's coverage** (`coverage:enrichment`, low side): judged like a fill rate, with `n` the listed coffees the
+  rules abstained on (`rows:needs_llm`). The backlog only climbs, so the floor sits under the history's median and
+  pages only on a real drop.
 - **Abstain and changed shares** (high side): the median plus at least 0.02 for a warning and 0.05 for critical.
 - **Volume ratios**: 1 ± at least 0.10 / 0.25. **Median shifts**: 0 ± at least 0.05 / 0.15.
 - **Fixed, with no history**: a warn-only band test warns on any failure, and the classifier is judged on
   `min_verdict_share` 0.85. Release age warns above 7 days and is critical above 14.
 
 **Flagged history.** A history value outside its own warning band is not used to widen the band. It is listed as
-`flagged` in the config, as a possible regression to look into. At revision 2026-11-11 two are flagged:
-- `abstain:enrichment:woocommerce` went from 0.013 to 0.196 in run 2026-11-09. It breaches as served: the first
-  prod-health run will open `prod:enrichment`, and that is the first thing to triage;
+`flagged` in the config, as a possible regression to look into. At revision 2026-11-12:
+- `coverage:enrichment[:<platform>]` is 0 in the 10-27 and 10-28 marts, before Claude's enrichment ran. That is
+  expected, not a regression;
 - `shift:rows_ratio:listed:generic` was 1.17 between the 10-27 and 10-28 marts.
+
+**The enrichment split (revision 2026-11-12).** Until then `abstain:enrichment` counted the coffees Claude had
+filled in (`enrichment_method = 'llm'`). That measures the backlog, not the rules: in run 2026-11-09 WooCommerce
+went from 0.013 to 0.196 because blocked stores reached the front of Claude's oldest-first queue, and nothing
+regressed. It is now the rules' own abstain rate, from `dim_coffee.rules_complete` (`stg_products.needs_llm`, the
+rules' `extract.needs_llm`). Releases built before that column are read from their values: Claude's rows (Claude is
+only asked when the rules abstain) plus the rules' rows that fail the same test. Over the four releases in the
+history it is 0.88–0.93 on every platform, flat. Claude's progress moved to `coverage:enrichment`, which went 0,
+0, 0.046, 0.074 overall. Judged with these bounds, the 11-09 release breaches neither. A short entry in
+`config/prod_health_expected.toml` also covers the old climb for runs up to 2026-11-16.
 
 **Simulated on the 11-09 release** (a copy, blanking Shopify grams):
 - a 3-point drop warns, and so does a 4-point drop;

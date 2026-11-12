@@ -18,14 +18,17 @@ from .test_triage import FakeGitHub
 COLUMNS = (
     "coffee_id varchar, platform varchar, is_listed boolean, is_wholesale boolean, origin_country varchar, "
     "process varchar, roast_level varchar, bag_sizes_g integer[], price_per_100g double, enrichment_method varchar, "
-    "classified_by varchar"
+    "classified_by varchar, rules_complete boolean"
 )
 
 
 def _coffee(i, platform="shopify", origin="Ethiopia", grams=(340,), price=6.0, listed=True, wholesale=False,
-            method="rules", by="claude"):  # fmt: skip
+            method="rules", by="claude", complete=None):  # fmt: skip
+    complete = (
+        method == "rules" if complete is None else complete
+    )  # Claude is only asked when the rules abstain
     return (f"r:{i}", platform, listed, wholesale, origin, "washed", "light", list(grams) if grams else None,
-            price, method, by)  # fmt: skip
+            price, method, by, complete)  # fmt: skip
 
 
 def _write(path: Path, rows: list[tuple], columns: str = COLUMNS) -> Path:
@@ -105,7 +108,7 @@ def test_it_measures_fill_abstain_shift_and_the_build_record(tmp_path):
         x["fill:origin"] == 0.75 and x["fill:origin:shopify"] == 1.0 and x["fill:origin:woocommerce"] == 0.5
     )
     assert x["fill:grams"] == 1.0 and x["fill:price_per_100g"] == 1.0 and x["fill:classifier"] == 1.0
-    assert x["abstain:enrichment"] == 0.01
+    assert x["abstain:enrichment"] == 0.01 and x["rows:needs_llm"] == 1 and x["coverage:enrichment"] == 1.0
     assert x["shift:rows_ratio:listed"] == 1.0 and x["shift:retained"] == 1.0
     assert x["shift:changed:price_per_100g"] == 0.01 and x["shift:changed:origin"] == 0.0
     assert x["shift:median:price_per_100g"] == 0.0
@@ -439,3 +442,91 @@ def test_a_rule_closes_only_once_its_breached_metric_is_measured_again(cfg):
         {"served": _served()}, ph.judge({"fill:grams": 0.95, "shift:rows_ratio:listed": 1.0}, cfg), "R", "s"
     )
     assert triage.sync(back, gh, now="t") == [("closed", "prod:volume", n)]
+
+
+def test_the_rules_abstain_rate_and_claudes_coverage_are_measured_apart(tmp_path):
+    """abstain:enrichment is the rules' own rate (rules_complete false), whether or not Claude has reached the
+    coffee; coverage:enrichment is the share of those with a Claude row. Claude working through its backlog (the
+    11-09 WooCommerce jump: blocked stores reached the front of the queue) raises coverage and leaves the abstain rate
+    alone, so the checked-in thresholds page on neither."""
+    before = [
+        _coffee(i, platform="woocommerce", complete=i >= 90) for i in range(100)
+    ]  # 90 abstained, none filled
+    after = [_coffee(i, platform="woocommerce", method="llm" if i < 20 else "rules", complete=i >= 90)
+             for i in range(100)]  # Claude filled 20 of the 90  # fmt: skip
+    b, a = (
+        ph.release_metrics(_write(tmp_path / "b.parquet", before)),
+        ph.release_metrics(_write(tmp_path / "a.parquet", after)),
+    )
+    assert b["abstain:enrichment:woocommerce"] == a["abstain:enrichment:woocommerce"] == 0.9
+    assert b["coverage:enrichment:woocommerce"] == 0.0 and a["coverage:enrichment:woocommerce"] == round(
+        20 / 90, 6
+    )
+    assert a["rows:needs_llm:woocommerce"] == 90
+    cfg = ph.load_config()
+    results = {r["metric"]: r["status"] for r in ph.judge(a, cfg, [], "2026-11-23")}
+    assert (
+        results["abstain:enrichment:woocommerce"] == "ok"
+        and results["coverage:enrichment:woocommerce"] == "ok"
+    )
+    # the rules abstaining more pages; Claude's coverage dropping to nothing pages
+    worse = [_coffee(i, platform="woocommerce", complete=False) for i in range(100)]
+    results = {r["metric"]: r["status"] for r in ph.judge(ph.release_metrics(_write(tmp_path / "w.parquet", worse)),
+                                                           cfg, [], "2026-11-23")}  # fmt: skip
+    assert results["abstain:enrichment:woocommerce"] in ph.BREACH
+    assert results["coverage:enrichment:woocommerce"] in ph.BREACH
+
+
+def test_a_release_before_rules_complete_reads_the_rules_abstain_rate_from_its_values(tmp_path):
+    """Without rules_complete: Claude's rows (the rules left them incomplete) plus the rules' rows that are
+    incomplete by extract.needs_llm's test (no origin and not a blend, no process, or no tasting notes)."""
+    cols = ("coffee_id varchar, platform varchar, is_listed boolean, origin_country varchar, process varchar, "
+            "tasting_notes varchar[], is_blend boolean, enrichment_method varchar")  # fmt: skip
+    rows = [
+        ("r:1", "shopify", True, "Kenya", "washed", ["plum"], False, "rules"),  # complete
+        (
+            "r:2",
+            "shopify",
+            True,
+            None,
+            "washed",
+            ["plum"],
+            True,
+            "rules",
+        ),  # a blend needs no origin: complete
+        ("r:3", "shopify", True, "Kenya", "washed", [], False, "rules"),  # no notes: abstained, not reached
+        ("r:4", "shopify", True, "Kenya", "", ["plum"], False, "rules"),  # an empty process: abstained
+        (
+            "r:5",
+            "shopify",
+            True,
+            "Kenya",
+            "washed",
+            ["plum"],
+            False,
+            "llm",
+        ),  # Claude's: the rules had abstained
+    ]
+    x = ph.release_metrics(_write(tmp_path / "old.parquet", rows, cols))
+    assert x["abstain:enrichment"] == 0.6 and x["rows:needs_llm"] == 3
+    assert x["coverage:enrichment"] == round(1 / 3, 6)
+
+
+def test_the_needs_llm_test_matches_extract():
+    """The fallback SQL is extract.needs_llm's test, case by case."""
+    from coffeedata import extract
+
+    con = duckdb.connect()
+    cases = [("Kenya", False, "washed", ["plum"]), (None, True, "washed", ["plum"]), (None, False, "washed", ["x"]),
+             ("Kenya", False, None, ["plum"]), ("Kenya", False, "washed", []), ("", False, "washed", ["x"]),
+             ("Kenya", False, "", ["x"]), (None, True, None, [])]  # fmt: skip
+    for origin, blend, process, notes in cases:
+        # unvalidated, so an empty string reads as the rules' own value would
+        e = extract.Enrichment.model_construct(origin_country=origin, is_blend=blend, process=process,
+                                               tasting_notes=notes)  # fmt: skip
+        (got,) = con.execute(
+            f"select {ph.RULES_INCOMPLETE} from (select ?::varchar as origin_country, ?::boolean as is_blend, "
+            "?::varchar as process, ?::varchar[] as tasting_notes)",
+            [origin, blend, process, notes],
+        ).fetchone()
+        assert got == extract.needs_llm(e), (origin, blend, process, notes)
