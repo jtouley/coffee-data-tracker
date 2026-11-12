@@ -15,8 +15,12 @@ dbt/dbt_packages/
 lake/
 data/
 dbt/.user.yml
+dbt_importers/target/
+dbt_importers/logs/
+dbt_importers/.user.yml
 lake-photos/
 lake-users/
+lake-importers/
 tests/browser/node_modules/
 
 # Terraform (src/terraform/)

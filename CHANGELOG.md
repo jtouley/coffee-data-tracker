@@ -28,6 +28,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   aliases on a row of their own. Public contract 2.6.0 adds the error rule
   `public_roasters_unique_by_host`. Measured in `eval/roaster_dedup`.
 
+- Triage alerts (docs/TRIAGE.md). A failed accuracy floor names the eval, the set, the value and the floor (and
+  the Wilson interval for a count); on main and in eval-floors it opens or updates one `eval-regression` issue per
+  eval and closes it on recovery. `prod-health.yml` judges each served release's per-rule fill and abstain rates,
+  week-over-week shift, volume and build record against `config/prod_health.toml`, whose bounds come from the
+  release history and carry a severity, and keeps a `prod-health` issue per rule the same way. Alerts never block
+  the pipeline.
+
 - Data-quality rules, all warn only and measured on held-out data in `eval/dq`: per-adapter volume bands
   (`adapter_volume_in_band`), near-duplicate roasters, price per 100 g outliers within origin and process, and
   cross-table reconciliation (`public_tables_reconcile`; `release_changes` / `release_changes_explained` against the
