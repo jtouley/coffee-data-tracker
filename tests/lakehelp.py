@@ -206,3 +206,23 @@ def manifest(lake: Lake, run_date: str, roasters: list[str], mode: str = "full")
     lake.write_partition("run_manifests", run_date, b, [
         {"run_date": date.fromisoformat(run_date), "manifest_id": b, "started_at": at(run_date, 6),
          "roaster_id": r, "status": "active", "adapter": "shopify", "mode": mode} for r in roasters])  # fmt: skip
+
+
+def importer_offers(lake: Lake, tmp, unit_tests: bool = False) -> list[dict]:
+    """Build the private importers dbt project (dbt_importers/) over an importers lake, with `tmp` as the checkout
+    (importers.ROOT, so into tmp/build/importers.duckdb, its one place), and read its importer_offers, ordered by
+    week, importer and row."""
+    import contextlib
+    from pathlib import Path
+    from unittest import mock
+
+    import duckdb
+
+    from coffeedata import importers
+
+    with contextlib.chdir(tmp), mock.patch.object(importers, "ROOT", Path(tmp).resolve()):
+        assert importers.build(lake, target=Path("importers-target"), unit_tests=unit_tests)
+        db = Path(importers.DB).resolve()
+    with duckdb.connect(str(db), read_only=True) as con:
+        rel = con.sql('select * from importer_offers order by week, importer, "row"')
+        return [dict(zip(rel.columns, r, strict=True)) for r in rel.fetchall()]

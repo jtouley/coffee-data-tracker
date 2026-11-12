@@ -652,6 +652,13 @@ def importer_alerts(
         how = f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}."
     else:
         how = f"The scheduled run for the week of {due} ended `{run.get('conclusion')}`."
+        if run.get("conclusion") != "success":
+            # the run's conclusion covers its build job too, which never touches the stored weeks: the rows above,
+            # read from the dataset, are what is missing
+            how += (
+                " That conclusion covers both the snapshot and the build after it; a build failure alone stores "
+                "every week and has its own issue, `pipeline:importer-build`."
+            )
     ctx = {
         "due week": f"{due} (scheduled Wednesday {wed} {at})",
         "scheduled run": f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}" if run else None,

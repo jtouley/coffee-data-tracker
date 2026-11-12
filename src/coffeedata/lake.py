@@ -508,9 +508,11 @@ SCHEMAS["contacts"] = pa.schema(
 # Green-coffee importers' public offer lists (importers.py): raw only, one immutable file per importer per week. Each
 # lot word for word, as the roaster adapters keep a product: every cell of its row under the page's header (null when
 # empty), and its own page's URL. Columns about prices are left out; no page HTML or images. Private, in its own
-# dataset (Lake.importers()): never a dbt source, never released, backend-only (for internal use and a future roaster
-# portal, which may show only the normalized values). Stated fields and normalized values are derived from it at read
-# time (importers.offers), never stored, so a better rule re-derives the whole history.
+# dataset (Lake.importers()): never a source of the main dbt project, never released, backend-only (for internal use
+# and a future roaster portal, which may show only the normalized values). Stated fields and normalized values are
+# derived from it by a private dbt project of its own (dbt_importers/, `coffeedata importer-build`, into its own
+# database file), each build from the whole raw history, so a better rule re-derives it all; the dataset keeps only the
+# latest build's copy (derived/importer_offers.parquet), which no build reads.
 SCHEMAS["importer_raw"] = pa.schema(
     [
         ("week", pa.date32()),  # the Monday of the fetch's ISO week: one snapshot per importer per week
@@ -720,7 +722,8 @@ class Lake:
 
     @classmethod
     def importers(cls) -> Lake:
-        """The private importers dataset: COFFEEDATA_IMPORTERS, or ./lake-importers. Never a dbt source."""
+        """The private importers dataset: COFFEEDATA_IMPORTERS, or ./lake-importers. Never a source of the main dbt project
+        (dbt/): only the private one (dbt_importers/, `coffeedata importer-build`) reads it, into its own database."""
         url = os.environ.get("COFFEEDATA_IMPORTERS") or "lake-importers"
         return cls(url, staging="build/importers-staging", tables=IMPORTER_TABLES)
 

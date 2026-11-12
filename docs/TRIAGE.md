@@ -35,6 +35,7 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 | `prod:<rule>` | `prod-health.yml` (Tuesdays 11:43 UTC, by hand) | a metric of the served release crosses its bound in `config/prod_health.toml` | warning or critical, per bound |
 | `pipeline:prod-health` | `prod-health.yml` | the served release couldn't be measured | warning |
 | `importers:weekly` | `importers-alerts.yml`, after every `importers` run on main and Thursdays 09:23 UTC (by hand too) | an importer has no stored week for the due week: its run failed, the scheduled run never started, or the week is stale | warning |
+| `pipeline:importer-build` | `importers.yml` job `alert`, after the `build` job that follows each snapshot on main | the private importer build (`coffeedata importer-build --publish`) failed, or its copy couldn't be sent; the stored weeks aren't affected | warning |
 | `pipeline:importers-health` | `importers-alerts.yml` | the check couldn't judge the week: no Hub token, a failed dataset or runs listing, or (once a week is due) a dataset the Hub calls "not found" | warning |
 
 Each workflow judges only the evals it owns: ci never touches a private eval's issue (its private floors skip), and
@@ -163,7 +164,9 @@ Quick checklist:
      it by hand. GitHub can also drop or delay a scheduled event under load. Since `queue: max`, a dispatch no
      longer cancels a pending scheduled run.
    - **The run failed.** Open the linked run and read the `importer-snapshot` step's line per importer, its status and
-     error. In comments here, give the importer and its status only: an error can name a store's address.
+     error. In comments here, give the importer and its status only: an error can name a store's address. A run
+     also ends `failure` when only its `build` job failed. That stores every week, so it opens
+     `pipeline:importer-build` instead of this issue; this issue lists only the weeks the dataset lacks.
    - **The run succeeded but a week is missing.** Royal was skipped (the address went only to a scheduled first
      attempt: a re-run, or a dispatch, skips it), or the run stored the week after this check ran (the next check
      closes the issue).
@@ -283,6 +286,33 @@ change acknowledged in `config/prod_health_expected.toml` lands. Bump `revision`
 
 The eval floors and ceilings stay where they are, in each `tests/test_*_accuracy.py`. The alerts read them from
 the test run's report (`EVAL_REPORT`, `tests/evalfloor.py`) and never copy them.
+
+## importers: the private importer build failed
+
+**`pipeline:importer-build`** (label `importers`, warning), raised by the `alert` job of `importers.yml` after
+the `build` job, which follows each importers run's snapshot on main once it has passed. It fires when the private dbt build
+(`coffeedata importer-build --publish`) fails, or when it passes but its copy can't be sent to the dataset, and
+closes on the next build that passes. The issue gives the build's status, the run and the commit: nothing from a lot.
+
+- **What isn't affected.** The snapshot job finished before the build started, so every week it stored stays stored
+  (raw files are never rewritten). The private dataset's `derived/importer_offers.parquet` stays the last build that
+  passed: a failed build sends nothing.
+- **Reading the run.** The repository and its logs are public, so the build step prints counts only: dbt's nodes by
+  status (model, test, unit_test) and, when sent, the lots, lots per importer, weeks and latest week. dbt's own output
+  went to a file on the runner, never printed or uploaded, since a failing query's error can quote a lot's value.
+- **Reproduce** with read access to the private dataset:
+  `COFFEEDATA_IMPORTERS=<its hf:// URL> uv run coffeedata importer-build` prints dbt's output on your own console.
+  In the issue and its comments, give the failing model or test and the kind of error, never a value.
+- **Recover.** Fix it on main. The next Wednesday's run builds again; to build sooner, dispatch
+  `gh workflow run importers` (a dispatch never fetches Royal, and stored weeks are skipped). Never re-run a
+  scheduled run for Royal's sake: a re-run never fetches Royal either.
+- **Token or privacy refusal.** `HF_TOKEN is not set`, `not private` or `holds files this job didn't write`: the same
+  checks as the snapshot (`importers.ensure_private`), which the build passes before sending anything. The dataset may
+  hold `raw/`, `README.md`, `.gitattributes` and, under `derived/`, only `importer_offers.parquet`.
+
+To see the issue without touching GitHub: `PYTHONPATH=src python3 -m coffeedata.importer_build_alert failure
+--dry-run`. `tests/test_importer_build_alert.py` covers opening, updating, closing and reopening against an
+in-memory GitHub.
 
 ## Permissions and safety
 

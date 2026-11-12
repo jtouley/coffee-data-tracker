@@ -1035,6 +1035,40 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     return all(r["status"] != "failed" for r in results)
 
 
+def cmd_importer_build(args: argparse.Namespace) -> bool:
+    """The importers' derived view: the private dbt project (dbt_importers/) over $COFFEEDATA_IMPORTERS, read only,
+    into its own database file, build/importers.duckdb (importers.DB, the only place it builds). Exits 1 if a model or
+    check failed.
+
+    With --log-file, dbt's output goes to that file and only counts are printed (importers.run_counts): what the
+    workflow does, since its log is public and a failing query's error can quote a lot's value. With --publish, a
+    build that passed is sent to the private dataset (importers.publish_derived, counts printed); a failed build
+    sends nothing, so the copy there stays the last good one."""
+    import tempfile
+
+    from . import importers
+
+    lake = Lake.importers()
+    if args.publish and not lake.remote:
+        raise SystemExit(
+            f"--publish needs COFFEEDATA_IMPORTERS to be an hf://datasets/ URL, not {lake.url!r}"
+        )
+    if args.log_file is None:
+        ok = importers.build(lake)
+        counts = None
+    else:
+        with tempfile.TemporaryDirectory() as target:
+            ok = importers.build(lake, target=Path(target), log=args.log_file)
+            counts = importers.run_counts(Path(target))
+    summary: dict = {"build": "passed" if ok else "failed"}
+    if counts is not None:
+        summary["dbt"] = counts
+    _print(summary)
+    if ok and args.publish:
+        _print({"published": importers.publish_derived(lake, sha=os.environ.get("GITHUB_SHA"))})
+    return ok
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1296,6 +1330,23 @@ def main(argv: list[str] | None = None) -> None:
     )
     imp.add_argument(
         "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
+    )
+
+    ib = add(
+        "importer-build",
+        cmd_importer_build,
+        "derive importer offers (private dbt project) from $COFFEEDATA_IMPORTERS into their own private database",
+    )
+    ib.add_argument(
+        "--log-file",
+        type=Path,
+        help="write dbt's output to this file and print only counts (CI: its log is public)",
+    )
+    ib.add_argument(
+        "--publish",
+        action="store_true",
+        help="after a build that passed, send importer_offers to the private dataset's derived/ (replaced each "
+        "build; needs an hf:// COFFEEDATA_IMPORTERS)",
     )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")

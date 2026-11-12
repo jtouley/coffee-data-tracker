@@ -562,6 +562,8 @@ def test_a_failed_scheduled_run_opens_one_issue_with_keys_and_statuses_only():
         "`failure`." in body  # fmt: skip
     assert "https://github.com/o/r/actions/runs/7" in body and CHECK in body
     assert "never dispatch or re-run for it" in body
+    # a failed run may be its build job alone, which stores every week: the issue doesn't blame the snapshot
+    assert "a build failure alone stores every week and has its own issue, `pipeline:importer-build`" in body
     table_and_text = body.lower()
     for word in ("http://", "royalcoffee", "shopify", "products.json", "price"):
         assert word not in table_and_text.replace("https://github.com/o/r/", ""), word
