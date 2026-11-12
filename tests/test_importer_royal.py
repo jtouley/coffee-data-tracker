@@ -1,6 +1,6 @@
 """Royal Coffee, the third importer (coffeedata.importers, importer_rules): its Shopify listing read page by page,
 each product kept word for word without prices or images, raw only and immutable per week like the other importers,
-its values derived on read by the same transform, and no network call to the store from any test or CI job.
+its values derived by the same private dbt project, and no network call to the store from any test or CI job.
 
 Every product here is invented (tests/fixtures/importers/royal_synthetic_products.json) and every host is made up:
 no AI agent may access Royal's site, so nothing in this file was built from it.
@@ -8,6 +8,7 @@ no AI agent may access Royal's site, so nothing in this file was built from it.
 
 from __future__ import annotations
 
+import contextlib
 import dataclasses
 import hashlib
 import json
@@ -25,6 +26,8 @@ from coffeedata import importer_rules as rules
 from coffeedata import importers
 from coffeedata.http import USER_AGENT, FetchError, PoliteClient
 from coffeedata.lake import IMPORTER_TABLES, Lake
+
+from .lakehelp import importer_offers, needs_dbt
 
 ROOT = Path(__file__).parent.parent
 FIXTURE = json.loads((Path(__file__).parent / "fixtures/importers/royal_synthetic_products.json").read_text())
@@ -184,6 +187,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
 
     def fake(lake, client, *a, **k):
         seen["ok"] = client.schedule_only_ok
+        seen["deadline"] = client.deadline is not None
         return []
 
     monkeypatch.setattr(importers, "snapshot", fake)
@@ -191,7 +195,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
         cli.main(["importer-snapshot"])
     except SystemExit as e:
         assert e.code in (0, None)
-    assert seen == {"ok": True}
+    assert seen == {"ok": True, "deadline": True}
     assert PoliteClient().schedule_only_ok is False  # every other client refuses it
 
 
@@ -306,7 +310,7 @@ def _with_fake_store(monkeypatch):
     monkeypatch.setitem(importers.IMPORTERS, importers.ROYAL, royal)
 
 
-def test_raw_only_one_immutable_file_a_week_and_values_derived_on_read(tmp_path, monkeypatch):
+def test_raw_only_one_immutable_file_a_week(tmp_path, monkeypatch):
     _with_fake_store(monkeypatch)
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     calls: list[httpx.Request] = []
@@ -322,13 +326,7 @@ def test_raw_only_one_immutable_file_a_week_and_values_derived_on_read(tmp_path,
     raw = pq.read_table(lake.root / importers.path(importers.ROYAL, MON)).to_pylist()
     assert {(r["importer"], r["source_url"], r["week"]) for r in raw} == {("royal_coffee", LISTING, MON)}
     assert [r["url"] for r in raw] == [f"{FAKE}/products/{p['handle']}" for p in PRODUCTS]
-    # the same read-time transform as the other importers: derived from the stored cells, never stored
-    derived = [o for o in importers.offers(lake) if o["importer"] == "royal_coffee"]
-    assert [(o["lot_id"], o["warehouse"], o["process_type"]) for o in derived[:2]] == [
-        ("70412", "Harborview", "washed"),
-        ("70588", "Riverside", "natural"),
-    ]
-    assert derived[0]["name"] == PRODUCTS[0]["title"] and derived[0]["problems"] == []
+    # nothing derived is stored: the private dbt project derives it (test_rules_on_the_synthetic_products)
 
     calls.clear()  # later that week: not fetched again, not rewritten
     with _store(_pages_of(250), calls) as client:
@@ -563,6 +561,9 @@ def test_royals_address_is_only_in_the_scheduled_step_of_the_importers_workflow(
     assert (
         wf["jobs"]["snapshot"]["timeout-minutes"] * 60 >= worst + 15 * 60
     )  # plus the other importers and upload
+    # and the run itself stops a little before the job is killed, so a long pass is a recorded failure
+    timeout_s = wf["jobs"]["snapshot"]["timeout-minutes"] * 60
+    assert timeout_s - 20 * 60 <= importers.IMPORTERS_DEADLINE_S <= timeout_s - 10 * 60
 
 
 def _workflow_host() -> str:
@@ -571,6 +572,88 @@ def _workflow_host() -> str:
     m = ROYAL_HOST.search(text)
     assert m
     return m.group(0)
+
+
+def _equivalent_spellings(host: str) -> list[str]:
+    """Spellings the HTTP library reads as `host` (it maps other dot characters to "." and ignores case, a trailing
+    dot, userinfo and the port), and compatibility forms (full-width) a client could be handed."""
+    dots = ("\u3002", "\uff0e", "\uff61")
+    full = "".join(chr(ord(c) + 0xFEE0) if "!" <= c <= "~" else c for c in host)
+    return [
+        host.upper(),
+        f"{host}.",
+        *(host.replace(".", d) for d in dots),
+        *(f"www{d}{host.replace('.', d)}" for d in dots),
+        full,
+        f"https://user@{host}:443/products.json",
+        f"https://{host.upper()}./",
+        f"https://{host.replace('.', dots[0])}/robots.txt",
+    ]
+
+
+def test_every_spelling_the_http_library_treats_as_the_store_is_refused(lake):
+    """The refusal compares the host the HTTP library will actually connect to, so no equivalent spelling slips
+    past it (a mock transport records any request; nothing leaves this machine either way)."""
+    from datetime import UTC, datetime
+
+    from coffeedata import http, registry
+
+    host = _workflow_host()
+    forms = _equivalent_spellings(host)
+    for form in forms:
+        assert http.schedule_only_host(form), ascii(form)
+        url = form if "//" in form else f"https://{form}/products.json"
+        with contextlib.suppress(
+            httpx.InvalidURL
+        ):  # the library reads it as the store, or rejects it outright
+            assert httpx.URL(url).raw_host.decode().rstrip(".").removeprefix("www.") == host, ascii(form)
+    calls: list[httpx.Request] = []
+    transport = httpx.MockTransport(lambda r: calls.append(r) or httpx.Response(200, text=""))
+    with PoliteClient(min_interval=0, retries=1, transport=transport) as client:
+        for form in forms:
+            url = form if "//" in form else f"https://{form}/products.json"
+            with pytest.raises(http.ScheduleOnlyHost):
+                client.get(url)
+    assert calls == []
+    # the roaster crawl's side: never a storefront, never in the registry, whatever the spelling
+    for form in forms:
+        assert not registry.is_storefront_host(registry.normalize_domain(form)), ascii(form)
+    lake.write("registry", "registry/source=manual/x.parquet", [
+        {"added_at": datetime.now(UTC), "source": "manual", "roaster_id": rid, "name": "Added"}
+        for rid in [*(registry.normalize_domain(f) for f in forms), "realroaster.com"]
+    ])  # fmt: skip
+    ids = {s.roaster.roaster_id for s in registry.current(lake)}
+    assert ids & {registry.normalize_domain(f) for f in forms} == set() and "realroaster.com" in ids
+    # look-alikes that aren't the store stay allowed
+    for other in (f"not{host}", f"{host}.evil.example", f"https://x.example/?ref={host}", "shop.example"):
+        assert not http.schedule_only_host(other), other
+
+
+def test_a_malformed_url_naming_the_store_is_refused_as_such(monkeypatch):
+    """ScheduleOnlyHost (a Blocked, which callers handle), never a ValueError from parsing the URL again."""
+    from coffeedata import http
+
+    host = _workflow_host()
+    calls: list[httpx.Request] = []
+    transport = httpx.MockTransport(lambda r: calls.append(r) or httpx.Response(200))
+    with PoliteClient(min_interval=0, retries=1, transport=transport) as client:
+        for url in (f"https://[{host}/products.json", f"https://{host}]/", f"https://[x]({host})/"):
+            with pytest.raises(http.ScheduleOnlyHost):
+                client.get(url)
+    assert calls == []
+
+
+def test_a_run_past_its_deadline_is_a_recorded_failure(tmp_path, monkeypatch):
+    """The weekly command's client stops at IMPORTERS_DEADLINE_S: a pass still running then fails as
+    DeadlineReached, recorded per importer, nothing written, instead of the job being killed."""
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    calls: list[httpx.Request] = []
+    with _store(_pages_of(250), calls) as client:
+        client.deadline = 0.0  # already passed
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert res[0]["status"] == "failed" and "DeadlineReached" in res[0]["error"] and calls == []
+    assert not (lake.root / importers.path(importers.ROYAL, MON)).exists()
 
 
 def test_no_other_client_can_reach_the_store_and_the_roaster_crawl_never_lists_it(lake, monkeypatch):
@@ -677,13 +760,37 @@ EXPECTED = [
 ]  # fmt: skip
 
 
+@pytest.fixture(scope="module")
+def derived(tmp_path_factory) -> dict[int, dict]:
+    """The synthetic products, then every case of test_rules_abstain_when_unsure (row len(PRODUCTS) + its index), stored
+    as one raw week of Royal lots and derived by the private dbt project (its unit tests passing first), by row."""
+    from .smoke import require_dbt
+
+    require_dbt()  # as needs_dbt does, before building
+    tmp = tmp_path_factory.mktemp("royal-derived")
+    lake = Lake(str(tmp / "importers"), tables=IMPORTER_TABLES)
+    cells = [lot.cells for lot in importers.parse_royal(PRODUCTS, LISTING).lots] + [c for c, _, _ in CASES]
+    base = {
+        "week": MON,
+        "fetched_at": NOW,
+        "importer": "royal_coffee",
+        "source_url": LISTING,
+        "parser_version": "t",
+    }
+    rows = [
+        base | {"row": i, "url": None, "cells": [{"column": k, "text": v} for k, v in c.items()]}
+        for i, c in enumerate(cells)
+    ]
+    lake.write("importer_raw", importers.path(importers.ROYAL, MON), rows)
+    return {o["row"]: o for o in importer_offers(lake, tmp, unit_tests=True)}
+
+
+@needs_dbt
 @pytest.mark.parametrize("i", range(len(PRODUCTS)))
-def test_rules_on_the_synthetic_products(i):
-    cells = importers.parse_royal(PRODUCTS, LISTING).lots[i].cells
-    problems: list[str] = []
-    got = importers.stated("royal_coffee", cells, problems) | rules.normalize("royal_coffee", cells, problems)
+def test_rules_on_the_synthetic_products(i, derived):
+    got = dict(derived[i])
     lot, wh, origin, region, proc, var, (lo, hi), harvest, certs = EXPECTED[i]
-    assert problems == []
+    assert got.pop("problems") == []
     assert {
         k: got.pop(k) for k in ("name", "process", "status", "est_arrival", "bags", "bag_size", "bag_kg")
     } == {
@@ -695,7 +802,10 @@ def test_rules_on_the_synthetic_products(i):
         "bag_size": None,
         "bag_kg": None,
     }
-    assert got == {
+    assert {k: got[k] for k in (
+        "lot_id", "warehouse", "origin", "region", "process_type", "varieties", "altitude_min_m", "altitude_max_m",
+        "harvest_months", "grower_type", "grower_name", "certifications", "not_certified", "rules_version",
+    )} == {
         "lot_id": lot,
         "warehouse": wh,
         "origin": origin,
@@ -710,76 +820,81 @@ def test_rules_on_the_synthetic_products(i):
         "certifications": certs,
         "not_certified": None,  # the store never marks one absent: unknown, never "not certified"
         "rules_version": rules.ROYAL_RULES_VERSION,
-    }
+    }  # fmt: skip
 
 
 def _cells(title: str = "Invented Lot", tags: list[str] = (), body: str = "") -> dict[str, str | None]:  # type: ignore[assignment]
     return {"title": title, "tags": "\n".join(tags) or None, "body_text": body or None, "product_type": None}
 
 
-@pytest.mark.parametrize(
-    "cells, field, expected",
-    [
-        # the review's cases on #140's rules, here as Royal labels: no crash, no confident wrong value
-        (_cells(body="Altitude: 1.2.3 m"), "altitude", (None, None)),
-        (_cells(body="Altitude: Bags of 1,000 m"), "altitude", (None, None)),
-        (_cells(body="This harvest declined because of rain"), "harvest", None),
-        (_cells(body="Harvest: Dec"), "harvest", ["dec"]),
-        (_cells(body="Harvest: may be smaller this year"), "harvest", None),  # the verb, not the month
-        (_cells(body="Harvest: May"), "harvest", ["may"]),
-        (_cells("Mexico Natural", body="Processed with mountain water decaf method"), "process", None),
-        (_cells("Rwanda Washed", ["Natural"]), "process", None),  # title and tag disagree
-        (_cells("Indonesia Wet-Hulled"), "process", "honey"),
-        (_cells("Brazil Pulped Natural"), "process", "honey"),
-        (_cells(tags=["Process: Semi-Washed"]), "process", "honey"),
-        (_cells(tags=["Variety: Java"]), "varieties", ["Java"]),
-        (_cells(tags=["Variety: Bourbon, Mystery Hybrid"]), "varieties", None),
-        (_cells(body="Varieties grown nearby include Gesha"), "varieties", None),  # prose, not a label
-        (_cells(tags=["Certification: C.A.F.E. Practices"]), "certifications", None),
-        (_cells("Honduras Organic"), "certifications", ["organic"]),
-        (_cells(tags=["Organic coffee lovers will enjoy"]), "certifications", None),  # a tag that says more
-        (_cells("Lot 123 - Lot 123"), "lot", "123"),
-        (_cells("Lot 12 sample"), "lot", None),
-        (_cells("Kenya AA - North Warehouse", ["Warehouse: South"]), "warehouse", None),
-        (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
-        (_cells("Colombia and Peru Blend"), "origin", None),
-        # the review's cases (#145): abstain, never guess
-        (_cells("Kenya AA - In Warehouse"), "warehouse", None),
-        (_cells("Kenya AA - Not In Warehouse"), "warehouse", None),
-        (_cells("Kenya AA - In Harborview Warehouse"), "warehouse", "Harborview"),
-        (
-            _cells(tags=["Location: Huila, Colombia"]),
-            "warehouse",
-            None,
-        ),  # usually the farm, never the warehouse
-        (_cells("Peru Non-Organic Cajamarca"), "certifications", None),
-        (_cells(tags=["Certification: Non-Organic"]), "certifications", None),
-        (_cells("Guatemala Bird Friendly Organic"), "certifications", None),  # a program we don't model
-        (_cells(tags=["FTO"]), "certifications", None),  # Fair Trade Organic, or only Fair Trade?
-        (_cells(tags=["Fair Trade", "Organic", "FTO"]), "certifications", ["organic", "fair_trade"]),
-        (_cells(tags=["Region: Huila"], body="Region: Huila. Process: Washed."), "region", "Huila"),
-        (_cells(body="Region: Huila."), "region", "Huila"),
-        (_cells("Colombia Anaerobic Lot", ["Process: Natural"]), "process", "anaerobic"),  # anaerobic wins
-        (_cells(tags=["Process: Natural", "Process: Natural."]), "process", "natural"),
-        (_cells("Sumatra Mandheling"), "origin", "Indonesia"),  # one place in a coffee title
-        (_cells("Finca Las Flores Microlot - Lot 70412"), "origin", None),  # not Flores, Indonesia
-        (_cells("Java Natural - Lot 70412"), "origin", None),  # Java is a variety too
-        (_cells("Nicaragua Java Natural"), "origin", "Nicaragua"),
-        (_cells("Kenya AA - No. 2 Warehouse", ["Warehouse: No. 2"]), "warehouse", "No. 2"),  # a number
-        (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
-        (_cells("Kenya Harvest Lot 2025"), "lot", None),  # a year, not a lot number
-    ],
-)
-def test_rules_abstain_when_unsure(cells, field, expected):
-    fn = {
-        "altitude": rules.royal_altitude,
-        "harvest": rules.royal_harvest_months,
-        "process": rules.royal_process,
-        "varieties": rules.royal_varieties,
-        "certifications": rules.royal_certifications,
-        "lot": lambda c: rules.royal_lot(c["title"]),
-        "warehouse": rules.royal_warehouse,
-        "origin": rules.royal_origin,
-        "region": rules.royal_region,
+CASES = [
+    # the review's cases on #140's rules, here as Royal labels: no crash, no confident wrong value
+    (_cells(body="Altitude: 1.2.3 m"), "altitude", (None, None)),
+    (_cells(body="Altitude: Bags of 1,000 m"), "altitude", (None, None)),
+    (_cells(body="This harvest declined because of rain"), "harvest", None),
+    (_cells(body="Harvest: Dec"), "harvest", ["dec"]),
+    (_cells(body="Harvest: may be smaller this year"), "harvest", None),  # the verb, not the month
+    (_cells(body="Harvest: May"), "harvest", ["may"]),
+    (_cells("Mexico Natural", body="Processed with mountain water decaf method"), "process", None),
+    (_cells("Rwanda Washed", ["Natural"]), "process", None),  # title and tag disagree
+    (_cells("Indonesia Wet-Hulled"), "process", "honey"),
+    (_cells("Brazil Pulped Natural"), "process", "honey"),
+    (_cells(tags=["Process: Semi-Washed"]), "process", "honey"),
+    (_cells(tags=["Variety: Java"]), "varieties", ["Java"]),
+    (_cells(tags=["Variety: Bourbon, Mystery Hybrid"]), "varieties", None),
+    (_cells(body="Varieties grown nearby include Gesha"), "varieties", None),  # prose, not a label
+    (_cells(tags=["Certification: C.A.F.E. Practices"]), "certifications", None),
+    (_cells("Honduras Organic"), "certifications", ["organic"]),
+    (_cells(tags=["Organic coffee lovers will enjoy"]), "certifications", None),  # a tag that says more
+    (_cells("Lot 123 - Lot 123"), "lot", "123"),
+    (_cells("Lot 12 sample"), "lot", None),
+    (_cells("Kenya AA - North Warehouse", ["Warehouse: South"]), "warehouse", None),
+    (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
+    (_cells("Colombia and Peru Blend"), "origin", None),
+    # the review's cases (#145): abstain, never guess
+    (_cells("Kenya AA - In Warehouse"), "warehouse", None),
+    (_cells("Kenya AA - Not In Warehouse"), "warehouse", None),
+    (_cells("Kenya AA - In Harborview Warehouse"), "warehouse", "Harborview"),
+    (
+        _cells(tags=["Location: Huila, Colombia"]),
+        "warehouse",
+        None,
+    ),  # usually the farm, never the warehouse
+    (_cells("Peru Non-Organic Cajamarca"), "certifications", None),
+    (_cells(tags=["Certification: Non-Organic"]), "certifications", None),
+    (_cells("Guatemala Bird Friendly Organic"), "certifications", None),  # a program we don't model
+    (_cells(tags=["FTO"]), "certifications", None),  # Fair Trade Organic, or only Fair Trade?
+    (_cells(tags=["Fair Trade", "Organic", "FTO"]), "certifications", ["organic", "fair_trade"]),
+    (_cells(tags=["Region: Huila"], body="Region: Huila. Process: Washed."), "region", "Huila"),
+    (_cells(body="Region: Huila."), "region", "Huila"),
+    (_cells("Colombia Anaerobic Lot", ["Process: Natural"]), "process", "anaerobic"),  # anaerobic wins
+    (_cells(tags=["Process: Natural", "Process: Natural."]), "process", "natural"),
+    (_cells("Sumatra Mandheling"), "origin", "Indonesia"),  # one place in a coffee title
+    (_cells("Finca Las Flores Microlot - Lot 70412"), "origin", None),  # not Flores, Indonesia
+    (_cells("Java Natural - Lot 70412"), "origin", None),  # Java is a variety too
+    (_cells("Nicaragua Java Natural"), "origin", "Nicaragua"),
+    (_cells("DR Congo Kivu Washed - Lot 70412"), "origin", "Democratic Republic of the Congo"),
+    (_cells("Congo Kivu Washed - Lot 70412"), "origin", None),  # Congo alone: two countries
+    (_cells("Kenya AA - No. 2 Warehouse", ["Warehouse: No. 2"]), "warehouse", "No. 2"),  # a number
+    (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
+    (_cells("Kenya Harvest Lot 2025"), "lot", None),  # a year, not a lot number
+]
+
+
+@needs_dbt
+@pytest.mark.parametrize("k", range(len(CASES)))
+def test_rules_abstain_when_unsure(k, derived):
+    _, field, expected = CASES[k]
+    got = derived[len(PRODUCTS) + k]
+    value = {
+        "altitude": (got["altitude_min_m"], got["altitude_max_m"]),
+        "harvest": got["harvest_months"],
+        "process": got["process_type"],
+        "varieties": got["varieties"],
+        "certifications": got["certifications"],
+        "lot": got["lot_id"],
+        "warehouse": got["warehouse"],
+        "origin": got["origin"],
+        "region": got["region"],
     }[field]
-    assert fn(cells) == expected
+    assert value == expected
