@@ -58,7 +58,8 @@ _COUNT_WORDS |= {"seven": 7, "eight": 8, "nine": 9, "ten": 10, "twelve": 12}
 # A count of bags: a number or a number word, then "bags" ("2 Bags", "Two bags", "5-bags", "Bulk Box (100 bags").
 _N = r"(\d{1,3}|one|two|three|four|five|six|seven|eight|nine|ten|twelve)"
 # A count of bags too long to be one: blocks, rather than leaving the option to take one bag's weight (review F1).
-_UNREAD_COUNT = re.compile(r"\d{4,}[\s-]*bags?\b", re.I)
+# "1,000 bags" too (review L5 of #139: read as 0 bags).
+_UNREAD_COUNT = re.compile(r"(?:\d{4,}|\d{1,3}(?:,\d{3})+)[\s-]*bags?\b", re.I)
 
 # An explicit count of bags, right before a weight: "4 x 12 oz", "20/2.00oz", "8 / 1 lb", "Case of 6 - 10 oz",
 # "6 count case (12 oz", "Variety 3 Pack - 12oz", "(TWO 16 oz)". A grind or blend number isn't one ("No. 4 / 5 lbs").
@@ -249,7 +250,7 @@ def _bags_count(n: int, context: str, each: bool) -> int | None:
     total wording ("24 oz total", "packed in 5 bags") makes the weight the total (count 1); "each" or a shape that
     names each bag's weight multiplies; anything else could be either and is ambiguous. One bag is no count at all,
     so a bundle or a subscription around it still blocks (review L1)."""
-    if _TIER.search(context):
+    if _TIER.search(context) or n == 0:
         raise _Ambiguous(context)
     if n == 1:
         return None
@@ -269,7 +270,7 @@ def bag_count(text: str | None) -> int | None:
     else None; two different counts are ambiguous."""
     text = _norm(text)
     counts = {_as_count(m.group(1)) for m in _BAG_COUNT.finditer(text)}
-    if len(counts) > 1 or (counts and _TIER.search(text)):
+    if len(counts) > 1 or (counts and _TIER.search(text)) or 0 in counts:  # "0 bags" is no count
         raise _Ambiguous(text)
     return counts.pop() if counts else None
 

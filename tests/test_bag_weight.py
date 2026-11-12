@@ -323,6 +323,14 @@ def test_a_three_digit_count_of_bags_is_a_count():
     assert product_grams(
         "Corporate Gifts - 2oz Sample", "", [("Pallet (1000 bags) / Ground", 1700.0, None)]
     ) == [None]
+    # review L5 of #139: a thousands comma or a count of 0 blocks too, never one sample bag's weight; like a pack
+    # without a count, an unread count blocks the listing's count fill (the other boxes abstain)
+    opts = [
+        ("Small Box (20 bags $2.50/ea) / Ground", 50.0, None),
+        ("Pallet (1,000 bags) / Ground", 1700.0, None),
+    ]
+    assert product_grams("Corporate Gifts - 2oz Sample", "", opts) == [None, None]
+    assert product_grams("Corporate Gifts - 2oz Sample", "", [("0 bags / Ground", 1.0, None)]) == [None]
 
 
 def test_a_handle_with_a_count_before_its_weight():

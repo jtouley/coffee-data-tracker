@@ -112,15 +112,22 @@ def _gate_sets() -> dict[str, list[dict]]:
     return dict(out)
 
 
-def _rules_grams(r: dict, damaged: bool = False) -> dict:
+def _rules_grams(r: dict, damage: str | None = None) -> dict:
+    """The current rules' grams per option of a gate row; a mutation check damages them: "double" doubles every
+    weight, "blank" leaves the coffee without any."""
     opts = [(o[1], o[2], o[3]) for o in r["options"]]
     grams = product_grams(r["title"], r["body"], opts, r["tags"], r["handle"])
-    if damaged:  # the mutation check: this coffee's weights doubled
+    if damage == "double":
         grams = [g * 2 if g else g for g in grams]
+    elif damage == "blank":
+        grams = [None for _ in grams]
     return dict(zip([o[0] for o in r["options"]], grams, strict=True))
 
 
-def _gate(name: str, rows: list[dict], damage: set[str] = frozenset()) -> dict:
+def _gate(name: str, rows: list[dict], damage: dict[str, str] | None = None) -> dict:
+    """The gate on one gate set: main's sealed published values against the current rules, with `damage`
+    (coffee_id -> "double" | "blank") applied to the current rules for the mutation checks."""
+    damage = damage or {}
     main = json.loads((EVAL / f"items_{name}.json").read_text())["rules"]["main"]
     sealed = {}
     for part in bag_eval.gate_parts(name):
@@ -131,12 +138,25 @@ def _gate(name: str, rows: list[dict], damage: set[str] = frozenset()) -> dict:
         by_main[r["stratum"]].append(
             (r["store"], bag_eval.gate_outcome(sealed[r["coffee_id"]], r["labels"], r["drawn"], price))
         )
-    now = bag_eval.gate_outcomes(rows, lambda r: _rules_grams(r, r["coffee_id"] in damage))
+    now = bag_eval.gate_outcomes(rows, lambda r: _rules_grams(r, damage.get(r["coffee_id"])))
     return bag_eval.gate_result({"main": by_main, "now": now}, bag_eval.gate_sizes(name), "main", "now")
 
 
-@pytest.mark.skipif(not _gate_sets(), reason="no scored gate set yet (eval/bag_grams/README.md)")
-@pytest.mark.parametrize("name", sorted(_gate_sets()) or ["none"])
+def _publishes(r: dict) -> bool:
+    listing = {"variants": [{"variant_id": o[0], "price": o[2], "available": o[4]} for o in r["options"]]}
+    return bag_eval.published(listing, _rules_grams(r))[1] is not None
+
+
+def _lowest(ids, k: int) -> list[str]:
+    return sorted(ids, key=lambda c: hashlib.sha256(c.encode()).hexdigest())[:k]
+
+
+GATE_SETS = sorted(_gate_sets()) or ["none"]
+NO_GATE = pytest.mark.skipif(not _gate_sets(), reason="no scored gate set yet (eval/bag_grams/README.md)")
+
+
+@NO_GATE
+@pytest.mark.parametrize("name", GATE_SETS)
 def test_full_population_accuracy_meets_the_gate(name):
     res = _gate(name, _gate_sets()[name])
     acc, rise = res[("now", "accuracy")][0], res[("paired", "wrong")][0]
@@ -146,19 +166,49 @@ def test_full_population_accuracy_meets_the_gate(name):
     assert rise <= bag_eval.GATE_RISE, (
         f"full-population wrong rise {rise:.4f} > ceiling {bag_eval.GATE_RISE} (eval/bag_grams/README.md)"
     )
+    main_wrong, now_wrong = res["changed_wrong"]
+    assert now_wrong <= main_wrong, (
+        f"changed-stratum wrong {now_wrong} > ceiling {main_wrong} (eval/bag_grams/README.md)"
+    )
 
 
-@pytest.mark.skipif(not _gate_sets(), reason="no scored gate set yet (eval/bag_grams/README.md)")
-@pytest.mark.parametrize("name", sorted(_gate_sets()) or ["none"])
+@NO_GATE
+@pytest.mark.parametrize("name", GATE_SETS)
 def test_the_gate_fails_when_one_percent_of_answers_are_damaged(name):
-    # The mutation check (review M2 of #139): double the weights of 1% of the gate set's coffees (the lowest
-    # sha256 of their ids) and the gate must fail, through accuracy or through the rise in confidently wrong answers.
+    # The mutation check (review M2, L1 of #139): double the weights of 1% of the gate set's coffees, drawn from
+    # those the current rules publish a price for (the lowest sha256 of their ids), and the gate must fail.
     rows = _gate_sets()[name]
     k = max(1, round(0.01 * len(rows)))
-    damage = set(
-        sorted((r["coffee_id"] for r in rows), key=lambda c: hashlib.sha256(c.encode()).hexdigest())[:k]
-    )
+    damage = dict.fromkeys(_lowest([r["coffee_id"] for r in rows if _publishes(r)], k), "double")
     assert not _gate(name, rows, damage)["passes"], f"{name}: the gate still passes with {k} coffees damaged"
+
+
+@NO_GATE
+@pytest.mark.parametrize("name", GATE_SETS)
+def test_the_gate_fails_when_prices_stop_where_it_cannot_see(name):
+    # Review G1 of #139: a rule that stops publishing on the coffees whose drawn option nobody labeled must not pass
+    # (an unlabeled blank counts against accuracy, not as rightly blank).
+    rows = _gate_sets()[name]
+    damage = {r["coffee_id"]: "blank" for r in rows if r["drawn"] not in r["labels"] and _publishes(r)}
+    assert damage, f"{name}: no coffee to blank"
+    assert not _gate(name, rows, damage)["passes"], (
+        f"{name}: the gate still passes with {len(damage)} coffees blanked"
+    )
+
+
+@NO_GATE
+@pytest.mark.parametrize("name", GATE_SETS)
+def test_the_gate_fails_when_the_changed_coffees_are_damaged(name):
+    # Review G2 of #139: the census of the coffees the change publishes differently is a condition of its own, so
+    # doubling their weights fails the gate although they weigh too little to move the weighted figures.
+    rows = _gate_sets()[name]
+    damage = {r["coffee_id"]: "double" for r in rows if r["stratum"] == "changed"}
+    if not damage:
+        pytest.skip(f"{name} has no census part")
+    res = _gate(name, rows, damage)
+    assert not res["passes"], (
+        f"{name}: the gate still passes with the changed coffees damaged ({res['changed_wrong']})"
+    )
 
 
 @pytest.mark.parametrize("name", sorted(FLOOR))

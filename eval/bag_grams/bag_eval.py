@@ -654,14 +654,18 @@ def gate_outcome(pub: dict, labels: dict[str, int | str], drawn: str, price: flo
     """A rule's outcome on one gate coffee. Published: "right" when the option's grams are within 2% of its label,
     else "wrong" (confidently wrong; also when the option has no label: a gate never passes on what it can't
     see). Not published: "abstain_ok" when the drawn option's label gives no publishable weight (unknown, unclear,
-    or outside dim_coffee's bands at that option's price), else "missed"."""
+    or outside dim_coffee's bands at that option's price); "missed" when it gives one; "unlabeled" when the drawn
+    option has no label, which counts against accuracy like a miss: a rule that stops publishing where the gate set
+    can't see must not gain from it (review G1 of #139)."""
     if pub["variant_id"] is not None:
         lab = labels.get(pub["variant_id"])
         if lab is None or isinstance(lab, str):
             return "wrong"
         return "right" if abs(pub["grams"] - int(lab)) <= 0.02 * int(lab) else "wrong"
     lab = labels.get(drawn)
-    if lab is None or isinstance(lab, str):
+    if lab is None:
+        return "unlabeled"
+    if isinstance(lab, str):
         return "abstain_ok"
     if not BAG_BAND[0] <= int(lab) <= BAG_BAND[1]:
         return "abstain_ok"
@@ -700,7 +704,11 @@ def gate_result(
         )
         out[("paired", label)] = (est, lo, hi, clo, chi)
     acc, rise = out[(change, "accuracy")][0], out[("paired", "wrong")][0]
-    out["passes"] = acc >= GATE_ACCURACY and rise <= GATE_RISE
+    # The census of the coffees the change publishes differently weighs too little to move the weighted figures, so it
+    # is a condition of its own: the change has no more confidently wrong answers there than main (review G2).
+    changed = {name: sum(o == "wrong" for _, o in per.get("changed", [])) for name, per in outcomes.items()}
+    out["changed_wrong"] = (changed[main], changed[change])
+    out["passes"] = acc >= GATE_ACCURACY and rise <= GATE_RISE and changed[change] <= changed[main]
     return out
 
 
@@ -802,7 +810,7 @@ def cmd_gate_score(data: Path, gate: str, final: bool) -> None:
         for k in sorted(outcomes[name]):
             xs = [o for _, o in outcomes[name][k]]
             cells = []
-            for o in OUTCOMES:
+            for o in (*OUTCOMES, "unlabeled"):
                 lo, hi = wilson(xs.count(o), len(xs))
                 cells.append(f"{o} {xs.count(o)}/{len(xs)} [{100 * lo:.1f}, {100 * hi:.1f}]")
             print(f"  {k}: " + "; ".join(cells))
@@ -826,7 +834,8 @@ def cmd_gate_score(data: Path, gate: str, final: bool) -> None:
     print(
         "gate:",
         "passes" if res["passes"] else "FAILS",
-        f"(accuracy >= {GATE_ACCURACY}, wrong rise <= {GATE_RISE})",
+        f"(accuracy >= {GATE_ACCURACY}, wrong rise <= {GATE_RISE}, changed-stratum wrong {res['changed_wrong'][1]}"
+        f" <= main's {res['changed_wrong'][0]})",
     )
 
 
@@ -1011,7 +1020,7 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     d = 1 + z * z / n
     c = p + z * z / (2 * n)
     w = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return ((c - w) / d, (c + w) / d)
+    return (max(0.0, (c - w) / d), min(1.0, (c + w) / d))  # never "-0.0" (review N3)
 
 
 OUTCOMES = ("right", "wrong", "abstain_ok", "missed")

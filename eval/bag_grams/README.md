@@ -46,10 +46,10 @@ totals, and a fresh sealed test set (`test2`). Once `test2` is scored, the total
   again (`test3`). Once `test3` was scored the total was 0.
 - Review of #139, H1 and L1–L3 (below): **15** coffees change against round 3's frozen rules (14 with another
   `price_per_100g`), within step 9's light path. The final review's F1 (below) adds 2 more. **Running total since
-  the last full evaluation: 17.** Why the light path (the final review's F2, for the owner to accept): step 9's
-  count is met, and although H1 changes how a rule decides, on this population the fix round makes no new confident
-  answer (every changed output returns to `main`'s value, goes blank, or is the count times the stated bag), and
-  every changed test-split coffee is already in a scored fixture, so no unseen coffee is left for a fresh test set.
+  the last full evaluation: 17.** The light path was the final review's F2; the owner has since settled it (PR
+  comment of 2026-11-12, 03:34): the full-population gate (`gate-139`, below) measures the head's rules on fresh
+  labels, including every coffee the change touches, so the full process has been applied to them. The review of
+  the gate (L5: `1,000 bags`) changes no coffee.
 
 ## Data
 
@@ -483,25 +483,31 @@ the change's own evaluation (the census or stratified sets above) and the floors
 4. **Label it** with `packet <data> gate-<change>`, by `GUIDE.md` (one answer per named option, keyed
    `"<coffee_id>|<variant_id>"`): A and B independently and blind to each other and to every prediction, then C,
    blind, on their disagreements (`agree`, `settle`, which key each option).
-5. **Score it once:** `gate-score <data> gate-<change> labels_ref_gate-<change>.json --final`. Per rule and platform:
-   `right` (the published option's grams within 2% of its label), `wrong` (otherwise, or an option without a label),
-   `abstain_ok` (nothing published, and the drawn option's label gives no publishable weight: `unknown`, `unclear`,
-   or outside the bag or price band), `missed` (nothing published, but it does). Weighted by platform size:
+5. **Score it once:** `gate-score <data> gate-<change> --final` (each part's `labels/labels_ref_<part>.json`). Per
+   rule and stratum: `right` (the published option's grams within 2% of its label), `wrong` (otherwise, or an
+   option without a label), `abstain_ok` (nothing published, and the drawn option's label gives no publishable
+   weight: `unknown`, `unclear`, or outside the bag or price band), `missed` (nothing published, but it does), and
+   `unlabeled` (nothing published, and the drawn option has no label: counted against accuracy like a miss, so a
+   rule can't gain by blanking prices where the gate set can't see; review G1). Weighted by stratum size:
    accuracy (`right` + `abstain_ok`), the confidently wrong share, and change minus main, each with Wilson
    intervals per platform, a normal and a store-clustered 95% interval.
-6. **The gate:** the change's weighted accuracy is at least `GATE_ACCURACY` (0.95), and its weighted confidently
-   wrong share is at most `GATE_RISE` (0.5 points) above main's (point estimates; the intervals are reported).
+6. **The gate**, three conditions: the change's weighted accuracy is at least `GATE_ACCURACY` (0.95); its weighted
+   confidently wrong share is at most `GATE_RISE` (0.5 points) above main's (point estimates; the intervals are
+   reported); and on the census of the coffees it publishes differently (`gate-census`, below), it has no more
+   confidently wrong answers than main (review G2: the census weighs too little to move the weighted figures).
 7. **Keep it:** `gate-fixture <data> gate-<change> ../../tests/fixtures/bag_grams_gate.jsonl` adds the scored set
    to the gate fixture. `tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate` scores the
-   current rules on every gate set in it against that set's sealed `main` values, and
-   `test_the_gate_fails_when_one_percent_of_answers_are_damaged` doubles the weights of 1% of its coffees and
-   requires the gate to fail.
+   current rules on every gate set in it against that set's sealed `main` values. Three mutation checks require the
+   gate to fail: `test_the_gate_fails_when_one_percent_of_answers_are_damaged` (the weights of 1% of the set's
+   coffees doubled, drawn from coffees that publish a price), `test_the_gate_fails_when_prices_stop_where_it_cannot_see`
+   (prices dropped on the coffees whose drawn option has no label) and
+   `test_the_gate_fails_when_the_changed_coffees_are_damaged` (the census's weights doubled).
 
 **What this measures and what it doesn't.** The gate set is a sample of what is published across the population, so
 it sees a change that damages many coffees a little. It sees a change that touches few coffees only through their
 share: a change publishing other values for 0.27% of coffees (round 3, below) is expected to put one coffee in a
-500-coffee gate set, so such a change's own coffees are measured by its census (step 1 of its evaluation), and the
-gate guards the level of everything else. The population is the eval's frozen snapshot, not the live catalogue; a
+500-coffee gate set, so the gate adds a census of the coffees the change publishes differently and holds it as a
+condition of its own (step 6). The population is the eval's frozen snapshot, not the live catalogue; a
 newer snapshot needs a new `population.json` (its sha256 recorded above) before the next gate set.
 
 **The old estimate (a cheap diagnostic, not the gate).** `bag_eval.py gate` and `gate_d.json` still print round 3's
@@ -537,7 +543,8 @@ settled the 9 others. 500 reference labels: 368 weights, 132 `unknown`.
 between `main` and #139, 81 of 30,022, from 27 stores (the largest 17), with all 138 options labeled fresh by new
 labelers (A and B claude-haiku-5-5, C claude-sonnet-5-5), blind to every earlier label. 80 of the 81 are in earlier
 sets (#139's own census sets and `test2`), so this stratum is not unseen, only freshly labeled; it gives the gate the
-change's own coffees, which a population sample of 500 expects one of. Scored with the platform sample as one set:
+change's own coffees, which a population sample of 500 expects one of, and is a gate condition (step 6). Its packet
+names the 1–2 options each rule publishes for a coffee: which options the rules chose, not any value (review N1). Scored with the platform sample as one set:
 the census at 81 of 30,022, each platform at its size less its changed coffees (`platform_sizes`: shopify 21,389,
 squarespace 2,736, woocommerce 2,588, generic 1,936, square_online 1,292). Its items and both rules' predictions are
 in `SHA256SUMS`, sealed before any label. `bag_eval.py gate-census <data> <gate>-census <main> <change>` draws one.
@@ -643,8 +650,10 @@ Per stratum (right / wrong / rightly blank / missed, the same for both rules on 
 Wilson 95% per stratum in `gate-score`'s output; on the changed stratum, wrong 27/81 [24.0, 44.1] for `main` and
 0/81 [0.0, 4.5] for #139, missed 10/81 [6.8, 21.3] and 17/81 [13.5, 31.1].
 
-**The gate passes:** #139's weighted accuracy 98.27% ≥ 95%, and its confidently wrong share falls (-0.09 points ≤
-+0.5). On the coffees it changes, #139 removes all 27 confidently wrong published prices of `main` and leaves 7 more
+**The gate passes:** #139's weighted accuracy 98.27% ≥ 95%, its confidently wrong share falls (-0.09 points ≤
++0.5), and on the changed coffees it has 0 confidently wrong answers against `main`'s 27. Neither rule has an
+`unlabeled` outcome (every coffee that publishes nothing has its drawn option labeled), so the review's G1 leaves
+both scores as they are. On the coffees it changes, #139 removes all 27 confidently wrong published prices of `main` and leaves 7 more
 blank.
 
 **Mutation check** (`test_the_gate_fails_when_one_percent_of_answers_are_damaged`): doubling the weights of 6 of the
@@ -654,3 +663,26 @@ M2 of #139).
 
 `gate-139` and `gate-139-census` are in `tests/fixtures/bag_grams_gate.jsonl` (581 rows; the current rules
 reproduce the sealed score on it: 98.27% / 0.74%). The next rules change draws its own gate set.
+
+### The final review of the gate (#139): G1, G2, L1, L5, L7, and what is left
+
+- **G1:** a coffee that publishes nothing and whose drawn option was never labeled is `unlabeled`, not rightly
+  blank. Blanking the head's prices on the 271 gate coffees whose drawn option has no label now gives 41.6%
+  accuracy and fails (it read 98.68% and passed before). #139's score is unchanged (above).
+- **G2:** the census is a gate condition (step 6). Doubling the census coffees' weights gives 57 confidently wrong
+  against `main`'s 27 and fails; the weighted figures alone (98.06%, +0.10 points) would have passed.
+- **L1:** the 1% mutation damages coffees that publish a price: 6 of them doubled give a +1.42-point rise in
+  confidently wrong answers (accuracy 96.76%), and the gate fails.
+- **L5:** `1,000 bags` (or `0 bags`) blocks, as a count too long to read does; no coffee in the population changes.
+- **L7, the labelers' inputs** (sha256 prefixes; the packets hold listing text and stay out of git): GUIDE
+  `69af718ad2883bc2`; `gate-139` packet `7ffcc9d2659ed1d2`, prompts A `4f550753f5ed4bf2`, B `86892973b77ef82d`,
+  C's packet `9e5dd9f7b6b99cef`, prompt C `2534b6f64bff2581`; census packet `dbc73c6f15944521`, prompts A
+  `9d987981e05b2a3f`, B `5d2a933331cc7eff`, C's packet `d1d7bf8b8695e0de`, prompt C `c3f276e190b49265`. The
+  orchestrator spawned the runs (A and B claude-haiku-5-5, C claude-sonnet-5-5), so independence rests on its record.
+- **Left as they are (the owner's design):**
+  - L2: `gate-census` refuses when the platform sample holds a changed coffee, so a later change whose changed
+    coffees are unseen should draw its census before its platform sample, or leave them out of the sample's frame.
+  - L3: each platform's weight includes its earlier-labeled coffees (shopify's frame 20,671, its weight 21,389),
+    which are estimated at the unseen frame's rate.
+  - L4: the held test compares later rules with `branch2`'s sealed values and a fixed 95%; a later change measures
+    itself against the `main` of its time on its own gate set.
