@@ -511,7 +511,8 @@ SCHEMAS["contacts"] = pa.schema(
 # dataset (Lake.importers()): never a source of the main dbt project, never released, backend-only (for internal use
 # and a future roaster portal, which may show only the normalized values). Stated fields and normalized values are
 # derived from it by a private dbt project of its own (dbt_importers/, `coffeedata importer-build`, into its own
-# database file), never stored in the dataset, so a better rule re-derives the whole history.
+# database file), each build from the whole raw history, so a better rule re-derives it all; the dataset keeps only the
+# latest build's copy (derived/importer_offers.parquet), which no build reads.
 SCHEMAS["importer_raw"] = pa.schema(
     [
         ("week", pa.date32()),  # the Monday of the fetch's ISO week: one snapshot per importer per week
