@@ -11,7 +11,7 @@ from pathlib import Path
 
 import pytest
 
-from .evalfloor import eval_dir
+from .evalfloor import eval_dir, floors
 
 pytestmark = pytest.mark.private_eval
 sys.path.insert(0, str(Path(__file__).parent.parent / "eval" / "wholesale"))
@@ -25,5 +25,6 @@ def test_wholesale_accuracy_does_not_regress(name):
     from score import measure
 
     m = measure(str(eval_dir("WHOLESALE_EVAL_DIR")), name, "live")
-    for metric, floor in FLOOR[name].items():
-        assert m[metric] >= floor, f"{name} {metric}: {m[metric]:.1%} < {floor:.1%}"
+    with floors("wholesale", name) as f:
+        for metric, floor in FLOOR[name].items():
+            f.at_least(f"weighted {metric}", m[metric], floor)
