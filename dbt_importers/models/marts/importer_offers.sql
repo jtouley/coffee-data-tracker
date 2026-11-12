@@ -1,6 +1,7 @@
 -- Every stored lot, every week, as an offer: its keys, the fields its page states, and our model's normalized
--- values, all derived from raw at this build (nothing derived is stored in the importers dataset). Private: only this
--- project's database file holds it.
+-- values, all derived from raw at this build. Private: this project's database file holds it, and the importers
+-- workflow keeps the latest build's copy in the private importers dataset (derived/, importers.publish_derived),
+-- which no build reads back.
 --   Cafe Imports: its table's columns (int_importer_stated) and int_importer_rules.
 --   InterAmerican: its table has no origin, region or process column, so its product name's (int_importer_name_rules)
 --     fill them, with grade and screen; the rest as Cafe Imports.

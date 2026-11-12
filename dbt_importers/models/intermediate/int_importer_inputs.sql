@@ -5,20 +5,22 @@
 --   rule_stated_process: the page's process column, where it has one
 --   rule_cert_text: where certifications are stated
 -- An importer these rules don't know yet gets no inputs, so every rule here abstains for it (stg_importer_lots' test
--- on the importer only warns, so its lots still build).
+-- on the importer only warns, so its lots still build). One row per stored lot: a lot stored with no cells gets null
+-- inputs, so its rules abstain and it stays an offer (importer_offers keeps every lot; tests/every_lot_is_an_offer).
 with lots as (
     select
-        week,
-        importer,
-        "row",
-        max(cell_text) filter (where column_name = 'Name') as ci_name,
-        max(cell_text) filter (where column_name = 'Notes') as ci_notes,
-        max(cell_text) filter (where column_name = 'Origin') as ci_origin,
-        max(cell_text) filter (where column_name = 'Process') as ci_process,
-        max(cell_text) filter (where column_name = 'Certification') as ci_certification,
-        max(cell_text) filter (where column_name = 'Product') as ia_product,
-        max(cell_text) filter (where column_name = 'Distinction') as ia_distinction
-    from {{ ref('stg_importer_cells') }}
+        l.week,
+        l.importer,
+        l."row",
+        max(c.cell_text) filter (where c.column_name = 'Name') as ci_name,
+        max(c.cell_text) filter (where c.column_name = 'Notes') as ci_notes,
+        max(c.cell_text) filter (where c.column_name = 'Origin') as ci_origin,
+        max(c.cell_text) filter (where c.column_name = 'Process') as ci_process,
+        max(c.cell_text) filter (where c.column_name = 'Certification') as ci_certification,
+        max(c.cell_text) filter (where c.column_name = 'Product') as ia_product,
+        max(c.cell_text) filter (where c.column_name = 'Distinction') as ia_distinction
+    from {{ ref('stg_importer_lots') }} as l
+    left join {{ ref('stg_importer_cells') }} as c using (week, importer, "row")
     group by all
 )
 
