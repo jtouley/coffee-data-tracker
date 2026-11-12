@@ -97,8 +97,9 @@ FIRST_STEPS = {
         "royal_coffee: never dispatch or re-run for it (only a scheduled first attempt may fetch it), so its "
         "missed week stays missed. Fix the cause before next Wednesday's run; a real drop is accepted by the "
         "ROYAL_ACCEPT_DROP_WEEK variable set to the Monday the failure names (docs/TRIAGE.md).",
-        "No scheduled run: check that the importers workflow is enabled (Actions tab; GitHub disables scheduled "
-        "workflows in a repository with no activity for 60 days) and that nothing failed before its job started.",
+        "No scheduled run: check that the importers workflow is enabled in the Actions tab (someone may have "
+        "disabled it by hand) and that nothing failed before its job started. GitHub's 60-day inactivity "
+        "auto-disable would stop this check's schedule too, so this issue can't report that (docs/TRIAGE.md).",
     ],
 }
 
@@ -487,9 +488,10 @@ def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) ->
 
 # --- the importers' weekly snapshots ------------------------------------------------------------------------------
 
-# When importers.yml's schedule fires (Wednesdays 17:37 UTC), and how long after it a week still counts as in progress:
-# the job's 120-minute timeout plus room for a late scheduled start. A completed scheduled run makes its week due at
-# once, so the check that follows it (workflow_run) judges it without waiting for this.
+# When importers.yml's schedule fires ("37 17 * * 3": Wednesdays 17:37 UTC; tests/test_triage.py ties the two), and
+# how long after it a week still counts as in progress: the job's 120-minute timeout plus room for a late scheduled
+# start. A completed scheduled run makes its week due at once, so the check that follows it (workflow_run) judges it
+# without waiting for this.
 IMPORTERS_SCHEDULE = (2, 17, 37)  # weekday (Monday 0), hour, minute, UTC
 IMPORTERS_GRACE = timedelta(hours=4)
 # The first week a scheduled run stores (Wednesday 2026-11-18's): earlier weeks are never due.
@@ -500,22 +502,36 @@ _WEEK_FILE = re.compile(r"raw/week=(\d{4}-\d{2}-\d{2})/importer=([a-z0-9_]+)\.pa
 
 def importer_weeks(url: str, names: list[str]) -> dict[str, Any]:
     """Each importer's latest stored week in the private importers dataset, from its file names alone
-    (raw/week=<Monday>/importer=<key>.parquet, importers.path): no file is opened. A dataset that doesn't exist, or
-    that this token can't see (the Hub answers both alike), is "missing", with no week for anyone; any other Hub
-    error raises, so the check job fails and the pipeline issue opens."""
+    (raw/week=<Monday>/importer=<key>.parquet, importers.path): no file is opened. `dataset` is:
+    - "found": listed;
+    - "no token": no HF_TOKEN, so nothing was asked (the dataset is private);
+    - "missing": the Hub answered "repository not found", which it answers alike for a dataset that doesn't exist
+      (a wrong IMPORTERS_URL, or not created yet) and for one this token can't read.
+    A transient Hub error is retried (importers._hub); any other error raises, so the check job fails and the
+    pipeline issue opens."""
+    latest: dict[str, str | None] = dict.fromkeys(names)
+    token = os.environ.get("HF_TOKEN") or None
+    if token is None:
+        return {"dataset": "no token", "latest": latest}
     from huggingface_hub import HfApi
     from huggingface_hub.errors import RepositoryNotFoundError
 
+    from .importers import _hub
+
     repo = url.removeprefix("hf://datasets/").split("@")[0].rstrip("/")
-    latest: dict[str, str | None] = dict.fromkeys(names)
     try:
-        files = HfApi(token=os.environ.get("HF_TOKEN") or None).list_repo_files(repo, repo_type="dataset")
+        files = _hub(HfApi(token=token).list_repo_files, repo, repo_type="dataset")
     except RepositoryNotFoundError:
         return {"dataset": "missing", "latest": latest}
     for f in files:
-        if (m := _WEEK_FILE.fullmatch(f)) and m.group(2) in latest and "0000-00-00" not in f:
-            week, name = m.groups()
-            latest[name] = max(latest[name] or week, week)
+        if not (m := _WEEK_FILE.fullmatch(f)) or m.group(2) not in latest:
+            continue
+        week, name = m.groups()
+        try:
+            date.fromisoformat(week)
+        except ValueError:
+            continue  # not a real date (the schema file's 0000-00-00 included): not a stored week
+        latest[name] = max(latest[name] or week, week)
     return {"dataset": "found", "latest": latest}
 
 
@@ -534,7 +550,8 @@ def _when(s: str) -> datetime:
 
 def importers_due_week(now: datetime, runs: list[dict[str, Any]] | None = None) -> date | None:
     """The latest week every importer should have stored by `now`: this week once its scheduled run has completed
-    or IMPORTERS_GRACE has passed since the schedule, else the week before. None before IMPORTERS_FIRST_WEEK."""
+    or IMPORTERS_GRACE has passed since the schedule, else the week before. None before IMPORTERS_FIRST_WEEK.
+    Without the runs (None), only the time decides."""
     week = _monday(now)
     scheduled = [
         r for r in runs or [] if r.get("event") == "schedule" and r.get("status") == "completed"
@@ -555,6 +572,15 @@ def _scheduled_run(week: date, runs: list[dict[str, Any]] | None) -> dict[str, A
     return max(found, key=lambda r: r["created_at"]) if found else None
 
 
+_NOT_LISTED = {
+    None: "The check couldn't list the private importers dataset (its step failed: a Hub outage or a rejected "
+    "token), so no week was judged.",
+    "no token": "The check had no Hub token (HF_READ_TOKEN, else HF_TOKEN), so no week was judged.",
+    "missing": 'The Hub answered "not found" for the importers dataset: IMPORTERS_URL names the wrong dataset, or '
+    "the check's token can't read it. No week was judged.",
+}
+
+
 def importer_alerts(
     weeks: dict[str, Any] | None,
     runs: list[dict[str, Any]] | None,
@@ -562,29 +588,48 @@ def importer_alerts(
     run_url: str | None,
     sha: str | None,
 ) -> list[dict]:
-    """The importers' weekly snapshots as alerts: `importers:weekly`, one check per importer, firing while any
-    importer has no stored week for the due week (importers_due_week), however that happened: the scheduled run
-    failed, it never ran (a dropped schedule, a disabled workflow, a run displaced from its concurrency group), or
-    it stored only some importers. Each missing importer's status counts the weeks missed in a row, so a week missed
-    again comments on the issue. `pipeline:importers-health` fires when the dataset couldn't be listed (`weeks` is
-    None). The issue carries importer keys, statuses, weeks (Mondays) and run links: nothing from a lot."""
-    ctx = {"check": run_url, "commit": sha}
+    """The importers' weekly snapshots as alerts.
+
+    `importers:weekly`: one check per importer, firing while any importer has no stored week for the due week
+    (importers_due_week), however that happened: the scheduled run failed, it never started (a dropped schedule, a
+    workflow disabled by hand, a run displaced from its concurrency group), or it stored only some importers. Each
+    missing importer's status counts the weeks missed in a row, so a week missed again comments on the issue. It is
+    judged only when the dataset was listed.
+
+    `pipeline:importers-health`: firing when the check couldn't judge. The dataset wasn't listed (`weeks` None: its
+    step failed), there was no token, or the Hub said "not found" once a week is due (a wrong IMPORTERS_URL, or a
+    token that can't read the dataset; before then the dataset may simply not exist yet). Or the workflow's runs
+    weren't listed (`runs` None). The issues carry importer keys, statuses, weeks (Mondays) and run links: nothing
+    from a lot."""
+    ctx = {"run": run_url, "commit": sha}
+    weeks = weeks if isinstance(weeks, dict) and isinstance(weeks.get("latest"), dict) else None
+    runs = runs if isinstance(runs, list) else None
+    due = importers_due_week(now, runs)
+    state = (weeks or {}).get("dataset")
+    listed = state == "found" or (state == "missing" and due is None)
+    summary = [] if listed else [_NOT_LISTED.get(state, _NOT_LISTED[None])]
+    if runs is None:
+        summary.append("The importers workflow's runs couldn't be listed (the Actions API step failed).")
     out = [{
         "key": "pipeline:importers-health", "kind": "pipeline", "label": "importers",
-        "title": "importers-alerts: the check didn't run",
-        "severity": "warning", "firing": weeks is None, "source": ".github/workflows/importers-alerts.yml",
-        "summary": "The importers check couldn't list the private importers dataset, so no week was judged.",
-        "checks": [{"name": "importers dataset listed", "status": "ok" if weeks is not None else "warning"}],
+        "title": "importers-alerts: the check couldn't judge the week",
+        "severity": "warning", "firing": bool(summary), "source": ".github/workflows/importers-alerts.yml",
+        "summary": " ".join(summary),
+        "checks": [
+            {"name": "importers dataset listed", "status": "ok" if listed else "warning"},
+            {"name": "importers runs listed", "status": "ok" if runs is not None else "warning"},
+        ],
         "context": ctx,
         "steps": [
-            "Open the run and read the first failing step: the Hub token (HF_READ_TOKEN, else HF_TOKEN) or the "
-            "IMPORTERS_URL variable, or a Hub outage.",
+            "Read the summary above, then open the run and its first failing step.",
+            "Dataset not found, or no token: check the Hub token's read access to the private importers dataset "
+            "(HF_READ_TOKEN, else HF_TOKEN) and the IMPORTERS_URL variable before anything else.",
+            "Runs not listed, or a listing step that failed: usually a GitHub or Hub outage; the next check retries.",
             "Re-run importers-alerts by hand once fixed (`gh workflow run importers-alerts`); this issue closes on "
-            "the next run that lists the dataset. It never fetches an importer.",
+            "the next run that lists both. It never fetches an importer.",
         ],
     }]  # fmt: skip
-    due = importers_due_week(now, runs)
-    if weeks is None or due is None:
+    if weeks is None or state != "found" or due is None:
         return out  # nothing listed, or no week due yet: an open importers issue stays as it is
     checks, missing = [], []
     for name, last in sorted(weeks["latest"].items()):
@@ -598,21 +643,20 @@ def importer_alerts(
         missing.append(name)
     run = _scheduled_run(due, runs)
     wed = due + timedelta(days=IMPORTERS_SCHEDULE[0])
-    if run is None:
+    at = f"{IMPORTERS_SCHEDULE[1]:02d}:{IMPORTERS_SCHEDULE[2]:02d} UTC"
+    if runs is None:
+        how = "The workflow's runs couldn't be listed, so which run should have stored it is unknown."
+    elif run is None:
         how = f"No scheduled importers run started for the week of {due} (Wednesday {wed})."
     elif run.get("status") != "completed":
         how = f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}."
     else:
         how = f"The scheduled run for the week of {due} ended `{run.get('conclusion')}`."
-    if weeks.get("dataset") == "missing":
-        how += " The importers dataset wasn't found: not created yet, or the check's token can't see it."
     ctx = {
-        "due week": f"{due} (scheduled Wednesday {wed} 17:37 UTC)",
-        "scheduled run": f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}"
-        if run
-        else None,
+        "due week": f"{due} (scheduled Wednesday {wed} {at})",
+        "scheduled run": f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}" if run else None,
         **ctx,
-    }
+    }  # fmt: skip
     out.append({
         "key": "importers:weekly", "kind": "importers", "title": "importers: a weekly snapshot is missing",
         "severity": "warning", "firing": bool(missing), "source": IMPORTERS_WORKFLOW, "checks": checks,
@@ -622,7 +666,11 @@ def importer_alerts(
 
 
 def _read_json(path: Path) -> Any:
-    return json.loads(path.read_text()) if path.exists() else None
+    """The file's JSON; None when it is missing, empty or not JSON (a step that failed mid-write)."""
+    try:
+        return json.loads(path.read_text())
+    except (OSError, ValueError):
+        return None
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -645,7 +693,7 @@ def main(argv: list[str] | None = None) -> int:
     im.add_argument(
         "dir", type=Path, help="holds weeks.json (importers-weeks) and runs.json (the workflow's runs)"
     )
-    im.add_argument("--now", help="judge as of this ISO time (default: now)")
+    im.add_argument("--now", help="judge as of this ISO time, UTC unless it has an offset (default: now)")
     wk = sub.add_parser(
         "importers-weeks", help="each importer's latest stored week, from file names (Hub token)"
     )
@@ -672,9 +720,10 @@ def main(argv: list[str] | None = None) -> int:
         report = json.loads(a.report.read_text()) if a.report.exists() else None
         alerts = eval_alerts(report, a.workflow, run_url, sha, a.alert_if_missing, a.scope)
     elif a.cmd == "importers":
-        now = (
-            datetime.fromisoformat(a.now).replace(tzinfo=UTC) if a.now else datetime.now(UTC)
-        )  # --now in UTC
+        now = datetime.now(UTC)
+        if a.now:  # an ISO time; one without an offset is UTC
+            t = datetime.fromisoformat(a.now)
+            now = t.replace(tzinfo=UTC) if t.tzinfo is None else t.astimezone(UTC)
         weeks, runs = _read_json(a.dir / "weeks.json"), _read_json(a.dir / "runs.json")
         alerts = importer_alerts(weeks, runs, now, run_url, sha)
     else:

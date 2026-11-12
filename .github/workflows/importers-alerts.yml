@@ -1,8 +1,9 @@
 # Importers alerts (docs/TRIAGE.md): is each importer's week stored? After every importers run, and each Thursday in
 # case no run happened, list the private importers dataset's file names and open, update or close the
 # `importers:weekly` triage issue (coffeedata.triage importers). It judges the dataset, not the run, so one check
-# covers a failed importer, a run that never started (a dropped schedule, a disabled workflow, a run displaced from
-# its concurrency group) and a stale week alike; the run's conclusion and link go in the issue to say which.
+# covers a failed importer, a run that never started (a dropped schedule, a workflow disabled by hand, a run
+# displaced from its concurrency group) and a stale week alike; the run's conclusion and link go in the issue to say
+# which. GitHub's 60-day inactivity auto-disable stops this workflow's schedule too, so that case goes unreported.
 #
 # - It never fetches an importer and never dispatches importers.yml. It reads file names only
 #   (raw/week=<Monday>/importer=<key>.parquet), never a file, and keeps each importer's latest week.
@@ -11,7 +12,9 @@
 #   with issues: write (and contents: read, for its checkout), never the Hub token.
 # - This repository is public: the artifact, the log and the issue carry importer keys, statuses, weeks (Mondays)
 #   and run links, never a lot or a store's address.
-# - A run that couldn't list the dataset (no token, a Hub outage) opens `pipeline:importers-health` instead.
+# - A check that couldn't judge the week opens `pipeline:importers-health` instead of `importers:weekly`: no token,
+#   a failed listing (a Hub outage, a rejected token) or a failed runs listing, and, once a week is due, a dataset
+#   the Hub calls "not found" (a wrong IMPORTERS_URL, or a token that can't read it: the Hub answers both alike).
 name: importers-alerts
 on:
   workflow_run:
@@ -23,6 +26,8 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+# One run at a time, so two alert jobs never both find no issue and open two. A newer run waiting replaces an older
+# one, and its listing is the newer state anyway.
 concurrency:
   group: importers-alerts
   cancel-in-progress: false
@@ -45,9 +50,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p "$RUNNER_TEMP/importers"
-          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/importers.yml/runs?branch=main&per_page=30" \
+          # written whole or not at all: a failed call leaves no runs.json, and the alert job opens the pipeline issue
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/importers.yml/runs?branch=main&per_page=100" \
             --jq '[.workflow_runs[] | {event, status, conclusion, created_at, html_url}]' \
-            > "$RUNNER_TEMP/importers/runs.json"
+            > "$RUNNER_TEMP/runs.json.tmp"
+          mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
       - name: Each importer's latest stored week (file names only, read-only)
         env:
           HF_TOKEN: ${{ secrets.HF_READ_TOKEN || secrets.HF_TOKEN }}
@@ -69,9 +76,6 @@ jobs:
     if: always() && github.ref == 'refs/heads/main' && needs.check.result != 'cancelled'
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    # One at a time, so two runs never both find no issue and open two; a newer run waiting replaces an older one,
-    # and its listing is the newer state anyway.
-    concurrency: {group: triage-importers, cancel-in-progress: false}
     permissions:
       contents: read
       issues: write

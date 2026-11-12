@@ -35,7 +35,7 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 | `prod:<rule>` | `prod-health.yml` (Tuesdays 11:43 UTC, by hand) | a metric of the served release crosses its bound in `config/prod_health.toml` | warning or critical, per bound |
 | `pipeline:prod-health` | `prod-health.yml` | the served release couldn't be measured | warning |
 | `importers:weekly` | `importers-alerts.yml`, after every `importers` run on main and Thursdays 09:23 UTC (by hand too) | an importer has no stored week for the due week: its run failed, the scheduled run never started, or the week is stale | warning |
-| `pipeline:importers-health` | `importers-alerts.yml` | the private importers dataset couldn't be listed | warning |
+| `pipeline:importers-health` | `importers-alerts.yml` | the check couldn't judge the week: no Hub token, a failed dataset or runs listing, or (once a week is due) a dataset the Hub calls "not found" | warning |
 
 Each workflow judges only the evals it owns: ci never touches a private eval's issue (its private floors skip), and
 eval-floors never touches an in-git one. Only the floor files (`tests/test_<eval>_accuracy.py`) are reported, so a
@@ -159,9 +159,9 @@ adds a comment; the same state at the next check doesn't.
 Quick checklist:
 
 1. Read the summary. Which of the three is it?
-   - **No scheduled run started.** Check that `importers` is enabled in the Actions tab. GitHub disables scheduled
-     workflows in a public repository with no activity for 60 days. GitHub can also drop or delay a scheduled event
-     under load. Since `queue: max`, a dispatch no longer cancels a pending scheduled run.
+   - **No scheduled run started.** Check that `importers` is enabled in the Actions tab: someone may have disabled
+     it by hand. GitHub can also drop or delay a scheduled event under load. Since `queue: max`, a dispatch no
+     longer cancels a pending scheduled run.
    - **The run failed.** Open the linked run and read the `importer-snapshot` step's line per importer, its status and
      error. In comments here, give the importer and its status only: an error can name a store's address.
    - **The run succeeded but a week is missing.** Royal was skipped (the address went only to a scheduled first
@@ -183,10 +183,26 @@ Quick checklist:
 
 The issue is never closed by hand while a week is still missing. The next check would reopen it.
 
-**`pipeline:importers-health`**: the check couldn't list the dataset. Check the Hub token (`HF_READ_TOKEN`, else
-`HF_TOKEN`; it needs read access to the private importers dataset), the `IMPORTERS_URL` variable, and the Hub's
-status. A dataset that doesn't exist or that the token can't see reads as every importer missing, not as this
-issue: the Hub answers both the same way. While this issue is open, `importers:weekly` is left as it is.
+**What this check can't see.** GitHub automatically disables the scheduled workflows of a public repository with
+no activity for 60 days. That stops importers-alerts' Thursday schedule along with importers', and with no
+importers run there's no `workflow_run` either, so no issue opens. In a repository this active it's unlikely. If
+the repository goes quiet, re-enable both workflows in the Actions tab.
+
+**`pipeline:importers-health`**: the check couldn't judge the week, so `importers:weekly` is left as it is. The
+summary says which:
+- **No Hub token**: neither `HF_READ_TOKEN` nor `HF_TOKEN` is set.
+- **"Not found"**: `IMPORTERS_URL` names the wrong dataset, or the token can't read the private importers dataset.
+  The Hub answers both the same way. Before the first due week (2026-11-16) this stays silent, since the dataset
+  may not exist yet.
+- **The dataset listing failed**: a Hub outage or a rejected token. Transient errors are retried first.
+- **The runs listing failed**: the Actions API. The weeks are still judged, by the time alone.
+
+Check the token's read access and `IMPORTERS_URL` before anything else, then re-run `gh workflow run
+importers-alerts`.
+
+**Owner check before the first scheduled run.** After the first dispatch of `importers`, open the
+`importers-health` artifact of the importers-alerts run that follows it. Confirm that `weeks.json` says
+`"dataset": "found"`. That is the only proof, before 2026-11-18, that the check's token can read the dataset.
 
 To try it without touching GitHub, put the check's two files in a folder and run
 `PYTHONPATH=src python3 -m coffeedata.triage importers <folder> --dry-run --now 2026-11-19T09:23`. The files are the

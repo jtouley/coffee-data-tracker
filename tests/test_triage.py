@@ -599,9 +599,10 @@ def test_a_dispatch_mends_the_html_importers_and_the_issue_closes_on_the_next_fu
     runs.insert(0, _run("2026-11-25T17:45:00Z", "success", n=9))
     full = _weeks(cafe_imports="2026-11-23", interamerican="2026-11-23", royal_coffee="2026-11-23")
     assert _isync(gh, full, runs, "2026-11-25T19:00") == [("closed", "importers:weekly", 1)]
-    assert gh.comments[1][-1].startswith("Recovered")
-    # and a missed week later reopens the same issue
+    assert gh.comments[1][-1].startswith("Recovered") and CHECK in gh.comments[1][-1]
+    # and a missed week later reopens the same issue, its comment linking the check
     assert _isync(gh, full, runs, "2026-12-03T09:23") == [("reopened", "importers:weekly", 1)]
+    assert gh.comments[1][-1].startswith("Firing again") and CHECK in gh.comments[1][-1]
 
 
 def test_an_unlisted_dataset_opens_the_pipeline_issue_and_leaves_the_importers_issue_alone():
@@ -617,13 +618,73 @@ def test_an_unlisted_dataset_opens_the_pipeline_issue_and_leaves_the_importers_i
     ]  # fmt: skip
 
 
-def test_a_missing_dataset_says_so_and_before_the_first_week_nothing_fires():
-    assert [a["key"] for a in triage.importer_alerts(_weeks(), [], _at("2026-11-13T09:23"), None, None)] == [
+def _firing(weeks, runs, now):
+    return [a["key"] for a in triage.importer_alerts(weeks, runs, _at(now), CHECK, None) if a["firing"]]
+
+
+def test_a_dataset_the_check_cant_judge_opens_the_pipeline_issue_not_every_importer_missing():
+    """No token, or the Hub's "not found" once a week is due (a wrong IMPORTERS_URL, a token that can't read the
+    dataset): the pipeline issue, never `importers:weekly` with every importer missing."""
+    missing = {"dataset": "missing", "latest": dict.fromkeys(IMPORTERS)}
+    no_token = {"dataset": "no token", "latest": dict.fromkeys(IMPORTERS)}
+    assert _firing(_weeks(), [], "2026-11-13T09:23") == []  # before the first week nothing is due
+    assert _firing(missing, [], "2026-11-13T09:23") == []  # and the dataset may not exist yet
+    assert _firing(no_token, [], "2026-11-13T09:23") == [
+        "pipeline:importers-health"
+    ]  # a token is always needed
+    for weeks, words in ((missing, "IMPORTERS_URL names the wrong dataset"), (no_token, "no Hub token")):
+        alerts = triage.importer_alerts(weeks, [], _at("2026-11-19T09:23"), CHECK, None)
+        assert [a["key"] for a in alerts] == ["pipeline:importers-health"]
+        assert alerts[0]["firing"] and words in alerts[0]["summary"]
+    gh = FakeGitHub()
+    _isync(gh, missing, [], "2026-11-19T09:23")
+    assert [i["title"] for i in gh.store] == ["[triage] importers-alerts: the check couldn't judge the week"]
+    assert "IMPORTERS_URL" in gh.store[0]["body"]
+
+
+@pytest.mark.parametrize("runs_json", ["", "{not json", None])
+def test_an_unlisted_run_history_opens_the_pipeline_issue_and_still_judges_the_weeks(tmp_path, runs_json):
+    """The Actions API step failed: runs.json is empty, half-written or absent. The alert job doesn't crash: the
+    pipeline issue opens, and the weeks are still judged, by the time alone."""
+    (tmp_path / "weeks.json").write_text(json.dumps(_weeks(cafe_imports="2026-11-16")))
+    if runs_json is not None:
+        (tmp_path / "runs.json").write_text(runs_json)
+    env = {k: v for k, v in os.environ.items() if k not in ("GITHUB_TOKEN", "GH_TOKEN")}
+    r = subprocess.run(
+        [sys.executable, "-m", "coffeedata.triage", "importers", str(tmp_path), "--dry-run",
+         "--now", "2026-11-19T09:23"],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
+    assert r.returncode == 0, r.stderr
+    assert "2 alert(s) firing: pipeline:importers-health, importers:weekly" in r.stdout
+    assert "The importers workflow's runs couldn't be listed" in r.stdout
+    assert "which run should have stored it is unknown" in r.stdout
+    # an empty or unparsable weeks.json is a failed listing too
+    (tmp_path / "weeks.json").write_text("")
+    assert triage._read_json(tmp_path / "weeks.json") is None
+    assert _firing(triage._read_json(tmp_path / "weeks.json"), [], "2026-11-19T09:23") == [
         "pipeline:importers-health"
     ]  # fmt: skip
-    missing = {"dataset": "missing", "latest": dict.fromkeys(IMPORTERS)}
-    a = triage.importer_alerts(missing, [], _at("2026-11-19T09:23"), None, None)[1]
-    assert a["firing"] and "wasn't found" in a["summary"]
+
+
+@pytest.mark.parametrize(
+    ("now", "fires"),
+    [
+        ("2026-11-18T23:00+02:00", False),  # 21:00 UTC Wednesday: inside the grace, nothing due yet
+        ("2026-11-18T21:00-05:00", True),  # 02:00 UTC Thursday: the week is due
+        ("2026-11-19T02:00", True),  # no offset: UTC
+    ],
+)
+def test_now_converts_its_offset_to_utc(tmp_path, now, fires):
+    (tmp_path / "weeks.json").write_text(json.dumps(_weeks()))
+    (tmp_path / "runs.json").write_text("[]")
+    env = {k: v for k, v in os.environ.items() if k not in ("GITHUB_TOKEN", "GH_TOKEN")}
+    r = subprocess.run(
+        [sys.executable, "-m", "coffeedata.triage", "importers", str(tmp_path), "--dry-run", "--now", now],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
+    assert r.returncode == 0, r.stderr
+    assert ("1 alert(s) firing: importers:weekly" in r.stdout) == fires, r.stdout
 
 
 def test_importer_weeks_reads_file_names_only(monkeypatch):
@@ -650,12 +711,17 @@ def test_importer_weeks_reads_file_names_only(monkeypatch):
                     "raw/week=2026-11-23/importer=cafe_imports.parquet",
                     "raw/week=2026-11-16/importer=royal_coffee.parquet",
                     "raw/week=0000-00-00/importer=interamerican.parquet",  # a schema file
+                    "raw/week=2026-13-40/importer=interamerican.parquet",  # not a date
                     "raw/week=2026-11-23/importer=someone_else.parquet"]  # fmt: skip
 
         def __getattr__(self, name):
             raise AssertionError(f"only file names are listed, not {name}")
 
     monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
+    monkeypatch.delenv("HF_TOKEN", raising=False)
+    assert triage.importer_weeks("hf://datasets/o/importers", IMPORTERS)["dataset"] == "no token"
+    assert calls == []  # without a token nothing is asked
+    monkeypatch.setenv("HF_TOKEN", "hf_dummy")  # a dummy: the Hub is a mock
     got = triage.importer_weeks("hf://datasets/o/importers@main", IMPORTERS)
     assert got == {"dataset": "found", "latest": {"cafe_imports": "2026-11-23", "interamerican": None,
                                                     "royal_coffee": "2026-11-16"}}  # fmt: skip
@@ -705,3 +771,27 @@ def test_the_importers_alerts_workflow_and_the_importers_queue():
     assert "python3 -m coffeedata.triage importers " in alert["steps"][-1]["run"]
     importers = yaml.safe_load((workflows / "importers.yml").read_text())
     assert importers["concurrency"] == {"group": "importers", "cancel-in-progress": False, "queue": "max"}
+    # the runs listing is written whole or not at all (a failed call leaves no runs.json)
+    runs_step = next(s for s in wf["jobs"]["check"]["steps"] if "gh api" in s.get("run", ""))
+    assert "runs.json.tmp" in runs_step["run"] and "mv " in runs_step["run"]
+
+
+def test_the_due_week_follows_the_importers_cron():
+    """triage's Wednesday 17:37 UTC is importers.yml's cron, and the Thursday check runs after its grace."""
+    import yaml
+
+    workflows = ROOT / ".github" / "workflows"
+    (cron,) = [c["cron"] for c in yaml.safe_load((workflows / "importers.yml").read_text())[True]["schedule"]]
+    minute, hour, dom, month, dow = cron.split()
+    assert (dom, month) == ("*", "*")
+    assert (int(dow) - 1, int(hour), int(minute)) == triage.IMPORTERS_SCHEDULE  # cron's 3 is Python's 2
+    (check,) = [
+        c["cron"] for c in yaml.safe_load((workflows / "importers-alerts.yml").read_text())[True]["schedule"]
+    ]
+    c_minute, c_hour, _, _, c_dow = check.split()
+    week = triage.IMPORTERS_FIRST_WEEK
+    thursday = triage.datetime.combine(
+        week + triage.timedelta(days=int(c_dow) - 1), triage.dtime(int(c_hour), int(c_minute)), UTC
+    )
+    assert thursday >= triage._scheduled_at(week) + triage.IMPORTERS_GRACE
+    assert triage.importers_due_week(thursday) == week
