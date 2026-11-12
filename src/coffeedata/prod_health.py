@@ -560,6 +560,10 @@ def baseline(
     where: dict[str, list[str]] = {}
     for i, rel in enumerate(releases):
         ms = release_metrics(rel)
+        if ms.get("coverage:enrichment") == 0:
+            # no Claude row in the whole catalog: a release from before the enrichment ran says nothing about the
+            # backlog, and its zeros would sink the coverage floor, so it is left out of every coverage history
+            ms = {k: v for k, v in ms.items() if not k.startswith("coverage:")}
         if i:
             ms |= {k: v for k, v in shift_metrics(rel, releases[i - 1]).items()}
         for k, v in ms.items():
@@ -592,6 +596,7 @@ def baseline(
         f"changed shares: median + {LOW_MARGIN['warning']:g} / {LOW_MARGIN['critical']:g} at least;",
         f"# volume ratios: 1 +/- {RATIO_MARGIN['warning']:g} / {RATIO_MARGIN['critical']:g} at least; median shifts: "
         f"0 +/- {MEDIAN_MARGIN['warning']:g} / {MEDIAN_MARGIN['critical']:g} at least.",
+        "# Claude's coverage leaves out releases with no Claude row at all (from before the enrichment ran).",
         "# Without history: a warn-only dbt band test warns on any failure, the classifier's coverage is judged",
         f"# on the build's own gate (min_verdict_share {MIN_VERDICT_SHARE}), the served release's age on the weekly",
         f"# cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; above {CADENCE_DAYS['critical']:g}: two).",

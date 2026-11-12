@@ -530,3 +530,16 @@ def test_the_needs_llm_test_matches_extract():
             [origin, blend, process, notes],
         ).fetchone()
         assert got == extract.needs_llm(e), (origin, blend, process, notes)
+
+
+def test_coverage_leaves_out_releases_from_before_the_enrichment_ran(tmp_path):
+    """A release with no Claude row at all says nothing about Claude's backlog: its zeros stay out of every coverage
+    history (they would sink the floor), and its other metrics stay in."""
+    before = [_coffee(i, complete=i >= 50) for i in range(100)]  # 50 abstained, none filled yet
+    after = [_coffee(i, method="llm" if i < 10 else "rules", complete=i >= 50) for i in range(100)]
+    later = [_coffee(i, method="llm" if i < 20 else "rules", complete=i >= 50) for i in range(100)]
+    paths = [_write(tmp_path / f"w{i}.parquet", rows) for i, rows in enumerate((before, after, later))]
+    hist, text, _ = ph.baseline(paths, [], [], "2026-11-12", ["w0", "w1", "w2"])
+    assert hist["coverage:enrichment"] == [0.2, 0.4] and hist["abstain:enrichment"] == [0.5, 0.5, 0.5]
+    cov = next(m for m in tomllib.loads(text)["metric"] if m["name"] == "coverage:enrichment")
+    assert cov["baseline"] == 0.3 and cov["warning_below"] > 0.2 * 0.75

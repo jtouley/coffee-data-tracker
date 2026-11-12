@@ -6,6 +6,7 @@
 # 4 / 8 binomial standard errors at the platform's n, and 3 / 6 x 1.4826 x MAD, capped at
 # 0.25 / 0.45 of the median (fill and coverage shares, low side). Abstain and changed shares: median + 0.02 / 0.05 at least;
 # volume ratios: 1 +/- 0.1 / 0.25 at least; median shifts: 0 +/- 0.05 / 0.15 at least.
+# Claude's coverage leaves out releases with no Claude row at all (from before the enrichment ran).
 # Without history: a warn-only dbt band test warns on any failure, the classifier's coverage is judged
 # on the build's own gate (min_verdict_share 0.85), the served release's age on the weekly
 # cadence (above 7 days: a missed week; above 14: two).
@@ -171,62 +172,58 @@ warning_above = 0.0
 [[metric]]
 name = "coverage:enrichment"
 rule = "enrichment"
-baseline = 0.0228
-history = [0.0, 0.0, 0.0456, 0.0744]
+baseline = 0.06
+history = [0.0456, 0.0744]
 n = 38418
-flagged = ["lake@c3f7595 marts (2026-10-27) (0)", "lake@41b68c6 marts (2026-10-28) (0)"]
-warning_below = 0.0171
-critical_below = 0.0125
+warning_below = 0.045
+critical_below = 0.033
 
 [[metric]]
 name = "coverage:enrichment:generic"
 rule = "enrichment"
-baseline = 0.0246
-history = [0.0, 0.0, 0.0491, 0.0791]
+baseline = 0.0641
+history = [0.0491, 0.0791]
 n = 2142
-flagged = ["lake@c3f7595 marts (2026-10-27) (0)", "lake@41b68c6 marts (2026-10-28) (0)"]
-warning_below = 0.0184
-critical_below = 0.0135
+warning_below = 0.0481
+critical_below = 0.0353
 
 [[metric]]
 name = "coverage:enrichment:shopify"
 rule = "enrichment"
-baseline = 0.0237
-history = [0.0, 0.0, 0.0474, 0.05]
+baseline = 0.0487
+history = [0.0474, 0.05]
 n = 25887
-flagged = ["lake@c3f7595 marts (2026-10-27) (0)", "lake@41b68c6 marts (2026-10-28) (0)"]
-warning_below = 0.0178
-critical_below = 0.013
+warning_below = 0.0429
+critical_below = 0.037
 
 [[metric]]
 name = "coverage:enrichment:square_online"
 rule = "enrichment"
-baseline = 0.007
-history = [0.0, 0.0, 0.0139, 0.0243]
+baseline = 0.0191
+history = [0.0139, 0.0243]
 n = 2736
-flagged = ["lake@c3f7595 marts (2026-10-27) (0)", "lake@41b68c6 marts (2026-10-28) (0)"]
-warning_below = 0.0052
-critical_below = 0.0038
+flagged = ["release 20261104T041920-5060ad (run 2026-11-02) (0.01392)"]
+warning_below = 0.0143
+critical_below = 0.0105
 
 [[metric]]
 name = "coverage:enrichment:squarespace"
 rule = "enrichment"
-baseline = 0.0541
-history = [0.0, 0.0, 0.1083, 0.1156]
+baseline = 0.1119
+history = [0.1083, 0.1156]
 n = 2724
-flagged = ["lake@c3f7595 marts (2026-10-27) (0)", "lake@41b68c6 marts (2026-10-28) (0)"]
-warning_below = 0.0406
-critical_below = 0.0298
+warning_below = 0.0878
+critical_below = 0.0636
 
 [[metric]]
 name = "coverage:enrichment:woocommerce"
 rule = "enrichment"
-baseline = 0.0071
-history = [0.0, 0.0, 0.0143, 0.2105]
+baseline = 0.1124
+history = [0.0143, 0.2105]
 n = 4582
-flagged = ["lake@c3f7595 marts (2026-10-27) (0)", "lake@41b68c6 marts (2026-10-28) (0)"]
-warning_below = 0.0054
-critical_below = 0.0039
+flagged = ["release 20261104T041920-5060ad (run 2026-11-02) (0.0143)"]
+warning_below = 0.0843
+critical_below = 0.0618
 
 [[metric]]
 name = "fill:classifier"

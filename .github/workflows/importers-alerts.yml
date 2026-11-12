@@ -56,6 +56,8 @@ jobs:
             > "$RUNNER_TEMP/runs.json.tmp"
           mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
       - name: Each importer's latest stored week (file names only, read-only)
+        # also after a failed runs listing, so the weeks are still judged (by the time alone)
+        if: ${{ !cancelled() }}
         env:
           HF_TOKEN: ${{ secrets.HF_READ_TOKEN || secrets.HF_TOKEN }}
           # the same dataset importers.yml writes

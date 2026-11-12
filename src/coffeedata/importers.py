@@ -757,6 +757,7 @@ def build(lake: Lake, target: Path | None = None, unit_tests: bool = False, log:
                 f"{db} holds tables the importers project doesn't own ({', '.join(sorted(foreign))})"
             )
         db.unlink()  # derived: always rebuilt from raw
+    db.with_name(db.name + ".wal").unlink(missing_ok=True)  # a killed build's write-ahead log, never replayed
     db.parent.mkdir(parents=True, exist_ok=True)
     # dbt runs from the checkout, where DB is the one relative path the project accepts; everything else it's given
     # is absolute, so the caller's working directory doesn't matter
@@ -775,6 +776,7 @@ def build(lake: Lake, target: Path | None = None, unit_tests: bool = False, log:
             r = subprocess.run(cmd, env=env, cwd=ROOT, stdout=out, stderr=subprocess.STDOUT)
     if r.returncode != 0:
         db.unlink(missing_ok=True)  # never leave a half-built view
+        db.with_name(db.name + ".wal").unlink(missing_ok=True)
     return r.returncode == 0
 
 

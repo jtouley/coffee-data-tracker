@@ -88,7 +88,7 @@ value. The lake is private and this repository is public. Get the values locally
 | `grams` | `fill:grams[:<platform>]` (a bag weight read); `shift:changed:grams`; `shift:median:grams` | a bag_weight change (#136, #139), or a platform's variant titles changed shape |
 | `price_per_100g` | `fill:price_per_100g[:<platform>]`; `shift:changed:price_per_100g`; `shift:median:price_per_100g` | a lost weight or price, a currency or unit error, or a price wipe on one platform |
 | `classifier` | `fill:classifier`: the share decided by Claude's verdict, judged on the build's own `min_verdict_share` 0.85 | verdicts missing or late, or no verdict model. Starts once a release carries `classified_by` |
-| `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (enrichment not run, a key change), not a slow backlog, which only climbs |
+| `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (a wiped enrichments table, a key change). A stalled enrichment job keeps its rows, so coverage stays flat or sinks slowly and may not alert |
 | `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing |
 | `fetch` | `build:run_ok_share`, `build:run_catalog_ok_share`, `build:adapter_ok_share:<platform>` (mart_build_profile, reused) | fetches failing. fetch-health (RUNBOOK.md §8) should have said so too |
 | `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`, `origin_countries_are_mapped`: an origin spelling the ISO seed doesn't have, published with no country until it is labelled and added, eval/origin_iso); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
@@ -198,7 +198,8 @@ summary says which:
   The Hub answers both the same way. Before the first due week (2026-11-16) this stays silent, since the dataset
   may not exist yet.
 - **The dataset listing failed**: a Hub outage or a rejected token. Transient errors are retried first.
-- **The runs listing failed**: the Actions API. The weeks are still judged, by the time alone.
+- **The runs listing failed**: the Actions API. The weeks step runs anyway (`if: ${{ !cancelled() }}`), so the
+  weeks are still judged, by the time alone.
 
 Check the token's read access and `IMPORTERS_URL` before anything else, then re-run `gh workflow run
 importers-alerts`.
@@ -248,7 +249,8 @@ around it:
   Ordinary sampling noise doesn't page.
 - **Claude's coverage** (`coverage:enrichment`, low side): judged like a fill rate, with `n` the listed coffees the
   rules abstained on (`rows:needs_llm`). The backlog only climbs, so the floor sits under the history's median and
-  pages only on a real drop.
+  pages only on a real drop. Releases with no Claude row at all (from before the enrichment ran) are left out of its
+  history, so their zeros don't sink the floor.
 - **Abstain and changed shares** (high side): the median plus at least 0.02 for a warning and 0.05 for critical.
 - **Volume ratios**: 1 ± at least 0.10 / 0.25. **Median shifts**: 0 ± at least 0.05 / 0.15.
 - **Fixed, with no history**: a warn-only band test warns on any failure, and the classifier is judged on
@@ -256,8 +258,8 @@ around it:
 
 **Flagged history.** A history value outside its own warning band is not used to widen the band. It is listed as
 `flagged` in the config, as a possible regression to look into. At revision 2026-11-12:
-- `coverage:enrichment[:<platform>]` is 0 in the 10-27 and 10-28 marts, before Claude's enrichment ran. That is
-  expected, not a regression;
+- `coverage:enrichment:square_online` and `:woocommerce` in run 2026-11-02 (0.014 each), below a band centred
+  between it and run 2026-11-09. The backlog was earlier, not a regression;
 - `shift:rows_ratio:listed:generic` was 1.17 between the 10-27 and 10-28 marts.
 
 **The enrichment split (revision 2026-11-12).** Until then `abstain:enrichment` counted the coffees Claude had
@@ -267,7 +269,8 @@ regressed. It is now the rules' own abstain rate, from `dim_coffee.rules_complet
 rules' `extract.needs_llm`). Releases built before that column are read from their values: Claude's rows (Claude is
 only asked when the rules abstain) plus the rules' rows that fail the same test. Over the four releases in the
 history it is 0.88–0.93 on every platform, flat. Claude's progress moved to `coverage:enrichment`, which went 0,
-0, 0.046, 0.074 overall. Judged with these bounds, the 11-09 release breaches neither.
+0, 0.046, 0.074 overall. The two zeros are left out of its history, so its floor is 0.045 overall (warning)
+instead of 0.017. Judged with these bounds, the 11-09 release breaches neither.
 
 **Simulated on the 11-09 release** (a copy, blanking Shopify grams):
 - a 3-point drop warns, and so does a 4-point drop;

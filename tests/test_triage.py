@@ -767,6 +767,10 @@ def test_the_importers_alerts_workflow_and_the_importers_queue():
     assert wf["jobs"]["check"]["permissions"] == {"contents": "read", "actions": "read"}
     hub = [s for s in wf["jobs"]["check"]["steps"] if "HF_TOKEN" in json.dumps(s)]
     assert len(hub) == 1 and "coffeedata.triage importers-weeks" in hub[0]["run"]
+    # a failed runs listing before it doesn't skip it: the weeks are still listed and judged
+    assert hub[0]["if"] == "${{ !cancelled() }}"
+    steps = wf["jobs"]["check"]["steps"]
+    assert steps.index(hub[0]) > next(i for i, s in enumerate(steps) if "gh api" in s.get("run", ""))
     assert "importer-snapshot" not in (workflows / "importers-alerts.yml").read_text()
     alert = wf["jobs"]["alert"]
     assert "HF_TOKEN" not in json.dumps(alert) and alert["needs"] == "check"
