@@ -4,18 +4,18 @@
 // catalog's search, filter and click-out events and what they carry; utm_* and referrer sources; Global Privacy
 // Control and Do Not Track send nothing; a slow and a failing collector never hold a page or a click up. A cookie is
 // set on the collector's host, and no request to it may carry one (or any credentials). The collector is a local
-// HTTPS server the test runs (Chromium maps e.registry.coffee to it): a page's last events leave as it unloads, which
+// HTTPS server the test runs (Chromium maps the collector's host to it): a page's last events leave as it unloads, which
 // in-browser routing can't see, so the server records what really arrives, headers included. Any other request off
 // 127.0.0.1 fails the run, except a navigation to a store, which gets a stub page.
 // Usage: node usage_flow.js <site url> <app url> <screenshot dir> <app session cookie as JSON> <release build id>
-//          <collector port> <collector control url>
+//          <collector port> <collector control url> <collector origin, as config/usage.toml would hold it>
 const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 
-const [site, app, out, cookieJson, build, port, control] = process.argv.slice(2);
+const [site, app, out, cookieJson, build, port, control, origin] = process.argv.slice(2);
 const SESSION = JSON.parse(cookieJson);
-const COLLECTOR = "https://e.registry.coffee/e";
+const COLLECTOR = `${origin}/e`, HOST = new URL(origin).hostname;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let AXE = null;
 try { AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8"); } catch (e) {}
@@ -30,11 +30,11 @@ const seen = async () => (await fetch(`${control}/seen`)).json();
 // init: a script run before the page's own (Global Privacy Control, Do Not Track).
 async function open(browser, { viewport = VIEWPORTS[390], scheme = "light", collector = "ok", init } = {}) {
   await mode(collector);
-  // The collector's certificate is the test's own, for e.registry.coffee.
+  // The collector's certificate is the test's own, for its host.
   const context = await browser.newContext({ viewport, colorScheme: scheme, ignoreHTTPSErrors: true });
   const appHost = new URL(app).hostname;
   await context.addCookies([
-    { name: "session", value: "must-not-be-sent", domain: "e.registry.coffee", path: "/", secure: true, sameSite: "None" },
+    { name: "session", value: "must-not-be-sent", domain: HOST, path: "/", secure: true, sameSite: "None" },
     { name: SESSION.name, value: SESSION.value, domain: appHost, path: "/" },
   ]);
   if (init) await context.addInitScript(init);
@@ -94,9 +94,9 @@ async function look(page, name, width, scheme) {
 
 (async () => {
   const browser = await chromium.launch({
-    // e.registry.coffee is the test's collector, with the test's own certificate: a request sent as a page unloads
+    // The collector's host is the test's collector, with the test's own certificate: a request sent as a page unloads
     // outlives the context, so the context's ignoreHTTPSErrors doesn't reach it. Only this test browser does this.
-    args: [`--host-resolver-rules=MAP e.registry.coffee 127.0.0.1:${port}`, "--proxy-server=direct://", "--ignore-certificate-errors"],
+    args: [`--host-resolver-rules=MAP ${HOST} 127.0.0.1:${port}`, "--proxy-server=direct://", "--ignore-certificate-errors"],
   });
   try {
     // 1. Every site page, both widths and schemes: nothing leaves while it loads and is looked at; one page_view
@@ -125,8 +125,9 @@ async function look(page, name, width, scheme) {
     }
 
     // 2. The catalog: a search, a sort, then a click on the first result. Nothing leaves until the click; then the
-    //    search and filter state, counted once each when they settled, and the click with a copy of them. The link
-    //    carries the referral marker. The visit came from another site's page: only its host is kept.
+    //    search (once: the sort alone is a filter_state, not another search) and the filter state, each counted once
+    //    when it settled, and the click with a copy of both. The link carries the referral marker. The visit came
+    //    from another site's page: only its host is kept.
     {
       const { context, page } = await open(browser);
       await page.goto(`${site}/catalog/`, { referer: "https://news.example.com/story/42?ref=x" });
@@ -140,18 +141,48 @@ async function look(page, name, width, scheme) {
       const href = await link.getAttribute("href");
       assert.equal(href, "https://northside.coffee/?utm_source=registry.coffee&utm_medium=referral");
       await Promise.all([page.waitForURL(/northside\.coffee/), link.click()]);
-      await until(async () => events(await seen()).length >= 5, "the catalog's events");
+      await until(async () => events(await seen()).length >= 4, "the catalog's events");
       clean(await seen());
       const got = events(await seen()).map(({ event_id, device, webdriver, release, surface, ...rest }) => rest);
       const chicago = { query: "chicago", cities: ["chicago"], states: [], origin: null, process: null, state: null, in_stock: true };
       assert.deepEqual(got, [
         { event: "page_view", entry: true, referrer: "news.example.com" },
         { event: "search", ...chicago, sort: "roaster", results_n: 1, zero_results: false },
-        { event: "search", ...chicago, sort: "asc", results_n: 1, zero_results: false },
         { event: "filter_state", origin: null, process: null, state: null, in_stock: true, sort: "asc", results_n: 1, zero_results: false },
         { event: "click_out", ...chicago, sort: "asc", results_n: 1, zero_results: false, roaster_id: "northside.coffee",
-          coffee_id: "northside.coffee:Windy City Espresso", rank: 1 },
+          coffee_id: "northside.coffee:windy-city-espresso", rank: 1 },
       ]);
+      await done(page, context);
+    }
+
+    // 2b. Many searches on one page, past the 20-event batch: each event leaves exactly once, in batches of 20 or
+    //     fewer. (A flush that queued while it flushed used to call itself and resend the same search.) The page's
+    //     clock is run by hand: 60 searches, each settled, without 2 minutes of waiting.
+    {
+      const { context, page } = await open(browser);
+      await page.goto(`${site}/catalog/`);
+      await settled(page);
+      await page.clock.install();
+      for (let i = 1; i <= 60; i++) {
+        await page.fill("#q", `zz${i}`);
+        await page.clock.runFor(200);  // the typing pause
+        await page.clock.runFor(2100);  // settled
+        if (i % 15 === 0) { await page.selectOption("#sort", i % 30 ? "asc" : "roaster"); await page.clock.runFor(2100); }
+      }
+      await page.goto("about:blank");
+      await until(async () => events(await seen()).length >= 65, "65 events");
+      await sleep(500);
+      const all = await seen();
+      clean(all);
+      const evs = events(all);
+      assert.equal(evs.length, 65, `${evs.length} events arrived`);  // 1 page_view + 60 searches + 4 filter_states
+      assert.equal(new Set(evs.map((e) => e.event_id)).size, 65);
+      // Requests travel in parallel, so they may arrive in any order.
+      const queries = evs.filter((e) => e.event === "search").map((e) => e.query).sort();
+      assert.deepEqual(queries, Array.from({ length: 60 }, (_, i) => `zz${i + 1}`).sort());
+      assert.equal(evs.filter((e) => e.event === "filter_state").length, 4);
+      // Batches of at most 20 events and 4 KB (clean() and the collector check both), so a handful of requests.
+      assert.ok(all.length <= 10, `${all.length} requests`);
       await done(page, context);
     }
 
@@ -181,7 +212,7 @@ async function look(page, name, width, scheme) {
       const [view, click] = events(await seen());
       assert.equal(view.event, "page_view");
       assert.deepEqual({ ...click, event_id: 0 }, { event_id: 0, surface: "landing", release: build, device: "desktop", webdriver: true,
-        event: "click_out", roaster_id: "northside.coffee", coffee_id: "northside.coffee:Windy City Espresso", rank: null });
+        event: "click_out", roaster_id: "northside.coffee", coffee_id: "northside.coffee:windy-city-espresso", rank: null });
       await done(page, context);
     }
 

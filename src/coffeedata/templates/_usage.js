@@ -3,11 +3,11 @@
   // Events wait in memory and leave on a click to a roaster or when the page is hidden, never while it draws; they go
   // to a separate host without credentials, and any failure is dropped.
   const usage = (() => {
-    const cfg = {{ usage | tojson }};  // {url, surface, release}
-    const off = navigator.globalPrivacyControl === true || [navigator.doNotTrack, window.doNotTrack].includes("1");
+    const cfg = {{ usage | tojson }};  // {url, surface, release}; url is null until the collector exists
+    const off = !cfg.url || navigator.globalPrivacyControl === true || [navigator.doNotTrack, window.doNotTrack].includes("1");
     const queue = [], hooks = [];
-    const uid = () => crypto.randomUUID ? crypto.randomUUID()
-      : [...crypto.getRandomValues(new Uint8Array(16))].map(b => b.toString(16).padStart(2, "0")).join("");
+    let flushing = false;
+    const uid = () => crypto.randomUUID ? crypto.randomUUID() : undefined;  // a v4 UUID, or none (JSON leaves it out)
     // Where this load came from, sent once with its first event (entry): utm_* from the address (then removed from
     // it) and the referrer's host name only, never its path or query. The collector reads the source from them.
     let source = null;
@@ -26,24 +26,28 @@
         try { history.replaceState(history.state, "", location.pathname + (s ? "?" + s : "") + location.hash); } catch (e) {}
       }
     }
+    // Only fetch, without credentials: never sendBeacon, which sends cookies. A browser without fetch counts nothing.
     function post(events) {
-      const body = JSON.stringify({events});
       try {
-        fetch(cfg.url, {method: "POST", body, keepalive: true, credentials: "omit", mode: "no-cors", cache: "no-store",
-          referrerPolicy: "strict-origin-when-cross-origin"}).catch(() => {});  // the policy keeps Origin, which the collector needs
-      } catch (e) {
-        try { navigator.sendBeacon(cfg.url, body); } catch (e2) {}  // no fetch: the beacon (nothing sets cookies on that host)
-      }
+        fetch(cfg.url, {method: "POST", body: JSON.stringify({events}), keepalive: true, credentials: "omit", mode: "no-cors",
+          cache: "no-store", referrerPolicy: "strict-origin-when-cross-origin"}).catch(() => {});  // the policy keeps Origin, which the collector needs
+      } catch (e) {}
     }
+    // Sends everything queued, each event once. A hook (the catalog's settle) may queue more while it runs; a flush
+    // never starts inside another, and send() leaves a full queue to the flush that is running.
     function flush() {
-      hooks.forEach(f => { try { f(); } catch (e) {} });
-      // At most 20 events and 4 KB (in UTF-8) a request, the collector's limits.
-      const size = events => new TextEncoder().encode(JSON.stringify({events})).length;
-      while (queue.length) {
-        let n = Math.min(queue.length, 20);
-        while (n > 1 && size(queue.slice(0, n)) > 4000) n--;
-        post(queue.splice(0, n));
-      }
+      if (flushing) return;
+      flushing = true;
+      try {
+        hooks.forEach(f => { try { f(); } catch (e) {} });
+        // At most 20 events and 4 KB (in UTF-8) a request, the collector's limits.
+        const size = events => new TextEncoder().encode(JSON.stringify({events})).length;
+        while (queue.length) {
+          let n = Math.min(queue.length, 20);
+          while (n > 1 && size(queue.slice(0, n)) > 4000) n--;
+          post(queue.splice(0, n));
+        }
+      } finally { flushing = false; }
     }
     function send(fields) {
       if (off) return;
@@ -51,7 +55,7 @@
         device: matchMedia("(max-width: 600px)").matches ? "phone" : "desktop", webdriver: navigator.webdriver === true, ...fields};
       if (source) { Object.assign(e, source); source = null; }
       queue.push(e);
-      if (queue.length >= 20) flush();
+      if (queue.length >= 20 && !flushing) flush();
     }
     if (!off) {
       addEventListener("pagehide", flush);

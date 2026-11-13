@@ -12,30 +12,34 @@ from pathlib import Path
 
 from fastapi import HTTPException, Request, Response
 
-from coffeedata.beacon import USAGE_ORIGIN
-
 STATIC = Path(__file__).parent / "static"
 IMMUTABLE = "public, max-age=31536000, immutable"
 PRIVATE = "no-store, private"  # anything for one signed-in person: photos, pages, API answers
 
+
 # No inline script anywhere, so script-src needs no nonce. The JSON data blocks (<script type="application/json">)
-# aren't executed and CSP doesn't apply to them.
-CSP = "; ".join(
-    [
-        "default-src 'self'",
-        "script-src 'self'",
-        "style-src 'self'",
-        "img-src 'self' data: blob:",
-        "font-src 'self'",
-        f"connect-src 'self' {USAGE_ORIGIN}",  # the usage counter (app.js count()), and nothing else
-        "manifest-src 'self'",
-        "worker-src 'self'",
-        "object-src 'none'",
-        "base-uri 'none'",
-        "form-action 'self'",
-        "frame-ancestors 'none'",
-    ]
-)
+# aren't executed and CSP doesn't apply to them. connect-src adds the usage collector's origin when there is one
+# (config/usage.toml, app.js count()), and nothing else.
+def csp(collector: str | None = None) -> str:
+    return "; ".join(
+        [
+            "default-src 'self'",
+            "script-src 'self'",
+            "style-src 'self'",
+            "img-src 'self' data: blob:",
+            "font-src 'self'",
+            "connect-src 'self'" + (f" {collector}" if collector else ""),
+            "manifest-src 'self'",
+            "worker-src 'self'",
+            "object-src 'none'",
+            "base-uri 'none'",
+            "form-action 'self'",
+            "frame-ancestors 'none'",
+        ]
+    )
+
+
+CSP = csp()  # responses that aren't the app's pages (refusals, probes, not configured)
 # Pages a link with a secret in its fragment opens (spec §4): never a Referer, even to the app itself.
 NO_REFERRER = ("/reset", "/forgot", "/verify")
 # The camera is only for photographing a bag, so only that screen may ask for it.
@@ -50,11 +54,11 @@ def permissions_policy(path: str) -> str:
     )
 
 
-def secure_headers(response: Response, path: str, private: bool = False) -> None:
+def secure_headers(response: Response, path: str, private: bool = False, policy: str = CSP) -> None:
     """`private` (every route but auth.PUBLIC, and any path no route matches): never stored by a browser or a
     shared cache, whatever the route set, and no validators a cache could reuse it with."""
     h = response.headers
-    h.setdefault("Content-Security-Policy", CSP)
+    h.setdefault("Content-Security-Policy", policy)
     h["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains"
     h["X-Content-Type-Options"] = "nosniff"
     h["Referrer-Policy"] = "no-referrer" if path in NO_REFERRER else "same-origin"
@@ -116,6 +120,7 @@ def middleware(
     set_cookie: Callable[[Response, object], None] | None,
     cookie: str,
     on_error: Callable[[Request], Awaitable[Response]],
+    policy: str = CSP,
 ) -> Callable[[Request, Next], Awaitable]:
     """The outermost layer: every response, errors included, gets the security headers, and a session due for
     renewal gets a fresh cookie unless the route already set or cleared one (sign-out, a password change)."""
@@ -131,7 +136,7 @@ def middleware(
         # Private unless RequireSession matched the request to a public route, and always when it carries a
         # session cookie (a sign-in, or a renewal on any route).
         public = getattr(request.state, "public", False) is True and not (already or renew)
-        secure_headers(response, request.url.path, private=not public)
+        secure_headers(response, request.url.path, private=not public, policy=policy)
         if renew and set_cookie is not None:
             set_cookie(response, acct)
         return response

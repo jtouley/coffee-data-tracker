@@ -3,8 +3,8 @@
 {% block slug %}privacy{% endblock %}
 {% block body %}
 <div class="summary">
-  <p><strong>In short:</strong> the public site counts visits, searches and clicks to roasters without cookies or an ID,
-    and never keeps your full IP address. The invite-only app keeps what you log so it can work. Your personal data isn't sold, there are no ads, and there are no third-party trackers. You can ask for a copy of
+  <p><strong>In short:</strong> the site and the app count visits, searches and clicks to roasters without cookies or an
+    ID, and never keep your full IP address. The invite-only app keeps what you log so it can work. Your personal data isn't sold, there are no ads, and there are no third-party trackers. You can ask for a copy of
     your data, or for it to be deleted, at <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
 </div>
 
@@ -29,22 +29,30 @@
 </ul>
 
 <h2 id="counting">What we count</h2>
-<p>We count page visits, searches, filters and clicks to roasters, on the site and in the app, without cookies, without
-  storing anything in your browser, without an ID, and never tied to your account.</p>
+<p>We count page visits, searches, filters and clicks to roasters, on the site and in the app. We do it without
+  cookies, without storing anything in your browser, without an ID, and never tied to your account. For each one we
+  keep:</p>
 <ul>
-  <li>We keep what you searched for, the filters, the number of results, which roaster or coffee link you clicked, and
-    the site or campaign that sent you.</li>
-  <li>We never store your full IP address: we shorten it straight away (for example 203.0.113.x) and keep only that,
-    to work out your country, state and city. The city is often your internet provider's nearby city rather than where
-    you are.</li>
-  <li>We look only at weekly totals; a search or place shows only once it has appeared on several days, and small towns
-    are never named.</li>
-  <li>Links to roasters carry <code>utm_source=registry.coffee</code>.</li>
-  <li>With Global Privacy Control or Do Not Track, nothing is counted.</li>
-  <li>IP location data by <a href="https://db-ip.com">DB-IP</a>, city populations by
-    <a href="https://www.geonames.org">GeoNames</a> (both
-    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</li>
+  <li><strong>What you searched for, exactly as you typed it.</strong> Don't type anything private into the search
+    box.</li>
+  <li>The filters and sort order you chose, and how many results there were.</li>
+  <li>Which roaster or coffee link you clicked, and its position in the results.</li>
+  <li>Which page you were on, whether you were on a phone or a computer, and which weekly build of the catalog it
+    showed.</li>
+  <li>The site or campaign that sent you: only the other site's name, never the page.</li>
+  <li>The hour we received it, not the minute.</li>
+  <li><strong>A shortened IP address</strong> (for example 203.0.113.x), to work out your country, state and city. We
+    never store your full IP address: we shorten it straight away. The city is often your internet provider's nearby
+    city rather than where you are.</li>
 </ul>
+<p>We check your browser type only to mark visits from bots, and don't keep it.</p>
+<p>Our reports show only weekly totals. A search or place appears in one only once it has turned up on several days,
+  and small towns are never named.</p>
+<p>Links to roasters carry <code>utm_source=registry.coffee</code> and <code>utm_medium=referral</code>, so a roaster
+  can see the visit came from us. With Global Privacy Control or Do Not Track on, nothing is counted.</p>
+<p>IP location data by <a href="https://db-ip.com">DB-IP</a>, city populations by
+  <a href="https://www.geonames.org">GeoNames</a> (both
+  <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</p>
 
 <h2>What the app collects</h2>
 <p>The app is invite-only. When you use it, we keep:</p>
@@ -88,6 +96,8 @@
     can change it in Setup at any time.</li>
   <li>To keep it secure and prevent abuse, for example with rate limits.</li>
   <li>To find and fix problems.</li>
+  <li>To see which searches, filters and roasters people use on the site and in the app, and roughly where they come
+    from (the counts above).</li>
 </ul>
 <p>We may also use <strong>aggregated or de-identified</strong> data, which can't reasonably identify you, to run and
   improve the service and to publish statistics about it. For example: "washed Ethiopians are most often brewed at
@@ -133,6 +143,8 @@
   expire.</p>
 <p>Your email address is different: when you remove or change it, or your account is deleted, every copy of it is
   deleted from the data store, including its version history.</p>
+<p>The counts are different too: we keep them permanently, searches and shortened IP addresses included, in the same
+  append-only store. Nothing links them to you, so we can't find or delete yours on request.</p>
 
 <h2>Your choices and rights</h2>
 <p>Email <a href="mailto:{{ contact }}">{{ contact }}</a> and tell us your username (writing from the email address on

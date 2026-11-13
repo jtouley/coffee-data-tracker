@@ -358,7 +358,9 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   }
 
   // What was searched and filtered, counted once the results settle (2 s untouched, a result clicked or the page
-  // hidden) and only when it changed, never per keystroke. A click to a roaster carries a copy of it.
+  // hidden), never per keystroke: a search when the query is new (a filter change alone is a filter_state, not
+  // another search), a filter_state when the filters changed. A click to a roaster carries a copy of both. Each is
+  // marked counted before it is sent, so a flush that send() starts finds nothing new to count.
   let still, lastSearch = "", lastFilters = "";
   const filters = () => ({origin: $("origin").value || null, process: $("process").value || null,
     state: $("state").value || null, in_stock: $("stock").checked, sort: $("sort").value});
@@ -371,9 +373,11 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   function settle() {
     clearTimeout(still);
     if (!ready) return;
-    const now = looked(), f = JSON.stringify(filters());
-    if (now.query && now.query + f !== lastSearch) { usage.send({event: "search", ...now}); lastSearch = now.query + f; }
-    if (f !== lastFilters) { usage.send({event: "filter_state", ...filters(), results_n: now.results_n, zero_results: now.zero_results}); lastFilters = f; }
+    const now = looked(), f = JSON.stringify(filters()), searched = now.query && now.query !== lastSearch, filtered = f !== lastFilters;
+    lastSearch = now.query;  // cleared with the box, so typing the same query again counts again
+    lastFilters = f;
+    if (searched) usage.send({event: "search", ...now});
+    if (filtered) usage.send({event: "filter_state", ...filters(), results_n: now.results_n, zero_results: now.zero_results});
   }
   usage.hooks.push(settle);
   usage.context = () => ready ? looked() : {};

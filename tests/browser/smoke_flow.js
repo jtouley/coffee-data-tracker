@@ -6,6 +6,9 @@ const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
 
 const [site, app, out, username, password] = process.argv.slice(2);
+// The usage collector (coffeedata/beacon.py: config/usage.toml, a Cloud Run address) is answered here: a test never
+// sends to the real one.
+const COLLECTOR = (u) => u.hostname.endsWith(".run.app") && u.pathname === "/e";
 
 (async () => {
   const browser = await chromium.launch();
@@ -15,8 +18,7 @@ const [site, app, out, username, password] = process.argv.slice(2);
     await context.route("**/*", (route) => {
       const host = new URL(route.request().url()).hostname;
       if (host === "127.0.0.1" || route.request().url().startsWith("data:")) return route.continue();
-      // The usage counter (coffeedata/beacon.py) is answered here, as it would be: never reached from a test.
-      if (route.request().url() === "https://e.registry.coffee/e") return route.fulfill({ status: 204 });
+      if (COLLECTOR(new URL(route.request().url()))) return route.fulfill({ status: 204 });
       errors.push(`outside request: ${route.request().url()}`);
       return route.abort();
     });

@@ -21,9 +21,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
   `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
   the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a
-  click out or when the page is hidden, by `fetch` without credentials to `https://e.registry.coffee/e` (the only
-  new CSP origin); nothing is stored in the browser, no id is made, and nothing is sent with Global Privacy Control
-  or Do Not Track. Links out carry `utm_source=registry.coffee&utm_medium=referral` (`coffeedata/beacon.py`);
+  click out or when the page is hidden, by `fetch` without credentials to the collector's address in
+  `config/usage.toml` (the only new CSP origin, added only once that is set; until then nothing is sent); nothing is
+  stored in the browser, no id is made, and nothing is sent with Global Privacy Control or Do Not Track. Links out carry `utm_source=registry.coffee&utm_medium=referral` (`coffeedata/beacon.py`);
   `catalog.json` keeps the roasters' links as they are. The privacy policy says what is counted.
 - The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
   one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly

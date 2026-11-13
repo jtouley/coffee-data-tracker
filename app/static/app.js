@@ -224,12 +224,13 @@ const tick = (ms = 8) => navigator.vibrate?.(ms);
 
 // --- counting searches and clicks to roasters ------------------------------------------------------------
 // The same events as the site (coffeedata/beacon.py, privacy policy "What we count"): the catalog search on the
-// bag screen and the Shop link on a coffee. Sent to a separate host, never the app, without credentials, so no
-// request carries the session cookie; no user id, nothing stored; nothing with Global Privacy Control or Do Not
-// Track on. Fire and forget: a failure is dropped and nothing waits for it.
-const USAGE_URL = "https://e.registry.coffee/e";
+// bag screen and the Shop link on a coffee. Sent to the collector's own host (config/usage.toml, given to the page
+// as <meta name="usage">), never the app, without credentials, so no request carries the session cookie; no user
+// id, nothing stored; nothing without a collector or with Global Privacy Control or Do Not Track on. Fire and
+// forget: a failure is dropped and nothing waits for it.
+const USAGE_URL = document.querySelector('meta[name="usage"]')?.content || null;
 function count(fields) {
-  if (navigator.globalPrivacyControl === true || [navigator.doNotTrack, window.doNotTrack].includes("1")) return;
+  if (!USAGE_URL || navigator.globalPrivacyControl === true || [navigator.doNotTrack, window.doNotTrack].includes("1")) return;
   const event = { event_id: uuid(), release: null, device: matchMedia("(max-width: 600px)").matches ? "phone" : "desktop",
     webdriver: navigator.webdriver === true, ...fields };
   try {

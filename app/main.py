@@ -119,6 +119,7 @@ def create_app(
     photos_lake: Lake | None = None,
     labels_client: Any = None,
     mailer: mail.Mailer | None = None,
+    usage_collector: str | None = None,  # the collector's origin; None reads config/usage.toml, "" means none
 ) -> FastAPI:
     if auth is None:
         clean_secrets()
@@ -158,6 +159,9 @@ def create_app(
     templates.env.globals.update(rules=rules.for_page())  # the sign-up rules, for the page script (rules.py)
     templates.env.globals.update(email_on=email_on)
     templates.env.filters["referral"] = beacon.with_referral  # utm_source=registry.coffee on links to a store
+    # The usage collector (config/usage.toml): app.js counts only when it has an address, and the CSP allows it.
+    collector = beacon.collector_url() if usage_collector is None else usage_collector or None
+    templates.env.globals.update(usage_url=beacon.events_url(collector))
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
@@ -170,7 +174,9 @@ def create_app(
             return page(request, "error.html", status=500, code=500)
         return JSONResponse({"detail": "Something went wrong on the server."}, 500)
 
-    app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error))  # type: ignore[arg-type]
+    app.middleware("http")(
+        web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error, web.csp(collector))
+    )  # type: ignore[arg-type]
     app.middleware("http")(logs.middleware)  # it sees the final status, error pages included
     app.add_middleware(web.RejectProbes)  # outermost: scanner paths stop here, unlogged
     hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0)

@@ -4,7 +4,7 @@
 that events leave on a click out or when the page is hidden, that no request to the collector carries a cookie or
 credentials (a cookie is set on the collector's host to prove it), that Global Privacy Control and Do Not Track stop
 everything, that a slow or failing collector never holds a page up, and that links out carry the referral marker.
-The collector is a local HTTPS server (Collector, below; Chromium maps e.registry.coffee to it), so what it records is
+The collector is a local HTTPS server (Collector, below; Chromium maps the collector's host to it), so what it records is
 what really arrived, headers included: no request leaves 127.0.0.1. Needs openssl for its certificate.
 USAGE_SCREENSHOTS=<dir> keeps the screenshots."""
 
@@ -39,7 +39,10 @@ pytestmark = pytest.mark.skipif(
 )
 
 RELEASE = {"release_build_id": BUILD}
-NEW = {"coffee_id": "northside.coffee:Windy City Espresso", "roaster_id": "northside.coffee", "roaster_name": "Northside Coffee",
+# What config/usage.toml will hold: the collector's Cloud Run address (the test serves it locally).
+COLLECTOR_URL = "https://registry-coffee-usage-123456789012.us-central1.run.app"
+COLLECTOR_HOST = COLLECTOR_URL.removeprefix("https://")
+NEW = {"coffee_id": "northside.coffee:windy-city-espresso", "roaster_id": "northside.coffee", "roaster_name": "Northside Coffee",
        "title": "Windy City Espresso", "url": "https://northside.coffee/products/windy?variant=2#top",
        "origin_country": "Ethiopia", "process": "washed", "price_per_100g": 6.5}  # fmt: skip
 
@@ -51,6 +54,10 @@ FIELDS = {"event", "surface", "event_id", "release", "device", "query", "cities"
           "utm_source", "utm_medium", "utm_campaign", "webdriver"}  # fmt: skip
 SURFACES = {"landing", "catalog", "privacy", "terms", "bot", "app_search", "app_coffee"}
 CLICK = ("roaster_id", "coffee_id", "rank")
+# contracts/internal/usage-wire.schema.json's patterns (#167)
+UUID4 = r"[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}"
+ROASTER_ID = r"[a-z0-9-]+(?:\.[a-z0-9-]+)+"
+COFFEE_ID = r"[a-z0-9-]+(?:\.[a-z0-9-]+)+:[A-Za-z0-9._~#+-]{1,79}"
 SOURCE = ("referrer", "utm_source", "utm_medium", "utm_campaign")
 
 
@@ -73,6 +80,18 @@ def problems(e: dict) -> list[str]:
         out.append("a source off the first event")
     if len(e.get("cities", [])) > 10 or len(e.get("states", [])) > 10 or len(e.get("query") or "") > 1000:
         out.append("over a limit")
+    if e.get("event_id") is not None and not re.fullmatch(UUID4, e["event_id"]):
+        out.append(f"event_id {e['event_id']}")
+    if any(
+        not re.fullmatch(r"[A-Z]{2}", s)
+        for s in [*e.get("states", []), *([e["state"]] if e.get("state") else [])]
+    ):
+        out.append("a state that isn't a two-letter code")
+    rid, cid = e.get("roaster_id"), e.get("coffee_id")
+    if rid is not None and not re.fullmatch(ROASTER_ID, rid):
+        out.append(f"roaster_id {rid}")
+    if cid is not None and not (re.fullmatch(COFFEE_ID, cid) and cid.startswith(f"{rid}:")):
+        out.append(f"coffee_id {cid}")
     return out
 
 
@@ -86,7 +105,7 @@ class Collector:
         self.mode, self.seen, self.lock = "ok", [], threading.Lock()
         key, cert = tmp / "key.pem", tmp / "cert.pem"
         subprocess.run(["openssl", "req", "-x509", "-newkey", "rsa:2048", "-nodes", "-keyout", str(key), "-out",
-                        str(cert), "-subj", "/CN=e.registry.coffee", "-days", "1"], check=True, capture_output=True)  # fmt: skip
+                        str(cert), "-subj", f"/CN={COLLECTOR_HOST}", "-days", "1"], check=True, capture_output=True)  # fmt: skip
         collector = self
 
         class Events(BaseHTTPRequestHandler):
@@ -153,31 +172,33 @@ class Collector:
 
 def render_site(out: Path) -> None:
     """The landing page, the catalog and the three legal pages, as site.build renders them."""
-    render_catalog(out)
+    render_catalog(out, COLLECTOR_URL)
     env = site.environment()
     landing = env.get_template("landing.html").render(
         totals={"coffees": 640, "in_stock": 620, "roasters": 15}, registry=40,
         reach={"origins": 1, "states": 13, "has_dc": True, "has_pr": False},
         week={"new": 1, "price_changes": 0, "removed": 0}, new=[NEW], charts={"origins": ""}, origin_counts=[],
         links=site.links("", None), public_tables=4, generated="November 9, 2026", jsonld="",
-        usage=site.usage("landing", RELEASE),
+        usage=site.usage("landing", RELEASE, COLLECTOR_URL),
     )  # fmt: skip
-    (out / "index.html").write_text(site.with_csp(landing))
+    (out / "index.html").write_text(site.with_csp(landing, COLLECTOR_URL))
     site.copy_static(out)
     legal = {"links": site.links(), "updated": site.LEGAL_UPDATED, "contact": "support@registry.coffee",
              "governing_state": "Michigan"}  # fmt: skip
     for page in ("privacy", "terms", "bot"):
         (out / page).mkdir(exist_ok=True)
         extra = {"updated": site.BOT_UPDATED, "user_agent": "RegistryCoffeeBot"} if page == "bot" else {}
-        html = env.get_template(f"{page}.html").render(**legal | extra, usage=site.usage(page, RELEASE))
-        (out / page / "index.html").write_text(site.with_csp(html))
+        html = env.get_template(f"{page}.html").render(
+            **legal | extra, usage=site.usage(page, RELEASE, COLLECTOR_URL)
+        )
+        (out / page / "index.html").write_text(site.with_csp(html, COLLECTOR_URL))
 
 
 def seed_app(lake, tmp_path) -> tuple:
     """The app with one bag matched to a two-coffee catalog, and a signed-in session for the browser."""
     accounts = _accounts(tmp_path / "users")
     accounts.create_owner("SETUP-CODE-1234", "jtouley", PW, agree=True)
-    app = create_app(lake, Sessions(accounts, secure=False))
+    app = create_app(lake, Sessions(accounts, secure=False), usage_collector=COLLECTOR_URL)
     con = lake.connect()
     con.execute(
         "create table c as select * from (values"
@@ -212,7 +233,7 @@ def test_usage_events_in_a_browser(lake, tmp_path):
         r = subprocess.run(
             ["node", str(BROWSER / "usage_flow.js"), f"http://127.0.0.1:{static.server_port}",
              f"http://127.0.0.1:{port}", str(shots), json.dumps({"name": COOKIE, "value": session}), BUILD,
-             str(collector.https.server_port), f"http://127.0.0.1:{collector.control.server_port}"],
+             str(collector.https.server_port), f"http://127.0.0.1:{collector.control.server_port}", COLLECTOR_URL],
             capture_output=True, text=True, timeout=600, cwd=BROWSER,
         )  # fmt: skip
     finally:
