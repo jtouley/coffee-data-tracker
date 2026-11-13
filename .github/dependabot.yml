@@ -1,4 +1,5 @@
-# Keeps the SHA-pinned actions and the uv lockfile current; security fixes arrive as PRs that CI checks.
+# Keeps the SHA-pinned actions, the uv lockfile and the digest-pinned base images current; security fixes arrive as
+# PRs that CI checks.
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -11,3 +12,9 @@ updates:
     schedule: {interval: monthly}
     groups:
       python: {patterns: ["*"]}
+  # The base images pinned by digest in ingest.Dockerfile (/) and app/Dockerfile (/app).
+  - package-ecosystem: docker
+    directories: ["/", "/app"]
+    schedule: {interval: monthly}
+    groups:
+      docker: {patterns: ["*"]}

@@ -2,7 +2,7 @@
 # without the app. Built from the repository root by Cloud Build into the app's Artifact Registry repository
 # (docs/ingestion/RUNBOOK.md §1: `gcloud builds submit`, with BuildKit so ingest.Dockerfile.dockerignore applies).
 # Each Cloud Run job sets its own command (coffeedata crawl / crawl-retry / merge / enrich-week / build).
-FROM python:3.12-slim
+FROM python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
 
 COPY --from=ghcr.io/astral-sh/uv:0.11.32 /uv /usr/local/bin/uv
 

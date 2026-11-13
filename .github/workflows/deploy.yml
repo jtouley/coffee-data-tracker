@@ -198,3 +198,36 @@ jobs:
         env:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
         run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
+
+  # Signed build provenance (SLSA) for the image the deploy job built and pushed: which workflow run and commit made
+  # this digest. It is stored with the repository's attestations, not in the registry; check an image with
+  #   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker
+  # A job of its own, after the deploy and beside deploy-admin, so a failure here never holds back or fails a
+  # deploy, and the deploy jobs don't get `attestations: write`. It doesn't sign in to Google Cloud: `id-token` here
+  # is for the signing certificate. The ingestion image is built by Cloud Build (docs/ingestion/RUNBOOK.md), not by
+  # a workflow, so it has no attestation from here.
+  attest:
+    needs: deploy
+    if: needs.deploy.outputs.image != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write  # the signing certificate (Sigstore)
+      attestations: write  # store the attestation
+    env:
+      IMAGE_REF: ${{ needs.deploy.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>
+    steps:
+      - name: Split the image reference
+        id: ref
+        run: |
+          if ! [[ "$IMAGE_REF" =~ ^[^@]+@sha256:[0-9a-f]{64}$ ]]; then
+            echo "::error::Not an image reference with a digest: $IMAGE_REF"
+            exit 1
+          fi
+          echo "name=${IMAGE_REF%@*}" >> "$GITHUB_OUTPUT"
+          echo "digest=${IMAGE_REF#*@}" >> "$GITHUB_OUTPUT"
+      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8  # v4.2.2
+        with:
+          subject-name: ${{ steps.ref.outputs.name }}
+          subject-digest: ${{ steps.ref.outputs.digest }}
