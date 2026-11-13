@@ -1,0 +1,131 @@
+version: 2
+
+# The usage project's rules over hand-written rows (docs/dbt/CONVENTION.md section 10). Run by
+# tests/test_usage_dbt.py (usage_build.build(unit_tests=True)); the weekly build leaves them out.
+
+unit_tests:
+  - name: location_looks_up_ipv4_and_ipv6_prefixes
+    description: >
+      An IPv4 /24 and a compressed IPv6 /40 find their range; an address in a gap between ranges, text that isn't
+      an address and a missing prefix find nothing; a city's population is matched case-insensitively and only for
+      places in the city table.
+    model: int_usage_location
+    given:
+      - input: ref('stg_usage_ip_prefixes')
+        rows:
+          - {event_id: v4, ip_prefix: 198.51.100.0/24}
+          - {event_id: v6, ip_prefix: "2001:db8::/40"}
+          - {event_id: v6full, ip_prefix: "2001:0db8:0000:0000:0000:0000:0000:0000/40"}
+          - {event_id: gap, ip_prefix: 10.0.0.0/24}
+          - {event_id: junk, ip_prefix: not-an-address}
+          - {event_id: none, ip_prefix: null}
+          - {event_id: small, ip_prefix: 203.0.113.0/24}
+      - input: ref('stg_geo_ranges')
+        rows:
+          - {ip_start: "00000000000000000000ffffc6336400", ip_end: "00000000000000000000ffffc63364ff", country: US, region: Colorado, city: Denver}
+          - {ip_start: "00000000000000000000ffffcb007100", ip_end: "00000000000000000000ffffcb0071ff", country: US, region: Colorado, city: Tiny Town}
+          - {ip_start: "20010db8000000000000000000000000", ip_end: "20010db800ffffffffffffffffffffff", country: US, region: Oregon, city: Portland}
+          - {ip_start: "00000000000000000000ffff09000000", ip_end: "00000000000000000000ffff09ffffff", country: US, region: Ohio, city: Far}
+      - input: ref('stg_geo_cities')
+        rows:
+          - {country: US, region: Colorado, city: denver, population: 715000}
+          - {country: US, region: Oregon, city: portland, population: 650000}
+    expect:
+      rows:
+        - {event_id: v4, country: US, region: Colorado, city: Denver, city_population: 715000}
+        - {event_id: v6, country: US, region: Oregon, city: Portland, city_population: 650000}
+        - {event_id: v6full, country: US, region: Oregon, city: Portland, city_population: 650000}
+        - {event_id: gap, country: null, region: null, city: null, city_population: null}
+        - {event_id: junk, country: null, region: null, city: null, city_population: null}
+        - {event_id: none, country: null, region: null, city: null, city_population: null}
+        - {event_id: small, country: US, region: Colorado, city: Tiny Town, city_population: null}
+
+  - name: events_take_the_collectors_source_and_a_normalized_query
+    description: >
+      The source label is utm_source for utm, the referrer's domain for referrer ('(unnamed)' without one), the kind
+      itself for direct and internal, null on a load's later events. The query is lowercased, without accents and
+      with spaces collapsed; it is known only when every word is in the vocabulary.
+    model: int_usage_events
+    given:
+      - input: ref('stg_usage_events')
+        rows:
+          - {event_id: a, event: page_view, source: utm, utm_source: News, bot: false}
+          - {event_id: b, event: page_view, source: referrer, referrer_domain: Example.org, bot: false}
+          - {event_id: c, event: page_view, source: referrer, referrer_domain: null, bot: false}
+          - {event_id: d, event: page_view, source: direct, bot: false}
+          - {event_id: e, event: search, source: null, query: "  Café   KENYA ", bot: false}
+          - {event_id: f, event: search, source: null, query: "kenya xyzzy", bot: true}
+      - input: ref('int_usage_vocabulary')
+        rows:
+          - {word: cafe}
+          - {word: kenya}
+      - input: ref('int_usage_location')
+        rows: []
+    expect:
+      rows:
+        - {event_id: a, source_kind: utm, source: news, query_norm: null, query_words_known: false, bot: false}
+        - {event_id: b, source_kind: referrer, source: example.org, query_norm: null, query_words_known: false, bot: false}
+        - {event_id: c, source_kind: referrer, source: (unnamed), query_norm: null, query_words_known: false, bot: false}
+        - {event_id: d, source_kind: direct, source: direct, query_norm: null, query_words_known: false, bot: false}
+        - {event_id: e, source_kind: null, source: null, query_norm: cafe kenya, query_words_known: true, bot: false}
+        - {event_id: f, source_kind: null, source: null, query_norm: kenya xyzzy, query_words_known: false, bot: true}
+
+  - name: a_city_is_named_only_past_every_floor
+    description: >
+      With floors of 30,000 people, 2 days and 3 events a week: Big (3 events on 2 days) is named; Small (too few
+      people) and Rare (one day) roll up to "other, <region>"; a bot's events count toward nothing; no location is
+      'unknown'; a region below its own days is '(rare)' and its cities "other".
+    model: int_usage_event_places
+    overrides:
+      vars: {city_min_population: 30000, city_min_days: 2, city_min_week_events: 3, usage_min_days: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {event_id: b1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Big, city_population: 50000, bot: false}
+          - {event_id: b2, week: 2026-09-07, received_date: 2026-09-08, country: US, region: CO, city: Big, city_population: 50000, bot: false}
+          - {event_id: b3, week: 2026-09-07, received_date: 2026-09-08, country: US, region: CO, city: Big, city_population: 50000, bot: false}
+          - {event_id: s1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Small, city_population: null, bot: false}
+          - {event_id: s2, week: 2026-09-07, received_date: 2026-09-08, country: US, region: CO, city: Small, city_population: null, bot: false}
+          - {event_id: s3, week: 2026-09-07, received_date: 2026-09-09, country: US, region: CO, city: Small, city_population: null, bot: false}
+          - {event_id: r1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Rare, city_population: 90000, bot: false}
+          - {event_id: r2, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Rare, city_population: 90000, bot: false}
+          - {event_id: r3, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Rare, city_population: 90000, bot: false}
+          - {event_id: r4, week: 2026-09-07, received_date: 2026-09-09, country: US, region: CO, city: Rare, city_population: 90000, bot: true}
+          - {event_id: o1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: OR, city: Lone, city_population: 90000, bot: false}
+          - {event_id: u1, week: 2026-09-07, received_date: 2026-09-07, country: null, region: null, city: null, city_population: null, bot: false}
+    expect:
+      rows:
+        - {event_id: b1, country: US, region: CO, city: Big}
+        - {event_id: b2, country: US, region: CO, city: Big}
+        - {event_id: b3, country: US, region: CO, city: Big}
+        - {event_id: s1, country: US, region: CO, city: "other, CO"}
+        - {event_id: s2, country: US, region: CO, city: "other, CO"}
+        - {event_id: s3, country: US, region: CO, city: "other, CO"}
+        - {event_id: r1, country: US, region: CO, city: "other, CO"}
+        - {event_id: r2, country: US, region: CO, city: "other, CO"}
+        - {event_id: r3, country: US, region: CO, city: "other, CO"}
+        - {event_id: r4, country: US, region: CO, city: "other, CO"}
+        - {event_id: o1, country: US, region: (rare), city: other}
+        - {event_id: u1, country: unknown, region: unknown, city: unknown}
+
+  - name: a_query_with_an_unknown_word_needs_more_days
+    description: >
+      With 2 days for a query of known words and 3 for one with an unknown word: 'kenya' on 2 days is shown, 'xyzzy'
+      on 2 days is rare, and a day outside the 90-day window doesn't count; bots never count.
+    model: mart_usage_search_terms_weekly
+    overrides:
+      vars: {usage_min_days: 2, usage_min_days_unknown_word: 3}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {week: 2026-12-07, received_date: 2026-12-07, event: search, query_norm: kenya, query_words_known: true, zero_results: false, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-08, event: search, query_norm: kenya, query_words_known: true, zero_results: false, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-07, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-08, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-07, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-09, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: true}
+    expect:
+      rows:
+        - {week: 2026-09-07, query: (rare), searches: 1, zero_result_searches: 1}
+        - {week: 2026-12-07, query: kenya, searches: 2, zero_result_searches: 0}
+        - {week: 2026-12-07, query: (rare), searches: 2, zero_result_searches: 2}
