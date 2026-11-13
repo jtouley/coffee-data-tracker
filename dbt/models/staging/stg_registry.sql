@@ -1,17 +1,19 @@
+{% set fields = ['name', 'city', 'state'] -%}
 -- Seed list (config/roasters.csv: stg_roaster_seed) plus roasters added in the lake by discovery or by hand
 -- (stg_registry_records).
 with seed as (select * from {{ ref('stg_roaster_seed') }}),
 -- Every pick has a total order (the newest row; on a tie in added_at, the value itself), and sources are listed
 -- alphabetically: the same lake builds the same table whatever order DuckDB reads its rows in.
--- name, city and state are picked twice: from the records of open sources alone (is_open_source: Overture, curated,
--- manual) and from every record. The select below decides which one a roaster gets.
+-- name, city and state are picked twice: from the open records alone (is_open_source: Overture, curated, manual) and
+-- from every record. arg_max skips nulls, so each is the newest non-null value per field, and two fields can come
+-- from different records. The select below decides which pick a roaster gets.
 added as (
     select roaster_id,
-           arg_max(name, (added_at, name)) filter (where is_open_source) as open_name,
-           arg_max(city, (added_at, city)) filter (where is_open_source) as open_city,
-           arg_max(state, (added_at, state)) filter (where is_open_source) as open_state,
-           arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
-           arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
+    {%- for f in fields %}
+           arg_max({{ f }}, (added_at, {{ f }})) filter (where is_open_source) as open_{{ f }},
+           arg_max({{ f }}, (added_at, {{ f }})) as {{ f }},
+    {%- endfor %}
+           max(locations) as locations, bool_or(opted_out) as opted_out,
            string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added,
            min(added_at) filter (where opted_out) as opted_out_at
     from {{ ref('stg_registry_records') }}
@@ -23,16 +25,14 @@ added as (
 {%- set seed_open = is_open_source('s.sources') %}
 select
     coalesce(s.roaster_id, a.roaster_id) as roaster_id,
-    -- Field-level provenance (#90). A roaster known from an open source gets open values only: the lake's newest
-    -- open record, else the seed's when its sources are open. A later OpenStreetMap record (ODbL) never replaces
-    -- them, and a value only OpenStreetMap gave stays null. A roaster known only from OpenStreetMap never reaches the
-    -- public tables; it keeps the lake's newest values, else the seed's.
-    case when {{ is_open }} then coalesce(a.open_name, case when {{ seed_open }} then s.name end)
-         else coalesce(a.name, s.name) end as roaster_name,
-    case when {{ is_open }} then coalesce(a.open_city, case when {{ seed_open }} then s.city end)
-         else coalesce(a.city, s.city) end as city,
-    case when {{ is_open }} then coalesce(a.open_state, case when {{ seed_open }} then s.state end)
-         else coalesce(a.state, s.state) end as state,
+    -- Field-level provenance (#90). A roaster known from an open source gets open values only: per field, the lake's
+    -- newest non-null open value, else the seed's when its sources are open. A later OpenStreetMap record (ODbL)
+    -- never replaces them, and a value only OpenStreetMap gave stays null. A roaster known only from OpenStreetMap
+    -- never reaches the public tables; it keeps the lake's newest values, else the seed's.
+    {%- for f in fields %}
+    case when {{ is_open }} then coalesce(a.open_{{ f }}, case when {{ seed_open }} then s.{{ f }} end)
+         else coalesce(a.{{ f }}, s.{{ f }}) end as {{ 'roaster_name' if f == 'name' else f }},
+    {%- endfor %}
     -- The store count: the US Overture places that list this website and are roasteries (tagged coffee_roastery, or
     -- a coffee place with "roast" in its name: discover.overture), as the seed recorded it; for a roaster the lake
     -- alone lists, the most any discovery row counted (an OSM row counts 1). A cafe not tagged as a roastery isn't

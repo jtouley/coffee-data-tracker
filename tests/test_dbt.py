@@ -1424,8 +1424,10 @@ GUARD_BREAKS = {
     "variant_grams_are_valid": "delete from stg_variant_grams",
     # a published roaster that is a chain: public_roaster would have stopped leaving chains out
     "public_tables_have_no_chain": "update dim_roaster set is_chain = true where roaster_id = 'onyxcoffeelab.com'",
-    # a published registry value no open source gave (#90): stg_registry would have let an OpenStreetMap one through
-    "public_values_have_open_provenance": "update public_roaster set city = 'Elsewhere' where roaster_id = 'onyxcoffeelab.com'",
+    # a published value only OpenStreetMap gave (#90; the lake below has an osm record of Onyx in Bentonville):
+    # stg_registry would have let it through
+    "public_values_have_open_provenance": "update public_roaster set city = 'Bentonville' "
+    "where roaster_id = 'onyxcoffeelab.com'",
 }
 
 
@@ -1437,6 +1439,12 @@ def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path)
     rid = "onyxcoffeelab.com"
     probe(lake, "2026-10-18", rid)
     run(lake, "2026-10-19", rid, [product("A"), product("B", 18.0)])
+    # An OpenStreetMap record of Onyx (curated in the seed, so it publishes the seed's city, Rogers): the value
+    # public_values_have_open_provenance's break plants is one OpenStreetMap did give.
+    lake.write("registry", "registry/source=osm/x.parquet", [
+        {"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "osm", "roaster_id": rid, "name": "Onyx",
+         "city": "Bentonville", "state": "AR", "locations": 1},
+    ])  # fmt: skip
     build(lake, tmp_path).close()
     db = tmp_path / "coffee.duckdb"
     clean = tmp_path / "clean.duckdb"

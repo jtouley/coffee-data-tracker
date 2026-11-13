@@ -111,7 +111,9 @@ with seed as (
     from read_csv(?, header = true, all_varchar = true)
 ),
 added as (
-    -- ties broken as in dbt's stg_registry and dim_roaster, so the two always agree
+    -- ties broken as in dbt's stg_registry and dim_roaster. The two agree on every roaster's status and canonical id
+    -- (tests/test_dbt.py), not on names: dbt takes name, city and state from open sources only for a roaster one
+    -- knows (#90), and this, which only picks what to crawl and publishes nothing, takes the newest from any source
     select roaster_id, arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
            arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
            string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added

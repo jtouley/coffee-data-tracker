@@ -211,6 +211,17 @@ customProperties:
           the site, the public dataset and the shares. public-catalog contract 3.1.0, a minor version: a quality
           rule added (tests/public_tables_have_no_chain.sql, error), fewer rows (2 roasters and 149 coffees in
           release 971bfe), no table, column, type or enum changed, so Snowflake needs no migrate.
+      - topic: no published value from OpenStreetMap
+        decided: "2026-11-13"
+        outcome: >-
+          Issue #90: excluding roasters known only from OpenStreetMap kept ODbL roasters out but not ODbL values, since
+          stg_registry took a roaster's name, city and state from its newest registry row whatever the source. A
+          roaster known from an open source (overture, overture-<release>, curated, manual, each matched as a whole
+          name) now takes them from open sources only, per field; a value only OpenStreetMap gave stays null.
+          public-catalog contract 3.2.0, a minor version: a quality rule added
+          (tests/public_values_have_open_provenance.sql, error), no table, column, type or enum changed, so Snowflake
+          needs no migrate. No published value changed on the release of 2026-11-09, whose registry had no discovery
+          rows.
 team:
   name: registry.coffee
   members:

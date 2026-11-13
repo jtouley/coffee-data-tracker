@@ -18,11 +18,19 @@ regexp_replace(trim(split_part(split_part(split_part(regexp_replace(lower(trim({
 exists (select 1 from {{ shared_hosts }} sh where {{ key }} = sh.host or ends_with({{ key }}, '.' || sh.host))
 {%- endmacro %}
 
-{#- Known from a source whose data the public tables may carry: Overture (overture-<release>), the curated seed or a
-    manual add, never OpenStreetMap (ODbL) alone. `sources` is one source or several joined with +. stg_registry
-    takes every published registry value (name, city, state) from such a source when the roaster has one (#90). -#}
+{#- Known from a source whose data the public tables may carry: Overture (overture, or overture-<release>), the
+    curated seed or a manual add, never OpenStreetMap (ODbL) alone. `sources` is one source or several joined with +;
+    a whole source name must match, so a name that only starts like one (manual-osm-import, curated-from-osm) is not
+    open. stg_registry takes every published registry value (name, city, state) from such a source when the roaster
+    has one (#90). -#}
 {% macro is_open_source(sources) -%}
-regexp_matches(coalesce({{ sources }}, ''), '(^|\+)(overture|curated|manual)')
+regexp_matches(coalesce({{ sources }}, ''), '(^|\+)(overture(-[^+]+)?|curated|manual)(\+|$)')
+{%- endmacro %}
+
+{#- One registry record's source is open: the whole value is one open source. A record tagged with several sources
+    (overture+osm) is not an open record, since its values may be the other source's. -#}
+{% macro is_open_record_source(source) -%}
+regexp_full_match(coalesce({{ source }}, ''), 'overture(-[^+]+)?|curated|manual')
 {%- endmacro %}
 
 {#- Known from a source the public tables may list (public_roaster's rule), and in the US. -#}
