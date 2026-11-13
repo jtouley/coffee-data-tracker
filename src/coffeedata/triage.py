@@ -51,7 +51,9 @@ KIND_LABEL = {
 # Kinds whose issues name each check and its status, never a measured value (the data behind them is private).
 NO_VALUES = ("prod", "importers")
 SEVERITIES = ("critical", "warning")
-OK = ("ok", "expected")  # a check that isn't failing: passed, or a breach an acknowledged change explains
+# A check that isn't failing: passed, a breach an acknowledged change explains, or a report-only metric past its
+# bound (prod_health: listed for context in an alert its rule's other metrics opened, never keeping one open).
+OK = ("ok", "expected", "report only")
 LABELS = {
     TRIAGE: ("d93f0b", "Opened by an alert: triage with docs/TRIAGE.md"),
     "eval-regression": ("b60205", "An accuracy floor or ceiling failed on main or in eval-floors"),

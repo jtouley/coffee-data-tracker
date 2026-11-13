@@ -18,6 +18,18 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
+  one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly
+  runs only (a Monday with a full manifest, or from before manifests), each judged on what it stored (the roasters
+  its manifests listed or it tried, plus those earlier runs listed that it gave up on; closed and quarantined
+  stores count against it). `mart_crawl_slo` has the share per run and platform with its Wilson 95% interval, the
+  burn rate and the error budget over the four runs ending at each run. Both are counted from the stored runs
+  alone, so the same raw builds the same rows and an older run rebuilt gives its numbers again. They are report
+  only, built after the gate; `mart_crawl_slo_profile` is recorded in the builds table, and the production health
+  check warns on it under a new rule, `crawl-slo` (`config/prod_health.toml`; docs/TRIAGE.md, "The crawl success
+  SLO"). No gate reads it, and the 90% floor is unchanged. New staging model `stg_run_manifests`, and
+  `stg_registry.opted_out_at`.
+
 - Chains leave the public data. A roaster is a chain when it has more than 20 stores (dbt var
   `chain_store_threshold`; the store count is the registry's `locations`, from discovery's Overture scan), unless
   `dbt/seeds/chain_overrides.csv` decides otherwise, either way, with a reason. `int_roaster_state.is_chain` decides

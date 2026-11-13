@@ -12,7 +12,8 @@ with seed as (
 added as (
     select roaster_id, arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
            arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
-           string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added
+           string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added,
+           min(added_at) filter (where opted_out) as opted_out_at
     from {{ lake('registry') }}
     where roaster_id is not null
     group by roaster_id
@@ -33,6 +34,8 @@ select
     -- Hand-checked: another roaster_id that serves the same store (a rebrand whose old domain doesn't redirect, so
     -- the resolved host can't show it). dim_roaster makes this roaster an alias of it; null: decided by host alone.
     s.alias_of,
-    a.first_added  -- when the lake first listed it (null: from the seed list alone)
+    a.first_added,  -- when the lake first listed it (null: from the seed list alone)
+    -- when the lake first recorded its opt-out; null: not opted out, or opted out in the seed list, which has no date
+    case when not coalesce(s.opted_out, false) then a.opted_out_at end as opted_out_at
 from seed s
 full outer join added a using (roaster_id)
