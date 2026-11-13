@@ -13,7 +13,8 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
 ## 0. Before you start
 
 - `gcloud auth login` and `gcloud auth application-default login`, as an account that can apply the app's Terraform.
-- Terraform ≥ 1.6. No local Docker is needed: Cloud Build builds the image (§1).
+- Terraform ≥ 1.6. No local Docker is needed: GitHub builds the image (§1; Cloud Build in an emergency).
+- `gh` signed in (`gh auth status`): §1 and §4 check an image's provenance with it.
 - A checkout of this repository with [`uv`](https://docs.astral.sh/uv/) and `uv sync` run once: the results script
   in §3 runs with `uv run`. `jq` for the network check in §2 (Cloud Shell has it).
 - Secret Manager read access for your account on `HF_TOKEN` (`roles/secretmanager.secretAccessor`): §3 reads it with
@@ -26,25 +27,140 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
 
 ## 1. Build the image
 
-The jobs reference `$IMAGE` (`.../registry-coffee/ingest:latest`) until `ingest_image` pins a digest (§4), so **the
-image must exist before the first apply**: a job whose image is missing fails to create. The app's Artifact Registry repository already exists.
+Every job runs one image, pinned by digest: Terraform's `ingest_image` must be `<repo>/ingest@sha256:<digest>`,
+and a plan without it stops at the variable's validation. There is no fallback to a tag: `:latest` is no longer
+pushed by the normal route, so it would be whatever was last built by hand. So **the image must exist, and you
+need its digest, before any apply.** The app's Artifact Registry repository already exists.
 
-Build with Cloud Build (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
+**The normal route: GitHub builds it.** `deploy.yml`'s `ingest-image` job builds `ingest.Dockerfile` from every
+commit whose app image the deploy job pushed (main's tip, after ci passed, or a forced manual run), checks the
+image starts, pushes it to `.../registry-coffee/ingest` tagged with the commit, and signs build provenance for its
+digest. It deploys nothing: a job runs a new image only once `ingest_image` pins its digest and Terraform is
+applied (§4).
+
+### At merge: keep the images the jobs run (once)
+
+Do this when the PR that added `ingest-image` merges (#153). The registry deletes an image once it is **over 30
+days old and five newer images of the same name exist**. Until now a new ingest image appeared only when you built
+one. From that merge on, every deploy adds one, and five deploys can happen in an afternoon, so the image the jobs
+run today can be deleted as soon as it is 30 days old. The cleanup runs in the background, about once a day.
+Whether a Cloud Run job still starts once its image is gone from the registry isn't something to find out in
+production.
+
+1. **Tag every ingest image that exists today.** This needs no Terraform and can be done before the merge; the tags
+   protect nothing until step 2.
+   ```sh
+   for v in $(gcloud artifacts docker images list "${IMAGE%:*}" --format='value(version)'); do   # sha256:<digest>
+     gcloud artifacts docker tags add "${IMAGE%:*}@$v" "${IMAGE%:*}:pinned-premerge-${v:7:12}"
+   done
+   gcloud artifacts docker images list "${IMAGE%:*}" --include-tags   # every row has a pinned-premerge-… tag
+   ```
+   Every image, not only `:latest`: a job runs the digest its tag resolved to when the job was last created or
+   updated, which is not `:latest` if the image was rebuilt since.
+2. **Apply the `keep-pinned` cleanup policy, the same day as the merge**, from the merged main:
+   ```sh
+   cd src/terraform && rm -f keep.plan
+   terraform plan -target=google_artifact_registry_repository.app -out keep.plan
+   # 0 to add, 1 to change (google_artifact_registry_repository.app, in place: + cleanup_policies "keep-pinned"),
+   # 0 to destroy. Anything else: stop.
+   ```
+   ```sh
+   terraform apply keep.plan
+   gcloud artifacts repositories list-cleanup-policies registry-coffee --location "$REGION"   # lists keep-pinned
+   ```
+   If the plan stops with "ingest_image must be pinned by digest", `terraform.tfvars` doesn't pin the image yet:
+   add `-var ingest_image="${IMAGE%:*}@<a digest from step 1's list>"` to this plan. With `-target` it changes
+   no job; pinning the jobs is §4.
+3. From then on, §4's pinning step tags each image it pins `pinned-<commit>`. Tagged images are kept until someone
+   removes the tag: delete a `pinned-…` tag once no job and no rollback needs that image
+   (`gcloud artifacts docker tags delete`).
+
+### The digest to pin
+
+Read it for main's commit, without building. The script prints the image by digest only if the workflow built it
+from that commit and signed it; otherwise it says why and prints nothing:
+
+```sh
+unset PINNED
+git checkout main && git pull
+gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet   # gh reads the image's digest from the registry
+PINNED=$(docs/ingestion/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
+echo "pin: ${PINNED:?not verified. STOP: pin nothing}"
+```
+
+"No ingest image for <commit>": the workflow hasn't pushed one for that commit. Look at the run
+(`gh run list --workflow deploy --limit 5`, then `gh run view <id>`):
+- still running: wait;
+- `ingest-image` failed: read its log and fix main, or use **Re-run failed jobs** if the failure wasn't the code;
+- `ingest-image` skipped because `deploy` failed before it pushed the app's image (the sign-in, the build or the
+  push): fix that; the next run builds both;
+- everything skipped: ci was red on that commit, or main moved on while ci ran (then the newer commit's run builds
+  the image: pull again).
+
+Don't pin an older commit's image to get past this without meaning to run that older code.
+
+"No valid provenance": the image was pushed but signing failed, or it wasn't built by `deploy.yml` on main from
+that commit. **Re-run failed jobs** on the run builds, pushes and signs it again. Until the script prints an image,
+pin nothing.
+
+What the check proves: this digest was built by `deploy.yml` on main, from that commit. It does not prove ci
+passed on the commit: a manual deploy with `force` builds and signs too.
+
+**By hand, in an emergency only** (GitHub Actions is down, or the workflow can't push). Build with Cloud Build
+(`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
 with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
 contracts/ in the image (the app's `.dockerignore` leaves them out). The upload follows `.gitignore`, so the local
 lake and build/ stay behind.
 
+The build's config is checked in: `ingest.cloudbuild.yaml`. It builds `ingest.Dockerfile`, lets Cloud Build push
+the image (`images:`), and asks for signed build provenance (`requestedVerifyOption: VERIFIED`): the build
+succeeds only if Cloud Build wrote provenance for the image. That needs the Container Analysis API, which Terraform
+doesn't enable. Check it once; without it the build fails at the end, and no job changes:
+
 ```sh
-cat > /tmp/ingest-build.yaml <<'YAML'
-steps:
-  - name: gcr.io/cloud-builders/docker
-    env: ["DOCKER_BUILDKIT=1"]
-    args: ["build", "-f", "ingest.Dockerfile", "-t", "$_IMAGE", "."]
-images: ["$_IMAGE"]
-YAML
-gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml --substitutions "_IMAGE=$IMAGE" .
-gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists
+gcloud services list --project "$PROJECT" --enabled --filter='config.name=containeranalysis.googleapis.com' \
+  --format='value(config.name)'   # prints containeranalysis.googleapis.com; if it prints nothing:
+gcloud services enable containeranalysis.googleapis.com --project "$PROJECT"
 ```
+
+Build from a clean checkout of the commit you mean (`git status` shows nothing): the upload is the working tree.
+
+```sh
+gcloud builds submit --project "$PROJECT" --config ingest.cloudbuild.yaml \
+  --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" .
+gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists, as :latest
+```
+
+An image built this way has no GitHub attestation, so `verified-ingest-image.sh` refuses it, as it should. It has
+Cloud Build's provenance instead. Check that by hand, with the digest, not the tag:
+
+```sh
+gcloud artifacts docker images describe "<repo>/ingest@sha256:<digest>" --show-provenance --format=json | jq '
+  [.provenance_summary.provenance[]? | .build.inTotoSlsaProvenanceV1 // empty | {
+    subject: [.subject[].digest.sha256] | unique,
+    builder: .predicate.runDetails.builder.id,
+    build: .predicate.runDetails.metadata.invocationId,
+    substitutions: .predicate.buildDefinition.externalParameters.substitutions}]'
+```
+
+A good result is one entry (not `[]`) where:
+- `subject` is the digest you asked about, and nothing else;
+- `builder` is `https://cloudbuild.googleapis.com/GoogleHostedWorker`;
+- `build` ends in the id of the build you just ran, in project `$PROJECT`;
+- `substitutions` shows the `_IMAGE` and `_GIT_SHA` you passed.
+
+`[]`, a different digest or another builder: don't pin the image. Build again, and if it repeats, stop. Only after
+a good result, set the image for §4 yourself, in place of the script:
+
+```sh
+PINNED="<repo>/ingest@sha256:<digest>"   # the digest you just checked
+```
+
+What this proves, and what it doesn't. The statement is signed by Cloud Build, not by anyone with access to the
+project, so it shows that Google's builder made this digest, in this project, with these steps and substitutions.
+It does **not** prove the commit: a build submitted from a folder uploads an archive of that folder, and Cloud
+Build never sees the git repository. `_GIT_SHA` is recorded as what the person who ran the build said. Provenance
+that names a verified commit is what the normal route gives. Go back to it for the next image.
 
 **A build alone changes no job.** Cloud Run resolves an image tag to a digest when a job is created or updated, not
 on each execution, so after a rebuild every job keeps running the digest it was last created or updated with. To move
@@ -56,6 +172,12 @@ every job then runs the same image, and the plan shows the change.
 **Already applied in production** (the image existed first). The Shopify egress IP is **34.172.156.113**, and every
 job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches. The second
 egress IP, for the WooCommerce and generic crawls, is applied on its own: §2.1.
+
+Every plan in this runbook needs `ingest_image` (a digest, §1): from `terraform.tfvars` once §4 has put it there,
+or with `-var ingest_image="$PINNED"`. Without it the plan stops at the variable's validation and changes nothing.
+On a fresh project nothing can build the image before the repository and the deploy identity exist: apply those
+first with `-target` (any well-formed digest satisfies the validation; a targeted apply creates no job), set the
+repository variables, let the workflow build the image, then plan for real with its digest.
 
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
   `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7), until §2.1 sets crawl-woocommerce's
@@ -444,17 +566,28 @@ scheduled job.
        --format='table(name,status.startTime,status.completionTime)'   # every row has a completion time
    done
    ```
-   Then build the image from the merged main with Cloud Build (§1), read its digest from the build output, and pin
-   every job to it while turning the schedule on:
+   Then read the digest of the image GitHub built from the merged main and check its provenance (§1, "The digest
+   to pin"). The block stops at the first thing that isn't right, and nothing after it runs without a verified
+   image. (In an emergency, build by hand and set `PINNED` as §1's "By hand" ends, in place of the first block.)
    ```sh
+   # pin-block: begin (tests/test_ingest_pin.py runs these lines against stand-in gcloud and gh)
+   unset PINNED
    git checkout main && git pull
-   DIGEST=$(gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
-     --substitutions "_IMAGE=$IMAGE" --suppress-logs --format='value(results.images[0].digest)' .)
-   PINNED="${IMAGE%:*}@${DIGEST:?the build printed no digest}"; echo "$PINNED"
-   gcloud artifacts docker images describe "$PINNED" --format='value(image_summary.digest)'   # the same digest
-   cd src/terraform
-   terraform plan -var ingest_image="$PINNED" -var ingest_schedule_enabled=true -out ingest.plan
+   gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+   PINNED=$(docs/ingestion/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
+   echo "pin: ${PINNED:?not verified. STOP: pin nothing (§1)}"
+   # Keep it: the registry deletes images over 30 days old unless among the 5 newest, or tagged pinned-* or latest.
+   gcloud artifacts docker tags add "${PINNED:?}" "${IMAGE%:*}:pinned-$(git rev-parse --short=12 HEAD)"
+   # pin-block: end
+   ```
+   Plan, pinning every job to it while turning the schedule on:
+   ```sh
+   cd src/terraform && rm -f ingest.plan
+   terraform plan -var ingest_image="${PINNED:?not verified: stop}" -var ingest_schedule_enabled=true -out ingest.plan
    # 16 to add (google_cloud_scheduler_job.ingest), 12 to change (each job's image, to $PINNED), 0 to destroy
+   ```
+   Apply only a plan you just read, and check every job:
+   ```sh
    terraform apply ingest.plan
    for j in $(terraform output -json ingest_jobs | jq -r '.[]'); do   # every job's template runs the pinned digest
      img=$(gcloud run jobs describe "$j" --region $REGION \
@@ -616,9 +749,18 @@ something:
 | `release <id> not reconciled: its files couldn't be read` and `release not_reconciled unreadable: ...` | the served release's files couldn't be copied (after 3 tries) | nothing for this release; if it repeats, check the lake's `releases/` folder |
 | `the report-only step (release_changes) failed` / `release_changes is missing or failed` | the reconciliation itself errored; its record says `not_reconciled release_changes_missing` | open an issue with the dbt log; the release was gated without it |
 
-**b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
-the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed
-records.
+**b. The data is right, the gate is wrong.** Minutes, no re-crawl. The build job is never retried (`retries = 0` in
+`ingestion.tf`, once applied): a rebuild runs once, and `--wait` returns its result. Before that change it had
+`max_retries = 1`, and any failed step ran the whole chain again: a failed gate left two failed records, and a
+failed classify or egress-check after a build that passed stamped a second passing release for the same week (the
+served pointer moved to it, `marts/` was replaced, and `rollback` to the previous release landed on the same week).
+
+In the rebuild chains below every step runs, and any step's failure fails the execution: `--wait` returns a
+failure and the `ingest job build failed` email arrives. A failed classify (an Anthropic outage, a missing key) is
+one of them, which the old form of these commands let through: the build after it still ran on the verdicts already
+stored, so **read the log before running anything again**. If the build passed, the release is served and
+published, and only the classify needs another run (§5.5, step 2's command); a second rebuild would stamp a second
+release. If the publish is what failed, go to **f**.
 
 1. One roaster-week at a time: `accept` (a suspect catalog change is real), `reject` (drop that fetch: the week
    counts as missing for the roaster), or `use_batch` with `--batch <batch_id>` (count another ok fetch of that week).
@@ -635,11 +777,10 @@ records.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK --accept-volume-change; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
-**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build; a
-build that fails the gate runs twice (b).
+**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
 
 A crawl asks only roasters **without an `ok` or `unavailable` fetch this week**. It repairs failed, skipped and
 parked roasters, not ok fetches with wrong data (a parser bug in the image): those need b.1's `reject`, one
@@ -677,7 +818,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -695,8 +836,8 @@ gcloud run jobs execute build --region $REGION --wait \
   --args="coffeedata rollback --to <build_id> --reason '<why>'"   # <why>: no commas
 ```
 
-Without `--to`, a failed `publish` after the serve makes the job's retry (`max_retries = 1`) run `rollback` again,
-which goes back one more release. The job switches the served release and publishes only: it writes the site and
+Always pass `--to`: `rollback` without it goes back one release each time it runs, so running the command again
+after a failed `publish` (the job itself no longer retries) would go back one more. The job switches the served release and publishes only: it writes the site and
 the public export inside the container, and they're thrown away. Use it only when Actions can't run. **After any
 Cloud Run rollback**, as soon as Actions runs, re-export the release it served:
 
@@ -742,12 +883,32 @@ gets one day worse each day until this week's release is served.
 
 | Case | 11:17 | 8-day promise |
 |---|---|---|
-| a/b, rebuilt before 11:17 (a rebuild that fails the gate runs twice) | green, exports this week's | kept |
+| a/b, rebuilt before 11:17 | green, exports this week's | kept |
 | a/b, rebuilt after 11:17 | red, nothing exported; then `rollback_to=served` | kept if served on Tuesday |
-| c | red (the crawl alone can take 4 h, and a failing build runs twice); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
+| c | red (the crawl alone can take 4 h); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
 | d, before 11:17 | red (the served release is last week's); the rollback already exported | kept Tuesday; broken from Wednesday until b or c serves this week |
 | d, after 11:17 | the bad release was green and exported; the rollback re-exports | as above |
 | nothing fixed | red | broken from Wednesday |
+
+**f. The build ran but its publish failed.** The `ingest job build failed` email arrives, and the execution's log
+shows the build's result followed by an error from `coffeedata publish` (it tries five times before it fails).
+Nothing is lost: the release, its `builds` row and the served pointer are recorded in the staging bucket, and only
+the upload to the dataset is missing. Until it is sent, readers of the dataset (Tuesday's `site` run, the public
+export) still see last week's release.
+
+**Don't rebuild.** A rebuild takes a new build id and stamps a second release for the same week. Send what is
+staged, with a publish-only execution, once the cause (the dataset unreachable, a rejected or missing token) is
+fixed:
+
+```sh
+gcloud run jobs execute build --region $REGION --wait --args='coffeedata publish --message republish'
+```
+
+Its log ends `published N files to hf://...`; then confirm with **e**. A publish sends everything staged, whichever
+job staged it, so a later job's publish from the same staging bucket also sends the release: `fetch-health`
+publishes after a check (it is polled again on Tuesday from 10:07 UTC), and so does the next run of any other job.
+The release can therefore appear without anyone acting on the alert; **e** tells you whether it has. If it was served after 11:17,
+`gh workflow run weekly -f rollback_to=served` exports it (above).
 
 ### 5.2 The build ran before the merge finished
 
@@ -786,7 +947,7 @@ merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
 ```sh
 gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
 gcloud run jobs execute build --region $REGION --wait \
-  --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
 `--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
@@ -864,9 +1025,14 @@ Now three things stop that from happening silently:
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
   which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
-  so the `ingest job build failed` email arrives. A batch submit that Claude rejects (a revoked key, an outage)
-  fails the same way; a finished batch whose results can't be read yet stays open for the next run. With
-  `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
+  so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
+  before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
+  leaves the release recorded and staged but not in the dataset (§5.1 f sends it), and before this it exited 0 and
+  the first sign was Tuesday's red `site` run. The rebuild and backfill commands in §5 use the same chain
+  (`tests/test_discover_probe_jobs.py` runs them all with each step failing in turn). A batch submit that Claude
+  rejects (a revoked key, an outage) fails the same way; a finished batch whose results can't be read yet stays
+  open for the next run. The chain runs once: the build job is never retried (§5.1 b says why), so after a failed
+  classify the release the build served stands, and the classify is run again by hand (step 2's command below).
 - **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
   (`min_verdict_share`, `dbt/dbt_project.yml`) of listed coffees (`dim_coffee.is_listed`) have
   `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
@@ -890,17 +1056,22 @@ pending, so the first build after the change fails `verdicts_cover_catalog` unti
 and last week's release stays served. That is the gate working: don't opt out around it.
 
 1. Submit everything pending (7 batches of 10,000; `--limit` defaults to 100,000), and wait up to 3 hours for them
-   inside the job's 240 minutes:
+   inside the job's 240 minutes. A failed classify (a rejected submit, an outage) now fails this execution, where
+   the old form reported only the publish: the publish still runs, what was collected is sent, `--wait` returns a
+   failure and the email arrives. It runs once (no retry), so the 240 minutes hold. Run step 2 when the cause is
+   fixed:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify --wait 180; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify --wait 180 || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 2. If batches were still running (its output's `collect_after_wait` is below `submit.submitted`), collect again
    later; batches end within 24 hours. Repeat until a run collects 0 and submits 0:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 3. Rebuild (§5.2's form) and read the `verdicts:` line in its log. Expect about 3,600 listed products to drop out
@@ -1215,8 +1386,8 @@ build; it writes its `job_manifests` rows and publishes them to the dataset (a f
 never a different verdict or exit code).
 
 **Ship it** (after this PR merges):
-1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
-   step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
+1. Once this PR's commit is on main, its ingest image is built by the deploy workflow: pin its digest in
+   `ingest_image` (section 1, and section 4's pinning step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
    `COFFEEDATA_DQ_REFETCH` unset) only from it.
 2. `cd src/terraform && terraform plan -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
    `google_cloud_run_v2_job.ingest["fetch-health"]`, its invoker binding
