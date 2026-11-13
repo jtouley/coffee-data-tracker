@@ -13,6 +13,9 @@ locals {
     "crawl-shopify", "crawl-squarespace", "crawl-woocommerce", "crawl-square-online", "crawl-generic",
     "crawl-retry", "fetch-health", "merge", "enrich-week", "build", "publish",
   ])
+  # The two roles the admin gets on each of them, keyed by a plain word (the plan guard prints the keys).
+  admin_job_roles = { executor = "roles/run.jobsExecutorWithOverrides", viewer = "roles/run.viewer" }
+
   # The Cloud SQL user of a service account is its email without ".gserviceaccount.com".
   admin_db_user = trimsuffix(google_service_account.admin.email, ".gserviceaccount.com")
 }
@@ -82,7 +85,8 @@ resource "google_sql_user" "admin" {
 
 # Connect (cloudsql.client) and log in as its IAM user (cloudsql.instanceUser), on this instance only.
 resource "google_project_iam_member" "admin_sql" {
-  for_each = toset(["roles/cloudsql.client", "roles/cloudsql.instanceUser"])
+  # Plain keys: the plan guard (scripts/tf_plan_guard.py) prints only addresses whose keys are plain words.
+  for_each = { client = "roles/cloudsql.client", instance_user = "roles/cloudsql.instanceUser" }
   project  = var.project_id
   role     = each.value
   member   = "serviceAccount:${google_service_account.admin.email}"
@@ -108,7 +112,7 @@ resource "google_storage_bucket" "admin_snapshots" {
 }
 
 resource "google_storage_bucket_iam_member" "admin_snapshots" {
-  for_each = toset(["roles/storage.objectCreator", "roles/storage.objectViewer"])
+  for_each = { creator = "roles/storage.objectCreator", viewer = "roles/storage.objectViewer" }
   bucket   = google_storage_bucket.admin_snapshots.name
   role     = each.value
   member   = "serviceAccount:${google_service_account.admin.email}"
@@ -124,9 +128,10 @@ resource "google_storage_bucket_iam_member" "ingest_snapshots" {
 # run.jobs.runWithOverrides, run.executions.cancel), and read them and their executions for the Jobs page's status
 # (run.viewer: it has no run, update or IAM permission). Both on each job, never on the project.
 resource "google_cloud_run_v2_job_iam_member" "admin" {
+  # Keys "<job>-executor" and "<job>-viewer": plain words, which the plan guard can print.
   for_each = {
-    for pair in setproduct(sort(local.admin_jobs), ["roles/run.jobsExecutorWithOverrides", "roles/run.viewer"]) :
-    "${pair[0]} ${pair[1]}" => { job = pair[0], role = pair[1] }
+    for pair in setproduct(sort(local.admin_jobs), keys(local.admin_job_roles)) :
+    "${pair[0]}-${pair[1]}" => { job = pair[0], role = local.admin_job_roles[pair[1]] }
   }
   name     = google_cloud_run_v2_job.ingest[each.value.job].name
   location = var.region
