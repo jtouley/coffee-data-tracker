@@ -37,7 +37,7 @@ The owner labels issues and pull requests at triage. An item can carry several.
 | `bug` | Something is wrong. |
 | `enhancement` | A new feature or a change to an existing one. |
 | `documentation` | Docs only. |
-| `dependencies`, `github_actions`, `python:uv` | Dependency updates from Dependabot. |
+| `dependencies`, `github_actions`, `python:uv`, `docker` | Dependency updates from Dependabot. |
 | `help wanted` | The owner would welcome a pull request. |
 | `question`, `duplicate`, `invalid`, `wontfix` | Triage outcomes. |
 | `shot`, `roaster` | Reserved for the owner's issue forms, which the `issue-forms` workflow acts on. Don't use them elsewhere. |

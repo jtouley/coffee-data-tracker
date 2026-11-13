@@ -352,7 +352,11 @@ Why:
 One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
 repository, built with Cloud Build). Each job's task timeout is 240 min (the strict limit used in every sim).
 maxRetries is 0 for Shopify's crawl jobs (`crawl-shopify`, its default-egress arm, `crawl-retry`) and 1 for every
-other job, the other connectors' crawls included (section 7.1). A crawl that stops at its deadline exits 0 and
+other job, the other connectors' crawls included (section 7.1), except WooCommerce's and generic's crawls,
+`fetch-health` and `build` (0; `ingestion.tf` says why for each). The build is never retried because a second
+attempt is a second build: a second release for the same week, the served pointer moved, `marts/` replaced. Any
+failed step of it, the publish included, fails the execution and emails the owner, who re-runs that step by hand
+(RUNBOOK §5.1). A crawl that stops at its deadline exits 0 and
 reports `deadline` in `job_manifests`, so only a crawl that died is retried. A second attempt of a failed Shopify
 crawl would re-ask the stores that just refused, on Shopify's NAT IP, so its resume slot (or crawl-retry) picks up the
 rest instead.
@@ -859,8 +863,9 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
     always fire. Raised to $20 (RUNBOOK, Cost). Still to do: a billable-instance-time alert for the jobs.
 31. **A dedicated Cloud Build service account** (N7) with only Artifact Registry write and log writing, not the
     default Compute SA.
-32. **Base images pinned by digest** (N8): `python:3.12-slim@sha256:…` and `ghcr.io/astral-sh/uv:0.11.32@sha256:…`
-    in `ingest.Dockerfile`, with Artifact Registry vulnerability scanning.
+32. **Base images pinned by digest** (N8): done, `python:3.12-slim@sha256:…` and
+    `ghcr.io/astral-sh/uv:0.11.32@sha256:…` in both Dockerfiles, kept current by Dependabot. Still to do: Artifact
+    Registry vulnerability scanning.
 33. **An email when a crawl attempt died but its retry recovered** (section 7.1): today that execution succeeds and
     only `job_manifests` shows the dead attempt. A log-match alert on the retry's warning ("earlier attempt(s) this
     week died") would say so.

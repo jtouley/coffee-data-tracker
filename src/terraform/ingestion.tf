@@ -14,16 +14,14 @@ variable "ingest_schedule_enabled" {
   default     = false
 }
 
-variable "ingest_image_tag" {
-  description = "Tag of the ingest image (ingest.Dockerfile) in the app's Artifact Registry repository."
-  type        = string
-  default     = "latest"
-}
-
 variable "ingest_image" {
-  description = "The full ingest image every job runs, pinned by digest (`<repo>/ingest@sha256:<digest>`, RUNBOOK section 4). Cloud Run resolves a tag only when a job is created or updated, so a rebuilt `:latest` reaches no job until this changes. Empty = the `ingest_image_tag` form, for compatibility."
+  description = "The ingest image every job runs, by digest: `<repo>/ingest@sha256:<digest>`. Required, and never a tag: ingestion runs one known image, and a tag such as `:latest` would be re-resolved to whatever it points at whenever a job is updated. docs/ingestion/RUNBOOK.md section 1 reads the digest of the image GitHub built for a commit and checks its provenance."
   type        = string
   default     = ""
+  validation {
+    condition     = can(regex("^[a-z0-9.-]+/[a-z0-9._/-]+@sha256:[0-9a-f]{64}$", var.ingest_image))
+    error_message = "ingest_image must be pinned by digest: <region>-docker.pkg.dev/<project>/<repository>/ingest@sha256:<64 hex>, in terraform.tfvars or with -var. Get the digest for main's commit with docs/ingestion/verified-ingest-image.sh (docs/ingestion/RUNBOOK.md section 1). A tag such as :latest is refused."
+  }
 }
 
 variable "egress_echo_url" {
@@ -77,13 +75,12 @@ variable "woo_generic_subnet_cidr" {
 }
 
 locals {
-  ingest_image = var.ingest_image != "" ? var.ingest_image : "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/ingest:${var.ingest_image_tag}"
-  staging      = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
+  staging = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
 
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls and fetch-health (below). A crawl that
+  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls, fetch-health and build (below). A crawl that
   # dies (OOM kill, crash) is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints,
   # skips the roasters already done this week, fetches the dead attempt's in-flight roasters one at a time and
   # quarantines one that killed two attempts (crashguard), and it stops inside the first attempt's window
@@ -137,14 +134,20 @@ locals {
     "merge"        = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 1 }
     "enrich-week"  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
-    # check. A failed classify (no model or key, an API error), a failed gate, or the egress check's non-zero exit
-    # (an IP over 8% refusals two runs in a row) fails the execution, which emails the owner (alerts.tf,
-    # ingest_job_failed). The build still runs after a failed classify, on the verdicts already stored: its own
-    # verdict gate decides whether that release is served.
+    # check. Every step runs whatever the ones before it did, and any step's failure fails the execution, which
+    # emails the owner (alerts.tf, ingest_job_failed): a failed classify (no model or key, an API error), a failed
+    # gate, a failed publish (the release is recorded and staged but not in the dataset, issue #83; RUNBOOK §5.1 f
+    # sends it), or the egress check's non-zero exit (an IP over 8% refusals two runs in a row). The build still
+    # runs after a failed classify, on the verdicts already stored: its own verdict gate decides whether that
+    # release is served.
+    # Retries 0: a second attempt is a second build. It takes a new build id, stamps a second release for the same
+    # week with the first as its baseline, moves the served pointer and replaces marts/, so a re-run would change
+    # what the first run stored and a rollback to "previous" would land on the same week. The alert tells the
+    # owner, and a person re-runs the step that failed (RUNBOOK §5.1, §5.5).
     "build" = {
       command = ["sh", "-c"]
-      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
-      egress  = "default", claude = true, memory = "8Gi", retries = 1
+      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
+      egress  = "default", claude = true, memory = "8Gi", retries = 0
     }
   }
 
@@ -379,7 +382,7 @@ resource "google_cloud_run_v2_job" "ingest" {
     template {
       service_account = google_service_account.ingest.email
       timeout         = "14400s" # 240 min, the limit every design was held to
-      # local.ingest_jobs says why: Shopify's crawls 0, everything else 1 (a crawl's deadline exits 0, never retried).
+      # local.ingest_jobs says why, job by job (a crawl's deadline exits 0, never retried; the build is never retried).
       max_retries = each.value.retries
 
       dynamic "vpc_access" {
@@ -402,7 +405,7 @@ resource "google_cloud_run_v2_job" "ingest" {
       }
 
       containers {
-        image   = local.ingest_image
+        image   = var.ingest_image
         command = each.value.command
         args    = each.value.args
         resources {
@@ -531,8 +534,8 @@ output "ingest_jobs" {
 }
 
 output "ingest_image" {
-  description = "The image every ingest job runs (pinned by digest once `ingest_image` is set)."
-  value       = local.ingest_image
+  description = "The image every ingest job runs, by digest."
+  value       = var.ingest_image
 }
 
 output "ingest_staging_bucket" {
