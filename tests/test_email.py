@@ -98,7 +98,10 @@ def verified_member(app, owner, outbox, username="maya", email="maya@example.com
 
 
 def forgot(app, who: str):
+    from tests.conftest import wait_for_sends
+
     r = client(app).post("/api/forgot", json={"account": who}, headers=W)
+    wait_for_sends()  # the reply doesn't wait for the link's send (mail.later): the outbox checks do
     return r
 
 
@@ -139,8 +142,8 @@ def test_forgot_takes_a_username_or_an_email_and_answers_alike_unless_there_is_n
 def test_forgot_takes_the_same_time_whether_or_not_there_is_an_account(
     app, owner, outbox, accounts, monkeypatch
 ):
-    """The link is sent inside the request (Cloud Run has no CPU after the reply, review H1), and every answer is
-    held to the same floor, so a slow send (0.3 s here) doesn't show."""
+    """The link's send starts inside the request (Cloud Run has no CPU after the reply, review H1) but the reply
+    doesn't wait for it, and every answer is held to the same floor, so a slow send (0.3 s here) doesn't show."""
     verified_member(app, owner, outbox)
     app.state.forgot_floor = 0.6
     real = outbox.send
@@ -161,9 +164,10 @@ def test_forgot_takes_the_same_time_whether_or_not_there_is_an_account(
     found = statistics.median(timed(w) for w in ["maya@example.com", "maya", "Maya"])
     missing = statistics.median(timed(w) for w in ["nobody@example.com", "nobody", "nobody2"])
     assert abs(found - missing) < 0.05 and 0.6 <= missing < 0.75
-    assert (
-        len(outbox.to("maya@example.com")) == 3
-    )  # sent before each reply (the per-account limit stops the rest)
+    from tests.conftest import wait_for_sends
+
+    wait_for_sends()
+    assert len(outbox.to("maya@example.com")) == 3  # one for each (the per-account limit stops the rest)
     from app.main import FORGOT_FLOOR
 
     assert FORGOT_FLOOR == 2.0
@@ -238,6 +242,9 @@ def test_links_use_the_app_address_even_with_a_forged_host(app, owner, outbox):
         evil.post("/api/forgot", json={"account": "maya"}, headers=W | {"Host": "evil.example"}).json()
         == SAME
     )
+    from tests.conftest import wait_for_sends
+
+    wait_for_sends()
     (sent,) = outbox.sent
     assert (
         f"{APP}/reset#" in sent.text and f"{APP}/reset#" in sent.html and "evil" not in sent.text + sent.html

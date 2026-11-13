@@ -20,13 +20,16 @@ from app.accounts import Accounts
 from app.auth import Sessions
 from app.main import create_app
 from coffeedata.lake import USER_TABLES, Lake
+from tests.conftest import wait_for_sends
 
 W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 SETUP, PW, MAYA_PW = "SETUP-CODE-1234", "correct horse battery", "kettle orbit marble"
 KEY = base64.b64encode(b"k" * 32).decode()
 SAME = {"ok": True}
 FLOOR = 2.0
-GUARD = 3.0  # how long a held send waits to be let go: only so a broken fix fails instead of hanging
+# How long a held send waits to be let go. Only so a broken fix fails instead of hanging: with the fix, the test
+# lets it go as soon as the reply is back, so a slow runner can't reach this.
+GUARD = 60.0
 
 
 class Held:
@@ -46,15 +49,6 @@ class Held:
 class Failing:
     def send(self, to: str, subject: str, text: str, html: str) -> None:
         raise RuntimeError("provider down")
-
-
-def wait_for_sends() -> None:
-    """Until every send `later` started has finished and been logged (a wait, not a timing bound)."""
-    for _ in range(500):
-        if not mail._running:
-            return
-        time.sleep(0.01)
-    raise AssertionError("a send never finished")
 
 
 @pytest.fixture
@@ -178,8 +172,10 @@ def test_an_error_before_the_send_is_logged_not_lost(lake, accounts, caplog, mon
         assert c.post("/api/forgot", json={"account": "maya"}, headers=W).json() == SAME
         wait_for_sends()
     (record,) = [r for r in caplog.records if r.name == "app.mail"]
-    assert record.getMessage() == "email not sent" and record.exc_info[0] is OSError
-    assert record.fields == {"kind": "reset", "user_id": accounts.by_name("maya").user_id}
+    assert (
+        record.getMessage() == "email work failed" and record.levelno >= logging.WARNING
+    )  # the alert reads it
+    assert record.fields == {"kind": "reset", "user_id": accounts.by_name("maya").user_id, "error": "OSError"}
     assert outbox.sent == []
 
 
@@ -219,3 +215,53 @@ def test_a_quick_failure_still_gets_all_its_tries():
     assert route.call_count == 3
     route.mock(side_effect=[httpx.Response(503), httpx.Response(200, json={"id": "x"})])
     m.send("a@example.com", "s", "t", "h")
+
+
+class Trickle(httpx.AsyncBaseTransport):
+    """A provider that answers 200 and then sends its body one byte every 50 ms, for 5 s."""
+
+    def __init__(self) -> None:
+        self.bytes = 0
+
+    async def handle_async_request(self, request: httpx.Request) -> httpx.Response:
+        transport = self
+
+        class Body(httpx.AsyncByteStream):
+            async def __aiter__(self):
+                for _ in range(100):
+                    transport.bytes += 1
+                    yield b" "
+                    await asyncio.sleep(0.05)
+
+        return httpx.Response(200, stream=Body())
+
+
+def test_a_reply_that_trickles_in_is_cut_off_at_the_deadline():
+    """Each byte arrives well inside any read timeout, so only a wall-clock bound on the whole try stops it."""
+    trickle = Trickle()
+    m = mail.ResendMailer("re_test", deadline=0.5, transport=trickle)
+    started = time.monotonic()
+    with pytest.raises(httpx.TimeoutException):
+        m.send("a@example.com", "s", "t", "h")
+    # Cut off after about 10 of its 100 bytes (no retry: under MIN_TRY was left). The time is only a loose check;
+    # the byte count is the proof.
+    assert trickle.bytes < 40, trickle.bytes
+    assert time.monotonic() - started < 4.0
+
+
+def test_sends_past_the_cap_are_dropped_and_logged(lake, accounts, caplog, monkeypatch):
+    held = Held([0.0])
+    app = create_app(lake, Sessions(accounts), mailer=held)
+    held.go.set()
+    people(app, accounts, held.inner)
+    held.go.clear()
+    app.state.forgot_floor = 0.01
+    monkeypatch.setattr(mail, "IN_FLIGHT", 1)
+    with caplog.at_level(logging.INFO), client(app) as c:
+        assert c.post("/api/forgot", json={"account": "maya"}, headers=W).json() == SAME  # held, in flight
+        assert c.post("/api/forgot", json={"account": "maya"}, headers=W).json() == SAME  # the same reply
+        held.go.set()
+        wait_for_sends()
+    assert len(held.inner.sent) == 1
+    dropped = [r for r in caplog.records if r.name == "app.mail" and "too many" in r.getMessage()]
+    assert len(dropped) == 1 and dropped[0].levelno >= logging.WARNING

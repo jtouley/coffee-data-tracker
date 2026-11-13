@@ -303,7 +303,14 @@ _Last verified against the code: 2026-11-08 (PR #134, after the final review). C
 Email recovery (docs/app/signup-ux-spec.md §4, §5): members can add an email, confirm it from a link, and reset a
 forgotten password from `/forgot` with their username or email. The app sends four emails, verify, reset,
 password changed and email changed, through [Resend](https://resend.com), inside the request that asks for them
-(Cloud Run gives an instance no CPU after its reply). Until `EMAIL_KEY` and `RESEND_API_KEY` are both set, the
+(Cloud Run gives an instance no CPU after its reply), with one exception: the reset link from `/forgot`. Its reply
+mustn't say whether a link went, so the send starts during the reply's fixed 2 s floor and the reply doesn't wait for
+it (`mail.later`, at most 4 at once and 16 in flight; past that, new ones are dropped). A send slower than the floor
+carries on after the reply with little CPU: it can arrive late, or be lost if the instance stops first, and the
+person can ask again (3 an hour). Every send, all its tries included, is cut off after 10 s: with slow tries that
+leaves room for two, while quick failures still get all three. Each way a send fails, is cancelled or is dropped is
+logged at WARNING or above, so the "email not sent" alert sees it; a send cut off by the instance stopping logs
+nothing and doesn't alert. Until `EMAIL_KEY` and `RESEND_API_KEY` are both set, the
 email features are hidden: no email field, no marketing box, and `/forgot` shows only "ask the person who invited
 you". The app starts either way.
 

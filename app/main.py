@@ -141,11 +141,13 @@ def create_app(
     # Links in emails are built on the app's fixed address, never the request's Host header (OWASP Forgot Password,
     # "Host Header Injection").
     app_url = (os.environ.get("APP_URL") or APP).rstrip("/")
-    # Emails go out inside the request (review H1): Cloud Run gives an instance CPU only while it serves a request
-    # (cpu_idle), so work left for after the reply could stall until the next request, or be lost when the instance
-    # stops. Where a reply mustn't say whether an email went (forgot, and an address verified on another account),
-    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad). Forgot's send
-    # starts during the floor but off the reply path (mail.later), so a slow send can't hold its reply past it.
+    # Emails go out inside the request (review H1), with one exception: Cloud Run gives an instance CPU only while
+    # it serves a request (cpu_idle), so work left for after the reply could stall until the next request, or be lost
+    # when the instance stops. The exception is forgot's reset link. Its reply mustn't say whether a link went, so
+    # the send starts during the reply's fixed floor but the reply never waits for it (mail.later); a send slower
+    # than the floor runs on after the reply and can arrive late or be lost, and the person can ask again. The other
+    # place a reply mustn't say so (an address verified on another account) waits about as long as a send instead
+    # (mail.pad).
     app.state.forgot_floor = FORGOT_FLOOR
     app.state.mailer = mailer
     assets = web.Assets()
