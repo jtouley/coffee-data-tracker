@@ -400,6 +400,9 @@ Also: benchmark coffee count and freshness against RoastDB (9,976 coffees, 582 r
   DNS lookup can overrun the send deadline, RUNNING.md and signup-ux-spec.md:112 wording; #156 post-gate warnings
   not recorded in prod-health; `mail.pad` on /api/join and /api/email has the same timing weakness #164 fixed;
   `stg_enrichments` tie-break depends on the session time zone (strict xfail); `run_completeness` uses now().
+  #165 follow-ups (reviewer F1-F5, none affect the owner's run): woo NAT exception would accept a NAT taking
+  Shopify's subnet; grants written as a full IAM policy pass the role checks; break-glass ignores ci.tfvars and
+  GitHub variables; bootstrap re-apply steps put the billing id in shell history; no in-repo tests for the scripts.
 - Owner decision (2026-11-13, option A): ship terraform apply in GitHub (#163) with the residual risk written down.
   Residual: Google issues the apply token to any job in the `terraform-apply` environment; it can't see who approved.
   An admin (this session acts as jtouley, admin) could loosen the environment's reviewers; today only the session
