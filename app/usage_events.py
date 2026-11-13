@@ -78,13 +78,16 @@ Text = Annotated[
     str, StringConstraints(min_length=1, max_length=60, pattern=_PRINTABLE), AfterValidator(_no_identifier)
 ]
 StateCode = Annotated[str, StringConstraints(pattern=r"^[A-Z]{2}$")]
-# The catalog's ids: a roaster is its normalized domain; a coffee is `<roaster_id>:<the store's product id>` (digits,
-# hex, or a SKU).
+# The catalog's ids: a roaster is its normalized domain; a coffee is `<roaster_id>:<the store's product id>`. A
+# product id is the platform's id (digits, hex) or, from the generic adapter, a page's JSON-LD productID or sku as
+# written: free text (in the 2026-11-09 release, 20 of 45,857 have spaces; the longest is 36 characters). So the tail
+# takes any printable text up to 120 characters except `@`: no real id has one, and without it the tail can't hold
+# an email or a URL with credentials (user:pass@host). The page copies the id from the catalog, never from what the
+# visitor typed, and dbt checks it against the release.
 ROASTER_ID = r"[a-z0-9-]+(?:\.[a-z0-9-]+)+"
+PRODUCT_ID = r"[^\x00-\x1f\x7f@]{1,120}"
 RoasterId = Annotated[str, StringConstraints(min_length=3, max_length=100, pattern=rf"^{ROASTER_ID}$")]
-CoffeeId = Annotated[
-    str, StringConstraints(max_length=180, pattern=rf"^{ROASTER_ID}:[A-Za-z0-9._~#+-]{{1,79}}$")
-]
+CoffeeId = Annotated[str, StringConstraints(max_length=221, pattern=rf"^{ROASTER_ID}:{PRODUCT_ID}$")]
 Utm = Annotated[str, StringConstraints(min_length=1, max_length=40, pattern=r"^[a-z0-9._-]+$")]
 # The catalog build the page was showing: lake.new_batch_id()'s shape.
 Release = Annotated[str, StringConstraints(pattern=r"^[0-9]{8}T[0-9]{6}-[0-9a-f]{6}$")]

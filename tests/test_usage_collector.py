@@ -256,13 +256,28 @@ def test_the_wire_schema_is_strict(bad):
         {"roaster_id": "x.com/path"},
         {"coffee_id": "other-roaster.com:42"},  # a coffee belongs to the roaster clicked
         {"coffee_id": "example-roaster.com:"},
-        {"coffee_id": "example-roaster.com:a b"},
-        {"coffee_id": "example-roaster.com:" + "9" * 80},
+        {"coffee_id": "example-roaster.com:" + "9" * 121},
+        {"coffee_id": "example-roaster.com:canary@example.com"},  # an email can't ride in the product id
+        {"coffee_id": "example-roaster.com:https://user:pass@example.com/"},  # nor credentials in a URL
+        {"coffee_id": "example-roaster.com:line\nbreak"},
+        {"coffee_id": "example-roaster.com:tab\there"},
     ],
 )
 def test_ids_follow_the_catalogs_shape(bad):
     with pytest.raises(ValueError):
         Event.model_validate(click() | bad)
+
+
+@pytest.mark.parametrize(
+    "product_id",
+    ["8812345678901", "SQ9565490", "SYN-70950-B", "b1946ac92492", "ETH YIRGA 12OZ", "Kenya AA. Whole Bean",
+     "12oz/ground", "café-de-olla", "9" * 120],
+)  # fmt: skip
+def test_every_real_product_id_shape_is_accepted(product_id):
+    """Platform ids, SKUs and the generic adapter's free-text JSON-LD ids (spaces, dots, slashes, accents)."""
+    assert Event.model_validate(click(coffee_id=f"example-roaster.com:{product_id}")).coffee_id.endswith(
+        product_id
+    )
 
 
 def test_click_out_needs_a_roaster_and_page_views_carry_no_search():
