@@ -394,6 +394,12 @@ The engineering is ahead of the evidence that people want it. Order of work:
    loss shows up.
 Also: benchmark coffee count and freshness against RoastDB (9,976 coffees, 582 roasters; we track 2,545 roasters).
 
+- Merged 2026-11-13: #153, #155, #157, #161, #162, #163, #164, #156 (plus #154 on 11-12). Waiting: #165 (terraform
+  hardening; its bootstrap changes mean the owner's one combined shell run waits for it, then is truly the last).
+  Follow-ups noted, not started: #164 test-helper race, a dropped reset email still uses one of the 3/hour, a stuck
+  DNS lookup can overrun the send deadline, RUNNING.md and signup-ux-spec.md:112 wording; #156 post-gate warnings
+  not recorded in prod-health; `mail.pad` on /api/join and /api/email has the same timing weakness #164 fixed;
+  `stg_enrichments` tie-break depends on the session time zone (strict xfail); `run_completeness` uses now().
 - Owner decision (2026-11-13, option A): ship terraform apply in GitHub (#163) with the residual risk written down.
   Residual: Google issues the apply token to any job in the `terraform-apply` environment; it can't see who approved.
   An admin (this session acts as jtouley, admin) could loosen the environment's reviewers; today only the session
