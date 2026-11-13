@@ -378,7 +378,10 @@ The engineering is ahead of the evidence that people want it. Order of work:
 3. Usage analytics on the website and app, fully anonymous (owner, 2026-11-13): which roasters and coffees are
    viewed, what is typed into the search bar, saves, shot logs, repeat visits. No IPs, no cookies or user ids in the
    events; search text scrubbed of anything that looks personal; stored privately like shot data, never published
-   raw; aggregates only. Design first (how to count repeat visits without identifying anyone), then build.
+   raw; aggregates only. Owner narrowed it (2026-11-13): site only. Search text (scrubbed), the filters used
+   (city/state, origin, process, roast...), and click-outs to a roaster or coffee, with the search and filters
+   behind each click, for later per-roaster attribution. No visitor identifier at all; no app or retention
+   analytics. Raw search text deleted after 90 days. Design in the session scratchpad (design-analytics).
 4. Recommendation experiment ("Your Next Bag"): from five ratings per user, content-based picks vs most-popular vs
    random, scored on each user's later ratings (held-out by time, per CLAUDE.md). Needs about 20 users: owner to
    find them.
