@@ -966,11 +966,9 @@ def test_site_links_without_a_public_hf_dataset(monkeypatch):
 
 
 def _landing(**reach) -> str:
-    from jinja2 import Environment, PackageLoader, select_autoescape
-
     from coffeedata import site
 
-    env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
+    env = site.environment()
     return env.get_template("landing.html").render(
         totals={"coffees": 1, "in_stock": 1, "roasters": 1},
         registry=1,
@@ -981,6 +979,7 @@ def _landing(**reach) -> str:
         links=site.links("", None),
         public_tables=4,
         generated="today",
+        usage=site.usage("landing"),
     )
 
 

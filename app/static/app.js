@@ -221,6 +221,32 @@ function uuid() {
 }
 
 const tick = (ms = 8) => navigator.vibrate?.(ms);
+
+// --- counting searches and clicks to roasters ------------------------------------------------------------
+// The same events as the site (coffeedata/beacon.py, privacy policy "What we count"): the catalog search on the
+// bag screen and the Shop link on a coffee. Sent to the collector's own host (config/usage.toml, given to the page
+// as <meta name="usage">), never the app, without credentials, so no request carries the session cookie; no user
+// id, nothing stored; nothing without a collector or with Global Privacy Control or Do Not Track on. Fire and
+// forget: a failure is dropped and nothing waits for it.
+const USAGE_URL = document.querySelector('meta[name="usage"]')?.content || null;
+function count(fields) {
+  if (!USAGE_URL || navigator.globalPrivacyControl === true || [navigator.doNotTrack, window.doNotTrack].includes("1")) return;
+  const event = { event_id: uuid(), release: null, device: matchMedia("(max-width: 600px)").matches ? "phone" : "desktop",
+    webdriver: navigator.webdriver === true, ...fields };
+  try {
+    fetch(USAGE_URL, { method: "POST", body: JSON.stringify({ events: [event] }), keepalive: true, credentials: "omit",
+      mode: "no-cors", cache: "no-store", referrerPolicy: "strict-origin-when-cross-origin" }).catch(() => {});
+    // The policy: the app's own (same-origin) would send Origin: null, which the collector drops.
+  } catch { /* counting never gets in the way */ }
+}
+function countClick(event) {
+  const a = event.target.closest?.("a[data-out]");
+  if (!a || !a.dataset.roaster || (event.type === "auxclick" && event.button !== 1)) return;  // it names its roaster
+  count({ event: "click_out", surface: a.dataset.surface, roaster_id: a.dataset.roaster,
+    coffee_id: a.dataset.coffee || null, rank: null });
+}
+document.addEventListener("click", countClick, true);
+document.addEventListener("auxclick", countClick, true);
 const OFFLINE = "Saved on this phone. It’ll sync when you’re back online.";
 
 function hint(form, text) {
@@ -673,6 +699,8 @@ function bagEdit(form) {
       if (!response.ok) throw new Error();
       const data = await response.json();
       if (id !== request) return;
+      count({ event: "search", surface: "app_search", query: term.slice(0, 100), results_n: data.coffees.length,
+        zero_results: !data.coffees.length });
       status.textContent = data.coffees.length ? "Choose the coffee on your bag." : "No coffees found. Try another search.";
       for (const coffee of data.coffees) {
         const button = document.createElement("button");

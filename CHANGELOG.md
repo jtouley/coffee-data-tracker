@@ -18,6 +18,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
+  `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
+  the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a
+  click out or when the page is hidden, by `fetch` without credentials to the collector's address in
+  `config/usage.toml` (the only new CSP origin, added only once that is set; until then nothing is sent); nothing is
+  stored in the browser, no id is made, and nothing is sent with Global Privacy Control or Do Not Track. Links out carry `utm_source=registry.coffee&utm_medium=referral` (`coffeedata/beacon.py`);
+  `catalog.json` keeps the roasters' links as they are. The privacy policy says what is counted.
 - A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
   deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never
   the app. `POST /e` answers every request with an empty 204; it takes at most 4 KB and 20 events, refuses any event

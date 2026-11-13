@@ -29,7 +29,7 @@ log = logging.getLogger(__name__)
 
 
 # What the screens show about a catalog coffee (whatever of it this week's export has).
-FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes", "url",
+FACTS = ("title", "roaster_id", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes", "url",
          "elevation_masl_min", "elevation_masl_max",
          "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock", "catalog_status")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again

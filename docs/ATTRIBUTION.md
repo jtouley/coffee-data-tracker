@@ -16,3 +16,11 @@ from Overture, the curated seed or a manual add (dbt test `public_values_have_op
   to the roasters; this project stores only what a shopper sees, and links every coffee back to its roaster.
 - **Enrichment.** Attributes in the lake's `enrichments/` are extracted from those listings by rules, or by Claude
   (`method = 'llm'`), and can be wrong; the roaster's listing is authoritative.
+
+The private usage counts (never published; see the privacy policy's "What we count") place each visit's shortened IP
+address with two more sources:
+
+- **IP to city: DB-IP "IP to City Lite".** © [DB-IP](https://db-ip.com), licensed under
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The pinned file is named in `config/geo.lock`.
+- **City populations: GeoNames.** © [GeoNames](https://www.geonames.org), licensed under
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The pinned file is named in `config/geo.lock`.
