@@ -703,7 +703,7 @@
     ],
     "after": {
      "member": "principalSet://iam.googleapis.com/projects/1/locations/global/workloadIdentityPools/github/attribute.repository/someone/fork",
-     "role": "roles/iam.serviceAccountTokenCreator"
+     "role": "roles/iam.workloadIdentityUser"
     },
     "after_sensitive": {},
     "after_unknown": {},
