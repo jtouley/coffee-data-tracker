@@ -459,11 +459,14 @@ class Accounts:
         marketing: object = _KEEP,
         insights: object = _KEEP,
         experiment: object = _KEEP,
+        after: datetime | None = None,
     ) -> tuple[Consent, datetime]:
         """A new acceptance (signup, reaccept) records the current Terms; a choice changed in Setup (`settings`)
         keeps the acceptance it had. The marketing and roaster-insights choices are carried forward unless given."""
         prev = self.consents.get(user_id)
         at = self._next_at(prev)
+        if after and at <= after:  # joining the test again after an erasure is recorded after it
+            at = after + timedelta(seconds=1)
         if source == "settings":
             # Only a choice changes. An account with no record yet accepted the terms of its day by
             # joining (TERMS_BEFORE_RECORDS), and this mustn't claim it accepted anything newer.
@@ -1372,12 +1375,18 @@ class Accounts:
         hit = self.consents.get(user_id)
         return bool(hit and hit[0].experiment is True)
 
-    def set_experiment(self, user_id: str, on: bool) -> None:
-        """Joining or leaving the test: recorded with when, and the wording of the consent (EXPERIMENT_VERSION)."""
+    def experiment_since(self, user_id: str) -> datetime | None:
+        """When this member last joined the test, while they're in it; None otherwise."""
+        hit = self.consents.get(user_id)
+        return hit[0].experiment_at if hit and hit[0].experiment is True else None
+
+    def set_experiment(self, user_id: str, on: bool, after: datetime | None = None) -> None:
+        """Joining or leaving the test: recorded with when, and the wording of the consent (EXPERIMENT_VERSION).
+        `after`: the person's latest erasure of their test records, which a joining must come after."""
         with self.lock:
             if self.get(user_id) is None:
                 raise AccountError("No such account.")
-            staged = self._stage_consent(user_id, "settings", experiment=on)
+            staged = self._stage_consent(user_id, "settings", experiment=on, after=after)
             self._commit(f"app: consents {user_id}", consents=(staged,))
 
     def insights_excluded(self) -> set[str]:

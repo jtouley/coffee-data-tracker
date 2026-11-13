@@ -1040,13 +1040,14 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
     if args.dry_run:
         print("Dry run: nothing deleted.")
         return
-    erase.apply(p, main, photos, users)
     if args.only_recs:
+        done = erase.erase_recs(p, main, photos, users)
+        n = sum(len(v) for v in done.files.values())
         print(
-            "Deleted. Deploy again (or restart the service) so the app forgets their ratings and answers, then "
-            "turn the account back on."
+            f"Deleted {n} files. The app refuses their old ratings and answers from now on; nothing to redeploy."
         )
         return
+    erase.apply(p, main, photos, users)
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
 
 
@@ -1351,7 +1352,7 @@ def main(argv: list[str] | None = None) -> None:
     du.add_argument(
         "--only-recs",
         action="store_true",
-        help="only their 'Your next bag' ratings and answers; keep the account (turned off until the redeploy)",
+        help="only their 'Your next bag' ratings and answers; the account stays on and signed in",
     )
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")

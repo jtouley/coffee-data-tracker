@@ -1,17 +1,22 @@
 """Deleting one person's data from the datasets (`coffeedata delete-user`), for a deletion request.
 
 Their shots, bags, equipment, coffee ratings and answers to their picks (main lake), photos (photo dataset), and
-account and invites (users dataset) are removed, every version of each record: one commit per dataset on Hugging Face, or the files themselves in a local
-lake. The private marts that carry their rows (fct_shot, mart_bag) are rewritten without them in the same commit,
+account and invites (users dataset) are removed, every version of each record: one commit per dataset on Hugging
+Face, or the files themselves in a local lake. The private marts that carry their rows (fct_shot, mart_bag) are rewritten without them in the same commit,
 so the app can't load them back from the export on its next start. The account must be turned off in the app
 first, so the running app refuses its writes until it restarts without it. The main and photo datasets' version
 history still has the old commits; the privacy policy says so. The users dataset's history is squashed afterwards,
 so the account's email (sealed, app/contacts.py) can't be read from an old revision either.
 
 `--only-recs` deletes just the "Your next bag" test's records (ratings and answers, and the rec marts' rows) and
-keeps the account, for someone who asks to delete their answers. The account is turned off first here too: the
-running app holds their records in memory, and an Undo or a rejoin could write them back. It is turned on again only
-after the app restarts without them.
+keeps the account, signed in and untouched, for someone who asks to delete their answers. It first records an
+erasure (`recs_erasures` in the users dataset: who, when, and which rating ids) and publishes it; the running app
+checks it on every rating and answer it reads or writes, so nothing of theirs from before it can be undone, resent
+or merged back, and they take part again only by joining the test again. Then it deletes every file of their
+ratings and answers, listed after the erasure was published, so one the app wrote meanwhile goes too.
+
+Every remote dataset's folders must be listable: with a missing or expired token a private dataset answers 404, and
+every table would look empty.
 
 A table with no files in a source (one never published there) has nothing to delete and is listed in the plan as
 such. Any other failure to list a source stops the plan with an error, before anything is deleted: an erasure never
@@ -23,8 +28,10 @@ from __future__ import annotations
 import logging
 import tempfile
 from dataclasses import dataclass, field
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
+from . import lake as lake_mod
 from .lake import Lake, no_files
 
 log = logging.getLogger(__name__)
@@ -38,7 +45,8 @@ MAIN: Tables = [("shots", "shot_id", ("user_id",)), ("bags", "bag_id", ("user_id
                 ("rec_responses", "user_id", ("user_id",))]  # fmt: skip
 PHOTOS: Tables = [("photos", "photo_id", ("user_id",))]
 USERS: Tables = [("users", "user_id", ("user_id",)), ("invites", "invite_id", ("for_user_id", "used_by")),
-                 ("consents", "user_id", ("user_id",)), ("contacts", "user_id", ("user_id",))]  # fmt: skip
+                 ("consents", "user_id", ("user_id",)), ("contacts", "user_id", ("user_id",)),
+                 ("recs_erasures", "user_id", ("user_id",))]  # fmt: skip
 # The recommendation test's tables and marts: what --only-recs deletes.
 RECS: Tables = [t for t in MAIN if t[0] in ("ratings", "rec_responses")]
 RECS_MARTS: list[str] = []  # dbt/models/recs/ marts exported to marts/ with a user_id column (none yet)
@@ -68,15 +76,12 @@ def find_user(users: Lake, username: str, force: bool = False, only_recs: bool =
                 raise EraseError(
                     "That's the owner's account. The owner's data is deleted with the datasets themselves."
                 )
-            if not row.get("disabled") and not force:
-                then = (
-                    "Then run this again, deploy, and turn the account back on."
-                    if only_recs
-                    else "Then run this again."
-                )
+            if (
+                not row.get("disabled") and not force and not only_recs
+            ):  # --only-recs: the erasure marker instead
                 raise EraseError(
                     f"Turn {name}'s account off in the app first (Invite someone → {name} → Turn off account), so "
-                    f"the running app refuses their writes. {then}"
+                    "the running app refuses their writes. Then run this again."
                 )
             return row["user_id"], name
     raise EraseError(f"No account named {name}.")
@@ -138,6 +143,12 @@ def _marts(lake: Lake, user_id: str, marts: list[str], absent: list[str]) -> lis
 def plan(
     username: str, main: Lake, photos: Lake, users: Lake, force: bool = False, only_recs: bool = False
 ) -> Plan:
+    for lake in (main, photos, users):
+        if lake.remote and lake_mod.remote_folders(lake.url) is None:
+            raise EraseError(
+                f"Couldn't list {lake.url}'s folders (check HF_TOKEN). Every table would look empty, so nothing was "
+                "deleted."
+            )
     user_id, name = find_user(users, username, force, only_recs)
     p = Plan(user_id, name)
     p.marts = _marts(main, user_id, RECS_MARTS if only_recs else MARTS, p.absent)
@@ -196,3 +207,33 @@ def apply(p: Plan, main: Lake, photos: Lake, users: Lake) -> None:
             log.info("deleted %d files from %s, rewrote %d marts", len(paths), lake.url, len(marts))
             if lake is users and paths:  # nothing to do in a local lake, which has no history
                 users.squash(f"Squash history after deleting user {p.user_id}")
+
+
+def erase_recs(p: Plan, main: Lake, photos: Lake, users: Lake, now: datetime | None = None) -> Plan:
+    """--only-recs: record the erasure and publish it, then plan again (a rating or answer the running app wrote
+    before it saw the erasure is listed too) and delete. Returns the plan carried out."""
+    rows = _rows(main, "", f"select distinct rating_id from {main.scan('ratings')} where user_id = $id",
+                 {"id": p.user_id}, [])  # fmt: skip
+    # After every record of theirs, even one stamped ahead of the clock (each record of a key sorts after the last,
+    # app/store.py _commit), and after their latest consent, so an earlier joining never counts as a rejoin.
+    times = [
+        t
+        for lake, table in ((main, "ratings"), (main, "rec_responses"), (users, "consents"))
+        for (t,) in _rows(
+            lake,
+            "",
+            f"select max(logged_at) from {lake.scan(table)} where user_id = $id",
+            {"id": p.user_id},
+            [],
+        )  # fmt: skip
+        if t is not None
+    ]
+    at = max([(now or datetime.now(UTC)).replace(microsecond=0), *(t + timedelta(seconds=1) for t in times)])
+    marker = {"user_id": p.user_id, "logged_at": at, "rating_ids": sorted(r for (r,) in rows if r)}
+    users.write("recs_erasures", f"recs_erasures/{p.user_id}__{at:%Y%m%dT%H%M%S}.parquet", [marker])
+    users.publish(f"Erase the recommendation-test records of user {p.user_id} (deletion request)")
+    done = Plan(p.user_id, p.username)
+    done.marts = _marts(main, p.user_id, RECS_MARTS, done.absent)
+    done.files[main.url] = _files(main, RECS, p.user_id, done.absent)
+    apply(done, main, photos, users)
+    return done

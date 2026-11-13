@@ -379,17 +379,18 @@ isn't turned off (`--force` skips that check when the app isn't running). The ma
 history still holds the old commits, as the policy says. The users dataset's history is squashed afterwards, so the
 person's email (sealed) goes from its history too.
 
-To delete only someone's "Your next bag" ratings and answers and keep their account:
+To delete only someone's "Your next bag" ratings and answers and keep their account (on and signed in), run
+`uv run coffeedata delete-user maya --only-recs`, with `--dry-run` first. No turn-off and no redeploy are needed:
 
-1. Turn the account off, as above. The running app holds their records in memory, and an Undo or a rejoin from
-   their phone would write them back.
-2. `uv run coffeedata delete-user maya --only-recs` (with `--dry-run` first). It removes every version of their
-   `ratings` and `rec_responses` files and nothing else.
-3. Deploy again (or restart the service), then turn the account back on. Not before: until the restart the app
-   still has their old records.
+- It first records the erasure in the users dataset (`recs_erasures`: who, when, and the rating ids that went) and
+  publishes it.
+- Then it deletes every version of their `ratings` and `rec_responses` files.
+- The running app reads that record again before every rating and answer it reads or writes. Nothing of theirs from
+  before it can be undone, resent or merged back, and they take part again only by joining the test again.
+- The full deletion removes the erasure record too.
 
-Both forms list any source with no files yet ("nothing to delete"). If a source can't be read, they stop with an
-error before deleting anything: run them again.
+Both forms list any source with no files yet ("nothing to delete"). If a source can't be read, or a dataset's
+folders can't be listed (a missing or expired `HF_TOKEN`), they stop with an error before deleting anything.
 
 ## Email
 

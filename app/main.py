@@ -50,7 +50,7 @@ from .auth import (
     missing_secrets,
 )
 from .limits import Windows
-from .store import Invalid, NotFound, Store, Unavailable, coffee_key
+from .store import Erasures, Invalid, NotFound, NotInTest, Store, Unavailable, coffee_key
 
 HERE = Path(__file__).parent
 STARTED = (
@@ -793,8 +793,6 @@ def create_app(
         acct = owner_call(
             accounts_only().accounts.set_disabled, me.user_id, user_id, bool(body.get("disabled"))
         )
-        if acct.disabled:
-            store.forget_recs(acct.user_id)  # what an erasure removes can't come back from memory
         return {"user_id": acct.user_id, "disabled": acct.disabled}
 
     # --- screens -------------------------------------------------------------------------------------
@@ -1227,6 +1225,10 @@ def create_app(
             raise HTTPException(422, str(e)) from None
         except Unavailable as e:
             raise HTTPException(503, str(e)) from None
+        except NotInTest:
+            raise HTTPException(
+                409, "Your test answers were deleted. Join the “Your next bag” test again to take part."
+            ) from None
 
     @app.post("/api/shots")
     def post_shot(body: dict, me: OutboxWriter) -> dict:
@@ -1248,6 +1250,8 @@ def create_app(
     # --- the "Your next bag" recommendation test: coffee ratings and answers to the picks -----------------------
 
     rec_windows = Windows()
+    if sessions is not None:  # erasures live in the users dataset, beside the consents they're compared with
+        store.use_erasures(Erasures(sessions.accounts.lake), sessions.accounts.experiment_since)
 
     def in_test(me: User) -> None:
         """Ratings and answers are kept only for members who joined the test (an `experiment` consent). Without
@@ -1283,7 +1287,8 @@ def create_app(
         s = accounts_only()
         if not isinstance(body.get("experiment"), bool):
             raise HTTPException(422, "experiment must be true or false")
-        s.accounts.set_experiment(me.user_id, body["experiment"])
+        erased = run(store.erased_at, me.user_id)  # a joining after an erasure is recorded after it
+        s.accounts.set_experiment(me.user_id, body["experiment"], after=erased)
         return {"experiment": body["experiment"]}
 
     @app.post("/api/ratings")

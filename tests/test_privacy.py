@@ -331,23 +331,40 @@ def consent(users, uid, experiment, at):
 
 
 def test_delete_user_only_recs_deletes_the_tests_records_and_keeps_the_account(three):
-    # Review S6: someone who asks to delete just their answers keeps their account, shots and bags.
+    # Someone who asks to delete just their answers keeps their account (on, signed in), shots and bags. The
+    # erasure is recorded first, with the rating ids that went and nothing else of them.
     main, photos, users = three
     on = datetime(2026, 10, 22, 7, tzinfo=UTC)
     users.write("users", "users/u-maya__20261022T070000.parquet",
                 [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": False, "logged_at": on}])  # fmt: skip
     consent(users, "u-maya", True, on)
-    with pytest.raises(erase.EraseError, match="Turn maya's account off"):
-        erase.plan("maya", main, photos, users, only_recs=True)  # the running app holds their records
-    users.write("users", "users/u-maya__20261023T070000.parquet",
-                [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": True,
-                  "logged_at": datetime(2026, 10, 23, 7, tzinfo=UTC)}])  # fmt: skip
-    p = erase.plan("maya", main, photos, users, only_recs=True)
+    p = erase.plan("maya", main, photos, users, only_recs=True)  # no turn-off needed
     assert p.marts == [] and p.files == {main.url: [
         "ratings/r-u-maya__20261020T070000.parquet", "ratings/r-u-maya__20261021T070000.parquet",
         "rec_responses/u-maya__slate-1__h__20261020T070000.parquet"]}  # fmt: skip
-    erase.apply(p, main, photos, users)
+    done = erase.erase_recs(p, main, photos, users, now=datetime(2026, 10, 24, 7, tzinfo=UTC))
+    assert done.files == p.files
     assert "u-maya" not in every_value(main.root / "ratings") + every_value(main.root / "rec_responses")
     assert "s-u-maya" in every_value(main) and "p-u-maya" in every_value(photos)
-    assert any(r["user_id"] == "u-maya" for r in users.latest("users", "user_id"))
+    (acct,) = [r for r in users.latest("users", "user_id") if r["user_id"] == "u-maya"]
+    assert acct["disabled"] is False
     assert "r-owner" in every_value(main)
+    (marker,) = [r for r in users.latest("recs_erasures", "user_id") if r["user_id"] == "u-maya"]
+    assert marker["rating_ids"] == ["r-u-maya"] and "roaster.example" not in json.dumps(marker, default=str)
+    # The full deletion takes the erasure record too.
+    users.write("users", "users/u-maya__20261025T070000.parquet",
+                [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": True,
+                  "logged_at": datetime(2026, 10, 25, 7, tzinfo=UTC)}])  # fmt: skip
+    full = erase.plan("maya", main, photos, users)
+    assert "recs_erasures/u-maya__20261024T070000.parquet" in full.files[users.url]
+
+
+def test_delete_user_refuses_when_a_datasets_folders_cant_be_listed(three, monkeypatch):
+    # With a missing or expired HF_TOKEN a private dataset answers 404 and every table would look empty.
+    main, photos, users = three
+    monkeypatch.setattr("coffeedata.lake.remote_folders", lambda url: None)
+    monkeypatch.setattr(users, "remote", True)
+    for only_recs in (False, True):
+        with pytest.raises(erase.EraseError, match="Couldn't list"):
+            erase.plan("maya", main, photos, users, only_recs=only_recs)
+    assert "u-maya" in every_value(main)

@@ -237,14 +237,14 @@ def test_two_picks_at_once_leave_exactly_one_picked(slow, monkeypatch):
     import threading
 
     gate = threading.Barrier(2, timeout=1)
-    responses_of = slow.responses_of
+    responses_of = slow._responses_of  # the un-pick pass's read, inside the person's lock
 
     def at_the_gate(*a, **kw):
         with contextlib.suppress(threading.BrokenBarrierError):
             gate.wait()
         return responses_of(*a, **kw)
 
-    monkeypatch.setattr(slow, "responses_of", at_the_gate)
+    monkeypatch.setattr(slow, "_responses_of", at_the_gate)
     together(*(lambda c=c: slow.save_rec_response("owner", {"slate_id": SLATE, "coffee_id": c, "picked": True})
                for c in COFFEES[:2]))  # fmt: skip
     assert sum(r.picked for r in Store(slow.lake, "owner").responses_of("owner")) == 1
@@ -341,11 +341,8 @@ def test_a_missing_slate_export_keeps_the_copy_held_and_failed_reads_back_off(la
     assert store.slate_pairs("owner") == {("slate-2", COFFEES[1])} and reads == [1]
 
 
-def test_after_only_recs_erasure_neither_undo_nor_a_rejoin_writes_the_old_records_back(lake, accounts):  # noqa: F811
-    # Final review B3: the running app held the erased records; an Undo or a rejoin could write them back.
-    from coffeedata import erase
-    from coffeedata.lake import Lake
-
+def member_in_test(lake, accounts):  # noqa: F811
+    """The app with accounts, the owner signed in, and maya in the test with a rating and an answer."""
     from .test_invites import PW, client
 
     catalog(lake)
@@ -356,32 +353,94 @@ def test_after_only_recs_erasure_neither_undo_nor_a_rejoin_writes_the_old_record
     maya = join(app, invite(boss)["code"])
     uid = accounts.by_name("maya").user_id
     me = W | {"X-Expected-User": uid}
-    slate(lake, [(uid, SLATE, 0, COFFEES[0])])
+    slate(lake, [(uid, SLATE, i, cid) for i, cid in enumerate(COFFEES)])
     maya.post("/api/experiment", json={"experiment": True}, headers=me)
     rating = {"rating_id": "r1", "coffee_id": COFFEES[0], "rating": 4}
     assert maya.post("/api/ratings", json=rating, headers=me).status_code == 200
     answer = {"slate_id": SLATE, "coffee_id": COFFEES[0], "interest": "want"}
     assert maya.post("/api/rec-responses", json=answer, headers=me).status_code == 200
+    return app, boss, maya, uid, me
 
-    with pytest.raises(erase.EraseError, match="Turn maya's account off"):
-        erase.plan("maya", lake, Lake(str(lake.root.parent / "photos"), tables=("photos",)), accounts.lake,
-                   only_recs=True)  # fmt: skip
-    assert boss.post(f"/api/people/{uid}", json={"disabled": True}, headers=W).json()["disabled"] is True
-    photos = Lake(str(lake.root.parent / "photos"), tables=("photos",))
-    erase.apply(erase.plan("maya", lake, photos, accounts.lake, only_recs=True), lake, photos, accounts.lake)
-    assert files(lake, "ratings") == {} and files(lake, "rec_responses") == {}
-    # Turned on again too early, before the redeploy:
-    boss.post(f"/api/people/{uid}", json={"disabled": False}, headers=W)
-    maya = client(app)
-    maya.post("/api/signin", json={"username": "maya", "password": "kettle orbit marble"}, headers=W)
-    assert maya.post("/api/ratings/r1/retract", headers=me).status_code == 404  # nothing to undo
-    maya.post("/api/experiment", json={"experiment": True}, headers=me)
-    assert maya.post("/api/rec-responses", json={"slate_id": SLATE, "coffee_id": COFFEES[0], "picked": True},
-                     headers=me).status_code == 200  # fmt: skip
+
+def responses_on_disk(lake) -> list[tuple]:
     rows = [
         r for f in (lake.root / "rec_responses").glob("*__*.parquet") for r in pq.read_table(f).to_pylist()
     ]
-    assert [(r["interest"], r["picked"]) for r in rows] == [
-        (None, True)
-    ]  # the erased "want" didn't come back
-    assert files(lake, "ratings") == {}
+    return sorted((r["coffee_id"], r["interest"], r["picked"]) for r in rows)
+
+
+def test_only_recs_erasure_holds_in_the_running_app_and_a_rejoin_starts_afresh(lake, accounts):  # noqa: F811
+    # Re-check B3: erased while the app runs, with the account on and signed in throughout.
+    import time
+
+    from coffeedata import erase
+    from coffeedata.lake import Lake
+
+    app, boss, maya, uid, me = member_in_test(lake, accounts)
+    photos = Lake(str(lake.root.parent / "photos"), tables=("photos",))
+    erase.erase_recs(
+        erase.plan("maya", lake, photos, accounts.lake, only_recs=True), lake, photos, accounts.lake
+    )
+    assert files(lake, "ratings") == {} and files(lake, "rec_responses") == {}
+    store = app.state.store
+    # The phone still has the Undo, the rating and the answer queued: none brings anything back.
+    assert maya.post("/api/ratings/r1/retract", headers=me).status_code == 404
+    rating = {"rating_id": "r1", "coffee_id": COFFEES[0], "rating": 4}
+    assert maya.post("/api/ratings", json=rating, headers=me).status_code == 409  # erased: join again first
+    answer = {"slate_id": SLATE, "coffee_id": COFFEES[0], "picked": True}
+    assert maya.post("/api/rec-responses", json=answer, headers=me).status_code == 409
+    assert files(lake, "ratings") == {} and files(lake, "rec_responses") == {}
+    assert store.ratings_of(uid) == [] and store.responses_of(uid) == []
+    assert maya.get("/setup").status_code == 200  # still signed in
+    time.sleep(1.1)  # a join after the erasure, not in its second
+    assert maya.post("/api/experiment", json={"experiment": True}, headers=me).status_code == 200
+    assert maya.post("/api/ratings", json=rating, headers=me).status_code == 422  # that rating id was erased
+    assert maya.post("/api/ratings", json=rating | {"rating_id": "r2"}, headers=me).status_code == 200
+    assert maya.post("/api/rec-responses", json=answer, headers=me).status_code == 200
+    assert responses_on_disk(lake) == [(COFFEES[0], None, True)]  # the erased "want" wasn't merged back
+    restarted = create_app(lake, Sessions(accounts)).state.store
+    assert [r.rating_id for r in restarted.ratings_of(uid)] == ["r2"]
+
+
+def test_an_erasure_found_at_start_drops_records_still_on_disk(lake, accounts):  # noqa: F811
+    # A file the erasure didn't reach (a staged copy published later) is ignored all the same.
+    from datetime import UTC, datetime, timedelta
+
+    app, boss, maya, uid, me = member_in_test(lake, accounts)
+    at = datetime.now(UTC).replace(microsecond=0) + timedelta(seconds=1)
+    accounts.lake.write("recs_erasures", f"recs_erasures/{uid}__{at:%Y%m%dT%H%M%S}.parquet",
+                        [{"user_id": uid, "logged_at": at, "rating_ids": ["r1"]}])  # fmt: skip
+    store = create_app(lake, Sessions(accounts)).state.store
+    assert store.ratings == {} and store.responses == {}
+
+
+def test_turning_an_account_off_and_on_keeps_their_test_records(lake, accounts):  # noqa: F811
+    # Re-check: the earlier fix dropped them from memory on every turn-off, so the next saves wrote wrong latest
+    # records (a stored "want" replaced by null, a duplicate rating let through).
+    from .test_invites import client
+
+    app, boss, maya, uid, me = member_in_test(lake, accounts)
+    assert boss.post(f"/api/people/{uid}", json={"disabled": True}, headers=W).status_code == 200
+    assert boss.post(f"/api/people/{uid}", json={"disabled": False}, headers=W).status_code == 200
+    maya = client(app)
+    maya.post("/api/signin", json={"username": "maya", "password": "kettle orbit marble"}, headers=W)
+    answer = {"slate_id": SLATE, "coffee_id": COFFEES[0], "picked": True}
+    assert maya.post("/api/rec-responses", json=answer, headers=me).status_code == 200
+    latest = {r.coffee_id: (r.interest, r.picked) for r in app.state.store.responses_of(uid)}
+    assert latest == {COFFEES[0]: ("want", True)}
+    again = {"rating_id": "r9", "coffee_id": COFFEES[0], "rating": 2}
+    assert maya.post("/api/ratings", json=again, headers=me).status_code == 422  # still a duplicate
+
+
+def test_before_any_picks_export_answers_are_not_found_not_try_again(lake, monkeypatch):
+    # Re-check S7: before PR 3 there's no export; every read after the first must still be "no picks".
+    from app import store as store_mod
+
+    catalog(lake)
+    c = TestClient(create_app(lake, HeaderAuth()))
+    monkeypatch.setattr(store_mod, "SLATE_TTL", 0)
+    monkeypatch.setattr(store_mod, "SLATE_RECHECK", 0)
+    for _ in range(3):
+        r = c.post("/api/rec-responses", json={"slate_id": SLATE, "coffee_id": COFFEES[0], "interest": "want"},
+                   headers=W)  # fmt: skip
+        assert r.status_code == 404

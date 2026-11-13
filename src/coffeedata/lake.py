@@ -28,6 +28,7 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
     invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
     consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
     contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
+    recs_erasures/<user_id>__<time>.parquet               one file per deletion of someone's "Your next bag" records
 
 Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
 by dbt and never released:
@@ -535,6 +536,17 @@ SCHEMAS["contacts"] = pa.schema(
         ("verify_expires", pa.timestamp("s", tz="UTC")),
     ]
 )
+# A deletion of one person's "Your next bag" records (delete-user --only-recs): everything of theirs in ratings and
+# rec_responses logged at or before logged_at is gone, and the app refuses it back (app/store.py, Erasures). Kept in
+# the users dataset, which the app reads: the main lake's files are what it deletes. rating_ids names the ratings
+# that went, so a phone resending one is refused; it holds no coffee or score.
+SCHEMAS["recs_erasures"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("rating_ids", pa.list_(pa.string())),
+    ]
+)
 
 # Green-coffee importers' public offer lists (importers.py): raw only, one immutable file per importer per week. Each
 # lot word for word, as the roaster adapters keep a product: every cell of its row under the page's header (null when
@@ -559,7 +571,7 @@ SCHEMAS["importer_raw"] = pa.schema(
 
 # Tables that live in the photo, users or importers dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites", "consents", "contacts")
+USER_TABLES = ("users", "invites", "consents", "contacts", "recs_erasures")
 IMPORTER_TABLES = ("importer_raw",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
@@ -588,6 +600,7 @@ GLOBS = {
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
     "contacts": "contacts/*.parquet",
+    "recs_erasures": "recs_erasures/*.parquet",
     "importer_raw": "raw/*/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
@@ -618,6 +631,7 @@ SCHEMA_FILES = {
     "invites": "invites/invite_id=schema.parquet",
     "consents": "consents/user_id=schema.parquet",
     "contacts": "contacts/user_id=schema.parquet",
+    "recs_erasures": "recs_erasures/user_id=schema.parquet",
     "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
 }
 PENDING_DELETES = (
