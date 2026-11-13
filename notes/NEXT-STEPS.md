@@ -371,6 +371,22 @@ Backlog, not started until the owner says so:
   Until that run: #154's build fix, the registry keep rule and the image pin are NOT live. Deadline: the jobs' image
   dates from about 2026-11-01..08, so it can be deleted after ~2026-12-01 once five newer ingest images exist; the
   combined run must happen well before then. First importers run dispatched from GitHub 2026-11-13 (importer=all).
+## Plan from 2026-11-13 (owner agreed, after an outside product review)
+The engineering is ahead of the evidence that people want it. Order of work:
+1. Finish what is in flight (reliability and security): #163 then the owner's combined shell run, #156, #161, #164.
+2. Data correctness: #87 (WooCommerce variant prices go null while available), #90 (OSM values reaching public_roaster).
+3. Usage analytics on the website and app, fully anonymous (owner, 2026-11-13): which roasters and coffees are
+   viewed, what is typed into the search bar, saves, shot logs, repeat visits. No IPs, no cookies or user ids in the
+   events; search text scrubbed of anything that looks personal; stored privately like shot data, never published
+   raw; aggregates only. Design first (how to count repeat visits without identifying anyone), then build.
+4. Recommendation experiment ("Your Next Bag"): from five ratings per user, content-based picks vs most-popular vs
+   random, scored on each user's later ratings (held-out by time, per CLAUDE.md). Needs about 20 users: owner to
+   find them.
+5. Paused until 4 has a result: admin stack growth beyond what is open (#124-#149 need a measured saving), Canada
+   and Mexico (#70), new integrations, the product-dimension rebuild, the staging immutability fixes unless data
+   loss shows up.
+Also: benchmark coffee count and freshness against RoastDB (9,976 coffees, 582 roasters; we track 2,545 roasters).
+
 - Owner decision (2026-11-13, option A): ship terraform apply in GitHub (#163) with the residual risk written down.
   Residual: Google issues the apply token to any job in the `terraform-apply` environment; it can't see who approved.
   An admin (this session acts as jtouley, admin) could loosen the environment's reviewers; today only the session
