@@ -140,7 +140,9 @@ models:
       - name: source
         description: The utm_source for utm, the referrer's domain for referrer ('(unnamed)' when it had none), else the kind itself.
       - name: roaster_id
-        description: For a click-out, the roaster whose store it leads to; checked against the served release (usage_click_ids_known, warn).
+        description: For a click-out, the roaster whose store it leads to when it is an id of the served release, else '(unknown)' (the collector's text is never passed on; usage_click_ids_known, warn, counts them).
+      - name: coffee_id
+        description: For a click-out to a coffee's page, the coffee when it is an id of the served release, else '(unknown)'.
 
   - name: int_usage_event_places
     description: >
@@ -404,10 +406,12 @@ models:
       - type: not_null
     - name: page_views
       data_type: bigint
-      description: Page views; null when they or the other events are under 10, so no small split shows.
+      description: Page views; null when they or the other events are under 10, so no small split shows, and for a second
+        place when only one is held back in a week, so the week's total less the places shown never gives one place's.
   - name: mart_usage_city_facets_weekly
     description: One row per (week, country, region, city, facet, facet_value), one facet at a time beside the city, each
-      cell of 10 events or more, small cells merged or the facet held back.
+      cell of 10 events or more; '(other)' holds the same values at every place, a place with a small cell has the facet
+      held back, and never one place alone in a week and facet.
     config:
       contract:
         enforced: true
@@ -496,7 +500,7 @@ models:
       - type: not_null
     - name: roaster_id
       data_type: varchar
-      description: The roaster whose store the click led to.
+      description: The roaster whose store the click led to, when it is a roaster of the served release; else '(unknown)'.
       constraints:
       - type: not_null
     - name: surface
@@ -551,12 +555,12 @@ models:
       - type: not_null
     - name: coffee_id
       data_type: varchar
-      description: The coffee whose page the click led to.
+      description: The coffee whose page the click led to, when it is a coffee of the served release; else '(unknown)'.
       constraints:
       - type: not_null
     - name: roaster_id
       data_type: varchar
-      description: The roaster whose store the click led to.
+      description: The roaster whose store the click led to, when it is a roaster of the served release; else '(unknown)'.
     - name: click_outs
       data_type: bigint
       description: Click-outs, bots left out.
@@ -587,7 +591,7 @@ models:
       - type: not_null
     - name: roaster_id
       data_type: varchar
-      description: The roaster whose store the click led to.
+      description: The roaster whose store the click led to, when it is a roaster of the served release; else '(unknown)'.
       constraints:
       - type: not_null
     - name: context_kind

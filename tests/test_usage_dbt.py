@@ -470,6 +470,19 @@ GUARD_BREAKS = {
     # a place's page views shown beside a small remainder
     "cities_meet_floors#page_views": "update mart_usage_locations_weekly set page_views = events - 3 "
     "where city = 'Denver'",
+    # the final review's probe: one place's page views held back alone, so the week's total less the places shown
+    # gives them (the second place, the rest of Colorado, shown again with its true count)
+    "cities_meet_floors#page_views_alone": "update mart_usage_locations_weekly as m set page_views = ("
+    "select count(*) from int_usage_events e join int_usage_event_places p using (event_id) where not e.bot "
+    "and e.event = 'page_view' and e.week = m.week and p.city = m.city) where m.city = 'other, Colorado'",
+    # one place's facet held back alone (Oregon's surface), the second (the rest of Colorado) shown again
+    "cities_meet_floors#facet_alone": "insert into mart_usage_city_facets_weekly select e.week, p.country, "
+    "p.region, p.city, 'surface', coalesce(e.surface, 'unknown'), count(*) from int_usage_events e "
+    "join int_usage_event_places p using (event_id) where not e.bot and p.city = 'other, Colorado' "
+    "and e.week = date '2026-09-14' group by all",
+    # '(other)' holding a value another place names (Denver's devices as one '(other)' while desktop is named)
+    "cities_meet_floors#other_differs": "insert into mart_usage_city_facets_weekly values "
+    "(date '2026-09-14', 'US', 'Colorado', 'Denver', 'device', '(other)', 25)",
     # the prefix leaking into a mart
     "ip_prefix_only_in_location": "alter table mart_usage_locations_weekly add column ip_prefix varchar",
 }
@@ -495,6 +508,122 @@ def test_each_threshold_and_city_rule_fails_on_a_bad_row(checkout):
             "secret-test" not in bad.stdout and CANARY_TOWN not in bad.stdout
         )  # failures show counts, not rows
         shutil.copy(clean, db)
+
+
+# The published totals a place's held-back count could be subtracted from (the reviewer's probes on PR 170).
+PAGE_VIEWS_BY_SUBTRACTION = """
+    with total as (select week, sum(page_views) as pv from mart_usage_page_views_weekly group by week),
+    shown as (select week, coalesce(sum(page_views), 0) as pv, count(*) filter (where page_views is null) as held
+              from mart_usage_locations_weekly group by week)
+    select s.week, s.held, t.pv - s.pv as hidden from shown as s join total as t using (week) order by s.week
+"""
+
+# For each week and source: the source's landings (mart_usage_sources_weekly) less the cells naming it, and the places
+# that could hold the rest as the reader sees them: a place in the week that shows no cell for that source and has
+# an '(other)' cell or no source cells at all.
+SOURCE_BY_SUBTRACTION = """
+    with total as (select week, source, sum(landings) as n from mart_usage_sources_weekly group by all),
+    named as (select week, facet_value as source, sum(events) as n from mart_usage_city_facets_weekly
+              where facet = 'source' and facet_value <> '(other)' group by all),
+    places as (select distinct week, country, region, city from mart_usage_locations_weekly),
+    hiders as (
+        select t.week, t.source, count(*) as places
+        from total as t join places as p on p.week = t.week
+        where not exists (select 1 from mart_usage_city_facets_weekly m where m.week = p.week and m.country = p.country
+                          and m.region = p.region and m.city = p.city and m.facet = 'source' and m.facet_value = t.source)
+          and (exists (select 1 from mart_usage_city_facets_weekly m where m.week = p.week and m.country = p.country
+                       and m.region = p.region and m.city = p.city and m.facet = 'source' and m.facet_value = '(other)')
+               or not exists (select 1 from mart_usage_city_facets_weekly m where m.week = p.week
+                              and m.country = p.country and m.region = p.region and m.city = p.city
+                              and m.facet = 'source'))
+        group by all
+    )
+    select t.week, t.source, t.n - coalesce(n.n, 0) as hidden, coalesce(h.places, 0) as could_hold
+    from total as t left join named as n using (week, source) left join hiders as h using (week, source)
+    order by all
+"""
+
+
+@needs_dbt
+def test_a_held_back_page_view_count_is_never_the_weeks_total_less_the_places_shown(checkout):
+    """The final review's probe: Denver at 8 page views a week, held back alone, was the week's total page views less
+    the places shown. Now a second place is held back with it, so the difference is only ever a sum over two or more
+    places, and cities_meet_floors passes."""
+    events = [e for e in synthetic_events() if not str(e["ip_prefix"]).startswith("2001:")
+              and not (e["event"] == "page_view" and e["ip_prefix"] == "198.51.100.0/24"
+                       and e["received_at"].weekday() >= 4)]  # fmt: skip
+    db, ok, target, _log = _build(checkout, events=events)
+    results = json.loads((target / "run_results.tests.json").read_text())["results"]
+    failed = {r["unique_id"].split(".")[-1] for r in results if r["status"] in ("fail", "error")}
+    assert failed == {"search_text_looks_personal"}, failed
+    with duckdb.connect(str(db), read_only=True) as con:
+        rows = con.execute(PAGE_VIEWS_BY_SUBTRACTION).fetchall()
+        denver = con.execute("select count(*) from mart_usage_locations_weekly where city = 'Denver' "
+                             "and page_views is null").fetchone()[0]  # fmt: skip
+    assert denver >= 6  # the probe's case is there: Denver's page views held back most weeks
+    for week, held, hidden in rows:
+        assert hidden == 0 or held >= 2, (week, held, hidden)
+
+
+@needs_dbt
+def test_a_hidden_facet_cell_is_never_another_marts_total_less_the_cells_shown(checkout):
+    """Denver shows direct (21 a week) and '(other)' (a.example 5 + b.example 5); the rest of Colorado shows
+    a.example 14. mart_usage_sources_weekly publishes a.example's 19, so Denver's 5 was 19 - 14, the one place that
+    could hold it. Now '(other)' is the same values at every place, Denver's small a.example holds its source facet
+    back, and the rest of Colorado's with it: what is hidden is always shared by two or more places."""
+    events: list[dict] = []
+    n = 0
+
+    def add(day, ip, **kw):
+        nonlocal n
+        n += 1
+        events.append(_event(n, day, 9, "page_view", ip, **kw))
+
+    for i in range(28):
+        d = FIRST + timedelta(days=i)
+        for _ in range(3):
+            add(d, "198.51.100.0/24", source="direct")
+        if d.weekday() < 5:
+            add(d, "198.51.100.0/24", source="referrer", referrer_domain="a.example")
+            add(d, "198.51.100.0/24", source="referrer", referrer_domain="b.example")
+        for _ in range(2):
+            add(d, "100.64.0.0/24", source="referrer", referrer_domain="a.example")
+    db, ok, target, _log = _build(checkout, events=events)
+    assert ok, _log.read_text()[-3000:]
+    with duckdb.connect(str(db), read_only=True) as con:
+        named = {w for (w,) in con.execute(
+            "select distinct week from mart_usage_locations_weekly where city = 'Denver'").fetchall()}  # fmt: skip
+        rows = con.execute(SOURCE_BY_SUBTRACTION).fetchall()
+    # Denver is named from the second week (10 days); in the first, the rest of Colorado is the only place, and a
+    # week with one place is that place whatever is held back
+    assert len(named) == 3
+    rows = [r for r in rows if r[0] in named]
+    assert any(src == "a.example" and hidden > 0 for _w, src, hidden, _c in rows)
+    for week, src, hidden, could_hold in rows:
+        assert hidden == 0 or could_hold >= 2, (week, src, hidden, could_hold)
+
+
+@needs_dbt
+def test_a_click_id_not_in_the_release_is_unknown_and_never_shown(checkout):
+    """The collector takes roaster_id and coffee_id as free text (up to 120 characters). A click whose ids aren't
+    the served release's counts under '(unknown)', and its text is in no table but raw's staging."""
+    text_r, text_c = "Mile High <b>call 303 555 0100</b>", "my-own-text " * 9
+    extra = [_event(900_000 + i, FIRST + timedelta(days=i % 7), 9, "click_out", "198.51.100.0/24",
+                    roaster_id=text_r, coffee_id=text_c, rank=2) for i in range(5)]  # fmt: skip
+    db, _ok, _target, _log = _build(checkout, events=synthetic_events() + extra)
+    with duckdb.connect(str(db), read_only=True) as con:
+        roasters = dict(con.execute(
+            "select roaster_id, sum(click_outs) from mart_roaster_clicks_weekly group by 1").fetchall())  # fmt: skip
+        coffees = dict(con.execute(
+            "select coffee_id, sum(click_outs) from mart_coffee_clicks_weekly group by 1").fetchall())  # fmt: skip
+        assert roasters == {"r.denver": DAYS, "(unknown)": 5} and coffees == {"c1": DAYS, "(unknown)": 5}
+        tables = [t for (t,) in con.execute(
+            "select table_name from information_schema.tables where table_type = 'BASE TABLE'").fetchall()]  # fmt: skip
+        for t in tables:
+            if t == "stg_usage_events":
+                continue  # raw, deduplicated: the only place the text may be
+            dump = json.dumps(con.execute(f"select * from {t}").fetchall(), default=str)
+            assert "Mile High <b>" not in dump and "my-own-text" not in dump, t
 
 
 @needs_dbt
@@ -760,7 +889,7 @@ def test_the_dbt_unit_tests_pass(checkout):
     units = {
         r["unique_id"].split(".")[-1]: r["status"] for r in results if r["unique_id"].startswith("unit_test.")
     }
-    assert len(units) == 10 and set(units.values()) == {"pass"}, units
+    assert len(units) == 12 and set(units.values()) == {"pass"}, units
 
 
 def test_consensus_takes_the_level_every_row_agrees_on():
@@ -791,6 +920,46 @@ def test_consensus_takes_the_level_every_row_agrees_on():
     assert geo.placed({("US", "Oregon", "Portland"), ("US", "Washington", "Seattle")}) == ("US", None, None)
     assert geo.placed({("US", "Washington", "Blaine"), ("CA", "British Columbia", "Surrey")}) is None
     assert geo.base_city("Chicago (Near South Side)") == "Chicago" and geo.base_city(None) is None
+
+
+def test_dbip_filler_is_unknown_and_coverage_is_weighed_by_real_rows():
+    """DB-IP's filler (an IPv6 row across 16 or more /32s, or one at its default place, Murten) names no place: the
+    lookup reads it as unknown (int_usage_location's unit test pins the SQL), and the IPv6 coverage is the share of
+    real rows, so one filler row covering most of the space no longer reads as 99% city."""
+    h = lambda ip: int(geo.to_hex(ip), 16)  # noqa: E731
+    assert geo.is_filler(
+        h("2c10::"), h("fbff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"), "CH", "Fribourg", "Murten/Morat"
+    )
+    assert geo.is_filler(
+        h("3000::"), h("3000:f:ffff:ffff:ffff:ffff:ffff:ffff"), "NL", "North Holland", "Amsterdam"
+    )
+    assert not geo.is_filler(h("3000::"), h("3000:e:ffff:ffff:ffff:ffff:ffff:ffff"), "NL", "North Holland",
+                             "Amsterdam")  # 15 /32s: a real allocation  # fmt: skip
+    assert geo.is_filler(h("2a0d:1000::"), h("2a0d:1000:0:ffff:ffff:ffff:ffff:ffff"), "CH", "Fribourg",
+                         "Murten/Morat")  # fmt: skip
+    assert not geo.is_filler(
+        h("198.18.0.0"), h("198.18.0.255"), "CH", "Fribourg", "Murten/Morat"
+    )  # IPv4 is real
+    rows = sorted([
+        # one /40 held by two Portland rows: city
+        (h("2001:db8::"), h("2001:db8:7f:ffff:ffff:ffff:ffff:ffff"), "US", "Oregon", "Portland"),
+        (h("2001:db8:80::"), h("2001:db8:ff:ffff:ffff:ffff:ffff:ffff"), "US", "Oregon", "Portland"),
+        # one /40 split between Oregon and Washington, by /48: country at /40, city at /48
+        (h("2001:db8:100::"), h("2001:db8:100:ffff:ffff:ffff:ffff:ffff"), "US", "Oregon", "Portland"),
+        (h("2001:db8:101::"), h("2001:db8:101:ffff:ffff:ffff:ffff:ffff"), "US", "Washington", "Seattle"),
+        # a real /48 next to filler in its /40: unknown at /40, city at /48
+        (h("2001:db8:200::"), h("2001:db8:200:ffff:ffff:ffff:ffff:ffff"), "US", "Oregon", "Salem"),
+        (h("2001:db8:201::"), h("2001:db8:201:ffff:ffff:ffff:ffff:ffff"), "CH", "Fribourg", "Murten/Morat"),
+        # the filler, most of the space
+        (h("2c10::"), h("fbff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"), "CH", "Fribourg", "Murten/Morat"),
+    ])  # fmt: skip
+    weighted = geo.consensus_levels(rows)["ipv6_row_weighted"]
+    assert weighted["rows"] == 5 and weighted["filler_rows"] == 2
+    assert weighted["ipv6_40"] == {"city": 0.4, "region": 0.0, "country": 0.4, "unknown": 0.2,
+                                   "at_least_city": 0.4, "at_least_region": 0.4, "at_least_country": 0.8}  # fmt: skip
+    assert weighted["ipv6_48"]["city"] == 1.0
+    # the filler's space is unknown, not Murten
+    assert geo.consensus_levels(rows)["ipv6_40"]["all"]["city"] < 0.01
 
 
 def test_the_cli_prints_counts_only_and_alerts_when_the_detector_could_not_run(tmp_path, monkeypatch, capsys):

@@ -7,7 +7,8 @@
 -- city, else the region if they all name one region, else the country if they all name one country, else nothing.
 -- DB-IP's "City (Neighbourhood)" names are cut to the city's name first, so a block split by neighbourhood keeps its
 -- city and the neighbourhood is never shown. Deterministic: a function of the locked file and the prefix.
--- A city with no population row is under 50,000 people or unknown, and is never named.
+-- DB-IP's filler rows count as unknown (see ranges). A city with no population row is under 50,000 people or
+-- unknown, and is never named.
 with prefixes as (
     select distinct ip_prefix,
         nullif(split_part(trim(ip_prefix), '/', 1), '') as addr,
@@ -31,9 +32,21 @@ blocks as (
 ),
 
 ranges as (
-    select ip_start, ip_end, country, region,
-        nullif(regexp_replace(city, '\s*\(.*\)\s*$', ''), '') as city
-    from {{ ref('stg_geo_ranges') }}
+    -- DB-IP's filler rows name no network's place: they are unknown, like its rows with no country
+    -- (geo.is_filler: an IPv6 row reaching across 16 or more /32s, the size of a registry's own allocation, or
+    -- placed at "CH, Fribourg, Murten/Morat", which DB-IP gives unannounced IPv6 space of any size)
+    select ip_start, ip_end,
+        if(filler, null, country) as country, if(filler, null, region) as region,
+        if(filler, null, nullif(regexp_replace(city, '\s*\(.*\)\s*$', ''), '')) as city
+    from (
+        select *,
+            left(ip_start, 24) <> '00000000000000000000ffff'
+            and (
+                try_cast('0x' || left(ip_end, 8) as ubigint) - try_cast('0x' || left(ip_start, 8) as ubigint) >= 15
+                or (country = 'CH' and region = 'Fribourg' and city = 'Murten/Morat')
+            ) as filler
+        from {{ ref('stg_geo_ranges') }}
+    ) as r
 ),
 
 in_block as (

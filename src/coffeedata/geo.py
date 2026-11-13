@@ -170,6 +170,29 @@ def base_city(name: str | None) -> str | None:
     return _NEIGHBOURHOOD.sub("", name) if name else name
 
 
+# DB-IP fills IPv6 space it has no data for with rows placed at a registry's office or at its own default, "CH,
+# Fribourg, Murten/Morat" (one such row covers most of the IPv6 address space). They name no network's place, so the
+# lookup reads them as unknown, like a row with no country (int_usage_location does the same in SQL).
+FILLER_PLACE = ("CH", "Fribourg", "Murten/Morat")
+FILLER_SLASH32S = 16
+
+
+def is_filler(start: int, end: int, country: str | None, region: str | None, city: str | None) -> bool:
+    """An IPv6 row reaching across FILLER_SLASH32S or more /32s (a /28: a registry's own allocation, not a
+    network's), or one placed at FILLER_PLACE."""
+    if V4_MAPPED <= start <= V4_MAPPED | 0xFFFFFFFF:
+        return False
+    return (end >> 96) - (start >> 96) + 1 >= FILLER_SLASH32S or (country, region, city) == FILLER_PLACE
+
+
+def _place(row: tuple[int, int, str | None, str | None, str | None]) -> tuple:
+    """A row's place as the lookup reads it: (country, region, base city), all None for a filler row."""
+    s, e, country, region, city = row
+    return (
+        (None, None, None) if is_filler(s, e, country, region, city) else (country, region, base_city(city))
+    )
+
+
 def _level(places: set[tuple]) -> str:
     """The most precise level every place in a block agrees on (int_usage_location's rule): city, region, country,
     else unknown. A place is (country, region, city) with the city's base name."""
@@ -185,20 +208,22 @@ def _level(places: set[tuple]) -> str:
 
 def consensus_levels(rows: list[tuple[int, int, str | None, str | None, str | None]]) -> dict:
     """How the masked lookup resolves on this file, for IPv4 /24 and IPv6 /40 (the collector's masks): for every block
-    the file's rows touch, the level all the rows inside it agree on. `shared` counts blocks two or more rows share
-    (where masking can lose precision); `all` adds the blocks one row covers whole, which take that row's level.
-    Shares of blocks, not of traffic. `rows` sorted and disjoint."""
+    the file's rows touch, the level all the rows inside it agree on (filler rows read as unknown). `shared` counts
+    blocks two or more rows share (where masking can lose precision); `all` adds the blocks one row covers whole,
+    which take that row's level. Shares of blocks, not of traffic; address space is dominated by a few huge rows, so
+    `row_weighted` gives the IPv6 figures that matter. `rows` sorted and disjoint."""
     out = {}
     for name, version, bits in (("ipv4_24", 4, 24), ("ipv6_40", 6, 40)):
         shift = (32 if version == 4 else 128) - bits
         mask = (1 << shift) - 1
         partial: dict[int, set] = {}
         whole = dict.fromkeys(LEVELS, 0)
-        for s, e, country, region, city in rows:
+        for row in rows:
+            s, e = row[0], row[1]
             if (V4_MAPPED <= s <= V4_MAPPED | 0xFFFFFFFF) != (version == 4):
                 continue
             lo, hi = (s & 0xFFFFFFFF, e & 0xFFFFFFFF) if version == 4 else (s, e)
-            place = (country, region, base_city(city))
+            place = _place(row)
             first, last = lo >> shift, hi >> shift
             first_whole = first if lo & mask == 0 else first + 1
             last_whole = last if hi & mask == mask else last - 1
@@ -217,6 +242,36 @@ def consensus_levels(rows: list[tuple[int, int, str | None, str | None, str | No
             "shared_blocks": n_shared,
             "all": {k: round((v + whole[k]) / n_all, 4) if n_all else 0.0 for k, v in shared.items()},
             "all_blocks": n_all,
+        }
+    out["ipv6_row_weighted"] = row_weighted_levels(rows)
+    return out
+
+
+def row_weighted_levels(rows: list[tuple[int, int, str | None, str | None, str | None]]) -> dict:
+    """For IPv6 /40 (the collector's mask) and /48 (for comparison): of DB-IP's real IPv6 rows (filler left out),
+    the share whose first address's block resolves to a city, to a region only, to a country only, or to nothing,
+    and the shares resolving at least to a city, a region (state) and a country. Rows stand in for the networks
+    DB-IP tells apart, so this weighs each network once, however large. `rows` sorted and disjoint."""
+    six = [r for r in rows if not (V4_MAPPED <= r[0] <= V4_MAPPED | 0xFFFFFFFF)]
+    real = [r for r in six if not is_filler(*r)]
+    out: dict = {"rows": len(real), "filler_rows": len(six) - len(real)}
+    for bits in (40, 48):
+        shift = 128 - bits
+        places: dict[int, set] = {}
+        for row in six:
+            # the rows a block holds, for every block a row starts in: the rows starting or ending in it (rows are
+            # disjoint, so no other row can cross a block that a row starts in)
+            for k in {row[0] >> shift, row[1] >> shift}:
+                places.setdefault(k, set()).add(_place(row))
+        counts = dict.fromkeys(LEVELS, 0)
+        for row in real:
+            counts[_level(places[row[0] >> shift])] += 1
+        n = len(real)
+        share = {k: round(v / n, 4) if n else 0.0 for k, v in counts.items()}
+        out[f"ipv6_{bits}"] = share | {
+            "at_least_city": share["city"],
+            "at_least_region": round(share["city"] + share["region"], 4),
+            "at_least_country": round(share["city"] + share["region"] + share["country"], 4),
         }
     return out
 
@@ -371,7 +426,7 @@ def changed_events(sources: list[str], old: Path, new: Path) -> int:
     """How many stored events (bots included) would be placed differently by `new` than by `old`: the number
     `coffeedata geo-update` prints for the PR that edits the lock. A report, never stored; the location itself is
     derived only in dbt (int_usage_location), and this follows its rule: every row in the prefix's block, the level
-    they all agree on, neighbourhood names cut."""
+    they all agree on, neighbourhood names cut, filler rows unknown."""
     import duckdb
 
     if not sources:
@@ -392,11 +447,12 @@ def changed_events(sources: list[str], old: Path, new: Path) -> int:
 
         def places(path: Path) -> dict[str, tuple | None]:
             found: dict[str, set] = {s: set() for s, _e, _n in blocks}
-            for start, country, region, city in con.execute(
-                f"select b.start_hex, r.country, r.region, r.city from b inner join read_parquet('{path}') as r "
-                "on r.ip_start <= b.end_hex and r.ip_end >= b.start_hex"
+            for start, lo, hi, country, region, city in con.execute(
+                "select b.start_hex, r.ip_start, r.ip_end, r.country, r.region, r.city from b "
+                f"inner join read_parquet('{path}') as r on r.ip_start <= b.end_hex and r.ip_end >= b.start_hex"
             ).fetchall():
-                found[start].add((country, region, base_city(city) or None))
+                place = _place((int(lo, 16), int(hi, 16), country, region, city))
+                found[start].add((place[0], place[1], place[2] or None))
             return {s: placed(p) for s, p in found.items()}
 
         a, b = places(old), places(new)

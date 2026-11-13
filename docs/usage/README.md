@@ -49,9 +49,19 @@ click context is shown for a week only if it occurred on 3 distinct UTC days in 
 day (5 for a query with a word outside the release's vocabulary); a click context counts days with that roaster. A
 city is named only with 50,000 people (GeoNames), events on 10 days in the window and 20 in the week, in a region
 that passes; otherwise "other, <region>". A city x facet cell needs 10 events, and secondary suppression keeps a
-small cell from being worked out by subtraction: cells under 10 merge into one '(other)', and when that is itself
-under 10 the facet is held back for that city and week; a place's page views are held back (null) when they or its
-other events are under 10. Bots are left out of every mart. The marts carry enforced contracts (every column typed
+small cell from being worked out by subtraction, within a place or from a total another mart publishes (the week's
+page views, a source's landings, a surface's page views or clicks, the filter combinations):
+- A place's page views are held back (null) when they or its other events are under 10.
+- In a facet, '(other)' is the same values at every place: a value is named for a week when at least as many places
+  have 10 or more of it as have fewer. A place with a cell under 10 has the whole facet held back for that week.
+- When exactly one place is held back in a week (page views) or a week and facet, a second is held back with it,
+  a place that isn't a named city when there is one, else the smallest. What is hidden is then always whole places,
+  two or more, so a published total less the places shown is a sum over them, never one place's count. A week with
+  a single place is that place whatever is held back.
+
+Click ids are the collector's free text (up to 120 characters): `int_usage_events` keeps a roaster or coffee id
+only when the served release has it, else `(unknown)`, so no report shows text a page sent as an id. Bots are left
+out of every mart. The marts carry enforced contracts (every column typed
 and described) but are never `access: public`.
 
 **Location is a consensus, never a guess.** The collector keeps only the block (IPv4 /24, IPv6 /40), and a block can
@@ -59,16 +69,27 @@ hold DB-IP rows naming several places. `int_usage_location` reads every row insi
 name one, else the region they all name, else the country, else nothing. DB-IP's "City (Neighbourhood)" names are cut
 to the city first, so the neighbourhood is never shown.
 
+**DB-IP's filler rows are unknown.** DB-IP fills IPv6 space it has no data for with rows placed at a registry's office
+(RIPE NCC's Amsterdam, APNIC's South Brisbane, ARIN's Chantilly, AFRINIC's Ebene) or at "CH, Fribourg, Murten/Morat",
+one row of which covers most of the IPv6 address space. They name no network's place, so the lookup reads them as it
+reads a row with no country (`geo.is_filler`, the same rule in `int_usage_location`): an IPv6 row reaching across 16
+or more /32s (a /28 or more: about 37,000 rows, 98% of them at those offices), or an IPv6 row at Murten/Morat of any size
+(13,423 rows, for a town of under 10,000 people). That is 49,604 of 4,178,999 IPv6 rows. IPv4 rows are never filler.
+Registry-office rows from /29 to /32 (e.g. 1,355 at Amsterdam City Centre, 943 at Chantilly) may be filler too, but
+real networks sit there as well, so they are kept; they rarely matter, since a /40 inside one resolves to that row.
+
 ## Tests
 
 dbt: enforced contracts on the marts, `unique`/`not_null` on every event model's `event_id`, `accepted_values` on event, surface, device, sort and
 source (the collector's values), grain tests on every mart, `usage_click_ids_known` (warn), `usage_events_are_fresh`
 (warn, 3 days), `report_rows_meet_threshold`, `cities_meet_floors`, `no_city_with_query_or_roaster`,
 `ip_prefix_only_in_location`, `search_text_looks_personal` (error, `store_failures` off), `usage_rows_without_event_id`
-(warn), two volume bands (warn), and ten unit tests (`models/unit_tests.yml`). The gates check by meaning:
+(warn), two volume bands (warn), and twelve unit tests (`models/unit_tests.yml`). The gates check by meaning:
 `no_city_with_query_or_roaster` lists every mart's columns (a renamed or new column fails until reviewed),
 `report_rows_meet_threshold` also checks the source beside a roaster's clicks and a city, and `cities_meet_floors`
-recomputes each facet's total to catch a hidden cell. The detector counts a phone number only as one is written
+recomputes each facet's total to catch a hidden cell, and fails a week with exactly one place's page views held back
+(against `mart_usage_page_views_weekly`), a week and facet with exactly one place held back, and an '(other)' that
+holds a value another place names. The detector counts a phone number only as one is written
 (one run of 7-15 digits, groups split by `-` or `.`, a leading `+`, a bracketed area code, or 3-3-4), and a card
 only with 13-19 digits that pass the Luhn check, so "gesha 2023 2024" counts as neither.
 
@@ -103,19 +124,32 @@ to the usage dataset. DB-IP serves only the current month's file, so keep the pr
 
 ### What the consensus lookup resolves to, on the pinned file
 
-Every block the file's rows touch, by the level all its rows agree on (shares of blocks, not of traffic; from
-`geo.consensus_levels`, which follows the SQL's rule). "Shared" blocks hold two or more rows, or one that covers it
-only in part: the only blocks where masking can cost precision. "All" adds the blocks one row covers whole.
+**IPv6, weighted by DB-IP's real rows** (filler left out; 4,129,395 rows): for each row, the level that the block
+holding its first address resolves to. Rows stand in for the networks DB-IP tells apart, each counted once however
+large, which is closer to traffic than address space. From `geo.consensus_levels(...)["ipv6_row_weighted"]`.
+
+| Mask | City | Region only | Country only | Unknown | At least state | At least country |
+|---|---|---|---|---|---|---|
+| **IPv6 /40** (the collector's mask) | **13.0%** | 23.1% | 56.9% | 7.1% | **36.0%** | **92.9%** |
+| IPv6 /48 (for comparison only) | 91.9% | 2.7% | 5.3% | 0.1% | 94.6% | 99.9% |
+
+**For the owner:** at /40, about one IPv6 network in eight resolves to a city and about one in three to a state; at
+/48, nine in ten resolve to a city. The mask stays /40, the owner's choice; this is the cost of it on this file.
+
+Blocks by the level all their rows agree on (shares of blocks, not of traffic). "Shared" blocks hold two or more
+rows, or one that covers it only in part: the only blocks where masking can cost precision. "All" adds the blocks one
+row covers whole; it counts address space, so for IPv6 it is almost all filler (now unknown) and says nothing about
+traffic.
 
 | Blocks | City | Region only | Country only | Unknown |
 |---|---|---|---|---|
 | IPv4 /24, shared (364,284) | 12.2% | 36.5% | 48.2% | 3.2% |
 | IPv4 /24, all (16,777,216) | 83.8% | 0.8% | 1.5% | 13.9% (mostly reserved or unallocated) |
-| IPv6 /40, shared (346,065) | 10.8% | 30.3% | 54.4% | 4.6% |
-| IPv6 /40, all (962,072,674,304) | 99.0% | 0.0% | 0.0% | 1.0% |
+| IPv6 /40, shared (346,065) | 10.8% | 30.3% | 54.3% | 4.7% |
+| IPv6 /40, all (962,072,674,304) | 0.01% | 0.0% | 0.0% | 99.99% (filler and unallocated) |
 
-The "all" rows are dominated by large single-place allocations, which is also where most addresses sit. Where rows
-disagree, the lookup now abstains to the region or country instead of taking the first address's city.
+The first version's "all" figure for IPv6 /40 (99.0% city) was one filler row's address space read as Murten.
+Where rows disagree, the lookup abstains to the region or country instead of taking the first address's city.
 
 ### What first-address lookup would have cost (the first version), measured on the pinned file
 

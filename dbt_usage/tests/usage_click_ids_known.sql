@@ -1,6 +1,7 @@
 -- The relationships check (warn): every click-out's roaster_id, and coffee_id when there is one, is in the served
--- release the build was given (stg_usage_catalog). Skipped when the build has no release. The collector checks an
--- id's shape only, never against a release, so this is the only check. Warn, not error: a click on a coffee the
+-- release the build was given (stg_usage_catalog). Skipped when the build has no release. The collector takes an id
+-- as free text, never checked against a release; int_usage_events reports one that isn't there as '(unknown)', and
+-- this counts them (the raw ids, from staging; only the kind and the count are returned). Warn, not error: a click on a coffee the
 -- page showed from an older release is real, and the numbers are directional (design section 4). A singular test
 -- rather than dbt's relationships, because it must check only when a release is there.
 {{ config(severity='warn') }}
@@ -9,10 +10,10 @@ with catalog as (
 ),
 
 clicks as (
-    select 'roaster' as kind, roaster_id as id from {{ ref('int_usage_events') }}
+    select 'roaster' as kind, roaster_id as id from {{ ref('stg_usage_events') }}
     where event = 'click_out' and roaster_id is not null
     union all
-    select 'coffee', coffee_id from {{ ref('int_usage_events') }}
+    select 'coffee', coffee_id from {{ ref('stg_usage_events') }}
     where event = 'click_out' and coffee_id is not null
 )
 
