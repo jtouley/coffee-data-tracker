@@ -605,7 +605,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:A', 'A', 'kA', [{'variant_id': 'a1', 'title': '1/2 lb', 'price_usd': 10.0, 'grams': 907, 'available': true},
                                   {'variant_id': 'a2', 'title': '5-lb-bag', 'price_usd': 70.0, 'grams': null, 'available': true}]),
               ('r:B', 'B', 'kB', [{'variant_id': 'b1', 'title': '12 oz', 'price_usd': 17.0, 'grams': 340, 'available': true}])
@@ -657,7 +657,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
+          select null::varchar as decision, coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, coffee_id as input_hash, 'b' as body_hash,
                  coffee_id as grams_key,
@@ -739,7 +739,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+          select null::varchar as decision, coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
                  date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
                  'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
                  coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
@@ -896,7 +896,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
+          select null::varchar as decision, 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
                  'r:F1' as grams_key,

@@ -42,7 +42,8 @@ attrs as (
         if(e.roaster_id is null, p.is_blend, e.is_blend) as is_blend,
         if(e.roaster_id is null, p.is_decaf, e.is_decaf) as is_decaf,
         if(e.roaster_id is null, 'rules', 'llm') as enrichment_method,
-        not p.needs_llm as rules_complete
+        -- false, not null, for one the owner included that the rules call not coffee: they extracted nothing
+        coalesce(not p.needs_llm, false) as rules_complete
     from latest l
     join {{ ref('stg_products') }} p using (input_hash)
     left join llm e using (roaster_id, product_id, body_hash)

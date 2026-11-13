@@ -694,7 +694,7 @@ models:
       - name: rules_complete
         description: >-
           The rules alone describe the coffee completely (stg_products.needs_llm is false), whether or not Claude
-          has reached it. prod-health's abstain:enrichment is the share of listed coffees where this is false, and
+          has reached it. False for a coffee the owner included that the rules call not coffee (no rules extraction). prod-health's abstain:enrichment is the share of listed coffees where this is false, and
           coverage:enrichment the share of those with a Claude row (enrichment_method = llm).
         data_tests: [not_null]
       - name: classified_by
