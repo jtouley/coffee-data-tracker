@@ -12,8 +12,8 @@
 # cadence (above 7 days: a missed week; above 14: two).
 # `flagged`: history values outside their own warning band, possible regressions to look at.
 # The crawl success SLO (rule crawl-slo, #96; docs/TRIAGE.md): fixed bounds, warnings only. met is 1 when
-# the run fetched more than dbt's crawl_slo_target (0.99) of the known roasters; burn_rate above 4: one run
-# spent a whole window's error budget; budget_remaining below 0: the window is overspent. `report_only`:
+# the run fetched more than dbt's crawl_slo_target of the known roasters; burn_rate above 4: one run
+# spent about a whole window's budget; budget_remaining below 0: the window is overspent. `report_only`:
 # listed in an alert another metric of its rule opened, never opening one itself (the per-platform met).
 version = 2
 revision = "2026-11-12"

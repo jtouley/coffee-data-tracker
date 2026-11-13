@@ -159,6 +159,10 @@ def record_build(
         metrics = con.execute("select metric, value from mart_build_profile").fetchall() if con else []
     except duckdb.Error:
         metrics = []
+    try:  # the crawl success SLO (#96): report only, built after the gate, so absent when its step failed
+        metrics += con.execute("select metric, value from mart_crawl_slo_profile").fetchall() if con else []
+    except duckdb.Error as e:
+        log.warning("build %s: no crawl success SLO recorded: %s", build_id, e)
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
     rows += [base | h for h in hashes]
     # The release notes: how many rows of each public table this build adds, removes or changes against the

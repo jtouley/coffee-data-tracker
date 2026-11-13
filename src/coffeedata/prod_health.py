@@ -34,7 +34,9 @@ import tomllib
 from collections.abc import Iterable
 from datetime import UTC, date, datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, get_args
+
+from .models import Platform
 
 log = logging.getLogger("coffeedata.prod_health")
 
@@ -95,22 +97,19 @@ MEDIANS = {
 # mart_build_profile metrics reused from the builds table (shares; low is bad).
 BUILD_SHARES = ("run_ok_share", "run_catalog_ok_share")
 BUILD_PREFIXES = ("adapter_ok_share:",)
-# The crawl success SLO (#96), computed by dbt (mart_crawl_slo, recorded through mart_build_profile): judged on
+# The crawl success SLO (#96), computed by dbt (mart_crawl_slo, recorded through mart_crawl_slo_profile): judged on
 # fixed bounds, warnings only. The target itself lives in dbt (var crawl_slo_target): crawl_slo_met is 1 when the
 # run's share is above it. Per platform, crawl_slo_met:<platform> only reports (report_only): it names the
 # platforms below the target in an alert the overall SLO opened, and never opens one itself.
 SLO_METRICS = ("crawl_slo_met", "crawl_slo_burn_rate", "crawl_slo_budget_remaining")
 SLO_PLATFORM_PREFIX = "crawl_slo_met:"
-SLO_PLATFORMS = (
-    "generic",
-    "shopify",
-    "square_online",
-    "squarespace",
-    "woocommerce",
-)  # models.Roaster.adapter
-# A run that burns error budget this many times faster than the target allows spends a whole window's budget by
-# itself: dbt's crawl_slo_window_runs (tests/test_crawl_slo.py checks the two agree).
+SLO_PLATFORMS = tuple(
+    sorted(get_args(Platform))
+)  # the connectors (models.Platform), as dbt's adapters name them
+# A run that burns error budget this many times faster than the target allows spends about a whole window's budget
+# by itself: dbt's crawl_slo_window_runs (tests/test_crawl_slo.py checks the two agree).
 SLO_FAST_BURN = 4.0
+SLO_RULE = "crawl-slo"
 SLO_REPORTED = "build:" + SLO_PLATFORM_PREFIX
 SLO_BOUNDS: dict[str, dict[str, Any]] = {
     "build:crawl_slo_met": {"warning_below": 1.0},
@@ -330,6 +329,17 @@ def load_config(path: Path = CONFIG) -> dict[str, Any]:
     cfg = tomllib.loads(path.read_text())
     if cfg.get("version") != 2:
         raise SystemExit(f"{path}: unsupported config version {cfg.get('version')!r}")
+    for m in cfg.get("metric", []):
+        # report_only keeps a breach from opening or holding an issue. It is safe only on a warning that another
+        # metric of its rule can raise: never on a required metric (its "not measured" warning would go silent),
+        # never with a critical bound, and only in the crawl success SLO's rule, whose overall metrics alert.
+        if m.get("report_only") and (
+            m.get("required") or any(k.startswith("critical_") for k in m) or m.get("rule") != SLO_RULE
+        ):
+            raise SystemExit(
+                f"{path}: metric {m.get('name')!r} can't be report_only: only a warning-only, unrequired metric "
+                f"of rule {SLO_RULE!r} can"
+            )
     return cfg
 
 
@@ -539,7 +549,7 @@ def _rule_of(name: str) -> str:
     if name.startswith("build:test:") or name == "build:passed":
         return "build-tests"
     if name.startswith("build:crawl_slo_"):
-        return "crawl-slo"
+        return SLO_RULE
     if kind == "build":
         return "fetch"
     return kind
@@ -651,9 +661,9 @@ def baseline(
         f"# cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; above {CADENCE_DAYS['critical']:g}: two).",
         "# `flagged`: history values outside their own warning band, possible regressions to look at.",
         "# The crawl success SLO (rule crawl-slo, #96; docs/TRIAGE.md): fixed bounds, warnings only. met is 1 when",
-        "# the run fetched more than dbt's crawl_slo_target (0.99) of the known roasters; burn_rate above "
+        "# the run fetched more than dbt's crawl_slo_target of the known roasters; burn_rate above "
         f"{SLO_FAST_BURN:g}: one run",
-        "# spent a whole window's error budget; budget_remaining below 0: the window is overspent. `report_only`:",
+        "# spent about a whole window's budget; budget_remaining below 0: the window is overspent. `report_only`:",
         "# listed in an alert another metric of its rule opened, never opening one itself (the per-platform met).",
         "version = 2",
         f'revision = "{computed}"',

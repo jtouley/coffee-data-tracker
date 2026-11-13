@@ -24,11 +24,6 @@
 --       with fewer products (a challenge page, a truncated listing) shows as a drop below 1.
 --     adapter_same_store_priced:<adapter>: the same ratio for products with a priced variant: a price wipe on one
 --       platform. Both ratios leave out roasters whose fetch failed (the ok shares count those).
---   crawl_slo_*: the crawl success SLO for this build's run (mart_crawl_slo's row for it, #96; a benchmark, banded
---     and gated by nothing, and recorded only for the production health check to read: no build reads it back).
---     crawl_slo_roasters[:<adapter>] and crawl_slo_ok[:<adapter>] are the counts; crawl_slo_share[:<adapter>] and
---     crawl_slo_met[:<adapter>] (1: above the target) the share; crawl_slo_burn_rate, crawl_slo_budget_remaining
---     and crawl_slo_window_runs the error budget over the window that ends at this run.
 --   accepted_volume_change (1: this build was let through with --accept-volume-change) and accepted_overrides
 --     (accept overrides in the lake when it was built): where the bands' history starts again.
 with q as (select * from {{ ref('stg_run_quality') }}),
@@ -108,13 +103,3 @@ select 'accepted_volume_change', {{ 1 if var('accept_volume_change') else 0 }}::
 union all
 select 'accepted_overrides', count(*)::double from {{ lake('run_overrides') }}
 where roaster_id is not null and action = 'accept'
-union all
-select 'crawl_slo_' || m.name || case when s.platform = 'all' then '' else ':' || s.platform end, m.value
-from {{ ref('mart_crawl_slo') }} s
-cross join lateral (values
-    ('roasters', s.roasters::double, true), ('ok', s.ok::double, true), ('share', s.sli, true),
-    ('met', s.met::int::double, true), ('burn_rate', s.burn_rate, false),
-    ('budget_remaining', s.budget_remaining, false), ('window_runs', s.window_runs::double, false)
-) m(name, value, per_platform)
-where s.run_date = (select max(run_date) from {{ ref('run_completeness') }})
-  and (m.per_platform or s.platform = 'all')
