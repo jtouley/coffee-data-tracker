@@ -12,6 +12,9 @@ Every pipeline step *adds* files and never rewrites another run's files:
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
     equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
     bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
+    ratings/<rating_id>__<time>.parquet                   one file per coffee rating (or correction, or undo)
+    rec_responses/<user_id>__<slate_id>__<h>__<time>.parquet  one file per answer to a suggested coffee (h: the
+                                                          coffee_id's hash, since a catalog id isn't a file name)
     run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
     serving_log/serve_id=<id>.parquet                     one row per serve or rollback of a release
 
@@ -424,6 +427,29 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("deleted", pa.bool_()),
         ]
     ),
+    # The recommendation experiment's records: personal data, private marts only, never public.
+    "ratings": pa.schema(
+        [
+            ("rating_id", pa.string()),
+            ("user_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("coffee_id", pa.string()),
+            ("rating", pa.int32()),  # 1-5
+            ("drank_as", pa.string()),  # espresso, filter, milk; null when not said
+            ("context", pa.string()),  # seed, picks or later
+            ("deleted", pa.bool_()),  # an undo: true retracts the rating
+        ]
+    ),
+    "rec_responses": pa.schema(
+        [
+            ("user_id", pa.string()),
+            ("slate_id", pa.string()),
+            ("coffee_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("interest", pa.string()),  # want, maybe, no; null when only the pick is answered so far
+            ("picked", pa.bool_()),  # the one they'd buy next: at most one per slate in the latest records
+        ]
+    ),
     "photos": pa.schema(
         [
             ("photo_id", pa.string()),
@@ -489,6 +515,11 @@ SCHEMAS["consents"] = pa.schema(
         ("insights", pa.bool_()),
         ("insights_at", pa.timestamp("s", tz="UTC")),
         ("insights_version", pa.string()),
+        # The "Your next bag" test: whether this member joined it, when, and which wording of the consent they saw.
+        # Null where it was never asked; false once they leave it. Their ratings and answers are kept only with true.
+        ("experiment", pa.bool_()),
+        ("experiment_at", pa.timestamp("s", tz="UTC")),
+        ("experiment_version", pa.string()),
     ]
 )
 # Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
@@ -550,6 +581,8 @@ GLOBS = {
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
+    "ratings": "ratings/*.parquet",
+    "rec_responses": "rec_responses/*.parquet",
     "photos": "photos/*.parquet",
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
@@ -578,6 +611,8 @@ SCHEMA_FILES = {
     "shots": "shots/shot_id=schema-v2.parquet",
     "equipment": "equipment/equipment_id=schema.parquet",
     "bags": "bags/bag_id=schema.parquet",
+    "ratings": "ratings/rating_id=schema.parquet",
+    "rec_responses": "rec_responses/user_id=schema.parquet",
     "photos": "photos/photo_id=schema.parquet",
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
@@ -792,21 +827,24 @@ class Lake:
         files = ", ".join(f"'{s}'" for s in self.sources(table))
         return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
 
-    def latest(self, table: str, key: str, attempts: int = 1) -> list[dict]:
-        """The latest record per key (by logged_at): corrections are new records, so this is current state.
+    def latest(self, table: str, key: str | tuple[str, ...], attempts: int = 1) -> list[dict]:
+        """The latest record per key (by logged_at): corrections are new records, so this is current state. A key
+        of several columns (rec_responses: user, slate and coffee) takes the latest per combination.
 
         A remote lake made before a table existed has no folder for it until the next publish adds the schema
         file; until then the table is read from staging alone rather than failing. Any other failed read (a 429,
         a timeout) is tried `attempts` times in all, 2, 4 … seconds apart, before it's raised."""
-        sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
+        keys = (key,) if isinstance(key, str) else key
+        present = " and ".join(f"{k} is not null" for k in keys)
+        sql = f"select * from {{}} where {present} qualify row_number() over (partition by {', '.join(keys)} order by logged_at desc) = 1"
         for attempt in range(attempts):
             try:
-                cur = self.connect().execute(sql.format(self.scan(table), key, key))
+                cur = self.connect().execute(sql.format(self.scan(table)))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
                 if self.remote and no_files(e):
                     local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
-                    cur = self.connect().execute(sql.format(local, key, key))
+                    cur = self.connect().execute(sql.format(local))
                     break
                 if attempt == attempts - 1:
                     raise

@@ -1,6 +1,6 @@
 """Deleting one person's data from the datasets (`coffeedata delete-user`), for a deletion request.
 
-Their shots, bags and equipment (main lake), photos (photo dataset), and account and invites (users dataset) are
+Their shots, bags, equipment, coffee ratings and answers to their picks (main lake), photos (photo dataset), and account and invites (users dataset) are
 removed, every version of each record: one commit per dataset on Hugging Face, or the files themselves in a local
 lake. The private marts that carry their rows (fct_shot, mart_bag) are rewritten without them in the same commit,
 so the app can't load them back from the export on its next start. The account must be turned off in the app
@@ -23,8 +23,10 @@ log = logging.getLogger(__name__)
 # Per dataset: (table, its key, columns that name the person). Every file of a record goes once any version of it
 # names the person: an invite's first version has no `used_by`, and keeping it would make the invite usable again.
 Tables = list[tuple[str, str, tuple[str, ...]]]
+# rec_responses has no single id: every row names its user, so the user is the key.
 MAIN: Tables = [("shots", "shot_id", ("user_id",)), ("bags", "bag_id", ("user_id",)),
-                ("equipment", "equipment_id", ("user_id",))]  # fmt: skip
+                ("equipment", "equipment_id", ("user_id",)), ("ratings", "rating_id", ("user_id",)),
+                ("rec_responses", "user_id", ("user_id",))]  # fmt: skip
 PHOTOS: Tables = [("photos", "photo_id", ("user_id",))]
 USERS: Tables = [("users", "user_id", ("user_id",)), ("invites", "invite_id", ("for_user_id", "used_by")),
                  ("consents", "user_id", ("user_id",)), ("contacts", "user_id", ("user_id",))]  # fmt: skip

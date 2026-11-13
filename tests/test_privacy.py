@@ -12,7 +12,7 @@ import pytest
 
 from app import labels
 from coffeedata import erase
-from coffeedata.lake import PHOTO_TABLES, USER_TABLES, Lake
+from coffeedata.lake import LAKE_TABLES, PHOTO_TABLES, USER_TABLES, Lake
 
 from .test_bags import LABEL, FakeClient
 from .test_invites import PW, W, accounts, app, client, invite, join, owner  # noqa: F401 - fixtures
@@ -119,6 +119,14 @@ def three(tmp_path):
             [{"bag_id": f"b-{uid}", "user_id": uid, "logged_at": t}],
         )
         photos.write("photos", f"photos/p-{uid}.parquet", [{"photo_id": f"p-{uid}", "user_id": uid}])
+        # The recommendation test's records (invented coffee): a rating with its undo, and an answer to a pick.
+        for at, deleted in ((t, False), (later, True)):
+            main.write("ratings", f"ratings/r-{uid}__{at:%Y%m%dT%H%M%S}.parquet",
+                       [{"rating_id": f"r-{uid}", "user_id": uid, "coffee_id": "roaster.example:1", "rating": 4,
+                         "context": "seed", "deleted": deleted, "logged_at": at}])  # fmt: skip
+        main.write("rec_responses", f"rec_responses/{uid}__slate-1__h__20261020T070000.parquet",
+                   [{"user_id": uid, "slate_id": "slate-1", "coffee_id": "roaster.example:1", "interest": "want",
+                     "picked": True, "logged_at": t}])  # fmt: skip
     # Maya's account is turned off in the app before her data is deleted.
     users.write("users", "users/u-maya__20261021T070000.parquet",
                 [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": True, "logged_at": later}])  # fmt: skip
@@ -145,14 +153,20 @@ def test_delete_user_removes_every_version_of_their_records_and_nobody_elses(thr
     p = erase.plan("Maya", main, photos, users)
     assert p.user_id == "u-maya" and p.marts == ["fct_shot"]
     assert p.files == {
-        main.url: ["bags/b-u-maya__20261020T070000.parquet", "shots/s-u-maya__20261020T070000.parquet"],
+        main.url: ["bags/b-u-maya__20261020T070000.parquet", "ratings/r-u-maya__20261020T070000.parquet",
+                   "ratings/r-u-maya__20261021T070000.parquet",
+                   "rec_responses/u-maya__slate-1__h__20261020T070000.parquet",
+                   "shots/s-u-maya__20261020T070000.parquet"],
         photos.url: ["photos/p-u-maya.parquet"],
         users.url: ["invites/i1__20261020T070000.parquet", "invites/i1__20261021T070000.parquet",
                     "users/u-maya__20261020T070000.parquet", "users/u-maya__20261021T070000.parquet"],
     }  # fmt: skip
     erase.apply(p, main, photos, users)
     left = every_value(main) + every_value(photos) + every_value(users)
-    assert "u-maya" not in left and "s-owner" in left and "p-owner" in left
+    assert "u-maya" not in left and "s-owner" in left and "p-owner" in left and "r-owner" in left
+    assert [r["user_id"] for r in main.latest("rec_responses", ("user_id", "slate_id", "coffee_id"))] == [
+        "owner"
+    ]
     assert not any(
         i["invite_id"] == "i1" for i in users.latest("invites", "invite_id")
     )  # the invite can't come back
@@ -195,3 +209,57 @@ def test_delete_user_dry_run_deletes_nothing(three, monkeypatch, capsys):
     cli.main(["delete-user", "maya", "--dry-run"])
     out = capsys.readouterr().out
     assert "Dry run" in out and "marts/fct_shot.parquet" in out and "u-maya" in every_value(main)
+
+
+# 7. The recommendation test's ratings and answers are private: no public output is built from them.
+
+RECS_TABLES = ("ratings", "rec_responses")
+_LAKE = re.compile(r"""\blake\(\s*['"](\w+)['"]\s*\)""")
+_REF = re.compile(r"""\bref\(\s*['"](\w+)['"]\s*\)""")
+
+
+def recs_descendants(models: dict[str, str]) -> set[str]:
+    """Every dbt model (name -> its SQL or Python) that reads ratings or rec_responses, directly or through other
+    models, or sits in models/recs/ (its name given as recs/<name>)."""
+    tainted = {n.split("/")[-1] for n, src in models.items()
+               if n.startswith("recs/") or set(_LAKE.findall(src)) & set(RECS_TABLES)}  # fmt: skip
+    refs = {n.split("/")[-1]: set(_REF.findall(src)) for n, src in models.items()}
+    while grown := {n for n, r in refs.items() if r & tainted and n not in tainted}:
+        tainted |= grown
+    return tainted
+
+
+def dbt_models() -> dict[str, str]:
+    root = ROOT / "dbt" / "models"
+    return {
+        ("recs/" if "recs" in p.relative_to(root).parts else "") + p.stem: p.read_text()
+        for p in [*root.rglob("*.sql"), *root.rglob("*.py")]
+    }
+
+
+def test_no_public_served_or_snowflake_table_is_built_from_ratings_or_answers():
+    from coffeedata import public, quality
+
+    outputs = set(public.PUBLIC_TABLES) | set(quality.RELEASE_TABLES) | set(quality.SERVED_MARTS)
+    models = dbt_models()
+    assert outputs <= set(models)  # the names are real models, so the check below can't pass by a typo
+    assert not recs_descendants(models) & outputs
+    # The check does catch one: a public table that reads them, directly or through a staging model.
+    fake = {"stg_ratings": "select * from {{ lake('ratings') }}",
+            "public_coffee": "select * from {{ ref('stg_ratings') }}", "recs/mart_rec_slate": "select 1",
+            "public_roaster": "select * from {{ ref('mart_rec_slate') }}"}  # fmt: skip
+    assert recs_descendants(fake) == {"stg_ratings", "public_coffee", "mart_rec_slate", "public_roaster"}
+
+
+def test_the_public_exports_and_the_site_never_name_ratings_or_answers():
+    # Snowflake loads public.PUBLIC_TABLES; the site and the public dataset are built from the release tables.
+    for f in ("public.py", "snowflake_load.py", "site.py", "sitemap.py", "quality.py", "mcp_server.py"):
+        text = (ROOT / "src/coffeedata" / f).read_text()
+        assert not re.search(r"\b(ratings|rec_responses|mart_rec_\w+|rating_id|slate_id)\b", text), f
+    for t in RECS_TABLES:  # they live in the private main lake, beside shots
+        assert t in LAKE_TABLES
+
+
+def test_the_public_tables_guardrail_names_the_rating_column():
+    guard = (ROOT / "dbt/tests/public_tables_are_facts_only.sql").read_text()
+    assert "rating" in guard and "user_id" in guard

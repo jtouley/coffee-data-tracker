@@ -1330,7 +1330,11 @@ def main(argv: list[str] | None = None) -> None:
     s.add_argument("--json", help="shot fields as JSON (add)")
     s.add_argument("--file", help="issue body file (from-issue); default stdin")
 
-    du = add("delete-user", cmd_delete_user, "delete one person's shots, bags, gear, photos and account")
+    du = add(
+        "delete-user",
+        cmd_delete_user,
+        "delete one person's shots, bags, gear, ratings, answers to their picks, photos and account",
+    )
     du.add_argument("username")
     du.add_argument("--dry-run", action="store_true", help="list the files, delete nothing")
     du.add_argument(

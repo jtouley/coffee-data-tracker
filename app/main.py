@@ -49,7 +49,8 @@ from .auth import (
     hosted,
     missing_secrets,
 )
-from .store import Invalid, NotFound, Store, coffee_key
+from .limits import Windows
+from .store import Invalid, NotFound, Store, Unavailable, coffee_key
 
 HERE = Path(__file__).parent
 STARTED = (
@@ -59,6 +60,9 @@ MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
 READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
 PHOTO_MISS_TTL = 300  # seconds an unknown photo id answers 404 without another lookup
 RECENTLY_FINISHED_DAYS = 30  # a correction can move a shot to a bag finished this recently
+# Coffee ratings and answers to the picks, together, per account per hour. The test needs about a dozen in all; a
+# record that was already stored (a resend) isn't counted. In memory, like the other limits (app/limits.py).
+RECS_PER_HOUR = 60
 log = logging.getLogger(__name__)
 
 
@@ -1219,6 +1223,8 @@ def create_app(
             raise HTTPException(404, "not found") from None
         except Invalid as e:
             raise HTTPException(422, str(e)) from None
+        except Unavailable as e:
+            raise HTTPException(503, str(e)) from None
 
     @app.post("/api/shots")
     def post_shot(body: dict, me: OutboxWriter) -> dict:
@@ -1236,6 +1242,58 @@ def create_app(
     @app.post("/api/equipment")
     def post_equipment(body: dict, me: OutboxWriter) -> dict:
         return {"equipment_id": run(store.save_equipment, me.user_id, body).equipment_id}
+
+    # --- the "Your next bag" recommendation test: coffee ratings and answers to the picks -----------------------
+
+    rec_windows = Windows()
+
+    def in_test(me: User) -> None:
+        """Ratings and answers are kept only for members who joined the test (an `experiment` consent). Without
+        accounts (local development) there's no one else to ask."""
+        if sessions is not None and not sessions.accounts.experiment(me.user_id):
+            raise HTTPException(409, "Join the “Your next bag” test first. Nothing was saved.")
+
+    def counted(me: User, fn: Any, *args: Any) -> tuple[Any, bool]:
+        """Run a write under the per-account limit. Over it: 429, which the phone's outbox keeps and sends again."""
+        key, at = f"recs:{me.user_id}", time.monotonic()
+        if not rec_windows.take({key: (RECS_PER_HOUR, 3600)}, at):
+            raise HTTPException(
+                429, "Too many saves for now. They’re kept on this phone and sent again later."
+            )
+        try:
+            item, written = run(fn, me.user_id, *args)
+        except BaseException:
+            rec_windows.refund(key, at)
+            raise
+        if not written:
+            rec_windows.refund(key, at)
+        return item, written
+
+    @app.post("/api/experiment")
+    def post_experiment(body: dict, me: Writer) -> dict:
+        """Join or leave the test. Leaving stops new ratings and answers; deleting them is a deletion request."""
+        s = accounts_only()
+        if not isinstance(body.get("experiment"), bool):
+            raise HTTPException(422, "experiment must be true or false")
+        s.accounts.set_experiment(me.user_id, body["experiment"])
+        return {"experiment": body["experiment"]}
+
+    @app.post("/api/ratings")
+    def post_rating(body: dict, me: OutboxWriter) -> dict:
+        in_test(me)
+        rating, written = counted(me, store.save_rating, body)
+        return {"rating_id": rating.rating_id, "written": written}
+
+    @app.post("/api/ratings/{rating_id}/retract")
+    def retract_rating(rating_id: str, me: OutboxWriter) -> dict:
+        # Undo works after leaving the test too: it only takes a rating back.
+        return {"rating_id": rating_id, "written": run(store.retract_rating, me.user_id, rating_id)}
+
+    @app.post("/api/rec-responses")
+    def post_rec_response(body: dict, me: OutboxWriter) -> dict:
+        in_test(me)
+        item, written = counted(me, store.save_rec_response, body)
+        return {"slate_id": item.slate_id, "coffee_id": item.coffee_id, "written": written}
 
     photo_lake = photos_lake or Lake.photos()
     reads_today: dict[

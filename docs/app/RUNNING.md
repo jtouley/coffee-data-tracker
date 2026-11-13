@@ -372,9 +372,9 @@ The privacy policy promises deletion within 30 days of a request.
    don't turn the account back on. Don't run `delete-user` while the weekly job is running: it rewrites the
    same exports.
 
-It removes every version of that person's shots, bags, equipment, photos, account and invites, and rewrites the
-private exports that carry their rows (`marts/fct_shot.parquet`, `marts/mart_bag.parquet`) without them, so the app
-can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
+It removes every version of that person's shots, bags, equipment, coffee ratings, answers to their picks, photos,
+account and invites, and rewrites the private exports that carry their rows (`marts/fct_shot.parquet`,
+`marts/mart_bag.parquet`) without them, so the app can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
 isn't turned off (`--force` skips that check when the app isn't running). The main and photo datasets' version
 history still holds the old commits, as the policy says. The users dataset's history is squashed afterwards, so the
 person's email (sealed) goes from its history too.
