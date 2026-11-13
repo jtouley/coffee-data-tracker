@@ -227,7 +227,8 @@ def parse_source(e: Event) -> dict[str, str | None]:
 
 def is_bot(user_agent: str | None, webdriver: bool) -> bool:
     """A known bot's user agent, none at all, or a page driven by automation (navigator.webdriver)."""
-    return webdriver or not (user_agent or "").strip() or bool(BOT_AGENT.search(user_agent.strip()))
+    agent = user_agent.strip() if user_agent is not None else ""
+    return webdriver or not agent or bool(BOT_AGENT.search(agent))
 
 
 def hour(now: datetime) -> datetime:

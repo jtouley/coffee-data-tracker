@@ -373,6 +373,7 @@ def create_app(collector: Collector | None = None) -> Callable:
             c = get()
             headers = {k.decode("latin-1").lower(): v.decode("latin-1") for k, v in scope["headers"]}
             declared = headers.get("content-length", "")
+            cut: str | None  # why the body was cut short: too_large, aborted, or None (read whole)
             if declared.isdigit() and int(declared) > MAX_BODY:
                 body, cut = b"", "too_large"  # not read at all
             else:
