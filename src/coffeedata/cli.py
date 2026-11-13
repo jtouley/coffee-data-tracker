@@ -1204,7 +1204,9 @@ def main(argv: list[str] | None = None) -> None:
     ew.add_argument("--limit", type=int, default=2000)
     ew.add_argument("--submit", action="store_true", help="send to Claude (spends); without it, only count")
     add(
-        "egress-check", cmd_egress_check, "flag egress IPs refused on >8% of first contacts two runs in a row"
+        "egress-check",
+        cmd_egress_check,
+        "flag egress IPs refused on >8%% of first contacts two runs in a row",
     )
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
