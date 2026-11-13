@@ -1462,3 +1462,41 @@ staging bucket holds one week of raw/ and the last 30 days of merged partitions 
 raw rows, a few GB at most (cents a month). With the app (inside Cloud Run's free tier), about
 $9–14/month in all with the second IP. The monthly budget (`budget_usd`) stays $20, so its first email (50%, $10)
 now falls inside the estimate: raise `budget_usd` if that email is noise. Alert policies cost nothing.
+
+## 9. Terraform in GitHub: reading the plan comment
+
+A pull request that touches `src/terraform/**` (or the guard script, or the workflow) runs
+`.github/workflows/terraform-plan.yml`: init, validate and plan as the read-only plan identity, then the guards
+(`scripts/tf_plan_guard.py`), then one comment on the PR, **Terraform plan**, updated in place on every push. It
+also runs on main. It never applies anything, and the PR's plan is advisory: the plan that is applied is made again
+on main.
+
+The settings that used to live only in `terraform.tfvars` are in `src/terraform/ci.auto.tfvars`, checked in and
+reviewed like code. Only `billing_account` and `owner_email` stay private: the repository secrets
+`TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL` in CI, `terraform.tfvars` in your shell. `*.auto.tfvars` wins over
+`terraform.tfvars`, so a value set in both comes from the checked-in file. To pin a new ingest image, change
+`ingest_image` there in a one-line PR.
+
+The comment has three parts:
+- **Guards**, `pass` or `FAIL` each, with the addresses that broke a failed one:
+  - `no-delete-or-replace`: no action contains `delete`, so nothing is destroyed or replaced;
+  - `shopify-network-path`: Shopify's subnet and IP, the network and the router are untouched, and Shopify's NAT
+    changes only its port and logging settings, never its router, IPs, allocation or subnets;
+  - `shopify-jobs-network`: `crawl-shopify` and `crawl-retry` keep their `vpc_access`;
+  - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by
+    `@sha256:` digest, and every job's image is a digest.
+- **Changes**: one line per resource, its action and its address. `update` changes it in place, `create` adds it;
+  `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard. Unchanged resources and data
+  reads aren't listed.
+- **Totals**: how many of each action.
+
+There are no attribute values in it on purpose: the repository is public and a plan holds every variable in clear.
+To see what an update changes, run the plan in your shell. If the list can't be made without risking a value (an
+address with unusual characters, or one that contains a variable's value or an egress IP), the comment says "No
+change list" and the check fails; so does a failed plan, which shows only its error headlines in the run's log.
+
+A failed guard fails the check, and the apply refuses the same plan. Change the PR; or, for a delete, a replace or a
+change to Shopify's path that is really meant, make it by hand in Cloud Shell, as before, and run
+`python3 -I scripts/tf_plan_guard.py check plan.json` on the `show -json` output of your plan file to see what it
+breaks. A pull request from a fork gets no plan (it can't sign in), and until the plan identity's repository
+variables are set, the plan is skipped with a notice.
