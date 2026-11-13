@@ -31,6 +31,8 @@ DBT_PROJECT = "dbt_usage"
 DB = "build/usage.duckdb"
 # Where the locked geo files are kept between builds (not committed: build/ is ignored).
 GEO_CACHE = "build/geo"
+# Where dbt's output goes by default: never the console (usage_build.build).
+DBT_LOG = "build/usage-dbt.log"
 # The raw events under the usage dataset's root (design section 0: events/day=YYYY-MM-DD/batch=<id>.parquet).
 EVENTS_GLOB = "events/*/*.parquet"
 PATTERNS = ("email", "phone", "card")
@@ -160,26 +162,53 @@ def build(
     env = {k: v for k, v in os.environ.items() if k not in ("COFFEEDATA_DB", "COFFEEDATA_IMPORTERS_DB")}
     env["COFFEEDATA_USAGE_DB"] = DB
     project = str(PROJECT.resolve())
-    where = ["--target-path", str(target.resolve())] if target else []
+    target = (target or PROJECT / "target").resolve()
+    # dbt's output never goes to the console: a failing query's error can quote a value it read (a search), and CI's
+    # log is public. It goes to a file under build/ (ignored, never uploaded) unless the caller names another.
+    log = log or ROOT / DBT_LOG
+    log.parent.mkdir(parents=True, exist_ok=True)
+    log.write_text("")
     variables = json.dumps(dbt_vars(root, lock, local, catalog, today))
     # Models first, then every test, as the main build does: a failing check (the detector above all) never stops a
     # report from being built. dbt's unit tests check the SQL over hand-written rows, so they run only when asked.
+    # Each step's run_results.json is kept (run_results.<step>.json), so the counts cover both.
     units = [] if unit_tests else ["resource_type:unit_test"]
-    steps = (["build", "--exclude", "resource_type:test", "resource_type:unit_test"],
-             ["test", *(["--exclude", *units] if units else [])])  # fmt: skip
+    steps = (("models", ["build", "--exclude", "resource_type:test", "resource_type:unit_test"]),
+             ("tests", ["test", *(["--exclude", *units] if units else [])]))  # fmt: skip
+    for name in (n for n, _ in steps):
+        (target / f"run_results.{name}.json").unlink(missing_ok=True)
     passed = True
-    if log is not None:
-        log.parent.mkdir(parents=True, exist_ok=True)
-        log.write_text("")
-    for step in steps:
-        cmd = ["dbt", *step, "--project-dir", project, "--profiles-dir", project, *where, "--vars", variables]
-        if log is None:
-            r = subprocess.run(cmd, env=env, cwd=ROOT)
-        else:
-            with log.open("a") as out:
-                r = subprocess.run(cmd, env=env, cwd=ROOT, stdout=out, stderr=subprocess.STDOUT)
+    for name, step in steps:
+        (target / "run_results.json").unlink(missing_ok=True)
+        cmd = ["dbt", *step, "--project-dir", project, "--profiles-dir", project,
+               "--target-path", str(target), "--vars", variables]  # fmt: skip
+        with log.open("a") as out:
+            r = subprocess.run(cmd, env=env, cwd=ROOT, stdout=out, stderr=subprocess.STDOUT)
+        if (target / "run_results.json").exists():
+            (target / "run_results.json").replace(target / f"run_results.{name}.json")
         passed = passed and r.returncode == 0
+        if name == "models" and r.returncode != 0:
+            # never leave a half-built database: the reports and the detector would read it as if it were whole
+            db.unlink(missing_ok=True)
+            db.with_name(db.name + ".wal").unlink(missing_ok=True)
+            break
     return passed
+
+
+def run_counts(target: Path) -> dict[str, dict[str, int]]:
+    """How many of the build's nodes ended in each status, by kind (model, test, unit_test, ...), over both steps'
+    run_results: counts only, never a node's message (a failing query's error can quote a value)."""
+    counts: dict[str, dict[str, int]] = {}
+    for name in ("models", "tests"):
+        try:
+            results = json.loads((target / f"run_results.{name}.json").read_text())["results"]
+        except (OSError, ValueError, KeyError):
+            continue
+        for r in results:
+            kind = str(r.get("unique_id", "")).split(".")[0] or "unknown"
+            counts.setdefault(kind, {}).setdefault(str(r.get("status")), 0)
+            counts[kind][str(r.get("status"))] += 1
+    return counts
 
 
 def detector_counts(db: Path, target: Path) -> list[tuple[str, str, int]]:
@@ -197,9 +226,18 @@ def detector_counts(db: Path, target: Path) -> list[tuple[str, str, int]]:
     return sorted((str(w), str(p), int(n)) for w, p, n in rows)
 
 
-def detector_alert(counts: list[tuple[str, str, int]]) -> dict:
+def detector_alert(counts: list[tuple[str, str, int]] | None) -> dict:
     """The triage alert (coffeedata.triage prod) for the detector's counts: firing when any is above 0. Its checks
     are the three patterns, its summary "N searches in week W matched the <pattern> pattern"; no text, ever."""
+    if counts is None:  # the models didn't build, so the detector never ran: say so, and keep the alert open
+        return {
+            "key": ALERT_KEY, "kind": "prod", "title": "usage: searches that look like personal data",
+            "severity": "warning", "firing": True,
+            "summary": "the usage build failed before the detector could run; nothing was measured",
+            "source": f"{DBT_PROJECT}/tests/{DETECTOR}.sql",
+            "checks": [{"name": "detector ran", "status": "warning"}],
+            "steps": ["Read build/usage-dbt.log on the runner (never paste it anywhere public) and fix the build."],
+        }  # fmt: skip
     lines = [f"{n} searches in week {w} matched the {p} pattern" for w, p, n in counts if n > 0]
     hit = {p for _w, p, n in counts if n > 0}
     return {

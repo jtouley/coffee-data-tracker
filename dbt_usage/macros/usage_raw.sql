@@ -48,10 +48,10 @@ select * from read_parquet([{{ paths | join(', ') }}], union_by_name = true, hiv
 {% macro ip_to_hex(addr) -%}
 case
     when regexp_full_match({{ addr }}, '[0-9]{1,3}(\.[0-9]{1,3}){3}')
-         and list_bool_and(list_transform(string_split({{ addr }}, '.'), lambda x: cast(x as integer) <= 255))
+         and list_bool_and(list_transform(string_split({{ addr }}, '.'), lambda x: try_cast(x as integer) <= 255))
         then '00000000000000000000ffff'
              || array_to_string(list_transform(string_split({{ addr }}, '.'),
-                                               lambda x: lpad(lower(to_hex(cast(x as integer))), 2, '0')), '')
+                                               lambda x: lpad(lower(to_hex(try_cast(x as integer))), 2, '0')), '')
     when regexp_full_match({{ addr }}, '[0-9A-Fa-f:]+') and len(string_split({{ addr }}, '::')) <= 2
         then list_transform([
             case when contains({{ addr }}, '::') then list_concat(

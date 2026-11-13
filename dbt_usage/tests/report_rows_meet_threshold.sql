@@ -80,12 +80,34 @@ context_days as (
     group by m.week, m.roaster_id, m.context_kind, m.context_value
 ),
 
+source_labels as (
+    -- the source a roaster's clicks or a city's facet cell is shown with: the same days as the sources mart
+    select m.week, m.source as value, 'roaster_clicks.source' as report
+    from {{ ref('mart_roaster_clicks_weekly') }} as m
+    where m.source not in ('(rare)', 'not recorded')
+    union
+    select m.week, m.facet_value, 'city_facets.source'
+    from {{ ref('mart_usage_city_facets_weekly') }} as m
+    where m.facet = 'source' and m.facet_value not in ('(rare)', '(other)')
+),
+
+label_days as (
+    select l.week, l.value, l.report,
+        count(distinct e.received_date) as days, {{ var('usage_min_days') }} as need
+    from source_labels as l
+    left join ev as e
+        on e.source = l.value
+        and e.received_date between l.week + 6 - ({{ w }} - 1) and l.week + 6
+    group by all
+),
+
 checked as (
     select * from query_days
     union all select * from place_days
     union all select * from combo_days
     union all select * from source_days
     union all select * from context_days
+    union all select * from label_days
 )
 
 select report, week, days, need from checked where days < need

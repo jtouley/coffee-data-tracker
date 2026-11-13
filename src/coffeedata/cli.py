@@ -1114,21 +1114,29 @@ def cmd_importer_build(args: argparse.Namespace) -> bool:
 def cmd_usage_build(args: argparse.Namespace) -> bool:
     """The usage reports: the private dbt project (dbt_usage/) over $COFFEEDATA_USAGE, read only, into its own
     database, build/usage.duckdb, after checking the geo files config/geo.lock pins. Exits 1 if a model or check
-    failed (the search-text detector included). Prints counts only: dbt's output goes to --log-file when given, and a
-    failing query's error could quote a search. With --alerts-out, writes the detector's triage alert (counts and
-    pattern names, never text) for `python -m coffeedata.triage prod`."""
+    failed (the search-text detector included). Prints counts only: dbt's output goes to --log-file (default
+    build/usage-dbt.log, never the console), since a failing query's error could quote a search. With --alerts-out,
+    writes the detector's triage alert (counts and pattern names, never text; "not measured" when the models didn't
+    build) for `python -m coffeedata.triage prod`."""
     import tempfile
 
-    from . import importers, usage_build
+    import duckdb
+
+    from . import usage_build
 
     catalog = None
     if args.catalog:
         catalog = {t: str((args.catalog / f"{t}.parquet").resolve()) for t in ("dim_roaster", "dim_coffee")}
     with tempfile.TemporaryDirectory() as target:
         ok = usage_build.build(catalog=catalog, today=_today(), target=Path(target), log=args.log_file)
-        counts = importers.run_counts(Path(target))
+        counts = usage_build.run_counts(Path(target))
         db = usage_build.ROOT / usage_build.DB
-        found = usage_build.detector_counts(db, Path(target)) if db.exists() else []
+        found: list | None = None
+        if db.exists():
+            try:
+                found = usage_build.detector_counts(db, Path(target))
+            except (duckdb.Error, ValueError):
+                found = None
     alert = usage_build.detector_alert(found)
     if args.alerts_out:
         args.alerts_out.write_text(json.dumps([alert], indent=1))
@@ -1150,10 +1158,12 @@ def cmd_geo_update(args: argparse.Namespace) -> None:
     named = geo.prepare_cities(args.cities, args.admin1, out / cities)
     entries = {
         geo.DBIP: {"file": dbip, "release": args.dbip_release, "sha256": geo.sha256(out / dbip),
+                   "source": args.dbip_url or geo.DBIP_URL.format(month=args.dbip_release[:7]),
                    "source_sha256": geo.sha256(args.dbip), "licence": "CC BY 4.0",
                    "attribution": "IP Geolocation by DB-IP (https://db-ip.com)"},
         geo.CITIES: {"file": cities, "release": args.cities_release, "sha256": geo.sha256(out / cities),
-                     "source_sha256": geo.sha256(args.cities), "admin1_sha256": geo.sha256(args.admin1),
+                     "source": geo.CITIES_URL, "source_sha256": geo.sha256(args.cities),
+                     "admin1_source": geo.ADMIN1_URL, "admin1_sha256": geo.sha256(args.admin1),
                      "licence": "CC BY 4.0", "attribution": "City populations by GeoNames (https://www.geonames.org)"},
     }  # fmt: skip
     _print({"dbip": measured, "cities": named})
@@ -1454,7 +1464,11 @@ def main(argv: list[str] | None = None) -> None:
         cmd_usage_build,
         "derive the usage reports (private dbt project) from $COFFEEDATA_USAGE into their own private database",
     )
-    ub.add_argument("--log-file", type=Path, help="write dbt's output to this file (CI: its log is public)")
+    ub.add_argument(
+        "--log-file",
+        type=Path,
+        help="where dbt's output goes (default build/usage-dbt.log; never the console)",
+    )
     ub.add_argument(
         "--catalog", type=Path, help="a folder with the served release's dim_roaster/dim_coffee.parquet"
     )
@@ -1462,6 +1476,7 @@ def main(argv: list[str] | None = None) -> None:
     gu = add("geo-update", cmd_geo_update, "prepare a new pinned IP-to-city database and its lock entries")
     gu.add_argument("--dbip", type=Path, required=True, help="DB-IP IP to City Lite CSV download (.csv.gz)")
     gu.add_argument("--dbip-release", required=True, help="its release date, YYYY-MM-DD")
+    gu.add_argument("--dbip-url", help="where it was downloaded (default: DB-IP's free URL for that month)")
     gu.add_argument("--cities", type=Path, required=True, help="GeoNames cities500.zip")
     gu.add_argument("--admin1", type=Path, required=True, help="GeoNames admin1CodesASCII.txt")
     gu.add_argument("--cities-release", required=True, help="the GeoNames download's date, YYYY-MM-DD")

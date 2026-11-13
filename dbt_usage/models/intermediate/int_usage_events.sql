@@ -31,7 +31,7 @@ select
     -- section 5); null on the load's later events
     e.source as source_kind,
     case
-        when e.source = 'utm' then lower(e.utm_source)
+        when e.source = 'utm' then coalesce(lower(e.utm_source), '(unnamed)')
         when e.source = 'referrer' then coalesce(lower(e.referrer_domain), '(unnamed)')
         else e.source
     end as source,

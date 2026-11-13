@@ -1,28 +1,74 @@
--- One row per event: where its IP prefix is routed, from the pinned DB-IP file (config/geo.lock), and that city's
--- population from the pinned GeoNames file. The only model that reads ip_prefix, and it doesn't pass it on
--- (design section 4). The prefix's network address is looked up (the collector zeroed the host bits): the range
--- holding it, if any. A city with no population row is under 50,000 people or unknown, and is never named.
+-- One row per event: the place its IP prefix's whole block resolves to in the pinned DB-IP file (config/geo.lock),
+-- and that city's population from the pinned GeoNames file. The only model that reads ip_prefix, and it doesn't pass
+-- it on (design section 4).
+--
+-- Consensus, never a guess: the collector keeps only the block (IPv4 /24, IPv6 /40), and a block can hold rows
+-- naming several places. Every row inside the block is read; the block gets the city only if they all name one
+-- city, else the region if they all name one region, else the country if they all name one country, else nothing.
+-- DB-IP's "City (Neighbourhood)" names are cut to the city's name first, so a block split by neighbourhood keeps its
+-- city and the neighbourhood is never shown. Deterministic: a function of the locked file and the prefix.
+-- A city with no population row is under 50,000 people or unknown, and is never named.
 with prefixes as (
-    select event_id, nullif(split_part(trim(ip_prefix), '/', 1), '') as addr
+    select distinct ip_prefix,
+        nullif(split_part(trim(ip_prefix), '/', 1), '') as addr,
+        try_cast(nullif(split_part(trim(ip_prefix), '/', 2), '') as integer) as prefix_len
     from {{ ref('stg_usage_ip_prefixes') }}
+    where ip_prefix is not null
 ),
 
-keyed as (
-    select event_id, {{ ip_to_hex('addr') }} as ip_hex from prefixes
+blocks as (
+    -- the block's first and last address as 32 hex digits. Its length counts in the 128-bit space (IPv4 is
+    -- IPv4-mapped: /24 is /120), rounded down to a whole hex digit, so a length that isn't one widens the block
+    -- (more rows, never fewer).
+    select ip_prefix, start_hex,
+        left(start_hex, keep) || repeat('f', 32 - keep) as end_hex
+    from (
+        select ip_prefix, start_hex,
+            least(32, greatest(0, (coalesce(prefix_len, 0) + if(contains(addr, '.'), 96, 0)) // 4)) as keep
+        from (select ip_prefix, addr, prefix_len, {{ ip_to_hex('addr') }} as start_hex from prefixes) as p
+        where start_hex is not null and prefix_len is not null
+    ) as k
 ),
 
-found as (
-    -- the last range starting at or before the address; it holds the address only if it ends at or after it
-    select k.event_id,
-        case when k.ip_hex <= r.ip_end then r.country end as country,
-        case when k.ip_hex <= r.ip_end then r.region end as region,
-        case when k.ip_hex <= r.ip_end then r.city end as city
-    from keyed as k
-    asof left join {{ ref('stg_geo_ranges') }} as r
-        on k.ip_hex >= r.ip_start
+ranges as (
+    select ip_start, ip_end, country, region,
+        nullif(regexp_replace(city, '\s*\(.*\)\s*$', ''), '') as city
+    from {{ ref('stg_geo_ranges') }}
+),
+
+in_block as (
+    -- the row holding the block's first address, if any ...
+    select b.ip_prefix, r.country, r.region, r.city
+    from blocks as b
+    asof inner join ranges as r on b.start_hex >= r.ip_start
+    where b.start_hex <= r.ip_end
+    union all
+    -- ... and every row starting inside the block after it
+    select b.ip_prefix, r.country, r.region, r.city
+    from blocks as b
+    inner join ranges as r on r.ip_start > b.start_hex and r.ip_start <= b.end_hex
+),
+
+consensus as (
+    select ip_prefix,
+        count(distinct coalesce(country, '')) = 1 and bool_and(country is not null) as one_country,
+        count(distinct coalesce(region, '')) = 1 and bool_and(region is not null) as one_region,
+        count(distinct coalesce(city, '')) = 1 and bool_and(city is not null) as one_city,
+        min(country) as country, min(region) as region, min(city) as city
+    from in_block
+    group by ip_prefix
+),
+
+placed as (
+    select ip_prefix,
+        if(one_country, country, null) as country,
+        if(one_country and one_region, region, null) as region,
+        if(one_country and one_region and one_city, city, null) as city
+    from consensus
 )
 
-select f.event_id, f.country, f.region, f.city, c.population as city_population
-from found as f
+select e.event_id, p.country, p.region, p.city, c.population as city_population
+from {{ ref('stg_usage_ip_prefixes') }} as e
+left join placed as p on p.ip_prefix = e.ip_prefix
 left join {{ ref('stg_geo_cities') }} as c
-    on c.country = f.country and c.region = f.region and c.city = lower(f.city)
+    on c.country = p.country and c.region = p.region and c.city = lower(p.city)

@@ -25,6 +25,7 @@ import gzip
 import hashlib
 import io
 import ipaddress
+import re
 import tomllib
 import zipfile
 from collections.abc import Iterable, Iterator
@@ -40,6 +41,10 @@ DBT_VARS = {DBIP: "geo_db", CITIES: "geo_cities"}
 # Places this size or larger are kept in the city table: the marts never name a smaller one (design section 5).
 MIN_POPULATION = 50_000
 V4_MAPPED = 0xFFFF << 32  # ::ffff:0:0/96
+# Where the downloads come from, recorded in the lock (`coffeedata geo-update`).
+DBIP_URL = "https://download.db-ip.com/free/dbip-city-lite-{month}.csv.gz"
+CITIES_URL = "https://download.geonames.org/export/dump/cities500.zip"
+ADMIN1_URL = "https://download.geonames.org/export/dump/admin1CodesASCII.txt"
 RANGE_SCHEMA = pa.schema(
     [("ip_start", pa.string()), ("ip_end", pa.string()), ("country", pa.string()), ("region", pa.string()),
      ("city", pa.string())]
@@ -105,7 +110,11 @@ def prepare_dbip(csv_gz: Path, out: Path) -> dict:
     )
     out.parent.mkdir(parents=True, exist_ok=True)
     pq.write_table(table, out, **_WRITE)
-    return {"ranges": len(rows), "prefix_accuracy": prefix_accuracy(rows)}
+    return {
+        "ranges": len(rows),
+        "prefix_accuracy": prefix_accuracy(rows),
+        "consensus": consensus_levels(rows),
+    }
 
 
 def prefix_accuracy(rows: list[tuple[int, int, str | None, str | None, str | None]]) -> dict:
@@ -149,6 +158,78 @@ def prefix_accuracy(rows: list[tuple[int, int, str | None, str | None, str | Non
             "addresses_moved_share": round(moved_addresses / total, 6) if total else 0.0,
         }
     return out
+
+
+LEVELS = ("city", "region", "country", "unknown")
+# DB-IP names some places "City (Neighbourhood)"; the lookup keeps the base name only (int_usage_location does the
+# same in SQL), so they match GeoNames and the neighbourhood is never shown.
+_NEIGHBOURHOOD = re.compile(r"\s*\(.*\)\s*$")
+
+
+def base_city(name: str | None) -> str | None:
+    return _NEIGHBOURHOOD.sub("", name) if name else name
+
+
+def _level(places: set[tuple]) -> str:
+    """The most precise level every place in a block agrees on (int_usage_location's rule): city, region, country,
+    else unknown. A place is (country, region, city) with the city's base name."""
+    countries = {p[0] for p in places}
+    if len(countries) != 1 or None in countries:
+        return "unknown"
+    regions = {p[1] for p in places}
+    if len(regions) != 1 or None in regions:
+        return "country"
+    cities = {p[2] for p in places}
+    return "city" if len(cities) == 1 and None not in cities else "region"
+
+
+def consensus_levels(rows: list[tuple[int, int, str | None, str | None, str | None]]) -> dict:
+    """How the masked lookup resolves on this file, for IPv4 /24 and IPv6 /40 (the collector's masks): for every block
+    the file's rows touch, the level all the rows inside it agree on. `shared` counts blocks two or more rows share
+    (where masking can lose precision); `all` adds the blocks one row covers whole, which take that row's level.
+    Shares of blocks, not of traffic. `rows` sorted and disjoint."""
+    out = {}
+    for name, version, bits in (("ipv4_24", 4, 24), ("ipv6_40", 6, 40)):
+        shift = (32 if version == 4 else 128) - bits
+        mask = (1 << shift) - 1
+        partial: dict[int, set] = {}
+        whole = dict.fromkeys(LEVELS, 0)
+        for s, e, country, region, city in rows:
+            if (V4_MAPPED <= s <= V4_MAPPED | 0xFFFFFFFF) != (version == 4):
+                continue
+            lo, hi = (s & 0xFFFFFFFF, e & 0xFFFFFFFF) if version == 4 else (s, e)
+            place = (country, region, base_city(city))
+            first, last = lo >> shift, hi >> shift
+            first_whole = first if lo & mask == 0 else first + 1
+            last_whole = last if hi & mask == mask else last - 1
+            if first_whole <= last_whole:
+                whole[_level({place})] += last_whole - first_whole + 1
+            if lo & mask:
+                partial.setdefault(first, set()).add(place)
+            if hi & mask != mask:
+                partial.setdefault(last, set()).add(place)
+        shared = dict.fromkeys(LEVELS, 0)
+        for places in partial.values():
+            shared[_level(places)] += 1
+        n_shared, n_all = len(partial), len(partial) + sum(whole.values())
+        out[name] = {
+            "shared": {k: round(v / n_shared, 4) if n_shared else 0.0 for k, v in shared.items()},
+            "shared_blocks": n_shared,
+            "all": {k: round((v + whole[k]) / n_all, 4) if n_all else 0.0 for k, v in shared.items()},
+            "all_blocks": n_all,
+        }
+    return out
+
+
+def read_ranges(path: Path) -> list[tuple[int, int, str | None, str | None, str | None]]:
+    """A prepared range table back as sorted (start, end, country, region, city) rows, for measuring."""
+    t = pq.read_table(path).to_pydict()
+    return [
+        (int(a, 16), int(b, 16), c, r, x)
+        for a, b, c, r, x in zip(
+            t["ip_start"], t["ip_end"], t["country"], t["region"], t["city"], strict=True
+        )
+    ]
 
 
 def _admin1(text: str) -> dict[str, str]:
@@ -264,10 +345,33 @@ def locate(lock: dict[str, dict], cache: Path, fetch=None) -> dict[str, Path]:
     return local
 
 
+def block(prefix: str) -> tuple[str, str] | None:
+    """A stored ip_prefix's block as (first, last) 32-hex-digit addresses, the way int_usage_location reads it: the
+    length counted in the 128-bit space and rounded down to a whole hex digit. None for anything else."""
+    try:
+        net = ipaddress.ip_network(prefix.strip(), strict=False)
+    except ValueError:
+        return None
+    keep = (net.prefixlen + (96 if net.version == 4 else 0)) // 4
+    start = to_hex(str(net.network_address))
+    return start, start[:keep] + "f" * (32 - keep)
+
+
+def placed(places: set[tuple]) -> tuple | None:
+    """int_usage_location's consensus over the places of a block's rows: (country, region, city) down to the level
+    they all agree on, None above it."""
+    level = _level(places) if places else "unknown"
+    if level == "unknown":
+        return None
+    country, region, city = next(iter(places))
+    return (country, region if level in ("region", "city") else None, city if level == "city" else None)
+
+
 def changed_events(sources: list[str], old: Path, new: Path) -> int:
-    """How many stored events (bots included) would get another (country, region, city) from `new` than from `old`:
-    the number `coffeedata geo-update` prints for the PR that edits the lock. A report, never stored; the location
-    itself is derived only in dbt (int_usage_location), with the same encoding (to_hex) and the same range rule."""
+    """How many stored events (bots included) would be placed differently by `new` than by `old`: the number
+    `coffeedata geo-update` prints for the PR that edits the lock. A report, never stored; the location itself is
+    derived only in dbt (int_usage_location), and this follows its rule: every row in the prefix's block, the level
+    they all agree on, neighbourhood names cut."""
     import duckdb
 
     if not sources:
@@ -275,29 +379,27 @@ def changed_events(sources: list[str], old: Path, new: Path) -> int:
     paths = ", ".join(f"'{s}'" for s in sources)
     con = duckdb.connect()
     try:
+        if any(s.startswith("hf://") for s in sources):
+            # the private usage dataset: the Hub token from the environment or the local login, never printed
+            con.execute("create secret (type huggingface, provider credential_chain)")
         prefixes = con.execute(
             f"select ip_prefix, count(*) from read_parquet([{paths}], union_by_name = true) "
             "where ip_prefix is not null group by ip_prefix"
         ).fetchall()
-        rows = []
-        for prefix, n in prefixes:
-            try:
-                rows.append((to_hex(prefix.split("/")[0]), n))
-            except ValueError:
-                continue
-        con.execute("create temp table p (ip_hex varchar, n bigint)")
-        con.executemany("insert into p values (?, ?)", rows)
+        blocks = [(span[0], span[1], n) for prefix, n in prefixes if (span := block(prefix))]
+        con.execute("create temp table b (start_hex varchar, end_hex varchar, n bigint)")
+        con.executemany("insert into b values (?, ?, ?)", blocks)
 
-        def place(path: Path) -> str:
-            return (
-                f"select p.ip_hex, p.n, case when p.ip_hex <= r.ip_end then [r.country, r.region, r.city] end as place "
-                f"from p asof left join read_parquet('{path}') as r on p.ip_hex >= r.ip_start"
-            )
+        def places(path: Path) -> dict[str, tuple | None]:
+            found: dict[str, set] = {s: set() for s, _e, _n in blocks}
+            for start, country, region, city in con.execute(
+                f"select b.start_hex, r.country, r.region, r.city from b inner join read_parquet('{path}') as r "
+                "on r.ip_start <= b.end_hex and r.ip_end >= b.start_hex"
+            ).fetchall():
+                found[start].add((country, region, base_city(city) or None))
+            return {s: placed(p) for s, p in found.items()}
 
-        row = con.execute(
-            f"select coalesce(sum(a.n), 0) from ({place(old)}) as a inner join ({place(new)}) as b using (ip_hex) "
-            "where a.place is distinct from b.place"
-        ).fetchone()
-        return int(row[0]) if row else 0  # an aggregate always returns one row; fetchone() is typed Optional
+        a, b = places(old), places(new)
+        return sum(n for s, _e, n in blocks if a[s] != b[s])
     finally:
         con.close()

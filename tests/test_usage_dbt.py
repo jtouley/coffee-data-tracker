@@ -31,12 +31,16 @@ DAYS = 56
 CANARY_IP_PREFIX = "203.0.113.0/24"  # where the collector would have masked 203.0.113.77
 CANARY_TOWN = "Canary Gulch"  # an invented town in the test geo file, too small for the city table
 CANARY_EMAIL = "canary@example.com"
+HARVEST_SEARCHES = ("gesha 2023 2024", "2022 2023 2024 2025", "kenya aa 2024", "decaf 1/2 lb 12 oz 2025")
 
 # The synthetic geo database: ranges as (first, last, country, region, city), and the city table.
 GEO_RANGES = [
     ("192.0.2.0", "192.0.2.255", "US", "Colorado", "Boulder"),
-    ("198.51.100.0", "198.51.100.127", "US", "Colorado", "Denver"),
-    ("198.51.100.128", "198.51.100.255", "US", "Colorado", "Aurora"),
+    ("198.51.100.0", "198.51.100.127", "US", "Colorado", "Denver (Five Points)"),
+    ("198.51.100.128", "198.51.100.255", "US", "Colorado", "Denver"),
+    # a /24 split between two cities: its events are only ever Colorado
+    ("100.64.0.0", "100.64.0.127", "US", "Colorado", "Denver"),
+    ("100.64.0.128", "100.64.0.255", "US", "Colorado", "Aurora"),
     ("203.0.113.0", "203.0.113.255", "US", "Colorado", CANARY_TOWN),
     ("2001:db8::", "2001:db8:ff:ffff:ffff:ffff:ffff:ffff", "US", "Oregon", "Portland"),
 ]
@@ -126,11 +130,27 @@ def synthetic_events() -> list[dict]:
         # a known query on 3 days in week 1: passes at 3
         if i in (0, 1, 2):
             add(d, 15, "search", "198.51.100.0/24", query="  KENYA ", cities=["Denver"], states=["CO"])
+        # Denver on phones, 4 a week: under the cell floor, so the device facet is held back for Denver (else
+        # phone = total - desktop)
+        if d.weekday() in (1, 3):
+            for _ in range(2):
+                add(d, 17, "page_view", "198.51.100.0/24", device="phone")
+        # from the split /24, every day: Colorado, never a city
+        add(d, 18, "page_view", "100.64.0.0/24")
         # bots, every day: never counted
         add(d, 16, "search", "198.51.100.0/24", query="botquery", bot=True)
     # the canary search (and a phone number), once each: the detector fires with counts only
     add(FIRST + timedelta(days=5), 11, "search", CANARY_IP_PREFIX, query=CANARY_EMAIL)
     add(FIRST + timedelta(days=5), 11, "search", CANARY_IP_PREFIX, query="call 303-555-0100")
+    # more phone formats, and a test card number: each counts once
+    for q in ("(303) 555-0199", "+44 20 7946 0958", "303.555.0123", "4111 1111 1111 1111"):
+        add(FIRST + timedelta(days=5), 11, "search", CANARY_IP_PREFIX, query=q)
+    # ordinary searches with numbers in them: harvest years, side by side, are never a phone or a card
+    for q in HARVEST_SEARCHES:
+        add(FIRST + timedelta(days=5), 11, "search", CANARY_IP_PREFIX, query=q)
+    # a referrer seen on one day only
+    add(FIRST + timedelta(days=6), 11, "page_view", "198.51.100.0/24", source="referrer",
+        referrer_domain="once.example")  # fmt: skip
     return out
 
 
@@ -148,6 +168,11 @@ def write_dataset(root: Path, events: list[dict], reverse: bool = False) -> None
     retry = events[:3]
     pq.write_table(
         pa.Table.from_pylist(retry), root / "events" / f"day={FIRST.isoformat()}" / "batch=retry.parquet"
+    )
+    # a copy of the first event received an hour earlier, in a batch of its own: dedup keeps the earliest
+    early = events[0] | {"received_at": events[0]["received_at"] - timedelta(hours=1)}
+    pq.write_table(
+        pa.Table.from_pylist([early]), root / "events" / f"day={FIRST.isoformat()}" / "batch=early.parquet"
     )
 
 
@@ -286,18 +311,41 @@ def test_the_usage_build_on_synthetic_raw(checkout):
     # the detector fails the build (the canary email and the phone number), and nothing else does
     assert not ok
     assert re.search(r"FAIL \d+ search_text_looks_personal", text) or "search_text_looks_personal" in text
-    results = json.loads((target / "run_results.json").read_text())["results"]
+    results = json.loads((target / "run_results.tests.json").read_text())["results"]
     failed = {r["unique_id"].split(".")[-1] for r in results if r["status"] in ("fail", "error")}
     assert failed == {"search_text_looks_personal"}, failed
+    models = json.loads((target / "run_results.models.json").read_text())["results"]
+    assert models and {r["status"] for r in models} == {"success"}
+    counts = usage_build.run_counts(target)
+    assert counts["model"] == {"success": len(usage_build.models())} and counts["test"]["fail"] == 1
     assert CANARY_EMAIL not in text and "303-555-0100" not in text  # dbt's output never shows a search
     con = duckdb.connect(str(db), read_only=True)
     try:
         # dedup: the retried batch adds nothing
         assert con.execute("select count(*) from stg_usage_events").fetchone()[0] == len(synthetic_events())
+        # ... and keeps the earliest copy of an event
+        first = synthetic_events()[0]
+        assert con.execute("select received_at from stg_usage_events where event_id = ?", [first["event_id"]]
+                           ).fetchone()[0] == first["received_at"].replace(tzinfo=None) - timedelta(hours=1)  # fmt: skip
+        # secondary suppression: Denver's device facet (4 phone events a week) is held back whole
+        assert not con.execute(
+            "select count(*) from mart_usage_city_facets_weekly where city = 'Denver' and facet = 'device'"
+        ).fetchone()[0]
+        assert con.execute(
+            "select count(*) from mart_usage_city_facets_weekly where city = 'Denver' and facet = 'surface'"
+        ).fetchone()[0]
         # location: IPv4 /24 and IPv6 /40 prefixes both found
         loc = dict(con.execute(
             "select l.city, count(*) from int_usage_location l group by 1").fetchall())  # fmt: skip
         assert loc["Denver"] > 0 and loc["Portland"] > 0 and loc[CANARY_TOWN] > 0
+        # the split /24 resolves to its region only (consensus), and "Denver (Five Points)" to Denver
+        assert (
+            con.execute(
+                "select count(*) from int_usage_location where region = 'Colorado' and city is null"
+            ).fetchone()[0]
+            == DAYS
+        )
+        assert "Denver (Five Points)" not in loc and "Aurora" not in loc
         # city floors: Denver (every day, 21+ a week) named; Boulder (8 days), Portland (7 events a week, under 20)
         # and the canary town (no population) are not
         cities = {
@@ -347,12 +395,14 @@ def test_the_usage_build_on_synthetic_raw(checkout):
                 assert CANARY_TOWN not in dump and CANARY_EMAIL not in dump, t
     # the detector's counts and the alert's text: counts and patterns only
     counts = usage_build.detector_counts(db, target)
-    assert counts == [("2026-09-07", "email", 1), ("2026-09-07", "phone", 1)]
+    # 4 phone formats, 1 Luhn-valid card, 1 email; the harvest years count as nothing
+    assert counts == [("2026-09-07", "card", 1), ("2026-09-07", "email", 1), ("2026-09-07", "phone", 4)]
     alert = usage_build.detector_alert(counts)
     assert alert["firing"] and alert["summary"] == (
-        "1 searches in week 2026-09-07 matched the email pattern; 1 searches in week 2026-09-07 matched the phone "
-        "pattern"
+        "1 searches in week 2026-09-07 matched the card pattern; 1 searches in week 2026-09-07 matched the email "
+        "pattern; 4 searches in week 2026-09-07 matched the phone pattern"
     )
+    assert not any(q in text for q in HARVEST_SEARCHES[:2])
     from coffeedata import triage
 
     body = triage.render(alert, "now")
@@ -406,6 +456,20 @@ GUARD_BREAKS = {
     # a second facet beside the city
     "no_city_with_query_or_roaster#facet": "update mart_usage_city_facets_weekly set facet = 'query' "
     "where facet = 'device'",
+    # the reviewer's probes: a visitor city under another name beside a roaster
+    "no_city_with_query_or_roaster#place_city": "alter table mart_roaster_clicks_weekly add column place_city varchar",
+    # a referrer seen on one day as a roaster's click source
+    "report_rows_meet_threshold#roaster_source": "update mart_roaster_clicks_weekly set source = 'once.example' "
+    "where week = date '2026-09-07'",
+    # a rare source as a Denver facet cell of 12 events
+    "report_rows_meet_threshold#facet_source": "insert into mart_usage_city_facets_weekly values "
+    "(date '2026-09-14', 'US', 'Colorado', 'Denver', 'source', 'once.example', 12)",
+    # the subtraction case: Denver's desktop cell shown alone (what the first version published) gives phone = 4
+    "cities_meet_floors#subtraction": "insert into mart_usage_city_facets_weekly select week, country, region, city, "
+    "'device', 'desktop', events - 4 from mart_usage_locations_weekly where city = 'Denver'",
+    # a place's page views shown beside a small remainder
+    "cities_meet_floors#page_views": "update mart_usage_locations_weekly set page_views = events - 3 "
+    "where city = 'Denver'",
     # the prefix leaking into a mart
     "ip_prefix_only_in_location": "alter table mart_usage_locations_weekly add column ip_prefix varchar",
 }
@@ -483,7 +547,7 @@ def test_usage_models_never_reach_a_public_model_export_or_share(tmp_path):
     """The lineage test (design section 4): the usage models are a project of their own, so no public_* model,
     served mart, release table, app export or share descends from them. Checked on both projects' manifests: the
     main one has no node, source or macro from the usage project, and the usage one has no public, served or
-    exported name, nothing with access public, and no contract."""
+    exported name and nothing with access public; its marts have enforced contracts (private)."""
     from coffeedata import cli, public, quality
 
     main = _manifest(REPO / "dbt", tmp_path / "main")
@@ -498,7 +562,8 @@ def test_usage_models_never_reach_a_public_model_export_or_share(tmp_path):
     for n in usage["nodes"].values():
         if n["resource_type"] == "model":
             assert n["config"].get("access", "protected") != "public", n["name"]
-            assert not n["config"].get("contract", {}).get("enforced"), n["name"]
+            # the marts the owner reads have enforced contracts, but are never public
+            assert n["config"].get("contract", {}).get("enforced") == n["name"].startswith("mart_"), n["name"]
     main_nodes = {n["name"] for n in main["nodes"].values()}
     assert not main_nodes & usage_models
     assert all(n["package_name"] == "coffeedata" for n in main["nodes"].values())
@@ -596,8 +661,8 @@ def test_only_the_location_model_reads_the_ip_prefix():
         if re.search(r"\bip_prefix\b", text):
             assert f.name in ("usage_raw.sql", "usage_events.sql"), f
     location = (usage_build.PROJECT / "models/intermediate/int_usage_location.sql").read_text()
-    final = location.rsplit("select f.event_id", 1)[1]
-    assert "ip_prefix" not in final and "ip_hex" not in final  # the model's output never carries it
+    final = location.rsplit("select e.event_id", 1)[1].split("from", 1)[0]
+    assert "ip_prefix" not in final and "start_hex" not in final  # the model's output never carries it
 
 
 def test_no_model_reads_the_wall_clock_or_randomness():
@@ -622,24 +687,35 @@ def test_every_usage_model_has_a_description_and_a_grain_test():
 
 def test_the_public_facts_only_guard_names_the_usage_columns():
     """public_tables_are_facts_only (dbt/tests/) refuses every usage column in a public table; tests/test_dbt.py makes
-    it fail on a bad column. city and state stay allowed: public_roaster's own location."""
+    it fail on a bad column. city and state are allowed in public_roaster only (the roaster's location), event in
+    public_price_event only."""
     text = (REPO / "dbt/tests/public_tables_are_facts_only.sql").read_text()
-    parts = re.findall(r"'([^']*)'", text.split("regexp_matches(column_name,", 1)[1])
+    parts = re.findall(r"'([^']*)'", text.split("regexp_matches(column_name,", 1)[1].split("and not", 1)[0])
     pattern = "".join(parts)
     assert pattern.startswith("^(") and pattern.endswith(")$")
     for col in ("query", "ip", "ip_prefix", "source", "referrer_domain", "utm_source", "utm_medium", "utm_campaign",
-                "rank", "surface", "device", "region", "country", "bot", "tags"):  # fmt: skip
+                "rank", "surface", "device", "region", "country", "bot", "tags", "city", "state", "event"):  # fmt: skip
         assert re.fullmatch(pattern, col), col
-    for col in (
-        "city",
-        "state",
-        "roaster_state",
-        "origin_country",
-        "attributes_source",
-        "source_url",
-        "event",
-    ):
+    for col in ("roaster_state", "origin_country", "attributes_source", "source_url"):
         assert not re.fullmatch(pattern, col), col
+    assert "table_name = 'public_roaster' and column_name in ('city', 'state')" in text
+    assert "table_name = 'public_price_event' and column_name = 'event'" in text
+
+
+def test_the_facts_only_guard_allows_city_only_in_public_roaster(tmp_path):
+    """The guard's SQL on a database holding public tables with the allowed columns and with visitor ones."""
+    sql = (REPO / "dbt/tests/public_tables_are_facts_only.sql").read_text()
+    sql = "\n".join(line for line in sql.splitlines() if not line.startswith("--"))
+    with duckdb.connect(str(tmp_path / "x.duckdb")) as con:
+        con.execute("create table public_roaster (roaster_id varchar, city varchar, state varchar)")
+        con.execute("create table public_price_event (event varchar)")
+        con.execute("create table public_coffee (coffee_id varchar, roaster_state varchar)")
+        assert con.execute(sql).fetchall() == []
+        con.execute("alter table public_coffee add column city varchar")
+        con.execute("alter table public_coffee add column event varchar")
+        con.execute("alter table public_price_event add column state varchar")
+        assert sorted(con.execute(sql).fetchall()) == [
+            ("public_coffee", "city"), ("public_coffee", "event"), ("public_price_event", "state")]  # fmt: skip
 
 
 def test_the_coded_values_are_the_collectors():
@@ -664,8 +740,8 @@ def test_geo_update_counts_the_events_whose_city_would_change(tmp_path):
     shutil.copy(data / "geo/dbip-test.parquet", old)
     moved = [r if r[4] != "Denver" else (*r[:4], "Lakewood") for r in GEO_RANGES]
     write_geo(data, tmp_path / "new.lock", ranges=moved)
-    # every raw row counts, the retried batch's copies of the first three (Denver) events too
-    denver = sum(1 for e in synthetic_events() if e["ip_prefix"] == "198.51.100.0/24") + 3
+    # every raw row counts: the retried batch's copies of the first three (Denver) events and the early copy too
+    denver = sum(1 for e in synthetic_events() if e["ip_prefix"] == "198.51.100.0/24") + 4
     assert geo.changed_events(usage_build.sources(str(data)), old, data / "geo/dbip-test.parquet") == denver
     assert geo.changed_events([], old, old) == 0
 
@@ -680,8 +756,83 @@ def test_the_dbt_unit_tests_pass(checkout):
     target = checkout / "target"
     usage_build.build(str(data), lock_path=checkout / "geo.lock", target=target, log=checkout / "dbt.log",
                       unit_tests=True)  # fmt: skip
-    results = json.loads((target / "run_results.json").read_text())["results"]
+    results = json.loads((target / "run_results.tests.json").read_text())["results"]
     units = {
         r["unique_id"].split(".")[-1]: r["status"] for r in results if r["unique_id"].startswith("unit_test.")
     }
-    assert len(units) == 4 and set(units.values()) == {"pass"}, units
+    assert len(units) == 10 and set(units.values()) == {"pass"}, units
+
+
+def test_consensus_takes_the_level_every_row_agrees_on():
+    """geo.py's measurement and changed_events follow int_usage_location's rule (the dbt unit test pins the SQL)."""
+    h = lambda ip: int(geo.to_hex(ip), 16)  # noqa: E731
+    rows = sorted([
+        (h("198.51.100.0"), h("198.51.100.127"), "US", "Colorado", "Denver (Five Points)"),
+        (h("198.51.100.128"), h("198.51.100.255"), "US", "Colorado", "Denver"),
+        (h("192.0.2.0"), h("192.0.2.127"), "US", "Colorado", "Boulder"),
+        (h("192.0.2.128"), h("192.0.2.255"), "US", "Colorado", "Aurora"),
+        (h("203.0.113.0"), h("203.0.113.127"), "US", "Washington", "Blaine"),
+        (h("203.0.113.128"), h("203.0.113.255"), "CA", "British Columbia", "Surrey"),
+        (h("10.0.0.0"), h("10.0.1.255"), "US", "Ohio", "Far"),
+    ])  # fmt: skip
+    v4 = geo.consensus_levels(rows)["ipv4_24"]
+    assert v4["shared_blocks"] == 3 and v4["all_blocks"] == 5
+    assert v4["shared"] == {"city": 0.3333, "region": 0.3333, "country": 0.0, "unknown": 0.3333}
+    assert v4["all"]["city"] == 0.6  # the two whole /24s of 10.0.0.0/23 are Far
+    assert geo.block("198.51.100.0/24") == (geo.to_hex("198.51.100.0"), geo.to_hex("198.51.100.255"))
+    assert geo.block("2001:db8::/40")[1] == "20010db800" + "f" * 22
+    assert geo.block("not an address") is None
+    assert geo.placed({("US", "Colorado", "Denver")}) == ("US", "Colorado", "Denver")
+    assert geo.placed({("US", "Colorado", "Boulder"), ("US", "Colorado", "Aurora")}) == (
+        "US",
+        "Colorado",
+        None,
+    )
+    assert geo.placed({("US", "Oregon", "Portland"), ("US", "Washington", "Seattle")}) == ("US", None, None)
+    assert geo.placed({("US", "Washington", "Blaine"), ("CA", "British Columbia", "Surrey")}) is None
+    assert geo.base_city("Chicago (Near South Side)") == "Chicago" and geo.base_city(None) is None
+
+
+def test_the_cli_prints_counts_only_and_alerts_when_the_detector_could_not_run(tmp_path, monkeypatch, capsys):
+    """usage-build after a failed model step: no database, counts from both steps' results, and an alert that says the
+    detector didn't run rather than none at all."""
+    from coffeedata import cli
+
+    monkeypatch.setattr(usage_build, "ROOT", tmp_path.resolve())
+
+    def failed(**kw):
+        target = kw["target"]
+        (target / "run_results.models.json").write_text(json.dumps({"results": [
+            {"unique_id": "model.x.a", "status": "success", "message": "SECRET-VALUE"},
+            {"unique_id": "model.x.b", "status": "error", "message": "Conversion Error: 'canary@example.com'"}]}))  # fmt: skip
+        return False
+
+    monkeypatch.setattr(usage_build, "build", failed)
+    alerts = tmp_path / "alerts.json"
+    with pytest.raises(SystemExit):
+        cli.main(["usage-build", "--alerts-out", str(alerts)])
+    out = capsys.readouterr()
+    assert '"failed"' in out.out and '"error": 1' in out.out and '"success": 1' in out.out
+    assert "canary" not in out.out + out.err and "SECRET" not in out.out + out.err
+    (alert,) = json.loads(alerts.read_text())
+    assert alert["firing"] and alert["checks"] == [{"name": "detector ran", "status": "warning"}]
+
+
+@needs_dbt
+def test_a_failed_model_leaves_no_database_and_dbt_never_prints(checkout, capfd):
+    """A model that fails (a raw value that won't cast) deletes the half-built database; dbt's output, which can quote
+    the value, goes to build/usage-dbt.log, never the console."""
+    data = checkout / "usage"
+    write_geo(data, checkout / "geo.lock")
+    folder = data / "events" / "day=2026-09-07"
+    folder.mkdir(parents=True)
+    pq.write_table(pa.Table.from_pylist([{"event_id": "x", "received_at": "not-a-time-canary", "event": "search"}]),
+                   folder / "batch=a.parquet")  # fmt: skip
+    ok = usage_build.build(str(data), lock_path=checkout / "geo.lock", target=checkout / "target")
+    assert not ok and not (checkout / usage_build.DB).exists()
+    out = capfd.readouterr()
+    assert "not-a-time-canary" not in out.out + out.err
+    assert (checkout / usage_build.DBT_LOG).exists()
+    assert not (
+        checkout / "target" / "run_results.tests.json"
+    ).exists()  # the tests never ran on a partial build
