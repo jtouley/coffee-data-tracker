@@ -81,6 +81,10 @@ expected failure. The dbt ones are unit tests tagged `suspected_bug`, which `tes
 - dbt unit `flavor_lookup_ignores_case`: the flavor lexicon lookup is exact, so a capitalised note gets no category.
 - dbt unit `a_bag_with_no_shots_has_none_in_window`: mart_bag gives a bag with no shots `shots_in_window` null, while
   its shot_count is 0.
+- `tests/test_dbt.py::test_suspected_bug_the_enrichment_tie_break_depends_on_the_session_time_zone`:
+  stg_enrichments (a view) breaks a same-second tie by `md5(to_json(e))`, and `to_json` renders `extracted_at` in
+  the session's time zone, so the view picks another extraction when read in another zone. Builds are pinned to
+  UTC (profiles.yml), so tables built from it don't move.
 
 ## Inventory
 

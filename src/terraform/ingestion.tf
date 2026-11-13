@@ -80,7 +80,8 @@ locals {
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls, fetch-health and build (below). A crawl that
+  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls, fetch-health, the merge and build
+  # (below). A crawl that
   # dies (OOM kill, crash) is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints,
   # skips the roasters already done this week, fetches the dead attempt's in-flight roasters one at a time and
   # quarantines one that killed two attempts (crashguard), and it stops inside the first attempt's window
@@ -88,7 +89,13 @@ locals {
   # never retried. Shopify's crawls stay at 0: a retry straight after a failure would re-ask the stores that just
   # refused, on Shopify's NAT IP; their next slot (15:17, 21:47) resumes. WooCommerce's and generic's are 0 for the
   # same reason: they share one static IP (woo_generic), and their 15:17 resume and 21:47 retry slots cover a failed
-  # attempt.
+  # attempt. The merge is 0 too (issue #84): a retry would start over an attempt that died part-way, on its own
+  # judgement. `coffeedata merge` refuses that (a latest attempt this week that failed or has no end row), so the
+  # execution fails and emails the owner, who runs it again by hand once nothing is running (RUNBOOK §5.2). A merge
+  # that raises writes a `failed` end row with the error; one that is killed leaves its start row alone. A second merge
+  # changes no file an earlier one stored and adds only rows the lake lacks (tests/test_chain.py), but the archive
+  # folder a partition's files move to is named after the merge that moved them, so a retry splits one partition's
+  # archive across two folders.
   ingest_jobs = {
     # Discovery reads open datasets (OSM, then Overture), monthly and by hand (the Console, or `gcloud run jobs
     # execute discover`); probing asks stale roasters' sites which platform they run, weekly before the crawls.
@@ -131,7 +138,7 @@ locals {
     # fetch failure) fails the execution, which emails the owner (alerts.tf, ingest_job_failed). Retries 0: a retry would find the check done and exit 0, hiding the failure. 8Gi, as the
     # build: dbt builds the models run_completeness reads (dim_coffee, with the classifier).
     "fetch-health" = { command = ["coffeedata"], args = ["fetch-health"], egress = "default", claude = false, memory = "8Gi", retries = 0 }
-    "merge"        = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 1 }
+    "merge"        = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 0 }
     "enrich-week"  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
     # check. Every step runs whatever the ones before it did, and any step's failure fails the execution, which
@@ -186,6 +193,20 @@ locals {
     "merge"        = { job = "merge", cron = "17 3 * * 2" }
     "enrich-week"  = { job = "enrich-week", cron = "17 4 * * 2" }
     "build"        = { job = "build", cron = "17 6 * * 2" }
+  }
+
+  # The Tuesday chain (issue #84): the three jobs still start at the times above, and each of the last two first
+  # checks job_manifests for the jobs before it (src/coffeedata/chain.py). job => the `job`s (comma-separated)
+  # whose latest attempt this week must be `done` and published, and until when (HH:MM UTC, that day) to wait for
+  # them. Past the deadline the job exits non-zero having run nothing, so its execution fails and emails the owner
+  # (alerts.tf). enrich-week waits up to 90 minutes for the merge (which so has 150 from 03:17); the build job (its
+  # classify, then its build) up to 90 for the merge and the enrichment, which leaves it 150 of its 240 minutes
+  # and ends before site.yml's 11:17. A clock time, not a duration: classify and build share the one deadline, and
+  # so does Cloud Run's retry of enrich-week (the build has none). A run by hand skips the check with
+  # COFFEEDATA_SKIP_PRECONDITION=<reason> (RUNBOOK §5.2).
+  ingest_job_after = {
+    "enrich-week" = { job = "merge", deadline_utc = "05:47" }
+    "build"       = { job = "merge,enrich", deadline_utc = "07:47" }
   }
 }
 
@@ -460,6 +481,22 @@ resource "google_cloud_run_v2_job" "ingest" {
             }
           }
         }
+        # The Tuesday chain's precondition (local.ingest_job_after): only the jobs named there get these.
+        # Last in the list, so a plan adds them without shifting the entries above.
+        dynamic "env" {
+          for_each = [for job, after in local.ingest_job_after : after if job == each.key]
+          content {
+            name  = "COFFEEDATA_AFTER_JOB"
+            value = env.value.job
+          }
+        }
+        dynamic "env" {
+          for_each = [for job, after in local.ingest_job_after : after if job == each.key]
+          content {
+            name  = "COFFEEDATA_AFTER_DEADLINE_UTC"
+            value = env.value.deadline_utc
+          }
+        }
       }
     }
   }
@@ -471,6 +508,11 @@ resource "google_cloud_run_v2_job" "ingest" {
     precondition {
       condition     = contains(keys(local.egress_nats), each.value.egress)
       error_message = "A job's egress in local.ingest_jobs must be \"default\", \"shopify\" or \"woo_generic\"."
+    }
+    # likewise a misspelt job in local.ingest_job_after: that job would run with no precondition
+    precondition {
+      condition     = length(setsubtract(keys(local.ingest_job_after), keys(local.ingest_jobs))) == 0
+      error_message = "local.ingest_job_after names a job that isn't in local.ingest_jobs."
     }
     # a misspelt job name in var.ingest_job_memory would otherwise be ignored by lookup() above, silently
     precondition {

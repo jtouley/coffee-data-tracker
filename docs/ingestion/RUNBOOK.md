@@ -182,8 +182,9 @@ repository variables, let the workflow build the image, then plan for real with 
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
   `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7), until §2.1 sets crawl-woocommerce's
   and crawl-generic's to 0; `crawl-generic` has 8Gi, and
-  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
-  else on a job, beyond the image: stop.
+  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). Since #84 (§5.2), once:
+  `merge`'s `max_retries` 1 → 0, and `COFFEEDATA_AFTER_JOB` and `COFFEEDATA_AFTER_DEADLINE_UTC` added to
+  `enrich-week` and `build`. A plan that shows anything else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
   endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
   `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
@@ -633,7 +634,8 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
   lake, `public_coffee_is_fresh` fails such a build (the public catalog's newest `last_seen` is the newer run), so
   resuming last week after this Monday's crawl has written fetches fails too. Roll back to the previous release
   instead (`coffeedata rollback`, or `rollback_to` above), or build the latest week.
-- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
+- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`; after a
+  merge attempt that failed or died, it refuses until told to: §5.2). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
 - **Recover a merged week from the archive** (within 30 days of its merge; then the bucket's lifecycle rule has
   deleted it). The merge moves each connector's partition, unchanged, to
@@ -910,15 +912,40 @@ publishes after a check (it is polled again on Tuesday from 10:07 UTC), and so d
 The release can therefore appear without anyone acting on the alert; **e** tells you whether it has. If it was served after 11:17,
 `gh workflow run weekly -f rollback_to=served` exports it (above).
 
-### 5.2 The build ran before the merge finished
+### 5.2 A Tuesday job failed its precondition (the chain: merge, enrich-week, build)
 
-The Tuesday jobs run on fixed clock times, not on completion (issue #84): merge at 03:17 (up to 240 min, and one
-retry), enrich-week at 04:17, build at 06:17. `build` never checks for a finished merge. It judges the latest run in
-the lake, which before the merge is still last week's. Freshness uses a strict `<`, so last Monday counts as fresh on
-Tuesday, and such a build can pass and serve last week's data as a new release. enrich-week before a merge prints
-`waiting: no merge this week yet` and exits 0, so nothing alerts.
+The Tuesday jobs still start on fixed clock times: merge at 03:17, enrich-week at 04:17, build at 06:17. Since
+issue #84 each of the last two first checks the control table (`src/coffeedata/chain.py`, read-only):
 
-**How to tell:**
+| Job | Runs only once | Waits until (UTC) | Then |
+|---|---|---|---|
+| `enrich-week` | this week's latest `merge` attempt is `done` and published | 05:47 | exits non-zero, nothing sent to Claude |
+| `build` (its `classify`, then its `build`) | this week's latest `merge` and latest `enrich` attempts are both `done` and published | 07:47 | both exit non-zero: no verdicts submitted, no build, no release |
+| `merge` | its latest attempt of the week neither failed nor is left without an end row | no wait | exits non-zero, nothing merged |
+
+"This week" is the week of the day the job runs (UTC), for `classify` and `build` alike, whatever `--run-date` the
+build is given.
+
+A job that is waiting logs `waiting for this week's (<week>) <job>: <status>` every minute. One that gives up prints
+`precondition failed: ...` with the statuses it last saw, and its execution fails, which sends
+`registry.coffee: ingest job <job> failed` (§6). The deadline is a clock time: `classify` and `build` share it, and
+so does Cloud Run's retry of enrich-week (the build and the merge have none), so a failed chain doesn't wait twice.
+A run by hand after the deadline, or more than two hours before it, checks once and doesn't wait. In the build job,
+a `classify` whose check didn't pass stops the `build` after it too: the build never runs on last week's verdicts
+because classify gave up.
+
+Statuses: `missing` (no row: the job before never started, or is itself still waiting), `running` (at work, or
+killed: a killed attempt never writes an end row), `failed` (it raised; its row's `detail.error` says what),
+`done, not yet published` (its end row is written, its upload to the dataset isn't finished), `unreadable` (the
+control table couldn't be read; while waiting, this is tried again every minute). Only `done` passes.
+
+**The merge has no automatic retry** (`max_retries = 0`). A merge that raises writes a `failed` row; one that is
+killed leaves a `running` row. Either way enrich-week and the build fail their preconditions that morning, and a
+second `merge` refuses to start over it. Running it again loses and repeats no row (it adds only rows the lake
+lacks, and changes no file the earlier attempt stored), but it is the owner's decision, and its archive lands in a
+second `merge=<batch>` folder (§5, "Recover a merged week").
+
+**How to tell where the chain stopped:**
 
 ```sh
 uv run python - <<'EOF'
@@ -931,28 +958,48 @@ print("latest builds (build_id, run judged, passed):", quality.builds(lake)[-3:]
 print("served:", quality.served(lake))
 for r in control.rows(lake, os.environ["WEEK"]):
     if r["job"] in ("merge", "enrich"):
-        print(r["job"], r["status"], r["started_at"], r["ended_at"])
+        print(r["job"], r["status"], r["started_at"], r["ended_at"], control.detail_of(r).get("error", ""))
 EOF
-for j in merge build; do
+for j in merge enrich-week build; do
   gcloud run jobs executions list --job $j --region $REGION --limit 2 \
     --format='table(name,status.startTime,status.completionTime)'
 done
 ```
 
-The build ran too early if the latest build judged **last week's Monday** instead of `$WEEK`, or started before the
-merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
-
-**Recourse:** once the merge's row is `done`, run enrich-week (if it waited) and the build again:
+**Recourse**, from the first job that failed, in order. Each later job passes its own check once the ones before it
+are `done`, so those need no override:
 
 ```sh
-gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
+# 1. The merge failed or died (a `failed` or `running` row, and no merge execution still running in the list above):
+gcloud run jobs execute merge --region $REGION --wait \
+  --update-env-vars COFFEEDATA_SKIP_PRECONDITION="the 03:17 merge died and none is running"
+# 2. enrich-week, once the merge's latest row is `done`:
+gcloud run jobs execute enrich-week --region $REGION --wait
+# 3. the build, once the latest merge and enrich rows are `done`:
+gcloud run jobs execute build --region $REGION --wait
+# or the same build told to judge $WEEK (the rebuild form other sections refer to):
 gcloud run jobs execute build --region $REGION --wait \
   --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
-`--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
-week again. The early release has last week's data, so it is a harmless baseline. Confirm the fix (§5.1 e). After
-11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
+**The override.** `COFFEEDATA_SKIP_PRECONDITION=<reason>` on one execution skips that job's check (for the build
+job, both `classify`'s and `build`'s). It logs `PRECONDITION SKIPPED by COFFEEDATA_SKIP_PRECONDITION: <reason>` and
+the statuses it skipped over, and it works even when the control table can't be read. Use it for a deliberate run
+without the jobs before it: a build when enrichment can't run (an Anthropic outage), or a job run by hand on a
+Monday, when the new week has no merge yet:
+
+```sh
+gcloud run jobs execute build --region $REGION --wait \
+  --update-env-vars COFFEEDATA_SKIP_PRECONDITION="enrich failed - building on stored enrichments"
+```
+
+**No comma in the reason:** `--update-env-vars` takes a comma-separated list of `KEY=VALUE` pairs, so a comma ends
+the value and the command is rejected before it starts anything. The reason must be words: `0`, `false`, `no` and
+`off` are not reasons and leave the check on. Never set the variable in Terraform. A build run with it before the
+week's merge judges the latest run in the lake, which is then still last week's, and can pass and serve last week's
+data as a new release: use the `--run-date $WEEK` form above as well, so it fails as incomplete instead.
+
+After 11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
 
 ### 5.3 A crawl that ends `deadline`: skipped or partial
 
@@ -1462,3 +1509,56 @@ staging bucket holds one week of raw/ and the last 30 days of merged partitions 
 raw rows, a few GB at most (cents a month). With the app (inside Cloud Run's free tier), about
 $9–14/month in all with the second IP. The monthly budget (`budget_usd`) stays $20, so its first email (50%, $10)
 now falls inside the estimate: raise `budget_usd` if that email is noise. Alert policies cost nothing.
+
+## 9. Terraform in GitHub: reading the plan comment
+
+A pull request that touches `src/terraform/**` (or the guard script, or the workflow) runs
+`.github/workflows/terraform-plan.yml`: fmt, init, validate and plan as the read-only plan identity, then the guards
+(`scripts/tf_plan_guard.py`), then one comment on the PR, **Terraform plan**, replaced on every push. It never
+applies anything, and the PR's plan is advisory: the plan that is applied is made again on main, by the apply
+workflow.
+
+Where CI's variables come from (your shell is unchanged: it still reads `terraform.tfvars`):
+- `src/terraform/ci.tfvars`, checked in, passed only by CI with `-var-file`: `verdict_model`.
+- Repository **secrets** `TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL`: `billing_account` and `owner_email`.
+- Repository **variables**, holding what `terraform.tfvars` holds today: `TF_VAR_INGEST_IMAGE` and
+  `TF_VAR_INGEST_SCHEDULE_ENABLED` (required), and `TF_VAR_EMAIL`, `TF_VAR_BUDGET_USD` and `TF_VAR_INGEST_JOB_MEMORY`
+  (optional; unset means the default in `variables.tf`; `TF_VAR_INGEST_JOB_MEMORY` is HCL, e.g.
+  `{ "crawl-woocommerce" = "4Gi" }`). When you pin a new image in `terraform.tfvars`, set `TF_VAR_INGEST_IMAGE` to the
+  same value, or the next PR plan shows the jobs' image changing back.
+
+The comment starts with the PR head commit it planned (planned as merged with main) and one status line:
+- **Guards: pass** or **FAIL**, then the change list.
+- **The plan errored** at `terraform <command>`: no change list. The run's log names the files, lines and resources
+  involved, never Terraform's messages (they can quote the billing id or your email). Run the plan in your shell for
+  the details. "repository secrets or variables are missing": the log names which.
+- **Errored**: the plan couldn't be read, or an address in it couldn't be shown safely, so nothing is shown.
+- **No plan** (the plan identity isn't set up yet) or **Cancelled** (a newer push replaced the run).
+
+Then three parts:
+- **Guards**, `pass` or `FAIL` each, with the addresses that broke a failed one:
+  - `no-delete-or-replace`: no action is `delete` or `forget`, so nothing is destroyed, replaced or dropped from
+    the state;
+  - `shopify-network-path`: no network or router changes, at any address; no new NAT on the ingest router; a NAT
+    that serves Shopify's subnet (found by its address, its previous address, its name or its subnets) changes only
+    its port and logging settings, never its router, IPs, allocation or subnets; nothing else named for Shopify's
+    egress (its subnet, its IP) changes;
+  - `shopify-jobs-network`: `crawl-shopify` and `crawl-retry` keep their `vpc_access`;
+  - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by `@sha256:`
+    digest, and every job's image is a digest known at plan time;
+  - `workload-identity`: no workload identity pool or provider changes, nor any IAM grant that names one or grants
+    a workload identity role.
+- **Changes**: one line per resource, its action and its address, and where it moved from. `update` changes it in
+  place, `create` adds it; `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard.
+  Unchanged resources and data reads aren't listed.
+- **Totals**: how many of each action.
+
+There are no attribute values in it on purpose: the repository is public and a plan holds every variable in clear.
+An address is shown only if it is plain Terraform address syntax (keys of letters, digits, `.`, `_` and `-`) and
+contains no variable value, egress IP or secret, compared without case or separators; otherwise the comment says
+**Errored** and shows nothing.
+
+A failed guard fails the check, and the apply refuses the same plan. Change the PR; or, for a delete, a replace or a
+change to Shopify's path or the workload identity that is really meant, make it by hand in Cloud Shell, as before,
+and run `python3 -I scripts/tf_plan_guard.py check plan.json` on the `show -json` output of your plan file to see
+what it breaks. A pull request from a fork gets no plan and no comment (it can't sign in).

@@ -37,11 +37,13 @@ variable "support_email" {
 variable "billing_account" {
   description = "Billing account id (XXXXXX-XXXXXX-XXXXXX) for the monthly budget alert."
   type        = string
+  sensitive   = true
 }
 
 variable "owner_email" {
   description = "Where budget, error and uptime alerts go."
   type        = string
+  sensitive   = true
 }
 
 variable "budget_usd" {
