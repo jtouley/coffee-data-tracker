@@ -25,8 +25,11 @@ where a rule can break; they don't show how often it does.
    prompt.
 7. **Report:** the current code against the change on every set, with Wilson 95% intervals and, for a stratified
    sample, weights by stratum size. A change ships only if its test score is at least as good as `main`'s, with no
-   meaningful rise in confidently wrong answers. Where rules can't tell, abstaining (leaving the value for Claude) is
-   better than guessing.
+   meaningful rise in confidently wrong answers, and its estimated accuracy over the full population of current
+   items is at least 95%: measured on a sealed set stratified and weighted over the whole population, not only the
+   changed slice, and held by a test. Floors on slice sets stay at their measured values; only the full-population
+   estimate has the 95% bar. Where rules can't tell, abstaining (leaving the value for Claude) is better than
+   guessing.
 8. **Keep the bar:** unit tests keep the reproduced cases, and accuracy floors are only ever raised.
 9. **Scale the effort to the change.** Keep a running total of products whose output has changed for each field
    since its last full evaluation, in that field's eval README. If, compared with `main`, the total including this

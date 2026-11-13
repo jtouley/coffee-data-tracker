@@ -1,0 +1,9 @@
+{% extends "_layout.html" %}{% from "_button.html" import button %}
+{% block preview %}Choose a new password for {{ username }}. The link works once, for 30 minutes.{% endblock %}
+{% block heading %}Reset your password{% endblock %}
+{% block body %}
+<p style="margin:0;">Someone, hopefully you, asked to reset the password for <strong>{{ username }}</strong>.</p>
+{{ button(link, "Choose a new password") }}
+<p style="margin:0;">The link works once, for 30 minutes.</p>
+{% endblock %}
+{% block foot %}If it wasn’t you, ignore this; your password stays as it is.<br>If the button doesn’t work, paste this into your browser: <span style="word-break:break-all;">{{ link }}</span>{% endblock %}

@@ -1,17 +1,19 @@
 """The wholesale rule against labeled listings from the real catalog (eval/wholesale/README.md).
 
-The labeled data is private lake data, so it isn't in the repo: point WHOLESALE_EVAL_DIR at the eval folder (its
-work/ holds population.json and the label files) to run these. Validation is judged on its total only.
+The labeled data is private lake data, so it isn't in the repo: WHOLESALE_EVAL_DIR is the eval folder (its work/
+holds population.json), which eval/floor_inputs.py rebuilds from the lake, read-only, at the revision the eval was
+measured on. The eval-floors workflow runs this; without the folder it skips (fails under REQUIRE_EVALS=1). Validation is
+judged on its total only.
 """
 
-import os
 import sys
 from pathlib import Path
 
 import pytest
 
-EVAL_DIR = os.environ.get("WHOLESALE_EVAL_DIR")
-pytestmark = pytest.mark.skipif(not EVAL_DIR, reason="WHOLESALE_EVAL_DIR not set (private labeled data)")
+from .evalfloor import eval_dir, floors
+
+pytestmark = pytest.mark.private_eval
 sys.path.insert(0, str(Path(__file__).parent.parent / "eval" / "wholesale"))
 
 # Weighted by stratum, measured on 2026-10-28; raise these when the rule improves, never lower them to pass.
@@ -22,6 +24,7 @@ FLOOR = {"train": {"precision": 0.97, "recall": 0.85}, "validation": {"precision
 def test_wholesale_accuracy_does_not_regress(name):
     from score import measure
 
-    m = measure(EVAL_DIR, name, "live")
-    for metric, floor in FLOOR[name].items():
-        assert m[metric] >= floor, f"{name} {metric}: {m[metric]:.1%} < {floor:.1%}"
+    m = measure(str(eval_dir("WHOLESALE_EVAL_DIR")), name, "live")
+    with floors("wholesale", name) as f:
+        for metric, floor in FLOOR[name].items():
+            f.at_least(f"weighted {metric}", m[metric], floor)

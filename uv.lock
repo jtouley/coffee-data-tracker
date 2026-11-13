@@ -687,7 +687,7 @@ wheels = [
 
 [[package]]
 name = "cloud-sql-python-connector"
-version = "1.23.0"
+version = "1.24.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -697,9 +697,9 @@ dependencies = [
     { name = "google-cloud-sql" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c5/cd/d8752679b9936f0bce737a8d53616e8b7949716f41da5781811a24a24b3f/cloud_sql_python_connector-1.23.0.tar.gz", hash = "sha256:97f46b48d42b1eac7b96d948bb29efb33168dcf856f77b77691c2671af68d9c9", size = 56757, upload-time = "2026-10-15T18:22:10.313Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9b/52/c4877ac227378e770dc8f27dad37d87492c28d949016b3a44180d722fe68/cloud_sql_python_connector-1.24.0.tar.gz", hash = "sha256:e893e98dba68a9d088614b3c98324c43ea2fad4cbe5f7394dfb1e3452073e907", size = 72276, upload-time = "2026-11-11T20:04:35.697Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b1/4f/1ab0775120965381a7feaff9655b3163b4aa5380655a4c66e6a80ea90b9a/cloud_sql_python_connector-1.23.0-py3-none-any.whl", hash = "sha256:cf3d0423ed2033ef1afebfa29acef284da460b261adc86dcd480a34941451102", size = 63370, upload-time = "2026-10-15T18:22:09.107Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/5f/fd8eea60698c2af210d17b63b63589268d148c472aa6778492998ac52e58/cloud_sql_python_connector-1.24.0-py3-none-any.whl", hash = "sha256:b116842c3206ec264ca96d6d6ce579bd84cde131814449531384f49a3f4bf0c1", size = 70637, upload-time = "2026-11-11T20:04:34.377Z" },
 ]
 
 [package.optional-dependencies]
@@ -730,6 +730,7 @@ dependencies = [
 app = [
     { name = "argon2-cffi" },
     { name = "cloud-sql-python-connector", extra = ["pg8000"] },
+    { name = "cryptography" },
     { name = "fastapi" },
     { name = "pg8000" },
     { name = "pillow" },
@@ -767,6 +768,7 @@ requires-dist = [
     { name = "anthropic", specifier = ">=0.70" },
     { name = "argon2-cffi", marker = "extra == 'app'", specifier = ">=23.1" },
     { name = "cloud-sql-python-connector", extras = ["pg8000"], marker = "extra == 'app'", specifier = ">=1.18" },
+    { name = "cryptography", marker = "extra == 'app'", specifier = ">=42" },
     { name = "cryptography", marker = "extra == 'snowflake'", specifier = ">=42" },
     { name = "dbt-duckdb", specifier = ">=1.9" },
     { name = "duckdb", specifier = ">=1.1" },
@@ -1237,20 +1239,20 @@ grpc = [
 
 [[package]]
 name = "google-auth"
-version = "2.62.1"
+version = "2.62.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cryptography" },
     { name = "pyasn1-modules" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c4/38/d79ab09dcfc1e1638d887c8f65657619d3ebc454165c558ef79355971ce3/google_auth-2.62.1.tar.gz", hash = "sha256:3c8e1ce2553784ae17fd220e6f88df3281d86ab98019278f436d06dffab17a9e", size = 398519, upload-time = "2026-11-03T03:06:03.008Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4a/d4/87353e950d653d87360176363d51f316e8e368e1ddbb7ba7aa5503c30c3e/google_auth-2.62.2.tar.gz", hash = "sha256:046c61a72d3a847d6df6417a7f0d5cf054e3b82bbcb54fb1e69d47880964049c", size = 404543, upload-time = "2026-11-10T15:50:55.102Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/14/dd/2e11f0976ecb3ce48ef3f324837460e9ea50071fa4eb01f1e49df87d3cee/google_auth-2.62.1-py3-none-any.whl", hash = "sha256:015399a5abde39033c69404cc1c079e6d4c2de2993e164c9f4eac6e5376ad72b", size = 267975, upload-time = "2026-11-03T03:06:01.422Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/d4/0f8481baa50f75db3bb19a0df79fe19615e66eccfc3afb0b946dcb8791b3/google_auth-2.62.2-py3-none-any.whl", hash = "sha256:e9bcdb0679b6a4369ac327c5c59f06d92f7b4cd2624e7100294c14632f55a36b", size = 270150, upload-time = "2026-11-10T15:50:53.408Z" },
 ]
 
 [[package]]
 name = "google-cloud-sql"
-version = "0.1.4"
+version = "0.1.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-api-core", extra = ["grpc"] },
@@ -1259,9 +1261,9 @@ dependencies = [
     { name = "proto-plus" },
     { name = "protobuf" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/52/bd/f5ec3ba6277df67732564cdd30a1027ce284cbc29ab7b444bf1bd302a5d8/google_cloud_sql-0.1.4.tar.gz", hash = "sha256:80d3d0b8054269b57a92dbca40812e4098bb8913defd6edf3d0770a64faa2720", size = 1260748, upload-time = "2026-11-05T18:40:21.421Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a7/44/f890dca89823586434c62a47100979004b90117d7296ebdd52473e0290f6/google_cloud_sql-0.1.5.tar.gz", hash = "sha256:9566832fc3f15fdcc86dd0e2575174f80b4d9c14e0744922cf5d048178995e95", size = 1296432, upload-time = "2026-11-12T14:23:24.283Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/aa/8b/3a830e986432a70a16c71f4d71a8bcef707171afb27eda11f8237e69d97a/google_cloud_sql-0.1.4-py3-none-any.whl", hash = "sha256:c764dc1f81d442569a50c4548f64d41494557e156cb07b1ac4e500dc800255cb", size = 1264340, upload-time = "2026-11-05T18:39:34.711Z" },
+    { url = "https://files.pythonhosted.org/packages/be/35/019ff0cd50a360ad00b9f91598c06ee9cd0d896df0654269c0d9650b2b58/google_cloud_sql-0.1.5-py3-none-any.whl", hash = "sha256:ee2f80d8017c1a025cb9ba0d27b35e514a34f2d1a05bb54913cd30a996dc553b", size = 1286641, upload-time = "2026-11-12T14:22:37.034Z" },
 ]
 
 [[package]]

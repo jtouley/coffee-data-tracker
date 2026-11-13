@@ -1,0 +1,506 @@
+{
+ "items": [
+  {
+   "coffee_id": "bendixcoffee.com:7557652480081",
+   "store": "bendixcoffee.com",
+   "stratum": "D",
+   "variant_id": "41620752695377"
+  },
+  {
+   "coffee_id": "bendixcoffee.com:7821337952337",
+   "store": "bendixcoffee.com",
+   "stratum": "D",
+   "variant_id": "42586808811601"
+  },
+  {
+   "coffee_id": "cafevalverde.com:10501081550",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "40004051726"
+  },
+  {
+   "coffee_id": "cafevalverde.com:1306691843",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "42195733518"
+  },
+  {
+   "coffee_id": "cafevalverde.com:1307528771",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "3998942147"
+  },
+  {
+   "coffee_id": "cafevalverde.com:1307536835",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "3998979779"
+  },
+  {
+   "coffee_id": "cafevalverde.com:1307542531",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "3999010051"
+  },
+  {
+   "coffee_id": "cafevalverde.com:1307549443",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "3999047107"
+  },
+  {
+   "coffee_id": "cafevalverde.com:1307555523",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "3999083843"
+  },
+  {
+   "coffee_id": "cafevalverde.com:569057771553",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "7244833194017"
+  },
+  {
+   "coffee_id": "cafevalverde.com:6606343864362",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "39448682594346"
+  },
+  {
+   "coffee_id": "cafevalverde.com:661213251",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "1852545539"
+  },
+  {
+   "coffee_id": "cafevalverde.com:661271811",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "1852694211"
+  },
+  {
+   "coffee_id": "cafevalverde.com:6613944533034",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "39463291289642"
+  },
+  {
+   "coffee_id": "cafevalverde.com:6613947187242",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "39463300595754"
+  },
+  {
+   "coffee_id": "cafevalverde.com:661464899",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "42195604174"
+  },
+  {
+   "coffee_id": "cafevalverde.com:6630527828010",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "39492588306474"
+  },
+  {
+   "coffee_id": "cafevalverde.com:7296032964650",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "41623588044842"
+  },
+  {
+   "coffee_id": "cafevalverde.com:8438001027",
+   "store": "cafevalverde.com",
+   "stratum": "D",
+   "variant_id": "28112851971"
+  },
+  {
+   "coffee_id": "caffebristot.us:6602090545326",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417921769646"
+  },
+  {
+   "coffee_id": "caffebristot.us:6607180398766",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46418013388974"
+  },
+  {
+   "coffee_id": "caffebristot.us:6607188885678",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417973149870"
+  },
+  {
+   "coffee_id": "caffebristot.us:6607213166766",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417997922478"
+  },
+  {
+   "coffee_id": "caffebristot.us:6607277555886",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46420559397038"
+  },
+  {
+   "coffee_id": "caffebristot.us:6611241795758",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46420555956398"
+  },
+  {
+   "coffee_id": "caffebristot.us:6651299889326",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46420534952110"
+  },
+  {
+   "coffee_id": "caffebristot.us:7051614126254",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417570693294"
+  },
+  {
+   "coffee_id": "caffebristot.us:7051719311534",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417558110382"
+  },
+  {
+   "coffee_id": "caffebristot.us:7051736907950",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417547919534"
+  },
+  {
+   "coffee_id": "caffebristot.us:8254545723566",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417540972718"
+  },
+  {
+   "coffee_id": "caffebristot.us:8254550769838",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417533730990"
+  },
+  {
+   "coffee_id": "caffebristot.us:8526883520686",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46420329234606"
+  },
+  {
+   "coffee_id": "caffebristot.us:8526922776750",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46420297842862"
+  },
+  {
+   "coffee_id": "caffebristot.us:8533813821614",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46420229193902"
+  },
+  {
+   "coffee_id": "caffebristot.us:8551492288686",
+   "store": "caffebristot.us",
+   "stratum": "D",
+   "variant_id": "46417259987118"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731909738549",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728380444725"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731911049269",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728324182069"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731911082037",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728329293877"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731911442485",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "31806898274357"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731912163381",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728365404213"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731912556597",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728384376885"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731913015349",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728420651061"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731914326069",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "41580622053429"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731914424373",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "31800209539125"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731914784821",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728457875509"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731915145269",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728484220981"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731915505717",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "31800176541749"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731915538485",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728498147381"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3773588078645",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "31807141969973"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:4164161241141",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "31799404691509"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:4164173135925",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728314908725"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:4164310794293",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "43474453594165"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:4164367286325",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "39728470655029"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:4938480517173",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "40072949694517"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:6969792069685",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "41384166850613"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:7234914680885",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "42601205694517"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:8057315852341",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "44974734868533"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:8058144456757",
+   "store": "coppermooncoffee.com",
+   "stratum": "D",
+   "variant_id": "44977484070965"
+  },
+  {
+   "coffee_id": "haobaobaocoffee.com:8080997580982",
+   "store": "haobaobaocoffee.com",
+   "stratum": "D",
+   "variant_id": "45451061756086"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762273447998",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592296607806"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762274693182",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592316104766"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762284949566",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592326983742"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762286424126",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592329343038"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762286850110",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592329867326"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762300219454",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592360177726"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762354057278",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592586178622"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762354778174",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592592011326"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762359201854",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592617275454"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762366771262",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592663314494"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:4762368344126",
+   "store": "happyrockcoffee.com",
+   "stratum": "D",
+   "variant_id": "32592673243198"
+  },
+  {
+   "coffee_id": "highbankcoffeeroasters.com:6091150360767",
+   "store": "highbankcoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "43268044587199"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:2095777251426",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40543819268194"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:2095805268066",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40543808323682"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:2095806906466",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40543824773218"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:2148434378850",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40516680351842"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:3830010839138",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40543832965218"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:6858363240546",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40546755313762"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:6885203542114",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40546752659554"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:6959475556450",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "40614721716322"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:7165767319650",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "41217882914914"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:7329717256290",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "41857648787554"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:7700196360290",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "42955047305314"
+  },
+  {
+   "coffee_id": "ironsideroasting.com:7724002115682",
+   "store": "ironmulecoffee.com",
+   "stratum": "D",
+   "variant_id": "43015180910690"
+  }
+ ],
+ "set": "test3",
+ "stratum_sizes": {
+  "D": 83
+ }
+}

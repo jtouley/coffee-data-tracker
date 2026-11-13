@@ -270,6 +270,7 @@ def test_two_real_accounts_cant_see_each_others_shots(lake, users):
         headers=W,
     )
     a._write(Account("u2", "maria", a._hash(PW)))
+    a.accept("u2")  # an account with no record accepted the terms of its day, and these are newer
     other = TestClient(app, base_url="https://testserver", follow_redirects=False)
     other.post("/api/signin", json={"username": "maria", "password": PW}, headers=W)
     maria = W | {"X-Expected-User": "u2"}
@@ -318,7 +319,7 @@ def test_security_headers(lake, users):
     owner(c)
     assert "camera=(self)" in c.get("/bag/new").headers["permissions-policy"]
     assert "camera=()" in c.get("/setup").headers["permissions-policy"]
-    assert c.post("/api/signout", headers=W).headers["cache-control"] == "no-store"
+    assert c.post("/api/signout", headers=W).headers["cache-control"] == "no-store, private"
 
 
 def test_no_inline_script_or_style(lake, users):
@@ -341,6 +342,9 @@ def test_static_files_are_hashed_compressed_and_cached_for_a_year(lake, users):
     assert re.search(r"url\(/static/fonts/archivo\.[0-9a-f]{10}\.woff2\)", r.text)
     assert 'rel="preload"' in html and "font/woff2" in html
     assert c.get("/static/app.css").status_code == 404
+    # No route serves it: signed out that's the sign-in screen (default deny), signed in a 404.
+    assert c.get("/static/../main.py", follow_redirects=False).headers["location"] == "/signin"
+    owner(c)
     assert c.get("/static/../main.py").status_code == 404
 
 
@@ -563,8 +567,10 @@ def test_server_errors_get_the_security_headers(lake, users):
     def boom() -> None:
         raise RuntimeError("boom")
 
-    app.add_api_route("/boom", boom)
+    app.add_api_route("/boom", boom)  # added late, so private like every route not on PUBLIC
     c = TestClient(app, base_url="https://testserver", raise_server_exceptions=False)
+    assert c.get("/boom", follow_redirects=False).headers["location"] == "/signin"
+    owner(c)
     r = c.get("/boom", headers={"Accept": "text/html"})
     assert r.status_code == 500 and "Something went wrong" in r.text
     assert r.headers["x-content-type-options"] == "nosniff" and "content-security-policy" in r.headers
@@ -597,4 +603,4 @@ def test_each_dataset_publishes_only_its_own_files(tmp_path):
     main.write("shots", "shots/s1__20261027T000000.parquet", [{"shot_id": "s1"}])
     top = lambda lake: {p.relative_to(shared).parts[0] for p in lake.staged_files()}  # noqa: E731
     assert "users" not in top(main) and "shots" in top(main)
-    assert top(users) <= {"users", "invites", "consents"}
+    assert top(users) <= {"users", "invites", "consents", "contacts"}

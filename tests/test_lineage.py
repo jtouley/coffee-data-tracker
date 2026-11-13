@@ -189,8 +189,11 @@ def test_an_image_records_the_commit_it_was_built_from(monkeypatch, tmp_path):
         arg = lines.index("ARG GIT_SHA=unknown")
         assert lines[arg + 1] == "ENV COFFEEDATA_GIT_SHA=$GIT_SHA", f
         assert not any(x.startswith(("RUN ", "COPY ")) for x in lines[arg:]), f
+    # The pull request's check build passes its own commit; main's deploys (workflow_run) the commit ci passed on,
+    # for the app's image and the ingest image.
     deploy = (root / ".github/workflows/deploy.yml").read_text()
-    assert deploy.count('--build-arg GIT_SHA="$GITHUB_SHA"') == 2
+    assert deploy.count('--build-arg GIT_SHA="$GITHUB_SHA"') == 1
+    assert deploy.count('--build-arg GIT_SHA="$HEAD_SHA"') == 2
 
 
 def test_ci_run_and_actor_come_from_github_actions(monkeypatch):
