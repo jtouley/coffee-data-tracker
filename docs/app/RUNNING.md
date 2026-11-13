@@ -271,6 +271,53 @@ gcloud run services describe registry-coffee --region us-central1    # 100% to t
 curl -fsS https://app.registry.coffee/health
 ```
 
+### Changing the infrastructure (Terraform)
+
+Since the last Cloud Shell run (`docs/ingestion/final-shell-run.sh`), a change to `src/terraform/` goes through
+GitHub, and applies only after the owner's second account, `jtouleyrou`, approves it:
+
+1. **Open a PR.** `terraform-plan.yml` plans it and comments the guard's verdicts and the list of changes (actions
+   and addresses, never values). The PR plan is advisory.
+2. **Merge.** `terraform-apply.yml` plans main again as the read-only account, runs the guard
+   (`scripts/tf_plan_guard.py`), saves the plan to the private bucket `coffee-data-tracker-tf-plans` with its
+   SHA-256, writes the list to the run's summary, and waits on the `terraform-apply` environment. No changes: the
+   run ends there.
+3. **Approve, signed in as `jtouleyrou`.** Open the run (Actions, terraform-apply), read its summary, and if the
+   commit touches `.github/workflows/terraform-*.yml` or `scripts/tf_plan_guard.py`, read that diff first: the
+   approval page doesn't show it. Then Review deployments, Approve. Nobody else can: the environment requires that
+   reviewer, prevents self-review, allows `main` only and gives administrators no bypass, and an agent's approval
+   never stands in for this click.
+4. **The apply job** then checks that the environment is still protected that way (where its token can read it) and
+   that `jtouleyrou` approved this run; refuses a plan older than a day, one a newer Terraform commit supersedes, or
+   one made before the state last changed; refuses on a Monday, a Tuesday before 12:00 UTC or while an ingestion job
+   runs; downloads that exact plan, checks its hash, runs the guard again and applies the saved plan, never a fresh
+   one. A refusal changes nothing: run the workflow again (Actions, terraform-apply, Run workflow on `main`) when
+   its cause is gone; the new plan waits for a new approval.
+
+**If an apply fails partway**, Terraform keeps what it finished in the state and nothing else runs. Fix the cause in
+a PR, or run the workflow again; the new plan shows what is left. A lock left by a dead runner is cleared from Cloud
+Shell: `terraform force-unlock <lock id from the error>`, once you're sure no apply is running.
+
+**Not through GitHub, on purpose:** any delete or replace, any change to Shopify's network path or the deploy
+identity's pool (the guard refuses them; the apply account can't write pools anyway), the bootstrap root
+`src/terraform/bootstrap/` (the plan and apply identities and the plans bucket: the gate is not managed by what it
+gates), secret values, DNS. These, and the break-glass below, are the owner's, from Cloud Shell.
+
+**Break-glass** (GitHub down, or the pipeline broken): in Cloud Shell with `main` checked out and your
+`terraform.tfvars`, `cd src/terraform`, `terraform plan -out=bg.plan`,
+`terraform show -json bg.plan > bg.json && python3 -I ../../scripts/tf_plan_guard.py check bg.json`, read the list,
+then `terraform apply bg.plan` and delete both files. The state lock is shared, so this is safe beside a waiting run.
+
+**Revoking the pipeline's access**, fastest first:
+- stop applies at once: `gcloud iam service-accounts disable registry-coffee-tf-apply@coffee-data-tracker.iam.gserviceaccount.com`
+  (and `registry-coffee-tf-plan@...` for plans); `enable` undoes it;
+- or turn off the sign-in from GitHub:
+  `gcloud iam workload-identity-pools providers disable github --workload-identity-pool=github-tf-apply --location=global`
+  (`github-tf-plan` for plans);
+- for good: remove the resources from `src/terraform/bootstrap/` and apply it from Cloud Shell, after
+  `terraform plan -destroy` shows exactly what goes; then delete the repository variables `GCP_TF_*` and
+  `TF_*_BUCKET`, and the secrets `TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL`.
+
 ### Deleting a person's data
 
 The privacy policy promises deletion within 30 days of a request.
