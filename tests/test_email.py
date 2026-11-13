@@ -1,18 +1,21 @@
 """Email recovery, verification, the sealed `contacts` record and the marketing choice (docs/app/signup-ux-spec.md
 §4, §5, §7.1, §12 "Email recovery" and "Consent"). Every message goes to a FakeMailer: nothing here calls out."""
 
+import asyncio
 import base64
 import re
 import statistics
 import time
 from datetime import timedelta
 from pathlib import Path
+from types import SimpleNamespace
 
 import httpx
 import pytest
 import respx
 from fastapi.testclient import TestClient
 
+import app.main as app_main
 from app import mail
 from app.accounts import Accounts, _now
 from app.auth import Sessions
@@ -1147,7 +1150,7 @@ def test_start_up_deletes_contact_files_left_from_a_changed_email(app, owner, ou
     assert again.email(uid).address == "maya@example.com" and again.sweep_contacts() == []
 
 
-def test_the_owner_never_resets_by_email(app, owner, outbox, accounts):
+def test_the_owner_never_resets_by_email(app, owner, outbox, accounts, monkeypatch):
     """Owner decision (final review N9): the owner's account recovers with OWNER_SETUP_CODE only. /forgot answers
     for it like any ineligible account (same reply, same floor) and sends nothing; a signed link for it wouldn't
     work anyway; Setup and the emails call the owner's address what it is, for notices."""
@@ -1165,14 +1168,38 @@ def test_the_owner_never_resets_by_email(app, owner, outbox, accounts):
     assert accounts.verified_email(me.user_id) == "owner@example.com"
     outbox.sent.clear()
     app.state.forgot_floor = 0.4
-    timings = {}
-    for who in ("jtouley", "owner@example.com", "nobody-at-all"):
+    whos = ("jtouley", "owner@example.com", "nobody-at-all")
+    # Held to the same floor as anyone's, proved without the machine's speed: the handler's clock and sleep are
+    # replaced, each lookup "takes" a different time, and the handler must sleep exactly the rest of the floor,
+    # once, after the same steps, before it answers. (A wall-clock upper bound failed on a loaded CI runner.)
+    clock, steps = [1000.0], []
+    real_forgot = accounts.forgot
+
+    def timed_forgot(who, ip):
+        steps.append(("forgot", real_forgot(who, ip)))
+        clock[0] += work[who]
+        return steps[-1][1]
+
+    async def sleep(seconds):
+        steps.append(("sleep", round(seconds, 9)))
+        await asyncio.sleep(0)
+
+    work = dict(zip(whos, (0.05, 0.3, 0.12), strict=True))
+    with monkeypatch.context() as m:
+        m.setattr(accounts, "forgot", timed_forgot)
+        m.setattr(app_main, "time", SimpleNamespace(monotonic=lambda: clock[0]))
+        m.setattr(app_main, "asyncio", SimpleNamespace(sleep=sleep))
+        for who in whos:
+            steps.clear()
+            r = forgot(app, who)
+            assert (r.status_code, r.json()) == (200, SAME), who
+            assert steps == [("forgot", ("quiet", None)), ("sleep", round(0.4 - work[who], 9))], who
+    # And on the real clock, no answer comes back before the floor (a lower bound: load only adds to it).
+    for who in whos:
         t = time.perf_counter()
-        r = forgot(app, who)
-        timings[who] = time.perf_counter() - t
-        assert (r.status_code, r.json()) == (200, SAME), who
+        assert forgot(app, who).json() == SAME, who
+        assert time.perf_counter() - t >= 0.4, who
     assert outbox.sent == []
-    assert all(0.4 <= t < 0.6 for t in timings.values()), timings  # held to the same floor as anyone's
     assert accounts.forgot("jtouley", "9.9.9.9") == ("quiet", None)
     assert accounts.reset_link(me.user_id) is None
     token, _ = accounts.email_reset_token(me)
