@@ -83,7 +83,7 @@ locals {
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls and fetch-health (below). A crawl that
+  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls, fetch-health and build (below). A crawl that
   # dies (OOM kill, crash) is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints,
   # skips the roasters already done this week, fetches the dead attempt's in-flight roasters one at a time and
   # quarantines one that killed two attempts (crashguard), and it stops inside the first attempt's window
@@ -139,13 +139,18 @@ locals {
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
     # check. Every step runs whatever the ones before it did, and any step's failure fails the execution, which
     # emails the owner (alerts.tf, ingest_job_failed): a failed classify (no model or key, an API error), a failed
-    # gate, a failed publish (the release never reached the lake, issue #83), or the egress check's non-zero exit
-    # (an IP over 8% refusals two runs in a row). The build still runs after a failed classify, on the verdicts
-    # already stored: its own verdict gate decides whether that release is served.
+    # gate, a failed publish (the release is recorded and staged but not in the dataset, issue #83; RUNBOOK §5.1 f
+    # sends it), or the egress check's non-zero exit (an IP over 8% refusals two runs in a row). The build still
+    # runs after a failed classify, on the verdicts already stored: its own verdict gate decides whether that
+    # release is served.
+    # Retries 0: a second attempt is a second build. It takes a new build id, stamps a second release for the same
+    # week with the first as its baseline, moves the served pointer and replaces marts/, so a re-run would change
+    # what the first run stored and a rollback to "previous" would land on the same week. The alert tells the
+    # owner, and a person re-runs the step that failed (RUNBOOK §5.1, §5.5).
     "build" = {
       command = ["sh", "-c"]
       args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
-      egress  = "default", claude = true, memory = "8Gi", retries = 1
+      egress  = "default", claude = true, memory = "8Gi", retries = 0
     }
   }
 
@@ -380,7 +385,7 @@ resource "google_cloud_run_v2_job" "ingest" {
     template {
       service_account = google_service_account.ingest.email
       timeout         = "14400s" # 240 min, the limit every design was held to
-      # local.ingest_jobs says why: Shopify's crawls 0, everything else 1 (a crawl's deadline exits 0, never retried).
+      # local.ingest_jobs says why, job by job (a crawl's deadline exits 0, never retried; the build is never retried).
       max_retries = each.value.retries
 
       dynamic "vpc_access" {

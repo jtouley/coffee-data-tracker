@@ -1,7 +1,11 @@
 """The discover and probe Cloud Run jobs: they record new roasters, keep what they found when a part fails or the
 time runs out, publish it, and leave job_manifests rows (src/terraform/ingestion.tf, docs/ingestion/RUNBOOK.md §5.7).
 
-Each test names the cause it guards: the production jobs ran from 2026-11-02 and left nothing in the lake."""
+Each test names the cause it guards: the production jobs ran from 2026-11-02 and left nothing in the lake.
+
+Also the commands of every job that runs a shell chain (discover, probe and build) and of the chains the runbook has
+the owner paste into one: no step's failure may be hidden from the exit code (issue #83), and the build is never
+retried."""
 
 from __future__ import annotations
 
@@ -309,12 +313,6 @@ def test_discover_publishes_each_source_with_its_job_rows(tmp_path, monkeypatch)
 # --- the jobs' commands ---------------------------------------------------------------------------------------------
 
 
-def _job_args(name: str) -> str:
-    tf = (ROOT / "src/terraform/ingestion.tf").read_text()
-    block = tf[tf.index(f'"{name}" = {{') :]
-    return block[block.index("args") : block.index("egress")]
-
-
 def _shell_jobs() -> dict[str, str]:
     """Every job in ingestion.tf that runs a shell chain (`sh -c`), by name, with its script as the shell sees it."""
     tf = (ROOT / "src/terraform/ingestion.tf").read_text()
@@ -324,101 +322,131 @@ def _shell_jobs() -> dict[str, str]:
 
 
 def _runbook_chains() -> list[str]:
-    """The chains the runbook tells the owner to paste (`gcloud run jobs execute ... --args="..."`)."""
+    """The shell commands the runbook tells the owner to paste (`gcloud run jobs execute ... --args=...`), in either
+    quoting, one step or many, as the job's shell sees them. The comma-separated forms aren't shell and are left out."""
     text = (ROOT / "docs/ingestion/RUNBOOK.md").read_text()
-    return [c.replace("\\$", "$") for c in re.findall(r'--args="([^"\n]*;[^"\n]*)"', text)]
+    double = [c.replace("\\$", "$") for c in re.findall(r'--args="((?:[^"\\\n]|\\.)*)"', text)]
+    single = re.findall(r"--args='([^'\n]*)'", text)
+    return [c for c in double + single if "coffeedata " in c]
 
 
-def _swallowed(script: str) -> list[str]:
-    """What is wrong with a chain's exit code: each `coffeedata` step whose failure can't reach it."""
-    steps = [s.strip() for s in script.split(";")]
-    wrong = [s for s in steps[:-1] if s.startswith("coffeedata ") and not s.endswith("|| rc=1")]
-    if "&&" in script:
-        wrong.append("`&&` skips the later steps")
-    if any("rc=1" in s for s in steps) and (steps[0] != "rc=0" or steps[-1] != "exit $rc"):
-        wrong.append("sets rc but doesn't start with rc=0 and end with exit $rc")
-    if not any(s.startswith("coffeedata ") for s in steps):
-        wrong.append("no coffeedata step found")
-    return wrong
-
-
-def test_the_step_check_catches_the_chains_that_hid_a_failure():
-    # The build job's command before issue #83: a failed publish left rc at 0.
-    was = 'rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message "weekly build"; '
-    assert _swallowed(was + "coffeedata egress-check || rc=1; exit $rc") == [
-        'coffeedata publish --message "weekly build"'
-    ]
-    # The runbook's rebuild before #83: only the build's exit code counted.
-    assert (
-        _swallowed(
-            "coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message rebuild; exit $rc"
-        )
-        == [
-            "coffeedata classify",
-            "coffeedata build",  # `; rc=$?` did carry the build's exit, but one form for every step is what's checked
-            "coffeedata publish --message rebuild",
-        ]
-    )
-    assert _swallowed("coffeedata probe && coffeedata publish") == ["`&&` skips the later steps"]
-    assert _swallowed("rc=0; coffeedata build || rc=1; coffeedata publish") == [
-        "sets rc but doesn't start with rc=0 and end with exit $rc"
-    ]
-    assert (
-        _swallowed("coffeedata override --roaster r --action accept") == []
-    )  # one step: its exit is the job's
-
-
-def test_no_step_of_a_job_command_can_fail_without_failing_the_job():
-    jobs = _shell_jobs()
-    assert {"discover", "probe", "build"} <= set(jobs)
-    assert {name: w for name, script in jobs.items() if (w := _swallowed(script))} == {}
-    chains = _runbook_chains()
-    assert len(chains) >= 5  # the rebuilds in RUNBOOK §5.1 and §5.2, the verdict backfill in §5.5
-    assert {c: w for c in chains if (w := _swallowed(c))} == {}
-
-
-def _run_chain(script: str, tmp_path: Path, failing: str | None) -> tuple[int, list[str]]:
-    """Run a job's script with a stand-in `coffeedata` that records each call and fails the one named."""
+def _run_chain(script: str, tmp_path: Path, fail_call: int = 0) -> tuple[int, list[str]]:
+    """Run a script with a stand-in `coffeedata` that records each call and fails the `fail_call`-th (from 1)."""
     ran = tmp_path / "ran"
     ran.write_text("")
     fake = tmp_path / "coffeedata"
-    fake.write_text(f'#!/bin/sh\necho "$1" >> "{ran}"\n[ "$1" != "$FAIL" ]\n')
+    fake.write_text(f'#!/bin/sh\necho "$1" >> "{ran}"\n[ "$(wc -l < "{ran}")" -ne "$FAIL_CALL" ]\n')
     fake.chmod(0o755)
-    env = {"PATH": f"{tmp_path}{os.pathsep}{os.environ['PATH']}", "FAIL": failing or ""}
-    done = subprocess.run(["sh", "-c", script], env=env, capture_output=True, timeout=30, check=False)  # noqa: S603, S607
+    env = {
+        "PATH": f"{tmp_path}{os.pathsep}{os.environ['PATH']}",
+        "FAIL_CALL": str(fail_call),
+        "WEEK": "2026-01-05",
+    }
+    script = re.sub(
+        r"<\w+>", "placeholder", script
+    )  # the runbook's <roaster_id>, <why>: a redirect to the shell
+    done = subprocess.run(
+        ["sh", "-c", script], env=env, cwd=tmp_path, capture_output=True, timeout=30, check=False
+    )  # noqa: S603, S607
     return done.returncode, ran.read_text().split()
 
 
-@pytest.mark.parametrize("failing", ["classify", "build", "publish", "egress-check"])
-def test_the_build_job_runs_every_step_and_fails_when_any_one_does(tmp_path, failing):
+def _hidden_failures(script: str, tmp_path: Path) -> list[str]:
+    """The steps of a script whose failure it hides: with that step failing, the script still exits 0, or it stops
+    running the steps after it. Found by running it, so a prefix (`timeout 600`, an env var), a pipe or `|| true`
+    can't get past it the way they got past a reading of the text."""
+    code, steps = _run_chain(script, tmp_path)
+    assert code == 0 and steps, (script, code, steps)
+    hidden = []
+    for n, step in enumerate(steps, start=1):
+        code, ran = _run_chain(script, tmp_path, fail_call=n)
+        if code == 0 or ran != steps:
+            hidden.append(step)
+    return hidden
+
+
+@pytest.mark.parametrize(
+    ("script", "hidden"),
+    [
+        # The build job's command before issue #83: a failed publish left rc at 0.
+        (
+            'rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message "weekly build";'
+            " coffeedata egress-check || rc=1; exit $rc",
+            ["publish"],
+        ),
+        # The runbook's rebuild before #83: only the build's exit code counted.
+        (
+            "coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message rebuild; exit $rc",
+            ["classify", "publish"],
+        ),
+        ("coffeedata classify --wait 180; coffeedata publish --message verdicts", ["classify"]),
+        ("coffeedata probe && coffeedata publish", ["probe"]),  # `&&` skips the publish
+        ("rc=0; coffeedata build || rc=1; coffeedata publish", ["build"]),  # no `exit $rc`
+        ("rc=0; coffeedata build || rc=1; coffeedata publish || rc=1; rc=0; exit $rc", ["build", "publish"]),
+        ("rc=0; HF_HUB_ETAG_TIMEOUT=30 coffeedata build; coffeedata publish || rc=1; exit $rc", ["build"]),
+        ("rc=0; timeout 600 coffeedata build; coffeedata publish || rc=1; exit $rc", ["build"]),
+        ("rc=0; coffeedata build || true || rc=1; coffeedata publish || rc=1; exit $rc", ["build"]),
+        ("rc=0; coffeedata build | tee log || rc=1; coffeedata publish || rc=1; exit $rc", ["build"]),
+        # Nothing hidden: one step is its own exit code, and `&&` inside a message is only text.
+        ("coffeedata override --roaster <roaster_id> --action accept --reason '<why>'", []),
+        (
+            'rc=0; coffeedata build || rc=1; coffeedata publish --message "build && publish" || rc=1; exit $rc',
+            [],
+        ),
+    ],
+)
+def test_the_chain_check_finds_a_step_whose_failure_is_hidden(tmp_path, script, hidden):
+    assert _hidden_failures(script, tmp_path) == hidden
+
+
+def test_no_step_of_a_job_command_can_fail_without_failing_the_job(tmp_path):
+    """Issue #83: every shell job in ingestion.tf, and every command the runbook has the owner paste into one, is run
+    with each of its `coffeedata` steps failing in turn. Every step must still run, and the exit must be non-zero."""
+    jobs = _shell_jobs()
+    assert {"discover", "probe", "build"} <= set(jobs)
+    chains = _runbook_chains()
+    assert sum("coffeedata build " in c for c in chains) >= 3  # the rebuilds in RUNBOOK §5.1 and §5.2
+    assert (
+        sum("coffeedata classify" in c and "coffeedata build" not in c for c in chains) >= 2
+    )  # §5.5's backfill
+    assert any(c.startswith("coffeedata publish") for c in chains)  # §5.1 f: send a staged release
+    scripts = {f"job {name}": script for name, script in jobs.items()} | {f"runbook: {c}": c for c in chains}
+    assert {where: h for where, script in scripts.items() if (h := _hidden_failures(script, tmp_path))} == {}
+
+
+def test_the_build_job_runs_every_step_whichever_one_fails(tmp_path):
     script = _shell_jobs()["build"]
-    assert _run_chain(script, tmp_path, None) == (0, ["classify", "build", "publish", "egress-check"])
-    # A failed publish used to leave the exit code at 0, so no alert fired for a release that never reached the lake.
-    assert _run_chain(script, tmp_path, failing) == (1, ["classify", "build", "publish", "egress-check"])
+    steps = ["classify", "build", "publish", "egress-check"]
+    assert _run_chain(script, tmp_path) == (0, steps)
+    # A failed publish (the third call) used to leave the exit code at 0: no alert for a release nobody could read.
+    assert [_run_chain(script, tmp_path, fail_call=n) for n in (1, 2, 3, 4)] == [(1, steps)] * 4
 
 
-@pytest.mark.parametrize("failing", ["classify", "build", "publish"])
-def test_the_runbooks_rebuild_runs_every_step_and_fails_when_any_one_does(tmp_path, failing):
-    rebuilds = [c for c in _runbook_chains() if "coffeedata build" in c]
-    assert len(rebuilds) >= 3
-    for chain in rebuilds:
-        script = chain.replace("$WEEK", "2026-01-05")
-        assert _run_chain(script, tmp_path, None) == (0, ["classify", "build", "publish"])
-        assert _run_chain(script, tmp_path, failing) == (1, ["classify", "build", "publish"])
+def test_the_build_job_is_never_retried():
+    """Cloud Run retries a failed task `max_retries` times, and for the build a second attempt is a second build:
+    `coffeedata build` takes a new build id, so the retry stamps a second release for the same week (with the first
+    as its baseline), moves the served pointer and replaces marts/, and a rollback to "previous" lands on the same
+    week. A re-run of a release job must not change what an earlier run stored, so the build gets one attempt: its
+    failure emails the owner (alerts.tf, ingest_job_failed), who re-runs the step that failed (RUNBOOK §5.1)."""
+    tf = (ROOT / "src/terraform/ingestion.tf").read_text()
+    build = tf[tf.index('"build" = {') :]
+    build = build[: build.index("}")]
+    assert re.findall(r"\bretries = (\d+)", build) == ["0"]
+    assert "max_retries = each.value.retries" in tf  # the job resource takes it from that map
 
 
 def test_the_discover_job_publishes_each_source_and_exits_non_zero_on_a_failure():
-    args = _job_args("discover")
-    assert "coffeedata discover osm overture --publish || rc=1" in args
-    assert 'coffeedata publish --message \\"discover\\" || rc=1; exit $rc' in args
+    script = _shell_jobs()["discover"]
+    assert "coffeedata discover osm overture --publish || rc=1" in script
+    assert 'coffeedata publish --message "discover" || rc=1; exit $rc' in script
 
 
 def test_the_probe_job_publishes_whatever_the_probe_exit_and_ends_before_the_crawls():
-    args = _job_args("probe")
+    script = _shell_jobs()["probe"]
     assert (
-        "|| rc=1; coffeedata publish" in args and "&&" not in args
+        "|| rc=1; coffeedata publish" in script and "&&" not in script
     )  # `&&` skipped the publish on any failure
-    deadline = float(re.search(r"--deadline-min (\d+)", args).group(1))  # type: ignore[union-attr]
+    deadline = float(re.search(r"--deadline-min (\d+)", script).group(1))  # type: ignore[union-attr]
     tf = (ROOT / "src/terraform/ingestion.tf").read_text()
     probe_at = re.search(r'"probe"\s+= \{ job = "probe", cron = "17 (\d+) \* \* 1" \}', tf)
     crawl_at = re.search(r'"crawl-shopify"\s+= \{ job = "crawl-shopify", cron = "17 (\d+) \* \* 1" \}', tf)
