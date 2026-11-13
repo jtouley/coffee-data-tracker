@@ -25,7 +25,7 @@ output "dns" {
 
 output "usage_url" {
   description = "The usage collector's run.app address (works before its domain does)."
-  value       = google_cloud_run_v2_service.usage.uri
+  value       = one(google_cloud_run_v2_service.usage[*].uri)
 }
 
 output "usage_dns" {

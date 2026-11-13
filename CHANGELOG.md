@@ -27,6 +27,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   cookies and every other header are never read. Events go to the private dataset `jtouley/coffee-usage`
   (`Lake.usage()`, table `usage_events`, `events/day=YYYY-MM-DD/batch=<id>.parquet`) every 200 events, every 15
   minutes and at shutdown. Its log holds counts only, and Terraform excludes Cloud Run's request log for it.
+  Terraform deploys it, like the ingest jobs: the service runs `usage_image`, the app's attested image from main
+  pinned by digest in `ci.tfvars` (a PR bumps it), and `deploy.yml` tags that digest so the registry keeps it. The
+  service itself waits for `usage_enabled` (off), which needs two grants to the apply account first.
   Internal contract `usage` 1.0.0 (`contracts/internal/usage.odcs.yaml`). The page scripts and the dbt models are
   separate PRs.
 

@@ -468,13 +468,28 @@ def test_the_image_runs_the_collector_when_the_service_says_so():
 
 
 def test_the_terraform_keeps_to_the_collectors_own_resources():
-    """Its own account, one secret it alone reads, scale to zero and at most two instances, Google's sample image
-    until a deploy, the request-log exclusion; no grant to the deploy, plan or apply accounts or any
+    """Its own account, one secret it alone reads, scale to zero and at most two instances, the pinned image (Google's
+    sample image until one is pinned) owned by Terraform, the request-log exclusion made before the service; the
+    service and what hangs off it only with usage_enabled; no grant to the deploy, plan or apply accounts or any
     impersonation role (the plan guard's to refuse, the owner's to grant)."""
     tf = (ROOT / "src/terraform/usage.tf").read_text()
     code = "\n".join(line.split("#")[0] for line in tf.splitlines())
     assert re.search(r"min_instance_count\s*=\s*0", code) and re.search(r"max_instance_count\s*=\s*2", code)
-    assert 'image = "us-docker.pkg.dev/cloudrun/container/hello"' in code
+    assert (
+        'image = var.usage_image != "" ? var.usage_image : "us-docker.pkg.dev/cloudrun/container/hello"'
+        in code
+    )
+    assert re.search(r"ignore_changes = \[client, client_version, scaling\]", code)  # not the image
+    gated = re.findall(r'^resource "(\w+)" "\w+" \{\n  count = local.usage_count', code, re.M)
+    assert sorted(gated) == sorted(
+        [
+            "google_logging_project_exclusion",
+            "google_cloud_run_v2_service",
+            "google_cloud_run_v2_service_iam_member",
+            "google_cloud_run_domain_mapping",
+        ]
+    )
+    assert "google_logging_project_exclusion.usage_requests]" in code  # the service depends on it
     assert re.search(
         r'secret_id = google_secret_manager_secret.usage_token.id\s*\n\s*role\s*=\s*"roles/secretmanager.secretAccessor"',
         code,
@@ -492,7 +507,42 @@ def test_the_terraform_keeps_to_the_collectors_own_resources():
     assert (
         re.search(r"google_project_iam|google_service_account_iam|google_service_account_key", code) is None
     )
-    assert "run.googleapis.com%2Frequests" in code and "google_cloud_run_v2_service.usage.name" in code
+    assert "run.googleapis.com%2Frequests" in code and 'service_name=\\"${local.usage_service}\\"' in code
+
+
+def _usage_image_pattern() -> re.Pattern:
+    tf = (ROOT / "src/terraform/variables.tf").read_text()
+    block = tf[tf.index('variable "usage_image"') :]
+    hcl = re.search(r'can\(regex\("(.+?)", var\.usage_image\)\)', block).group(1)
+    return re.compile(hcl.replace("\\\\", "\\"))  # HCL's "\\." is the regex \.
+
+
+@pytest.mark.parametrize(
+    ("image", "ok"),
+    [
+        ("us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:" + "a" * 64, True),
+        ("us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app:latest", False),
+        ("us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:" + "a" * 64, False),
+        ("docker.io/library/app@sha256:" + "a" * 64, False),
+        ("us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:" + "a" * 63, False),
+    ],
+)
+def test_usage_image_is_the_apps_image_by_digest(image, ok):
+    assert bool(_usage_image_pattern().fullmatch(image)) is ok
+
+
+def test_deploy_keeps_the_pinned_usage_image_and_never_deploys_it():
+    """deploy.yml tags what ci.tfvars pins so the registry's cleanup keeps it; it never deploys the collector."""
+    wf = (ROOT / ".github/workflows/deploy.yml").read_text()
+    step = wf[wf.index("- name: Keep the usage collector's pinned image") :]
+    step = step[: step.index("\n\n")]
+    assert "src/terraform/ci.tfvars" in step and 'tags add "$usage" "$IMAGE:pinned-usage-' in step
+    assert "run deploy" not in step and "registry-coffee-usage" not in wf
+    keep = (ROOT / "src/terraform/artifact_registry.tf").read_text()
+    assert re.search(r'tag_prefixes = \["pinned"', keep)  # pinned-usage-* is kept
+    tfvars = (ROOT / "src/terraform/ci.tfvars").read_text()
+    pinned = re.findall(r'^usage_image *= *"(.*)"$', tfvars, re.M)
+    assert all(_usage_image_pattern().fullmatch(p) for p in pinned)
 
 
 def test_the_logs_never_hold_more_than_counts(collector, caplog):
@@ -527,14 +577,15 @@ def _create(address: str, rtype: str, after: dict, unknown: dict | None = None) 
     return {
         "address": address,
         "type": rtype,
-        "name": address.split(".")[1],
+        "name": address.split(".")[1].split("[")[0],
         "mode": "managed",
         "change": {"actions": ["create"], "before": None, "after": after, "after_unknown": unknown or {}},
     }
 
 
-# What `terraform plan` shows for usage.tf on a project that has the rest already: seven creates. Values Terraform
-# learns only at apply (the account's email, the secret's id) are unknown, as they are in the real plan.
+# What `terraform plan` shows for usage.tf on a project that has the rest already, with usage_enabled on: seven
+# creates (the first three alone with it off). Values Terraform learns only at apply (the account's email, the
+# secret's id) are unknown, as they are in the real plan.
 USAGE_PLAN = [
     _create("google_service_account.usage", "google_service_account",
             {"account_id": "registry-coffee-usage", "display_name": "registry.coffee usage collector (runtime)"},
@@ -543,41 +594,72 @@ USAGE_PLAN = [
             {"secret_id": "USAGE_HF_TOKEN", "replication": [{"auto": [{}]}]}, {"id": True, "name": True}),
     _create("google_secret_manager_secret_iam_member.usage_token", "google_secret_manager_secret_iam_member",
             {"role": "roles/secretmanager.secretAccessor"}, {"member": True, "secret_id": True}),
-    _create("google_cloud_run_v2_service.usage", "google_cloud_run_v2_service",
+    _create("google_cloud_run_v2_service.usage[0]", "google_cloud_run_v2_service",
             {"name": "registry-coffee-usage", "location": "us-central1", "ingress": "INGRESS_TRAFFIC_ALL",
              "template": [{"scaling": [{"min_instance_count": 0, "max_instance_count": 2}],
                            "containers": [{"image": "us-docker.pkg.dev/cloudrun/container/hello"}]}]},
             {"template": [{"service_account": True}], "uri": True}),
-    _create("google_cloud_run_v2_service_iam_member.usage_public", "google_cloud_run_v2_service_iam_member",
+    _create("google_cloud_run_v2_service_iam_member.usage_public[0]", "google_cloud_run_v2_service_iam_member",
             {"name": "registry-coffee-usage", "location": "us-central1", "role": "roles/run.invoker",
              "member": "allUsers"}),
-    _create("google_cloud_run_domain_mapping.usage", "google_cloud_run_domain_mapping",
+    _create("google_cloud_run_domain_mapping.usage[0]", "google_cloud_run_domain_mapping",
             {"name": "e.registry.coffee", "location": "us-central1",
              "spec": [{"route_name": "registry-coffee-usage"}]}),
-    _create("google_logging_project_exclusion.usage_requests", "google_logging_project_exclusion",
+    _create("google_logging_project_exclusion.usage_requests[0]", "google_logging_project_exclusion",
             {"name": "registry-coffee-usage-requests",
              "filter": 'resource.type="cloud_run_revision" AND resource.labels.service_name="registry-coffee-usage" '
                        'AND logName="projects/coffee-data-tracker/logs/run.googleapis.com%2Frequests"'}),
 ]  # fmt: skip
 
 
-def test_the_plan_guard_passes_the_collectors_resources():
-    """scripts/tf_plan_guard.py over a plan of usage.tf's creates added to the guard's own good plan: every guard
-    passes, so nothing here trips them for the wrong reason (no grant to a guarded account, no impersonation role,
-    the service's image Google's placeholder)."""
+PINNED = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:" + "c" * 64
+
+
+def usage_bump(old: str, new: str) -> dict:
+    """The PR that deploys a collector version: the service's image, from one digest (or the placeholder) to another."""
+    before = {"name": "registry-coffee-usage", "template": [{"containers": [{"image": old}]}]}
+    after = {"name": "registry-coffee-usage", "template": [{"containers": [{"image": new}]}]}
+    return {
+        "address": "google_cloud_run_v2_service.usage[0]",
+        "type": "google_cloud_run_v2_service",
+        "name": "usage",
+        "mode": "managed",
+        "change": {"actions": ["update"], "before": before, "after": after, "after_unknown": {}},
+    }
+
+
+def load_guard(path: Path):
     import importlib.util
     import sys
 
-    spec = importlib.util.spec_from_file_location(
-        "tf_plan_guard_usage", ROOT / "scripts" / "tf_plan_guard.py"
-    )
+    spec = importlib.util.spec_from_file_location(f"tf_plan_guard_{abs(hash(path))}", path)
     guard = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = guard
     spec.loader.exec_module(guard)
+    return guard
+
+
+def guard_results(guard, changes: list[dict]) -> dict[str, list[str]]:
     doc = json.loads((ROOT / "tests/fixtures/tf_plan/good.json").read_text())
-    doc["resource_changes"] += USAGE_PLAN
+    doc["resource_changes"] += changes
+    return {name: bad for name, _, bad in guard.run_guards(guard.load(json.dumps(doc)))}
+
+
+@pytest.mark.parametrize(
+    "changes",
+    [
+        USAGE_PLAN[:3],  # usage_enabled off: the account and the secret
+        USAGE_PLAN,  # usage_enabled on
+        [usage_bump("us-docker.pkg.dev/cloudrun/container/hello", PINNED)],  # the first pinned digest
+        [usage_bump(PINNED, PINNED.replace("c" * 64, "d" * 64))],  # a later one
+    ],
+)
+def test_the_plan_guard_passes_the_collectors_resources(changes):
+    """scripts/tf_plan_guard.py over each plan this PR's Terraform makes, added to the guard's own good plan: every
+    guard passes, so nothing here trips them for the wrong reason (no grant to a guarded account, no impersonation
+    role, the service's image Google's placeholder or the app's by digest)."""
     assert set(
         re.findall(r'^resource "(\w+)" "(\w+)"', (ROOT / "src/terraform/usage.tf").read_text(), re.M)
     ) == {(rc["type"], rc["name"]) for rc in USAGE_PLAN}
-    results = {name: bad for name, _, bad in guard.run_guards(guard.load(json.dumps(doc)))}
+    results = guard_results(load_guard(ROOT / "scripts" / "tf_plan_guard.py"), changes)
     assert results and all(bad == [] for bad in results.values()), results

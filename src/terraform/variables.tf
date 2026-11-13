@@ -76,8 +76,24 @@ variable "usage_dataset" {
   default     = "jtouley/coffee-usage"
 }
 
+variable "usage_enabled" {
+  description = "Creates the usage collector's service, its public invoker, its domain mapping and its request-log exclusion (usage.tf). Turn on in ci.tfvars once the apply account can act as registry-coffee-usage and write log exclusions (RUNNING.md, \"Usage\"); before that an apply would fail partway."
+  type        = bool
+  default     = false
+}
+
 variable "usage_token" {
   description = "Mounts the USAGE_HF_TOKEN secret on the usage collector as HF_TOKEN. The secret always exists; turn this on once it has a value (RUNNING.md, \"Usage\")."
   type        = bool
   default     = false
+}
+
+variable "usage_image" {
+  description = "The image the usage collector runs: an app image deploy.yml built from main, by digest (`<region>-docker.pkg.dev/<project>/<service>/app@sha256:<64 hex>`), set in ci.tfvars. Empty (the default) runs Google's sample image. Never a tag: a tag moves, a digest doesn't."
+  type        = string
+  default     = ""
+  validation {
+    condition     = var.usage_image == "" || can(regex("^[a-z0-9-]+-docker\\.pkg\\.dev/[a-z0-9-]+/[a-z0-9-]+/app@sha256:[0-9a-f]{64}$", var.usage_image))
+    error_message = "usage_image must be the app's image pinned by digest: <region>-docker.pkg.dev/<project>/<repository>/app@sha256:<64 hex>, from deploy.yml's run on main (its attest job signs it). A tag such as :latest is refused."
+  }
 }

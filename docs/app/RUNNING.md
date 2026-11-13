@@ -581,37 +581,37 @@ Cloud Run's own request log for it, which holds full IPs and user agents, is exc
 
 | What | Where | Value |
 |---|---|---|
-| `USAGE_HF_TOKEN` secret | Secret Manager: always exists, mounted as `HF_TOKEN` when `usage_token = true` | A fine-grained Hugging Face token with write access to `jtouley/coffee-usage` only |
-| `usage_token` | `terraform.tfvars` / `ci.tfvars` | `true` mounts the secret; `false` (the default) leaves the collector unable to publish |
+| `usage_enabled` | `ci.tfvars` (a PR) | `true` creates the service, its public invoker, domain mapping and request-log exclusion; `false` (the default): only its account and the empty secret |
+| `usage_image` | `ci.tfvars` (a PR) | The app's image from a deploy run on main, by digest (`<GCP_IMAGE>@sha256:<64 hex>`); empty runs Google's sample image |
+| `usage_token` | `ci.tfvars` (a PR) | `true` mounts `USAGE_HF_TOKEN` as `HF_TOKEN`; `false` (the default) leaves the collector unable to publish |
+| `USAGE_HF_TOKEN` secret | Secret Manager: always exists | A fine-grained Hugging Face token with write access to `jtouley/coffee-usage` only |
 | `usage_domain`, `usage_dataset` | variables | `e.registry.coffee`, `jtouley/coffee-usage` |
-| DNS | the registrar, by hand | `CNAME e -> ghs.googlehosted.com.` (`terraform output usage_dns`) |
+| DNS | the registrar | `CNAME e -> ghs.googlehosted.com.` (`terraform output usage_dns`) |
+
+**Deploying it.** Terraform runs the collector, like the ingest jobs; the deploy workflow never touches it. Every run
+of `deploy.yml` on main builds the app's image, pushes it by digest and attests it (the `attest` job); the collector
+is the same image with `COFFEEDATA_APP=app.usage`. To deploy a version, open a PR that sets `usage_image` in
+`src/terraform/ci.tfvars` to that run's `<GCP_IMAGE>@sha256:<digest>` (the "Build and push" step names it; check it
+with `gh attestation verify oci://<image> --repo jtouley/coffee-data-tracker`). Merge it, then apply through GitHub
+("Changing the infrastructure"). The variable refuses anything but the app's repository by digest, and the plan
+guard's image check covers the service. `deploy.yml` tags the digest `ci.tfvars` pins `pinned-usage-<12 hex>`, so the
+registry's cleanup keeps it.
 
 ### Turning usage on
 
-1. **The dataset.** On Hugging Face, make the private dataset `jtouley/coffee-usage`. Then a fine-grained token:
-   repository permissions on that one dataset, write. (Hugging Face has no write-only token: it can read that dataset
-   too, and nothing else.)
-2. **Terraform** (the apply flow in "Changing the infrastructure"). The first apply creates the service with
-   Google's sample image, its account, the empty secret, the public invoker grant, the domain mapping and the log
-   exclusion. Then add the token, without printing it:
+Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the GitHub apply.
 
-   ```bash
-   gcloud secrets versions add USAGE_HF_TOKEN --data-file=-   # paste the token, then Ctrl-D
-   ```
-
-   and set `usage_token = true`; the next apply mounts it.
-3. **DNS**: the CNAME above. The certificate follows within the hour, as the app's did.
-4. **The image.** Deploys don't update this service yet. Running the app's image as the collector's account needs
-   the deploy account to hold `roles/run.developer` on this service and `roles/iam.serviceAccountUser` on
-   `registry-coffee-usage@`. The second is an impersonation grant to a guarded account, which the plan guard refuses
-   by design (`scripts/tf_plan_guard.py`), so the owner grants it by hand, or deploys this service by hand:
-
-   ```bash
-   gcloud run deploy registry-coffee-usage --region us-central1 --image "$GCP_IMAGE@sha256:<digest of main's app image>"
-   ```
-
-   The image reads `COFFEEDATA_APP=app.usage` from the service and runs the collector.
-5. **Check it.** `curl -s -o /dev/null -w '%{http_code}\n' -X POST https://e.registry.coffee/e -d '{}'` prints
+1. **Outside GitHub, once:** on Hugging Face, make the private dataset `jtouley/coffee-usage` and a fine-grained
+   token with write access to that one dataset (Hugging Face has no write-only token: it can read that dataset too,
+   and nothing else). Then in the Cloud Console, **Security → Secret Manager → `USAGE_HF_TOKEN` → New version**:
+   paste the token. Add the DNS record above at the registrar.
+2. **The apply account's two grants** (bootstrap root, the owner's, not through GitHub): act as
+   `registry-coffee-usage@` (`roles/iam.serviceAccountUser` on that one account, as it has on the runtime account),
+   and write log exclusions (`logging.exclusions.create`, `.get`, `.list`, `.update`). Until then leave
+   `usage_enabled` off: the apply would fail partway.
+3. `usage_enabled = true`, `usage_token = true` and `usage_image` pinned, in one PR. The apply makes the log exclusion
+   first, then the service, its invoker and domain mapping. The certificate follows the DNS record within the hour.
+4. **Check it.** `curl -s -o /dev/null -w '%{http_code}\n' -X POST https://e.registry.coffee/e -d '{}'` prints
    `204`, as does every other request; the service's log shows a `usage flush` line counting it as `foreign_origin`
    at its next flush (a request 15 minutes later, or the instance stopping).
 
