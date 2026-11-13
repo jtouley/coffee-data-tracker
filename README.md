@@ -9,7 +9,7 @@ coffee in it.
 
 Every roaster runs its own online store, so there's no single place to compare origins, processes and prices, or to
 see when a coffee's price changes or it sells out. A paper shot log isn't tied to a specific coffee or grinder. This
-project reads each roaster's public store once a week, starting from a seed list of about 3,200 US roasters, keeps
+project reads each roaster's public store once a week, starting from a seed list of US roasters, keeps
 every weekly snapshot, and turns them into tables you can query with SQL: what's listed now, what changed, and how
 your shots of a given coffee went. The weekly crawl runs as scheduled Cloud Run jobs, and GitHub Actions publishes the site. The data lives in a lake
 of Parquet files: a Hugging Face dataset or a local folder.
@@ -245,6 +245,8 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads. `build` and `weekly` take `--db` instead (same default); `site` and `export-public` default to `build/served.duckdb`, the served release |
 | `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
 | `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
+| `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by the main dbt project or released. Only the private one (`dbt_importers/`, `coffeedata importer-build`) reads it, and `coffeedata importer-build --publish` keeps its latest `importer_offers` there under `derived/` |
+| `COFFEEDATA_IMPORTERS_DB` | none | The private importers project's database file. `coffeedata importer-build` sets it to `build/importers.duckdb` under the checkout (whatever the working directory; dbt runs from there), its only allowed value; the project refuses any other, and the command refuses a public database, a link (the file or its `build/` folder), or a file holding tables it doesn't own (dbt's own work tables for its models, left by an interrupted build, aside) |
 | `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
 | `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
@@ -260,9 +262,10 @@ Everything is set through environment variables. Nothing is required for a local
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
 | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |
 
-The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
-list. Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and
-this file stays as it is.
+The seed list is [`config/roasters.csv`](config/roasters.csv): roasters from Overture Maps and a curated list.
+Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and this
+file stays as it is. The site counts them all each week ("roasters in the registry" on
+[registry.coffee](https://registry.coffee/)).
 
 ## Run it on GitHub
 
@@ -307,7 +310,9 @@ public contract at each build: name and description, the data licence
 the 2026-10-26 run on), every contract column as a variable, the downloads (`catalog.json`, and the Hugging Face
 files when `PUBLIC_EXPORT_URL` is an `hf://` dataset), and the release (`dateModified` is its run date, `version` its build id). The site also has a `robots.txt` that allows
 everything and a `sitemap.xml` of its pages. `catalog/catalog.json` starts with a `release` object (build id, run
-date, contract id and version, licence) before its `columns` and `rows`.
+date, contract id and version, licence) before its `columns` and `rows`. Each row is one coffee; columns are only ever added
+at the end (`roaster_id` and `roaster_city`, the roaster's city as `public_roaster` stores it, came after `first_seen`),
+so look them up by name in `columns`.
 
 ## How it works
 
@@ -371,6 +376,42 @@ Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parque
 `Image` layout, so a photo is never in the main lake. The app writes one when a bag's label is photographed.
 Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt never reads.
 
+Green importers' offer lists have a private dataset of their own too (`COFFEEDATA_IMPORTERS`,
+[`src/coffeedata/importers_card.md`](src/coffeedata/importers_card.md), its dataset card). **They are backend-only,
+for internal use and a future roaster portal**: never in the public release, the `public_*` tables, the site or the
+public dataset, and the main dbt project never reads them. Even in that portal, only the normalized values may be
+shown, never the importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
+pass a week over each importer's public offer page and stores it raw: one immutable `raw/` file per importer and
+week, each lot word for word (every cell of its row and its URL), as the roaster adapters keep a product's whole
+text. No prices, page HTML or images. The stated fields and our normalized values are derived from raw by a private
+dbt project of its own, `dbt_importers/` (`coffeedata importer-build`): staging unnests each lot's cells, and
+intermediate models apply the rules (SQL over the vocabulary in `importer_rules.py`, `extract.py` and `origins.py`,
+handed to dbt by a Python model; dbt unit tests in `dbt_importers/models/unit_tests.yml`) into `importer_offers`. It
+builds into its own database file, only ever the checkout's `build/importers.duckdb`, which the main build, the release, the site, the
+exports, the contracts and the MCP server never open (`tests/test_importers.py`). Each build re-derives the whole
+history from raw, so a better rule applies to every week. After each weekly snapshot that passes, the workflow's `build` job runs
+`coffeedata importer-build --publish` and keeps the latest build's `importer_offers` in the same private dataset, as
+one file replaced at each build (`derived/importer_offers.parquet`), never read back by the build. dbt's output stays
+on the runner and the run's log shows counts only, since the repository and its logs are public. A failed build
+leaves the raw weeks and the last good copy as they are and opens a `pipeline:importer-build` triage issue
+([`docs/TRIAGE.md`](docs/TRIAGE.md)). InterAmerican's table has no origin, region, process or
+grade column, so those are read from its product names ("Brazil Oberon 17/18 Natural"); it states no lot ID. The
+rules abstain when unsure and haven't been evaluated yet (CLAUDE.md; status and running totals in
+[`eval/importers/README.md`](eval/importers/README.md)).
+
+Royal Coffee, a Shopify store, is the third importer: its public `/products.json` listing is read one page of 250
+after another, 15 s apart, and each product is kept word for word (its fields, tags, options, variants without
+prices, and `body_html`'s text; no prices or images; a field that mentions a price is left out of that product).
+Its values (lot number, warehouse, origin, region, process, varieties, altitude, harvest months, certifications) are
+derived by the same private dbt project (`int_royal_labels`, `int_royal_rules`), like the others. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
+access Royal's site.** Its address is only in the importers workflow, passed to a scheduled run's first attempt
+alone (never a dispatch or a re-run). `importers.royal_listing_url` refuses it anywhere else; that check reads
+environment values, so it stops accidents, not a deliberate run. Every HTTP client but the importers job's, and the
+roaster registry and discovery, refuse the host outright (`http.schedule_only_host`). Its tests use invented
+products only (`tests/fixtures/importers/royal_synthetic_products.json`). **Owner step for a real drop at Royal:**
+set the repository variable `ROYAL_ACCEPT_DROP_WEEK` to the value the failure names (the failed week's Monday,
+`YYYY-MM-DD`); the next weekly run stores the thinned listing, and the value expires by itself a week later.
+
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
 - **A site being down never looks like a delisting.** A failed fetch is recorded with no products, and price
@@ -407,6 +448,11 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     when a run just tries fewer roasters), and the same stores' products and priced products against their
     previous fetch (a platform whose fetches "succeed" with less, or a price wipe on one platform). Measured in
     `eval/dq`;
+  - `public_roasters_unique_by_host` and `roaster_aliases_resolve`: one store is one public roaster. A roaster_id
+    whose site resolves to another roaster's store (the same host, any case, without `www.`/`shop.`/`store.`) is
+    an alias (`dim_roaster.status`, `canonical_roaster_id`): the crawl skips it and no public table lists it.
+    A rebrand whose old domain doesn't redirect is set by hand (`alias_of` in `config/roasters.csv`). Measured in
+    `eval/roaster_dedup`;
   - `near_duplicate_roasters`, `price_per_100g_outliers`, `public_tables_reconcile` and
     `release_changes_explained` (all warn only, measured in `eval/dq`): one catalog listed under two roaster_ids; a
     price per 100 g far from coffees of the same origin and process (robust z of its log, below −3 or above 6);
@@ -432,8 +478,9 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   - `run_manifest_mode_values`: every run manifest's `mode` is `full`, `sample`, `only` or `retry_failed`
     (`run_completeness` takes the expected set from the full ones);
   - `coverage_claims_match_build`: the coverage numbers we publish (`marketplace/LISTING.md`'s coverage-claims
-    comment, such as "about 45,000 coffees listed for sale") are within 15% (`claim_tolerance`) of this build's
-    `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update;
+    comment, one `metric: text` line per number) are within 15% (`claim_tolerance`) of this build's
+    `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update, with the
+    build's number rounded for the copy;
     `coverage_claims_name_metrics` fails the build if a claim names a metric the profile doesn't have;
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 

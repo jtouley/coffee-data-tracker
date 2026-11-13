@@ -102,11 +102,12 @@ resource "google_monitoring_alert_policy" "down" {
 # a job. `run.googleapis.com/job/completed_execution_count` (DELTA, resource cloud_run_job with job_name and location,
 # metric label `result`) counts completed executions; in PromQL it is
 # run_googleapis_com:job_completed_execution_count. It counts executions, not task attempts: an execution's result is
-# decided after its retries (max_retries: 0 for Shopify's, WooCommerce's and generic's crawls, crawl-retry and
-# fetch-health, 1 otherwise, ingestion.tf), so an attempt that dies and a retry that succeeds is one `succeeded`
-# execution and sends no email (the dead attempt stays visible in job_manifests: a `running` row with no end row, and
-# the retry's start row lists it under detail.dead_attempts). It fires on a failed retry, on the 240-minute timeout,
-# or on a failed attempt of a job without retries; a crawl that hits its deadline exits 0 and isn't a failure.
+# decided after its retries (max_retries: 0 for Shopify's, WooCommerce's and generic's crawls, crawl-retry,
+# fetch-health, the merge and build, 1 otherwise, ingestion.tf), so an attempt that dies and a retry that succeeds is
+# one `succeeded` execution and sends no email (the dead attempt stays visible in job_manifests: a `running` row with
+# no end row, and the retry's start row lists it under detail.dead_attempts). It fires on a failed retry, on the
+# 240-minute timeout, or on a failed attempt of a job without retries; a crawl that hits its deadline exits 0 and
+# isn't a failure.
 
 # One policy per job, so the email names the job and its first command.
 resource "google_monitoring_alert_policy" "ingest_job_failed" {
@@ -136,7 +137,7 @@ resource "google_monitoring_alert_policy" "ingest_job_failed" {
 
           gcloud logging read 'resource.type="cloud_run_job" AND resource.labels.job_name="${each.key}" AND labels."run.googleapis.com/execution_name"="<execution>"' --limit 200 --freshness 1d
 
-      A failed `build`: if the gate failed, no new release this week and Tuesday's site run fails without exporting. If only egress-check failed (an IP refused on over 8% of first contacts), the release is already published: check the egress IPs, not the data. A failed `fetch-health`: the fetch-health check found a systemic fetch failure (one platform below the gate's adapter_ok_rate floor; two or more at once, which points at the image; or the run below run_ok_rate's), or couldn't run dbt. A challenged store is an ordinary failed fetch on its list, never an alert of its own. It judges whether fetches returned a catalog of about the right size, not whether the data is good. Its log's ERROR line and its job_manifests row (job fetch-health) say which, and a systemic platform's roasters are held off its list; steps for fetch-health: docs/ingestion/RUNBOOK.md, section 8. A failed `classify` (no verdict model or Anthropic key, or an API error) fails the execution too: the log names what is missing, and the build after it ran on the verdicts already stored (its verdicts_cover_catalog test says whether that release was served). A failed `publish` exits 0 and is not caught here. Steps: docs/ingestion/RUNBOOK.md, section 5.
+      A failed `build` (never retried: this is its one attempt, and every step ran): its log says which step failed. If the gate failed, no new release this week and Tuesday's site run fails without exporting. If `publish` failed, the release is recorded and staged but not in the dataset: send it with a publish-only execution, don't rebuild (RUNBOOK section 5.1 f). If only egress-check failed (an IP refused on over 8% of first contacts), the release is already published: check the egress IPs, not the data. A failed `fetch-health`: the fetch-health check found a systemic fetch failure (one platform below the gate's adapter_ok_rate floor; two or more at once, which points at the image; or the run below run_ok_rate's), or couldn't run dbt. A challenged store is an ordinary failed fetch on its list, never an alert of its own. It judges whether fetches returned a catalog of about the right size, not whether the data is good. Its log's ERROR line and its job_manifests row (job fetch-health) say which, and a systemic platform's roasters are held off its list; steps for fetch-health: docs/ingestion/RUNBOOK.md, section 8. A failed `classify` (no verdict model or Anthropic key, or an API error) fails the execution too: the log names what is missing, and the build after it ran on the verdicts already stored (its verdicts_cover_catalog test says whether that release was served). A failed `publish` fails the execution in `build`, `discover` and `probe` alike (what it didn't send stays staged, and the next publish from the same staging sends it). A failed `discover`: a source recorded nothing usable (Overture's scan found no roaster, or Overpass left most states unanswered); the other source's rows are published, and its job_manifests rows (job discover) say which. Run it again later (RUNBOOK section 5.7). Steps: docs/ingestion/RUNBOOK.md, section 5.
     EOT
   }
   user_labels = {
@@ -197,3 +198,44 @@ resource "google_monitoring_alert_policy" "ingest_schedule_failed" {
 # ingest_schedule_failed (a build slot that didn't start), and site.yml's Tuesday 11:17 run, which fails red when the
 # served release isn't this week's (GitHub emails a failed scheduled run). The gap left: a paused or deleted
 # Scheduler entry, which only the red Tuesday run shows.
+
+# Email (var.email, docs/app/RUNNING.md "Email"): a message the app didn't send. Resend refusing or unreachable logs
+# at ERROR (the errors policy above fires too); the day's sending cap (app/mail.py DAILY_CAP) logs at WARNING, which
+# only this policy sees. Logs carry the kind of email and the user id, never an address or a link.
+resource "google_monitoring_alert_policy" "email_not_sent" {
+  count        = var.email ? 1 : 0
+  display_name = "registry.coffee: email not sent"
+  combiner     = "OR"
+  conditions {
+    display_name = "app.mail logged \"email not sent\""
+    condition_matched_log {
+      filter = join(" AND ", [
+        "resource.type=\"cloud_run_revision\"",
+        "resource.labels.service_name=\"${google_cloud_run_v2_service.app.name}\"",
+        "jsonPayload.logger=\"app.mail\"",
+        "severity>=WARNING",
+      ])
+      label_extractors = {
+        kind = "EXTRACT(jsonPayload.kind)"
+      }
+    }
+  }
+  documentation {
+    mime_type = "text/markdown"
+    subject   = "registry.coffee: a $${log.extracted_label.kind} email wasn't sent"
+    content   = <<-EOT
+      The app couldn't send a `$${log.extracted_label.kind}` email. The log line says why: the daily cap ("the daily limit is reached") or Resend refusing or unreachable (with a stack trace).
+
+          gcloud logging read 'resource.type="cloud_run_revision" AND jsonPayload.logger="app.mail"' --limit 20 --freshness 1d
+
+      Check Resend's status page and the Emails log in its dashboard. Members aren't locked out: the owner can still make a reset link on the People screen. Steps: docs/app/RUNNING.md, "Email", "When Resend is down".
+    EOT
+  }
+  alert_strategy {
+    notification_rate_limit {
+      period = "3600s" # at most one an hour: an outage would otherwise repeat on every request
+    }
+    auto_close = "1800s"
+  }
+  notification_channels = [google_monitoring_notification_channel.owner.id]
+}

@@ -1,0 +1,67 @@
+# "Your Next Bag" experiment: the frozen settings. eval/recs/README.md is the pre-registration and defines every
+# rule in words ("Arms", "Assignment"); dbt/models/recs/ (design PR 3) must implement exactly these, and the
+# scorer reads `slate` and `responses` from here. The seal (eval/recs/SHA256SUMS) covers this file.
+# Change nothing after the seal. A change after the pilot is made on pilot aggregates only, then re-sealed.
+version: 1
+
+# The pinned catalog release every slate and feature is built from (dbt var rec_release): the stored release's
+# dim_coffee is read as published, never rebuilt. Set at the seal.
+catalog_release: null  # SEAL: fill in
+
+slate:
+  size: 6
+  per_arm: 2
+  arms: [C, P, R]  # content, popular, random
+  max_per_roaster: 1
+  interleaving: three_team_draft  # README "Assignment"
+
+content:
+  # Corpus for IDF: every coffee in the pinned release's dim_coffee with is_coffee and not is_wholesale, in stock
+  # or not (so past-offering seed coffees are in it). N = corpus size, df(f) = corpus coffees carrying feature f.
+  idf: "ln((1 + N) / (1 + df)) + 1"
+  # Values are lower(trim(x)); empty values are absent. Feature weights are set before each block's L2
+  # normalisation; a block with no features is absent and contributes nothing. Every present block has norm 1.
+  blocks:
+    origin:  # origin_country_code; region only with a country
+      features: ["country:<origin_country_code>", "region:<origin_country_code>:<origin_region>"]
+      weights: {country: 1.0, region: 0.5}
+      idf: false
+    process: {features: ["process:<process>"], idf: false}
+    roast: {features: ["roast:<roast_level>"], idf: false}
+    varietals: {features: ["variety:<each distinct varietal>"], idf: true}
+    flavor: {features: ["flavor:<each distinct flavor_category>"], idf: true}
+  block_weight: 1.0
+  # profile = sum over the seed coffees of (rating - mean of the user's five ratings) x vector.
+  # If all five ratings are equal, or the centred profile is the zero vector (norm < 1e-12), the profile is
+  # sum(rating x vector) instead. A seed coffee absent from the pinned release has no vector but counts in the mean.
+  # score = dot(profile, v) / (norm(profile) x norm(v)), rounded to 12 decimals; ties by coffee_id ascending.
+  score_round: 12
+
+popular:
+  # At the seal: site click-outs over the trailing 8 weeks if analytics exists and has at least 300 of them;
+  # otherwise the fallback. The seal records which, the click-out count, and pins the ranking file's sha256 in
+  # config/recs.lock.
+  primary_source: site_click_outs
+  window_weeks: 8
+  min_click_outs: 300
+  fallback_source: weeks_listed  # weeks_listed descending, then first_seen ascending, then coffee_id ascending
+  source_chosen: null  # SEAL: site_click_outs or weeks_listed
+  # Each user's P list: the top_k eligible coffees (after the user's eligibility filter) ordered by
+  # sha256(salt|user_id|P|coffee_id) ascending, then the rest in popularity order.
+  top_k: 20
+
+random:
+  # uniform over eligible coffees, ordered by sha256(salt|user_id|R|coffee_id) ascending
+  seeded_by: salt
+
+eligibility:
+  is_coffee: true
+  retail_only: true  # is_wholesale false
+  in_stock_at_freeze: true  # in_stock in the pinned release, never live stock
+  min_blocks: 2  # at least two of the five content blocks present
+  exclude_rated_by_user: true
+  decaf_only_if_user_rated_decaf: true
+
+responses:
+  interest: {want_to_try: 2, maybe: 1, not_for_me: 0}
+  buy_next_picks: 1

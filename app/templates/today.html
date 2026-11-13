@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-{% from "_macros.html" import synced, taste, nav, shotrow %}
+{% from "_macros.html" import synced, taste, nav, shotrow, email_prompt %}
 {% block main %}
   {% set last = shots[-1] if shots else None %}
   <div class="top"><span class="meta">{{ now.strftime("%A, %B ") ~ now.day }}</span>{{ synced() }}</div>
+  {% if nudge %}{{ email_prompt() }}{% endif %}
   <section class="mt8">
     <div class="label">{{ "On the grinder" if p.bag else "Last coffee" }}</div>
     <h1 class="serif name mt4">{% if p.bag %}<a href="/coffee/{{ p.bag.bag_id }}">{{ name }}</a>{% else %}{{ name }}{% endif %}</h1>

@@ -35,9 +35,11 @@ const [site, app, out, username, password] = process.argv.slice(2);
 
     // The catalog: its script loads catalog.json and fills the table.
     await page.goto(`${site}/catalog/`);
-    await page.waitForFunction(() => /^\d[\d,]* coffees/.test(document.getElementById("count").textContent));
-    const shown = Number((await page.textContent("#count")).replace(/[^\d].*$/s, "").replace(/,/g, ""));
-    assert.ok(shown > 0 && (await page.$$("#rows tr")).length === shown, `catalog shows ${shown}`);
+    // Wait for the load to finish, whatever it says ("1 coffee", "No coffees…", or an error), then check it.
+    await page.waitForFunction(() => !/^Loading/.test(document.getElementById("count").textContent));
+    const line = await page.textContent("#count");
+    const shown = Number((line.match(/^([\d,]+) coffees? /) || [, "0"])[1].replace(/,/g, ""));
+    assert.ok(shown > 0 && (await page.$$("#rows tr")).length === Math.min(shown, 500), `catalog says: ${line}`);
     await noScroll("catalog");
 
     // The app: the join page loads with its form; the seeded user signs in and lands on Today.

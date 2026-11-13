@@ -5,7 +5,10 @@ dbt test fails the build if any of them ever exposes descriptions, images, store
 
 - Product descriptions, images, handles, tags and the shot log are excluded.
 - Opted-out roasters are excluded.
-- Roasters known only from OpenStreetMap are excluded.
+- Roasters known only from OpenStreetMap are excluded, and no published value (a roaster's name, city or state)
+  comes from OpenStreetMap: a roaster also known from Overture, the curated seed or a manual add publishes those
+  sources' values (`public_values_have_open_provenance` fails the build otherwise).
+- Chains (more than 20 stores, or marked by hand in `dbt/seeds/chain_overrides.csv`) are excluded.
 
 `coffeedata export-public --to <dest>` writes them as Parquet. With `PUBLIC_EXPORT_URL` set, the weekly run does
 it automatically. A directory or Hugging Face export also writes `manifest.json`: the release (`release_build_id`,
@@ -55,6 +58,20 @@ never holds the site back):
   the contract doesn't describe fails the load before anything changes; a contract column Snowflake doesn't have
   yet is skipped with a warning. To change a description, change the contract; the next load applies it.
 - It fails if the row counts differ from the export.
+- The tables in `MARKET` keep the export's lower-case column names (quoted identifiers, as `infer_schema` makes
+  them). The share views rename them to upper case (`create or replace secure view SHARE.COFFEE (RELEASE_RUN_DATE
+  comment '...', ...) copy grants comment = '...' as select "release_run_date", ... from MARKET.public_coffee`),
+  so consumers write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes. Columns are compared in any case.
+  A share view with the export's columns that isn't upper case yet (made by `admin_setup.sql` part 2, or before
+  this change) is recreated by any load; no `--migrate` is needed. Unlike a migration, an ordinary load never
+  stops for it: if another role owns the view, the share is missing it and COFFEE_LOADER can't grant it, or its
+  grants can't be read, the load leaves that view lower case, loads the data, and warns (on stderr and as a
+  warning on the workflow run's summary page) with the statement that fixes it. After recreating a view, the load
+  reads its grants back and fails the job if the view is no longer in the share. To re-case before the Tuesday
+  `site` run, `gh workflow run weekly -f snowflake_migrate=true` works too, but it is the strict path: it stops,
+  loading nothing, if any view can't be recreated. Run `coffeedata load-snowflake --migrate --dry-run` first to
+  see what it would refuse; a dry run only records the `grant … to share` statements, so a share grant that would
+  fail shows only in the real run.
 
 Databricks loads from S3 or GCS.
 
@@ -62,12 +79,12 @@ Databricks loads from S3 or GCS.
 
 `LISTING.md` is the source of truth for the listing copy. The Snowflake listing's attribute boxes are typed by
 hand from it, so nothing else would notice when a number there goes stale. Its `coverage-claims` comment maps
-each number in the copy to a `mart_build_profile` metric (`listed_coffees: about 45,000 coffees listed for
-sale`), and every build compares them. `listed_coffees` counts the coffees currently listed for sale, not
+each number in the copy to a `mart_build_profile` metric (a `listed_coffees: <the copy's words>` line), and
+every build compares them. `listed_coffees` counts the coffees currently listed for sale, not
 wholesale (not `PUBLIC_COFFEE`'s rows), and `roasters_with_coffee` the roasters with at least one of them:
 - `coverage_claims_match_build` warns when a claim is more than 15% (`claim_tolerance` in
-  `dbt/dbt_project.yml`) from this build's metric, and `coffeedata build` prints the file and line to update.
-  It never holds a release back. Update the copy and the comment together, then retype the number in Snowflake.
+  `dbt/dbt_project.yml`) from this build's metric, and `coffeedata build` prints the file and line to update
+  and the build's number rounded for the copy ("about 41,000 now"). It never holds a release back. Update the copy and the comment together, then retype the number in Snowflake.
 - `coverage_claims_name_metrics` fails the build when a claim names a metric the profile doesn't have: that's a
   bug in the claim or the profile, not drift.
 - A claim whose text isn't in the copy, or has no number, fails CI

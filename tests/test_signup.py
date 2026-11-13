@@ -457,7 +457,12 @@ def test_reset_links(app, owner, accounts):
     assert accounts.invites[first["invite_id"]][0].revoked  # the earlier one stops working
     assert "Ask the person who invited you for a reset link" in client(app).get("/reset").text
     signin = client(app).get("/signin").text
-    assert "Forgot your password? Ask the person who invited you for a reset link" in signin
+    # "Forgot your password?" goes to /forgot (spec §4), which keeps the way back for accounts without an email.
+    assert '<a class="btn text" href="/forgot">Forgot your password?</a>' in signin
+    assert (
+        "No email on your account? Ask the person who invited you" not in client(app).get("/forgot").text
+    )  # email off
+    assert "Ask the person who invited you for a reset link" in client(app).get("/forgot").text
 
 
 # --- in-app browsers --------------------------------------------------------------------------------------------

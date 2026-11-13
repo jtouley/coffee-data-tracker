@@ -1,0 +1,96 @@
+# Importers alerts (docs/TRIAGE.md): is each importer's week stored? After every importers run, and each Thursday in
+# case no run happened, list the private importers dataset's file names and open, update or close the
+# `importers:weekly` triage issue (coffeedata.triage importers). It judges the dataset, not the run, so one check
+# covers a failed importer, a run that never started (a dropped schedule, a workflow disabled by hand, a run
+# displaced from its concurrency group) and a stale week alike; the run's conclusion and link go in the issue to say
+# which. GitHub's 60-day inactivity auto-disable stops this workflow's schedule too, so that case goes unreported.
+#
+# - It never fetches an importer and never dispatches importers.yml. It reads file names only
+#   (raw/week=<Monday>/importer=<key>.parquet), never a file, and keeps each importer's latest week.
+# - main's code only, as prod-health: the Hub token (HF_READ_TOKEN, else HF_TOKEN) is given to the one listing step,
+#   in a job with contents: read and actions: read (the importers workflow's runs). The alert job has GITHUB_TOKEN
+#   with issues: write (and contents: read, for its checkout), never the Hub token.
+# - This repository is public: the artifact, the log and the issue carry importer keys, statuses, weeks (Mondays)
+#   and run links, never a lot or a store's address.
+# - A check that couldn't judge the week opens `pipeline:importers-health` instead of `importers:weekly`: no token,
+#   a failed listing (a Hub outage, a rejected token) or a failed runs listing, and, once a week is due, a dataset
+#   the Hub calls "not found" (a wrong IMPORTERS_URL, or a token that can't read it: the Hub answers both alike).
+name: importers-alerts
+on:
+  workflow_run:
+    workflows: [importers]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: "23 9 * * 4"  # Thursdays 09:23 UTC, the morning after the importers run (Wednesdays 17:37)
+  workflow_dispatch:
+permissions:
+  contents: read
+# One run at a time, so two alert jobs never both find no issue and open two. A newer run waiting replaces an older
+# one, and its listing is the newer state anyway.
+concurrency:
+  group: importers-alerts
+  cancel-in-progress: false
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read  # the importers workflow's recent runs
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - name: The importers workflow's recent runs on main (event, status, conclusion, link)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/importers"
+          # written whole or not at all: a failed call leaves no runs.json, and the alert job opens the pipeline issue
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/importers.yml/runs?branch=main&per_page=100" \
+            --jq '[.workflow_runs[] | {event, status, conclusion, created_at, html_url}]' \
+            > "$RUNNER_TEMP/runs.json.tmp"
+          mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
+      - name: Each importer's latest stored week (file names only, read-only)
+        # also after a failed runs listing, so the weeks are still judged (by the time alone)
+        if: ${{ !cancelled() }}
+        env:
+          HF_TOKEN: ${{ secrets.HF_READ_TOKEN || secrets.HF_TOKEN }}
+          # the same dataset importers.yml writes
+          COFFEEDATA_IMPORTERS: ${{ vars.IMPORTERS_URL || format('hf://datasets/{0}/coffee-data-importers', github.repository_owner) }}
+        run: |
+          uv run python -m coffeedata.triage importers-weeks "$COFFEEDATA_IMPORTERS" \
+            --out "$RUNNER_TEMP/importers/weeks.json"
+      - if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: importers-health
+          path: ${{ runner.temp }}/importers/  # importer keys, Mondays, run conclusions and links
+          if-no-files-found: ignore
+          retention-days: 90
+
+  alert:
+    needs: check
+    if: always() && github.ref == 'refs/heads/main' && needs.check.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        continue-on-error: true  # nothing listed: the pipeline issue opens
+        with:
+          name: importers-health
+          path: ${{ runner.temp }}/importers
+      - name: Open, update or close the triage issues
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: python3 -m coffeedata.triage importers "$RUNNER_TEMP/importers"

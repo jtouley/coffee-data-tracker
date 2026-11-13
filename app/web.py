@@ -1,4 +1,5 @@
-"""What every response gets: security headers, long-cached hashed static files and the session renewal."""
+"""What every response gets: security headers, cache rules, long-cached hashed static files and the session
+renewal."""
 
 from __future__ import annotations
 
@@ -13,6 +14,7 @@ from fastapi import HTTPException, Request, Response
 
 STATIC = Path(__file__).parent / "static"
 IMMUTABLE = "public, max-age=31536000, immutable"
+PRIVATE = "no-store, private"  # anything for one signed-in person: photos, pages, API answers
 
 # No inline script anywhere, so script-src needs no nonce. The JSON data blocks (<script type="application/json">)
 # aren't executed and CSP doesn't apply to them.
@@ -32,6 +34,8 @@ CSP = "; ".join(
         "frame-ancestors 'none'",
     ]
 )
+# Pages a link with a secret in its fragment opens (spec §4): never a Referer, even to the app itself.
+NO_REFERRER = ("/reset", "/forgot", "/verify")
 # The camera is only for photographing a bag, so only that screen may ask for it.
 CAMERA_PATHS = ("/bag/new",)
 
@@ -44,17 +48,29 @@ def permissions_policy(path: str) -> str:
     )
 
 
-def secure_headers(response: Response, path: str) -> None:
+def secure_headers(response: Response, path: str, private: bool = False) -> None:
+    """`private` (every route but auth.PUBLIC, and any path no route matches): never stored by a browser or a
+    shared cache, whatever the route set, and no validators a cache could reuse it with."""
     h = response.headers
     h.setdefault("Content-Security-Policy", CSP)
     h["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains"
     h["X-Content-Type-Options"] = "nosniff"
-    h["Referrer-Policy"] = "same-origin"
+    h["Referrer-Policy"] = "no-referrer" if path in NO_REFERRER else "same-origin"
     h["Permissions-Policy"] = permissions_policy(path)
     h["Cross-Origin-Opener-Policy"] = "same-origin"
     h["Cross-Origin-Resource-Policy"] = "same-origin"
-    if "Cache-Control" not in h:
-        h["Cache-Control"] = "no-store" if path.startswith("/api/") else "no-cache"
+    if private:
+        h["Cache-Control"] = PRIVATE
+        vary = [v.strip() for v in h.get("Vary", "").split(",") if v.strip()]
+        if "cookie" not in {v.lower() for v in vary}:
+            h["Vary"] = ", ".join([*vary, "Cookie"])
+        for validator in ("ETag", "Last-Modified"):
+            if validator in h:
+                del h[validator]
+    elif "Cache-Control" not in h:
+        h["Cache-Control"] = (
+            "no-store"  # the sign-in and join pages; hashed files and the worker set their own
+        )
 
 
 class Assets:
@@ -107,10 +123,14 @@ def middleware(
             response = await call_next(request)
         except Exception:  # noqa: BLE001 - shown as the error screen; logged by on_error
             response = await on_error(request)
-        secure_headers(response, request.url.path)
         acct = getattr(request.state, "renew", None)
         already = any(v.startswith(f"{cookie}=") for v in response.headers.getlist("set-cookie"))
-        if acct is not None and set_cookie is not None and not already:
+        renew = acct is not None and set_cookie is not None and not already
+        # Private unless RequireSession matched the request to a public route, and always when it carries a
+        # session cookie (a sign-in, or a renewal on any route).
+        public = getattr(request.state, "public", False) is True and not (already or renew)
+        secure_headers(response, request.url.path, private=not public)
+        if renew and set_cookie is not None:
             set_cookie(response, acct)
         return response
 

@@ -13,13 +13,11 @@
     sync();
   });
 
-  // Tooltips: hover and keyboard focus, textContent only.
+  // Tooltips: on hover, textContent only; each chart's Table carries the numbers.
   const tip = document.getElementById("tip");
   const show = (el, x, y) => { tip.textContent = el.dataset.tip; tip.style.display = "block";
     tip.style.left = Math.min(x + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (y + 12) + "px"; };
   document.querySelectorAll(".mark").forEach(el => {
     el.addEventListener("pointermove", e => show(el, e.clientX, e.clientY));
     el.addEventListener("pointerleave", () => tip.style.display = "none");
-    el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); show(el, r.left, r.top); });
-    el.addEventListener("blur", () => tip.style.display = "none");
   });

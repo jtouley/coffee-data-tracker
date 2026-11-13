@@ -18,6 +18,44 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
 
 ### Added
 
+- The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
+  one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly
+  runs only (a Monday with a full manifest, or from before manifests), each judged on what it stored (the roasters
+  its manifests listed or it tried, plus those earlier runs listed that it gave up on; closed and quarantined
+  stores count against it). `mart_crawl_slo` has the share per run and platform with its Wilson 95% interval, the
+  burn rate and the error budget over the four runs ending at each run. Both are counted from the stored runs
+  alone, so the same raw builds the same rows and an older run rebuilt gives its numbers again. They are report
+  only, built after the gate; `mart_crawl_slo_profile` is recorded in the builds table, and the production health
+  check warns on it under a new rule, `crawl-slo` (`config/prod_health.toml`; docs/TRIAGE.md, "The crawl success
+  SLO"). No gate reads it, and the 90% floor is unchanged. New staging model `stg_run_manifests`, and
+  `stg_registry.opted_out_at`.
+
+- Chains leave the public data. A roaster is a chain when it has more than 20 stores (dbt var
+  `chain_store_threshold`; the store count is the registry's `locations`, from discovery's Overture scan), unless
+  `dbt/seeds/chain_overrides.csv` decides otherwise, either way, with a reason. `int_roaster_state.is_chain` decides
+  it; a chain is still crawled and stays in the lake and the internal marts, and `public_roaster` leaves it out, so
+  its coffees, price events and market counts leave every public table, the site, the public dataset and the
+  shares (`public_market_weekly` no longer counts them). The seed's `is_chain` column is gone: its four curated
+  chains whose count is 20 or fewer are overrides now. Public contract 3.1.0 adds the error rule
+  `public_tables_have_no_chain`.
+
+- One store, one roaster: a roaster_id whose site resolves to another roaster's store (the same host, any case,
+  without www/shop/store; never a parked, shortener, directory or platform host, `dbt/seeds/shared_hosts.csv`) is an
+  alias (`dim_roaster.status`, `canonical_roaster_id`), never crawled, never in `dim_coffee`, `fct_price_event` or
+  the public tables; a hand-checked `alias_of` in `config/roasters.csv` covers a rebrand that doesn't redirect. The
+  grouping never reads the crawl status and the canonical id is sticky (an opt-out, then a publishable id, then the
+  one read first), so an outage never splits a store. The rule is written once (`dbt/macros/roaster_alias.sql`),
+  for dbt and the crawl. The probe job lists the domains that became aliases. The site's coverage table counts
+  aliases on a row of their own. Public contract 2.6.0 adds the error rule
+  `public_roasters_unique_by_host`. Measured in `eval/roaster_dedup`.
+
+- Triage alerts (docs/TRIAGE.md). A failed accuracy floor names the eval, the set, the value and the floor (and
+  the Wilson interval for a count); on main and in eval-floors it opens or updates one `eval-regression` issue per
+  eval and closes it on recovery. `prod-health.yml` judges each served release's per-rule fill and abstain rates,
+  week-over-week shift, volume and build record against `config/prod_health.toml`, whose bounds come from the
+  release history and carry a severity, and keeps a `prod-health` issue per rule the same way. Alerts never block
+  the pipeline.
+
 - Data-quality rules, all warn only and measured on held-out data in `eval/dq`: per-adapter volume bands
   (`adapter_volume_in_band`), near-duplicate roasters, price per 100 g outliers within origin and process, and
   cross-table reconciliation (`public_tables_reconcile`; `release_changes` / `release_changes_explained` against the
@@ -81,6 +119,17 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
 
 ### Changed
 
+- **Origin countries are ISO 3166-1.** `origin_country` in dim_coffee and the public tables is the ISO English short
+  name, with `origin_country_code` (alpha-2) beside it; the captured spelling stays in the lake and in
+  `dim_coffee.origin_country_raw`. A versioned seed (`dbt/seeds/origin_country_iso.csv`, source and version in its
+  YAML) maps each captured spelling; a list of several origins, a continent or New Guinea has no country; a new
+  spelling is published with no country and warns (`origin_countries_are_mapped`), opening a triage issue. The 2026-11-09 release's 52 market origins for about 46
+  countries become 45. Puerto Rico is its own country, "New Guinea" no longer reads as Guinea, and a country inside a
+  list of places ("customers in New York, Puerto Rico, and El Paso") is no longer read as the origin. Public contract
+  3.0.0. Measured over the full census of 149 spellings in `eval/origin_iso`: all agree with the settled labels, 0
+  wrong. dbt also gives each origin a display name (`origin_country_display`): a common name such as Tanzania,
+  Vietnam or DR Congo by default, or the ISO name with the dbt var `origin_names: iso`; the site shows it.
+
 - The weekly merge keeps each connector partition it merged for 30 days instead of deleting it: the files it read
   move, unchanged, to `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket, where nothing
   else reads, and a lifecycle rule on the bucket deletes `archive/` objects 30 days after the merge. The RUNBOOK
@@ -105,8 +154,42 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   Each job's egress in `ingestion.tf` is now `default`, `shopify` or `woo_generic` instead of a `nat` flag, and
   `Connector.egress` is `dedicated` for WooCommerce and generic. After apply, the runbook (ยง2.1) has the owner
   check one SiteGround store from the new IP and open a SiteGround allowlist ticket for it.
+- **Snowflake share views have upper-case column names (breaking for queries that quote lower-case names).**
+  Marketplace consumers now write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes; before, the views kept
+  the tables' quoted lower-case names and needed `"release_run_date"`. Snowflake compares quoted names exactly, so
+  once the first load after this change recreates the views, a query that quotes a lower-case name fails with
+  `invalid identifier`. Before: `select "release_run_date" from SHARE.COFFEE`. After:
+  `select release_run_date from SHARE.COFFEE` (or `RELEASE_RUN_DATE`, or `"RELEASE_RUN_DATE"`). The tables in
+  `MARKET` keep their names, and the views keep their descriptions in their definition. Columns are compared in any
+  case, and the first load after this change recreates the existing views (`copy grants`) without `--migrate`; a
+  view it can't recreate (another role owns it, the share is missing it and the loader can't grant it, or its
+  grants can't be read) is left as it is, with a warning on the workflow run, and the data still loads. Each
+  recreated view is read back, and the job fails if one is no longer in the share. The
+  listing's sample queries are unquoted and upper case: query 3 keeps its `EVENT = 'price'` filter, and query 4, a
+  summary by origin, is new.
 
 ### Fixed
+
+- **No published value comes from OpenStreetMap (#90).** `public_roaster` left out roasters known only from
+  OpenStreetMap (ODbL), but `stg_registry` took a roaster's name, city and state from its newest registry row
+  whatever the source, so a roaster found by Overture and later by OpenStreetMap would have published
+  OpenStreetMap's values. A roaster known from an open source (Overture, the curated seed or a manual add) now takes
+  them from open sources only (per field, the newest non-null open value); a value only OpenStreetMap gave stays
+  null. A source counts as open only as a whole name (`overture`, `overture-<release>`, `curated`, `manual`), so
+  `is_publishable` no longer accepts a name that merely starts like one. New staging tables `stg_registry_records`
+  (the lake's registry records, with `is_open_source`) and `stg_roaster_seed` (`config/roasters.csv`), and macros
+  `is_open_source` and `is_open_record_source`. Public contract 3.2.0 adds the error rule
+  `public_values_have_open_provenance`: every published roaster name, city and state is one an open source gave.
+  No published value changes on today's lake, whose registry has no discovery rows yet.
+
+- **The `discover` and `probe` jobs record new roasters, and say that they ran.** Neither had left anything in the
+  lake: `discover` runs monthly and its first slot (Nov 1) came before the schedule was on, so the registry stayed
+  empty, and the seed's roasters were all probed 2026-10-26, so the probe found nothing stale (until 2026-11-30)
+  and exited 0 without a trace. Now each source (OSM, then Overture) is recorded and published on its own, an
+  Overpass outage is bounded and fails the execution without losing Overture's rows, the Overture scan runs in half
+  the memory, the probe writes its results in batches as it goes, asks never-probed roasters first and stops at a
+  deadline, its publish runs whatever its exit, and both jobs write `job_manifests` rows (jobs `discover`, `probe`).
+  RUNBOOK ยง5.7 says how to run discovery by hand.
 
 - **Claude's coffee-or-not verdicts now fail loudly when they can't run.** They never ran in production: the Terraform
   variable `verdict_model` defaulted to empty, `coffeedata classify` printed a skip message and exited 0, and every
@@ -149,6 +232,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   An exception from one roaster's fetch is always that roaster's error.
 
 ### Security
+
+- App: the sign-in, join, reset and change-password forms post, so a form app.js didn't wire never puts the
+  password in the URL, and the sign-in screen's clearing of offline pages can no longer stop the forms being wired.
 
 - App: queued writes are bound to the account that queued them. After an account switch, a queued save is held on
   the phone instead of being written under the other account (#56).

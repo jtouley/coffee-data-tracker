@@ -18,8 +18,10 @@
 --     rewritten on a coffee whose history didn't change) is unexplained.
 --   public_roaster (roaster_id): removed when no coffee of it is left in dim_coffee (no_coffee_left), when it opted
 --     out (opted_out), when it's no longer known from a public source (source), or when it's outside the US
---     (outside_us: public_roaster keeps US stores only); added with its first public
---     coffee (first_coffee). Changed in place: values_changed (last_ok_run, which moves every week, isn't compared).
+--     (outside_us: public_roaster keeps US stores only), when another roaster_id serves the same store (alias:
+--     public_roaster keeps the canonical id only), or when it is a chain (chain: more than chain_store_threshold
+--     stores, or an override); added with its first public coffee (first_coffee: also a roaster that stops being a
+--     chain, whose coffees all join with it). Changed in place: values_changed (last_ok_run, which moves every week, isn't compared).
 --   public_market_weekly (origin_country, process): a cell lost (no_coffees_left) or new (new_cell) follows from
 --     its qualifying coffees; a changed cell must have its qualifying coffees changed (coffees_changed).
 --   schema / not_reconciled (table 'release'): a compared column the served file lacks (missing_column:<col>, read
@@ -115,10 +117,13 @@ event_changes as (
 ),
 roaster_changes as (
     select 'public_roaster' as table_name, p.roaster_id, 'removed',
-           case when p.roaster_id not in (select roaster_id from {{ ref('dim_coffee') }}) then 'no_coffee_left'
+           -- alias first: dim_coffee leaves an alias's coffees out, so no_coffee_left would hide a merge
+           case when d.roaster_id <> d.canonical_roaster_id then 'alias'
+                when p.roaster_id not in (select roaster_id from {{ ref('dim_coffee') }}) then 'no_coffee_left'
                 when d.opted_out then 'opted_out'
                 when not regexp_matches(coalesce(d.sources, ''), '(^|\+)(overture|curated|manual)') then 'source'
                 when d.country is distinct from 'US' then 'outside_us'
+                when d.is_chain then 'chain'
                 else 'unexplained' end
     from prev_roaster p left join {{ ref('dim_roaster') }} d using (roaster_id)
     where not exists (select 1 from cur_roaster c where c.roaster_id = p.roaster_id)
@@ -134,8 +139,7 @@ roaster_changes as (
     where {{ row_hash('p', roaster_cols) }} <> {{ row_hash('c', roaster_cols) }}
 ),
 -- A market cell's qualifying coffees (public_market_weekly's filter), and what each contributes.
-{%- set qualifies = "is_listed and catalog_status <> 'archived' and not is_wholesale and not is_blend
-      and origin_country is not null" %}
+{%- set qualifies = is_single_origin() %}
 qualifying as (
     {%- for side, rel in [('prev', 'prev_coffee'), ('cur', 'cur_coffee')] %}
     select '{{ side }}' as side, origin_country, coalesce(process, 'unknown') as process,

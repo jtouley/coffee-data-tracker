@@ -182,7 +182,7 @@ C never had a PR.
 
 | Service | Command | Reads | Writes |
 |---|---|---|---|
-| Discovery, probing | `coffeedata discover overture\|osm`, `coffeedata probe` | open datasets, stale roasters' sites | `registry`, `probes` |
+| Discovery, probing | `coffeedata discover osm overture`, `coffeedata probe` | open datasets, stale roasters' sites | `registry`, `probes` |
 | Connector ingest | `coffeedata crawl --connector X` | registry, lake history, its partition | `raw/connector=X/run_date=W/` (snapshots, bodies, fetches, run_manifests), parked progress, `job_manifests` |
 | Parked-store retry | `coffeedata crawl-retry --connector X` | its parked progress | the same partition |
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
@@ -259,7 +259,7 @@ vendored ODCS schema and checks that each producer writes exactly its contract's
 | **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
 | **manifest / control** | 1.2.0 (1.2.0: the `fetch-health` job and its detail; descriptions only, the interface is 1.1.0's) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check, fetch-health (and, only with re-fetch on, the crawl passes after it) |
 | **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | 2.5.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82; 2.4.0: USD prices and US roasters only, raw 1.6.0's `variants.currency`; 2.5.0 adds the `verdicts_cover_catalog` rule and `min_verdict_share`, no column change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
+| **public** | 3.2.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82; 2.4.0: USD prices and US roasters only, raw 1.6.0's `variants.currency`; 2.5.0 adds the `verdicts_cover_catalog` rule and `min_verdict_share`, no column change; 2.6.0 adds `public_roasters_unique_by_host`, one store one public roaster, no column change; 3.0.0: `origin_country` is the ISO 3166-1 short name and `origin_country_code` is added to `public_coffee` and `public_market_weekly`, with the rules `origin_countries_are_mapped` (warning) and `origin_country_iso_matches_iso`; 3.1.0 adds `public_tables_have_no_chain`, chains leave the public tables, no column change; 3.2.0 adds `public_values_have_open_provenance`, no published registry value comes from OpenStreetMap alone, #90, no column change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
 
 `fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
 checkpoint from an older image the same way. Each internal contract now carries a description of every table and
@@ -352,15 +352,19 @@ Why:
 One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
 repository, built with Cloud Build). Each job's task timeout is 240 min (the strict limit used in every sim).
 maxRetries is 0 for Shopify's crawl jobs (`crawl-shopify`, its default-egress arm, `crawl-retry`) and 1 for every
-other job, the other connectors' crawls included (section 7.1). A crawl that stops at its deadline exits 0 and
+other job, the other connectors' crawls included (section 7.1), except WooCommerce's and generic's crawls,
+`fetch-health` and `build` (0; `ingestion.tf` says why for each). The build is never retried because a second
+attempt is a second build: a second release for the same week, the served pointer moved, `marts/` replaced. Any
+failed step of it, the publish included, fails the execution and emails the owner, who re-runs that step by hand
+(RUNBOOK §5.1). A crawl that stops at its deadline exits 0 and
 reports `deadline` in `job_manifests`, so only a crawl that died is retried. A second attempt of a failed Shopify
 crawl would re-ask the stores that just refused, on Shopify's NAT IP, so its resume slot (or crawl-retry) picks up the
 rest instead.
 
 | Job | Command | Network | Scheduler (UTC) |
 |---|---|---|---|
-| `discover` | `discover overture`, `discover osm`, `publish` | default | 1st of the month 03:17 |
-| `probe` | `probe --stale-days 28`, `publish` | default | Mon 07:17 |
+| `discover` | `discover osm overture --publish` (each source published on its own), `publish` | default | 1st of the month 03:17, and by hand |
+| `probe` | `probe --stale-days 28 --deadline-min 100` (batches written as it goes), `publish` | default | Mon 07:17 |
 | `crawl-shopify` | `crawl --connector shopify` (a re-run resumes) | **Direct VPC egress → Cloud NAT, one static IP** | Mon 09:17, resume 15:17 |
 | `crawl-retry` | `crawl-retry --connector shopify` | **the same NAT IP** | Mon 21:47 |
 | `crawl-woocommerce`, `crawl-generic` | `crawl --connector X` (a re-run resumes) | **Direct VPC egress → a second Cloud NAT, its own static IP** (section 9.1) | Mon 09:17, resume 15:17 (with Shopify), third pass 21:47 |
@@ -381,12 +385,12 @@ Tuesdays") say. The earlier spread (connectors Mon–Fri, merge/enrich/build on 
 | When | Entry | What | Done by (240-min limit) |
 |---|---|---|---|
 | 1st of the month 03:17 | `discover` | Overture and OSM discovery, publish | 07:17 |
-| Mon 07:17 | `probe` | stale roasters' platforms, publish | 11:17 |
+| Mon 07:17 | `probe` | stale roasters' platforms (new ones first; stops starting at 100 min), publish | 11:17 |
 | Mon 09:17 | `crawl-shopify`, `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | every connector's crawl at once: 5 executions, one task and one instance each (Shopify on its NAT IP, WooCommerce and generic on the second, the rest on default egress) | 13:17 (each stops starting roasters at 225 min) |
 | Mon 15:17 | the five `*-resume` entries | the same five jobs again: each resumes its own connector's roasters without an ok fetch this week | 19:17 |
 | Mon 21:47 | `crawl-retry` and the four `*-retry` entries | the third pass: Shopify's parked stores, on the NAT IP (`crawl-retry`); every other connector's own crawl job again, on that job's egress, resuming every roaster without an ok fetch this week | Tue 01:47 |
 | Tue 03:17 | `merge` | every connector's partition for Monday's week into the lake's tables | 07:17 |
-| Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (otherwise it reports `waiting` and sends nothing: run it again by hand) | 08:17 |
+| Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (it waits for it until 05:47, then fails and emails: RUNBOOK §5.2) | 08:17 |
 | Tue 06:17 | `build` | verdicts, build + gate, publish, egress-check | 10:17 |
 | Tue 11:17 | `site.yml` (Actions, at cutover) | the site, the public export and the Snowflake load from the served release | |
 
@@ -848,9 +852,13 @@ Next:
 
 Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps review; item 15 above is the first):
 
-27. **Chain merge → enrich → build by completion, not fixed times** (N2): `enrich-week` and `build` fail closed unless
-    this week's `merge` end row is `done` in `job_manifests` (or one job runs the chain), so a slow merge never
-    hands enrichment or the build a half-merged week.
+27. **Chain merge → enrich → build by completion, not fixed times** (N2). Done as a precondition (issue #84,
+    `chain.py`): the schedule still starts each job, and `enrich-week` and the build job (`classify`, `build`) go on
+    only once the latest attempts of the jobs before them are `done` and published in `job_manifests`, waiting
+    until a deadline (05:47, 07:47 UTC) and failing the execution otherwise. The merge has no automatic retry and
+    refuses to start over an attempt that failed or never ended. Still to do: start each job when the one before
+    ends (Cloud Workflows, or one job running the chain), which removes the idle wait and the fixed slots; and a
+    lock so two merges can't run at once (item 9).
 28. **A service account per job class** (N3): only `enrich-week` and `build` can read `ANTHROPIC_API_KEY`; the crawl
     jobs, which parse untrusted roaster HTML, can't.
 29. **Ingestion secrets apart from the app's** (N4): `INGEST_HF_TOKEN` (fine-grained to the dataset) and
@@ -859,8 +867,9 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
     always fire. Raised to $20 (RUNBOOK, Cost). Still to do: a billable-instance-time alert for the jobs.
 31. **A dedicated Cloud Build service account** (N7) with only Artifact Registry write and log writing, not the
     default Compute SA.
-32. **Base images pinned by digest** (N8): `python:3.12-slim@sha256:…` and `ghcr.io/astral-sh/uv:0.11.32@sha256:…`
-    in `ingest.Dockerfile`, with Artifact Registry vulnerability scanning.
+32. **Base images pinned by digest** (N8): done, `python:3.12-slim@sha256:…` and
+    `ghcr.io/astral-sh/uv:0.11.32@sha256:…` in both Dockerfiles, kept current by Dependabot. Still to do: Artifact
+    Registry vulnerability scanning.
 33. **An email when a crawl attempt died but its retry recovered** (section 7.1): today that execution succeeds and
     only `job_manifests` shows the dead attempt. A log-match alert on the retry's warning ("earlier attempt(s) this
     week died") would say so.

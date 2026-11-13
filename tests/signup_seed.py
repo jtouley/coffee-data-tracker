@@ -7,11 +7,12 @@ from pathlib import Path
 
 from app.accounts import Accounts, _now
 from coffeedata.lake import USER_TABLES, Lake
+from coffeedata.site import LEGAL_UPDATED
 
 OWNER, OWNER_PW = "jtouley", "kettle orbit marble"
 MEMBER, MEMBER_PW = "maya", "lantern quarry velvet"
 SETUP = "SETUP-CODE-1234"
-OLD_TERMS = "November 2, 2026"
+OLD_TERMS = LEGAL_UPDATED  # what everyone accepted; the "bumped" server's terms are newer
 
 
 def accounts(root: Path, pepper: str, secret: str, legal: str | None = None) -> Accounts:

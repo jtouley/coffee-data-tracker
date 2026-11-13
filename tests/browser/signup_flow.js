@@ -277,7 +277,9 @@ function counting(page, path) {
     await snap(used, "join-already-used");
     await used.locator("#code-h").getByRole("link", { name: "sign in" }).click();
     await used.waitForURL(`${base}/signin`);
-    assert.match(await text(used, "main"), /Forgot your password\? Ask the person who invited you for a reset link/);
+    assert.equal(await used.getAttribute("a[href='/forgot']", "href"), "/forgot");
+    assert.match(await text(used, "main"), /Forgot your password\?/);
+    assert.doesNotMatch(await text(used, "main"), /Ask the person who invited you/); // that's on /forgot now
     await snap(used, "sign-in");
     await usedCtx.close();
 

@@ -61,7 +61,7 @@ def test_passwords_are_stored_only_as_a_hash(owner, accounts):  # noqa: F811
     assert PW not in stored and "$argon2id$" in stored
 
 
-def test_the_app_uses_exactly_the_four_cookies_the_policy_lists(app, owner):  # noqa: F811
+def test_the_app_uses_exactly_the_cookies_the_policy_lists(app, owner):  # noqa: F811
     # The server sets the session cookie; the page script sets theme, hand and tz.
     names = set()
     c = client(app)
@@ -73,12 +73,14 @@ def test_the_app_uses_exactly_the_four_cookies_the_policy_lists(app, owner):  # 
     ):
         names |= {h.split("=", 1)[0] for h in r.headers.get_list("set-cookie")}
     js = (ROOT / "app/static/app.js").read_text()
-    assert js.count("document.cookie =") == 2  # tz, and the one in preference()
-    names |= set(re.findall(r"document\.cookie = `(\w+)=", js))
+    assert (
+        js.count("document.cookie =") == 3
+    )  # tz, the one in preference(), and Today's "Not now" (nudge-email)
+    names |= set(re.findall(r"document\.cookie = `([\w-]+)=", js))
     names |= set(re.findall(r'preference\(\w+, "(\w+)"', js))
-    assert names == {"session", "theme", "hand", "tz"}
+    assert names == {"session", "theme", "hand", "tz", "nudge-email"}
     policy = (ROOT / "src/coffeedata/templates/privacy.html").read_text()
-    assert set(re.findall(r"<li><code>(\w+)</code>", policy)) == names
+    assert set(re.findall(r"<li><code>([\w-]+)</code>", policy)) == names
 
 
 def test_anthropic_receives_only_the_photo_and_the_fixed_prompt():

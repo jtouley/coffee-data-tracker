@@ -1,0 +1,663 @@
+{
+ "errored": false,
+ "format_version": "1.2",
+ "output_changes": {
+  "shopify_egress_ip": {
+   "actions": [
+    "no-op"
+   ],
+   "after": "203.0.113.10",
+   "after_unknown": false,
+   "before": "203.0.113.10"
+  }
+ },
+ "planned_values": {
+  "outputs": {
+   "shopify_egress_ip": {
+    "sensitive": false,
+    "value": "203.0.113.10"
+   },
+   "woo_generic_egress_ip": {
+    "sensitive": false,
+    "value": "203.0.113.20"
+   }
+  }
+ },
+ "resource_changes": [
+  {
+   "address": "google_compute_network.ingest",
+   "change": {
+    "actions": [
+     "no-op"
+    ],
+    "after": {
+     "auto_create_subnetworks": false,
+     "name": "registry-coffee-ingest"
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "auto_create_subnetworks": false,
+     "name": "registry-coffee-ingest"
+    },
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "ingest",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_compute_network"
+  },
+  {
+   "address": "google_compute_router.ingest",
+   "change": {
+    "actions": [
+     "no-op"
+    ],
+    "after": {
+     "name": "registry-coffee-ingest",
+     "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+     "region": "us-central1"
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "name": "registry-coffee-ingest",
+     "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+     "region": "us-central1"
+    },
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "ingest",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_compute_router"
+  },
+  {
+   "address": "google_compute_subnetwork.shopify_egress",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "ip_cidr_range": "10.8.0.0/25",
+     "name": "registry-coffee-shopify-egress",
+     "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest"
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "ip_cidr_range": "10.8.0.0/25",
+     "name": "registry-coffee-shopify-egress",
+     "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest"
+    },
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "shopify_egress",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_compute_subnetwork"
+  },
+  {
+   "address": "google_compute_address.shopify_egress",
+   "change": {
+    "actions": [
+     "no-op"
+    ],
+    "after": {
+     "address": "203.0.113.10",
+     "address_type": "EXTERNAL",
+     "name": "registry-coffee-shopify-egress"
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "address": "203.0.113.10",
+     "address_type": "EXTERNAL",
+     "name": "registry-coffee-shopify-egress"
+    },
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "shopify_egress",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_compute_address"
+  },
+  {
+   "address": "google_compute_router_nat.shopify_egress",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "enable_dynamic_port_allocation": true,
+     "enable_endpoint_independent_mapping": false,
+     "log_config": [
+      {
+       "enable": true,
+       "filter": "ERRORS_ONLY"
+      }
+     ],
+     "max_ports_per_vm": 8192,
+     "min_ports_per_vm": 1024,
+     "name": "registry-coffee-shopify-egress",
+     "nat_ip_allocate_option": "MANUAL_ONLY",
+     "nat_ips": [
+      "https://www.googleapis.com/compute/v1/projects/coffee-data-tracker/regions/us-central1/addresses/registry-coffee-shopify-egress"
+     ],
+     "region": "us-central1",
+     "router": "registry-coffee-ingest",
+     "source_subnetwork_ip_ranges_to_nat": "LIST_OF_SUBNETWORKS",
+     "subnetwork": [
+      {
+       "name": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-shopify-egress",
+       "secondary_ip_range_names": [],
+       "source_ip_ranges_to_nat": [
+        "ALL_IP_RANGES"
+       ]
+      }
+     ]
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "enable_dynamic_port_allocation": true,
+     "enable_endpoint_independent_mapping": false,
+     "log_config": [
+      {
+       "enable": true,
+       "filter": "ERRORS_ONLY"
+      }
+     ],
+     "max_ports_per_vm": 8192,
+     "min_ports_per_vm": 64,
+     "name": "registry-coffee-shopify-egress",
+     "nat_ip_allocate_option": "MANUAL_ONLY",
+     "nat_ips": [
+      "https://www.googleapis.com/compute/v1/projects/coffee-data-tracker/regions/us-central1/addresses/registry-coffee-shopify-egress"
+     ],
+     "region": "us-central1",
+     "router": "registry-coffee-ingest",
+     "source_subnetwork_ip_ranges_to_nat": "LIST_OF_SUBNETWORKS",
+     "subnetwork": [
+      {
+       "name": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-shopify-egress",
+       "secondary_ip_range_names": [],
+       "source_ip_ranges_to_nat": [
+        "ALL_IP_RANGES"
+       ]
+      }
+     ]
+    },
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "shopify_egress",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_compute_router_nat"
+  },
+  {
+   "address": "google_cloud_run_v2_job.ingest[\"crawl-shopify\"]",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "crawl-shopify",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "crawl-shopify"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": [
+          {
+           "connector": "",
+           "egress": "ALL_TRAFFIC",
+           "network_interfaces": [
+            {
+             "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+             "subnetwork": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-shopify-egress",
+             "tags": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "crawl-shopify",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "crawl-shopify"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": [
+          {
+           "connector": "",
+           "egress": "ALL_TRAFFIC",
+           "network_interfaces": [
+            {
+             "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+             "subnetwork": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-shopify-egress",
+             "tags": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "before_sensitive": {}
+   },
+   "index": "crawl-shopify",
+   "mode": "managed",
+   "name": "ingest",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_cloud_run_v2_job"
+  },
+  {
+   "address": "google_cloud_run_v2_job.ingest[\"crawl-retry\"]",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "crawl-retry",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "crawl-retry"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": [
+          {
+           "connector": "",
+           "egress": "ALL_TRAFFIC",
+           "network_interfaces": [
+            {
+             "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+             "subnetwork": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-shopify-egress",
+             "tags": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "crawl-retry",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "crawl-retry"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": [
+          {
+           "connector": "",
+           "egress": "ALL_TRAFFIC",
+           "network_interfaces": [
+            {
+             "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+             "subnetwork": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-shopify-egress",
+             "tags": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "before_sensitive": {}
+   },
+   "index": "crawl-retry",
+   "mode": "managed",
+   "name": "ingest",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_cloud_run_v2_job"
+  },
+  {
+   "address": "google_cloud_run_v2_job.ingest[\"crawl-woocommerce\"]",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "crawl-woocommerce",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "crawl-woocommerce"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": [
+          {
+           "connector": "",
+           "egress": "ALL_TRAFFIC",
+           "network_interfaces": [
+            {
+             "network": "projects/coffee-data-tracker/global/networks/registry-coffee-ingest",
+             "tags": []
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "after_sensitive": {},
+    "after_unknown": {
+     "template": [
+      {
+       "template": [
+        {
+         "vpc_access": [
+          {
+           "network_interfaces": [
+            {
+             "subnetwork": true
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "before": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "crawl-woocommerce",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "crawl-woocommerce"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": []
+        }
+       ]
+      }
+     ]
+    },
+    "before_sensitive": {}
+   },
+   "index": "crawl-woocommerce",
+   "mode": "managed",
+   "name": "ingest",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_cloud_run_v2_job"
+  },
+  {
+   "address": "google_cloud_run_v2_job.ingest[\"merge\"]",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "merge",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "merge"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+         ],
+         "max_retries": 0,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": []
+        }
+       ]
+      }
+     ]
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "deletion_protection": false,
+     "location": "us-central1",
+     "name": "merge",
+     "template": [
+      {
+       "task_count": 1,
+       "template": [
+        {
+         "containers": [
+          {
+           "args": [
+            "ingest",
+            "--platform",
+            "merge"
+           ],
+           "image": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+         ],
+         "max_retries": 1,
+         "service_account": "registry-coffee-ingest@coffee-data-tracker.iam.gserviceaccount.com",
+         "timeout": "14400s",
+         "vpc_access": []
+        }
+       ]
+      }
+     ]
+    },
+    "before_sensitive": {}
+   },
+   "index": "merge",
+   "mode": "managed",
+   "name": "ingest",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_cloud_run_v2_job"
+  },
+  {
+   "address": "google_monitoring_alert_policy.job_failed",
+   "change": {
+    "actions": [
+     "create"
+    ],
+    "after": {
+     "display_name": "An ingestion job failed",
+     "enabled": true
+    },
+    "after_sensitive": {},
+    "after_unknown": {
+     "id": true,
+     "name": true
+    },
+    "before": null,
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "job_failed",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_monitoring_alert_policy"
+  },
+  {
+   "address": "data.google_project.this",
+   "change": {
+    "actions": [
+     "read"
+    ],
+    "after": {},
+    "after_sensitive": {},
+    "after_unknown": {
+     "number": true
+    },
+    "before": null,
+    "before_sensitive": {}
+   },
+   "mode": "data",
+   "name": "google_project.this",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "data"
+  }
+ ],
+ "terraform_version": "1.9.8",
+ "variables": {
+  "billing_account": {
+   "value": "000000-AAAAAA-111111"
+  },
+  "budget_usd": {
+   "value": 20
+  },
+  "domain": {
+   "value": "app.registry.coffee"
+  },
+  "egress_echo_url": {
+   "value": "https://echo.example.com"
+  },
+  "email": {
+   "value": false
+  },
+  "github_repo": {
+   "value": "jtouley/coffee-data-tracker"
+  },
+  "ingest_image": {
+   "value": "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "ingest_job_memory": {
+   "value": {}
+  },
+  "ingest_schedule_enabled": {
+   "value": true
+  },
+  "ingest_subnet_cidr": {
+   "value": "10.8.0.0/26"
+  },
+  "owner_email": {
+   "value": "owner@example.com"
+  },
+  "project_id": {
+   "value": "coffee-data-tracker"
+  },
+  "region": {
+   "value": "us-central1"
+  },
+  "service": {
+   "value": "registry-coffee"
+  },
+  "site_url": {
+   "value": "https://registry.coffee"
+  },
+  "support_email": {
+   "value": "support@registry.coffee"
+  },
+  "verdict_model": {
+   "value": "invented-model-1"
+  },
+  "woo_generic_subnet_cidr": {
+   "value": "10.8.0.64/26"
+  }
+ }
+}

@@ -1,0 +1,43 @@
+host,kind,note
+facebook.com,not_a_roaster,
+instagram.com,not_a_roaster,
+yelp.com,not_a_roaster,
+linktr.ee,not_a_roaster,
+toasttab.com,not_a_roaster,
+google.com,not_a_roaster,
+business.site,not_a_roaster,
+square.site,not_a_roaster,
+squareup.com,not_a_roaster,
+order.online,not_a_roaster,
+doordash.com,not_a_roaster,
+ubereats.com,not_a_roaster,
+grubhub.com,not_a_roaster,
+tiktok.com,not_a_roaster,
+twitter.com,not_a_roaster,
+x.com,not_a_roaster,
+linkedin.com,not_a_roaster,
+tripadvisor.com,not_a_roaster,
+mapquest.com,not_a_roaster,
+youtube.com,not_a_roaster,
+clover.com,not_a_roaster,
+wixsite.com,not_a_roaster,
+godaddysites.com,not_a_roaster,
+weebly.com,not_a_roaster,
+blogspot.com,not_a_roaster,
+wordpress.com,not_a_roaster,
+gmail.com,not_a_roaster,
+tryperdiem.com,not_a_roaster,"Per Diem's own site, which Overture lists for Java House's North Liberty location (crawl 2026-11-02)"
+orderspoon.com,not_a_roaster,"Spoon's ordering marketplace, which Overture lists as a cafe's website (crawl 2026-11-02)"
+shopify.com,platform,a closed store's domain can redirect to the platform's home page
+squarespace.com,platform,
+wix.com,platform,
+bigcartel.com,platform,
+hugedomains.com,parked,domain for sale: 6 roasters' expired domains (2026-11-09)
+expireddomains.com,parked,domain for sale: 5 roasters' expired domains (2026-11-09)
+sedo.com,parked,domain for sale
+dan.com,parked,domain for sale
+afternic.com,parked,domain for sale
+bitly.com,shortener,bit.ly resolves here (2026-11-09: bit.ly and gmcoff.ee)
+bit.ly,shortener,
+tinyurl.com,shortener,
+foodeist.com,directory,"restaurant listing pages on t2-food.com, food74.com and others resolve here (2026-11-09)"

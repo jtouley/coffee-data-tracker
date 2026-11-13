@@ -1,0 +1,2011 @@
+{
+ "items": [
+  {
+   "coffee_id": "5starcoffeeroasters.com:6645292925024",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3516",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3519",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3520",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3521",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3523",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3537",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3556",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:3558",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:4510",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:4513",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "abitaroasting.com:4826",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "aguadulcecafe.com:8143477309662",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "akron.coffee:5a482d018165f54918b12d03",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "alaskacoffeeroasting.com:5938b6b8d482e9a4eff2b942",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "alaskacoffeeroasting.com:5a347de09140b76437bca2ee",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "anthologycoffee.com:2418",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "apexcoffeeroasters.com:14c311a3838f",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "apexcoffeeroasters.com:4d1bba3658f1",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "apexcoffeeroasters.com:77540a4b3213",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "apexcoffeeroasters.com:dd4eeac03c99",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:01f552f3a15f",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:269ece593c07",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:3f7422912324",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:513765a2f9ad",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:9221a5f714d2",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:a620d425b7d4",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:ae7eb84d559f",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:b1b2d22356c6",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:b81ac76ab835",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:c02f9901c2c6",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:d198696e6373",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:da4035fe379c",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:da86cf380f12",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:e36ca9360801",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:f3c7f124d741",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:f531109af2ab",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "arabicacoffeeco.com:fb46de71db35",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "atowncoffee.com:4584797503573",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "avspresso.com:8176473932056",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "backstageroasters.com:3226",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:5079",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:5173",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:7371",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:7632",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:7811",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:7987",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:8317",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:8336",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:894",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:904",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "backstageroasters.com:928",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:3992",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:3994",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:3997",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:3998",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:4002",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:5795",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:7276",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "barbarossacoffee.com:7489",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "baristacolorado.com:393",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "baristacolorado.com:470",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "baristacolorado.com:471",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "baristacolorado.com:479",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "barnyardcoffee.com:2233617186927",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "barnyardcoffee.com:7969825456352",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "bcbccoffeeroasters.com:21001",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "bcbccoffeeroasters.com:21014",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "bcbccoffeeroasters.com:21550",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "bcbccoffeeroasters.com:2377",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "bendixcoffee.com:6756763271249",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "blacksiloroasting.com:8239869fc074",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "blanchardscoffee.com:409805640",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "bluechipcoffeeroaster.com:8277052555584",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "bluechipcoffeeroaster.com:8277102068032",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "blueflamecoffee.com:8433262198847",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "blueridgecoffeecrafters.com:9145565085971",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "boldbeancoffee.com:8971890950395",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "bongojava.com:9189701484801",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "bonlifecoffee.com:62597ac617b9bf2eef391d48",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "branchstreetcoffee.com:6552b7be24bf9f39d377d952",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "branchstreetcoffee.com:655e2f36f0aec57b50585a08",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "branchstreetcoffee.com:656a8645263fd234be03b963",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "branchstreetcoffee.com:656a86e1bd20522e5fc43617",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "branchstreetcoffee.com:67e5fb3cb9673100d70a7189",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "broadcastcoffee.com:8563347194028",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:477663859051",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:4e552123ae0d",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:4e7543d9bca0",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:5d17517564bd",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:6448a37467ca",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:c30f17bb3361",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "broadwayroasting.com:ed7c8718a941",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "cafevalverde.com:6606338621482",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "cafevalverde.com:6642302091306",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "caffebristot.us:8982689841326",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "canyoncoffeeroasters.com:6686179917996",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "canyoncoffeeroasters.com:6686181818540",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "canyoncoffeeroasters.com:6688400900268",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:10075",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:10076",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:26302",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:26332",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:278",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:282",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:284",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:290",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:309",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:313",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:317",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:319",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:325",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:404",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:413",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:416",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:422",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:425",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "carpediemcoffee.com:428",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "cashuacoffee.com:7094870736945",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "citybean.com:69ff6ea058d17f0cea659e32",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "coastalcoffeeroasters.com:664a911cf70aea387c29b542",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "coffeebytheroast.com:59301226bf629ad57a59cb56",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coffeebytheroast.com:593014a0d482e9f118e146b5",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coffeebytheroast.com:593014d14402434184314b73",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coffeebytheroast.com:59301af4725e2556b751a7af",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coffeebytheroast.com:593968651b10e322cb178e33",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coffeebytheroast.com:59396c0de4fcb5a7cf71e001",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:368026812448",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:373402075168",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:373416034336",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:373460008992",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:373461450784",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:373471445024",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:373511847968",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:7324580479074",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeefactoryroasters.com:7324581822562",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coffeelabs.com:57875333139",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "colonialcoffee.com:8920668012796",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "colonialcoffee.com:8920668045564",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "colonialcoffee.com:9094183846140",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "coltercoffee.com:6229855469750",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coltercoffee.com:9621841231",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "coolbeanscoffeeroasters.com:10961",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coolbeanscoffeeroasters.com:11862",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coolbeanscoffeeroasters.com:12484",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coolbeanscoffeeroasters.com:7551",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coolbeanscoffeeroasters.com:7961",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:3731911016501",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "coppermooncoffee.com:6908402565173",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "csrcoffee.com:1588914094195",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:1588917665907",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:1588921499763",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:1588925431923",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:1924132995187",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:4759107371141",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:829895573619",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:829909172339",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:829981753459",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:830144675955",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:830175510643",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:830268047475",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:830284660851",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "csrcoffee.com:9145788399862",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "cuckoocoffeeroastery.com:8255285198917",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "cuckoocoffeeroastery.com:8293653184581",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "cumberlandcoffeeroasters.com:3a024673b4b7",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "cumberlandcoffeeroasters.com:6fb9a984b9db",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "cumberlandcoffeeroasters.com:b6013a07cc41",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "cumberlandcoffeeroasters.com:ba5efbeda0b1",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "darkmooncoffee.com:6217",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "dillanos.com:10256587030822",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "dillanos.com:10415090401574",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "dillanos.com:10496330629414",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "doomsdaycoffeeroast.com:SU6I4YWVNRNESYKHKZRS3LXQ",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "drinkinspired.com:9507907698876",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "electriccityroasting.com:21201",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "electriccityroasting.com:21216",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "electriccityroasting.com:40399",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "enderlycoffee.com:d50753d0a971",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "endurocoffee.com:10339",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "endurocoffee.com:10372",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "endurocoffee.com:9571",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "endurocoffee.com:9747",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "enigmacoffee.com:8937674637486",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "equalexchange.coop:10571532808",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "equalexchange.coop:7066831454398",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "equalexchange.coop:7975663960254",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "equalexchange.coop:8406707175614",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "equalexchange.coop:8456186724542",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "evermorecoffee.com:9648333193447",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "fieldstonecoffeeroasters.com:234326473",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:100",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:126",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:140",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:142",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:146",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:150",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:4804",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:4806",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:5621",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fiveriverscoffee.com:94",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "framecoffeeroasters.com:692c667880600a01dce48912",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "freshgroundroast.com:3401828356",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "freshgroundroast.com:4743996538960",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "fullcityrooster.com:177",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fullcityrooster.com:184",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "fullcityrooster.com:UIQEV5GJXUJGIIDLFXXR5VIJ",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "fullcityrooster.com:WJO34IAENS4RBZXXI4YHC6EL",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "gleancoffee.com:412",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "goldcoffee.com:76021",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "goldcountryroasters.com:3787660886050",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "goodmancoffeeroasters.com:6049385ff07aa24d9dd3e863",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7424924352692",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7424928186548",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7424930447540",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7424933396660",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7425703739572",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7425722974388",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7426336227508",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7426346156212",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436222890164",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436223054004",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436223873204",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436225314996",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436225446068",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436225642676",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436630196404",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436645630132",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436648022196",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436653691060",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436655067316",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436655493300",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436665487540",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436670042292",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436671484084",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436671910068",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436673614004",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7436676235444",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437124731060",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437124829364",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437125025972",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437137248436",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437137674420",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437137707188",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437138198708",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437138329780",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437139902644",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437870989492",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437871087796",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437871415476",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7437871481012",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7440353591476",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7440361783476",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7440363454644",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7442399723700",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7442404671668",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7442792022196",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7442792677556",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7442799296692",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7442800279732",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7449218875572",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7449220677812",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7459346350260",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7549595517108",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7608809423028",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7608820531380",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7770135527604",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:7887507292340",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greencastlecoffee.com:8079160967348",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "greendragonroasters.com:10239619989820",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "groundopstlh.com:66f81311fb783433b96cc8a3",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "haobaobaocoffee.com:7563309252790",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "haobaobaocoffee.com:8826416332982",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "happyrockcoffee.com:146711794",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:10222653341780",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:10271810846804",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:10317246431316",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:10317254295636",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:10317256458324",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:10317265600596",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "havencoffeeroaster.com:6782059184212",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "headrushroasters.com:282",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "headrushroasters.com:367",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "headrushroasters.com:415",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "headycup.com:9270425452756",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "hiddenpeakscoffee.com:7491179511898",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "hiddenpeakscoffee.com:7550716051546",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "highpointroasters.com:13788",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "highpointroasters.com:50",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "highpointroasters.com:52",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "highpointroasters.com:88",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "highpointroasters.com:938",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "highpointroasters.com:94",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "hollerroast.com:1337",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "hollerroast.com:3031",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "hollerroast.com:360",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "ironbrewcoffee.com:6590976000129",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "ironbrewcoffee.com:6590976065665",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "ithacacoffee.com:10253617725762",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "javaloveroasters.com:12080302867",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "javaloveroasters.com:12579718355",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "jitteryjoes.com:9836376883481",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "jitteryjoes.com:9874269602073",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "jitteryjoes.com:9890216509721",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "joebeanroasters.com:5781909962903",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "joebeanroasters.com:6043345223831",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "joecoffeecompany.com:10437819564325",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "jolliffcoffee.com:4750702837863",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "journeycoffeeco.com:8566605218075",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "jsacoffee.com:9250095825188",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "justcoffee.coop:153715187",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "katzcoffee.com:5770",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "kekoabrewco.com:328",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "kilatescoffee.com:7TKVSW2JFUAOJPMRFFFS65FI",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "kribicoffee.com:9006189150494",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "kuvacoffee.com:5d5d867fdd357600016080e1",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "kuvacoffee.com:5d5d86eddd357600016085b0",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "lacolombe.com:428158824",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "lajavaroastinghouse.com:1049",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "lajavaroastinghouse.com:1070",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "lajavaroastinghouse.com:1114",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "lawcoffee.com:4358791200864",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "leipersforkroastery.com:8035893379237",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6602e5962ca23c606ed65d37",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6602ef56f5d81767dabbe316",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6602fe75220ab448ccf34961",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6634ecab34a47a21221a57af",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6634edc447407a4295fd1e70",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6636723099f8076cb06b69fa",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:6636761c4ae2ba4e5b607fbe",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663d8594d95c0273a3cfeab6",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663d8750924963578bf08a52",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663d89fe2154e96dfd9baa18",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663d92ee112d400d56266ddc",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663d95cb47e0b86ea25d9e98",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663e61159174c10b51222e05",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663e61b86b8d8527fa289bcc",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:663e63593f693807206a7d16",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlefootcoffee.com:683f12412c776b04a889f759",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlescratchcoffee.com:63d19a9d1a1d235bf535db9b",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littlescratchcoffee.com:656e243f86f8593214140f26",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "littleseed.coffee:2b15d76500a8",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "littleseed.coffee:d5911c4f2866",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "livingmillennially.com:69f4f3f8d9a07f26c83ea56d",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "m36coffeeroasters.com:15418354401509",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "m36coffeeroasters.com:15418375241957",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "m36coffeeroasters.com:9025349779685",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "mainemicroroasters.com:600",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "mainemicroroasters.com:663",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "mainstreetroasters.com:6656764805296",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "mainstreetroasters.com:6656766705840",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "mainstreetroasters.com:6895271936176",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "middleforkroasters.com:7746533648",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "midwestcoffeecompany.com:1",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "midwestcoffeecompany.com:14",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "midwestcoffeecompany.com:18",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "mightyfinecoffee.com:AYYVNCFNSGN5H5JTWCTYOQFN",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "morninglight.com:551770bae4b05ec98fe11966",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:551772b9e4b0fd1c92d8cfb3",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:55177732e4b0ae548a7f45d8",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:5517abefe4b0d571edbcb41a",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:5517ad26e4b0ac8577ae559f",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:5517b04ce4b090722fb08d23",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:5517b224e4b0ce927f10bcb3",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:596e79661b631b5386b1036c",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "morninglight.com:62264a5e7d602110dde0a4fc",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "mountaineerroasting.com:638409ecd9aa9d1e6d566c08",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "muddworks.com:76",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "natescoffee.com:25886",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "newheightscoffeeroasters.com:11050394157223",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "nimbusroasters.com:23",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "nimbusroasters.com:26",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "nimbusroasters.com:36",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f5f6ff62c6d5c03ffcde30c",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f5f702c82f5d20704ccbf5a",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f8850ef918e49738ba9f6d5",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f885b90f7f9fc4f2b9eb594",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f8860594d20d63f2f568754",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f88627503c3291d747735a0",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5f8862c99b4b5f2b64a90629",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5fa5347d782875020ebf892e",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5fa53530614dde503855fbb3",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5fa535775dfc746ea89a7de3",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:5fa537e00cf814681baed5c8",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "oakleyartisanroasters.com:675754dfaa0e1e29e27f9a43",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "offdutycoffee.com:4e22521d6a0c",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "orlandocoffeeroasters.com:7529301409943",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "overmountaincoffee.com:1550c6ada077",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "overmountaincoffee.com:4ebb22f52530",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "overmountaincoffee.com:ea5b5a776369",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "pangeacoffeeroasters.com:593844e729687fa59f94ca32",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "pangeacoffeeroasters.com:5938454c9de4bb16a6bbd343",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "paperboyroasting.com:dd45d4a12f0f",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "port2050coffeeroasters.com:7760393568315",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "praxiscoffee.com:100",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "proudmarycoffee.com:6750523fb3e9",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "ptscoffee.com:8082756304944",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "pureficoffee.com:67862",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "redbaycoffee.com:7861535342691",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "reprisecoffee.com:6a935b26d54348140a77c3db",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "reprisecoffee.com:6aaf2abf51e8655725fab0e2",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "repriseroasters.com:6a5f9faf22d8fb7a65be1825",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "repriseroasters.com:6aaf2abf51e8655725fab0e2",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "ritualgroundsroasting.com:8286974640361",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "rivalbros.com:8934755172659",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "roastedrecord.com:8366360658105",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "roastery.olivergospel.org:O3IOONNVUU2ZFA7EYAFCON75",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "roasthousecoffee.com:10259859112039",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "roasthousecoffee.com:7243976245351",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "rwandabean.com:1181",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "rwandabean.com:1210",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "rwandabean.com:1864",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "rwandabean.com:1905",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "rwandabean.com:2001",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "rwandabean.com:2210",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "sabocoffeeroasters.com:2631",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "sabocoffeeroasters.com:6371",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "sabocoffeeroasters.com:6640",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "sacredgrounds.coffee:30a197f5d8f5",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "sacredgrounds.coffee:a323b2e7d9b4",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8453190517017",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8453192974617",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456788705561",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456789459225",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456791327001",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456796504345",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456798732569",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456803549465",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456806629657",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456839069977",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456849785113",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8456850538777",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "safaricoffee.com:8860972876057",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:9310101799193",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "safaricoffee.com:9310108156185",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "seafoamroastingcompany.com:19",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "seafoamroastingcompany.com:30",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "seafoamroastingcompany.com:H5UA36E2ED62YAC6QTNUNXXK",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "seafoamroastingcompany.com:KH4IQ5QFCRKGMNZJMXHK45DN",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "seafoamroastingcompany.com:SBQS5UFKVLA7TEN56XTADRHL",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "seafoamroastingcompany.com:ZW6A77EQFEXTJXUCMI7FTSYU",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "silvercupcoffeeroasters.com:10342629179556",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "silvercupcoffeeroasters.com:10382557675684",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "smithrockcoffeeroaster.com:656d036586f859321413607d",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "soulbeanroasters.com:1980",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "soulbeanroasters.com:2036",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "spellacaffe.com:589800c66a4963593a65ea95",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "spellacaffe.com:589805e13e00be25e1283739",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "spellacaffe.com:5a04fb0a652dea80131a98bf",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "spellacaffe.com:695b38cc9112f8038760a6a4",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "starbeanscoffeeroasters.com:2018",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "starlightcoffeeco.com:5ecbb064288b",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "starlightcoffeeco.com:615bc7153a3b",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "steamwhistlecoffee.com:53",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "strongtreecoffee.com:609d4736127f406327c7baab",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "studiocoffeeroasters.com:65f1da816fa10d6a6d72a43c",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "takelmaroasting.com:4463580282966",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "tallcatcoffeeroasters.com:580bc8416b8f5b0d54cc4932",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tallcatcoffeeroasters.com:580bca02e4fcb5d3621e20e1",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tallcatcoffeeroasters.com:580c148c37c5818da2b2a1e1",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tallcatcoffeeroasters.com:580c14ce9de4bb15854b5571",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tallcatcoffeeroasters.com:580c151337c5818da2b2a514",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tallcatcoffeeroasters.com:582a10e9d482e98c4598648f",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tanbarkcityroasters.com:944",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "thewildroaster.com:68c034c82f5892531d8aef86",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "tobracoffee.com:1693410623606",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "topog.com:677",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "torkecoffee.com:18396381200",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "torkecoffee.com:221201973",
+   "stratum": "C"
+  },
+  {
+   "coffee_id": "tugboatcoffee.com:23113b023d38",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "tughillartisanroasters.com:4b670d5177c7",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "tughillartisanroasters.com:d2cedb07584b",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "tughillartisanroasters.com:f380d1af75d5",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "uncommoncoffeeroasters.com:10305182695508",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "uncommoncoffeeroasters.com:6932874100820",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "vanelis.com:1449633906786",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "vivacoffeeroasters.com:6ae1f6d4c60fcb4e980217c2",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "wateravenuecoffee.com:9219194978456",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "wateravenuecoffee.com:9352003190936",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "whistlepunk.coffee:677c27e8a63c107b30da90bf",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "whistlepunk.coffee:6844a5e2b91f060aa51e7892",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "whistlepunk.coffee:6848892536c31823d93e7751",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "wilsoncoffeeroasting.com:5988d35f3987",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "wilsoncoffeeroasting.com:5bab44afb289",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "wilsoncoffeeroasting.com:9326915ae2d7",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "wilsoncoffeeroasting.com:a97172fa6ede",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "wreckingballcoffee.com:4519495958667",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "xelaroasters.com:698bc85f6a1d184ccf99a6c2",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "xelaroasters.com:698bcb7a6504d0400fbd6c96",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "xelaroasters.com:6997446aed3424766d648dc8",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "yaggyroad.com:126",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "yaggyroad.com:23",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "yaggyroad.com:7CVLH7TDBRJRSTHGLDRUDIFC",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "yaggyroad.com:BVR7GP6FE5ABJRSRXUP6IBXT",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "yaggyroad.com:NW5WIMCBSWCOU6W6PSD6MIH4",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "yaggyroad.com:SDEA3ELTT3HWNW52YWVUV5V7",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "yaggyroad.com:TQKXVOB7JJGLBEOKZMWTUJR5",
+   "stratum": "F"
+  },
+  {
+   "coffee_id": "yellowspruceroasters.net:5d4cb5296f6b060001a3a0b1",
+   "stratum": "A"
+  },
+  {
+   "coffee_id": "zekescoffee.com:568127193130",
+   "stratum": "K"
+  },
+  {
+   "coffee_id": "zekescoffee.com:7935593480361",
+   "stratum": "K"
+  }
+ ],
+ "set": "test",
+ "stratum_sizes": {
+  "A": 902,
+  "C": 244,
+  "F": 380,
+  "K": 4202
+ }
+}
