@@ -58,7 +58,8 @@ resource "google_storage_bucket" "admin_state" {
 }
 
 resource "google_storage_bucket_iam_member" "admin_state" {
-  for_each = toset(["roles/storage.objectCreator", "roles/storage.objectViewer"])
+  # Plain keys: the plan guard (scripts/tf_plan_guard.py) prints only addresses whose keys are plain words.
+  for_each = { creator = "roles/storage.objectCreator", viewer = "roles/storage.objectViewer" }
   bucket   = google_storage_bucket.admin_state.name
   role     = each.value
   member   = "serviceAccount:${google_service_account.admin.email}"
