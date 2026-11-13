@@ -83,8 +83,8 @@ locals {
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls, fetch-health and the merge (below).
-  # A crawl that
+  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls, fetch-health, the merge and build
+  # (below). A crawl that
   # dies (OOM kill, crash) is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints,
   # skips the roasters already done this week, fetches the dead attempt's in-flight roasters one at a time and
   # quarantines one that killed two attempts (crashguard), and it stops inside the first attempt's window
@@ -93,8 +93,9 @@ locals {
   # refused, on Shopify's NAT IP; their next slot (15:17, 21:47) resumes. WooCommerce's and generic's are 0 for the
   # same reason: they share one static IP (woo_generic), and their 15:17 resume and 21:47 retry slots cover a failed
   # attempt. The merge is 0 too (issue #84): a retry would start over an attempt that died part-way, on its own
-  # judgement. `coffeedata merge` refuses that (an earlier attempt this week with no end row), so the execution
-  # fails and emails the owner, who runs it again by hand once nothing is running (RUNBOOK §5.2). A second merge
+  # judgement. `coffeedata merge` refuses that (a latest attempt this week that failed or has no end row), so the
+  # execution fails and emails the owner, who runs it again by hand once nothing is running (RUNBOOK §5.2). A merge
+  # that raises writes a `failed` end row with the error; one that is killed leaves its start row alone. A second merge
   # changes no file an earlier one stored and adds only rows the lake lacks (tests/test_chain.py), but the archive
   # folder a partition's files move to is named after the merge that moved them, so a retry splits one partition's
   # archive across two folders.
@@ -143,14 +144,20 @@ locals {
     "merge"        = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 0 }
     "enrich-week"  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
-    # check. A failed classify (no model or key, an API error), a failed gate, or the egress check's non-zero exit
-    # (an IP over 8% refusals two runs in a row) fails the execution, which emails the owner (alerts.tf,
-    # ingest_job_failed). The build still runs after a failed classify, on the verdicts already stored: its own
-    # verdict gate decides whether that release is served.
+    # check. Every step runs whatever the ones before it did, and any step's failure fails the execution, which
+    # emails the owner (alerts.tf, ingest_job_failed): a failed classify (no model or key, an API error), a failed
+    # gate, a failed publish (the release is recorded and staged but not in the dataset, issue #83; RUNBOOK §5.1 f
+    # sends it), or the egress check's non-zero exit (an IP over 8% refusals two runs in a row). The build still
+    # runs after a failed classify, on the verdicts already stored: its own verdict gate decides whether that
+    # release is served.
+    # Retries 0: a second attempt is a second build. It takes a new build id, stamps a second release for the same
+    # week with the first as its baseline, moves the served pointer and replaces marts/, so a re-run would change
+    # what the first run stored and a rollback to "previous" would land on the same week. The alert tells the
+    # owner, and a person re-runs the step that failed (RUNBOOK §5.1, §5.5).
     "build" = {
       command = ["sh", "-c"]
-      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
-      egress  = "default", claude = true, memory = "8Gi", retries = 1
+      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
+      egress  = "default", claude = true, memory = "8Gi", retries = 0
     }
   }
 
@@ -192,16 +199,17 @@ locals {
   }
 
   # The Tuesday chain (issue #84): the three jobs still start at the times above, and each of the last two first
-  # checks job_manifests for the job before it (src/coffeedata/chain.py). job => the `job` whose latest attempt
-  # this week must be `done`, and until when (HH:MM UTC, that day) to wait for it. Past the deadline the job exits
-  # non-zero having run nothing, so its execution fails and emails the owner (alerts.tf). enrich-week waits up to
-  # 90 minutes for the merge (which so has 150 from 03:17); the build job (its classify, then its build) up to 90
-  # for the enrichment, which leaves it 150 of its 240 minutes and ends before site.yml's 11:17. A clock time,
-  # not a duration: classify, build and Cloud Run's retry of the job share the one deadline. A run by hand skips
-  # the check with COFFEEDATA_SKIP_PRECONDITION=<reason> (RUNBOOK §5.2).
+  # checks job_manifests for the jobs before it (src/coffeedata/chain.py). job => the `job`s (comma-separated)
+  # whose latest attempt this week must be `done` and published, and until when (HH:MM UTC, that day) to wait for
+  # them. Past the deadline the job exits non-zero having run nothing, so its execution fails and emails the owner
+  # (alerts.tf). enrich-week waits up to 90 minutes for the merge (which so has 150 from 03:17); the build job (its
+  # classify, then its build) up to 90 for the merge and the enrichment, which leaves it 150 of its 240 minutes
+  # and ends before site.yml's 11:17. A clock time, not a duration: classify and build share the one deadline, and
+  # so does Cloud Run's retry of enrich-week (the build has none). A run by hand skips the check with
+  # COFFEEDATA_SKIP_PRECONDITION=<reason> (RUNBOOK §5.2).
   ingest_job_after = {
     "enrich-week" = { job = "merge", deadline_utc = "05:47" }
-    "build"       = { job = "enrich", deadline_utc = "07:47" }
+    "build"       = { job = "merge,enrich", deadline_utc = "07:47" }
   }
 }
 
@@ -398,7 +406,7 @@ resource "google_cloud_run_v2_job" "ingest" {
     template {
       service_account = google_service_account.ingest.email
       timeout         = "14400s" # 240 min, the limit every design was held to
-      # local.ingest_jobs says why: Shopify's crawls 0, everything else 1 (a crawl's deadline exits 0, never retried).
+      # local.ingest_jobs says why, job by job (a crawl's deadline exits 0, never retried; the build is never retried).
       max_retries = each.value.retries
 
       dynamic "vpc_access" {
@@ -448,21 +456,6 @@ resource "google_cloud_run_v2_job" "ingest" {
           name  = each.value.egress == "default" ? "COFFEEDATA_EGRESS_ECHO_URL" : "COFFEEDATA_EGRESS_IP"
           value = each.value.egress == "default" ? var.egress_echo_url : local.egress_nats[each.value.egress].ip
         }
-        # The Tuesday chain's precondition (local.ingest_job_after): only the jobs named there get these.
-        dynamic "env" {
-          for_each = [for job, after in local.ingest_job_after : after if job == each.key]
-          content {
-            name  = "COFFEEDATA_AFTER_JOB"
-            value = env.value.job
-          }
-        }
-        dynamic "env" {
-          for_each = [for job, after in local.ingest_job_after : after if job == each.key]
-          content {
-            name  = "COFFEEDATA_AFTER_DEADLINE_UTC"
-            value = env.value.deadline_utc
-          }
-        }
         env {
           name = "HF_TOKEN"
           value_source {
@@ -489,6 +482,22 @@ resource "google_cloud_run_v2_job" "ingest" {
                 version = "latest"
               }
             }
+          }
+        }
+        # The Tuesday chain's precondition (local.ingest_job_after): only the jobs named there get these.
+        # Last in the list, so a plan adds them without shifting the entries above.
+        dynamic "env" {
+          for_each = [for job, after in local.ingest_job_after : after if job == each.key]
+          content {
+            name  = "COFFEEDATA_AFTER_JOB"
+            value = env.value.job
+          }
+        }
+        dynamic "env" {
+          for_each = [for job, after in local.ingest_job_after : after if job == each.key]
+          content {
+            name  = "COFFEEDATA_AFTER_DEADLINE_UTC"
+            value = env.value.deadline_utc
           }
         }
       }
