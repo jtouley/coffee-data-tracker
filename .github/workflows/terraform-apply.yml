@@ -1,17 +1,24 @@
 # Apply src/terraform/ from main, only after the owner's second account approves it (docs/app/RUNNING.md, "Changing
 # the infrastructure").
 #
-# - `plan` (read-only account): plans main, runs the guard (scripts/tf_plan_guard.py), writes the list of changes to
-#   the run's summary, and saves the plan file to the private plans bucket with its SHA-256. No changes: the run ends.
+# - `plan` (read-only account): plans main with ci.tfvars and the TF_VAR_* repository secrets and variables, runs the
+#   guard (scripts/tf_plan_guard.py), writes the scrubbed change list and the plan's SHA-256 to the run's summary,
+#   and saves the plan file to the private plans bucket. No changes: the run ends.
 # - `apply` (write account) runs in the `terraform-apply` environment, so GitHub holds it until `jtouleyrou` approves.
-#   It then checks the environment's protection and the approval, refuses a plan that is stale (older than a day,
-#   superseded by a newer commit, or made before the state changed), downloads that exact plan and checks its hash,
-#   re-runs the guard, and applies the saved plan. Never a fresh one.
+#   It then refuses unless: the environment's protection reads back exactly as expected; this is the run's first
+#   attempt and `jtouleyrou` approved it; the plan is under a day old and no newer Terraform commit is on main; the
+#   downloaded plan has the SHA-256 shown before the approval; the state hasn't changed since; the guard passes again;
+#   a fresh plan shows the same change set (no drift); and no weekly job is due or running. It applies that saved plan,
+#   never a fresh one, checks the jobs' image and deletes the plan.
 # - The apply account's Workload Identity condition (src/terraform/bootstrap/main.tf) accepts only this file, on main,
-#   in a job of the `terraform-apply` environment: no other workflow, branch or job can apply.
+#   in a job of the `terraform-apply` environment.
 #
-# The repository is public. A plan file and its JSON hold every variable in clear, so they stay on the runner and in
-# the private bucket; nothing Terraform prints reaches the log except error headings and the final count.
+# These checks are code on main: an administrator of this repository can change them, or the environment, by
+# merging. The environment's required reviewer is the gate GitHub enforces; see RUNNING.md for what keeps it so.
+#
+# The repository is public. Nothing Terraform prints reaches the log: every Terraform command's output goes to a file,
+# and a failure shows only the guard's fixed, scrubbed summary (`tf_plan_guard.py errors`). The TF_VAR_* repository
+# variables are not masked by GitHub, so this matters.
 name: terraform-apply
 on:
   push:
@@ -23,8 +30,9 @@ on:
       - ".github/workflows/terraform-apply.yml"
   workflow_dispatch:
 permissions: {}
-# One at a time, and never cancelled: a run waiting for its approval holds the group. Terraform's state lock also
-# covers the owner's shell.
+# One at a time, never cancelled: a run waiting for its approval holds the group, and later runs wait behind it.
+# A run you won't approve: Reject it (or cancel it) and the next one goes ahead. GitHub ends an unanswered one after
+# 30 days. Terraform's state lock also covers the owner's shell.
 concurrency:
   group: terraform-apply
   cancel-in-progress: false
@@ -34,107 +42,144 @@ env:
   TF_STATE_PREFIX: registry-coffee  # the main root's backend prefix (provider.tf)
   ENVIRONMENT: terraform-apply
   APPROVER: jtouleyrou
+  GUARD: scripts/tf_plan_guard.py
 jobs:
   plan:
     if: github.repository == 'jtouley/coffee-data-tracker' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     permissions:
       contents: read
       id-token: write  # Workload Identity Federation, the plan account
     outputs:
       changed: ${{ steps.plan.outputs.changed }}
       planned_at: ${{ steps.plan.outputs.planned_at }}
-      state_generation: ${{ steps.state.outputs.generation }}
+      state_generation: ${{ steps.plan.outputs.state_generation }}
+      changeset: ${{ steps.plan.outputs.changeset }}
       object: ${{ steps.save.outputs.object }}
       generation: ${{ steps.save.outputs.generation }}
       sha256: ${{ steps.save.outputs.sha256 }}
     env:
-      TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET }}
+      TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET || 'coffee-data-tracker-tfstate' }}
       TF_PLANS_BUCKET: ${{ vars.TF_PLANS_BUCKET }}
-      # The two values that aren't in src/terraform/ci.auto.tfvars. Never printed: the plan's output goes to a file.
+      # The values not in ci.tfvars (src/terraform/ci.tfvars says where each comes from).
       TF_VAR_billing_account: ${{ secrets.TF_VAR_BILLING_ACCOUNT }}
       TF_VAR_owner_email: ${{ secrets.TF_VAR_OWNER_EMAIL }}
+      TF_VAR_ingest_image: ${{ vars.TF_VAR_INGEST_IMAGE }}
+      TF_VAR_ingest_schedule_enabled: ${{ vars.TF_VAR_INGEST_SCHEDULE_ENABLED }}
+      TF_VAR_email: ${{ vars.TF_VAR_EMAIL }}
+      TF_VAR_budget_usd: ${{ vars.TF_VAR_BUDGET_USD }}
+      TF_VAR_ingest_job_memory: ${{ vars.TF_VAR_INGEST_JOB_MEMORY }}
     steps:
-      - name: Settings present
+      - name: Set up, or skip?
+        id: gate
         env:
-          PROVIDER: ${{ vars.GCP_TF_PLAN_PROVIDER }}
-          SA: ${{ vars.GCP_TF_PLAN_SA }}
+          PLAN_PROVIDER: ${{ vars.GCP_TF_PLAN_PROVIDER }}
+          PLAN_SA: ${{ vars.GCP_TF_PLAN_SA }}
+          APPLY_PROVIDER: ${{ vars.GCP_TF_APPLY_PROVIDER }}
+          APPLY_SA: ${{ vars.GCP_TF_APPLY_SA }}
+          ACTOR: ${{ github.triggering_actor }}
         run: |
           missing=""
-          for v in PROVIDER SA TF_STATE_BUCKET TF_PLANS_BUCKET TF_VAR_billing_account TF_VAR_owner_email; do
-            [ -n "${!v}" ] || missing="$missing $v"
-          done
+          for v in PLAN_PROVIDER PLAN_SA APPLY_PROVIDER APPLY_SA TF_PLANS_BUCKET; do [ -n "${!v}" ] || missing="$missing $v"; done
           if [ -n "$missing" ]; then
-            echo "::error::Not set:$missing. Set the repository variables and secrets from the bootstrap (docs/app/RUNNING.md, \"Changing the infrastructure\")."
+            echo "::notice::No apply: the pipeline isn't set up yet (missing:$missing). The owner's last shell run sets it up (docs/ingestion/final-shell-run.sh)."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # self-review is prevented, so a run the approver starts could only wait, holding the queue
+          if [ "$ACTOR" = "$APPROVER" ]; then
+            echo "::error::$APPROVER can't start this workflow: they approve it. Run it as the owner's main account."
             exit 1
           fi
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+          echo "run=true" >> "$GITHUB_OUTPUT"
+      - if: steps.gate.outputs.run == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
-      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+      - if: steps.gate.outputs.run == 'true'
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
           workload_identity_provider: ${{ vars.GCP_TF_PLAN_PROVIDER }}
           service_account: ${{ vars.GCP_TF_PLAN_SA }}
-      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
-      - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e  # v4.0.1
+      - if: steps.gate.outputs.run == 'true'
+        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      - if: steps.gate.outputs.run == 'true'
+        uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e  # v4.0.1
         with:
           terraform_version: "1.9.8"
           terraform_wrapper: false  # the wrapper copies stdout into step outputs
-      - name: Init
-        run: |
-          if ! terraform -chdir="$TF_ROOT" init -input=false -lockfile=readonly -backend-config="bucket=$TF_STATE_BUCKET" > "$RUNNER_TEMP/init.log" 2>&1; then
-            grep -E '^(│ )?Error: ' "$RUNNER_TEMP/init.log" | sort -u | head -20
-            echo "::error::terraform init failed (error headings above)."
-            exit 1
-          fi
-      # Before the plan: any state write after this point makes the apply job refuse the plan.
-      - name: State version
-        id: state
-        run: |
-          gen=$(gcloud storage objects describe "gs://$TF_STATE_BUCKET/$TF_STATE_PREFIX/default.tfstate" --format='value(generation)')
-          [[ "$gen" =~ ^[0-9]+$ ]] || { echo "::error::Couldn't read the state's generation."; exit 1; }
-          echo "generation=$gen" >> "$GITHUB_OUTPUT"
       - name: Plan
         id: plan
+        if: steps.gate.outputs.run == 'true'
         run: |
+          unset TF_LOG TF_LOG_CORE TF_LOG_PROVIDER TF_LOG_PATH
+          missing=""
+          for v in TF_VAR_billing_account TF_VAR_owner_email TF_VAR_ingest_image TF_VAR_ingest_schedule_enabled; do
+            [ -n "${!v}" ] || missing="$missing ${v^^}"
+          done
+          [ -z "$missing" ] || { echo "::error::Set these repository secrets or variables first:$missing"; exit 1; }
+          for v in TF_VAR_email TF_VAR_budget_usd TF_VAR_ingest_job_memory; do [ -n "${!v}" ] || unset "$v"; done
+          logs="$RUNNER_TEMP/tf-logs"; mkdir -p "$logs"
+          fail() { python3 -I "$GUARD" errors "$1" "$logs/$1.log"; rm -rf "$logs" "$RUNNER_TEMP/tfplan"; exit 1; }
+          terraform -chdir="$TF_ROOT" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$TF_STATE_BUCKET" \
+            >"$logs/init.log" 2>&1 || fail init
+          # Before the plan: any state write after this makes the apply job refuse the plan.
+          gen=$(gcloud storage objects describe "gs://$TF_STATE_BUCKET/$TF_STATE_PREFIX/default.tfstate" --format='value(generation)')
+          [[ "$gen" =~ ^[0-9]+$ ]] || { echo "::error::Couldn't read the state's generation."; exit 1; }
           set +e
-          terraform -chdir="$TF_ROOT" plan -input=false -lock=false -no-color -detailed-exitcode \
-            -out="$RUNNER_TEMP/tfplan" > "$RUNNER_TEMP/plan.log" 2>&1
+          terraform -chdir="$TF_ROOT" plan -input=false -lock=false -no-color -detailed-exitcode -var-file=ci.tfvars \
+            -out="$RUNNER_TEMP/tfplan" >"$logs/plan.log" 2>&1
           rc=$?
           set -e
-          echo "planned_at=$(date -u +%s)" >> "$GITHUB_OUTPUT"
-          case $rc in
-            0) echo "changed=false" >> "$GITHUB_OUTPUT"; echo "No changes: nothing to approve." | tee -a "$GITHUB_STEP_SUMMARY" ;;
-            2) echo "changed=true" >> "$GITHUB_OUTPUT" ;;
-            *) grep -E '^(│ )?Error: ' "$RUNNER_TEMP/plan.log" | sort -u | head -20
-               echo "::error::terraform plan failed (error headings above; values are not printed)."
-               exit 1 ;;
-          esac
-      - name: Guard and list the changes
-        if: steps.plan.outputs.changed == 'true'
-        run: |
-          terraform -chdir="$TF_ROOT" show -json "$RUNNER_TEMP/tfplan" > "$RUNNER_TEMP/plan.json"
-          python3 -I scripts/tf_plan_guard.py check "$RUNNER_TEMP/plan.json"
-          {
-            echo "## Plan for ${GITHUB_SHA::12}, waiting for ${APPROVER}'s approval"
-            python3 -I scripts/tf_plan_guard.py render "$RUNNER_TEMP/plan.json"
-          } >> "$GITHUB_STEP_SUMMARY"
-      # Create-only (ifGenerationMatch=0): the plan account can't read, list or overwrite a saved plan.
-      - name: Save the plan
+          [ "$rc" = 0 ] || [ "$rc" = 2 ] || fail plan
+          { echo "planned_at=$(date -u +%s)"; echo "state_generation=$gen"; } >> "$GITHUB_OUTPUT"
+          if [ "$rc" = 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes: nothing to approve." | tee -a "$GITHUB_STEP_SUMMARY"
+            rm -rf "$logs" "$RUNNER_TEMP/tfplan"
+            exit 0
+          fi
+          terraform -chdir="$TF_ROOT" show -json -no-color "$RUNNER_TEMP/tfplan" >"$RUNNER_TEMP/plan.json" 2>"$logs/show.log" || fail show
+          rm -rf "$logs"
+          # Fails the run if a guard fails (1) or the plan can't be read or scrubbed (2). Prints addresses only.
+          python3 -I "$GUARD" check "$RUNNER_TEMP/plan.json"
+          python3 -I "$GUARD" render "$RUNNER_TEMP/plan.json" >"$RUNNER_TEMP/render.md"
+          # What the fresh plan before the apply must match: actions, address, and the planned values, hashed.
+          changeset=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
+            | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/plan.json" | sha256sum | cut -d' ' -f1)
+          rm -f "$RUNNER_TEMP/plan.json"
+          { echo "changed=true"; echo "changeset=$changeset"; } >> "$GITHUB_OUTPUT"
+      - name: Save the plan and show what is to be approved
         id: save
         if: steps.plan.outputs.changed == 'true'
         run: |
-          object="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tfplan"
+          # A random part: names can't be guessed and taken first by anyone else who can create objects here.
+          object="${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}-$(openssl rand -hex 8).tfplan"
           sha=$(sha256sum "$RUNNER_TEMP/tfplan" | cut -d' ' -f1)
           token=$(gcloud auth print-access-token)
           echo "::add-mask::$token"
+          # Create-only (ifGenerationMatch=0): the plan account can't read, list or overwrite a saved plan.
           resp=$(curl -fsS -X POST -H "Authorization: Bearer $token" -H "Content-Type: application/octet-stream" \
             --data-binary @"$RUNNER_TEMP/tfplan" \
             "https://storage.googleapis.com/upload/storage/v1/b/$TF_PLANS_BUCKET/o?uploadType=media&ifGenerationMatch=0&name=$object")
+          rm -f "$RUNNER_TEMP/tfplan"
           gen=$(jq -r '.generation' <<<"$resp")
           [[ "$gen" =~ ^[0-9]+$ ]] || { echo "::error::The upload returned no generation."; exit 1; }
           { echo "object=$object"; echo "generation=$gen"; echo "sha256=$sha"; } >> "$GITHUB_OUTPUT"
-          echo "Saved plan: gs://$TF_PLANS_BUCKET/$object, generation $gen, sha256 $sha" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "::notice title=Plan to approve::${GITHUB_SHA::12}, plan sha256 $sha"
+          {
+            echo "## Plan for ${GITHUB_SHA::12}: waiting for ${APPROVER}'s approval"
+            echo
+            echo "Plan SHA-256 \`$sha\`. The apply job applies only a plan with this hash."
+            echo
+            echo "### IAM changes (who can do what: read these first)"
+            echo
+            # shellcheck disable=SC2016  # literal backticks: render's Markdown
+            grep -E '^- `[a-z+-]+` `[^`]*_iam_' "$RUNNER_TEMP/render.md" || echo "None."
+            echo
+            cat "$RUNNER_TEMP/render.md"
+          } >> "$GITHUB_STEP_SUMMARY"
+          rm -f "$RUNNER_TEMP/render.md"
 
   apply:
     needs: plan
@@ -144,28 +189,53 @@ jobs:
     environment: terraform-apply  # waits here for the approval
     permissions:
       contents: read
-      actions: read    # the run's approvals; the environment's settings, where this token may read them
+      actions: read    # the run's approvals and the environment's settings
       id-token: write  # Workload Identity Federation, the apply account (its condition requires this environment)
     env:
-      TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET }}
+      TF_STATE_BUCKET: ${{ vars.TF_STATE_BUCKET || 'coffee-data-tracker-tfstate' }}
       TF_PLANS_BUCKET: ${{ vars.TF_PLANS_BUCKET }}
       OBJECT: ${{ needs.plan.outputs.object }}
       GENERATION: ${{ needs.plan.outputs.generation }}
       SHA256: ${{ needs.plan.outputs.sha256 }}
       STATE_GENERATION: ${{ needs.plan.outputs.state_generation }}
+      CHANGESET: ${{ needs.plan.outputs.changeset }}
       PLANNED_AT: ${{ needs.plan.outputs.planned_at }}
       GH_TOKEN: ${{ github.token }}
-      # Not used: referenced so that the runner masks them in this job's log, should an error heading quote one.
-      MASKED_BILLING_ACCOUNT: ${{ secrets.TF_VAR_BILLING_ACCOUNT }}
-      MASKED_OWNER_EMAIL: ${{ secrets.TF_VAR_OWNER_EMAIL }}
+      REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      # For the fresh plan (drift) and for scrubbing error summaries only, never for the apply itself. Named S_* so that
+      # `terraform apply <saved plan>` sees no TF_VAR_*.
+      S_BILLING_ACCOUNT: ${{ secrets.TF_VAR_BILLING_ACCOUNT }}
+      S_OWNER_EMAIL: ${{ secrets.TF_VAR_OWNER_EMAIL }}
+      S_INGEST_IMAGE: ${{ vars.TF_VAR_INGEST_IMAGE }}
+      S_INGEST_SCHEDULE_ENABLED: ${{ vars.TF_VAR_INGEST_SCHEDULE_ENABLED }}
+      S_EMAIL: ${{ vars.TF_VAR_EMAIL }}
+      S_BUDGET_USD: ${{ vars.TF_VAR_BUDGET_USD }}
+      S_INGEST_JOB_MEMORY: ${{ vars.TF_VAR_INGEST_JOB_MEMORY }}
     steps:
+      - name: One attempt, approved by the second account
+        env:
+          ACTOR: ${{ github.triggering_actor }}
+        run: |
+          # A re-run would reuse this run's earlier approval (the approvals list spans attempts), and a full re-run
+          # makes a new plan nobody approved. So only attempt 1 applies; anything else is a new run.
+          if [ "$GITHUB_RUN_ATTEMPT" != 1 ]; then
+            echo "::error::This is attempt $GITHUB_RUN_ATTEMPT of this run. Re-runs never apply: run the workflow again from main for a new plan and a new approval. Nothing was applied."
+            exit 1
+          fi
+          # Attempt 1's apply job waits for the plan job to finish, so every approval here came after the plan was saved.
+          who=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/approvals" --jq \
+            "[.[] | select(.state == \"approved\" and any(.environments[]; .name == \"$ENVIRONMENT\")) | .user.login] | unique | join(\",\")") \
+            || { echo "::error::Can't read this run's approvals. Nothing was applied."; exit 1; }
+          case ",$who," in
+            *",$APPROVER,"*) ;;
+            *) echo "::error::No approval by $APPROVER on this run (approved by: '${who:-nobody}'). Nothing was applied."; exit 1 ;;
+          esac
+          [ "$ACTOR" != "$APPROVER" ] || { echo "::error::$APPROVER started this run. Nothing was applied."; exit 1; }
+          echo "Approved by $APPROVER."
       - name: The environment's protection is as expected
         run: |
-          fail() { echo "::error::The $ENVIRONMENT environment isn't protected as expected: $*. Fix it in Settings, Environments; nothing was applied."; exit 1; }
-          if ! env_json=$(gh api "repos/$GITHUB_REPOSITORY/environments/$ENVIRONMENT" 2>/dev/null); then
-            echo "::warning::This token can't read the environment's settings; checking the approval itself instead."
-            exit 0
-          fi
+          fail() { echo "::error::The $ENVIRONMENT environment isn't protected as expected: $*. Nothing was applied."; exit 1; }
+          env_json=$(gh api "repos/$GITHUB_REPOSITORY/environments/$ENVIRONMENT") || fail "its settings can't be read"
           jq -e '.can_admins_bypass == false' <<<"$env_json" >/dev/null || fail "administrators can bypass it"
           jq -e '.deployment_branch_policy.custom_branch_policies == true and .deployment_branch_policy.protected_branches == false' \
             <<<"$env_json" >/dev/null || fail "deployments aren't limited to selected branches"
@@ -173,32 +243,22 @@ jobs:
             | length == 1 and .[0].prevent_self_review == true
             and ([.[0].reviewers[] | "\(.type):\(.reviewer.login)"] == ["User:\($who)"])' <<<"$env_json" >/dev/null \
             || fail "the required reviewer isn't $APPROVER alone, with self-review prevented"
-          if branches=$(gh api "repos/$GITHUB_REPOSITORY/environments/$ENVIRONMENT/deployment-branch-policies" \
-               --jq '[.branch_policies[] | "\(.type // "branch"):\(.name)"] | sort | join(",")' 2>/dev/null); then
-            [ "$branches" = "branch:main" ] || fail "its deployment branches are '$branches', not main only"
-          else
-            echo "::warning::This token can't read the environment's branch policies."
-          fi
-          echo "Protection as expected: reviewer $APPROVER, self-review prevented, main only, no admin bypass."
-      - name: Approved by the second account
-        env:
-          ACTOR: ${{ github.triggering_actor }}
-        run: |
-          who=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/approvals" --jq \
-            "[.[] | select(.state == \"approved\" and any(.environments[]; .name == \"$ENVIRONMENT\")) | .user.login] | unique | join(\",\")")
-          case ",$who," in
-            *",$APPROVER,"*) ;;
-            *) echo "::error::No approval by $APPROVER on this run (approved by: '${who:-nobody}'). Nothing was applied."; exit 1 ;;
-          esac
-          [ "$ACTOR" != "$APPROVER" ] || { echo "::error::$APPROVER started this run and approved it. Nothing was applied."; exit 1; }
-          echo "Approved by $APPROVER."
+          branches=$(gh api "repos/$GITHUB_REPOSITORY/environments/$ENVIRONMENT/deployment-branch-policies" \
+            --jq '[.branch_policies[] | "\(.type // "branch"):\(.name)"] | sort | join(",")') || fail "its branch policies can't be read"
+          [ "$branches" = "branch:main" ] || fail "its deployment branches are '$branches', not main only"
+          echo "Protection as expected: reviewer $APPROVER alone, self-review prevented, main only, no admin bypass."
       - name: The plan is still the one to apply
         run: |
           age=$(( $(date -u +%s) - PLANNED_AT ))
           [ "$age" -le 86400 ] || { echo "::error::The plan is $((age / 3600)) hours old. Run the workflow again for a fresh plan. Nothing was applied."; exit 1; }
           tip=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
           if [ "$tip" != "$GITHUB_SHA" ]; then
-            newer=$(gh api "repos/$GITHUB_REPOSITORY/compare/$GITHUB_SHA...$tip" --jq '.files[].filename' \
+            cmp=$(gh api "repos/$GITHUB_REPOSITORY/compare/$GITHUB_SHA...$tip")
+            # the compare API lists at most 300 files: a longer list can't be judged, so it counts as a change
+            if [ "$(jq '.files | length' <<<"$cmp")" -ge 300 ]; then
+              echo "::error::main has moved on by too many files to check. Run the workflow again from main. Nothing was applied."; exit 1
+            fi
+            newer=$(jq -r '.files[] | .filename, (.previous_filename // empty)' <<<"$cmp" \
               | grep -E '^(src/terraform/|scripts/tf_plan_guard\.py$|\.github/workflows/terraform-apply\.yml$)' \
               | grep -v '^src/terraform/bootstrap/' || true)
             if [ -n "$newer" ]; then
@@ -217,59 +277,82 @@ jobs:
         with:
           terraform_version: "1.9.8"
           terraform_wrapper: false
-      # The ingestion timing rules (docs/ingestion/RUNBOOK.md): crawls run on Monday, the release on Tuesday morning.
-      - name: Not during the weekly run
-        env:
-          REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      - name: Check the approved plan, then apply it
         run: |
-          dow=$(date -u +%u); hr=$(date -u +%H)
-          [ "$dow" != 1 ] || { echo "::error::It's Monday (UTC): the crawls run today. Run the workflow again from Tuesday 12:00 UTC. Nothing was applied."; exit 1; }
-          if [ "$dow" = 2 ] && [ "$hr" -lt 12 ]; then
-            echo "::error::The Tuesday release runs until about 12:00 UTC. Run the workflow again after it. Nothing was applied."; exit 1
-          fi
-          # Fails closed: a job or execution list that can't be read stops the run.
-          jobs=$(gcloud run jobs list --region "$REGION" --format='value(name)')
-          for j in $jobs; do
-            ends=$(gcloud run jobs executions list --job "$j" --region "$REGION" --limit 5 --format='csv[no-heading](name,status.completionTime)')
-            # "<execution>," : no completion time, still running
-            if grep -q ',$' <<<"$ends"; then
-              echo "::error::$j has a running execution. Run the workflow again when it ends. Nothing was applied."; exit 1
-            fi
-          done
-          echo "No job is running."
-      - name: Init
-        run: |
-          if ! terraform -chdir="$TF_ROOT" init -input=false -lockfile=readonly -backend-config="bucket=$TF_STATE_BUCKET" > "$RUNNER_TEMP/init.log" 2>&1; then
-            grep -E '^(│ )?Error: ' "$RUNNER_TEMP/init.log" | sort -u | head -20
-            echo "::error::terraform init failed (error headings above). Nothing was applied."
-            exit 1
-          fi
-      - name: Download the approved plan and check its hash
-        run: |
+          unset TF_LOG TF_LOG_CORE TF_LOG_PROVIDER TF_LOG_PATH
+          logs="$RUNNER_TEMP/tf-logs"; mkdir -p "$logs"
+          scrubbed() {  # the guard's fixed summary of a failed step, with every private value known to its scrubber
+            TF_VAR_billing_account="$S_BILLING_ACCOUNT" TF_VAR_owner_email="$S_OWNER_EMAIL" \
+              TF_VAR_ingest_image="$S_INGEST_IMAGE" TF_VAR_ingest_job_memory="$S_INGEST_JOB_MEMORY" \
+              python3 -I "$GUARD" errors "$1" "$logs/$1.log"
+          }
+          stop() { echo "::error::$*"; rm -rf "$logs" "$RUNNER_TEMP/tfplan" "$RUNNER_TEMP"/*.json; exit 1; }
+          terraform -chdir="$TF_ROOT" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$TF_STATE_BUCKET" \
+            >"$logs/init.log" 2>&1 || { scrubbed init; stop "Nothing was applied."; }
+
           token=$(gcloud auth print-access-token)
           echo "::add-mask::$token"
           curl -fsS -o "$RUNNER_TEMP/tfplan" -H "Authorization: Bearer $token" \
-            "https://storage.googleapis.com/storage/v1/b/$TF_PLANS_BUCKET/o/$OBJECT?alt=media&generation=$GENERATION"
+            "https://storage.googleapis.com/storage/v1/b/$TF_PLANS_BUCKET/o/$OBJECT?alt=media&generation=$GENERATION" \
+            || stop "Couldn't download the saved plan. Nothing was applied."
           got=$(sha256sum "$RUNNER_TEMP/tfplan" | cut -d' ' -f1)
-          [ "$got" = "$SHA256" ] || { echo "::error::The saved plan's SHA-256 is $got, not the $SHA256 the plan job recorded. Nothing was applied."; exit 1; }
-          echo "Plan gs://$TF_PLANS_BUCKET/$OBJECT (generation $GENERATION), sha256 matches."
-      - name: The state hasn't changed since the plan
-        run: |
+          [ "$got" = "$SHA256" ] || stop "The saved plan's SHA-256 is $got, not the $SHA256 shown before the approval. Nothing was applied."
+
           gen=$(gcloud storage objects describe "gs://$TF_STATE_BUCKET/$TF_STATE_PREFIX/default.tfstate" --format='value(generation)')
-          [ "$gen" = "$STATE_GENERATION" ] || { echo "::error::The state changed after this plan was made (generation $STATE_GENERATION, now $gen). Run the workflow again for a new plan. Nothing was applied."; exit 1; }
-      - name: Guard the saved plan again
-        run: |
-          terraform -chdir="$TF_ROOT" show -json "$RUNNER_TEMP/tfplan" > "$RUNNER_TEMP/plan.json"
-          python3 -I scripts/tf_plan_guard.py check "$RUNNER_TEMP/plan.json"
-      # The saved plan only. Terraform also refuses it if the state moved after it was made (a stale plan).
-      - name: Apply
-        run: |
-          if terraform -chdir="$TF_ROOT" apply -input=false -no-color "$RUNNER_TEMP/tfplan" > "$RUNNER_TEMP/apply.log" 2>&1; then
-            grep -E '^Apply complete!' "$RUNNER_TEMP/apply.log" | tee -a "$GITHUB_STEP_SUMMARY"
-            exit 0
+          [ "$gen" = "$STATE_GENERATION" ] || stop "The state changed after this plan was made. Run the workflow again for a new plan. Nothing was applied."
+
+          terraform -chdir="$TF_ROOT" show -json -no-color "$RUNNER_TEMP/tfplan" >"$RUNNER_TEMP/saved.json" 2>"$logs/show.log" \
+            || { scrubbed show; stop "Nothing was applied."; }
+          python3 -I "$GUARD" check "$RUNNER_TEMP/saved.json" || stop "The guard refuses the saved plan. Nothing was applied."
+
+          # Drift: a fresh plan, never applied, must show the same change set as the approved one.
+          (
+            export TF_VAR_billing_account="$S_BILLING_ACCOUNT" TF_VAR_owner_email="$S_OWNER_EMAIL" \
+              TF_VAR_ingest_image="$S_INGEST_IMAGE" TF_VAR_ingest_schedule_enabled="$S_INGEST_SCHEDULE_ENABLED"
+            [ -z "$S_EMAIL" ] || export TF_VAR_email="$S_EMAIL"
+            [ -z "$S_BUDGET_USD" ] || export TF_VAR_budget_usd="$S_BUDGET_USD"
+            [ -z "$S_INGEST_JOB_MEMORY" ] || export TF_VAR_ingest_job_memory="$S_INGEST_JOB_MEMORY"
+            terraform -chdir="$TF_ROOT" plan -input=false -lock=false -no-color -var-file=ci.tfvars -out="$RUNNER_TEMP/fresh" \
+              >"$logs/plan.log" 2>&1 && \
+            terraform -chdir="$TF_ROOT" show -json -no-color "$RUNNER_TEMP/fresh" >"$RUNNER_TEMP/fresh.json" 2>"$logs/show.log"
+          ) || { scrubbed plan; stop "The fresh plan for the drift check failed. Nothing was applied."; }
+          rm -f "$RUNNER_TEMP/fresh"
+          fresh=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
+            | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/fresh.json" | sha256sum | cut -d' ' -f1)
+          [ "$fresh" = "$CHANGESET" ] || stop "The infrastructure changed since the plan (a fresh plan differs from the approved one). Run the workflow again for a new plan. Nothing was applied."
+          rm -f "$RUNNER_TEMP"/*.json
+
+          # The weekly pipeline (src/terraform/ingestion.tf): crawls and fetch-health on Monday, fetch-health and the
+          # release on Tuesday, discover on the 1st at 03:17, all UTC. Checked last, right before the apply.
+          dow=$(date -u +%u); hr=$((10#$(date -u +%H))); dom=$(date -u +%d)
+          if [ "$dow" = 1 ] || [ "$dow" = 2 ] || { [ "$dow" = 7 ] && [ "$hr" -ge 23 ]; } || { [ "$dom" = 01 ] && [ "$hr" -ge 2 ] && [ "$hr" -le 4 ]; }; then
+            stop "The weekly pipeline runs now (Monday and Tuesday UTC, from Sunday 23:00, and 02:00-05:00 on the 1st). Run the workflow again after it. Nothing was applied."
           fi
-          grep -E '^(│ )?Error: ' "$RUNNER_TEMP/apply.log" | sort -u | head -20
-          msg="The apply failed (error headings above). Terraform kept what it finished in the state and nothing else runs. Don't re-run this job: fix the cause, then run the workflow again from main; its new plan shows what is left and waits for a new approval. A lock left behind is cleared by the owner (docs/app/RUNNING.md, \"Changing the infrastructure\")."
-          echo "::error title=Apply failed::$msg"
-          echo "**Apply failed.** $msg" >> "$GITHUB_STEP_SUMMARY"
-          exit 1
+          jobs=$(gcloud run jobs list --region "$REGION" --format='value(name)') || stop "Can't list the jobs. Nothing was applied."
+          for j in $jobs; do
+            ends=$(gcloud run jobs executions list --job "$j" --region "$REGION" --limit 5 --format='csv[no-heading](name,status.completionTime)') \
+              || stop "Can't list $j's executions. Nothing was applied."
+            if grep -q ',$' <<<"$ends"; then stop "$j has a running execution. Run the workflow again when it ends. Nothing was applied."; fi
+          done
+
+          # The saved plan only. Terraform also refuses it if the state moved after it was made (a stale plan).
+          if ! terraform -chdir="$TF_ROOT" apply -input=false -no-color "$RUNNER_TEMP/tfplan" >"$logs/apply.log" 2>&1; then
+            scrubbed apply
+            msg="The apply failed. Terraform kept what it finished in the state and nothing else runs. Don't re-run: fix the cause, then run the workflow again from main; its new plan shows what is left and waits for a new approval. A lock left behind is cleared by the owner (docs/app/RUNNING.md, \"Changing the infrastructure\")."
+            echo "**Apply failed.** $msg" >> "$GITHUB_STEP_SUMMARY"
+            stop "$msg"
+          fi
+          grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$logs/apply.log" | tee -a "$GITHUB_STEP_SUMMARY" || true
+          rm -rf "$logs" "$RUNNER_TEMP/tfplan"
+          curl -fsS -X DELETE -H "Authorization: Bearer $token" "https://storage.googleapis.com/storage/v1/b/$TF_PLANS_BUCKET/o/$OBJECT" \
+            || echo "::warning::Couldn't delete the applied plan; the bucket's lifecycle removes it within a day."
+      - name: Every job runs the pinned image
+        run: |
+          bad=0
+          jobs=$(gcloud run jobs list --region "$REGION" --format='value(name)')
+          [ -n "$jobs" ] || { echo "::error::No jobs listed."; exit 1; }
+          for j in $jobs; do
+            img=$(gcloud run jobs describe "$j" --region "$REGION" --format='value(spec.template.spec.template.spec.containers[0].image)')
+            if [ "$img" = "$S_INGEST_IMAGE" ]; then echo "ok  $j"; else echo "::error::$j doesn't run the pinned image"; bad=1; fi
+          done
+          exit "$bad"

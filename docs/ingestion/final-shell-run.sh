@@ -3,20 +3,22 @@
 # (docs/app/RUNNING.md, "Changing the infrastructure"); Cloud Shell stays only as the break-glass route.
 #
 # It finishes cutover 2 and sets up the GitHub route, in one go:
-#   1. checks: main is checked out and has what this needs; not a Monday or a Tuesday morning; no job running
+#   1. checks: main is checked out and has what this needs; the weekly pipeline isn't due; no job running; the state
+#      bucket has uniform access and versioning
 #   2. the ingest image GitHub built and signed for main's commit (verified-ingest-image.sh), tagged pinned-<commit>
-#   3. plan the main root with that image, run the guard (scripts/tf_plan_guard.py), show the list, apply
-#   4. verify: every job runs the pinned image; the schedules; the egress IPs
+#   3. plan the main root with your terraform.tfvars and that image, run the guard, show the list, apply
+#   4. verify: every job runs the pinned image; the schedules; the two egress IPs (for the SiteGround ticket)
 #   5. keep the pinned image in your terraform.tfvars
 #   6. plan and apply the bootstrap root (src/terraform/bootstrap: the plan and apply identities, the plans bucket)
-#   7. the repository variables and the two secrets the workflows need: printed (secrets never), set with gh on a yes
+#   7. the repository variables and secrets the workflows need, set with gh (names shown, values never)
 #   8. the first importers run, if cutover 2 hasn't started it yet
 #
 # Run from Cloud Shell, with the gh CLI signed in once (`gh auth login`), as:
 #   bash docs/ingestion/final-shell-run.sh
-# Every step asks first (y/N; anything but y stops). The first error stops the run, and nothing after it runs. Plan
-# files and Terraform's output go to a private temporary folder that is deleted at the end; only error headings,
-# addresses and counts are shown. No secret is printed.
+# Every step asks first (y/N; anything but y stops). The first error stops the run, and nothing after it runs.
+# Terraform's own output never reaches the terminal: it goes to files in a private temporary folder (deleted at the
+# end, with the saved plans, which hold every value in clear); a failure shows the guard's fixed, scrubbed summary.
+# No secret value is printed, passed as an argument or written anywhere but that folder.
 set -Eeuo pipefail
 umask 077
 
@@ -33,8 +35,33 @@ exec 3<"${ANSWERS:-/dev/tty}"
 say(){ printf '\n\033[1m== %s  (%s UTC)\033[0m\n' "$*" "$(date -u +%T)"; }
 die(){ printf '\033[31mSTOP: %s\033[0m\n' "$*" >&2; exit 1; }
 ask(){ local a=""; printf '%s [y/N] ' "$*"; read -r -u 3 a || true; echo; [[ "$a" == [yY]* ]] || die "cancelled at: $*"; }
-errors(){ grep -E '^(│ )?Error: ' "$1" | sort -u | head -20 >&2 || true; }  # headings only: no values
-tf(){ terraform -chdir="$1" "${@:2}"; }
+# A string value from terraform.tfvars, for scrubbing and for gh's stdin only: never printed.
+tfvar(){ sed -n "s/^[[:space:]]*$1[[:space:]]*=[[:space:]]*\"\([^\"]*\)\".*/\1/p" "$TF/terraform.tfvars"; }
+# tfrun STEP DIR ARGS...: Terraform with its output in a file; on failure, only the guard's scrubbed summary.
+tfrun(){
+  local step=$1 dir=$2
+  shift 2
+  if ! terraform -chdir="$dir" "$@" >"$WORK/$step.log" 2>&1; then
+    TF_VAR_billing_account="$(tfvar billing_account)" TF_VAR_owner_email="$(tfvar owner_email)" \
+      python3 -I scripts/tf_plan_guard.py errors "$step" "$WORK/$step.log" >&2 || true
+    die "terraform $step failed in $dir (its own messages are not shown: they can hold private values)"
+  fi
+}
+# The weekly pipeline (src/terraform/ingestion.tf): crawls and fetch-health on Monday, fetch-health and the release
+# on Tuesday, discover on the 1st at 03:17, all UTC.
+not_now(){
+  local dow hr dom
+  dow=$(date -u +%u); hr=$((10#$(date -u +%H))); dom=$(date -u +%d)
+  if [ "$dow" = 1 ] || [ "$dow" = 2 ] || { [ "$dow" = 7 ] && [ "$hr" -ge 23 ]; } || { [ "$dom" = 01 ] && [ "$hr" -ge 2 ] && [ "$hr" -le 4 ]; }; then
+    die "the weekly pipeline runs now (Monday and Tuesday UTC, from Sunday 23:00, and 02:00-05:00 on the 1st): run this Wednesday to Sunday"
+  fi
+  local jobs j ends
+  jobs=$(gcloud run jobs list --project $P --region $R --format='value(name)')
+  for j in $jobs; do
+    ends=$(gcloud run jobs executions list --project $P --job "$j" --region $R --limit 5 --format='csv[no-heading](name,status.completionTime)')
+    if grep -q ',$' <<<"$ends"; then die "$j has a running execution"; fi
+  done
+}
 
 say "1. checks"
 ask "check out origin/main in $CHECKOUT and run the read-only checks?"
@@ -42,30 +69,24 @@ cd "$CHECKOUT"
 git fetch -q origin main
 git checkout -q --detach origin/main
 echo "main at $(git log -1 --oneline)"
-for f in "$BOOT/main.tf" scripts/tf_plan_guard.py .github/workflows/terraform-apply.yml; do
+for f in "$BOOT/main.tf" scripts/tf_plan_guard.py .github/workflows/terraform-apply.yml "$TF/ci.tfvars"; do
   [ -f "$f" ] || die "main has no $f: merge the Terraform-in-GitHub PRs first"
 done
 [ -x docs/ingestion/verified-ingest-image.sh ] || die "main has no verified-ingest-image.sh: is #153 merged?"
 [ -f "$TF/terraform.tfvars" ] || die "no $TF/terraform.tfvars (your private values): copy it into this checkout first"
+for v in billing_account owner_email; do [ -n "$(tfvar $v)" ] || die "$TF/terraform.tfvars has no $v"; done
 grep -q 'resource "google_compute_address" "woo_generic_egress"' "$TF/ingestion.tf" \
   || die "main doesn't have the second NAT IP yet: merge that PR first"
 for c in jq python3 gh terraform gcloud; do command -v "$c" >/dev/null || die "$c is not installed"; done
 gh auth status >/dev/null 2>&1 || die "sign the gh CLI in first: gh auth login"
-# not during the crawls (Monday) or the Tuesday release (merge 03:17, enrich 04:17, build 06:17, site 11:17 UTC)
-dow=$(date -u +%u); hr=$(date -u +%H)
-[ "$dow" != 1 ] || die "it's Monday: crawls run today; run this Tuesday afternoon to Sunday"
-if [ "$dow" = 2 ] && [ "$hr" -lt 12 ]; then die "Tuesday release still running (until ~12:00 UTC)"; fi
-jobs=$(gcloud run jobs list --region $R --format='value(name)')
-for j in $jobs; do
-  ends=$(gcloud run jobs executions list --job "$j" --region $R --limit 5 --format='csv[no-heading](name,status.completionTime)')
-  if grep -q ',$' <<<"$ends"; then die "$j has a running execution"; fi
-done
-echo "no job is running"
+not_now
+echo "no weekly job is due or running"
 # The bootstrap gives each identity the main root's state objects only (an IAM condition), which needs uniform
-# bucket-level access on the state bucket.
-ubla=$(gcloud storage buckets describe "gs://$P-tfstate" --format='value(uniform_bucket_level_access)')
-[[ "${ubla,,}" == true ]] \
-  || die "gs://$P-tfstate doesn't have uniform bucket-level access, which the bootstrap's state conditions need"
+# bucket-level access; versioning keeps every earlier state, should an apply go wrong.
+ubla=$(gcloud storage buckets describe "gs://$P-tfstate" --project $P --format='value(uniform_bucket_level_access)')
+[[ "${ubla,,}" == true ]] || die "gs://$P-tfstate doesn't have uniform bucket-level access, which the bootstrap's state conditions need"
+versioning=$(gcloud storage buckets describe "gs://$P-tfstate" --project $P --format='value(versioning_enabled)')
+[[ "${versioning,,}" == true ]] || die "gs://$P-tfstate has no object versioning: turn it on first (gcloud storage buckets update gs://$P-tfstate --versioning)"
 
 say "2. the image GitHub built from main, verified"
 ask "read and verify the ingest image for $(git rev-parse --short HEAD)?"
@@ -79,24 +100,31 @@ echo "image: $IMG"
 PIN="pinned-$(git rev-parse --short=12 HEAD)"
 # the registry deletes images over 30 days old unless among the 5 newest, or tagged pinned-* or latest
 ask "tag it $PIN, so the registry keeps it?"
-gcloud artifacts docker tags add "$IMG" "$REPO:$PIN" --quiet || die "couldn't tag the image to keep it"
+gcloud artifacts docker tags add "$IMG" "$REPO:$PIN" --quiet >/dev/null 2>&1 || die "couldn't tag the image to keep it"
 
 say "3. plan the main root with that image"
-# With your terraform.tfvars only, whatever main holds in src/terraform/*.auto.tfvars (GitHub's checked-in values,
-# which may still be placeholders): the root's .tf files are copied to a private folder without them, so this run
-# doesn't depend on the order the PRs merge in. The copy holds no values; the state is the same bucket and prefix.
+# Your terraform.tfvars only, and never GitHub's ci.tfvars or any *.auto.tfvars: the root's .tf files are copied to
+# the private folder, so this run plans the same whatever order the PRs merged in. The state is the same.
 MAIN="$WORK/main-root"; TFVARS="$PWD/$TF/terraform.tfvars"
 mkdir "$MAIN" && cp "$TF"/*.tf "$TF/.terraform.lock.hcl" "$MAIN/"
 ask "init, check and plan $TF with your terraform.tfvars and the image above (nothing changes yet)?"
-tf "$MAIN" init -input=false -lockfile=readonly -backend-config="bucket=$P-tfstate" >"$WORK/init.log" 2>&1 \
-  || { errors "$WORK/init.log"; die "terraform init failed"; }
-tf "$MAIN" fmt -check >/dev/null || die "terraform fmt -check fails on main"
-tf "$MAIN" validate -no-color >"$WORK/validate.log" 2>&1 || { errors "$WORK/validate.log"; die "terraform validate fails"; }
-tf "$MAIN" plan -input=false -no-color -var-file="$TFVARS" -var "ingest_image=$IMG" -out="$WORK/main.plan" \
-  >"$WORK/plan.log" 2>&1 || { errors "$WORK/plan.log"; die "terraform plan failed"; }
-tf "$MAIN" show -json "$WORK/main.plan" >"$WORK/main.json"
-# no delete or replace, Shopify's network path and jobs untouched, the image pinned by digest
-python3 -I scripts/tf_plan_guard.py check "$WORK/main.json" || die "the guard refuses this plan (lines above)"
+tfrun init "$MAIN" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$P-tfstate"
+tfrun fmt "$MAIN" fmt -check -no-color
+tfrun validate "$MAIN" validate -no-color
+tfrun plan "$MAIN" plan -input=false -no-color -var-file="$TFVARS" -var "ingest_image=$IMG" -out="$WORK/main.plan"
+terraform -chdir="$MAIN" show -json "$WORK/main.plan" >"$WORK/main.json" 2>"$WORK/show.log" || die "terraform show failed"
+echo "-- guard --"
+rc=0
+python3 -I scripts/tf_plan_guard.py check "$WORK/main.json" || rc=$?
+[ "$rc" != 2 ] || die "the guard can't read this plan"
+if [ "$rc" = 1 ]; then
+  # Two guards protect what only you change, here: who can deploy, plan or apply. Anything else stops the run.
+  other=$(python3 -I scripts/tf_plan_guard.py check "$WORK/main.json" | sed -n 's/^FAIL \([a-z-]*\).*/\1/p' \
+    | grep -vxE 'workload-identity|guarded-accounts' || true)
+  [ -z "$other" ] || die "the guard refuses this plan: $(echo "$other" | tr '\n' ' ')"
+  echo "The FAIL lines above change who can deploy, plan or apply. Only you change these, here."
+  ask "they are expected (such as the deploy identity's condition, #127): go on?"
+fi
 echo "-- changes --"
 python3 -I scripts/tf_plan_guard.py render "$WORK/main.json" || die "couldn't list the changes"
 echo "expect: updates to every job (the pinned image; discover and probe commands, #132/#133); the build job's"
@@ -105,86 +133,89 @@ echo "        keep-pinned cleanup rule (#153); and, if not applied before: alert
 echo "        condition (#127), the two empty email secrets (#134), the second subnet/IP/NAT, the 21:47 retries."
 echo "        Nothing may be deleted or replaced (checked above). Read the list before answering."
 ask "apply exactly this plan?"
-tf "$MAIN" apply -input=false -no-color "$WORK/main.plan" >"$WORK/apply.log" 2>&1 \
-  || { errors "$WORK/apply.log"; die "terraform apply failed: what finished is in the state; nothing else ran"; }
-grep -E '^Apply complete!' "$WORK/apply.log" || true
+not_now
+tfrun apply "$MAIN" apply -input=false -no-color "$WORK/main.plan"
+grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$WORK/apply.log" || true
 
 say "4. verify"
-ask "check that every job runs $IMG and list the schedules (read-only)?"
+ask "check that every job runs $IMG, list the schedules and show the egress IPs (read-only)?"
 bad=0
-jobs=$(gcloud run jobs list --region $R --format='value(name)')
+jobs=$(gcloud run jobs list --project $P --region $R --format='value(name)')
+[ -n "$jobs" ] || die "no jobs listed"
 for j in $jobs; do
-  img=$(gcloud run jobs describe "$j" --region $R --format='value(spec.template.spec.template.spec.containers[0].image)')
+  img=$(gcloud run jobs describe "$j" --project $P --region $R --format='value(spec.template.spec.template.spec.containers[0].image)')
   if [ "$img" = "$IMG" ]; then echo "ok  $j"; else echo "!!  $j -> $img"; bad=1; fi
 done
 [ "$bad" = 0 ] || die "some jobs don't run the pinned image (above)"
-gcloud scheduler jobs list --location $R --filter="name~registry-coffee-" --format="table(name,schedule,state)"
-echo "-- egress IPs (Shopify, then WooCommerce/generic) --"
-tf "$MAIN" output -raw shopify_egress_ip; echo
-tf "$MAIN" output -raw woo_generic_egress_ip; echo
+gcloud scheduler jobs list --project $P --location $R --filter="name~registry-coffee-" --format="table(name,schedule,state)"
+echo "-- egress IPs, for the SiteGround ticket (Shopify, then WooCommerce/generic) --"
+for a in shopify-egress woo-generic-egress; do
+  gcloud compute addresses describe "registry-coffee-$a" --project $P --region $R --format='value(address)'
+done
 
 say "5. keep the pinned image in terraform.tfvars"
 ask "write ingest_image = \"$IMG\" into $TF/terraform.tfvars?"
-if grep -q '^ingest_image' "$TF/terraform.tfvars"; then
-  sed -i "s|^ingest_image .*|ingest_image = \"$IMG\"|" "$TF/terraform.tfvars"
+IMG_LINE='^[[:space:]]*ingest_image[[:space:]]*='
+if grep -qE "$IMG_LINE" "$TF/terraform.tfvars"; then
+  sed -i -E "s|$IMG_LINE.*|ingest_image = \"$IMG\"|" "$TF/terraform.tfvars"
 else
   echo "ingest_image = \"$IMG\"" >>"$TF/terraform.tfvars"
 fi
-grep -E '^ingest_image ' "$TF/terraform.tfvars"
-# GitHub plans with src/terraform/ci.auto.tfvars, not this file: it must pin the same image, or the first apply
-# from GitHub changes every job back.
-if [ -f "$TF/ci.auto.tfvars" ] && ! grep -qF "\"$IMG\"" "$TF/ci.auto.tfvars"; then
-  echo "NOTE: $TF/ci.auto.tfvars pins a different image. Open a one-line PR setting its ingest_image to"
-  echo "      $IMG"
-  echo "      before the next Terraform change, or GitHub's plan will show every job changing back."
-fi
+[ "$(grep -cE "$IMG_LINE" "$TF/terraform.tfvars")" = 1 ] || die "terraform.tfvars should have one ingest_image line"
+grep -E "$IMG_LINE" "$TF/terraform.tfvars"
 
 say "6. the bootstrap root: identities for GitHub's plan and apply, and the plans bucket"
-BILLING=$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' "$TF/terraform.tfvars")
-[[ "$BILLING" =~ ^[0-9A-F]{6}-[0-9A-F]{6}-[0-9A-F]{6}$ ]] || die "no billing_account in $TF/terraform.tfvars (value not shown)"
-export TF_VAR_billing_account="$BILLING"
+TF_VAR_billing_account="$(tfvar billing_account)"
+export TF_VAR_billing_account
 ask "init, check and plan $BOOT (nothing changes yet)?"
-tf $BOOT init -input=false -lockfile=readonly -backend-config="bucket=$P-tfstate" >"$WORK/boot-init.log" 2>&1 \
-  || { errors "$WORK/boot-init.log"; die "terraform init failed (bootstrap)"; }
-tf $BOOT fmt -check >/dev/null || die "terraform fmt -check fails on the bootstrap"
-tf $BOOT validate -no-color >"$WORK/boot-validate.log" 2>&1 || { errors "$WORK/boot-validate.log"; die "terraform validate fails (bootstrap)"; }
-tf $BOOT plan -input=false -no-color -out="$WORK/boot.plan" >"$WORK/boot-plan.log" 2>&1 \
-  || { errors "$WORK/boot-plan.log"; die "terraform plan failed (bootstrap)"; }
-tf $BOOT show -json "$WORK/boot.plan" >"$WORK/boot.json"
+tfrun init "$BOOT" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$P-tfstate"
+tfrun fmt "$BOOT" fmt -check -no-color
+tfrun validate "$BOOT" validate -no-color
+tfrun plan "$BOOT" plan -input=false -no-color -out="$WORK/boot.plan"
+terraform -chdir="$BOOT" show -json "$WORK/boot.plan" >"$WORK/boot.json" 2>"$WORK/show.log" || die "terraform show failed (bootstrap)"
 BAD=$(jq -r '.resource_changes[]? | select(.change.actions | index("delete")) | .address' "$WORK/boot.json")
 [ -z "$BAD" ] || die "the bootstrap plan deletes or replaces: $BAD"
-echo "-- changes --"
+echo "-- changes (addresses only) --"
 jq -r '.resource_changes[]? | select(.change.actions != ["no-op"] and .change.actions != ["read"])
   | "\(.change.actions | join("+"))\t\(.address)"' "$WORK/boot.json" | sort
 echo "expect (first run): 50 creates: two pools and providers, two accounts and their workload identity bindings,"
-echo "        five custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
+echo "        six custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
 ask "apply exactly this plan?"
-tf $BOOT apply -input=false -no-color "$WORK/boot.plan" >"$WORK/boot-apply.log" 2>&1 \
-  || { errors "$WORK/boot-apply.log"; die "terraform apply failed (bootstrap): what finished is in its state; nothing else ran"; }
-grep -E '^Apply complete!' "$WORK/boot-apply.log" || true
+tfrun apply "$BOOT" apply -input=false -no-color "$WORK/boot.plan"
+grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$WORK/apply.log" || true
+unset TF_VAR_billing_account
 
 say "7. GitHub repository variables and secrets"
-tf $BOOT output -json github_variables >"$WORK/vars.json"
-echo "repository variables (none is a secret):"
-jq -r 'to_entries[] | "  \(.key) = \(.value)"' "$WORK/vars.json"
-ask "set these as repository variables on $GH with gh?"
+terraform -chdir="$BOOT" output -json github_variables >"$WORK/vars.json" 2>"$WORK/output.log" || die "terraform output failed (bootstrap)"
+# Your values, as this run's plan used them (terraform.tfvars, the variables' defaults, the pinned image).
+val(){ jq -c --arg n "$1" '.variables[$n].value' "$WORK/main.json"; }
+raw(){ jq -j --arg n "$1" '.variables[$n].value' "$WORK/main.json"; }
+sets(){ grep -qE "^[[:space:]]*$1[[:space:]]*=" "$TF/terraform.tfvars"; }
+{
+  jq -r 'to_entries[] | "\(.key)\t\(.value)"' "$WORK/vars.json"
+  printf 'TF_VAR_INGEST_IMAGE\t%s\n' "$IMG"
+  printf 'TF_VAR_INGEST_SCHEDULE_ENABLED\t%s\n' "$(raw ingest_schedule_enabled)"
+  if sets email; then printf 'TF_VAR_EMAIL\t%s\n' "$(raw email)"; fi
+  if sets budget_usd; then printf 'TF_VAR_BUDGET_USD\t%s\n' "$(raw budget_usd)"; fi
+  if sets ingest_job_memory; then printf 'TF_VAR_INGEST_JOB_MEMORY\t%s\n' "$(val ingest_job_memory)"; fi
+} >"$WORK/gh-vars.tsv"
+echo "repository variables to set: $(cut -f1 "$WORK/gh-vars.tsv" | tr '\n' ' ')"
+ask "set these repository variables on $GH with gh (values not shown)?"
 while IFS=$'\t' read -r name value; do
   gh variable set "$name" -R "$GH" --body "$value" >/dev/null
   echo "set $name"
-done < <(jq -r 'to_entries[] | "\(.key)\t\(.value)"' "$WORK/vars.json")
-# The private values, as repository secrets: read from terraform.tfvars, piped to gh, never shown or written anywhere.
-tfvar(){ sed -n "s/^[[:space:]]*$1[[:space:]]*=[[:space:]]*\"\([^\"]*\)\".*/\1/p" "$TF/terraform.tfvars"; }
-SECRETS="billing_account:TF_VAR_BILLING_ACCOUNT owner_email:TF_VAR_OWNER_EMAIL"
-for pair in $SECRETS; do [ -n "$(tfvar "${pair%%:*}")" ] || die "no ${pair%%:*} in $TF/terraform.tfvars"; done
-names=$(for pair in $SECRETS; do printf '%s ' "${pair#*:}"; done)
-ask "set the repository secrets ${names% } from terraform.tfvars (values not shown)?"
-for pair in $SECRETS; do
-  gh secret set "${pair#*:}" -R "$GH" < <(tfvar "${pair%%:*}" | tr -d '\n') >/dev/null
+done <"$WORK/gh-vars.tsv"
+ask "set the repository secrets TF_VAR_BILLING_ACCOUNT and TF_VAR_OWNER_EMAIL from terraform.tfvars (values not shown)?"
+for pair in billing_account:TF_VAR_BILLING_ACCOUNT owner_email:TF_VAR_OWNER_EMAIL; do
+  gh secret set "${pair#*:}" -R "$GH" < <(raw "${pair%%:*}") >/dev/null
   echo "set ${pair#*:}"
 done
-echo "your other terraform.tfvars settings, for the FILL_IN values of $TF/ci.auto.tfvars (none is a secret):"
-grep -vE '^[[:space:]]*(#|$)' "$TF/terraform.tfvars" | grep -vE '^[[:space:]]*(billing_account|owner_email)[[:space:]]*=' \
-  | sed 's/^/  /' || true
+# What GitHub's plan won't see: a setting in terraform.tfvars that no variable above or ci.tfvars carries.
+known='billing_account|owner_email|ingest_image|ingest_schedule_enabled|email|budget_usd|ingest_job_memory|verdict_model'
+left=$(sed -n -E 's/^[[:space:]]*([a-z_]+)[[:space:]]*=.*/\1/p' "$TF/terraform.tfvars" | grep -vxE "$known" | sort -u | tr '\n' ' ' || true)
+[ -z "$left" ] || echo "NOTE: terraform.tfvars also sets: $left. GitHub's plan doesn't; add them to ci.tfvars or a TF_VAR_* variable."
+ci_model=$(sed -n -E 's/^[[:space:]]*verdict_model[[:space:]]*=[[:space:]]*"([^"]*)".*/\1/p' "$TF/ci.tfvars")
+[ "$(raw verdict_model)" = "$ci_model" ] || echo "NOTE: verdict_model in terraform.tfvars differs from ci.tfvars; GitHub's plan would change it."
 
 say "8. first importers run (skip it if cutover 2 already started one)"
 ask "run importers.yml on main (importer=all; a manual run never fetches Royal)?"

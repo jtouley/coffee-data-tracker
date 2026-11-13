@@ -53,9 +53,11 @@ jobs:
       - name: Check the Terraform
         working-directory: src/terraform
         run: |
-          terraform fmt -check
+          terraform fmt -check -recursive
           terraform init -backend=false -input=false
           terraform validate
+          terraform -chdir=bootstrap init -backend=false -input=false
+          terraform -chdir=bootstrap validate
 
   deploy:
     # A green ci run on a push to main in this repository (a fork's pull request from its own branch named main

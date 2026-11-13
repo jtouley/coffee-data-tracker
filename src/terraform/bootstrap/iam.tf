@@ -7,19 +7,25 @@
 # Specific roles throughout: no owner, editor, projectIamAdmin, workloadIdentityPoolAdmin, roleAdmin or
 # serviceAccountKeyAdmin. A missing permission fails closed, with a 403 that names it.
 #
-# What neither account can do: write a workload identity pool or provider (the deploy pool included: that stays a
-# change by hand, and the guard refuses it), a custom role, the project's IAM policy, its own or the other's IAM
-# policy, these two buckets' IAM policies or the billing account's; read a secret's value or an ingestion object;
-# delete a service account.
+# What neither account can do: write a workload identity pool or provider, a custom role, the project's IAM policy,
+# IAM on any service account (so who may act as the deploy, plan or apply account never changes through the
+# pipeline: the guard refuses those changes too), these two buckets' IAM or the billing account's; delete a service
+# account.
+#
+# What the apply account CAN do once an apply is approved, because the main root manages it: set IAM on the secrets
+# (so grant itself or anyone a secret's value), the image repository, the Cloud Run service and jobs, and the staging
+# bucket (so reach raw ingestion data); and run any image as the runtime, ingest or scheduler account, which hold
+# secret access and the staging bucket. The approval, the guard and the checks in terraform-apply.yml are the gate
+# on all of that, not these roles. The plan account can read every resource's settings and IAM, and the state (the
+# billing account id, the owner's email, the egress IPs), from any same-repository pull request.
 
 locals {
   plan_member  = "serviceAccount:${google_service_account.tf_plan.email}"
   apply_member = "serviceAccount:${google_service_account.tf_apply.email}"
 
-  # The main root's accounts (deploy.tf, secrets.tf, ingestion.tf), by the names it gives them.
+  # The main root's runtime accounts (secrets.tf, ingestion.tf), by the names it gives them.
   managed_account = {
     for k, id in {
-      deploy           = "${var.service}-deploy"
       runtime          = "${var.service}-run"
       ingest           = "${var.service}-ingest"
       ingest_scheduler = "${var.service}-ingest-sched"
@@ -58,11 +64,17 @@ resource "google_project_iam_custom_role" "tf_service_accounts" {
   permissions = ["iam.serviceAccounts.create", "iam.serviceAccounts.get", "iam.serviceAccounts.list", "iam.serviceAccounts.update"]
 }
 
-# IAM on one service account, granted only on the two whose IAM the main root sets (deploy, runtime).
-resource "google_project_iam_custom_role" "tf_service_account_iam" {
-  role_id     = "tfApplyServiceAccountIam"
-  title       = "Terraform apply: IAM on a service account"
-  permissions = ["iam.serviceAccounts.get", "iam.serviceAccounts.getIamPolicy", "iam.serviceAccounts.setIamPolicy"]
+# The image repository's settings and IAM (cleanup policies, the deploy account's writer role), on that repository
+# only: not roles/artifactregistry.admin, which can also delete images, the pinned one included.
+resource "google_project_iam_custom_role" "tf_repository" {
+  role_id = "tfApplyRepository"
+  title   = "Terraform apply: a repository's settings and IAM, no images"
+  permissions = [
+    "artifactregistry.repositories.get",
+    "artifactregistry.repositories.getIamPolicy",
+    "artifactregistry.repositories.setIamPolicy",
+    "artifactregistry.repositories.update",
+  ]
 }
 
 # Create the empty secrets and set who may read them. Not secretmanager.versions.access (roles/secretmanager.admin
@@ -114,10 +126,19 @@ resource "google_storage_bucket_iam_member" "tf_plan_staging" {
   member = local.plan_member
 }
 
-resource "google_billing_account_iam_member" "tf_plan" {
-  billing_account_id = var.billing_account
-  role               = "roles/billing.viewer" # the monthly budget
-  member             = local.plan_member
+# The monthly budget, read through the project: Google's budget docs give this project-scoped pair for a budget
+# limited to one project, without any billing-account role (billing.viewer would show every project's costs). If the
+# Budget API refuses it, the first plan fails closed with a 403, and billing.viewer on the account is the fallback.
+resource "google_project_iam_custom_role" "tf_budget_reader" {
+  role_id     = "tfPlanBudgetReader"
+  title       = "Terraform plan: this project's budgets"
+  permissions = ["billing.resourcebudgets.read", "resourcemanager.projects.get"]
+}
+
+resource "google_project_iam_member" "tf_plan_budget" {
+  project = var.project_id
+  role    = google_project_iam_custom_role.tf_budget_reader.id
+  member  = local.plan_member
 }
 
 resource "google_storage_bucket_iam_member" "tf_plan_state" {
@@ -143,6 +164,7 @@ resource "google_project_iam_member" "tf_apply" {
     "roles/browser",                              # resourcemanager.projects.get
     "roles/serviceusage.serviceUsageAdmin",       # enable the APIs in google_project_service (never disabled: disable_on_destroy = false)
     "roles/iam.workloadIdentityPoolViewer",       # read only: the deploy pool is changed by hand
+    "roles/iam.securityReviewer",                 # read IAM policies, for the fresh plan the apply job compares (drift)
     "roles/run.admin",                            # the service, its IAM and domain mapping; the jobs and their IAM
     "roles/compute.networkAdmin",                 # network, subnets, router, NATs, static addresses (no instances, no firewall)
     "roles/cloudscheduler.admin",                 # the weekly schedule
@@ -157,13 +179,11 @@ resource "google_project_iam_member" "tf_apply" {
   member  = local.apply_member
 }
 
-# The image repository's settings and IAM (cleanup policies, the deploy account's writer role), on that repository
-# only. It can also delete images there; the jobs run a pinned digest the registry keeps (keep-pinned).
 resource "google_artifact_registry_repository_iam_member" "tf_apply" {
   project    = var.project_id
   location   = var.region
   repository = local.image_repository
-  role       = "roles/artifactregistry.admin"
+  role       = google_project_iam_custom_role.tf_repository.id
   member     = local.apply_member
 }
 
@@ -173,16 +193,9 @@ resource "google_storage_bucket_iam_member" "tf_apply_staging" {
   member = local.apply_member
 }
 
-# deploy.tf binds workloadIdentityUser on the deploy account and serviceAccountUser on the runtime account.
-resource "google_service_account_iam_member" "tf_apply_sets_iam" {
-  for_each           = toset(["deploy", "runtime"])
-  service_account_id = local.managed_account[each.value]
-  role               = google_project_iam_custom_role.tf_service_account_iam.id
-  member             = local.apply_member
-}
-
 # actAs: the service runs as the runtime account, the jobs as the ingest account, the schedule calls them as the
-# scheduler account. No other account.
+# scheduler account. No other account, and never IAM on any account: deploy.tf's two account bindings (who may act as
+# the deploy account, and the deploy account acting as the runtime one) stay changes by hand, and the guard refuses them.
 resource "google_service_account_iam_member" "tf_apply_acts_as" {
   for_each           = toset(["runtime", "ingest", "ingest_scheduler"])
   service_account_id = local.managed_account[each.value]
@@ -208,6 +221,6 @@ resource "google_storage_bucket_iam_member" "tf_apply_state" {
 
 resource "google_storage_bucket_iam_member" "tf_apply_plans" {
   bucket = google_storage_bucket.tf_plans.name
-  role   = "roles/storage.objectViewer" # read the saved plan it was approved for
+  role   = "roles/storage.objectUser" # read the saved plan it was approved for, and delete it after the apply
   member = local.apply_member
 }

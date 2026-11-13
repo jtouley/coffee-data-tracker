@@ -32,6 +32,7 @@ src/terraform/bootstrap/*.tfstate*
 # saved plans hold every variable in clear
 src/terraform/**/*.plan
 src/terraform/**/*.tfplan
+src/terraform/**/*.json
 
 # Local PR review notes; never committed.
 .context/

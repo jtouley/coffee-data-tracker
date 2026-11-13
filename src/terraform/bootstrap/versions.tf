@@ -4,7 +4,7 @@
 # managed by what it gates. Neither identity can change anything here: no role below writes a workload identity pool,
 # a provider, a custom role, the project's IAM policy, these accounts' IAM policies or these buckets' IAM policies.
 terraform {
-  required_version = ">= 1.6"
+  required_version = "~> 1.9" # CI pins 1.9.8
   required_providers {
     google = {
       source  = "hashicorp/google"

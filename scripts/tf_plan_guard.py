@@ -35,6 +35,13 @@ ACTIONS = {"no-op", "create", "read", "update", "delete", "forget"}
 SHOPIFY_ADDRESS = re.compile(r"shopify_egress")
 SHOPIFY_NAME = "shopify-egress"
 NETWORK_TYPES = {"google_compute_network", "google_compute_router"}
+# Resources that steer a network's traffic: on the ingest network, any of them could take Shopify's egress off its NAT.
+NETWORK_ATTACHED_TYPES = {
+    "google_compute_route",
+    "google_compute_firewall",
+    "google_compute_network_peering",
+    "google_compute_network_peering_routes_config",
+}
 NAT_TYPE = "google_compute_router_nat"
 # The NAT's attributes that decide which IPs and subnets it serves; everything else (ports, logging) may change.
 NAT_PINNED = (
@@ -50,6 +57,10 @@ WIF_TYPE_PREFIX = "google_iam_workload_identity_pool"  # pools, providers, and I
 WIF_MARKERS = ("workloadidentitypools", "principalset:", "principal:")
 WIF_ROLES = {"roles/iam.workloadIdentityUser", "roles/iam.workloadIdentityPoolAdmin"}
 DIGEST = "@sha256:[0-9a-f]{64}"
+# The accounts whose trust the pipeline must never change: the deploy account (deploy.tf) and the plan and apply
+# accounts (src/terraform/bootstrap). Their resources, IAM on them, and any grant to them are the owner's, by hand.
+GUARDED_ACCOUNTS = ("registry-coffee-deploy", "registry-coffee-tf-plan", "registry-coffee-tf-apply")
+SA_TYPE = "google_service_account"
 
 # Terraform's address syntax, with for_each keys limited to plain characters (no quotes, spaces, @, /, backticks).
 _KEY = r'(?:\[(?:[0-9]+|"[A-Za-z0-9_.-]+")\])?'
@@ -57,7 +68,7 @@ ADDRESS = re.compile(
     rf"(?:module\.[A-Za-z_][A-Za-z0-9_-]*{_KEY}\.)*(?:data\.)?[a-z0-9_]+\.[A-Za-z_][A-Za-z0-9_-]*{_KEY}"
 )
 FILE = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_./-]*\.tf(?:vars)?")
-STEPS = ("fmt", "init", "validate", "plan", "show")
+STEPS = ("fmt", "init", "validate", "plan", "show", "apply")
 MIN_SCRUB_LEN = 6  # shorter strings would match addresses by accident; compared after normalize()
 
 
@@ -140,7 +151,14 @@ class Plan:
         found = _strings({k: jq(v, "value") for k, v in self.variables.items() if isinstance(v, dict)})
         for source in (jq(self.raw, "planned_values", "outputs"), jq(self.raw, "output_changes")):
             if isinstance(source, dict):
-                found += _strings({k: v for k, v in source.items() if k.endswith("egress_ip")})
+                # the values only: an output's `actions` or `type` ("create", "string") would match addresses
+                found += _strings(
+                    [
+                        [jq(v, f) for f in ("value", "before", "after")]
+                        for k, v in source.items()
+                        if k.endswith("egress_ip") and isinstance(v, dict)
+                    ]
+                )
         return Scrubber(found)
 
 
@@ -168,8 +186,8 @@ def load(text: str) -> Plan:
         if (
             not isinstance(acts, list)
             or not acts
-            or not set(acts) <= ACTIONS
             or not all(isinstance(a, str) for a in acts)
+            or not set(acts) <= ACTIONS
         ):
             raise Unreadable("a resource change has no actions, or one the guard doesn't know")
     return Plan(changes=changes, variables=variables, raw=doc)
@@ -181,6 +199,19 @@ def actions(rc: dict) -> list[str]:
 
 def is_change(rc: dict) -> bool:
     return actions(rc) not in (["no-op"], ["read"])
+
+
+def importing(rc: dict) -> bool:
+    return jq(rc, "change", "importing") is not None
+
+
+def moved(rc: dict) -> bool:
+    return bool(rc.get("previous_address")) and rc.get("previous_address") != rc["address"]
+
+
+def touched(rc: dict) -> bool:
+    """A change, an import or a move: anything the approver should see."""
+    return is_change(rc) or importing(rc) or moved(rc)
 
 
 def addresses(rc: dict) -> list[str]:
@@ -213,10 +244,8 @@ def _nat_subnet_names(nat) -> list[str]:
         return []
     if not isinstance(subnets, list):
         raise Unreadable("a NAT's subnetwork list has a shape the guard doesn't understand")
-    names = [jq(s, "name") for s in subnets]
-    if not all(isinstance(n, str) for n in names):
-        raise Unreadable("a NAT's subnetwork has no name")
-    return names
+    # a subnet whose name is unknown (null at plan) might be Shopify's: count it as Shopify's, so the NAT is protected
+    return [n if isinstance(n, str) else SHOPIFY_NAME for n in (jq(s, "name") for s in subnets)]
 
 
 def _shopify_nat(rc: dict) -> bool:
@@ -228,7 +257,8 @@ def _shopify_nat(rc: dict) -> bool:
 
 
 def shopify_network_path(plan: Plan) -> list[str]:
-    """Shopify's path stays as it is: no change to any network or router; no new NAT on the ingest router; a NAT
+    """Shopify's path stays as it is: no change to any network or router, or to a route, firewall rule or peering on
+    the ingest network (or on one unknown at plan); no new NAT on the ingest router; a NAT
     that serves Shopify's subnet (by address, name or subnet, before or after) changes only its port and logging
     settings; and nothing else named for Shopify's egress (its subnet, its IP) changes."""
     service = plan.var("service")
@@ -242,6 +272,11 @@ def shopify_network_path(plan: Plan) -> list[str]:
         before, after = jq(rc, "change", "before"), jq(rc, "change", "after")
         if rc["type"] in NETWORK_TYPES:
             bad.append(rc["address"])
+        elif rc["type"] in NETWORK_ATTACHED_TYPES:
+            # on the ingest network (by name, id or self link), or on a network not known until apply
+            text = _strings([before, after])
+            if unknown(rc, "network") or any(t == router or t.endswith(f"/networks/{router}") for t in text):
+                bad.append(rc["address"])
         elif rc["type"] == NAT_TYPE:
             # a new NAT on the ingest router, or on a router not known until apply
             if "create" in actions(rc) and (jq(after, "router") in (router, None) or unknown(rc, "router")):
@@ -270,8 +305,8 @@ def shopify_jobs_network(plan: Plan) -> list[str]:
 
 
 def ingest_image_pinned(plan: Plan) -> list[str]:
-    """The ingest image is the build's own repository, pinned by digest, and every job's image is a known digest
-    (an image only known at apply doesn't come from var.ingest_image, so it fails)."""
+    """The ingest image is the build's own repository, pinned by digest, and every job runs exactly that image (an
+    image from another registry, or one only known at apply, fails)."""
     bad = []
     region, project, service = (plan.var(n) for n in ("region", "project_id", "service"))
     image = plan.var("ingest_image")
@@ -281,13 +316,15 @@ def ingest_image_pinned(plan: Plan) -> list[str]:
         repo = re.escape(f"{region}-docker.pkg.dev/{project}/{service}/ingest")
         if not (isinstance(image, str) and re.fullmatch(repo + DIGEST, image)):
             bad.append("var.ingest_image")
+    pinned = bad == []  # with no valid pin, every job's image fails too
     containers = ("template", 0, "template", 0, "containers")
     for rc in plan.changes:
         if rc["type"] != JOB_TYPE or actions(rc) == ["delete"]:
             continue
         listed = jq(rc, "change", "after", *containers)
         images = [jq(c, "image") for c in listed] if isinstance(listed, list) and listed else [None]
-        if not all(isinstance(i, str) and re.search(DIGEST + "$", i) for i in images):
+        # exactly var.ingest_image: a digest from another registry, or an image unknown at plan, fails
+        if not (pinned and all(i == image for i in images)):
             bad.append(rc["address"])
     return bad
 
@@ -297,7 +334,7 @@ def workload_identity(plan: Plan) -> list[str]:
     workload identity roles): the gate isn't managed by what it gates."""
     bad = []
     for rc in plan.changes:
-        if not is_change(rc):
+        if not (is_change(rc) or importing(rc)):
             continue
         if rc["type"].startswith(WIF_TYPE_PREFIX):
             bad.append(rc["address"])
@@ -307,6 +344,29 @@ def workload_identity(plan: Plan) -> list[str]:
             roles = {jq(s, "role") for s in sides if s is not None}
             if any(m in s for s in text for m in WIF_MARKERS) or roles & WIF_ROLES or unknown(rc, "role"):
                 bad.append(rc["address"])
+    return bad
+
+
+def guarded_accounts(plan: Plan) -> list[str]:
+    """No change to the deploy, plan or apply account itself, to who may act as one (IAM on the account), to what one
+    may act as (a service account grant to it), or to a project-wide grant naming one. A service account or project
+    IAM change whose account or member Terraform learns only at apply fails closed. Grants to them on other single
+    resources (the deploy account's registry and service roles) are listed for the approver, not refused."""
+    bad = []
+    for rc in plan.changes:
+        if not (is_change(rc) or importing(rc)):
+            continue
+        sides = [jq(rc, "change", "before"), jq(rc, "change", "after")]
+        text = [s.casefold() for s in _strings(sides)]
+        named = any(f"{a}@" in s or s == a for s in text for a in GUARDED_ACCOUNTS)
+        if rc["type"] == SA_TYPE:
+            late = unknown(rc, "account_id")
+        elif rc["type"].startswith(("google_service_account_iam_", "google_project_iam_")):
+            late = any(unknown(rc, k) for k in ("member", "members", "service_account_id", "policy_data"))
+        else:
+            continue
+        if named or late:
+            bad.append(rc["address"])
     return bad
 
 
@@ -320,6 +380,11 @@ GUARDS: list[tuple[str, str, Callable[[Plan], list[str]]]] = [
     ("shopify-jobs-network", "crawl-shopify and crawl-retry keep their network", shopify_jobs_network),
     ("ingest-image-pinned", "the ingest image is pinned by digest", ingest_image_pinned),
     ("workload-identity", "no workload identity pool, provider or grant on them changes", workload_identity),
+    (
+        "guarded-accounts",
+        "the deploy, plan and apply accounts, IAM on them and grants to them: unchanged",
+        guarded_accounts,
+    ),
 ]
 
 
@@ -334,17 +399,17 @@ def run_guards(plan: Plan) -> list[tuple[str, str, list[str]]]:
 
 def render(plan: Plan) -> str:
     scrub = plan.scrubber()
-    changed = sorted((rc for rc in plan.changes if is_change(rc)), key=lambda rc: rc["address"])
+    changed = sorted((rc for rc in plan.changes if touched(rc)), key=lambda rc: rc["address"])
     lines = ["### Guards", ""]
     for name, what, bad in run_guards(plan):
         lines.append(f"- {'FAIL' if bad else 'pass'} `{name}`: {what}")
         lines += [f"  - `{b}`" for b in bad]
     lines += ["", "### Changes", ""]
     for rc in changed:
-        moved = rc.get("previous_address")
         lines.append(
             f"- `{'+'.join(actions(rc))}` `{scrub.printable(rc['address'])}`"
-            + (f" (moved from `{scrub.printable(moved)}`)" if moved and moved != rc["address"] else "")
+            + (f" (moved from `{scrub.printable(rc['previous_address'])}`)" if moved(rc) else "")
+            + (" (import)" if importing(rc) else "")
         )
     if not changed:
         lines.append("No changes.")
@@ -424,6 +489,9 @@ def main(argv: list[str]) -> int:
     except (OSError, Unreadable) as e:
         reason = e if isinstance(e, Unreadable) else "cannot read the plan file"
         print(f"tf_plan_guard: refusing: {reason}", file=sys.stderr)
+        return UNREADABLE
+    except Exception:  # any other shape the guard didn't foresee: fixed text, never the input, and exit 2
+        print("tf_plan_guard: refusing: the plan has a shape the guard doesn't understand", file=sys.stderr)
         return UNREADABLE
     sys.stdout.write(out)
     return FAIL if failed else PASS
