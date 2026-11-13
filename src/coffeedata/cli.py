@@ -765,6 +765,10 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
         snap
     )  # places flagged roasters: stg_registry adds them
     extra["not_roasters"] = decisions.not_roasters(snap)  # flagged not a roaster: stg_registry drops them
+    # The owner's chain flags (Sources), over the store count either way: int_roaster_state reads them in place of
+    # its seed. A snapshot from before chain flags carries none, and dbt keeps reading the seed.
+    if (chains := decisions.chain_flags(snap)) is not None:
+        extra["chain_flags"] = chains
     # The keyword filters: this build's (its snapshot's) and the served build's, so eval_prefilter can tell what a
     # change moves. A build without --snapshot already applies the served snapshot, so it is its own baseline. A
     # draft reads the served one; if that can't be read (a lake error, a bad snapshot), there is no baseline and

@@ -584,10 +584,47 @@ const errors = [];
       assert.match(await page.textContent("[data-counts]"), /1 flagged as a roaster · 2 flagged as not roasters/);
     });
 
-    await check("Release: the draft carries the rule settings, the crawl flag and the keyword filter", async () => {
+    // A made-up roaster (tests/test_admin_browser.py adds it to the served registry): a hand-flag example must never
+    // read as a decision about a real one.
+    await check("Sources: a registry roaster's ⋯ menu marks it a chain; the reason wraps, a refusal stays in the sheet", async () => {
+      await page.goto(`${cfg.act}/sources?q=example-roasters.test`);
+      await settled(page);
+      const row = page.locator("table.sources tbody tr", { hasText: "example-roasters.test" });
+      await row.locator("details[data-rowmenu] > summary").click();
+      assert.match(await row.locator(".menu").textContent(), /Not a chain\. \d+ stores? counted: 20 or fewer\./);
+      // the chain flag is its own group, under the roaster flag
+      assert.ok(await row.locator(".menu .menugroup[role=group][aria-label=Chain] button:text-is('Mark as a chain…')").count());
+      await shoot(page, "sources-chain-menu", true);
+      await row.locator("button:text-is('Mark as a chain…')").click();
+      await page.waitForSelector("dialog#confirm[open] #confirm-reason");
+      assert.match(await page.textContent("#confirm-h"), /^Mark Example Roasters as a chain\?$/);
+      await page.fill("#confirm-reason", "x");
+      await page.click("[data-confirm-go]");
+      await page.waitForFunction(() => /reason/.test(document.querySelector("[data-confirm-hint]").textContent));
+      await shoot(page, "sources-chain-refused", true);
+      const long = "It runs far more than 20 cafés, which Overture doesn't tag as roasteries, so its store count reads low: checked on its store locator";
+      await page.fill("#confirm-reason", long);
+      const box = await page.$eval("#confirm-reason", (t) => ({ sh: t.scrollHeight, ch: t.clientHeight }));
+      assert.ok(box.sh <= box.ch + 2, `the reason is cut off: ${JSON.stringify(box)}`); // it wraps and grows: all of it shows
+      await page.press("#confirm-reason", "Enter"); // one line: Enter adds no break and confirms nothing
+      assert.equal(await page.inputValue("#confirm-reason"), long);
+      assert.ok(await page.$("dialog#confirm[open]"), "Enter in the reason closed the confirm");
+      await shoot(page, "sources-chain-confirm", true);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Marked example-roasters\.test as a chain\. It takes effect when a draft of it is published\./);
+      await settled(page);
+      assert.match(await page.textContent("table.sources tbody tr"), /Chain \(pending\)/); // pending until published
+      await page.goto(`${cfg.act}/sources?chain=to_chain`);
+      await settled(page);
+      assert.match(await page.textContent("table.sources"), /example-roasters\.test/);
+      await shoot(page, "sources-chain-filtered");
+    });
+
+    await check("Release: the draft carries the rule settings, the crawl flag, the keyword filter and the chain flag", async () => {
       await page.goto(`${cfg.act}/release`);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag, 1 keyword filter not in it/);
+      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag, 1 keyword filter, 1 chain flag not in it/);
+      assert.match(await page.textContent("[data-part]"), /example-roasters\.test becomes a chain/);
     });
 
     await check("The Monday window: refused, then started with a recorded reason", async () => {

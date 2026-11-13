@@ -23,7 +23,18 @@ from coffeedata.registry import normalize_domain
 from .catalog import FACET_VALUES, PAGE, Filters, _one
 from .queries import safe_url, store_url
 
-CACHE_VERSION = "v1"
+CACHE_VERSION = "v3"
+# A registry roaster with more stores than this is a chain unless the owner flags it otherwise: dbt's var
+# chain_store_threshold (int_roaster_state.is_chain), which tests/test_admin_chains.py holds this to.
+CHAIN_STORES = 20
+# A registry roaster's chain status on the page (the column `chain`, a facet): the served release's (dim_roaster
+# .is_chain: what customers get now) against the next Publish's (the owner's flag, else the store count). Codes, not
+# words: the page words them (part_sources.html), so a wording change never touches the logic.
+#   chain         a chain now and after the next Publish
+#   to_chain      public now; a chain from the next Publish
+#   to_not_chain  a chain now; not one from the next Publish
+#   not_chain     flagged not a chain, and not one now
+CHAIN_CODES = ("chain", "to_chain", "to_not_chain", "not_chain")
 EMPTY = ("(select null::timestamptz as added_at, null::varchar as source, null::varchar as roaster_id, "
          "null::varchar as name, null::varchar as city, null::varchar as state, null::varchar as website, "
          "null::varchar[] as tags, null::boolean as roast_in_name where false)")  # fmt: skip
@@ -54,7 +65,7 @@ def order_by(sort: str, desc: bool) -> str:
 
 @dataclass
 class SourceFilters(Filters):
-    FACETS = ("status", "origin", "tag", "state", "city")
+    FACETS = ("status", "chain", "origin", "tag", "state", "city")
     COLUMN = {f: f for f in FACETS}
     SEARCH = ("name", "roaster_id", "coalesce(city, '')")
     PRICES = False
@@ -134,10 +145,18 @@ class SourceList:
             )
             con.execute(f"create table c as select * from {scan} where roaster_id is not null")
             latest = _one(con, "select max(added_at)::varchar from c")
-            reg = (f"select roaster_id, roaster_name as name, city, state, sources from read_parquet("
-                   f"'{roasters.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)" if roasters else
-                   "select null::varchar as roaster_id, null::varchar as name, null::varchar as city, "
-                   "null::varchar as state, null::varchar as sources where false")  # fmt: skip
+            reg = "select null::varchar as roaster_id, null::varchar as name, null::varchar as city, " \
+                  "null::varchar as state, null::varchar as sources, null::integer as locations, " \
+                  "null::bigint as coffees_listed, null::boolean as is_chain where false"  # fmt: skip
+            if roasters:
+                # the store count and the listed coffees, where the release has them (a release from before
+                # dim_roaster carried them reads null: no count, so no chain by count)
+                src = f"read_parquet('{roasters.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
+                have = {r[0] for r in con.execute(f"describe select * from {src}").fetchall()}
+                more = ", ".join(f"{c}::{t} as {c}" if c in have else f"null::{t} as {c}"
+                                 for c, t in (("locations", "integer"), ("coffees_listed", "bigint"),
+                                              ("is_chain", "boolean")))  # fmt: skip
+                reg = f"select roaster_id, roaster_name as name, city, state, sources, {more} from {src}"
             con.execute(f"""
                 create table places as
                 with runs as (select distinct added_at from c),
@@ -166,7 +185,8 @@ class SourceList:
                        k.first_seen, k.last_seen,
                        case when k.first_seen = r.latest and r.previous is not null then 'new'
                             when k.last_seen < r.latest and k.last_seen >= r.previous then 'gone' end as change,
-                       g.roaster_id is not null as in_registry
+                       g.roaster_id is not null as in_registry, g.locations as stores, g.coffees_listed,
+                       coalesce(g.is_chain, false) as published_chain
                 from cand k full outer join reg g using (roaster_id)
                 cross join last2 r""")
             con.execute("drop table c")
@@ -179,14 +199,19 @@ class SourceList:
             if p != path:
                 p.unlink(missing_ok=True)
 
-    def search(self, served: str | None, f: SourceFilters, flags: dict[str, dict] | None) -> dict:
+    def search(self, served: str | None, f: SourceFilters, flags: dict[str, dict] | None,
+               chains: dict[str, dict] | None = None) -> dict:  # fmt: skip
         """The places matching `f` (a page of them), counts by status and of the latest run's changes, and each
         facet's values. `flags`: the control plane's latest flag per place; None when it couldn't be read, and then
-        no place has a status (an inherited or unreviewed label could be wrong)."""
+        no place has a status (an inherited or unreviewed label could be wrong). `chains`: the owner's chain flags
+        (control plane); None when they couldn't be read, and then no registry roaster says whether it is a chain."""
         known = flags is not None
         if flags is None:
             flags = {}
             f.values.pop("status", None)
+        if chains is None or not known:
+            chains = None
+            f.values.pop("chain", None)
         path = self.ensure(served)
         con = duckdb.connect(str(path), read_only=True)
         try:
@@ -194,17 +219,32 @@ class SourceList:
                 "roaster_id": list(flags), "flag": [v["flag"] for v in flags.values()],
                 "batch_id": [v["batch_id"] for v in flags.values()],
             }, schema=pa.schema([("roaster_id", pa.string()), ("flag", pa.string()), ("batch_id", pa.string())])))  # fmt: skip
+            con.register("chains", pa.table({
+                "roaster_id": list(chains or {}), "chain_flag": [v["flag"] for v in (chains or {}).values()],
+                "chain_reason": [v["reason"] for v in (chains or {}).values()],
+            }, schema=pa.schema([("roaster_id", pa.string()), ("chain_flag", pa.string()), ("chain_reason", pa.string())])))  # fmt: skip
+            # A registry roaster's chain status (CHAIN_CODES): the served release's against the next Publish's (the
+            # owner's flag, else its store count, CHAIN_STORES). Only a chain, or a flagged non-chain, has one.
+            nxt = f"coalesce(h.chain_flag = 'chain', p.stores > {CHAIN_STORES}, false)"
+            chain = (f"""case when not p.in_registry then null
+                             when p.published_chain and {nxt} then 'chain'
+                             when {nxt} then 'to_chain'
+                             when p.published_chain then 'to_not_chain'
+                             when h.chain_flag = 'not_chain' then 'not_chain' end"""
+                     if chains is not None else "null::varchar")  # fmt: skip
             # Every registry roaster inherits the roaster flag; an explicit flag, either way, wins.
             status = ("""case when f.flag = 'not_roaster' then 'not a roaster' when f.flag = 'roaster' then 'roaster'
                                   when p.in_registry then 'roaster (inherited)' else 'unreviewed' end"""
                       if known else "null::varchar")  # fmt: skip
-            view = f"(select p.*, f.batch_id, {status} as status from places p left join flags f using (roaster_id))"
+            view = (f"(select p.*, f.batch_id, {status} as status, {chain} as chain, h.chain_flag, h.chain_reason "
+                    "from places p left join flags f using (roaster_id) left join chains h using (roaster_id))")  # fmt: skip
             where, params = f.where()
             total = _one(con, f"select count(*) from {view}")
             matching = _one(con, f"select count(*) from {view} {where}", params)
             cur = con.execute(
                 f"""select roaster_id, name, city, state, website, tag, hint, sources, status, change, batch_id,
-                           in_registry, first_seen, last_seen from {view} {where}
+                           in_registry, first_seen, last_seen, stores, coffees_listed, published_chain, chain,
+                           chain_flag, chain_reason from {view} {where}
                     order by {order_by(f.sort, f.desc)}
                     limit {PAGE} offset {(f.page - 1) * PAGE}""",
                 params,
@@ -221,8 +261,10 @@ class SourceList:
                         group by 1 order by n desc, 1 limit {FACET_VALUES}""",
                     p,
                 ).fetchall()
+            # a chain status is a word on a few registry roasters, so "(none)" (every other place) is no facet value
+            facets["chain"] = [(v, k) for v, k in facets["chain"] if v != "(none)"]
             counts = {k: dict(con.execute(f"select coalesce({k}, ''), count(*) from {view} group by 1").fetchall())
-                      for k in ("status", "change")}  # fmt: skip
+                      for k in ("status", "change", "chain")}  # fmt: skip
             latest_run, served_build = con.execute("select * from meta").fetchone() or (None, None)
             meta = {"latest_run": latest_run, "served": served_build}
             return {"total": total, "matching": matching, "rows": rows, "facets": facets, "counts": counts,

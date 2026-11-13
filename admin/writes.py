@@ -620,6 +620,39 @@ class Writes:
         plan, _n_unseen = await self.classify_review_plan(draft_id)
         return await self._start(actor, key, plan, override)
 
+    # --- chain flags (Sources' row menu) --------------------------------------------------------------------------
+
+    async def set_chain(self, actor: str, key: str, roaster_id: str, body: dict) -> dict:
+        """Flag a registry roaster a chain or not a chain (over its store count), or clear its flag. A reason is
+        required; `seen` is the flag the page showed, so a change made since in another tab is a Conflict."""
+        await self.ready()
+        flag = body.get("chain")
+        if flag not in ("chain", "not_chain", "clear"):
+            raise ValueError("chain is chain, not_chain or clear")
+        seen = body.get("seen")
+        if seen not in (
+            "chain",
+            "not_chain",
+            "none",
+        ):  # the flag the page showed: what the stale-tab check compares
+            raise ValueError(
+                "Reload the page and choose again: the request didn't say which chain flag it saw"
+            )
+        # A registry roaster only: a flag on any other domain would decide nothing, and ride in every snapshot.
+        served = await self.read(queries.served)
+        known = await self.read(queries.registry_ids, served["build_id"]) if served else None
+        if known is None:
+            raise ValueError("The served release's registry can't be read now, so no chain flag can be checked: "
+                             "try again shortly")  # fmt: skip
+        if roaster_id not in known:
+            raise ValueError(
+                f"{roaster_id} isn't in the served release's registry, so it can't be flagged a chain"
+            )
+        out = await asyncio.to_thread(self.control.set_chain, actor, key, roaster_id, flag,
+                                      reason_of(body.get("reason")), seen)  # fmt: skip
+        written(action="chain_flag", subject=roaster_id, outcome="ok", chain=flag)
+        return out
+
     # --- the source list's flags ---------------------------------------------------------------------------------
 
     async def flag_sources(self, actor: str, key: str, body: dict) -> dict:
@@ -654,13 +687,15 @@ class Writes:
         """The effective decisions, rule settings, crawl flags and source-list roasters against the served build's
         snapshot: what a draft would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
-        effective, settings, states, flags, kf = await asyncio.gather(
+        effective, settings, states, flags, kf, chain_rows = await asyncio.gather(
             asyncio.to_thread(self.control.effective),
             asyncio.to_thread(self.control.settings),
             asyncio.to_thread(self.control.roaster_states),
             asyncio.to_thread(self.control.source_flags),
             asyncio.to_thread(self.control.keyword_filters),
+            asyncio.to_thread(self.control.chain_flags),
         )
+        seed_chains: dict[str, bool] = await asyncio.to_thread(self.control.seed_chains)
         if served is None:
             served = await self.read(queries.served)
         if drafts is None:
@@ -707,7 +742,16 @@ class Writes:
             )
         sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
                                  | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
-        mine = (now, now_settings, set(off), sources, dropped, prefilter)
+        # The chain flags (Sources): each roaster's flag over its store count, against the flags the served build
+        # applied: its snapshot's, or, for a snapshot from before chain flags, dbt's seed (control.chain_flags' first
+        # rows, migration 0006), which that build read. So a flag the seed already had is no change, and clearing one
+        # is.
+        chains = {r: f["flag"] == "chain" for r, f in chain_rows.items()}
+        was_chains = _served_chains(served_doc, seed_chains)
+        chains_changed = [{"roaster_id": r, "flag": "clear" if r not in chains else
+                           ("chain" if chains[r] else "not_chain")}
+                          for r in sorted(set(chains) | set(was_chains)) if chains.get(r) != was_chains.get(r)]  # fmt: skip
+        mine = (now, now_settings, set(off), sources, dropped, prefilter, chains)
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -719,7 +763,8 @@ class Writes:
             got = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
             if got and ({(x["subject_kind"], x["subject"], x["action"]) for x in got["decisions"]},
                         snap.settings_of(got), snap.crawl_off(got), snap.source_roasters(got),
-                        snap.not_roasters(got), snap.prefilter(got)) == mine:  # fmt: skip
+                        snap.not_roasters(got), snap.prefilter(got),
+                        {c["roaster_id"]: c["chain"] for c in snap.chain_flags(got) or []}) == mine:  # fmt: skip
                 drafted = d["draft_id"]
             break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
@@ -727,6 +772,8 @@ class Writes:
                 "crawl_off": off, "crawl_changed": crawl_changed, "sources": sources, "not_roasters": dropped,
                 "sources_changed": sources_changed, "sources_error": sources_error,
                 "prefilter": [x.as_dict() for x in prefilter], "prefilter_changed": prefilter_changed,
+                "chains": [{"roaster_id": r, "chain": c} for r, c in sorted(chains.items())],
+                "chains_changed": chains_changed,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
@@ -734,13 +781,13 @@ class Writes:
         if p["sources_error"]:
             raise registry.Refused([p["sources_error"]])
         if not (p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
-                or p["prefilter_changed"]):  # fmt: skip
-            raise ValueError("Nothing to build: the decisions, rule settings, keyword filters, crawl flags and source "
+                or p["prefilter_changed"] or p["chains_changed"]):  # fmt: skip
+            raise ValueError("Nothing to build: the decisions, rule settings, keyword filters, crawl, source and chain "
                              "flags are the served release's")  # fmt: skip
         sid, did = new_id("s").lower(), new_id("draft").lower()
         doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"], p["settings"],
                             [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]], p["sources"],
-                            p["not_roasters"], p["prefilter"])  # fmt: skip
+                            p["not_roasters"], p["prefilter"], p["chains"])  # fmt: skip
         digest = snap.digest(doc)
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]
@@ -794,10 +841,21 @@ class Writes:
             # the review is not a full evaluation, and the total restarts only at the next one.
             if changed is not None and moved is not None:
                 changed += moved
+        # The chain flags: every public coffee of a roaster whose chain flag changed counts toward step 9's running
+        # total (it leaves or joins the public data). Like the keyword filters', their part doesn't need the full
+        # evaluation first: a chain flag is the owner's decision about a roaster, not a rule's answer to measure.
+        chained: int | None = 0
+        if effect["chain_roasters"]:
+            chained = (
+                (await self.read(queries.roasters_moved, build, effect["chain_roasters"])) if build else None
+            )
+            if changed is not None and chained is not None:
+                changed += chained
         # Over 50 because of the keyword filters alone: their own check (reviewed above) stands in for the step-9
         # refusal for this draft; the decisions' part still needs the full evaluation when it alone is over.
-        by_filters = ("" if not moved else " (all through keyword filters)" if moved == changed else
-                      f" ({moved:,} through keyword filters)")  # fmt: skip
+        parts = [(x, what) for x, what in ((moved, "keyword filters"), (chained, "chain flags")) if x]
+        by_filters = ("" if not parts else f" (all through {parts[0][1]})" if len(parts) == 1 and parts[0][0] == changed
+                      else " (" + "; ".join(f"{x:,} through {what}" for x, what in parts) + ")")  # fmt: skip
         decided_ok = decided is None or total + decided <= STEP9_LIMIT
         checks.append({"name": "Change size",
                        "ok": changed is None or total + changed <= STEP9_LIMIT or decided_ok,
@@ -961,7 +1019,17 @@ class Writes:
             )
         roasters = sorted({(m["roaster_id"], m.get("platform")) for d in removing for m in covered(d) if m["roaster_id"]},
                           key=lambda x: (x[0], x[1] or ""))  # fmt: skip
+        # The chain flags: the roasters whose flag differs from what the baseline build applied (its snapshot's, else
+        # the seed's), whose public coffees the draft moves in or out.
+        base_chains = _served_chains(
+            (pinned or {}).get("doc"), await asyncio.to_thread(self.control.seed_chains)
+        )
+        new_chains = _served_chains(now_doc, base_chains)
+        chain_roasters = sorted(
+            r for r in set(base_chains) | set(new_chains) if base_chains.get(r) != new_chains.get(r)
+        )
         return {"coffees": coffees, "removal_roasters": roasters, "filter_coffees": filter_coffees,
+                "chain_roasters": chain_roasters,
                 "filters_changed": old_kf != new_kf, "filters_added": bool(set(new_kf) - set(old_kf)),
                 "deciding": rules.decides(old_settings, new_settings),
                 "needs_evaluation": rules.evaluation_needed(old_settings, new_settings)}  # fmt: skip
@@ -1099,6 +1167,13 @@ def _settings_doc(body: dict, current: dict) -> object:
         except json.JSONDecodeError as e:
             raise ValueError(f"the settings aren't valid JSON: {e.msg} (line {e.lineno})") from e
     return raw
+
+
+def _served_chains(doc: dict | None, seed: dict[str, bool]) -> dict[str, bool]:
+    """The chain flags a build with this snapshot applies: its `chains`, or, for a snapshot from before chain flags
+    (or none), dbt's seed, which such a build reads (decisions.chain_flags)."""
+    flags = snap.chain_flags(doc)
+    return dict(seed) if flags is None else {c["roaster_id"]: c["chain"] for c in flags}
 
 
 def _field(field: str) -> str:

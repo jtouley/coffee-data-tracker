@@ -429,6 +429,65 @@ class ControlPlane:
         with self.tx() as cur:
             return self._crawl(cur, roaster_ids)
 
+    # --- chain flags (the Sources page) --------------------------------------------------------------------------
+
+    CHAIN_FLAGS = ("chain", "not_chain", "clear")
+
+    def set_chain(
+        self, actor: str, key: str, roaster_id: str, flag: str, reason: str, seen: str | None
+    ) -> dict:
+        """Flag a registry roaster a chain or not a chain, over its store count, or `clear` the flag (its count
+        decides again), from the flag the page showed (`seen`: chain, not_chain or none; a change since is a
+        Conflict). Takes effect once a draft carrying it is published. Idempotent on `key`; audited."""
+        reason = _reason(reason)
+        if not ID_ROASTER.fullmatch(roaster_id or ""):
+            raise ValueError("bad roaster id")
+        if flag not in self.CHAIN_FLAGS:
+            raise ValueError("the chain flag is chain, not_chain or clear")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("chain:" + roaster_id,))
+            now = self._chain(cur, [roaster_id]).get(roaster_id, {}).get("flag", "none")
+            if seen is not None and now != seen:
+                raise Conflict("The chain flag changed after this page loaded (another tab?). Reload the page to "
+                               "see it, then choose again.")  # fmt: skip
+            if now == (flag if flag != "clear" else "none"):
+                raise ValueError("It has that chain flag already. Reload the page to see it." if flag != "clear" else
+                                 "It has no chain flag to clear. Reload the page to see it.")  # fmt: skip
+            cur.execute("insert into control.chain_flags (roaster_id, flag, reason, actor) values (%s, %s, %s, %s)",
+                        (roaster_id, flag, reason, actor))  # fmt: skip
+            out = {"ok": True, "roaster_id": roaster_id, "chain": flag}
+            self.audit(cur, actor, "chain_flag", roaster_id, "ok", out | {"reason": reason, "was": now})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _chain(cur, roaster_ids: list[str] | None = None) -> dict[str, dict]:
+        """Each roaster's chain flag in effect (its latest row, unless that row clears it)."""
+        cur.execute(
+            "select roaster_id, flag, reason, actor, at from (select distinct on (roaster_id) * from control.chain_flags "
+            + ("where roaster_id = any(%s) " if roaster_ids is not None else "")
+            + "order by roaster_id, id desc) latest where flag <> 'clear' order by roaster_id",
+            (roaster_ids,) if roaster_ids is not None else (),
+        )
+        return {r[0]: dict(zip(("roaster_id", "flag", "reason", "actor", "at"), r, strict=True))
+                for r in cur.fetchall()}  # fmt: skip
+
+    def seed_chains(self) -> dict[str, bool]:
+        """The chain flags migration 0006 started with: dbt/seeds/chain_overrides.csv, which dbt reads while the served
+        snapshot carries no chain flags (the baseline Release compares against until one does)."""
+        with self.tx() as cur:
+            cur.execute("select roaster_id, flag from control.chain_flags where actor = 'seed' and client = 'migration' "
+                        "order by id")  # fmt: skip
+            return {r[0]: r[1] == "chain" for r in cur.fetchall()}
+
+    def chain_flags(self, roaster_ids: list[str] | None = None) -> dict[str, dict]:
+        """The chain flags in effect: roaster_id -> {flag (chain or not_chain), reason, actor, at}. A roaster with
+        none is decided by its store count."""
+        with self.tx() as cur:
+            return self._chain(cur, roaster_ids)
+
     # --- keyword filters (the Filters page) ---------------------------------------------------------------------
 
     def change_filter(self, actor: str, key: str, event: str, phrase: str, field: str, reason: str,
