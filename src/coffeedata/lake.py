@@ -13,6 +13,9 @@ Every pipeline step *adds* files and never rewrites another run's files:
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
     equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
     bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
+    ratings/<rating_id>__<time>.parquet                   one file per coffee rating (or correction, or undo)
+    rec_responses/<user_id>__<slate_id>__<h>__<time>.parquet  one file per answer to a suggested coffee (h: the
+                                                          coffee_id's hash, since a catalog id isn't a file name)
     run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
     serving_log/serve_id=<id>.parquet                     one row per serve, rollback or re-export of a release
     releases/run_date=.../build=<id>/<table>.parquet       every build's release (quality.RELEASE_TABLES)
@@ -28,11 +31,17 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
     invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
     consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
     contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
+    recs_erasures/<user_id>__<time>.parquet               one file per deletion of someone's "Your next bag" records
 
 Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
 by dbt and never released:
 
     raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
+
+Anonymous search, filter and click-out events from the site and the app go to a fifth private dataset
+(`Lake.usage()`, app/usage.py), append-only and never published; only the usage dbt models read it:
+
+    events/day=YYYY-MM-DD/batch=<id>.parquet              one row per event, the IP already masked (usage_events)
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
@@ -52,6 +61,7 @@ import secrets
 import tempfile
 import threading
 import time
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -573,6 +583,29 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("deleted", pa.bool_()),
         ]
     ),
+    # The recommendation experiment's records: personal data, private marts only, never public.
+    "ratings": pa.schema(
+        [
+            ("rating_id", pa.string()),
+            ("user_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("coffee_id", pa.string()),
+            ("rating", pa.int32()),  # 1-5
+            ("drank_as", pa.string()),  # espresso, filter, milk; null when not said
+            ("context", pa.string()),  # seed, picks or later
+            ("deleted", pa.bool_()),  # an undo: true retracts the rating
+        ]
+    ),
+    "rec_responses": pa.schema(
+        [
+            ("user_id", pa.string()),
+            ("slate_id", pa.string()),
+            ("coffee_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("interest", pa.string()),  # want, maybe, no; null when only the pick is answered so far
+            ("picked", pa.bool_()),  # the one they'd buy next: at most one per slate in the latest records
+        ]
+    ),
     "photos": pa.schema(
         [
             ("photo_id", pa.string()),
@@ -638,6 +671,11 @@ SCHEMAS["consents"] = pa.schema(
         ("insights", pa.bool_()),
         ("insights_at", pa.timestamp("s", tz="UTC")),
         ("insights_version", pa.string()),
+        # The "Your next bag" test: whether this member joined it, when, and which wording of the consent they saw.
+        # Null where it was never asked; false once they leave it. Their ratings and answers are kept only with true.
+        ("experiment", pa.bool_()),
+        ("experiment_at", pa.timestamp("s", tz="UTC")),
+        ("experiment_version", pa.string()),
     ]
 )
 # Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
@@ -651,6 +689,17 @@ SCHEMAS["contacts"] = pa.schema(
         ("verified_at", pa.timestamp("s", tz="UTC")),
         ("verify_sha256", pa.string()),  # the open verify link's token, hashed
         ("verify_expires", pa.timestamp("s", tz="UTC")),
+    ]
+)
+# A deletion of one person's "Your next bag" records (delete-user --only-recs): everything of theirs in ratings and
+# rec_responses logged at or before logged_at is gone, and the app refuses it back (app/store.py, Erasures). Kept in
+# the users dataset, which the app reads: the main lake's files are what it deletes. rating_ids names the ratings
+# that went, so a phone resending one is refused; it holds no coffee or score.
+SCHEMAS["recs_erasures"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("rating_ids", pa.list_(pa.string())),
     ]
 )
 
@@ -675,10 +724,58 @@ SCHEMAS["importer_raw"] = pa.schema(
     ]
 )
 
-# Tables that live in the photo, users or importers dataset rather than the main lake.
+# The values usage_events' coded columns take (app/usage_events.py refuses anything else; the usage contract's enums).
+# Surfaces: the site's pages, and the app's two (the bag page's catalog search, the coffee page's Shop link).
+USAGE_VALUES: dict[str, tuple[str, ...]] = {
+    "event": ("page_view", "search", "filter_state", "click_out"),
+    "surface": ("landing", "catalog", "privacy", "terms", "bot", "app_search", "app_coffee"),
+    "device": ("phone", "desktop"),
+    "sort": ("roaster", "asc", "desc"),  # the catalog's Sort select
+    "source": ("utm", "referrer", "direct", "internal"),
+}
+# Search, filter and click-out events (app/usage.py, docs: the analytics design, section 0), in their own private
+# dataset (Lake.usage()): one row per event, written by the collector, append-only, never published. Nothing in a
+# row identifies a person, browser, device, session or page load: no full IP (ip_prefix is the /24 or /40 it was
+# masked to before anything was written), no user agent (only the bot flag), no referrer path or query.
+SCHEMAS["usage_events"] = pa.schema(
+    [
+        ("event_id", pa.string()),  # random, from the page; only for dropping a retried duplicate
+        ("received_at", pa.timestamp("s", tz="UTC")),  # the collector's clock, truncated to the hour
+        ("event", pa.string()),  # page_view, search, filter_state, click_out
+        ("surface", pa.string()),
+        ("release", pa.string()),  # the catalog build the page was showing
+        ("device", pa.string()),  # phone or desktop
+        ("query", pa.string()),  # as typed, capped at 100 characters
+        ("cities", pa.list_(pa.string())),
+        ("states", pa.list_(pa.string())),
+        ("origin", pa.string()),
+        ("process", pa.string()),
+        ("state", pa.string()),
+        ("in_stock", pa.bool_()),
+        ("sort", pa.string()),
+        ("results_n", pa.int32()),
+        ("zero_results", pa.bool_()),
+        ("roaster_id", pa.string()),
+        ("coffee_id", pa.string()),
+        ("rank", pa.int32()),
+        (
+            "source",
+            pa.string(),
+        ),  # utm, referrer, direct or internal; null on events after a page load's first
+        ("referrer_domain", pa.string()),
+        ("utm_source", pa.string()),
+        ("utm_medium", pa.string()),
+        ("utm_campaign", pa.string()),
+        ("ip_prefix", pa.string()),  # IPv4 /24 or IPv6 /40, as a network: 203.0.113.0/24
+        ("bot", pa.bool_()),
+    ]
+)
+
+# Tables that live in the photo, users, importers or usage dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites", "consents", "contacts")
+USER_TABLES = ("users", "invites", "consents", "contacts", "recs_erasures")
 IMPORTER_TABLES = ("importer_raw",)
+USAGE_TABLES = ("usage_events",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -701,12 +798,16 @@ GLOBS = {
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
+    "ratings": "ratings/*.parquet",
+    "rec_responses": "rec_responses/*.parquet",
     "photos": "photos/*.parquet",
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
     "contacts": "contacts/*.parquet",
+    "recs_erasures": "recs_erasures/*.parquet",
     "importer_raw": "raw/*/*.parquet",
+    "usage_events": "events/*/*.parquet",
 }
 # The ops tables' files across every build (see SCHEMAS): for a reader that globs them itself, with
 # hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
@@ -744,17 +845,23 @@ SCHEMA_FILES = {
     "shots": "shots/shot_id=schema-v2.parquet",
     "equipment": "equipment/equipment_id=schema.parquet",
     "bags": "bags/bag_id=schema.parquet",
+    "ratings": "ratings/rating_id=schema.parquet",
+    "rec_responses": "rec_responses/user_id=schema.parquet",
     "photos": "photos/photo_id=schema.parquet",
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
     "consents": "consents/user_id=schema.parquet",
     "contacts": "contacts/user_id=schema.parquet",
+    "recs_erasures": "recs_erasures/user_id=schema.parquet",
     "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
+    "usage_events": "events/day=0000-00-00/batch=schema.parquet",
 }
 PENDING_DELETES = (
     "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset
 )
-LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES)
+LAKE_TABLES = tuple(
+    t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES + USAGE_TABLES
+)
 
 
 _REMOTE_FOLDERS: dict[str, frozenset[str] | None] = {}
@@ -875,6 +982,9 @@ class Lake:
         lake, never a staging folder."""
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
         self.tables = tables or LAKE_TABLES
+        # Called with the staged files before each upload, under the publish lock: it deletes any that mustn't be
+        # sent any more (the app's erased test records, app/store.py). None: send them all.
+        self.screen: Callable[[list[Path]], None] | None = None
         self.remote = self.url.startswith("hf://")
         self.read_only = read_only
         self.root = (
@@ -909,6 +1019,13 @@ class Lake:
         (dbt/): only the private one (dbt_importers/, `coffeedata importer-build`) reads it, into its own database."""
         url = os.environ.get("COFFEEDATA_IMPORTERS") or "lake-importers"
         return cls(url, staging="build/importers-staging", tables=IMPORTER_TABLES)
+
+    @classmethod
+    def usage(cls) -> Lake:
+        """The private usage dataset: COFFEEDATA_USAGE, or ./lake-usage. Written only by the collector (app/usage.py),
+        read only by the usage dbt models; never published, never a release table."""
+        url = os.environ.get("COFFEEDATA_USAGE") or "lake-usage"
+        return cls(url, staging="build/usage-staging", tables=USAGE_TABLES)
 
     # --- writing -------------------------------------------------------------------------------------
 
@@ -974,26 +1091,38 @@ class Lake:
         folders = remote_folders(self.url)
         return folders is None or GLOBS[table].split("/")[0] in folders
 
-    def scan(self, table: str) -> str:
-        """SQL table expression over every file of a table."""
+    def scan(self, table: str, filename: bool = False) -> str:
+        """SQL table expression over every file of a table (with each row's file name as `filename`, if asked)."""
         files = ", ".join(f"'{s}'" for s in self.sources(table))
-        return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
+        named = ", filename = true" if filename else ""
+        return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false{named})"
 
-    def latest(self, table: str, key: str, attempts: int = 1) -> list[dict]:
-        """The latest record per key (by logged_at): corrections are new records, so this is current state.
+    def latest(self, table: str, key: str | tuple[str, ...], attempts: int = 1) -> list[dict]:
+        """The latest record per key (by logged_at): corrections are new records, so this is current state. A key
+        of several columns (rec_responses: user, slate and coffee) takes the latest per combination. Records of one
+        key made in the same second are told apart by file name (the last in name order wins), so the answer doesn't
+        depend on the order files are read in.
 
         A remote lake made before a table existed has no folder for it until the next publish adds the schema
         file; until then the table is read from staging alone rather than failing. Any other failed read (a 429,
         a timeout) is tried `attempts` times in all, 2, 4 … seconds apart, before it's raised."""
-        sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
+        keys = (key,) if isinstance(key, str) else key
+        present = " and ".join(f"{k} is not null" for k in keys)
+        order = (
+            "logged_at desc, regexp_extract(filename, '[^/]*$') desc"  # the name, not where it was read from
+        )
+        sql = (
+            f"select * exclude (filename) from {{}} where {present} "
+            f"qualify row_number() over (partition by {', '.join(keys)} order by {order}) = 1"
+        )
         for attempt in range(attempts):
             try:
-                cur = self.connect().execute(sql.format(self.scan(table), key, key))
+                cur = self.connect().execute(sql.format(self.scan(table, filename=True)))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
                 if self.remote and no_files(e) and not self.read_only:  # a reader stages nothing
-                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
-                    cur = self.connect().execute(sql.format(local, key, key))
+                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false, filename = true)"
+                    cur = self.connect().execute(sql.format(local))
                     break
                 if attempt == attempts - 1:
                     raise
@@ -1180,6 +1309,8 @@ class Lake:
         if not self.remote:
             return 0
         with self._publishing:
+            if self.screen is not None:
+                self.screen(self.staged_files())  # removes staged files that mustn't go up any more
             pending = self.root / PENDING_DELETES
             waiting = json.loads(pending.read_text()) if pending.exists() else []
             todo = tuple(dict.fromkeys([*waiting, *delete]))

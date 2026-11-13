@@ -12,3 +12,9 @@
 
 # Claude's coffee-or-not verdicts for the build job; the same value as the VERDICT_MODEL repository variable.
 verdict_model = "claude-haiku-5-5"
+
+# The usage collector (usage.tf). usage_image: an app image deploy.yml built from main, by digest (the "Build and
+# push" step's log and the attest job name it). Bumping it here, in a PR, is how the collector is deployed; deploy.yml
+# tags the digest set here so the registry's cleanup keeps it. Unset: Google's sample image. usage_enabled: true once
+# the apply account can act as the collector's account and write log exclusions; usage_token: true once the
+# USAGE_HF_TOKEN secret has a value (RUNNING.md, "Usage").

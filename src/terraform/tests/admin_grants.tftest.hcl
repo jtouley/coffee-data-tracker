@@ -49,7 +49,7 @@ run "admin_starts_only_the_named_jobs" {
   command = plan
 
   assert {
-    condition     = toset([for k, m in google_cloud_run_v2_job_iam_member.admin : split(" ", k)[0]]) == local.admin_jobs
+    condition     = toset([for k, m in google_cloud_run_v2_job_iam_member.admin : trimsuffix(trimsuffix(k, "-executor"), "-viewer")]) == local.admin_jobs
     error_message = "The admin's job grants must be exactly local.admin_jobs."
   }
   assert {
