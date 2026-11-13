@@ -271,15 +271,57 @@ def test_every_exported_mart_built_from_personal_data_is_erased():
     assert set(erase.RECS_MARTS) <= set(erase.MARTS)
 
 
-def test_a_mart_never_exported_is_skipped_not_an_error(three, monkeypatch):
+class Failing:
+    def __init__(self, message):
+        self.message = message
+
+    def execute(self, *a):
+        raise RuntimeError(self.message)
+
+
+def test_a_mart_never_exported_is_skipped_and_listed(three, monkeypatch):
     main, _, _ = three
+    monkeypatch.setattr(
+        main, "connect", lambda: Failing("HTTP 404 (Not Found) reading marts/mart_rec_slate.parquet")
+    )
+    absent: list[str] = []
+    assert erase._marts(main, "u-maya", ["mart_rec_slate"], absent) == []
+    assert absent == main.mart_sources("mart_rec_slate")
 
-    class Missing:
-        def execute(self, *a):
-            raise RuntimeError("HTTP 404 (Not Found) when reading marts/mart_rec_slate.parquet")
 
-    monkeypatch.setattr(main, "connect", lambda: Missing())
-    assert erase._marts(main, "u-maya", ["mart_rec_slate"]) == []
+def test_a_table_with_no_files_is_listed_and_one_that_cant_be_read_stops_the_erasure(three, monkeypatch):
+    # Final review B2: a 404 while listing a table's files silently dropped it from the deletion.
+    main, photos, users = three
+    before = every_value(main)
+    connect = main.connect
+    ratings_src = main.sources("ratings")[0]
+
+    def failing(message):
+        def connect_(*a, **kw):
+            con = connect(*a, **kw)
+
+            class Wrapped:
+                def execute(self, sql, *args):
+                    if ratings_src in sql:
+                        raise RuntimeError(message)
+                    return con.execute(sql, *args)
+
+            return Wrapped()
+
+        return connect_
+
+    monkeypatch.setattr(main, "connect", failing("IO Error: No files found that match the pattern"))
+    p = erase.plan("maya", main, photos, users)
+    assert ratings_src in p.absent and not any(f.startswith("ratings/") for f in p.files[main.url])
+    for message in (
+        "HTTP 404 (Not Found) error reading the file",
+        "HTTP 500 server error",
+        "connection reset",
+    ):
+        monkeypatch.setattr(main, "connect", failing(message))
+        with pytest.raises(erase.EraseError, match="Nothing was deleted"):
+            erase.plan("maya", main, photos, users)
+    assert every_value(main) == before
 
 
 def consent(users, uid, experiment, at):
@@ -295,9 +337,11 @@ def test_delete_user_only_recs_deletes_the_tests_records_and_keeps_the_account(t
     users.write("users", "users/u-maya__20261022T070000.parquet",
                 [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": False, "logged_at": on}])  # fmt: skip
     consent(users, "u-maya", True, on)
-    with pytest.raises(erase.EraseError, match="still in the"):
-        erase.plan("maya", main, photos, users, only_recs=True)  # the app would still take their ratings
-    consent(users, "u-maya", False, datetime(2026, 10, 23, 7, tzinfo=UTC))  # they left the test
+    with pytest.raises(erase.EraseError, match="Turn maya's account off"):
+        erase.plan("maya", main, photos, users, only_recs=True)  # the running app holds their records
+    users.write("users", "users/u-maya__20261023T070000.parquet",
+                [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": True,
+                  "logged_at": datetime(2026, 10, 23, 7, tzinfo=UTC)}])  # fmt: skip
     p = erase.plan("maya", main, photos, users, only_recs=True)
     assert p.marts == [] and p.files == {main.url: [
         "ratings/r-u-maya__20261020T070000.parquet", "ratings/r-u-maya__20261021T070000.parquet",

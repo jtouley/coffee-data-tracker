@@ -229,7 +229,22 @@ def test_two_answers_to_one_coffee_at_once_keep_both_fields(slow):
     ]
 
 
-def test_two_picks_at_once_leave_exactly_one_picked(slow):
+def test_two_picks_at_once_leave_exactly_one_picked(slow, monkeypatch):
+    # The final review's barrier: each pick waits, after its own commit and before its un-pick pass, for the other.
+    # Unserialized, both commit, both un-pick passes then see only themselves picked... or none, and none was left
+    # picked. Serialized, the first waits alone, times out, and the second un-picks it.
+    import contextlib
+    import threading
+
+    gate = threading.Barrier(2, timeout=1)
+    responses_of = slow.responses_of
+
+    def at_the_gate(*a, **kw):
+        with contextlib.suppress(threading.BrokenBarrierError):
+            gate.wait()
+        return responses_of(*a, **kw)
+
+    monkeypatch.setattr(slow, "responses_of", at_the_gate)
     together(*(lambda c=c: slow.save_rec_response("owner", {"slate_id": SLATE, "coffee_id": c, "picked": True})
                for c in COFFEES[:2]))  # fmt: skip
     assert sum(r.picked for r in Store(slow.lake, "owner").responses_of("owner")) == 1
@@ -298,3 +313,75 @@ def test_refused_saves_count_toward_the_limit_and_try_again_ones_dont(lake, monk
     monkeypatch.setattr(lake, "mart_sources", lambda name: [str(lake.root / "nowhere.parquet")])
     for _ in range(3):
         assert rate(d, coffee=COFFEES[1]).status_code == 503  # our side: not counted
+
+
+def test_a_missing_slate_export_keeps_the_copy_held_and_failed_reads_back_off(lake, monkeypatch):
+    # Final review S7 and S8.
+    from app import store as store_mod
+
+    slate(lake, [("owner", SLATE, 0, COFFEES[0])])
+    store = Store(lake, "owner")
+    assert store.slate_pairs("owner") == {(SLATE, COFFEES[0])}
+    (lake.root / "marts" / "mart_rec_slate.parquet").unlink()  # mid-publish, or a 404 on the dataset
+    monkeypatch.setattr(store_mod, "SLATE_TTL", 0)
+    assert store.slate_pairs("owner") == {(SLATE, COFFEES[0])}  # not thrown away as "no picks"
+    reads = []
+    read = store._read_slates
+
+    def counting():
+        reads.append(1)
+        return read()
+
+    monkeypatch.setattr(store, "_read_slates", counting)
+    for _ in range(5):
+        assert store.slate_pairs("owner") == {(SLATE, COFFEES[0])}
+    assert reads == []  # backing off after the failed read
+    monkeypatch.setattr(store_mod, "SLATE_RECHECK", 0)
+    slate(lake, [("owner", "slate-2", 0, COFFEES[1])])
+    assert store.slate_pairs("owner") == {("slate-2", COFFEES[1])} and reads == [1]
+
+
+def test_after_only_recs_erasure_neither_undo_nor_a_rejoin_writes_the_old_records_back(lake, accounts):  # noqa: F811
+    # Final review B3: the running app held the erased records; an Undo or a rejoin could write them back.
+    from coffeedata import erase
+    from coffeedata.lake import Lake
+
+    from .test_invites import PW, client
+
+    catalog(lake)
+    app = create_app(lake, Sessions(accounts))
+    boss = client(app)
+    assert boss.post("/api/signin", json={"agree": True, "setup_code": "SETUP-CODE-1234", "username": "jtouley",
+                                          "password": PW}, headers=W).status_code == 200  # fmt: skip
+    maya = join(app, invite(boss)["code"])
+    uid = accounts.by_name("maya").user_id
+    me = W | {"X-Expected-User": uid}
+    slate(lake, [(uid, SLATE, 0, COFFEES[0])])
+    maya.post("/api/experiment", json={"experiment": True}, headers=me)
+    rating = {"rating_id": "r1", "coffee_id": COFFEES[0], "rating": 4}
+    assert maya.post("/api/ratings", json=rating, headers=me).status_code == 200
+    answer = {"slate_id": SLATE, "coffee_id": COFFEES[0], "interest": "want"}
+    assert maya.post("/api/rec-responses", json=answer, headers=me).status_code == 200
+
+    with pytest.raises(erase.EraseError, match="Turn maya's account off"):
+        erase.plan("maya", lake, Lake(str(lake.root.parent / "photos"), tables=("photos",)), accounts.lake,
+                   only_recs=True)  # fmt: skip
+    assert boss.post(f"/api/people/{uid}", json={"disabled": True}, headers=W).json()["disabled"] is True
+    photos = Lake(str(lake.root.parent / "photos"), tables=("photos",))
+    erase.apply(erase.plan("maya", lake, photos, accounts.lake, only_recs=True), lake, photos, accounts.lake)
+    assert files(lake, "ratings") == {} and files(lake, "rec_responses") == {}
+    # Turned on again too early, before the redeploy:
+    boss.post(f"/api/people/{uid}", json={"disabled": False}, headers=W)
+    maya = client(app)
+    maya.post("/api/signin", json={"username": "maya", "password": "kettle orbit marble"}, headers=W)
+    assert maya.post("/api/ratings/r1/retract", headers=me).status_code == 404  # nothing to undo
+    maya.post("/api/experiment", json={"experiment": True}, headers=me)
+    assert maya.post("/api/rec-responses", json={"slate_id": SLATE, "coffee_id": COFFEES[0], "picked": True},
+                     headers=me).status_code == 200  # fmt: skip
+    rows = [
+        r for f in (lake.root / "rec_responses").glob("*__*.parquet") for r in pq.read_table(f).to_pylist()
+    ]
+    assert [(r["interest"], r["picked"]) for r in rows] == [
+        (None, True)
+    ]  # the erased "want" didn't come back
+    assert files(lake, "ratings") == {}

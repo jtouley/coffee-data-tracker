@@ -1035,12 +1035,17 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
             print(f"    {rel}")
     for m in p.marts:
         print(f"  marts/{m}.parquet: rewritten without their rows")
+    for src in p.absent:
+        print(f"  {src}: no files there yet, nothing to delete")
     if args.dry_run:
         print("Dry run: nothing deleted.")
         return
     erase.apply(p, main, photos, users)
     if args.only_recs:
-        print("Deleted. Deploy again (or restart the service) so the app forgets their ratings and answers.")
+        print(
+            "Deleted. Deploy again (or restart the service) so the app forgets their ratings and answers, then "
+            "turn the account back on."
+        )
         return
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
 
@@ -1346,7 +1351,7 @@ def main(argv: list[str] | None = None) -> None:
     du.add_argument(
         "--only-recs",
         action="store_true",
-        help="only their 'Your next bag' ratings and answers; keep the account (they must have left the test)",
+        help="only their 'Your next bag' ratings and answers; keep the account (turned off until the redeploy)",
     )
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")

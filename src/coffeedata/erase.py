@@ -1,7 +1,7 @@
 """Deleting one person's data from the datasets (`coffeedata delete-user`), for a deletion request.
 
-Their shots, bags, equipment, coffee ratings and answers to their picks (main lake), photos (photo dataset), and account and invites (users dataset) are
-removed, every version of each record: one commit per dataset on Hugging Face, or the files themselves in a local
+Their shots, bags, equipment, coffee ratings and answers to their picks (main lake), photos (photo dataset), and
+account and invites (users dataset) are removed, every version of each record: one commit per dataset on Hugging Face, or the files themselves in a local
 lake. The private marts that carry their rows (fct_shot, mart_bag) are rewritten without them in the same commit,
 so the app can't load them back from the export on its next start. The account must be turned off in the app
 first, so the running app refuses its writes until it restarts without it. The main and photo datasets' version
@@ -9,8 +9,13 @@ history still has the old commits; the privacy policy says so. The users dataset
 so the account's email (sealed, app/contacts.py) can't be read from an old revision either.
 
 `--only-recs` deletes just the "Your next bag" test's records (ratings and answers, and the rec marts' rows) and
-keeps the account, for someone who asks to delete their answers. The account needn't be turned off, but the person
-must have left the test first, so the running app refuses their new ratings and answers.
+keeps the account, for someone who asks to delete their answers. The account is turned off first here too: the
+running app holds their records in memory, and an Undo or a rejoin could write them back. It is turned on again only
+after the app restarts without them.
+
+A table with no files in a source (one never published there) has nothing to delete and is listed in the plan as
+such. Any other failure to list a source stops the plan with an error, before anything is deleted: an erasure never
+skips a table it couldn't read.
 """
 
 from __future__ import annotations
@@ -52,14 +57,7 @@ class Plan:
     username: str
     files: dict[str, list[str]] = field(default_factory=dict)  # dataset url -> paths within it
     marts: list[str] = field(default_factory=list)  # marts in the main lake that hold the person's rows
-
-
-def in_recs_test(users: Lake, user_id: str) -> bool:
-    """Whether the person's latest consent has them in the "Your next bag" test."""
-    if "consents" not in users.tables:
-        return False
-    latest = [r for r in users.latest("consents", "user_id") if r["user_id"] == user_id]
-    return bool(latest and latest[0].get("experiment") is True)
+    absent: list[str] = field(default_factory=list)  # sources with no files at all: nothing to delete there
 
 
 def find_user(users: Lake, username: str, force: bool = False, only_recs: bool = False) -> tuple[str, str]:
@@ -70,32 +68,40 @@ def find_user(users: Lake, username: str, force: bool = False, only_recs: bool =
                 raise EraseError(
                     "That's the owner's account. The owner's data is deleted with the datasets themselves."
                 )
-            if only_recs and not force:
-                if not row.get("disabled") and in_recs_test(users, row["user_id"]):
-                    raise EraseError(
-                        f"{name} is still in the “Your next bag” test. They leave it in Setup (or turn the account "
-                        "off for now), so the running app refuses their new ratings. Then run this again."
-                    )
-                return row["user_id"], name
             if not row.get("disabled") and not force:
+                then = (
+                    "Then run this again, deploy, and turn the account back on."
+                    if only_recs
+                    else "Then run this again."
+                )
                 raise EraseError(
                     f"Turn {name}'s account off in the app first (Invite someone → {name} → Turn off account), so "
-                    "the running app refuses their writes. Then run this again."
+                    f"the running app refuses their writes. {then}"
                 )
             return row["user_id"], name
     raise EraseError(f"No account named {name}.")
 
 
-def _rows(lake: Lake, src: str, sql: str, params: dict) -> list[tuple]:
+def _rows(lake: Lake, src: str, sql: str, params: dict, absent: list[str], missing=no_files) -> list[tuple]:
+    """The rows, or none when the source has no files (`missing`), which is recorded in `absent`. Any other failure
+    is an EraseError: the plan stops before anything is deleted."""
     try:
         return lake.connect().execute(sql.format(src=src), params).fetchall()
-    except Exception as e:  # noqa: BLE001 - duckdb.IOException: no files in this source
-        if no_files(e) or "404" in str(e):  # a remote mart that was never exported
+    except Exception as e:  # noqa: BLE001 - duckdb.IOException, or the network
+        if missing(e):
+            absent.append(src)
             return []
-        raise
+        raise EraseError(
+            f"Couldn't read {src} ({type(e).__name__}: {str(e)[:200]}). Nothing was deleted: run it again."
+        ) from e
 
 
-def _files(lake: Lake, tables: Tables, user_id: str) -> list[str]:
+def _mart_missing(e: Exception) -> bool:
+    """A mart that was never exported: no local file, or a 404 for the file on the dataset."""
+    return no_files(e) or "404" in str(e)
+
+
+def _files(lake: Lake, tables: Tables, user_id: str, absent: list[str]) -> list[str]:
     """Every file (path within the dataset) of every record that any version of names the person."""
     out: set[str] = set()
     for table, key, cols in tables:
@@ -107,6 +113,7 @@ def _files(lake: Lake, tables: Tables, user_id: str) -> list[str]:
                 src,
                 f"select distinct filename from {scan} where {key} in (select {key} from {scan} where {where})",
                 {"id": user_id},
+                absent,
             )
             out |= {_relative(lake, name) for (name,) in rows}
     return sorted(out)
@@ -118,14 +125,13 @@ def _relative(lake: Lake, name: str) -> str:
     return Path(name).resolve().relative_to(lake.root.resolve()).as_posix()
 
 
-def _marts(lake: Lake, user_id: str, marts: list[str]) -> list[str]:
+def _marts(lake: Lake, user_id: str, marts: list[str], absent: list[str]) -> list[str]:
+    sql = "select 1 from read_parquet('{src}') where user_id = $id limit 1"
     return [
         m
         for m in marts
         for src in lake.mart_sources(m)
-        if _rows(
-            lake, src, "select 1 from read_parquet('{src}') where user_id = $id limit 1", {"id": user_id}
-        )
+        if _rows(lake, src, sql, {"id": user_id}, absent, _mart_missing)
     ]
 
 
@@ -133,10 +139,11 @@ def plan(
     username: str, main: Lake, photos: Lake, users: Lake, force: bool = False, only_recs: bool = False
 ) -> Plan:
     user_id, name = find_user(users, username, force, only_recs)
-    p = Plan(user_id, name, marts=_marts(main, user_id, RECS_MARTS if only_recs else MARTS))
+    p = Plan(user_id, name)
+    p.marts = _marts(main, user_id, RECS_MARTS if only_recs else MARTS, p.absent)
     scope = ((main, RECS),) if only_recs else ((main, MAIN), (photos, PHOTOS), (users, USERS))
     for lake, tables in scope:
-        p.files[lake.url] = _files(lake, tables, user_id)
+        p.files[lake.url] = _files(lake, tables, user_id, p.absent)
     return p
 
 

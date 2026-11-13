@@ -793,6 +793,8 @@ def create_app(
         acct = owner_call(
             accounts_only().accounts.set_disabled, me.user_id, user_id, bool(body.get("disabled"))
         )
+        if acct.disabled:
+            store.forget_recs(acct.user_id)  # what an erasure removes can't come back from memory
         return {"user_id": acct.user_id, "disabled": acct.disabled}
 
     # --- screens -------------------------------------------------------------------------------------

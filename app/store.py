@@ -92,6 +92,7 @@ class Store:
         self.responses: dict[str, Rec] = {}  # response_key -> the latest answer
         self._slates: tuple[dict[str, set[tuple[str, str]]], float] | None = None  # user -> {(slate, coffee)}
         self._slate_lock = threading.Lock()  # one read of the picks export at a time
+        self._slate_failed: float | None = None  # when the last read of it failed, to back off
         # One rating or answer write at a time per person: each reads what's stored, checks it and writes, and two
         # at once could both pass a check or merge into the same old answer (review B1).
         self._user_locks: dict[str, threading.Lock] = {}
@@ -570,7 +571,8 @@ class Store:
 
     def _read_slates(self) -> dict[str, set[tuple[str, str]]]:
         """Every (slate_id, coffee_id) per person, from the picks export dbt writes (mart_rec_slate: user_id,
-        slate_id, position, coffee_id); none before the first export exists. Unavailable if the read fails."""
+        slate_id, position, coffee_id); none before the first export exists. Unavailable if the read fails, and if
+        the export is missing while a copy is held (review S7): a missing file then is a failure, not "no picks"."""
         src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("mart_rec_slate"))
         try:
             rows = (
@@ -579,7 +581,7 @@ class Store:
                 .fetchall()
             )
         except Exception as e:  # noqa: BLE001 - duckdb's IOException: no export yet, or the network
-            if not (no_files(e) or "404" in str(e)):
+            if not (no_files(e) or "404" in str(e)) or self._slates is not None:
                 log.warning("reading the picks export failed (%s)", type(e).__name__)
                 raise Unavailable("Your picks couldn't be read right now. Try again shortly.") from None
             rows = []
@@ -595,17 +597,23 @@ class Store:
     def _slate_pairs(self, user_id: str, older_than: float) -> tuple[set[tuple[str, str]], bool]:
         """The pairs, and whether they were read just now. The export is read again once the copy held is
         `older_than` seconds old, by one request at a time. If that read fails the copy held is used; only with
-        none held is it Unavailable."""
+        none held is it Unavailable. After a failed read the export isn't tried again for SLATE_RECHECK (S8)."""
         fresh = False
         with self._slate_lock:
-            cached = self._slates
-            if cached is None or time.monotonic() - cached[1] >= older_than:
+            cached, now = self._slates, time.monotonic()
+            due = cached is None or now - cached[1] >= older_than
+            backing_off = self._slate_failed is not None and now - self._slate_failed < SLATE_RECHECK
+            if due and backing_off and cached is None:
+                raise Unavailable("Your picks couldn't be read right now. Try again shortly.")
+            if due and not backing_off:
                 try:
                     cached = self._slates = (self._read_slates(), time.monotonic())
-                    fresh = True
+                    self._slate_failed, fresh = None, True
                 except Unavailable:
+                    self._slate_failed = time.monotonic()
                     if cached is None:
                         raise
+        assert cached is not None  # every path above either read it, held it or raised
         return cached[0].get(user_id, set()), fresh
 
     def _in_slate(self, user_id: str, slate_id: str, coffee_id: str) -> None:
@@ -620,6 +628,15 @@ class Store:
             if fresh:
                 raise NotFound(coffee_id)
         raise Unavailable("Your picks may have just changed. This is sent again shortly.")
+
+    def forget_recs(self, user_id: str) -> None:
+        """Drop a person's ratings and answers from memory (their account was turned off). An erasure
+        (delete-user --only-recs) can then never be written back by this process, even if the account is turned on
+        again before the restart: an Undo finds nothing, and a new answer has no old one to merge (review B3)."""
+        with self._user_lock(user_id), self.lock:
+            for recs in (self.ratings, self.responses):
+                for key in [k for k, r in recs.items() if r.item.user_id == user_id]:
+                    del recs[key]
 
     def _user_lock(self, user_id: str) -> threading.Lock:
         with self.lock:
