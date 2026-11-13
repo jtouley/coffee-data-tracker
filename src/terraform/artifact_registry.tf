@@ -1,4 +1,4 @@
-# Where the deploy workflow pushes the app's image.
+# Where the deploy workflow pushes the app's image and the ingestion jobs' (<repository>/app, <repository>/ingest).
 
 resource "google_artifact_registry_repository" "app" {
   repository_id = var.service
@@ -18,6 +18,18 @@ resource "google_artifact_registry_repository" "app" {
     action = "KEEP"
     most_recent_versions {
       keep_count = 5
+    }
+  }
+  # deploy.yml pushes an ingest image for every commit it deploys, so the image the Cloud Run jobs are pinned to
+  # (`ingest_image`) is soon neither recent nor, after 30 days, young. The owner tags each image they pin
+  # `pinned-<date>` (docs/ingestion/RUNBOOK.md §4), and an image tagged like that is never deleted. Nor is
+  # `latest`, which jobs read until `ingest_image` is pinned (`ingest_image_tag`) and which nothing pushes any more.
+  cleanup_policies {
+    id     = "keep-pinned"
+    action = "KEEP"
+    condition {
+      tag_state    = "TAGGED"
+      tag_prefixes = ["pinned", "latest"]
     }
   }
   depends_on = [google_project_service.apis]

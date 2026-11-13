@@ -859,8 +859,9 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
     always fire. Raised to $20 (RUNBOOK, Cost). Still to do: a billable-instance-time alert for the jobs.
 31. **A dedicated Cloud Build service account** (N7) with only Artifact Registry write and log writing, not the
     default Compute SA.
-32. **Base images pinned by digest** (N8): `python:3.12-slim@sha256:…` and `ghcr.io/astral-sh/uv:0.11.32@sha256:…`
-    in `ingest.Dockerfile`, with Artifact Registry vulnerability scanning.
+32. **Base images pinned by digest** (N8): done, `python:3.12-slim@sha256:…` and
+    `ghcr.io/astral-sh/uv:0.11.32@sha256:…` in both Dockerfiles, kept current by Dependabot. Still to do: Artifact
+    Registry vulnerability scanning.
 33. **An email when a crawl attempt died but its retry recovered** (section 7.1): today that execution succeeds and
     only `job_manifests` shows the dead attempt. A log-match alert on the retry's warning ("earlier attempt(s) this
     week died") would say so.

@@ -199,20 +199,91 @@ jobs:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
         run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
 
-  # Signed build provenance (SLSA) for the image the deploy job built and pushed: which workflow run and commit made
-  # this digest. It is stored with the repository's attestations, not in the registry; check an image with
-  #   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker
-  # A job of its own, after the deploy and beside deploy-admin, so a failure here never holds back or fails a
-  # deploy, and the deploy jobs don't get `attestations: write`. It doesn't sign in to Google Cloud: `id-token` here
-  # is for the signing certificate. The ingestion image is built by Cloud Build (docs/ingestion/RUNBOOK.md), not by
-  # a workflow, so it has no attestation from here.
-  attest:
+  # The ingestion jobs' image (ingest.Dockerfile), built from the same commit and under the same conditions as the
+  # app's: it runs only after the deploy job built and deployed this commit, so only for main's tip once ci passed
+  # (or a forced manual run), and never for a pull request or a fork. It is pushed beside the app's image, in the
+  # same repository (<repository>/ingest, where the deploy identity can already push), tagged with the commit.
+  # **It deploys nothing.** The Cloud Run jobs run the digest Terraform pins (`ingest_image`), and the owner applies
+  # that by hand (docs/ingestion/RUNBOOK.md §1 and §4, which read this image's digest by its commit tag). No moving
+  # tag such as `latest` is pushed. A failure here fails the run but changes neither the app nor the admin.
+  # It signs the image's build provenance itself, as its last step: it already holds `id-token: write` to push, so
+  # a separate job for that would only be one more job able to sign in to Google Cloud (see `attest`, below). If
+  # that step fails the image is in the registry without provenance, and RUNBOOK.md §1's check refuses it:
+  # "Re-run failed jobs" builds, pushes and signs it again.
+  ingest-image:
     needs: deploy
     if: needs.deploy.outputs.image != ''
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     permissions:
       contents: read
+      id-token: write  # for Workload Identity Federation, and the signing certificate (Sigstore)
+      attestations: write  # store the attestation
+    env:
+      REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}  # the commit the deploy job built
+      APP_IMAGE: ${{ vars.GCP_IMAGE }}  # <repository>/app
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ env.HEAD_SHA }}
+          persist-credentials: false
+      # Before any sign-in: build the image and run it once, with no network and no secrets, so an image that
+      # can't start never reaches the registry. BuildKit, so ingest.Dockerfile.dockerignore applies.
+      - name: Build, and check the image starts
+        env:
+          DOCKER_BUILDKIT: "1"
+        run: |
+          image="${APP_IMAGE%/*}/ingest"
+          docker build -f ingest.Dockerfile --build-arg GIT_SHA="$HEAD_SHA" -t "$image:$HEAD_SHA" .
+          for command in crawl merge enrich-week build; do  # commands the jobs run; --help imports the package
+            docker run --rm --network none "$image:$HEAD_SHA" "$command" --help > /dev/null
+          done
+          echo "IMAGE=$image" >> "$GITHUB_ENV"
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SA }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      - name: Push
+        id: push
+        run: |
+          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+          docker push "$IMAGE:$HEAD_SHA"
+          # The registry's digest for what was just pushed: the tag can move, the digest can't.
+          ref=$(docker inspect --format '{{join .RepoDigests "\n"}}' "$IMAGE:$HEAD_SHA" |
+            awk -v p="$IMAGE@sha256:" 'index($0, p) == 1 {print; exit}')
+          if ! [[ "$ref" =~ @sha256:[0-9a-f]{64}$ ]]; then
+            echo "::error::No registry digest for $IMAGE:$HEAD_SHA after the push."
+            exit 1
+          fi
+          echo "name=$IMAGE" >> "$GITHUB_OUTPUT"
+          echo "digest=${ref#*@}" >> "$GITHUB_OUTPUT"
+          echo "Pushed \`$ref\` (not deployed: pin it in Terraform, RUNBOOK.md §4)." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6  # v4.2.2
+        with:  # no predicate: SLSA build provenance
+          subject-name: ${{ steps.push.outputs.name }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+
+  # Signed build provenance (SLSA) for the app's image: which workflow run and commit made the digest the deploy job
+  # pushed. It is stored with the repository's attestations, not in the registry; check an image with
+  #   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker
+  # - A job of its own, beside deploy-admin, so it can't hold back the app's or the admin's deploy. It can turn the
+  #   run red after production has been updated (Sigstore or GitHub's attestations API down): "Re-run failed jobs"
+  #   signs the same digest again and deploys nothing (docs/app/RUNNING.md, "A red run after a deploy").
+  # - It runs whenever the deploy job pushed an image, even if the deploy step then failed, so every pushed image
+  #   has provenance (one may be deployed by hand later).
+  # - `id-token: write` is for the signing certificate. This job never signs in to Google Cloud, but nothing stops
+  #   it: the Workload Identity condition (src/terraform/deploy.tf) accepts a token from any job of this workflow
+  #   on main, so this job, and the action it runs, could act as the deploy account. Moving it to its own workflow
+  #   file would close that, but then the workflow that signs isn't the one that built the image. The fix that
+  #   keeps both is a Terraform change the owner applies (RUNNING.md, same section).
+  attest:
+    needs: deploy
+    if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
       id-token: write  # the signing certificate (Sigstore)
       attestations: write  # store the attestation
     env:
@@ -227,7 +298,7 @@ jobs:
           fi
           echo "name=${IMAGE_REF%@*}" >> "$GITHUB_OUTPUT"
           echo "digest=${IMAGE_REF#*@}" >> "$GITHUB_OUTPUT"
-      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8  # v4.2.2
-        with:
+      - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6  # v4.2.2
+        with:  # no predicate: SLSA build provenance
           subject-name: ${{ steps.ref.outputs.name }}
           subject-digest: ${{ steps.ref.outputs.digest }}

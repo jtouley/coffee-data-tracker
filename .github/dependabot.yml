@@ -12,9 +12,14 @@ updates:
     schedule: {interval: monthly}
     groups:
       python: {patterns: ["*"]}
-  # The base images pinned by digest in ingest.Dockerfile (/) and app/Dockerfile (/app).
+  # The images pinned by digest in ingest.Dockerfile (/) and app/Dockerfile (/app): Python's base and uv. Weekly,
+  # because the pin now decides how long a Debian security fix takes to reach a build. For Python only the digest
+  # of 3.12-slim moves: ci tests 3.12, so a newer Python is a change someone makes on purpose.
   - package-ecosystem: docker
     directories: ["/", "/app"]
-    schedule: {interval: monthly}
+    schedule: {interval: weekly}
+    ignore:
+      - dependency-name: python
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
     groups:
       docker: {patterns: ["*"]}

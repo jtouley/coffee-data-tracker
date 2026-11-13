@@ -29,22 +29,88 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
 The jobs reference `$IMAGE` (`.../registry-coffee/ingest:latest`) until `ingest_image` pins a digest (§4), so **the
 image must exist before the first apply**: a job whose image is missing fails to create. The app's Artifact Registry repository already exists.
 
-Build with Cloud Build (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
+**The normal route: GitHub builds it.** `deploy.yml`'s `ingest-image` job builds `ingest.Dockerfile` from every
+commit it deploys (main's tip, after ci passed), checks the image starts, pushes it to `.../registry-coffee/ingest`
+tagged with the commit, and signs build provenance for its digest. It deploys nothing: a job runs a new image only
+once `ingest_image` pins its digest and Terraform is applied (§4). Nothing pushes `:latest` any more, so that tag
+stays on the last image built by hand; only a job that was never pinned still reads it (`ingest_image_tag`).
+
+Read the digest for main's commit, without building:
+
+```sh
+git checkout main && git pull
+SHA=$(git rev-parse HEAD)
+DIGEST=$(gcloud artifacts docker images describe "${IMAGE%:*}:$SHA" --format='value(image_summary.digest)')
+PINNED="${IMAGE%:*}@${DIGEST:?no ingest image for $SHA yet}"; echo "$PINNED"
+```
+
+"No ingest image yet" (the describe fails with NOT_FOUND): the workflow hasn't built that commit. Look at its run
+(`gh run list --workflow deploy --limit 5`): still running, wait; `ingest-image` failed, fix main; skipped, main
+moved on while ci ran and the newer commit's run builds the image, so pull again. Don't pin an older commit's
+image to get past this without meaning to run that older code.
+
+**Check the image's provenance** before pinning it (§4 does):
+
+```sh
+gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet   # gh reads the image's digest from the registry
+gh attestation verify "oci://$PINNED" --repo jtouley/coffee-data-tracker \
+  --signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml \
+  --source-ref refs/heads/main --source-digest "$SHA"
+```
+
+A good result exits 0 and says the verification succeeded: this digest was built by `deploy.yml` on main, from
+commit `$SHA`. Any failure (no attestation, another workflow, another commit): don't pin the image.
+
+**By hand, in an emergency only** (GitHub Actions is down, or the workflow can't push). Build with Cloud Build
+(`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
 with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
 contracts/ in the image (the app's `.dockerignore` leaves them out). The upload follows `.gitignore`, so the local
 lake and build/ stay behind.
 
+The build's config is checked in: `ingest.cloudbuild.yaml`. It builds `ingest.Dockerfile`, lets Cloud Build push
+the image (`images:`), and asks for signed build provenance (`requestedVerifyOption: VERIFIED`): the build
+succeeds only if Cloud Build wrote provenance for the image. That needs the Container Analysis API, which Terraform
+doesn't enable. Check it once; without it the build fails at the end, and no job changes:
+
 ```sh
-cat > /tmp/ingest-build.yaml <<'YAML'
-steps:
-  - name: gcr.io/cloud-builders/docker
-    env: ["DOCKER_BUILDKIT=1"]
-    args: ["build", "-f", "ingest.Dockerfile", "-t", "$_IMAGE", "."]
-images: ["$_IMAGE"]
-YAML
-gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml --substitutions "_IMAGE=$IMAGE" .
-gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists
+gcloud services list --project "$PROJECT" --enabled --filter='config.name=containeranalysis.googleapis.com' \
+  --format='value(config.name)'   # prints containeranalysis.googleapis.com; if it prints nothing:
+gcloud services enable containeranalysis.googleapis.com --project "$PROJECT"
 ```
+
+Build from a clean checkout of the commit you mean (`git status` shows nothing): the upload is the working tree.
+
+```sh
+gcloud builds submit --project "$PROJECT" --config ingest.cloudbuild.yaml \
+  --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" .
+gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists, as :latest
+```
+
+An image built this way has no GitHub attestation, so `gh attestation verify` fails for it, as it should. It has
+Cloud Build's provenance instead. Use the digest, not the tag:
+
+```sh
+gcloud artifacts docker images describe "<repo>/ingest@sha256:<digest>" --show-provenance --format=json | jq '
+  [.provenance_summary.provenance[]? | .build.inTotoSlsaProvenanceV1 // empty | {
+    subject: [.subject[].digest.sha256] | unique,
+    builder: .predicate.runDetails.builder.id,
+    build: .predicate.runDetails.metadata.invocationId,
+    substitutions: .predicate.buildDefinition.externalParameters.substitutions}]'
+```
+
+A good result is one entry (not `[]`) where:
+- `subject` is the digest you asked about, and nothing else;
+- `builder` is `https://cloudbuild.googleapis.com/GoogleHostedWorker`;
+- `build` ends in the id of the build you just ran, in project `$PROJECT`;
+- `substitutions` shows the `_IMAGE` and `_GIT_SHA` you passed.
+
+`[]`, a different digest or another builder: don't pin the image. Build again, and if it repeats, stop.
+
+What this proves, and what it doesn't. The statement is signed by Cloud Build, not by anyone with access to the
+project, so it shows that Google's builder made this digest, in this project, with these steps and substitutions.
+It does **not** prove the commit: a build submitted from a folder uploads an archive of that folder, and Cloud
+Build never sees the git repository. `_GIT_SHA` is recorded as what the person who ran the build said. Provenance
+that names a verified commit is what the normal route gives. Go back to it for the next image.
 
 **A build alone changes no job.** Cloud Run resolves an image tag to a digest when a job is created or updated, not
 on each execution, so after a rebuild every job keeps running the digest it was last created or updated with. To move
@@ -444,17 +510,24 @@ scheduled job.
        --format='table(name,status.startTime,status.completionTime)'   # every row has a completion time
    done
    ```
-   Then build the image from the merged main with Cloud Build (§1), read its digest from the build output, and pin
-   every job to it while turning the schedule on:
+   Then read the digest of the image GitHub built from the merged main (§1; in an emergency, build it by hand
+   there instead and set `PINNED` from that build), check its provenance, and pin every job to it while turning
+   the schedule on:
    ```sh
    git checkout main && git pull
-   DIGEST=$(gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
-     --substitutions "_IMAGE=$IMAGE" --suppress-logs --format='value(results.images[0].digest)' .)
-   PINNED="${IMAGE%:*}@${DIGEST:?the build printed no digest}"; echo "$PINNED"
-   gcloud artifacts docker images describe "$PINNED" --format='value(image_summary.digest)'   # the same digest
+   SHA=$(git rev-parse HEAD)
+   DIGEST=$(gcloud artifacts docker images describe "${IMAGE%:*}:$SHA" --format='value(image_summary.digest)')
+   PINNED="${IMAGE%:*}@${DIGEST:?no ingest image for $SHA yet (§1)}"; echo "$PINNED"
+   gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+   gh attestation verify "oci://$PINNED" --repo jtouley/coffee-data-tracker \
+     --signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml \
+     --source-ref refs/heads/main --source-digest "$SHA" || echo "STOP: no provenance for $PINNED (§1)"
+   # Keep it: the registry deletes images over 30 days old unless among the 5 newest, or tagged pinned-* or latest.
+   gcloud artifacts docker tags add "$PINNED" "${IMAGE%:*}:pinned-$(date -u +%Y%m%d)"
    cd src/terraform
    terraform plan -var ingest_image="$PINNED" -var ingest_schedule_enabled=true -out ingest.plan
    # 16 to add (google_cloud_scheduler_job.ingest), 12 to change (each job's image, to $PINNED), 0 to destroy
+   # (one more to change, google_artifact_registry_repository.app, the first time: its keep-pinned cleanup policy)
    terraform apply ingest.plan
    for j in $(terraform output -json ingest_jobs | jq -r '.[]'); do   # every job's template runs the pinned digest
      img=$(gcloud run jobs describe "$j" --region $REGION \

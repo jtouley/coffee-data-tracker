@@ -81,6 +81,39 @@ be added in the repository's settings, as long as the app still runs that image 
 from there), so the app and the admin never stay on different images. A deploy while traffic is pinned (Rolling
 back, below) ends with a warning on the run, and leaves the admin where it is.
 
+After a deploy, the same run does two more things, neither of which deploys anything:
+- `attest` signs build provenance for the app's image (which workflow run and commit made that digest);
+- `ingest-image` builds the ingestion jobs' image from the same commit, checks it starts, pushes it beside the
+  app's (`.../ingest:<commit>`) and signs its provenance. The jobs run it only once Terraform pins its digest
+  (`docs/ingestion/RUNBOOK.md` §1 and §4).
+
+Check an image's provenance (it needs `gh` signed in, and read access to the registry, which is private:
+`gcloud auth configure-docker us-central1-docker.pkg.dev`):
+
+```bash
+gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker \
+  --signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml --source-ref refs/heads/main
+```
+
+**A red run after a deploy.** If `deploy` (and `deploy-admin`) are green and only `attest` or `ingest-image` is
+red, production was updated and is fine; what is missing is a signature or the ingest image.
+- Use **Re-run failed jobs**. `attest` signs the same digest again. `ingest-image` builds, pushes and signs again;
+  the commit's tag then points at the new, signed image.
+- Don't use **Re-run all jobs** for this: it runs the deploy again. That is harmless when main has moved on (the
+  run skips), and otherwise builds and deploys a new image of the same commit.
+- An app image whose deploy step failed is still signed, so a revision deployed from it by hand later verifies.
+  An ingest image whose signing failed stays in the registry unsigned; RUNBOOK §1's check refuses it until the
+  job is re-run.
+
+**Which jobs can act as the deploy account.** The Workload Identity condition (`src/terraform/deploy.tf`) accepts
+a token from any job of `deploy.yml` running on `main` that has `id-token: write`. `deploy`, `deploy-admin` and
+`ingest-image` need that: they push or deploy. `attest` has `id-token: write` only to get a signing certificate
+and never signs in to Google Cloud, but the condition would let it. To close that, give the three jobs that need
+the cloud a GitHub environment each (`deploy-admin` has `admin`), map `attribute.environment` to
+`assertion.environment` in the provider, and add `assertion.environment in ['<those names>']` to its condition.
+Apply that and merge the workflow change together: a job with no environment is refused once the condition is
+applied, and that includes the deploy itself.
+
 ### Owner's steps
 
 Nothing here was created for you. Once, in this order:
