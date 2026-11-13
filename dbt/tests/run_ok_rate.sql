@@ -1,3 +1,6 @@
+-- The refs below sit inside a var check, so dbt would see them only when the build's vars are set; this line
+-- declares them whatever the vars (docs/dbt/CONVENTION.md, section 5). The test itself is unchanged.
+-- depends_on: {{ ref('run_completeness') }}
 -- Enough of the run succeeded: a proxy outage or a blocked runner fails most fetches at once. Counted over the
 -- roasters that have a catalog (run_completeness has_catalog), so the ~600 no_catalog stores that "succeed" with 0
 -- products don't pad the share; a success has to bring back products. attempted_only (set by `coffeedata

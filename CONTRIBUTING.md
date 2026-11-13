@@ -60,6 +60,8 @@ make fmt       # ruff fix and format over src, app and tests
 - Code follows the ruff lint and format settings and the mypy settings in `pyproject.toml`.
 - New features and bug fixes come with tests in `tests/`, or for dbt, a unit test in `dbt/models/unit_tests.yml`
   (model logic) or a data test in `dbt/tests/` (data rules). A bug fix includes a test that reproduces the bug.
+- dbt models, tests and docs follow [`docs/dbt/CONVENTION.md`](docs/dbt/CONVENTION.md): the same raw builds the
+  same output, every model has a description and a grain test, and published tables have contracts.
 - Changes to heuristics or the classifier (classifying products, extracting attributes, matching bags to coffees,
   choosing a Claude model or prompt) follow the evaluation rules in [CLAUDE.md](CLAUDE.md), which scale the
   effort to the size of the change (step 9 covers small changes).

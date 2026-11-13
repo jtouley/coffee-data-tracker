@@ -1,3 +1,9 @@
+-- The refs below sit inside a var check, so dbt would see them only when the build's vars are set; this line
+-- declares them whatever the vars (docs/dbt/CONVENTION.md, section 5). The test itself is unchanged.
+-- depends_on: {{ ref('public_coffee') }}
+-- depends_on: {{ ref('public_roaster') }}
+-- depends_on: {{ ref('public_price_event') }}
+-- depends_on: {{ ref('public_market_weekly') }}
 -- Every row of every public table comes from this build and the run it checked: release_build_id and
 -- release_run_date each take exactly one value per table, the build's (vars build_id and as_of_run), so a stale or
 -- mixed release can't be served. One row per table and value that isn't this build's. Set by `coffeedata build`;
