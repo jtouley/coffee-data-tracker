@@ -730,9 +730,12 @@ def test_nothing_public_names_the_usage_project_its_database_or_dataset():
     skip = {"__pycache__", "target", "logs", "dbt_packages"}
     for f in sources:
         if f.is_file() and not skip & set(f.relative_to(REPO).parts):
-            # The collector's environment variables (COFFEEDATA_USAGE, its lake; COFFEEDATA_USAGE_ORIGINS) are not
-            # the usage dbt project: lake.py reads the first by design (#167).
-            text = re.sub(r"\bCOFFEEDATA_USAGE(?:_ORIGINS)?\b", "", f.read_text(errors="ignore")).lower()
+            text = f.read_text(errors="ignore")
+            if f.name == "lake.py":
+                # Lake.usage() reads the collector's lake from COFFEEDATA_USAGE by design (#167): an env var, not the
+                # usage dbt project. Only there; anywhere else that name is still a leak.
+                text = re.sub(r"\bCOFFEEDATA_USAGE\b", "", text)
+            text = text.lower()
             for name in names:
                 assert name.lower() not in text, (f, name)
     assert usage_build.DB not in (importers.MAIN_DB, importers.SERVED_DB, importers.DB)
