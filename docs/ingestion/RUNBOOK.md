@@ -13,7 +13,8 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
 ## 0. Before you start
 
 - `gcloud auth login` and `gcloud auth application-default login`, as an account that can apply the app's Terraform.
-- Terraform ≥ 1.6. No local Docker is needed: Cloud Build builds the image (§1).
+- Terraform ≥ 1.6. No local Docker is needed: GitHub builds the image (§1; Cloud Build in an emergency).
+- `gh` signed in (`gh auth status`): §1 and §4 check an image's provenance with it.
 - A checkout of this repository with [`uv`](https://docs.astral.sh/uv/) and `uv sync` run once: the results script
   in §3 runs with `uv run`. `jq` for the network check in §2 (Cloud Shell has it).
 - Secret Manager read access for your account on `HF_TOKEN` (`roles/secretmanager.secretAccessor`): §3 reads it with
@@ -26,28 +27,141 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
 
 ## 1. Build the image
 
-The jobs reference `$IMAGE` (`.../registry-coffee/ingest:latest`) until `ingest_image` pins a digest (§4), so **the
-image must exist before the first apply**: a job whose image is missing fails to create. The app's Artifact Registry repository already exists.
+Every job runs one image, pinned by digest: Terraform's `ingest_image` must be `<repo>/ingest@sha256:<digest>`,
+and a plan without it stops at the variable's validation. There is no fallback to a tag: `:latest` is no longer
+pushed by the normal route, so it would be whatever was last built by hand. So **the image must exist, and you
+need its digest, before any apply.** The app's Artifact Registry repository already exists.
 
-Build with Cloud Build (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
+**The normal route: GitHub builds it.** `deploy.yml`'s `ingest-image` job builds `ingest.Dockerfile` from every
+commit whose app image the deploy job pushed (main's tip, after ci passed, or a forced manual run), checks the
+image starts, pushes it to `.../registry-coffee/ingest` tagged with the commit, and signs build provenance for its
+digest. It deploys nothing: a job runs a new image only once `ingest_image` pins its digest and Terraform is
+applied (§4).
+
+### At merge: keep the images the jobs run (once)
+
+Do this when the PR that added `ingest-image` merges (#153). The registry deletes an image once it is **over 30
+days old and five newer images of the same name exist**. Until now a new ingest image appeared only when you built
+one. From that merge on, every deploy adds one, and five deploys can happen in an afternoon, so the image the jobs
+run today can be deleted as soon as it is 30 days old. The cleanup runs in the background, about once a day.
+Whether a Cloud Run job still starts once its image is gone from the registry isn't something to find out in
+production.
+
+1. **Tag every ingest image that exists today.** This needs no Terraform and can be done before the merge; the tags
+   protect nothing until step 2.
+   ```sh
+   for v in $(gcloud artifacts docker images list "${IMAGE%:*}" --format='value(version)'); do   # sha256:<digest>
+     gcloud artifacts docker tags add "${IMAGE%:*}@$v" "${IMAGE%:*}:pinned-premerge-${v:7:12}"
+   done
+   gcloud artifacts docker images list "${IMAGE%:*}" --include-tags   # every row has a pinned-premerge-… tag
+   ```
+   Every image, not only `:latest`: a job runs the digest its tag resolved to when the job was last created or
+   updated, which is not `:latest` if the image was rebuilt since.
+2. **Apply the `keep-pinned` cleanup policy, the same day as the merge**, from the merged main:
+   ```sh
+   cd src/terraform && rm -f keep.plan
+   terraform plan -target=google_artifact_registry_repository.app -out keep.plan
+   # 0 to add, 1 to change (google_artifact_registry_repository.app, in place: + cleanup_policies "keep-pinned"),
+   # 0 to destroy. Anything else: stop.
+   ```
+   ```sh
+   terraform apply keep.plan
+   gcloud artifacts repositories list-cleanup-policies registry-coffee --location "$REGION"   # lists keep-pinned
+   ```
+   If the plan stops with "ingest_image must be pinned by digest", `terraform.tfvars` doesn't pin the image yet:
+   add `-var ingest_image="${IMAGE%:*}@<a digest from step 1's list>"` to this plan. With `-target` it changes
+   no job; pinning the jobs is §4.
+3. From then on, §4's pinning step tags each image it pins `pinned-<commit>`. Tagged images are kept until someone
+   removes the tag: delete a `pinned-…` tag once no job and no rollback needs that image
+   (`gcloud artifacts docker tags delete`).
+
+### The digest to pin
+
+Read it for main's commit, without building. The script prints the image by digest only if the workflow built it
+from that commit and signed it; otherwise it says why and prints nothing:
+
+```sh
+unset PINNED
+git checkout main && git pull
+gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet   # gh reads the image's digest from the registry
+PINNED=$(docs/ingestion/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
+echo "pin: ${PINNED:?not verified. STOP: pin nothing}"
+```
+
+"No ingest image for <commit>": the workflow hasn't pushed one for that commit. Look at the run
+(`gh run list --workflow deploy --limit 5`, then `gh run view <id>`):
+- still running: wait;
+- `ingest-image` failed: read its log and fix main, or use **Re-run failed jobs** if the failure wasn't the code;
+- `ingest-image` skipped because `deploy` failed before it pushed the app's image (the sign-in, the build or the
+  push): fix that; the next run builds both;
+- everything skipped: ci was red on that commit, or main moved on while ci ran (then the newer commit's run builds
+  the image: pull again).
+
+Don't pin an older commit's image to get past this without meaning to run that older code.
+
+"No valid provenance": the image was pushed but signing failed, or it wasn't built by `deploy.yml` on main from
+that commit. **Re-run failed jobs** on the run builds, pushes and signs it again. Until the script prints an image,
+pin nothing.
+
+What the check proves: this digest was built by `deploy.yml` on main, from that commit. It does not prove ci
+passed on the commit: a manual deploy with `force` builds and signs too.
+
+**By hand, in an emergency only** (GitHub Actions is down, or the workflow can't push). Build with Cloud Build
+(`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
 with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
 contracts/ in the image (the app's `.dockerignore` leaves them out). The upload follows `.gitignore`, so the local
 lake and build/ stay behind. `_GIT_SHA` stamps the commit into the image (`COFFEEDATA_GIT_SHA`), so every record a
-job writes names it (`code_version`, `builds.git_sha`); an image built without it records `unknown`. Build from a
-clean checkout of the commit you mean (`git status` shows nothing), since the upload is the working tree.
+job writes names it (`code_version`, `builds.git_sha`); an image built without it records `unknown`.
+
+The build's config is checked in: `ingest.cloudbuild.yaml`. It builds `ingest.Dockerfile`, lets Cloud Build push
+the image (`images:`), and asks for signed build provenance (`requestedVerifyOption: VERIFIED`): the build
+succeeds only if Cloud Build wrote provenance for the image. That needs the Container Analysis API, which Terraform
+doesn't enable. Check it once; without it the build fails at the end, and no job changes:
 
 ```sh
-cat > /tmp/ingest-build.yaml <<'YAML'
-steps:
-  - name: gcr.io/cloud-builders/docker
-    env: ["DOCKER_BUILDKIT=1"]
-    args: ["build", "-f", "ingest.Dockerfile", "--build-arg", "GIT_SHA=$_GIT_SHA", "-t", "$_IMAGE", "."]
-images: ["$_IMAGE"]
-YAML
-gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
-  --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" .
-gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists
+gcloud services list --project "$PROJECT" --enabled --filter='config.name=containeranalysis.googleapis.com' \
+  --format='value(config.name)'   # prints containeranalysis.googleapis.com; if it prints nothing:
+gcloud services enable containeranalysis.googleapis.com --project "$PROJECT"
 ```
+
+Build from a clean checkout of the commit you mean (`git status` shows nothing): the upload is the working tree.
+
+```sh
+gcloud builds submit --project "$PROJECT" --config ingest.cloudbuild.yaml \
+  --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" .
+gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists, as :latest
+```
+
+An image built this way has no GitHub attestation, so `verified-ingest-image.sh` refuses it, as it should. It has
+Cloud Build's provenance instead. Check that by hand, with the digest, not the tag:
+
+```sh
+gcloud artifacts docker images describe "<repo>/ingest@sha256:<digest>" --show-provenance --format=json | jq '
+  [.provenance_summary.provenance[]? | .build.inTotoSlsaProvenanceV1 // empty | {
+    subject: [.subject[].digest.sha256] | unique,
+    builder: .predicate.runDetails.builder.id,
+    build: .predicate.runDetails.metadata.invocationId,
+    substitutions: .predicate.buildDefinition.externalParameters.substitutions}]'
+```
+
+A good result is one entry (not `[]`) where:
+- `subject` is the digest you asked about, and nothing else;
+- `builder` is `https://cloudbuild.googleapis.com/GoogleHostedWorker`;
+- `build` ends in the id of the build you just ran, in project `$PROJECT`;
+- `substitutions` shows the `_IMAGE` and `_GIT_SHA` you passed.
+
+`[]`, a different digest or another builder: don't pin the image. Build again, and if it repeats, stop. Only after
+a good result, set the image for §4 yourself, in place of the script:
+
+```sh
+PINNED="<repo>/ingest@sha256:<digest>"   # the digest you just checked
+```
+
+What this proves, and what it doesn't. The statement is signed by Cloud Build, not by anyone with access to the
+project, so it shows that Google's builder made this digest, in this project, with these steps and substitutions.
+It does **not** prove the commit: a build submitted from a folder uploads an archive of that folder, and Cloud
+Build never sees the git repository. `_GIT_SHA` is recorded as what the person who ran the build said. Provenance
+that names a verified commit is what the normal route gives. Go back to it for the next image.
 
 **A build alone changes no job.** Cloud Run resolves an image tag to a digest when a job is created or updated, not
 on each execution, so after a rebuild every job keeps running the digest it was last created or updated with. To move
@@ -60,11 +174,18 @@ every job then runs the same image, and the plan shows the change.
 job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches. The second
 egress IP, for the WooCommerce and generic crawls, is applied on its own: §2.1.
 
+Every plan in this runbook needs `ingest_image` (a digest, §1): from `terraform.tfvars` once §4 has put it there,
+or with `-var ingest_image="$PINNED"`. Without it the plan stops at the variable's validation and changes nothing.
+On a fresh project nothing can build the image before the repository and the deploy identity exist: apply those
+first with `-target` (any well-formed digest satisfies the validation; a targeted apply creates no job), set the
+repository variables, let the workflow build the image, then plan for real with its digest.
+
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
   `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7), until §2.1 sets crawl-woocommerce's
   and crawl-generic's to 0; `crawl-generic` has 8Gi, and
-  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
-  else on a job, beyond the image: stop.
+  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). Since #84 (§5.2), once:
+  `merge`'s `max_retries` 1 → 0, and `COFFEEDATA_AFTER_JOB` and `COFFEEDATA_AFTER_DEADLINE_UTC` added to
+  `enrich-week` and `build`. A plan that shows anything else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
   endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
   `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
@@ -447,17 +568,28 @@ scheduled job.
        --format='table(name,status.startTime,status.completionTime)'   # every row has a completion time
    done
    ```
-   Then build the image from the merged main with Cloud Build (§1), read its digest from the build output, and pin
-   every job to it while turning the schedule on:
+   Then read the digest of the image GitHub built from the merged main and check its provenance (§1, "The digest
+   to pin"). The block stops at the first thing that isn't right, and nothing after it runs without a verified
+   image. (In an emergency, build by hand and set `PINNED` as §1's "By hand" ends, in place of the first block.)
    ```sh
+   # pin-block: begin (tests/test_ingest_pin.py runs these lines against stand-in gcloud and gh)
+   unset PINNED
    git checkout main && git pull
-   DIGEST=$(gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
-     --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" --suppress-logs --format='value(results.images[0].digest)' .)
-   PINNED="${IMAGE%:*}@${DIGEST:?the build printed no digest}"; echo "$PINNED"
-   gcloud artifacts docker images describe "$PINNED" --format='value(image_summary.digest)'   # the same digest
-   cd src/terraform
-   terraform plan -var ingest_image="$PINNED" -var ingest_schedule_enabled=true -out ingest.plan
+   gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+   PINNED=$(docs/ingestion/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
+   echo "pin: ${PINNED:?not verified. STOP: pin nothing (§1)}"
+   # Keep it: the registry deletes images over 30 days old unless among the 5 newest, or tagged pinned-* or latest.
+   gcloud artifacts docker tags add "${PINNED:?}" "${IMAGE%:*}:pinned-$(git rev-parse --short=12 HEAD)"
+   # pin-block: end
+   ```
+   Plan, pinning every job to it while turning the schedule on:
+   ```sh
+   cd src/terraform && rm -f ingest.plan
+   terraform plan -var ingest_image="${PINNED:?not verified: stop}" -var ingest_schedule_enabled=true -out ingest.plan
    # 16 to add (google_cloud_scheduler_job.ingest), 12 to change (each job's image, to $PINNED), 0 to destroy
+   ```
+   Apply only a plan you just read, and check every job:
+   ```sh
    terraform apply ingest.plan
    for j in $(terraform output -json ingest_jobs | jq -r '.[]'); do   # every job's template runs the pinned digest
      img=$(gcloud run jobs describe "$j" --region $REGION \
@@ -503,7 +635,8 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
   lake, `public_coffee_is_fresh` fails such a build (the public catalog's newest `last_seen` is the newer run), so
   resuming last week after this Monday's crawl has written fetches fails too. Roll back to the previous release
   instead (`coffeedata rollback`, or `rollback_to` above), or build the latest week.
-- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
+- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`; after a
+  merge attempt that failed or died, it refuses until told to: §5.2). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
 - **Recover a merged week from the archive** (within 30 days of its merge; then the bucket's lifecycle rule has
   deleted it). The merge moves each connector's partition, unchanged, to
@@ -600,7 +733,13 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 `price_per_100g_outliers`, `public_tables_reconcile` and `release_changes_explained` are warnings
 (`severity='warn'`) and never fail the gate, so none appears in `failing`. The last four keep their rows in the
 build's database (`store_failures`, schema `main_dbt_test__audit`); the build's `release notes:` lines say what the
-release changes against the served one, per reason. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+release changes against the served one, per reason. A `near_duplicate_roasters` row is a pair the host can't link (a
+rebrand whose old domain doesn't redirect): once checked by hand, set the old id's `alias_of` in
+`config/roasters.csv` to the id that stays. If unrelated roasters resolve to one host (a new parking, for-sale,
+shortener or directory site makes them aliases of each other), add the host to `dbt/seeds/shared_hosts.csv`: such a
+host never groups (dbt and the crawl read the same file). A `stranded_alias_stores` row (warn) is a store whose
+canonical id is unreachable while an alias still answers: if the canonical's domain is gone for good, set its
+`alias_of` in `config/roasters.csv` to that alias, so the store is crawled under the alias again. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
 
 `release_changes` and `release_changes_explained` are report only (tag `report_only`): `coffeedata build` runs them
 after the gate, in a dbt step of its own, so even an error there can't fail a build. What to do when they say
@@ -613,9 +752,18 @@ something:
 | `release <id> not reconciled: its files couldn't be read` and `release not_reconciled unreadable: ...` | the served release's files couldn't be copied (after 3 tries) | nothing for this release; if it repeats, check the lake's `releases/` folder |
 | `the report-only step (release_changes) failed` / `release_changes is missing or failed` | the reconciliation itself errored; its record says `not_reconciled release_changes_missing` | open an issue with the dbt log; the release was gated without it |
 
-**b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
-the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed
-records.
+**b. The data is right, the gate is wrong.** Minutes, no re-crawl. The build job is never retried (`retries = 0` in
+`ingestion.tf`, once applied): a rebuild runs once, and `--wait` returns its result. Before that change it had
+`max_retries = 1`, and any failed step ran the whole chain again: a failed gate left two failed records, and a
+failed classify or egress-check after a build that passed stamped a second passing release for the same week (the
+served pointer moved to it, `marts/` was replaced, and `rollback` to the previous release landed on the same week).
+
+In the rebuild chains below every step runs, and any step's failure fails the execution: `--wait` returns a
+failure and the `ingest job build failed` email arrives. A failed classify (an Anthropic outage, a missing key) is
+one of them, which the old form of these commands let through: the build after it still ran on the verdicts already
+stored, so **read the log before running anything again**. If the build passed, the release is served and
+published, and only the classify needs another run (§5.5, step 2's command); a second rebuild would stamp a second
+release. If the publish is what failed, go to **f**.
 
 1. One roaster-week at a time: `accept` (a suspect catalog change is real), `reject` (drop that fetch: the week
    counts as missing for the roaster), or `use_batch` with `--batch <batch_id>` (count another ok fetch of that week).
@@ -632,11 +780,10 @@ records.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK --accept-volume-change; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
-**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build; a
-build that fails the gate runs twice (b).
+**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
 
 A crawl asks only roasters **without an `ok` or `unavailable` fetch this week**. It repairs failed, skipped and
 parked roasters, not ok fetches with wrong data (a parser bug in the image): those need b.1's `reject`, one
@@ -674,7 +821,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -692,8 +839,8 @@ gcloud run jobs execute build --region $REGION --wait \
   --args="coffeedata rollback --to <build_id> --reason '<why>'"   # <why>: no commas
 ```
 
-Without `--to`, a failed `publish` after the serve makes the job's retry (`max_retries = 1`) run `rollback` again,
-which goes back one more release. The job switches the served release and publishes only: it writes the site and
+Always pass `--to`: `rollback` without it goes back one release each time it runs, so running the command again
+after a failed `publish` (the job itself no longer retries) would go back one more. The job switches the served release and publishes only: it writes the site and
 the public export inside the container, and they're thrown away. Use it only when Actions can't run. **After any
 Cloud Run rollback**, as soon as Actions runs, re-export the release it served:
 
@@ -740,22 +887,67 @@ gets one day worse each day until this week's release is served.
 
 | Case | 11:17 | 8-day promise |
 |---|---|---|
-| a/b, rebuilt before 11:17 (a rebuild that fails the gate runs twice) | green, exports this week's | kept |
+| a/b, rebuilt before 11:17 | green, exports this week's | kept |
 | a/b, rebuilt after 11:17 | red, nothing exported; then `rollback_to=served` | kept if served on Tuesday |
-| c | red (the crawl alone can take 4 h, and a failing build runs twice); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
+| c | red (the crawl alone can take 4 h); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
 | d, before 11:17 | red (the served release is last week's); the rollback already exported | kept Tuesday; broken from Wednesday until b or c serves this week |
 | d, after 11:17 | the bad release was green and exported; the rollback re-exports | as above |
 | nothing fixed | red | broken from Wednesday |
 
-### 5.2 The build ran before the merge finished
+**f. The build ran but its publish failed.** The `ingest job build failed` email arrives, and the execution's log
+shows the build's result followed by an error from `coffeedata publish` (it tries five times before it fails).
+Nothing is lost: the release, its `builds` row and the served pointer are recorded in the staging bucket, and only
+the upload to the dataset is missing. Until it is sent, readers of the dataset (Tuesday's `site` run, the public
+export) still see last week's release.
 
-The Tuesday jobs run on fixed clock times, not on completion (issue #84): merge at 03:17 (up to 240 min, and one
-retry), enrich-week at 04:17, build at 06:17. `build` never checks for a finished merge. It judges the latest run in
-the lake, which before the merge is still last week's. Freshness uses a strict `<`, so last Monday counts as fresh on
-Tuesday, and such a build can pass and serve last week's data as a new release. enrich-week before a merge prints
-`waiting: no merge this week yet` and exits 0, so nothing alerts.
+**Don't rebuild.** A rebuild takes a new build id and stamps a second release for the same week. Send what is
+staged, with a publish-only execution, once the cause (the dataset unreachable, a rejected or missing token) is
+fixed:
 
-**How to tell:**
+```sh
+gcloud run jobs execute build --region $REGION --wait --args='coffeedata publish --message republish'
+```
+
+Its log ends `published N files to hf://...`; then confirm with **e**. A publish sends everything staged, whichever
+job staged it, so a later job's publish from the same staging bucket also sends the release: `fetch-health`
+publishes after a check (it is polled again on Tuesday from 10:07 UTC), and so does the next run of any other job.
+The release can therefore appear without anyone acting on the alert; **e** tells you whether it has. If it was served after 11:17,
+`gh workflow run weekly -f rollback_to=served` exports it (above).
+
+### 5.2 A Tuesday job failed its precondition (the chain: merge, enrich-week, build)
+
+The Tuesday jobs still start on fixed clock times: merge at 03:17, enrich-week at 04:17, build at 06:17. Since
+issue #84 each of the last two first checks the control table (`src/coffeedata/chain.py`, read-only):
+
+| Job | Runs only once | Waits until (UTC) | Then |
+|---|---|---|---|
+| `enrich-week` | this week's latest `merge` attempt is `done` and published | 05:47 | exits non-zero, nothing sent to Claude |
+| `build` (its `classify`, then its `build`) | this week's latest `merge` and latest `enrich` attempts are both `done` and published | 07:47 | both exit non-zero: no verdicts submitted, no build, no release |
+| `merge` | its latest attempt of the week neither failed nor is left without an end row | no wait | exits non-zero, nothing merged |
+
+"This week" is the week of the day the job runs (UTC), for `classify` and `build` alike, whatever `--run-date` the
+build is given.
+
+A job that is waiting logs `waiting for this week's (<week>) <job>: <status>` every minute. One that gives up prints
+`precondition failed: ...` with the statuses it last saw, and its execution fails, which sends
+`registry.coffee: ingest job <job> failed` (§6). The deadline is a clock time: `classify` and `build` share it, and
+so does Cloud Run's retry of enrich-week (the build and the merge have none), so a failed chain doesn't wait twice.
+A run by hand after the deadline, or more than two hours before it, checks once and doesn't wait. In the build job,
+a `classify` whose check didn't pass stops the `build` after it too: the build never runs on last week's verdicts
+because classify gave up.
+
+Statuses: `missing` (no row: the job before never started, or is itself still waiting), `running` (at work, or
+killed: a killed attempt never writes an end row), `failed` (it raised; its row's `detail.error` says what),
+`done, not yet published` (its end row is written, its upload to the dataset isn't finished), `unreadable` (the
+control table couldn't be read; while waiting, this is tried again every minute). Only `done` passes.
+
+**The merge has no automatic retry** (`max_retries = 0`). A merge that raises writes a `failed` row; one that is
+killed leaves a `running` row. Either way enrich-week and the build fail their preconditions that morning, and a
+second `merge` refuses to start over it. Running it again loses and repeats no row (it adds only rows the lake
+lacks, and changes no file the earlier attempt stored), but it is the owner's decision, and its archive lands in a
+second `merge=<batch>` folder (§5, "Recover a merged week").
+
+**How to tell where the chain stopped:**
 
 ```sh
 uv run python - <<'EOF'
@@ -768,28 +960,48 @@ print("latest builds (build_id, run judged, passed):", quality.builds(lake)[-3:]
 print("served:", quality.served(lake))
 for r in control.rows(lake, os.environ["WEEK"]):
     if r["job"] in ("merge", "enrich"):
-        print(r["job"], r["status"], r["started_at"], r["ended_at"])
+        print(r["job"], r["status"], r["started_at"], r["ended_at"], control.detail_of(r).get("error", ""))
 EOF
-for j in merge build; do
+for j in merge enrich-week build; do
   gcloud run jobs executions list --job $j --region $REGION --limit 2 \
     --format='table(name,status.startTime,status.completionTime)'
 done
 ```
 
-The build ran too early if the latest build judged **last week's Monday** instead of `$WEEK`, or started before the
-merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
-
-**Recourse:** once the merge's row is `done`, run enrich-week (if it waited) and the build again:
+**Recourse**, from the first job that failed, in order. Each later job passes its own check once the ones before it
+are `done`, so those need no override:
 
 ```sh
-gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
+# 1. The merge failed or died (a `failed` or `running` row, and no merge execution still running in the list above):
+gcloud run jobs execute merge --region $REGION --wait \
+  --update-env-vars COFFEEDATA_SKIP_PRECONDITION="the 03:17 merge died and none is running"
+# 2. enrich-week, once the merge's latest row is `done`:
+gcloud run jobs execute enrich-week --region $REGION --wait
+# 3. the build, once the latest merge and enrich rows are `done`:
+gcloud run jobs execute build --region $REGION --wait
+# or the same build told to judge $WEEK (the rebuild form other sections refer to):
 gcloud run jobs execute build --region $REGION --wait \
-  --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
-`--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
-week again. The early release has last week's data, so it is a harmless baseline. Confirm the fix (§5.1 e). After
-11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
+**The override.** `COFFEEDATA_SKIP_PRECONDITION=<reason>` on one execution skips that job's check (for the build
+job, both `classify`'s and `build`'s). It logs `PRECONDITION SKIPPED by COFFEEDATA_SKIP_PRECONDITION: <reason>` and
+the statuses it skipped over, and it works even when the control table can't be read. Use it for a deliberate run
+without the jobs before it: a build when enrichment can't run (an Anthropic outage), or a job run by hand on a
+Monday, when the new week has no merge yet:
+
+```sh
+gcloud run jobs execute build --region $REGION --wait \
+  --update-env-vars COFFEEDATA_SKIP_PRECONDITION="enrich failed - building on stored enrichments"
+```
+
+**No comma in the reason:** `--update-env-vars` takes a comma-separated list of `KEY=VALUE` pairs, so a comma ends
+the value and the command is rejected before it starts anything. The reason must be words: `0`, `false`, `no` and
+`off` are not reasons and leave the check on. Never set the variable in Terraform. A build run with it before the
+week's merge judges the latest run in the lake, which is then still last week's, and can pass and serve last week's
+data as a new release: use the `--run-date $WEEK` form above as well, so it fails as incomplete instead.
+
+After 11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
 
 ### 5.3 A crawl that ends `deadline`: skipped or partial
 
@@ -862,9 +1074,14 @@ Now three things stop that from happening silently:
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
   which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
-  so the `ingest job build failed` email arrives. A batch submit that Claude rejects (a revoked key, an outage)
-  fails the same way; a finished batch whose results can't be read yet stays open for the next run. With
-  `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
+  so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
+  before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
+  leaves the release recorded and staged but not in the dataset (§5.1 f sends it), and before this it exited 0 and
+  the first sign was Tuesday's red `site` run. The rebuild and backfill commands in §5 use the same chain
+  (`tests/test_discover_probe_jobs.py` runs them all with each step failing in turn). A batch submit that Claude
+  rejects (a revoked key, an outage) fails the same way; a finished batch whose results can't be read yet stays
+  open for the next run. The chain runs once: the build job is never retried (§5.1 b says why), so after a failed
+  classify the release the build served stands, and the classify is run again by hand (step 2's command below).
 - **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
   (`min_verdict_share`, `dbt/dbt_project.yml`) of listed coffees (`dim_coffee.is_listed`) have
   `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
@@ -888,17 +1105,22 @@ pending, so the first build after the change fails `verdicts_cover_catalog` unti
 and last week's release stays served. That is the gate working: don't opt out around it.
 
 1. Submit everything pending (7 batches of 10,000; `--limit` defaults to 100,000), and wait up to 3 hours for them
-   inside the job's 240 minutes:
+   inside the job's 240 minutes. A failed classify (a rejected submit, an outage) now fails this execution, where
+   the old form reported only the publish: the publish still runs, what was collected is sent, `--wait` returns a
+   failure and the email arrives. It runs once (no retry), so the 240 minutes hold. Run step 2 when the cause is
+   fixed:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify --wait 180; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify --wait 180 || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 2. If batches were still running (its output's `collect_after_wait` is below `submit.submitted`), collect again
    later; batches end within 24 hours. Repeat until a run collects 0 and submits 0:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 3. Rebuild (§5.2's form) and read the `verdicts:` line in its log. Expect about 3,600 listed products to drop out
@@ -1018,6 +1240,51 @@ order), a lake file changed after the build, or different code or versions.
 
 **6. Clean up:** `rm -rf $V /tmp/find_rev.py`, and `git worktree remove $V/code` if you made one.
 
+### 5.7 Discovery and the probe: running them by hand, reading what they recorded
+
+`discover` is scheduled monthly (03:17 on the 1st), so a schedule turned on after the 1st runs it only on the next
+1st. Run it by hand whenever new roasters are wanted (the Console, or the command below): it runs OSM, then
+Overture, and publishes each source's rows as soon as they're recorded.
+
+```sh
+gcloud run jobs execute discover --region $REGION --wait
+```
+
+What to expect: Overture's scan of the US places (about 12 GB of public Parquet, read in about a minute and 1.5 GiB
+of memory) records about 3,100 roasters, nearly all already in the seed; OSM asks Overpass one state at a time, asks
+a busy state again after 30 and 90 seconds, and stops asking (the rest count as failed) after three states in a row
+go unanswered or after an hour, so an Overpass outage never keeps Overture from running. Each source writes a
+`job_manifests` start and end row (job `discover`, connector `osm` or `overture`, under the week's Monday), whose
+`detail` has `recorded`, `new` (not in the seed or the registry before), a sample of the new ones, and
+`failed_states` (states Overpass never answered). A source that gives nothing usable ends `failed`: Overture's scan
+finds no roaster, or Overpass leaves more than half the states unanswered (what it did answer is still recorded).
+The other source still runs and publishes, and the execution exits 1 (the failure email). Cloud Run's retry starts
+at once and usually meets the same outage, so re-run it by hand once Overpass is back; re-recording a roaster is
+harmless (the registry keeps the latest row). Fewer unanswered states end `done`, with a WARNING line naming them in
+the job's log. `new` is counted against the seed and the registry as they were when that source started, so
+Overture's leaves out what OSM found earlier in the same run: the run's new roasters are the sum over both sources.
+To check a run, read the week's rows from the dataset (`HF_TOKEN` set; `WEEK` is the Monday; an attempt with only a
+`running` row died):
+
+```sh
+COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data uv run python -c "
+from coffeedata import control; from coffeedata.lake import Lake
+for r in control.rows(Lake(), '$WEEK'):
+    if r['job'] in ('discover', 'probe'):
+        print(r['job'], r['connector'], r['status'], r['ok'], r['errors'], r['skipped'], r['detail'])"
+```
+
+The probe (Mondays 07:17) asks the roasters never probed (new from discovery) first, then those last probed more
+than 28 days before (one probed exactly 28 days earlier waits a week). It writes what it has probed to the lake
+every 10 minutes as it goes and starts no roaster after 100 minutes from its first attempt's start (a Cloud Run
+retry keeps that window), so it ends before the 09:17 crawls; what's left waits for next Monday (end row `deadline`,
+`skipped` = the count left). Its publish runs whatever the probe's exit. A week with nothing stale still writes its
+start and end rows (`todo` 0): the seed's roasters were probed 2026-10-26 (14 of them 2026-11-02), so the first full
+re-probe is 2026-11-30 (about 3,200 roasters; at the rate of a 20-roaster sample, 16 workers take about 40 minutes,
+and the deadline covers a slower week).
+
+A new roaster is crawled only after a probe has found its platform: discover, then probe, then the next crawl.
+
 ## 6. Alerts
 
 `src/terraform/alerts.tf` emails the owner (the `owner` notification channel, `owner_email`) about the pipeline too.
@@ -1036,6 +1303,11 @@ documents, and an empty series would read as "missing" every Tuesday. A failed o
 merge or enrich-week before it) fires the job alert; a build slot that doesn't start fires the Scheduler alert; and
 `site.yml`'s Tuesday 11:17 run fails red, without exporting, when the served release isn't this week's (GitHub
 emails a failed scheduled run). Left uncovered by email from Cloud Monitoring: a paused or deleted Scheduler entry.
+
+**Beyond email.** A build that passes with worse data sends none of these. `prod-health.yml` measures each served
+release's per-rule fill, abstain, shift and volume metrics against `config/prod_health.toml` on Tuesdays, and opens
+a GitHub triage issue per rule that breaches, read from the lake by a GitHub workflow with no new GCP resource
+(docs/TRIAGE.md).
 
 **Apply.** With `terraform.tfvars` as after the cutover (`ingest_schedule_enabled = true`, `ingest_image` pinned):
 
@@ -1165,8 +1437,8 @@ build; it writes its `job_manifests` rows and publishes them to the dataset (a f
 never a different verdict or exit code).
 
 **Ship it** (after this PR merges):
-1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
-   step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
+1. Once this PR's commit is on main, its ingest image is built by the deploy workflow: pin its digest in
+   `ingest_image` (section 1, and section 4's pinning step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
    `COFFEEDATA_DQ_REFETCH` unset) only from it.
 2. `cd src/terraform && terraform plan -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
    `google_cloud_run_v2_job.ingest["fetch-health"]`, its invoker binding
@@ -1262,3 +1534,56 @@ staging bucket holds one week of raw/ and the last 30 days of merged partitions 
 raw rows, a few GB at most (cents a month). With the app (inside Cloud Run's free tier), about
 $9–14/month in all with the second IP. The monthly budget (`budget_usd`) stays $20, so its first email (50%, $10)
 now falls inside the estimate: raise `budget_usd` if that email is noise. Alert policies cost nothing.
+
+## 9. Terraform in GitHub: reading the plan comment
+
+A pull request that touches `src/terraform/**` (or the guard script, or the workflow) runs
+`.github/workflows/terraform-plan.yml`: fmt, init, validate and plan as the read-only plan identity, then the guards
+(`scripts/tf_plan_guard.py`), then one comment on the PR, **Terraform plan**, replaced on every push. It never
+applies anything, and the PR's plan is advisory: the plan that is applied is made again on main, by the apply
+workflow.
+
+Where CI's variables come from (your shell is unchanged: it still reads `terraform.tfvars`):
+- `src/terraform/ci.tfvars`, checked in, passed only by CI with `-var-file`: `verdict_model`.
+- Repository **secrets** `TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL`: `billing_account` and `owner_email`.
+- Repository **variables**, holding what `terraform.tfvars` holds today: `TF_VAR_INGEST_IMAGE` and
+  `TF_VAR_INGEST_SCHEDULE_ENABLED` (required), and `TF_VAR_EMAIL`, `TF_VAR_BUDGET_USD` and `TF_VAR_INGEST_JOB_MEMORY`
+  (optional; unset means the default in `variables.tf`; `TF_VAR_INGEST_JOB_MEMORY` is HCL, e.g.
+  `{ "crawl-woocommerce" = "4Gi" }`). When you pin a new image in `terraform.tfvars`, set `TF_VAR_INGEST_IMAGE` to the
+  same value, or the next PR plan shows the jobs' image changing back.
+
+The comment starts with the PR head commit it planned (planned as merged with main) and one status line:
+- **Guards: pass** or **FAIL**, then the change list.
+- **The plan errored** at `terraform <command>`: no change list. The run's log names the files, lines and resources
+  involved, never Terraform's messages (they can quote the billing id or your email). Run the plan in your shell for
+  the details. "repository secrets or variables are missing": the log names which.
+- **Errored**: the plan couldn't be read, or an address in it couldn't be shown safely, so nothing is shown.
+- **No plan** (the plan identity isn't set up yet) or **Cancelled** (a newer push replaced the run).
+
+Then three parts:
+- **Guards**, `pass` or `FAIL` each, with the addresses that broke a failed one:
+  - `no-delete-or-replace`: no action is `delete` or `forget`, so nothing is destroyed, replaced or dropped from
+    the state;
+  - `shopify-network-path`: no network or router changes, at any address; no new NAT on the ingest router; a NAT
+    that serves Shopify's subnet (found by its address, its previous address, its name or its subnets) changes only
+    its port and logging settings, never its router, IPs, allocation or subnets; nothing else named for Shopify's
+    egress (its subnet, its IP) changes;
+  - `shopify-jobs-network`: `crawl-shopify` and `crawl-retry` keep their `vpc_access`;
+  - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by `@sha256:`
+    digest, and every job's image is a digest known at plan time;
+  - `workload-identity`: no workload identity pool or provider changes, nor any IAM grant that names one or grants
+    a workload identity role.
+- **Changes**: one line per resource, its action and its address, and where it moved from. `update` changes it in
+  place, `create` adds it; `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard.
+  Unchanged resources and data reads aren't listed.
+- **Totals**: how many of each action.
+
+There are no attribute values in it on purpose: the repository is public and a plan holds every variable in clear.
+An address is shown only if it is plain Terraform address syntax (keys of letters, digits, `.`, `_` and `-`) and
+contains no variable value, egress IP or secret, compared without case or separators; otherwise the comment says
+**Errored** and shows nothing.
+
+A failed guard fails the check, and the apply refuses the same plan. Change the PR; or, for a delete, a replace or a
+change to Shopify's path or the workload identity that is really meant, make it by hand in Cloud Shell, as before,
+and run `python3 -I scripts/tf_plan_guard.py check plan.json` on the `show -json` output of your plan file to see
+what it breaks. A pull request from a fork gets no plan and no comment (it can't sign in).

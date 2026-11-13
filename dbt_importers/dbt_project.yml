@@ -1,0 +1,27 @@
+# The importers' derived view: a private dbt project of its own, never part of the main build (dbt/).
+#
+# It reads the private importers dataset (COFFEEDATA_IMPORTERS, raw only) and builds into a database file of its own
+# (build/importers.duckdb, set by `coffeedata importer-build`; any other target is refused), which nothing public
+# opens: not the main build, the release, the public tables or contracts, the site, the public dataset or the MCP
+# server (tests/test_importers.py). Each build re-derives every stored week from raw.
+name: coffeedata_importers
+version: "0.1.0"
+config-version: 2
+profile: coffeedata_importers
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target"]
+
+# Before anything is built: the target is the private database and nothing else (macros/private_target.sql).
+on-run-start:
+  - "{{ refuse_unless_private_target() }}"
+
+vars:
+  # The raw files to read: Lake.sources("importer_raw"), the local (staged) glob and the Hub's when it is remote.
+  importer_sources: []
+
+models:
+  coffeedata_importers:
+    +materialized: table

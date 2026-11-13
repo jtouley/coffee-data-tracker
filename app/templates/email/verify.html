@@ -1,0 +1,9 @@
+{% extends "_layout.html" %}{% from "_button.html" import button %}
+{% block preview %}Confirm this is your email{% if notices_only %}, for account notices{% else %}, so you can reset your password yourself{% endif %}.{% endblock %}
+{% block heading %}Confirm your email{% endblock %}
+{% block body %}
+<p style="margin:0;">One quick step before your first shot: confirm this is your email{% if notices_only %}, for account notices{% else %}, so you can reset your password yourself{% endif %}.</p>
+{{ button(link, "Confirm email") }}
+<p style="margin:0;">The link works for 24 hours.</p>
+{% endblock %}
+{% block foot %}If you didn’t sign up, ignore this.<br>If the button doesn’t work, paste this into your browser: <span style="word-break:break-all;">{{ link }}</span>{% endblock %}

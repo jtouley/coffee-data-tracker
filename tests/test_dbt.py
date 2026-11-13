@@ -1,5 +1,6 @@
 """Build the dbt project over a synthetic lake and check the derived history (the same SQL the weekly run uses)."""
 
+import hashlib
 import json
 import os
 import re
@@ -13,11 +14,13 @@ import pytest
 
 from coffeedata import registry
 
-from .lakehelp import probe, product, run
+from .lakehelp import at, needs_dbt, probe, product, run
 
 ROOT = Path(__file__).parent.parent
 FIX = Path(__file__).parent / "fixtures"
-pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+# Every model of the private importers project, which only its own database file may hold.
+PRIVATE_MODELS = {p.stem for p in (ROOT / "dbt_importers/models").rglob("*") if p.suffix in (".sql", ".py")}
+pytestmark = needs_dbt
 
 
 def run_dbt(lake, tmp_path, *args, **extra_vars):
@@ -52,7 +55,13 @@ def build(lake, tmp_path, check=True, **extra_vars):
     if not check:
         return r
     assert r.returncode == 0, r.stdout[-4000:]
-    return duckdb.connect(str(db), read_only=True)
+    con = duckdb.connect(str(db), read_only=True)
+    # The main build's database (what the release, the site, the exports and the MCP server read) never holds a table
+    # of the private importers project (dbt_importers/).
+    built = {t for (t,) in con.execute("select table_name from information_schema.tables").fetchall()}
+    assert not built & PRIVATE_MODELS, built & PRIVATE_MODELS
+    assert not any("importer" in t or "royal" in t for t in built), built
+    return con
 
 
 def test_history_is_derived_from_successful_runs(lake, tmp_path):
@@ -236,7 +245,7 @@ def test_repeated_variant_ids_in_raw_snapshots(lake, tmp_path):
         p["variants"][0] | {"variant_id": "SKU", "title": t} for t in ("Whole bean", "Drip", "Espresso")
     ]
     run(lake, "2026-10-26", "ikoncoffee.com", [p])
-    con = build(lake, tmp_path)  # unique_price_events would fail without the staging fix
+    con = build(lake, tmp_path)  # fct_price_event's grain test would fail without the staging fix
     assert sorted(con.execute("select variant_id, event from fct_price_event").fetchall()) == [
         ("SKU", "new"),
         ("SKU#1", "new"),
@@ -256,6 +265,167 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
     assert dbt_status == py_status
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
+
+
+def test_python_and_dbt_agree_on_no_catalog_and_platformless_roasters(lake, tmp_path):
+    """The status CASE's last branches (registry.STATE_SQL and int_roaster_state): an ok fetch with no products is
+    no_catalog; a probe that answered with an HTTP error (platform http_<code>) or a roaster with no platform at all
+    is unreachable, however its fetches went."""
+    a, b, c = "onyxcoffeelab.com", "intelligentsia.com", "newroaster.example"
+    run(lake, "2026-10-19", a, [])  # ok, nothing listed
+    probe(lake, "2026-10-18", b, platform="http_404")
+    run(lake, "2026-10-19", b, [product("1")])  # even with an ok fetch of coffee
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [
+            {
+                "added_at": datetime(2026, 10, 1, tzinfo=UTC),
+                "source": "overture",
+                "roaster_id": c,
+                "name": "New",
+            }
+        ],
+    )  # never probed: no platform
+    con = build(lake, tmp_path)
+    dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
+    py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert dbt_status == py_status
+    assert (py_status[a], py_status[b], py_status[c]) == ("no_catalog", "unreachable", "unreachable")
+
+
+def test_one_store_is_one_roaster_in_python_dbt_and_the_public_tables(lake, tmp_path):
+    """eval/roaster_dedup: a second domain whose site resolves to an active roaster's store is an alias, in the
+    crawl's state (registry.current) and in dbt alike. Discovery adds intelligentsiacoffee.com, whose probe lands on
+    www.Intelligentsia.com (any case): while it is only pending it is already the alias, so it is never crawled, and
+    once both were read the id equal to the host stays canonical. The alias is in no public table."""
+    from datetime import UTC, datetime
+
+    from coffeedata import ingest
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [{"added_at": datetime(2026, 11, 1, tzinfo=UTC), "source": "overture", "roaster_id": alias,
+          "name": "Intelligentsia Coffee"}],
+    )  # fmt: skip
+    run(lake, "2026-10-26", main, [product("A", 20.0), product("B", 18.0)])
+    probe(lake, "2026-11-01", alias, final_host="www.Intelligentsia.com")
+    py = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert (py[main], py[alias]) == ("active", "alias")
+    assert alias not in {s.roaster.roaster_id for s in ingest.select_states(lake, "2026-11-02")[0]}
+    # Crawled anyway (as before this change), the same products under the second id: still one store.
+    run(lake, "2026-11-02", alias, [product("A", 20.0), product("B", 18.0)])
+    run(lake, "2026-11-02", main, [product("A", 20.0), product("B", 18.0)])
+    con = build(lake, tmp_path)
+    dbt = {
+        r[0]: r[1:]
+        for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster").fetchall()
+    }
+    py = {
+        s.roaster.roaster_id: (s.status, s.canonical_roaster_id)
+        for s in registry.current(lake, FIX / "roasters.csv")
+    }
+    assert dbt == py
+    assert dbt[alias] == ("alias", main) and dbt[main] == ("active", main)
+    assert [
+        r[0]
+        for r in con.execute(
+            "select roaster_id from public_roaster where roaster_id like 'intell%'"
+        ).fetchall()
+    ] == [main]
+    for t in ("public_coffee", "public_price_event"):
+        assert con.execute(f"select count(*) from {t} where roaster_id = ?", [alias]).fetchone() == (0,), t
+    assert con.execute("select count(*) from public_coffee where roaster_id = ?", [main]).fetchone() == (2,)
+
+
+def test_a_store_keeps_its_alias_through_an_outage_a_week_without_coffee_and_an_opt_out(lake, tmp_path):
+    """Review of #137 (H1, M7): grouping never reads the crawl status, so the canonical id going unreachable, then
+    reading no coffee, then opting out never makes its alias a store of its own again. Each time the build passes
+    (public_roasters_unique_by_host and roaster_aliases_resolve are error tests), the alias is never crawled or
+    public, and Python's state agrees with dbt's on every roaster's status and canonical id."""
+    from datetime import UTC, datetime
+
+    from coffeedata import ingest
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+
+    def registry_row(rid, **kw):
+        lake.write(
+            "registry",
+            f"registry/source=overture/{rid}-{len(kw)}.parquet",
+            [{"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "overture", "roaster_id": rid, "name": rid}
+             | kw],
+        )  # fmt: skip
+
+    registry_row(alias)
+    run(lake, "2026-10-12", main, [product("A", 20.0)])
+    run(lake, "2026-10-12", alias, [product("A", 20.0)])  # both read before the change
+    probe(lake, "2026-10-13", alias, final_host="www.intelligentsia.com")
+
+    def check(expected_main_status):
+        con = build(lake, tmp_path)
+        dbt = {r[0]: r[1:] for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster")
+               .fetchall()}  # fmt: skip
+        py = {s.roaster.roaster_id: (s.status, s.canonical_roaster_id)
+              for s in registry.current(lake, FIX / "roasters.csv")}  # fmt: skip
+        assert dbt == py
+        assert dbt[main] == (expected_main_status, main) and dbt[alias] == ("alias", main)
+        assert con.execute(
+            "select count(*) from public_roaster where roaster_id = ?", [alias]
+        ).fetchone() == (0,)
+        assert con.execute("select count(*) from dim_coffee where roaster_id = ?", [alias]).fetchone() == (0,)
+        con.close()
+        assert alias not in {s.roaster.roaster_id for s in ingest.select_states(lake, "2026-11-30")[0]}
+
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, main, None)  # the canonical store is down for 3 runs
+    check("unreachable")
+    run(lake, "2026-11-09", main, [product("M", coffee=False)])  # back, with only a mug for sale
+    check("no_coffee")
+    registry_row(main, opted_out=True)  # the store opts out: its other domain stays out too
+    check("opted_out")
+
+
+def test_a_stranded_store_warns_and_two_stores_on_a_parked_host_are_two(lake, tmp_path):
+    """Final review of #137. N1: a canonical id that stays unreachable while its alias still answers is a store
+    nobody crawls, so stranded_alias_stores warns (the runbook's fix is alias_of). N2: two published stores whose
+    domains both lapsed to a parked host (hugedomains.com, seed shared_hosts) are two stores, as the alias rule has
+    them, so public_roasters_unique_by_host (error) passes."""
+    import re
+    from datetime import UTC, datetime
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [
+            {
+                "added_at": datetime(2026, 10, 1, tzinfo=UTC),
+                "source": "overture",
+                "roaster_id": alias,
+                "name": alias,
+            }
+        ],
+    )
+    run(lake, "2026-10-12", main, [product("A", 20.0)])
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, main, None)  # gone for good
+    probe(lake, "2026-11-03", alias, final_host="www.intelligentsia.com")  # the alias still answers
+    for rid in ("counterculturecoffee.com", "anaheimcoffee.com"):
+        run(lake, "2026-11-02", rid, [product("B", 18.0)])
+        probe(lake, "2026-11-03", rid, final_host="www.hugedomains.com", platform="other")
+    r = build(lake, tmp_path, check=False)
+    assert r.returncode == 0, r.stdout[-3000:]
+    assert re.search(r"WARN 1 stranded_alias_stores", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert con.execute(
+        "select alias_id, canonical_id from main_dbt_test__audit.stranded_alias_stores"
+    ).fetchall() == [(alias, main)]
+    public = {r[0] for r in con.execute("select roaster_id from public_roaster").fetchall()}
+    assert {"counterculturecoffee.com", "anaheimcoffee.com"} <= public
+    con.close()
 
 
 def test_roaster_status_reads_the_recorded_coffee_count_else_counts_it(lake, tmp_path):
@@ -339,6 +509,45 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
         "public_price_event.parquet",
         "public_roaster.parquet",
     ]
+
+
+def test_public_tables_never_carry_an_openstreetmap_value(lake, tmp_path):
+    """Field-level provenance (#90): a roaster known from an open source and later found by OpenStreetMap (ODbL)
+    publishes the open source's name, city and state in public_roaster and public_coffee, never OpenStreetMap's.
+    A city only OpenStreetMap gave is not published. The gate test public_values_have_open_provenance passes."""
+    now = datetime(2026, 10, 1, tzinfo=UTC)
+    later = datetime(2026, 10, 8, tzinfo=UTC)
+    lake.write("registry", "registry/source=overture-2026-09-17.0/a.parquet", [
+        {"added_at": now, "source": "overture-2026-09-17.0", "roaster_id": "overture.coffee",
+         "name": "Overture Roasters", "state": "OR", "locations": 1},
+    ])  # fmt: skip
+    lake.write("registry", "registry/source=osm/b.parquet", [
+        {"added_at": later, "source": "osm", "roaster_id": "overture.coffee", "name": "OSM Roasters",
+         "city": "Portland", "state": "WA", "locations": 1},
+        # curated in the seed (tests/fixtures/roasters.csv: Onyx Coffee Lab, Rogers, AR)
+        {"added_at": later, "source": "osm", "roaster_id": "onyxcoffeelab.com", "name": "Onyx OSM",
+         "city": "Bentonville", "state": "MO", "locations": 1},
+    ])  # fmt: skip
+    for rid in ("onyxcoffeelab.com", "overture.coffee"):
+        probe(lake, "2026-10-18", rid)
+        run(lake, "2026-10-19", rid, [product("A")])
+    con = build(lake, tmp_path)
+
+    assert con.execute(
+        "select roaster_id, roaster_name, city, state from public_roaster order by roaster_id"
+    ).fetchall() == [
+        ("onyxcoffeelab.com", "Onyx Coffee Lab", "Rogers", "AR"),
+        ("overture.coffee", "Overture Roasters", None, "OR"),
+    ]
+    assert con.execute(
+        "select distinct roaster_id, roaster_name, roaster_state from public_coffee order by roaster_id"
+    ).fetchall() == [
+        ("onyxcoffeelab.com", "Onyx Coffee Lab", "AR"),
+        ("overture.coffee", "Overture Roasters", "OR"),
+    ]
+    con.close()
+    r = run_dbt(lake, tmp_path, "test", "--select", "public_values_have_open_provenance")
+    assert r.returncode == 0 and "PASS=1 " in r.stdout, r.stdout[-2000:]
 
 
 def test_old_and_new_shots_with_equipment_and_bags(lake, tmp_path):
@@ -583,6 +792,112 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
     assert '"version":"20261027T060000-abcdef"' in landing and '"dateModified":"2026-10-26"' in landing
 
 
+def test_site_catalog_adds_the_roasters_city_after_mains_columns(lake, tmp_path):
+    """catalog.json is a published download, so it only gains columns: main's columns stay first, in their order, and
+    roaster_id and roaster_city (public_roaster's city, as stored) follow. The page fetches catalog.json?b=<a hash of the
+    file>, so a new page never reads a cached older file."""
+    from coffeedata import site
+
+    for rid in ("onyxcoffeelab.com", "1802roasters.com"):
+        run(lake, "2026-10-19", rid, [product("A"), product("B")])
+    build(lake, tmp_path, build_id="20261020T060000-abcdef", as_of_run="2026-10-19", **ANY_RUN).close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    assert list(catalog) == ["release", "columns", "rows"]
+    assert catalog["columns"] == [
+        "coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
+        "tasting_notes", "price_per_100g", "min_price_usd", "in_stock", "catalog_status", "first_seen",
+        "roaster_id", "roaster_city",
+    ]  # fmt: skip
+    cols = catalog["columns"]
+    got = {tuple(r[cols.index(c)] for c in ("coffee_id", "roaster_id", "roaster_name", "roaster_state", "roaster_city"))
+           for r in catalog["rows"]}  # fmt: skip
+    # The fixture registry has no city for 1802 Roasters: left empty, not guessed.
+    assert got == {
+        ("onyxcoffeelab.com:A", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("onyxcoffeelab.com:B", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("1802roasters.com:A", "1802roasters.com", "1802 Roasters", "CA", None),
+        ("1802roasters.com:B", "1802roasters.com", "1802 Roasters", "CA", None),
+    }
+    page = (out / "catalog" / "index.html").read_text()
+    # The page asks for its own file by a hash of it, so a new page never gets a cached older one.
+    key = hashlib.sha256((out / "catalog" / "catalog.json").read_bytes()).hexdigest()[:12]
+    assert f'fetch("catalog.json?b={key}")' in page
+    assert '<select id="state" aria-label="Roaster state (number of roasters)">' in page
+    assert '<p class="note" id="count" role="status">' in page
+    assert '"MI": "Michigan"' in page and '["west virginia", "WV"]' in page
+    # The Dataset JSON-LD describes the download as it is.
+    assert "plus roaster_city" in page
+
+
+def test_the_sites_single_origin_definition_selects_public_market_weeklys_coffees(lake, tmp_path):
+    """site.SINGLE_ORIGIN, over the site's coffees, selects the same coffees public_market_weekly counts, cell for
+    cell, through every way a coffee leaves it: delisted, archived, wholesale, a blend, unknown origin (a sold-out
+    one stays). This lake has no chain roaster: the site leaves chains out, the table doesn't yet. So the page's origin count and its charts are the published table's, and a blend's origin list
+    ("Colombia, Brazil") is not an origin country."""
+    from coffeedata import site
+
+    rid = "onyxcoffeelab.com"
+    archived = product("A", title="Guatemala Huehuetenango", available=False) | {"tags": ["Archive"]}
+    products = [
+        product("K", title="Kenya Kamwangi AA Washed"),
+        product("E", title="Ethiopia Guji Natural", available=False),
+        product("B", title="Colombia Brazil House Blend"),
+        product("U", title="House Roast"),
+        product("W", title="Wholesale Kenya Kiambu 5LB"),
+        archived,
+    ]
+    probe(lake, "2026-10-11", rid)
+    run(lake, "2026-10-12", rid, [*products, product("D", title="Colombia Huila Washed")])
+    run(lake, "2026-10-19", rid, products)
+    lake.write_partition(
+        "enrichments",
+        "2026-10-19",
+        "llm1",
+        [
+            {
+                "extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+                "roaster_id": rid,
+                "product_id": "B",
+                "body_hash": "bB",
+                "method": "llm",
+                "needs_llm": False,
+                "origin_country": "Colombia, Brazil",
+                "is_blend": True,
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    # Each way out is really in the fixture.
+    got = {
+        r[0]: r[1:]
+        for r in con.execute(
+            "select product_id, is_listed, catalog_status, is_wholesale, is_blend, origin_country from dim_coffee"
+        ).fetchall()
+    }
+    assert got["D"][0] is False and got["A"][1] == "archived" and got["W"][2] is True
+    assert got["B"][3] is True and got["U"][4] is None and got["E"][1] == "sold_out"
+    cells = "select origin_country, coalesce(process, 'unknown'), count(*), count(*) filter (where in_stock)"
+    for view in site.SITE_VIEWS:
+        con.execute(view)
+    by_site = con.execute(f"{cells} from site_coffee where {site.SINGLE_ORIGIN} group by all").fetchall()
+    by_table = con.execute(
+        "select origin_country, process, coffees, in_stock from public_market_weekly"
+    ).fetchall()
+    assert sorted(by_site) == sorted(by_table) and {r[0] for r in by_table} == {"Kenya", "Ethiopia"}
+    con.close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    landing = (out / "index.html").read_text()
+    assert re.search(r'<div class="n">2</div><div class="l">origin countries</div>', landing)
+    assert re.search(r'<div class="n">4</div><div class="l">coffees listed</div>', landing)  # K, E, B, U
+    assert "Kenya: 1 coffees in stock" in landing and "Colombia, Brazil" not in landing
+    # The catalog page's process chart counts the same in-stock single origins as the landing's origin chart.
+    # Once in each of the chart's two drawings (wide and narrow).
+    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1", "1"]
+
+
 # A release's vars without the run checks (the fixture registry lists roasters these lakes never fetch).
 ANY_RUN = {"min_attempted_share": 0, "min_ok_share": 0}
 
@@ -731,7 +1046,8 @@ def test_every_roaster_status_has_a_coverage_label():
 
     from coffeedata import site
 
-    sql = (ROOT / "dbt" / "models" / "marts" / "dim_roaster.sql").read_text()
+    # dim_roaster's status is decided in int_roaster_state
+    sql = (ROOT / "dbt" / "models" / "intermediate" / "int_roaster_state.sql").read_text()
     statuses = set(re.findall(r"(?:then|else) '(\w+)'", sql))
     assert statuses and statuses == set(site.STATUS_LABELS)
 
@@ -744,14 +1060,15 @@ def test_states_are_the_fifty():
 
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
-    partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, product_decisions'
-    latest record, and the guard and readiness (int_catalog_decided). They read hand-written
-    rows, but dbt reads the column types of their inputs from built tables, so a small lake is built first."""
+    partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
+    per store, product_decisions' latest record, and the guard and readiness (int_catalog_decided). They read
+    hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
+    first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
-    r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
+    r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=19 " in r.stdout
+    assert "PASS=42 " in r.stdout
 
 
 def test_keyword_filters_reach_the_build_through_its_snapshot_only(lake, tmp_path, monkeypatch):
@@ -901,6 +1218,91 @@ def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
         "natural",
         "llm",
     )
+    # Claude's row doesn't change what the rules said: they left it incomplete (prod-health's abstain:enrichment)
+    assert con.execute("select rules_complete from dim_coffee").fetchone() == (False,)
+    assert con.execute("select needs_llm from stg_products where is_coffee").fetchone() == (True,)
+
+
+def test_dim_coffee_maps_origins_to_iso(lake, tmp_path):
+    """dim_coffee and the public tables carry the ISO 3166-1 short name and alpha-2 code (int_origin_country), the
+    captured spelling stays in origin_country_raw, a list of several countries has no country (and leaves the market
+    table), and the place a spelling names fills an empty origin_region. The site, built from the release tables
+    alone, shows dbt's display name. An unmapped spelling warns and gets no country."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    titles = {"A": "Tanzania Peaberry", "B": "Cerrado Coffee Roast", "C": "Kona Extra Fancy", "D": "Duo Coffee Roast",
+              "E": "Puerto Rico Yauco Selecto"}  # fmt: skip
+    run(lake, "2026-10-19", rid, [product(k, title=t) for k, t in titles.items()])
+
+    def llm(pid, origin, region=None):
+        return {"extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC), "roaster_id": rid, "product_id": pid,
+                "body_hash": f"b{pid}", "method": "llm", "needs_llm": False, "origin_country": origin,
+                "origin_region": region, "process": "washed", "is_blend": False}  # fmt: skip
+
+    lake.write_partition("enrichments", "2026-10-19", "llm1",
+                         [llm("B", "Brasil"), llm("C", "Hawaii, Usa"), llm("D", "Colombia, Honduras")])  # fmt: skip
+    con = build(lake, tmp_path)
+    got = {r[0]: r[1:] for r in con.execute(
+        "select product_id, origin_country, origin_country_code, origin_country_raw, origin_region from dim_coffee"
+    ).fetchall()}  # fmt: skip
+    assert got == {
+        "A": ("Tanzania, United Republic of", "TZ", "Tanzania", None),
+        "B": ("Brazil", "BR", "Brasil", None),
+        "C": ("United States", "US", "Hawaii, Usa", "Hawaii"),
+        "D": (None, None, "Colombia, Honduras", None),
+        "E": ("Puerto Rico", "PR", "Puerto Rico", None),
+    }
+    public = con.execute(
+        "select origin_country, origin_country_code from public_coffee order by 1"
+    ).fetchall()
+    assert ("Brazil", "BR") in public and (None, None) in public
+    cells = con.execute(
+        "select distinct origin_country, origin_country_code from public_market_weekly"
+    ).fetchall()
+    assert sorted(cells) == [("Brazil", "BR"), ("Puerto Rico", "PR"), ("Tanzania, United Republic of", "TZ"),
+                             ("United States", "US")]  # fmt: skip
+
+    con.close()
+
+    # The name the site shows comes from dbt (dim_coffee.origin_country_display; var origin_names, default common),
+    # read from the served release: a database holding only the release tables, as quality.materialize writes it.
+    from coffeedata import quality, site
+
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert con.execute("select origin_country_display from dim_coffee where product_id = 'A'").fetchone() == (
+        "Tanzania",
+    )
+    served = duckdb.connect(str(tmp_path / "served.duckdb"))
+    for t in quality.RELEASE_TABLES:
+        served.execute(f"create table {t} as select * from read_parquet('{_export(con, t, tmp_path)}')")
+    served.close()
+    con.close()
+    out = site.build(tmp_path / "served.duckdb", tmp_path / "site").parent
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    names = {r[catalog["columns"].index("origin_country")] for r in catalog["rows"]}
+    # The page without its JSON-LD, which quotes the contract's column descriptions.
+    html = re.sub(r"<script.*?</script>", "", (out / "index.html").read_text(), flags=re.S)
+    assert "Tanzania" in names and "Tanzania, United Republic of" not in names and "Brazil" in names
+    assert "Tanzania" in html and "United Republic" not in html
+
+    # An unmapped spelling warns and is published without a country: it never holds back a release.
+    later = llm("A", "Narnia") | {"extracted_at": datetime(2026, 10, 19, 13, tzinfo=UTC)}
+    lake.write_partition("enrichments", "2026-10-19", "llm2", [later])
+    con = build(lake, tmp_path / "unmapped")
+    assert con.execute(
+        "select origin_country, origin_country_code, origin_country_raw from dim_coffee where product_id = 'A'"
+    ).fetchone() == (None, None, "Narnia")
+    con.close()
+    log = (tmp_path / "unmapped" / "logs" / "dbt.log").read_text()
+    assert re.search(r"WARN 1 origin_countries_are_mapped", log), "the unmapped spelling must warn"
+
+
+def _export(con, table, tmp_path):
+    """A release table as a parquet file, as a release in the lake holds it."""
+    path = tmp_path / "release" / f"{table}.parquet"
+    path.parent.mkdir(exist_ok=True)
+    con.execute(f"copy {table} to '{path}' (format parquet)")
+    return path
 
 
 def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tmp_path, monkeypatch):
@@ -1060,3 +1462,396 @@ def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_
     head, example = quality.tag_parity_messages(db)
     assert head.startswith("1 products decide differently on raw and decoded tags")
     assert example.startswith(f"{rid}:P 'Coffee P Roast': {', '.join(sorted(every))} differ")
+
+
+# Each error-severity guard that no input can trip through the models (its model's own filter already keeps such rows
+# out), with the bad row the guard exists to stop, written into the built table it reads.
+GUARD_BREAKS = {
+    "price_per_100g_in_range": "update dim_coffee set price_per_100g = 250 where product_id = 'A'",
+    "sane_coffee_listings": "update dim_coffee set title = 'Replacement Burrs' where product_id = 'A'",
+    "unique_runs": "insert into stg_runs select * from stg_runs limit 1",
+    "public_tables_are_facts_only": "alter table public_coffee add column tags varchar[]",
+    # a latest version with no bag-weight row (#136): dim_coffee would silently keep its stored grams
+    "variant_grams_are_valid": "delete from stg_variant_grams",
+    # a published roaster that is a chain: public_roaster would have stopped leaving chains out
+    "public_tables_have_no_chain": "update dim_roaster set is_chain = true where roaster_id = 'onyxcoffeelab.com'",
+    # a published value only OpenStreetMap gave (#90; the lake below has an osm record of Onyx in Bentonville):
+    # stg_registry would have let it through
+    "public_values_have_open_provenance": "update public_roaster set city = 'Bentonville' "
+    "where roaster_id = 'onyxcoffeelab.com'",
+}
+
+
+def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path):
+    """price_per_100g_in_range, sane_coffee_listings, unique_runs, public_tables_are_facts_only,
+    variant_grams_are_valid, public_tables_have_no_chain and public_values_have_open_provenance pass on every
+    synthetic build, since the models never produce such a row. Each is made to fail here, so a guard that stopped
+    selecting anything (a renamed column, a dropped ref) would show."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    run(lake, "2026-10-19", rid, [product("A"), product("B", 18.0)])
+    # An OpenStreetMap record of Onyx (curated in the seed, so it publishes the seed's city, Rogers): the value
+    # public_values_have_open_provenance's break plants is one OpenStreetMap did give.
+    lake.write("registry", "registry/source=osm/x.parquet", [
+        {"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "osm", "roaster_id": rid, "name": "Onyx",
+         "city": "Bentonville", "state": "AR", "locations": 1},
+    ])  # fmt: skip
+    build(lake, tmp_path).close()
+    db = tmp_path / "coffee.duckdb"
+    clean = tmp_path / "clean.duckdb"
+    shutil.copy(db, clean)
+    for guard, break_it in GUARD_BREAKS.items():
+        ok = run_dbt(lake, tmp_path, "test", "--select", guard)
+        assert ok.returncode == 0 and "PASS=1 " in ok.stdout, (guard, ok.stdout[-2000:])
+        with duckdb.connect(str(db)) as con:
+            con.execute(break_it)
+        bad = run_dbt(lake, tmp_path, "test", "--select", guard)
+        assert bad.returncode != 0 and "ERROR=1 " in bad.stdout, (guard, bad.stdout[-2000:])
+        shutil.copy(clean, db)
+
+
+# The grain test (dbt/tests/generic/grain.sql), on stg_runs (roaster_id, run_date), on mart_dial_in, whose
+# grinder_id and key may be null, and on mart_market: what is written into the built table, and whether the test
+# must then fail.
+DIAL_IN_GRAIN = "grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id__key"
+_DIAL_IN = (
+    "insert into mart_dial_in (user_id, grinder_id, grain, key) values ({user}, {grinder}, 'coffee', 'k')"
+)
+GRAIN_CASES = [
+    ("grain_stg_runs_roaster_id__run_date", "insert into stg_runs select * from stg_runs limit 1", True),
+    # A null key part. `unique` over roaster_id || '|' || run_date, which grain replaced, passed this row.
+    ("grain_stg_runs_roaster_id__run_date",
+     "insert into stg_runs select * replace (null as run_date) from stg_runs limit 1", True),
+    # A column listed as nullable may be null, once per key: two rows sharing the null are a duplicate.
+    (DIAL_IN_GRAIN, _DIAL_IN.format(user="'u'", grinder="null"), False),
+    (DIAL_IN_GRAIN, ";".join([_DIAL_IN.format(user="'u'", grinder="null")] * 2), True),
+    (DIAL_IN_GRAIN, _DIAL_IN.format(user="null", grinder="'g'"), True),  # user_id isn't nullable
+    # Each column is compared on its own: ('a|b', 'c') and ('a', 'b|c') are two keys, not one.
+    ("grain_mart_market_origin_country__process",
+     "insert into mart_market (origin_country, process) values ('a|b', 'c'), ('a', 'b|c')", False),
+]  # fmt: skip
+
+
+def _shot(lake, shot_id: str, **fields) -> None:
+    lake.write("shots", f"shots/{shot_id}__20261020T060000.parquet", [{
+        "shot_id": shot_id, "logged_at": at("2026-10-20", 6), "deleted": False, "brewed_at": at("2026-10-20", 7),
+        "grinder_setting": 10.0, "dose_g": 18.0, "yield_g": 36.0, "time_s": 28.0, "brew_method": "espresso",
+        "rating": 4, "is_milk_drink": False} | fields])  # fmt: skip
+
+
+def test_the_grain_test_fails_on_a_duplicate_key_and_on_a_null_key_part(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A")])
+    # Two shots that name neither a coffee nor a bag (Shot allows it): one mart_dial_in row whose key is null. The
+    # build's gate passes it (key is nullable); without that, one such private shot would hold back the release.
+    _shot(lake, "s1")
+    _shot(lake, "s2", rating=5)
+    _shot(lake, "s3", coffee_freetext="House Espresso")
+    con = build(lake, tmp_path)
+    assert con.execute("select key, shots from mart_dial_in where grain = 'coffee' order by key nulls first").fetchall() == [
+        (None, 2), ("freetext:house espresso", 1)]  # fmt: skip
+    con.close()
+    db = tmp_path / "coffee.duckdb"
+    clean = tmp_path / "clean.duckdb"
+    shutil.copy(db, clean)
+    for test in dict.fromkeys(t for t, *_ in GRAIN_CASES):  # each passes on the clean build
+        ok = run_dbt(lake, tmp_path, "test", "--select", test)
+        assert ok.returncode == 0 and "PASS=1 " in ok.stdout, (test, ok.stdout[-2000:])
+    for test, write, fails in GRAIN_CASES:
+        with duckdb.connect(str(db)) as con:
+            for statement in write.split(";"):
+                con.execute(statement)
+        r = run_dbt(lake, tmp_path, "test", "--select", test)
+        assert (r.returncode != 0 and "ERROR=1 " in r.stdout) == fails, (test, write, r.stdout[-2000:])
+        assert fails or "PASS=1 " in r.stdout, (test, write, r.stdout[-2000:])
+        shutil.copy(clean, db)
+
+
+def _manifest_nodes(lake, tmp_path, name: str, **extra_vars) -> dict:
+    """dbt parse's manifest nodes, with these vars on top of run_dbt's."""
+    r = run_dbt(lake, tmp_path / name, "parse", **extra_vars)
+    assert r.returncode == 0, r.stdout[-2000:]
+    return json.loads((tmp_path / name / "target" / "manifest.json").read_text())["nodes"]
+
+
+def test_gate_tests_depend_on_their_models_whatever_the_vars(lake, tmp_path):
+    """A gate test that reads its model only when a build var is set still declares it (-- depends_on), so dbt's
+    graph (lineage, --select model+, the build order) is the same with and without the build's vars. Only
+    run_manifest_mode_values has no model: it reads raw."""
+
+    def parents(name, **extra_vars) -> dict[str, list[str]]:
+        nodes = _manifest_nodes(lake, tmp_path, name, **extra_vars)
+        return {
+            n["name"]: sorted(n["depends_on"]["nodes"])
+            for n in nodes.values()
+            if n["resource_type"] == "test"
+        }
+
+    plain = parents("plain")
+    assert [t for t, p in plain.items() if not p] == ["run_manifest_mode_values"]
+    assert plain["run_ok_rate"] == ["model.coffeedata.run_completeness"]
+    assert plain["build_metrics_in_band"] == [
+        "model.coffeedata.mart_build_profile",
+        "model.coffeedata.stg_builds",
+    ]
+    built = parents("vars", as_of_run="2026-10-19", today="2026-10-20", build_id="20261020T060000-abcdef",
+                    require_verdicts=True, baseline_build="20261013T060000-abcdef")  # fmt: skip
+    assert built == plain
+
+
+def test_every_model_has_a_description_and_a_grain_test(lake, tmp_path):
+    """docs/dbt/CONVENTION.md, sections 5 and 7, held for the next model too: every model of the public project has
+    a description and a grain test, either `grain` on the model or `unique` and `not_null` on one of its columns,
+    and no uniqueness test builds its key with || (a null part passes it)."""
+    nodes = _manifest_nodes(lake, tmp_path, "parse")
+    models = {uid: n["name"] for uid, n in nodes.items() if n["resource_type"] == "model"}
+    grain, single, joined = set(), {}, []
+    for n in nodes.values():
+        test = (n.get("test_metadata") or {}).get("name")
+        if n["resource_type"] != "test" or not test:
+            continue
+        column = n.get("column_name") or (n["test_metadata"].get("kwargs") or {}).get("column_name") or ""
+        if test == "unique" and "||" in column:
+            joined.append(n["name"])
+        if test == "grain":
+            grain.add(n["attached_node"])
+        elif test in ("unique", "not_null") and re.fullmatch(r"\w+", column):
+            single.setdefault((n["attached_node"], column), set()).add(test)
+    grain |= {uid for (uid, _), tests in single.items() if tests == {"unique", "not_null"}}
+    assert len(models) >= 43
+    assert sorted(m for uid, m in models.items() if not nodes[uid]["description"].strip()) == [], (
+        "no description"
+    )
+    assert sorted(m for uid, m in models.items() if uid not in grain) == [], "no grain test"
+    assert joined == [], "a key built with ||: use grain (dbt/tests/generic/grain.sql)"
+
+
+def _build_with_a_chain(lake, tmp_path):
+    """onyxcoffeelab.com and intelligentsia.com each list one Kenya; the seed gives intelligentsia.com 21 stores,
+    one over chain_store_threshold, so it is a chain."""
+    import csv
+
+    config = tmp_path / "config"
+    config.mkdir()
+    with (FIX / "roasters.csv").open() as f:
+        rows = list(csv.DictReader(f))
+    for r in rows:
+        r["locations"] = "21" if r["roaster_id"] == "intelligentsia.com" else r["locations"]
+    with (config / "roasters.csv").open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+    for rid, title in (("onyxcoffeelab.com", "Kenya Kiambu"), ("intelligentsia.com", "Kenya Gichathaini")):
+        probe(lake, "2026-10-18", rid)
+        run(lake, "2026-10-19", rid, [product("A", title=title)])
+    return build(lake, tmp_path, config_dir=str(config), build_id="20261020T060000-abcdef", as_of_run="2026-10-19",
+                 **ANY_RUN)  # fmt: skip
+
+
+def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
+    """is_chain (more than 20 stores): mart_market and everything on the site (the catalog, the headline counts, the
+    charts and the states) leave a chain's coffees out."""
+    from coffeedata import site
+
+    con = _build_with_a_chain(lake, tmp_path)
+    assert dict(con.execute("select roaster_id, is_chain from dim_coffee").fetchall()) == {
+        "onyxcoffeelab.com": False, "intelligentsia.com": True}  # fmt: skip
+    assert con.execute(
+        "select coffees, roasters from mart_market where origin_country = 'Kenya'"
+    ).fetchall() == [(1, 1)]
+    con.close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    assert {r[catalog["columns"].index("coffee_id")].split(":")[0] for r in catalog["rows"]} == {
+        "onyxcoffeelab.com"
+    }
+    assert not site.INCLUDE_CHAINS
+    landing = (out / "index.html").read_text()
+    for n, label in ((1, "coffees listed"), (1, "roasters with coffee listed"), (1, "origin countries")):
+        assert f'<div class="n">{n}</div><div class="l">{label}</div>' in landing
+    assert "Kenya: 1 coffees in stock" in landing and "Gichathaini" not in landing
+    # The process chart: the chain's in-stock Kenya isn't counted either.
+    # Once in each of the chart's two drawings (wide and narrow).
+    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1", "1"]
+
+
+def test_every_chain_override_names_a_registry_roaster():
+    """An override for a roaster_id the registry doesn't list would decide nothing, silently: each one of
+    dbt/seeds/chain_overrides.csv names a roaster of config/roasters.csv, with a reason."""
+    import csv
+
+    with (ROOT / "config" / "roasters.csv").open(newline="") as f:
+        registry = {r["roaster_id"] for r in csv.DictReader(f)}
+    with (ROOT / "dbt" / "seeds" / "chain_overrides.csv").open(newline="") as f:
+        overrides = list(csv.DictReader(f))
+    assert overrides and all(o["roaster_id"] in registry for o in overrides), [
+        o["roaster_id"] for o in overrides if o["roaster_id"] not in registry
+    ]
+    assert all(o["is_chain"] in ("true", "false") and len(o["reason"]) >= 3 for o in overrides)
+
+
+def test_public_market_weekly_leaves_out_chains(lake, tmp_path):
+    """Formerly a strict xfail (docs/RULES.md rule 77): public_market_weekly counted a chain's coffees that
+    mart_market and the site left out. public_roaster now leaves chains out, so the Kenya cell is onyx's alone."""
+    con = _build_with_a_chain(lake, tmp_path)
+    got = con.execute(
+        "select coffees, roasters from public_market_weekly where origin_country = 'Kenya'"
+    ).fetchall()
+    con.close()
+    assert got == [(1, 1)]
+
+
+def test_a_chain_is_crawled_and_kept_internally_but_never_public(lake, tmp_path):
+    """The owner's decision: chains are still scraped, but filtered from the public result. The chain's coffee and
+    price events stay in dim_coffee and fct_price_event; no public table, and not the site, has its rows."""
+    from coffeedata import public, site
+
+    con = _build_with_a_chain(lake, tmp_path)
+    chain, indie = "intelligentsia.com", "onyxcoffeelab.com"
+    row = con.execute(
+        "select is_chain, coffees_listed from dim_roaster where roaster_id = ?", [chain]
+    ).fetchone()
+    assert row == (True, 1)
+    assert con.execute("select count(*) from fct_price_event where roaster_id = ?", [chain]).fetchone()[0] > 0
+    # public_market_weekly has no roaster_id: test_public_market_weekly_leaves_out_chains covers it
+    assert set(public.PUBLIC_TABLES) - {"public_market_weekly"} == {
+        "public_roaster",
+        "public_coffee",
+        "public_price_event",
+    }
+    sql = "select count(*) filter (where roaster_id = ?), count(*) filter (where roaster_id = ?) from {}"
+    for table in ("public_roaster", "public_coffee", "public_price_event"):
+        chains, indies = con.execute(sql.format(table), [chain, indie]).fetchone()
+        assert chains == 0 and indies > 0, table
+    con.close()
+    ok = run_dbt(lake, tmp_path, "test", "--select", "public_tables_have_no_chain")
+    assert ok.returncode == 0 and "PASS=1 " in ok.stdout, ok.stdout[-2000:]
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    assert chain not in (out / "catalog" / "catalog.json").read_text()
+
+
+# --- Suspected bugs (docs/RULES.md): what the models should output. Strict xfails: each fails once fixed. ---------
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="suspected bugs: the dbt unit tests tagged suspected_bug fail today (flavor_lookup_ignores_case: a "
+    "capitalised note gets no category; a_bag_with_no_shots_has_none_in_window: null, not 0)",
+)
+@pytest.mark.parametrize(
+    "unit_test", ["flavor_lookup_ignores_case", "a_bag_with_no_shots_has_none_in_window"]
+)
+def test_suspected_bug_unit_tests(lake, tmp_path, unit_test):
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    build(lake, tmp_path).close()  # dbt reads the inputs' column types from built tables
+    r = run_dbt(lake, tmp_path, "test", "--select", unit_test)
+    # Only the expected failure is an xfail; anything else raises RuntimeError, which fails the test:
+    # - the named unit test must have been selected and run (renamed, deleted or disabled, dbt runs nothing and
+    #   exits 0, and the bug would go untracked);
+    # - a failure must be its output differing from the expected one, not a broken test.
+    if "TOTAL=1" not in r.stdout or f"::{unit_test}" not in r.stdout:
+        raise RuntimeError(f"{unit_test} wasn't selected and run:\n{r.stdout[-2000:]}")
+    if r.returncode and "differs from" not in r.stdout:
+        raise RuntimeError(r.stdout[-2000:])
+    assert r.returncode == 0 and "PASS=1 " in r.stdout, r.stdout[-2000:]
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="suspected bug: stg_enrichments breaks a tie between two extractions stored in the same second by "
+    "md5(to_json(e)), and to_json renders extracted_at in the session's time zone, so the view picks another row "
+    "when it is read in another zone (the build itself is pinned to UTC by profiles.yml)",
+)
+def test_suspected_bug_the_enrichment_tie_break_depends_on_the_session_time_zone(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    pids = [f"P{i}" for i in range(8)]
+    run(lake, "2026-10-19", rid, [product(p) for p in pids])
+    lake.write_partition("enrichments", "2026-10-19", "llm1", [
+        {"extracted_at": at("2026-10-19"), "roaster_id": rid, "product_id": p, "body_hash": f"b{p}", "method": "llm",
+         "needs_llm": False, "origin_country": country, "process": "washed"}
+        for p in pids for country in ("Ethiopia", "Kenya")])  # fmt: skip
+    build(lake, tmp_path).close()
+    picks = {}
+    for tz in ("UTC", "Asia/Tokyo"):
+        with duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True) as con:
+            con.execute(f"set TimeZone = '{tz}'")
+            picks[tz] = con.execute(
+                "select product_id, origin_country from stg_enrichments order by 1"
+            ).fetchall()
+    if len(picks["UTC"]) != len(pids):  # only a different pick is the expected failure
+        raise RuntimeError(picks)
+    assert picks["UTC"] == picks["Asia/Tokyo"]
+
+
+def test_bag_weights_are_read_again_from_the_stored_text(lake, tmp_path):
+    """stg_variant_grams (coffeedata.bag_weight) gives dim_coffee its grams: a weight in the product title, a
+    slug-style option or the description fills options the crawler stored none for; a misread option ("1/2 lb" stored
+    as 907 g) is corrected; a pack with a count is its total; a bundle's weight is dropped and not refilled from the
+    title; a stored weight the listing never states (Shopify's grams) is dropped. The raw snapshots keep what the
+    crawler stored."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+
+    def opts(p, *variants):
+        p["variants"] = [
+            {
+                "variant_id": f"{p['product_id']}-{i}",
+                "title": t,
+                "price_usd": price,
+                "grams": g,
+                "available": True,
+            }
+            for i, (t, price, g) in enumerate(variants)
+        ]
+        return p
+
+    products = [
+        opts(product("A", title="Bolivia Coffee - 1 lb"), ("Whole Bean", 20.0, None), ("Drip", 20.0, None)),
+        opts(
+            product("B", title="Colombia Coffee"),
+            ("1-lb-whole-bean", 18.0, None),
+            ("5-lb-whole-bean", 80.0, None),
+        ),
+        opts(product("C", title="Mexico Coffee"), ("1/2 lb", 10.0, 907), ("1 lb", 18.0, 454)),
+        opts(product("D", title="Kenya Coffee"), ("Whole Bean", 17.0, None)),
+        opts(product("E", title="Peru Coffee"), ("12oz - 3 Pack", 45.0, 340)),
+        opts(product("F", title="Sumatra Coffee 12 oz"), ("12 oz Bundle", 30.0, 340)),
+        opts(product("G", title="Ethiopia Coffee"), ("Default Title", 19.0, 363)),
+    ]
+    run(lake, "2026-10-19", rid, products)
+    lake.write_partition(
+        "bodies",
+        "2026-10-19",
+        "b1",
+        [
+            {
+                "body_hash": "bD",
+                "body_text": "Bright and juicy.\n12 oz bag",
+                "first_seen_run": date(2026, 10, 19),
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    got = dict(
+        (
+            (pid, (p100, sizes))
+            for pid, p100, sizes in con.execute(
+                "select product_id, price_per_100g, bag_sizes_g from dim_coffee order by product_id"
+            ).fetchall()
+        )
+    )
+    assert got == {
+        "A": (4.41, [454]),
+        "B": (3.53, [454, 2268]),
+        "C": (3.96, [227, 454]),
+        "D": (5.0, [340]),
+        "E": (4.41, [1021]),
+        "F": (None, None),
+        "G": (None, None),
+    }
+    raw = dict(con.execute("select product_id, [v.grams for v in variants] from stg_snapshots").fetchall())
+    assert raw["A"] == [None, None] and raw["C"] == [907, 454] and raw["E"] == [340]

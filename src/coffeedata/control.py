@@ -9,6 +9,7 @@ Cloud Scheduler's (time-based); this table says what actually ran.
 
 from __future__ import annotations
 
+import errno
 import json
 import os
 from datetime import UTC, date, datetime
@@ -64,6 +65,24 @@ def execution() -> dict:
     if (n := os.environ.get("CLOUD_RUN_TASK_ATTEMPT", "")).isdigit():
         out["task_attempt"] = int(n)
     return out
+
+
+def this_execution(lake: Lake, week: str, job: str, connector: str | None) -> list[dict]:
+    """The rows of `job` (and `connector`) written by this Cloud Run execution's attempts, the current one's included,
+    when this attempt is a retry (CLOUD_RUN_TASK_ATTEMPT > 0); [] for a first attempt or outside Cloud Run. A retry
+    uses them to keep the first attempt's window, or to skip what it already did."""
+    from .lake import retry_transient
+
+    ex = execution()
+    if not ex.get("execution") or not ex.get("task_attempt"):
+        return []
+    return [
+        r
+        for r in retry_transient(rows, lake, week)
+        if r["job"] == job
+        and r["connector"] == connector
+        and detail_of(r).get("execution") == ex["execution"]
+    ]
 
 
 def start(
@@ -143,19 +162,37 @@ def landed(lake: Lake, run_date: str, job: str = "crawl") -> set[str]:
 
 
 def rollup(lake: Lake, run_date: str) -> int:
-    """Fold a week's row files into one (the weekly merge does it): no small files in the control table."""
+    """Fold a week's row files into one (the weekly merge does it): no small files in the control table.
+
+    Another job sharing the staging folder (the monthly discover, when the 1st is a Tuesday) can publish, and so
+    remove, a file between the glob and its read or unlink. Such a file is skipped: its rows are in the dataset
+    already. One it removes after the read is in both the dataset and the rollup, which is harmless, since `rows`
+    keeps one row per attempt."""
     import pyarrow as pa
 
     d = lake.root / "job_manifests" / f"run_date={run_date}"
     files = sorted(d.glob("attempt=*.parquet"))
     if len(files) <= 1:
         return len(files)
-    tbl = pa.concat_tables([pq.read_table(f).cast(SCHEMAS["job_manifests"]) for f in files])
+    read, tables = [], []
+    for f in files:
+        try:
+            tables.append(pq.read_table(f).cast(SCHEMAS["job_manifests"]))
+        except (
+            OSError
+        ) as e:  # gone: FileNotFoundError, or ESTALE on a gcsfuse mount if removed after the open
+            if not isinstance(e, FileNotFoundError) and e.errno != errno.ESTALE:
+                raise
+            continue
+        read.append(f)
+    if len(read) <= 1:
+        return len(read)
+    tbl = pa.concat_tables(tables)
     out = d / f"attempt=rollup-{new_batch_id()}.parquet"
     pq.write_table(tbl, out.with_suffix(".tmp"), compression="zstd")
     out.with_suffix(".tmp").replace(out)
-    for f in files:
-        f.unlink()
+    for f in read:
+        f.unlink(missing_ok=True)
     return tbl.num_rows
 
 

@@ -1,0 +1,223 @@
+version: 2
+
+# Staging models that models/schema.yml doesn't describe. dbt takes one entry per model, so a model is described
+# either here or there, never in both (docs/dbt/CONVENTION.md, section 7).
+models:
+  - name: stg_probes
+    description: >-
+      One row per probe of a roaster's site (raw probes): whether it answered, the host it resolved to and the
+      platform found there. int_roaster_state reads the history for a roaster's host and status. A row without a
+      roaster_id (the lake's zero-row schema file reads as none) is left out.
+    data_tests:
+      # Warn, not error: this key is the closest the model's columns allow, and it can repeat. Two probes of one
+      # roaster in the same second are a case the build supports (int_roaster_state breaks the tie by value, and
+      # tests/test_reproducible.py's lake holds one on purpose), so the test warns there. The raw key is
+      # (roaster_id, batch_id). The plan: carry batch_id through this model, a change to its output and so a
+      # change of its own, then test that key at error.
+      - grain:
+          arguments: {columns: [roaster_id, probed_at]}
+          config: {severity: warn}
+    columns:
+      - name: run_date
+        description: The day the probe was recorded under.
+      - name: probed_at
+        description: When the probe ran (UTC).
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: status
+        description: ok when the site answered; anything else is a failed probe, which never moves a roaster's host.
+      - name: http_status
+        description: The HTTP status the site answered with, if it answered.
+      - name: final_host
+        description: The host the site resolved to, after redirects.
+      - name: platform
+        description: The store platform the probe found (shopify, woocommerce, squarespace, square_online, generic).
+  - name: stg_registry
+    description: >-
+      One row per roaster the registry knows: the seed list (stg_roaster_seed) joined with the roasters the lake
+      adds by discovery or by hand (stg_registry_records, the newest record per roaster). Every roaster stays a row:
+      opted-out ones and aliases are flagged (opted_out, alias_of), not removed. A roaster known from an open source
+      (Overture, curated, manual) takes its name, city and state from open sources only, never from OpenStreetMap
+      (ODbL), so the public tables carry no OpenStreetMap value (#90).
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain; the key of every roaster model.
+        data_tests: [unique, not_null]
+      - name: roaster_name
+        description: >-
+          The roaster's name. Known from an open source: the newest non-null open value in the lake, else the seed's
+          (when its sources are open), never an OpenStreetMap one; name, city and state are picked per field. Known only from OpenStreetMap (never public): the lake's
+          newest, else the seed's.
+      - name: city
+        description: >-
+          The roaster's city, picked as roaster_name is: null when only OpenStreetMap gave one to a roaster an open
+          source knows.
+      - name: state
+        description: The roaster's state, picked as roaster_name is.
+      - name: locations
+        description: >-
+          Its store count as discovery counted it (US Overture places listing its website that are roasteries); 1
+          when unknown. int_roaster_state decides is_chain from it.
+      - name: opted_out
+        description: The roaster asked not to be crawled, in the seed or in the lake.
+      - name: sources
+        description: Where the registry knows it from (overture, curated, manual, osm), joined with +.
+      - name: seed_host
+        description: The host the seed list recorded (final_host), if any.
+      - name: seed_platform
+        description: The platform the seed list recorded, if any.
+      - name: seed_probed
+        description: When the seed list's host was last probed, if recorded.
+      - name: country
+        description: ISO 3166-1 alpha-2, as the seed states it; US for a roaster the lake alone lists.
+      - name: alias_of
+        description: >-
+          Hand-checked: another roaster_id that serves the same store (a rebrand whose old domain doesn't redirect).
+          Null: decided by host alone (macros/roaster_alias.sql).
+      - name: first_added
+        description: When the lake first listed it; null for a roaster from the seed list alone.
+  - name: stg_registry_records
+    description: >-
+      One row per record of the lake's raw registry: a roaster added by discovery (overture-<release>, osm) or by
+      hand (manual), plus each place of the source list (candidates) the build's snapshot flags as a roaster that the
+      registry doesn't list (var source_roasters), with is_open_source. stg_registry picks each roaster's values from these; the test
+      public_values_have_open_provenance checks every published registry value against them. A row without a
+      roaster_id (the lake's zero-row schema file reads as none) is left out.
+    data_tests:
+      # Raw registry has no key of its own: a source lists a roaster again in a later run, and two records of one
+      # roaster can share a second (tests/test_reproducible.py's lake holds such a tie). The whole record is the key,
+      # so this fails when raw holds the same record twice, a double write. Warn, not error: every pick stg_registry
+      # makes is unchanged by a repeat, so a duplicate changes no output. The plan: once discovery has written to
+      # the lake (its first osm and overture runs), check the history for exact repeats, and make this an error if
+      # it has none, so a double write fails the build from then on.
+      - grain:
+          arguments:
+            columns: [roaster_id, source, added_at, name, city, state, locations, opted_out]
+            nullable: [source, added_at, name, city, state, locations, opted_out]
+          config: {severity: warn}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: source
+        description: Where the record came from (overture-<release>, osm, manual).
+      - name: added_at
+        description: When the record was written (UTC).
+      - name: is_open_source
+        description: >-
+          The record's whole source may feed the public tables (macros/roaster_alias.sql is_open_record_source:
+          overture, overture-<release>, curated, manual); false for OpenStreetMap (ODbL), a name that only starts
+          like an open one (manual-osm-import), several sources at once (overture+osm) and anything else.
+  - name: stg_roaster_seed
+    description: >-
+      One row per roaster in the seed list (config/roasters.csv): the curated and Overture-derived roasters
+      stg_registry starts from, empty text read as null.
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain.
+        data_tests: [unique, not_null]
+      - name: sources
+        description: Where the seed knows it from (overture, curated), joined with +.
+  - name: stg_run_overrides
+    description: >-
+      One row per roaster-week a person decided on: the latest override (accept, reject or use_batch) of the
+      append-only raw run_overrides. stg_run_walk applies it when it decides which weeks count.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, run_date]}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: run_date
+        description: The weekly run the decision is about (its Monday).
+      - name: action
+        description: accept (the week counts), reject (it never counts) or use_batch (batch_id counts for the week).
+        data_tests:
+          - accepted_values: {arguments: {values: [accept, reject, use_batch]}}
+      - name: batch_id
+        description: The batch a use_batch override pins; null otherwise.
+      - name: reason
+        description: The free-text reason the person gave with `coffeedata override`.
+      - name: added_at
+        description: When the override was recorded (UTC); the latest per roaster-week wins.
+  - name: stg_verdicts
+    description: >-
+      One row per product version (input_hash) Claude has judged: its latest verdict for the build's verdict model
+      and definition (vars verdict_model, verdict_definition; verdict.py). Empty without a verdict model, when the
+      build uses the rules alone. Among verdicts stored in the same second, coffee wins.
+    columns:
+      - name: input_hash
+        description: The product version the verdict is about (macro product_input_hash, over the raw tags).
+        data_tests: [unique, not_null]
+      - name: label
+        description: coffee, not_coffee or unsure. An unsure verdict leaves the decision to the rules.
+        data_tests:
+          - accepted_values: {arguments: {values: [coffee, not_coffee, unsure]}}
+      - name: model
+        description: The Claude model that gave the verdict (the build's verdict_model).
+  - name: stg_enrichments
+    description: >-
+      One row per product and description (roaster_id, product_id, body_hash): its current extracted attributes
+      from the append-only raw enrichments. Claude's extraction (method llm) beats the rules'; among those, the
+      newest wins. dim_coffee joins it to each coffee's latest version.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, product_id, body_hash]}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: product_id
+        description: The store's product id.
+      - name: body_hash
+        description: The hash of the description the attributes were read from (raw bodies).
+      - name: method
+        description: "rules or llm: what extracted the attributes."
+        data_tests:
+          - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: extracted_at
+        description: When the extraction ran (UTC).
+  - name: stg_product_inputs
+    description: >-
+      One row per distinct product version (input_hash: title, type, tags, bag sizes and description), with the
+      description's text. What stg_products runs the classifier and the extraction rules over, once per version.
+    columns:
+      - name: input_hash
+        description: "Everything the classifier and the extraction rules read (macro product_input_hash)."
+        data_tests: [unique, not_null]
+      - name: title
+        description: The product's title.
+      - name: product_type
+        description: The store's product type.
+      - name: tags
+        description: The store's tags, HTML entities decoded (stg_snapshots.tags).
+      - name: body_hash
+        description: The description's hash (raw bodies).
+      - name: grams
+        description: Each variant's stored bag size in grams, where known.
+      - name: body_text
+        description: The description as text; null when the lake holds no body for the hash.
+  - name: stg_shots
+    description: >-
+      One row per current shot: the latest record of each shot_id (a correction logs the same id again), without
+      retracted shots. Personal data: private marts only, never public.
+    columns:
+      - name: shot_id
+        description: The shot's id, as the app, the MCP server or an issue form assigned it.
+        data_tests: [unique, not_null]
+      - name: user_id
+        description: Who logged it; a shot from before accounts existed is the owner's (var owner_user_id).
+        data_tests: [not_null]
+      - name: logged_at
+        description: When this record was written (UTC); the app reads only shot files written after the export.
+  - name: stg_equipment
+    description: >-
+      One row per piece of equipment (grinder, machine or basket): the latest record of each equipment_id. Retired
+      equipment stays, so old shots still resolve their grinder.
+    columns:
+      - name: equipment_id
+        description: The equipment's id.
+        data_tests: [unique, not_null]
+      - name: user_id
+        description: Whose it is; equipment from before accounts existed is the owner's (var owner_user_id).
+        data_tests: [not_null]
+      - name: updated_at
+        description: When the latest record was written (raw logged_at, UTC).

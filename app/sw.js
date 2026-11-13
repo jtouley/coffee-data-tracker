@@ -2,7 +2,8 @@
 //
 // The shell (styles, script, fonts, an offline page) is cached at install, so the app opens without a network.
 // Pages go to the network first; the last good copy of the screens used at the machine (Today, Log shot, New bag,
-// Coffees, a coffee, History) is kept, so they still open offline. Writes never go through here: they wait in the
+// Coffees, a coffee, History) is kept, so they still open offline, and so are the bag photos they show (up to
+// PHOTO_LIMIT, the oldest dropped first). Writes never go through here: they wait in the
 // page's IndexedDB outbox until the server acknowledges them. Signing out clears the kept pages, which hold that
 // person's data.
 //
@@ -12,6 +13,8 @@ const SHELL = __SHELL__;
 const STATIC = "static";
 const CACHE = "shell-__VERSION__"; // the unhashed shell (the offline page) for this version
 const PAGES = "pages";
+const PHOTO = /^\/photos\/[\w-]+$/;
+const PHOTO_LIMIT = 60;
 const KEEP = [/^\/$/, /^\/log$/, /^\/bag\/new$/, /^\/coffees$/, /^\/history$/, /^\/coffee\/[\w-]+$/, /^\/setup$/];
 
 self.addEventListener("install", (e) => {
@@ -32,8 +35,14 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// Bumped by each sign-out: a photo fetched before it must not put the kept pages back afterwards.
+let generation = 0;
+
 self.addEventListener("message", (e) => {
-  if (e.data === "signed-out") e.waitUntil(caches.delete(PAGES));
+  if (e.data === "signed-out") {
+    generation += 1;
+    e.waitUntil(caches.delete(PAGES));
+  }
 });
 
 async function hashed(request) {
@@ -69,6 +78,36 @@ async function page(request) {
   }
 }
 
+// A bag photo: from the network (the app sends it no-store), kept with the pages so a kept screen shows it offline.
+// It goes with them on sign-out. Only an image is kept: signed out, the app redirects to the sign-in page, which
+// fetch follows to a 200 that must not replace the photo.
+async function keepPhoto(path, response, fetchedIn) {
+  if (generation !== fetchedIn) return; // signed out meanwhile: the photo was the last person's
+  const pages = await caches.open(PAGES);
+  if (generation !== fetchedIn) return;
+  await pages.put(path, response);
+  if (generation !== fetchedIn) return void (await pages.delete(path)); // signed out during the put
+  const kept = (await pages.keys()).filter((r) => PHOTO.test(new URL(r.url).pathname));
+  await Promise.all(kept.slice(0, Math.max(0, kept.length - PHOTO_LIMIT)).map((r) => pages.delete(r)));
+}
+
+async function photo(e) {
+  const url = new URL(e.request.url);
+  const fetchedIn = generation;
+  let response;
+  try {
+    response = await fetch(e.request);
+  } catch {
+    return (await caches.match(url.pathname, { cacheName: PAGES })) || Response.error();
+  }
+  const image = (response.headers.get("content-type") || "").startsWith("image/");
+  if (response.ok && !response.redirected && image) {
+    // Kept after answering, on its own: a full storage (QuotaExceededError) never costs the photo just fetched.
+    e.waitUntil(keepPhoto(url.pathname, response.clone(), fetchedIn).catch(() => { /* not kept: still shown online */ }));
+  }
+  return response;
+}
+
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
@@ -76,5 +115,7 @@ self.addEventListener("fetch", (e) => {
     e.respondWith(hashed(e.request)); // cache first, and kept across versions
   } else if (e.request.mode === "navigate") {
     e.respondWith(page(e.request));
+  } else if (PHOTO.test(url.pathname)) {
+    e.respondWith(photo(e));
   }
 });

@@ -75,9 +75,18 @@ a.door:hover { border-color: var(--accent); transform: translateY(-2px); }
 .chart .val { fill: var(--text-primary); font-variant-numeric: tabular-nums; }
 .chart .bar { fill: var(--series-1); }
 .chart .hit { fill: transparent; }
-.chart .mark:hover .bar, .chart .mark:focus .bar { fill: var(--series-1-hover); }
-.chart .mark:focus { outline: none; }
+.chart .mark:hover .bar { fill: var(--series-1-hover); }
 .chart .axis { stroke: var(--border); }
+/* The chart's two drawings (site.hbar_chart): the narrow one, whose text stays 12 px, below 440 px. */
+.chart-box { container-type: inline-size; }
+.chart.narrow { display: none; }
+@container (max-width: 439px) { .chart.wide { display: none; } .chart.narrow { display: block; } }
+/* The chart's numbers as a table, as on the catalog page. */
+.panel details { margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+.panel table { width: 100%; border-collapse: collapse; }
+.panel th, .panel td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+.panel th { font-weight: 600; }
+.panel .num { text-align: right; font-variant-numeric: tabular-nums; }
 .empty { color: var(--text-muted); font-size: 14px; }
 .arrivals { list-style: none; margin: 0; padding: 0; }
 .arrivals li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--border); }
@@ -197,6 +206,9 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     <div class="panel">
       <h4>Single-origin coffees in stock, by origin</h4>
       {{ charts.origins | safe }}
+      {% if origin_counts %}<details><summary>Table</summary><table><thead><tr><th>Origin</th><th class="num">Coffees in stock</th></tr></thead><tbody>
+      {% for r in origin_counts %}<tr><td>{{ r.origin_country }}</td><td class="num">{{ "{:,}".format(r.n) }}</td></tr>{% endfor %}
+      </tbody></table></details>{% endif %}
     </div>
     <div class="panel">
       <h4>Just arrived</h4>
