@@ -352,7 +352,11 @@ Why:
 One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
 repository, built with Cloud Build). Each job's task timeout is 240 min (the strict limit used in every sim).
 maxRetries is 0 for Shopify's crawl jobs (`crawl-shopify`, its default-egress arm, `crawl-retry`) and 1 for every
-other job, the other connectors' crawls included (section 7.1). A crawl that stops at its deadline exits 0 and
+other job, the other connectors' crawls included (section 7.1), except WooCommerce's and generic's crawls,
+`fetch-health` and `build` (0; `ingestion.tf` says why for each). The build is never retried because a second
+attempt is a second build: a second release for the same week, the served pointer moved, `marts/` replaced. Any
+failed step of it, the publish included, fails the execution and emails the owner, who re-runs that step by hand
+(RUNBOOK §5.1). A crawl that stops at its deadline exits 0 and
 reports `deadline` in `job_manifests`, so only a crawl that died is retried. A second attempt of a failed Shopify
 crawl would re-ask the stores that just refused, on Shopify's NAT IP, so its resume slot (or crawl-retry) picks up the
 rest instead.

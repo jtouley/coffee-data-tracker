@@ -616,9 +616,18 @@ something:
 | `release <id> not reconciled: its files couldn't be read` and `release not_reconciled unreadable: ...` | the served release's files couldn't be copied (after 3 tries) | nothing for this release; if it repeats, check the lake's `releases/` folder |
 | `the report-only step (release_changes) failed` / `release_changes is missing or failed` | the reconciliation itself errored; its record says `not_reconciled release_changes_missing` | open an issue with the dbt log; the release was gated without it |
 
-**b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
-the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed
-records.
+**b. The data is right, the gate is wrong.** Minutes, no re-crawl. The build job is never retried (`retries = 0` in
+`ingestion.tf`, once applied): a rebuild runs once, and `--wait` returns its result. Before that change it had
+`max_retries = 1`, and any failed step ran the whole chain again: a failed gate left two failed records, and a
+failed classify or egress-check after a build that passed stamped a second passing release for the same week (the
+served pointer moved to it, `marts/` was replaced, and `rollback` to the previous release landed on the same week).
+
+In the rebuild chains below every step runs, and any step's failure fails the execution: `--wait` returns a
+failure and the `ingest job build failed` email arrives. A failed classify (an Anthropic outage, a missing key) is
+one of them, which the old form of these commands let through: the build after it still ran on the verdicts already
+stored, so **read the log before running anything again**. If the build passed, the release is served and
+published, and only the classify needs another run (§5.5, step 2's command); a second rebuild would stamp a second
+release. If the publish is what failed, go to **f**.
 
 1. One roaster-week at a time: `accept` (a suspect catalog change is real), `reject` (drop that fetch: the week
    counts as missing for the roaster), or `use_batch` with `--batch <batch_id>` (count another ok fetch of that week).
@@ -635,11 +644,10 @@ records.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK --accept-volume-change; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
-**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build; a
-build that fails the gate runs twice (b).
+**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
 
 A crawl asks only roasters **without an `ok` or `unavailable` fetch this week**. It repairs failed, skipped and
 parked roasters, not ok fetches with wrong data (a parser bug in the image): those need b.1's `reject`, one
@@ -677,7 +685,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -695,8 +703,8 @@ gcloud run jobs execute build --region $REGION --wait \
   --args="coffeedata rollback --to <build_id> --reason '<why>'"   # <why>: no commas
 ```
 
-Without `--to`, a failed `publish` after the serve makes the job's retry (`max_retries = 1`) run `rollback` again,
-which goes back one more release. The job switches the served release and publishes only: it writes the site and
+Always pass `--to`: `rollback` without it goes back one release each time it runs, so running the command again
+after a failed `publish` (the job itself no longer retries) would go back one more. The job switches the served release and publishes only: it writes the site and
 the public export inside the container, and they're thrown away. Use it only when Actions can't run. **After any
 Cloud Run rollback**, as soon as Actions runs, re-export the release it served:
 
@@ -742,12 +750,32 @@ gets one day worse each day until this week's release is served.
 
 | Case | 11:17 | 8-day promise |
 |---|---|---|
-| a/b, rebuilt before 11:17 (a rebuild that fails the gate runs twice) | green, exports this week's | kept |
+| a/b, rebuilt before 11:17 | green, exports this week's | kept |
 | a/b, rebuilt after 11:17 | red, nothing exported; then `rollback_to=served` | kept if served on Tuesday |
-| c | red (the crawl alone can take 4 h, and a failing build runs twice); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
+| c | red (the crawl alone can take 4 h); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
 | d, before 11:17 | red (the served release is last week's); the rollback already exported | kept Tuesday; broken from Wednesday until b or c serves this week |
 | d, after 11:17 | the bad release was green and exported; the rollback re-exports | as above |
 | nothing fixed | red | broken from Wednesday |
+
+**f. The build ran but its publish failed.** The `ingest job build failed` email arrives, and the execution's log
+shows the build's result followed by an error from `coffeedata publish` (it tries five times before it fails).
+Nothing is lost: the release, its `builds` row and the served pointer are recorded in the staging bucket, and only
+the upload to the dataset is missing. Until it is sent, readers of the dataset (Tuesday's `site` run, the public
+export) still see last week's release.
+
+**Don't rebuild.** A rebuild takes a new build id and stamps a second release for the same week. Send what is
+staged, with a publish-only execution, once the cause (the dataset unreachable, a rejected or missing token) is
+fixed:
+
+```sh
+gcloud run jobs execute build --region $REGION --wait --args='coffeedata publish --message republish'
+```
+
+Its log ends `published N files to hf://...`; then confirm with **e**. A publish sends everything staged, whichever
+job staged it, so a later job's publish from the same staging bucket also sends the release: `fetch-health`
+publishes after a check (it is polled again on Tuesday from 10:07 UTC), and so does the next run of any other job.
+The release can therefore appear without anyone acting on the alert; **e** tells you whether it has. If it was served after 11:17,
+`gh workflow run weekly -f rollback_to=served` exports it (above).
 
 ### 5.2 The build ran before the merge finished
 
@@ -786,7 +814,7 @@ merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
 ```sh
 gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
 gcloud run jobs execute build --region $REGION --wait \
-  --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
 `--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
@@ -864,9 +892,14 @@ Now three things stop that from happening silently:
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
   which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
-  so the `ingest job build failed` email arrives. A batch submit that Claude rejects (a revoked key, an outage)
-  fails the same way; a finished batch whose results can't be read yet stays open for the next run. With
-  `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
+  so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
+  before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
+  leaves the release recorded and staged but not in the dataset (§5.1 f sends it), and before this it exited 0 and
+  the first sign was Tuesday's red `site` run. The rebuild and backfill commands in §5 use the same chain
+  (`tests/test_discover_probe_jobs.py` runs them all with each step failing in turn). A batch submit that Claude
+  rejects (a revoked key, an outage) fails the same way; a finished batch whose results can't be read yet stays
+  open for the next run. The chain runs once: the build job is never retried (§5.1 b says why), so after a failed
+  classify the release the build served stands, and the classify is run again by hand (step 2's command below).
 - **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
   (`min_verdict_share`, `dbt/dbt_project.yml`) of listed coffees (`dim_coffee.is_listed`) have
   `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
@@ -890,17 +923,22 @@ pending, so the first build after the change fails `verdicts_cover_catalog` unti
 and last week's release stays served. That is the gate working: don't opt out around it.
 
 1. Submit everything pending (7 batches of 10,000; `--limit` defaults to 100,000), and wait up to 3 hours for them
-   inside the job's 240 minutes:
+   inside the job's 240 minutes. A failed classify (a rejected submit, an outage) now fails this execution, where
+   the old form reported only the publish: the publish still runs, what was collected is sent, `--wait` returns a
+   failure and the email arrives. It runs once (no retry), so the 240 minutes hold. Run step 2 when the cause is
+   fixed:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify --wait 180; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify --wait 180 || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 2. If batches were still running (its output's `collect_after_wait` is below `submit.submitted`), collect again
    later; batches end within 24 hours. Repeat until a run collects 0 and submits 0:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 3. Rebuild (§5.2's form) and read the `verdicts:` line in its log. Expect about 3,600 listed products to drop out
