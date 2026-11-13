@@ -748,21 +748,17 @@ def test_a_malformed_host_never_breaks_discovery_the_registry_or_add_roaster(
 # --- the rules: decide when the text says so, abstain otherwise --------------------------------------------------
 
 
+# The synthetic products predate the real listing's shapes (their titles say "Lot 70412 - Harborview Warehouse" and
+# their facts sit in "Label: value" lines, which Royal's real bodies don't have), so on them the rules mostly abstain:
+# no five-digit lot ID part, so none reads as a lot (is_lot false) and none gets an origin, warehouse or status.
 EXPECTED = [
-    # (lot, warehouse, origin, region, process, varieties, altitude, harvest, certifications)
-    ("70412", "Harborview", "Colombia", "Huila", "washed", ["Castillo", "Caturra"], (1600, 1900),
-     ["oct", "nov", "dec", "jan"], ["organic"]),
-    ("70588", "Riverside", "Ethiopia", "Sidama", "natural", ["74110", "Heirloom"], (2000, 2250),
-     ["nov", "dec", "jan"], ["rainforest_alliance"]),
-    # decaf: no process; both certifications from the body's label
-    ("70733", "Harborview", "Peru", "Cajamarca", None, None, (1750, 1750), None, ["organic", "fair_trade"]),
-    # two processes, two regions, feet, a harvest year only, an unmodeled certification: all abstain
-    ("70801", None, "Costa Rica", None, None, None, (None, None), None, None),
-    # two lot numbers: abstain; anaerobic wins over natural
-    (None, "Lakeside", "Brazil", "Mogiana", "anaerobic", ["Yellow Bourbon"], (1100, 1100),
-     ["jun", "jul", "aug", "sep"], None),
-    # not a lot at all
-    (None, None, None, None, None, None, (None, None), None, None),
+    # (process as stated, process type, certifications, available)
+    (None, "washed", None, True),
+    ("Natural", "natural", ["rainforest_alliance"], True),
+    (None, None, None, True),  # decaf
+    (None, None, None, True),  # two processes
+    (None, "anaerobic", None, False),  # two process tags as written; anaerobic wins
+    (None, None, None, True),  # not a lot at all
 ]  # fmt: skip
 
 
@@ -775,7 +771,9 @@ def derived(tmp_path_factory) -> dict[int, dict]:
     require_dbt()  # as needs_dbt does, before building
     tmp = tmp_path_factory.mktemp("royal-derived")
     lake = Lake(str(tmp / "importers"), tables=IMPORTER_TABLES)
-    cells = [lot.cells for lot in importers.parse_royal(PRODUCTS, LISTING).lots] + [c for c, _, _ in CASES]
+    cells = [lot.cells for lot in importers.parse_royal(PRODUCTS, LISTING).lots] + [
+        {"id": str(9_900_000_000_000 + k), **c} for k, (c, _, _) in enumerate(CASES)
+    ]
     base = {
         "week": MON,
         "fetched_at": NOW,
@@ -795,96 +793,99 @@ def derived(tmp_path_factory) -> dict[int, dict]:
 @pytest.mark.parametrize("i", range(len(PRODUCTS)))
 def test_rules_on_the_synthetic_products(i, derived):
     got = dict(derived[i])
-    lot, wh, origin, region, proc, var, (lo, hi), harvest, certs = EXPECTED[i]
+    process, process_type, certs, available = EXPECTED[i]
     assert got.pop("problems") == []
-    assert {
-        k: got.pop(k) for k in ("name", "process", "status", "est_arrival", "bags", "bag_size", "bag_kg")
-    } == {
+    assert {k: got[k] for k in (
+        "name", "is_lot", "lot_id", "warehouse", "status", "est_arrival", "bags", "origin", "origin_as_written", "region",
+        "process", "process_type", "varieties", "altitude_min_m", "altitude_max_m", "harvest_months", "grower_type",
+        "grower_name", "certifications", "not_certified", "is_available", "currently_offered", "lot_key",
+        "rules_version",
+    )} == {
         "name": PRODUCTS[i]["title"],
-        "process": {0: "Washed", 2: "Decaf (Sugarcane EA)"}.get(i),  # the label, as stated
+        "is_lot": False,
+        "lot_id": None,
+        "warehouse": None,
         "status": None,
         "est_arrival": None,
-        "bags": None,
-        "bag_size": None,
-        "bag_kg": None,
-    }
-    assert {k: got[k] for k in (
-        "lot_id", "warehouse", "origin", "region", "process_type", "varieties", "altitude_min_m", "altitude_max_m",
-        "harvest_months", "grower_type", "grower_name", "certifications", "not_certified", "rules_version",
-    )} == {
-        "lot_id": lot,
-        "warehouse": wh,
-        "origin": origin,
-        "region": region,
-        "process_type": proc,
-        "varieties": var,
-        "altitude_min_m": lo,
-        "altitude_max_m": hi,
-        "harvest_months": harvest,
+        "bags": None,  # Royal's listing never states a bag count
+        "origin": None,
+        "origin_as_written": None,
+        "region": None,  # the body is prose: region, varieties, altitude and harvest are left for Claude
+        "process": process,
+        "process_type": process_type,
+        "varieties": None,
+        "altitude_min_m": None,
+        "altitude_max_m": None,
+        "harvest_months": None,
         "grower_type": None,
         "grower_name": None,
         "certifications": certs,
         "not_certified": None,  # the store never marks one absent: unknown, never "not certified"
+        "is_available": available,
+        "currently_offered": available,  # the only stored week is the latest
+        "lot_key": f"royal_coffee:{PRODUCTS[i]['id']}",  # the Shopify id, never the listing position
         "rules_version": rules.ROYAL_RULES_VERSION,
     }  # fmt: skip
 
 
-def _cells(title: str = "Invented Lot", tags: list[str] = (), body: str = "") -> dict[str, str | None]:  # type: ignore[assignment]
-    return {"title": title, "tags": "\n".join(tags) or None, "body_text": body or None, "product_type": None}
+def _cells(
+    title: str = "Example Lot",
+    tags: list[str] = (),  # type: ignore[assignment]
+    body: str = "",
+    variants: str | None = None,
+) -> dict[str, str | None]:
+    return {
+        "title": title,
+        "tags": "\n".join(tags) or None,
+        "body_text": body or None,
+        "product_type": None,
+        "variants": variants,
+    }
 
 
+# Titles in the real listing's shapes ("<ORIGIN ...> - [*contract*] - <lot ID> - [bags] - [date] - [SPOT] <WAREHOUSE>"),
+# every value invented: no real title, lot ID, warehouse or producer.
 CASES = [
-    # the review's cases on #140's rules, here as Royal labels: no crash, no confident wrong value
-    (_cells(body="Altitude: 1.2.3 m"), "altitude", (None, None)),
-    (_cells(body="Altitude: Bags of 1,000 m"), "altitude", (None, None)),
-    (_cells(body="This harvest declined because of rain"), "harvest", None),
-    (_cells(body="Harvest: Dec"), "harvest", ["dec"]),
-    (_cells(body="Harvest: may be smaller this year"), "harvest", None),  # the verb, not the month
-    (_cells(body="Harvest: May"), "harvest", ["may"]),
-    (_cells("Mexico Natural", body="Processed with mountain water decaf method"), "process", None),
-    (_cells("Rwanda Washed", ["Natural"]), "process", None),  # title and tag disagree
-    (_cells("Indonesia Wet-Hulled"), "process", "honey"),
-    (_cells("Brazil Pulped Natural"), "process", "honey"),
-    (_cells(tags=["Process: Semi-Washed"]), "process", "honey"),
-    (_cells(tags=["Variety: Java"]), "varieties", ["Java"]),
-    (_cells(tags=["Variety: Bourbon, Mystery Hybrid"]), "varieties", None),
-    (_cells(body="Varieties grown nearby include Gesha"), "varieties", None),  # prose, not a label
-    (_cells(tags=["Certification: C.A.F.E. Practices"]), "certifications", None),
-    (_cells("Honduras Organic"), "certifications", ["organic"]),
-    (_cells(tags=["Organic coffee lovers will enjoy"]), "certifications", None),  # a tag that says more
-    (_cells("Lot 123 - Lot 123"), "lot", "123"),
-    (_cells("Lot 12 sample"), "lot", None),
-    (_cells("Kenya AA - North Warehouse", ["Warehouse: South"]), "warehouse", None),
-    (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
-    (_cells("Colombia and Peru Blend"), "origin", None),
-    # the review's cases (#145): abstain, never guess
-    (_cells("Kenya AA - In Warehouse"), "warehouse", None),
-    (_cells("Kenya AA - Not In Warehouse"), "warehouse", None),
-    (_cells("Kenya AA - In Harborview Warehouse"), "warehouse", "Harborview"),
-    (
-        _cells(tags=["Location: Huila, Colombia"]),
-        "warehouse",
-        None,
-    ),  # usually the farm, never the warehouse
-    (_cells("Peru Non-Organic Cajamarca"), "certifications", None),
-    (_cells(tags=["Certification: Non-Organic"]), "certifications", None),
-    (_cells("Guatemala Bird Friendly Organic"), "certifications", None),  # a program we don't model
+    (_cells("COLOMBIA FT-FLO/USA ORGANIC HUILA EXAMPLE - *54321* - 12345 - GrainPro Bags - SPOT EXAMPLEWHSE"),
+     "lot", "12345"),
+    (_cells("Honduras Example Producer Lot 3 SHG - 23456-1 - SPOT EXAMPLEWHSE"), "lot", "23456-1"),  # not "Lot 3"
+    (_cells("Kenya Example AA - 11111 - 22222 - SPOT EXAMPLEWHSE"), "lot", None),  # two IDs
+    (_cells("Kenya Example AB - 2026 - SPOT EXAMPLEWHSE"), "lot", None),  # a year
+    (_cells("Peru Example - 34567 - SPOT EXAMPLEWHSE C2"), "warehouse", "EXAMPLEWHSE C2"),
+    (_cells("Peru Example - 34568 - May 2027 Shipment - EXAMPLEWHSE"), "status", None),  # not there yet
+    (_cells("Peru Example - 34569 - SPOT EXAMPLEWHSE"), "status", "spot"),
+    (_cells("Ethiopia Example Natural - 34570 - Sample"), "warehouse", None),  # not a warehouse code
+    (_cells("Ethiopia Example Natural - 10574 - ORGANIC"), "warehouse", None),  # a word in capitals
+    (_cells("Workshop: Invented Cupping Night About Kenya"), "origin", None),  # not a lot
+    (_cells("Brazil Example - 34571 - ETA: Dec 12, 2026 - EXAMPLEWHSE"), "arrival", "Dec 12, 2026"),
+    (_cells("Brazil Example - 10573 - Intend Ship: Dec 12, 2026 - EXAMPLEWHSE"), "arrival", None),
+    (_cells("PAPUA NEW GUINEA EXAMPLE A - 45678 - SPOT EXAMPLEWHSE"), "origin", "Papua New Guinea"),
+    (_cells("TIMOR LESTE EXAMPLE - 45679 - SPOT EXAMPLEWHSE"), "origin", "Timor-Leste"),
+    (_cells("TIMOR ORGANIC EXAMPLE - 45680 - SPOT EXAMPLEWHSE"), "origin", "Timor-Leste"),
+    (_cells("Decaf Komodo Example Water Process - 45681 - SPOT EXAMPLEWHSE"), "origin", "Indonesia"),
+    (_cells("FLORES EXAMPLE - 45682 - SPOT EXAMPLEWHSE"), "origin", "Indonesia"),
+    (_cells("Guatemala Example Las Flores Natural - 45683 - SPOT EXAMPLEWHSE"), "origin", "Guatemala"),
+    (_cells("Colombia Peru Example Blend - 45684 - SPOT EXAMPLEWHSE"), "origin", None),
+    (_cells("New Guinea Example - 45685 - SPOT EXAMPLEWHSE"), "origin", None),
+    (_cells("Congo Example Kivu Washed - 45686 - SPOT EXAMPLEWHSE"), "origin", None),
+    (_cells("PERU FT EXAMPLE - 56789 - SPOT EXAMPLEWHSE"), "certifications", ["fair_trade"]),
+    (_cells("PERU FT-USA ORGANIC EXAMPLE - 56790 - SPOT EXAMPLEWHSE"), "certifications", ["organic", "fair_trade"]),
+    (_cells("Mexico Example 30 ft Terraces - 56791 - SPOT EXAMPLEWHSE"), "certifications", None),  # feet
+    (_cells("GUATEMALA FT ORGANIC BIRD FRIENDLY EXAMPLE - 56792"), "certifications", None),  # unmodeled program
+    (_cells("Peru Non-Organic Example - 56793"), "certifications", None),
     (_cells(tags=["FTO"]), "certifications", None),  # Fair Trade Organic, or only Fair Trade?
     (_cells(tags=["Fair Trade", "Organic", "FTO"]), "certifications", ["organic", "fair_trade"]),
-    (_cells(tags=["Region: Huila"], body="Region: Huila. Process: Washed."), "region", "Huila"),
-    (_cells(body="Region: Huila."), "region", "Huila"),
-    (_cells("Colombia Anaerobic Lot", ["Process: Natural"]), "process", "anaerobic"),  # anaerobic wins
-    (_cells(tags=["Process: Natural", "Process: Natural."]), "process", "natural"),
-    (_cells("Sumatra Mandheling"), "origin", "Indonesia"),  # one place in a coffee title
-    (_cells("Finca Las Flores Microlot - Lot 70412"), "origin", None),  # not Flores, Indonesia
-    (_cells("Java Natural - Lot 70412"), "origin", None),  # Java is a variety too
-    (_cells("Nicaragua Java Natural"), "origin", "Nicaragua"),
-    (_cells("DR Congo Kivu Washed - Lot 70412"), "origin", "Democratic Republic of the Congo"),
-    (_cells("Congo Kivu Washed - Lot 70412"), "origin", None),  # Congo alone: two countries
-    (_cells("Kenya AA - No. 2 Warehouse", ["Warehouse: No. 2"]), "warehouse", "No. 2"),  # a number
-    (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
-    (_cells("Kenya Harvest Lot 2025"), "lot", None),  # a year, not a lot number
-]
+    (_cells("Ethiopia Example Natural - 67890", ["natural"], body="Invented: the farm also grows sugar cane."),
+     "process", "natural"),  # the body's prose isn't read for decaf
+    (_cells("Mexico Example Natural - 67891", ["decaf"]), "process", None),
+    (_cells("Rwanda Example Washed - 67892", ["natural"]), "process", None),  # title and tag disagree
+    (_cells("Sumatra Example - 67893", ["wet-hulled"]), "process", "honey"),
+    (_cells("Colombia Example Anaerobic - 67894", ["natural"]), "process", "anaerobic"),  # anaerobic wins
+    (_cells(variants='[{"available": false, "grams": 69041}]'), "available", False),
+    (_cells(variants='[{"available": true, "grams": 69041}]'), "bag_kg", 69.0),
+    (_cells("Peru Example - 67895 - 30.0 kg Bags", variants='[{"available": true, "grams": 30105}]'), "bag_kg", 30.0),
+    (_cells(body="Region: Huila. Altitude: 1,800 masl"), "region", None),  # labels aren't read any more
+]  # fmt: skip
 
 
 @needs_dbt
@@ -893,14 +894,54 @@ def test_rules_abstain_when_unsure(k, derived):
     _, field, expected = CASES[k]
     got = derived[len(PRODUCTS) + k]
     value = {
-        "altitude": (got["altitude_min_m"], got["altitude_max_m"]),
-        "harvest": got["harvest_months"],
-        "process": got["process_type"],
-        "varieties": got["varieties"],
-        "certifications": got["certifications"],
         "lot": got["lot_id"],
         "warehouse": got["warehouse"],
+        "status": got["status"],
+        "arrival": got["est_arrival"],
         "origin": got["origin"],
+        "certifications": got["certifications"],
+        "process": got["process_type"],
+        "available": got["is_available"],
+        "bag_kg": got["bag_kg"],
         "region": got["region"],
     }[field]
     assert value == expected
+
+
+@needs_dbt
+def test_a_week_stored_twice_is_read_from_its_first_fetch_once(tmp_path):
+    """stg_importer_lots' dedupe, which a dbt unit test can't reach (raw is read_parquet over the lake's globs): a week
+    stored three times (the first fetch, a copy of it, and a later fetch that lists the products in another order and
+    adds one) derives once, from the first fetch only: every product once, no two products sharing a row."""
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+
+    def rows(fetched_at: datetime, ids: list[str]) -> list[dict]:
+        return [
+            {
+                "week": MON,
+                "fetched_at": fetched_at,
+                "importer": "royal_coffee",
+                "source_url": LISTING,
+                "parser_version": "t",
+                "row": i,
+                "url": None,
+                "cells": [
+                    {"column": "id", "text": pid},
+                    {"column": "title", "text": f"Peru Example - 1{pid[-4:]} - SPOT EXAMPLEWHSE"},
+                    {"column": "variants", "text": '[{"available": true, "grams": 69000}]'},
+                ],
+            }
+            for i, pid in enumerate(ids)
+        ]
+
+    first = rows(NOW, ["9900000000101", "9900000000102"])
+    lake.write("importer_raw", importers.path(importers.ROYAL, MON), first)
+    week = importers.path(importers.ROYAL, MON).rsplit("/", 1)[0]
+    lake.write("importer_raw", f"{week}/importer=royal_coffee-copy.parquet", first)
+    later = rows(NOW + timedelta(hours=2), ["9900000000102", "9900000000101", "9900000000103"])
+    lake.write("importer_raw", f"{week}/importer=royal_coffee-refetch.parquet", later)
+    offers = importer_offers(lake, tmp_path)
+    assert [(o["row"], o["lot_key"], o["fetched_at"]) for o in offers] == [
+        (0, "royal_coffee:9900000000101", NOW),
+        (1, "royal_coffee:9900000000102", NOW),
+    ]

@@ -333,8 +333,9 @@ def stated(importer: str, cells: dict[str, str | None], problems: list[str] | No
     """The fields the page states for one lot, read from its stored cells. A cell that can't be read is None and
     noted in `problems`; `lot_id` and `name` are None when the row lacks its identity.
 
-    Royal's listing has no column for any of them but its title (the name): its lot number, warehouse, origin, region
-    and process are read from its title and labelled text by the private dbt project's rules (int_royal_rules)."""
+    Royal's listing has no column for any of them but its title (the name): its lot ID, warehouse, status, arrival,
+    bags, origin and process are read from its title, tags and variants by the private dbt project's rules
+    (int_royal_rules)."""
     problems = [] if problems is None else problems
     if importer == ROYAL:
         return dict.fromkeys(STATED_FIELDS) | {"name": " ".join((cells.get("title") or "").split()) or None}
