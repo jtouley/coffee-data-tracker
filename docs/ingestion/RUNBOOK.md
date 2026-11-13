@@ -1466,37 +1466,52 @@ now falls inside the estimate: raise `budget_usd` if that email is noise. Alert 
 ## 9. Terraform in GitHub: reading the plan comment
 
 A pull request that touches `src/terraform/**` (or the guard script, or the workflow) runs
-`.github/workflows/terraform-plan.yml`: init, validate and plan as the read-only plan identity, then the guards
-(`scripts/tf_plan_guard.py`), then one comment on the PR, **Terraform plan**, updated in place on every push. It
-also runs on main. It never applies anything, and the PR's plan is advisory: the plan that is applied is made again
-on main.
+`.github/workflows/terraform-plan.yml`: fmt, init, validate and plan as the read-only plan identity, then the guards
+(`scripts/tf_plan_guard.py`), then one comment on the PR, **Terraform plan**, replaced on every push. It never
+applies anything, and the PR's plan is advisory: the plan that is applied is made again on main, by the apply
+workflow.
 
-The settings that used to live only in `terraform.tfvars` are in `src/terraform/ci.auto.tfvars`, checked in and
-reviewed like code. Only `billing_account` and `owner_email` stay private: the repository secrets
-`TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL` in CI, `terraform.tfvars` in your shell. `*.auto.tfvars` wins over
-`terraform.tfvars`, so a value set in both comes from the checked-in file. To pin a new ingest image, change
-`ingest_image` there in a one-line PR.
+Where CI's variables come from (your shell is unchanged: it still reads `terraform.tfvars`):
+- `src/terraform/ci.tfvars`, checked in, passed only by CI with `-var-file`: `verdict_model`.
+- Repository **secrets** `TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL`: `billing_account` and `owner_email`.
+- Repository **variables**, holding what `terraform.tfvars` holds today: `TF_VAR_INGEST_IMAGE` and
+  `TF_VAR_INGEST_SCHEDULE_ENABLED` (required), and `TF_VAR_EMAIL`, `TF_VAR_BUDGET_USD` and `TF_VAR_INGEST_JOB_MEMORY`
+  (optional; unset means the default in `variables.tf`; `TF_VAR_INGEST_JOB_MEMORY` is HCL, e.g.
+  `{ "crawl-woocommerce" = "4Gi" }`). When you pin a new image in `terraform.tfvars`, set `TF_VAR_INGEST_IMAGE` to the
+  same value, or the next PR plan shows the jobs' image changing back.
 
-The comment has three parts:
+The comment starts with the PR head commit it planned (planned as merged with main) and one status line:
+- **Guards: pass** or **FAIL**, then the change list.
+- **The plan errored** at `terraform <command>`: no change list. The run's log names the files, lines and resources
+  involved, never Terraform's messages (they can quote the billing id or your email). Run the plan in your shell for
+  the details. "repository secrets or variables are missing": the log names which.
+- **Errored**: the plan couldn't be read, or an address in it couldn't be shown safely, so nothing is shown.
+- **No plan** (the plan identity isn't set up yet) or **Cancelled** (a newer push replaced the run).
+
+Then three parts:
 - **Guards**, `pass` or `FAIL` each, with the addresses that broke a failed one:
-  - `no-delete-or-replace`: no action contains `delete`, so nothing is destroyed or replaced;
-  - `shopify-network-path`: Shopify's subnet and IP, the network and the router are untouched, and Shopify's NAT
-    changes only its port and logging settings, never its router, IPs, allocation or subnets;
+  - `no-delete-or-replace`: no action is `delete` or `forget`, so nothing is destroyed, replaced or dropped from
+    the state;
+  - `shopify-network-path`: no network or router changes, at any address; no new NAT on the ingest router; a NAT
+    that serves Shopify's subnet (found by its address, its previous address, its name or its subnets) changes only
+    its port and logging settings, never its router, IPs, allocation or subnets; nothing else named for Shopify's
+    egress (its subnet, its IP) changes;
   - `shopify-jobs-network`: `crawl-shopify` and `crawl-retry` keep their `vpc_access`;
-  - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by
-    `@sha256:` digest, and every job's image is a digest.
-- **Changes**: one line per resource, its action and its address. `update` changes it in place, `create` adds it;
-  `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard. Unchanged resources and data
-  reads aren't listed.
+  - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by `@sha256:`
+    digest, and every job's image is a digest known at plan time;
+  - `workload-identity`: no workload identity pool or provider changes, nor any IAM grant that names one or grants
+    a workload identity role.
+- **Changes**: one line per resource, its action and its address, and where it moved from. `update` changes it in
+  place, `create` adds it; `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard.
+  Unchanged resources and data reads aren't listed.
 - **Totals**: how many of each action.
 
 There are no attribute values in it on purpose: the repository is public and a plan holds every variable in clear.
-To see what an update changes, run the plan in your shell. If the list can't be made without risking a value (an
-address with unusual characters, or one that contains a variable's value or an egress IP), the comment says "No
-change list" and the check fails; so does a failed plan, which shows only its error headlines in the run's log.
+An address is shown only if it is plain Terraform address syntax (keys of letters, digits, `.`, `_` and `-`) and
+contains no variable value, egress IP or secret, compared without case or separators; otherwise the comment says
+**Errored** and shows nothing.
 
 A failed guard fails the check, and the apply refuses the same plan. Change the PR; or, for a delete, a replace or a
-change to Shopify's path that is really meant, make it by hand in Cloud Shell, as before, and run
-`python3 -I scripts/tf_plan_guard.py check plan.json` on the `show -json` output of your plan file to see what it
-breaks. A pull request from a fork gets no plan (it can't sign in), and until the plan identity's repository
-variables are set, the plan is skipped with a notice.
+change to Shopify's path or the workload identity that is really meant, make it by hand in Cloud Shell, as before,
+and run `python3 -I scripts/tf_plan_guard.py check plan.json` on the `show -json` output of your plan file to see
+what it breaks. A pull request from a fork gets no plan and no comment (it can't sign in).

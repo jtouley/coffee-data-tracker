@@ -601,6 +601,99 @@
    "name": "google_project.this",
    "provider_name": "registry.terraform.io/hashicorp/google",
    "type": "data"
+  },
+  {
+   "address": "google_compute_router_nat.woo_generic_egress",
+   "change": {
+    "actions": [
+     "update"
+    ],
+    "after": {
+     "enable_dynamic_port_allocation": true,
+     "enable_endpoint_independent_mapping": false,
+     "log_config": [
+      {
+       "enable": true,
+       "filter": "ERRORS_ONLY"
+      }
+     ],
+     "max_ports_per_vm": 16384,
+     "min_ports_per_vm": 64,
+     "name": "registry-coffee-woo-generic-egress",
+     "nat_ip_allocate_option": "MANUAL_ONLY",
+     "nat_ips": [
+      "https://www.googleapis.com/compute/v1/projects/coffee-data-tracker/regions/us-central1/addresses/registry-coffee-woo-generic-egress"
+     ],
+     "region": "us-central1",
+     "router": "registry-coffee-ingest",
+     "source_subnetwork_ip_ranges_to_nat": "LIST_OF_SUBNETWORKS",
+     "subnetwork": [
+      {
+       "name": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-woo-generic-egress",
+       "secondary_ip_range_names": [],
+       "source_ip_ranges_to_nat": [
+        "ALL_IP_RANGES"
+       ]
+      }
+     ]
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": {
+     "enable_dynamic_port_allocation": true,
+     "enable_endpoint_independent_mapping": false,
+     "log_config": [
+      {
+       "enable": true,
+       "filter": "ERRORS_ONLY"
+      }
+     ],
+     "max_ports_per_vm": 8192,
+     "min_ports_per_vm": 64,
+     "name": "registry-coffee-woo-generic-egress",
+     "nat_ip_allocate_option": "MANUAL_ONLY",
+     "nat_ips": [
+      "https://www.googleapis.com/compute/v1/projects/coffee-data-tracker/regions/us-central1/addresses/registry-coffee-woo-generic-egress"
+     ],
+     "region": "us-central1",
+     "router": "registry-coffee-ingest",
+     "source_subnetwork_ip_ranges_to_nat": "LIST_OF_SUBNETWORKS",
+     "subnetwork": [
+      {
+       "name": "projects/coffee-data-tracker/regions/us-central1/subnetworks/registry-coffee-woo-generic-egress",
+       "secondary_ip_range_names": [],
+       "source_ip_ranges_to_nat": [
+        "ALL_IP_RANGES"
+       ]
+      }
+     ]
+    },
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "woo_generic_egress",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_compute_router_nat"
+  },
+  {
+   "address": "google_artifact_registry_repository_iam_member.deploy",
+   "change": {
+    "actions": [
+     "create"
+    ],
+    "after": {
+     "member": "serviceAccount:registry-coffee-deploy@coffee-data-tracker.iam.gserviceaccount.com",
+     "role": "roles/artifactregistry.writer"
+    },
+    "after_sensitive": {},
+    "after_unknown": {},
+    "before": null,
+    "before_sensitive": {}
+   },
+   "mode": "managed",
+   "name": "deploy",
+   "provider_name": "registry.terraform.io/hashicorp/google",
+   "type": "google_artifact_registry_repository_iam_member"
   }
  ],
  "terraform_version": "1.9.8",
