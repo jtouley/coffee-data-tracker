@@ -543,6 +543,9 @@ models:
       One row per flag (rule x product) of this build, with the product's summary (ready_flags,
       evidence_hash, public_rows). Report only (tag report_only), run after the gate; written beside the release as
       an ops table (releases/.../ops/) for the admin's Queue and Case pages; never served or exported.
+    data_tests:
+      - grain:
+          arguments: {columns: [rule, coffee_id]}
     columns:
       - name: rule
         data_tests: [not_null]
