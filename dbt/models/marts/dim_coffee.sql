@@ -11,10 +11,19 @@ seen as (
     from s where is_coffee group by coffee_id
 ),
 -- The latest record decides: a product the classifier no longer considers coffee drops out entirely.
+-- Each variant's grams are the bag-weight rules' (stg_variant_grams, by position): the crawler's reading of the
+-- option's title, corrected where it misread it, and filled from the product title or description where the
+-- options state no weight (coffeedata.bag_weight; eval/bag_grams).
+-- A coffee whose version has no row there keeps its stored grams (variant_grams_are_valid fails the build first).
 latest as (
-    select * from (
+    select l.* replace (
+        if(g.grams is null, l.variants,
+           list_transform(l.variants, lambda v, i: struct_update(v, grams := g.grams[i]))) as variants)
+    from (
         select * from s qualify row_number() over (partition by coffee_id order by run_date desc) = 1
-    ) where is_coffee
+    ) l
+    left join {{ ref('stg_variant_grams') }} g using (grams_key)
+    where l.is_coffee
 ),
 -- Claude's extraction of a description, where there is one, replaces the rules' attributes for it.
 llm as (select * from {{ ref('stg_enrichments') }} where method = 'llm'),
@@ -32,7 +41,8 @@ attrs as (
         if(e.roaster_id is null, p.tasting_notes, e.tasting_notes) as tasting_notes,
         if(e.roaster_id is null, p.is_blend, e.is_blend) as is_blend,
         if(e.roaster_id is null, p.is_decaf, e.is_decaf) as is_decaf,
-        if(e.roaster_id is null, 'rules', 'llm') as enrichment_method
+        if(e.roaster_id is null, 'rules', 'llm') as enrichment_method,
+        not p.needs_llm as rules_complete
     from latest l
     join {{ ref('stg_products') }} p using (input_hash)
     left join llm e using (roaster_id, product_id, body_hash)
@@ -64,16 +74,23 @@ notes as (
     group by a.coffee_id
 )
 select
-    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.country as roaster_country, r.is_chain,
+    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.country as roaster_country, rs.is_chain,
     l.product_id, l.handle,
     -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
     l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
     run.is_current as is_listed,
-    a.origin_country, a.origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
+    -- Origin as ISO 3166-1 (int_origin_country): the short name and alpha-2 code, null when the captured value
+    -- isn't one country (a blend's list, a continent, an unmapped spelling); the captured value stays beside them. A
+    -- sub-national place the spelling names (Hawaii) fills origin_region when the extraction gave none.
+    -- origin_country_display is the name the site shows (var origin_names: the ISO name or a common one). A blank
+    -- captured origin counts as none.
+    iso.iso_short_name as origin_country, iso.alpha2 as origin_country_code,
+    iso.display_name as origin_country_display, if(trim(a.origin_country) = '', null, a.origin_country) as origin_country_raw,
+    coalesce(a.origin_region, iso.region) as origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
-    a.enrichment_method, a.is_wholesale,
+    a.enrichment_method, a.rules_complete, a.is_wholesale,
     -- What decided that the latest version is coffee: Claude's verdict (and its model) or the rules
     -- (verdicts_cover_catalog checks the share).
     l.classified_by, l.verdict_model,
@@ -101,5 +118,13 @@ join seen s using (coffee_id)
 join attrs a using (coffee_id)
 join {{ ref('stg_runs') }} run using (roaster_id, run_date)
 left join {{ ref('stg_registry') }} r using (roaster_id)
+left join {{ ref('int_roaster_state') }} rs using (roaster_id)  -- is_chain (the store-count rule and its overrides)
 left join notes n using (coffee_id)
 left join prices p using (coffee_id)
+left join {{ ref('int_origin_country') }} iso on iso.raw_value = a.origin_country
+-- One store's coffees once: an alias's (int_roaster_state: another roaster_id serves the same store) are the
+-- canonical id's own products, so every consumer of this table (the public tables, the marts, the quality tests,
+-- dim_roaster's counts) counts the canonical id's alone.
+where l.roaster_id not in (
+    select roaster_id from {{ ref('int_roaster_state') }} where roaster_id <> canonical_roaster_id
+)

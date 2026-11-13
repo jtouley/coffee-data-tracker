@@ -1,0 +1,80 @@
+# Production-run health (docs/TRIAGE.md): each Tuesday, after the Cloud Run build (06:17, ends by 10:17) and the
+# site run (11:17), measure the served release's per-rule proxy metrics and open, update or close a triage issue per
+# rule (coffeedata.prod_health, thresholds in config/prod_health.toml; coffeedata.triage).
+#
+# - It only reads the lake (a read-only download of the served release, the previous run's, the serving log and the
+#   builds table) and only alerts: the Cloud Run jobs get no GitHub token, no GCP resource is added, and nothing here
+#   can hold back a load, a build or a serve.
+# - main's code only, as eval-floors: the Hub token (HF_READ_TOKEN, else HF_TOKEN) is given to the one step that
+#   downloads, in a job with contents: read. The alert job has GITHUB_TOKEN with issues: write, never the Hub token.
+# - The lake is private and this repository public: the run summary, the log, the `prod-health` artifact and the
+#   issues carry metric names, statuses and bounds, never a measured value (docs/TRIAGE.md, Permissions and safety).
+# - A breach that config/prod_health_expected.toml acknowledges (an intended change, its PR) is reported, not paged.
+# - A run that couldn't measure (no LAKE_URL, the lake unreadable) opens the `pipeline:prod-health` issue instead.
+name: prod-health
+on:
+  schedule:
+    - cron: "43 11 * * 2"  # Tuesdays, after the build and the site run
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: prod-health
+  cancel-in-progress: false
+jobs:
+  measure:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      LAKE_URL: ${{ vars.LAKE_URL }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - name: Download the served release (read-only)
+        env:
+          HF_TOKEN: ${{ secrets.HF_READ_TOKEN || secrets.HF_TOKEN }}
+        run: |
+          test -n "$LAKE_URL" || { echo "::error::Set the LAKE_URL repository variable"; exit 1; }
+          uv run python -m coffeedata.prod_health fetch "$LAKE_URL" "$RUNNER_TEMP/lake"
+      - name: Measure and judge
+        run: |
+          mkdir -p "$RUNNER_TEMP/health"
+          uv run python -m coffeedata.prod_health measure "$RUNNER_TEMP/lake" "$RUNNER_TEMP/health/metrics.json"
+          uv run python -m coffeedata.prod_health judge "$RUNNER_TEMP/health/metrics.json" \
+            --out "$RUNNER_TEMP/health/alerts.json" --summary "$GITHUB_STEP_SUMMARY"
+      - if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: prod-health
+          path: ${{ runner.temp }}/health/alerts.json  # names, statuses and bounds; metrics.json stays here
+          if-no-files-found: ignore
+          retention-days: 90
+
+  alert:
+    needs: measure
+    if: always() && github.ref == 'refs/heads/main' && needs.measure.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # One at a time per workflow, so two runs never both find no issue and open two; a newer run waiting replaces
+    # an older one, and its report is the newer state anyway.
+    concurrency: {group: triage-prod-health, cancel-in-progress: false}
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        continue-on-error: true  # nothing measured: the pipeline issue opens
+        with:
+          name: prod-health
+          path: ${{ runner.temp }}/health
+      - name: Open, update or close the triage issues
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: python3 -m coffeedata.triage prod "$RUNNER_TEMP/health/alerts.json"

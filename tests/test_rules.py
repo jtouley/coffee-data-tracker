@@ -30,6 +30,11 @@ def test_every_rule_has_its_words():
         "p.variety": "Use at least 4 different characters.",
         "terms": "Tick the box to agree to the Terms and Privacy Policy before creating your account.",
         "i.label": "Keep the note to 60 characters.",
+        "e.syntax": "That doesn’t look like an email address. Check for typos.",
+        "e.required": "Enter your email address.",
+        "f.required": "Enter your username or email.",
+        "f.no_email": "This account has no verified email, so we can’t send a link. Ask the person who invited you for a "
+        "reset link.",
     }
     shown = {k: v[1] for k, v in rules.RULES.items() if v[1]}
     assert shown == {

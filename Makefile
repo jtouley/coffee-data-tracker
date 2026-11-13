@@ -45,7 +45,7 @@ mcp:
 	uv run coffeedata mcp
 
 app:  ## the shot-logging app on http://localhost:8000, over the local lake (signed in as the owner unless SESSION_SECRET is set)
-	uv run uvicorn app.main:app --reload --host $${HOST:-127.0.0.1} --port $${PORT:-8000}
+	COFFEEDATA_LOCAL_OWNER=1 uv run uvicorn app.main:app --reload --host $${HOST:-127.0.0.1} --port $${PORT:-8000}
 
 admin:  ## the admin on http://localhost:8001 over the local lake, read-only; set ADMIN_SESSION_SECRET and ADMIN_ENROLL_TOKEN first (docs/admin/README.md)
 	ADMIN_ORIGIN=$${ADMIN_ORIGIN:-http://localhost:8001} ADMIN_STATE_DIR=$${ADMIN_STATE_DIR:-build/admin-state} \

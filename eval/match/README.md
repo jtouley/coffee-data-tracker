@@ -5,6 +5,10 @@ returns its coffee_id, or nothing when the match isn't confident. It runs agains
 lake. It was made for #57, which widens `fuzzy_match_coffee`'s candidate pool, and follows the root `CLAUDE.md`.
 The results are in `RESULTS.md`.
 
+## Floor
+
+`tests/test_match_accuracy.py` holds `match_coffee` to train and validation (CLAUDE.md step 8): right at least 1,621 and 1,632 of 2,000 queries, confidently wrong at most 2 and 3 (measured 2026-11-11, main 0cfa4d9, the same as RESULTS.md). The catalog is private: `eval/floor_inputs.py` fetches it from the lake at df57f62 (the sha256 above), and the eval-floors workflow runs it (`docs/RULES.md`).
+
 ## Data
 
 - Source: `marts/dim_coffee.parquet` from `hf://datasets/jtouley/coffee-data`, copied into a scratch folder.

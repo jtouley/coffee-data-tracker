@@ -110,6 +110,25 @@ def test_search_labels_the_back_catalog(lake, with_status):
     assert search() == []  # in stock only, by default
 
 
+def test_search_finds_an_origin_by_its_iso_name_spelling_or_code(lake):
+    # origin_country is the ISO 3166-1 short name; a reader asking for "Vietnam" or "VN" still finds it.
+    import duckdb
+
+    con = duckdb.connect()
+    con.execute("""create table dim_coffee as select 'r.com:1' as coffee_id, 'R' as roaster_name, 'Da Lat' as title,
+                   'u' as url, 'Viet Nam' as origin_country, 'VN' as origin_country_code,
+                   'Vietnam' as origin_country_raw, 'natural' as process, ['plum'] as tasting_notes, true as in_stock,
+                   true as is_listed, 3.0 as price_per_100g, 'r.com' as roaster_id""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from dim_coffee")
+    search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
+    for asked in ("Viet Nam", "vietnam", "VN", "vn"):
+        assert [r["title"] for r in search(origin=asked)] == ["Da Lat"], asked
+    assert search(origin="Laos") == []
+    assert (
+        search(origin="am") == []
+    )  # two letters are a code, matched exactly, never a substring of "Viet Nam"
+
+
 def test_search_reads_old_and_new_exports_together(lake, monkeypatch):
     # Review #4: the schema check and the query read the files the same way (union_by_name), so a mix of exports
     # from before and after is_wholesale filters the new ones' wholesale rows and keeps every old row.

@@ -4,8 +4,9 @@ Their shots, bags and equipment (main lake), photos (photo dataset), and account
 removed, every version of each record: one commit per dataset on Hugging Face, or the files themselves in a local
 lake. The private marts that carry their rows (fct_shot, mart_bag) are rewritten without them in the same commit,
 so the app can't load them back from the export on its next start. The account must be turned off in the app
-first, so the running app refuses its writes until it restarts without it. The datasets' version history still
-has the old commits; the privacy policy says so.
+first, so the running app refuses its writes until it restarts without it. The main and photo datasets' version
+history still has the old commits; the privacy policy says so. The users dataset's history is squashed afterwards,
+so the account's email (sealed, app/contacts.py) can't be read from an old revision either.
 """
 
 from __future__ import annotations
@@ -26,7 +27,7 @@ MAIN: Tables = [("shots", "shot_id", ("user_id",)), ("bags", "bag_id", ("user_id
                 ("equipment", "equipment_id", ("user_id",))]  # fmt: skip
 PHOTOS: Tables = [("photos", "photo_id", ("user_id",))]
 USERS: Tables = [("users", "user_id", ("user_id",)), ("invites", "invite_id", ("for_user_id", "used_by")),
-                 ("consents", "user_id", ("user_id",))]  # fmt: skip
+                 ("consents", "user_id", ("user_id",)), ("contacts", "user_id", ("user_id",))]  # fmt: skip
 MARTS = ["fct_shot", "mart_bag"]  # private exports with a user_id column, rewritten without the person's rows
 
 
@@ -157,3 +158,5 @@ def apply(p: Plan, main: Lake, photos: Lake, users: Lake) -> None:
                         commit_message=f"Delete the data of user {p.user_id} (deletion request)",
                     )
             log.info("deleted %d files from %s, rewrote %d marts", len(paths), lake.url, len(marts))
+            if lake is users and paths:  # nothing to do in a local lake, which has no history
+                users.squash(f"Squash history after deleting user {p.user_id}")

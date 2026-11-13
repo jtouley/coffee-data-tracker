@@ -1,0 +1,79 @@
+# Acknowledged shifts: a merged change that moves a production-health metric on purpose (docs/TRIAGE.md,
+# "Was it intended?"). A breach that matches an entry is reported as "expected (#<pr>)" in the run summary and
+# never opens or keeps an issue open. It matches when:
+#   - `metric` matches the breaching metric (a glob: `fill:grams:*`);
+#   - the served release's run date is within [from_run, until_run];
+#   - the breach goes the announced way (`change`: "down", "up" or "either");
+#   - the metric is at most `by` (absolute) from its baseline. A bigger move still alerts.
+# One entry per metric and change, citing the PR and the effect its description measured. Keep windows short.
+# A level shift that lasts (a fill rate that stays lower) ends when the baselines are regenerated with the new
+# release in the history, before `until_run`. Expired entries can be deleted.
+version = 1
+
+# #136 (read bag weights again at build time; merged 2026-11-11, first in the release of run 2026-11-16). Its PR
+# measured, on the stored lake: Shopify grams coverage 94.4% -> 87.8% (unstated Shopify `grams` dropped, the owner's
+# decision), WooCommerce +25 points, Squarespace +27, generic +9, Square Online +5; `bag_sizes_g` changes for 10,175
+# of 45,857 coffees and `price_per_100g` for 6,668 (2,651 filled, 1,981 blanked, 2,036 changed).
+
+[[expected]]
+metric = "fill:grams:shopify"
+change = "down"
+by = 0.10
+from_run = "2026-11-16"
+until_run = "2026-12-07"
+pr = 136
+why = "unstated Shopify grams dropped: Shopify coverage 94.4% -> 87.8% on the PR's measurement"
+
+[[expected]]
+metric = "fill:price_per_100g:shopify"
+change = "down"
+by = 0.10
+from_run = "2026-11-16"
+until_run = "2026-12-07"
+pr = 136
+why = "a Shopify price per 100 g needs a bag weight; 1,981 coffees blanked overall"
+
+[[expected]]
+metric = "fill:grams"
+change = "either"
+by = 0.06
+from_run = "2026-11-16"
+until_run = "2026-12-07"
+pr = 136
+why = "overall grams coverage moves with Shopify down and the other platforms up (+1 point on the PR's measurement)"
+
+[[expected]]
+metric = "fill:price_per_100g"
+change = "either"
+by = 0.06
+from_run = "2026-11-16"
+until_run = "2026-12-07"
+pr = 136
+why = "filled_share:price_per_100g 0.620 -> 0.638 on the PR's measurement"
+
+[[expected]]
+metric = "shift:changed:grams"
+change = "up"
+by = 0.35
+from_run = "2026-11-16"
+until_run = "2026-11-16"
+pr = 136
+why = "bag_sizes_g changes for 10,175 of 45,857 coffees (22%), once"
+
+[[expected]]
+metric = "shift:changed:price_per_100g"
+change = "up"
+by = 0.25
+from_run = "2026-11-16"
+until_run = "2026-11-16"
+pr = 136
+why = "price_per_100g changes for 6,668 coffees (15%), once"
+
+[[expected]]
+metric = "shift:median:*"
+change = "either"
+by = 0.15
+from_run = "2026-11-16"
+until_run = "2026-11-16"
+pr = 136
+why = "bag weights re-read: the median bag size and price per 100 g may move once (the PR saw market medians move 0)"

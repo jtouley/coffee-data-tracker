@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.5.0
+version: 3.1.0
 status: active
 domain: coffee
 description:
@@ -71,7 +71,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.5.0
+    version: 3.1.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: license
@@ -168,6 +168,47 @@ customProperties:
           none changed or removed). A release is served only if the build had a verdict model and at least 85% of listed
           coffees were decided by Claude's coffee-or-not verdict; until 2026-11 every release was the rules alone.
           No table, column, type or enum changed, so Snowflake needs no migrate.
+      - topic: one store, one roaster
+        decided: "2026-11-10"
+        outcome: >-
+          35 stores were published twice or three times, under 71 roaster_ids: a second domain (an old name, a
+          café's domain, a rebrand) that redirects to the store's own. A roaster_id whose resolved host has the same
+          key as another roaster's (lower case, without www/shop/store) is now an alias: never crawled, never
+          public, with its coffees and price events (the same store's products, which the canonical id carries
+          under its own coffee_ids; no history is moved across). Grouping never reads the crawl status (an outage
+          never splits a store) and skips shared hosts (parked, shorteners, platforms); the canonical id is sticky:
+          an opted-out one, then a publishable one, then the one read first, then the one equal to the host.
+          White-label stores (one supplier's catalog sold by separate businesses on their own domains) are separate
+          stores and stay. public-catalog contract
+          2.6.0, a minor version: a quality rule added (tests/public_roasters_unique_by_host.sql, error), fewer
+          rows, no table, column, type or enum changed, so Snowflake needs no migrate. Measured in
+          eval/roaster_dedup (main against the change, on held-out roaster pairs).
+      - topic: origin countries as ISO 3166-1
+        decided: "2026-11-11"
+        outcome: >-
+          origin_country is now the ISO 3166-1 English short name, and origin_country_code (alpha-2) is added to
+          public_coffee and public_market_weekly (public-catalog contract 3.0.0, a major version: values of a key
+          column change, e.g. 'Tanzania' becomes 'Tanzania, United Republic of', 'Vietnam' 'Viet Nam', 'Ivory Coast'
+          "Côte d'Ivoire", and Puerto Rico is its own country, PR). The 2026-11-09 release carried 52 origin values
+          in public_market_weekly for about 46 countries (Brasil and Brazil, two spellings of DR Congo, "Hawaii,
+          Usa"). A versioned seed (dbt/seeds/origin_country_iso.csv) maps each captured spelling; a list of several
+          origins, a continent or New Guinea has no country; a new spelling warns and is published with no country until mapped (two
+          quality rules added). The raw captured value stays in the private lake. Snowflake's PUBLIC_COFFEE and
+          PUBLIC_MARKET_WEEKLY get the new column through snowflake_migrate (marketplace/README.md). Measured over the
+          full census of captured spellings in eval/origin_iso. A spelling not in the seed warns (published with no
+          country) and opens a triage issue rather than holding back the release. The site shows a common name
+          for some countries (Tanzania, Vietnam, DR Congo…) by the dbt var origin_names; the data keeps ISO's.
+      - topic: chains leave the public data
+        decided: "2026-11-11"
+        outcome: >-
+          "Chains should still be scraped, but filtered from the public result. A chain is anything with over 20
+          stores." A roaster is a chain when its store count (the registry's locations: US Overture roastery places
+          that list its website) is over 20 (dbt var chain_store_threshold), unless dbt/seeds/chain_overrides.csv
+          decides otherwise, either way, with a reason. A chain is still crawled and stays in the lake and the
+          internal marts; public_roaster leaves it out, and with it its coffees, price events and market counts,
+          the site, the public dataset and the shares. public-catalog contract 3.1.0, a minor version: a quality
+          rule added (tests/public_tables_have_no_chain.sql, error), fewer rows (2 roasters and 149 coffees in
+          release 971bfe), no table, column, type or enum changed, so Snowflake needs no migrate.
 team:
   name: registry.coffee
   members:

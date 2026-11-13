@@ -1,0 +1,165 @@
+{
+ "items": [
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:104124",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "104132"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:1733",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87090"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:1738",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87097"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:1753",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87122"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:1761",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87104"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:29101",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "42490"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:33987",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "42507"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:33993",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87110"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:33998",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87067"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:34003",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87072"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:39856",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87133"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:42601",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "44794"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:58413",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "58421"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:75536",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "75543"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:776",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87079"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:88100",
+   "label_from": "validation",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "92568"
+  },
+  {
+   "coffee_id": "charlestoncoffeeroasters.com:988",
+   "store": "charlestoncoffeeroasters.com",
+   "stratum": "D",
+   "variant_id": "87116"
+  },
+  {
+   "coffee_id": "fluidcoffeelove.com:399d8170dcf0",
+   "store": "fluidcoffeelove.com",
+   "stratum": "D",
+   "variant_id": "0"
+  },
+  {
+   "coffee_id": "freedomhillcoffee.com:7997823779029",
+   "store": "freedomhillcoffee.com",
+   "stratum": "D",
+   "variant_id": "44590799487189"
+  },
+  {
+   "coffee_id": "freedomhillcoffee.com:8001317404885",
+   "store": "freedomhillcoffee.com",
+   "stratum": "D",
+   "variant_id": "44054172565717"
+  },
+  {
+   "coffee_id": "loreroasters.com:10369838973244",
+   "store": "loreroasters.com",
+   "stratum": "D",
+   "variant_id": "52999797834044"
+  },
+  {
+   "coffee_id": "madpriestcoffee.com:8826982162",
+   "store": "madpriestcoffee.com",
+   "stratum": "D",
+   "variant_id": "30817122962"
+  },
+  {
+   "coffee_id": "ohoriscoffee.com:8199933264057",
+   "label_from": "validation",
+   "store": "ohoriscoffee.com",
+   "stratum": "D",
+   "variant_id": "45460333527225"
+  },
+  {
+   "coffee_id": "sevenvirtuespdx.com:11899051573566",
+   "label_from": "validation",
+   "store": "sevenvirtuespdx.com",
+   "stratum": "D",
+   "variant_id": "51768089870654"
+  }
+ ],
+ "set": "validation-3",
+ "stratum_sizes": {
+  "D": 24
+ }
+}

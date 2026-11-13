@@ -3,6 +3,9 @@ version: 2
 models:
   - name: stg_fetches
     description: One row per fetch attempt (raw fetches, raw contract 1.2.0), ok or not.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, batch_id]}
     columns:
       - name: run_date
         description: The weekly run the attempt belongs to (its Monday).
@@ -53,8 +56,11 @@ models:
           - accepted_values: {arguments: {values: [siteground, cloudflare]}}
   - name: int_fetches
     description: >-
-      stg_fetches with every ok fetch's coffee count: as its crawl recorded it, else as int_fetch_coffees counts it
-      with the same rule. dim_roaster's status reads it.
+      One row per fetch attempt (stg_fetches), with every ok fetch's coffee count: as its crawl recorded it, else as
+      int_fetch_coffees counts it with the same rule. dim_roaster's status reads it.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, batch_id]}
     columns:
       - name: run_date
         description: The weekly run's date (stg_fetches.run_date).
@@ -84,11 +90,11 @@ models:
         data_tests: [not_null]
   - name: int_fetch_product_inputs
     description: >-
-      The products of every ok fetch whose crawl recorded no coffee count (ELT), one row per fetch and product,
-      with what the crawl's coffee rule reads.
+      One row per fetch and product, for every ok fetch whose crawl recorded no coffee count (ELT), with what the
+      crawl's coffee rule reads.
     data_tests:
-      - unique:
-          arguments: {column_name: "roaster_id || '|' || batch_id || '|' || product_id"}
+      - grain:
+          arguments: {columns: [roaster_id, batch_id, product_id]}
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
@@ -116,8 +122,11 @@ models:
         description: The description as text.
   - name: int_escaped_tag_inputs
     description: >-
-      Every product version in the lake whose tags decoding changes, one row per roaster, product and version, with
-      the raw tags (what registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
+      One row per roaster, product and version in the lake whose tags change when decoded, with the raw tags (what
+      registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, product_id, input_hash]}
     columns:
       - name: input_hash
         description: The product-version key, over the raw tags (as stg_snapshots.input_hash).
@@ -128,9 +137,12 @@ models:
         description: The same tags decoded (decode_html_entities_list).
   - name: int_tag_decoding_parity
     description: >-
-      The rows of int_escaped_tag_inputs where the rules decide differently on the raw and the decoded tags, so
-      the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
+      One row per int_escaped_tag_inputs row (roaster, product and version) where the rules decide differently on
+      the raw and the decoded tags, so the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
       fails the build on any row, and `coffeedata build` prints them.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, product_id, input_hash]}
     columns:
       - name: differs
         description: >-
@@ -139,11 +151,11 @@ models:
           (products.rules with no verdict and with a "coffee" one: enrich.py's candidates and their bases).
   - name: int_fetch_coffees
     description: >-
-      Coffees per ok fetch without a recorded count, counted as the crawl counted them before ELT:
-      classify.is_coffee, the rules alone (no stored verdicts, no listing or suspect-run filter).
+      One row per ok fetch without a recorded coffee count, with its coffees counted as the crawl counted them
+      before ELT: classify.is_coffee, the rules alone (no stored verdicts, no listing or suspect-run filter).
     data_tests:
-      - unique:
-          arguments: {column_name: "roaster_id || '|' || batch_id"}
+      - grain:
+          arguments: {columns: [roaster_id, batch_id]}
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
@@ -154,11 +166,63 @@ models:
       - name: coffees
         description: Distinct products in the fetch that the rule calls coffee.
         data_tests: [not_null]
+  - name: int_origin_country
+    description: >-
+      One row per origin spelling the lake holds as captured (stg_products' rules, stg_enrichments' Claude rows),
+      resolved to ISO 3166-1 through the origin_country_iso seed (macros/origin_iso.sql): kind country with its codes,
+      short name and any sub-national region the spelling names; multiple for a list of several places (a blend or a
+      multi-origin offer); not_a_country or ambiguous as the seed lists them; unmapped for anything else.
+    columns:
+      - name: raw_value
+        description: "The origin as captured, unchanged."
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [country, multiple, not_a_country, ambiguous, unmapped]}}
+      - name: alpha2
+        description: "ISO 3166-1 alpha-2 code; null unless kind is country."
+      - name: alpha3
+        description: "ISO 3166-1 alpha-3 code; null unless kind is country."
+      - name: iso_short_name
+        description: "ISO 3166-1 English short name; null unless kind is country."
+      - name: region
+        description: "The sub-national place the spelling names (Hawaii, Sumatra), if any."
+      - name: display_name
+        description: "What the site shows: the origin_display_name seed's name under var origin_names common, else iso_short_name."
+  - name: int_roaster_state
+    description: >-
+      One row per roaster in the registry: its crawl status from probe and fetch history, and the store it serves
+      (canonical_roaster_id, macros/roaster_alias.sql). registry.STATE_SQL decides both the same way for the crawl.
+      Upstream of dim_coffee, which leaves aliases out; dim_roaster adds the coffee counts. Also where is_chain is
+      decided (dbt only: the crawl reads every roaster alike, chains included).
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [unique, not_null]
+      - name: is_chain
+        description: "A chain: more than chain_store_threshold (20) stores (stg_registry.locations), unless seeds/chain_overrides.csv says otherwise, either way. Still crawled and kept in the internal marts; public_roaster leaves it out of every public output."
+        data_tests: [not_null]
+      - name: host
+        description: "The store's host: the last ok probe's, else the seed's, else the roaster_id. A failed probe never moves it."
+      - name: first_catalog_run
+        description: "The first run that read a catalog (an ok fetch with products); null: never. History, so it only ever moves earlier: the canonical id's sticky rank."
+      - name: crawl_status
+        description: "The status from history alone, before aliases (dim_roaster.status's values but alias)."
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+      - name: status
+        description: "crawl_status, or alias when another roaster_id serves the same store (an opted-out id keeps opted_out)."
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: "The one roaster_id its store is crawled and published under (macros/roaster_alias.sql); roaster_id itself when it is its store's."
+        data_tests: [not_null]
   - name: int_roaster_runs
     description: One row per roaster and run, over all of the run's attempts (a run counts, not an attempt).
     data_tests:
-      - unique:
-          arguments: {column_name: "roaster_id || '|' || run_date"}
+      - grain:
+          arguments: {columns: [roaster_id, run_date]}
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
@@ -201,8 +265,8 @@ models:
   - name: stg_runs
     description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
     data_tests:
-      - unique:
-          arguments: {column_name: "roaster_id || '|' || run_date"}
+      - grain:
+          arguments: {columns: [roaster_id, run_date]}
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
@@ -240,10 +304,11 @@ models:
           are all partial has every run current, so nothing it ever listed is delisted until a complete run lands.
         data_tests: [not_null]
   - name: stg_run_quality
-    description: Every roaster-week with a successful fetch, the batch that counts, and whether it looks broken.
+    description: >-
+      One row per roaster-week with a successful fetch: the batch that counts, and whether the week looks broken.
     data_tests:
-      - unique:
-          arguments: {column_name: "roaster_id || '|' || run_date"}
+      - grain:
+          arguments: {columns: [roaster_id, run_date]}
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
@@ -276,7 +341,12 @@ models:
           The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
         data_tests: [not_null]
   - name: stg_run_walk
-    description: Each roaster-week in order, whether it counts, and the counted weeks it was judged against.
+    description: >-
+      One row per roaster-week with a successful fetch, in order: whether it counts, and the counted weeks it was
+      judged against.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, run_date]}
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
@@ -319,6 +389,50 @@ models:
           - accepted_values: {arguments: {values: [include, exclude]}}
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
+    columns:
+      - name: build_id
+        description: The build's id, as `coffeedata build` recorded it in the lake's builds table.
+        data_tests: [unique, not_null]
+  - name: stg_snapshots
+    description: >-
+      One row per roaster, counted run and product: what the store listed at the fetch that counts for the week,
+      with prices in USD only and tags decoded.
+    data_tests:
+      - grain:
+          arguments: {columns: [roaster_id, run_date, product_id]}
+    columns:
+      - name: input_hash
+        description: "Everything the classifier and the extraction rules read (macro product_input_hash)."
+      - name: grams_key
+        description: >-
+          Everything the bag-weight rules read (macro variant_grams_key): the title, description hash, raw tags,
+          handle, and each option's title, stated price and stored grams. stg_variant_grams runs once per value.
+  - name: stg_variant_grams_inputs
+    description: >-
+      One row per distinct input of the bag-weight rules (grams_key) among each coffee's latest run: what
+      coffeedata.bag_weight reads. Its grain differs from stg_product_inputs (input_hash), which leaves out the
+      options' titles and prices, the tags' order and the handle.
+    columns:
+      - name: grams_key
+        description: "stg_snapshots.grams_key (macro variant_grams_key)."
+        data_tests: [unique, not_null]
+      - name: variants
+        description: "Each option's title, price as the store states it, and the grams the crawler stored."
+  - name: stg_variant_grams
+    description: >-
+      The bag-weight rules (coffeedata.bag_weight), run once per stg_variant_grams_inputs row: each variant's
+      grams, in the snapshot's order. dim_coffee prices bags with them. variant_grams_are_valid checks the lengths
+      and the range.
+    columns:
+      - name: grams_key
+        data_tests: [unique, not_null]
+      - name: options
+        description: "How many options the version has: the length grams must have."
+      - name: grams
+        description: >-
+          One per variant, by position: what the option's price buys, from the option's own title; else the one
+          weight the product title, size tags, description or URL handle states when the options cost the same; a
+          stored weight the listing doesn't state is dropped; null where the text doesn't say (eval/bag_grams).
   - name: stg_products
     description: The classifier and extraction rules, run once per distinct product version (input_hash).
     columns:
@@ -334,6 +448,10 @@ models:
           (classify.decision): excluded:<rule>, sauce, sweets, drinks, coffee_words, country, demonym, coffee_type, or
           signals:<n>. An explanation only (product_decisions); nothing public reads it, and no test on it gates
           a release.
+      - name: needs_llm
+        description: >-
+          The rules leave the coffee incompletely described (extract.needs_llm: no origin and not a blend, no
+          process, or no tasting notes), so the enrichment job asks Claude for it. Null for a non-coffee.
   - name: product_decisions
     description: >-
       Every product a store lists, coffee or not, as of its latest record, with the build's decision and why. Report
@@ -378,9 +496,14 @@ models:
         description: Why (stg_products.reason).
         data_tests: [not_null]
   - name: mart_market
+    description: >-
+      One row per origin_country x process over the current catalog (int_current_catalog): non-wholesale, non-blend
+      coffees with an origin from US, non-chain roasters, each store counted once (canonical roaster ids only,
+      dim_roaster.canonical_roaster_id), with coffee and roaster counts, price per 100 g quantiles and the origin's
+      top tasting notes.
     data_tests:
-      - unique:
-          arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
+      - grain:
+          arguments: {columns: [origin_country, process]}
   - name: run_completeness
     description: One row per roaster the latest (or as_of_run) run should have tried, and whether it did.
     columns:
@@ -434,11 +557,15 @@ models:
       - name: metric
         data_tests: [unique, not_null]
   - name: release_changes
-    description: Every row this build's public tables add, remove or change against the release customers get now
-      (var previous_release), with the reason the build can show for it, and a row for each comparison that couldn't
+    description: One row per row this build's public tables add, remove or change against the release customers get
+      now (var previous_release), with the reason the build can show for it, and one per comparison that couldn't
       be made in full. Empty when nothing is served. Report only (tag report_only), run after the gate. The build
       prints the counts per reason and records them (builds, kind release_change) as the release's notes;
       release_changes_explained warns on the unexplained and incomplete ones.
+    # Report only, like the model: `coffeedata build` runs this with it, after the gate.
+    data_tests:
+      - grain:
+          arguments: {columns: [table_name, item, change]}
     columns:
       - name: table_name
         description: The public table (public_coffee, public_price_event, public_roaster, public_market_weekly), or
@@ -473,7 +600,7 @@ models:
       - name: roaster_country
         description: "The roaster's country (ISO 3166-1 alpha-2, stg_registry; null for a roaster no longer in the registry). The public tables keep US only."
       - name: is_chain
-        description: "The roaster is a chain."
+        description: "The roaster is a chain (int_roaster_state.is_chain): out of mart_market and every public table."
       - name: product_id
         description: "The store's product id."
       - name: handle
@@ -493,9 +620,22 @@ models:
       - name: weeks_listed
         description: "Counted runs it was listed in."
       - name: origin_country
-        description: "Origin country (Claude's extraction where there is one, else the rules)."
+        description: >-
+          Origin country as its ISO 3166-1 English short name (int_origin_country), from Claude's extraction where
+          there is one, else the rules. Null when the listing gives no single country: not stated, a blend's or a
+          multi-origin offer's list, a continent, or a place two countries share.
+      - name: origin_country_code
+        description: "The origin country's ISO 3166-1 alpha-2 code; null exactly when origin_country is."
+      - name: origin_country_display
+        description: >-
+          The name the site shows for the origin (int_origin_country.display_name): a common name under the dbt var
+          origin_names common (the default), else the ISO short name. Null exactly when origin_country is.
+      - name: origin_country_raw
+        description: "The origin as captured, before the ISO mapping (any spelling, or a list of several)."
       - name: origin_region
-        description: "The region within the origin country (Claude's extraction where there is one, else the rules)."
+        description: >-
+          The region within the origin country (Claude's extraction where there is one, else the rules), or else the
+          sub-national place the captured origin names (Hawaii in "Hawaii, Usa").
       - name: producer
         description: "Farm, washing station or producer."
       - name: varietals
@@ -521,7 +661,7 @@ models:
       - name: price_per_100g
         description: "The lowest plausible retail price per 100 g of an available bag, from USD prices only."
       - name: bag_sizes_g
-        description: "The bag sizes offered, in grams."
+        description: "The bag sizes offered, in grams (stg_variant_grams: an option's weight, or the one the product title or description states)."
       - name: release_build_id
         description: "The build that made this release."
       - name: release_run_date
@@ -551,6 +691,12 @@ models:
         description: "rules or llm: what the attributes come from."
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: rules_complete
+        description: >-
+          The rules alone describe the coffee completely (stg_products.needs_llm is false), whether or not Claude
+          has reached it. prod-health's abstain:enrichment is the share of listed coffees where this is false, and
+          coverage:enrichment the share of those with a Claude row (enrichment_method = llm).
+        data_tests: [not_null]
       - name: classified_by
         description: >-
           claude or rules: what decided that the latest version is coffee. claude is a stored verdict for the
@@ -577,9 +723,9 @@ models:
         description: "Country (ISO 3166-1 alpha-2): the seed's, US unless corrected; public_roaster keeps US only."
         data_tests: [not_null]
       - name: locations
-        description: "Number of locations."
+        description: "Its store count: US Overture places listing its website that are roasteries (tagged coffee_roastery, or a coffee place with roast in its name), as discovery counted them; 1 when unknown. Cafes not tagged as roasteries aren't counted, so a chain of cafes can read low."
       - name: is_chain
-        description: "The roaster runs multiple retail locations (the registry's is_chain)."
+        description: "A chain (int_roaster_state.is_chain): more than chain_store_threshold (20) stores, unless seeds/chain_overrides.csv says otherwise. Still crawled; never public."
       - name: opted_out
         description: "The roaster asked not to be crawled."
       - name: sources
@@ -607,14 +753,33 @@ models:
       - name: status
         description: >-
           As on main, from the last ok fetch's coffee count (int_fetches.coffees: as the crawl recorded it, else
-          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md).
+          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md). alias: another
+          roaster_id serves the same store (canonical_roaster_id); an alias is never crawled (registry.STATE_SQL
+          decides the same), has no coffee in dim_coffee and is never public. The site's coverage table counts
+          aliases on a row of their own.
         data_tests:
-          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: >-
+          The one roaster_id its store is crawled and published under (int_roaster_state; the rule and its order
+          are in macros/roaster_alias.sql): roasters whose resolved hosts share a key (macro host_key), whatever
+          their status, unless the key is a shared host (seed shared_hosts), are one store; alias_of overrides the
+          host. The canonical id is sticky: an opted-out one, then a publishable one, then the one whose catalog was
+          read first. dim_coffee and fct_price_event keep only roasters equal to it.
+        data_tests: [not_null]
   - name: mart_bag
+    description: >-
+      One row per bag, per user: the coffee in it, how many shots it took, the best one (highest rating, then the
+      latest brewed, then shot_id, as in mart_dial_in) and how many days off roast its first and last shots were.
+      Personal data: private marts only, never public.
     columns:
       - name: bag_id
         data_tests: [unique, not_null]
   - name: fct_shot
+    description: >-
+      One row per current shot (stg_shots), with its bag, grinder and catalog coffee. A shot with no coffee or
+      roast date of its own takes its bag's; the shot's own values stay in shot_coffee_id, shot_coffee_freetext and
+      shot_roast_date. Personal data: private marts only, never public.
     columns:
       - name: shot_id
         data_tests: [unique, not_null]
@@ -642,10 +807,21 @@ models:
         data_tests:
           - accepted_values: {arguments: {values: [grinder, machine, basket]}}
   - name: stg_bags
+    description: >-
+      One row per current bag: the latest record of each bag_id (finishing or correcting a bag is a new record),
+      without deleted bags. Personal data: private marts only, never public.
     columns:
       - name: bag_id
         data_tests: [unique, not_null]
   - name: fct_price_event
+    description: >-
+      One row per coffee, bag size (variant), run and kind of change: a bag first listed (new), back after a gap
+      (relisted), repriced (price), in or out of stock (availability) or gone (removed), between consecutive
+      counted fetches of its roaster. Derived from the raw snapshots alone, so a failed fetch never reads as a
+      delisting, and USD prices only. Served with the release (quality.RELEASE_TABLES).
+    data_tests:
+      - grain:
+          arguments: {columns: [coffee_id, variant_id, run_date, event]}
     columns:
       - name: coffee_id
         data_tests:
@@ -662,141 +838,189 @@ models:
 
   - name: public_coffee
     description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."
-    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step). A required
+    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step, descriptions
+    # included: they are the contract's, word for word). A required
     # column is a not_null constraint too, so DuckDB refuses a null while building the table.
     config:
       contract: {enforced: true}
     columns:
       - name: coffee_id
+        description: "<roaster domain>:<store product id>; stable across runs and renames."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [unique, not_null]
       - name: roaster_id
+        description: "The roaster's normalized domain."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: roaster_name
+        description: "Roaster name."
         data_type: varchar
       - name: roaster_state
+        description: "US state code of the roaster, where known."
         data_type: varchar
       - name: coffee_name
+        description: "The coffee's name as the roaster lists it, cleaned of markup."
         data_type: varchar
       - name: source_url
+        description: "The coffee's page on the roaster's own store (http or https only)."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: is_listed
+        description: "In the roaster's latest successful catalog fetch, or, when the fetches since then read only part of the catalog (partial), in one of those or in the latest complete fetch before them. A roaster whose fetches have all been partial keeps every coffee it ever listed until a complete fetch lands."
         data_type: boolean
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: in_stock
+        description: "Listed, with at least one bag size available."
         data_type: boolean
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: catalog_status
+        description: "available or preorder (buyable now), sold_out, archived (the roaster's own back-catalog tag), or delisted."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests:
           - not_null
           - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
       - name: published_at
+        description: "The store's latest publish time for the product (Shopify stores only)."
         data_type: timestamp with time zone
       - name: first_seen
+        description: "First weekly run that listed it."
         data_type: date
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: last_seen
+        description: "Latest weekly run that listed it."
         data_type: date
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: weeks_listed
+        description: "Weekly runs that listed it."
         data_type: bigint
       - name: origin_country
+        description: "Origin country as its ISO 3166-1 English short name (e.g. 'Ethiopia', 'Tanzania, United Republic of', 'Viet Nam'), from the rules or Claude's extraction. Null when the listing names no single country (not stated, a blend's or multi-origin offer's list, a continent, or New Guinea, which two countries share)."
+        data_type: varchar
+      - name: origin_country_code
+        description: "The origin country's ISO 3166-1 alpha-2 code (e.g. 'ET', 'TZ', 'VN'); null exactly when origin_country is."
         data_type: varchar
       - name: origin_region
+        description: "Origin region."
         data_type: varchar
       - name: process
+        description: "washed, natural, honey, anaerobic or other."
         data_type: varchar
       - name: varietals
+        description: "Coffee varietals."
         data_type: varchar[]
       - name: elevation_masl_min
+        description: "Lowest growing elevation, metres above sea level."
         data_type: integer
       - name: elevation_masl_max
+        description: "Highest growing elevation, metres above sea level."
         data_type: integer
       - name: roast_level
+        description: "light, medium or dark."
         data_type: varchar
       - name: tasting_notes
+        description: "Tasting notes as normalized descriptors taken from the roaster's text (lowercased, split, shortened)."
         data_type: varchar[]
       - name: flavor_categories
+        description: "Flavor-wheel categories of the tasting notes."
         data_type: varchar[]
       - name: is_blend
+        description: "A blend of origins."
         data_type: boolean
       - name: is_decaf
+        description: "Decaffeinated."
         data_type: boolean
       - name: min_price_usd
+        description: "Cheapest listed bag of any size, USD; the bag may be sold out."
         data_type: double
       - name: price_per_100g
+        description: "Cheapest available retail bag (150 g to 2.5 kg) per 100 g, USD."
         data_type: double
       - name: bag_sizes_g
+        description: "Bag sizes on offer, grams."
         data_type: integer[]
       - name: attributes_source
+        description: "Where origin, process and notes came from: rules, or llm (Claude)."
         data_type: varchar
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
       - name: is_wholesale
+        description: "A wholesale listing: a bulk bag or case the roaster sells to cafes, often the twin of one of its retail coffees. Kept here, flagged; left out of the site, the app's picker, market counts and new arrivals."
         data_type: boolean
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: release_build_id
+        description: "The build that produced this row (coffeedata build-diff and rollback refer to it)."
         data_type: varchar
       - name: release_run_date
+        description: "The weekly run that build checked; every row of a release has the same value."
         data_type: date
   - name: public_roaster
-    description: "One row per published roaster: in the US, not opted out, with a coffee seen, from a redistributable source."
+    description: "One row per published roaster from the registry: in the US, not opted out, with at least one coffee seen, and known from a source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap alone). A store outside the US (a registry correction) is never published. One store is one row: a second domain serving the same store (an alias) is never published, nor its coffees. A chain (more than 20 stores, or a hand-checked registry override) is never published, nor its coffees or price events."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
     columns:
       - name: roaster_id
+        description: "The roaster's normalized domain."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [unique, not_null]
       - name: roaster_name
+        description: "Roaster name."
         data_type: varchar
       - name: city
+        description: "City."
         data_type: varchar
       - name: state
+        description: "US state code."
         data_type: varchar
       - name: platform
+        description: "Store platform (shopify, woocommerce, squarespace, square_online, generic)."
         data_type: varchar
       - name: status
+        description: "Derived from probe and fetch history."
         data_type: varchar
         data_tests:
           - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
       - name: coffees_listed
+        description: "Coffees in its current catalog (listed, not archived)."
         data_type: bigint
       - name: coffees_in_stock
+        description: "Coffees in stock."
         data_type: bigint
       - name: last_ok_run
+        description: "Latest weekly run with a successful catalog fetch."
         data_type: date
       - name: release_build_id
+        description: "The build that produced this row (coffeedata build-diff and rollback refer to it)."
         data_type: varchar
       - name: release_run_date
+        description: "The weekly run that build checked; every row of a release has the same value."
         data_type: date
   - name: public_price_event
-    description: "Price, availability and listing changes between consecutive successful weekly fetches, per bag size."
+    description: "Price, availability and listing changes between consecutive successful weekly fetches, per bag size. A fetch that read only part of a catalog (partial) never removes a bag; removals and relistings are read against complete fetches, so they agree with public_coffee.is_listed."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
     data_tests:
-      - unique:
-          arguments: {column_name: "coffee_id || '|' || variant_id || '|' || run_date || '|' || event"}
+      - grain:
+          arguments: {columns: [coffee_id, variant_id, run_date, event]}
     columns:
       - name: run_date
+        description: "Weekly run in which the change was seen."
         data_type: date
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: coffee_id
+        description: "The coffee (public_coffee.coffee_id)."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests:
@@ -804,28 +1028,36 @@ models:
           - relationships:
               arguments: {to: ref('public_coffee'), field: coffee_id}
       - name: roaster_id
+        description: "The roaster (public_roaster.roaster_id)."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: variant_id
+        description: "The store's own id for one bag size of the coffee (its Shopify or WooCommerce \"variant\" id), so price changes to the 10 oz and the 2 lb bag are told apart. A store fact, not personal data."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: event
+        description: "new, relisted, price, availability or removed."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests:
           - not_null
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
       - name: price_usd
+        description: "Price after the change, USD."
         data_type: double
       - name: previous_price_usd
+        description: "Price before the change, USD."
         data_type: double
       - name: available
+        description: "Availability after the change."
         data_type: boolean
       - name: release_build_id
+        description: "The build that produced this row (coffeedata build-diff and rollback refer to it)."
         data_type: varchar
       - name: release_run_date
+        description: "The weekly run that build checked; every row of a release has the same value."
         data_type: date
   - name: public_market_weekly
     description: "The current catalog by origin and process: breadth and price spread."
@@ -833,43 +1065,150 @@ models:
     config:
       contract: {enforced: true}
     data_tests:
-      - unique:
-          arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
+      - grain:
+          arguments: {columns: [origin_country, process]}
     columns:
       - name: as_of_run
+        description: "Weekly run the summary describes."
         data_type: date
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: origin_country
+        description: "Origin country, its ISO 3166-1 English short name."
+        data_type: varchar
+        constraints: [{type: not_null}]
+        data_tests: [not_null]
+      - name: origin_country_code
+        description: "The origin country's ISO 3166-1 alpha-2 code."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: process
+        description: "Process, or unknown."
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: coffees
+        description: "Coffees in the current catalog (single origins, not archived)."
         data_type: bigint
         constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: roasters
+        description: "Roasters offering them."
         data_type: bigint
       - name: in_stock
+        description: "Of which in stock."
         data_type: bigint
       - name: median_price_per_100g
+        description: "Median price per 100 g, USD."
         data_type: double
       - name: p10_price_per_100g
+        description: "10th percentile price per 100 g, USD."
         data_type: double
       - name: p90_price_per_100g
+        description: "90th percentile price per 100 g, USD."
         data_type: double
       - name: release_build_id
+        description: "The build that produced this row (coffeedata build-diff and rollback refer to it)."
         data_type: varchar
       - name: release_run_date
+        description: "The weekly run that build checked; every row of a release has the same value."
         data_type: date
 
 seeds:
+  - name: chain_overrides
+    description: >-
+      Hand-checked chain status that decides over the store-count rule (int_roaster_state.is_chain: more than
+      chain_store_threshold stores), either way: true for a chain whose store count reads low (discovery counts only
+      Overture places that are roasteries, so a chain of cafes is undercounted), false for a roaster the count calls
+      a chain that isn't one. Every row says why. Read only until a published snapshot carries the admin's chain
+      flags (var chain_flags, the Sources page), which then replace it; its four rows are the flags' initial values.
+    config:
+      column_types: {roaster_id: varchar, is_chain: boolean, reason: varchar}
+    columns:
+      - name: roaster_id
+        data_tests: [unique, not_null]
+      - name: is_chain
+        data_tests: [not_null]
+      - name: reason
+        data_tests: [not_null]
+  - name: shared_hosts
+    description: >-
+      Hosts many unrelated domains resolve to, so sharing one is no evidence of one store (macros/roaster_alias.sql):
+      not_a_roaster (registry.NOT_A_ROASTER_SITE: social, listing and ordering sites, never a roaster's storefront),
+      platform (a platform's own home page, where a closed store can redirect), parked (domains for sale),
+      shortener and directory. A host covers its subdomains. registry.py reads the same file.
+    columns:
+      - name: host
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [not_a_roaster, platform, parked, shortener, directory]}}
   - name: flavor_lexicon
     description: Tasting note -> SCA flavor-wheel-style category. Unknown notes stay uncategorized.
     columns:
       - name: note
         data_tests: [unique]
+  - name: origin_country_iso
+    description: >-
+      Each origin spelling the lake has captured (and each one the rules can produce, origins.py), mapped to ISO
+      3166-1: kind country with the alpha-2 and alpha-3 codes and the ISO English short name, and the sub-national
+      region the spelling names (Hawaii, Sumatra); not_a_country (a continent or a region larger than a country) and
+      ambiguous (a place two countries share, or a name several use: bare "Guinea", also part of Guinea-Bissau,
+      Equatorial Guinea and Papua New Guinea) carry no code. Version .2: Guinea became ambiguous on the census labels; .3 adds the ISO short and common forms of seeded countries, each blind-labelled first (eval/origin_iso round 2). A list of several places isn't listed: the transform
+      reads it part by part (macros/origin_iso.sql). Measured over the full census of spellings in eval/origin_iso.
+    config:
+      meta:
+        mapping_version: "2026-11-12.3"
+        iso_standard: "ISO 3166-1:2020"
+        iso_source: >-
+          English short names (iso_short_name) as published by the ISO 3166 Maintenance Agency, in Debian iso-codes'
+          iso_3166-1 data, as packaged by pycountry 26.2.16 (PyPI wheel sha256
+          115c4baf7cceaa30f59a4694d79483c9167dbce7a9de4d3d571c5f3ea77c305a; databases/iso3166-1.json sha256
+          f01b812b57fba9f31ff621bf33e7c7570a01964dbeb5be2167e94decf538c89f). The iso_3166_1 seed is that file.
+      column_types: {raw_value: varchar, kind: varchar, alpha2: varchar, alpha3: varchar, iso_short_name: varchar,
+                     region: varchar}
+    data_tests:
+      - unique:
+          arguments: {column_name: "lower(trim(raw_value))"}  # the transform matches spellings this way
+    columns:
+      - name: raw_value
+        data_tests: [not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [country, not_a_country, ambiguous]}}
+  - name: iso_3166_1
+    description: >-
+      ISO 3166-1 (all 249 entries): alpha-2, alpha-3 and numeric codes, the English short name, and the common name
+      Debian iso-codes gives where the short name is a formal one (Bolivia, Tanzania, Viet Nam). Source and version
+      as origin_country_iso's meta: written unchanged from pycountry 26.2.16's databases/iso3166-1.json.
+    config:
+      meta:
+        iso_standard: "ISO 3166-1:2020"
+        iso_source: "Debian iso-codes iso_3166-1, as packaged by pycountry 26.2.16 (see origin_country_iso)"
+      column_types: {alpha2: varchar, alpha3: varchar, numeric: varchar, iso_short_name: varchar, common_name: varchar}
+    columns:
+      - name: alpha2
+        data_tests: [unique, not_null]
+      - name: alpha3
+        data_tests: [unique, not_null]
+      - name: iso_short_name
+        data_tests: [unique, not_null]
+  - name: origin_display_name
+    description: >-
+      The common name for an origin country whose ISO 3166-1 short name is a formal one: int_origin_country.display_name
+      and dim_coffee.origin_country_display use it when the dbt var origin_names is common (the default). Display only:
+      origin_country and origin_country_code keep the ISO short name and code.
+    config:
+      column_types: {alpha2: varchar, display_name: varchar}
+    columns:
+      - name: alpha2
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments: {to: ref('iso_3166_1'), field: alpha2}
+      - name: display_name
+        data_tests: [unique, not_null]
