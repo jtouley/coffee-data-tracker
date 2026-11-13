@@ -854,11 +854,11 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
 
 27. **Chain merge → enrich → build by completion, not fixed times** (N2). Done as a precondition (issue #84,
     `chain.py`): the schedule still starts each job, and `enrich-week` and the build job (`classify`, `build`) go on
-    only once the latest attempt of the job before them is `done` in `job_manifests`, waiting until a deadline
-    (05:47, 07:47 UTC) and failing the execution otherwise. The merge has no automatic retry and refuses to start
-    over an attempt that never ended. Still to do: start each job when the one before ends (Cloud Workflows, or one
-    job running the chain), which removes the idle wait and the fixed slots; and a lock so two merges can't run
-    at once (item 9).
+    only once the latest attempts of the jobs before them are `done` and published in `job_manifests`, waiting
+    until a deadline (05:47, 07:47 UTC) and failing the execution otherwise. The merge has no automatic retry and
+    refuses to start over an attempt that failed or never ended. Still to do: start each job when the one before
+    ends (Cloud Workflows, or one job running the chain), which removes the idle wait and the fixed slots; and a
+    lock so two merges can't run at once (item 9).
 28. **A service account per job class** (N3): only `enrich-week` and `build` can read `ANTHROPIC_API_KEY`; the crawl
     jobs, which parse untrusted roaster HTML, can't.
 29. **Ingestion secrets apart from the app's** (N4): `INGEST_HF_TOKEN` (fine-grained to the dataset) and

@@ -1,12 +1,13 @@
 """The Tuesday chain (issue #84): enrich-week runs only after the week's merge is done, the build job (classify,
-then build) only after its enrichment; each waits until a deadline and then fails loudly. And the merge, run
-twice: what a second run does to the files the first one stored, and why it is never retried automatically
+then build) only after its merge and enrichment; each waits until a deadline and then fails loudly. And the merge,
+run twice: what a second run does to the files the first one stored, and why it is never retried automatically
 (src/coffeedata/chain.py, src/terraform/ingestion.tf)."""
 
 import hashlib
 import logging
 import re
 import shutil
+import tempfile
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -20,8 +21,11 @@ from .lakehelp import needs_dbt, product, run
 
 WEEK = "2026-11-02"  # a Monday
 TUESDAY = "2026-11-03"
-# Each precondition: the command that has it, and the job_manifests `job` that must be done before it.
-PRECONDITIONS = [("enrich-week", "merge"), ("classify", "enrich"), ("build", "enrich")]
+# Each precondition: the command that has it, and the job_manifests `job`s that must be done before it (what
+# COFFEEDATA_AFTER_JOB holds on its Cloud Run job).
+PRECONDITIONS = [("enrich-week", "merge"), ("classify", "merge,enrich"), ("build", "merge,enrich")]
+# ... and each (command, the one job before it that isn't done): the others are.
+NOT_DONE = [("enrich-week", "merge"), ("classify", "merge"), ("classify", "enrich"), ("build", "merge"), ("build", "enrich")]  # fmt: skip
 
 
 class Clock:
@@ -38,13 +42,31 @@ class Clock:
         self.t += s
 
 
-def _attempt(lake: Lake, job: str, status: str | None, at: datetime | None = None) -> dict:
+def _attempt(lake: Lake, job: str, status: str | None, at: datetime | None = None, week: str = WEEK) -> dict:
     """One attempt of `job` this week: a start row, and an end row unless status is None (still running, or dead)."""
-    row = control.start(lake, job, WEEK)
+    row = control.start(lake, job, week)
     if at:
         row = row | {"started_at": at}
         control.write(lake, row)
     return control.finish(lake, row, status) if status else row
+
+
+def _stored(lk: Lake, *folders: str) -> dict[str, str]:
+    """path => sha256 of every file under these folders of the lake's root."""
+    return {
+        str(f.relative_to(lk.root)): hashlib.sha256(f.read_bytes()).hexdigest()
+        for d in folders
+        for f in sorted((lk.root / d).rglob("*"))
+        if f.is_file()
+    }
+
+
+@pytest.fixture(autouse=True)
+def _own_temp_folder(tmp_path, monkeypatch):
+    """The marker a failed precondition leaves for the next command lives in the temp folder: one per test."""
+    monkeypatch.setattr(tempfile, "tempdir", str(tmp_path))
+    for name in (chain.AFTER_JOB_ENV, chain.DEADLINE_ENV, chain.SKIP_ENV):
+        monkeypatch.delenv(name, raising=False)
 
 
 # --- the five cases, for each predecessor -------------------------------------------------------------------------
@@ -55,14 +77,14 @@ def test_a_done_predecessor_passes_at_once(lake, job):
     _attempt(lake, job, "done")
     clock = Clock()
     out = chain.require(lake, WEEK, job, wait_s=5400, sleep=clock.sleep, clock=clock)
-    assert out == {"after": job, "status": "done", "waited_s": 0} and clock.sleeps == []
+    assert out == {"after": [job], "status": "done", "waited_s": 0} and clock.sleeps == []
 
 
 @pytest.mark.parametrize("job", ["merge", "enrich"])
 def test_a_failed_predecessor_fails_the_job(lake, job):
     _attempt(lake, job, "failed")
     clock = Clock()
-    with pytest.raises(chain.PreconditionFailed, match=rf"`{job}` is not done.*latest attempt: failed"):
+    with pytest.raises(chain.PreconditionFailed, match=rf"not all done.*`{job}`: failed"):
         chain.require(lake, WEEK, job, wait_s=0, sleep=clock.sleep, clock=clock)
     assert clock.sleeps == []
 
@@ -70,10 +92,9 @@ def test_a_failed_predecessor_fails_the_job(lake, job):
 @pytest.mark.parametrize("job", ["merge", "enrich"])
 def test_a_missing_predecessor_fails_the_job(lake, job):
     _attempt(lake, "crawl", "done")  # the week has rows, none of them the predecessor's
-    other = control.start(lake, job, "2026-10-26")  # last week's doesn't count
-    control.finish(lake, other, "done")
+    _attempt(lake, job, "done", week="2026-10-26")  # last week's doesn't count
     clock = Clock()
-    with pytest.raises(chain.PreconditionFailed, match="latest attempt: missing"):
+    with pytest.raises(chain.PreconditionFailed, match=rf"`{job}`: missing"):
         chain.require(lake, WEEK, job, wait_s=0, sleep=clock.sleep, clock=clock)
 
 
@@ -89,16 +110,16 @@ def test_a_running_predecessor_is_waited_for_until_it_finishes(lake, job, caplog
 
     with caplog.at_level(logging.WARNING):
         out = chain.require(lake, WEEK, job, wait_s=5400, sleep=sleep, clock=clock)
-    assert out == {"after": job, "status": "done", "waited_s": 180}
+    assert out == {"after": [job], "status": "done", "waited_s": 180}
     assert clock.sleeps == [chain.POLL_S] * 3
-    assert f"waiting for this week's ({WEEK}) {job}: its latest attempt is running" in caplog.text
+    assert f"waiting for this week's ({WEEK}) {job}: running" in caplog.text
 
 
 @pytest.mark.parametrize("job", ["merge", "enrich"])
 def test_a_predecessor_still_running_at_the_deadline_fails_the_job(lake, job):
     _attempt(lake, job, None)
     clock = Clock()
-    with pytest.raises(chain.PreconditionFailed, match="latest attempt: running.*after waiting 90 min"):
+    with pytest.raises(chain.PreconditionFailed, match=rf"`{job}`: running.*after waiting 90 min"):
         chain.require(lake, WEEK, job, wait_s=5400, sleep=clock.sleep, clock=clock)
     assert sum(clock.sleeps) == 5400 and max(clock.sleeps) == chain.POLL_S  # the whole wait, never longer
 
@@ -110,13 +131,62 @@ def test_only_the_latest_attempt_counts(lake):
     """A done merge followed by one still running (a re-run, or one that died half-way) is not a finished merge;
     a dead first attempt followed by a done retry is."""
     t = datetime(2026, 11, 3, 3, 17, tzinfo=UTC)
-    _attempt(lake, "merge", None, at=t)  # Cloud Run's first attempt, killed
+    _attempt(lake, "merge", None, at=t)  # a first attempt, killed
     assert chain.state(lake, WEEK, "merge") == "running"
-    _attempt(lake, "merge", "done", at=t + timedelta(minutes=20))  # its retry
+    _attempt(lake, "merge", "done", at=t + timedelta(minutes=20))  # run again
     assert chain.state(lake, WEEK, "merge") == "done"
     _attempt(lake, "merge", None, at=t + timedelta(minutes=90))  # a re-run by hand, still going
     assert chain.state(lake, WEEK, "merge") == "running"
     assert chain.state(lake, WEEK, "enrich") == "missing"
+
+
+def test_every_job_before_must_be_done_not_just_the_last(lake):
+    """The build's check: an `enrich` row alone doesn't prove a finished merge (enrich-week run with the override,
+    or a re-merge running after the enrichment)."""
+    t = datetime(2026, 11, 3, 3, 17, tzinfo=UTC)
+    _attempt(lake, "enrich", "done", at=t + timedelta(hours=1))
+    clock = Clock()
+    with pytest.raises(chain.PreconditionFailed, match="`merge`: missing, `enrich`: done"):
+        chain.require(lake, WEEK, ("merge", "enrich"), sleep=clock.sleep, clock=clock)
+    _attempt(lake, "merge", "done", at=t)
+    assert chain.require(lake, WEEK, ("merge", "enrich"))["after"] == ["merge", "enrich"]
+    _attempt(lake, "merge", None, at=t + timedelta(hours=2))  # a re-merge for a late connector, still going
+    with pytest.raises(chain.PreconditionFailed, match="`merge`: running, `enrich`: done"):
+        chain.require(lake, WEEK, ("merge", "enrich"), sleep=clock.sleep, clock=clock)
+
+
+def test_a_done_row_counts_only_once_its_job_has_published(tmp_path, monkeypatch):
+    """The end row is written before the publish. On the remote lake the waiter goes on only when that row has left
+    staging, which is when the publish's commit is in: until then the week's files are still being uploaded."""
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lk = Lake("hf://datasets/someone/coffee")
+    monkeypatch.setattr(
+        lk, "remote_has", lambda table: False
+    )  # no network: the dataset is stood in for below
+    monkeypatch.setattr(lk, "connect", lambda: __import__("duckdb").connect())
+    _attempt(lk, "merge", "done")
+    assert chain.state(lk, WEEK, "merge") == chain.NOT_PUBLISHED
+    clock = Clock()
+    with pytest.raises(chain.PreconditionFailed, match="`merge`: done, not yet published"):
+        chain.require(lk, WEEK, "merge", wait_s=120, sleep=clock.sleep, clock=clock)
+    assert clock.sleeps == [chain.POLL_S] * 2
+    # the publish: the rows are in the dataset and staging is cleared
+    published = chain.week_rows(lk, WEEK)
+    shutil.rmtree(lk.root / "job_manifests" / f"run_date={WEEK}")
+    monkeypatch.setattr(chain, "week_rows", lambda lake, week: published)
+    assert chain.state(lk, WEEK, "merge") == "done"
+
+
+def test_a_poll_reads_only_the_weeks_folder(lake):
+    """Not the whole table on every poll: another week's files are never opened (here one of them is unreadable)."""
+    _attempt(lake, "merge", "done")
+    other = lake.root / "job_manifests" / "run_date=2026-10-26"
+    other.mkdir(parents=True)
+    (other / "attempt=broken.parquet").write_bytes(b"not parquet")
+    assert chain.state(lake, WEEK, "merge") == "done"
+    assert chain.state(lake, "2026-11-09", "merge") == "missing"  # a week with no folder yet
+    with pytest.raises(Exception, match="broken"):
+        control.rows(lake, WEEK)  # the whole-table read does open it
 
 
 def test_the_wait_is_capped_whatever_it_is_asked(lake):
@@ -136,7 +206,7 @@ def test_the_deadline_is_a_clock_time_shared_by_every_process_and_retry():
     assert (
         chain.wait_budget_s("07:47", at(7, 47)) == 0
     )  # build, after classify waited: one check, no second wait
-    assert chain.wait_budget_s("07:47", at(9, 0)) == 0  # Cloud Run's retry, or a run by hand later that day
+    assert chain.wait_budget_s("07:47", at(9, 0)) == 0  # a retry, or a run by hand later that day
     assert chain.wait_budget_s("07:47", at(1, 0)) == 0  # a run by hand long before: never a 6-hour wait
     assert chain.wait_budget_s(None, at(6, 17)) == chain.wait_budget_s("", at(6, 17)) == 0
     for bad in ("7.47", "soon", "25:00", "07:61"):
@@ -144,26 +214,66 @@ def test_the_deadline_is_a_clock_time_shared_by_every_process_and_retry():
             chain.wait_budget_s(bad, at(6, 17))
 
 
-def test_a_dropped_connection_while_waiting_is_polled_again_and_any_other_error_is_raised(lake, monkeypatch):
+# What a read of the control table fails with while the job being waited for replaces the week's files (its
+# rollup and its publish unlink them), on a dropped connection, and on a 429.
+READ_FAILURES = [
+    OSError('IO Error: Cannot open file "/mnt/staging/job_manifests/run_date=2026-11-02/attempt=a__done.parquet": '
+            "No such file or directory"),
+    FileNotFoundError(2, "No such file or directory"),
+    OSError(116, "Stale file handle"),
+    OSError("IO Error: Stale file handle"),
+    OSError("HTTP Error: HTTP GET error on 'https://huggingface.co/...' (HTTP 429)"),
+    OSError("429 Client Error: Too Many Requests for url"),
+    OSError("Could not connect to server"),
+]  # fmt: skip
+
+
+@pytest.mark.parametrize("error", READ_FAILURES, ids=lambda e: str(e)[:40])
+def test_a_read_that_fails_while_waiting_is_not_done_yet_and_is_polled_again(lake, monkeypatch, error):
+    """The late-predecessor case: the files vanish under the poll exactly when the job before finishes. The poll
+    goes on until the same deadline; it never kills the job, and never passes it."""
+    assert chain.retryable(error)
     _attempt(lake, "merge", "done")
-    real, calls = chain.state, []
+    real, calls = chain.week_rows, []
+
+    def flaky(*a):
+        calls.append(1)
+        if len(calls) <= 2:
+            raise error
+        return real(*a)
+
+    monkeypatch.setattr(chain, "week_rows", flaky)
+    clock = Clock()
+    out = chain.require(lake, WEEK, "merge", wait_s=600, sleep=clock.sleep, clock=clock)
+    assert out["status"] == "done" and clock.sleeps == [chain.POLL_S] * 2
+
+    monkeypatch.setattr(chain, "week_rows", lambda *a: (_ for _ in ()).throw(error))  # it never recovers
+    clock = Clock()
+    with pytest.raises(chain.PreconditionFailed, match="`merge`: unreadable"):
+        chain.require(lake, WEEK, "merge", wait_s=600, sleep=clock.sleep, clock=clock)
+    assert sum(clock.sleeps) == 600 + sum(
+        chain.UNREADABLE_WAITS
+    )  # the deadline, then the short retries: closed
+
+
+def test_a_check_with_no_wait_left_retries_a_failed_read_briefly_and_any_other_error_is_raised(
+    lake, monkeypatch
+):
+    _attempt(lake, "merge", "done")
+    real, calls = chain.week_rows, []
 
     def flaky(*a):
         calls.append(1)
         if len(calls) == 1:
-            raise OSError("Could not connect to server")
+            raise OSError("Stale file handle")
         return real(*a)
 
-    monkeypatch.setattr(chain, "state", flaky)
+    monkeypatch.setattr(chain, "week_rows", flaky)
     clock = Clock()
-    assert chain.require(lake, WEEK, "merge", wait_s=600, sleep=clock.sleep, clock=clock)["status"] == "done"
-    assert clock.sleeps == [chain.POLL_S]
-    calls.clear()
-    with pytest.raises(
-        chain.PreconditionFailed, match="latest attempt: unreadable"
-    ):  # no wait left: fail closed
-        chain.require(lake, WEEK, "merge", wait_s=0, sleep=clock.sleep, clock=clock)
-    monkeypatch.setattr(chain, "state", lambda *a: 1 / 0)
+    assert chain.require(lake, WEEK, "merge", wait_s=0, sleep=clock.sleep, clock=clock)["status"] == "done"
+    assert clock.sleeps == [chain.UNREADABLE_WAITS[0]]
+    monkeypatch.setattr(chain, "week_rows", lambda *a: 1 / 0)
+    assert not chain.retryable(ZeroDivisionError())
     with pytest.raises(ZeroDivisionError):
         chain.require(lake, WEEK, "merge", wait_s=600, sleep=clock.sleep, clock=clock)
 
@@ -178,7 +288,7 @@ class Reached(Exception):
 @pytest.fixture
 def commands(lake, monkeypatch):
     """The three commands with their work replaced by `Reached`, as the Cloud Run jobs configure them, long after
-    the deadline (so nothing waits). Returns run(command) -> None."""
+    the deadline (so nothing waits). Returns run(command, COFFEEDATA_AFTER_JOB's value or None)."""
     from coffeedata import quality, verdict
 
     def reached(*a, **k):
@@ -188,62 +298,165 @@ def commands(lake, monkeypatch):
     monkeypatch.setattr(verdict, "require", lambda *a: True)
     monkeypatch.setattr(verdict, "collect", reached)
     monkeypatch.setattr(quality, "latest_run", reached)
+    monkeypatch.setattr(cli, "dbt_build", reached)
     monkeypatch.setattr(cli, "_today", lambda: TUESDAY)
     monkeypatch.setattr(chain, "_utc_now", lambda: datetime(2026, 11, 3, 9, 0, tzinfo=UTC))
+    monkeypatch.setattr(chain, "UNREADABLE_WAITS", ())
     monkeypatch.setenv(chain.DEADLINE_ENV, "07:47")
-    monkeypatch.delenv(chain.SKIP_ENV, raising=False)
 
-    def go(command: str, after: str | None) -> None:
-        if after and command != "enrich-week":  # enrich-week needs the merge with or without the variable
+    def go(command: str, after: str | None, *args: str) -> None:
+        if after:
             monkeypatch.setenv(chain.AFTER_JOB_ENV, after)
         else:
             monkeypatch.delenv(chain.AFTER_JOB_ENV, raising=False)
-        args = ["--run-date", TUESDAY] if command == "enrich-week" else []
-        cli.main([command, *args, *(["--db", str(lake.root / "x.duckdb")] if command == "build" else [])])
+        dated = ["--run-date", TUESDAY] if command == "enrich-week" else []
+        db = ["--db", str(lake.root / "x.duckdb")] if command == "build" else []
+        cli.main([command, *dated, *db, *args])
 
     return go
 
 
+def _all_done(lake: Lake, jobs: str, but: str | None = None, status: str | None = "missing") -> None:
+    """Every job in `jobs` done this week, except `but`: missing, or with this status (None: running)."""
+    t = datetime(2026, 11, 3, 3, 17, tzinfo=UTC)
+    for i, job in enumerate(jobs.split(",")):
+        if job != but:
+            _attempt(lake, job, "done", at=t + timedelta(hours=i))
+        elif status != "missing":
+            _attempt(lake, job, status, at=t + timedelta(hours=i))
+
+
 @pytest.mark.parametrize(("command", "after"), PRECONDITIONS)
-def test_each_command_runs_after_a_done_predecessor(lake, commands, command, after):
-    _attempt(lake, after, "done")
+def test_each_command_runs_after_done_predecessors(lake, commands, command, after):
+    _all_done(lake, after)
     with pytest.raises(Reached):
         commands(command, after)
 
 
-@pytest.mark.parametrize(("command", "after"), PRECONDITIONS)
+@pytest.mark.parametrize(("command", "job"), NOT_DONE)
 @pytest.mark.parametrize("status", ["failed", "missing", "running"])
-def test_each_command_exits_non_zero_and_does_nothing_otherwise(lake, commands, command, after, status):
-    """Non-zero, so the Cloud Run execution fails and the job-failure alert emails the owner (alerts.tf). The build
-    job's shell keeps its `|| rc=1`, so a failed classify precondition is followed by a failed build one."""
-    if status != "missing":
-        _attempt(lake, after, None if status == "running" else status)
+def test_each_command_exits_non_zero_and_does_nothing_otherwise(lake, commands, command, job, status):
+    """Non-zero, so the Cloud Run execution fails and the job-failure alert emails the owner (alerts.tf)."""
+    after = dict(PRECONDITIONS)[command]
+    _all_done(lake, after, but=job, status=None if status == "running" else status)
     before = control.rows(lake, WEEK)
     with pytest.raises(SystemExit) as e:
         commands(command, after)
     assert e.value.code not in (0, None)
-    assert f"`{after}` is not done" in str(e.value.code) and f"latest attempt: {status}" in str(e.value.code)
+    assert "not all done" in str(e.value.code) and f"`{job}`: {status}" in str(e.value.code)
     assert "RUNBOOK.md §5.2" in str(e.value.code) and chain.SKIP_ENV in str(e.value.code)
     assert control.rows(lake, WEEK) == before  # it wrote no row of its own: nothing started
 
 
+def test_enrich_week_needs_the_merge_with_or_without_the_variable(lake, commands):
+    with pytest.raises(SystemExit, match="`merge`: missing"):
+        commands("enrich-week", None)
+
+
 @pytest.mark.parametrize("command", ["classify", "build"])
 def test_build_and_classify_have_no_precondition_outside_the_weekly_job(lake, commands, command):
-    """Locally, in CI and in weekly.yml nothing sets COFFEEDATA_AFTER_JOB: they run as before, with no merge row."""
+    """Locally, in CI and in weekly.yml nothing sets COFFEEDATA_AFTER_JOB: they run as before, with no merge row,
+    and a precondition that failed in some earlier local command leaves nothing that stops them."""
+    with pytest.raises(SystemExit):
+        commands("enrich-week", None)
     with pytest.raises(Reached):
         commands(command, None)
+
+
+def test_a_classify_that_failed_its_check_stops_the_build_after_it(lake, commands):
+    """The build job runs `classify || rc=1; build || rc=1`. classify gives up at the deadline; a moment later the
+    enrichment's row turns done. The build must not then run on last week's verdicts: it refuses."""
+    _all_done(lake, "merge,enrich", but="enrich", status=None)
+    with pytest.raises(SystemExit, match="`enrich`: running"):
+        commands("classify", "merge,enrich")
+    _attempt(lake, "enrich", "done", at=datetime(2026, 11, 3, 9, 1, tzinfo=UTC))
+    assert chain.require(lake, WEEK, ("merge", "enrich"))["status"] == "done"  # its own check would now pass
+    with pytest.raises(
+        SystemExit, match="an earlier command of this execution did not pass its precondition"
+    ):
+        commands("build", "merge,enrich")
+
+
+def test_a_classify_that_died_in_its_check_stops_the_build_after_it(lake, commands, monkeypatch):
+    """Not a failed precondition but an error no retry covers, raised while classify reads the control table."""
+    _all_done(lake, "merge,enrich")
+    real = chain.week_rows
+    monkeypatch.setattr(chain, "week_rows", lambda *a: 1 / 0)
+    with pytest.raises(ZeroDivisionError):
+        commands("classify", "merge,enrich")
+    monkeypatch.setattr(chain, "week_rows", real)
+    with pytest.raises(SystemExit, match="an earlier command of this execution.*ZeroDivisionError"):
+        commands("build", "merge,enrich")
+
+
+def test_a_failed_classify_stops_only_its_own_execution(lake, commands, monkeypatch):
+    """The marker is the execution's: the owner's re-run (another execution) and a classify that passed its check
+    and then failed at its work (a rejected key: the build still runs, on stored verdicts) are not stopped."""
+    monkeypatch.setenv("CLOUD_RUN_EXECUTION", "build-abc12")
+    _all_done(lake, "merge,enrich", but="enrich")
+    with pytest.raises(SystemExit):
+        commands("classify", "merge,enrich")
+    with pytest.raises(SystemExit, match="an earlier command"):
+        commands("build", "merge,enrich")
+    _attempt(lake, "enrich", "done", at=datetime(2026, 11, 3, 9, 1, tzinfo=UTC))
+    monkeypatch.setenv("CLOUD_RUN_EXECUTION", "build-xyz99")
+    with pytest.raises(Reached):  # classify passes its check, then fails at its work
+        commands("classify", "merge,enrich")
+    with pytest.raises(Reached):
+        commands("build", "merge,enrich")
+
+
+def test_classify_and_build_check_the_same_week_whatever_run_date_the_build_is_given(lake, commands):
+    """The rebuild forms in the RUNBOOK run `classify; build --run-date $WEEK`: both check today's week."""
+    _all_done(lake, "merge,enrich")
+    with pytest.raises(Reached):
+        commands("build", "merge,enrich", "--run-date", "2026-10-27")  # a week with no rows at all
+    with pytest.raises(Reached):
+        commands("classify", "merge,enrich")
 
 
 @pytest.mark.parametrize(("command", "after"), PRECONDITIONS)
 def test_the_owner_can_override_a_precondition_and_it_is_logged(
     lake, commands, command, after, monkeypatch, caplog
 ):
-    monkeypatch.setenv(chain.SKIP_ENV, "merge re-run by hand, enrich not needed")
+    monkeypatch.setenv(chain.SKIP_ENV, "merge re-run by hand - enrich not needed")
     with caplog.at_level(logging.WARNING), pytest.raises(Reached):
         commands(command, after)
     assert "PRECONDITION SKIPPED by COFFEEDATA_SKIP_PRECONDITION" in caplog.text
-    assert "merge re-run by hand, enrich not needed" in caplog.text
-    assert f"{after}: latest attempt missing" in caplog.text  # what it skipped over
+    assert "merge re-run by hand - enrich not needed" in caplog.text
+    assert "merge: missing" in caplog.text  # what it skipped over
+
+
+@pytest.mark.parametrize("word", ["false", "0", "no", "off", "FALSE", " False ", "none"])
+def test_a_false_like_word_is_not_a_reason_and_leaves_the_check_on(lake, commands, monkeypatch, caplog, word):
+    """Someone "turning the override off" with =false must not turn the precondition off."""
+    monkeypatch.setenv(chain.SKIP_ENV, word)
+    _attempt(lake, "merge", None)
+    with caplog.at_level(logging.WARNING):
+        for command, after in PRECONDITIONS:
+            with pytest.raises(SystemExit):
+                commands(command, after)
+        with pytest.raises(SystemExit, match="start row and no end row"):
+            cli.main(["merge", "--run-date", TUESDAY])
+    assert (
+        "is not a reason: the precondition stays on" in caplog.text
+        and "PRECONDITION SKIPPED" not in caplog.text
+    )
+
+
+def test_the_override_works_when_the_control_table_cannot_be_read(lake, commands, monkeypatch, caplog):
+    """For every command, the merge included: the reason is honoured before anything is read."""
+    monkeypatch.setattr(chain, "week_rows", lambda *a: (_ for _ in ()).throw(OSError("HTTP 403 Forbidden")))
+    monkeypatch.setattr(connectors, "merge", lambda *a: {"ran": True})
+    with pytest.raises(OSError, match="403"):
+        cli.main(["merge", "--run-date", TUESDAY])
+    monkeypatch.setenv(chain.SKIP_ENV, "the dataset is unreadable and the week must be merged")
+    with caplog.at_level(logging.WARNING):
+        cli.main(["merge", "--run-date", TUESDAY])
+        for command, after in PRECONDITIONS:
+            with pytest.raises(Reached):
+                commands(command, after)
+    assert caplog.text.count("PRECONDITION SKIPPED") == 4 and "unreadable (OSError)" in caplog.text
 
 
 def test_an_overridden_enrich_week_runs_without_a_merge_and_says_so(lake, monkeypatch, capsys):
@@ -275,11 +488,27 @@ def test_enrich_week_waits_for_a_merge_that_finishes_before_its_deadline(lake, m
     monkeypatch.setattr(chain.time, "sleep", sleep)
     cli.main(["enrich-week", "--run-date", TUESDAY])
     assert slept == [chain.POLL_S] * 2
-    assert '"after": "merge"' in capsys.readouterr().out
+    assert '"after": [' in capsys.readouterr().out
     assert sorted((r["job"], r["status"]) for r in control.rows(lake, WEEK)) == [
         ("enrich", "done"),
         ("merge", "done"),
     ]
+
+
+def test_the_preconditions_only_read_the_control_table(lake, commands):
+    """Passing, failing or waiting, a precondition writes, edits and deletes nothing in the lake: the control
+    table's files keep their paths and checksums. (The marker for the next command is in the temp folder.)"""
+    _attempt(lake, "merge", "done")
+    _attempt(lake, "enrich", None)
+    before = _stored(lake, "")
+    clock = Clock()
+    chain.require(lake, WEEK, "merge", wait_s=600, sleep=clock.sleep, clock=clock)
+    with pytest.raises(chain.PreconditionFailed):
+        chain.require(lake, WEEK, ("merge", "enrich"), wait_s=600, sleep=clock.sleep, clock=clock)
+    for command in ("classify", "build"):
+        with pytest.raises(SystemExit):
+            commands(command, "merge,enrich")
+    assert _stored(lake, "") == before and len(before) >= 3
 
 
 # --- the Cloud Run jobs (src/terraform/ingestion.tf; terraform itself is never run here) ----------------------------
@@ -289,18 +518,18 @@ def _tf() -> str:
     return (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
 
 
-def test_terraform_gives_the_two_later_jobs_their_predecessor_and_a_deadline_inside_their_timeout():
+def test_terraform_gives_the_two_later_jobs_their_predecessors_and_a_deadline_inside_their_timeout():
     tf = _tf()
     block = tf[tf.index("ingest_job_after = {") :]
-    after = dict(
-        (job, (pre, dl))
+    after = {
+        job: (pre, dl)
         for job, pre, dl in re.findall(
-            r'"([a-z-]+)"\s+= \{ job = "([a-z-]+)", deadline_utc = "(\d\d:\d\d)" \}',
+            r'"([a-z-]+)"\s+= \{ job = "([a-z,-]+)", deadline_utc = "(\d\d:\d\d)" \}',
             block[: block.index("\n  }")],
         )
-    )
-    # the job_manifests `job` each waits for: the merge writes `merge`, enrich-week writes `enrich`
-    assert {j: pre for j, (pre, _) in after.items()} == {"enrich-week": "merge", "build": "enrich"}
+    }
+    # the job_manifests `job`s each waits for: the merge writes `merge`, enrich-week writes `enrich`
+    assert {j: pre for j, (pre, _) in after.items()} == dict(PRECONDITIONS[:1]) | {"build": "merge,enrich"}
     cron = dict(
         re.findall(r'^\s+"([a-z-]+)"\s+= \{ job = "[a-z-]+", cron = "(\d+ \d+) \* \* 2" \}', tf, re.M)
     )
@@ -328,6 +557,10 @@ def test_terraform_gives_the_two_later_jobs_their_predecessor_and_a_deadline_ins
             rf'\s+content \{{\s+name  = "{name}"\s+value = env\.value\.{field}\s+\}}',
             tf,
         ), name
+    # the two are the last entries of the container's env list, so a plan adds them and shifts nothing
+    assert tf.index('name  = "COFFEEDATA_AFTER_JOB"') > tf.index(
+        'for_each = each.value.claude ? ["ANTHROPIC_API_KEY"]'
+    )
     assert "length(setsubtract(keys(local.ingest_job_after), keys(local.ingest_jobs))) == 0" in tf
     assert chain.SKIP_ENV not in re.sub(r"#.*", "", tf)  # the override is never configured, only set by hand
 
@@ -447,16 +680,6 @@ def registry_of_three(monkeypatch):
     monkeypatch.setattr(registry, "current", lambda lake, seed=None: states)
 
 
-def _stored(lk: Lake, *folders: str) -> dict[str, str]:
-    """path => sha256 of every file under these folders of the lake's root."""
-    return {
-        str(f.relative_to(lk.root)): hashlib.sha256(f.read_bytes()).hexdigest()
-        for d in folders
-        for f in sorted((lk.root / d).rglob("*"))
-        if f.is_file()
-    }
-
-
 DATA = (
     "fetches",
     "snapshots",
@@ -524,8 +747,8 @@ def test_a_merge_run_again_after_one_that_died_loses_and_repeats_nothing(
         m.setattr(control, "now", lambda: datetime(2026, 11, 3, 3, 17, tzinfo=UTC))  # the scheduled slot
         with pytest.raises(Killed):
             connectors.merge(lk, WEEK)
-    if "end row" not in stage and "rollup" not in stage and "publish" not in stage:
-        assert chain.state(lk, WEEK, "merge") == "running"  # the dead attempt: enrich-week and the build wait
+    # the dead attempt as the jobs after it see it: running until its end row is written, done after
+    assert chain.state(lk, WEEK, "merge") == ("done" if stage.startswith("after") else "running")
     stored = _stored(lk, "fetches", "snapshots", "bodies", "run_manifests", "archive")
     connectors.merge(lk, WEEK)  # the owner's re-run
     got, got_manifests = _lake_rows(lk)
@@ -538,43 +761,63 @@ def test_a_merge_run_again_after_one_that_died_loses_and_repeats_nothing(
 
 
 def test_merge_refuses_to_start_over_an_attempt_that_never_ended(lake, monkeypatch, caplog):
-    """A start row with no end row is a merge still running, or one that died part-way. The command exits non-zero
-    without touching anything; the owner's override, once they have checked nothing is running, is logged."""
+    """A start row with no end row is a merge still running, or one that was killed part-way. The command exits
+    non-zero without touching anything; the owner's override, once they have checked nothing is running, is
+    logged."""
     monkeypatch.setattr(connectors, "merge", lambda *a: {"ran": True})
-    monkeypatch.delenv(chain.SKIP_ENV, raising=False)
+    t = datetime(2026, 11, 3, 3, 17, tzinfo=UTC)
     cli.main(["merge", "--run-date", TUESDAY])  # no earlier attempt: runs
-    _attempt(lake, "merge", "done")
+    _attempt(lake, "merge", "done", at=t)
     cli.main(["merge", "--run-date", TUESDAY])  # after a finished one (a late connector): runs
-    _attempt(lake, "merge", None)
-    before = (_stored(lake, "job_manifests"), control.rows(lake, WEEK))
+    _attempt(lake, "merge", None, at=t + timedelta(hours=1))
+    before = (_stored(lake, ""), control.rows(lake, WEEK))
     with pytest.raises(SystemExit) as e:
         cli.main(["merge", "--run-date", TUESDAY])
-    assert "earlier `merge` attempt of this week (2026-11-02) has a start row and no end row" in str(
+    assert "latest `merge` attempt of this week (2026-11-02)" in str(e.value.code)
+    assert "has a start row and no end row: it is still running, or it was killed part-way" in str(
         e.value.code
     )
-    assert (
-        _stored(lake, "job_manifests"),
-        control.rows(lake, WEEK),
-    ) == before  # it only read the control table
-    monkeypatch.setenv(chain.SKIP_ENV, "the 03:17 execution was OOM-killed, nothing is running")
+    assert (_stored(lake, ""), control.rows(lake, WEEK)) == before  # it only read the control table
+    monkeypatch.setenv(chain.SKIP_ENV, "the 03:17 execution was OOM-killed and nothing is running")
     with caplog.at_level(logging.WARNING):
         cli.main(["merge", "--run-date", TUESDAY])
     assert "PRECONDITION SKIPPED" in caplog.text and "OOM-killed" in caplog.text
 
 
-def test_the_preconditions_only_read_the_control_table(lake, commands):
-    """Passing, failing or waiting, a precondition writes, edits and deletes nothing in job_manifests."""
-    _attempt(lake, "merge", "done")
-    _attempt(lake, "enrich", None)
-    before = _stored(lake, "job_manifests")
-    clock = Clock()
-    chain.require(lake, WEEK, "merge", wait_s=600, sleep=clock.sleep, clock=clock)
-    with pytest.raises(chain.PreconditionFailed):
-        chain.require(lake, WEEK, "enrich", wait_s=600, sleep=clock.sleep, clock=clock)
-    for command in ("classify", "build"):
-        with pytest.raises(SystemExit):
-            commands(command, "enrich")
-    assert _stored(lake, "job_manifests") == before and len(before) >= 3
+def test_a_merge_that_raises_leaves_a_failed_row_that_says_why(
+    tmp_path, monkeypatch, registry_of_three, capsys
+):
+    """With no retry, the row is what the next job and a person read: `failed` with the error for a merge that
+    raised, against a lone start row for one that was killed. The next merge refuses either, and says which."""
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    lk = _crawled_week(tmp_path / "lake")
+
+    def refused(*a):
+        raise OSError("HTTP 429 Too Many Requests")
+
+    with monkeypatch.context() as m:
+        m.setattr(connectors, "_archive_files", refused)
+        m.setattr(control, "now", lambda: datetime(2026, 11, 3, 3, 17, tzinfo=UTC))  # the scheduled slot
+        with pytest.raises(OSError, match="429"):
+            cli.main(["merge", "--run-date", TUESDAY])
+    row = chain.latest(lk, WEEK, "merge")
+    assert row["status"] == "failed" and row["ended_at"]
+    assert control.detail_of(row)["error"] == "OSError: HTTP 429 Too Many Requests"
+    for after in ("merge", ("merge", "enrich")):  # enrich-week's check, and the build job's
+        with pytest.raises(chain.PreconditionFailed, match="`merge`: failed"):
+            chain.require(lk, WEEK, after)
+    stored = _stored(lk, "fetches", "snapshots", "bodies", "run_manifests", "archive")
+    with pytest.raises(SystemExit) as e:
+        cli.main(["merge", "--run-date", TUESDAY])
+    assert "failed (OSError: HTTP 429 Too Many Requests); it may have stopped part-way" in str(e.value.code)
+    assert (
+        _stored(lk, "fetches", "snapshots", "bodies", "run_manifests", "archive") == stored
+    )  # nothing redone
+    monkeypatch.setenv(chain.SKIP_ENV, "the archive move was refused once - nothing is running")
+    cli.main(["merge", "--run-date", TUESDAY])  # the owner's re-run finishes the week and only adds
+    assert chain.state(lk, WEEK, "merge") == "done"
+    assert stored.items() <= _stored(lk, "fetches", "snapshots", "bodies", "run_manifests", "archive").items()
+    assert not list((lk.root / "raw").rglob("*.parquet"))
 
 
 @needs_dbt

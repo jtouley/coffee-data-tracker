@@ -411,6 +411,16 @@ def merge(lake: Lake, day: str) -> dict:
     connectors landed comes from the control table (job_manifests), not from the other jobs."""
     week = week_of(day)
     job = control.start(lake, "merge", week)
+    try:
+        return _merge_week(lake, week, job)
+    except Exception as e:
+        # An end row for a merge that raised, as the crawls write: the control table then tells "raised" (failed,
+        # with the error) from "killed" (a start row alone). Either way the jobs after it don't run on this week.
+        control.finish(lake, job, "failed", detail={"error": f"{type(e).__name__}: {e}"[:500]})
+        raise
+
+
+def _merge_week(lake: Lake, week: str, job: dict) -> dict:
     con = lake.connect()
     landed = control.landed(lake, week)
     present = {c: partition(lake, c, week) for c in sorted(landed) if partition(lake, c, week).exists()}
@@ -483,12 +493,10 @@ def enrich_week(
     (submit: `--submit` on the scheduled job) and it has credentials (enrich.collect + enrich.run); otherwise it
     only counts them. The CLI checks the merge first (chain.py: it waits, then fails loudly), so the `waiting`
     answer here is for callers of this function; require_merge=False is the owner's logged override."""
-    from . import enrich, extract
+    from . import chain, enrich, extract
 
     week = week_of(day)
-    if require_merge and not any(
-        r["job"] == "merge" and r["status"] == "done" for r in control.rows(lake, week)
-    ):
+    if require_merge and chain.state(lake, week, "merge") != "done":  # the chain's one definition of a done merge
         return {"run_date": week, "status": "waiting: no merge this week yet"}
     job = control.start(lake, "enrich", week)
     out: dict[str, Any]
