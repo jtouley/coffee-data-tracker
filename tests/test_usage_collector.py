@@ -938,7 +938,9 @@ def test_flush_threads_never_outlive_the_test():
 def test_a_request_without_a_user_agent_is_stored_as_a_bot_and_answered(collector):
     """No User-Agent header (None, not ""): the reply is still 204 and the row says bot, never a crash or a null."""
     sent = {k: v for k, v in headers().items() if k != "user-agent"}
-    r = TestClient(usage.create_app(collector)).post("/e", headers=sent | {"user-agent": ""}, content=body(search()))
+    r = TestClient(usage.create_app(collector)).post(
+        "/e", headers=sent | {"user-agent": ""}, content=body(search())
+    )
     assert r.status_code == 204
     collector.receive(sent, None, body(search()))  # the header absent altogether
     assert [row["bot"] for row in collector.buffer] == [True, True]
