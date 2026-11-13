@@ -75,7 +75,7 @@ class Agree(Exception):
 IN_APP = re.compile(r"\b(Instagram)\b|(FBAN/|FBAV/|FB_IAB/|FBIOS)|(MessengerForiOS)")
 # Paths someone who still has to accept the new terms may write to.
 AGREE_FREE = {"/api/agree", "/api/signout", "/api/signout-everywhere"}
-FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes at least: a lookup plus a send fits well inside
+FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes: the lookup fits well inside; never the send
 NUDGE_COOKIE = "nudge-email"  # "Not now" on Today's add-an-email prompt, for 90 days (spec §5)
 
 
@@ -144,7 +144,8 @@ def create_app(
     # Emails go out inside the request (review H1): Cloud Run gives an instance CPU only while it serves a request
     # (cpu_idle), so work left for after the reply could stall until the next request, or be lost when the instance
     # stops. Where a reply mustn't say whether an email went (forgot, and an address verified on another account),
-    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad).
+    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad). Forgot's send
+    # starts during the floor but off the reply path (mail.later), so a slow send can't hold its reply past it.
     app.state.forgot_floor = FORGOT_FLOOR
     app.state.mailer = mailer
     assets = web.Assets()
@@ -609,9 +610,10 @@ def create_app(
     @app.post("/api/forgot", dependencies=[Depends(anyone)])
     async def post_forgot(body: dict, request: Request) -> dict:
         """A username or an email. One reply for an account with a verified email and for no account at all; an
-        account with no verified email is told so on the form (owner decision; see Accounts.forgot). The link is
-        sent inside the request (review H1), and every answer that gets past the limits is held to the same floor
-        (FORGOT_FLOOR), so those alike replies take the same time unless sending runs past it. The floor is an
+        account with no verified email is told so on the form (owner decision; see Accounts.forgot). Every answer
+        that gets past the limits is held to the same floor (FORGOT_FLOOR), counted from the lookup alone. The
+        link's send starts during the floor, while the request still has CPU (review H1), but the reply never waits
+        for it (mail.later): however slow or failed the send, the reply's time doesn't change. The floor is an
         async sleep and the work runs in the thread pool, so a burst of requests holds no worker thread while it
         waits (final review N1). An answer refused by a limit comes back at once, with the same words."""
         s = email_only()
@@ -626,7 +628,7 @@ def create_app(
             return {"ok": True}
         try:
             if answer == "send" and acct is not None:
-                await run_in_threadpool(send_reset, acct.user_id)
+                mail.later("reset", acct.user_id, send_reset)  # the reply never waits for the send
         finally:
             await asyncio.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
         if answer == "no_email":
