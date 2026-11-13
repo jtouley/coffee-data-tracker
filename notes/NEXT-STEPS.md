@@ -358,8 +358,9 @@ Backlog, not started until the owner says so:
   apply waits for the owner's Approve click in a protected environment. Needs the ruleset on main first; design in the
   session scratchpad (design-tf-ci), its own high-review PRs after cutover 2.
 - Terraform in CI (owner, 2026-11-13): the owner made a second account, `jtouleyrou`, as the approver, and says the
-  `terraform-apply` environment exists (not visible from the session: environments return 403). Its settings still to
-  confirm with the owner: reviewer jtouleyrou, prevent self-review, main only, admin bypass off. main still has no
+  `terraform-apply` environment exists (not visible from the session: environments return 403). Its settings were
+  confirmed by the owner 2026-11-13 (screenshots): reviewer jtouleyrou, prevent self-review, main only, admin bypass
+  off. main still has no
   ruleset (owner to create, or says "create it"). Build order after #153 and #154: checked-in tfvars and guard scripts;
   plan-on-PR workflow; bootstrap terraform (owner applies once after cutover 2); apply workflow gated on the environment.
   Why a second account: this session acts as jtouley with admin, so jtouley-as-approver is no gate.
