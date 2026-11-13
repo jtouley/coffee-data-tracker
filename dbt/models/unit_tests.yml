@@ -1212,3 +1212,49 @@ unit_tests:
     expect:
       rows:
         - {raw_value: Tanzania, alpha2: TZ, iso_short_name: "Tanzania, United Republic of", display_name: "Tanzania, United Republic of"}
+
+  - name: registry_values_come_from_open_sources
+    description: >-
+      Field-level provenance (#90). A roaster known from an open source (Overture, the curated seed, a manual add)
+      takes its name, city and state from open sources only: a later OpenStreetMap record (ODbL) never replaces
+      them, and a value only OpenStreetMap gave stays null. These columns pass unchanged through int_roaster_state
+      and dim_roaster to public_roaster and public_coffee. A roaster known only from OpenStreetMap, which
+      public_roaster leaves out, keeps the newest values, as before.
+    model: stg_registry
+    given:
+      - input: ref('stg_roaster_seed')
+        rows:
+          # curated in the seed, then found by OpenStreetMap: the seed's values stay
+          - {roaster_id: seeded.coffee, name: Seeded Roasters, city: Durham, state: NC, sources: curated, locations: 1, opted_out: false}
+      - input: ref('stg_registry_records')
+        rows:
+          - {roaster_id: seeded.coffee, source: osm, added_at: "2026-10-08 06:00:00+00", name: Seeded OSM, city: Raleigh, state: VA, is_open_source: false}
+          # Overture first, OpenStreetMap a week later: Overture's name and state; its city was empty, so none
+          - {roaster_id: overture.coffee, source: overture-2026-09-17.0, added_at: "2026-10-01 06:00:00+00", name: Overture Roasters, city: null, state: OR, locations: 2, is_open_source: true}
+          - {roaster_id: overture.coffee, source: osm, added_at: "2026-10-08 06:00:00+00", name: OSM Roasters, city: Portland, state: WA, locations: 1, is_open_source: false}
+          # a manual add between two OpenStreetMap records: the manual one's values, whatever came before or after
+          - {roaster_id: manual.coffee, source: osm, added_at: "2026-10-01 06:00:00+00", name: Old OSM, city: Bangor, state: ME, is_open_source: false}
+          - {roaster_id: manual.coffee, source: manual, added_at: "2026-10-08 06:00:00+00", name: Manual Roasters, city: null, state: NH, is_open_source: true}
+          - {roaster_id: manual.coffee, source: osm, added_at: "2026-10-15 06:00:00+00", name: New OSM, city: Concord, state: VT, is_open_source: false}
+          # OpenStreetMap only (never public): the newest record's values
+          - {roaster_id: osmonly.coffee, source: osm, added_at: "2026-10-01 06:00:00+00", name: OSM Old Name, city: Augusta, state: ME, is_open_source: false}
+          - {roaster_id: osmonly.coffee, source: osm, added_at: "2026-10-08 06:00:00+00", name: OSM Only, city: null, state: ME, is_open_source: false}
+          # two Overture records: per field, the newest non-null open value (the newer one gave no city), never OSM's
+          - {roaster_id: twice.coffee, source: overture-2026-08-20.0, added_at: "2026-09-01 06:00:00+00", name: Twice Old, city: Salem, state: OR, is_open_source: true}
+          - {roaster_id: twice.coffee, source: overture-2026-09-17.0, added_at: "2026-10-01 06:00:00+00", name: Twice New, city: null, state: OR, is_open_source: true}
+          - {roaster_id: twice.coffee, source: osm, added_at: "2026-10-08 06:00:00+00", name: Twice OSM, city: Eugene, state: WA, is_open_source: false}
+          # a record tagged overture+osm is not an open record (stg_registry_records): only the plain Overture one counts
+          - {roaster_id: mixed.coffee, source: overture, added_at: "2026-10-01 06:00:00+00", name: Mixed Overture, city: null, state: ID, is_open_source: true}
+          - {roaster_id: mixed.coffee, source: overture+osm, added_at: "2026-10-08 06:00:00+00", name: Mixed Both, city: Boise, state: WA, is_open_source: false}
+          # a source that only starts like an open one is not open: this roaster is known from no open source, so it
+          # keeps the newest values (and public_roaster leaves it out)
+          - {roaster_id: prefixed.coffee, source: manual-osm-import, added_at: "2026-10-01 06:00:00+00", name: Prefixed Import, city: Bangor, state: ME, is_open_source: false}
+    expect:
+      rows:
+        - {roaster_id: seeded.coffee, roaster_name: Seeded Roasters, city: Durham, state: NC, sources: curated+osm}
+        - {roaster_id: overture.coffee, roaster_name: Overture Roasters, city: null, state: OR, sources: osm+overture-2026-09-17.0}
+        - {roaster_id: manual.coffee, roaster_name: Manual Roasters, city: null, state: NH, sources: manual+osm}
+        - {roaster_id: osmonly.coffee, roaster_name: OSM Only, city: Augusta, state: ME, sources: osm}
+        - {roaster_id: twice.coffee, roaster_name: Twice New, city: Salem, state: OR, sources: osm+overture-2026-08-20.0+overture-2026-09-17.0}
+        - {roaster_id: mixed.coffee, roaster_name: Mixed Overture, city: null, state: ID, sources: overture+overture+osm}
+        - {roaster_id: prefixed.coffee, roaster_name: Prefixed Import, city: Bangor, state: ME, sources: manual-osm-import}
