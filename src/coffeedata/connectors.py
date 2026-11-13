@@ -496,7 +496,8 @@ def enrich_week(
     from . import chain, enrich, extract
 
     week = week_of(day)
-    if require_merge and chain.state(lake, week, "merge") != "done":  # the chain's one definition of a done merge
+    # the chain's one definition of a done merge: its latest attempt this week, done and published
+    if require_merge and chain.state(lake, week, "merge") != "done":
         return {"run_date": week, "status": "waiting: no merge this week yet"}
     job = control.start(lake, "enrich", week)
     out: dict[str, Any]
