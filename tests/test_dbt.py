@@ -14,7 +14,7 @@ import pytest
 
 from coffeedata import registry
 
-from .lakehelp import needs_dbt, probe, product, run
+from .lakehelp import at, needs_dbt, probe, product, run
 
 ROOT = Path(__file__).parent.parent
 FIX = Path(__file__).parent / "fixtures"
@@ -245,7 +245,7 @@ def test_repeated_variant_ids_in_raw_snapshots(lake, tmp_path):
         p["variants"][0] | {"variant_id": "SKU", "title": t} for t in ("Whole bean", "Drip", "Espresso")
     ]
     run(lake, "2026-10-26", "ikoncoffee.com", [p])
-    con = build(lake, tmp_path)  # unique_price_events would fail without the staging fix
+    con = build(lake, tmp_path)  # fct_price_event's grain test would fail without the staging fix
     assert sorted(con.execute("select variant_id, event from fct_price_event").fetchall()) == [
         ("SKU", "new"),
         ("SKU#1", "new"),
@@ -1409,36 +1409,54 @@ def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path)
         shutil.copy(clean, db)
 
 
-# The grain test (dbt/tests/generic/grain.sql), on stg_runs (roaster_id, run_date) and on mart_dial_in, whose
-# grinder_id may be null: what is written into the built table, and whether the test must then fail.
-_DIAL_IN = "insert into mart_dial_in (user_id, grinder_id, grain, key) values ('u', {grinder}, 'coffee', 'k')"
+# The grain test (dbt/tests/generic/grain.sql), on stg_runs (roaster_id, run_date), on mart_dial_in, whose
+# grinder_id and key may be null, and on mart_market: what is written into the built table, and whether the test
+# must then fail.
+DIAL_IN_GRAIN = "grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id__key"
+_DIAL_IN = (
+    "insert into mart_dial_in (user_id, grinder_id, grain, key) values ({user}, {grinder}, 'coffee', 'k')"
+)
 GRAIN_CASES = [
     ("grain_stg_runs_roaster_id__run_date", "insert into stg_runs select * from stg_runs limit 1", True),
     # A null key part. `unique` over roaster_id || '|' || run_date, which grain replaced, passed this row.
     ("grain_stg_runs_roaster_id__run_date",
      "insert into stg_runs select * replace (null as run_date) from stg_runs limit 1", True),
     # A column listed as nullable may be null, once per key: two rows sharing the null are a duplicate.
-    ("grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id", _DIAL_IN.format(grinder="null"), False),
-    ("grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id",
-     ";".join([_DIAL_IN.format(grinder="null")] * 2), True),
-    ("grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id",
-     _DIAL_IN.format(grinder="'g'").replace("'u'", "null"), True),  # user_id isn't nullable
+    (DIAL_IN_GRAIN, _DIAL_IN.format(user="'u'", grinder="null"), False),
+    (DIAL_IN_GRAIN, ";".join([_DIAL_IN.format(user="'u'", grinder="null")] * 2), True),
+    (DIAL_IN_GRAIN, _DIAL_IN.format(user="null", grinder="'g'"), True),  # user_id isn't nullable
     # Each column is compared on its own: ('a|b', 'c') and ('a', 'b|c') are two keys, not one.
     ("grain_mart_market_origin_country__process",
      "insert into mart_market (origin_country, process) values ('a|b', 'c'), ('a', 'b|c')", False),
 ]  # fmt: skip
 
 
+def _shot(lake, shot_id: str, **fields) -> None:
+    lake.write("shots", f"shots/{shot_id}__20261020T060000.parquet", [{
+        "shot_id": shot_id, "logged_at": at("2026-10-20", 6), "deleted": False, "brewed_at": at("2026-10-20", 7),
+        "grinder_setting": 10.0, "dose_g": 18.0, "yield_g": 36.0, "time_s": 28.0, "brew_method": "espresso",
+        "rating": 4, "is_milk_drink": False} | fields])  # fmt: skip
+
+
 def test_the_grain_test_fails_on_a_duplicate_key_and_on_a_null_key_part(lake, tmp_path):
     rid = "onyxcoffeelab.com"
     run(lake, "2026-10-19", rid, [product("A")])
-    build(lake, tmp_path).close()
+    # Two shots that name neither a coffee nor a bag (Shot allows it): one mart_dial_in row whose key is null. The
+    # build's gate passes it (key is nullable); without that, one such private shot would hold back the release.
+    _shot(lake, "s1")
+    _shot(lake, "s2", rating=5)
+    _shot(lake, "s3", coffee_freetext="House Espresso")
+    con = build(lake, tmp_path)
+    assert con.execute("select key, shots from mart_dial_in where grain = 'coffee' order by key nulls first").fetchall() == [
+        (None, 2), ("freetext:house espresso", 1)]  # fmt: skip
+    con.close()
     db = tmp_path / "coffee.duckdb"
     clean = tmp_path / "clean.duckdb"
     shutil.copy(db, clean)
-    for test, write, fails in GRAIN_CASES:
+    for test in dict.fromkeys(t for t, *_ in GRAIN_CASES):  # each passes on the clean build
         ok = run_dbt(lake, tmp_path, "test", "--select", test)
         assert ok.returncode == 0 and "PASS=1 " in ok.stdout, (test, ok.stdout[-2000:])
+    for test, write, fails in GRAIN_CASES:
         with duckdb.connect(str(db)) as con:
             for statement in write.split(";"):
                 con.execute(statement)
@@ -1448,32 +1466,63 @@ def test_the_grain_test_fails_on_a_duplicate_key_and_on_a_null_key_part(lake, tm
         shutil.copy(clean, db)
 
 
+def _manifest_nodes(lake, tmp_path, name: str, **extra_vars) -> dict:
+    """dbt parse's manifest nodes, with these vars on top of run_dbt's."""
+    r = run_dbt(lake, tmp_path / name, "parse", **extra_vars)
+    assert r.returncode == 0, r.stdout[-2000:]
+    return json.loads((tmp_path / name / "target" / "manifest.json").read_text())["nodes"]
+
+
 def test_gate_tests_depend_on_their_models_whatever_the_vars(lake, tmp_path):
     """A gate test that reads its model only when a build var is set still declares it (-- depends_on), so dbt's
     graph (lineage, --select model+, the build order) is the same with and without the build's vars. Only
     run_manifest_mode_values has no model: it reads raw."""
 
-    def parents(**extra_vars) -> dict[str, list[str]]:
-        target = tmp_path / ("target-" + ("vars" if extra_vars else "plain"))
-        r = subprocess.run(
-            ["dbt", "parse", "--project-dir", "dbt", "--profiles-dir", "dbt", "--target-path", str(target),
-             "--log-path", str(tmp_path / "logs"), "--vars", json.dumps(extra_vars)],
-            cwd=ROOT, env=os.environ | {"COFFEEDATA_DB": str(tmp_path / "coffee.duckdb")}, capture_output=True,
-            text=True)  # fmt: skip
-        assert r.returncode == 0, r.stdout[-2000:]
-        nodes = json.loads((target / "manifest.json").read_text())["nodes"]
+    def parents(name, **extra_vars) -> dict[str, list[str]]:
+        nodes = _manifest_nodes(lake, tmp_path, name, **extra_vars)
         return {
             n["name"]: sorted(n["depends_on"]["nodes"])
             for n in nodes.values()
             if n["resource_type"] == "test"
         }
 
-    plain = parents()
+    plain = parents("plain")
     assert [t for t, p in plain.items() if not p] == ["run_manifest_mode_values"]
     assert plain["run_ok_rate"] == ["model.coffeedata.run_completeness"]
-    built = parents(as_of_run="2026-10-19", today="2026-10-20", build_id="20261020T060000-abcdef",
+    assert plain["build_metrics_in_band"] == [
+        "model.coffeedata.mart_build_profile",
+        "model.coffeedata.stg_builds",
+    ]
+    built = parents("vars", as_of_run="2026-10-19", today="2026-10-20", build_id="20261020T060000-abcdef",
                     require_verdicts=True, baseline_build="20261013T060000-abcdef")  # fmt: skip
     assert built == plain
+
+
+def test_every_model_has_a_description_and_a_grain_test(lake, tmp_path):
+    """docs/dbt/CONVENTION.md, sections 5 and 7, held for the next model too: every model of the public project has
+    a description and a grain test, either `grain` on the model or `unique` and `not_null` on one of its columns,
+    and no uniqueness test builds its key with || (a null part passes it)."""
+    nodes = _manifest_nodes(lake, tmp_path, "parse")
+    models = {uid: n["name"] for uid, n in nodes.items() if n["resource_type"] == "model"}
+    grain, single, joined = set(), {}, []
+    for n in nodes.values():
+        test = (n.get("test_metadata") or {}).get("name")
+        if n["resource_type"] != "test" or not test:
+            continue
+        column = n.get("column_name") or (n["test_metadata"].get("kwargs") or {}).get("column_name") or ""
+        if test == "unique" and "||" in column:
+            joined.append(n["name"])
+        if test == "grain":
+            grain.add(n["attached_node"])
+        elif test in ("unique", "not_null") and re.fullmatch(r"\w+", column):
+            single.setdefault((n["attached_node"], column), set()).add(test)
+    grain |= {uid for (uid, _), tests in single.items() if tests == {"unique", "not_null"}}
+    assert len(models) >= 43
+    assert sorted(m for uid, m in models.items() if not nodes[uid]["description"].strip()) == [], (
+        "no description"
+    )
+    assert sorted(m for uid, m in models.items() if uid not in grain) == [], "no grain test"
+    assert joined == [], "a key built with ||: use grain (dbt/tests/generic/grain.sql)"
 
 
 def _build_with_a_chain(lake, tmp_path):
@@ -1607,6 +1656,34 @@ def test_suspected_bug_unit_tests(lake, tmp_path, unit_test):
     if r.returncode and "differs from" not in r.stdout:
         raise RuntimeError(r.stdout[-2000:])
     assert r.returncode == 0 and "PASS=1 " in r.stdout, r.stdout[-2000:]
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="suspected bug: stg_enrichments breaks a tie between two extractions stored in the same second by "
+    "md5(to_json(e)), and to_json renders extracted_at in the session's time zone, so the view picks another row "
+    "when it is read in another zone (the build itself is pinned to UTC by profiles.yml)",
+)
+def test_suspected_bug_the_enrichment_tie_break_depends_on_the_session_time_zone(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    pids = [f"P{i}" for i in range(8)]
+    run(lake, "2026-10-19", rid, [product(p) for p in pids])
+    lake.write_partition("enrichments", "2026-10-19", "llm1", [
+        {"extracted_at": at("2026-10-19"), "roaster_id": rid, "product_id": p, "body_hash": f"b{p}", "method": "llm",
+         "needs_llm": False, "origin_country": country, "process": "washed"}
+        for p in pids for country in ("Ethiopia", "Kenya")])  # fmt: skip
+    build(lake, tmp_path).close()
+    picks = {}
+    for tz in ("UTC", "Asia/Tokyo"):
+        with duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True) as con:
+            con.execute(f"set TimeZone = '{tz}'")
+            picks[tz] = con.execute(
+                "select product_id, origin_country from stg_enrichments order by 1"
+            ).fetchall()
+    if len(picks["UTC"]) != len(pids):  # only a different pick is the expected failure
+        raise RuntimeError(picks)
+    assert picks["UTC"] == picks["Asia/Tokyo"]
 
 
 def test_bag_weights_are_read_again_from_the_stored_text(lake, tmp_path):

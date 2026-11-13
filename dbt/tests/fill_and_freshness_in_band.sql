@@ -1,7 +1,3 @@
--- The macro's refs sit inside its var check (as_of_run), so dbt would see them only when the build's vars are
--- set; this line declares them whatever the vars (docs/dbt/CONVENTION.md, section 5).
--- depends_on: {{ ref('stg_builds') }}
--- depends_on: {{ ref('mart_build_profile') }}
 -- Warn only, always (the owner's call): unlike build_metrics_in_band, this band never blocks a release, even once
 -- band_k is recalibrated. A fixed baseline that blocked was tried and rejected for failing real weekly changes; the
 -- enrichment backlog (capped per week, collected next run) and partial fetches move these shares legitimately.

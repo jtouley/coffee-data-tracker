@@ -45,8 +45,10 @@ models:
       best shot's recipe. Every best_* column comes from one shot: the highest rating, then the latest brewed, then
       shot_id. Personal data: private marts only, never public.
     data_tests:
+      # Two parts may be null. grinder_id: shots from before equipment was recorded. key: shots logged with neither
+      # a coffee nor a bag (Shot allows both to be empty), which group together, as the app's coffee_key does.
       - grain:
-          arguments: {columns: [user_id, grinder_id, grain, key], nullable: [grinder_id]}
+          arguments: {columns: [user_id, grinder_id, grain, key], nullable: [grinder_id, key]}
     columns:
       - name: user_id
         description: Whose shots (fct_shot.user_id).
@@ -58,8 +60,9 @@ models:
           - accepted_values: {arguments: {values: [coffee, origin_process]}}
       - name: key
         description: >-
-          The subject within its grain: the coffee_id, or freetext:<name> for a coffee typed by hand; for
-          origin_process, "<origin> / <process>" with ? for an unknown part.
+          The subject within its grain: the coffee_id, or freetext:<name> for a coffee typed by hand, or null for
+          the user's shots that name no coffee at all; for origin_process, "<origin> / <process>" with ? for an
+          unknown part.
       - name: label
         description: What to show for the key (the coffee's title or typed name, or the origin and process).
       - name: shots

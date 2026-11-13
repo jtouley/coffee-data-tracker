@@ -32,6 +32,24 @@ ROOT = Path(__file__).parent.parent
 # Models whose rows are about the builds themselves, so two builds never share them: stg_builds reads the lake's
 # builds table, which every build appends its own record to. No model reads it; only gate tests do.
 PER_BUILD_MODELS = ("stg_builds",)
+# Views whose rows depend on the session's time zone: a known bug, pinned as a strict xfail
+# (test_dbt.py::test_suspected_bug_the_enrichment_tie_break_depends_on_the_session_time_zone). Remove it with the fix.
+TIME_ZONE_DEPENDENT_VIEWS = ("stg_enrichments",)
+
+
+def snapshot_views(db: Path, time_zone: str) -> list[str]:
+    """Copy every view of db into a table of schema snap, read in a session in time_zone: a view is evaluated when
+    it is read, in the reader's session, so comparing views in one session could never show a time-zone dependence.
+    Returns the views."""
+    with duckdb.connect(str(db)) as con:
+        con.execute(f"set TimeZone = '{time_zone}'")
+        views = [r[0] for r in con.execute(
+            "select table_name from information_schema.tables where table_schema = 'main' and table_type = 'VIEW' "
+            "order by 1").fetchall()]  # fmt: skip
+        con.execute("create schema snap")
+        for v in views:
+            con.execute(f'create table snap."{v}" as select * from main."{v}"')
+    return views
 
 
 def _write(lake: Lake, run_date: str, results: list[ingest.Result], bodies: set[str], batch: str) -> None:
@@ -169,12 +187,12 @@ def build(monkeypatch, lake_root: Path, db: Path) -> str:
 
 
 def differences(a: duckdb.DuckDBPyConnection, table: str) -> tuple[int, int, list, list]:
-    """Rows of `table` only in database a, only in the attached database z (EXCEPT ALL both ways, per-build
-    columns aside), and a sample of each."""
+    """Rows of `table` (schema.table) only in database a, only in the attached database z (EXCEPT ALL both ways,
+    per-build columns aside), and a sample of each."""
     cols = [r[0] for r in a.execute(f"describe {table}").fetchall() if r[0] not in quality.PER_BUILD_COLUMNS]
     sel = ", ".join(f'"{c}"' for c in cols)
     only = []
-    for x, y in (("main", "z"), ("z", "main")):
+    for x, y in (("a", "z"), ("z", "a")):
         q = f"select {sel} from {x}.{table} except all select {sel} from {y}.{table}"
         only.append(
             (a.execute(f"select count(*) from ({q})").fetchone()[0], a.execute(f"{q} limit 1").fetchall())
@@ -203,22 +221,27 @@ def test_the_same_lake_builds_the_same_release(fixture_items, roasters, monkeypa
     monkeypatch.delenv("TZ")
     assert a_id != z_id
 
+    # Every model of the project, tables and views (docs/dbt/CONVENTION.md, section 2: the same raw builds the same
+    # rows). Each build's views are read over its own lake, in a session in its own time zone (the first in UTC, the
+    # second in Asia/Tokyo), and kept as tables. dbt's stored test failures are in their own schema.
+    views = snapshot_views(tmp_path / "a.duckdb", "UTC")
+    assert snapshot_views(tmp_path / "z.duckdb", "Asia/Tokyo") == views
     con = duckdb.connect(str(tmp_path / "a.duckdb"), read_only=True)
     con.execute(f"attach '{tmp_path / 'z.duckdb'}' as z (read_only)")
     tables = [r[0] for r in con.execute(
         "select table_name from information_schema.tables where table_catalog = 'a' and table_schema = 'main' "
-        "order by 1").fetchall()]  # fmt: skip
-    # Every model of the project, tables and views (docs/dbt/CONVENTION.md, section 2: the same raw builds the same
-    # rows). A view reads its own build's lake, the one its build was given, when it is compared here. dbt's stored
-    # test failures are in their own schema.
+        "and table_type = 'BASE TABLE' order by 1").fetchall()]  # fmt: skip
     models = {p.stem for p in (ROOT / "dbt/models").rglob("*") if p.suffix in (".sql", ".py")}
-    assert models <= set(tables), models - set(tables)
+    assert models <= set(tables) | set(views), models - set(tables) - set(views)
+    assert set(TIME_ZONE_DEPENDENT_VIEWS) <= set(views)
     assert (
         set(quality.RELEASE_TABLES) <= models
         and {"stg_products", "stg_verdicts", "release_changes"} <= models
     )
     # But stg_builds: one row per build the lake has recorded, and each of the two lakes has recorded its own.
-    tables = [t for t in tables if t not in PER_BUILD_MODELS]
+    tables = [f"main.{t}" for t in tables if t not in PER_BUILD_MODELS] + [
+        f"snap.{v}" for v in views if v not in PER_BUILD_MODELS + TIME_ZONE_DEPENDENT_VIEWS
+    ]
     differ = []
     for t in tables:
         n_a, n_z, row_a, row_z = differences(con, t)

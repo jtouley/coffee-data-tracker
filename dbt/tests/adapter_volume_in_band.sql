@@ -1,7 +1,3 @@
--- The macro's refs sit inside its var check (as_of_run), so dbt would see them only when the build's vars are
--- set; this line declares them whatever the vars (docs/dbt/CONVENTION.md, section 5).
--- depends_on: {{ ref('stg_builds') }}
--- depends_on: {{ ref('mart_build_profile') }}
 -- Warn only (the owner's rule: a new rule warns until its evaluation shows it can block; eval/dq/README.md, #11).
 {{ config(severity='warn') }}
 -- One platform's collapse, against that platform's own history: the bands of build_metrics_in_band

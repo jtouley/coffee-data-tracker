@@ -49,9 +49,10 @@ a flag (`stg_run_quality.counted`).
 | Incremental models, snapshots | Their output depends on the state the last run left | Rebuild everything from raw on every build ([section 9](#9-materializations)) |
 | A Python model that reads a file, the network or the clock, or iterates a `set` or an unsorted `dict` into its output | The same | A pure `row()` over a SQL `*_inputs` model ([section 8](#8-python-models)) |
 
-**The two exceptions**, both outside the release tables. A gate test may compare this build with earlier ones (the
-volume check and the anomaly bands read the lake's `builds` records through `stg_builds`), because that is what the
-gate is for. And `release_changes`, a report-only model run after the gate, compares this build's public tables
+**The two exceptions**, both outside the release tables. A gate test may compare this build with earlier ones,
+because that is what the gate is for: the volume check (`catalog_volume_vs_last_build`) and the anomaly bands
+(`macros/metrics_out_of_band.sql`) find the earlier builds through `stg_builds`, and read their metrics from the
+lake's raw `builds` records directly. And `release_changes`, a report-only model run after the gate, compares this build's public tables
 with the served release. No model that feeds a release table reads either.
 
 **The per-build columns.** `release_build_id` names the build a row came from, so it differs between two builds by
@@ -59,9 +60,12 @@ design (`quality.PER_BUILD_COLUMNS`). It comes from a var, not from the clock, a
 
 **The test.** `tests/test_reproducible.py` builds one synthetic lake twice through `coffeedata build`. The second
 build reads a copy with every file's rows, and every folder's files, in reverse order, in another time zone. Every
-model, tables and views, must have the same rows in both, per-build columns aside (`stg_builds`, which is about
-the builds themselves, is the one model left out). The lake holds a tie for every "latest" pick on purpose. A new
-pick gets a tie in that fixture.
+model must have the same rows in both, per-build columns aside. A view is evaluated when it is read, in the
+reader's session, so each build's views are read in a session of its own time zone (UTC, then Asia/Tokyo) before
+the two are compared. Two models are left out: `stg_builds`, which is about the builds themselves, and
+`stg_enrichments`, whose tie-break depends on the session's time zone (a known bug, pinned as a strict xfail in
+`tests/test_dbt.py`; [section 12](#12-where-the-projects-stand)). The lake holds a tie for every "latest" pick on
+purpose. A new pick gets a tie in that fixture.
 
 ## 3. Layers, folders and prefixes
 
@@ -97,7 +101,9 @@ A file a build is handed from outside (`previous_release`) is read in `ops_` onl
 
 ## 5. Keys, grain and tests
 
-- **A description starts with the grain**: "One row per ...". Keys are named `<entity>_id`.
+- **A description starts with the grain**: "One row per ...". Keys are named `<entity>_id`. A published table
+  whose description is its contract's text, word for word ([section 6](#6-contracts)), is the exception: the
+  contract says what the grain is.
 - **Every model has a grain test** on the key its description claims.
   - A single-column key takes `unique` and `not_null` on the column.
   - A compound key takes the project's generic test `grain` (`dbt/tests/generic/grain.sql`) on the model:
@@ -109,10 +115,12 @@ A file a build is handed from outside (`previous_release`) is read in `ops_` onl
     ```
 
     It fails on a key that more than one row has and on a null in any key column. A column that may
-    legitimately be null is named in `nullable` (`mart_dial_in`'s `grinder_id`); two rows that share a null are
-    still a duplicate.
+    legitimately be null is named in `nullable`, with the reason beside it (`mart_dial_in`'s `grinder_id` and
+    `key`); two rows that share a null are still a duplicate.
   - Never `unique` over `a || '|' || b`. A null part makes the whole expression null, and `unique` skips nulls, so
     the rows most likely to be wrong pass. It also reads `('a|b', 'c')` and `('a', 'b|c')` as one key.
+- **A test holds this.** `tests/test_dbt.py::test_every_model_has_a_description_and_a_grain_test` reads the
+  manifest and fails on a model with no description, no grain test, or a uniqueness test over a `||` key.
 - **A grain that fails is reported, not weakened.** If a model has duplicates on the key it claims, the claim or
   the model is wrong: fix one, or record the failing test and its reason in the pull request. Don't add a
   `where`, a `distinct` or a wider key to make the test pass.
@@ -142,8 +150,9 @@ version for the migration window.
 
 ## 7. Documentation
 
-- Every model has a description in YAML, grain first. The SQL header comment keeps the "why"; dbt docs and
-  catalogs don't read it, so the description has to stand alone.
+- Every model has a description in YAML, grain first (a contract's text excepted,
+  [section 5](#5-keys-grain-and-tests)). The SQL header comment keeps the "why"; dbt docs and catalogs don't read
+  it, so the description has to stand alone.
 - Columns: all of them on dimensions, facts and published models; keys and derived columns elsewhere. A column a
   model passes through is described in the upstream model's words.
 - Seeds and sources are documented.
@@ -189,20 +198,21 @@ Measured from `dbt parse` manifests in November 2026. Met by both projects: `stg
 and layer folders, `data_tests:` with `arguments:`, the Python model shape, full rebuilds from raw, documented and
 tested seeds, raw never written by dbt.
 
-Met by the public project since the change that added this file: a description on every model, a grain test on
-every model, no `||` keys, var-gated refs declared, the public tables' column descriptions.
+Met by the public project since the change that added this file, and held by tests: a description and a grain test
+on every model, no `||` keys (`tests/test_dbt.py`), var-gated refs declared (the same file), the public tables'
+descriptions equal to the contract's (`tests/test_contracts.py`).
 
 Not yet met, each for a change of its own:
 
 | Rule | What is open |
 |---|---|
-| 1.2 Idempotent | `run_completeness` falls back to `now()` for a run with no fetch; `stg_shots`, `stg_bags` and `stg_equipment` pick the latest record by `logged_at` alone, so two records of one id in the same second tie |
+| 1.2 Idempotent | `run_completeness` falls back to `now()` for a run with no fetch; `stg_shots`, `stg_bags` and `stg_equipment` pick the latest record by `logged_at` alone, so two records of one id in the same second tie; `stg_enrichments` breaks a same-second tie by `md5(to_json(e))`, which renders `extracted_at` in the session's time zone, so the view picks differently when read outside UTC (builds are pinned to UTC, so the tables built from it don't move) |
 | 1.3 Dimension and flags | `dim_coffee` and `fct_price_event` filter out products that aren't coffee and alias roasters instead of flagging them; no dimension holds every product. `public_roaster` decides eligibility itself, and `public_coffee` drops rows on a null `url` |
 | 1.1 ELT | `dim_roaster.status` still reads the crawl's recorded coffee count where there is one (`docs/ingestion/DESIGN.md` follow-up 13) |
 | 3 Layers | The run walk, the suspect-run rule, the classifier and the bag-weight rules sit in staging; `int_current_catalog` reads `dim_coffee`; `release_changes`, `run_completeness` and `mart_build_profile` are ops tables under mart names |
-| 4 Reading raw | Neither project declares `sources:`. `run_completeness`, `mart_build_profile`, `int_fetch_product_inputs` and `int_escaped_tag_inputs` read raw outside staging; `stg_registry` reads `config/roasters.csv` undeclared |
+| 4 Reading raw | Neither project declares `sources:`. `run_completeness`, `mart_build_profile`, `int_fetch_product_inputs` and `int_escaped_tag_inputs` read raw outside staging, and so do the tests `catalog_volume_vs_last_build` and `run_manifest_mode_values` and the band tests' macro `metrics_out_of_band` (the `builds` and `run_manifests` tables); `stg_registry` reads `config/roasters.csv` undeclared |
 | 5 Grain | `dbt_importers` still builds compound keys with `\|\|`, and has no `grain` test yet. `stg_probes` drops `batch_id`, the only column that tells two probes of one roaster in the same second apart, so its grain test on (`roaster_id`, `probed_at`) only warns |
 | 5 No silent drops | Staging's `where <key> is not null` filters have no test that counts what they remove |
 | 6 Contracts | The served marts (`dim_coffee`, `dim_roaster`, `fct_price_event`, `mart_market`, `mart_new_arrivals`, `fct_shot`, `mart_bag`) have no enforced contract; no model sets `access: public` |
-| 7 Documentation | Column descriptions are incomplete outside the public tables, in both projects |
+| 7 Documentation | Column descriptions are incomplete outside the public tables, in both projects. Five descriptions this change didn't touch don't start with the grain: `dim_coffee`, `dim_equipment`, `mart_build_profile`, `stg_products`, `stg_variant_grams` (`public_price_event` and `public_market_weekly` are their contract's text) |
 | 10 Unit tests | None on `release_changes`, `mart_build_profile`, `stg_registry`, `stg_fetches`, `dim_roaster`, `mart_new_arrivals`, `stg_variant_grams_inputs`, `int_importer_inputs` |

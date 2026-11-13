@@ -56,8 +56,8 @@ models:
           - accepted_values: {arguments: {values: [siteground, cloudflare]}}
   - name: int_fetches
     description: >-
-      stg_fetches with every ok fetch's coffee count: as its crawl recorded it, else as int_fetch_coffees counts it
-      with the same rule. dim_roaster's status reads it.
+      One row per fetch attempt (stg_fetches), with every ok fetch's coffee count: as its crawl recorded it, else as
+      int_fetch_coffees counts it with the same rule. dim_roaster's status reads it.
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, batch_id]}
@@ -90,8 +90,8 @@ models:
         data_tests: [not_null]
   - name: int_fetch_product_inputs
     description: >-
-      The products of every ok fetch whose crawl recorded no coffee count (ELT), one row per fetch and product,
-      with what the crawl's coffee rule reads.
+      One row per fetch and product, for every ok fetch whose crawl recorded no coffee count (ELT), with what the
+      crawl's coffee rule reads.
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, batch_id, product_id]}
@@ -122,8 +122,8 @@ models:
         description: The description as text.
   - name: int_escaped_tag_inputs
     description: >-
-      Every product version in the lake whose tags decoding changes, one row per roaster, product and version, with
-      the raw tags (what registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
+      One row per roaster, product and version in the lake whose tags change when decoded, with the raw tags (what
+      registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, product_id, input_hash]}
@@ -137,8 +137,8 @@ models:
         description: The same tags decoded (decode_html_entities_list).
   - name: int_tag_decoding_parity
     description: >-
-      The rows of int_escaped_tag_inputs where the rules decide differently on the raw and the decoded tags, so
-      the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
+      One row per int_escaped_tag_inputs row (roaster, product and version) where the rules decide differently on
+      the raw and the decoded tags, so the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
       fails the build on any row, and `coffeedata build` prints them.
     data_tests:
       - grain:
@@ -151,8 +151,8 @@ models:
           (products.rules with no verdict and with a "coffee" one: enrich.py's candidates and their bases).
   - name: int_fetch_coffees
     description: >-
-      Coffees per ok fetch without a recorded count, counted as the crawl counted them before ELT:
-      classify.is_coffee, the rules alone (no stored verdicts, no listing or suspect-run filter).
+      One row per ok fetch without a recorded coffee count, with its coffees counted as the crawl counted them
+      before ELT: classify.is_coffee, the rules alone (no stored verdicts, no listing or suspect-run filter).
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, batch_id]}
@@ -304,7 +304,8 @@ models:
           are all partial has every run current, so nothing it ever listed is delisted until a complete run lands.
         data_tests: [not_null]
   - name: stg_run_quality
-    description: Every roaster-week with a successful fetch, the batch that counts, and whether it looks broken.
+    description: >-
+      One row per roaster-week with a successful fetch: the batch that counts, and whether the week looks broken.
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, run_date]}
@@ -340,7 +341,9 @@ models:
           The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
         data_tests: [not_null]
   - name: stg_run_walk
-    description: Each roaster-week in order, whether it counts, and the counted weeks it was judged against.
+    description: >-
+      One row per roaster-week with a successful fetch, in order: whether it counts, and the counted weeks it was
+      judged against.
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, run_date]}
@@ -376,7 +379,9 @@ models:
         description: The build's id, as `coffeedata build` recorded it in the lake's builds table.
         data_tests: [unique, not_null]
   - name: stg_snapshots
-    description: Every product a store listed at a counted fetch, with prices in USD only and tags decoded.
+    description: >-
+      One row per roaster, counted run and product: what the store listed at the fetch that counts for the week,
+      with prices in USD only and tags decoded.
     data_tests:
       - grain:
           arguments: {columns: [roaster_id, run_date, product_id]}
@@ -488,8 +493,8 @@ models:
       - name: metric
         data_tests: [unique, not_null]
   - name: release_changes
-    description: Every row this build's public tables add, remove or change against the release customers get now
-      (var previous_release), with the reason the build can show for it, and a row for each comparison that couldn't
+    description: One row per row this build's public tables add, remove or change against the release customers get
+      now (var previous_release), with the reason the build can show for it, and one per comparison that couldn't
       be made in full. Empty when nothing is served. Report only (tag report_only), run after the gate. The build
       prints the counts per reason and records them (builds, kind release_change) as the release's notes;
       release_changes_explained warns on the unexplained and incomplete ones.
@@ -750,7 +755,6 @@ models:
       (relisted), repriced (price), in or out of stock (availability) or gone (removed), between consecutive
       counted fetches of its roaster. Derived from the raw snapshots alone, so a failed fetch never reads as a
       delisting, and USD prices only. Served with the release (quality.RELEASE_TABLES).
-    # The same key as tests/unique_price_events.sql, which stays: tests/test_dbt.py names it.
     data_tests:
       - grain:
           arguments: {columns: [coffee_id, variant_id, run_date, event]}

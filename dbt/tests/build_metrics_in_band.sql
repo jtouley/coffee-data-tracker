@@ -1,7 +1,3 @@
--- The macro's refs sit inside its var check (as_of_run), so dbt would see them only when the build's vars are
--- set; this line declares them whatever the vars (docs/dbt/CONVENTION.md, section 5).
--- depends_on: {{ ref('stg_builds') }}
--- depends_on: {{ ref('mart_build_profile') }}
 -- Warn-only for now (the owner's call): a band out of range is reported, not blocking, until band_k is
 -- recalibrated on 8-12 weeks of real history. The fixed floors (run_ok_rate, adapter_ok_rate,
 -- catalog_volume_vs_last_build) block.
