@@ -555,6 +555,93 @@ def test_render_says_what_changes_never_values():
     assert APP not in text and "evil" not in text
 
 
+def test_a_value_equal_to_the_routers_name_is_not_an_attachment():
+    # the ingest account's id is "<service>-ingest", the router's name: it isn't on the network
+    d = _sa_change(
+        doc("good"),
+        "google_service_account.ingest",
+        "google_service_account",
+        {"account_id": "registry-coffee-ingest"},
+    )
+    d["resource_changes"][-1]["change"]["actions"] = ["update"]
+    assert guard.shopify_network_path(plan(d)) == []
+
+
+def test_a_grant_to_an_account_created_in_the_same_plan_passes():
+    d = _sa_change(
+        doc("good"),
+        "google_service_account.new",
+        "google_service_account",
+        {"account_id": "registry-coffee-new"},
+    )
+    _sa_change(
+        d,
+        "google_project_iam_member.new",
+        "google_project_iam_member",
+        {"project": "p", "role": "roles/viewer"},
+        {"member": True},
+    )
+    _sa_change(
+        d,
+        "google_secret_manager_secret_iam_member.new",
+        "google_secret_manager_secret_iam_member",
+        {"secret_id": "HF_TOKEN", "role": "roles/secretmanager.secretAccessor"},
+        {"member": True},
+    )
+    assert guard.guarded_accounts(plan(d)) == []
+
+
+def test_the_deploy_account_gets_only_its_two_roles():
+    rtype = "google_cloud_run_v2_service_iam_member"
+    d = _sa_change(doc("good"), f"{rtype}.deploy_admin", rtype, {"role": "roles/run.admin", "member": DEPLOY})
+    _sa_change(d, f"{rtype}.deploy", rtype, {"role": "roles/run.developer", "member": DEPLOY})
+    assert guard.guarded_accounts(plan(d)) == [f"{rtype}.deploy_admin"]
+
+
+@pytest.mark.parametrize(
+    "rtype, after",
+    [
+        ("google_project_iam_custom_role", {"role_id": "x", "permissions": ["iam.serviceAccounts.actAs"]}),
+        (
+            "google_storage_bucket_iam_member",
+            {"bucket": "b", "role": "projects/p/roles/x", "member": "user:a@example.com"},
+        ),
+        (
+            "google_storage_bucket_iam_member",
+            {
+                "bucket": "b",
+                "role": "roles/iam.serviceAccountOpenIdTokenCreator",
+                "member": "user:a@example.com",
+            },
+        ),
+        (
+            "google_project_iam_member",
+            {"project": "p", "role": "roles/iam.roleAdmin", "member": "user:a@example.com"},
+        ),
+    ],
+)
+def test_custom_roles_and_impersonation_roles_are_refused_anywhere(rtype, after):
+    d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after)
+    assert guard.guarded_accounts(plan(d)) == [f"{rtype}.extra"]
+
+
+def test_a_principal_set_member_with_an_ordinary_role_is_a_workload_identity_grant():
+    rtype = "google_project_iam_member"
+    member = "principalSet://iam.googleapis.com/projects/1/locations/global/workloadIdentityPools/github/attribute.repository/x/y"
+    d = _sa_change(
+        doc("good"), f"{rtype}.extra", rtype, {"project": "p", "role": "roles/viewer", "member": member}
+    )
+    assert guard.workload_identity(plan(d)) == [f"{rtype}.extra"]
+
+
+def test_creating_the_service_with_its_placeholder_image_passes():
+    d = doc("good")
+    d["resource_changes"].append(
+        _service("us-docker.pkg.dev/cloudrun/container/hello", before_image=None, actions=("create",))
+    )
+    assert guard.app_image_pinned(plan(d)) == []
+
+
 def test_true_is_not_one():
     assert not guard.jq_equal(True, 1)
     assert guard.jq_equal(1, 1.0)

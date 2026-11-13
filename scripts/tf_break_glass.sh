@@ -31,7 +31,15 @@ tfrun(){  # tfrun STEP ARGS...: output to a file; on failure, only the guard's s
 cd "$(git rev-parse --show-toplevel)"
 [ -f "$TF/terraform.tfvars" ] || die "no $TF/terraform.tfvars"
 [ -z "$(git status --porcelain)" ] || die "the checkout has local changes or untracked files: plan from a clean main"
-tfrun init init -input=false -lockfile=readonly -no-color
+# Terraform loads every *.tf, *.tf.json and *.auto.tfvars(.json) in a root, gitignored or not: refuse any but your
+# terraform.tfvars, so only main's configuration is planned.
+loaded=$(git status --porcelain --ignored -- src/terraform \
+  | grep -E '^!! src/terraform/(bootstrap/)?[^/]+\.(tf|tf\.json|tfvars|tfvars\.json)$' \
+  | grep -vx '!! src/terraform/terraform.tfvars' || true)
+[ -z "$loaded" ] || die "ignored files Terraform would load: ${loaded//'!! '/}"
+git fetch -q origin main 2>/dev/null || echo "Couldn't reach GitHub: comparing with the main fetched last."
+[ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ] || die "this isn't main's tip: git checkout --detach origin/main"
+tfrun init init -input=false -lockfile=readonly -no-color -backend-config="bucket=${TF_STATE_BUCKET:-coffee-data-tracker-tfstate}"
 tfrun plan plan -input=false -no-color -out="$W/bg.plan"
 terraform -chdir="$TF" show -json -no-color "$W/bg.plan" >"$W/bg.json" 2>"$W/show.log" || die "terraform show failed"
 rc=0

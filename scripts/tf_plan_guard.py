@@ -14,9 +14,10 @@ CI (terraform-plan.yml, and the apply workflow) and the owner's shell run the sa
 `-` reads the JSON from stdin. Standard library only, so no install step is needed.
 
 The plan JSON holds every variable in clear, sensitive or not, and Terraform's own messages can quote values. This
-repository is public, so nothing here prints a value: output is fixed text, guard names, file:line, and resource
-addresses that pass Terraform's address syntax with plain keys and contain no variable value, egress IP or
-TF_VAR_* environment value (compared case-folded, with separators removed). Anything else is refused.
+repository is public, so nothing here prints a value: output is fixed text, guard names, file:line, resource
+addresses that pass Terraform's address syntax with plain keys, and the attribute paths that change (lower-case
+names; a map key that looks like one, such as a label's, can appear). None may contain a variable value, egress IP
+or TF_VAR_* environment value (compared case-folded, with separators removed). Anything else is refused.
 """
 
 from __future__ import annotations
@@ -60,17 +61,20 @@ GUARDED_ACCOUNTS = ("registry-coffee-deploy", "registry-coffee-tf-plan", "regist
 SA_TYPE = "google_service_account"
 SA_KEY_TYPE = "google_service_account_key"  # sign-in is Workload Identity Federation: no key, for any account
 DEPLOY_ACCOUNT = "registry-coffee-deploy"
-# The deploy account's own grants (deploy.tf): its registry writer and service developer roles may change in a PR.
-DEPLOY_GRANT_TYPES = {
-    "google_artifact_registry_repository_iam_member",
-    "google_cloud_run_v2_service_iam_member",
+# The deploy account's own grants (deploy.tf), exactly: its registry writer and service developer roles.
+DEPLOY_GRANTS = {
+    ("google_artifact_registry_repository_iam_member", "roles/artifactregistry.writer"),
+    ("google_cloud_run_v2_service_iam_member", "roles/run.developer"),
 }
+CUSTOM_ROLE_TYPES = ("google_project_iam_custom_role", "google_organization_iam_custom_role")
 # Roles that let their holder act as, or make keys for, service accounts: refused anywhere they'd be granted.
 IMPERSONATION_ROLES = {
     "roles/iam.serviceAccountTokenCreator",
     "roles/iam.serviceAccountUser",
     "roles/iam.serviceAccountKeyAdmin",
     "roles/iam.serviceAccountAdmin",
+    "roles/iam.serviceAccountOpenIdTokenCreator",
+    "roles/iam.roleAdmin",
     "roles/iam.securityAdmin",
     "roles/resourcemanager.projectIamAdmin",
     "roles/owner",
@@ -282,6 +286,20 @@ def _shopify_nat(rc: dict) -> bool:
     )
 
 
+ATTACHMENT_FIELDS = {"network", "router", "peer_network", "attachment_target", "network_url"}
+
+
+def _attachments(value) -> list[str]:
+    """The strings under attachment fields (network, router...), at any depth: what a resource is attached to."""
+    if isinstance(value, list):
+        return [s for v in value for s in _attachments(v)]
+    if isinstance(value, dict):
+        return [
+            s for k, v in value.items() for s in (_strings(v) if k in ATTACHMENT_FIELDS else _attachments(v))
+        ]
+    return []
+
+
 def shopify_network_path(plan: Plan) -> list[str]:
     """Shopify's path stays as it is: no change to any network or router; on the ingest network or router, changes
     only to the allowed types (ON_INGEST_ALLOWED); no new NAT on the ingest router; a NAT
@@ -301,7 +319,7 @@ def shopify_network_path(plan: Plan) -> list[str]:
         elif rc["type"] not in ON_INGEST_ALLOWED and (
             any(
                 t == router or t.endswith((f"/networks/{router}", f"/routers/{router}"))
-                for t in _strings([before, after])
+                for t in _attachments([before, after])
             )
             or (
                 rc["type"].startswith("google_compute_")
@@ -364,6 +382,8 @@ def ingest_image_pinned(plan: Plan) -> list[str]:
 
 
 SERVICE_TYPE = "google_cloud_run_v2_service"
+# cloud_run.tf creates the service with Google's sample image; deploys put the app's in.
+SERVICE_PLACEHOLDER = "us-docker.pkg.dev/cloudrun/container/hello"
 
 
 def app_image_pinned(plan: Plan) -> list[str]:
@@ -381,6 +401,8 @@ def app_image_pinned(plan: Plan) -> list[str]:
         images = [jq(c, "image") for c in after] if isinstance(after, list) and after else [None]
         old = [jq(c, "image") for c in before] if isinstance(before, list) else None
         if images == old and not unknown(rc, *containers):
+            continue
+        if actions(rc) == ["create"] and images == [SERVICE_PLACEHOLDER]:
             continue
         if not all(isinstance(i, str) and pinned.fullmatch(i) for i in images):
             bad.append(rc["address"])
@@ -411,41 +433,53 @@ def _names(text: list[str], *accounts: str) -> bool:
 
 
 def guarded_accounts(plan: Plan) -> list[str]:
-    """No change to the deploy, plan or apply account itself; no service account key for any account; no grant on
-    any resource that names the plan or apply account; no grant naming the deploy account except its own registry and
-    service roles; no service account or project grant of a role that impersonates or makes keys (to anyone); no
-    service account IAM that names its account by numeric id. Members, accounts and roles unknown at plan fail closed."""
+    """No change to the deploy, plan or apply account itself, and no other resource naming the plan or apply account;
+    no service account key for any account; no custom role, created, changed or granted; no grant of a role that
+    impersonates, makes keys or administers roles, on any resource, to anyone; no grant naming the plan or apply
+    account; none naming the deploy account but its registry writer and service developer roles; no service account
+    IAM naming its account by numeric id. In project and service account IAM, a role, account or policy unknown at
+    plan fails closed, and so does an unknown member unless the plan creates (non-guarded) accounts it can be."""
+    creates_accounts = any(rc["type"] == SA_TYPE and "create" in actions(rc) for rc in plan.changes)
+    ci = [a for a in GUARDED_ACCOUNTS if a != DEPLOY_ACCOUNT]
     bad = []
     for rc in plan.changes:
         if not (is_change(rc) or importing(rc)):
             continue
         sides = [jq(rc, "change", "before"), jq(rc, "change", "after")]
-        text = [s.casefold() for s in _strings(sides)]
-
+        strings = _strings(sides)
+        text = [s.casefold() for s in strings]
         rtype = rc["type"]
         if rtype == SA_TYPE:
             refuse = _names(text, *GUARDED_ACCOUNTS) or unknown(rc, "account_id")
-        elif rtype == SA_KEY_TYPE:
+        elif rtype == SA_KEY_TYPE or rtype in CUSTOM_ROLE_TYPES:
             refuse = True
         elif "_iam_" in rtype:
-            sa_or_project = rtype.startswith(("google_service_account_iam_", "google_project_iam_"))
-            roles = {s for s in _strings(sides) if s.startswith("roles/")} | {
+            roles = {s for s in strings if s.startswith(("roles/", "projects/", "organizations/"))} | {
                 r for s in text for r in IMPERSONATION_ROLES if r.casefold() in s
             }
+            roles = {r for r in roles if "/roles/" in r or r.startswith("roles/")}
+            sa_or_project = rtype.startswith(("google_service_account_iam_", "google_project_iam_"))
             refuse = (
-                _names(text, *(a for a in GUARDED_ACCOUNTS if a != DEPLOY_ACCOUNT))
-                or (_names(text, DEPLOY_ACCOUNT) and rtype not in DEPLOY_GRANT_TYPES)
-                or (sa_or_project and bool(roles & IMPERSONATION_ROLES))
+                _names(text, *ci)
+                or (_names(text, DEPLOY_ACCOUNT) and not {(rtype, r) for r in roles} <= DEPLOY_GRANTS)
+                or bool(roles & IMPERSONATION_ROLES)
+                or any(not r.startswith("roles/") for r in roles)
                 or (
                     rtype.startswith("google_service_account_iam_")
                     and any(NUMERIC_ACCOUNT.search(s) for s in text)
                 )
-                or any(
-                    unknown(rc, k) for k in ("member", "members", "service_account_id", "policy_data", "role")
+                or (
+                    sa_or_project
+                    and any(unknown(rc, k) for k in ("service_account_id", "policy_data", "role"))
+                )
+                or (
+                    sa_or_project
+                    and not creates_accounts
+                    and any(unknown(rc, k) for k in ("member", "members"))
                 )
             )
         else:
-            continue
+            refuse = _names(text, *ci)  # e.g. a job or schedule that would run as the plan or apply account
         if refuse:
             bad.append(rc["address"])
     return bad

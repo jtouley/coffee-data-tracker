@@ -316,16 +316,20 @@ set IAM on the secrets (and so reach their values), on the image repository, the
 staging bucket (and so raw ingestion data), and run any image as the runtime, ingest or scheduler account. That is
 what the approval is for: read the IAM section of the summary first. It cannot write a workload identity pool or
 provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
-- any change to the deploy, plan or apply account, or a key for any account;
-- a grant on any resource that names the plan or apply account; one that names the deploy account, except its own
-  registry writer and service developer roles (`deploy.tf`), which a PR may change;
-- a service-account or project grant of a role that impersonates accounts or makes keys, to anyone;
+- any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
+  any account, or a custom role;
+- a grant on any resource that names the plan or apply account; one that names the deploy account, except exactly
+  its registry writer and service developer roles (`deploy.tf`), which a PR may change;
+- a grant, on any resource, of a custom role or a role that impersonates accounts, makes keys or administers roles;
+- in project or service-account IAM, a role, account or policy unknown at plan, or a member unknown at plan unless
+  the same plan creates the (non-guarded) account it will be;
 - any change to a workload identity pool or provider, or a grant on them;
 - on the ingest network or router, any type but subnets, NATs and the jobs (and Shopify's path, as before);
 - any delete or replace; a job image other than the pinned one; a service image Terraform sets that isn't the app's,
   pinned by digest.
 
-Other grants, such as a secret's reader or the staging bucket's users, are listed in the IAM section, not refused.
+Other grants, such as a secret's reader or the staging bucket's users (to an account created in the same plan too),
+are listed in the IAM section, not refused.
 
 **Not through GitHub, on purpose:** what the guard refuses, the bootstrap root `src/terraform/bootstrap/` (the plan
 and apply identities and the plans bucket: the gate is not managed by what it gates), secret values, DNS. These, and
@@ -351,7 +355,26 @@ the break-glass below, are the owner's, from Cloud Shell.
 `terraform.tfvars`, run `bash scripts/tf_break_glass.sh`. It plans into a private temporary folder, runs the guard,
 lists the changes and applies that saved plan only after a yes. If the guard refuses, it applies only after you type
 `override <reason>`, which it appends, with the time, the commit and the refusing guards, to `~/break-glass.log`.
-The state lock is shared, so this is safe beside a waiting run.
+It refuses a checkout that isn't main's tip, or that holds a file Terraform would load beyond main's (an ignored
+`*_override.tf` or `*.auto.tfvars`, say). The state lock is shared, so this is safe beside a waiting run.
+
+If the script itself is broken, by hand (each step only if the one before succeeded; read the list before the yes):
+
+```bash
+cd src/terraform && d=$(mktemp -d) && terraform init -backend-config="bucket=coffee-data-tracker-tfstate" >/dev/null &&
+  terraform plan -out="$d/bg.plan" >"$d/plan.log" 2>&1 && terraform show -json "$d/bg.plan" >"$d/bg.json" &&
+  python3 -I ../../scripts/tf_plan_guard.py check "$d/bg.json" && python3 -I ../../scripts/tf_plan_guard.py render "$d/bg.json" &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply "$d/bg.plan"; rm -rf "$d"
+```
+
+**After this change merges, re-apply the bootstrap once** (the owner, from Cloud Shell), if it was applied before:
+the apply account's access to saved plans moves from `objectUser` to a read-and-delete role. By hand (the combined
+script's bootstrap step refuses any replace, so it is for a first apply only):
+`cd src/terraform/bootstrap && terraform init -backend-config="bucket=coffee-data-tracker-tfstate"`, then
+`TF_VAR_billing_account=<from your terraform.tfvars> terraform plan -out=b.plan`, then `terraform apply b.plan`. The plan
+shows: create `google_project_iam_custom_role.tf_plan_object`, and replace
+`google_storage_bucket_iam_member.tf_apply_plans` (its role changes, so it is replaced); nothing else. If the bootstrap
+was never applied, the first run creates everything (51 resources) with the final roles.
 
 **The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
 deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed

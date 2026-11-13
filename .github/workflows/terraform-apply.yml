@@ -150,9 +150,12 @@ jobs:
           python3 -I "$GUARD" check "$RUNNER_TEMP/plan.json"
           python3 -I "$GUARD" render "$RUNNER_TEMP/plan.json" >"$RUNNER_TEMP/render.md"
           # What the fresh plan before the apply must match: actions, address, and the planned values, hashed.
+          # Moves, imports and output changes alone are real changes too (an empty list here): only a plan JSON that
+          # can't be read stops the run.
+          jq -e '.resource_changes | type == "array"' "$RUNNER_TEMP/plan.json" >/dev/null \
+            || { echo "::error::Couldn't read the plan's change set."; exit 1; }
           changes=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
             | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/plan.json")
-          if [ -z "$changes" ] || [ "$changes" = "[]" ]; then echo "::error::Couldn't read the plan's change set."; exit 1; fi
           changeset=$(printf '%s' "$changes" | sha256sum | cut -d' ' -f1)
           rm -f "$RUNNER_TEMP/plan.json"
           { echo "changed=true"; echo "changeset=$changeset"; } >> "$GITHUB_OUTPUT"
@@ -324,7 +327,8 @@ jobs:
             terraform -chdir="$TF_ROOT" show -json -no-color "$RUNNER_TEMP/fresh" >"$RUNNER_TEMP/fresh.json" 2>"$logs/show.log"
           ) || { scrubbed plan; stop "The fresh plan for the drift check failed. Nothing was applied."; }
           rm -f "$RUNNER_TEMP/fresh"
-          [ -s "$RUNNER_TEMP/fresh.json" ] || stop "The fresh plan for the drift check is empty. Nothing was applied."
+          jq -e '.resource_changes | type == "array"' "$RUNNER_TEMP/fresh.json" >/dev/null \
+            || stop "Couldn't read the fresh plan. Nothing was applied."
           changes=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
             | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/fresh.json") \
             || stop "Couldn't read the fresh plan. Nothing was applied."
