@@ -434,6 +434,46 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("verdict_model", pa.string()),
             ("verdict_label", pa.string()),
             ("reason", pa.string()),
+            ("tags", pa.list_(pa.string())),
+            ("unfiltered_is_coffee", pa.bool_()),
+        ]
+    ),
+    "eval_prefilter": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("direction", pa.string()),
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("title", pa.string()),
+            ("url", pa.string()),
+            ("input_hash", pa.string()),
+            ("prefilter", pa.string()),
+            ("verdict_label", pa.string()),
+            ("claude", pa.string()),
+            ("is_coffee_after", pa.bool_()),
+        ]
+    ),
+    "eval_prefilter_summary": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("direction", pa.string()),
+            ("products", pa.int64()),
+            ("claude_coffee", pa.int64()),
+            ("claude_not_coffee", pa.int64()),
+            ("no_verdict", pa.int64()),
+            ("back_in_catalog", pa.int64()),
+        ]
+    ),
+    "prefilter_samples": pa.schema(
+        [
+            ("sampled_at", pa.timestamp("s", tz="UTC")),
+            ("run_date", pa.date32()),
+            ("input_hash", pa.string()),
+            ("roaster_id", pa.string()),
+            ("prefilter", pa.string()),
+            ("model", pa.string()),
+            ("definition", pa.string()),
+            ("stratum_size", pa.int64()),
         ]
     ),
     "mart_flags": pa.schema(
@@ -749,6 +789,7 @@ GLOBS = {
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
     "verdict_batches": "verdict_batches/*/*.parquet",
+    "prefilter_samples": "prefilter_samples/*/*.parquet",
     "run_overrides": "run_overrides/*.parquet",
     "builds": "builds/*/*.parquet",
     "run_manifests": "run_manifests/*/*.parquet",
@@ -772,7 +813,14 @@ GLOBS = {
 # hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
 OPS_GLOBS = {
     t: f"releases/*/*/ops/{t}.parquet"
-    for t in ("run_completeness", "release_changes", "product_decisions", "mart_flags")
+    for t in (
+        "run_completeness",
+        "release_changes",
+        "product_decisions",
+        "mart_flags",
+        "eval_prefilter",
+        "eval_prefilter_summary",
+    )
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -786,6 +834,7 @@ SCHEMA_FILES = {
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",
     "verdict_batches": "verdict_batches/state=schema/schema.parquet",
+    "prefilter_samples": "prefilter_samples/run_date=0000-00-00/batch=schema.parquet",
     "run_overrides": "run_overrides/override_id=schema.parquet",
     "builds": "builds/run_date=0000-00-00/build=schema.parquet",
     "run_manifests": "run_manifests/run_date=0000-00-00/batch=schema.parquet",

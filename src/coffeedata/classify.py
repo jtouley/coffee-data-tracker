@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import re
+import unicodedata
+from collections.abc import Iterable, Sequence
+from dataclasses import dataclass
 
 from .extract import DEMONYMS
 from .models import CatalogItem
@@ -134,10 +137,99 @@ def says_wholesale(text: str) -> bool:
     return bool(_WHOLESALE.search(text))
 
 
-def exclusion(item: CatalogItem) -> str | None:
+# --- the owner's keyword filters (the admin's Filters page: docs/design/admin-registry.md §4, "a keyword pre-filter") -----
+
+KEYWORD_FIELDS = ("title", "product_type", "tags")
+KEYWORD_MAX = 200  # filters in one snapshot
+# A filter is a word or phrase: 3 to 60 characters of letters, digits, spaces, & ' . and -, starting with a letter or
+# digit and holding at least one letter. Nothing in it is a pattern: it is matched literally.
+_PHRASE = re.compile(r"[^\W_][\w &'.-]{2,59}")
+# Whole words only. A word character (any script), an apostrophe or a hyphen next to the phrase means it is part of a
+# longer word ("tea" is not in "teapot", "tea-like", "tea's", "Tea’s" or "tea‐like"), so the filter is unsure and
+# doesn't match. Typographic apostrophes (’ ‘ ‛ ʼ ′) and Unicode hyphens and dashes (‐ ‑ ‒ – — ― − ﹣) count as well
+# as the ASCII ones: stores' titles use them.
+_EDGE = r"[\w'\u2018\u2019\u201b\u02bc\u2032\u00b4`\u0300-\u036f\-\u2010-\u2015\u2212\ufe63]"
+# Characters that are inside a word without showing (soft hyphen, zero-width space, joiners, word joiner, BOM):
+# removed before matching, so "Cold\u00adbrew" reads "coldbrew". Apostrophes, an acute accent and a backtick read as
+# the ASCII apostrophe, in text and in phrases alike, so "o'hara" matches "O’Hara".
+_INVISIBLE = dict.fromkeys(map(ord, "\u00ad\u200b\u200c\u200d\u2060\ufeff"))
+_APOSTROPHES = str.maketrans({c: "'" for c in "\u2018\u2019\u201b\u02bc\u2032\u00b4`\uff07"})
+
+
+def keyword_phrase(raw: object) -> str:
+    """A filter's phrase as stored and matched: NFKC, lower case, single spaces. ValueError when it isn't one."""
+    if not isinstance(raw, str):
+        raise ValueError("a keyword filter is a word or phrase")
+    p = " ".join(keyword_text(raw).split())
+    if not _PHRASE.fullmatch(p) or not any(c.isalpha() for c in p):
+        raise ValueError(
+            "a keyword filter is 3 to 60 characters: letters, digits, spaces, & ' . and -, with at least one letter"
+        )
+    return p
+
+
+@dataclass(frozen=True, order=True)
+class KeywordFilter:
+    """A word or phrase the owner added in the admin: a product whose `field` (title, product_type or tags) holds it
+    as whole words is never a coffee, and gets no Claude verdict. It only ever excludes."""
+
+    phrase: str
+    field: str
+
+    def __post_init__(self) -> None:
+        if self.field not in KEYWORD_FIELDS:
+            raise ValueError(f"a keyword filter's field is one of {', '.join(KEYWORD_FIELDS)}")
+        object.__setattr__(self, "phrase", keyword_phrase(self.phrase))
+        words = (re.escape(w) for w in self.phrase.split(" "))
+        object.__setattr__(
+            self, "_re", re.compile(rf"(?<!{_EDGE})" + r"\s+".join(words) + rf"(?!{_EDGE})", re.I)
+        )
+
+    @property
+    def name(self) -> str:
+        """The exclusion's name: keyword:<field>:<phrase> (decision() gives excluded:keyword:...)."""
+        return f"keyword:{self.field}:{self.phrase}"
+
+    def matches(self, item: CatalogItem) -> bool:
+        rx = self._re  # type: ignore[attr-defined]
+        if self.field == "tags":
+            return any(rx.search(_norm(t)) for t in item.tags)
+        return bool(rx.search(_norm(item.title if self.field == "title" else item.product_type)))
+
+    def as_dict(self) -> dict:
+        return {"phrase": self.phrase, "field": self.field}
+
+
+def keyword_text(text: str | None) -> str:
+    """Text as a filter reads it: NFKC (full-width letters become ASCII) and case-folded ("Straße" reads "strasse").
+    A filter's phrase is normalized the same way, so a phrase found in this text by substring is a candidate match;
+    KeywordFilter.matches decides."""
+    text = (text or "").translate(_INVISIBLE).translate(_APOSTROPHES)  # before NFKC: it splits "´" into two
+    return unicodedata.normalize("NFKC", text).casefold()
+
+
+_norm = keyword_text
+
+
+def keyword_filters(rows: Iterable[dict] | None) -> tuple[KeywordFilter, ...]:
+    """Filters from their stored form ({phrase, field}), sorted and without duplicates. ValueError on a bad one."""
+    out = {KeywordFilter(r["phrase"], r["field"]) for r in rows or ()}
+    if len(out) > KEYWORD_MAX:
+        raise ValueError(f"at most {KEYWORD_MAX} keyword filters")
+    return tuple(sorted(out))
+
+
+def keyword_match(item: CatalogItem, filters: Sequence[KeywordFilter]) -> KeywordFilter | None:
+    """The first filter (in their sorted order) that matches the product, or None."""
+    return next((f for f in filters if f.matches(item)), None)
+
+
+def exclusion(item: CatalogItem, filters: Sequence[KeywordFilter] = ()) -> str | None:
     """The first rule that excludes the product outright (never a coffee, whatever else the listing says: gear,
     parts, merch, tea, green coffee, subscriptions, test listings), by name, or None. The rules are checked in a
-    fixed order, so a product that more than one rule excludes always gets the same name."""
+    fixed order, so a product that more than one rule excludes always gets the same name. The owner's keyword
+    filters (`filters`, from the build's snapshot) come after the code's rules, so a product the code already
+    excludes keeps its rule's name: keyword:<field>:<phrase> names only what a filter newly excludes."""
     title, ptype = item.title, item.product_type
     checks = (
         ("not_coffee_words", lambda: _NOT_COFFEE.search(f"{title} | {ptype}")),
@@ -154,29 +246,35 @@ def exclusion(item: CatalogItem) -> str | None:
         ("other_type", lambda: _OTHER_META.search(ptype)),
         ("tag", lambda: any(_TAG.fullmatch(t.strip()) for t in item.tags)),
     )
-    return next((name for name, check in checks if check()), None)
+    found = next((name for name, check in checks if check()), None)
+    if found is None and filters:
+        hit = keyword_match(item, filters)
+        found = hit.name if hit else None
+    return found
 
 
-def excluded(item: CatalogItem) -> bool:
-    """Never a coffee, whatever else the listing says (exclusion names the rule). These skip Claude's verdict
-    (verdict.py)."""
-    return exclusion(item) is not None
+def excluded(item: CatalogItem, filters: Sequence[KeywordFilter] = ()) -> bool:
+    """Never a coffee, whatever else the listing says (exclusion names the rule), by the code's rules or the owner's
+    keyword filters. These skip Claude's verdict (verdict.py)."""
+    return exclusion(item, filters) is not None
 
 
-def is_coffee(item: CatalogItem) -> bool:
+def is_coffee(item: CatalogItem, filters: Sequence[KeywordFilter] = ()) -> bool:
     """The rules' answer: used where Claude has no verdict, and as the floor the labeled sets hold it to."""
-    return decision(item)[0]
+    return decision(item, filters=filters)[0]
 
 
 _UNSET = object()
 
 
-def decision(item: CatalogItem, excluded_by: str | None | object = _UNSET) -> tuple[bool, str]:
+def decision(
+    item: CatalogItem, excluded_by: str | None | object = _UNSET, filters: Sequence[KeywordFilter] = ()
+) -> tuple[bool, str]:
     """The rules' answer and the rule that gave it: excluded:<rule> (exclusion), sauce, sweets or drinks (not
     coffee); coffee_words, country, demonym or coffee_type (coffee); else signals:<n>, the count of the four
     independent signals (coffee at two or more). Only an explanation: is_coffee is this answer. `excluded_by` is
     exclusion(item) when the caller already has it, so the exclusions run once."""
-    why = exclusion(item) if excluded_by is _UNSET else excluded_by
+    why = exclusion(item, filters) if excluded_by is _UNSET else excluded_by
     if why is not None:
         return False, f"excluded:{why}"
     title, ptype = item.title, item.product_type

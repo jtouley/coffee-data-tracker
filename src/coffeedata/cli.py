@@ -558,7 +558,13 @@ def cmd_classify(args: argparse.Namespace) -> None:
     job = control.start(lake, "classify", connectors.week_of(args.run_date or _today()),
                         detail={"model": verdict.model(), **control.execution()})  # fmt: skip
     try:
-        out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+        only = None
+        if getattr(args, "prefilter_build", None):
+            # A draft's review (the admin's Classify these): exactly the versions its build's census lists as taken
+            # out by a new filter with no verdict, still pending (verdict.review_rows).
+            only = verdict.review_rows(lake, verdict.model() or "", args.prefilter_build)
+        out = {"collect": verdict.collect(lake, args.run_date),
+               "submit": verdict.submit(lake, args.limit, only=only, run_date=args.run_date)}  # fmt: skip
         deadline = time.monotonic() + args.wait * 60
         # Wait for this run's batches only; whatever is still running is collected by the next run.
         waiting = set(out["submit"].get("batch_ids", []))
@@ -759,6 +765,20 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
         snap
     )  # places flagged roasters: stg_registry adds them
     extra["not_roasters"] = decisions.not_roasters(snap)  # flagged not a roaster: stg_registry drops them
+    # The keyword filters: this build's (its snapshot's) and the served build's, so eval_prefilter can tell what a
+    # change moves. A build without --snapshot already applies the served snapshot, so it is its own baseline. A
+    # draft reads the served one; if that can't be read (a lake error, a bad snapshot), there is no baseline and
+    # eval_prefilter lists every filter's exclusions as new: more to review, never less. Logged, never fatal.
+    baseline_doc = snap
+    if getattr(args, "snapshot", None):
+        try:
+            baseline_doc = _snapshot(argparse.Namespace(), lake, served)
+        except Exception as e:  # noqa: BLE001 - the lake's IO errors vary (duckdb, fsspec, OSError); none is fatal
+            logging.warning("the served snapshot wasn't read for eval_prefilter's baseline: %s", _error(e))
+            baseline_doc = None
+    extra["prefilter_path"] = str(
+        decisions.write_prefilter(snap, baseline_doc, db.parent / "prefilter.parquet")
+    )
     if snap is not None:
         extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
         recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),
@@ -1464,6 +1484,11 @@ def main(argv: list[str] | None = None) -> None:
     c.add_argument("--limit", type=int, default=100_000)
     c.add_argument("--run-date", default=None)
     c.add_argument("--wait", type=int, default=0, help="minutes to wait for the new batch")
+    c.add_argument(
+        "--prefilter-build",
+        help="a draft's build: classify only what its census lists as taken out by a new keyword filter with no "
+        "verdict (the admin's Classify these)",
+    )
     c.add_argument(
         "--allow-rules-only",
         action="store_true",

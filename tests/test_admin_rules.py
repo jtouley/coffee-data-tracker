@@ -172,7 +172,7 @@ def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, p
     assert decisions.settings_of(doc) == rules.check(on) and doc["decisions"] == []
     b3 = _draft_build(lake.root, d["draft_id"], doc)
     page = c.get(f"/part/release?build={b3}").text
-    assert "Evaluation of a rule change" in page and "eval/verdict_flip/" in page
+    assert "Rule changes" in page and "eval/verdict_flip/" in page
     no = post(c, f"/api/drafts/{d['draft_id']}/publish", {"key": "k5", "reason": "go"})
     assert no.status_code == 409 and any(
         "verdict_flip.polarity changes how a rule decides" in x for x in no.json()["reasons"]

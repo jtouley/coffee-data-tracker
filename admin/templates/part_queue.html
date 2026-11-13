@@ -123,20 +123,20 @@
   {% endif %}
   {% endif %}
 
-  {# --- the rule settings ------------------------------------------------------------------------------------- #}
+  {# --- the rule settings: each rule's params, as plain controls ---------------------------------------------- #}
   <details class="settings mt24">
     <summary class="section">Rule settings · {% if settings.version_id %}version <code>{{ settings.version_id }}</code>, {{ settings.actor }}, {{ t(settings.at) }} UTC{% else %}the defaults{% endif %}</summary>
-    <p class="body">The code defines each rule; these settings configure it. A change goes into the next draft, and nothing changes for anyone until it is published. One that changes how a rule decides (a family, a polarity, readiness) needs its full evaluation before Publish.</p>
-    {% if writes_off %}<pre class="json">{{ settings_json }}</pre>{% else %}
-    <form class="settings-form" data-write="/api/settings" data-preview="/api/settings/check" data-confirm-title="Save the rule settings?" data-confirm-label="Save">
+    <p class="body prose">What the flag rules look for. A change goes into the next draft. A rule’s family, polarity and readiness change how it decides, which needs its full evaluation, so they aren’t edited here.</p>
+    <form class="settings-form" data-write="/api/settings" data-preview="/api/settings/check" data-ask="reason" data-confirm-title="Save the rule settings?" data-confirm-label="Save">
       <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="based_on" value="{{ settings.version_id or '' }}">
-      <label class="flabel" for="settings-doc">Settings (JSON; checked against the code’s schema)</label>
-      <textarea class="input json" id="settings-doc" name="doc" rows="18" spellcheck="false" autocomplete="off">{{ settings_json }}</textarea>
-      <label class="flabel" for="settings-reason">Reason (recorded)</label>
-      <input class="input" id="settings-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off">
-      <div class="actions mt12"><button class="btn secondary inline" type="submit" data-busy="Checking…">Check and save…</button></div>
+      {% for r in rule_params %}<fieldset class="fld rule-params"><legend class="flabel">{{ r.id | replace("_", " ") | capitalize }}</legend>
+        {% for x in r.params %}<div class="fld">
+          <label class="label" for="p-{{ r.id }}-{{ x.name }}">{{ x.name | replace("_", " ") | capitalize }}{% if not x.number %} (separate with commas){% endif %}</label>
+          {% if x.number %}<input class="input small num" id="p-{{ r.id }}-{{ x.name }}" name="param:{{ r.id }}:{{ x.name }}" type="number" inputmode="numeric" min="{{ x.lo }}" max="{{ x.hi }}" value="{{ x.value }}"{% if writes_off %} disabled{% endif %}>
+          {% else %}<input class="input small" id="p-{{ r.id }}-{{ x.name }}" name="param:{{ r.id }}:{{ x.name }}" value="{{ x.value | join(', ') }}" autocomplete="off" spellcheck="false"{% if writes_off %} disabled{% endif %}>{% endif %}
+        </div>{% endfor %}</fieldset>{% endfor %}
+      {% if not writes_off %}<div class="actions mt12"><button class="btn secondary inline" type="submit" data-busy="Checking…">Check and save…</button></div>{% endif %}
     </form>
-    {% endif %}
     {% if history %}<ul class="checks mt12" aria-label="Earlier versions">{% for h in history %}<li><code>{{ h.version_id }}</code> <span>{{ h.actor }}, {{ t(h.at) }} UTC: {{ h.reason }} · {{ h.changed | join(", ") }}{% if h.decides %} (decides: {{ h.decides | join(", ") }}){% endif %}</span></li>{% endfor %}</ul>{% endif %}
   </details>
 {% endif %}

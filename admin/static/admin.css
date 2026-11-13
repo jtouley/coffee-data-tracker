@@ -251,3 +251,68 @@ dialog .plan-details { margin-top: 8px; }
 @media (prefers-reduced-motion: no-preference) { .admin details > summary::after { transition: transform 120ms ease-out; } }
 .admin details:not(.rowmenu) > summary.btn.text { font-size: 0.9375rem; font-weight: 500; color: var(--ink); }
 .admin h2.section { font-size: 1.0625rem; color: var(--ink); }
+
+/* Keyword filters (the Filters page) and their review (Release): one column, labels above their fields, helper text in
+   --ink-2 under the label; the filter list is a dense table like the others; the preview's product lists read as a
+   plain list with the store after each name. No new colours. */
+.prose { max-width: 72ch; }
+.kf-add { display: grid; gap: 16px; margin-top: 12px; }
+.fld { display: grid; gap: 4px; min-width: 0; }
+.fld > .flabel, .fld > legend.flabel { margin: 0; }
+.fld > .meta { margin: 0 0 4px; }
+.kf-add .input { min-height: 44px; font-size: 1rem; }
+.kf-add .choice { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.kf-add .choice legend { margin-bottom: 4px; }
+.kf-add .choice label { min-height: 44px; display: inline-flex; align-items: center; padding: 0; text-indent: 0; }
+table.kf-list tbody th { white-space: normal; min-width: 8rem; max-width: 20rem; }
+table.kf-list { width: 100%; }
+table.kf-list td:nth-child(4) { white-space: normal; min-width: 12rem; max-width: 28rem; }
+table.kf-list td.act, table.kf-list th.act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
+.rule-params { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
+.rule-params legend { grid-column: 1 / -1; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+.rule-params .num { max-width: 10rem; }
+ul.plist { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 4px; font-size: 0.9375rem; }
+ul.plist li { overflow-wrap: anywhere; }
+.pf-review { margin-top: 16px; }
+table.review tbody th { white-space: normal; min-width: 10rem; max-width: 22rem; }
+table.review td.call { white-space: normal; min-width: 12rem; }
+table.review td.call .mark { display: block; font-weight: 600; margin-bottom: 4px; }
+table.review td.call .inline-form + .inline-form .btn { margin-inline-start: 8px; }
+.pf-review h3.section { font-size: 0.9375rem; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
+/* On a phone each product to review is a stacked row: the name, its store and filter, then the two calls, all on
+   screen (no sideways scroll to reach the buttons). */
+@media (max-width: 759px) {
+  table.review { min-width: 0; width: 100%; }
+  table.review thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.review tr { display: block; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+  table.review tbody { display: block; }
+  table.review th, table.review td { display: block; border: 0; padding: 0; position: static; max-width: none; }
+  table.review td:nth-child(2), table.review td:nth-child(3) { display: inline; color: var(--ink-2); font-size: 0.8125rem; }
+  table.review td:nth-child(3)::before { content: " · "; }
+  table.review td.call { display: block; margin-top: 8px; min-width: 0; }
+}
+/* A disabled Publish reads as off, not as a faded primary: the panel fill, ink-2 text and the control border, with
+   the reason beside it. */
+.btn.primary[aria-disabled="true"] { opacity: 1; background: var(--panel); color: var(--ink-2); border: 1px solid var(--control); }
+form.actions .why-not { flex: 1 1 16rem; align-self: center; margin: 0; }
+/* The Queue's decision column: a text button sits on its row's baseline, with a 24 px target. */
+table.flagged td .btn.text.inline { display: inline; padding: 4px 0; margin: -4px 0;
+  min-height: 0; font-size: inherit; line-height: inherit; }
+table.kf-list th, table.kf-list td { vertical-align: middle; }
+.field-error { color: var(--danger); font-size: 0.8125rem; margin: 4px 0 0; min-height: 0; }
+.field-error:empty { display: none; }
+.input[aria-invalid="true"] { border-color: var(--danger); }
+/* Filters on a phone: each filter is a stacked row, its ⋯ menu (Remove) always on screen at the row's end. */
+@media (max-width: 759px) {
+  table.kf-list { min-width: 0; width: 100%; }
+  table.kf-list thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.kf-list tbody { display: block; }
+  table.kf-list tr { display: grid; grid-template-columns: minmax(0, 1fr) 44px; column-gap: 8px; padding: 8px 0;
+    border-bottom: 1px solid var(--rule); }
+  table.kf-list th, table.kf-list td { display: block; border: 0; padding: 0; position: static; max-width: none;
+    min-width: 0; white-space: normal; text-align: start; grid-column: 1; }
+  table.kf-list td.act { grid-column: 2; grid-row: 1; }
+  table.kf-list td.c-in::before { content: "In "; color: var(--ink-2); }
+  table.kf-list td.c-out:not(.draft)::before { content: "Takes out "; color: var(--ink-2); }
+  table.kf-list td.c-in, table.kf-list td.c-out, table.kf-list td.c-check, table.kf-list td.c-why { font-size: 0.8125rem; }
+}

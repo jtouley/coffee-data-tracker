@@ -34,7 +34,9 @@ async function post(url, body) {
 // --- data regions -------------------------------------------------------------------------------------------
 
 // quiet: refresh in place (after a write, or a poll while a job runs) without showing the loading state again.
-function loadPart(section, quiet) {
+// titles: also refresh the title's buttons and sheets (after a write, whose forms carry the version they were made
+// from); a poll leaves them, and any panel open there, alone.
+function loadPart(section, quiet, titles = !quiet) {
   const url = section.dataset.part;
   const loading = section.dataset.loadingHtml || section.innerHTML;
   section.dataset.loadingHtml = loading;
@@ -55,7 +57,7 @@ function loadPart(section, quiet) {
       const html = await r.text(); // server-rendered and escaped by the template engine
       if (quiet && !r.ok) return; // keep what is shown; the next poll tries again
       section.innerHTML = html;
-      if (!quiet) titleActions(section); // a poll leaves the title's buttons (and any panel open there) alone
+      if (titles) titleActions(section, !quiet);
       const poll = section.querySelector("[data-poll]");
       if (poll) section.pollTimer = setTimeout(() => loadPart(section, true), Number(poll.dataset.poll) * 1000);
       // Filters start open where there's room for them beside the results; on a phone they fold away.
@@ -250,7 +252,7 @@ function modes(root = document) {
 }
 
 // A part's <template data-title> goes beside the page title: its Run a job, its "?" help, and their panels.
-function titleActions(section) {
+function titleActions(section, first = true) {
   const slot = document.querySelector("[data-title-actions]");
   if (!slot) return;
   slot.replaceChildren();
@@ -259,7 +261,7 @@ function titleActions(section) {
   const run = slot.querySelector("[data-run-form]");
   if (run) {
     runForm(run);
-    if ("open" in run.dataset) run.closest("dialog").showModal(); // a link here asked for a job (Week, Release)
+    if (first && "open" in run.dataset) run.closest("dialog").showModal(); // a link here asked for a job (Week, Release)
   }
 }
 
@@ -326,7 +328,7 @@ function fields(form) {
 }
 
 function reloadParts() {
-  document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
+  document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true, true));
 }
 
 // The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo.
@@ -367,6 +369,9 @@ function describe(out) {
   }
   if (out.restored !== undefined && out.reverted) return `Undone (${out.count}).` + (out.restored ? ` ${plural(out.restored, "coffee")} back in the catalog.` : "");
   if (out.reverted) return out.count ? `Undone (${out.count}): as it was before, from the next draft.` : "Already superseded: nothing to undo.";
+  if (out.undone !== undefined) return out.undone ? `Undone: “${out.phrase}” is ${out.event === "added" ? "removed" : "back"}, from the next draft.` : "Already changed again since: nothing to undo.";
+  if (out.filter_change) return `${out.event === "added" ? "Added" : "Removed"} the filter “${out.phrase}”. Build a draft on Release to see it in the catalog; Undo is under Recent changes.`;
+  if (out.reviewed) return `Marked ${out.mark === "keep_excluded" ? "keep excluded" : "drop the filter"}.`;
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
   return "Done.";
@@ -379,6 +384,40 @@ function refusal(err) {
   return err.message || "Something went wrong. Try again.";
 }
 
+// A titled list of products, each a link to its store page with the store and Claude's call after it.
+function productList(g) {
+  const h = document.createElement("h3");
+  h.className = "label mt12";
+  h.textContent = g.title;
+  const ul = document.createElement("ul");
+  ul.className = "plist";
+  for (const it of g.items) {
+    const li = document.createElement("li");
+    const name = document.createElement(it.url ? "a" : "span");
+    if (it.url) {
+      name.className = "ev";
+      name.href = it.url; // https only: the server's safe_url
+      name.target = "_blank";
+      name.rel = "noreferrer noopener";
+    }
+    name.textContent = it.title || it.coffee_id;
+    const store = document.createElement("span");
+    store.className = "meta";
+    // A list grouped by Claude's call says it once, in its title; a mixed one says it on each line.
+    store.textContent = ` · ${it.roaster_id}` + (g.call ? "" : ` · Claude: ${it.verdict_label === "coffee" || it.verdict_label === "not_coffee" ? it.verdict_label.replace("_", " ") : "no verdict"}`);
+    li.append(name, store);
+    ul.append(li);
+  }
+  const out = [h, ul];
+  if (g.more) {
+    const more = document.createElement("p");
+    more.className = "meta";
+    more.textContent = `and ${g.more.toLocaleString("en-US")} more`;
+    out.push(more);
+  }
+  return out;
+}
+
 function renderPlan(box, plan) {
   box.textContent = "";
   if (plan.lines) { // a preview that starts no job (a settings edit): its lines, then any refusal
@@ -387,6 +426,22 @@ function renderPlan(box, plan) {
       p.className = "body";
       p.textContent = line;
       box.append(p);
+    }
+    // A keyword filter's preview: the products it moves, each with its store and Claude's call; the release, the
+    // counts and the step-9 arithmetic under Details.
+    for (const g of (plan.groups || []).filter((x) => !x.details)) box.append(...productList(g));
+    if (plan.details) {
+      const more = document.createElement("details");
+      more.className = "plan-details";
+      more.innerHTML = '<summary class="btn text start">Details</summary>';
+      for (const line of plan.details) {
+        const p = document.createElement("p");
+        p.className = "meta";
+        p.textContent = line;
+        more.append(p);
+      }
+      for (const g of (plan.groups || []).filter((x) => x.details)) more.append(...productList(g));
+      box.append(more);
     }
     for (const r of plan.refusals || []) {
       const x = document.createElement("p");
@@ -465,12 +520,14 @@ async function confirmWrite(form) {
   document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { m.open = false; });
   document.querySelectorAll("dialog.panel[open]").forEach((p) => p.close()); // the confirm stands alone
   if (!d.open) d.showModal();
+  delete form.dataset.previewed; // a save carries the token of the preview shown here, and no other
   if (form.dataset.preview) {
     body.textContent = "Checking what this starts…";
     go.setAttribute("aria-disabled", "true");
     try {
       const plan = await post(form.dataset.preview, fields(form));
       renderPlan(body, plan);
+      if (plan.token) form.dataset.previewed = plan.token;
       if ("planDetails" in form.dataset) { // the summary in words; the jobs and their exact commands under Details
         const more = document.createElement("details");
         more.className = "plan-details";
@@ -498,7 +555,8 @@ async function confirmWrite(form) {
     hint.textContent = "";
     busy(go, true);
     try {
-      const extra = { confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined };
+      const extra = { confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined,
+        previewed: form.dataset.previewed || undefined };
       if (ask.includes("reason")) extra.reason = reason.value;
       if (ask.includes("kind")) extra.kind = d.querySelector("input[name=confirm-kind]:checked").value;
       const out = await post(form.dataset.write, { ...fields(form), ...extra });
@@ -550,10 +608,32 @@ document.addEventListener("click", (e) => {
   pullNow(t.matches("[data-pull-one]") ? [t.dataset.pullOne] : picks().map((p) => p.roaster_id));
 });
 
+// A form with data-validate checks its fields before the confirm opens, and says what to fix under each one (the
+// browser's own bubbles vanish and aren't read out reliably).
+function invalid(form) {
+  let first = null;
+  for (const el of form.querySelectorAll("input[required]")) {
+    const out = form.querySelector(`[data-field-error="${el.name}"]`);
+    const v = el.value.trim();
+    let msg = "";
+    if (!v) msg = "Fill this in.";
+    else if (el.minLength > 0 && v.length < el.minLength) msg = `At least ${el.minLength} characters.`;
+    else if (el.name === "phrase" && !/\p{L}/u.test(v)) msg = "Use at least one letter.";
+    else if (el.name === "phrase" && /[^\p{L}\p{N} &'.-]/u.test(v)) msg = "Only letters, digits, spaces, & ' . and -.";
+    if (out) out.textContent = msg;
+    if (msg) el.setAttribute("aria-invalid", "true"); // an empty aria-invalid reads as false
+    else el.removeAttribute("aria-invalid");
+    if (msg && !first) first = el;
+  }
+  if (first) first.focus();
+  return Boolean(first);
+}
+
 document.addEventListener("submit", (e) => {
   const form = e.target.closest("form[data-write]");
   if (!form) return;
   e.preventDefault();
+  if ("validate" in form.dataset && invalid(form)) return;
   const button = form.querySelector('button[type="submit"]');
   if (button && button.getAttribute("aria-disabled") === "true") return;
   if ("now" in form.dataset) writeNow(form, button);

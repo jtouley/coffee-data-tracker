@@ -13,8 +13,10 @@ from pathlib import Path
 from typing import Any, ClassVar
 
 import duckdb
+import pyarrow as pa
 
-from coffeedata import quality
+from coffeedata import classify, products, quality
+from coffeedata.classify import KeywordFilter
 from coffeedata.lake import Lake
 
 from .queries import safe_url
@@ -30,7 +32,9 @@ COLUMN = {
     "stock": "stock",
 }
 PAGE = 100
-CACHE_VERSION = "v2"  # the products table's shape: a new version makes new files (v2: input_hash, platform)
+# The products table's shape: a new version makes new files (v2: input_hash, platform; v3: tags; v4: the keyword
+# filters' normalized text and unfiltered_is_coffee).
+CACHE_VERSION = "v4"
 FACET_VALUES = 40
 BUILD_ID = re.compile(r"^[0-9A-Za-z-]{1,64}$")
 
@@ -167,16 +171,25 @@ class Catalog:
                     "roaster_id varchar, url varchar)"
                 )
             dim_cols = {c for (c,) in con.execute("select column_name from (describe dim)").fetchall()}
+            pd_tags, pd_unfiltered = "null::varchar[]", "null::boolean"
 
             def dim(col: str, typ: str) -> str:
                 return f"d.{col}" if col in dim_cols else f"null::{typ}"
 
             if "product_decisions" in ops:
                 con.execute(f"create table pd as select * from {src(ops['product_decisions'])}")
+                pd_cols = {c for (c,) in con.execute("select column_name from (describe pd)").fetchall()}
+                # tags: written from the keyword filters' change on; an older build has none (null: unknown)
+                pd_tags = "p.tags" if "tags" in pd_cols else pd_tags
+                pd_unfiltered = (
+                    "p.unfiltered_is_coffee" if "unfiltered_is_coffee" in pd_cols else pd_unfiltered
+                )
                 base = f"""
                     select p.coffee_id, p.roaster_id, p.product_id, p.title, p.product_type, p.url,
                            p.first_seen, p.last_seen, p.is_listed, p.is_coffee, p.classified_by, p.verdict_model,
-                           p.verdict_label, p.reason, p.input_hash, {dim("platform", "varchar")} as platform,
+                           p.verdict_label, p.reason, p.input_hash, {pd_tags} as tags,
+                           {pd_unfiltered} as unfiltered_is_coffee,
+                           {dim("platform", "varchar")} as platform,
                            {dim("title", "varchar")} as coffee_name,
                            {dim("origin_country", "varchar")} as origin_country, {dim("process", "varchar")} as process,
                            {dim("in_stock", "boolean")} as in_stock, {dim("min_price_usd", "double")} as min_price_usd,
@@ -189,23 +202,40 @@ class Catalog:
                            url, null::date as first_seen, null::date as last_seen, is_listed, true as is_coffee,
                            {dim("classified_by", "varchar")} as classified_by, null::varchar as verdict_model,
                            null::varchar as verdict_label, null::varchar as reason, null::varchar as input_hash,
+                           null::varchar[] as tags, null::boolean as unfiltered_is_coffee,
                            {dim("platform", "varchar")} as platform, title as coffee_name,
                            origin_country, process, in_stock, min_price_usd, price_per_100g, true as in_dim_coffee
                     from dim d"""
                 made_from = "dim_coffee only (this build has no product_decisions)"
+            # The text a keyword filter reads (classify.keyword_text: NFKC, case-folded), computed in Python by the
+            # filters' own function and stored, so the preview's SQL narrowing is a superset of what a filter matches;
+            # KeywordFilter.matches then decides.
+            con.execute(f"create table base as {base}")
+            src_rows = con.execute("select coffee_id, title, product_type, tags from base").fetchall()
+            kf = pa.table({
+                "coffee_id": [r[0] for r in src_rows],
+                "kf_title": [classify.keyword_text(r[1]) for r in src_rows],
+                "kf_type": [classify.keyword_text(r[2]) for r in src_rows],
+                "kf_tags": [classify.keyword_text(" | ".join(r[3] or [])) for r in src_rows],
+            })  # fmt: skip
+            con.register("kf_text", kf)
             con.execute(
-                f"""create table products as
-                    select *, if(is_coffee, 'coffee', 'not coffee') as coffee,
+                """create table products as
+                    select b.*, k.kf_title, k.kf_type, k.kf_tags, if(is_coffee, 'coffee', 'not coffee') as coffee,
                            if(coalesce(is_listed, false) and coalesce(is_coffee, false), 'listed', 'removed') as listed,
                            case when in_stock then 'in stock' when in_stock is not null then 'out of stock' end as stock
-                    from ({base})"""
+                    from base b left join kf_text k using (coffee_id)"""
             )
+            con.unregister("kf_text")
+            con.execute("drop table base")
             con.execute("create table meta (key varchar, value varchar)")
             n = con.execute("select count(*) from products").fetchone()[0]
+            has_tags = pd_tags == "p.tags"
             con.executemany(
                 "insert into meta values (?, ?)",
-                [["build_id", build_id], ["made_from", made_from], ["products", str(n)]],
-            )
+                [["build_id", build_id], ["made_from", made_from], ["products", str(n)],
+                 ["tags", "yes" if has_tags else "no"]],
+            )  # fmt: skip
             con.execute("drop table dim")
             con.execute("drop table if exists pd")
             con.execute("checkpoint")
@@ -300,3 +330,85 @@ class Catalog:
             }
         finally:
             con.close()
+
+
+# --- keyword filters: what a filter matches in a build ------------------------------------------------------------
+
+MATCH_COLS = ("coffee_id", "roaster_id", "title", "product_type", "tags", "url", "input_hash", "reason",
+              "verdict_label", "in_dim_coffee", "is_coffee", "unfiltered_is_coffee", "is_listed")  # fmt: skip
+SQL_FIELD = {"title": "kf_title", "product_type": "kf_type", "tags": "kf_tags"}
+
+
+class PrefilterReader:
+    """The keyword filters against one build's products (its catalog file): what each newly excludes, and what a
+    change to the set newly excludes or gives back. The same classify code as the build decides: SQL only narrows the
+    candidates to a superset (the phrase's first word as a substring of the same normalized text the filter reads),
+    and classify.KeywordFilter.matches decides the whole-word match."""
+
+    def __init__(self, catalog: Catalog, build_id: str):
+        self.catalog, self.build_id = catalog, build_id
+
+    def has_tags(self) -> bool:
+        return self.catalog.ensure(self.build_id).get("tags") == "yes"
+
+    def candidates(self, filters: list[KeywordFilter]) -> list[dict]:
+        """The build's products any of `filters` might match (each once)."""
+        if not filters:
+            return []
+        self.catalog.ensure(self.build_id)
+        where = " or ".join(f"{SQL_FIELD[f.field]} like ? escape '\\'" for f in filters)
+        like = ["%" + f.phrase.split(" ")[0].replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "%"
+                for f in filters]  # fmt: skip
+        con = duckdb.connect(str(self.catalog.path(self.build_id)), read_only=True)
+        try:
+            rows = con.execute(f"select {', '.join(MATCH_COLS)} from products where {where} "
+                               "order by roaster_id, title, coffee_id", like).fetchall()  # fmt: skip
+        finally:
+            con.close()
+        return [dict(zip(MATCH_COLS, r, strict=True)) for r in rows]
+
+    @staticmethod
+    def _item(r: dict):
+        return products.item(r["title"], r["product_type"], list(r["tags"] or []), None, None, None)
+
+    def counts(self, filters: list[KeywordFilter]) -> tuple[dict[KeywordFilter, int], int]:
+        """How many products each filter newly excludes in the build, and how many they exclude together: a listed
+        product no rule of the code excludes and no owner's decision settles, counted for the first filter that
+        matches it (in the filters' order, as the build names it)."""
+        ordered = tuple(sorted(filters))
+        out = dict.fromkeys(filters, 0)
+        for r in self.candidates(list(ordered)):
+            if (r["reason"] or "").startswith("decision:") or r["is_listed"] is False:
+                continue
+            it = self._item(r)
+            if classify.exclusion(it) is not None:
+                continue
+            if hit := classify.keyword_match(it, ordered):
+                out[hit] += 1
+        return out, sum(out.values())
+
+    def changed(self, old: tuple[KeywordFilter, ...], new: tuple[KeywordFilter, ...],
+                served: tuple[KeywordFilter, ...] | None = None) -> list[dict]:  # fmt: skip
+        """The products whose answer the change from `old` to `new` turns: excluded by the new set and not the old
+        (`excluded`), or the reverse (`restored`). Products the code's rules exclude, and those an owner's decision
+        settles, are left out: no filter changes them. Each row says which way, by which filter, and whether it is a
+        public coffee now."""
+        diff = sorted(set(old) ^ set(new))
+        out = []
+        for r in self.candidates(diff):
+            if (r["reason"] or "").startswith("decision:") or r["is_listed"] is False:
+                continue
+            it = self._item(r)
+            if classify.exclusion(it) is not None:  # the code's own rules: no filter changes it
+                continue
+            was, now = classify.keyword_match(it, old), classify.keyword_match(it, new)
+            if (was is None) == (now is None):
+                continue
+            out.append(
+                {k: r[k] for k in ("coffee_id", "roaster_id", "title", "url", "input_hash", "verdict_label",
+                                   "unfiltered_is_coffee")}
+                | {"way": "excluded" if now else "restored", "filter": (now or was).name,  # type: ignore[union-attr]
+                   "in_served": classify.keyword_match(it, served if served is not None else old) is not None,
+                   "public": bool(r["in_dim_coffee"]), "url": safe_url(r["url"])}
+            )  # fmt: skip
+        return out

@@ -17,7 +17,6 @@ import asyncio
 import contextlib
 import contextvars
 import hashlib
-import json
 import mimetypes
 import re
 import secrets
@@ -33,12 +32,13 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from coffeedata import decisions, quality, rules
+from coffeedata import decisions, quality, rules, verdict
+from coffeedata.classify import KeywordFilter
 from coffeedata.lake import Lake, no_files
 
 from . import jobs, logs, queries
 from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
-from .catalog import FACETS, Catalog, Filters
+from .catalog import FACETS, Catalog, Filters, PrefilterReader
 from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
 from .logs import emit
@@ -51,11 +51,12 @@ HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
 COOKIE_SECURE = "__Host-admin"  # host-only, Secure, path=/
 COOKIE_LOCAL = "admin_session"  # http://localhost only
-PAGES = ("week", "queue", "jobs", "release", "catalog", "sources", "log")
+PAGES = ("week", "queue", "filters", "jobs", "release", "catalog", "sources", "log")
 # What each page's data region reads, named on its loading state.
 READS = {
     "week": "job_manifests, fetches, builds and serving_log",
     "queue": "mart_flags, fetches and the rule settings",
+    "filters": "the keyword filters, the served build's product_decisions and the weekly sample's verdicts",
     "jobs": "job_runs and Cloud Run executions",
     "release": "builds, release_changes, serving_log and drafts",
     "catalog": "product_decisions, dim_coffee and decisions",
@@ -63,7 +64,7 @@ READS = {
     "log": "the control plane's audit",
 }
 AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag",
-           "source_flag", "source_flag_undo")  # fmt: skip
+           "source_flag", "source_flag_undo", "keyword_filter", "keyword_filter_undo", "prefilter_review")  # fmt: skip
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -272,7 +273,7 @@ def create_app(
     if not settings.writes_off:
         assert settings.control and settings.jobs and settings.snapshots
         writes = Writes(settings.control, settings.jobs, settings.snapshots, reader.run, catalog=catalog,
-                        **({"now": now} if now else {}))  # fmt: skip
+                        secret=settings.session_secret, **({"now": now} if now else {}))  # fmt: skip
     else:
         emit("WARNING", event="admin_writes_off", reasons=settings.writes_off)
     limiter = Limiter()
@@ -739,12 +740,61 @@ def create_app(
                 await cp(writes.control.settings, default=ctx["settings"]) if writes else ctx["settings"]
             )
             ctx["history"] = await cp(writes.control.settings_history, 5, default=[]) if writes else []
-            # shown as the deployed code reads it: a rule type retired since it was saved is left out, so an edit made
-            # from this text still checks
-            ctx["settings_json"] = json.dumps(rules.check(ctx["settings"]["doc"], strict=False), indent=2)
+            # the params as the deployed code reads them: a rule type retired since it was saved is left out
+            ctx["rule_params"] = [
+                {"id": r["id"], "params": [{"name": k, "number": spec.kind is int, "lo": spec.lo, "hi": spec.hi,
+                                            "value": r["params"][k]}
+                                           for k, spec in rules.RULE_TYPES[r["id"]].params.items()]}
+                for r in rules.check(ctx["settings"]["doc"], strict=False)["rules"] if rules.RULE_TYPES[r["id"]].params
+            ]  # fmt: skip
             return ctx
 
         return await part("queue", make)
+
+    @app.get("/part/filters", response_class=HTMLResponse)
+    async def filters_part():
+        """The owner's keyword filters (the control plane), each with how many of the served build's products it
+        matches, and the products any of them matches: the page's one line."""
+
+        async def make():
+            served = await reader.run(queries.served)
+            build = (served or {}).get("build_id")
+            off = list(settings.writes_off)
+            ctx: dict = {"served": served, "build": build, "writes_off": off, "kf": None, "kf_history": [],
+                         "excluded": None, "in_draft": 0, "sample": verdict.SHADOW_SAMPLE}  # fmt: skip
+            if not writes:
+                return ctx
+
+            async def read(fn, *args):
+                await writes.ready()
+                return await asyncio.to_thread(fn, *args)
+
+            kf = await plane(lambda: read(writes.control.keyword_filters), None, off)
+            ctx["kf"] = kf
+            if kf is None:
+                return ctx
+            ctx["kf_history"] = await plane(lambda: read(writes.control.filter_history, 8), [], off)
+            if kf["filters"] and build:
+                pf = PrefilterReader(catalog, build)
+                fs = [KeywordFilter(x["phrase"], x["field"]) for x in kf["filters"]]
+                # Published: in the served release's snapshot. A filter only in the control plane takes nothing
+                # out yet: it would, from the next published draft.
+                pinned = await reader.run(queries.build_snapshot, build)
+                served_kf = set(decisions.prefilter((pinned or {}).get("doc")))
+                counts, _all = await reader.run(lambda _l, _c: pf.counts(fs))
+                live = [one for one in fs if one in served_kf]
+                ctx["excluded"] = (await reader.run(lambda _l, _c: pf.counts(live)))[1] if live else 0
+                ctx["in_draft"] = sum(one not in served_kf for one in fs)
+                checks = await reader.run(queries.prefilter_checks)  # the weekly sample sent to Claude anyway
+                for x, one in zip(kf["filters"], fs, strict=True):
+                    x["matches"], x["check"], x["published"] = (
+                        counts[one],
+                        checks.get(one.name),
+                        one in served_kf,
+                    )
+            return ctx
+
+        return await part("filters", make)
 
     @app.get("/part/jobs", response_class=HTMLResponse)
     async def jobs_part(request: Request):
@@ -914,11 +964,51 @@ def create_app(
 
     @app.post("/api/settings/check")
     async def settings_check(request: Request):
-        return await write(request, lambda _a, _k, b: on().check_settings(b.get("doc")), replay=False)
+        return await write(request, lambda _a, _k, b: on().check_settings(b), replay=False)
 
     @app.post("/api/settings")
     async def settings_save(request: Request):
         return await write(request, lambda a, k, b: on().save_settings(a, k, b))
+
+    @app.post("/api/prefilter/check")
+    async def prefilter_check(request: Request):
+        return await write(
+            request, lambda a, _k, b: on().prefilter_check(a, b), replay=False
+        )  # a preview acts on nothing
+
+    @app.post("/api/prefilter")
+    async def prefilter_save(request: Request):
+        return await write(request, lambda a, k, b: on().prefilter_save(a, k, b))
+
+    @app.post("/api/prefilter/{change}/undo")
+    async def prefilter_undo(request: Request, change: str):
+        return await write(request, lambda a, k, b: on().prefilter_undo(a, k, change, b))
+
+    @app.post("/api/prefilter/reviews")
+    async def prefilter_review(request: Request):
+        return await write(request, lambda a, k, b: on().prefilter_review(a, k, b))
+
+    @app.post("/api/drafts/{draft_id}/classify/plan")
+    async def classify_review_plan(request: Request, draft_id: str):
+        async def go(_actor, _key, _body):
+            plan, n = await on().classify_review_plan(draft_id)
+            word = "product" if n == 1 else "products"
+            lines = [f"Sends {n:,} {word} to Claude in one batch, at the batch price (about half the usual price per "
+                     "product): the ones this draft’s keyword filters take out that Claude hasn’t seen.",
+                     "Claude answers within a day. Then build the draft again: they join the review list with "
+                     "Claude’s call."]  # fmt: skip
+            if plan.window:
+                lines.append(f"Now is inside {plan.window}. Starting needs a reason, which is recorded.")
+            return {"lines": lines, "details": [f"{s.job}: {' '.join(s.args or [])}" for s in plan.steps],
+                    "refusals": plan.refusals, "window": plan.window}  # fmt: skip
+
+        return await write(request, go, replay=False)  # a preview acts on nothing
+
+    @app.post("/api/drafts/{draft_id}/classify")
+    async def classify_review(request: Request, draft_id: str):
+        return await write(
+            request, lambda a, k, b: on().classify_review(a, k, draft_id, b.get("override") or None)
+        )
 
     @app.post("/api/roasters/{roaster_id}/crawl")
     async def crawl_flag(request: Request, roaster_id: str):

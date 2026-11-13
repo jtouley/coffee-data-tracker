@@ -239,8 +239,26 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 - **A case is a section of the Queue** (`/queue?case=<coffee_id>`, "← Queue" back): the flags with polarity and
   evidence, the decision, the listing, then the store (crawl flag, live check, fetches). It is the Queue's detail
   view (Owl-Listener `critique-information-density`: progressive disclosure, a detail view instead of inlining).
+- **Keyword filters are a page of their own (Filters, after Queue)**, laid out as Jobs is: one line ("2 filters ·
+  14 products excluded", counting published filters only; one only in a draft is marked "in draft" and says what it
+  would take out), the list (word or phrase, where it's looked for, what it takes out, the weekly check, why), Remove
+  in each row's ⋯ menu, recent changes with Undo in a fold, and **Add filter** beside the title opening a sheet with
+  the form (word or phrase, a radio group for title, product type or tags, why). The explanation is behind `?`. Why its
+  own page (`critique-information-density`, `better-layout`): the Queue is triage of one product at a time, filters are
+  catalog-wide rules; together they buried the filters under a 100-row table, and a page gives them one primary
+  action. The admin has no sub-tab pattern, and its top-level tabs already scroll on a phone.
+- **The preview speaks plainly.** Add and Remove open it first: "Removes 2 products from the catalog.", then each
+  product with its store and Claude's call. The release, the counts and CLAUDE.md step 9's arithmetic are under
+  Details. Saving needs that preview.
+- **On Release a waiting review isn't a failure**: "needs review" with the warn mark, in plain check names (Keyword
+  filters checked against Claude, Change size, Rule changes, Live check of stores), and a disabled Publish that looks
+  off, with what it waits on beside it. The census is plain counts (taken out; Claude calls coffee, not coffee, hasn't
+  seen), under Details, never a rate. The review list is grouped by Claude's call: coffee first, then the products
+  Claude hasn't seen, with **Classify these** to ask Claude about them through the Jobs path.
 - **The rule settings fold at the foot of the Queue**: they are edited rarely, and only make sense next to the flags
-  they produce.
+  they produce. They are plain controls for each rule's params (numbers, and comma-separated lists). The JSON editor
+  is gone: a rule's family, polarity and readiness change how it decides, need their full evaluation, and aren't
+  edited here.
 
 | | Answer line | Then | Primary action |
 |---|---|---|---|

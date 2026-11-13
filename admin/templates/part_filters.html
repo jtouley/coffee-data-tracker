@@ -1,0 +1,75 @@
+{% from "_macros.html" import write_off, write_button, help %}
+{% set field_name = {"title": "Title", "product_type": "Product type", "tags": "Tags"} %}
+<template data-title>
+  {% if kf is not none and build and not writes_off %}<button class="btn primary inline" type="button" data-panel aria-controls="add-filter" aria-haspopup="dialog">Add filter</button>{% endif %}
+  {% call help("filters", "How keyword filters work") %}
+    <p class="body">A product whose title, product type or tags contain one of these words is never a coffee, and isn’t sent to Claude.</p>
+    <p class="body">Whole words only, ignoring case: “tea towel” matches “Linen Tea Towel”, not “tea-towel”. A filter only removes products. When it isn’t sure (the word is part of a longer one), it doesn’t match and the product goes to Claude as usual.</p>
+    <p class="body">Adding, removing or undoing a filter shows what it changes in the served release first. The change goes into the next draft and reaches the catalog when you publish it (Release). A new filter that, with the changes since the last full check, moves more than 50 coffees waits on Release until you have checked each product it takes out that Claude calls coffee or hasn’t seen. Removing a filter never waits: it only hands products back to Claude and the rules.</p>
+    <p class="body">Each week Claude also looks at up to {{ sample }} of the new products the published filters took out, picked at random about evenly across stores. Its answer never changes the filter. The list shows, for the last four weeks, the share Claude called coffee, weighted by how many products each store had excluded, with a 95% interval. A filter whose share is above zero is worth a second look.</p>
+    <p class="body">A filter marked “in draft” isn’t published yet: it takes nothing out until a draft carrying it is published.</p>
+    <p class="meta">From the control plane and build {{ build or "—" }}’s <code>product_decisions</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+  {% endcall %}
+  {% if kf is not none and build and not writes_off %}
+  <dialog class="sheet panel" id="add-filter" aria-labelledby="add-filter-h">
+    <h2 class="serif title-s" id="add-filter-h">Add filter</h2>
+    <form class="kf-add" data-write="/api/prefilter" data-preview="/api/prefilter/check" data-confirm-title="Add this keyword filter?" data-confirm-label="Add filter" data-validate novalidate>
+      <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="event" value="add"><input type="hidden" name="based_on" value="{{ kf.version or '' }}">
+      <div class="fld">
+        <label class="flabel" for="kf-phrase">Word or phrase</label>
+        <p class="meta" id="kf-phrase-hint">Something that is never coffee, such as “tea towel” or “grinder brush”. 3 to 60 characters: letters, digits, spaces, &amp; ' . and -, with at least one letter. Whole words, any case.</p>
+        <input class="input" id="kf-phrase" name="phrase" required minlength="3" maxlength="60" autocomplete="off" spellcheck="false" aria-describedby="kf-phrase-hint kf-phrase-error">
+        <p class="field-error" id="kf-phrase-error" data-field-error="phrase" aria-live="polite"></p>
+      </div>
+      <fieldset class="choice fld">
+        <legend class="flabel">Look in</legend>
+        {% for v in ("title", "product_type", "tags") %}<label><input type="radio" name="field" value="{{ v }}"{% if loop.first %} checked{% endif %}>{{ field_name[v] }}</label>{% endfor %}
+      </fieldset>
+      <div class="fld">
+        <label class="flabel" for="kf-reason">Why</label>
+        <p class="meta" id="kf-reason-hint">Recorded in the log and shown beside the filter. 3 to 300 characters.</p>
+        <input class="input" id="kf-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off" aria-describedby="kf-reason-hint kf-reason-error">
+        <p class="field-error" id="kf-reason-error" data-field-error="reason" aria-live="polite"></p>
+      </div>
+      <div class="actions"><button class="btn primary inline" type="submit" data-busy="Checking…">Preview…</button><button class="btn text inline" type="button" data-panel-close>Cancel</button></div>
+    </form>
+  </dialog>
+  {% endif %}
+</template>
+<div data-state="{{ 'data' if kf and kf.filters else 'empty' }}">
+{{ write_off(writes_off) }}
+{% if kf is none %}
+  <div class="state empty mt16"><p class="body">The keyword filters live in the control plane, which can’t be read right now.</p></div>
+{% else %}
+  {% set nf = kf.filters | length %}
+  <p class="answer" data-answer>{{ nf }} filter{{ "s" if nf != 1 }}{% if in_draft %} ({{ in_draft }} in draft){% endif %}{% if excluded is not none %} · {{ n(excluded) }} product{{ "s" if excluded != 1 }} excluded{% endif %}</p>
+  {% if not build %}<p class="body">Nothing is served yet, so there is nothing to check a filter against.</p>{% endif %}
+  {% if not kf.filters %}
+  <div class="state empty"><p class="body">No keyword filters yet. Add a word that only ever names something that isn’t coffee, such as “tea towel” or “grinder brush”.</p></div>
+  {% else %}
+  <div class="frame" tabindex="0" role="region" aria-label="Keyword filters"><table class="dense kf-list">
+    <caption class="vh">The keyword filters: what each takes out of build {{ build }}, and the weekly check of a sample against Claude</caption>
+    <thead><tr><th scope="col">Word or phrase</th><th scope="col">In</th><th scope="col" class="n">Takes out</th><th scope="col">Checked by Claude, 4 weeks</th><th scope="col">Why</th><th scope="col" class="act"><span class="vh">More</span></th></tr></thead>
+    <tbody>{% for x in kf.filters %}<tr>
+      <th scope="row">“{{ x.phrase }}”{% if x.published is false %} <span class="meta">in draft</span>{% endif %}</th><td class="c-in">{{ field_name[x.field] }}</td><td class="n c-out{{ ' draft' if x.published is false }}">{% if x.matches is none %}—{% elif x.published is false %}would take out {{ n(x.matches) }}{% else %}{{ n(x.matches) }}{% endif %}</td>
+      <td class="c-check">{% set c = x.check %}{% if c and c.answered %}{{ "%.0f" | format(c.share * 100) }}% called coffee <span class="meta">({{ "%.0f" | format(c.low * 100) }}–{{ "%.0f" | format(c.high * 100) }}%, {{ c.answered }} answered, weighted by store)</span>{% elif c %}<span class="meta">{{ c.sampled }} sent, no answer yet</span>{% else %}<span class="meta">none sampled yet</span>{% endif %}</td>
+      <td class="c-why">{{ x.reason }} <span class="meta">· {{ t(x.at) }}</span></td>
+      <td class="act">{% if not writes_off %}<details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="More for “{{ x.phrase }}”">⋯</summary>
+        <div class="menu"><form data-write="/api/prefilter" data-preview="/api/prefilter/check" data-ask="reason" data-confirm-title="Remove “{{ x.phrase }}”?" data-confirm-label="Remove">
+          <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="event" value="remove"><input type="hidden" name="phrase" value="{{ x.phrase }}"><input type="hidden" name="field" value="{{ x.field }}"><input type="hidden" name="based_on" value="{{ kf.version or '' }}">
+          <button class="btn text inline" type="submit" data-busy="Checking…">Remove…</button></form></div>
+      </details>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+  {% endif %}
+  {% if kf_history %}
+  <details class="settings mt16">
+    <summary class="btn text">Recent changes</summary>
+    <ul class="checks" aria-label="Recent changes to the keyword filters">{% for h in kf_history %}<li><span>{{ "Added" if h.event == "added" else "Removed" }} “{{ h.phrase }}” · {{ field_name[h.field] | lower }} · {{ t(h.at) }}{% if not h.undoes %} · {{ h.reason }}{% endif %}</span>
+      {% if h.latest and not writes_off and build %}<form class="inline-form" data-write="/api/prefilter/{{ h.change }}/undo" data-preview="/api/prefilter/check" data-confirm-title="Undo: {{ 'remove' if h.event == 'added' else 'add back' }} “{{ h.phrase }}”?" data-confirm-label="Undo">
+        <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="event" value="{{ 'remove' if h.event == 'added' else 'add' }}"><input type="hidden" name="phrase" value="{{ h.phrase }}"><input type="hidden" name="field" value="{{ h.field }}"><input type="hidden" name="based_on" value="{{ kf.version or '' }}">
+        <button class="btn text inline" type="submit" data-busy="Checking…">Undo…</button></form>{% endif %}</li>{% endfor %}</ul>
+  </details>
+  {% endif %}
+{% endif %}
+</div>

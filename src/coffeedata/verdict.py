@@ -24,7 +24,7 @@ from datetime import UTC, date, datetime
 from importlib import resources
 from typing import cast
 
-from . import extract
+from . import classify, extract
 from .classify import excluded
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Variant
@@ -54,8 +54,10 @@ INPUT_HASH = (
 PENDING_SQL = """
 with v as (
     select distinct on (input_hash) {input_hash} as input_hash, s.title, s.product_type, s.tags, s.body_hash,
-           list_transform(s.variants, lambda v: v.grams) as grams
+           list_transform(s.variants, lambda v: v.grams) as grams, s.roaster_id,
+           min(s.run_date) over (partition by {input_hash}) as first_seen
     from {snapshots} s
+    order by input_hash, s.roaster_id  -- a version two stores list: always the same roaster
 ),
 done as (select distinct input_hash from {verdicts} where model = $model and definition = $definition),
 b as (select * from {verdict_batches} where model = $model and definition = $definition),
@@ -167,20 +169,113 @@ def parse(msg: object) -> str | None:
     return label if label in LABELS else None
 
 
-def pending(lake: Lake, model_id: str, limit: int) -> list[dict]:
+def _pending_rows(lake: Lake, model_id: str):
+    """Every product version with no verdict for this model and definition and none in an open batch."""
     sql = PENDING_SQL.format(
         input_hash=INPUT_HASH,
         **{t: lake.scan(t) for t in ("snapshots", "bodies", "verdicts", "verdict_batches")},
     )
     cur = lake.connect().execute(sql, {"model": model_id, "definition": DEFINITION_VERSION})
     cols = [d[0] for d in cur.description]
-    out = []
     for row in cur.fetchall():
-        r = dict(zip(cols, row, strict=True))
-        if not excluded(item(r)):
+        yield dict(zip(cols, row, strict=True))
+
+
+def pending(lake: Lake, model_id: str, limit: int, filters: tuple | None = None) -> list[dict]:
+    """Product versions with no verdict for this model and definition, none in an open batch, that the rules and the
+    owner's keyword filters don't exclude. `filters`: the published snapshot's (decisions.served_prefilter) unless
+    given; a draft's filters reach Claude only once published."""
+    from . import decisions
+
+    if filters is None:
+        filters = decisions.served_prefilter(lake)
+    out = []
+    for r in _pending_rows(lake, model_id):
+        if not excluded(item(r), filters):
             out.append(r)
             if len(out) >= limit:
                 break
+    return out
+
+
+# --- keyword filters: the weekly check, and a draft's review ---------------------------------------------------------
+
+# Each weekly classify run sends this many of the versions the published keyword filters excluded to Claude anyway,
+# so the Filters page can show how often a filter excludes something Claude calls coffee (eval/prefilter/README.md).
+# Claude's answer is stored as any verdict, and never changes the exclusion (the filter decides first).
+SHADOW_SAMPLE = 20
+SHADOW_SALT = "prefilter-shadow-v1"
+
+
+def _salted(*parts: str) -> str:
+    return hashlib.sha256("|".join((SHADOW_SALT, *parts)).encode()).hexdigest()
+
+
+def split_pending(lake: Lake, model_id: str, filters, limit: int) -> tuple[list[dict], list[dict]]:
+    """One pass over the pending versions (no verdict, none in flight): those the rules and `filters` don't exclude
+    (up to `limit`: what classify sends), and those a filter of `filters` excludes and no rule of the code does,
+    each with `prefilter`, the filter's name (the weekly sample's population)."""
+    todo: list[dict] = []
+    excluded_by_filter: list[dict] = []
+    for r in _pending_rows(lake, model_id):
+        it = item(r)
+        if classify.exclusion(it) is not None:
+            continue
+        if hit := classify.keyword_match(it, filters):
+            excluded_by_filter.append(r | {"prefilter": hit.name})
+        elif len(todo) < limit:
+            todo.append(r)
+    return todo, excluded_by_filter
+
+
+def this_week(rows: list[dict], week: str) -> list[dict]:
+    """The rows first seen in the run's week (a version new this week; an older one already had its chance)."""
+    start = date.fromisoformat(week)
+    return [r for r in rows if r.get("first_seen") is not None and r["first_seen"] >= start]
+
+
+def strata(rows: list[dict]) -> dict[tuple[str, str], int]:
+    """Each (filter, roaster)'s count of excluded versions: the sizes the weekly check weights its estimate by."""
+    out: dict[tuple[str, str], int] = {}
+    for r in rows:
+        k = (r["prefilter"], r.get("roaster_id") or "")
+        out[k] = out.get(k, 0) + 1
+    return out
+
+
+def review_rows(lake: Lake, model_id: str, build_id: str) -> list[dict]:
+    """Exactly what a draft's Classify these sends: the versions its census (the draft build's eval_prefilter) lists
+    as taken out by a new filter with no verdict at all, that are still pending (none in flight since). The admin's
+    confirm counts the same census rows, so what it says is what is sent."""
+    import duckdb
+
+    from . import quality
+
+    f = quality.ops_files(lake, build_id).get("eval_prefilter")
+    if not f:
+        return []
+    src = f"read_parquet('{f.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
+    with duckdb.connect() as con:
+        want = {h for (h,) in con.execute(
+            f"select distinct input_hash from {src} where direction = 'excluded' and claude = 'no_verdict' "
+            "and verdict_label is null").fetchall()}  # fmt: skip
+    return [r for r in _pending_rows(lake, model_id) if r["input_hash"] in want]
+
+
+def shadow_sample(rows: list[dict], week: str, n: int = SHADOW_SAMPLE) -> list[dict]:
+    """A deterministic random sample of `rows`, spread across roasters: each roaster's versions in the order of a
+    salted hash of the version (input_hash), the roasters in the order of a salted hash of the roaster, then one
+    version per roaster in turn until `n`. The week is in the salt, so each week draws afresh."""
+    by_roaster: dict[str, list[dict]] = {}
+    for r in rows:
+        by_roaster.setdefault(r.get("roaster_id") or "", []).append(r)
+    queues = [sorted(v, key=lambda r: _salted(week, r["input_hash"]))
+              for _k, v in sorted(by_roaster.items(), key=lambda kv: _salted(week, kv[0]))]  # fmt: skip
+    out: list[dict] = []
+    while len(out) < n and any(queues):
+        for q in queues:
+            if q and len(out) < n:
+                out.append(q.pop(0))
     return out
 
 
@@ -189,20 +284,48 @@ def pending(lake: Lake, model_id: str, limit: int) -> list[dict]:
 BATCH_SIZE = 10_000
 
 
-def submit(lake: Lake, limit: int = 100_000) -> dict:
-    """Send pending product versions to Claude in Message Batches (half price; results within a day)."""
+def submit(
+    lake: Lake, limit: int = 100_000, only: list[dict] | None = None, run_date: str | None = None
+) -> dict:
+    """Send pending product versions to Claude in Message Batches (half price; results within a day). With `only`,
+    exactly those versions (a draft's review: cli `classify --prefilter-build`, review_rows); otherwise every pending
+    version, plus a sample of the versions first seen this week that the published keyword filters excluded
+    (SHADOW_SAMPLE), recorded in prefilter_samples with each (filter, roaster)'s count, which the estimate weights
+    by. The sample only reports: a failure drawing or recording it is logged and returned, never raised."""
     import anthropic
     from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
     from anthropic.types.messages.batch_create_params import Request
 
+    from . import connectors, decisions
+
     model_id = model()
     if not model_id:
         return {"skipped": "COFFEEDATA_VERDICT_MODEL is not set"}
-    todo = pending(lake, model_id, limit)
+    shadow: list[dict] = []
+    sizes: dict[tuple[str, str], int] = {}
+    errors: dict = {}
+    if only is not None:
+        todo = only[:limit]
+    else:
+        served = decisions.served_prefilter(lake)
+        if not served:
+            todo = pending(lake, model_id, limit, ())
+        else:
+            todo, excluded_by_filter = split_pending(lake, model_id, served, limit)
+            # The weekly check only reports, so it fails open: a problem drawing it never stops classify.
+            try:
+                week = connectors.week_of(run_date or date.today().isoformat())
+                population = this_week(excluded_by_filter, week)
+                sizes = strata(population)
+                shadow = shadow_sample(population, week)
+                todo = todo + shadow
+            except Exception as e:  # noqa: BLE001 - report only
+                log.warning("the keyword filters' weekly sample wasn't drawn: %s", e)
+                errors["prefilter_sample_error"] = f"{type(e).__name__}: {e}"[:300]
     if not todo:
         return {"pending": 0}
     client = extract.client()
-    out: dict = {"pending": len(todo), "submitted": 0, "batch_ids": []}
+    out: dict = {"pending": len(todo), "submitted": 0, "batch_ids": []} | errors
     for start in range(0, len(todo), BATCH_SIZE):
         chunk = todo[start : start + BATCH_SIZE]
         reqs = [
@@ -230,6 +353,22 @@ def submit(lake: Lake, limit: int = 100_000) -> dict:
         )  # fmt: skip
         out["submitted"] += len(reqs)
         out["batch_ids"].append(batch.id)
+        sampled = {r["input_hash"] for r in chunk} & {r["input_hash"] for r in shadow}
+        if (
+            sampled
+        ):  # the week's check of the keyword filters: which versions, for which filter, from how many
+            try:
+                lake.write_partition("prefilter_samples", run_date or now.date().isoformat(), batch.id, [
+                    {"sampled_at": now, "run_date": date.fromisoformat(run_date) if run_date else now.date(),
+                     "input_hash": r["input_hash"], "roaster_id": r.get("roaster_id"), "prefilter": r["prefilter"],
+                     "model": model_id, "definition": DEFINITION_VERSION,
+                     "stratum_size": sizes.get((r["prefilter"], r.get("roaster_id") or ""), 1)}
+                    for r in shadow if r["input_hash"] in sampled])  # fmt: skip
+            except Exception as e:  # noqa: BLE001 - report only: the batch is already sent, the rest still goes
+                log.warning("the keyword filters' weekly sample wasn't recorded: %s", e)
+                out["prefilter_sample_error"] = f"{type(e).__name__}: {e}"[:300]
+                continue
+            out["prefilter_sampled"] = out.get("prefilter_sampled", 0) + len(sampled)
     return out
 
 

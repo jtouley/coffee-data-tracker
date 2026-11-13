@@ -391,28 +391,89 @@ const errors = [];
       assert.equal(await page.locator("text=excluded · next draft").count(), 2);
     });
 
-    await check("Queue: a settings edit that changes how a rule decides is checked first, and says it needs its evaluation", async () => {
-      await page.click("details.settings summary");
-      const doc = await page.inputValue("#settings-doc");
-      await page.fill("#settings-doc", doc.replace('"added": "supports"', '"added": "doubts"'));
-      await page.fill("#settings-reason", "a re-added coffee only doubts a removal");
+    // The keyword filters: their own page, as Jobs is: one line, the list, Add filter opens a sheet with the form.
+    async function addFilter(phrase) {
+      await page.click("[data-title-actions] button:text-is('Add filter')");
+      await page.waitForSelector("dialog#add-filter[open]");
+      await page.fill("#kf-phrase", phrase);
+      await page.check("form.kf-add input[name=field][value=title]");
+      await page.fill("#kf-reason", "never coffee");
+      await page.click("form.kf-add button[type=submit]");
+      await page.waitForFunction(() => /the catalog|the served release/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+    }
+
+    await check("Filters: the Add form says what to fix under each field", async () => {
+      await page.goto(`${cfg.act}/filters`);
+      await settled(page);
+      await page.click("[data-title-actions] button:text-is('Add filter')");
+      await page.waitForSelector("dialog#add-filter[open]");
+      await page.click("form.kf-add button[type=submit]");
+      await page.waitForFunction(() => document.querySelector("#kf-phrase-error")?.textContent === "Fill this in.");
+      assert.equal(await page.getAttribute("#kf-phrase", "aria-invalid"), "true");
+      assert.equal(await page.evaluate(() => document.activeElement.id), "kf-phrase");
+      await shoot(page, "kf-add-errors", true);
+      await page.keyboard.press("Escape");
+    });
+
+    await check("Filters: its own page, empty at first, the explanation behind ?", async () => {
+      await page.goto(`${cfg.act}/filters`);
+      await settled(page);
+      assert.match(await page.textContent("[data-answer]"), /^0 filters/);
+      assert.match(await page.textContent("main"), /No keyword filters yet/);
+      assert.equal(await page.isVisible("text=isn’t sent to Claude"), false, "the prose is behind ?");
+      await shoot(page, "kf-empty");
+      await page.click("[data-title-actions] button:text-is('Add filter')");
+      await page.waitForSelector("dialog#add-filter[open]");
+      await shoot(page, "kf-add-sheet", true);
+      await page.keyboard.press("Escape");
+    });
+
+    await check("Filters: Add filter previews in plain words, with the details folded, before it saves", async () => {
+      await addFilter("tea towel");
+      const body = await page.textContent("dialog#confirm [data-confirm-body]");
+      assert.doesNotMatch(body.split("Details")[0], /CLAUDE\.md|20\d{6}T/, "jargon is under Details");
+      await shoot(page, "kf-preview", true);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Added the filter “tea towel”/);
+      await settled(page);
+      assert.match(await page.textContent("[data-answer]"), /^1 filter \(1 in draft\) · /); // not published yet
+      assert.match(await page.textContent("table.kf-list"), /tea towel/);
+      await shoot(page, "kf-list");
+    });
+
+    await check("Filters: undo from Recent changes, through the same preview, then add it again", async () => {
+      assert.equal(await page.isVisible("[data-result] [data-undo]"), false, "no undo without its preview");
+      await page.click("details.settings summary:text-is('Recent changes')");
+      await page.click("button:text-is('Undo…')");
+      await page.waitForFunction(() => /the catalog/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+      await shoot(page, "kf-undo-preview", true);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Undone/);
+      await settled(page);
+      assert.match(await page.textContent("main"), /No keyword filters yet/);
+      await addFilter("tea towel");
+      await page.click("[data-confirm-go]");
+      await toast(page, /Added the filter/);
+      await settled(page);
+    });
+
+    await check("Queue: no keyword filters or JSON editor left on it", async () => {
+      await page.goto(`${cfg.act}/queue`);
+      await settled(page);
+      assert.equal(await page.locator("#settings-doc, #kf-phrase").count(), 0);
+    });
+
+    await check("Queue: a rule's params are plain controls, checked first and saved", async () => {
+      await page.click("details.settings summary.section");
+      await page.fill("#p-shared_body-min_products", "4");
       await page.click("form.settings-form button[type=submit]");
-      await page.waitForFunction(() => document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent.includes("full evaluation"));
+      await page.waitForFunction(() => /min_products/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
       await shoot(page, "settings-check", true);
+      await page.fill("#confirm-reason", "pasted text needs four products");
       await page.click("[data-confirm-go]");
       await toast(page, /Saved rule settings/);
       await settled(page);
-      assert.match(await page.textContent("details.settings summary"), /version/);
-    });
-
-    await check("Queue: settings the code can't read are refused, and nothing is saved", async () => {
-      if (!(await page.locator("details.settings").getAttribute("open"))) await page.click("details.settings summary");
-      await page.fill("#settings-doc", '{"schema": 1, "rules": []');
-      await page.fill("#settings-reason", "a broken edit");
-      await page.click("form.settings-form button[type=submit]");
-      await page.waitForFunction(() => /valid JSON/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
-      assert.equal(await page.getAttribute("[data-confirm-go]", "aria-disabled"), "true");
-      await page.click("dialog#confirm [data-close]");
+      assert.match(await page.textContent("details.settings summary.section"), /version/);
     });
 
     await check("Sources: search first, one Filter / Sort panel, compact rows with a quiet status and a ⋯ menu", async () => {
@@ -523,10 +584,10 @@ const errors = [];
       assert.match(await page.textContent("[data-counts]"), /1 flagged as a roaster · 2 flagged as not roasters/);
     });
 
-    await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {
+    await check("Release: the draft carries the rule settings, the crawl flag and the keyword filter", async () => {
       await page.goto(`${cfg.act}/release`);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag not in it/);
+      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag, 1 keyword filter not in it/);
     });
 
     await check("The Monday window: refused, then started with a recorded reason", async () => {

@@ -1068,7 +1068,57 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=38 " in r.stdout
+    assert "PASS=42 " in r.stdout
+
+
+def test_keyword_filters_reach_the_build_through_its_snapshot_only(lake, tmp_path, monkeypatch):
+    """A snapshot's keyword filter (var prefilter_path, written by decisions.write_prefilter) excludes a product the
+    rules call coffee, names itself in the reason, and eval_prefilter counts it as newly excluded; a filter the
+    served build already had is not new. The build reads no database: an admin database URL that can't be reached
+    changes nothing."""
+    from coffeedata import decisions
+
+    monkeypatch.setenv("ADMIN_DATABASE_URL", "postgresql://nobody@127.0.0.1:1/none")
+    run(lake, "2026-10-19", "onyxcoffeelab.com",
+        [product("A", title="Ethiopia Apron Roast"), product("B", title="Kenya Roast"),
+         product("C", title="Linen Bag Roast")])  # fmt: skip
+    now = {"prefilter": [{"phrase": "apron", "field": "title"}, {"phrase": "linen", "field": "title"}]}
+    was = {"prefilter": [{"phrase": "linen", "field": "title"}]}
+    path = decisions.write_prefilter(now, was, tmp_path / "prefilter.parquet")
+    con = build(lake, tmp_path, prefilter_path=str(path))
+    got = dict(con.execute("select title, reason from product_decisions").fetchall())
+    assert got["Ethiopia Apron Roast"] == "excluded:keyword:title:apron"
+    assert (
+        got["Linen Bag Roast"] == "excluded:keyword:title:linen"
+        and got["Kenya Roast"] != got["Linen Bag Roast"]
+    )
+    assert {r[0] for r in con.execute("select title from dim_coffee").fetchall()} == {"Kenya Roast"}
+    summary = con.execute("select products, claude_coffee, claude_not_coffee, no_verdict from eval_prefilter_summary "
+                          "where direction = 'excluded'").fetchone()  # fmt: skip
+    assert summary == (
+        1,
+        0,
+        0,
+        1,
+    )  # only the new filter's product; no verdicts in this lake: not seen by Claude
+    assert con.execute("select direction, title, prefilter, claude from eval_prefilter").fetchall() == [
+        ("excluded", "Ethiopia Apron Roast", "keyword:title:apron", "no_verdict")]  # fmt: skip
+    # removing the served "linen" gives "Linen Bag Roast" back, as coffee by the rules
+    path = decisions.write_prefilter({"prefilter": []}, was, tmp_path / "prefilter.parquet")
+    con.close()
+    con = build(lake, tmp_path, prefilter_path=str(path))
+    assert con.execute("select direction, title, is_coffee_after from eval_prefilter").fetchall() == [
+        ("restored", "Linen Bag Roast", True)]  # fmt: skip
+    assert con.execute("select products, back_in_catalog from eval_prefilter_summary where direction = 'restored'"
+                       ).fetchone() == (1, 1)  # fmt: skip
+    con.close()
+    # no file: no filters, and the summary still says so
+    con = build(lake, tmp_path)
+    assert con.execute(
+        "select count(*) from product_decisions where reason like 'excluded:keyword:%'"
+    ).fetchone() == (0,)
+    assert con.execute("select direction, products from eval_prefilter_summary order by 1").fetchall() == [
+        ("excluded", 0), ("restored", 0)]  # fmt: skip
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
