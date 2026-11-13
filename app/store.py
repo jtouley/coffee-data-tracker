@@ -13,8 +13,10 @@ import threading
 import time
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
 from typing import Any
 
+import pyarrow.parquet as pq
 from pydantic import BaseModel, ValidationError
 
 from coffeedata import shots
@@ -55,23 +57,54 @@ class NotInTest(PermissionError):
     """Their test records were erased, and they haven't joined the test again since."""
 
 
+ERASURES_TTL = 5.0  # seconds a read of the erasures is reused; erase.SETTLE waits far longer than this
+
+
 class Erasures:
     """The erasures of people's "Your next bag" records (recs_erasures in the users dataset, written by
-    `delete-user --only-recs`), read again on every rating and answer read or written: the command runs while the
-    app does, and the app learns of it only from the dataset."""
+    `delete-user --only-recs`), read again before every rating and answer read or written: the command runs while
+    the app does, and the app learns of it only from the dataset.
 
-    def __init__(self, users: Lake):
-        self.users = users
+    The dataset's folder list is listed afresh for each read, never taken from the process's cache (review B4): an
+    app that listed the dataset before the first erasure would otherwise never look for one. Only a fresh listing
+    without the folder means "no erasures"; any other failure (a 404 for a folder that is listed is an auth
+    failure) is Unavailable, so writes wait. A read is reused for ERASURES_TTL, and never across an erasure made in
+    this process (erase.ERASURES)."""
 
-    def _read(self, where: str = "", params: list | None = None) -> list[tuple]:
+    def __init__(self, users: Lake, ttl: float = ERASURES_TTL):
+        self.users, self.ttl = users, ttl
+        self._cache: tuple[dict[str, tuple[datetime, frozenset[str]]], float, int] | None = None
+        self._lock = threading.Lock()
+
+    def _sources(self) -> list[str]:
+        from coffeedata import lake as lake_mod
+
+        out = [str(self.users.root / lake_mod.GLOBS["recs_erasures"])]
+        if self.users.remote:
+            lake_mod._REMOTE_FOLDERS.pop(self.users.url, None)  # a fresh listing, not this process's last one
+            folders = lake_mod.remote_folders(self.users.url)
+            if folders is None:
+                raise Unavailable("Couldn't check your test records right now. Try again shortly.")
+            if "recs_erasures" in folders:
+                out.append(f"{self.users.url}/{lake_mod.GLOBS['recs_erasures']}")
+        return out
+
+    def _read(self) -> list[tuple]:
         if "recs_erasures" not in self.users.tables:
             return []
         try:
-            sql = f"select user_id, logged_at, rating_ids from {self.users.scan('recs_erasures')} "
-            return self.users.connect().execute(sql + where, params or []).fetchall()
-        except Exception as e:  # noqa: BLE001 - duckdb's IOException, or the network
-            if no_files(e):
-                return []
+            files = ", ".join(f"'{s}'" for s in self._sources())
+            return (
+                self.users.connect()
+                .execute(
+                    "select user_id, logged_at, rating_ids from "
+                    f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
+                )
+                .fetchall()
+            )
+        except Unavailable:
+            raise
+        except Exception as e:  # noqa: BLE001 - duckdb's IOException, or the network: fail closed
             log.warning("reading the test erasures failed (%s)", type(e).__name__)
             raise Unavailable("Couldn't check your test records right now. Try again shortly.") from None
 
@@ -88,11 +121,18 @@ class Erasures:
             )
         return out
 
-    def all(self) -> dict[str, tuple[datetime, frozenset[str]]]:
-        return self._fold(self._read())
+    def all(self, fresh: bool = False) -> dict[str, tuple[datetime, frozenset[str]]]:
+        from coffeedata import erase
 
-    def of(self, user_id: str) -> tuple[datetime, frozenset[str]] | None:
-        return self._fold(self._read("where user_id = ?", [user_id])).get(user_id)
+        with self._lock:
+            hit, now = self._cache, time.monotonic()
+            if fresh or hit is None or now - hit[1] >= self.ttl or hit[2] != erase.ERASURES:
+                generation = erase.ERASURES
+                hit = self._cache = (self._fold(self._read()), time.monotonic(), generation)
+            return hit[0]
+
+    def of(self, user_id: str, fresh: bool = False) -> tuple[datetime, frozenset[str]] | None:
+        return self.all(fresh).get(user_id)
 
 
 @dataclass
@@ -108,6 +148,13 @@ class _Pending:
     deleted: bool
     ok: bool = False
     done: threading.Event = field(default_factory=threading.Event)
+
+
+REC_TABLES = ("ratings", "rec_responses")
+
+
+def _never_joined(user_id: str) -> None:
+    return None
 
 
 def _model[M: BaseModel](cls: type[M], row: dict) -> M:
@@ -137,17 +184,15 @@ class Store:
         self._slates: tuple[dict[str, set[tuple[str, str]]], float] | None = None  # user -> {(slate, coffee)}
         self._slate_lock = threading.Lock()  # one read of the picks export at a time
         self._slate_failed: float | None = None  # when the last read of it failed, to back off
-        self._slates_real = (
-            False  # whether an export was ever read (before PR 3's, "no export" is just empty)
-        )
+        # Whether an export was ever read: before PR 3's first one, "no export" is just empty.
+        self._slates_real = False
         # One rating or answer write at a time per person: each reads what's stored, checks it and writes, and two
         # at once could both pass a check or merge into the same old answer (review B1).
         self._user_locks: dict[str, threading.Lock] = {}
         # Erasures (delete-user --only-recs): user -> (when, the rating ids that went). Set by use_erasures.
         self.erasures: Erasures | None = None
-        self.joined_at: Any = lambda user_id: (
-            None
-        )  # when they last joined the test (Accounts.experiment_since)
+        self.joined_at: Any = _never_joined  # when they last joined the test (Accounts.experiment_since)
+        self._dropped: set[str] = set()  # staged test records deleted before upload (erased): never stored
         self._erased: dict[str, tuple[datetime, frozenset[str]]] = {}
         self._coffees: dict[str, tuple[dict | None, float]] = {}
         self._staged: dict[str, datetime] = {}
@@ -453,8 +498,17 @@ class Store:
             self._staged[key] = at  # the next record for this key sorts after this one, published or not
             mine = self._pending[mark] = _Pending(item, deleted)
         started = time.perf_counter()
+        rel = f"{table}/{key}__{at:%Y%m%dT%H%M%S}.parquet"
         try:
+            if table in REC_TABLES:
+                # Checked again just before the upload (and by the publish's own screen, for whatever it sends):
+                # a person erased since this write's own check gets nothing stored (review B5).
+                self._screen([self.lake.root / rel])
+                if rel in self._dropped:
+                    raise NotInTest(key)
             self.lake.publish(f"app: {table} {key}")
+            if table in REC_TABLES and rel in self._dropped:
+                raise NotInTest(key)
         except BaseException:
             with self.lock:
                 if self._pending.get(mark) is mine:
@@ -707,21 +761,67 @@ class Store:
         """Honour the erasures from now on: those already recorded at once (at start), and each person's again
         before every read and write of their ratings and answers."""
         self.erasures, self.joined_at = erasures, joined_at
-        for user_id, marker in erasures.all().items():
+        self.lake.screen = self._screen  # every upload of this lake drops erased test records first
+        for attempt in range(STARTUP_READS):
+            try:
+                found = erasures.all(fresh=True)
+                break
+            except Unavailable:
+                if attempt == STARTUP_READS - 1:
+                    # Not fatal: every read and write of someone's test records reads their erasure again.
+                    log.warning("the test erasures couldn't be read at start; each person's is read on use")
+                    return
+                time.sleep(2 ** (attempt + 1))
+        for user_id, marker in found.items():
             self._apply_erasure(user_id, marker)
+
+    def _gone(self, user_id: str, marker: tuple[datetime, frozenset[str]], logged_at: datetime) -> bool:
+        """Whether a record of theirs logged then is erased: everything before a rejoin after the erasure, and
+        everything if they haven't joined again."""
+        joined = self.joined_at(user_id)
+        return not (joined and joined > marker[0]) or logged_at < joined
+
+    def _screen(self, paths: list[Path]) -> None:
+        """Delete the staged test records of erased people (review B5): a write that passed its check before the
+        erasure was visible, or one whose upload failed and still waits. Reads the erasures fresh; if that fails,
+        Unavailable, and nothing is uploaded."""
+        if self.erasures is None:
+            return
+        candidates = [p for p in paths if p.parent.name in REC_TABLES and "__" in p.name and p.exists()]
+        if not candidates:
+            return
+        markers = self.erasures.all(fresh=True)
+        for p in candidates:
+            try:
+                rows = pq.read_table(p, columns=["user_id", "logged_at"]).to_pylist()
+            except FileNotFoundError:
+                continue
+            for row in rows[:1]:
+                marker = markers.get(row["user_id"])
+                if marker and self._erased.get(row["user_id"]) != marker:
+                    self._apply_erasure(row["user_id"], marker)  # newly seen: their memory and files go too
+                if marker and self._gone(row["user_id"], marker, row["logged_at"]):
+                    p.unlink(missing_ok=True)
+                    self._dropped.add(p.relative_to(self.lake.root).as_posix())
+                    log.info("dropped an erased test record before upload")
 
     def _apply_erasure(self, user_id: str, marker: tuple[datetime, frozenset[str]]) -> None:
         """Drop from memory every rating and answer of theirs made before they joined the test again after the
         erasure; all of them if they haven't. (A record made after the erasure but before a rejoin can only be
         one this process wrote before it saw the erasure: the file went with the erasure.)"""
         self._erased[user_id] = marker
-        joined = self.joined_at(user_id)
-        cutoff = joined if joined and joined > marker[0] else None
         with self.lock:
+            rating_ids = set(marker[1]) | {
+                r.item.rating_id for r in self.ratings.values() if r.item.user_id == user_id
+            }
             for recs in (self.ratings, self.responses):
                 for key in [k for k, r in recs.items() if r.item.user_id == user_id
-                            and (cutoff is None or r.logged_at < cutoff)]:  # fmt: skip
+                            and self._gone(user_id, marker, r.logged_at)]:  # fmt: skip
                     del recs[key]
+        # Their files still here (staged for upload, or in a local lake) go too, every version.
+        root = self.lake.root
+        self._screen([*(f for rid in rating_ids for f in (root / "ratings").glob(f"{rid}__*.parquet")),
+                      *(root / "rec_responses").glob(f"{user_id}__*.parquet")])  # fmt: skip
 
     def _honour(self, user_id: str) -> tuple[datetime, frozenset[str]] | None:
         """Read the person's erasure again and apply it. Unavailable if it can't be read: a write then waits."""

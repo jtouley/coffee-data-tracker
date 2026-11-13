@@ -1287,7 +1287,8 @@ def create_app(
         s = accounts_only()
         if not isinstance(body.get("experiment"), bool):
             raise HTTPException(422, "experiment must be true or false")
-        erased = run(store.erased_at, me.user_id)  # a joining after an erasure is recorded after it
+        # A joining after an erasure is recorded after it; leaving needs no read, so it never waits on one (S9).
+        erased = run(store.erased_at, me.user_id) if body["experiment"] else None
         s.accounts.set_experiment(me.user_id, body["experiment"], after=erased)
         return {"experiment": body["experiment"]}
 

@@ -342,7 +342,7 @@ def test_delete_user_only_recs_deletes_the_tests_records_and_keeps_the_account(t
     assert p.marts == [] and p.files == {main.url: [
         "ratings/r-u-maya__20261020T070000.parquet", "ratings/r-u-maya__20261021T070000.parquet",
         "rec_responses/u-maya__slate-1__h__20261020T070000.parquet"]}  # fmt: skip
-    done = erase.erase_recs(p, main, photos, users, now=datetime(2026, 10, 24, 7, tzinfo=UTC))
+    done = erase.erase_recs(p, main, photos, users, now=datetime(2026, 10, 24, 7, tzinfo=UTC), settle=0)
     assert done.files == p.files
     assert "u-maya" not in every_value(main.root / "ratings") + every_value(main.root / "rec_responses")
     assert "s-u-maya" in every_value(main) and "p-u-maya" in every_value(photos)
@@ -364,7 +364,16 @@ def test_delete_user_refuses_when_a_datasets_folders_cant_be_listed(three, monke
     main, photos, users = three
     monkeypatch.setattr("coffeedata.lake.remote_folders", lambda url: None)
     monkeypatch.setattr(users, "remote", True)
+    monkeypatch.delenv("HF_TOKEN", raising=False)
+    for only_recs in (False, True):  # S12: the token the reads use is the one checked
+        with pytest.raises(erase.EraseError, match="HF_TOKEN isn't set"):
+            erase.plan("maya", main, photos, users, only_recs=only_recs)
+    monkeypatch.setenv("HF_TOKEN", "stand-in")
     for only_recs in (False, True):
         with pytest.raises(erase.EraseError, match="Couldn't list"):
             erase.plan("maya", main, photos, users, only_recs=only_recs)
+    # --only-recs doesn't need the photos dataset at all.
+    monkeypatch.setattr(users, "remote", False)
+    monkeypatch.setattr(photos, "remote", True)
+    assert erase.plan("maya", main, photos, users, only_recs=True, force=True).user_id == "u-maya"
     assert "u-maya" in every_value(main)

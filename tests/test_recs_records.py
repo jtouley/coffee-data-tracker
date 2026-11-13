@@ -379,7 +379,7 @@ def test_only_recs_erasure_holds_in_the_running_app_and_a_rejoin_starts_afresh(l
     app, boss, maya, uid, me = member_in_test(lake, accounts)
     photos = Lake(str(lake.root.parent / "photos"), tables=("photos",))
     erase.erase_recs(
-        erase.plan("maya", lake, photos, accounts.lake, only_recs=True), lake, photos, accounts.lake
+        erase.plan("maya", lake, photos, accounts.lake, only_recs=True), lake, photos, accounts.lake, settle=0
     )
     assert files(lake, "ratings") == {} and files(lake, "rec_responses") == {}
     store = app.state.store
@@ -444,3 +444,155 @@ def test_before_any_picks_export_answers_are_not_found_not_try_again(lake, monke
         r = c.post("/api/rec-responses", json={"slate_id": SLATE, "coffee_id": COFFEES[0], "interest": "want"},
                    headers=W)  # fmt: skip
         assert r.status_code == 404
+
+
+# --- the final review: the erasure seen through a stale folder list, and writes already under way -----------------
+
+
+def erasable(lake, tmp_path, joined=None):
+    """A Store honouring the erasures of a local users dataset, with one rating and one answer of u-1 stored."""
+    from app.store import Erasures
+    from coffeedata.lake import USER_TABLES, Lake
+
+    catalog(lake)
+    slate(lake, [("u-1", SLATE, 0, COFFEES[0])])
+    users = Lake(str(tmp_path / "users"), tables=USER_TABLES)
+    store = Store(lake, "owner")
+    store.use_erasures(Erasures(users), lambda uid: joined)
+    store.save_rating("u-1", {"rating_id": "r1", "coffee_id": COFFEES[0], "rating": 4})
+    store.save_rec_response("u-1", {"slate_id": SLATE, "coffee_id": COFFEES[0], "interest": "want"})
+    return store, users
+
+
+def mark(users, uid="u-1", ids=("r1",)):
+    """An erasure, as delete-user --only-recs records it (which also tells this process's readers)."""
+    from datetime import UTC, datetime, timedelta
+
+    from coffeedata import erase
+
+    erase.ERASURES = getattr(erase, "ERASURES", 0) + 1
+
+    at = datetime.now(UTC).replace(microsecond=0) + timedelta(seconds=2)  # after the records above
+    users.write("recs_erasures", f"recs_erasures/{uid}__{at:%Y%m%dT%H%M%S}.parquet",
+                [{"user_id": uid, "logged_at": at, "rating_ids": list(ids)}])  # fmt: skip
+    return at
+
+
+def test_the_erasure_is_found_through_a_stale_folder_list(tmp_path, monkeypatch):
+    # B4: an app that listed the users dataset before its first erasure kept a folder list without
+    # recs_erasures, and so never read the remote erasures.
+    from app.store import Erasures, Unavailable
+    from coffeedata import lake as lake_mod
+    from coffeedata.lake import USER_TABLES, Lake
+
+    url = "hf://datasets/someone/users"
+    users = Lake(str(tmp_path / "users"), tables=USER_TABLES)
+    monkeypatch.setattr(users, "remote", True)
+    monkeypatch.setattr(users, "url", url)
+    monkeypatch.setitem(lake_mod._REMOTE_FOLDERS, url, frozenset({"users", "consents"}))  # listed before
+
+    def listing(u):  # cached if listed, as the real one; a fresh listing has the new folder
+        return lake_mod._REMOTE_FOLDERS.setdefault(u, frozenset({"users", "consents", "recs_erasures"}))
+
+    monkeypatch.setattr(lake_mod, "remote_folders", listing)
+    from datetime import UTC, datetime
+
+    at = datetime(2026, 11, 13, 7, tzinfo=UTC)
+
+    class Remote:
+        def __init__(self, fail=None):
+            self.fail = fail
+
+        def execute(self, sql, *a):
+            if f"{url}/recs_erasures" not in sql:
+                return types.SimpleNamespace(fetchall=lambda: [])
+            if self.fail:
+                raise RuntimeError(self.fail)
+            return types.SimpleNamespace(fetchall=lambda: [("u-1", at, ["r1"])])
+
+    import types
+
+    monkeypatch.setattr(users, "connect", lambda *a, **kw: Remote())
+    assert Erasures(users).of("u-1") == (at, frozenset({"r1"}))
+    # S11: the folder is listed, so a 404 reading it is a failure (an expired token), not "no erasures".
+    monkeypatch.setattr(users, "connect", lambda *a, **kw: Remote("HTTP 404: error listing recs_erasures"))
+    with pytest.raises(Unavailable):
+        Erasures(users).of("u-1")
+
+
+def test_a_write_checked_before_the_erasure_is_dropped_before_upload(lake, tmp_path, monkeypatch):
+    # B5: the write passed its own check, then the erasure was published before its upload.
+    from app.store import NotInTest
+
+    store, users = erasable(lake, tmp_path)
+    check = store._may_take_part
+
+    def then_erased(uid, marker):
+        check(uid, marker)
+        mark(users)  # published while this write is on its way
+
+    monkeypatch.setattr(store, "_may_take_part", then_erased)
+    before = set(files(lake, "rec_responses"))
+    with pytest.raises(NotInTest):
+        store.save_rec_response("u-1", {"slate_id": SLATE, "coffee_id": COFFEES[0], "picked": True})
+    assert files(lake, "rec_responses") == {}  # the new one never stored, and the earlier one swept
+    assert before and store.responses == {}
+
+
+def test_every_upload_is_screened_and_a_staged_record_is_swept_once_erased(lake, tmp_path, monkeypatch):
+    # B5: a staged file (an upload that failed) went up with a later publish, hours after the erasure.
+    from coffeedata.lake import Lake
+
+    remote = Lake("hf://datasets/someone/main", staging=tmp_path / "staging")
+    seen: list = []
+    remote.screen = lambda paths: seen.append(sorted(p.name for p in paths))
+    monkeypatch.setattr(remote, "_publish", lambda *a, **kw: 0)
+    remote.write("ratings", "ratings/r1__20261113T070000.parquet", [{"rating_id": "r1", "user_id": "u-1"}])
+    remote.publish("m")
+    assert any("r1__20261113T070000.parquet" in names for names in seen)
+    # And the app sweeps a person's files still here as soon as it sees their erasure.
+    store, users = erasable(lake, tmp_path)
+    assert files(lake, "ratings") and files(lake, "rec_responses")
+    mark(users)
+    assert store.ratings_of("u-1") == []
+    assert files(lake, "ratings") == {} and files(lake, "rec_responses") == {}
+
+
+def test_erasure_reads_are_reused_briefly_but_never_across_an_erasure_here(lake, tmp_path, monkeypatch):
+    # S13, and S10: a failed read at start retries, and never stops the app.
+    from app import store as store_mod
+    from coffeedata import erase
+
+    store, users = erasable(lake, tmp_path)
+    reads = []
+    read = store.erasures._read
+    monkeypatch.setattr(store.erasures, "_read", lambda: reads.append(1) or read())
+    store.erasures.of("u-1")
+    store.erasures.of("u-1")
+    n = len(reads)
+    assert n <= 1
+    monkeypatch.setattr(erase, "ERASURES", erase.ERASURES + 1)  # an erasure made in this process
+    store.erasures.of("u-1")
+    assert len(reads) == n + 1
+    monkeypatch.setattr(store_mod.time, "sleep", lambda s: None)
+
+    def down():
+        raise store_mod.Unavailable("down")
+
+    monkeypatch.setattr(store.erasures, "_read", down)
+    store.use_erasures(store.erasures, lambda uid: None)  # logs, doesn't raise
+
+
+def test_leaving_the_test_never_waits_on_the_erasures(lake, accounts, monkeypatch):  # noqa: F811
+    # S9: a failed read of the erasures stopped people leaving the test.
+    from app.store import Unavailable
+
+    app, boss, maya, uid, me = member_in_test(lake, accounts)
+
+    def down():
+        raise Unavailable("down")
+
+    monkeypatch.setattr(app.state.store.erasures, "_read", down)
+    monkeypatch.setattr(app.state.store.erasures, "ttl", 0)
+    assert maya.post("/api/experiment", json={"experiment": False}, headers=me).status_code == 200
+    assert maya.post("/api/experiment", json={"experiment": True}, headers=me).status_code == 503

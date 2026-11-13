@@ -26,7 +26,9 @@ skips a table it couldn't read.
 from __future__ import annotations
 
 import logging
+import os
 import tempfile
+import time
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -53,6 +55,15 @@ RECS_MARTS: list[str] = []  # dbt/models/recs/ marts exported to marts/ with a u
 # Private exports with a user_id column, rewritten without the person's rows. tests/test_privacy.py fails when an
 # exported mart built from personal data isn't here.
 MARTS = ["fct_shot", "mart_bag", *RECS_MARTS]
+
+
+# How long --only-recs waits after publishing the erasure before it lists and deletes: longer than an upload the app
+# started before it saw the erasure can take (Lake.publish: 5 tries, 2-16 s apart, plus the requests), and than the
+# app's reuse of a read of the erasures (app/store.py ERASURES_TTL). Every upload after it drops their records.
+SETTLE = 180.0
+ERASURES = (
+    0  # erasures made by this process: an app in the same process (tests) never reuses a read from before
+)
 
 
 class EraseError(ValueError):
@@ -143,7 +154,10 @@ def _marts(lake: Lake, user_id: str, marts: list[str], absent: list[str]) -> lis
 def plan(
     username: str, main: Lake, photos: Lake, users: Lake, force: bool = False, only_recs: bool = False
 ) -> Plan:
-    for lake in (main, photos, users):
+    # The reads go with HF_TOKEN alone (Lake.connect), so that's what is checked, not a cached CLI login (S12).
+    for lake in (main, users) if only_recs else (main, photos, users):
+        if lake.remote and not os.environ.get("HF_TOKEN"):
+            raise EraseError(f"HF_TOKEN isn't set, so {lake.url} would read as empty. Nothing was deleted.")
         if lake.remote and lake_mod.remote_folders(lake.url) is None:
             raise EraseError(
                 f"Couldn't list {lake.url}'s folders (check HF_TOKEN). Every table would look empty, so nothing was "
@@ -209,9 +223,13 @@ def apply(p: Plan, main: Lake, photos: Lake, users: Lake) -> None:
                 users.squash(f"Squash history after deleting user {p.user_id}")
 
 
-def erase_recs(p: Plan, main: Lake, photos: Lake, users: Lake, now: datetime | None = None) -> Plan:
-    """--only-recs: record the erasure and publish it, then plan again (a rating or answer the running app wrote
-    before it saw the erasure is listed too) and delete. Returns the plan carried out."""
+def erase_recs(
+    p: Plan, main: Lake, photos: Lake, users: Lake, now: datetime | None = None, settle: float | None = None
+) -> Plan:
+    """--only-recs: record the erasure and publish it, wait SETTLE (an upload the running app started before it
+    saw the erasure lands meanwhile; every one after drops their records), then plan again and delete every file of
+    theirs, staged copies included. Returns the plan carried out."""
+    global ERASURES
     rows = _rows(main, "", f"select distinct rating_id from {main.scan('ratings')} where user_id = $id",
                  {"id": p.user_id}, [])  # fmt: skip
     # After every record of theirs, even one stamped ahead of the clock (each record of a key sorts after the last,
@@ -232,6 +250,11 @@ def erase_recs(p: Plan, main: Lake, photos: Lake, users: Lake, now: datetime | N
     marker = {"user_id": p.user_id, "logged_at": at, "rating_ids": sorted(r for (r,) in rows if r)}
     users.write("recs_erasures", f"recs_erasures/{p.user_id}__{at:%Y%m%dT%H%M%S}.parquet", [marker])
     users.publish(f"Erase the recommendation-test records of user {p.user_id} (deletion request)")
+    ERASURES += 1
+    wait = SETTLE if settle is None else settle
+    if wait:
+        log.info("erasure recorded; waiting %.0f s for uploads already under way", wait)
+        time.sleep(wait)
     done = Plan(p.user_id, p.username)
     done.marts = _marts(main, p.user_id, RECS_MARTS, done.absent)
     done.files[main.url] = _files(main, RECS, p.user_id, done.absent)

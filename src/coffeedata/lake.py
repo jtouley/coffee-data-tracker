@@ -53,6 +53,7 @@ import secrets
 import tempfile
 import threading
 import time
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -747,6 +748,9 @@ class Lake:
     ):
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
         self.tables = tables or LAKE_TABLES
+        # Called with the staged files before each upload, under the publish lock: it deletes any that mustn't be
+        # sent any more (the app's erased test records, app/store.py). None: send them all.
+        self.screen: Callable[[list[Path]], None] | None = None
         self.remote = self.url.startswith("hf://")
         self.root = (
             Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging"))
@@ -1036,6 +1040,8 @@ class Lake:
         if not self.remote:
             return 0
         with self._publishing:
+            if self.screen is not None:
+                self.screen(self.staged_files())  # removes staged files that mustn't go up any more
             pending = self.root / PENDING_DELETES
             waiting = json.loads(pending.read_text()) if pending.exists() else []
             todo = tuple(dict.fromkeys([*waiting, *delete]))

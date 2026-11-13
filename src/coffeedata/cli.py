@@ -1041,6 +1041,7 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
         print("Dry run: nothing deleted.")
         return
     if args.only_recs:
+        print(f"Recording the erasure, then waiting {erase.SETTLE:.0f} s for uploads already under way.")
         done = erase.erase_recs(p, main, photos, users)
         n = sum(len(v) for v in done.files.values())
         print(
