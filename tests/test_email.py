@@ -22,6 +22,7 @@ from app.main import create_app
 from coffeedata import erase
 from coffeedata.lake import PHOTO_TABLES, USER_TABLES, Lake
 from coffeedata.site import APP, LEGAL_UPDATED
+from tests.conftest import wait_for_sends
 
 W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 SETUP, PW, MAYA_PW, NEW_PW = (
@@ -100,6 +101,7 @@ def verified_member(app, owner, outbox, username="maya", email="maya@example.com
 
 def forgot(app, who: str):
     r = client(app).post("/api/forgot", json={"account": who}, headers=W)
+    wait_for_sends()  # the reply doesn't wait for the link's send (mail.later): the outbox checks do
     return r
 
 
@@ -120,7 +122,8 @@ class ForgotClock:
     called, and every step the handler takes is recorded in order: the lookup's answer, each other thread-pool call
     (so slow work after the floor shows up), each send, and the floor's sleep. Synchronous work written inline in
     the handler, outside the thread pool, isn't seen; the real-clock lower bounds in the tests cover only "not too
-    soon"."""
+    soon". Work started with `mail.later` (the reset link's send) runs on mail's own threads, off the reply path,
+    and isn't recorded either: tests/test_forgot_send_off_path.py covers it."""
 
     def __init__(self, monkeypatch, accounts, lookup: dict[str, float], mailer=None, send: float = 0.0):
         self.now, self.steps, self.lookup, self.send = 1000.0, [], lookup, send
@@ -159,9 +162,12 @@ class ForgotClock:
         self.now += seconds
 
     def ask(self, app, who: str) -> list:
-        """One request's steps, after checking it got the reply that says nothing."""
+        """One request's steps, after checking it got the reply that says nothing. The client's event loop stays
+        open until any send the request started has finished: the fake sleep doesn't give it time to start."""
         self.steps.clear()
-        r = forgot(app, who)
+        with client(app) as c:
+            r = c.post("/api/forgot", json={"account": who}, headers=W)
+            wait_for_sends()
         assert (r.status_code, r.json()) == (200, SAME), who
         return list(self.steps)
 
@@ -203,27 +209,28 @@ def test_forgot_takes_a_username_or_an_email_and_answers_alike_unless_there_is_n
 def test_forgot_takes_the_same_time_whether_or_not_there_is_an_account(
     app, owner, outbox, accounts, monkeypatch
 ):
-    """The link is sent inside the request (Cloud Run has no CPU after the reply, review H1), and every answer is
-    held to the same floor, so a slow send (0.3 s here) doesn't show: the send happens before the floor's sleep,
-    and its time comes off it."""
+    """Every answer is held to the same floor, counted from the lookup alone, so a slow send (0.3 s here) doesn't
+    show: the link's send starts inside the request (Cloud Run has no CPU after the reply, review H1) but off the
+    reply path (mail.later), so a found account takes the same steps as no account."""
     verified_member(app, owner, outbox)
     app.state.forgot_floor = 0.6
     # Three for maya (her hourly limit; a 4th would be refused, and answered at once), three for no one.
     found, missing = ("maya@example.com", "maya", "Maya"), ("nobody@example.com", "nobody", "nobody2")
     lookup = dict(zip(found + missing, (0.02, 0.01, 0.015, 0.03, 0.005, 0.01), strict=True))
-    clock = ForgotClock(monkeypatch, accounts, lookup, mailer=outbox, send=0.3)
+    real_send = outbox.send
+
+    def slow(*a):
+        time.sleep(0.3)  # on a send thread: it moves no clock the handler reads
+        return real_send(*a)
+
+    monkeypatch.setattr(outbox, "send", slow)
+    clock = ForgotClock(monkeypatch, accounts, lookup)
     for who in found:
-        assert clock.ask(app, who) == [
-            ("forgot", "send"),
-            ("pool", "send_reset"),
-            ("send", "maya@example.com"),
-            ("sleep", pytest.approx(0.6 - lookup[who] - 0.3)),
-        ], who
+        assert clock.ask(app, who) == [("forgot", "send"), ("sleep", pytest.approx(0.6 - lookup[who]))], who
     for who in missing:
         assert clock.ask(app, who) == [("forgot", "quiet"), ("sleep", pytest.approx(0.6 - lookup[who]))], who
-    assert (
-        len(outbox.to("maya@example.com")) == 3
-    )  # sent before each reply (the per-account limit stops the rest)
+    wait_for_sends()  # the sends ran off the reply path: wait for them before counting
+    assert len(outbox.to("maya@example.com")) == 3  # one for each (the per-account limit stops the rest)
     monkeypatch.undo()
     t = time.perf_counter()  # on the real clock, no answer comes back before the floor (load only adds to it)
     assert forgot(app, "nobody3").json() == SAME
@@ -241,14 +248,10 @@ class Relay:
         return self.inner.send(*a)
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="a reset email's send to the provider has no overall deadline below FORGOT_FLOOR, so a slow send shows "
-    "through the floor, only for accounts with a verified email (follow-up fix in app/mail.py; then drop this mark)",
-)
 def test_a_slow_send_to_the_provider_still_answers_at_the_floor(lake, accounts, monkeypatch):
-    """The production mailer, with every try to the provider timing out on the fake clock: the reply must still
-    come at the floor, as it does for no account."""
+    """The production mailer, with every try to the provider timing out: the reply still comes at the floor, from
+    the lookup alone, as it does for no account, and the send gives up on its own, off the reply path. The mailer's
+    waits and timeouts count on a clock of their own, so the send can't move the handler's."""
     outbox = mail.FakeMailer()
     relay = Relay(outbox)
     app = create_app(lake, Sessions(accounts), mailer=relay)
@@ -258,21 +261,25 @@ def test_a_slow_send_to_the_provider_still_answers_at_the_floor(lake, accounts, 
     verified_member(app, owner, outbox)
     app.state.forgot_floor = app_main.FORGOT_FLOOR
     clock = ForgotClock(monkeypatch, accounts, {"maya": 0.01})
-    resend = mail.ResendMailer("re_test_key", sleep=clock.advance)
+    sender = [0.0]  # the mailer's own clock
+
+    def tick(seconds):
+        sender[0] += seconds
+
+    resend = mail.ResendMailer("re_test_key", sleep=tick, clock=lambda: sender[0])
     relay.inner = resend
 
     def times_out(request):
-        clock.advance(resend.timeout)
+        tick(request.extensions["timeout"]["connect"])  # each try runs to the timeout it was given
         raise httpx.ConnectTimeout("timed out", request=request)
 
     with respx.mock:
-        respx.post(mail.RESEND_URL).mock(side_effect=times_out)
-        started = clock.now
-        steps = clock.ask(app, "maya")
-    assert steps[:2] == [("forgot", "send"), ("pool", "send_reset")]
-    (kind, slept) = steps[-1]
-    assert kind == "sleep"
-    assert clock.now - started + slept == pytest.approx(app_main.FORGOT_FLOOR)
+        route = respx.post(mail.RESEND_URL).mock(side_effect=times_out)
+        steps = clock.ask(app, "maya")  # waits for the send to finish (forgot() helper) before it returns
+    assert steps == [("forgot", "send"), ("sleep", pytest.approx(app_main.FORGOT_FLOOR - 0.01))]
+    # The send tried, gave up within its deadline, and sent nothing.
+    assert route.call_count >= 1 and sender[0] <= mail.ResendMailer.DEADLINE
+    assert outbox.sent == []
 
 
 def test_the_limits_come_first_send_nothing_and_hide_the_no_email_answer(app, owner, outbox, accounts):
@@ -344,6 +351,7 @@ def test_links_use_the_app_address_even_with_a_forged_host(app, owner, outbox):
         evil.post("/api/forgot", json={"account": "maya"}, headers=W | {"Host": "evil.example"}).json()
         == SAME
     )
+    wait_for_sends()
     (sent,) = outbox.sent
     assert (
         f"{APP}/reset#" in sent.text and f"{APP}/reset#" in sent.html and "evil" not in sent.text + sent.html

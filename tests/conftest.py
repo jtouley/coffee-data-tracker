@@ -108,3 +108,17 @@ def _own_dbt_target(tmp_path_factory):
     mp.setattr(cli, "DBT_TARGET", target)
     yield
     mp.undo()
+
+
+def wait_for_sends() -> None:
+    """Until every send app/mail.py's `later` started has finished and been logged. /api/forgot's reply doesn't wait
+    for its email, so a test that checks the outbox after it waits here first (a wait, not a timing bound)."""
+    import time
+
+    from app import mail
+
+    for _ in range(3000):
+        if not mail._running:
+            return
+        time.sleep(0.01)
+    raise AssertionError("a send never finished")
