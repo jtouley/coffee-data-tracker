@@ -1,6 +1,7 @@
 # The ingestion jobs' image (src/terraform/ingestion.tf): the coffeedata CLI, the dbt project and the registry seed,
 # without the app. Built from the repository root by Cloud Build into the app's Artifact Registry repository
-# (docs/ingestion/RUNBOOK.md §1: `gcloud builds submit`, with BuildKit so ingest.Dockerfile.dockerignore applies).
+# (docs/ingestion/RUNBOOK.md §1: `gcloud builds submit`, with BuildKit so ingest.Dockerfile.dockerignore applies,
+# and --build-arg GIT_SHA so the image knows its commit).
 # Each Cloud Run job sets its own command (coffeedata crawl / crawl-retry / merge / enrich-week / build).
 # Since #153 it is built, pushed and signed by deploy.yml's ingest-image job; Cloud Build is the emergency route.
 # uv, as a named stage: Dependabot updates a pinned FROM, not a COPY --from=<image>.
@@ -31,6 +32,12 @@ COPY --chown=user contracts ./contracts
 COPY --chown=user marketplace/LISTING.md ./marketplace/LISTING.md
 # Fail the image build, not every weekly build, if the claims file can't be found (e.g. a non-editable install).
 RUN .venv/bin/python -c "from coffeedata import quality; assert quality.LISTING.is_file(), quality.LISTING"
+
+# The commit this image is built from, recorded in every lake record it writes (lineage.git_sha: code_version, and
+# builds.git_sha): `--build-arg GIT_SHA=$(git rev-parse HEAD)`. Without it the records say "unknown". Last, so a
+# new commit doesn't rebuild the layers above.
+ARG GIT_SHA=unknown
+ENV COFFEEDATA_GIT_SHA=$GIT_SHA
 
 ENTRYPOINT ["coffeedata"]
 CMD ["--help"]

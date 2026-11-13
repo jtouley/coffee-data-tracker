@@ -11,5 +11,7 @@ manifest:
   1.2.0: d775e9935559e256
 enrichment:
   1.1.0: 476da22198cd35e9
+ops:
+  1.0.0: 106a5474e48e89c2
 usage:
   1.0.0: 68296dd4374bc721

@@ -150,6 +150,7 @@ def test_git_sha_is_the_packages_checkout_not_the_cwds(tmp_path, monkeypatch):
     import subprocess
 
     monkeypatch.delenv("GITHUB_SHA", raising=False)
+    monkeypatch.delenv("COFFEEDATA_GIT_SHA", raising=False)
     here = Path(lineage.__file__).resolve().parent
     mine = subprocess.run(["git", "-C", str(here), "rev-parse", "HEAD"], capture_output=True, text=True)
     subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
@@ -159,10 +160,40 @@ def test_git_sha_is_the_packages_checkout_not_the_cwds(tmp_path, monkeypatch):
     assert lineage.git_sha() == (mine.stdout.strip() or None)
 
 
-def test_code_version_falls_back_to_the_package_version(monkeypatch):
+def test_code_version_falls_back_to_unknown(monkeypatch):
+    """Not the package's version, which every commit shares (a Cloud Run record said only "coffeedata 0.1.0")."""
     monkeypatch.delenv("GITHUB_SHA", raising=False)
     monkeypatch.setattr(lineage, "git_sha", lambda: None)
-    assert lineage.code_version() == f"coffeedata {lineage.package_version('coffeedata')}"
+    assert lineage.code_version() == "unknown"
+
+
+def test_an_image_records_the_commit_it_was_built_from(monkeypatch, tmp_path):
+    """The images have no git checkout: their build sets COFFEEDATA_GIT_SHA (ARG GIT_SHA), and every record names
+    it. GitHub Actions' own GITHUB_SHA wins; an image built without the arg (GIT_SHA=unknown) counts as missing."""
+    import subprocess
+
+    monkeypatch.delenv("GITHUB_SHA", raising=False)
+    monkeypatch.setenv("COFFEEDATA_GIT_SHA", "abc123")
+    assert lineage.git_sha() == "abc123" and lineage.code_version() == "abc123"
+    monkeypatch.setenv("GITHUB_SHA", "def456")
+    assert lineage.git_sha() == "def456"
+    monkeypatch.delenv("GITHUB_SHA")
+    monkeypatch.setenv("COFFEEDATA_GIT_SHA", "unknown")
+    monkeypatch.setattr(subprocess, "run", lambda *a, **k: (_ for _ in ()).throw(OSError("no git")))
+    assert lineage.git_sha() is None and lineage.code_version() == "unknown"
+    # The Dockerfiles take the arg, last (a new commit doesn't rebuild the dependency layers), and the deploy
+    # workflow passes it.
+    root = Path(__file__).parent.parent
+    for f in ("ingest.Dockerfile", "app/Dockerfile"):
+        lines = (root / f).read_text().splitlines()
+        arg = lines.index("ARG GIT_SHA=unknown")
+        assert lines[arg + 1] == "ENV COFFEEDATA_GIT_SHA=$GIT_SHA", f
+        assert not any(x.startswith(("RUN ", "COPY ")) for x in lines[arg:]), f
+    # The pull request's check build passes its own commit; main's deploys (workflow_run) the commit ci passed on,
+    # for the app's image and the ingest image.
+    deploy = (root / ".github/workflows/deploy.yml").read_text()
+    assert deploy.count('--build-arg GIT_SHA="$GITHUB_SHA"') == 1
+    assert deploy.count('--build-arg GIT_SHA="$HEAD_SHA"') == 2
 
 
 def test_ci_run_and_actor_come_from_github_actions(monkeypatch):

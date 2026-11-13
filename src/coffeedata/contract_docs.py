@@ -11,6 +11,12 @@ TABLES: dict[str, str] = {
     "run_manifests": "What an ingest set out to fetch, written before its first request: one row per roaster.",
     "job_manifests": "The control plane: one row when a job starts and one when it ends, per connector and week.",
     "enrichments": "Claude's extracted attributes per product description (llm rows; older lakes also hold rules rows).",
+    "run_completeness": "Ops: one row per roaster the build's run should have tried, and how its fetch went "
+    "(dbt run_completeness, as the build saw it).",
+    "release_changes": "Ops: every row the build's public tables add, remove or change against the release served "
+    "before it, with the reason (dbt release_changes); empty when nothing was served.",
+    "product_decisions": "Ops: every product a store lists, coffee or not, as of its latest record, with the "
+    "build's coffee decision, what decided it and why (dbt product_decisions).",
     "usage_events": "One anonymous search, filter, click-out or page-view event from registry.coffee or "
     "app.registry.coffee, as the collector accepted it: private, append-only, never published. No identifier of a "
     "person, browser, device, session or page load; no full IP, user agent, cookie, or referrer path or query.",
@@ -84,13 +90,17 @@ COLUMNS: dict[str, dict[str, str]] = {
     },
     "job_manifests": {
         "run_date": _RUN,
-        "job": "discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich or fetch-health (the fetch-health check).",
+        "job": "discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich, "
+        "fetch-health (the fetch-health check), classify (Claude's verdicts) or build (the dbt build, its release and "
+        "serve).",
         "connector": "The connector (adapter) the job served, if any.",
         "shard": "The shard, if the job was sharded.",
         "attempt_id": "One execution of the job; its start and end rows share it.",
         "started_at": "When the attempt started.",
         "ended_at": "When it ended (null on the start row).",
-        "status": "running (start row), done, deadline or failed. An attempt with only a running row died.",
+        "status": "running (start row), done, deadline or failed. An attempt with only a running row died. A "
+        "build is done when it passed and was served, failed when its checks failed or it crashed (detail.passed, "
+        "detail.error).",
         "todo": "Roasters it set out to fetch.",
         "ok": "Roasters fetched.",
         "errors": "Roasters that failed.",
@@ -106,7 +116,8 @@ COLUMNS: dict[str, dict[str, str]] = {
         "manual crawl --only; for "
         "fetch-health, its verdict on the week's fetches: systemic fetch failures, and the list of roasters whose "
         "fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, "
-        "plus the partial and quarantined fetches).",
+        "plus the partial and quarantined fetches; for classify, its model and what it collected and submitted; "
+        "for build, its build_id and whether it passed).",
     },
     "enrichments": {
         "extracted_at": "When it was extracted.",
@@ -167,6 +178,54 @@ COLUMNS: dict[str, dict[str, str]] = {
     },
 }
 
+_OPS_RUN = "The run the build judged (as_of_run, else the latest run)."
+_OPS_BUILD = "The build that wrote it (builds.build_id, the folder's build=<id>): every row names its build."
+COLUMNS |= {
+    "run_completeness": {
+        "build_id": _OPS_BUILD,
+        "run_date": _OPS_RUN,
+        "roaster_id": "A roaster the run should have tried.",
+        "attempted": "The run has a fetch for it.",
+        "ok": "An attempt in the run was ok.",
+        "expected_from": "Where the expected set came from: manifest or reconstructed.",
+        "adapter": "The adapter that counts for it in adapter_ok_rate.",
+        "has_catalog": "It counts in the ok rates: not known to have no catalog, not unavailable, not quarantined.",
+        "catalog_ok": "The run fetched it and got products.",
+        "unavailable": "Found closed in this run (fetch status unavailable, no ok attempt).",
+        "quarantined": "Quarantined in this run (fetch status crashed, no ok attempt): not fetched.",
+        "partial": "This run read only part of its catalog.",
+        "partial_reason": "Why it is partial; null otherwise.",
+        "challenge": "The edge whose challenge it failed behind (siteground or cloudflare); null otherwise.",
+    },
+    "release_changes": {
+        "build_id": _OPS_BUILD,
+        "table_name": "The public table, or 'release' when the served release couldn't be read.",
+        "item": "The row's key in that table; for a schema row the missing column or table.",
+        "change": "added, removed, changed, schema or not_reconciled.",
+        "reason": "Why, from the two releases and the build; unexplained when nothing shows why.",
+    },
+    "product_decisions": {
+        "build_id": _OPS_BUILD,
+        "coffee_id": "<roaster domain>:<store product id> (dim_coffee's key, for the ones that are coffee).",
+        "roaster_id": _ROASTER,
+        "product_id": "The store's product id.",
+        "title": "The title as the store sent it (latest record).",
+        "product_type": "The store's product type (latest record).",
+        "url": "The product's page on the store, as sent.",
+        "first_seen": "The first run with a record of it.",
+        "last_seen": "The run of its latest record, which the decision is about.",
+        "is_listed": "Its latest record is from the roaster's current run.",
+        "input_hash": "The product version the decision is about.",
+        "is_coffee": "The build counts it as coffee (dim_coffee holds it).",
+        "classified_by": "claude (a stored verdict decided) or rules.",
+        "verdict_model": "The verdict's model when classified_by is claude, else null.",
+        "verdict_label": "Claude's stored label for the version (coffee, not_coffee or unsure), whether or not it "
+        "decided; null without one.",
+        "reason": "Why: verdict:<label> when Claude's verdict decided, else the rule that did: excluded:<rule>, sauce, "
+        "sweets, drinks, coffee_words, country, demonym, coffee_type or signals:<n>.",
+    },
+}
+
 # Columns the contract requires to be non-null although the Arrow schema allows null (every lake column is
 # nullable, so older files read back): each is held by a quality rule below.
 REQUIRED: dict[str, list[str]] = {"fetches": ["run_date", "batch_id", "roaster_id"]}
@@ -216,6 +275,29 @@ QUALITY: dict[str, list[dict]] = {
          "severity": "error", "rule": "run_manifests.mode is full, sample, only, retry_failed or null",
          "engine": "dbt", "implementation": "tests/run_manifest_mode_values.sql",
          "enforced_by": "dbt run_manifest_mode_values"},
+    ],
+    "ops": [
+        {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions"],
+         "dimension": "conformity", "severity": "error",
+         "rule": "each ops file has exactly the contract's columns and types, and none is a release table",
+         "engine": "pytest",
+         "implementation": "tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract"},
+        {"id": "one_row_per_roaster", "tables": ["run_completeness"], "dimension": "uniqueness",
+         "severity": "error", "rule": "run_completeness.roaster_id is unique and not null",
+         "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "run_completeness",
+                                              "columns": ["roaster_id"], "test": "unique"},
+         "enforced_by": "dbt run_completeness unique, not_null"},
+        {"id": "change_values", "tables": ["release_changes"], "dimension": "conformity", "severity": "warning",
+         "rule": "release_changes.change is added, removed, changed, schema or not_reconciled",
+         "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "release_changes",
+                                              "columns": ["change"], "test": "accepted_values"},
+         "enforced_by": "dbt release_changes accepted_values (report only: never gates a release)"},
+        {"id": "one_row_per_product", "tables": ["product_decisions"], "dimension": "uniqueness",
+         "severity": "warning", "rule": "product_decisions.coffee_id is unique and not null, and every row has a "
+         "decision and a reason",
+         "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "product_decisions",
+                                              "columns": ["coffee_id"], "test": "unique"},
+         "enforced_by": "dbt product_decisions unique, not_null (report only: never gates a release)"},
     ],
     "enrichment": [
         {"id": "writer_columns", "tables": ["enrichments"], "dimension": "conformity", "severity": "error",

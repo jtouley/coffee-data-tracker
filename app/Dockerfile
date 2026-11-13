@@ -1,5 +1,5 @@
 # The app's image, for any container host (Cloud Run today). Build from the repository root:
-#   docker build -f app/Dockerfile .
+#   docker build -f app/Dockerfile --build-arg GIT_SHA="$(git rev-parse HEAD)" .
 # Nothing in it is specific to one host: the port comes from $PORT, secrets from the environment.
 # uv, as a named stage: Dependabot updates a pinned FROM, not a COPY --from=<image>.
 FROM ghcr.io/astral-sh/uv:0.11.32@sha256:df4cae8f3a96d175e2e5f992e597550000edbe78fdc2594d5cd8de1a217f504c AS uv
@@ -29,6 +29,12 @@ RUN uv sync --locked --no-dev --extra app
 # DuckDB's httpfs extension (reading the lake over hf://), installed now rather than downloaded on every cold start.
 RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user app ./app
+
+# The commit this image is built from, recorded in every lake record it writes (lineage.git_sha: code_version, and
+# builds.git_sha): `--build-arg GIT_SHA=$(git rev-parse HEAD)`. Without it the records say "unknown". Last, so a
+# new commit doesn't rebuild the layers above.
+ARG GIT_SHA=unknown
+ENV COFFEEDATA_GIT_SHA=$GIT_SHA
 
 EXPOSE 8080
 # One process: accounts, the shot cache and the sign-in limits live in memory (so the host runs one instance).
