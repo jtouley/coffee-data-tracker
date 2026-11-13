@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 3.1.0
+version: 3.2.0
 status: active
 domain: coffee
 description:
@@ -45,7 +45,9 @@ inputPorts:
       - property: description
         value: >-
           OpenStreetMap via the Overpass API, read to discover US roasters (registry source osm). Roasters known only
-          from OpenStreetMap are excluded from the public tables (dbt/models/public/public_roaster.sql).
+          from OpenStreetMap are excluded from the public tables (dbt/models/public/public_roaster.sql), and no
+          published value comes from it: a public roaster's name, city and state are its open sources'
+          (stg_registry; the quality rule public_values_have_open_provenance).
       - property: license
         value: ODbL-1.0
       - property: inPublicTables
@@ -71,7 +73,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 3.1.0
+    version: 3.2.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: license
@@ -209,6 +211,17 @@ customProperties:
           the site, the public dataset and the shares. public-catalog contract 3.1.0, a minor version: a quality
           rule added (tests/public_tables_have_no_chain.sql, error), fewer rows (2 roasters and 149 coffees in
           release 971bfe), no table, column, type or enum changed, so Snowflake needs no migrate.
+      - topic: no published value from OpenStreetMap
+        decided: "2026-11-13"
+        outcome: >-
+          Issue #90: excluding roasters known only from OpenStreetMap kept ODbL roasters out but not ODbL values, since
+          stg_registry took a roaster's name, city and state from its newest registry row whatever the source. A
+          roaster known from an open source (overture, overture-<release>, curated, manual, each matched as a whole
+          name) now takes them from open sources only, per field; a value only OpenStreetMap gave stays null.
+          public-catalog contract 3.2.0, a minor version: a quality rule added
+          (tests/public_values_have_open_provenance.sql, error), no table, column, type or enum changed, so Snowflake
+          needs no migrate. No published value changed on the release of 2026-11-09, whose registry had no discovery
+          rows.
 team:
   name: registry.coffee
   members:
