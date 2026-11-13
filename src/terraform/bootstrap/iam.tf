@@ -178,9 +178,19 @@ resource "google_project_iam_member" "tf_apply" {
     "roles/monitoring.alertPolicyEditor",         # alert policies
     "roles/monitoring.notificationChannelEditor", # the owner's email channel
     "roles/monitoring.uptimeCheckConfigEditor",   # the /healthz uptime check
-    google_project_iam_custom_role.tf_service_accounts.id,
-    google_project_iam_custom_role.tf_secrets.id,
   ])
+  project = var.project_id
+  role    = each.value
+  member  = local.apply_member
+}
+
+# The two custom roles, by static keys: their ids are unknown until the roles exist, and for_each keys must be known
+# at plan.
+resource "google_project_iam_member" "tf_apply_custom" {
+  for_each = {
+    service_accounts = google_project_iam_custom_role.tf_service_accounts.id
+    secrets          = google_project_iam_custom_role.tf_secrets.id
+  }
   project = var.project_id
   role    = each.value
   member  = local.apply_member
