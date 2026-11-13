@@ -569,6 +569,52 @@ bags in roaster insights" (Setup → Account; on by default). The choice is in t
 must leave out every member with `insights = false` (`Accounts.insights_excluded()`), and keep a record of each report
 it releases, as the policy says.
 
+## Usage
+
+Anonymous search, filter and click-out counts (the analytics design) go to a small service of their own,
+`registry-coffee-usage` on `e.registry.coffee` (`src/terraform/usage.tf`, `app/usage.py`), never to the app: the app
+is same-site with registry.coffee, so a beacon to it would carry the session cookie. The collector answers every
+`POST /e` with an empty 204 at once, masks the caller's IP (IPv4 /24, IPv6 /40) before anything is kept, and appends
+events to the private dataset `jtouley/coffee-usage` (`events/day=YYYY-MM-DD/batch=<id>.parquet`): every 200 events,
+every 15 minutes while it gets requests, and when the instance stops. It logs counts per flush and nothing else, and
+Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from the `_Default` sink.
+
+| What | Where | Value |
+|---|---|---|
+| `USAGE_HF_TOKEN` secret | Secret Manager: always exists, mounted as `HF_TOKEN` when `usage_token = true` | A fine-grained Hugging Face token with write access to `jtouley/coffee-usage` only |
+| `usage_token` | `terraform.tfvars` / `ci.tfvars` | `true` mounts the secret; `false` (the default) leaves the collector unable to publish |
+| `usage_domain`, `usage_dataset` | variables | `e.registry.coffee`, `jtouley/coffee-usage` |
+| DNS | the registrar, by hand | `CNAME e -> ghs.googlehosted.com.` (`terraform output usage_dns`) |
+
+### Turning usage on
+
+1. **The dataset.** On Hugging Face, make the private dataset `jtouley/coffee-usage`. Then a fine-grained token:
+   repository permissions on that one dataset, write. (Hugging Face has no write-only token: it can read that dataset
+   too, and nothing else.)
+2. **Terraform** (the apply flow in "Changing the infrastructure"). The first apply creates the service with
+   Google's sample image, its account, the empty secret, the public invoker grant, the domain mapping and the log
+   exclusion. Then add the token, without printing it:
+
+   ```bash
+   gcloud secrets versions add USAGE_HF_TOKEN --data-file=-   # paste the token, then Ctrl-D
+   ```
+
+   and set `usage_token = true`; the next apply mounts it.
+3. **DNS**: the CNAME above. The certificate follows within the hour, as the app's did.
+4. **The image.** Deploys don't update this service yet. Running the app's image as the collector's account needs
+   the deploy account to hold `roles/run.developer` on this service and `roles/iam.serviceAccountUser` on
+   `registry-coffee-usage@`. The second is an impersonation grant to a guarded account, which the plan guard refuses
+   by design (`scripts/tf_plan_guard.py`), so the owner grants it by hand, or deploys this service by hand:
+
+   ```bash
+   gcloud run deploy registry-coffee-usage --region us-central1 --image "$GCP_IMAGE@sha256:<digest of main's app image>"
+   ```
+
+   The image reads `COFFEEDATA_APP=app.usage` from the service and runs the collector.
+5. **Check it.** `curl -s -o /dev/null -w '%{http_code}\n' -X POST https://e.registry.coffee/e -d '{}'` prints
+   `204`, as does every other request; the service's log shows a `usage flush` line counting it as `foreign_origin`
+   at its next flush (a request 15 minutes later, or the instance stopping).
+
 ## Using it on the phone
 
 - **Install:** open the app's address in Chrome on Android and use "Add to Home screen". It runs full screen and stays

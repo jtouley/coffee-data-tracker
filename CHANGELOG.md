@@ -18,6 +18,18 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service on
+  `e.registry.coffee` (`src/terraform/usage.tf`), never the app. `POST /e` answers every request with an empty 204 at
+  once; it takes at most 4 KB and 20 events, refuses any event its strict schema doesn't name
+  (`app/usage_events.py`), drops Global Privacy Control and Do Not Track, foreign origins, bursts over 60 a minute
+  or 2,000 a day per masked prefix and a service-wide ceiling, and flags known bots. The caller's IP is masked to
+  IPv4 /24 or IPv6 /40 before anything is kept; a referrer is cut to its host; the user agent becomes the bot flag;
+  cookies and every other header are never read. Events go to the private dataset `jtouley/coffee-usage`
+  (`Lake.usage()`, table `usage_events`, `events/day=YYYY-MM-DD/batch=<id>.parquet`) every 200 events, every 15
+  minutes and at shutdown. Its log holds counts only, and Terraform excludes Cloud Run's request log for it.
+  Internal contract `usage` 1.0.0 (`contracts/internal/usage.odcs.yaml`). The page scripts and the dbt models are
+  separate PRs.
+
 - The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
   one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly
   runs only (a Monday with a full manifest, or from before manifests), each judged on what it stored (the roasters

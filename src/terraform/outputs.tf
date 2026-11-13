@@ -22,3 +22,13 @@ output "dns" {
   description = "The record to add at the DNS host once the domain mapping exists."
   value       = "CNAME ${split(".", var.domain)[0]} -> ghs.googlehosted.com."
 }
+
+output "usage_url" {
+  description = "The usage collector's run.app address (works before its domain does)."
+  value       = google_cloud_run_v2_service.usage.uri
+}
+
+output "usage_dns" {
+  description = "The record to add at the DNS host once the usage collector's domain mapping exists."
+  value       = "CNAME ${split(".", var.usage_domain)[0]} -> ghs.googlehosted.com."
+}

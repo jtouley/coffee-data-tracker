@@ -63,3 +63,21 @@ variable "email" {
   type        = bool
   default     = false
 }
+
+variable "usage_domain" {
+  description = "The usage collector's hostname (usage.tf): its own subdomain, so nothing of the app's is same-origin with it."
+  type        = string
+  default     = "e.registry.coffee"
+}
+
+variable "usage_dataset" {
+  description = "owner/name of the private Hugging Face dataset the usage collector appends to; never published."
+  type        = string
+  default     = "jtouley/coffee-usage"
+}
+
+variable "usage_token" {
+  description = "Mounts the USAGE_HF_TOKEN secret on the usage collector as HF_TOKEN. The secret always exists; turn this on once it has a value (RUNNING.md, \"Usage\")."
+  type        = bool
+  default     = false
+}
