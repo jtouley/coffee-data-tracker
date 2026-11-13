@@ -384,7 +384,8 @@ The engineering is ahead of the evidence that people want it. Order of work:
    analytics. Design in the session scratchpad (design-analytics). Owner decisions (2026-11-13): registry.coffee
    catalog is the main surface, the app too; traffic source (referrer domain, utm) and location to city level, no
    finer. No search-text scrubbing until a real case appears (a dbt detector alerts on email/phone patterns). Raw IP
-   kept briefly in its own file, city/state derived in dbt, location persisted before the IP is deleted.
+   masked at collection (IPv4 /24, IPv6 /48) and kept permanently; city/state derived in dbt from a pinned
+   IP-to-city database. Outbound roaster links get utm_source=registry.coffee; page_view event added.
 4. Recommendation experiment ("Your Next Bag"): from five ratings per user, content-based picks vs most-popular vs
    random, scored on each user's later ratings (held-out by time, per CLAUDE.md). Needs about 20 users: owner to
    find them.
