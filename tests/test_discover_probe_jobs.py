@@ -7,7 +7,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
+import subprocess
 import types
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
@@ -311,6 +313,98 @@ def _job_args(name: str) -> str:
     tf = (ROOT / "src/terraform/ingestion.tf").read_text()
     block = tf[tf.index(f'"{name}" = {{') :]
     return block[block.index("args") : block.index("egress")]
+
+
+def _shell_jobs() -> dict[str, str]:
+    """Every job in ingestion.tf that runs a shell chain (`sh -c`), by name, with its script as the shell sees it."""
+    tf = (ROOT / "src/terraform/ingestion.tf").read_text()
+    found = re.findall(r'"([\w-]+)"\s*= \{\s*command = \["sh", "-c"\]\s*args\s*= \["((?:[^"\\]|\\.)*)"\]', tf)
+    assert tf.count('"sh", "-c"') == len(found)  # a shell job written another way would slip past these tests
+    return {name: script.replace('\\"', '"') for name, script in found}
+
+
+def _runbook_chains() -> list[str]:
+    """The chains the runbook tells the owner to paste (`gcloud run jobs execute ... --args="..."`)."""
+    text = (ROOT / "docs/ingestion/RUNBOOK.md").read_text()
+    return [c.replace("\\$", "$") for c in re.findall(r'--args="([^"\n]*;[^"\n]*)"', text)]
+
+
+def _swallowed(script: str) -> list[str]:
+    """What is wrong with a chain's exit code: each `coffeedata` step whose failure can't reach it."""
+    steps = [s.strip() for s in script.split(";")]
+    wrong = [s for s in steps[:-1] if s.startswith("coffeedata ") and not s.endswith("|| rc=1")]
+    if "&&" in script:
+        wrong.append("`&&` skips the later steps")
+    if any("rc=1" in s for s in steps) and (steps[0] != "rc=0" or steps[-1] != "exit $rc"):
+        wrong.append("sets rc but doesn't start with rc=0 and end with exit $rc")
+    if not any(s.startswith("coffeedata ") for s in steps):
+        wrong.append("no coffeedata step found")
+    return wrong
+
+
+def test_the_step_check_catches_the_chains_that_hid_a_failure():
+    # The build job's command before issue #83: a failed publish left rc at 0.
+    was = 'rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message "weekly build"; '
+    assert _swallowed(was + "coffeedata egress-check || rc=1; exit $rc") == [
+        'coffeedata publish --message "weekly build"'
+    ]
+    # The runbook's rebuild before #83: only the build's exit code counted.
+    assert (
+        _swallowed(
+            "coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message rebuild; exit $rc"
+        )
+        == [
+            "coffeedata classify",
+            "coffeedata build",  # `; rc=$?` did carry the build's exit, but one form for every step is what's checked
+            "coffeedata publish --message rebuild",
+        ]
+    )
+    assert _swallowed("coffeedata probe && coffeedata publish") == ["`&&` skips the later steps"]
+    assert _swallowed("rc=0; coffeedata build || rc=1; coffeedata publish") == [
+        "sets rc but doesn't start with rc=0 and end with exit $rc"
+    ]
+    assert (
+        _swallowed("coffeedata override --roaster r --action accept") == []
+    )  # one step: its exit is the job's
+
+
+def test_no_step_of_a_job_command_can_fail_without_failing_the_job():
+    jobs = _shell_jobs()
+    assert {"discover", "probe", "build"} <= set(jobs)
+    assert {name: w for name, script in jobs.items() if (w := _swallowed(script))} == {}
+    chains = _runbook_chains()
+    assert len(chains) >= 5  # the rebuilds in RUNBOOK §5.1 and §5.2, the verdict backfill in §5.5
+    assert {c: w for c in chains if (w := _swallowed(c))} == {}
+
+
+def _run_chain(script: str, tmp_path: Path, failing: str | None) -> tuple[int, list[str]]:
+    """Run a job's script with a stand-in `coffeedata` that records each call and fails the one named."""
+    ran = tmp_path / "ran"
+    ran.write_text("")
+    fake = tmp_path / "coffeedata"
+    fake.write_text(f'#!/bin/sh\necho "$1" >> "{ran}"\n[ "$1" != "$FAIL" ]\n')
+    fake.chmod(0o755)
+    env = {"PATH": f"{tmp_path}{os.pathsep}{os.environ['PATH']}", "FAIL": failing or ""}
+    done = subprocess.run(["sh", "-c", script], env=env, capture_output=True, timeout=30, check=False)  # noqa: S603, S607
+    return done.returncode, ran.read_text().split()
+
+
+@pytest.mark.parametrize("failing", ["classify", "build", "publish", "egress-check"])
+def test_the_build_job_runs_every_step_and_fails_when_any_one_does(tmp_path, failing):
+    script = _shell_jobs()["build"]
+    assert _run_chain(script, tmp_path, None) == (0, ["classify", "build", "publish", "egress-check"])
+    # A failed publish used to leave the exit code at 0, so no alert fired for a release that never reached the lake.
+    assert _run_chain(script, tmp_path, failing) == (1, ["classify", "build", "publish", "egress-check"])
+
+
+@pytest.mark.parametrize("failing", ["classify", "build", "publish"])
+def test_the_runbooks_rebuild_runs_every_step_and_fails_when_any_one_does(tmp_path, failing):
+    rebuilds = [c for c in _runbook_chains() if "coffeedata build" in c]
+    assert len(rebuilds) >= 3
+    for chain in rebuilds:
+        script = chain.replace("$WEEK", "2026-01-05")
+        assert _run_chain(script, tmp_path, None) == (0, ["classify", "build", "publish"])
+        assert _run_chain(script, tmp_path, failing) == (1, ["classify", "build", "publish"])
 
 
 def test_the_discover_job_publishes_each_source_and_exits_non_zero_on_a_failure():

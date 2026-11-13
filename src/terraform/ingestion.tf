@@ -137,13 +137,14 @@ locals {
     "merge"        = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 1 }
     "enrich-week"  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
-    # check. A failed classify (no model or key, an API error), a failed gate, or the egress check's non-zero exit
-    # (an IP over 8% refusals two runs in a row) fails the execution, which emails the owner (alerts.tf,
-    # ingest_job_failed). The build still runs after a failed classify, on the verdicts already stored: its own
-    # verdict gate decides whether that release is served.
+    # check. Every step runs whatever the ones before it did, and any step's failure fails the execution, which
+    # emails the owner (alerts.tf, ingest_job_failed): a failed classify (no model or key, an API error), a failed
+    # gate, a failed publish (the release never reached the lake, issue #83), or the egress check's non-zero exit
+    # (an IP over 8% refusals two runs in a row). The build still runs after a failed classify, on the verdicts
+    # already stored: its own verdict gate decides whether that release is served.
     "build" = {
       command = ["sh", "-c"]
-      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
+      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
       egress  = "default", claude = true, memory = "8Gi", retries = 1
     }
   }

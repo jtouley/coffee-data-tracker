@@ -635,7 +635,7 @@ records.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK --accept-volume-change; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build; a
@@ -677,7 +677,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -786,7 +786,7 @@ merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
 ```sh
 gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
 gcloud run jobs execute build --region $REGION --wait \
-  --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
 `--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
@@ -864,7 +864,11 @@ Now three things stop that from happening silently:
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
   which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
-  so the `ingest job build failed` email arrives. A batch submit that Claude rejects (a revoked key, an outage)
+  so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
+  before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
+  leaves the release out of the lake, and before this it exited 0 and the first sign was Tuesday's red `site` run.
+  The rebuild and backfill commands in §5 use the same chain (`tests/test_discover_probe_jobs.py` holds them all
+  to it). A batch submit that Claude rejects (a revoked key, an outage)
   fails the same way; a finished batch whose results can't be read yet stays open for the next run. With
   `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
 - **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
@@ -893,14 +897,16 @@ and last week's release stays served. That is the gate working: don't opt out ar
    inside the job's 240 minutes:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify --wait 180; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify --wait 180 || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 2. If batches were still running (its output's `collect_after_wait` is below `submit.submitted`), collect again
    later; batches end within 24 hours. Repeat until a run collects 0 and submits 0:
 
    ```sh
-   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify; coffeedata publish --message verdicts"
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="rc=0; coffeedata classify || rc=1; coffeedata publish --message verdicts || rc=1; exit \$rc"
    ```
 
 3. Rebuild (§5.2's form) and read the `verdicts:` line in its log. Expect about 3,600 listed products to drop out
