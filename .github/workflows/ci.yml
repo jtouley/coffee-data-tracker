@@ -36,7 +36,7 @@ jobs:
       # changes ci's result, which deploy waits on). On a pull request a failed floor fails this job, and its
       # message and annotation name the eval, the set, the measured value and the floor.
       - if: always() && github.event_name == 'push'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
         with:
           name: eval-report
           path: ${{ runner.temp }}/eval-report.json
