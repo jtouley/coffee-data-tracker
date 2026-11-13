@@ -366,6 +366,11 @@ Backlog, not started until the owner says so:
   Why a second account: this session acts as jtouley with admin, so jtouley-as-approver is no gate.
 - Immutability audit (2026-11-13, scratchpad audit-immut/FINDINGS.md): published lake append-only; staging between
   jobs is not (compaction and merge delete or rewrite). Fixes touch shared crawler code: WAITING on the owner's "go".
+- 2026-11-13: #154 and #153 merged; GitHub now builds and signs the ingest image (deploy 724a3bb green). Owner chose
+  B: no cutover now; one combined last shell run once terraform-in-CI exists (tf-plan-ci, tf-apply-ci, building).
+  Until that run: #154's build fix, the registry keep rule and the image pin are NOT live. Deadline: the jobs' image
+  dates from about 2026-11-01..08, so it can be deleted after ~2026-12-01 once five newer ingest images exist; the
+  combined run must happen well before then. First importers run dispatched from GitHub 2026-11-13 (importer=all).
 - Royal derivation: fixed in #152 (owner asked, 2026-11-12). Reviewed, CI green, held as draft for the held-out score:
   per CLAUDE.md it waits for the first scheduled week after 11-18 (week 11-09 was read while building). Then score main
   and #152 on a hash split grouped by lot, two labelers plus a tiebreak, Wilson intervals; merge if not worse.
