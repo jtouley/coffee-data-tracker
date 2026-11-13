@@ -27,6 +27,12 @@ tests/browser/node_modules/
 src/terraform/.terraform/
 src/terraform/*.tfstate*
 src/terraform/terraform.tfvars
+src/terraform/bootstrap/.terraform/
+src/terraform/bootstrap/*.tfstate*
+# saved plans hold every variable in clear
+src/terraform/**/*.plan
+src/terraform/**/*.tfplan
+src/terraform/**/*.json
 
 # Local PR review notes; never committed.
 .context/

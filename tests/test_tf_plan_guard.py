@@ -175,6 +175,202 @@ def test_an_iam_grant_with_the_workload_identity_role_fails():
     assert guard.workload_identity(plan(d)) == ["google_artifact_registry_repository_iam_member.deploy"]
 
 
+def _sa_change(d: dict, address: str, rtype: str, after: dict, after_unknown: dict | None = None) -> dict:
+    rc = {
+        "address": address,
+        "type": rtype,
+        "change": {
+            "actions": ["create"],
+            "before": None,
+            "after": after,
+            "after_unknown": after_unknown or {},
+        },
+    }
+    d["resource_changes"].append(rc)
+    return d
+
+
+DEPLOY = "serviceAccount:registry-coffee-deploy@coffee-data-tracker.iam.gserviceaccount.com"
+
+
+@pytest.mark.parametrize(
+    "rtype, after, after_unknown",
+    [
+        # who may act as the deploy account
+        (
+            "google_service_account_iam_member",
+            {
+                "service_account_id": "projects/coffee-data-tracker/serviceAccounts/"
+                "registry-coffee-deploy@coffee-data-tracker.iam.gserviceaccount.com",
+                "role": "roles/iam.serviceAccountTokenCreator",
+                "member": "user:someone@example.com",
+            },
+            None,
+        ),
+        # what the apply account may act as
+        (
+            "google_service_account_iam_member",
+            {
+                "service_account_id": "projects/p/serviceAccounts/other@p.iam.gserviceaccount.com",
+                "role": "roles/iam.serviceAccountUser",
+                "member": "serviceAccount:registry-coffee-tf-apply@p.iam.gserviceaccount.com",
+            },
+            None,
+        ),
+        # a project-wide grant to the plan account
+        (
+            "google_project_iam_member",
+            {
+                "project": "p",
+                "role": "roles/editor",
+                "member": "serviceAccount:registry-coffee-tf-plan@p.iam.gserviceaccount.com",
+            },
+            None,
+        ),
+        # the deploy account itself
+        ("google_service_account", {"account_id": "registry-coffee-deploy", "display_name": "x"}, None),
+        # a service account IAM change whose member is known only at apply
+        (
+            "google_service_account_iam_member",
+            {
+                "service_account_id": "projects/p/serviceAccounts/other@p.iam.gserviceaccount.com",
+                "role": "roles/iam.serviceAccountUser",
+            },
+            {"member": True},
+        ),
+        # a project IAM change whose member is known only at apply
+        ("google_project_iam_member", {"project": "p", "role": "roles/viewer"}, {"member": True}),
+    ],
+)
+def test_the_guarded_accounts_and_their_trust_are_refused(rtype, after, after_unknown):
+    d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
+    got = results(d)
+    assert got.pop("guarded-accounts") == [f"{rtype}.extra"]
+    assert not any(got.values())
+
+
+def test_other_accounts_and_grants_to_the_deploy_account_on_one_resource_pass():
+    d = _sa_change(
+        doc("good"),
+        "google_service_account.ingest_new",
+        "google_service_account",
+        {"account_id": "registry-coffee-ingest2"},
+    )
+    _sa_change(
+        d,
+        "google_cloud_run_v2_service_iam_member.deploy",
+        "google_cloud_run_v2_service_iam_member",
+        {"role": "roles/run.developer", "member": DEPLOY},
+    )
+    assert guard.guarded_accounts(plan(d)) == []
+
+
+NETWORK = "projects/coffee-data-tracker/global/networks/registry-coffee-ingest"
+
+
+@pytest.mark.parametrize(
+    "rtype, after, after_unknown",
+    [
+        ("google_compute_route", {"name": "r", "network": NETWORK, "dest_range": "0.0.0.0/0"}, None),
+        (
+            "google_compute_firewall",
+            {"name": "f", "network": "registry-coffee-ingest", "direction": "EGRESS"},
+            None,
+        ),
+        ("google_compute_network_peering", {"name": "p", "network": NETWORK, "peer_network": "other"}, None),
+        ("google_compute_route", {"name": "r", "dest_range": "0.0.0.0/0"}, {"network": True}),
+    ],
+)
+def test_routes_firewalls_and_peerings_on_the_ingest_network_are_refused(rtype, after, after_unknown):
+    d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
+    got = results(d)
+    assert got.pop("shopify-network-path") == [f"{rtype}.extra"]
+    assert not any(got.values())
+
+
+def test_a_route_on_another_network_passes():
+    d = _sa_change(
+        doc("good"),
+        "google_compute_route.other",
+        "google_compute_route",
+        {"name": "r", "network": "projects/p/global/networks/other"},
+    )
+    assert guard.shopify_network_path(plan(d)) == []
+
+
+def test_a_job_image_from_another_registry_fails_even_by_digest():
+    d = doc("good")
+    job = find(d, 'google_cloud_run_v2_job.ingest["merge"]')
+    job["change"]["after"]["template"][0]["template"][0]["containers"][0]["image"] = (
+        "evil.example/x@sha256:" + "c" * 64
+    )
+    assert guard.ingest_image_pinned(plan(d)) == ['google_cloud_run_v2_job.ingest["merge"]']
+
+
+@pytest.mark.parametrize("acts", [[["create"]], [{"a": 1}], [None]])
+def test_malformed_actions_exit_2_with_a_fixed_message(acts):
+    d = doc("good")
+    d["resource_changes"][0]["change"]["actions"] = acts
+    for command in ("check", "render"):
+        r = run(command, "-", stdin=json.dumps(d))
+        assert r.returncode == 2, (command, r.stdout, r.stderr)
+        assert r.stdout == "" and "refusing" in r.stderr
+
+
+def test_an_unforeseen_error_exits_2(monkeypatch, capsys):
+    monkeypatch.setattr(guard, "check_text", lambda plan: 1 / 0)
+    monkeypatch.setattr(guard, "_read", lambda path: (FIXTURES / "good.json").read_text())
+    assert guard.main(["check", "x"]) == 2
+    assert "doesn't understand" in capsys.readouterr().err
+
+
+def test_output_metadata_is_not_scrubbed_as_a_value():
+    d = doc("good")
+    d.setdefault("output_changes", {})["new_egress_ip"] = {
+        "actions": ["create"],
+        "before": None,
+        "after": "203.0.113.99",
+    }
+    scrub = plan(d).scrubber()
+    assert (
+        scrub.printable("google_monitoring_alert_policy.create_alert")
+        == "google_monitoring_alert_policy.create_alert"
+    )
+    with pytest.raises(guard.Unreadable):
+        scrub.printable("google_x.ip_203_0_113_99")
+
+
+def test_a_nat_subnet_with_an_unknown_name_is_protected_not_unreadable():
+    d = doc("good")
+    nat = find(d, "google_compute_router_nat.shopify_egress")
+    nat["change"]["actions"] = ["update"]
+    nat["change"]["after"] = copy.deepcopy(nat["change"]["before"] or nat["change"]["after"])
+    nat["change"]["after"]["subnetwork"] = [{"name": None, "source_ip_ranges_to_nat": ["ALL_IP_RANGES"]}]
+    assert guard.shopify_network_path(plan(d)) == ["google_compute_router_nat.shopify_egress"]
+
+
+def test_moves_and_imports_are_listed_and_a_pool_import_is_refused():
+    d = doc("good")
+    moved = copy.deepcopy(find(d, "google_monitoring_alert_policy.job_failed"))
+    moved["address"], moved["previous_address"] = (
+        "google_monitoring_alert_policy.renamed",
+        "google_monitoring_alert_policy.old",
+    )
+    moved["change"]["actions"] = ["no-op"]
+    pool = {
+        "address": "google_iam_workload_identity_pool.imported",
+        "type": "google_iam_workload_identity_pool",
+        "change": {"actions": ["no-op"], "before": {}, "after": {}, "importing": {"id": "x"}},
+    }
+    d["resource_changes"] += [moved, pool]
+    text = guard.render(plan(d))
+    assert (
+        "`google_monitoring_alert_policy.renamed` (moved from `google_monitoring_alert_policy.old`)" in text
+    )
+    assert "`google_iam_workload_identity_pool.imported` (import)" in text
+    assert guard.workload_identity(plan(d)) == ["google_iam_workload_identity_pool.imported"]
+
+
 def test_true_is_not_one():
     assert not guard.jq_equal(True, 1)
     assert guard.jq_equal(1, 1.0)
@@ -202,7 +398,9 @@ def test_image_must_be_the_ingest_repository_by_digest(image):
 def test_missing_variables_fail_closed():
     d = doc("good")
     del d["variables"]["project_id"]
-    assert guard.ingest_image_pinned(plan(d)) == ["var.region"]
+    bad = guard.ingest_image_pinned(plan(d))
+    assert bad[0] == "var.region"  # and, with no valid pin, every job after it
+    assert all(b.startswith("google_cloud_run_v2_job.") for b in bad[1:])
     del d["variables"]["service"]
     assert run("check", "-", stdin=json.dumps(d)).returncode == 2
 
@@ -249,7 +447,7 @@ def test_wrong_shape_inside_a_change_fails_closed():
 def test_missing_file_and_bad_usage():
     assert run("check", str(FIXTURES / "nope.json")).returncode == 2
     assert run("plan", str(FIXTURES / "good.json")).returncode == 2
-    assert run("errors", "apply", "-").returncode == 2
+    assert run("errors", "destroy", "-").returncode == 2
     assert run().returncode == 2
 
 
