@@ -11,7 +11,8 @@
 # - DOCKER_BUILDKIT=1: only BuildKit reads ingest.Dockerfile.dockerignore.
 # - _GIT_SHA is passed to the build as GIT_SHA; Docker ignores it until ingest.Dockerfile reads it (#124).
 steps:
-  - name: gcr.io/cloud-builders/docker
+  # Google's docker builder as of 2026-11-13 (`latest` then). Nothing updates this pin: refresh it when you use it.
+  - name: gcr.io/cloud-builders/docker@sha256:dccbdf9b7877dc1b66427d769a55fe9d82c21655a88301e5eba3d0754c76d146
     env: ["DOCKER_BUILDKIT=1"]
     args: ["build", "-f", "ingest.Dockerfile", "--build-arg", "GIT_SHA=$_GIT_SHA", "-t", "$_IMAGE", "."]
 images: ["$_IMAGE"]

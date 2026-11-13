@@ -200,19 +200,22 @@ jobs:
         run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
 
   # The ingestion jobs' image (ingest.Dockerfile), built from the same commit and under the same conditions as the
-  # app's: it runs only after the deploy job built and deployed this commit, so only for main's tip once ci passed
-  # (or a forced manual run), and never for a pull request or a fork. It is pushed beside the app's image, in the
+  # app's: it runs only when the deploy job pushed the app's image for this commit, so only for main's tip once ci
+  # passed (or a forced manual run), and never for a pull request or a fork. It doesn't wait for the app's rollout
+  # to succeed: the image depends on the commit, not on the app (`!cancelled()`, as for `attest`). It still runs
+  # after the deploy job, not beside it, because that job holds the checks it relies on (is this main's tip, did ci
+  # pass); a second copy of them here could drift. It is pushed beside the app's image, in the
   # same repository (<repository>/ingest, where the deploy identity can already push), tagged with the commit.
   # **It deploys nothing.** The Cloud Run jobs run the digest Terraform pins (`ingest_image`), and the owner applies
   # that by hand (docs/ingestion/RUNBOOK.md §1 and §4, which read this image's digest by its commit tag). No moving
   # tag such as `latest` is pushed. A failure here fails the run but changes neither the app nor the admin.
   # It signs the image's build provenance itself, as its last step: it already holds `id-token: write` to push, so
   # a separate job for that would only be one more job able to sign in to Google Cloud (see `attest`, below). If
-  # that step fails the image is in the registry without provenance, and RUNBOOK.md §1's check refuses it:
+  # that step fails the image is in the registry without provenance, and RUNBOOK.md §1's script refuses it:
   # "Re-run failed jobs" builds, pushes and signs it again.
   ingest-image:
     needs: deploy
-    if: needs.deploy.outputs.image != ''
+    if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -228,16 +231,22 @@ jobs:
         with:
           ref: ${{ env.HEAD_SHA }}
           persist-credentials: false
-      # Before any sign-in: build the image and run it once, with no network and no secrets, so an image that
-      # can't start never reaches the registry. BuildKit, so ingest.Dockerfile.dockerignore applies.
+      # Before any sign-in: build the image and run it, with no network and no secrets. This catches an image
+      # whose CLI can't start, whose lockfile lost a package the jobs import, or that lacks DuckDB's httpfs; it
+      # doesn't prove a crawl or a build works. BuildKit, so ingest.Dockerfile.dockerignore applies.
+      # --provenance=false: one plain image per push, not an index with BuildKit's own attestation beside it, so
+      # the registry's "5 most recent" counts commits. The provenance that counts is the signed one below.
       - name: Build, and check the image starts
         env:
           DOCKER_BUILDKIT: "1"
         run: |
           image="${APP_IMAGE%/*}/ingest"
-          docker build -f ingest.Dockerfile --build-arg GIT_SHA="$HEAD_SHA" -t "$image:$HEAD_SHA" .
+          docker build -f ingest.Dockerfile --provenance=false --build-arg GIT_SHA="$HEAD_SHA" \
+            -t "$image:$HEAD_SHA" .
           docker run --rm --network none "$image:$HEAD_SHA" --help > /dev/null  # the image's default command
           docker run --rm --network none "$image:$HEAD_SHA" build --help > /dev/null
+          docker run --rm --network none --entrypoint python "$image:$HEAD_SHA" -c \
+            'import dbt, duckdb, coffeedata.quality; duckdb.sql("LOAD httpfs")'
           echo "IMAGE=$image" >> "$GITHUB_ENV"
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:

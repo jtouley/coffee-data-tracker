@@ -22,8 +22,9 @@ resource "google_artifact_registry_repository" "app" {
   }
   # deploy.yml pushes an ingest image for every commit it deploys, so the image the Cloud Run jobs are pinned to
   # (`ingest_image`) is soon neither recent nor, after 30 days, young. The owner tags each image they pin
-  # `pinned-<date>` (docs/ingestion/RUNBOOK.md §4), and an image tagged like that is never deleted. Nor is
-  # `latest`, which jobs read until `ingest_image` is pinned (`ingest_image_tag`) and which nothing pushes any more.
+  # `pinned-<commit>` (docs/ingestion/RUNBOOK.md §1 "At merge" and §4), and an image tagged like that is never
+  # deleted, until someone removes the tag. `latest` is kept too: only the emergency build by hand pushes it now.
+  # The 5 most recent are counted for each image name (app, ingest) on its own.
   cleanup_policies {
     id     = "keep-pinned"
     action = "KEEP"
