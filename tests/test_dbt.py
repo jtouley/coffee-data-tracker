@@ -1409,6 +1409,73 @@ def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path)
         shutil.copy(clean, db)
 
 
+# The grain test (dbt/tests/generic/grain.sql), on stg_runs (roaster_id, run_date) and on mart_dial_in, whose
+# grinder_id may be null: what is written into the built table, and whether the test must then fail.
+_DIAL_IN = "insert into mart_dial_in (user_id, grinder_id, grain, key) values ('u', {grinder}, 'coffee', 'k')"
+GRAIN_CASES = [
+    ("grain_stg_runs_roaster_id__run_date", "insert into stg_runs select * from stg_runs limit 1", True),
+    # A null key part. `unique` over roaster_id || '|' || run_date, which grain replaced, passed this row.
+    ("grain_stg_runs_roaster_id__run_date",
+     "insert into stg_runs select * replace (null as run_date) from stg_runs limit 1", True),
+    # A column listed as nullable may be null, once per key: two rows sharing the null are a duplicate.
+    ("grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id", _DIAL_IN.format(grinder="null"), False),
+    ("grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id",
+     ";".join([_DIAL_IN.format(grinder="null")] * 2), True),
+    ("grain_mart_dial_in_user_id__grinder_id__grain__key__grinder_id",
+     _DIAL_IN.format(grinder="'g'").replace("'u'", "null"), True),  # user_id isn't nullable
+    # Each column is compared on its own: ('a|b', 'c') and ('a', 'b|c') are two keys, not one.
+    ("grain_mart_market_origin_country__process",
+     "insert into mart_market (origin_country, process) values ('a|b', 'c'), ('a', 'b|c')", False),
+]  # fmt: skip
+
+
+def test_the_grain_test_fails_on_a_duplicate_key_and_on_a_null_key_part(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A")])
+    build(lake, tmp_path).close()
+    db = tmp_path / "coffee.duckdb"
+    clean = tmp_path / "clean.duckdb"
+    shutil.copy(db, clean)
+    for test, write, fails in GRAIN_CASES:
+        ok = run_dbt(lake, tmp_path, "test", "--select", test)
+        assert ok.returncode == 0 and "PASS=1 " in ok.stdout, (test, ok.stdout[-2000:])
+        with duckdb.connect(str(db)) as con:
+            for statement in write.split(";"):
+                con.execute(statement)
+        r = run_dbt(lake, tmp_path, "test", "--select", test)
+        assert (r.returncode != 0 and "ERROR=1 " in r.stdout) == fails, (test, write, r.stdout[-2000:])
+        assert fails or "PASS=1 " in r.stdout, (test, write, r.stdout[-2000:])
+        shutil.copy(clean, db)
+
+
+def test_gate_tests_depend_on_their_models_whatever_the_vars(lake, tmp_path):
+    """A gate test that reads its model only when a build var is set still declares it (-- depends_on), so dbt's
+    graph (lineage, --select model+, the build order) is the same with and without the build's vars. Only
+    run_manifest_mode_values has no model: it reads raw."""
+
+    def parents(**extra_vars) -> dict[str, list[str]]:
+        target = tmp_path / ("target-" + ("vars" if extra_vars else "plain"))
+        r = subprocess.run(
+            ["dbt", "parse", "--project-dir", "dbt", "--profiles-dir", "dbt", "--target-path", str(target),
+             "--log-path", str(tmp_path / "logs"), "--vars", json.dumps(extra_vars)],
+            cwd=ROOT, env=os.environ | {"COFFEEDATA_DB": str(tmp_path / "coffee.duckdb")}, capture_output=True,
+            text=True)  # fmt: skip
+        assert r.returncode == 0, r.stdout[-2000:]
+        nodes = json.loads((target / "manifest.json").read_text())["nodes"]
+        return {
+            n["name"]: sorted(n["depends_on"]["nodes"])
+            for n in nodes.values()
+            if n["resource_type"] == "test"
+        }
+
+    plain = parents()
+    assert [t for t, p in plain.items() if not p] == ["run_manifest_mode_values"]
+    assert plain["run_ok_rate"] == ["model.coffeedata.run_completeness"]
+    built = parents(as_of_run="2026-10-19", today="2026-10-20", build_id="20261020T060000-abcdef",
+                    require_verdicts=True, baseline_build="20261013T060000-abcdef")  # fmt: skip
+    assert built == plain
+
+
 def _build_with_a_chain(lake, tmp_path):
     """onyxcoffeelab.com and intelligentsia.com each list one Kenya; the seed gives intelligentsia.com 21 stores,
     one over chain_store_threshold, so it is a chain."""

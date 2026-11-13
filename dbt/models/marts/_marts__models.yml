@@ -1,0 +1,68 @@
+version: 2
+
+# Marts that models/schema.yml doesn't describe. dbt takes one entry per model, so a model is described either
+# here or there, never in both (docs/dbt/CONVENTION.md, section 7).
+models:
+  - name: mart_new_arrivals
+    description: >-
+      One row per new arrival: a coffee in stock, not wholesale, first seen in its roaster's latest counted run,
+      when the roaster has an earlier run and the store published the coffee since that run (or doesn't say when).
+      A product seen only now because more of a catalog is read is new to the build, not a new arrival. Served with
+      the release (quality.RELEASE_TABLES): the site and the MCP server read it.
+    columns:
+      - name: coffee_id
+        description: "<roaster domain>:<store product id> (dim_coffee.coffee_id)."
+        data_tests: [unique, not_null]
+      - name: roaster_name
+        description: The roaster's name (dim_coffee.roaster_name).
+      - name: title
+        description: The coffee's name, cleaned of markup (dim_coffee.title).
+      - name: origin_country
+        description: Origin country as its ISO 3166-1 English short name (dim_coffee.origin_country).
+      - name: origin_country_display
+        description: The name the site shows for the origin (dim_coffee.origin_country_display).
+      - name: process
+        description: washed, natural, honey, anaerobic or other (dim_coffee.process).
+      - name: tasting_notes
+        description: The roaster's tasting notes (dim_coffee.tasting_notes).
+      - name: price_per_100g
+        description: The lowest plausible retail price per 100 g of an available bag, USD (dim_coffee.price_per_100g).
+      - name: min_price_usd
+        description: The lowest bag price in USD (dim_coffee.min_price_usd).
+      - name: url
+        description: The coffee's page on the store (dim_coffee.url).
+      - name: first_seen
+        description: The first counted run it was listed in, which is its roaster's latest run.
+        data_tests: [not_null]
+      - name: release_build_id
+        description: The build that made this release.
+      - name: release_run_date
+        description: The run the release is built from.
+  - name: mart_dial_in
+    description: >-
+      One row per user, grinder and recipe subject: each coffee the user pulled shots of (grain coffee), and each
+      origin and process across their catalog coffees (grain origin_process), with the shot count, ratings and the
+      best shot's recipe. Every best_* column comes from one shot: the highest rating, then the latest brewed, then
+      shot_id. Personal data: private marts only, never public.
+    data_tests:
+      - grain:
+          arguments: {columns: [user_id, grinder_id, grain, key], nullable: [grinder_id]}
+    columns:
+      - name: user_id
+        description: Whose shots (fct_shot.user_id).
+      - name: grinder_id
+        description: The grinder the shots were ground on; null for shots from before equipment was recorded.
+      - name: grain
+        description: "What the row is about: coffee (one coffee) or origin_process (an origin and process)."
+        data_tests:
+          - accepted_values: {arguments: {values: [coffee, origin_process]}}
+      - name: key
+        description: >-
+          The subject within its grain: the coffee_id, or freetext:<name> for a coffee typed by hand; for
+          origin_process, "<origin> / <process>" with ? for an unknown part.
+      - name: label
+        description: What to show for the key (the coffee's title or typed name, or the origin and process).
+      - name: shots
+        description: Shots in the group.
+      - name: best_rating
+        description: The highest rating in the group; the best_* columns are that shot's.

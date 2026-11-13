@@ -28,6 +28,10 @@ VERDICT_MODEL = "claude-test-model"
 ONYX = "onyxcoffeelab.com"
 PARTIAL, EDGE = "partial.example", "edge.example"
 GB = "blacksheepcoffee.co.uk"  # in the seed list, country GB
+ROOT = Path(__file__).parent.parent
+# Models whose rows are about the builds themselves, so two builds never share them: stg_builds reads the lake's
+# builds table, which every build appends its own record to. No model reads it; only gate tests do.
+PER_BUILD_MODELS = ("stg_builds",)
 
 
 def _write(lake: Lake, run_date: str, results: list[ingest.Result], bodies: set[str], batch: str) -> None:
@@ -203,10 +207,18 @@ def test_the_same_lake_builds_the_same_release(fixture_items, roasters, monkeypa
     con.execute(f"attach '{tmp_path / 'z.duckdb'}' as z (read_only)")
     tables = [r[0] for r in con.execute(
         "select table_name from information_schema.tables where table_catalog = 'a' and table_schema = 'main' "
-        "and table_type = 'BASE TABLE' order by 1").fetchall()]  # fmt: skip
-    # Every release table, and every model table they're built from (views read the lake, so they're left out;
-    # dbt's stored test failures are in their own schema).
-    assert set(quality.RELEASE_TABLES) <= set(tables) and "stg_products" in tables
+        "order by 1").fetchall()]  # fmt: skip
+    # Every model of the project, tables and views (docs/dbt/CONVENTION.md, section 2: the same raw builds the same
+    # rows). A view reads its own build's lake, the one its build was given, when it is compared here. dbt's stored
+    # test failures are in their own schema.
+    models = {p.stem for p in (ROOT / "dbt/models").rglob("*") if p.suffix in (".sql", ".py")}
+    assert models <= set(tables), models - set(tables)
+    assert (
+        set(quality.RELEASE_TABLES) <= models
+        and {"stg_products", "stg_verdicts", "release_changes"} <= models
+    )
+    # But stg_builds: one row per build the lake has recorded, and each of the two lakes has recorded its own.
+    tables = [t for t in tables if t not in PER_BUILD_MODELS]
     differ = []
     for t in tables:
         n_a, n_z, row_a, row_z = differences(con, t)
