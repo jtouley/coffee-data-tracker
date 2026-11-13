@@ -1,0 +1,626 @@
+version: 2
+
+# The usage project's models, in layer order. Every model has a grain test on the key its description names
+# (docs/dbt/CONVENTION.md section 5). Nothing here is public: no model has access public or a contract, and none is
+# read outside this project's own database (tests/test_usage_dbt.py).
+
+models:
+  # --- staging -------------------------------------------------------------------------------------------------------
+  - name: stg_usage_events
+    description: >
+      One row per event the collector stored (raw, design section 0), deduplicated by event_id, with every raw
+      column but the IP prefix. Bots stay, flagged.
+    columns:
+      - name: event_id
+        description: The collector's random id for the event; used only to drop retried copies.
+        data_tests: [unique, not_null]
+      - name: received_at
+        description: Server time the collector received the event, to the hour, UTC.
+        data_tests: [not_null]
+      - name: received_date
+        description: received_at's UTC date; thresholds count distinct days of it.
+      - name: week
+        description: The Monday (UTC) of received_at's week; every report is weekly.
+      - name: event
+        description: page_view, search, filter_state or click_out (design section 2).
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: "{{ var('usage_events') }}"}
+      - name: surface
+        description: Where the event was sent from (landing, catalog, privacy, terms, bot; app_search, app_coffee).
+        data_tests:
+          - accepted_values:
+              arguments: {values: "{{ var('usage_surfaces') }}"}
+      - name: device
+        description: phone or desktop, from the viewport.
+        data_tests:
+          - accepted_values:
+              arguments: {values: "{{ var('usage_devices') }}"}
+      - name: sort
+        description: The catalog's Sort select (roaster, asc, desc); null when left at its default.
+        data_tests:
+          - accepted_values:
+              arguments: {values: "{{ var('usage_sorts') }}"}
+      - name: source
+        description: The traffic source the collector parsed on a load's first event; null on its later events.
+        data_tests:
+          - accepted_values:
+              arguments: {values: "{{ var('usage_sources_kinds') }}"}
+      - name: query
+        description: The search text as typed, capped at 100 characters by the collector. Never shown outside the marts' thresholds.
+      - name: bot
+        description: The collector's bot flag (known bot user agent or navigator.webdriver); the marts leave these out.
+        data_tests: [not_null]
+      - name: roaster_id
+        description: For a click-out, the roaster whose store it leads to.
+      - name: coffee_id
+        description: For a click-out to a coffee's page, its id.
+
+  - name: stg_usage_ip_prefixes
+    description: >
+      One row per event: its IP prefix as masked at collection (IPv4 /24, IPv6 /40). A view over raw read only by
+      int_usage_location; no other model or table holds the prefix (ip_prefix_only_in_location).
+    columns:
+      - name: event_id
+        description: The event, as in stg_usage_events.
+        data_tests: [unique, not_null]
+      - name: ip_prefix
+        description: The masked address and its length, e.g. 203.0.113.0/24.
+
+  - name: stg_geo_ranges
+    description: One row per address range of the pinned DB-IP "IP to City Lite" file (config/geo.lock), prepared by coffeedata geo-update.
+    columns:
+      - name: ip_start
+        description: The range's first address, 32 hex digits (IPv4 as IPv4-mapped).
+        data_tests: [unique, not_null]
+      - name: ip_end
+        description: The range's last address, same encoding.
+      - name: country
+        description: ISO 3166-1 alpha-2 code; null where DB-IP has none.
+      - name: region
+        description: DB-IP's region (state) name.
+      - name: city
+        description: DB-IP's city name.
+
+  - name: stg_geo_cities
+    description: One row per (country, region, lowercased city name) of the pinned GeoNames file (config/geo.lock), places of 50,000 people or more.
+    data_tests:
+      - grain:
+          arguments: {columns: [country, region, city]}
+    columns:
+      - name: population
+        description: GeoNames' population for the place (the largest, when two share the name).
+
+  - name: stg_usage_catalog
+    description: One row per (kind, id) of the served release the build was given (kind roaster or coffee), with the text its vocabulary comes from.
+    data_tests:
+      - grain:
+          arguments: {columns: [kind, id]}
+
+  # --- intermediate --------------------------------------------------------------------------------------------------
+  - name: int_usage_location
+    description: >
+      One row per event: the country, region and city the pinned DB-IP file gives its IP prefix's network address,
+      and the city's population from GeoNames (null under 50,000 or unknown). The only model that reads ip_prefix.
+    columns:
+      - name: event_id
+        description: The event, as in stg_usage_events.
+        data_tests: [unique, not_null]
+      - name: country
+        description: ISO 3166-1 alpha-2 code where the prefix is routed; null when the file has no range for it.
+      - name: region
+        description: Region (state) name.
+      - name: city
+        description: City name. Where the IP block is routed, often the provider's nearest metro, not the visitor's town.
+      - name: city_population
+        description: The city's GeoNames population when it is 50,000 or more; null otherwise.
+
+  - name: int_usage_vocabulary
+    description: One row per word of the served release's vocabulary (roaster names, cities and states; coffee titles, origins and processes).
+    columns:
+      - name: word
+        description: A lowercased word without accents.
+        data_tests: [unique, not_null]
+
+  - name: int_usage_events
+    description: >
+      One row per event, with the normalized query and whether all its words are in the vocabulary, the traffic
+      source, and the location. Bots stay, flagged; the marts leave them out.
+    columns:
+      - name: event_id
+        description: The event, as in stg_usage_events.
+        data_tests: [unique, not_null]
+      - name: query_norm
+        description: The query lowercased, without accents, spaces collapsed; null for no query.
+      - name: query_words_known
+        description: True when every word of the query is in int_usage_vocabulary (such a query needs fewer days to be shown).
+      - name: source_kind
+        description: The collector's source (utm, referrer, direct or internal); null on a load's later events, which carry no source.
+      - name: source
+        description: The utm_source for utm, the referrer's domain for referrer ('(unnamed)' when it had none), else the kind itself.
+      - name: roaster_id
+        description: For a click-out, the roaster whose store it leads to when it is an id of the served release, else '(unknown)' (the collector's text is never passed on; usage_click_ids_known, warn, counts them).
+      - name: coffee_id
+        description: For a click-out to a coffee's page, the coffee when it is an id of the served release, else '(unknown)'.
+
+  - name: int_usage_event_places
+    description: >
+      One row per event: the country, region and city it may be reported under after the thresholds and city floors
+      (design section 5); "other, <region>" for a city under 50,000 people or below the floors.
+    columns:
+      - name: event_id
+        description: The event, as in stg_usage_events.
+        data_tests: [unique, not_null]
+      - name: city
+        description: The city's name when it passes every floor, else "other, <region>", "other" or "unknown".
+        data_tests: [not_null]
+
+  # --- marts ---------------------------------------------------------------------------------------------------------
+  # The marts the owner reads: an enforced contract (every column typed and described, keys not null), but never
+  # access public: they are private and stay in build/usage.duckdb.
+  - name: mart_usage_page_views_weekly
+    description: One row per (week, surface, device) with the week's site page views, bots left out.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - surface
+          - device
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: surface
+      data_type: varchar
+      description: Where the page was viewed (landing, catalog, privacy, terms, bot), 'unknown' if not sent.
+      constraints:
+      - type: not_null
+    - name: device
+      data_type: varchar
+      description: phone or desktop, 'unknown' if not sent.
+      constraints:
+      - type: not_null
+    - name: page_views
+      data_type: bigint
+      description: Page views.
+  - name: mart_usage_search_terms_weekly
+    description: One row per (week, query), the threshold-passing normalized queries and a '(rare)' total, with searches and
+      zero-result searches.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - query
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: query
+      data_type: varchar
+      description: The normalized query once it passes its days (3, or 5 with a word outside the vocabulary), else '(rare)'.
+      constraints:
+      - type: not_null
+    - name: searches
+      data_type: bigint
+      description: Searches, bots left out.
+      constraints:
+      - type: not_null
+    - name: zero_result_searches
+      data_type: bigint
+      description: Searches that found nothing.
+      constraints:
+      - type: not_null
+  - name: mart_usage_filter_combos_weekly
+    description: One row per (week, origin, process, state, in_stock, sort), the threshold-passing filter combinations and
+      a '(rare)' total.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - origin
+          - process
+          - state
+          - in_stock
+          - sort
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: origin
+      data_type: varchar
+      description: Origin filter, 'any' unset, '(rare)' for a combination below its days.
+      constraints:
+      - type: not_null
+    - name: process
+      data_type: varchar
+      description: Process filter, as origin.
+      constraints:
+      - type: not_null
+    - name: state
+      data_type: varchar
+      description: The catalog's State filter (a roaster's state), as origin.
+      constraints:
+      - type: not_null
+    - name: in_stock
+      data_type: varchar
+      description: '''yes'' when In stock was ticked, else ''any''; ''(rare)'' as origin.'
+      constraints:
+      - type: not_null
+    - name: sort
+      data_type: varchar
+      description: Sort (roaster, asc, desc), 'default' unset; '(rare)' as origin.
+      constraints:
+      - type: not_null
+    - name: result_views
+      data_type: bigint
+      description: Search and filter_state events shown with the combination.
+      constraints:
+      - type: not_null
+    - name: zero_result_views
+      data_type: bigint
+      description: Those that found nothing.
+      constraints:
+      - type: not_null
+  - name: mart_usage_places_weekly
+    description: One row per (week, place_type, place), catalog cities and states named in search text, threshold-passing,
+      and a '(rare)' total per type.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - place_type
+          - place
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: place_type
+      data_type: varchar
+      description: city or state.
+      constraints:
+      - type: not_null
+    - name: place
+      data_type: varchar
+      description: The place as the page's parser read it, lowercased, or '(rare)'. A place searched for, not where the visitor
+        is.
+      constraints:
+      - type: not_null
+    - name: searches
+      data_type: bigint
+      description: Searches, bots left out.
+      constraints:
+      - type: not_null
+  - name: mart_usage_sources_weekly
+    description: One row per (week, source_kind, source, utm_medium, utm_campaign), where visits came from, threshold-passing,
+      with landings.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - source_kind
+          - source
+          - utm_medium
+          - utm_campaign
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: source_kind
+      data_type: varchar
+      description: 'The collector''s source: utm, referrer, direct or internal.'
+      constraints:
+      - type: not_null
+    - name: source
+      data_type: varchar
+      description: utm_source for utm, the referrer's domain for referrer ('(unnamed)' without one), else the kind; '(rare)'
+        below its days.
+      constraints:
+      - type: not_null
+    - name: utm_medium
+      data_type: varchar
+      description: utm_medium, 'none' unset; '(rare)' unless the whole combination passes.
+      constraints:
+      - type: not_null
+    - name: utm_campaign
+      data_type: varchar
+      description: utm_campaign, as utm_medium.
+      constraints:
+      - type: not_null
+    - name: landings
+      data_type: bigint
+      description: Page loads' first events from that source.
+      constraints:
+      - type: not_null
+  - name: mart_usage_locations_weekly
+    description: One row per (week, country, region, city), events and page views by the visitor's place after the city floors.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - country
+          - region
+          - city
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: country
+      data_type: varchar
+      description: The visitor's country (ISO 3166-1 alpha-2) where it passes its days, '(rare)' below them, 'unknown' when
+        the prefix's block resolves to no single country.
+      constraints:
+      - type: not_null
+    - name: region
+      data_type: varchar
+      description: The visitor's region (state) where it passes its days, '(rare)' below them, 'unknown' when the block resolves
+        to no single region.
+      constraints:
+      - type: not_null
+    - name: city
+      data_type: varchar
+      description: The visitor's city where it passes every floor, else 'other, <region>', 'other' or 'unknown'. Where the
+        IP block is routed, not where the visitor is.
+      constraints:
+      - type: not_null
+    - name: events
+      data_type: bigint
+      description: Events, bots left out.
+      constraints:
+      - type: not_null
+    - name: page_views
+      data_type: bigint
+      description: Page views; null when they or the other events are under 10, so no small split shows, and for a second
+        place when only one is held back in a week, so the week's total less the places shown never gives one place's.
+  - name: mart_usage_city_facets_weekly
+    description: One row per (week, country, region, city, facet, facet_value), one facet at a time beside the city, each
+      cell of 10 events or more; '(other)' holds the same values at every place, a place with a small cell has the facet
+      held back, and never one place alone in a week and facet.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - country
+          - region
+          - city
+          - facet
+          - facet_value
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: country
+      data_type: varchar
+      description: The visitor's country (ISO 3166-1 alpha-2) where it passes its days, '(rare)' below them, 'unknown' when
+        the prefix's block resolves to no single country.
+      constraints:
+      - type: not_null
+    - name: region
+      data_type: varchar
+      description: The visitor's region (state) where it passes its days, '(rare)' below them, 'unknown' when the block resolves
+        to no single region.
+      constraints:
+      - type: not_null
+    - name: city
+      data_type: varchar
+      description: The visitor's city where it passes every floor, else 'other, <region>', 'other' or 'unknown'. Where the
+        IP block is routed, not where the visitor is.
+      constraints:
+      - type: not_null
+    - name: facet
+      data_type: varchar
+      description: surface, device, origin, process, in_stock, sort or source.
+      constraints:
+      - type: not_null
+      data_tests:
+      - accepted_values:
+          arguments:
+            values:
+            - surface
+            - device
+            - origin
+            - process
+            - in_stock
+            - sort
+            - source
+    - name: facet_value
+      data_type: varchar
+      description: The facet's value, '(other)' for the cells under 10 merged, '(rare)' for a source below its days.
+      constraints:
+      - type: not_null
+    - name: events
+      data_type: bigint
+      description: Events, bots left out.
+      constraints:
+      - type: not_null
+  - name: mart_roaster_clicks_weekly
+    description: One row per (week, roaster_id, surface, device, source, country, region), click-outs to a roaster's store;
+      never a city.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - roaster_id
+          - surface
+          - device
+          - source
+          - country
+          - region
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: roaster_id
+      data_type: varchar
+      description: The roaster whose store the click led to, when it is a roaster of the served release; else '(unknown)'.
+      constraints:
+      - type: not_null
+    - name: surface
+      data_type: varchar
+      description: Where the click was made.
+      constraints:
+      - type: not_null
+    - name: device
+      data_type: varchar
+      description: phone or desktop, 'unknown' if not sent.
+      constraints:
+      - type: not_null
+    - name: source
+      data_type: varchar
+      description: The traffic source when the click was its load's first event and passes its days, '(rare)' below them,
+        else 'not recorded'.
+      constraints:
+      - type: not_null
+    - name: country
+      data_type: varchar
+      description: The visitor's country (ISO 3166-1 alpha-2) where it passes its days, '(rare)' below them, 'unknown' when
+        the prefix's block resolves to no single country.
+      constraints:
+      - type: not_null
+    - name: region
+      data_type: varchar
+      description: The visitor's region (state) where it passes its days, '(rare)' below them, 'unknown' when the block resolves
+        to no single region.
+      constraints:
+      - type: not_null
+    - name: click_outs
+      data_type: bigint
+      description: Click-outs, bots left out.
+      constraints:
+      - type: not_null
+  - name: mart_coffee_clicks_weekly
+    description: One row per (week, coffee_id), click-outs to a coffee's page and the median position it was clicked at.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - coffee_id
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: coffee_id
+      data_type: varchar
+      description: The coffee whose page the click led to, when it is a coffee of the served release; else '(unknown)'.
+      constraints:
+      - type: not_null
+    - name: roaster_id
+      data_type: varchar
+      description: The roaster whose store the click led to, when it is a roaster of the served release; else '(unknown)'.
+    - name: click_outs
+      data_type: bigint
+      description: Click-outs, bots left out.
+      constraints:
+      - type: not_null
+    - name: median_rank
+      data_type: double
+      description: Median position in the result list; null when every click came from off a list.
+  - name: mart_click_context_weekly
+    description: One row per (week, roaster_id, context_kind, context_value), what led to a roaster's click-outs, threshold-passing,
+      and a '(rare)' total per kind.
+    config:
+      contract:
+        enforced: true
+    data_tests:
+    - grain:
+        arguments:
+          columns:
+          - week
+          - roaster_id
+          - context_kind
+          - context_value
+    columns:
+    - name: week
+      data_type: date
+      description: The Monday (UTC) of the week the events fall in.
+      constraints:
+      - type: not_null
+    - name: roaster_id
+      data_type: varchar
+      description: The roaster whose store the click led to, when it is a roaster of the served release; else '(unknown)'.
+      constraints:
+      - type: not_null
+    - name: context_kind
+      data_type: varchar
+      description: query, searched_city, searched_state or filters.
+      constraints:
+      - type: not_null
+      data_tests:
+      - accepted_values:
+          arguments:
+            values:
+            - query
+            - searched_city
+            - searched_state
+            - filters
+    - name: context_value
+      data_type: varchar
+      description: The query, place or filter combination once it led to this roaster's clicks on enough days, else '(rare)'.
+      constraints:
+      - type: not_null
+    - name: click_outs
+      data_type: bigint
+      description: Click-outs, bots left out.
+      constraints:
+      - type: not_null
+
+  - name: ops_usage_build
+    description: One row per pinned geo file the build read (config/geo.lock), with its file, release and sha256.
+    columns:
+      - name: geo_key
+        description: The lock's key (dbip_city_lite, geonames_cities).
+        data_tests: [unique, not_null]
