@@ -1025,7 +1025,7 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
 
     main, photos, users = Lake(), Lake.photos(), Lake.users()
     try:
-        p = erase.plan(args.username, main, photos, users, force=args.force)
+        p = erase.plan(args.username, main, photos, users, force=args.force, only_recs=args.only_recs)
     except erase.EraseError as e:
         sys.exit(str(e))
     print(f"{p.username} ({p.user_id}):")
@@ -1035,8 +1035,18 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
             print(f"    {rel}")
     for m in p.marts:
         print(f"  marts/{m}.parquet: rewritten without their rows")
+    for src in p.absent:
+        print(f"  {src}: no files there yet, nothing to delete")
     if args.dry_run:
         print("Dry run: nothing deleted.")
+        return
+    if args.only_recs:
+        print(f"Recording the erasure, then waiting {erase.SETTLE:.0f} s for uploads already under way.")
+        done = erase.erase_recs(p, main, photos, users)
+        n = sum(len(v) for v in done.files.values())
+        print(
+            f"Deleted {n} files. The app refuses their old ratings and answers from now on; nothing to redeploy."
+        )
         return
     erase.apply(p, main, photos, users)
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
@@ -1330,11 +1340,20 @@ def main(argv: list[str] | None = None) -> None:
     s.add_argument("--json", help="shot fields as JSON (add)")
     s.add_argument("--file", help="issue body file (from-issue); default stdin")
 
-    du = add("delete-user", cmd_delete_user, "delete one person's shots, bags, gear, photos and account")
+    du = add(
+        "delete-user",
+        cmd_delete_user,
+        "delete one person's shots, bags, gear, ratings, answers to their picks, photos and account",
+    )
     du.add_argument("username")
     du.add_argument("--dry-run", action="store_true", help="list the files, delete nothing")
     du.add_argument(
         "--force", action="store_true", help="even if the account isn't turned off (the app isn't running)"
+    )
+    du.add_argument(
+        "--only-recs",
+        action="store_true",
+        help="only their 'Your next bag' ratings and answers; the account stays on and signed in",
     )
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")

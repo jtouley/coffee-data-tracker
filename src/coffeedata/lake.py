@@ -12,6 +12,9 @@ Every pipeline step *adds* files and never rewrites another run's files:
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
     equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
     bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
+    ratings/<rating_id>__<time>.parquet                   one file per coffee rating (or correction, or undo)
+    rec_responses/<user_id>__<slate_id>__<h>__<time>.parquet  one file per answer to a suggested coffee (h: the
+                                                          coffee_id's hash, since a catalog id isn't a file name)
     run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
     serving_log/serve_id=<id>.parquet                     one row per serve or rollback of a release
 
@@ -25,6 +28,7 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
     invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
     consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
     contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
+    recs_erasures/<user_id>__<time>.parquet               one file per deletion of someone's "Your next bag" records
 
 Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
 by dbt and never released:
@@ -49,6 +53,7 @@ import secrets
 import tempfile
 import threading
 import time
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -424,6 +429,29 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("deleted", pa.bool_()),
         ]
     ),
+    # The recommendation experiment's records: personal data, private marts only, never public.
+    "ratings": pa.schema(
+        [
+            ("rating_id", pa.string()),
+            ("user_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("coffee_id", pa.string()),
+            ("rating", pa.int32()),  # 1-5
+            ("drank_as", pa.string()),  # espresso, filter, milk; null when not said
+            ("context", pa.string()),  # seed, picks or later
+            ("deleted", pa.bool_()),  # an undo: true retracts the rating
+        ]
+    ),
+    "rec_responses": pa.schema(
+        [
+            ("user_id", pa.string()),
+            ("slate_id", pa.string()),
+            ("coffee_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("interest", pa.string()),  # want, maybe, no; null when only the pick is answered so far
+            ("picked", pa.bool_()),  # the one they'd buy next: at most one per slate in the latest records
+        ]
+    ),
     "photos": pa.schema(
         [
             ("photo_id", pa.string()),
@@ -489,6 +517,11 @@ SCHEMAS["consents"] = pa.schema(
         ("insights", pa.bool_()),
         ("insights_at", pa.timestamp("s", tz="UTC")),
         ("insights_version", pa.string()),
+        # The "Your next bag" test: whether this member joined it, when, and which wording of the consent they saw.
+        # Null where it was never asked; false once they leave it. Their ratings and answers are kept only with true.
+        ("experiment", pa.bool_()),
+        ("experiment_at", pa.timestamp("s", tz="UTC")),
+        ("experiment_version", pa.string()),
     ]
 )
 # Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
@@ -502,6 +535,17 @@ SCHEMAS["contacts"] = pa.schema(
         ("verified_at", pa.timestamp("s", tz="UTC")),
         ("verify_sha256", pa.string()),  # the open verify link's token, hashed
         ("verify_expires", pa.timestamp("s", tz="UTC")),
+    ]
+)
+# A deletion of one person's "Your next bag" records (delete-user --only-recs): everything of theirs in ratings and
+# rec_responses logged at or before logged_at is gone, and the app refuses it back (app/store.py, Erasures). Kept in
+# the users dataset, which the app reads: the main lake's files are what it deletes. rating_ids names the ratings
+# that went, so a phone resending one is refused; it holds no coffee or score.
+SCHEMAS["recs_erasures"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("rating_ids", pa.list_(pa.string())),
     ]
 )
 
@@ -528,7 +572,7 @@ SCHEMAS["importer_raw"] = pa.schema(
 
 # Tables that live in the photo, users or importers dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites", "consents", "contacts")
+USER_TABLES = ("users", "invites", "consents", "contacts", "recs_erasures")
 IMPORTER_TABLES = ("importer_raw",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
@@ -550,11 +594,14 @@ GLOBS = {
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
+    "ratings": "ratings/*.parquet",
+    "rec_responses": "rec_responses/*.parquet",
     "photos": "photos/*.parquet",
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
     "contacts": "contacts/*.parquet",
+    "recs_erasures": "recs_erasures/*.parquet",
     "importer_raw": "raw/*/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
@@ -578,11 +625,14 @@ SCHEMA_FILES = {
     "shots": "shots/shot_id=schema-v2.parquet",
     "equipment": "equipment/equipment_id=schema.parquet",
     "bags": "bags/bag_id=schema.parquet",
+    "ratings": "ratings/rating_id=schema.parquet",
+    "rec_responses": "rec_responses/user_id=schema.parquet",
     "photos": "photos/photo_id=schema.parquet",
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
     "consents": "consents/user_id=schema.parquet",
     "contacts": "contacts/user_id=schema.parquet",
+    "recs_erasures": "recs_erasures/user_id=schema.parquet",
     "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
 }
 PENDING_DELETES = (
@@ -698,6 +748,9 @@ class Lake:
     ):
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
         self.tables = tables or LAKE_TABLES
+        # Called with the staged files before each upload, under the publish lock: it deletes any that mustn't be
+        # sent any more (the app's erased test records, app/store.py). None: send them all.
+        self.screen: Callable[[list[Path]], None] | None = None
         self.remote = self.url.startswith("hf://")
         self.root = (
             Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging"))
@@ -787,26 +840,38 @@ class Lake:
         folders = remote_folders(self.url)
         return folders is None or GLOBS[table].split("/")[0] in folders
 
-    def scan(self, table: str) -> str:
-        """SQL table expression over every file of a table."""
+    def scan(self, table: str, filename: bool = False) -> str:
+        """SQL table expression over every file of a table (with each row's file name as `filename`, if asked)."""
         files = ", ".join(f"'{s}'" for s in self.sources(table))
-        return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
+        named = ", filename = true" if filename else ""
+        return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false{named})"
 
-    def latest(self, table: str, key: str, attempts: int = 1) -> list[dict]:
-        """The latest record per key (by logged_at): corrections are new records, so this is current state.
+    def latest(self, table: str, key: str | tuple[str, ...], attempts: int = 1) -> list[dict]:
+        """The latest record per key (by logged_at): corrections are new records, so this is current state. A key
+        of several columns (rec_responses: user, slate and coffee) takes the latest per combination. Records of one
+        key made in the same second are told apart by file name (the last in name order wins), so the answer doesn't
+        depend on the order files are read in.
 
         A remote lake made before a table existed has no folder for it until the next publish adds the schema
         file; until then the table is read from staging alone rather than failing. Any other failed read (a 429,
         a timeout) is tried `attempts` times in all, 2, 4 … seconds apart, before it's raised."""
-        sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
+        keys = (key,) if isinstance(key, str) else key
+        present = " and ".join(f"{k} is not null" for k in keys)
+        order = (
+            "logged_at desc, regexp_extract(filename, '[^/]*$') desc"  # the name, not where it was read from
+        )
+        sql = (
+            f"select * exclude (filename) from {{}} where {present} "
+            f"qualify row_number() over (partition by {', '.join(keys)} order by {order}) = 1"
+        )
         for attempt in range(attempts):
             try:
-                cur = self.connect().execute(sql.format(self.scan(table), key, key))
+                cur = self.connect().execute(sql.format(self.scan(table, filename=True)))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
                 if self.remote and no_files(e):
-                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
-                    cur = self.connect().execute(sql.format(local, key, key))
+                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false, filename = true)"
+                    cur = self.connect().execute(sql.format(local))
                     break
                 if attempt == attempts - 1:
                     raise
@@ -975,6 +1040,8 @@ class Lake:
         if not self.remote:
             return 0
         with self._publishing:
+            if self.screen is not None:
+                self.screen(self.staged_files())  # removes staged files that mustn't go up any more
             pending = self.root / PENDING_DELETES
             waiting = json.loads(pending.read_text()) if pending.exists() else []
             todo = tuple(dict.fromkeys([*waiting, *delete]))

@@ -413,12 +413,29 @@ The privacy policy promises deletion within 30 days of a request.
    don't turn the account back on. Don't run `delete-user` while the weekly job is running: it rewrites the
    same exports.
 
-It removes every version of that person's shots, bags, equipment, photos, account and invites, and rewrites the
-private exports that carry their rows (`marts/fct_shot.parquet`, `marts/mart_bag.parquet`) without them, so the app
-can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
+It removes every version of that person's shots, bags, equipment, coffee ratings, answers to their picks, photos,
+account and invites, and rewrites the private exports that carry their rows (`marts/fct_shot.parquet`,
+`marts/mart_bag.parquet`) without them, so the app can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
 isn't turned off (`--force` skips that check when the app isn't running). The main and photo datasets' version
 history still holds the old commits, as the policy says. The users dataset's history is squashed afterwards, so the
 person's email (sealed) goes from its history too.
+
+To delete only someone's "Your next bag" ratings and answers and keep their account (on and signed in), run
+`uv run coffeedata delete-user maya --only-recs`, with `--dry-run` first. No turn-off and no redeploy are needed:
+
+- It first records the erasure in the users dataset (`recs_erasures`: who, when, and the rating ids that went) and
+  publishes it.
+- It waits 3 minutes, longer than an upload the app started before the erasure can take. Then it deletes every
+  version of their `ratings` and `rec_responses` files.
+- The running app reads that record again before every rating and answer it reads or writes, reusing a read for
+  at most 5 seconds. Nothing of theirs from before it can be undone, resent or merged back, and they take part
+  again only by joining the test again.
+- The app also checks every upload: any staged rating or answer of theirs is deleted instead of sent.
+- The full deletion removes the erasure record too.
+
+Both forms list any source with no files yet ("nothing to delete"). If a source can't be read, or a dataset's
+folders can't be listed, or `HF_TOKEN` isn't set (the reads use it, not a cached login), they stop with an error
+before deleting anything.
 
 ## Email
 
