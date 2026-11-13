@@ -353,6 +353,10 @@ Backlog, not started until the owner says so:
   exit code (#83), dbt-tests-docs, crawl-slo (#96), chain-tuesday-jobs (#84), then contracts on served tables, then
   the product dimension (design in the session scratchpad; defaults: dim_coffee stays coffee-only beside dim_product,
   the false "removed" event is a later measured change, admin drops become flags).
+- Owner decisions (2026-11-13): out of the build path. CI builds the ingest image from main and attests it (#153); the
+  by-hand Cloud Build route stays only as the runbook fallback. Terraform moves into GitHub too: plan posted on the PR,
+  apply waits for the owner's Approve click in a protected environment. Needs the ruleset on main first; design in the
+  session scratchpad (design-tf-ci), its own high-review PRs after cutover 2.
 - Royal derivation: fixed in #152 (owner asked, 2026-11-12). Reviewed, CI green, held as draft for the held-out score:
   per CLAUDE.md it waits for the first scheduled week after 11-18 (week 11-09 was read while building). Then score main
   and #152 on a hash split grouped by lot, two labelers plus a tiebreak, Wilson intervals; merge if not worse.
