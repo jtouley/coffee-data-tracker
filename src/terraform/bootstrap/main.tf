@@ -103,7 +103,8 @@ resource "google_service_account_iam_member" "tf_apply_from_github" {
 
 # --- Where the apply workflow's saved plans wait for the Approve ---------------------------------------------------
 # A saved plan holds every variable in clear, so it never goes to a GitHub artifact (public on a public repository).
-# The plan account may only create objects here (no read, no overwrite); the apply account may only read them.
+# The plan account may only create objects here (no read, no overwrite); the apply account may only read and delete
+# them (no list, no write).
 
 resource "google_storage_bucket" "tf_plans" {
   name                        = "${var.project_id}-tf-plans"

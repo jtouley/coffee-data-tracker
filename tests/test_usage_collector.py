@@ -798,10 +798,16 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
                                  "logging.exclusions.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
     }  # fmt: skip
-    apply = code[code.index('resource "google_project_iam_member" "tf_apply"') :]
-    plan = code[code.index('resource "google_project_iam_member" "tf_plan"') :]
-    assert "google_project_iam_custom_role.tf_log_exclusions.id" in apply[: apply.index("])")]
-    assert "google_project_iam_custom_role.tf_log_exclusions_reader.id" in plan[: plan.index("])")]
+    apply = code[code.index('resource "google_project_iam_member" "tf_apply_custom"') :]
+    plan = code[code.index('resource "google_project_iam_member" "tf_plan_custom"') :]
+    assert (
+        "log_exclusions   = google_project_iam_custom_role.tf_log_exclusions.id"
+        in apply[: apply.index("\n}")]
+    )
+    assert (
+        "log_exclusions = google_project_iam_custom_role.tf_log_exclusions_reader.id"
+        in plan[: plan.index("\n}")]
+    )
     assert "logging.sinks" not in code and "roles/logging" not in code
     variables = _code("src/terraform/variables.tf")
     assert re.search(r'variable "usage_enabled" \{[^}]*default\s*=\s*false', variables, re.S)

@@ -81,6 +81,13 @@ resource "google_project_iam_custom_role" "tf_repository" {
   ]
 }
 
+# Read the saved plan it was approved for (by name and generation), and delete it after the apply. Not list or write.
+resource "google_project_iam_custom_role" "tf_plan_object" {
+  role_id     = "tfApplyPlanObject"
+  title       = "Terraform apply: read and delete a saved plan"
+  permissions = ["storage.objects.delete", "storage.objects.get"]
+}
+
 # Create the empty secrets and set who may read them. Not secretmanager.versions.access (roles/secretmanager.admin
 # has it): the account never reads a value, and Terraform never holds one.
 resource "google_project_iam_custom_role" "tf_secrets" {
@@ -124,8 +131,17 @@ resource "google_project_iam_member" "tf_plan" {
     "roles/compute.networkViewer",             # network, subnets, router, NATs, static addresses
     "roles/cloudscheduler.viewer",             # the weekly schedule
     "roles/monitoring.viewer",                 # notification channel, alert policies, uptime check
-    google_project_iam_custom_role.tf_log_exclusions_reader.id,
   ])
+  project = var.project_id
+  role    = each.value
+  member  = local.plan_member
+}
+
+# The custom role, by a static key: its id is unknown until the role exists, and for_each keys must be known at plan.
+resource "google_project_iam_member" "tf_plan_custom" {
+  for_each = {
+    log_exclusions = google_project_iam_custom_role.tf_log_exclusions_reader.id
+  }
   project = var.project_id
   role    = each.value
   member  = local.plan_member
@@ -190,10 +206,20 @@ resource "google_project_iam_member" "tf_apply" {
     "roles/monitoring.alertPolicyEditor",         # alert policies
     "roles/monitoring.notificationChannelEditor", # the owner's email channel
     "roles/monitoring.uptimeCheckConfigEditor",   # the /healthz uptime check
-    google_project_iam_custom_role.tf_service_accounts.id,
-    google_project_iam_custom_role.tf_secrets.id,
-    google_project_iam_custom_role.tf_log_exclusions.id,
   ])
+  project = var.project_id
+  role    = each.value
+  member  = local.apply_member
+}
+
+# The custom roles, by static keys: their ids are unknown until the roles exist, and for_each keys must be known
+# at plan.
+resource "google_project_iam_member" "tf_apply_custom" {
+  for_each = {
+    service_accounts = google_project_iam_custom_role.tf_service_accounts.id
+    secrets          = google_project_iam_custom_role.tf_secrets.id
+    log_exclusions   = google_project_iam_custom_role.tf_log_exclusions.id
+  }
   project = var.project_id
   role    = each.value
   member  = local.apply_member
@@ -242,6 +268,6 @@ resource "google_storage_bucket_iam_member" "tf_apply_state" {
 
 resource "google_storage_bucket_iam_member" "tf_apply_plans" {
   bucket = google_storage_bucket.tf_plans.name
-  role   = "roles/storage.objectUser" # read the saved plan it was approved for, and delete it after the apply
+  role   = google_project_iam_custom_role.tf_plan_object.id
   member = local.apply_member
 }

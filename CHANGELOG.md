@@ -190,6 +190,18 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- **No published value comes from OpenStreetMap (#90).** `public_roaster` left out roasters known only from
+  OpenStreetMap (ODbL), but `stg_registry` took a roaster's name, city and state from its newest registry row
+  whatever the source, so a roaster found by Overture and later by OpenStreetMap would have published
+  OpenStreetMap's values. A roaster known from an open source (Overture, the curated seed or a manual add) now takes
+  them from open sources only (per field, the newest non-null open value); a value only OpenStreetMap gave stays
+  null. A source counts as open only as a whole name (`overture`, `overture-<release>`, `curated`, `manual`), so
+  `is_publishable` no longer accepts a name that merely starts like one. New staging tables `stg_registry_records`
+  (the lake's registry records, with `is_open_source`) and `stg_roaster_seed` (`config/roasters.csv`), and macros
+  `is_open_source` and `is_open_record_source`. Public contract 3.2.0 adds the error rule
+  `public_values_have_open_provenance`: every published roaster name, city and state is one an open source gave.
+  No published value changes on today's lake, whose registry has no discovery rows yet.
+
 - **The `discover` and `probe` jobs record new roasters, and say that they ran.** Neither had left anything in the
   lake: `discover` runs monthly and its first slot (Nov 1) came before the schedule was on, so the registry stayed
   empty, and the seed's roasters were all probed 2026-10-26, so the probe found nothing stale (until 2026-11-30)

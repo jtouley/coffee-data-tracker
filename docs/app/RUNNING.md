@@ -283,10 +283,12 @@ GitHub, and applies only after the owner's second account, `jtouleyrou`, approve
    to the private bucket `coffee-data-tracker-tf-plans`, and writes the change list, with IAM changes first, and the
    plan's SHA-256 to the run's summary. Then it waits on the `terraform-apply` environment. No changes: the run
    ends there. Start it as the main account, never as `jtouleyrou`.
-3. **Approve, signed in as `jtouleyrou`.** Open the run (Actions, terraform-apply) and read its summary. If the
-   commit touches `.github/workflows/terraform-*.yml` or `scripts/tf_plan_guard.py`, read that diff first: the
-   approval page doesn't show it. Then Review deployments, Approve. A run you won't approve: Reject it, so the runs
-   behind it can go ahead (GitHub ends an unanswered one after 30 days).
+3. **Approve, signed in as `jtouleyrou`.** Open the run (Actions, terraform-apply) and read its summary: the IAM
+   changes, then each resource with the attributes that change (names, never values). Read the commit's diff of
+   `src/terraform/` too, and of `.github/workflows/terraform-*.yml` and `scripts/tf_plan_guard.py` if it touches
+   them: the approval page shows neither. Then Review deployments, Approve. A run you won't approve: Reject it, so the
+   pending run behind it can go ahead. GitHub keeps only the newest pending run (a newer push replaces an older one)
+   and ends an unanswered one after 30 days.
 4. **The apply job** refuses, changing nothing, unless:
    - this is the run's first attempt and `jtouleyrou` approved it;
    - the environment's settings read back exactly as set: that reviewer alone, self-review prevented, `main` only,
@@ -305,15 +307,29 @@ GitHub, and applies only after the owner's second account, `jtouleyrou`, approve
 message and the affected addresses are shown: Terraform's own messages can quote private values, and the
 `TF_VAR_*` repository variables aren't masked. For the details, plan in Cloud Shell. Fix the cause in a PR, or run
 the workflow again; the new plan shows what is left. A lock left by a dead runner is cleared from Cloud Shell:
-`terraform force-unlock <lock id>`, once you're sure no apply is running.
+`terraform force-unlock <lock id>`, once you're sure no apply is running. If the first plan fails on the budget
+(`google_billing_budget.monthly`), the plan account's project-scoped budget role isn't enough: give it
+`roles/billing.viewer` on the billing account instead (`src/terraform/bootstrap/iam.tf`).
 
 **What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can
 set IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the
 staging bucket (and so raw ingestion data), and run any image as the runtime, ingest or scheduler account. That is
 what the approval is for: read the IAM section of the summary first. It cannot write a workload identity pool or
-provider, a custom role, the project's IAM, or IAM on any service account; and the guard refuses any change to the
-deploy, plan or apply accounts or to grants that name them, to a pool or provider, to Shopify's network path (routes,
-firewall rules and peerings on the ingest network included), and any delete, replace or unpinned image.
+provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
+- any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
+  any account, or a custom role;
+- a grant on any resource that names the plan or apply account; one that names the deploy account, except exactly
+  its registry writer and service developer roles (`deploy.tf`), which a PR may change;
+- a grant, on any resource, of a custom role or a role that impersonates accounts, makes keys or administers roles;
+- in project or service-account IAM, a role, account or policy unknown at plan, or a member unknown at plan unless
+  the same plan creates the (non-guarded) account it will be;
+- any change to a workload identity pool or provider, or a grant on them;
+- on the ingest network or router, any type but subnets, NATs and the jobs (and Shopify's path, as before);
+- any delete or replace; a job image other than the pinned one; a service image Terraform sets that isn't the app's,
+  pinned by digest.
+
+Other grants, such as a secret's reader or the staging bucket's users (to an account created in the same plan too),
+are listed in the IAM section, not refused.
 
 **Not through GitHub, on purpose:** what the guard refuses, the bootstrap root `src/terraform/bootstrap/` (the plan
 and apply identities and the plans bucket: the gate is not managed by what it gates), secret values, DNS. These, and
@@ -323,6 +339,9 @@ the break-glass below, are the owner's, from Cloud Shell.
 - Google issues the apply token to any job that runs in the `terraform-apply` environment. It can't see who approved.
 - An account with admin rights on this repository, including any tool that holds such a credential, could loosen
   the environment's reviewers.
+- The workflow's checks are code on `main`. An admin can merge a change to them, and `main` has no ruleset today,
+  so that path is open: a ruleset on `main` (pull request with `jtouleyrou`'s review on these files, no bypass) closes
+  it. The owner hasn't created it yet.
 - What stands in the way:
   - the environment's own required reviewer;
   - the workflow's checks, which fail closed: it applies only when it can verify a `jtouleyrou` approval of this
@@ -332,18 +351,40 @@ the break-glass below, are the owner's, from Cloud Shell.
   no administration, and require `jtouleyrou`'s review of `.github/workflows/terraform-*.yml`,
   `scripts/tf_plan_guard.py` and `src/terraform/**`.
 
-**Break-glass** (GitHub down, or the pipeline broken), in Cloud Shell with `main` checked out and your
-`terraform.tfvars`:
+**Break-glass** (GitHub down, or the pipeline broken): in Cloud Shell, with a clean checkout of `main` and your
+`terraform.tfvars`, run `bash scripts/tf_break_glass.sh`. It plans into a private temporary folder, runs the guard,
+lists the changes and applies that saved plan only after a yes. If the guard refuses, it applies only after you type
+`override <reason>`, which it appends, with the time, the commit and the refusing guards, to `~/break-glass.log`.
+It refuses a checkout that isn't main's tip, or that holds a file Terraform would load beyond main's (an ignored
+`*_override.tf` or `*.auto.tfvars`, say). The state lock is shared, so this is safe beside a waiting run.
+
+If the script itself is broken, by hand (each step only if the one before succeeded; read the list before the yes):
 
 ```bash
-cd src/terraform && d=$(mktemp -d)   # the plan and its JSON hold every value in clear: keep them out of the checkout
-terraform plan -out="$d/bg.plan" >"$d/plan.log" 2>&1 || less "$d/plan.log"
-terraform show -json "$d/bg.plan" >"$d/bg.json" && python3 -I ../../scripts/tf_plan_guard.py check "$d/bg.json"
-python3 -I ../../scripts/tf_plan_guard.py render "$d/bg.json"   # read the list
-terraform apply "$d/bg.plan"; rm -rf "$d"
+cd src/terraform && d=$(mktemp -d) && terraform init -backend-config="bucket=coffee-data-tracker-tfstate" >/dev/null &&
+  terraform plan -out="$d/bg.plan" >"$d/plan.log" 2>&1 && terraform show -json "$d/bg.plan" >"$d/bg.json" &&
+  python3 -I ../../scripts/tf_plan_guard.py check "$d/bg.json" && python3 -I ../../scripts/tf_plan_guard.py render "$d/bg.json" &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply "$d/bg.plan"; rm -rf "$d"
 ```
 
-The state lock is shared, so this is safe beside a waiting run.
+**After this change merges, re-apply the bootstrap once** (the owner, from Cloud Shell), if it was applied before:
+the apply account's access to saved plans moves from `objectUser` to a read-and-delete role. By hand (the combined
+script's bootstrap step refuses any replace, so it is for a first apply only):
+`cd src/terraform/bootstrap && terraform init -backend-config="bucket=coffee-data-tracker-tfstate"`, then
+`TF_VAR_billing_account=<from your terraform.tfvars> terraform plan -out=b.plan`, then `terraform apply b.plan`. The plan
+shows: create `google_project_iam_custom_role.tf_plan_object`, and replace
+`google_storage_bucket_iam_member.tf_apply_plans` (its role changes, so it is replaced); nothing else. If the bootstrap
+was never applied, the first run creates everything (51 resources) with the final roles.
+
+**The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
+deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed
+in as the owner, Settings, Environments, New environment, `terraform-apply`:
+1. Required reviewers: on, `jtouleyrou` alone. Prevent self-review: on.
+2. Allow administrators to bypass configured protection rules: off.
+3. Deployment branches and tags: Selected branches and tags, add the rule `main` (branch).
+4. No wait timer, no environment secrets or variables: the workflow uses repository ones.
+
+The apply job reads these back and refuses if any differs.
 
 **Revoking the pipeline's access**, fastest first:
 - stop applies at once: `gcloud iam service-accounts disable registry-coffee-tf-apply@coffee-data-tracker.iam.gserviceaccount.com`
