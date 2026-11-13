@@ -1,23 +1,36 @@
-"""The usage collector: `POST /e` on e.registry.coffee, its own small Cloud Run service (src/terraform/usage.tf), never
-the app. Run with `COFFEEDATA_APP=app.usage` in the app's image, or `uvicorn app.usage:app`.
+"""The usage collector: `POST /e`, its own small Cloud Run service (src/terraform/usage.tf), never the app. Run with
+`COFFEEDATA_APP=app.usage` in the app's image, or `uvicorn app.usage:app`.
 
-It never blocks or slows a page: every POST gets an empty 204 straight away, whatever happened to it, and nothing
-it does waits on the network before replying. Accepted events wait in memory and go to the private usage dataset
-(Lake.usage()) in one file per day per flush, at FLUSH_AT events, every FLUSH_EVERY seconds, or at shutdown
-(SIGTERM, through uvicorn's lifespan). A flush that fails to publish leaves its files staged for the next one.
+It never slows a page: the page's fetch is fire-and-forget (keepalive, no-cors), every POST gets an empty 204, and
+nothing the collector does can turn that into an error. Accepted events wait in memory and go to the private usage
+dataset (Lake.usage()), one file per day per flush.
+
+When it flushes. Cloud Run gives the CPU only while a request is open (cpu_idle, the cheap setting), so a thread
+working after the reply would crawl. So the flush runs in the request path: the request that finds a flush due (at
+FLUSH_AT events or the oldest FLUSH_EVERY old, never sooner than PUBLISH_EVERY after the last) writes and publishes
+before its own 204, on a worker thread so every other request is still answered at once. That one beacon waits
+for the commit (about a second, at most FLUSH_WAIT); no page does. At SIGTERM (uvicorn's lifespan shutdown) it
+flushes once more within SHUTDOWN_BUDGET of Cloud Run's 10 seconds, and counts as `lost` whatever doesn't make it.
+
+Bounded: at most BUFFER_MAX events in memory and STAGED_MAX written but not yet published (the staging folder is on
+the instance's in-memory filesystem); past either, new events are dropped and counted. A failed write puts its rows
+back in memory. One commit a minute at most, so a flood can't make back-to-back commits.
 
 Dropped before anything is kept, and counted (the counts are all it logs): Global Privacy Control or Do Not Track;
 an Origin that isn't ours (a missing or "null" one too); a body over MAX_BODY or with more than MAX_EVENTS events;
-an event the schema refuses (app/usage_events.py); over the per-prefix limits (PER_MINUTE, PER_DAY) or the
-service's ceiling (CEILING_PER_MINUTE); past the memory cap (BUFFER_MAX).
+an event the schema refuses (app/usage_events.py); over the limits per masked prefix (PER_MINUTE, PER_DAY) or the
+instance's (CEILING_PER_MINUTE, DAILY_CAP); past the memory caps. A flush line logs at WARNING when anything was
+dropped for a limit or a publish failed, and at ERROR when events were lost; the usage alert (alerts.tf) fires on
+either.
 
-The client's address is read from X-Forwarded-For the way the app does (COFFEEDATA_PROXY_HOPS from the right),
-masked at once (IPv4 /24, IPv6 /40) and never kept, logged or used again: the rate limits count per masked prefix.
-Cookie, Authorization and every other header are never read, except User-Agent, which only sets the bot flag.
+The client's address is read from X-Forwarded-For the way the app does (limits.forwarded_client), masked at once
+(IPv4 /24, IPv6 /40) and never kept, logged or used again: the limits count per masked prefix. Cookie,
+Authorization and every other header are never read, except User-Agent, which only sets the bot flag.
 """
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import os
@@ -34,32 +47,33 @@ from pydantic import ValidationError
 from coffeedata.lake import Lake, new_batch_id
 
 from . import logs
-from .limits import Windows
-from .usage_events import Event, is_bot, mask_ip, row
+from .limits import FixedWindows, forwarded_client
+from .usage_events import MAX_BODY, MAX_EVENTS, Event, is_bot, mask_ip, row
 
 log = logging.getLogger("app.usage")
 
-MAX_BODY = 4096  # bytes
-MAX_EVENTS = 20  # per request
-PER_MINUTE = 60  # events per masked prefix
-PER_DAY = 2000
-CEILING_PER_MINUTE = 6000  # every prefix together
+# Per masked prefix (a /24 or /40 can be a whole carrier's NAT pool or an iCloud Private Relay egress, so these are
+# well above one person: a page load sends a few events, a busy session a few dozen a minute).
+PER_MINUTE = 600
+PER_DAY = 10_000
+# Per instance (at most 2): a flood's ceiling, and the day's.
+CEILING_PER_MINUTE = 6_000
+DAILY_CAP = 200_000
 FLUSH_AT = 200  # events in memory
 FLUSH_EVERY = 15 * 60  # seconds since the oldest event in memory
-BUFFER_MAX = 20_000  # events in memory while publishing is failing; past it, new ones are dropped
-SHUTDOWN_ATTEMPTS = 2  # Cloud Run allows 10 s after SIGTERM: no long backoff then
+PUBLISH_EVERY = 60  # seconds: at most one flush (and one commit) a minute per instance
+FLUSH_WAIT = 20.0  # seconds the flushing request waits before replying anyway (usage.tf's timeout is 30 s)
+BUFFER_MAX = 20_000  # events in memory
+STAGED_MAX = 50_000  # events written to staging but not yet published
+SHUTDOWN_BUDGET = 8.0  # seconds, of Cloud Run's 10 after SIGTERM
 DEFAULT_ORIGINS = "https://registry.coffee,https://www.registry.coffee,https://app.registry.coffee"
+# Counts that mean data was dropped by a limit or a publish failed (WARNING), or events are gone for good (ERROR).
+WARN = ("rate_limited", "ceiling", "daily_cap", "overflow", "staged_full", "publish_failed", "write_failed")
+LOSS = ("lost",)
 
 
 def client_address(headers: Mapping[str, str], peer: str | None, hops: int) -> str:
-    """The caller's address: behind `hops` proxies that each append to X-Forwarded-For, that many entries from the
-    right (anything further left came from the client and can't be trusted); else the socket's peer (app/web.py's
-    client_ip, on plain headers)."""
-    if hops > 0:
-        chain = [p.strip() for p in headers.get("x-forwarded-for", "").split(",") if p.strip()]
-        if len(chain) >= hops:
-            return chain[-hops]
-    return peer or ""
+    return forwarded_client(headers.get("x-forwarded-for", ""), peer, hops)
 
 
 class Collector:
@@ -78,15 +92,14 @@ class Collector:
         self.origins = origins or frozenset(o.strip() for o in env_origins.split(",") if o.strip())
         self.hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0) if hops is None else hops
         self.clock = clock
-        self.limits = Windows()
+        self.limits = FixedWindows()
         self.buffer: list[dict[str, Any]] = []
         self.oldest: float | None = None
         self.counts: Counter[str] = Counter()
-        self.unpublished = False  # files staged by a flush whose publish failed
+        self.staged = 0  # events written to staging since the last successful publish
         self.last_flush = clock()
-        self._lock = threading.Lock()  # the buffer and the counts
+        self._lock = threading.Lock()  # the buffer, the counts, `staged`
         self._flushing = threading.Lock()  # one flush at a time
-        self._worker: threading.Thread | None = None
 
     # --- receiving ---------------------------------------------------------------------------------
 
@@ -97,28 +110,27 @@ class Collector:
         try:
             self._receive(headers, peer, body, oversize)
         except Exception as e:  # noqa: BLE001 - never fail a page; the type only (a message could quote the body)
-            self._count("error")
+            self.count("error")
             log.error("usage receive failed: %s", type(e).__name__)
-        self.flush_if_due()
 
     def _receive(self, headers: Mapping[str, str], peer: str | None, body: bytes, oversize: bool) -> None:
         if headers.get("sec-gpc", "").strip() == "1" or headers.get("dnt", "").strip() == "1":
-            return self._count("opted_out")
+            return self.count("opted_out")
         if headers.get("origin") not in self.origins:
-            return self._count("foreign_origin")
+            return self.count("foreign_origin")
         if oversize or len(body) > MAX_BODY:
-            return self._count("too_large")
+            return self.count("too_large")
         try:
             doc = json.loads(body)
         except ValueError:
-            return self._count("bad_body")
+            return self.count("bad_body")
         events = doc.get("events") if isinstance(doc, dict) and set(doc) == {"events"} else None
         if not isinstance(events, list) or not events or len(events) > MAX_EVENTS:
-            return self._count("bad_body")
+            return self.count("bad_body")
         # The only place the full address exists: masked here and dropped with this frame.
         prefix = mask_ip(client_address(headers, peer, self.hops))
         if prefix is None:
-            return self._count("no_address", len(events))
+            return self.count("no_address", len(events))
         user_agent = headers.get("user-agent")
         now = self.clock()
         at = datetime.fromtimestamp(now, UTC)
@@ -127,103 +139,173 @@ class Collector:
             try:
                 e = Event.model_validate(raw)
             except ValidationError:
-                self._count("invalid")
+                self.count("invalid")
                 continue
-            limits = {
-                f"m|{prefix}": (PER_MINUTE, 60.0),
-                f"d|{prefix}": (PER_DAY, 86400.0),
-                "ceiling": (CEILING_PER_MINUTE, 60.0),
-            }
-            if not self.limits.take(limits, now):
-                self._count("rate_limited")
+            reason = self._limited(prefix, now)
+            if reason:
+                self.count(reason)
                 continue
             rows.append(row(e, prefix, is_bot(user_agent, e.webdriver), at))
         with self._lock:
-            room = max(0, BUFFER_MAX - len(self.buffer))
+            memory = BUFFER_MAX - len(self.buffer)
+            staging = STAGED_MAX - self.staged - len(self.buffer)
+            room = max(0, min(memory, staging))
             if len(rows) > room:
-                self.counts["overflow"] += len(rows) - room
+                self.counts["overflow" if memory <= staging else "staged_full"] += len(rows) - room
                 rows = rows[:room]
             if rows and not self.buffer:
                 self.oldest = now
             self.buffer += rows
-            self.counts["accepted"] += len(rows)
+            if rows:
+                self.counts["accepted"] += len(rows)
 
-    def _count(self, reason: str, n: int = 1) -> None:
+    def _limited(self, prefix: str, now: float) -> str | None:
+        """Why this event is over a limit, or None. An event is counted against every limit only when it passes them
+        all, so a refused one uses up nothing."""
+        key = self.limits.blocked(
+            {
+                "instance-day": (DAILY_CAP, 86400.0),
+                "instance-minute": (CEILING_PER_MINUTE, 60.0),
+                f"m|{prefix}": (PER_MINUTE, 60.0),
+                f"d|{prefix}": (PER_DAY, 86400.0),
+            },
+            now,
+        )
+        return {None: None, "instance-day": "daily_cap", "instance-minute": "ceiling"}.get(
+            key, "rate_limited"
+        )
+
+    def count(self, reason: str, n: int = 1) -> None:
         with self._lock:
             self.counts[reason] += n
 
     # --- flushing ----------------------------------------------------------------------------------
 
     def due(self) -> bool:
-        """FLUSH_AT events waiting, the oldest FLUSH_EVERY old, or only counts to log and none logged for as long."""
+        """At most once every PUBLISH_EVERY: FLUSH_AT events waiting, the oldest FLUSH_EVERY old, files staged by a
+        flush whose publish failed, or only counts to log and none logged for FLUSH_EVERY."""
         with self._lock:
             now = self.clock()
+            if now - self.last_flush < PUBLISH_EVERY:
+                return False
             if self.buffer:
                 return len(self.buffer) >= FLUSH_AT or now - (self.oldest or now) >= FLUSH_EVERY
-            return bool(self.counts) and now - self.last_flush >= FLUSH_EVERY
-
-    def flush_if_due(self) -> None:
-        """Start a flush in the background when one is due and none is running; never waits for it."""
-        if not self.due() or (self._worker is not None and self._worker.is_alive()):
-            return
-        self._worker = threading.Thread(target=self.flush, name="usage-flush", daemon=True)
-        self._worker.start()
+            return self.staged > 0 or (bool(self.counts) and now - self.last_flush >= FLUSH_EVERY)
 
     def lake(self) -> Lake:
         if self._lake is None:
             self._lake = self._lake_factory()
         return self._lake
 
-    def flush(self, attempts: int = 5) -> int:
-        """Write what's in memory, one file per day, and publish it with any files an earlier flush left staged.
-        Returns the events written. Logs one line of counts; never an event, a prefix or a header."""
-        with self._flushing:
-            with self._lock:
-                rows, self.buffer, self.oldest = self.buffer, [], None
-                counts, self.counts = self.counts, Counter()
-                self.last_flush = self.clock()
-            written = files = 0
-            published = None
+    def flush(self, wait: float | None = None) -> int:
+        """Write what's in memory, one file per day, then publish everything staged in one commit (one attempt: the
+        next due flush retries). Returns the events written. Logs one line of counts; never an event, a prefix or a
+        header. With `wait`, gives up (returning -1) if another flush holds the lock that long."""
+        if not self._flushing.acquire(timeout=-1 if wait is None else wait):
+            return -1
+        try:
+            return self._flush()
+        finally:
+            self._flushing.release()
+
+    def _flush(self) -> int:
+        with self._lock:
+            rows, self.buffer, self.oldest = self.buffer, [], None
+            counts, self.counts = self.counts, Counter()
+            self.last_flush = self.clock()
+        written = files = 0
+        published = None
+        lake = None
+        by_day: dict[str, list[dict[str, Any]]] = {}
+        for r in rows:
+            by_day.setdefault(r["received_at"].strftime("%Y-%m-%d"), []).append(r)
+        days = sorted(by_day.items())
+        for i, (day, day_rows) in enumerate(days):
             try:
-                lake = self.lake()
-                by_day: dict[str, list[dict[str, Any]]] = {}
-                for r in rows:
-                    by_day.setdefault(r["received_at"].strftime("%Y-%m-%d"), []).append(r)
-                for day, day_rows in sorted(by_day.items()):
-                    lake.write("usage_events", f"events/day={day}/batch={new_batch_id()}.parquet", day_rows)
-                    written += len(day_rows)
-                    files += 1
-                if files or self.unpublished:
-                    self.unpublished = True
-                    lake.publish(f"usage: {written} events", attempts=attempts)
-                    self.unpublished = False
-                    published = True
-            except Exception as e:  # noqa: BLE001 - kept staged (or lost, if the write failed); counted and logged
+                lake = lake or self.lake()
+                lake.write("usage_events", f"events/day={day}/batch={new_batch_id()}.parquet", day_rows)
+            except Exception as e:  # noqa: BLE001 - this day's rows and the later days' go back in memory
+                counts["write_failed"] += 1
+                self._requeue([r for _, later in days[i:] for r in later], counts)
+                log.warning("usage write failed: %s", type(e).__name__)
+                break
+            written += len(day_rows)
+            files += 1
+            with self._lock:
+                self.staged += len(day_rows)
+        if lake is None and self.staged:
+            lake = self.lake()
+        if lake is not None and self.staged:
+            try:
+                lake.publish(f"usage: {self.staged} events", attempts=1)
+                with self._lock:
+                    counts["published"] += self.staged
+                    self.staged = 0
+                published = True
+            except Exception as e:  # noqa: BLE001 - staged files stay for the next flush
+                counts["publish_failed"] += 1
                 published = False
-                counts["write_failed" if written < len(rows) else "publish_failed"] += 1
-                if written < len(rows):
-                    counts["lost"] += len(rows) - written
-                log.warning("usage flush failed: %s", type(e).__name__)
-            if rows or counts:
-                log.info(
-                    "usage flush: %d events in %d files",
-                    written,
-                    files,
-                    extra={"fields": {"written": written, "files": files, "published": published, **counts}},
-                )
-            return written
+                log.warning("usage publish failed: %s", type(e).__name__)
+        self._log(counts, written, files, published)
+        return written
 
-    def start_timer(self, every: float = 60.0) -> threading.Event:
-        """Check every `every` seconds whether a flush is due (Cloud Run gives CPU between requests only with
-        instance-based billing, so this may sleep through idle time: the request path and shutdown check too)."""
-        stop = threading.Event()
+    def _requeue(self, rows: list[dict[str, Any]], counts: Counter[str]) -> None:
+        with self._lock:
+            room = max(0, BUFFER_MAX - len(self.buffer))
+            self.buffer = rows[:room] + self.buffer
+            if self.buffer and self.oldest is None:
+                self.oldest = self.clock()
+            if len(rows) > room:
+                counts["lost"] += len(rows) - room
 
-        def run() -> None:
-            while not stop.wait(every):
-                self.flush_if_due()
+    def _log(self, counts: Counter[str], written: int, files: int, published: bool | None) -> None:
+        if not (written or counts):
+            return
+        level = (
+            logging.ERROR
+            if any(counts.get(k) for k in LOSS)
+            else logging.WARNING
+            if any(counts.get(k) for k in WARN)
+            else logging.INFO
+        )
+        log.log(
+            level,
+            "usage flush: %d events in %d files",
+            written,
+            files,
+            extra={
+                "fields": {
+                    "written": written,
+                    "files": files,
+                    "published_ok": published,
+                    "staged": self.staged,
+                    **counts,
+                }
+            },  # fmt: skip
+        )
 
-        threading.Thread(target=run, name="usage-timer", daemon=True).start()
-        return stop
+    def shutdown(self, budget: float = SHUTDOWN_BUDGET) -> None:
+        """The last flush, within `budget` seconds: whatever isn't published by then dies with the instance, and is
+        logged at ERROR as `lost` (the events in memory and those staged but not published)."""
+        done = threading.Event()
+
+        def last() -> None:
+            if self.flush(wait=budget / 2) >= 0:
+                done.set()
+
+        worker = threading.Thread(target=last, name="usage-shutdown", daemon=True)
+        worker.start()
+        worker.join(budget)
+        with self._lock:
+            lost = len(self.buffer) + self.staged
+        if lost:
+            reason = "it ran out of time" if not done.is_set() else "the last publish failed"
+            log.error(
+                "usage shutdown: %d events lost (%s)",
+                lost,
+                reason,
+                extra={"fields": {"lost": lost, "finished": done.is_set()}},
+            )
 
 
 # --- the ASGI app ------------------------------------------------------------------------------------------------
@@ -237,26 +319,32 @@ async def _reply(send: Callable, status: int, body: bytes = b"") -> None:
     await send({"type": "http.response.body", "body": body})
 
 
-async def _read_capped(receive: Callable, limit: int) -> tuple[bytes, bool]:
-    """The body, read up to `limit` + 1 bytes; whether it was longer (the rest is never read)."""
+async def _read_capped(receive: Callable, limit: int) -> tuple[bytes, str | None]:
+    """The body, read up to `limit` + 1 bytes, and why it was cut short: `too_large` (the rest is never read) or
+    `aborted` (the client went away)."""
     chunks, size = [], 0
     while True:
         message = await receive()
         if message["type"] != "http.request":
-            return b"", True  # the client went away
+            return b"", "aborted"
         chunk = message.get("body", b"")
         size += len(chunk)
         if size > limit:
-            return b"", True
+            return b"", "too_large"
         chunks.append(chunk)
         if not message.get("more_body"):
-            return b"".join(chunks), False
+            return b"".join(chunks), None
 
 
 def create_app(collector: Collector | None = None) -> Callable:
     """A bare ASGI app, so nothing (routing, middleware, a framework's error page) stands between a request and its
     204. The collector is made at startup unless one is given (tests)."""
-    state: dict[str, Any] = {"collector": collector, "stop": None}
+    state: dict[str, Any] = {"collector": collector}
+
+    def get() -> Collector:
+        if state["collector"] is None:  # no lifespan (a bare server): make it now
+            state["collector"] = Collector()
+        return state["collector"]
 
     async def app(scope: dict, receive: Callable, send: Callable) -> None:
         if scope["type"] == "lifespan":
@@ -266,14 +354,10 @@ def create_app(collector: Collector | None = None) -> Callable:
                     if os.environ.get("K_SERVICE") or os.environ.get("COFFEEDATA_JSON_LOGS"):
                         logs.setup()
                     logging.getLogger("uvicorn.access").disabled = True  # its line holds the client's address
-                    state["collector"] = state["collector"] or Collector()
-                    state["stop"] = state["collector"].start_timer()
+                    get()
                     await send({"type": "lifespan.startup.complete"})
                 elif message["type"] == "lifespan.shutdown":
-                    if state["stop"] is not None:
-                        state["stop"].set()
-                    if state["collector"] is not None:
-                        state["collector"].flush(attempts=SHUTDOWN_ATTEMPTS)
+                    await asyncio.to_thread(get().shutdown)
                     await send({"type": "lifespan.shutdown.complete"})
                     return
         if scope["type"] != "http":
@@ -286,16 +370,26 @@ def create_app(collector: Collector | None = None) -> Callable:
         if path != "/e":
             return await _reply(send, 404)
         if method == "POST":
+            c = get()
             headers = {k.decode("latin-1").lower(): v.decode("latin-1") for k, v in scope["headers"]}
             declared = headers.get("content-length", "")
             if declared.isdigit() and int(declared) > MAX_BODY:
-                body, oversize = b"", True  # not read at all
+                body, cut = b"", "too_large"  # not read at all
             else:
-                body, oversize = await _read_capped(receive, MAX_BODY)
-            if state["collector"] is None:  # no lifespan (a bare server): make it now
-                state["collector"] = Collector()
+                body, cut = await _read_capped(receive, MAX_BODY)
+            if cut == "aborted":
+                c.count("aborted")
+                return
             peer = scope.get("client")
-            state["collector"].receive(headers, peer[0] if peer else None, body, oversize)
+            c.receive(headers, peer[0] if peer else None, body, cut == "too_large")
+            if c.due():
+                # While this request is open the instance has its CPU. The flush runs on its own thread, so every
+                # other request is answered meanwhile; this one waits for it at most FLUSH_WAIT, then replies anyway.
+                worker = threading.Thread(target=c.flush, args=(0.0,), name="usage-flush", daemon=True)
+                worker.start()
+                deadline = time.monotonic() + FLUSH_WAIT
+                while worker.is_alive() and time.monotonic() < deadline:
+                    await asyncio.sleep(0.01)
         return await _reply(
             send, 204
         )  # POST, and OPTIONS or anything else on /e: always 204, never a CORS header

@@ -24,11 +24,6 @@ output "dns" {
 }
 
 output "usage_url" {
-  description = "The usage collector's run.app address (works before its domain does)."
-  value       = one(google_cloud_run_v2_service.usage[*].uri)
-}
-
-output "usage_dns" {
-  description = "The record to add at the DNS host once the usage collector's domain mapping exists."
-  value       = "CNAME ${split(".", var.usage_domain)[0]} -> ghs.googlehosted.com."
+  description = "The usage collector's address: Cloud Run's deterministic URL, known at plan, the value for config/usage.toml's collector_url."
+  value       = "https://${local.usage_service}-${data.google_project.this.number}.${var.region}.run.app"
 }

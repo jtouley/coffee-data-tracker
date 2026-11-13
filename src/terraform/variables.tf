@@ -64,12 +64,6 @@ variable "email" {
   default     = false
 }
 
-variable "usage_domain" {
-  description = "The usage collector's hostname (usage.tf): its own subdomain, so nothing of the app's is same-origin with it."
-  type        = string
-  default     = "e.registry.coffee"
-}
-
 variable "usage_dataset" {
   description = "owner/name of the private Hugging Face dataset the usage collector appends to; never published."
   type        = string
@@ -77,7 +71,7 @@ variable "usage_dataset" {
 }
 
 variable "usage_enabled" {
-  description = "Creates the usage collector's service, its public invoker, its domain mapping and its request-log exclusion (usage.tf). Turn on in ci.tfvars once the apply account can act as registry-coffee-usage and write log exclusions (RUNNING.md, \"Usage\"); before that an apply would fail partway."
+  description = "Creates the usage collector's service, its public invoker, its request-log exclusion and its alert (usage.tf). Turn on in ci.tfvars once the apply account can act as registry-coffee-usage and write log exclusions (RUNNING.md, \"Usage\"); before that an apply would fail partway."
   type        = bool
   default     = false
 }

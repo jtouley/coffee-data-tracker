@@ -1,16 +1,19 @@
-# The usage collector (app/usage.py): its own small service on e.registry.coffee, not the app. The app is one
+# The usage collector (app/usage.py): its own small service at its run.app address, not the app. The app is one
 # instance holding every account and is same-site with registry.coffee, so a beacon sent to it would carry the
-# session cookie; this service sets no cookie, reads none, and holds only a write token for the private usage
-# dataset. Same image as the app; COFFEEDATA_APP picks the module (app/Dockerfile).
+# session cookie; run.app is a public suffix, so no registry.coffee cookie ever reaches this service, which sets no
+# cookie, reads none, and holds only a write token for the private usage dataset. Same image as the app;
+# COFFEEDATA_APP picks the module (app/Dockerfile). No custom domain: its address is Cloud Run's deterministic one,
+# https://<service>-<project number>.<region>.run.app (output usage_url; config/usage.toml for the page scripts).
 #
 # Deployed by Terraform, like the ingest jobs, never by the deploy workflow: the service runs `usage_image`, an app
 # image deploy.yml built from main and attested, pinned by digest in ci.tfvars. A new version is a PR that bumps the
 # digest, then the GitHub apply. deploy.yml tags the pinned digest so the registry's cleanup never deletes it.
 #
 # Two switches, both in ci.tfvars and both off by default (RUNNING.md, "Usage"):
-# - usage_enabled: the service, its public invoker, its domain and its request-log exclusion. The apply account must
-#   first be able to act as the collector's account and to write log exclusions (bootstrap root): until then an
-#   apply of these would fail partway, so the default creates only the account and the empty secret.
+# - usage_enabled: the service, its public invoker, its request-log exclusion and its alert. The apply account must
+#   first be able to act as the collector's account and to write log exclusions (bootstrap/iam.tf; RUNNING.md,
+#   "Usage"): until then an apply of these would fail partway, so the default creates only the account and the
+#   empty secret, which the apply and plan accounts can already manage.
 # - usage_token: mounts the secret once it has a value.
 
 locals {
@@ -67,7 +70,7 @@ resource "google_cloud_run_v2_service" "usage" {
     service_account = google_service_account.usage.email
     # A beacon is answered at once (204) and costs microseconds; the default concurrency is plenty.
     max_instance_request_concurrency = 80
-    timeout                          = "10s"
+    timeout                          = "30s" # a flush runs in the request that finds it due (app/usage.py FLUSH_WAIT)
     scaling {
       min_instance_count = 0 # scale to zero between uses
       max_instance_count = 2 # the cost ceiling; the per-prefix limits are per instance
@@ -80,7 +83,9 @@ resource "google_cloud_run_v2_service" "usage" {
           cpu    = "1"
           memory = "512Mi" # events wait in memory between flushes; staged files are on the in-memory filesystem
         }
-        cpu_idle          = true # CPU only during requests; the request path and shutdown flush too
+        # CPU only while a request is open (and at shutdown): request-based billing, nothing while idle. So the
+        # collector flushes inside a request, never on a background thread after its reply (app/usage.py).
+        cpu_idle          = true
         startup_cpu_boost = true
       }
       env {
@@ -142,16 +147,37 @@ resource "google_cloud_run_v2_service_iam_member" "usage_public" {
   member   = "allUsers"
 }
 
-# The domain is verified already (app.registry.coffee). Afterwards: the CNAME e -> ghs.googlehosted.com.
-resource "google_cloud_run_domain_mapping" "usage" {
+# Lost or dropped events: the collector's flush line logs at WARNING when a limit dropped events or a publish failed,
+# and at ERROR when events were lost (a failed write with no room left, or a shutdown that couldn't publish). Its own
+# log holds counts only, so the alert can quote them.
+resource "google_monitoring_alert_policy" "usage_dropped" {
   count = local.usage_count
 
-  name     = var.usage_domain
-  location = var.region
-  metadata {
-    namespace = var.project_id
+  display_name = "registry.coffee: usage events dropped or lost"
+  combiner     = "OR"
+  conditions {
+    display_name = "app.usage logged at WARNING or above"
+    condition_matched_log {
+      filter = join(" AND ", [
+        "resource.type=\"cloud_run_revision\"",
+        "resource.labels.service_name=\"${local.usage_service}\"",
+        "jsonPayload.logger=\"app.usage\"",
+        "severity>=WARNING",
+      ])
+    }
   }
-  spec {
-    route_name = google_cloud_run_v2_service.usage[0].name
+  documentation {
+    mime_type = "text/markdown"
+    subject   = "registry.coffee: usage events dropped or lost"
+    content   = <<-EOT
+      The usage collector dropped or lost events. Its log line holds only counts: `rate_limited`, `ceiling`, `daily_cap`, `overflow` and `staged_full` are events a limit dropped (traffic, or a flood); `publish_failed` means Hugging Face refused or was unreachable and the events wait in staging; `lost` and `write_failed` are events that will never be stored. Logs Explorer: resource "Cloud Run Revision", service `${local.usage_service}`, logger `app.usage`. Steps: docs/app/RUNNING.md, "Usage".
+    EOT
   }
+  alert_strategy {
+    notification_rate_limit {
+      period = "21600s" # at most one every six hours: the counts are directional, a flood would repeat it
+    }
+    auto_close = "3600s"
+  }
+  notification_channels = [google_monitoring_notification_channel.owner.id]
 }

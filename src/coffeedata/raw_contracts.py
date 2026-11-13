@@ -100,8 +100,15 @@ CONTRACTS: dict[str, dict[str, Any]] = {
     },
     "usage": {
         "tables": ["usage_events"],
-        "producer": "the usage collector (app/usage.py, POST /e on e.registry.coffee)",
+        "producer": "the usage collector (app/usage.py, POST /e on its run.app address)",
         "producer_code": ["app/usage.py", "app/usage_events.py"],
+        # What the page scripts send the collector: the envelope, each event's fields and the collector's rules.
+        "links": [
+            (
+                "contracts/internal/usage-wire.schema.json",
+                "The wire format the page scripts send (JSON Schema)",
+            )
+        ],
         "consumers": ["dbt (models/usage/: stg_usage_events, int_usage_location)"],
         "values": {f"usage_events.{c}": list(v) for c, v in USAGE_VALUES.items()},
     },
@@ -201,6 +208,7 @@ def generate(name: str, version: str) -> dict:
         ),
         ("src/coffeedata/raw_contracts.py", "implementation", "The generator of this file"),
         *((p, "implementation", "Producer") for p in spec["producer_code"]),
+        *((p, "implementation", d) for p, d in spec.get("links", [])),
         (
             "tests/test_raw_contracts.py",
             "implementation",

@@ -1,9 +1,10 @@
 # What each account may do, read from what src/terraform/ manages:
-#   APIs (google_project_service); the deploy pool and provider; four service accounts and IAM on two of them; the
-#   image repository and its IAM; seven empty secrets and their IAM; the Cloud Run service, its IAM and its domain
-#   mapping; the ingestion network (network, two subnets, router, two NATs, two static addresses); the staging bucket
-#   and its IAM; the Cloud Run jobs and their IAM; Cloud Scheduler jobs; a notification channel, alert policies and an
-#   uptime check; the billing budget; `data.google_project`.
+#   APIs (google_project_service); the deploy pool and provider; five service accounts and IAM on two of them; the
+#   image repository and its IAM; eight empty secrets and their IAM; the Cloud Run service, its IAM and its domain
+#   mapping; the usage collector's service and its IAM, and one log exclusion (usage.tf); the ingestion network
+#   (network, two subnets, router, two NATs, two static addresses); the staging bucket and its IAM; the Cloud Run jobs
+#   and their IAM; Cloud Scheduler jobs; a notification channel, alert policies and an uptime check; the billing
+#   budget; `data.google_project`.
 # Specific roles throughout: no owner, editor, projectIamAdmin, workloadIdentityPoolAdmin, roleAdmin or
 # serviceAccountKeyAdmin. A missing permission fails closed, with a 403 that names it.
 #
@@ -23,12 +24,15 @@ locals {
   plan_member  = "serviceAccount:${google_service_account.tf_plan.email}"
   apply_member = "serviceAccount:${google_service_account.tf_apply.email}"
 
-  # The main root's runtime accounts (secrets.tf, ingestion.tf), by the names it gives them.
+  # The main root's runtime accounts (secrets.tf, ingestion.tf, usage.tf), by the names it gives them. The usage
+  # collector's account is made by the main root's first apply after usage.tf merges: this root's grant on it can
+  # only be applied after that (RUNNING.md, "Usage").
   managed_account = {
     for k, id in {
       runtime          = "${var.service}-run"
       ingest           = "${var.service}-ingest"
       ingest_scheduler = "${var.service}-ingest-sched"
+      usage            = "${var.service}-usage"
     } : k => "projects/${var.project_id}/serviceAccounts/${id}@${var.project_id}.iam.gserviceaccount.com"
   }
 
@@ -92,6 +96,20 @@ resource "google_project_iam_custom_role" "tf_secrets" {
   ]
 }
 
+# The usage collector's request-log exclusion (usage.tf). Not roles/logging.configWriter, which can also write sinks
+# (send logs anywhere) and buckets: exclusions only, and no delete (the guard refuses deletes; that is by hand).
+resource "google_project_iam_custom_role" "tf_log_exclusions" {
+  role_id     = "tfApplyLogExclusions"
+  title       = "Terraform apply: create and update log exclusions"
+  permissions = ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list", "logging.exclusions.update"]
+}
+
+resource "google_project_iam_custom_role" "tf_log_exclusions_reader" {
+  role_id     = "tfPlanLogExclusions"
+  title       = "Terraform plan: read log exclusions"
+  permissions = ["logging.exclusions.get", "logging.exclusions.list"]
+}
+
 # --- Plan: read every resource the main root manages ----------------------------------------------------------------
 
 resource "google_project_iam_member" "tf_plan" {
@@ -99,13 +117,14 @@ resource "google_project_iam_member" "tf_plan" {
     "roles/browser",                           # resourcemanager.projects.get: data.google_project, the provider
     "roles/serviceusage.serviceUsageConsumer", # read enabled APIs; use the project as quota project (user_project_override)
     "roles/iam.workloadIdentityPoolViewer",    # the deploy pool and provider
-    "roles/iam.serviceAccountViewer",          # the four service accounts
+    "roles/iam.serviceAccountViewer",          # the five service accounts
     "roles/iam.securityReviewer",              # read (never set) IAM policies: accounts, secrets, repository, service, jobs, bucket
     "roles/run.viewer",                        # the service, its domain mapping, the jobs
     "roles/secretmanager.viewer",              # secrets' metadata; never a value (no versions.access)
     "roles/compute.networkViewer",             # network, subnets, router, NATs, static addresses
     "roles/cloudscheduler.viewer",             # the weekly schedule
     "roles/monitoring.viewer",                 # notification channel, alert policies, uptime check
+    google_project_iam_custom_role.tf_log_exclusions_reader.id,
   ])
   project = var.project_id
   role    = each.value
@@ -173,6 +192,7 @@ resource "google_project_iam_member" "tf_apply" {
     "roles/monitoring.uptimeCheckConfigEditor",   # the /healthz uptime check
     google_project_iam_custom_role.tf_service_accounts.id,
     google_project_iam_custom_role.tf_secrets.id,
+    google_project_iam_custom_role.tf_log_exclusions.id,
   ])
   project = var.project_id
   role    = each.value
@@ -194,10 +214,11 @@ resource "google_storage_bucket_iam_member" "tf_apply_staging" {
 }
 
 # actAs: the service runs as the runtime account, the jobs as the ingest account, the schedule calls them as the
-# scheduler account. No other account, and never IAM on any account: deploy.tf's two account bindings (who may act as
-# the deploy account, and the deploy account acting as the runtime one) stay changes by hand, and the guard refuses them.
+# scheduler account, the usage collector as its own. No other account, and never IAM on any account: deploy.tf's two
+# account bindings (who may act as the deploy account, and the deploy account acting as the runtime one) stay changes
+# by hand, and the guard refuses them.
 resource "google_service_account_iam_member" "tf_apply_acts_as" {
-  for_each           = toset(["runtime", "ingest", "ingest_scheduler"])
+  for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage"])
   service_account_id = local.managed_account[each.value]
   role               = "roles/iam.serviceAccountUser"
   member             = local.apply_member

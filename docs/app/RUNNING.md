@@ -572,21 +572,55 @@ it releases, as the policy says.
 ## Usage
 
 Anonymous search, filter and click-out counts (the analytics design) go to a small service of their own,
-`registry-coffee-usage` on `e.registry.coffee` (`src/terraform/usage.tf`, `app/usage.py`), never to the app: the app
-is same-site with registry.coffee, so a beacon to it would carry the session cookie. The collector answers every
-`POST /e` with an empty 204 at once, masks the caller's IP (IPv4 /24, IPv6 /40) before anything is kept, and appends
-events to the private dataset `jtouley/coffee-usage` (`events/day=YYYY-MM-DD/batch=<id>.parquet`): every 200 events,
-every 15 minutes while it gets requests, and when the instance stops. It logs counts per flush and nothing else, and
-Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from the `_Default` sink.
+`registry-coffee-usage` at its own run.app address (`src/terraform/usage.tf`, `app/usage.py`), never to the app: the
+app is same-site with registry.coffee, so a beacon to it would carry the session cookie. The address is Cloud Run's
+deterministic one, `https://registry-coffee-usage-<project number>.us-central1.run.app` (output `usage_url`), with no
+custom domain, DNS record or domain verification; the page scripts read it from `config/usage.toml` (`collector_url`,
+empty until the service exists, and then the pages send nothing). The collector answers every `POST /e` with an empty
+204, masks the caller's IP (IPv4 /24, IPv6 /40) before anything is kept, and appends events to the private dataset
+`jtouley/coffee-usage` (`events/day=YYYY-MM-DD/batch=<id>.parquet`): at most once a minute, inside the request that
+finds 200 events waiting or the oldest 15 minutes old, and at shutdown. It logs counts per flush and nothing else;
+Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from the `_Default` sink. The
+alert "usage events dropped or lost" emails the owner when a flush logs at WARNING (a limit dropped events, a publish
+failed) or ERROR (events lost).
 
 | What | Where | Value |
 |---|---|---|
-| `usage_enabled` | `ci.tfvars` (a PR) | `true` creates the service, its public invoker, domain mapping and request-log exclusion; `false` (the default): only its account and the empty secret |
+| `usage_enabled` | `ci.tfvars` (a PR) | `true` creates the service, its public invoker, its request-log exclusion and its alert; `false` (the default): only its account and the empty secret |
 | `usage_image` | `ci.tfvars` (a PR) | The app's image from a deploy run on main, by digest (`<GCP_IMAGE>@sha256:<64 hex>`); empty runs Google's sample image |
 | `usage_token` | `ci.tfvars` (a PR) | `true` mounts `USAGE_HF_TOKEN` as `HF_TOKEN`; `false` (the default) leaves the collector unable to publish |
 | `USAGE_HF_TOKEN` secret | Secret Manager: always exists | A fine-grained Hugging Face token with write access to `jtouley/coffee-usage` only |
-| `usage_domain`, `usage_dataset` | variables | `e.registry.coffee`, `jtouley/coffee-usage` |
-| DNS | the registrar | `CNAME e -> ghs.googlehosted.com.` (`terraform output usage_dns`) |
+| `collector_url` | `config/usage.toml` (a PR) | `usage_url`'s value once the service exists |
+| `usage_dataset` | variable | `jtouley/coffee-usage` |
+
+**Limits** (`app/usage.py`), counted in the flush line when they drop anything: 600 events a minute and 10,000 a
+day per masked prefix (a /24 or /40 can be a whole carrier's NAT pool or a Private Relay egress); 6,000 a minute and
+200,000 a UTC day per instance (at most two); 20,000 events in memory and 50,000 written but unpublished.
+
+### The apply account's grants for the collector
+
+The main root manages the collector's account (from the first apply after `usage.tf` merged, with `usage_enabled`
+off: the plan and apply accounts can already manage it and the empty secret). Before `usage_enabled` can be turned
+on, the apply account must be able to act as that account and to write the one log exclusion, and the plan account
+to read it. They are in `src/terraform/bootstrap/iam.tf` (`tfApplyLogExclusions`, `tfPlanLogExclusions`, and
+`usage` in `tf_apply_acts_as`). Give them **after** that first apply has made `registry-coffee-usage`, in one of
+two ways:
+
+- **Re-apply the bootstrap root** from Cloud Shell, as it was applied before (plan, read it: two custom roles, three
+  grants, nothing else changes; apply).
+- **Or in the Cloud Console**, the same grants by hand:
+  1. IAM & Admin → Roles → Create role: ID `tfApplyLogExclusions`, title "Terraform apply: create and update log
+     exclusions", permissions `logging.exclusions.create`, `.get`, `.list`, `.update`. Again: ID
+     `tfPlanLogExclusions`, title "Terraform plan: read log exclusions", permissions `logging.exclusions.get`,
+     `.list`.
+  2. IAM & Admin → IAM → Grant access: principal `registry-coffee-tf-apply@<project>.iam.gserviceaccount.com`, role
+     `tfApplyLogExclusions`; then principal `registry-coffee-tf-plan@…`, role `tfPlanLogExclusions`.
+  3. IAM & Admin → Service accounts → `registry-coffee-usage` → Permissions → Grant access: principal
+     `registry-coffee-tf-apply@…`, role Service Account User.
+
+  The next bootstrap apply then finds the two roles already there: import them first (`terraform import
+  google_project_iam_custom_role.tf_log_exclusions projects/<project>/roles/tfApplyLogExclusions`, and the same for
+  `tf_log_exclusions_reader` with `tfPlanLogExclusions`); the grants need no import.
 
 **Deploying it.** Terraform runs the collector, like the ingest jobs; the deploy workflow never touches it. Every run
 of `deploy.yml` on main builds the app's image, pushes it by digest and attests it (the `attest` job); the collector
@@ -604,16 +638,15 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
 1. **Outside GitHub, once:** on Hugging Face, make the private dataset `jtouley/coffee-usage` and a fine-grained
    token with write access to that one dataset (Hugging Face has no write-only token: it can read that dataset too,
    and nothing else). Then in the Cloud Console, **Security → Secret Manager → `USAGE_HF_TOKEN` → New version**:
-   paste the token. Add the DNS record above at the registrar.
-2. **The apply account's two grants** (bootstrap root, the owner's, not through GitHub): act as
-   `registry-coffee-usage@` (`roles/iam.serviceAccountUser` on that one account, as it has on the runtime account),
-   and write log exclusions (`logging.exclusions.create`, `.get`, `.list`, `.update`). Until then leave
-   `usage_enabled` off: the apply would fail partway.
+   paste the token.
+2. **The grants** above, after the first apply has made the collector's account. Until then leave `usage_enabled`
+   off: the apply would fail partway.
 3. `usage_enabled = true`, `usage_token = true` and `usage_image` pinned, in one PR. The apply makes the log exclusion
-   first, then the service, its invoker and domain mapping. The certificate follows the DNS record within the hour.
-4. **Check it.** `curl -s -o /dev/null -w '%{http_code}\n' -X POST https://e.registry.coffee/e -d '{}'` prints
-   `204`, as does every other request; the service's log shows a `usage flush` line counting it as `foreign_origin`
-   at its next flush (a request 15 minutes later, or the instance stopping).
+   first, then the service, its invoker and the alert.
+4. `collector_url` in `config/usage.toml` set to `usage_url` (the apply's output, or the service's URL on its Cloud
+   Run page), in a PR: from then on the pages send events.
+5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does every other request; the service's
+   log shows a `usage flush` line counting it as `foreign_origin` at its next flush.
 
 ## Using it on the phone
 

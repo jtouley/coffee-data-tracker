@@ -12,7 +12,7 @@ domain: coffee
 tags:
 - internal
 description:
-  purpose: 'Internal contract between services: the usage collector (app/usage.py, POST /e on e.registry.coffee) -> dbt
+  purpose: 'Internal contract between services: the usage collector (app/usage.py, POST /e on its run.app address) -> dbt
     (models/usage/: stg_usage_events, int_usage_location).'
   usage: Internal to the pipeline; not published, and not a public interface. Readers outside the pipeline use the public
     catalog contract (contracts/public-catalog.odcs.yaml).
@@ -30,8 +30,8 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: Random, made by the page per event; only for dropping a retried duplicate (never a visitor, session or
-      page-load id).
+    description: A random version-4 UUID the page makes per event, or null when it sent none (the collector never makes
+      one up); only for dropping a retried duplicate, never a visitor, session or page-load id.
   - name: received_at
     logicalType: timestamp
     logicalTypeOptions:
@@ -91,7 +91,7 @@ schema:
       logicalType: string
       physicalType: string
     required: false
-    description: Catalog cities the page's parser read in the search text.
+    description: Catalog cities the page's parser read in the search text (no '@' or runs of 7+ digits).
   - name: states
     logicalType: array
     physicalType: 'list<item: string>'
@@ -99,22 +99,22 @@ schema:
       logicalType: string
       physicalType: string
     required: false
-    description: Catalog states the page's parser read in the search text.
+    description: Catalog states the page's parser read in the search text, as two-letter codes.
   - name: origin
     logicalType: string
     physicalType: string
     required: false
-    description: The Origin filter (a country), or null for all.
+    description: The Origin filter (a country), or null for all (no '@' or runs of 7+ digits).
   - name: process
     logicalType: string
     physicalType: string
     required: false
-    description: The Process filter, or null for all.
+    description: The Process filter, or null for all (no '@' or runs of 7+ digits).
   - name: state
     logicalType: string
     physicalType: string
     required: false
-    description: The State filter (the roaster's state), or null for all.
+    description: The State filter (the roaster's state, a two-letter code), or null for all.
   - name: in_stock
     logicalType: boolean
     physicalType: bool
@@ -143,12 +143,13 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: A click_out's roaster (normalized domain), as the page sent it; checked against the release in dbt.
+    description: A click_out's roaster (its normalized domain, the catalog's roaster id), as the page sent it; checked against
+      the release in dbt.
   - name: coffee_id
     logicalType: string
     physicalType: string
     required: false
-    description: A click_out's coffee, if the link was a coffee's.
+    description: 'A click_out''s coffee, if the link was a coffee''s: <roaster_id>:<the store''s product id>.'
   - name: rank
     logicalType: integer
     physicalType: int32
@@ -259,6 +260,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/app/usage_events.py
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/contracts/internal/usage-wire.schema.json
+  type: implementation
+  description: The wire format the page scripts send (JSON Schema)
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -266,11 +270,11 @@ customProperties:
 - property: audience
   value: internal
 - property: producer
-  value: the usage collector (app/usage.py, POST /e on e.registry.coffee)
+  value: the usage collector (app/usage.py, POST /e on its run.app address)
 - property: consumers
   value:
   - 'dbt (models/usage/: stg_usage_events, int_usage_location)'
 - property: interfaceFingerprint
   value: 68296dd4374bc721
 - property: docsFingerprint
-  value: fa2f85ff23a5f744
+  value: 5b80820e3795d6c4

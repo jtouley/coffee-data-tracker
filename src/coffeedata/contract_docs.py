@@ -128,8 +128,8 @@ COLUMNS: dict[str, dict[str, str]] = {
         "is_decaf": "Decaffeinated.",
     },
     "usage_events": {
-        "event_id": "Random, made by the page per event; only for dropping a retried duplicate (never a visitor, "
-        "session or page-load id).",
+        "event_id": "A random version-4 UUID the page makes per event, or null when it sent none (the collector "
+        "never makes one up); only for dropping a retried duplicate, never a visitor, session or page-load id.",
         "received_at": "When the collector received it (UTC), truncated to the hour.",
         "event": "page_view, search (results settled), filter_state (filters settled) or click_out (a link to a "
         "roaster's or coffee's store).",
@@ -139,18 +139,18 @@ COLUMNS: dict[str, dict[str, str]] = {
         "device": "phone or desktop, as the page judged it from its width.",
         "query": "The search text as typed, capped at 100 characters; not scrubbed. A dbt detector counts any that "
         "look like an email, phone or card number and alerts on the count, never the text.",
-        "cities": "Catalog cities the page's parser read in the search text.",
-        "states": "Catalog states the page's parser read in the search text.",
-        "origin": "The Origin filter (a country), or null for all.",
-        "process": "The Process filter, or null for all.",
-        "state": "The State filter (the roaster's state), or null for all.",
+        "cities": "Catalog cities the page's parser read in the search text (no '@' or runs of 7+ digits).",
+        "states": "Catalog states the page's parser read in the search text, as two-letter codes.",
+        "origin": "The Origin filter (a country), or null for all (no '@' or runs of 7+ digits).",
+        "process": "The Process filter, or null for all (no '@' or runs of 7+ digits).",
+        "state": "The State filter (the roaster's state, a two-letter code), or null for all.",
         "in_stock": "The In stock filter.",
         "sort": "The Sort select: roaster, asc or desc (price per 100 g).",
         "results_n": "Coffees shown for the search and filters.",
         "zero_results": "Whether the search and filters found nothing.",
-        "roaster_id": "A click_out's roaster (normalized domain), as the page sent it; checked against the release "
-        "in dbt.",
-        "coffee_id": "A click_out's coffee, if the link was a coffee's.",
+        "roaster_id": "A click_out's roaster (its normalized domain, the catalog's roaster id), as the page sent it; "
+        "checked against the release in dbt.",
+        "coffee_id": "A click_out's coffee, if the link was a coffee's: <roaster_id>:<the store's product id>.",
         "rank": "A click_out's position in the result list, from 1; null off a result list.",
         "source": "On a page load's first event only: utm (it had utm_* tags), referrer, direct or internal (one of "
         "our own hosts); null on every later event.",

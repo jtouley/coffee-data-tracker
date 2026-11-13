@@ -1,16 +1,19 @@
-"""The usage collector (app/usage.py) and its event schema (app/usage_events.py): every request gets a 204 and
-nothing waits; the IP is masked before anything is kept; nothing written or logged holds a full IP, a cookie or the
-user agent; the per-prefix limits, the bot flag, the source parser and the flushes. All values are invented (the
-addresses are from the documentation ranges, RFC 5737 and RFC 3849)."""
+"""The usage collector (app/usage.py) and its event schema (app/usage_events.py): every request gets a 204; the IP is
+masked before anything is kept; nothing written or logged holds a full IP, a cookie or the user agent; the limits,
+the bot flag, the source parser, the flushes and their bounds; the wire schema; the Terraform and the bootstrap
+grants it needs. All values are invented (the addresses are from the documentation ranges, RFC 5737 and RFC 3849)."""
 
 from __future__ import annotations
 
+import asyncio
 import ipaddress
 import json
 import logging
 import re
 import threading
 import time
+import tomllib
+import uuid
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Literal, get_args, get_origin
@@ -20,6 +23,7 @@ import pytest
 from starlette.testclient import TestClient
 
 from app import logs, usage
+from app.limits import FixedWindows, forwarded_client
 from app.usage_events import (
     QUERY_MAX,
     Event,
@@ -28,6 +32,7 @@ from app.usage_events import (
     mask_ip,
     parse_source,
     referrer_host,
+    render_wire_schema,
     row,
 )
 from coffeedata import raw_contracts
@@ -41,21 +46,28 @@ COOKIE = "session=c4n4ry-s3ss10n-v4lu3-0123456789abcdef"
 EMAIL = "canary@example.com"
 UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148 Safari/604.1"
 NOW = datetime(2026, 11, 13, 15, 42, 7, tzinfo=UTC).timestamp()
+EVENT_ID = "3f2b8c1e-9a4d-4e7f-8b21-6c0d5e4f3a29"  # version 4
 
 
 class FakeLake(Lake):
-    """A local usage lake whose publish can be slow or fail, like Hugging Face on a bad day."""
+    """A local usage lake whose writes and publishes can be slow or fail, like Hugging Face on a bad day."""
 
-    def __init__(self, root: Path, fail: int = 0, delay: float = 0.0):
+    def __init__(self, root: Path, fail: int = 0, delay: float = 0.0, fail_writes: int = 0):
         super().__init__(str(root), tables=USAGE_TABLES)
-        self.fail, self.delay, self.publishes = fail, delay, 0
+        self.fail, self.delay, self.fail_writes, self.publishes = fail, delay, fail_writes, 0
+
+    def write(self, table, rel, rows):
+        if self.fail_writes:
+            self.fail_writes -= 1
+            raise OSError(f"disk full near {IP}")  # a message the collector must never log
+        return super().write(table, rel, rows)
 
     def publish(self, message: str, attempts: int = 5, **_) -> int:
         time.sleep(self.delay)
         self.publishes += 1
         if self.fail:
             self.fail -= 1
-            raise ConnectionError(f"hub unreachable from {IP}")  # a message the collector must never log
+            raise ConnectionError(f"hub unreachable from {IP}")
         return 1
 
 
@@ -98,6 +110,11 @@ def click(**kw) -> dict:
     return {"event": "click_out", "surface": "catalog", "roaster_id": "example-roaster.com", "rank": 3} | kw
 
 
+def prefix_ip(i: int) -> str:
+    """An address in the i-th /40 of the IPv6 documentation range: a separate prefix for each i < 256."""
+    return f"2001:db8:{i:02x}00::1"
+
+
 def written(lake: Lake) -> list[dict]:
     files = sorted(p for p in (lake.root / "events").rglob("*.parquet") if "schema" not in p.name)
     return [r for f in files for r in pq.read_table(f).to_pylist()]
@@ -117,9 +134,9 @@ def test_rows_follow_the_usage_contract():
     """Exactly the contract's columns, in the lake's order; every coded column's values are the contract's, and the
     wire schema's choices are the same lists."""
     e = Event.model_validate(
-        click(release="20261110T030000-abc123", device="phone", query="denver", cities=["Denver"], states=["CO"],
-              origin="Ethiopia", process="natural", state="CO", in_stock=True, sort="asc", results_n=4,
-              zero_results=False, coffee_id="example-roaster.com:42", entry=True, utm_source="newsletter")
+        click(release="20261110T030000-abc123", device="phone", event_id=EVENT_ID, origin="Ethiopia",
+              process="natural", state="CO", in_stock=True, sort="asc", results_n=4, zero_results=False,
+              coffee_id="example-roaster.com:42", entry=True, utm_source="newsletter")
     )  # fmt: skip
     r = row(e, "203.0.113.0/24", False, datetime.fromtimestamp(NOW, UTC))
     assert list(r) == SCHEMAS["usage_events"].names == raw_contracts.columns("usage", "usage_events")
@@ -131,6 +148,28 @@ def test_rows_follow_the_usage_contract():
         if column in Event.model_fields:
             assert _choices(Event.model_fields[column].annotation) == values, column
     assert r["source"] == "utm" and r["received_at"] == datetime(2026, 11, 13, 15, tzinfo=UTC)
+    assert r["event_id"] == EVENT_ID
+
+
+def test_an_event_without_an_id_is_stored_without_one():
+    """No id is made up: a retry of an event without one can't be told from a new one, and a made-up id would hide
+    that."""
+    r = row(Event.model_validate(search()), "203.0.113.0/24", False, datetime.fromtimestamp(NOW, UTC))
+    assert r["event_id"] is None
+
+
+def test_the_wire_schema_file_is_the_codes():
+    """contracts/internal/usage-wire.schema.json is what `python -m app.usage_events --write` writes, the usage
+    contract links it, and `make contracts` rewrites it."""
+    assert (ROOT / "contracts/internal/usage-wire.schema.json").read_text() == render_wire_schema()
+    doc = json.loads(render_wire_schema())
+    assert doc["properties"]["events"]["maxItems"] == usage.MAX_EVENTS
+    assert doc["x-collector"]["maxBodyBytes"] == usage.MAX_BODY
+    assert set(doc["$defs"]["UsageEvent"]["properties"]) == set(Event.model_fields)
+    assert doc["$defs"]["UsageEvent"]["additionalProperties"] is False
+    links = [d["url"] for d in raw_contracts.load("usage")["authoritativeDefinitions"]]
+    assert raw_contracts.REPO + "contracts/internal/usage-wire.schema.json" in links
+    assert "python -m app.usage_events --write" in (ROOT / "Makefile").read_text()
 
 
 def test_no_row_can_hold_a_full_address():
@@ -154,6 +193,16 @@ def test_no_row_can_hold_a_full_address():
                         "visitor_id", "page_load_id", "referrer", "url", "path"}  # fmt: skip
 
 
+@pytest.mark.parametrize(
+    "address", ["10.1.2.3", "192.168.0.9", "172.16.5.5", "127.0.0.1", "169.254.1.1", "fe80::1", "::1", "fc00::5",
+                "224.0.0.1", "0.0.0.0", "::ffff:10.0.0.1"]
+)  # fmt: skip
+def test_addresses_that_arent_public_have_no_prefix(address):
+    """Private, link-local, loopback, multicast and unspecified addresses name no place: no prefix, and the event is
+    dropped as `no_address` (the documentation ranges stay usable for tests)."""
+    assert mask_ip(address) is None
+
+
 def test_query_is_kept_as_typed_and_capped():
     typed = "  Kenya AA, washed — from Nairobi? " + "x" * 200
     e = Event.model_validate(search(query=typed))
@@ -174,11 +223,21 @@ def test_query_is_kept_as_typed_and_capped():
         {"sort": "random"},
         {"results_n": -1},
         {"results_n": "12"},
-        {"cities": ["x"] * 11},
+        {"cities": ["denver"] * 11},
         {"origin": "o" * 61},
+        {"origin": EMAIL},  # identifiers outside the query
+        {"process": "call 555-123-4567"},
+        {"cities": ["denver", "+1 (303) 555 0100"]},
+        {"origin": "4111 1111 1111 1111"},
+        {"states": ["Colorado"]},
+        {"states": ["co"]},
+        {"state": "C0"},
         {"release": "latest"},
         {"event_id": "not-a-uuid"},
-        {"roaster_id": "a.com"},  # only a click_out names a roaster
+        {"event_id": str(uuid.uuid1())},  # not random: a version-1 UUID carries a clock and a node
+        {"event_id": EVENT_ID.upper()},
+        {"event_id": 7},
+        {"roaster_id": "example-roaster.com"},  # only a click_out names a roaster
         {"referrer": "https://news.example.com/"},  # only an entry event carries a source
         {"utm_source": "News Letter", "entry": True},
     ],
@@ -188,15 +247,34 @@ def test_the_wire_schema_is_strict(bad):
         Event.model_validate(search() | bad)
 
 
+@pytest.mark.parametrize(
+    "bad",
+    [
+        {"roaster_id": "Example-Roaster.com"},
+        {"roaster_id": "localhost"},
+        {"roaster_id": "a" * 120 + ".com"},
+        {"roaster_id": "x.com/path"},
+        {"coffee_id": "other-roaster.com:42"},  # a coffee belongs to the roaster clicked
+        {"coffee_id": "example-roaster.com:"},
+        {"coffee_id": "example-roaster.com:a b"},
+        {"coffee_id": "example-roaster.com:" + "9" * 80},
+    ],
+)
+def test_ids_follow_the_catalogs_shape(bad):
+    with pytest.raises(ValueError):
+        Event.model_validate(click() | bad)
+
+
 def test_click_out_needs_a_roaster_and_page_views_carry_no_search():
     with pytest.raises(ValueError):
         Event.model_validate({"event": "click_out", "surface": "app_coffee", "coffee_id": "x.com:1"})
     with pytest.raises(ValueError):
         Event.model_validate({"event": "page_view", "surface": "landing", "query": "kenya"})
+    ok = Event.model_validate({"event": "click_out", "surface": "app_coffee", "roaster_id": "x.com",
+                               "coffee_id": "x.com:8812345678901"})  # fmt: skip
     assert (
-        Event.model_validate({"event": "click_out", "surface": "app_coffee", "roaster_id": "x.com"}).rank
-        is None
-    )
+        ok.rank is None and ok.coffee_id == "x.com:8812345678901"
+    )  # a store's long numeric id is fine there
 
 
 @pytest.mark.parametrize(
@@ -235,20 +313,34 @@ def test_only_a_page_loads_first_event_carries_a_source():
         (None, False, True),
         ("", False, True),
         ("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)", False, True),
-        (
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 HeadlessChrome/131.0 Safari/537.36",
-            False,
-            True,
-        ),
+        ("Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)", False, True),
+        ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 HeadlessChrome/131.0 Safari/537.36", False, True),
         ("python-requests/2.32", False, True),
         ("curl/8.5.0", False, True),
+        ("TelegramBot (like TwitterBot)", False, True),  # Telegram's link preview
+        ("WhatsApp/2.23.20.0 A", False, True),  # WhatsApp's link preview
+        ("Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)", False, True),
+        ("Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)", False, True),
+        # real people's browsers that the first patterns flagged (review finding 8)
+        ("Mozilla/5.0 (Linux; Android 12; CUBOT KINGKONG 7) AppleWebKit/537.36 Chrome/119.0 Mobile Safari/537.36",
+         False, False),
+        ("Mozilla/5.0 (Linux; Android 13; CUBOT_X70) AppleWebKit/537.36 Chrome/120.0 Mobile Safari/537.36",
+         False, False),
+        ("Mozilla/5.0 (Linux; Android 14; Pixel 8 Build/AP2A; wv) AppleWebKit/537.36 Chrome/125.0 Mobile "
+         "Safari/537.36 Telegram-Android/11.2.3 (Google Pixel 8; Android 14; SDK 34; HIGH)", False, False),
+        ("Mozilla/5.0 (Linux; Android 14; SM-S918B; wv) AppleWebKit/537.36 Chrome/125.0 Mobile Safari/537.36 "
+         "WhatsApp/2.24.10.78", False, False),
+        ("Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148 "
+         "[FBAN/FBIOS;FBAV/470.0]", False, False),
+        ("Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 Version/17.5 Safari/605.1.15 "
+         "Slack_SSB/4.38.125", False, False),
     ],
-)
+)  # fmt: skip
 def test_bot_flag(agent, webdriver, bot):
     assert is_bot(agent, webdriver) is bot
 
 
-# --- receiving: always 204, never blocking -------------------------------------------------------------------------
+# --- receiving: always 204 --------------------------------------------------------------------------------------
 
 
 @pytest.mark.parametrize(
@@ -268,6 +360,7 @@ def test_bot_flag(agent, webdriver, bot):
          "invalid"),
         ("POST", {"headers": {"origin": SITE, "x-forwarded-for": "garbage"}, "content": body(search())},
          "no_address"),
+        ("POST", {"headers": headers(ip="10.0.0.7"), "content": body(search())}, "no_address"),
         ("OPTIONS", {"headers": headers()}, None),
         ("GET", {"headers": headers()}, None),
     ],
@@ -290,60 +383,91 @@ def test_health_and_other_paths(collector):
     assert collector.counts.get("accepted") is None
 
 
-def test_a_declared_oversized_body_is_never_read(collector):
-    async def receive():  # pragma: no cover - must not be called
-        raise AssertionError("read a body declared too large")
+def _asgi(app, scope_headers: list[tuple[bytes, bytes]], messages: list[dict]) -> list[dict]:
+    sent: list[dict] = []
+    queue = list(messages)
 
-    sent = []
+    async def receive():
+        if not queue:
+            raise AssertionError("read past the body")
+        return queue.pop(0)
 
     async def send(message):
         sent.append(message)
-
-    import asyncio
 
     scope = {
         "type": "http",
         "method": "POST",
         "path": "/e",
-        "client": ("10.0.0.1", 1),
-        "headers": [(b"origin", SITE.encode()), (b"content-length", b"999999")],
+        "client": ("192.0.2.1", 1),
+        "headers": scope_headers,
     }
-    asyncio.run(usage.create_app(collector)(scope, receive, send))
+    asyncio.run(app(scope, receive, send))
+    return sent
+
+
+def test_a_declared_oversized_body_is_never_read(collector):
+    sent = _asgi(
+        usage.create_app(collector), [(b"origin", SITE.encode()), (b"content-length", b"999999")], []
+    )
     assert sent[0]["status"] == 204 and collector.counts["too_large"] == 1
 
 
-def test_the_reply_never_waits_for_a_slow_or_failing_publish(tmp_path, clock):
-    lake = FakeLake(tmp_path / "usage", fail=1, delay=1.5)
-    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
-    with TestClient(usage.create_app(c)) as client:
-        for i in range(usage.FLUSH_AT // 20):  # one /24 each: under the per-prefix limit
-            r = client.post("/e", headers=headers(ip=f"10.{i}.0.1"), content=body(*[search()] * 20))
-            assert r.status_code == 204
-        started = time.perf_counter()
-        for i in range(5):  # a flush is publishing (slowly, then failing) meanwhile
-            r = client.post("/e", headers=headers(ip=f"203.0.{i}.1"), content=body(search()))
-            assert r.status_code == 204
-        assert time.perf_counter() - started < 1.0
-    # the failed publish left its file staged; the shutdown flush published it with the rest
-    assert lake.publishes == 2 and not c.unpublished
-    assert len(written(lake)) == usage.FLUSH_AT + 5
+def test_a_client_that_goes_away_is_counted_as_aborted(collector):
+    sent = _asgi(usage.create_app(collector), [(b"origin", SITE.encode())],
+                 [{"type": "http.request", "body": b'{"ev', "more_body": True}, {"type": "http.disconnect"}])  # fmt: skip
+    assert sent == [] and collector.counts["aborted"] == 1 and not collector.counts.get("too_large")
 
 
-def test_rate_limits_count_per_masked_prefix(collector, clock, monkeypatch):
-    """60 events a minute per /24 (two addresses in it share the count), another /24 unaffected; 2,000 a day."""
-    monkeypatch.setattr(collector, "flush_if_due", lambda: None)  # keep every accepted row in memory to count
-    for _ in range(3):
+def test_rate_limits_count_per_masked_prefix(collector, clock):
+    """600 events a minute per /24 (two addresses in it share the count), another /24 unaffected; 10,000 a day."""
+    for _ in range(30):
         collector.receive(headers(ip="203.0.113.5"), None, body(*[search()] * 20))
     collector.receive(headers(ip="203.0.113.6"), None, body(search()))
     collector.receive(headers(ip="192.0.2.1"), None, body(search()))
-    assert collector.counts["accepted"] == 61 and collector.counts["rate_limited"] == 1
+    assert collector.counts["accepted"] == 601 and collector.counts["rate_limited"] == 1
     assert {r["ip_prefix"] for r in collector.buffer} == {"203.0.113.0/24", "192.0.2.0/24"}
-    for minute in range(1, 40):  # 60 a minute for 39 minutes is 2,340: the day's cap stops it at 2,000
+    for minute in range(1, 18):  # 600 a minute for 17 minutes is 10,200: the day's limit stops it at 10,000
         clock.t = NOW + 60 * minute
-        for _ in range(3):
+        for _ in range(30):
             collector.receive(headers(ip="192.0.2.1"), None, body(*[search()] * 20))
     per_prefix = sum(1 for r in collector.buffer if r["ip_prefix"] == "192.0.2.0/24")
     assert per_prefix == usage.PER_DAY
+
+
+def test_the_instance_ceiling_and_daily_cap(collector, clock, monkeypatch):
+    monkeypatch.setattr(usage, "CEILING_PER_MINUTE", 30)
+    monkeypatch.setattr(usage, "DAILY_CAP", 50)
+    for i in range(3):
+        collector.receive(headers(ip=prefix_ip(i)), None, body(*[search()] * 20))
+    assert collector.counts["accepted"] == 30 and collector.counts["ceiling"] == 30
+    clock.t += 60
+    for i in range(3, 6):
+        collector.receive(headers(ip=prefix_ip(i)), None, body(*[search()] * 20))
+    assert collector.counts["accepted"] == 50 and collector.counts["daily_cap"] >= 10
+
+
+def test_fixed_windows_keep_one_count_per_key_and_window():
+    w = FixedWindows()
+    limits = {"k": (3, 60.0)}
+    assert [w.take(limits, 100.0) for _ in range(4)] == [True, True, True, False]
+    assert w.take(limits, 121.0)  # the next minute
+    assert len(w.counts) == 2  # one integer per window, not one per hit
+
+
+def test_fixed_windows_sweep_past_windows_at_most_once_a_minute(monkeypatch):
+    import app.limits as limits
+
+    monkeypatch.setattr(limits, "SWEEP_AT", 5)
+    w = FixedWindows()
+    for i in range(10):
+        w.take({f"k{i}": (5, 60.0)}, 100.0)
+    w.take(
+        {"x": (5, 60.0)}, 100.0
+    )  # minute 1 was swept once already (nothing was past): no sweep per request
+    assert len(w.counts) == 11
+    w.take({"y": (5, 60.0)}, 130.0)  # the next minute sweeps once: minute 1's eleven counts go
+    assert set(w.counts) == {("y", 60.0, 2)}
 
 
 def test_ipv6_is_masked_to_40_bits(collector):
@@ -354,45 +478,20 @@ def test_ipv6_is_masked_to_40_bits(collector):
 def test_the_leftmost_forwarded_entry_is_never_trusted(collector):
     collector.receive(headers(ip="192.0.2.44"), None, body(search()))
     assert collector.buffer[0]["ip_prefix"] == "192.0.2.0/24"  # not SPOOF's /24
+    assert forwarded_client(f"{SPOOF}, 192.0.2.44", "10.0.0.1", 1) == "192.0.2.44"
+    assert forwarded_client("", "10.0.0.1", 1) == "10.0.0.1"
 
 
-def test_flush_writes_one_file_per_day_and_retries_a_failed_publish(tmp_path, clock, monkeypatch):
-    lake = FakeLake(tmp_path / "usage", fail=1)
-    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
-    monkeypatch.setattr(c, "flush_if_due", lambda: None)  # flushed by hand below
-    c.receive(headers(), None, body(search()))
-    clock.t = datetime(2026, 11, 14, 0, 5, tzinfo=UTC).timestamp()
-    c.receive(headers(ip="192.0.2.1"), None, body(click()))
-    assert c.flush() == 2 and c.unpublished  # written and staged; the publish failed
-    days = sorted(p.parent.name for p in (lake.root / "events").rglob("batch=2*.parquet"))
-    assert days == ["day=2026-11-13", "day=2026-11-14"]
-    assert (
-        c.flush() == 0 and not c.unpublished and lake.publishes == 2
-    )  # nothing new, but the staged files went
-    assert [r["received_at"].hour for r in written(lake)] == [15, 0]
-
-
-def test_flush_is_due_at_200_events_or_15_minutes(collector, clock):
-    collector.receive(headers(), None, body(search()))
-    assert not collector.due()
-    clock.t += usage.FLUSH_EVERY
-    assert collector.due()
-    collector.flush()
-    collector.receive(headers(), None, body(*[search()] * 20))
-    assert not collector.due()
-    collector.counts.clear()
-    collector.receive(headers(origin="https://evil.example"), None, b"")
-    clock.t += usage.FLUSH_EVERY
-    assert collector.due()  # only counts to log: still logged every 15 minutes
-
-
-def test_memory_is_capped_while_publishing_fails(collector, monkeypatch):
+def test_memory_and_staging_are_capped(collector, monkeypatch):
     monkeypatch.setattr(usage, "BUFFER_MAX", 25)
-    monkeypatch.setattr(usage, "PER_MINUTE", 1000)
-    monkeypatch.setattr(collector, "flush_if_due", lambda: None)
     collector.receive(headers(), None, body(*[search()] * 20))
     collector.receive(headers(), None, body(*[search()] * 20))
     assert len(collector.buffer) == 25 and collector.counts["overflow"] == 15
+    monkeypatch.setattr(usage, "BUFFER_MAX", 1000)
+    monkeypatch.setattr(usage, "STAGED_MAX", 40)
+    collector.staged = 10  # written, a publish failed: 25 in memory + 10 staged leaves room for 5
+    collector.receive(headers(ip="192.0.2.1"), None, body(*[search()] * 20))
+    assert len(collector.buffer) == 30 and collector.counts["staged_full"] == 15
 
 
 def test_receive_never_raises(collector, monkeypatch, caplog):
@@ -403,6 +502,152 @@ def test_receive_never_raises(collector, monkeypatch, caplog):
     with caplog.at_level(logging.DEBUG):
         collector.receive(headers(), None, body(search()))
     assert collector.counts["error"] == 1 and IP not in caplog.text
+
+
+# --- flushing ------------------------------------------------------------------------------------------------------
+
+
+def test_flush_writes_one_file_per_day_and_retries_a_failed_publish(tmp_path, clock):
+    lake = FakeLake(tmp_path / "usage", fail=1)
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    c.receive(headers(), None, body(search()))
+    clock.t = datetime(2026, 11, 14, 0, 5, tzinfo=UTC).timestamp()
+    c.receive(headers(ip="192.0.2.1"), None, body(click()))
+    assert c.flush() == 2 and c.staged == 2  # written; the publish failed, so they wait in staging
+    days = sorted(p.parent.name for p in (lake.root / "events").rglob("batch=2*.parquet"))
+    assert days == ["day=2026-11-13", "day=2026-11-14"]
+    clock.t += usage.PUBLISH_EVERY
+    assert c.due()  # staged files make a flush due
+    assert c.flush() == 0 and c.staged == 0 and lake.publishes == 2  # nothing new, but the staged files went
+    assert [r["received_at"].hour for r in written(lake)] == [15, 0]
+
+
+def test_a_failed_write_puts_its_rows_back(tmp_path, clock, caplog):
+    """The partial write: day one written and staged, day two's write fails and its rows go back in memory; the next
+    flush writes them and publishes both. Nothing is lost, and the warning names only the error's type."""
+    lake = FakeLake(tmp_path / "usage")
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    c.receive(headers(), None, body(search()))
+    clock.t = datetime(2026, 11, 14, 0, 5, tzinfo=UTC).timestamp()
+    c.receive(headers(ip="192.0.2.1"), None, body(click(), click()))
+    real = lake.write
+    calls = []
+
+    def second_fails(table, rel, rows):
+        calls.append(rel)
+        if len(calls) == 2:
+            raise OSError(f"disk full near {IP}")
+        return real(table, rel, rows)
+
+    lake.write = second_fails
+    with caplog.at_level(logging.DEBUG):
+        assert c.flush() == 1
+    assert (
+        len(c.buffer) == 2 and lake.publishes == 1 and c.staged == 0
+    )  # day one published, day two back in memory
+    flush_line = next(r for r in caplog.records if r.getMessage().startswith("usage flush"))
+    assert flush_line.levelno == logging.WARNING and flush_line.fields["write_failed"] == 1
+    assert "lost" not in flush_line.fields and IP not in caplog.text
+    clock.t += usage.PUBLISH_EVERY
+    assert c.flush() == 2 and len(written(lake)) == 3 and c.buffer == []
+
+
+def test_flush_is_due_at_200_events_or_15_minutes_but_never_twice_a_minute(collector, clock):
+    collector.receive(headers(), None, body(search()))
+    assert not collector.due()  # the first minute after start, and only one event
+    clock.t += usage.FLUSH_EVERY
+    assert collector.due()
+    collector.flush()
+    for i in range(10):  # 200 events, at once
+        collector.receive(headers(ip=prefix_ip(i)), None, body(*[search()] * 20))
+    assert not collector.due()  # a flush ran less than a minute ago
+    clock.t += usage.PUBLISH_EVERY
+    assert collector.due()
+    collector.flush()
+    collector.receive(headers(origin="https://evil.example"), None, b"")
+    clock.t += usage.PUBLISH_EVERY
+    assert not collector.due()  # only counts: they wait for 15 minutes
+    clock.t += usage.FLUSH_EVERY
+    assert collector.due()
+
+
+def test_the_request_that_finds_a_flush_due_flushes_before_its_reply(collector, lake, clock):
+    """The flush runs while that request is open (the CPU is the instance's only then), at most once a minute: ten
+    batches of 200 in one minute make one commit."""
+    client = TestClient(usage.create_app(collector))
+    clock.t += usage.PUBLISH_EVERY
+    for i in range(20):
+        r = client.post("/e", headers=headers(ip=prefix_ip(i)), content=body(*[search()] * 20))
+        assert r.status_code == 204
+    assert (
+        lake.publishes == 1 and len(written(lake)) == usage.FLUSH_AT
+    )  # flushed by the 10th request, then gated
+    assert len(collector.buffer) == 200
+
+
+def test_a_slow_publish_delays_one_reply_no_longer_than_flush_wait(tmp_path, clock, monkeypatch):
+    monkeypatch.setattr(usage, "FLUSH_WAIT", 0.2)
+    lake = FakeLake(tmp_path / "usage", delay=1.0)
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    client = TestClient(usage.create_app(c))
+    clock.t += usage.PUBLISH_EVERY
+    for i in range(9):
+        client.post("/e", headers=headers(ip=prefix_ip(i)), content=body(*[search()] * 20))
+    started = time.perf_counter()
+    assert (
+        client.post("/e", headers=headers(ip=prefix_ip(9)), content=body(*[search()] * 20)).status_code == 204
+    )
+    assert time.perf_counter() - started < 0.8
+    started = time.perf_counter()
+    assert client.post("/e", headers=headers(ip=prefix_ip(10)), content=body(search())).status_code == 204
+    assert time.perf_counter() - started < 0.5  # the next request isn't held by the flush still running
+
+
+def test_shutdown_publishes_within_its_budget_and_counts_what_is_lost(tmp_path, clock, caplog):
+    lake = FakeLake(tmp_path / "usage", fail=5)
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    c.receive(headers(), None, body(search(), search(), search()))
+    with caplog.at_level(logging.DEBUG):
+        c.shutdown(budget=2.0)
+    lost = next(r for r in caplog.records if r.getMessage().startswith("usage shutdown"))
+    assert lost.levelno == logging.ERROR and lost.fields == {"lost": 3, "finished": True}
+    assert lake.publishes == 1  # one attempt: no backoff inside the 10 seconds
+
+
+def test_shutdown_never_waits_past_its_budget_for_a_stuck_flush(collector, caplog):
+    collector.receive(headers(), None, body(search(), search()))
+    collector._flushing.acquire()  # a flush stuck in a hung publish
+    try:
+        started = time.perf_counter()
+        with caplog.at_level(logging.DEBUG):
+            collector.shutdown(budget=0.5)
+        assert time.perf_counter() - started < 1.5
+    finally:
+        collector._flushing.release()
+    lost = next(r for r in caplog.records if r.getMessage().startswith("usage shutdown"))
+    assert lost.fields == {"lost": 2, "finished": False}
+
+
+def test_a_clean_shutdown_logs_no_loss(collector, lake, caplog):
+    collector.receive(headers(), None, body(search()))
+    with caplog.at_level(logging.DEBUG):
+        collector.shutdown(budget=2.0)
+    assert len(written(lake)) == 1 and lake.publishes == 1
+    assert not any(r.getMessage().startswith("usage shutdown") for r in caplog.records)
+
+
+def test_flush_lines_log_at_warning_when_dropped_and_error_when_lost(collector, clock, caplog, monkeypatch):
+    monkeypatch.setattr(usage, "PER_MINUTE", 1)
+    with caplog.at_level(logging.DEBUG):
+        collector.receive(headers(), None, body(search(), search()))
+        collector.flush()
+    line = next(r for r in caplog.records if r.getMessage().startswith("usage flush"))
+    assert line.levelno == logging.WARNING and line.fields["rate_limited"] == 1
+    caplog.clear()
+    counts = usage.Counter({"lost": 4})
+    with caplog.at_level(logging.DEBUG):
+        collector._log(counts, 0, 0, None)
+    assert caplog.records[0].levelno == logging.ERROR
 
 
 # --- the canary ----------------------------------------------------------------------------------------------------
@@ -420,8 +665,8 @@ def test_canary_leaves_no_ip_or_cookie_in_the_lake_or_logs(lake, collector, capl
             "entry": True,
             "referrer": f"https://mail.example.com/?u={IP}",
         },
-        search(query=f"roasters near {EMAIL}", cities=["Denver"], states=["CO"]),
-        click(coffee_id="example-roaster.com:7", query=f"roasters near {EMAIL}"),
+        search(query=f"roasters near {EMAIL}", cities=["denver"], states=["CO"], event_id=EVENT_ID),
+        click(coffee_id="example-roaster.com:7"),
     ]
     formatter = logs.JsonFormatter()
     # the client's exit runs the lifespan's shutdown, which flushes
@@ -449,12 +694,28 @@ def test_canary_leaves_no_ip_or_cookie_in_the_lake_or_logs(lake, collector, capl
     assert EMAIL in raw_text and EMAIL not in log_text
     assert re.search(r"usage flush: 3 events in 1 files", log_text)
     flush = next(r for r in caplog.records if r.getMessage().startswith("usage flush"))
-    assert flush.fields["accepted"] == 3 and flush.fields["foreign_origin"] == 1
+    assert (
+        flush.fields["accepted"] == 3
+        and flush.fields["foreign_origin"] == 1
+        and flush.fields["published"] == 3
+    )
     # every address-shaped string in the logs is not one: no IPv4 at all
     assert not re.search(r"\b\d{1,3}(\.\d{1,3}){3}\b", log_text)
     for token in re.findall(r"[0-9a-f:]{6,}", log_text):
         with pytest.raises(ValueError):
             ipaddress.ip_address(token)
+
+
+def test_the_logs_never_hold_more_than_counts(collector, caplog):
+    with caplog.at_level(logging.DEBUG):
+        collector.receive(headers(), None, body(search(query="kenya")))
+        collector.flush()
+    lines = [r for r in caplog.records if r.name.startswith("app.usage")]
+    assert len(lines) == 1
+    allowed = {"written", "files", "published_ok", "staged", "published", "accepted", "invalid", "aborted",
+               "opted_out", "foreign_origin", "too_large", "bad_body", "no_address", "error", *usage.WARN, *usage.LOSS}  # fmt: skip
+    assert set(lines[0].fields) <= allowed
+    assert "kenya" not in caplog.text
 
 
 # --- deployment ----------------------------------------------------------------------------------------------------
@@ -467,47 +728,79 @@ def test_the_image_runs_the_collector_when_the_service_says_so():
     assert re.search(r'name\s*=\s*"COFFEEDATA_APP"\s*\n\s*value\s*=\s*"app.usage"', tf)
 
 
+def _code(path: str) -> str:
+    return "\n".join(line.split("#")[0] for line in (ROOT / path).read_text().splitlines())
+
+
 def test_the_terraform_keeps_to_the_collectors_own_resources():
     """Its own account, one secret it alone reads, scale to zero and at most two instances, the pinned image (Google's
-    sample image until one is pinned) owned by Terraform, the request-log exclusion made before the service; the
-    service and what hangs off it only with usage_enabled; no grant to the deploy, plan or apply accounts or any
-    impersonation role (the plan guard's to refuse, the owner's to grant)."""
-    tf = (ROOT / "src/terraform/usage.tf").read_text()
-    code = "\n".join(line.split("#")[0] for line in tf.splitlines())
+    sample image until one is pinned) owned by Terraform, no custom domain, the request-log exclusion made before the
+    service; the service and what hangs off it only with usage_enabled; no grant to the deploy, plan or apply
+    accounts or any impersonation role (the plan guard's to refuse, the owner's to grant)."""
+    code = _code("src/terraform/usage.tf")
     assert re.search(r"min_instance_count\s*=\s*0", code) and re.search(r"max_instance_count\s*=\s*2", code)
     assert (
         'image = var.usage_image != "" ? var.usage_image : "us-docker.pkg.dev/cloudrun/container/hello"'
         in code
     )
     assert re.search(r"ignore_changes = \[client, client_version, scaling\]", code)  # not the image
+    assert re.search(r'timeout\s*=\s*"30s"', code) and re.search(r"cpu_idle\s*=\s*true", code)
+    assert usage.FLUSH_WAIT + 5 <= 30
     gated = re.findall(r'^resource "(\w+)" "\w+" \{\n  count = local.usage_count', code, re.M)
     assert sorted(gated) == sorted(
         [
             "google_logging_project_exclusion",
             "google_cloud_run_v2_service",
             "google_cloud_run_v2_service_iam_member",
-            "google_cloud_run_domain_mapping",
+            "google_monitoring_alert_policy",
         ]
     )
     assert "google_logging_project_exclusion.usage_requests]" in code  # the service depends on it
-    assert re.search(
-        r'secret_id = google_secret_manager_secret.usage_token.id\s*\n\s*role\s*=\s*"roles/secretmanager.secretAccessor"',
-        code,
-    )
+    assert "domain_mapping" not in code and 'registry.coffee"' not in code
+    assert re.search(r'secret_id = google_secret_manager_secret.usage_token.id\s*\n\s*role\s*=\s*"roles/secretmanager.secretAccessor"', code)  # fmt: skip
     assert "registry-coffee-deploy" not in code and "tf-plan" not in code and "tf-apply" not in code
-    assert "google_service_account.deploy" not in code
-    for role in (
-        "serviceAccountUser",
-        "serviceAccountTokenCreator",
-        "roles/owner",
-        "roles/editor",
-        "iam.workloadIdentity",
-    ):
+    for role in ("serviceAccountUser", "serviceAccountTokenCreator", "roles/owner", "roles/editor",
+                 "iam.workloadIdentity"):  # fmt: skip
         assert role not in code
     assert (
         re.search(r"google_project_iam|google_service_account_iam|google_service_account_key", code) is None
     )
     assert "run.googleapis.com%2Frequests" in code and 'service_name=\\"${local.usage_service}\\"' in code
+    assert 'jsonPayload.logger=\\"app.usage\\"' in code and '"severity>=WARNING"' in code  # the loss alert
+
+
+def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs():
+    """actAs on the collector's account (and no other new one), log exclusions only (no sinks, buckets or delete),
+    and the plan account their read; the main root's plan stays green without them while usage_enabled is off."""
+    code = _code("src/terraform/bootstrap/iam.tf")
+    assert 'usage            = "${var.service}-usage"' in code
+    assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage"])' in code
+    perms = dict(
+        re.findall(r'role_id\s*=\s*"(tf\w*LogExclusions)"[^}]*?permissions\s*=\s*\[([^\]]*)\]', code, re.S)
+    )
+    assert {k: sorted(re.findall(r'"([^"]+)"', v)) for k, v in perms.items()} == {
+        "tfApplyLogExclusions": ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list",
+                                 "logging.exclusions.update"],
+        "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
+    }  # fmt: skip
+    apply = code[code.index('resource "google_project_iam_member" "tf_apply"') :]
+    plan = code[code.index('resource "google_project_iam_member" "tf_plan"') :]
+    assert "google_project_iam_custom_role.tf_log_exclusions.id" in apply[: apply.index("])")]
+    assert "google_project_iam_custom_role.tf_log_exclusions_reader.id" in plan[: plan.index("])")]
+    assert "logging.sinks" not in code and "roles/logging" not in code
+    variables = _code("src/terraform/variables.tf")
+    assert re.search(r'variable "usage_enabled" \{[^}]*default\s*=\s*false', variables, re.S)
+    assert not re.search(r"^usage_enabled\s*=\s*true", (ROOT / "src/terraform/ci.tfvars").read_text(), re.M)
+
+
+def test_the_collector_url_is_in_one_checked_in_place():
+    """config/usage.toml holds it: empty until the service exists, then Cloud Run's deterministic address, the same
+    shape as Terraform's output usage_url."""
+    url = tomllib.loads((ROOT / "config/usage.toml").read_text())["collector_url"]
+    shape = r"https://registry-coffee-usage-[0-9]+\.us-central1\.run\.app"
+    assert url == "" or re.fullmatch(shape, url)
+    out = _code("src/terraform/outputs.tf")
+    assert '"https://${local.usage_service}-${data.google_project.this.number}.${var.region}.run.app"' in out
 
 
 def _usage_image_pattern() -> re.Pattern:
@@ -545,34 +838,6 @@ def test_deploy_keeps_the_pinned_usage_image_and_never_deploys_it():
     assert all(_usage_image_pattern().fullmatch(p) for p in pinned)
 
 
-def test_the_logs_never_hold_more_than_counts(collector, caplog):
-    with caplog.at_level(logging.DEBUG):
-        collector.receive(headers(), None, body(search(query="kenya")))
-        collector.flush()
-    lines = [r for r in caplog.records if r.name.startswith("app.usage")]
-    assert len(lines) == 1
-    assert set(lines[0].fields) <= {"written", "files", "published", "accepted", "invalid", "rate_limited",
-                                    "opted_out", "foreign_origin", "too_large", "bad_body", "no_address", "overflow",
-                                    "error", "write_failed", "publish_failed", "lost"}  # fmt: skip
-    assert "kenya" not in caplog.text
-
-
-def test_the_timer_flushes_without_a_request(collector, clock):
-    collector.receive(headers(), None, body(search()))
-    clock.t += usage.FLUSH_EVERY
-    stop = collector.start_timer(every=0.01)
-    try:
-        deadline = time.monotonic() + 5
-        while collector.buffer and time.monotonic() < deadline:
-            time.sleep(0.01)
-    finally:
-        stop.set()
-    assert collector.buffer == []
-    assert all(
-        t.name != "usage-flush" or not t.is_alive() or t.join(5) is None for t in threading.enumerate()
-    )
-
-
 def _create(address: str, rtype: str, after: dict, unknown: dict | None = None) -> dict:
     return {
         "address": address,
@@ -594,6 +859,10 @@ USAGE_PLAN = [
             {"secret_id": "USAGE_HF_TOKEN", "replication": [{"auto": [{}]}]}, {"id": True, "name": True}),
     _create("google_secret_manager_secret_iam_member.usage_token", "google_secret_manager_secret_iam_member",
             {"role": "roles/secretmanager.secretAccessor"}, {"member": True, "secret_id": True}),
+    _create("google_logging_project_exclusion.usage_requests[0]", "google_logging_project_exclusion",
+            {"name": "registry-coffee-usage-requests",
+             "filter": 'resource.type="cloud_run_revision" AND resource.labels.service_name="registry-coffee-usage" '
+                       'AND logName="projects/coffee-data-tracker/logs/run.googleapis.com%2Frequests"'}),
     _create("google_cloud_run_v2_service.usage[0]", "google_cloud_run_v2_service",
             {"name": "registry-coffee-usage", "location": "us-central1", "ingress": "INGRESS_TRAFFIC_ALL",
              "template": [{"scaling": [{"min_instance_count": 0, "max_instance_count": 2}],
@@ -602,15 +871,10 @@ USAGE_PLAN = [
     _create("google_cloud_run_v2_service_iam_member.usage_public[0]", "google_cloud_run_v2_service_iam_member",
             {"name": "registry-coffee-usage", "location": "us-central1", "role": "roles/run.invoker",
              "member": "allUsers"}),
-    _create("google_cloud_run_domain_mapping.usage[0]", "google_cloud_run_domain_mapping",
-            {"name": "e.registry.coffee", "location": "us-central1",
-             "spec": [{"route_name": "registry-coffee-usage"}]}),
-    _create("google_logging_project_exclusion.usage_requests[0]", "google_logging_project_exclusion",
-            {"name": "registry-coffee-usage-requests",
-             "filter": 'resource.type="cloud_run_revision" AND resource.labels.service_name="registry-coffee-usage" '
-                       'AND logName="projects/coffee-data-tracker/logs/run.googleapis.com%2Frequests"'}),
+    _create("google_monitoring_alert_policy.usage_dropped[0]", "google_monitoring_alert_policy",
+            {"display_name": "registry.coffee: usage events dropped or lost", "combiner": "OR"},
+            {"notification_channels": True, "name": True}),
 ]  # fmt: skip
-
 
 PINNED = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:" + "c" * 64
 
@@ -663,3 +927,9 @@ def test_the_plan_guard_passes_the_collectors_resources(changes):
     ) == {(rc["type"], rc["name"]) for rc in USAGE_PLAN}
     results = guard_results(load_guard(ROOT / "scripts" / "tf_plan_guard.py"), changes)
     assert results and all(bad == [] for bad in results.values()), results
+
+
+def test_flush_threads_never_outlive_the_test():
+    assert not [
+        t for t in threading.enumerate() if t.name == "usage-shutdown" and t.is_alive() and not t.daemon
+    ]
