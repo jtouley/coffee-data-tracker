@@ -1254,7 +1254,9 @@ def create_app(
             raise HTTPException(409, "Join the “Your next bag” test first. Nothing was saved.")
 
     def counted(me: User, fn: Any, *args: Any) -> tuple[Any, bool]:
-        """Run a write under the per-account limit. Over it: 429, which the phone's outbox keeps and sends again."""
+        """Run a write under the per-account limit. Over it: 429, which the phone's outbox keeps and sends again.
+        A refusal (4xx) counts, so made-up coffees can't cost unlimited catalog reads; a resend that wrote nothing
+        and our own failures (5xx, try again) don't."""
         key, at = f"recs:{me.user_id}", time.monotonic()
         if not rec_windows.take({key: (RECS_PER_HOUR, 3600)}, at):
             raise HTTPException(
@@ -1262,6 +1264,10 @@ def create_app(
             )
         try:
             item, written = run(fn, me.user_id, *args)
+        except HTTPException as e:
+            if e.status_code >= 500:
+                rec_windows.refund(key, at)
+            raise
         except BaseException:
             rec_windows.refund(key, at)
             raise

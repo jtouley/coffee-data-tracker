@@ -7,6 +7,10 @@ so the app can't load them back from the export on its next start. The account m
 first, so the running app refuses its writes until it restarts without it. The main and photo datasets' version
 history still has the old commits; the privacy policy says so. The users dataset's history is squashed afterwards,
 so the account's email (sealed, app/contacts.py) can't be read from an old revision either.
+
+`--only-recs` deletes just the "Your next bag" test's records (ratings and answers, and the rec marts' rows) and
+keeps the account, for someone who asks to delete their answers. The account needn't be turned off, but the person
+must have left the test first, so the running app refuses their new ratings and answers.
 """
 
 from __future__ import annotations
@@ -30,7 +34,12 @@ MAIN: Tables = [("shots", "shot_id", ("user_id",)), ("bags", "bag_id", ("user_id
 PHOTOS: Tables = [("photos", "photo_id", ("user_id",))]
 USERS: Tables = [("users", "user_id", ("user_id",)), ("invites", "invite_id", ("for_user_id", "used_by")),
                  ("consents", "user_id", ("user_id",)), ("contacts", "user_id", ("user_id",))]  # fmt: skip
-MARTS = ["fct_shot", "mart_bag"]  # private exports with a user_id column, rewritten without the person's rows
+# The recommendation test's tables and marts: what --only-recs deletes.
+RECS: Tables = [t for t in MAIN if t[0] in ("ratings", "rec_responses")]
+RECS_MARTS: list[str] = []  # dbt/models/recs/ marts exported to marts/ with a user_id column (none yet)
+# Private exports with a user_id column, rewritten without the person's rows. tests/test_privacy.py fails when an
+# exported mart built from personal data isn't here.
+MARTS = ["fct_shot", "mart_bag", *RECS_MARTS]
 
 
 class EraseError(ValueError):
@@ -45,7 +54,15 @@ class Plan:
     marts: list[str] = field(default_factory=list)  # marts in the main lake that hold the person's rows
 
 
-def find_user(users: Lake, username: str, force: bool = False) -> tuple[str, str]:
+def in_recs_test(users: Lake, user_id: str) -> bool:
+    """Whether the person's latest consent has them in the "Your next bag" test."""
+    if "consents" not in users.tables:
+        return False
+    latest = [r for r in users.latest("consents", "user_id") if r["user_id"] == user_id]
+    return bool(latest and latest[0].get("experiment") is True)
+
+
+def find_user(users: Lake, username: str, force: bool = False, only_recs: bool = False) -> tuple[str, str]:
     name = username.strip().lower()
     for row in users.latest("users", "user_id"):
         if row["username"] == name:
@@ -53,6 +70,13 @@ def find_user(users: Lake, username: str, force: bool = False) -> tuple[str, str
                 raise EraseError(
                     "That's the owner's account. The owner's data is deleted with the datasets themselves."
                 )
+            if only_recs and not force:
+                if not row.get("disabled") and in_recs_test(users, row["user_id"]):
+                    raise EraseError(
+                        f"{name} is still in the “Your next bag” test. They leave it in Setup (or turn the account "
+                        "off for now), so the running app refuses their new ratings. Then run this again."
+                    )
+                return row["user_id"], name
             if not row.get("disabled") and not force:
                 raise EraseError(
                     f"Turn {name}'s account off in the app first (Invite someone → {name} → Turn off account), so "
@@ -66,7 +90,7 @@ def _rows(lake: Lake, src: str, sql: str, params: dict) -> list[tuple]:
     try:
         return lake.connect().execute(sql.format(src=src), params).fetchall()
     except Exception as e:  # noqa: BLE001 - duckdb.IOException: no files in this source
-        if no_files(e):
+        if no_files(e) or "404" in str(e):  # a remote mart that was never exported
             return []
         raise
 
@@ -94,10 +118,10 @@ def _relative(lake: Lake, name: str) -> str:
     return Path(name).resolve().relative_to(lake.root.resolve()).as_posix()
 
 
-def _marts(lake: Lake, user_id: str) -> list[str]:
+def _marts(lake: Lake, user_id: str, marts: list[str]) -> list[str]:
     return [
         m
-        for m in MARTS
+        for m in marts
         for src in lake.mart_sources(m)
         if _rows(
             lake, src, "select 1 from read_parquet('{src}') where user_id = $id limit 1", {"id": user_id}
@@ -105,10 +129,13 @@ def _marts(lake: Lake, user_id: str) -> list[str]:
     ]
 
 
-def plan(username: str, main: Lake, photos: Lake, users: Lake, force: bool = False) -> Plan:
-    user_id, name = find_user(users, username, force)
-    p = Plan(user_id, name, marts=_marts(main, user_id))
-    for lake, tables in ((main, MAIN), (photos, PHOTOS), (users, USERS)):
+def plan(
+    username: str, main: Lake, photos: Lake, users: Lake, force: bool = False, only_recs: bool = False
+) -> Plan:
+    user_id, name = find_user(users, username, force, only_recs)
+    p = Plan(user_id, name, marts=_marts(main, user_id, RECS_MARTS if only_recs else MARTS))
+    scope = ((main, RECS),) if only_recs else ((main, MAIN), (photos, PHOTOS), (users, USERS))
+    for lake, tables in scope:
         p.files[lake.url] = _files(lake, tables, user_id)
     return p
 

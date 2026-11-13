@@ -98,7 +98,12 @@ def test_an_unreadable_catalog_is_try_again_not_refused(lake):
     assert r.status_code == 503 and files(lake, "ratings") == {}
 
 
-def test_answers_carry_forward_and_one_pick_per_slate(c, lake):
+def test_answers_carry_forward_and_one_pick_per_slate(c, lake, monkeypatch):
+    from app import store as store_mod
+
+    monkeypatch.setattr(
+        store_mod, "SLATE_RECHECK", 0
+    )  # a coffee not in the copy held is looked up again at once
     slate(
         lake,
         [("owner", SLATE, i, cid) for i, cid in enumerate(COFFEES)] + [("maya", "slate-2", 0, COFFEES[0])],
@@ -164,3 +169,132 @@ def test_only_members_who_joined_the_test_can_save_ratings(lake, accounts, owner
 @pytest.fixture
 def app(lake, accounts):  # noqa: F811
     return create_app(lake, Sessions(accounts))
+
+
+# --- review fixes: concurrent saves, try-again answers, the limit counting refusals ------------------------------
+
+
+@pytest.fixture
+def slow(lake, monkeypatch):
+    """A Store whose publish takes a moment, so two saves overlap the way two phones' requests can."""
+    import time
+
+    catalog(lake)
+    slate(lake, [("owner", SLATE, i, cid) for i, cid in enumerate(COFFEES)])
+    store = Store(lake, "owner")
+    publish = lake.publish
+
+    def slowly(*a, **kw):
+        time.sleep(0.2)
+        return publish(*a, **kw)
+
+    monkeypatch.setattr(lake, "publish", slowly)
+    return store
+
+
+def together(*calls) -> list:
+    """Run the calls at the same moment on threads; each result, or the exception it raised."""
+    import threading
+
+    out: list = [None] * len(calls)
+    start = threading.Barrier(len(calls))
+
+    def go(i, fn):
+        start.wait()
+        try:
+            out[i] = fn()
+        except Exception as e:  # noqa: BLE001 - returned for the test to look at
+            out[i] = e
+
+    threads = [threading.Thread(target=go, args=(i, fn)) for i, fn in enumerate(calls)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    return out
+
+
+def test_two_answers_to_one_coffee_at_once_keep_both_fields(slow):
+    # Review B1: without a per-person lock both read "no answer yet" and the later write dropped the other's field.
+    together(
+        lambda: slow.save_rec_response(
+            "owner", {"slate_id": SLATE, "coffee_id": COFFEES[0], "interest": "want"}
+        ),
+        lambda: slow.save_rec_response("owner", {"slate_id": SLATE, "coffee_id": COFFEES[0], "picked": True}),
+    )
+    (got,) = slow.responses_of("owner")
+    assert (got.interest, got.picked) == ("want", True)
+    assert [(r.interest, r.picked) for r in Store(slow.lake, "owner").responses_of("owner")] == [
+        ("want", True)
+    ]
+
+
+def test_two_picks_at_once_leave_exactly_one_picked(slow):
+    together(*(lambda c=c: slow.save_rec_response("owner", {"slate_id": SLATE, "coffee_id": c, "picked": True})
+               for c in COFFEES[:2]))  # fmt: skip
+    assert sum(r.picked for r in Store(slow.lake, "owner").responses_of("owner")) == 1
+
+
+def test_two_new_ratings_of_one_coffee_at_once_store_one(slow):
+    from app.store import Invalid
+
+    out = together(*(lambda i=i: slow.save_rating("owner", {"rating_id": f"r{i}", "coffee_id": COFFEES[0],
+                                                             "rating": 4}) for i in range(2)))  # fmt: skip
+    assert sum(isinstance(x, Invalid) for x in out) == 1
+    assert len(Store(slow.lake, "owner").ratings_of("owner")) == 1
+
+
+def test_a_failed_catalog_read_is_try_again_even_after_an_old_miss(c, lake, monkeypatch):
+    # Review S1: a miss cached long ago, then a read that fails, answered "not in the catalog" for good.
+    import time
+
+    from app.store import MISS_TTL
+
+    store = c.app.state.store
+    store._coffees[COFFEES[0]] = (None, time.monotonic() - MISS_TTL - 1)
+    monkeypatch.setattr(lake, "mart_sources", lambda name: [str(lake.root / "nowhere.parquet")])
+    assert rate(c).status_code == 503
+    assert files(lake, "ratings") == {}
+
+
+def test_a_new_slate_is_never_refused_by_the_copy_held(c, lake, monkeypatch):
+    # Review S2: dbt publishes a new slate while the app holds the old one.
+    from app import store as store_mod
+
+    slate(lake, [("owner", SLATE, 0, COFFEES[0])])
+
+    def answer(sid, cid):
+        return c.post(
+            "/api/rec-responses", json={"slate_id": sid, "coffee_id": cid, "interest": "want"}, headers=W
+        )
+
+    assert answer(SLATE, COFFEES[0]).status_code == 200  # the copy is now held
+    slate(lake, [("owner", "slate-2", 0, COFFEES[1])])
+    assert answer("slate-2", COFFEES[1]).status_code == 503  # read a moment ago: try again, kept on the phone
+    monkeypatch.setattr(store_mod, "SLATE_RECHECK", 0)
+    assert answer("slate-2", COFFEES[1]).status_code == 200  # read again: found
+    assert answer("slate-2", COFFEES[2]).status_code == 404  # not theirs, on a read made just now
+    # A failed read keeps the copy held rather than refusing everything.
+    monkeypatch.setattr(store_mod, "SLATE_TTL", 0)
+    monkeypatch.setattr(lake, "mart_sources", lambda name: ["hf://datasets/nobody/none/x.parquet"])
+    store = c.app.state.store
+
+    def broken():
+        raise store_mod.Unavailable("down")
+
+    monkeypatch.setattr(store, "_read_slates", broken)
+    assert store.slate_pairs("owner") == {("slate-2", COFFEES[1])}
+
+
+def test_refused_saves_count_toward_the_limit_and_try_again_ones_dont(lake, monkeypatch):
+    # Review S3: made-up coffees each cost a catalog read and weren't counted.
+    monkeypatch.setattr(app_main, "RECS_PER_HOUR", 2)
+    catalog(lake)
+    c = TestClient(create_app(lake, HeaderAuth()))
+    assert rate(c, rating_id="x1", coffee="made-up.example:1").status_code == 422
+    assert rate(c, rating_id="x2", coffee="made-up.example:2").status_code == 422
+    assert rate(c).status_code == 429
+    d = TestClient(create_app(lake, HeaderAuth()))
+    monkeypatch.setattr(lake, "mart_sources", lambda name: [str(lake.root / "nowhere.parquet")])
+    for _ in range(3):
+        assert rate(d, coffee=COFFEES[1]).status_code == 503  # our side: not counted

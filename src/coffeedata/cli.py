@@ -1025,7 +1025,7 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
 
     main, photos, users = Lake(), Lake.photos(), Lake.users()
     try:
-        p = erase.plan(args.username, main, photos, users, force=args.force)
+        p = erase.plan(args.username, main, photos, users, force=args.force, only_recs=args.only_recs)
     except erase.EraseError as e:
         sys.exit(str(e))
     print(f"{p.username} ({p.user_id}):")
@@ -1039,6 +1039,9 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
         print("Dry run: nothing deleted.")
         return
     erase.apply(p, main, photos, users)
+    if args.only_recs:
+        print("Deleted. Deploy again (or restart the service) so the app forgets their ratings and answers.")
+        return
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
 
 
@@ -1339,6 +1342,11 @@ def main(argv: list[str] | None = None) -> None:
     du.add_argument("--dry-run", action="store_true", help="list the files, delete nothing")
     du.add_argument(
         "--force", action="store_true", help="even if the account isn't turned off (the app isn't running)"
+    )
+    du.add_argument(
+        "--only-recs",
+        action="store_true",
+        help="only their 'Your next bag' ratings and answers; keep the account (they must have left the test)",
     )
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")

@@ -20,12 +20,11 @@ from .test_invites import PW, W, accounts, app, client, invite, join, owner  # n
 ROOT = Path(__file__).parent.parent
 
 
-def every_value(lake: Lake) -> str:
-    """Everything stored in a local lake, as text."""
+def every_value(lake: Lake | Path) -> str:
+    """Everything stored in a local lake (or one folder of it), as text."""
+    root = lake.root if isinstance(lake, Lake) else lake
     return " ".join(
-        json.dumps(row, default=str)
-        for f in lake.root.rglob("*.parquet")
-        for row in pq.read_table(f).to_pylist()
+        json.dumps(row, default=str) for f in root.rglob("*.parquet") for row in pq.read_table(f).to_pylist()
     )
 
 
@@ -218,11 +217,11 @@ _LAKE = re.compile(r"""\blake\(\s*['"](\w+)['"]\s*\)""")
 _REF = re.compile(r"""\bref\(\s*['"](\w+)['"]\s*\)""")
 
 
-def recs_descendants(models: dict[str, str]) -> set[str]:
-    """Every dbt model (name -> its SQL or Python) that reads ratings or rec_responses, directly or through other
-    models, or sits in models/recs/ (its name given as recs/<name>)."""
+def recs_descendants(models: dict[str, str], tables: tuple[str, ...] = RECS_TABLES) -> set[str]:
+    """Every dbt model (name -> its SQL or Python) that reads one of these lake tables (ratings and rec_responses),
+    directly or through other models, or sits in models/recs/ (its name given as recs/<name>)."""
     tainted = {n.split("/")[-1] for n, src in models.items()
-               if n.startswith("recs/") or set(_LAKE.findall(src)) & set(RECS_TABLES)}  # fmt: skip
+               if n.startswith("recs/") or set(_LAKE.findall(src)) & set(tables)}  # fmt: skip
     refs = {n.split("/")[-1]: set(_REF.findall(src)) for n, src in models.items()}
     while grown := {n for n, r in refs.items() if r & tainted and n not in tainted}:
         tainted |= grown
@@ -260,6 +259,51 @@ def test_the_public_exports_and_the_site_never_name_ratings_or_answers():
         assert t in LAKE_TABLES
 
 
-def test_the_public_tables_guardrail_names_the_rating_column():
-    guard = (ROOT / "dbt/tests/public_tables_are_facts_only.sql").read_text()
-    assert "rating" in guard and "user_id" in guard
+def test_every_exported_mart_built_from_personal_data_is_erased():
+    # Review S5: a rec mart PR 3 exports to marts/ must be rewritten by delete-user too. (The facts-only guardrail's
+    # new columns, slate_id, interest and picked, and a manifest-based descendant check come with those models.)
+    from coffeedata import cli
+
+    personal = ("shots", "bags", "equipment", "photos", *RECS_TABLES)
+    built = recs_descendants(dbt_models(), personal)
+    assert {"fct_shot", "mart_bag"} <= built  # the check sees the marts it already knows
+    assert {m for m in cli.MARTS if m in built} <= set(erase.MARTS)
+    assert set(erase.RECS_MARTS) <= set(erase.MARTS)
+
+
+def test_a_mart_never_exported_is_skipped_not_an_error(three, monkeypatch):
+    main, _, _ = three
+
+    class Missing:
+        def execute(self, *a):
+            raise RuntimeError("HTTP 404 (Not Found) when reading marts/mart_rec_slate.parquet")
+
+    monkeypatch.setattr(main, "connect", lambda: Missing())
+    assert erase._marts(main, "u-maya", ["mart_rec_slate"]) == []
+
+
+def consent(users, uid, experiment, at):
+    users.write("consents", f"consents/{uid}__{at:%Y%m%dT%H%M%S}.parquet",
+                [{"user_id": uid, "terms_version": "x", "privacy_version": "x", "terms_at": at, "source": "settings",
+                  "experiment": experiment, "logged_at": at}])  # fmt: skip
+
+
+def test_delete_user_only_recs_deletes_the_tests_records_and_keeps_the_account(three):
+    # Review S6: someone who asks to delete just their answers keeps their account, shots and bags.
+    main, photos, users = three
+    on = datetime(2026, 10, 22, 7, tzinfo=UTC)
+    users.write("users", "users/u-maya__20261022T070000.parquet",
+                [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": False, "logged_at": on}])  # fmt: skip
+    consent(users, "u-maya", True, on)
+    with pytest.raises(erase.EraseError, match="still in the"):
+        erase.plan("maya", main, photos, users, only_recs=True)  # the app would still take their ratings
+    consent(users, "u-maya", False, datetime(2026, 10, 23, 7, tzinfo=UTC))  # they left the test
+    p = erase.plan("maya", main, photos, users, only_recs=True)
+    assert p.marts == [] and p.files == {main.url: [
+        "ratings/r-u-maya__20261020T070000.parquet", "ratings/r-u-maya__20261021T070000.parquet",
+        "rec_responses/u-maya__slate-1__h__20261020T070000.parquet"]}  # fmt: skip
+    erase.apply(p, main, photos, users)
+    assert "u-maya" not in every_value(main.root / "ratings") + every_value(main.root / "rec_responses")
+    assert "s-u-maya" in every_value(main) and "p-u-maya" in every_value(photos)
+    assert any(r["user_id"] == "u-maya" for r in users.latest("users", "user_id"))
+    assert "r-owner" in every_value(main)

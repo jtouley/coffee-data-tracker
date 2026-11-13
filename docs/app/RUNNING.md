@@ -379,6 +379,11 @@ isn't turned off (`--force` skips that check when the app isn't running). The ma
 history still holds the old commits, as the policy says. The users dataset's history is squashed afterwards, so the
 person's email (sealed) goes from its history too.
 
+To delete only someone's "Your next bag" ratings and answers and keep their account, they first leave the test in
+Setup (or turn the account off for now), then `uv run coffeedata delete-user maya --only-recs` (with `--dry-run`
+first). It removes every version of their `ratings` and `rec_responses` files and nothing else. Deploy again after
+it, like the full deletion.
+
 ## Email
 
 _Last verified against the code: 2026-11-08 (PR #134, after the final review). Check it again whenever

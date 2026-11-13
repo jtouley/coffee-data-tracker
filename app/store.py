@@ -36,6 +36,7 @@ MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is lo
 STARTUP_READS = 3
 SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
 SLATE_TTL = 600  # seconds the picks export (marts/mart_rec_slate.parquet) is kept before it's read again
+SLATE_RECHECK = 60  # an answer for a coffee not in the copy held reads it again, at most this often (seconds)
 
 
 class NotFound(KeyError):
@@ -90,29 +91,29 @@ class Store:
         self.ratings: dict[str, Rec] = {}
         self.responses: dict[str, Rec] = {}  # response_key -> the latest answer
         self._slates: tuple[dict[str, set[tuple[str, str]]], float] | None = None  # user -> {(slate, coffee)}
+        self._slate_lock = threading.Lock()  # one read of the picks export at a time
+        # One rating or answer write at a time per person: each reads what's stored, checks it and writes, and two
+        # at once could both pass a check or merge into the same old answer (review B1).
+        self._user_locks: dict[str, threading.Lock] = {}
         self._coffees: dict[str, tuple[dict | None, float]] = {}
         self._staged: dict[str, datetime] = {}
         self._pending: dict[tuple[str, str], _Pending] = {}  # the latest record per key still being published
-        for table, key, cls, into in (
-            ("shots", "shot_id", Shot, self.shots),
-            ("bags", "bag_id", Bag, self.bags),
-            ("equipment", "equipment_id", Equipment, self.equipment),
+        # (table, key, model, into, whether a record with no user is the owner's: those from before accounts are;
+        # the recommendation test's records always name their user)
+        for table, key, cls, into, owners in (
+            ("shots", "shot_id", Shot, self.shots, True),
+            ("bags", "bag_id", Bag, self.bags, True),
+            ("equipment", "equipment_id", Equipment, self.equipment, True),
+            ("ratings", "rating_id", Rating, self.ratings, False),
         ):
             rows = self._seed_shots() if table == "shots" else None
             for row in lake.latest(table, key, attempts=STARTUP_READS) if rows is None else rows:
-                row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
+                if owners:
+                    row["user_id"] = row["user_id"] or owner_id
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
                 except ValidationError as e:
                     log.warning("skipping %s %s: %s", table, row[key], e)
-        # The recommendation test's records: every one has its user, so none is the owner's by default.
-        for row in lake.latest("ratings", "rating_id", attempts=STARTUP_READS):
-            try:
-                self.ratings[row["rating_id"]] = Rec(
-                    _model(Rating, row), row["logged_at"], bool(row.get("deleted"))
-                )
-            except ValidationError as e:
-                log.warning("skipping ratings %s: %s", row["rating_id"], e)
         for row in lake.latest("rec_responses", ("user_id", "slate_id", "coffee_id"), attempts=STARTUP_READS):
             try:
                 item = _model(RecResponse, row)
@@ -204,11 +205,15 @@ class Store:
 
     def coffee(self, coffee_id: str | None) -> dict | None:
         """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
+        return self._lookup(coffee_id)[0]
+
+    def _lookup(self, coffee_id: str | None) -> tuple[dict | None, bool]:
+        """A coffee's catalog facts, and whether the answer is known: False when the export couldn't be read."""
         if not coffee_id:
-            return None
+            return None, True
         hit = self._coffees.get(coffee_id)
         if hit and (hit[0] is not None or time.monotonic() - hit[1] < MISS_TTL):
-            return hit[0]
+            return hit[0], True
         src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
         try:
             cur = self.lake.connect().execute(
@@ -221,10 +226,10 @@ class Store:
             found = {k: v for k, v in zip(cols, row, strict=True) if k in keep} if row else None
         except Exception as e:  # noqa: BLE001 - no catalog export yet, or the network
             log.info("no catalog facts for %s: %s", coffee_id, e)
-            return None  # not cached: try again next time
+            return None, False  # not cached: try again next time
         # A coffee not in this week's export is asked again after MISS_TTL, not never.
         self._coffees[coffee_id] = (found, time.monotonic())
-        return found
+        return found, True
 
     def bags_of(self, user_id: str) -> list[Bag]:
         """This person's bags, the one used most recently first (a bag with no shots by when it was opened)."""
@@ -558,88 +563,123 @@ class Store:
     def _in_catalog(self, coffee_id: str) -> bool:
         """Whether the catalog export has this coffee. Unavailable when the export couldn't be read, so a phone's
         save is tried again rather than refused for good."""
-        if self.coffee(coffee_id) is not None:
-            return True
-        if coffee_id not in self._coffees:  # not a cached miss: the read itself failed
+        found, known = self._lookup(coffee_id)
+        if not known:  # the read itself failed, whatever an older read said
             raise Unavailable("The catalog isn't available right now. Try again shortly.")
-        return False
+        return found is not None
+
+    def _read_slates(self) -> dict[str, set[tuple[str, str]]]:
+        """Every (slate_id, coffee_id) per person, from the picks export dbt writes (mart_rec_slate: user_id,
+        slate_id, position, coffee_id); none before the first export exists. Unavailable if the read fails."""
+        src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("mart_rec_slate"))
+        try:
+            rows = (
+                self.lake.connect()
+                .execute(f"select user_id, slate_id, coffee_id from read_parquet([{src}])")
+                .fetchall()
+            )
+        except Exception as e:  # noqa: BLE001 - duckdb's IOException: no export yet, or the network
+            if not (no_files(e) or "404" in str(e)):
+                log.warning("reading the picks export failed (%s)", type(e).__name__)
+                raise Unavailable("Your picks couldn't be read right now. Try again shortly.") from None
+            rows = []
+        out: dict[str, set[tuple[str, str]]] = {}
+        for uid, sid, cid in rows:
+            out.setdefault(uid, set()).add((sid, cid))
+        return out
 
     def slate_pairs(self, user_id: str) -> set[tuple[str, str]]:
-        """(slate_id, coffee_id) of every coffee this person was suggested, from the picks export dbt writes
-        (mart_rec_slate: user_id, slate_id, position, coffee_id). Read again after SLATE_TTL; none before the first
-        export exists. A failed read is Unavailable and isn't cached."""
-        cached = self._slates
-        if cached is None or time.monotonic() - cached[1] >= SLATE_TTL:
-            src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("mart_rec_slate"))
-            slates: dict[str, set[tuple[str, str]]] = {}
-            try:
-                rows = (
-                    self.lake.connect()
-                    .execute(f"select user_id, slate_id, coffee_id from read_parquet([{src}])")
-                    .fetchall()
-                )
-            except Exception as e:  # noqa: BLE001 - duckdb's IOException: no export yet, or the network
-                if not (no_files(e) or "404" in str(e)):
-                    log.warning("reading the picks export failed (%s)", type(e).__name__)
-                    raise Unavailable("Your picks couldn't be read right now. Try again shortly.") from None
-                rows = []
-            for uid, sid, cid in rows:
-                slates.setdefault(uid, set()).add((sid, cid))
-            cached = self._slates = (slates, time.monotonic())
-        return cached[0].get(user_id, set())
+        """(slate_id, coffee_id) of every coffee this person was suggested, read again after SLATE_TTL."""
+        return self._slate_pairs(user_id, SLATE_TTL)[0]
+
+    def _slate_pairs(self, user_id: str, older_than: float) -> tuple[set[tuple[str, str]], bool]:
+        """The pairs, and whether they were read just now. The export is read again once the copy held is
+        `older_than` seconds old, by one request at a time. If that read fails the copy held is used; only with
+        none held is it Unavailable."""
+        fresh = False
+        with self._slate_lock:
+            cached = self._slates
+            if cached is None or time.monotonic() - cached[1] >= older_than:
+                try:
+                    cached = self._slates = (self._read_slates(), time.monotonic())
+                    fresh = True
+                except Unavailable:
+                    if cached is None:
+                        raise
+        return cached[0].get(user_id, set()), fresh
+
+    def _in_slate(self, user_id: str, slate_id: str, coffee_id: str) -> None:
+        """Refuse (404) a coffee that isn't one of this person's picks, but only on a read made just now: one the
+        copy held lacks may be in an export published since, so the export is read again (at most once a
+        SLATE_RECHECK), and while that's too soon the answer is try-again (503), never a refusal of a new slate."""
+        pair = (slate_id, coffee_id)
+        for older_than in (SLATE_TTL, SLATE_RECHECK):
+            pairs, fresh = self._slate_pairs(user_id, older_than)
+            if pair in pairs:
+                return
+            if fresh:
+                raise NotFound(coffee_id)
+        raise Unavailable("Your picks may have just changed. This is sent again shortly.")
+
+    def _user_lock(self, user_id: str) -> threading.Lock:
+        with self.lock:
+            return self._user_locks.setdefault(user_id, threading.Lock())
 
     def save_rating(self, user_id: str, data: dict) -> tuple[Rating, bool]:
         """A 1-5 rating of a catalog coffee. A correction (the same rating_id) keeps its coffee and context; a
         rating that was undone stays undone. Returns the rating and whether a new record was written."""
         rating = Rating(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
-        prev = self._owned(self.ratings, rating.rating_id, user_id)
-        if prev:
-            if prev.item.coffee_id != rating.coffee_id:
-                raise Invalid("A rating can't move to another coffee. Rate that coffee instead.")
-            rating = rating.model_copy(update={"context": prev.item.context})
-            if prev.item == rating:
-                return rating, False  # a resend, including one that arrives after Undo
-            if prev.deleted:
-                raise Invalid("That rating was undone, so it can't be changed. Rate the coffee again.")
-        else:
-            if any(
-                r.coffee_id == rating.coffee_id and r.context == rating.context
-                for r in self.ratings_of(user_id)
-            ):
-                raise Invalid("You've rated this coffee already. Change that rating instead.")
-            if not self._in_catalog(rating.coffee_id):
-                raise Invalid("That coffee isn't in the catalog, so it can't be rated here.")
-        return rating, self._commit(self.ratings, rating.rating_id, rating, "ratings")
+        with self._user_lock(user_id):
+            prev = self._owned(self.ratings, rating.rating_id, user_id)
+            if prev:
+                if prev.item.coffee_id != rating.coffee_id:
+                    raise Invalid("A rating can't move to another coffee. Rate that coffee instead.")
+                rating = rating.model_copy(update={"context": prev.item.context})
+                if prev.item == rating:
+                    return rating, False  # a resend, including one that arrives after Undo
+                if prev.deleted:
+                    raise Invalid("That rating was undone, so it can't be changed. Rate the coffee again.")
+            else:
+                if any(
+                    r.coffee_id == rating.coffee_id and r.context == rating.context
+                    for r in self.ratings_of(user_id)
+                ):
+                    raise Invalid("You've rated this coffee already. Change that rating instead.")
+                if not self._in_catalog(rating.coffee_id):
+                    raise Invalid("That coffee isn't in the catalog, so it can't be rated here.")
+            return rating, self._commit(self.ratings, rating.rating_id, rating, "ratings")
 
     def retract_rating(self, user_id: str, rating_id: str) -> bool:
         """Undo: a retraction record (deleted = true), never a delete. Retracting twice writes once."""
-        prev = self._owned(self.ratings, rating_id, user_id)
-        if prev is None:
-            raise NotFound(rating_id)
-        if prev.deleted:
-            return False
-        return self._commit(self.ratings, rating_id, prev.item, "ratings", deleted=True)
+        with self._user_lock(user_id):
+            prev = self._owned(self.ratings, rating_id, user_id)
+            if prev is None:
+                raise NotFound(rating_id)
+            if prev.deleted:
+                return False
+            return self._commit(self.ratings, rating_id, prev.item, "ratings", deleted=True)
 
     def save_rec_response(self, user_id: str, data: dict) -> tuple[RecResponse, bool]:
         """An answer to one suggested coffee: interest, the pick, or both. What the body leaves out is kept from
         the last answer. Picking a coffee un-picks the slate's other one, with a new record for it."""
         data = {k: v for k, v in data.items() if k != "user_id"}
         item = RecResponse(**data, user_id=user_id)
-        if (item.slate_id, item.coffee_id) not in self.slate_pairs(user_id):
-            raise NotFound(item.coffee_id)  # not one of this person's picks
+        self._in_slate(user_id, item.slate_id, item.coffee_id)
         key = response_key(user_id, item.slate_id, item.coffee_id)
-        prev = self.responses.get(key)
-        if prev:
-            kept = prev.item.model_dump(exclude={"user_id"})
-            item = RecResponse(**({k: v for k, v in kept.items() if k not in data} | data), user_id=user_id)
-        if item.interest is None and not item.picked:
-            raise Invalid("Choose how this coffee sounds, or pick it.")
-        written = self._commit(self.responses, key, item, "rec_responses")
-        if item.picked:
-            for other in self.responses_of(user_id, item.slate_id):
-                if other.picked and other.coffee_id != item.coffee_id:
-                    other_key = response_key(user_id, other.slate_id, other.coffee_id)
-                    self._commit(
-                        self.responses, other_key, other.model_copy(update={"picked": False}), "rec_responses"
-                    )
-        return item, written
+        with self._user_lock(user_id):
+            prev = self.responses.get(key)
+            if prev:
+                kept = prev.item.model_dump(exclude={"user_id"})
+                item = RecResponse(
+                    **({k: v for k, v in kept.items() if k not in data} | data), user_id=user_id
+                )
+            if item.interest is None and not item.picked:
+                raise Invalid("Choose how this coffee sounds, or pick it.")
+            written = self._commit(self.responses, key, item, "rec_responses")
+            if item.picked:
+                for other in self.responses_of(user_id, item.slate_id):
+                    if other.picked and other.coffee_id != item.coffee_id:
+                        unpick = other.model_copy(update={"picked": False})
+                        okey = response_key(user_id, other.slate_id, other.coffee_id)
+                        self._commit(self.responses, okey, unpick, "rec_responses")
+            return item, written

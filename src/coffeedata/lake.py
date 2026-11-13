@@ -822,28 +822,37 @@ class Lake:
         folders = remote_folders(self.url)
         return folders is None or GLOBS[table].split("/")[0] in folders
 
-    def scan(self, table: str) -> str:
-        """SQL table expression over every file of a table."""
+    def scan(self, table: str, filename: bool = False) -> str:
+        """SQL table expression over every file of a table (with each row's file name as `filename`, if asked)."""
         files = ", ".join(f"'{s}'" for s in self.sources(table))
-        return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
+        named = ", filename = true" if filename else ""
+        return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false{named})"
 
     def latest(self, table: str, key: str | tuple[str, ...], attempts: int = 1) -> list[dict]:
         """The latest record per key (by logged_at): corrections are new records, so this is current state. A key
-        of several columns (rec_responses: user, slate and coffee) takes the latest per combination.
+        of several columns (rec_responses: user, slate and coffee) takes the latest per combination. Records of one
+        key made in the same second are told apart by file name (the last in name order wins), so the answer doesn't
+        depend on the order files are read in.
 
         A remote lake made before a table existed has no folder for it until the next publish adds the schema
         file; until then the table is read from staging alone rather than failing. Any other failed read (a 429,
         a timeout) is tried `attempts` times in all, 2, 4 … seconds apart, before it's raised."""
         keys = (key,) if isinstance(key, str) else key
         present = " and ".join(f"{k} is not null" for k in keys)
-        sql = f"select * from {{}} where {present} qualify row_number() over (partition by {', '.join(keys)} order by logged_at desc) = 1"
+        order = (
+            "logged_at desc, regexp_extract(filename, '[^/]*$') desc"  # the name, not where it was read from
+        )
+        sql = (
+            f"select * exclude (filename) from {{}} where {present} "
+            f"qualify row_number() over (partition by {', '.join(keys)} order by {order}) = 1"
+        )
         for attempt in range(attempts):
             try:
-                cur = self.connect().execute(sql.format(self.scan(table)))
+                cur = self.connect().execute(sql.format(self.scan(table, filename=True)))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
                 if self.remote and no_files(e):
-                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
+                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false, filename = true)"
                     cur = self.connect().execute(sql.format(local))
                     break
                 if attempt == attempts - 1:
