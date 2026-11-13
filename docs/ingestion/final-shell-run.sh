@@ -69,6 +69,8 @@ cd "$CHECKOUT"
 git fetch -q origin main
 git checkout -q --detach origin/main
 echo "main at $(git log -1 --oneline)"
+# local edits or untracked .tf files would be planned and applied too (terraform.tfvars is ignored, so it's fine)
+[ -z "$(git status --porcelain)" ] || die "the checkout has local changes or untracked files: clean it first (git status)"
 for f in "$BOOT/main.tf" scripts/tf_plan_guard.py .github/workflows/terraform-apply.yml "$TF/ci.tfvars"; do
   [ -f "$f" ] || die "main has no $f: merge the Terraform-in-GitHub PRs first"
 done
@@ -178,8 +180,8 @@ BAD=$(jq -r '.resource_changes[]? | select(.change.actions | index("delete")) | 
 echo "-- changes (addresses only) --"
 jq -r '.resource_changes[]? | select(.change.actions != ["no-op"] and .change.actions != ["read"])
   | "\(.change.actions | join("+"))\t\(.address)"' "$WORK/boot.json" | sort
-echo "expect (first run): 50 creates: two pools and providers, two accounts and their workload identity bindings,"
-echo "        six custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
+echo "expect (first run): 51 creates: two pools and providers, two accounts and their workload identity bindings,"
+echo "        seven custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
 ask "apply exactly this plan?"
 tfrun apply "$BOOT" apply -input=false -no-color "$WORK/boot.plan"
 grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$WORK/apply.log" || true

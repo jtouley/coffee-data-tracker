@@ -77,6 +77,13 @@ resource "google_project_iam_custom_role" "tf_repository" {
   ]
 }
 
+# Read the saved plan it was approved for (by name and generation), and delete it after the apply. Not list or write.
+resource "google_project_iam_custom_role" "tf_plan_object" {
+  role_id     = "tfApplyPlanObject"
+  title       = "Terraform apply: read and delete a saved plan"
+  permissions = ["storage.objects.delete", "storage.objects.get"]
+}
+
 # Create the empty secrets and set who may read them. Not secretmanager.versions.access (roles/secretmanager.admin
 # has it): the account never reads a value, and Terraform never holds one.
 resource "google_project_iam_custom_role" "tf_secrets" {
@@ -221,6 +228,6 @@ resource "google_storage_bucket_iam_member" "tf_apply_state" {
 
 resource "google_storage_bucket_iam_member" "tf_apply_plans" {
   bucket = google_storage_bucket.tf_plans.name
-  role   = "roles/storage.objectUser" # read the saved plan it was approved for, and delete it after the apply
+  role   = google_project_iam_custom_role.tf_plan_object.id
   member = local.apply_member
 }
