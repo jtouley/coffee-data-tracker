@@ -1,6 +1,6 @@
 // The smoke suite's browser pass (tests/test_smoke_web.py), in Chromium at 390 px: the static site's landing page
-// and catalog, then the app's join page and a seeded user's sign-in. Any request off 127.0.0.1 is aborted and
-// fails the run, as does a script error or a CSP refusal.
+// and catalog, then the app's join page and a seeded user's sign-in. Any request off 127.0.0.1 (but the usage
+// counter's, answered here) is aborted and fails the run, as does a script error or a CSP refusal.
 // Usage: node smoke_flow.js <site url> <app url> <screenshot dir> <username> <password>
 const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
@@ -15,6 +15,8 @@ const [site, app, out, username, password] = process.argv.slice(2);
     await context.route("**/*", (route) => {
       const host = new URL(route.request().url()).hostname;
       if (host === "127.0.0.1" || route.request().url().startsWith("data:")) return route.continue();
+      // The usage counter (coffeedata/beacon.py) is answered here, as it would be: never reached from a test.
+      if (route.request().url() === "https://e.registry.coffee/e") return route.fulfill({ status: 204 });
       errors.push(`outside request: ${route.request().url()}`);
       return route.abort();
     });

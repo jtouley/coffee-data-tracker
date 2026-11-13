@@ -12,6 +12,8 @@ from pathlib import Path
 
 from fastapi import HTTPException, Request, Response
 
+from coffeedata.beacon import USAGE_ORIGIN
+
 STATIC = Path(__file__).parent / "static"
 IMMUTABLE = "public, max-age=31536000, immutable"
 PRIVATE = "no-store, private"  # anything for one signed-in person: photos, pages, API answers
@@ -25,7 +27,7 @@ CSP = "; ".join(
         "style-src 'self'",
         "img-src 'self' data: blob:",
         "font-src 'self'",
-        "connect-src 'self'",
+        f"connect-src 'self' {USAGE_ORIGIN}",  # the usage counter (app.js count()), and nothing else
         "manifest-src 'self'",
         "worker-src 'self'",
         "object-src 'none'",

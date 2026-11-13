@@ -46,6 +46,8 @@ async function noticeOf(page) {
 
 async function newPage(browser, errors) {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  // The usage counter (coffeedata/beacon.py) is answered here: a test never sends to the real one.
+  await context.route("https://e.registry.coffee/**", (route) => route.fulfill({ status: 204 }));
   const page = await context.newPage();
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => { if (/Content Security Policy|Refused to/.test(m.text())) errors.push(m.text()); });

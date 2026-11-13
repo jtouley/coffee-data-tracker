@@ -23,7 +23,7 @@ from pathlib import Path
 from jinja2 import Environment, PackageLoader, select_autoescape
 from markupsafe import Markup
 
-from . import public
+from . import beacon, public
 from .discover import STATE_NAMES, US_STATES
 from .http import USER_AGENT
 
@@ -226,7 +226,8 @@ def safe_url(url: object) -> str | None:
 
 
 def with_csp(html: str) -> str:
-    """Add a Content-Security-Policy that allows the page's own inline scripts (by hash) and nothing third-party."""
+    """Add a Content-Security-Policy that allows the page's own inline scripts (by hash) and nothing third-party. The
+    one other origin a page may reach is the usage collector, for the counting script's events (beacon.py)."""
     hashes = (
         " ".join(
             "'sha256-" + base64.b64encode(hashlib.sha256(js.encode()).digest()).decode() + "'"
@@ -236,7 +237,7 @@ def with_csp(html: str) -> str:
     )
     csp = (
         f"default-src 'none'; script-src {hashes}; style-src 'unsafe-inline'; img-src 'self' data:; "
-        "connect-src 'self'; base-uri 'none'; form-action 'none'"
+        f"connect-src 'self' {beacon.USAGE_ORIGIN}; base-uri 'none'; form-action 'none'"
     )
     meta = (
         f'<meta http-equiv="Content-Security-Policy" content="{csp}">\n'
@@ -351,6 +352,19 @@ def sitemap_xml(site: str, lastmod: dict[str, str]) -> str:
 # --- build -------------------------------------------------------------------------------------------
 
 
+def usage(surface: str, release: dict | None = None) -> dict:
+    """What a page's counting script (templates/_usage.js) is told: where to send, which page it is, which catalog
+    build it shows (the collector keeps only ids in that build)."""
+    return {"url": beacon.USAGE_URL, "surface": surface, "release": (release or {}).get("release_build_id")}
+
+
+def environment() -> Environment:
+    """The site's templates, with `referral` for links out to roasters' stores."""
+    env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
+    env.filters["referral"] = beacon.with_referral
+    return env
+
+
 def _q(con, sql: str) -> list[dict]:
     cur = con.execute(sql)
     cols = [d[0] for d in cur.description]
@@ -453,6 +467,10 @@ def build(db: Path, out: Path) -> Path:
     )[0]
     for r in new + catalog:
         r["url"] = safe_url(r["url"])
+    # The new arrivals' roaster, for the click-out count (mart_new_arrivals has the coffee, not the roaster).
+    roaster_of = dict(con.execute("select coffee_id, roaster_id from site_coffee").fetchall())
+    for r in new:
+        r.setdefault("roaster_id", roaster_of.get(r["coffee_id"]))
     new_count = _q(con, f"select count(*) as n from ({public_new})")[0]["n"]
     last_fetch = _q(con, "select max(last_fetch) as t from dim_roaster")[0]["t"]
     release = public.describe(con)
@@ -489,7 +507,7 @@ def build(db: Path, out: Path) -> Path:
     # "Updated" is when the data was last read, not when the pages were rendered: a template-only redeploy
     # (.github/workflows/site.yml) mustn't make the catalog look fresher than it is.
     generated = last_fetch.astimezone(UTC) if last_fetch else datetime.now(UTC)
-    env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
+    env = environment()
     out.mkdir(parents=True, exist_ok=True)
     link = links()
     jsonld = jsonld_script(dataset_jsonld(release, link))
@@ -506,6 +524,7 @@ def build(db: Path, out: Path) -> Path:
         public_tables=len(public.PUBLIC_TABLES),
         generated=f"{generated:%B} {generated.day}, {generated:%Y}",
         jsonld=jsonld,
+        usage=usage("landing", release),
     )
     (out / "index.html").write_text(with_csp(landing))
     copy_static(out)
@@ -517,10 +536,13 @@ def build(db: Path, out: Path) -> Path:
     }
     for page in ("privacy", "terms"):
         (out / page).mkdir(exist_ok=True)
-        (out / page / "index.html").write_text(with_csp(env.get_template(f"{page}.html").render(**legal)))
+        html = env.get_template(f"{page}.html").render(**legal, usage=usage(page, release))
+        (out / page / "index.html").write_text(with_csp(html))
     # /bot: the page RegistryCoffeeBot's User-Agent links to (who we are, what we crawl, how to opt out)
     (out / "bot").mkdir(exist_ok=True)
-    bot = env.get_template("bot.html").render(**legal | {"updated": BOT_UPDATED, "user_agent": USER_AGENT})
+    bot = env.get_template("bot.html").render(
+        **legal | {"updated": BOT_UPDATED, "user_agent": USER_AGENT}, usage=usage("bot", release)
+    )
     (out / "bot" / "index.html").write_text(with_csp(bot))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
@@ -558,6 +580,7 @@ def build(db: Path, out: Path) -> Path:
         data_key=hashlib.sha256(data.encode()).hexdigest()[:12],
         state_titles=STATE_TITLES,
         state_words=STATE_WORDS,
+        usage=usage("catalog", release),
     )
     (cat / "index.html").write_text(with_csp(html))
     site = str(link["site"])

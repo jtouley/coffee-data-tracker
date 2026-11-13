@@ -20,6 +20,7 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = []) {
   const fetched = [];
   await context.route("**/*", async (route) => {
     const url = new URL(route.request().url());
+    if (url.href === "https://e.registry.coffee/e") return route.fulfill({ status: 204 });  // the usage counter (usage_flow.js)
     if (url.hostname !== "127.0.0.1") { errors.push(`outside request: ${url}`); return route.abort(); }
     if (url.pathname.endsWith("/catalog.json")) {
       fetched.push(url.search);

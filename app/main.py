@@ -29,7 +29,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import ValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from coffeedata import shots
+from coffeedata import beacon, shots
 from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
 from coffeedata.site import APP
@@ -157,6 +157,7 @@ def create_app(
     templates.env.globals.update(site=site_links())
     templates.env.globals.update(rules=rules.for_page())  # the sign-up rules, for the page script (rules.py)
     templates.env.globals.update(email_on=email_on)
+    templates.env.filters["referral"] = beacon.with_referral  # utm_source=registry.coffee on links to a store
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)

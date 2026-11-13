@@ -137,7 +137,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   <h2 class="serif">New since last week</h2>
   {% if new %}
   <table><thead><tr><th>Coffee</th><th class="hide-sm">Origin</th><th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody>
-  {% for c in new %}<tr><td>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}<br><span class="notes">{{ c.roaster_name }}</span></td>
+  {% for c in new %}<tr><td>{% if c.url %}<a href="{{ c.url | referral }}" rel="noopener" data-out data-roaster="{{ c.roaster_id or '' }}" data-coffee="{{ c.coffee_id or '' }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}<br><span class="notes">{{ c.roaster_name }}</span></td>
     <td class="hide-sm">{{ c.origin_country or "" }}{% if c.process %} · {{ c.process }}{% endif %}</td>
     <td class="hide-sm notes">{{ (c.tasting_notes or [])|join(", ") }}</td>
     <td class="num">{{ "%.2f"|format(c.price_per_100g) if c.price_per_100g else "" }}</td></tr>{% endfor %}
@@ -193,6 +193,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <script>
 (() => {
 {% include "_common.js" %}
+{% include "_usage.js" %}
 
   // Catalog: loaded lazily, filtered client-side, rendered with textContent.
   const $ = id => document.getElementById(id);
@@ -206,6 +207,13 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   const word = w => new RegExp("(^|[^\\p{L}\\p{N}])" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=$|[^\\p{L}\\p{N}])", "u");
   const n = (k, one, many) => k.toLocaleString() + " " + (k === 1 ? one : many);
   const quote = s => "“" + s + "”";
+  // A link out carries utm_source=registry.coffee (coffeedata.beacon.with_referral): added here, keeping the link's
+  // query and fragment and any utm_* it already has; catalog.json keeps the roaster's link as it is.
+  const referral = u => {
+    const i = u.indexOf("#"), h = (i < 0 ? u : u.slice(0, i)).replace(/&+$/, ""), q = h.indexOf("?");
+    if (q >= 0 && /(^|&)utm_/i.test(h.slice(q + 1))) return u;
+    return h + (q < 0 ? "?" : h.endsWith("?") ? "" : "&") + "utm_source=registry.coffee&utm_medium=referral" + (i < 0 ? "" : u.slice(i));
+  };
 
   // The search box, read as terms that must all match, in any letter case:
   // - a city in the catalog ("Chicago", "Michigan City") is read first, as a phrase, wherever it is in the query, so
@@ -281,9 +289,13 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   function draw(from) {
     const body = $("rows");
     let first;
-    for (const r of hits.slice(from, from + PAGE)) {
+    hits.slice(from, from + PAGE).forEach((r, i) => {
       const tr = body.insertRow(), td = tr.insertCell();
-      if (r[C.url]) { const a = document.createElement("a"); a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a); first ??= a; }
+      if (r[C.url]) {
+        const a = document.createElement("a"); a.href = referral(r[C.url]); a.rel = "noopener"; a.textContent = r[C.title];
+        a.dataset.out = ""; a.dataset.roaster = r[C.roaster_id] ?? ""; a.dataset.coffee = r[C.coffee_id] ?? ""; a.dataset.rank = from + i + 1;
+        td.appendChild(a); first ??= a;
+      }
       else td.textContent = r[C.title];
       if (!first) { tr.tabIndex = -1; first = tr; }
       const st = STATUS[r[C.catalog_status]];  // the roaster's back catalog is kept, and marked as such
@@ -297,7 +309,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
       cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm hide-md notes");
       cell(tr, r[C.price_per_100g] != null ? r[C.price_per_100g].toFixed(2) : "", "num");
-    }
+    });
     shown = Math.min(hits.length, from + PAGE);
     const left = hits.length - shown, more = $("more");
     more.hidden = !left;
@@ -342,7 +354,29 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     let text = summary(terms, byPlace);
     if (hits.length && ORDER[sort]) text += " " + ORDER[sort] + (unpriced ? " " + n(unpriced, "with no price is listed last.", "with no price are listed last.") : "");
     $("count").textContent = text;
+    clearTimeout(still); still = setTimeout(settle, 2000);
   }
+
+  // What was searched and filtered, counted once the results settle (2 s untouched, a result clicked or the page
+  // hidden) and only when it changed, never per keystroke. A click to a roaster carries a copy of it.
+  let still, lastSearch = "", lastFilters = "";
+  const filters = () => ({origin: $("origin").value || null, process: $("process").value || null,
+    state: $("state").value || null, in_stock: $("stock").checked, sort: $("sort").value});
+  function looked() {
+    const q = $("q").value.trim().slice(0, 100), terms = parse(q);
+    const some = list => [...new Set(list)].slice(0, 10).map(v => v.slice(0, 60));  // the collector's limits
+    return {query: q, cities: some(terms.filter(t => t.city).map(t => t.city)), states: some(terms.filter(t => t.state).map(t => t.state)),
+      ...filters(), results_n: hits.length, zero_results: !hits.length};
+  }
+  function settle() {
+    clearTimeout(still);
+    if (!ready) return;
+    const now = looked(), f = JSON.stringify(filters());
+    if (now.query && now.query + f !== lastSearch) { usage.send({event: "search", ...now}); lastSearch = now.query + f; }
+    if (f !== lastFilters) { usage.send({event: "filter_state", ...filters(), results_n: now.results_n, zero_results: now.zero_results}); lastFilters = f; }
+  }
+  usage.hooks.push(settle);
+  usage.context = () => ready ? looked() : {};
   // Typing waits for a pause, so the table and the count change together, once. A lone two-letter code waits longer,
   // in any case (phones capitalise the first letter): "Mi" on the way to "Mild" shouldn't flash Michigan's coffees.
   function typed() {
@@ -388,6 +422,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     // The roasters' states by name; render() writes each option's name and count.
     fill("state", distinct("roaster_state").filter(v => STATES[v]).sort((a, b) => STATES[a].localeCompare(STATES[b])));
     ready = true;
+    lastFilters = JSON.stringify(filters());  // the filters as the page opens aren't a choice
     render();
     const again = $("retry"); if (document.activeElement === again) $("q").focus(); again.hidden = true;
   }
