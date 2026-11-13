@@ -18,9 +18,16 @@ regexp_replace(trim(split_part(split_part(split_part(regexp_replace(lower(trim({
 exists (select 1 from {{ shared_hosts }} sh where {{ key }} = sh.host or ends_with({{ key }}, '.' || sh.host))
 {%- endmacro %}
 
+{#- Known from a source whose data the public tables may carry: Overture (overture-<release>), the curated seed or a
+    manual add, never OpenStreetMap (ODbL) alone. `sources` is one source or several joined with +. stg_registry
+    takes every published registry value (name, city, state) from such a source when the roaster has one (#90). -#}
+{% macro is_open_source(sources) -%}
+regexp_matches(coalesce({{ sources }}, ''), '(^|\+)(overture|curated|manual)')
+{%- endmacro %}
+
 {#- Known from a source the public tables may list (public_roaster's rule), and in the US. -#}
 {% macro is_publishable(sources, country) -%}
-(regexp_matches(coalesce({{ sources }}, ''), '(^|\+)(overture|curated|manual)') and coalesce({{ country }}, 'US') = 'US')
+({{ is_open_source(sources) }} and coalesce({{ country }}, 'US') = 'US')
 {%- endmacro %}
 
 {#- Each roaster's canonical id, over `base` (one row per roaster: roaster_id, host, opted_out, alias_of, sources,
