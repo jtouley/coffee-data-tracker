@@ -1,3 +1,6 @@
+-- The ref to stg_builds below sits inside a var check (it is read only without var baseline_build); this line
+-- keeps the dependency whatever the vars (docs/dbt/CONVENTION.md, section 5).
+-- depends_on: {{ ref('stg_builds') }}
 -- A pipeline-wide break must not be published: listed coffees, in-stock coffees and roasters may move at most
 -- volume_tolerance from the release customers get now (var baseline_build; after a rollback that is not the newest
 -- passing build), or else the last build whose tests all passed. The first build has nothing to compare with.

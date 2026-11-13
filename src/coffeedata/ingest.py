@@ -305,7 +305,15 @@ def select_states(
     mode = "only" if only else "retry_failed" if retry_failed else "sample" if sample else "full"
     states = registry.current(lake)
     if only:
-        return [s for s in states if s.roaster.roaster_id == only], mode
+        # `--only` and the admin's "Pull now" ask for one roaster, but never crawl an alias: its store is crawled under
+        # its canonical id (registry.RoasterState.canonical_roaster_id), and a second read would only add a copy.
+        picked = [s for s in states if s.roaster.roaster_id == only]
+        for s in picked:
+            if s.status == "alias":
+                log.warning(
+                    "%s is an alias of %s (the same store): not crawled", only, s.canonical_roaster_id
+                )
+        return [s for s in picked if s.status != "alias"], mode
     done, tried = retry_transient(_done_and_tried, lake, run_date)
     # Draw a sample from a population that doesn't change as the run progresses, so re-running the same
     # command picks the same roasters (and then skips the ones already done).
@@ -319,12 +327,13 @@ def select_states(
 
 
 def _in_pool(s: registry.RoasterState) -> bool:
-    """A roaster a crawl may ask at all: it has a platform and hasn't opted out."""
-    return bool(s.roaster.platform) and s.status != "opted_out"
+    """A roaster a crawl may ask at all: it has a platform, hasn't opted out and isn't an alias (another roaster_id
+    serves its store), even when it was already tried this run."""
+    return bool(s.roaster.platform) and s.status not in ("opted_out", "alias")
 
 
 def crawlable(s: registry.RoasterState, tried: set[str] | frozenset[str]) -> bool:
-    """select_states' status rules for one roaster: in the pool (a platform, not opted out), and ingestable now or
+    """select_states' status rules for one roaster: in the pool (a platform, not opted out, not an alias), and ingestable now or
     already tried this run (`tried`). The fetch-health check's re-fetches (fetchhealth.repull_states) apply the same
     rules, so a roaster that opted out after the check is never fetched again."""
     return _in_pool(s) and (s.status in INGESTABLE or s.roaster.roaster_id in tried)
@@ -353,13 +362,16 @@ def select_parked(
     lake: Lake, run_date: str, adapter: str | None = None
 ) -> tuple[list[registry.RoasterState], dict[str, dict]]:
     """crawl-retry's work: the run's parked stores still without an ok fetch (of `adapter`'s roasters, when given:
-    the parked folder is shared by every connector's partition), and their progress."""
+    the parked folder is shared by every connector's partition), and their progress. A store that has since opted out
+    or become an alias (a probe resolved it to another roaster's store) is not resumed (_in_pool)."""
     resume = load_parked(lake, run_date)
     done, _ = retry_transient(_done_and_tried, lake, run_date)  # crawl-retry's first lake read: retried
     states = [
         s
         for s in registry.current(lake)
-        if s.roaster.roaster_id in resume.keys() - done and (adapter is None or s.roaster.adapter == adapter)
+        if s.roaster.roaster_id in resume.keys() - done
+        and (adapter is None or s.roaster.adapter == adapter)
+        and _in_pool(s)
     ]
     return states, {s.roaster.roaster_id: resume[s.roaster.roaster_id] for s in states}
 

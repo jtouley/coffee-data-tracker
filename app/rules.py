@@ -17,6 +17,7 @@ USERNAME_MIN, USERNAME_MAX = 3, 32
 MIN_PASSWORD, MAX_PASSWORD = 10, 256  # the owner's decision on the minimum (spec §2)
 MIN_DISTINCT = 4
 LABEL_MAX = 60  # an invite's "For" note
+EMAIL_MAX = 254  # RFC 5321's limit on a forward path
 USERNAME_CHARS = "a-z0-9._-"  # a regex character class, the same in Python and JavaScript
 
 # Long enough to pass the length rule, and still among the first guesses (NIST 800-63B asks for a check like this).
@@ -85,6 +86,11 @@ RULES: dict[str, tuple[str, str | None, str]] = {
     "p.variety": ("password", f"At least {MIN_DISTINCT} different characters", f"Use at least {MIN_DISTINCT} different characters."),
     "terms": ("agree", None, "Tick the box to agree to the Terms and Privacy Policy before creating your account."),
     "i.label": ("for_label", None, f"Keep the note to {LABEL_MAX} characters."),
+    "e.syntax": ("email", None, "That doesn’t look like an email address. Check for typos."),
+    "e.required": ("email", None, "Enter your email address."),
+    # /forgot takes a username or an email (owner decision, 2026-11-08).
+    "f.required": ("account", None, "Enter your username or email."),
+    "f.no_email": ("account", None, "This account has no verified email, so we can’t send a link. Ask the person who invited you for a reset link."),
 }  # fmt: skip
 TOO_LONG = f"Use at most {MAX_PASSWORD} characters."  # p.length's other message
 SUGGEST = "A username isn’t an email address. Try {suggestion}."  # u.email, when there's a suggestion
@@ -158,6 +164,30 @@ def check_password(password: str, username: str = "") -> list[dict[str, str]]:
     return out
 
 
+def clean_email(email: str) -> str:
+    """As stored: NFC and trimmed, with the domain lower-cased (the part before @ is left as typed)."""
+    e = nfc(email).strip(TRIM)
+    local, at, domain = e.rpartition("@")
+    return f"{local}@{domain.lower()}" if at else e
+
+
+def check_email(email: str, required: bool = False) -> list[dict[str, str]]:
+    """A light syntax check (spec §5): one @, something before it, a dot inside the part after it, at most
+    EMAIL_MAX characters, no spaces. Empty passes unless the email is required."""
+    e = clean_email(email)
+    if not e:
+        return [error("e.required")] if required else []
+    local, _, domain = e.partition("@")
+    ok = (
+        e.count("@") == 1
+        and bool(local)
+        and "." in domain.strip(".")
+        and len(e) <= EMAIL_MAX
+        and not any(c in TRIM for c in e)  # the same spaces as the page (JavaScript trim)
+    )
+    return [] if ok else [error("e.syntax")]
+
+
 def clean_label(label: object) -> str | None:
     """An invite's note: whitespace collapsed, control characters dropped, None when empty. Length is checked by
     `check_label`."""
@@ -178,6 +208,7 @@ def for_page() -> dict[str, Any]:
         "username": {"min": USERNAME_MIN, "max": USERNAME_MAX, "chars": USERNAME_CHARS},
         "password": {"min": MIN_PASSWORD, "max": MAX_PASSWORD, "distinct": MIN_DISTINCT},
         "label_max": LABEL_MAX,
+        "email_max": EMAIL_MAX,
         "rules": {k: {"field": f, "shown": shown, "message": m} for k, (f, shown, m) in RULES.items()},
         "too_long": TOO_LONG,
         "suggest": SUGGEST,

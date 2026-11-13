@@ -37,11 +37,13 @@ variable "support_email" {
 variable "billing_account" {
   description = "Billing account id (XXXXXX-XXXXXX-XXXXXX) for the monthly budget alert."
   type        = string
+  sensitive   = true
 }
 
 variable "owner_email" {
   description = "Where budget, error and uptime alerts go."
   type        = string
+  sensitive   = true
 }
 
 variable "budget_usd" {
@@ -54,4 +56,10 @@ variable "service" {
   description = "Name of the Cloud Run service and its Artifact Registry repository."
   type        = string
   default     = "registry-coffee"
+}
+
+variable "email" {
+  description = "Email recovery (docs/app/signup-ux-spec.md §5): mounts the EMAIL_KEY and RESEND_API_KEY secrets on the app and adds the \"email not sent\" alert. The secrets themselves always exist; turning this off only unmounts them. Turn on after the Resend domain is verified and both secrets have values (RUNNING.md, \"Email\")."
+  type        = bool
+  default     = false
 }

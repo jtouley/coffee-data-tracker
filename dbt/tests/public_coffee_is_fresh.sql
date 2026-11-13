@@ -1,3 +1,6 @@
+-- The refs below sit inside a var check, so dbt would see them only when the build's vars are set; this line
+-- declares them whatever the vars (docs/dbt/CONVENTION.md, section 5). The test itself is unchanged.
+-- depends_on: {{ ref('public_coffee') }}
 -- The public catalog reflects the run the build checked: its newest last_seen is that run (as_of_run).
 -- latest_run_is_fresh checks the run is recent; this checks the served table caught up with it. Older means the
 -- run listed no public coffee (its fetches failed, or never landed); newer means the lake holds a later run than the

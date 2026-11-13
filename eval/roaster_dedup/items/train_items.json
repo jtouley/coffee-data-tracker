@@ -1,0 +1,867 @@
+[
+ {
+  "id": "ascension.coffee|ascensioncoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "barkingdogcoffee.com|smastadcoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "blindtigercafe.com|blindtigercoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "broadcastcoffee.com|broadcastcoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "cxt.coffee|cxtcoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "dessertoasiscoffee.com|docr.coffee",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "elliottmurreycoffee.com|roastedbymom.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "frothymonkeycoffee.com|frothymonkeyroasting.co",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "ggroasting.com|greatergoodsroasting.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "goodcoffeegoodpurpose.com|vigilanthoperoasting.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "gracestcoffee.com|gracestreetcoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "intelligentsia.com|intelligentsiacoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "jonescoffee.com|jonescoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "jonescoffee.com|thebestcoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "jonescoffeeroasters.com|thebestcoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "kickapoocoffee.com|wonderstate.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "north-fork-coffee-roasters.myshopify.com|northforkcoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "portolacoffee.com|portolacoffeelab.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "reprisecoffee.com|repriseroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "revecoffee.com|revecoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "rockfordroasting.co|rockfordroastingcompany.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "seattlecoffeeworks.com|victrolacoffee.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "serafinacoffeebar.com|serafinacoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "silvercupcoffeeroasters.com|unionroasters.co",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "sunshinecoffeeroasters.com|sunshineorganiccoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "sweetleafcoffee.com|sweetleaflic.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "vervecoffee.com|vervecoffeeroasters.com",
+  "stratum": "H1",
+  "split": "train"
+ },
+ {
+  "id": "altruisticjoe.com|bagelsbrews.coffee",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "altruisticjoe.com|roastcoachcoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "altruisticjoe.com|timbertowncoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "altruisticjoe.com|valparaisocoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "bagelsbrews.coffee|roastcoachcoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "bagelsbrews.coffee|timbertowncoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "bagelsbrews.coffee|valparaisocoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "bit.ly|gmcoff.ee",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "carefreecoffeeroastery.t2-food.com|foodeist.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "carefreecoffeeroastery.t2-food.com|pacificcoffeeroastingcompany.food74.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "cowabungaroasters.com|cowabungaweb.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "foodeist.com|pacificcoffeeroastingcompany.food74.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "javaboulevard.com|magnumcoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "roastcoachcoffee.com|timbertowncoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "roastcoachcoffee.com|valparaisocoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "timbertowncoffee.com|valparaisocoffee.com",
+  "stratum": "H2",
+  "split": "train"
+ },
+ {
+  "id": "ahillofbeans.com|heritagecoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "ahillofbeans.com|jumpymonkey.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "aromaridge.com|javataza.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "aromaridge.com|joescoffeehouse.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "aromaridge.com|meanbeanroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "aromaridge.com|primeroastcoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "artizancoffee.com|bodhileafcoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "artizancoffee.com|coffeeorigins.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "backroadscoffee.com|fingerlakescoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "backroadscoffee.com|sheldrakecoffeeroasting.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "birdrockcoffee.com|quillscoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "bonitoroaster.com|theroastedbean.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "caminorealcoffee.com|idlehandsroasting.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "coffeecityusacafe.com|nhcoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "coffeecityusacafe.com|safaricoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "confidentcoffeeroasters.com|michaelthomascoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "corvuscoffee.com|dayglow.coffee",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "daybreak.coffee|iowacr.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "euroroast.com|telluridecoffeeroasters.net",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "fingerlakescoffee.com|maplecityroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "gaiacoffee.com|redhouseroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "ghosttowncoffee.com|hemispherecoffeeroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "ghosttowncoffee.com|ragamuffinroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "guilfordroastingcompany.com|indabacoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "hiddenfortresscoffee.com|scottbroscoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "idiomacoffee.com|oldcrown.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "javadoro.com|latitudecoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "keeblercoffee.com|whisperingbean.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "martincoffee.com|meanbeanroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "naomijoecoffee.com|ragamuffinroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "nhcoffee.com|safaricoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "piatanoirroast.com|temeculacoffeeroasters.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "strigocoffee.com|vigilant.coffee",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "switchcoffee.co|vamocoffee.com",
+  "stratum": "C1",
+  "split": "train"
+ },
+ {
+  "id": "blueflamecoffee.com|ohoriscoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "capecodcoffee.com|hillroadcoffeeroasters.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "capecodcoffee.com|singlebatchcoffeeroasters.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "clancybroscoffee.com|vitalityroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "coffeeroasterlnk.com|dynamocoffeeroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "coppercanyoncoffeeroasters.com|quartertonecoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "coyotemooncoffee.com|lgrcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "coyotemooncoffee.com|quartertonecoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "dynamocoffeeroasting.com|lgrcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "dynamocoffeeroasting.com|tagcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "frenchieroast.com|fullbloomcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "frenchieroast.com|goldberryroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "fullbloomcoffee.com|kramerroastingco.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "globalcoffeeco.com|littleseed.coffee",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "globalcoffeeco.com|trailcreekcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "goldcountryroasters.com|lgrcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "goodnewsroasters.com|hillroadcoffeeroasters.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "goodnewsroasters.com|kramerroastingco.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "goodnewsroasters.com|pangeacoffeeroasters.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "goodnewsroasters.com|piatanoirroast.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "groundcontrolroasters.com|lgrcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "kramerroastingco.com|mountainroaster.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "lgrcoffee.com|littlegoatcoffeeroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "lgrcoffee.com|piatanoirroast.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "lgrcoffee.com|roasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "lgrcoffee.com|tagcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "littlegoatcoffeeroasting.com|nhcoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "littlegoatcoffeeroasting.com|ohoriscoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "nomadnectarcoffeeroasters.com|obviouscoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "piatanoirroast.com|quartertonecoffee.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "quartertonecoffee.com|refugeroasters.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "quartertonecoffee.com|vitalityroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "roasting.com|singlebatchcoffeeroasters.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "singlebatchcoffeeroasters.com|stiverscoffee.biz",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "singlebatchcoffeeroasters.com|vitalityroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "springtownroasters.com|vitalityroasting.com",
+  "stratum": "C2",
+  "split": "train"
+ },
+ {
+  "id": "ahillofbeans.com|roasthousecoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "aromaroasters.com|aromaticroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "beaneticscoffee.com|coffeebean.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "beanjuicecoffee.com|coffeebean.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "beanstockcoffee.com|coffeebean.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "blindtigercafe.com|blindtigercoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "carmelcoffee.com|carmelcoffeeroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "carolinacoffee.co|carolinacoffeeroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "cherryblendcoffeeroasters.com|cherrycoffeeroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "cherrycoffeeroasters.com|cherryrivercoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "companioncoffeeroasters.com|companionroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "daybreak.coffee|daybreakcoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "frenchiecoffee.com|frenchieroast.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "housecupcoffee.com|roasterscoffeehouse.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "jamescoffeeco.com|jamesonbrown.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "justatasteunique.com|justcoffee.coop",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "maas.coffee|maascoffeeroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "martincoffee.com|martincoffeeroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "northforkcoffeeroasters.com|northforkroastingco.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "peacecoffee.com|peacemakercoffeecompany.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "redlightcoffeeroasters.com|redlightroastery.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "revecoffee.com|revenant.coffee",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "revecoffee.com|reverieroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "riverbendroastery.com|riverroasters.co",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "riverroasters.co|riverrockroasters.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "roastery.coffee|vigilanthoperoasting.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "rockymountainroastery.com|rockymountainroasting.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "safaricoffee.com|safaripridecoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "sevencoffeeroasters.com|sevenhillscoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "sevencoffeeroasters.com|sevenvirtuespdx.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "skyroast.coffee|skyroasted.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "sunshinecoffeeroasters.com|sunshineroaster.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "thomasandfisk.com|thomascoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "unioncoffeeroaster.com|unionroasters.co",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "vigilant.coffee|vigilanthoperoasting.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "wolfandmermaidcoffee.com|wolfcoffee.com",
+  "stratum": "N1",
+  "split": "train"
+ },
+ {
+  "id": "acentocoffeeroasters.com|achillescoffeeroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "acentocoffeeroasters.com|sevenseasroasting.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "alanascoffeeroasters.com|unincorporated.coffee",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "broadcastcoffee.com|caffeumbria.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "brooklynroasting.com|partnerscoffee.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "capitolpresscoffee.com|roastedbymom.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "cellardoorcoffee.com|nossacoffee.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "chuckroastscoffee.com|florandseed.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "corvuscoffee.com|stravacraftcoffee.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "deadstockcoffee.com|fetchroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "deadstockcoffee.com|sterling.coffee",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "destinationcoffees.com|seedhouse.coffee",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "groundswellcoffeeroasters.com|intelligentsiacoffee.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "habitat.coffee|supremacoffeeroastery.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "huckleberryroasters.com|wagoncoffeeroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "intelligentsiacoffee.com|pridecoffeeroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "laterzacoffee.com|vivacoffeeroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "nossacoffee.com|ofpdx.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "nossacoffee.com|thegreatnorthcoffee.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "ondaorigins.com|trucup.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "proudmarycoffee.com|upperleftroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "safaripridecoffee.com|vitalityroasting.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "sellwoodcoffee.com|upperleftroasters.com",
+  "stratum": "R1",
+  "split": "train"
+ },
+ {
+  "id": "spellacaffe.com|thegreatnorthcoffee.com",
+  "stratum": "R1",
+  "split": "train"
+ }
+]

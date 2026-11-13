@@ -44,10 +44,12 @@
   <h2 class="section">People</h2>
   <div class="rows">
     {% for a in people %}
-    <div class="gear"><div class="n">{{ a.username }}<em>{{ "turned off" if a.disabled else "member" }}</em></div><div class="d">{{ shots_n(shots_of(a.user_id)) }}</div></div>
+    {% set em = email_of(a.user_id) %}
+    <div class="gear"><div class="n">{{ a.username }}<em>{{ "turned off" if a.disabled else "member" }}</em></div><div class="d">{{ shots_n(shots_of(a.user_id)) }}</div>{% if email_on %}<div class="d addr">{% if em %}{{ em.address }} · {{ "verified" if em.verified else "not verified yet" }}{% else %}No email{% endif %}</div>{% endif %}</div>
     {% if not a.disabled %}
     <button class="link" type="button" data-reset="{{ a.user_id }}" data-name="{{ a.username }}" data-confirm="Tap again: {{ a.username }}’s old reset link stops working">Make a reset link for {{ a.username }}</button>
     {% endif %}
+    {% if em %}<button class="link danger" type="button" data-remove-email="{{ a.user_id }}" data-name="{{ a.username }}" data-confirm="Tap again to remove {{ a.username }}’s email">Remove {{ a.username }}’s email</button>{% endif %}
     <button class="link{{ '' if a.disabled else ' danger' }}" type="button" data-person="{{ a.user_id }}" data-name="{{ a.username }}" data-disabled="{{ 'false' if a.disabled else 'true' }}"{% if not a.disabled %} data-confirm="Tap again to turn off {{ a.username }}’s account"{% endif %}>{{ "Turn " ~ a.username ~ "’s account back on" if a.disabled else "Turn off " ~ a.username ~ "’s account" }}</button>
     {% else %}
     <p class="body mt8">Nobody else yet.</p>
