@@ -371,6 +371,11 @@ Backlog, not started until the owner says so:
   Until that run: #154's build fix, the registry keep rule and the image pin are NOT live. Deadline: the jobs' image
   dates from about 2026-11-01..08, so it can be deleted after ~2026-12-01 once five newer ingest images exist; the
   combined run must happen well before then. First importers run dispatched from GitHub 2026-11-13 (importer=all).
+- Owner decision (2026-11-13, option A): ship terraform apply in GitHub (#163) with the residual risk written down.
+  Residual: Google issues the apply token to any job in the `terraform-apply` environment; it can't see who approved.
+  An admin (this session acts as jtouley, admin) could loosen the environment's reviewers; today only the session
+  proxy blocks that (403 on environments and rulesets). The workflow refuses if it can't verify a fresh jtouleyrou
+  approval for this attempt. Proper fix later: the agent stops using an admin credential.
 - Royal derivation: fixed in #152 (owner asked, 2026-11-12). Reviewed, CI green, held as draft for the held-out score:
   per CLAUDE.md it waits for the first scheduled week after 11-18 (week 11-09 was read while building). Then score main
   and #152 on a hash split grouped by lot, two labelers plus a tiebreak, Wilson intervals; merge if not worse.
