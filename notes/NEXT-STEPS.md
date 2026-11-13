@@ -345,6 +345,14 @@ Backlog, not started until the owner says so:
   - #139: C1 (the census gate should also require accuracy at least main's), C2 ("1,500 bags" count parsing).
   - #151: iOS zoom on the 13 px Sort select, a truncated Filters label with a sort on, and the nav's `row-gap` having no effect.
   - #150: no test for the WAL cleanup, and the coverage baseline drops releases by "overall = 0".
+- Owner rule (2026-11-13): dbt must stay idempotent and ingestion immutable. Same raw in, same output out, every
+  build; stored raw is never rewritten or deleted; a job re-run must not change what an earlier run stored. Every
+  builder and reviewer brief carries it, and it goes into docs/dbt/CONVENTION.md (#dbt-tests-docs).
+- Health review (2026-11-12): OpenSSF Scorecard about 6.8/10, engineering B+, dbt "partly" one design. Owner said
+  start all of it with independent agents: #153 supply-chain pins and provenance (ingest image included), #154 build
+  exit code (#83), dbt-tests-docs, crawl-slo (#96), chain-tuesday-jobs (#84), then contracts on served tables, then
+  the product dimension (design in the session scratchpad; defaults: dim_coffee stays coffee-only beside dim_product,
+  the false "removed" event is a later measured change, admin drops become flags).
 - Royal derivation: fixed in #152 (owner asked, 2026-11-12). Reviewed, CI green, held as draft for the held-out score:
   per CLAUDE.md it waits for the first scheduled week after 11-18 (week 11-09 was read while building). Then score main
   and #152 on a hash split grouped by lot, two labelers plus a tiebreak, Wilson intervals; merge if not worse.
