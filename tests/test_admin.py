@@ -686,7 +686,10 @@ def test_a_cookie_from_another_secret_or_tampered_is_refused(tmp_path):
     b = Auth(FileStore(tmp_path / "state"), "t" * 40, TOKEN, "localhost", ORIGIN)
     assert b.session(cookie) is None
     sid, sig = cookie.split(".")
-    for bad in (f"{sid}.{sig[:-1]}A", f"{sid}x.{sig}", sid, "", None, "a.b.c"):
+    # A changed first character: it carries 6 bits of the signature. The last one of unpadded base64url carries
+    # padding bits too, so replacing it with A left the same bytes whenever it was A to D (CI failed on that).
+    other = "B" if sig.startswith("A") else "A"
+    for bad in (f"{sid}.{other}{sig[1:]}", f"{sid}x.{sig}", sid, "", None, "a.b.c"):
         assert a.session(bad) is None
 
 
