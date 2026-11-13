@@ -174,9 +174,9 @@ def create_app(
             return page(request, "error.html", status=500, code=500)
         return JSONResponse({"detail": "Something went wrong on the server."}, 500)
 
-    app.middleware("http")(
-        web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error, web.csp(collector))
-    )  # type: ignore[arg-type]
+    renew = sessions.set_cookie if sessions else None
+    policy = web.csp(collector)
+    app.middleware("http")(web.middleware(renew, COOKIE, on_error, policy))  # type: ignore[arg-type]
     app.middleware("http")(logs.middleware)  # it sees the final status, error pages included
     app.add_middleware(web.RejectProbes)  # outermost: scanner paths stop here, unlogged
     hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0)
