@@ -224,6 +224,45 @@ class Bag(BaseModel):
     _id = field_validator("bag_id")(_safe_id)
 
 
+# The "Your next bag" recommendation test: a coffee-level rating, separate from shots, and answers to the picks.
+Interest = Literal["want", "maybe", "no"]  # Want to try / Maybe / Not for me
+RatingContext = Literal["seed", "picks", "later"]  # the five that seed the picks; from the picks; rated later
+DrankAs = Literal["espresso", "filter", "milk"]
+# A catalog id ("roaster:product"): checked against the catalog or the person's picks, so this only bounds it.
+_COFFEE_ID = Field(min_length=1, max_length=200, pattern=r"^[^\s\x00-\x1f]+$")
+
+
+class Rating(BaseModel):
+    """One person's 1-5 rating of one catalog coffee. A correction is a new record under the same rating_id and
+    an undo is one with deleted = true: the latest record per rating_id wins, and none is ever changed."""
+
+    rating_id: str
+    user_id: str | None = None
+    coffee_id: str = _COFFEE_ID
+    rating: int = Field(ge=1, le=5)
+    drank_as: DrankAs | None = None
+    context: RatingContext = "seed"
+
+    model_config = {"extra": "forbid"}
+
+    _id = field_validator("rating_id")(_safe_id)
+
+
+class RecResponse(BaseModel):
+    """One person's answer to one coffee of their slate: how it sounds, and whether it's the one they'd buy next.
+    A changed answer is a new record; the latest per (user_id, slate_id, coffee_id) wins."""
+
+    user_id: str | None = None
+    slate_id: str
+    coffee_id: str = _COFFEE_ID
+    interest: Interest | None = None  # None: only the pick is answered so far
+    picked: bool = False
+
+    model_config = {"extra": "forbid"}
+
+    _id = field_validator("slate_id")(_safe_id)
+
+
 _GRAMS = [
     (re.compile(r"(\d+(?:\.\d+)?)\s*(?:kg|kilo)", re.I), 1000.0),
     (re.compile(r"(\d+(?:\.\d+)?)\s*(?:lb|lbs|pound|#)", re.I), 453.592),

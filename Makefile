@@ -58,8 +58,9 @@ fmt:
 	uv run ruff check --fix src app admin tests
 	uv run ruff format src app admin tests
 
-contracts:  ## regenerate the internal ODCS contracts (contracts/internal/) from lake.SCHEMAS and contract_docs.py
+contracts:  ## regenerate the internal ODCS contracts (contracts/internal/) from lake.SCHEMAS and contract_docs.py, and the usage wire schema
 	uv run python -m coffeedata.raw_contracts --all
+	uv run python -m app.usage_events --write
 
 lint:  ## the same checks as the pre-commit hooks, on every file
 	uv run pre-commit run --all-files

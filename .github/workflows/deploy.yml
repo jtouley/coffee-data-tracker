@@ -151,6 +151,25 @@ jobs:
           elif [ "$latest" != "100" ]; then
             echo "::warning::$SERVICE's traffic is pinned (${latest}% to the newest revision), so this deploy serves no one. After a rollback, move it back: RUNNING.md, Rolling back."
           fi
+      # The usage collector runs the app image ci.tfvars pins (usage_image, src/terraform/usage.tf); Terraform
+      # deploys it, not this workflow. Tag that digest `pinned-usage-<12 hex>` so the registry's cleanup (keep the
+      # pinned* tags, artifact_registry.tf) never deletes the image the collector's next cold start needs. Tagging
+      # is within the deploy account's registry writer role; it changes no service.
+      - name: Keep the usage collector's pinned image
+        if: steps.tip.outputs.current == 'true'
+        env:
+          IMAGE: ${{ vars.GCP_IMAGE }}
+        run: |
+          usage=$(sed -n 's/^usage_image *= *"\(.*\)"$/\1/p' src/terraform/ci.tfvars)
+          if [ -z "$usage" ]; then
+            echo "usage_image isn't pinned in ci.tfvars: the collector runs Google's sample image. Nothing to keep."
+            exit 0
+          fi
+          if ! [[ "$usage" =~ ^"$IMAGE"@sha256:([0-9a-f]{64})$ ]]; then
+            echo "::error::ci.tfvars' usage_image isn't $IMAGE pinned by digest."
+            exit 1
+          fi
+          gcloud artifacts docker tags add "$usage" "$IMAGE:pinned-usage-${BASH_REMATCH[1]:0:12}" --quiet
 
   # The admin (admin.registry.coffee) runs the same image as its own service: the same digest, after the app.
   deploy-admin:
