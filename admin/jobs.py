@@ -87,7 +87,9 @@ def _crawl(p: dict) -> list[Step]:
 
 
 def _sh(script: str) -> list[str]:
-    """The build job runs `sh -c <args[0]>`: an override is one script, built here from fixed text and checked ids."""
+    """The build job runs `sh -c <args[0]>`: an override is one script, built here from fixed text and checked ids.
+    Every step runs whatever the ones before it did, and any step's failure fails the execution (issue #83), the
+    publish included: a staged but unpublished write must reach the owner's alert, as in ingestion.tf's chains."""
     return [script]
 
 
@@ -110,7 +112,7 @@ ACTIONS: dict[str, Action] = {
                ("week",), lambda p: [Step("enrich-week", ["enrich-week", "--submit", "--run-date", p["week"]])]),
         Action("classify", "Classify", "Ask Claude which new products are coffee. It costs money.", (),
                lambda p: [Step("build", _sh('rc=0; coffeedata classify || rc=1; '
-                                            'coffeedata publish --message "classify (admin)"; exit $rc'))]),
+                                            'coffeedata publish --message "classify (admin)" || rc=1; exit $rc'))]),
         Action("build", "Build", "Build the catalog and check it. If every check passes, it goes live.",
                (), lambda p: [Step("build", None)]),
         # From the Release page: a draft build over a decisions snapshot, Publish, Roll back.
@@ -118,7 +120,7 @@ ACTIONS: dict[str, Action] = {
                lambda p: [Step("build", _sh(
                    f"rc=0; coffeedata build --draft {p['draft_id']} --snapshot {p['snapshot_id']} "
                    f"--snapshot-sha256 {p['sha256']} || rc=1; "
-                   f'coffeedata publish --message "draft {p["draft_id"]}"; exit $rc'))],
+                   f'coffeedata publish --message "draft {p["draft_id"]}" || rc=1; exit $rc'))],
                page="release"),
         # From the Sources page: Pull now, for places the owner flagged Roaster. One job: the probe, then a counted
         # crawl of each storefront found on its connector, into `week` (Writes.plan: the next week once this
@@ -126,7 +128,7 @@ ACTIONS: dict[str, Action] = {
         Action("pull", "Pull now", "Find each place's shop, then crawl it for this week. No Publish needed.",
                ("roasters",), lambda p: [Step("pull", _sh(
                    f'rc=0; coffeedata pull --only {p["roasters"]} --run-date {p["week"]} || rc=1; '
-                   f'coffeedata publish --message "pull (admin)"; exit $rc'))],
+                   f'coffeedata publish --message "pull (admin)" || rc=1; exit $rc'))],
                page="sources"),
         Action("publish", "Publish", "Make a draft build live.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",

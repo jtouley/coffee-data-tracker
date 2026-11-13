@@ -184,7 +184,7 @@ def test_overpass_down_still_records_overture_and_fails_the_execution(lake, monk
     """Before: `discover overture; discover osm; publish` in one shell. Overture runs first in one 4Gi process, so
     a kill there took OSM's rows with it, and an all-states Overpass outage recorded 0 rows and exited 0."""
     monkeypatch.setattr(discover, "overture_latest_release", lambda: "2026-10-21.0")
-    monkeypatch.setattr(discover, "overture", _overture_rows)
+    monkeypatch.setattr(discover, "overture_places", lambda release: (_overture_rows(release), []))
 
     def down(states, failed):
         failed.extend(states)
@@ -204,7 +204,7 @@ def test_overpass_down_still_records_overture_and_fails_the_execution(lake, monk
 
 
 def test_an_overture_scan_that_finds_nothing_fails(lake, monkeypatch):
-    monkeypatch.setattr(discover, "overture", lambda release: [])
+    monkeypatch.setattr(discover, "overture_places", lambda release: ([], []))
     with pytest.raises(RuntimeError, match="found no roasters"):
         cli.discover_source(lake, "overture", "2026-10-21.0")
     (end,) = _jobs(lake, "discover")
@@ -298,7 +298,7 @@ def test_discover_publishes_each_source_with_its_job_rows(tmp_path, monkeypatch)
     monkeypatch.setenv("COFFEEDATA_LAKE", "hf://datasets/someone/coffee")
     monkeypatch.setattr(Lake, "remote_has", lambda self, table: False)  # read staging alone (no network)
     monkeypatch.setattr(discover, "overture_latest_release", lambda: "2026-10-21.0")
-    monkeypatch.setattr(discover, "overture", _overture_rows)
+    monkeypatch.setattr(discover, "overture_places", lambda release: (_overture_rows(release), []))
     monkeypatch.setattr(discover, "osm", lambda states, failed: [_registry_row("osm.example")])
     cli.cmd_discover(argparse.Namespace(source=["osm", "overture"], release=None, states=None, publish=True))
     osm, overture = (
@@ -786,7 +786,7 @@ def _overture_place(name, cat="coffee_roastery", alts=(), x=-122.6, y=45.5, coun
     return {"names": {"primary": name}, "taxonomy": {"primary": cat, "alternates": list(alts)},
             "basic_category": basic, "bbox": {"xmin": x, "ymin": y}, "confidence": conf,
             "addresses": [{"locality": city, "region": region, "country": country}],
-            "websites": [website] if website else None}  # fmt: skip
+            "websites": [website] if website else None, "operating_status": None}  # fmt: skip
 
 
 def test_overture_filter_keeps_us_roasteries_with_a_storefront(tmp_path, monkeypatch):

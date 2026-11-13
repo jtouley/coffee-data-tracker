@@ -166,7 +166,11 @@ locals {
     # override (`coffeedata pull --only ...`); its own arguments print the help. It leaves from WooCommerce's and
     # generic's NAT IP (SiteGround answers the default egress with a challenge), and a few stores asked once don't
     # touch Shopify's IP budget. Retries 0: the owner starts it again.
-    "pull" = { command = ["sh", "-c"], args = ["coffeedata pull --help"], egress = "woo_generic", claude = false, memory = "2Gi", retries = 0 }
+    "pull" = {
+      command = ["sh", "-c"]
+      args    = ["coffeedata pull --help"]
+      egress  = "woo_generic", claude = false, memory = "2Gi", retries = 0
+    }
   }
 
   # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): every connector's
