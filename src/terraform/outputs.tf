@@ -22,3 +22,8 @@ output "dns" {
   description = "The record to add at the DNS host once the domain mapping exists."
   value       = "CNAME ${split(".", var.domain)[0]} -> ghs.googlehosted.com."
 }
+
+output "usage_url" {
+  description = "The usage collector's address: Cloud Run's deterministic URL, known at plan, the value for config/usage.toml's collector_url."
+  value       = "https://${local.usage_service}-${data.google_project.this.number}.${var.region}.run.app"
+}

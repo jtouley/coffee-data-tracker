@@ -18,6 +18,26 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
+  deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never
+  the app. `POST /e` answers every request with an empty 204; it takes at most 4 KB and 20 events, refuses any event
+  its strict schema doesn't name (`app/usage_events.py`; the wire format is
+  `contracts/internal/usage-wire.schema.json`), drops Global Privacy Control and Do Not Track, foreign origins, more
+  than 600 events a minute or 10,000 a day per masked prefix and 6,000 a minute or 200,000 a day per instance, and
+  flags known bots. The caller's IP is masked to IPv4 /24 or IPv6 /40 before anything is kept (no prefix for private
+  or link-local addresses); a referrer is cut to its host; the user agent becomes the bot flag; cookies and every
+  other header are never read; filter values refuse anything shaped like an email, phone or card number. Events go to
+  the private dataset `jtouley/coffee-usage` (`Lake.usage()`, table `usage_events`,
+  `events/day=YYYY-MM-DD/batch=<id>.parquet`) at most once a minute, inside the request that finds 200 waiting or the
+  oldest 15 minutes old, and at shutdown within 8 seconds; memory and unpublished staging are capped, and what's lost
+  is counted. Its log holds counts only, at WARNING when a limit dropped events and ERROR when events were lost, which
+  the new "usage events dropped or lost" alert emails; Terraform excludes Cloud Run's request log for it. Terraform
+  deploys it, like the ingest jobs: the service runs `usage_image`, the app's attested image from main pinned by
+  digest in `ci.tfvars` (a PR bumps it), and `deploy.yml` tags that digest so the registry keeps it. The service
+  waits for `usage_enabled` (off) until the apply account holds the grants `src/terraform/bootstrap/iam.tf` now lists
+  (docs/app/RUNNING.md, "Usage"). Internal contract `usage` 1.0.0. The page scripts and the dbt models are separate
+  PRs.
+
 - The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
   one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly
   runs only (a Monday with a full manifest, or from before manifests), each judged on what it stored (the roasters

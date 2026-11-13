@@ -1,0 +1,485 @@
+version: 2
+
+# The usage project's rules over hand-written rows (docs/dbt/CONVENTION.md section 10). Run by
+# tests/test_usage_dbt.py (usage_build.build(unit_tests=True)); the weekly build leaves them out.
+
+unit_tests:
+  - name: location_takes_what_every_row_in_the_block_agrees_on
+    description: >
+      A prefix's block resolves to the most precise place all its rows agree on, never the first address's: a /24
+      split between two Denver neighbourhoods is Denver (the neighbourhood cut); one split between Boulder and Aurora
+      is only Colorado; one split across two countries is nothing. An IPv6 /40 inside one row is Portland, written
+      compressed or in full; a /40 split between Oregon and Washington is only the US. A block in a gap, text that
+      isn't an address and a missing prefix find nothing. Population matches case-insensitively, on the cut name.
+      DB-IP's IPv6 filler is unknown: a row across 16 /32s (a /28), and DB-IP's default place at any size; an IPv4
+      row there is a real one.
+    model: int_usage_location
+    given:
+      - input: ref('stg_usage_ip_prefixes')
+        rows:
+          - {event_id: denver, ip_prefix: 198.51.100.0/24}
+          - {event_id: region, ip_prefix: 192.0.2.0/24}
+          - {event_id: border, ip_prefix: 203.0.113.0/24}
+          - {event_id: v6, ip_prefix: "2001:db8::/40"}
+          - {event_id: v6full, ip_prefix: "2001:0db8:0000:0000:0000:0000:0000:0000/40"}
+          - {event_id: v6split, ip_prefix: "2001:db8:100::/40"}
+          - {event_id: gap, ip_prefix: 10.0.0.0/24}
+          - {event_id: junk, ip_prefix: not-an-address}
+          - {event_id: none, ip_prefix: null}
+          - {event_id: filler, ip_prefix: "3000::/40"}
+          - {event_id: murten, ip_prefix: "2a0d:1000::/40"}
+          - {event_id: v4murten, ip_prefix: 198.18.0.0/24}
+      - input: ref('stg_geo_ranges')
+        rows:
+          - {ip_start: "00000000000000000000ffffc6336400", ip_end: "00000000000000000000ffffc633647f", country: US, region: Colorado, city: "Denver (Five Points)"}
+          - {ip_start: "00000000000000000000ffffc6336480", ip_end: "00000000000000000000ffffc63364ff", country: US, region: Colorado, city: Denver}
+          - {ip_start: "00000000000000000000ffffc0000200", ip_end: "00000000000000000000ffffc000027f", country: US, region: Colorado, city: Boulder}
+          - {ip_start: "00000000000000000000ffffc0000280", ip_end: "00000000000000000000ffffc00002ff", country: US, region: Colorado, city: Aurora}
+          - {ip_start: "00000000000000000000ffffcb007100", ip_end: "00000000000000000000ffffcb00717f", country: US, region: Washington, city: Blaine}
+          - {ip_start: "00000000000000000000ffffcb007180", ip_end: "00000000000000000000ffffcb0071ff", country: CA, region: British Columbia, city: Surrey}
+          - {ip_start: "20010db8000000000000000000000000", ip_end: "20010db800ffffffffffffffffffffff", country: US, region: Oregon, city: Portland}
+          - {ip_start: "20010db8010000000000000000000000", ip_end: "20010db8017fffffffffffffffffffff", country: US, region: Oregon, city: Portland}
+          - {ip_start: "20010db8018000000000000000000000", ip_end: "20010db801ffffffffffffffffffffff", country: US, region: Washington, city: Seattle}
+          - {ip_start: "00000000000000000000ffff09000000", ip_end: "00000000000000000000ffff09ffffff", country: US, region: Ohio, city: Far}
+          - {ip_start: "30000000000000000000000000000000", ip_end: "3000000fffffffffffffffffffffffff", country: NL, region: North Holland, city: Amsterdam}
+          - {ip_start: "2a0d1000000000000000000000000000", ip_end: "2a0d1000ffffffffffffffffffffffff", country: CH, region: Fribourg, city: Murten/Morat}
+          - {ip_start: "00000000000000000000ffffc6120000", ip_end: "00000000000000000000ffffc61200ff", country: CH, region: Fribourg, city: Murten/Morat}
+      - input: ref('stg_geo_cities')
+        rows:
+          - {country: US, region: Colorado, city: denver, population: 715000}
+          - {country: US, region: Oregon, city: portland, population: 650000}
+    expect:
+      rows:
+        - {event_id: denver, country: US, region: Colorado, city: Denver, city_population: 715000}
+        - {event_id: region, country: US, region: Colorado, city: null, city_population: null}
+        - {event_id: border, country: null, region: null, city: null, city_population: null}
+        - {event_id: v6, country: US, region: Oregon, city: Portland, city_population: 650000}
+        - {event_id: v6full, country: US, region: Oregon, city: Portland, city_population: 650000}
+        - {event_id: v6split, country: US, region: null, city: null, city_population: null}
+        - {event_id: gap, country: null, region: null, city: null, city_population: null}
+        - {event_id: junk, country: null, region: null, city: null, city_population: null}
+        - {event_id: none, country: null, region: null, city: null, city_population: null}
+        - {event_id: filler, country: null, region: null, city: null, city_population: null}
+        - {event_id: murten, country: null, region: null, city: null, city_population: null}
+        - {event_id: v4murten, country: CH, region: Fribourg, city: Murten/Morat, city_population: null}
+
+  - name: events_take_the_collectors_source_and_a_normalized_query
+    description: >
+      The source label is utm_source for utm, the referrer's domain for referrer ('(unnamed)' without one), the kind
+      itself for direct and internal, null on a load's later events. The query is lowercased, without accents and
+      with spaces collapsed; it is known only when every word is in the vocabulary. A roaster or coffee id is kept
+      only when the served release has it (of that kind), else it is '(unknown)': the collector's free text never
+      reaches a report.
+    model: int_usage_events
+    given:
+      - input: ref('stg_usage_events')
+        rows:
+          - {event_id: a, event: page_view, source: utm, utm_source: News, bot: false}
+          - {event_id: b, event: page_view, source: referrer, referrer_domain: Example.org, bot: false}
+          - {event_id: c, event: page_view, source: referrer, referrer_domain: null, bot: false}
+          - {event_id: d, event: page_view, source: direct, bot: false}
+          - {event_id: g, event: page_view, source: utm, utm_source: null, utm_campaign: fall, bot: false}
+          - {event_id: e, event: search, source: null, query: "  Café   KENYA ", bot: false}
+          - {event_id: f, event: search, source: null, query: "kenya xyzzy", bot: true}
+          - {event_id: k, event: click_out, source: null, roaster_id: r.known, coffee_id: c.known, bot: false}
+          - {event_id: u, event: click_out, source: null, roaster_id: "Mile High <b>call 303 555 0100</b>", coffee_id: "free text up to 120 characters", bot: false}
+      - input: ref('int_usage_vocabulary')
+        rows:
+          - {word: cafe}
+          - {word: kenya}
+      - input: ref('int_usage_location')
+        rows: []
+      - input: ref('stg_usage_catalog')
+        rows:
+          - {kind: roaster, id: r.known, words_text: Known Roasters}
+          - {kind: coffee, id: c.known, words_text: Kenya AA}
+          - {kind: coffee, id: r.known, words_text: an id of the other kind}
+    expect:
+      rows:
+        - {event_id: a, source_kind: utm, source: news, query_norm: null, query_words_known: false, bot: false, roaster_id: null, coffee_id: null}
+        - {event_id: b, source_kind: referrer, source: example.org, query_norm: null, query_words_known: false, bot: false, roaster_id: null, coffee_id: null}
+        - {event_id: c, source_kind: referrer, source: (unnamed), query_norm: null, query_words_known: false, bot: false, roaster_id: null, coffee_id: null}
+        - {event_id: d, source_kind: direct, source: direct, query_norm: null, query_words_known: false, bot: false, roaster_id: null, coffee_id: null}
+        - {event_id: g, source_kind: utm, source: (unnamed), query_norm: null, query_words_known: false, bot: false, roaster_id: null, coffee_id: null}
+        - {event_id: e, source_kind: null, source: null, query_norm: cafe kenya, query_words_known: true, bot: false, roaster_id: null, coffee_id: null}
+        - {event_id: f, source_kind: null, source: null, query_norm: kenya xyzzy, query_words_known: false, bot: true, roaster_id: null, coffee_id: null}
+        - {event_id: k, source_kind: null, source: null, query_norm: null, query_words_known: false, bot: false, roaster_id: r.known, coffee_id: c.known}
+        - {event_id: u, source_kind: null, source: null, query_norm: null, query_words_known: false, bot: false, roaster_id: (unknown), coffee_id: (unknown)}
+
+  - name: a_city_is_named_only_past_every_floor
+    description: >
+      With floors of 30,000 people, 2 days and 3 events a week: Big (3 events on 2 days) is named; Small (too few
+      people) and Rare (one day) roll up to "other, <region>"; a bot's events count toward nothing; no location is
+      'unknown'; a region below its own days is '(rare)' and its cities "other".
+    model: int_usage_event_places
+    overrides:
+      vars: {city_min_population: 30000, city_min_days: 2, city_min_week_events: 3, usage_min_days: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {event_id: b1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Big, city_population: 50000, bot: false}
+          - {event_id: b2, week: 2026-09-07, received_date: 2026-09-08, country: US, region: CO, city: Big, city_population: 50000, bot: false}
+          - {event_id: b3, week: 2026-09-07, received_date: 2026-09-08, country: US, region: CO, city: Big, city_population: 50000, bot: false}
+          - {event_id: s1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Small, city_population: null, bot: false}
+          - {event_id: s2, week: 2026-09-07, received_date: 2026-09-08, country: US, region: CO, city: Small, city_population: null, bot: false}
+          - {event_id: s3, week: 2026-09-07, received_date: 2026-09-09, country: US, region: CO, city: Small, city_population: null, bot: false}
+          - {event_id: r1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Rare, city_population: 90000, bot: false}
+          - {event_id: r2, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Rare, city_population: 90000, bot: false}
+          - {event_id: r3, week: 2026-09-07, received_date: 2026-09-07, country: US, region: CO, city: Rare, city_population: 90000, bot: false}
+          - {event_id: r4, week: 2026-09-07, received_date: 2026-09-09, country: US, region: CO, city: Rare, city_population: 90000, bot: true}
+          - {event_id: o1, week: 2026-09-07, received_date: 2026-09-07, country: US, region: OR, city: Lone, city_population: 90000, bot: false}
+          - {event_id: u1, week: 2026-09-07, received_date: 2026-09-07, country: null, region: null, city: null, city_population: null, bot: false}
+    expect:
+      rows:
+        - {event_id: b1, country: US, region: CO, city: Big}
+        - {event_id: b2, country: US, region: CO, city: Big}
+        - {event_id: b3, country: US, region: CO, city: Big}
+        - {event_id: s1, country: US, region: CO, city: "other, CO"}
+        - {event_id: s2, country: US, region: CO, city: "other, CO"}
+        - {event_id: s3, country: US, region: CO, city: "other, CO"}
+        - {event_id: r1, country: US, region: CO, city: "other, CO"}
+        - {event_id: r2, country: US, region: CO, city: "other, CO"}
+        - {event_id: r3, country: US, region: CO, city: "other, CO"}
+        - {event_id: r4, country: US, region: CO, city: "other, CO"}
+        - {event_id: o1, country: US, region: (rare), city: other}
+        - {event_id: u1, country: unknown, region: unknown, city: unknown}
+
+  - name: a_query_with_an_unknown_word_needs_more_days
+    description: >
+      With 2 days for a query of known words and 3 for one with an unknown word: 'kenya' on 2 days is shown, 'xyzzy'
+      on 2 days is rare, and a day outside the 90-day window doesn't count; bots never count.
+    model: mart_usage_search_terms_weekly
+    overrides:
+      vars: {usage_min_days: 2, usage_min_days_unknown_word: 3}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {week: 2026-12-07, received_date: 2026-12-07, event: search, query_norm: kenya, query_words_known: true, zero_results: false, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-08, event: search, query_norm: kenya, query_words_known: true, zero_results: false, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-07, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-08, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-07, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: false}
+          - {week: 2026-12-07, received_date: 2026-12-09, event: search, query_norm: xyzzy, query_words_known: false, zero_results: true, bot: true}
+    expect:
+      rows:
+        - {week: 2026-09-07, query: (rare), searches: 1, zero_result_searches: 1}
+        - {week: 2026-12-07, query: kenya, searches: 2, zero_result_searches: 0}
+        - {week: 2026-12-07, query: (rare), searches: 2, zero_result_searches: 2}
+
+  - name: a_city_facet_with_a_small_cell_merges_or_is_held_back
+    description: >
+      The reviewer's subtraction case. Denver has 25 events: 20 desktop and 5 phone. Showing desktop alone would give
+      phone as 25 - 20, so the small cell goes into '(other)', which at 5 is itself under the floor, and the whole
+      device facet is held back. Surface (25 on catalog) is shown. Two small origins (6 and 5) merge into one
+      '(other)' of 11, shown beside the 14 that passes.
+    model: mart_usage_city_facets_weekly
+    given:
+      - input: ref('int_usage_event_places')
+        rows:
+          - {event_id: e0, country: US, region: CO, city: Denver}
+          - {event_id: e1, country: US, region: CO, city: Denver}
+          - {event_id: e2, country: US, region: CO, city: Denver}
+          - {event_id: e3, country: US, region: CO, city: Denver}
+          - {event_id: e4, country: US, region: CO, city: Denver}
+          - {event_id: e5, country: US, region: CO, city: Denver}
+          - {event_id: e6, country: US, region: CO, city: Denver}
+          - {event_id: e7, country: US, region: CO, city: Denver}
+          - {event_id: e8, country: US, region: CO, city: Denver}
+          - {event_id: e9, country: US, region: CO, city: Denver}
+          - {event_id: e10, country: US, region: CO, city: Denver}
+          - {event_id: e11, country: US, region: CO, city: Denver}
+          - {event_id: e12, country: US, region: CO, city: Denver}
+          - {event_id: e13, country: US, region: CO, city: Denver}
+          - {event_id: e14, country: US, region: CO, city: Denver}
+          - {event_id: e15, country: US, region: CO, city: Denver}
+          - {event_id: e16, country: US, region: CO, city: Denver}
+          - {event_id: e17, country: US, region: CO, city: Denver}
+          - {event_id: e18, country: US, region: CO, city: Denver}
+          - {event_id: e19, country: US, region: CO, city: Denver}
+          - {event_id: e20, country: US, region: CO, city: Denver}
+          - {event_id: e21, country: US, region: CO, city: Denver}
+          - {event_id: e22, country: US, region: CO, city: Denver}
+          - {event_id: e23, country: US, region: CO, city: Denver}
+          - {event_id: e24, country: US, region: CO, city: Denver}
+      - input: ref('int_usage_events')
+        rows:
+          - {event_id: e0, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e1, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e2, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e3, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e4, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e5, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e6, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e7, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e8, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e9, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e10, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e11, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e12, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e13, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Kenya, source_kind: null, bot: false}
+          - {event_id: e14, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Peru, source_kind: null, bot: false}
+          - {event_id: e15, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Peru, source_kind: null, bot: false}
+          - {event_id: e16, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Peru, source_kind: null, bot: false}
+          - {event_id: e17, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Peru, source_kind: null, bot: false}
+          - {event_id: e18, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Peru, source_kind: null, bot: false}
+          - {event_id: e19, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: desktop, origin: Peru, source_kind: null, bot: false}
+          - {event_id: e20, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: phone, origin: Bolivia, source_kind: null, bot: false}
+          - {event_id: e21, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: phone, origin: Bolivia, source_kind: null, bot: false}
+          - {event_id: e22, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: phone, origin: Bolivia, source_kind: null, bot: false}
+          - {event_id: e23, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: phone, origin: Bolivia, source_kind: null, bot: false}
+          - {event_id: e24, week: 2026-09-07, received_date: 2026-09-07, event: search, surface: catalog, device: phone, origin: Bolivia, source_kind: null, bot: false}
+    expect:
+      rows:
+        - {facet: surface, facet_value: catalog, events: 25}
+        - {facet: origin, facet_value: Kenya, events: 14}
+        - {facet: origin, facet_value: (other), events: 11}
+        - {facet: in_stock, facet_value: any, events: 25}
+        - {facet: sort, facet_value: default, events: 25}
+        - {facet: process, facet_value: any, events: 25}
+
+  - name: a_source_shows_its_campaign_only_when_the_combination_passes
+    description: >
+      With 2 days: a newsletter on 2 days with the 'fall' campaign on both is shown whole; a newsletter campaign
+      'spring' on one day keeps the source but hides medium and campaign; a referrer on one day is '(rare)'.
+    model: mart_usage_sources_weekly
+    overrides:
+      vars: {usage_min_days: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {week: 2026-09-07, received_date: 2026-09-07, source_kind: utm, source: news, utm_medium: email, utm_campaign: fall, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, source_kind: utm, source: news, utm_medium: email, utm_campaign: fall, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, source_kind: utm, source: news, utm_medium: email, utm_campaign: spring, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, source_kind: referrer, source: once.example, utm_medium: null, utm_campaign: null, bot: false}
+    expect:
+      rows:
+        - {source_kind: utm, source: news, utm_medium: email, utm_campaign: fall, landings: 2}
+        - {source_kind: utm, source: news, utm_medium: (rare), utm_campaign: (rare), landings: 1}
+        - {source_kind: referrer, source: (rare), utm_medium: (rare), utm_campaign: (rare), landings: 1}
+
+  - name: click_context_counts_days_with_that_roaster
+    description: >
+      With 2 days: 'kenya' led to roaster a's clicks on 2 days (shown) but to b's on one (rare for b); the filters
+      behind a's clicks are shown as text.
+    model: mart_click_context_weekly
+    overrides:
+      vars: {usage_min_days: 2, usage_min_days_unknown_word: 3}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {week: 2026-09-07, received_date: 2026-09-07, event: click_out, roaster_id: a, query_norm: kenya, query_words_known: true, cities: [], states: [], bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, event: click_out, roaster_id: a, query_norm: kenya, query_words_known: true, cities: [], states: [], bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, event: click_out, roaster_id: b, query_norm: kenya, query_words_known: true, cities: [], states: [], bot: false}
+    expect:
+      rows:
+        - {roaster_id: a, context_kind: query, context_value: kenya, click_outs: 2}
+        - {roaster_id: a, context_kind: filters, context_value: "origin=any; process=any; state=any; in_stock=any; sort=default", click_outs: 2}
+        - {roaster_id: b, context_kind: query, context_value: (rare), click_outs: 1}
+        - {roaster_id: b, context_kind: filters, context_value: (rare), click_outs: 1}
+
+  - name: roaster_clicks_carry_region_and_a_passing_source_only
+    description: >
+      With 2 days: a click that was its load's first event from a referrer seen on 2 days shows the referrer; one from
+      a referrer seen once shows '(rare)'; a later click shows 'not recorded'. Region, never city.
+    model: mart_roaster_clicks_weekly
+    overrides:
+      vars: {usage_min_days: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {event_id: c1, week: 2026-09-07, received_date: 2026-09-07, event: click_out, roaster_id: a, surface: catalog, device: phone, source_kind: referrer, source: blog.example, bot: false}
+          - {event_id: p1, week: 2026-09-07, received_date: 2026-09-08, event: page_view, roaster_id: null, surface: catalog, device: phone, source_kind: referrer, source: blog.example, bot: false}
+          - {event_id: c2, week: 2026-09-07, received_date: 2026-09-08, event: click_out, roaster_id: a, surface: catalog, device: phone, source_kind: referrer, source: once.example, bot: false}
+          - {event_id: c3, week: 2026-09-07, received_date: 2026-09-08, event: click_out, roaster_id: a, surface: catalog, device: phone, source_kind: null, source: null, bot: false}
+      - input: ref('int_usage_event_places')
+        rows:
+          - {event_id: c1, country: US, region: CO, city: Denver}
+          - {event_id: p1, country: US, region: CO, city: Denver}
+          - {event_id: c2, country: US, region: CO, city: Denver}
+          - {event_id: c3, country: US, region: CO, city: Denver}
+    expect:
+      rows:
+        - {roaster_id: a, source: blog.example, country: US, region: CO, click_outs: 1}
+        - {roaster_id: a, source: (rare), country: US, region: CO, click_outs: 1}
+        - {roaster_id: a, source: not recorded, country: US, region: CO, click_outs: 1}
+
+  - name: filter_combinations_pass_as_a_whole
+    description: >
+      With 2 days: origin Kenya with sort asc on 2 days is shown; the same origin with process natural on one day
+      counts under '(rare)' in every column; unset filters read 'any' and 'default'.
+    model: mart_usage_filter_combos_weekly
+    overrides:
+      vars: {usage_min_days: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {week: 2026-09-07, received_date: 2026-09-07, event: filter_state, origin: Kenya, sort: asc, zero_results: false, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, event: search, origin: Kenya, sort: asc, zero_results: true, bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, event: filter_state, origin: Kenya, process: natural, zero_results: false, bot: false}
+    expect:
+      rows:
+        - {origin: Kenya, process: any, state: any, in_stock: any, sort: asc, result_views: 2, zero_result_views: 1}
+        - {origin: (rare), process: (rare), state: (rare), in_stock: (rare), sort: (rare), result_views: 1, zero_result_views: 0}
+
+  - name: searched_places_pass_on_days
+    description: With 2 days, a city named in searches on 2 days is shown, lowercased; a state named once is '(rare)'.
+    model: mart_usage_places_weekly
+    overrides:
+      vars: {usage_min_days: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {week: 2026-09-07, received_date: 2026-09-07, event: search, cities: [Denver], states: [], bot: false}
+          - {week: 2026-09-07, received_date: 2026-09-08, event: search, cities: [" denver"], states: [CO], bot: false}
+    expect:
+      rows:
+        - {place_type: city, place: denver, searches: 2}
+        - {place_type: state, place: (rare), searches: 1}
+
+  - name: a_lone_held_back_page_view_count_takes_a_second_place_with_it
+    description: >
+      With a floor of 2: in the first week only A's page views (1) are under it, so the week's total less B and C
+      would give A's; B, the place shown with the fewest page views, is held back too. In the second week D and E are
+      both held back, so nothing more is.
+    model: mart_usage_locations_weekly
+    overrides:
+      vars: {city_cell_min_events: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {event_id: l1, week: 2026-09-07, received_date: 2026-09-07, event: page_view, bot: false}
+          - {event_id: l2, week: 2026-09-07, received_date: 2026-09-07, event: search, bot: false}
+          - {event_id: l3, week: 2026-09-07, received_date: 2026-09-07, event: search, bot: false}
+          - {event_id: l4, week: 2026-09-07, received_date: 2026-09-07, event: page_view, bot: false}
+          - {event_id: l5, week: 2026-09-07, received_date: 2026-09-07, event: page_view, bot: false}
+          - {event_id: l6, week: 2026-09-07, received_date: 2026-09-07, event: search, bot: false}
+          - {event_id: l7, week: 2026-09-07, received_date: 2026-09-07, event: search, bot: false}
+          - {event_id: l8, week: 2026-09-07, received_date: 2026-09-07, event: page_view, bot: false}
+          - {event_id: l9, week: 2026-09-07, received_date: 2026-09-07, event: page_view, bot: false}
+          - {event_id: l10, week: 2026-09-07, received_date: 2026-09-07, event: page_view, bot: false}
+          - {event_id: l11, week: 2026-09-07, received_date: 2026-09-07, event: search, bot: false}
+          - {event_id: l12, week: 2026-09-07, received_date: 2026-09-07, event: search, bot: false}
+          - {event_id: l13, week: 2026-09-14, received_date: 2026-09-14, event: search, bot: false}
+          - {event_id: l14, week: 2026-09-14, received_date: 2026-09-14, event: search, bot: false}
+          - {event_id: l15, week: 2026-09-14, received_date: 2026-09-14, event: page_view, bot: false}
+          - {event_id: l16, week: 2026-09-14, received_date: 2026-09-14, event: search, bot: false}
+          - {event_id: l17, week: 2026-09-14, received_date: 2026-09-14, event: search, bot: false}
+          - {event_id: l18, week: 2026-09-14, received_date: 2026-09-14, event: page_view, bot: false}
+          - {event_id: l19, week: 2026-09-14, received_date: 2026-09-14, event: page_view, bot: false}
+          - {event_id: l20, week: 2026-09-14, received_date: 2026-09-14, event: search, bot: false}
+          - {event_id: l21, week: 2026-09-14, received_date: 2026-09-14, event: search, bot: false}
+      - input: ref('int_usage_event_places')
+        rows:
+          - {event_id: l1, country: US, region: CO, city: A}
+          - {event_id: l2, country: US, region: CO, city: A}
+          - {event_id: l3, country: US, region: CO, city: A}
+          - {event_id: l4, country: US, region: CO, city: B}
+          - {event_id: l5, country: US, region: CO, city: B}
+          - {event_id: l6, country: US, region: CO, city: B}
+          - {event_id: l7, country: US, region: CO, city: B}
+          - {event_id: l8, country: US, region: CO, city: C}
+          - {event_id: l9, country: US, region: CO, city: C}
+          - {event_id: l10, country: US, region: CO, city: C}
+          - {event_id: l11, country: US, region: CO, city: C}
+          - {event_id: l12, country: US, region: CO, city: C}
+          - {event_id: l13, country: US, region: CO, city: D}
+          - {event_id: l14, country: US, region: CO, city: D}
+          - {event_id: l15, country: US, region: CO, city: E}
+          - {event_id: l16, country: US, region: CO, city: E}
+          - {event_id: l17, country: US, region: CO, city: E}
+          - {event_id: l18, country: US, region: CO, city: F}
+          - {event_id: l19, country: US, region: CO, city: F}
+          - {event_id: l20, country: US, region: CO, city: F}
+          - {event_id: l21, country: US, region: CO, city: F}
+    expect:
+      rows:
+        - {week: 2026-09-07, city: A, events: 3, page_views: null}
+        - {week: 2026-09-07, city: B, events: 4, page_views: null}
+        - {week: 2026-09-07, city: C, events: 5, page_views: 3}
+        - {week: 2026-09-14, city: D, events: 2, page_views: null}
+        - {week: 2026-09-14, city: E, events: 3, page_views: null}
+        - {week: 2026-09-14, city: F, events: 4, page_views: 2}
+
+  - name: city_facets_hide_whole_places_and_never_one_alone
+    description: >
+      With a floor of 2. First week: phone is named (Q has 2, P only 1), so P's phone cell is small and P's device
+      facet is held back; alone, it would be the week's phones less Q's, so R, the place shown with the fewest
+      events, is held back too. Second week: phone and tablet reach 2 at fewer places than not, so they are '(other)'
+      at every place; T's '(other)' (1) is small, so T is held back, and U with it; S shows desktop and '(other)'.
+      The surface facet passes everywhere.
+    model: mart_usage_city_facets_weekly
+    overrides:
+      vars: {city_cell_min_events: 2}
+    given:
+      - input: ref('int_usage_events')
+        rows:
+          - {event_id: f1, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f2, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f3, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f4, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+          - {event_id: f5, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f6, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f7, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f8, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+          - {event_id: f9, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+          - {event_id: f10, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f11, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f12, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: tablet, source_kind: null, bot: false}
+          - {event_id: f13, week: 2026-09-07, received_date: 2026-09-07, event: page_view, surface: catalog, device: tablet, source_kind: null, bot: false}
+          - {event_id: f14, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f15, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f16, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f17, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f18, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+          - {event_id: f19, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: tablet, source_kind: null, bot: false}
+          - {event_id: f20, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f21, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f22, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f23, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f24, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+          - {event_id: f25, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f26, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: desktop, source_kind: null, bot: false}
+          - {event_id: f27, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+          - {event_id: f28, week: 2026-09-14, received_date: 2026-09-14, event: page_view, surface: catalog, device: phone, source_kind: null, bot: false}
+      - input: ref('int_usage_event_places')
+        rows:
+          - {event_id: f1, country: US, region: CO, city: P}
+          - {event_id: f2, country: US, region: CO, city: P}
+          - {event_id: f3, country: US, region: CO, city: P}
+          - {event_id: f4, country: US, region: CO, city: P}
+          - {event_id: f5, country: US, region: CO, city: Q}
+          - {event_id: f6, country: US, region: CO, city: Q}
+          - {event_id: f7, country: US, region: CO, city: Q}
+          - {event_id: f8, country: US, region: CO, city: Q}
+          - {event_id: f9, country: US, region: CO, city: Q}
+          - {event_id: f10, country: US, region: CO, city: R}
+          - {event_id: f11, country: US, region: CO, city: R}
+          - {event_id: f12, country: US, region: CO, city: R}
+          - {event_id: f13, country: US, region: CO, city: R}
+          - {event_id: f14, country: US, region: CO, city: S}
+          - {event_id: f15, country: US, region: CO, city: S}
+          - {event_id: f16, country: US, region: CO, city: S}
+          - {event_id: f17, country: US, region: CO, city: S}
+          - {event_id: f18, country: US, region: CO, city: S}
+          - {event_id: f19, country: US, region: CO, city: S}
+          - {event_id: f20, country: US, region: CO, city: T}
+          - {event_id: f21, country: US, region: CO, city: T}
+          - {event_id: f22, country: US, region: CO, city: T}
+          - {event_id: f23, country: US, region: CO, city: T}
+          - {event_id: f24, country: US, region: CO, city: T}
+          - {event_id: f25, country: US, region: CO, city: U}
+          - {event_id: f26, country: US, region: CO, city: U}
+          - {event_id: f27, country: US, region: CO, city: U}
+          - {event_id: f28, country: US, region: CO, city: U}
+    expect:
+      rows:
+        - {week: 2026-09-07, city: P, facet: surface, facet_value: catalog, events: 4}
+        - {week: 2026-09-07, city: Q, facet: surface, facet_value: catalog, events: 5}
+        - {week: 2026-09-07, city: R, facet: surface, facet_value: catalog, events: 4}
+        - {week: 2026-09-07, city: Q, facet: device, facet_value: desktop, events: 3}
+        - {week: 2026-09-07, city: Q, facet: device, facet_value: phone, events: 2}
+        - {week: 2026-09-14, city: S, facet: surface, facet_value: catalog, events: 6}
+        - {week: 2026-09-14, city: T, facet: surface, facet_value: catalog, events: 5}
+        - {week: 2026-09-14, city: U, facet: surface, facet_value: catalog, events: 4}
+        - {week: 2026-09-14, city: S, facet: device, facet_value: desktop, events: 4}
+        - {week: 2026-09-14, city: S, facet: device, facet_value: (other), events: 2}
