@@ -1,0 +1,876 @@
+{
+ "meta": {
+  "labeler": "A",
+  "labelled_by": "Claude subagent",
+  "model": "claude-opus-5-5",
+  "set": "train",
+  "date": "2026-11-11"
+ },
+ "labels": [
+  {
+   "id": "ahillofbeans.com|roasthousecoffee.com",
+   "label": "different_store",
+   "reason": "Different names, towns and catalogs."
+  },
+  {
+   "id": "barkingdogcoffee.com|smastadcoffee.com",
+   "label": "same_store",
+   "reason": "Barking Dog domain redirects to Småstad in the same town with an identical catalog and prices; a rebrand."
+  },
+  {
+   "id": "backroadscoffee.com|sheldrakecoffeeroasting.com",
+   "label": "different_store",
+   "reason": "Different towns; overlap only in generic roast/flavor titles at different prices."
+  },
+  {
+   "id": "reprisecoffee.com|repriseroasters.com",
+   "label": "same_store",
+   "reason": "Both ids resolve to repriseroasters.com with the same name and identical catalog."
+  },
+  {
+   "id": "goodnewsroasters.com|pangeacoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different towns; overlap only in generic origin names at different prices."
+  },
+  {
+   "id": "keeblercoffee.com|whisperingbean.com",
+   "label": "different_store",
+   "reason": "Different towns and catalogs; only generic origins shared."
+  },
+  {
+   "id": "sevencoffeeroasters.com|sevenvirtuespdx.com",
+   "label": "different_store",
+   "reason": "Different businesses, towns and catalogs."
+  },
+  {
+   "id": "silvercupcoffeeroasters.com|unionroasters.co",
+   "label": "same_store",
+   "reason": "Silvercup domain redirects to unionroasters.com; identical catalog and prices in nearby Idaho towns."
+  },
+  {
+   "id": "carolinacoffee.co|carolinacoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states with no shared titles."
+  },
+  {
+   "id": "frenchieroast.com|goldberryroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; overlap only in generic origin names."
+  },
+  {
+   "id": "jonescoffee.com|thebestcoffee.com",
+   "label": "same_store",
+   "reason": "Same name and town; hosts differ only in case; identical catalog."
+  },
+  {
+   "id": "housecupcoffee.com|roasterscoffeehouse.com",
+   "label": "different_store",
+   "reason": "Different businesses and towns, no shared titles."
+  },
+  {
+   "id": "deadstockcoffee.com|fetchroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "capecodcoffee.com|singlebatchcoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; overlap only in generic origins."
+  },
+  {
+   "id": "aromaridge.com|meanbeanroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; overlap only in common flavored-coffee titles."
+  },
+  {
+   "id": "piatanoirroast.com|quartertonecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; overlap only in generic origins."
+  },
+  {
+   "id": "roastcoachcoffee.com|valparaisocoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page; no store."
+  },
+  {
+   "id": "corvuscoffee.com|dayglow.coffee",
+   "label": "different_store",
+   "reason": "Different roasters sharing two importer lots at very different prices."
+  },
+  {
+   "id": "serafinacoffeebar.com|serafinacoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to serafinacoffeeroasters.com with identical catalog."
+  },
+  {
+   "id": "globalcoffeeco.com|trailcreekcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic titles shared."
+  },
+  {
+   "id": "altruisticjoe.com|timbertowncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page; no store."
+  },
+  {
+   "id": "nossacoffee.com|ofpdx.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "cellardoorcoffee.com|nossacoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "fullbloomcoffee.com|kramerroastingco.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic origins shared."
+  },
+  {
+   "id": "ggroasting.com|greatergoodsroasting.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to greatergoodsroasting.com with identical catalog."
+  },
+  {
+   "id": "vervecoffee.com|vervecoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Same name; both resolve to vervecoffee.com with identical catalog."
+  },
+  {
+   "id": "thomasandfisk.com|thomascoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "rockymountainroastery.com|rockymountainroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "acentocoffeeroasters.com|sevenseasroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "aromaroasters.com|aromaticroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "caminorealcoffee.com|idlehandsroasting.com",
+   "label": "different_store",
+   "reason": "Different roasters sharing two importer lots at different prices."
+  },
+  {
+   "id": "ahillofbeans.com|heritagecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles at different prices."
+  },
+  {
+   "id": "northforkcoffeeroasters.com|northforkroastingco.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "quartertonecoffee.com|vitalityroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic titles shared."
+  },
+  {
+   "id": "ahillofbeans.com|jumpymonkey.com",
+   "label": "different_store",
+   "reason": "Different businesses; few common flavored titles at different prices."
+  },
+  {
+   "id": "lgrcoffee.com|tagcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic origins shared."
+  },
+  {
+   "id": "coffeecityusacafe.com|nhcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic flavored/roast titles shared."
+  },
+  {
+   "id": "ascension.coffee|ascensioncoffee.com",
+   "label": "same_store",
+   "reason": "Both resolve to ascension.coffee, same company and town, identical catalog."
+  },
+  {
+   "id": "lgrcoffee.com|littlegoatcoffeeroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic origins shared."
+  },
+  {
+   "id": "littlegoatcoffeeroasting.com|nhcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic titles shared."
+  },
+  {
+   "id": "huckleberryroasters.com|wagoncoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "blindtigercafe.com|blindtigercoffee.com",
+   "label": "different_store",
+   "reason": "Different hosts, towns and catalogs."
+  },
+  {
+   "id": "skyroast.coffee|skyroasted.com",
+   "label": "different_store",
+   "reason": "Different hosts, towns and catalogs."
+  },
+  {
+   "id": "blueflamecoffee.com|ohoriscoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic titles shared."
+  },
+  {
+   "id": "backroadscoffee.com|fingerlakescoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses sharing common flavored-coffee titles at different prices."
+  },
+  {
+   "id": "clancybroscoffee.com|vitalityroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic titles shared."
+  },
+  {
+   "id": "ghosttowncoffee.com|ragamuffinroasters.com",
+   "label": "different_store",
+   "reason": "Different roasters; only two equipment items shared."
+  },
+  {
+   "id": "sevencoffeeroasters.com|sevenhillscoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "coffeecityusacafe.com|safaricoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles at different prices."
+  },
+  {
+   "id": "dynamocoffeeroasting.com|tagcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic origins shared."
+  },
+  {
+   "id": "sellwoodcoffee.com|upperleftroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; one generic title shared."
+  },
+  {
+   "id": "redlightcoffeeroasters.com|redlightroastery.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "kickapoocoffee.com|wonderstate.com",
+   "label": "same_store",
+   "reason": "Kickapoo domain redirects to Wonderstate in the same town with an identical catalog; a rebrand."
+  },
+  {
+   "id": "foodeist.com|pacificcoffeeroastingcompany.food74.com",
+   "label": "different_store",
+   "reason": "Both land on foodeist.com, a non-store directory page with no catalog."
+  },
+  {
+   "id": "confidentcoffeeroasters.com|michaelthomascoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; two generic titles shared."
+  },
+  {
+   "id": "sweetleafcoffee.com|sweetleaflic.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to sweetleafcoffee.com with identical catalog."
+  },
+  {
+   "id": "bit.ly|gmcoff.ee",
+   "label": "different_store",
+   "reason": "Both are bitly link-shortener landings; no store."
+  },
+  {
+   "id": "carefreecoffeeroastery.t2-food.com|pacificcoffeeroastingcompany.food74.com",
+   "label": "different_store",
+   "reason": "Both land on foodeist.com, a non-store page; different businesses."
+  },
+  {
+   "id": "chuckroastscoffee.com|florandseed.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "acentocoffeeroasters.com|achillescoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "nomadnectarcoffeeroasters.com|obviouscoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic roast-level titles shared."
+  },
+  {
+   "id": "daybreak.coffee|iowacr.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states; common flavored titles at different prices."
+  },
+  {
+   "id": "martincoffee.com|meanbeanroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles."
+  },
+  {
+   "id": "brooklynroasting.com|partnerscoffee.com",
+   "label": "different_store",
+   "reason": "Different Brooklyn roasters with separate catalogs."
+  },
+  {
+   "id": "coffeeroasterlnk.com|dynamocoffeeroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic origins at different prices."
+  },
+  {
+   "id": "springtownroasters.com|vitalityroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic titles."
+  },
+  {
+   "id": "maas.coffee|maascoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Same family name but separate hosts, platforms and line-ups in different towns."
+  },
+  {
+   "id": "singlebatchcoffeeroasters.com|stiverscoffee.biz",
+   "label": "different_store",
+   "reason": "Different businesses; only generic origins."
+  },
+  {
+   "id": "naomijoecoffee.com|ragamuffinroasters.com",
+   "label": "different_store",
+   "reason": "Different roasters; only two equipment items shared."
+  },
+  {
+   "id": "frenchiecoffee.com|frenchieroast.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states; generic origins only."
+  },
+  {
+   "id": "coppercanyoncoffeeroasters.com|quartertonecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "jonescoffee.com|jonescoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Same name; hosts differ only in case; identical catalog in Pasadena area."
+  },
+  {
+   "id": "groundswellcoffeeroasters.com|intelligentsiacoffee.com",
+   "label": "different_store",
+   "reason": "Different Chicago roasters with separate catalogs."
+  },
+  {
+   "id": "capecodcoffee.com|hillroadcoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "gaiacoffee.com|redhouseroasters.com",
+   "label": "different_store",
+   "reason": "Different roasters sharing two importer lots."
+  },
+  {
+   "id": "rockfordroasting.co|rockfordroastingcompany.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to rockfordroasting.co with identical catalog."
+  },
+  {
+   "id": "nossacoffee.com|thegreatnorthcoffee.com",
+   "label": "different_store",
+   "reason": "Different Portland businesses, no shared titles."
+  },
+  {
+   "id": "idiomacoffee.com|oldcrown.com",
+   "label": "different_store",
+   "reason": "Different roasters sharing two importer lots."
+  },
+  {
+   "id": "riverbendroastery.com|riverroasters.co",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "cowabungaroasters.com|cowabungaweb.com",
+   "label": "same_store",
+   "reason": "Same name; cowabungaweb.com redirects to cowabungaroasters.com, a live site rather than a parked page."
+  },
+  {
+   "id": "aromaridge.com|primeroastcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles."
+  },
+  {
+   "id": "safaripridecoffee.com|vitalityroasting.com",
+   "label": "different_store",
+   "reason": "Different Minneapolis businesses, no shared titles."
+  },
+  {
+   "id": "gracestcoffee.com|gracestreetcoffee.com",
+   "label": "same_store",
+   "reason": "Same name; both resolve to gracestcoffee.com with identical catalog in the DC area."
+  },
+  {
+   "id": "carmelcoffee.com|carmelcoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different Carmel businesses with different hosts and catalogs."
+  },
+  {
+   "id": "daybreak.coffee|daybreakcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states."
+  },
+  {
+   "id": "quartertonecoffee.com|refugeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "broadcastcoffee.com|broadcastcoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to broadcastcoffeeroasters.com with identical catalog."
+  },
+  {
+   "id": "goodnewsroasters.com|piatanoirroast.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "revecoffee.com|reverieroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "intelligentsia.com|intelligentsiacoffee.com",
+   "label": "same_store",
+   "reason": "Both resolve to intelligentsia.com with identical 181-title catalog."
+  },
+  {
+   "id": "beanstockcoffee.com|coffeebean.com",
+   "label": "different_store",
+   "reason": "Different businesses; one generic title."
+  },
+  {
+   "id": "roastery.coffee|vigilanthoperoasting.com",
+   "label": "different_store",
+   "reason": "Same generic name but different towns, hosts and catalogs."
+  },
+  {
+   "id": "riverroasters.co|riverrockroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "coyotemooncoffee.com|quartertonecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "safaricoffee.com|safaripridecoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "littlegoatcoffeeroasting.com|ohoriscoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "dessertoasiscoffee.com|docr.coffee",
+   "label": "same_store",
+   "reason": "Same name; Detroit-area domain redirects to docr.coffee with identical catalog."
+  },
+  {
+   "id": "hiddenfortresscoffee.com|scottbroscoffee.com",
+   "label": "different_store",
+   "reason": "Different roasters sharing importer lots."
+  },
+  {
+   "id": "beanjuicecoffee.com|coffeebean.com",
+   "label": "different_store",
+   "reason": "Different businesses; one generic title."
+  },
+  {
+   "id": "carefreecoffeeroastery.t2-food.com|foodeist.com",
+   "label": "different_store",
+   "reason": "Both land on foodeist.com, a non-store page."
+  },
+  {
+   "id": "unioncoffeeroaster.com|unionroasters.co",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "altruisticjoe.com|roastcoachcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "timbertowncoffee.com|valparaisocoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "roasting.com|singlebatchcoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "bagelsbrews.coffee|timbertowncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "groundcontrolroasters.com|lgrcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "revecoffee.com|revenant.coffee",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "guilfordroastingcompany.com|indabacoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; two generic titles."
+  },
+  {
+   "id": "piatanoirroast.com|temeculacoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Separate businesses in different states with a few shared supplier titles at their own prices."
+  },
+  {
+   "id": "sunshinecoffeeroasters.com|sunshineroaster.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "wolfandmermaidcoffee.com|wolfcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "ghosttowncoffee.com|hemispherecoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different roasters; only shared espresso tools."
+  },
+  {
+   "id": "bonitoroaster.com|theroastedbean.com",
+   "label": "different_store",
+   "reason": "Different businesses; two varietal names."
+  },
+  {
+   "id": "artizancoffee.com|coffeeorigins.com",
+   "label": "different_store",
+   "reason": "Different businesses; only shared equipment."
+  },
+  {
+   "id": "artizancoffee.com|bodhileafcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only shared roaster machines at different prices."
+  },
+  {
+   "id": "frothymonkeycoffee.com|frothymonkeyroasting.co",
+   "label": "same_store",
+   "reason": "Same company and town; both resolve to frothymonkeycoffee.com with identical catalog."
+  },
+  {
+   "id": "habitat.coffee|supremacoffeeroastery.com",
+   "label": "different_store",
+   "reason": "Different Philadelphia businesses, no shared titles."
+  },
+  {
+   "id": "elliottmurreycoffee.com|roastedbymom.com",
+   "label": "same_store",
+   "reason": "Both resolve to roastedbymom.com in Hillsboro with identical catalog; old name of the same shop."
+  },
+  {
+   "id": "proudmarycoffee.com|upperleftroasters.com",
+   "label": "different_store",
+   "reason": "Different Portland businesses, no shared titles."
+  },
+  {
+   "id": "bagelsbrews.coffee|roastcoachcoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "broadcastcoffee.com|caffeumbria.com",
+   "label": "different_store",
+   "reason": "Different Seattle roasters, no shared titles."
+  },
+  {
+   "id": "aromaridge.com|joescoffeehouse.com",
+   "label": "different_store",
+   "reason": "Same town but separate stores sharing supplier titles at their own prices; white label."
+  },
+  {
+   "id": "seattlecoffeeworks.com|victrolacoffee.com",
+   "label": "same_store",
+   "reason": "Seattle Coffee Works domain resolves to victrolacoffee.com with identical catalog in the same town."
+  },
+  {
+   "id": "martincoffee.com|martincoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "switchcoffee.co|vamocoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; only generic bag-size titles."
+  },
+  {
+   "id": "javadoro.com|latitudecoffee.com",
+   "label": "different_store",
+   "reason": "Separate Florida businesses sharing common titles at different prices."
+  },
+  {
+   "id": "corvuscoffee.com|stravacraftcoffee.com",
+   "label": "different_store",
+   "reason": "Different Denver businesses, no shared titles."
+  },
+  {
+   "id": "deadstockcoffee.com|sterling.coffee",
+   "label": "different_store",
+   "reason": "Different Portland businesses, no shared titles."
+  },
+  {
+   "id": "birdrockcoffee.com|quillscoffee.com",
+   "label": "different_store",
+   "reason": "Different roasters; few generic subscription titles at different prices."
+  },
+  {
+   "id": "strigocoffee.com|vigilant.coffee",
+   "label": "different_store",
+   "reason": "Different roasters sharing two importer lots at different prices."
+  },
+  {
+   "id": "altruisticjoe.com|bagelsbrews.coffee",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "jonescoffeeroasters.com|thebestcoffee.com",
+   "label": "same_store",
+   "reason": "Same name; hosts differ only in case/leading www; identical catalog."
+  },
+  {
+   "id": "goodnewsroasters.com|hillroadcoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "coyotemooncoffee.com|lgrcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "beaneticscoffee.com|coffeebean.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "roastcoachcoffee.com|timbertowncoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "nhcoffee.com|safaricoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; common flavored titles."
+  },
+  {
+   "id": "cherryblendcoffeeroasters.com|cherrycoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states, no shared titles."
+  },
+  {
+   "id": "euroroast.com|telluridecoffeeroasters.net",
+   "label": "different_store",
+   "reason": "Different businesses; two generic titles."
+  },
+  {
+   "id": "justatasteunique.com|justcoffee.coop",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "portolacoffee.com|portolacoffeelab.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to portolacoffee.com with identical catalog."
+  },
+  {
+   "id": "ondaorigins.com|trucup.com",
+   "label": "different_store",
+   "reason": "Different Seattle businesses, no shared titles."
+  },
+  {
+   "id": "destinationcoffees.com|seedhouse.coffee",
+   "label": "different_store",
+   "reason": "Different Steamboat Springs roasters, no shared titles."
+  },
+  {
+   "id": "goodcoffeegoodpurpose.com|vigilanthoperoasting.com",
+   "label": "same_store",
+   "reason": "Same town; both resolve to goodcoffeegoodpurpose.com with identical catalog."
+  },
+  {
+   "id": "altruisticjoe.com|valparaisocoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "cherrycoffeeroasters.com|cherryrivercoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; one generic title."
+  },
+  {
+   "id": "laterzacoffee.com|vivacoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different Cincinnati businesses, no shared titles."
+  },
+  {
+   "id": "vigilant.coffee|vigilanthoperoasting.com",
+   "label": "different_store",
+   "reason": "Different businesses, hosts and towns."
+  },
+  {
+   "id": "north-fork-coffee-roasters.myshopify.com|northforkcoffeeroasters.com",
+   "label": "same_store",
+   "reason": "myshopify host beside the custom domain; same name, town and catalog."
+  },
+  {
+   "id": "kramerroastingco.com|mountainroaster.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "spellacaffe.com|thegreatnorthcoffee.com",
+   "label": "different_store",
+   "reason": "Different Portland businesses, no shared titles."
+  },
+  {
+   "id": "intelligentsiacoffee.com|pridecoffeeroasters.com",
+   "label": "different_store",
+   "reason": "Different Chicago businesses, no shared titles."
+  },
+  {
+   "id": "frenchieroast.com|fullbloomcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "goodnewsroasters.com|kramerroastingco.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "javaboulevard.com|magnumcoffee.com",
+   "label": "same_store",
+   "reason": "Same Magnum Coffee Roastery name; hosts differ only by shop./www. label of magnumcoffee.com."
+  },
+  {
+   "id": "companioncoffeeroasters.com|companionroasters.com",
+   "label": "different_store",
+   "reason": "Different businesses in different states; one generic title."
+  },
+  {
+   "id": "goldcountryroasters.com|lgrcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "lgrcoffee.com|piatanoirroast.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "cxt.coffee|cxtcoffee.com",
+   "label": "same_store",
+   "reason": "Same company and town; both resolve to cxt.coffee with identical catalog."
+  },
+  {
+   "id": "jamescoffeeco.com|jamesonbrown.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "alanascoffeeroasters.com|unincorporated.coffee",
+   "label": "different_store",
+   "reason": "Different LA businesses, no shared titles."
+  },
+  {
+   "id": "sunshinecoffeeroasters.com|sunshineorganiccoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Both resolve to sunshinecoffeeroasters.com with identical Sunshine Organic catalog in neighboring towns."
+  },
+  {
+   "id": "capitolpresscoffee.com|roastedbymom.com",
+   "label": "different_store",
+   "reason": "Different Hillsboro businesses, no shared titles."
+  },
+  {
+   "id": "blindtigercafe.com|blindtigercoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Both resolve to blindtigercoffeeroasters.com, same Tampa business, same catalog."
+  },
+  {
+   "id": "aromaridge.com|javataza.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles at different prices."
+  },
+  {
+   "id": "fingerlakescoffee.com|maplecityroasters.com",
+   "label": "different_store",
+   "reason": "Separate businesses sharing common flavored titles at different prices."
+  },
+  {
+   "id": "singlebatchcoffeeroasters.com|vitalityroasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "revecoffee.com|revecoffeeroasters.com",
+   "label": "same_store",
+   "reason": "Same name and town; both resolve to revecoffee.com with the same catalog."
+  },
+  {
+   "id": "globalcoffeeco.com|littleseed.coffee",
+   "label": "different_store",
+   "reason": "Different businesses; generic titles only."
+  },
+  {
+   "id": "lgrcoffee.com|roasting.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  },
+  {
+   "id": "peacecoffee.com|peacemakercoffeecompany.com",
+   "label": "different_store",
+   "reason": "Different businesses, no shared titles."
+  },
+  {
+   "id": "bagelsbrews.coffee|valparaisocoffee.com",
+   "label": "different_store",
+   "reason": "Both land on a parked expireddomains.com page."
+  },
+  {
+   "id": "dynamocoffeeroasting.com|lgrcoffee.com",
+   "label": "different_store",
+   "reason": "Different businesses; generic origins only."
+  }
+ ]
+}

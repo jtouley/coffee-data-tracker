@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Confirm your email · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top">{% if me %}<a class="back" href="/setup#email">‹ Setup</a>{% else %}<a class="meta home" href="{{ site.site }}/">registry.coffee</a>{% endif %}</div>
+  <div id="verify" data-verify>
+    <h1 class="serif title mt8" data-verify-title tabindex="-1">Confirm your email</h1>
+    <p class="body" data-verify-status role="status">Checking your link…</p>
+    <noscript><p class="body">This page needs JavaScript to confirm your email.</p></noscript>
+  </div>
+  <div class="spacer"></div>
+  <div class="dock">
+    <a class="btn primary" data-verify-next href="{{ '/' if me else '/signin' }}" hidden>{{ "Go to Today" if me else "Sign in" }}</a>
+  </div>
+{% endblock %}

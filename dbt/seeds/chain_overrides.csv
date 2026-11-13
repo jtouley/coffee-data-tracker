@@ -1,0 +1,5 @@
+roaster_id,is_chain,reason
+cariboucoffee.com,true,"Caribou Coffee runs hundreds of coffeehouses. Overture lists its site on 14 places, because discovery counts only places tagged coffee_roastery or named with roast. A curated chain before the store-count rule."
+cleaneatz.com,true,"Clean Eatz is a restaurant franchise with well over 20 locations. Overture lists its site on 13 roastery places. A curated chain before the store-count rule."
+coffeebean.com,true,"The Coffee Bean & Tea Leaf runs hundreds of US stores. Overture lists its site on 21 roastery places, one above the threshold, so a later Overture release could drop it under. A curated chain before the store-count rule."
+peets.com,true,"Peet's Coffee runs hundreds of US coffeehouses. The seed lists it from the curated list with 1 location; Overture's roastery places don't include its cafes. A curated chain before the store-count rule."

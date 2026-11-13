@@ -37,7 +37,7 @@ The owner labels issues and pull requests at triage. An item can carry several.
 | `bug` | Something is wrong. |
 | `enhancement` | A new feature or a change to an existing one. |
 | `documentation` | Docs only. |
-| `dependencies`, `github_actions`, `python:uv` | Dependency updates from Dependabot. |
+| `dependencies`, `github_actions`, `python:uv`, `docker` | Dependency updates from Dependabot. |
 | `help wanted` | The owner would welcome a pull request. |
 | `question`, `duplicate`, `invalid`, `wontfix` | Triage outcomes. |
 | `shot`, `roaster` | Reserved for the owner's issue forms, which the `issue-forms` workflow acts on. Don't use them elsewhere. |
@@ -60,6 +60,8 @@ make fmt       # ruff fix and format over src, app and tests
 - Code follows the ruff lint and format settings and the mypy settings in `pyproject.toml`.
 - New features and bug fixes come with tests in `tests/`, or for dbt, a unit test in `dbt/models/unit_tests.yml`
   (model logic) or a data test in `dbt/tests/` (data rules). A bug fix includes a test that reproduces the bug.
+- dbt models, tests and docs follow [`docs/dbt/CONVENTION.md`](docs/dbt/CONVENTION.md): the same raw builds the
+  same output, every model has a description and a grain test, and published tables have contracts.
 - Changes to heuristics or the classifier (classifying products, extracting attributes, matching bags to coffees,
   choosing a Claude model or prompt) follow the evaluation rules in [CLAUDE.md](CLAUDE.md), which scale the
   effort to the size of the change (step 9 covers small changes).

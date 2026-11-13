@@ -25,6 +25,13 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
 
     users/<user_id>__<time>.parquet                       one file per sign-up or account change
     invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
+    consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
+    contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
+
+Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
+by dbt and never released:
+
+    raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
@@ -527,13 +534,58 @@ SCHEMAS["consents"] = pa.schema(
         ("terms_version", pa.string()),  # the Terms' "Last updated" date (site.LEGAL_UPDATED)
         ("privacy_version", pa.string()),  # the Privacy Policy's
         ("terms_at", pa.timestamp("s", tz="UTC")),
-        ("source", pa.string()),  # signup or reaccept
+        ("source", pa.string()),  # signup, reaccept or settings
+        # Marketing email (spec §7.1): the member's choice, when it was made and the Privacy Policy version they saw.
+        # Null where it was never offered (accounts from before it, owner setup, the app without email).
+        ("marketing", pa.bool_()),
+        ("marketing_at", pa.timestamp("s", tz="UTC")),
+        ("marketing_version", pa.string()),
+        # Roaster insights (privacy policy): whether this member's shots may be counted in the aggregate reports
+        # sold to roasters. On by default: null means never changed, and counts as on. Set from Setup.
+        ("insights", pa.bool_()),
+        ("insights_at", pa.timestamp("s", tz="UTC")),
+        ("insights_version", pa.string()),
+    ]
+)
+# Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
+# never the address itself. One file per change, latest wins; removing or changing it deletes every file.
+SCHEMAS["contacts"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("email_hmac", pa.string()),  # HMAC-SHA256 under a key derived from EMAIL_KEY
+        ("email_enc", pa.string()),  # AES-256-GCM, the user id as associated data
+        ("verified_at", pa.timestamp("s", tz="UTC")),
+        ("verify_sha256", pa.string()),  # the open verify link's token, hashed
+        ("verify_expires", pa.timestamp("s", tz="UTC")),
     ]
 )
 
-# Tables that live in the photo dataset or the users dataset rather than the main lake.
+# Green-coffee importers' public offer lists (importers.py): raw only, one immutable file per importer per week. Each
+# lot word for word, as the roaster adapters keep a product: every cell of its row under the page's header (null when
+# empty), and its own page's URL. Columns about prices are left out; no page HTML or images. Private, in its own
+# dataset (Lake.importers()): never a source of the main dbt project, never released, backend-only (for internal use
+# and a future roaster portal, which may show only the normalized values). Stated fields and normalized values are
+# derived from it by a private dbt project of its own (dbt_importers/, `coffeedata importer-build`, into its own
+# database file), each build from the whole raw history, so a better rule re-derives it all; the dataset keeps only the
+# latest build's copy (derived/importer_offers.parquet), which no build reads.
+SCHEMAS["importer_raw"] = pa.schema(
+    [
+        ("week", pa.date32()),  # the Monday of the fetch's ISO week: one snapshot per importer per week
+        ("fetched_at", pa.timestamp("s", tz="UTC")),
+        ("importer", pa.string()),  # importers.IMPORTERS key
+        ("source_url", pa.string()),
+        ("parser_version", pa.string()),
+        ("row", pa.int32()),  # the lot's position in the page's table, from 0
+        ("url", pa.string()),  # the lot's own page on the importer's site, when the row links to one
+        ("cells", pa.list_(pa.struct([("column", pa.string()), ("text", pa.string())]))),
+    ]
+)
+
+# Tables that live in the photo, users or importers dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites", "consents")
+USER_TABLES = ("users", "invites", "consents", "contacts")
+IMPORTER_TABLES = ("importer_raw",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -558,6 +610,8 @@ GLOBS = {
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
+    "contacts": "contacts/*.parquet",
+    "importer_raw": "raw/*/*.parquet",
 }
 # The ops tables' files across every build (see SCHEMAS): for a reader that globs them itself, with
 # hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
@@ -589,8 +643,13 @@ SCHEMA_FILES = {
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
     "consents": "consents/user_id=schema.parquet",
+    "contacts": "contacts/user_id=schema.parquet",
+    "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
 }
-LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
+PENDING_DELETES = (
+    "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset
+)
+LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES)
 
 
 _REMOTE_FOLDERS: dict[str, frozenset[str] | None] = {}
@@ -738,6 +797,13 @@ class Lake:
         """The private users dataset: COFFEEDATA_USERS, or ./lake-users. Never a dbt source."""
         url = os.environ.get("COFFEEDATA_USERS") or "lake-users"
         return cls(url, staging="build/users-staging", tables=USER_TABLES)
+
+    @classmethod
+    def importers(cls) -> Lake:
+        """The private importers dataset: COFFEEDATA_IMPORTERS, or ./lake-importers. Never a source of the main dbt project
+        (dbt/): only the private one (dbt_importers/, `coffeedata importer-build`) reads it, into its own database."""
+        url = os.environ.get("COFFEEDATA_IMPORTERS") or "lake-importers"
+        return cls(url, staging="build/importers-staging", tables=IMPORTER_TABLES)
 
     # --- writing -------------------------------------------------------------------------------------
 
@@ -917,7 +983,69 @@ class Lake:
         tmp.replace(path)
         return path
 
-    def publish(self, message: str, attempts: int = 5, schemas: bool = False) -> int:
+    def record_files(self, table: str, key: str | None = None) -> list[str]:
+        """Every file (path within the dataset) of one record of a per-record table (`<key>__<time>.parquet`), or
+        of every record with no key: staged here and, for a remote lake, already in the dataset. One listing."""
+        prefix = GLOBS[table].split("/")[0]
+        mine = f"{key}__" if key is not None else None
+        out = {
+            f"{prefix}/{p.name}"
+            for p in (self.root / prefix).glob("*__*.parquet")
+            if mine is None or p.name.startswith(mine)
+        }
+        if self.remote:
+            from huggingface_hub import HfApi
+
+            api = HfApi(token=os.environ.get("HF_TOKEN"))
+            try:
+                tree = list(api.list_repo_tree(self._repo_id(), path_in_repo=prefix, repo_type="dataset"))
+            except Exception as e:  # noqa: BLE001 - a folder the dataset doesn't have yet
+                if "404" not in str(e) and "not found" not in str(e).lower():
+                    raise
+                tree = []
+            names = ((f.path, f.path.rsplit("/", 1)[-1]) for f in tree)
+            out |= {path for path, name in names if "__" in name and (mine is None or name.startswith(mine))}
+        return sorted(out)
+
+    def file_rows(self, table: str, cols: tuple[str, ...]) -> list[dict]:
+        """Every row of a table with the file it's in (path within the dataset), staged and remote."""
+        out: list[dict] = []
+        for src in self.sources(table):
+            scan = f"read_parquet('{src}', union_by_name = true, hive_partitioning = false, filename = true)"
+            try:
+                rows = self.connect().execute(f"select filename, {', '.join(cols)} from {scan}").fetchall()
+            except Exception as e:  # noqa: BLE001 - duckdb.IOException: no files in this source
+                if no_files(e):
+                    continue
+                raise
+            for name, *values in rows:
+                rel = (
+                    name[len(self.url) + 1 :]
+                    if self.remote and name.startswith(self.url + "/")
+                    else Path(name).resolve().relative_to(self.root.resolve()).as_posix()
+                )
+                out.append({"file": rel} | dict(zip(cols, values, strict=True)))
+        return out
+
+    def _repo_id(self) -> str:
+        return self.url.removeprefix("hf://datasets/").split("@")[0]
+
+    def squash(self, message: str) -> None:
+        """Drop the dataset's version history (one commit holding what's there now), so files deleted from it can't
+        be read from an old revision. For the small private users dataset only."""
+        self._writable()
+        if not self.remote:
+            return
+        from huggingface_hub import HfApi
+
+        with self._publishing:
+            HfApi(token=os.environ.get("HF_TOKEN")).super_squash_history(
+                self._repo_id(), repo_type="dataset", commit_message=message
+            )
+
+    def publish(
+        self, message: str, attempts: int = 5, schemas: bool = False, delete: tuple[str, ...] | list[str] = ()
+    ) -> int:
         """Upload staged files to the remote lake in one commit, then clear the staging area.
 
         A file already in the dataset is never replaced (except the derived marts/). Staged paths carry a batch
@@ -932,14 +1060,32 @@ class Lake:
         reader of the dataset alone sees every column. Like ensure_schemas, that compares column names, so a
         process running older code (fewer columns) never replaces a newer schema file. This is checked once per
         process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
+
+        `delete` names files (paths within the dataset) to remove in the same commit: an email changed or removed
+        goes in one step with whatever replaces it. Their staged copies go too. In a local lake they're simply
+        removed. For a remote lake they're kept in staging (PENDING_DELETES) until a commit has removed them, so a
+        failed publish doesn't lose them: the next publish tries again (review M6).
         """
         self._writable()
+        for rel in delete:
+            path = self.root / rel
+            if not path.resolve().is_relative_to(self.root.resolve()):
+                raise ValueError(f"path escapes the lake: {rel}")
+            path.unlink(missing_ok=True)
         if not self.remote:
             return 0
         with self._publishing:
-            return self._publish(message, attempts, schemas)
+            pending = self.root / PENDING_DELETES
+            waiting = json.loads(pending.read_text()) if pending.exists() else []
+            todo = tuple(dict.fromkeys([*waiting, *delete]))
+            if todo:
+                pending.parent.mkdir(parents=True, exist_ok=True)
+                pending.write_text(json.dumps(list(todo)))
+            n = self._publish(message, attempts, schemas, todo)
+            pending.unlink(missing_ok=True)
+            return n
 
-    def _publish(self, message: str, attempts: int, schemas: bool) -> int:
+    def _publish(self, message: str, attempts: int, schemas: bool, delete: tuple[str, ...] = ()) -> int:
         schema_paths = {SCHEMA_FILES[t] for t in self.tables}
         check_schemas = schemas or not self._schemas_checked
         files = [
@@ -947,9 +1093,9 @@ class Lake:
             for p in self.staged_files()
             if check_schemas or p.relative_to(self.root).as_posix() not in schema_paths
         ]
-        if not files:
+        if not files and not delete:
             return 0  # nothing new: no API calls
-        from huggingface_hub import CommitOperationAdd, HfApi
+        from huggingface_hub import CommitOperationAdd, CommitOperationDelete, HfApi
 
         repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
         api = HfApi(token=os.environ.get("HF_TOKEN"))
@@ -964,7 +1110,7 @@ class Lake:
                 }
                 # A job sharing this staging folder (the confirmation run's concurrent arms) may have sent and
                 # removed a file since it was listed: it is in the dataset now, or goes with that job's commit.
-                ops = [
+                ops: list = [
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
                     if p.exists()
@@ -974,6 +1120,9 @@ class Lake:
                         or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
                     )
                 ]
+                if delete:
+                    there = {f.path for f in api.get_paths_info(repo_id, list(delete), repo_type="dataset")}
+                    ops += [CommitOperationDelete(path_in_repo=rel) for rel in delete if rel in there]
                 if ops:
                     api.create_commit(
                         repo_id=repo_id, repo_type="dataset", operations=ops, commit_message=message

@@ -172,6 +172,10 @@ def record_build(
         metrics = con.execute("select metric, value from mart_build_profile").fetchall() if con else []
     except duckdb.Error:
         metrics = []
+    try:  # the crawl success SLO (#96): report only, built after the gate, so absent when its step failed
+        metrics += con.execute("select metric, value from mart_crawl_slo_profile").fetchall() if con else []
+    except duckdb.Error as e:
+        log.warning("build %s: no crawl success SLO recorded: %s", build_id, e)
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
     rows += [base | h for h in hashes]
     # Each ops table written beside the release, and its row count (a missing one is in the build's log).
@@ -409,6 +413,16 @@ def compare_hashes(
     return out
 
 
+def about(n: float) -> str:
+    """A count rounded to two significant figures for copy ("about 41,000"): what a stale coverage claim should say
+    now, computed from the build rather than worked out by hand."""
+    n = int(n + 0.5)  # halves round up, here and below: 1,850 is "about 1,900"
+    if n < 100:
+        return f"{n:,}"
+    step = 10 ** (len(str(n)) - 2)
+    return f"{(n + step // 2) // step * step:,}"
+
+
 def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]:
     """The numeric claims in `path`'s (default LISTING) coverage-claims comment, one `metric: text` line each: the
     metric in mart_build_profile, the text as it appears in the copy, its number (the stated value) and `source`,
@@ -479,9 +493,11 @@ def coverage_claim_messages(db: Path) -> list[str]:
                     )
                 else:
                     off = "far" if r[4] is None else f"{r[4]:+.0%}"  # None: the build has 0
+                    now = f" (about {about(r[3])} now)" if r[3] >= 100 else ""  # a count, not a 0-1 share
                     out.append(
                         f"{r[0]}: {r[2]!r} is {off} off this build's {r[1]} ({r[3]:,.0f}; tolerance "
-                        f"{r[5]:.0%}): update the line and its coverage-claims entry, then the Snowflake listing"
+                        f"{r[5]:.0%}): update the line{now} and its coverage-claims entry, then the Snowflake "
+                        "listing"
                     )
     finally:
         con.close()

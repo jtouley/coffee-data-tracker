@@ -5,7 +5,7 @@ select
     c.coffee_id, c.roaster_id, r.roaster_name, r.state as roaster_state,
     c.title as coffee_name, c.url as source_url,
     c.is_listed, c.in_stock, c.catalog_status, c.published_at, c.first_seen, c.last_seen, c.weeks_listed,
-    c.origin_country, c.origin_region, c.process, c.varietals, c.elevation_masl_min, c.elevation_masl_max,
+    c.origin_country, c.origin_country_code, c.origin_region, c.process, c.varietals, c.elevation_masl_min, c.elevation_masl_max,
     c.roast_level, c.tasting_notes, c.flavor_categories, c.is_blend, c.is_decaf,
     c.min_price_usd, c.price_per_100g, c.bag_sizes_g,
     c.enrichment_method as attributes_source,

@@ -534,6 +534,7 @@ dependencies = [
 [package.optional-dependencies]
 app = [
     { name = "argon2-cffi" },
+    { name = "cryptography" },
     { name = "fastapi" },
     { name = "pillow" },
     { name = "uvicorn" },
@@ -567,6 +568,7 @@ dev = [
 requires-dist = [
     { name = "anthropic", specifier = ">=0.70" },
     { name = "argon2-cffi", marker = "extra == 'app'", specifier = ">=23.1" },
+    { name = "cryptography", marker = "extra == 'app'", specifier = ">=42" },
     { name = "cryptography", marker = "extra == 'snowflake'", specifier = ">=42" },
     { name = "dbt-duckdb", specifier = ">=1.9" },
     { name = "duckdb", specifier = ">=1.1" },

@@ -2,9 +2,9 @@
 to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo. Shots are
 private and never appear here; they are only in the app.
 
-Only the public roasters (dbt model `public_roaster`: not opted out, and not known only from OpenStreetMap) and their
-coffees appear, as in the public tables, except in the roaster status counts and the registry total, which count every
-roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
+Only the public roasters (dbt model `public_roaster`: not opted out, not a chain, and not known only from
+OpenStreetMap) and their coffees appear, except in the roaster status counts and the registry total, which
+count every roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
 from the public contract) for search engines, and the site has a robots.txt and a sitemap.xml."""
 
 from __future__ import annotations
@@ -12,6 +12,7 @@ from __future__ import annotations
 import base64
 import hashlib
 import json
+import logging
 import os
 import re
 import shutil
@@ -23,38 +24,133 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 from markupsafe import Markup
 
 from . import public
-from .discover import US_STATES
+from .discover import STATE_NAMES, US_STATES
 from .http import USER_AGENT
 
 # The 50 states; DC and Puerto Rico are named separately on the launch page.
 STATES = [s for s in US_STATES if s not in ("DC", "PR")]
+# The catalog's State filter and search: each code's name as shown ("District of Columbia"), and every name the search
+# reads as a state, longest first so "west virginia" is read before "virginia".
+STATE_TITLES = {
+    code: " ".join(w if w == "of" else w.capitalize() for w in name.split())
+    for name, code in STATE_NAMES.items()
+    if name != "washington dc"
+}
+STATE_WORDS = sorted(STATE_NAMES.items(), key=lambda kv: (-len(kv[0]), kv[0]))
 # Roaster statuses (dim_roaster.status) in reading order, with what each means to a visitor.
 STATUS_LABELS = {
     "active": "Shop read, coffee found",
     "no_coffee": "Shop read, no coffee for sale",
     "no_catalog": "Shop read, nothing listed",
     "pending": "Not read yet",
+    "alias": "Same shop as another roaster listed here",
     "unreachable": "Site down, or no shop we can read",
     "opted_out": "Opted out",
 }
+
+# The name the site shows for an origin country is dbt's: dim_coffee.origin_country_display (and mart_new_arrivals'),
+# the ISO 3166-1 short name or a common one by the dbt var origin_names. Both are release tables, so the served
+# release carries it. The site counts and groups by the ISO name (origin_country), which is one-to-one with it.
+ORIGIN_DISPLAY = "origin_country_display"
+
+
+def origin_display_column(con) -> str:
+    """The column to show origins from: origin_country_display, or origin_country for a release built before it
+    existed (a rollback to an older release), said so in the log rather than failing the site."""
+    cols = {r[0] for r in con.execute("describe dim_coffee").fetchall()}
+    if ORIGIN_DISPLAY in cols:
+        return ORIGIN_DISPLAY
+    logging.warning("dim_coffee has no %s (a release before it): the site shows ISO names", ORIGIN_DISPLAY)
+    return "origin_country"
+
+
+# Which roasters the site shows: the public roasters (public_roaster: not opted out, not a chain, not known only
+# from OpenStreetMap). Chains are still crawled but left out of what's published: public_roaster decides that for
+# every public table (public_market_weekly included) and so for the site; the is_chain filter below repeats it, so
+# INCLUDE_CHAINS can no longer bring chains back on its own. Every count, chart, list and the catalog read
+# site_roaster or site_coffee. Temporary views: the database itself stays read-only.
+INCLUDE_CHAINS = False
+SITE_VIEWS = (
+    "create temp view site_roaster as select roaster_id from public_roaster"
+    + (
+        ""
+        if INCLUDE_CHAINS
+        else " where roaster_id not in (select roaster_id from dim_roaster where is_chain)"
+    ),
+    "create temp view site_coffee as select * from dim_coffee where roaster_id in (select roaster_id from site_roaster)",
+)
+# Every count and chart on the site uses one of two definitions over site_coffee, computed from this build's data
+# (never written into a template or a page by hand; tests/test_stated_counts.py fails if one comes back):
+# - LISTED, the current retail catalog: listed, not the roaster's archived back catalog, not wholesale. The headline
+#   coffees, in stock and roasters, and the states. The same filter as int_current_catalog less wholesale, which
+#   mart_build_profile's listed_coffees and roasters_with_coffee count.
+# - SINGLE_ORIGIN: LISTED, not a blend, origin known. The origin count and all three charts (in stock by origin, by
+#   process, and the median price by origin). Over the same roasters it selects public_market_weekly's coffees
+#   (tests/test_dbt.py checks the two cell for cell).
+# dbt states the same two rules once, as macros (dbt/macros/catalog_rules.sql: is_current, is_single_origin), which
+# int_current_catalog, public_market_weekly and release_changes use; the site reads its views with these strings.
+LISTED = "is_listed and catalog_status <> 'archived' and not is_wholesale"
+SINGLE_ORIGIN = f"{LISTED} and not is_blend and origin_country is not null"
 
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
 
 def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width: int = 460) -> str:
-    """Horizontal bars: rows of (category, value, tooltip). Value labels at the bar end."""
+    """Horizontal bars: rows of (category, value, tooltip). Value labels at the bar end.
+
+    Two drawings of the same bars, and the page's container query shows the one that fits (.chart-box): the wide one
+    scales with its viewBox, so in a narrow box its 12 px text would shrink to about 8 px. The narrow one has no
+    viewBox, so its text stays 12 px at any width: each label sits on its own line above its bar, and the bars are
+    drawn in percent of the width."""
     if not rows:
         return '<p class="empty">Not enough data yet.</p>'
+    return f'<div class="chart-box">{_hbar_wide(rows, unit, label, width)}{_hbar_narrow(rows, unit, label)}</div>'
+
+
+def _hbar_narrow(rows: list[tuple[str, float, str]], unit: str, label: str) -> str:
+    text_h, bar_h, gap = 16, 12, 10  # label line, bar, space before the next label
+    row_h = text_h + bar_h + gap
+    height = len(rows) * row_h
+    vmax = max(v for _, v, _ in rows) or 1
+    most = 72  # percent of the width for the longest bar, leaving room for its value label on a 320 px screen
+    out = [
+        f'<svg class="chart narrow" width="100%" height="{height}" style="height:{height}px" role="img"'
+        f' aria-label="{escape(label)}">'
+    ]
+    for i, (cat, v, tip) in enumerate(rows):
+        y = i * row_h
+        pct = max(v / vmax * most, 0.5)
+        out.append(
+            f'<g class="mark" data-tip="{escape(tip)}">'
+            f'<rect class="hit" x="0" y="{y}" width="100%" height="{row_h}"/>'
+            f'<text class="cat" x="0" y="{y + 12}">{escape(cat)}</text>'
+            # A 4px rounded data end, square at the baseline: a rounded bar, its baseline end squared off. A short bar
+            # (under 3% of the width, about 10 px on a phone) is a plain rectangle, so the cap never lengthens it.
+            + (
+                f'<rect class="bar" x="0" y="{y + text_h}" width="{pct:.1f}%" height="{bar_h}" rx="4"/>'
+                f'<rect class="bar" x="0" y="{y + text_h}" width="4" height="{bar_h}"/>'
+                if pct >= 3
+                else f'<rect class="bar" x="0" y="{y + text_h}" width="{pct:.1f}%" height="{bar_h}"/>'
+            )
+            + f'<text class="val" x="{pct:.1f}%" dx="6" y="{y + text_h + bar_h / 2}" dominant-baseline="central">'
+            f"{escape(unit.format(v))}</text>"
+            "</g>"
+        )
+    out.append("</svg>")
+    return "".join(out)
+
+
+def _hbar_wide(rows: list[tuple[str, float, str]], unit: str, label: str, width: int) -> str:
     bar_h, gap, left, right = 18, 2 + 6, 120, 56
     height = len(rows) * (bar_h + gap) + 8
     vmax = max(v for _, v, _ in rows) or 1
     scale = (width - left - right) / vmax
-    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">']
+    out = [f'<svg class="chart wide" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">']
     for i, (cat, v, tip) in enumerate(rows):
         y = 4 + i * (bar_h + gap)
         w = max(v * scale, 2)
         out.append(
-            f'<g class="mark" tabindex="0" data-tip="{escape(tip)}">'
+            f'<g class="mark" data-tip="{escape(tip)}">'
             f'<rect class="hit" x="0" y="{y - 4}" width="{width}" height="{bar_h + 8}"/>'
             f'<text class="cat" x="{left - 8}" y="{y + bar_h / 2}" text-anchor="end" dominant-baseline="central">{escape(cat)}</text>'
             # 4px rounded data end, square at the baseline.
@@ -71,7 +167,9 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
 REPO = "https://github.com/jtouley/coffee-data-tracker"
 APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides it for a fork or staging
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
-LEGAL_UPDATED = "November 2, 2026"
+LEGAL_UPDATED = (
+    "November 8, 2026"  # email, marketing and recommendations (spec §7.4); the owner sets the deploy day
+)
 # The crawler page's (bot.html) "Last updated" date: change it whenever that page changes.
 BOT_UPDATED = "November 2, 2026"
 FIRST_RUN = "2026-10-26"  # the first weekly run the public data covers (the start of temporalCoverage)
@@ -177,7 +275,7 @@ def dataset_jsonld(release: dict, link: dict[str, str | None], contract: dict | 
             "@type": "DataDownload",
             "name": "catalog.json",
             "description": "The site's catalog: every listed retail coffee from the public roasters, as JSON "
-            "(a subset of public_coffee's columns).",
+            "(a subset of public_coffee's columns, plus roaster_city: the roaster's city from public_roaster).",
             "encodingFormat": "application/json",
             "contentUrl": f"{site}/catalog/catalog.json",
         }
@@ -271,61 +369,76 @@ def build(db: Path, out: Path) -> Path:
     import duckdb
 
     con = duckdb.connect(str(db), read_only=True)
-    # The site shows the public roasters only, the same ones as the public tables (public_roaster's filter: not
-    # opted out, not known only from OpenStreetMap). A temporary view: the database itself stays read-only.
-    con.execute(
-        "create temp view site_coffee as select * from dim_coffee "
-        "where roaster_id in (select roaster_id from public_roaster)"
-    )
+    for view in SITE_VIEWS:
+        con.execute(view)
+    shown = origin_display_column(con)
     origin_price = _q(
         con,
-        """
-        select origin_country, count(*) as n, median(price_per_100g) as med
-        from site_coffee where in_stock and not is_wholesale and not is_blend and not is_chain and price_per_100g is not null
-          and origin_country is not null
+        f"""
+        select {shown} as origin_country, count(*) as n, median(price_per_100g) as med
+        from site_coffee where {SINGLE_ORIGIN} and in_stock and price_per_100g is not null
         group by 1 having count(*) >= 5 order by n desc limit 12""",
     )
     processes = _q(
         con,
-        """
+        f"""
         select coalesce(process, 'not stated') as process, count(*) as n
-        from site_coffee where in_stock and not is_wholesale and not is_blend group by 1 order by n desc""",
+        from site_coffee where {SINGLE_ORIGIN} and in_stock group by 1 order by n desc""",
     )
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
     # The filter doesn't keep the mart's order, so it is restated (the model's own order).
     public_new = "select * from mart_new_arrivals where coffee_id in (select coffee_id from site_coffee)"
-    new = _q(con, f"{public_new} order by first_seen desc, roaster_name, title, coffee_id limit 25")
+    shown_new = (
+        shown
+        if shown in {r[0] for r in con.execute("describe mart_new_arrivals").fetchall()}
+        else "origin_country"
+    )
+    new = _q(
+        con,
+        f"select * replace ({shown_new} as origin_country) from ({public_new}) "
+        "order by first_seen desc, roaster_name, title, coffee_id limit 25",
+    )
     totals = _q(
         con,
-        """
+        f"""
         select count(*) as coffees,
                count(*) filter (where in_stock) as in_stock,
                count(distinct roaster_id) as roasters
-        from site_coffee where is_listed and catalog_status <> 'archived' and not is_wholesale""",
+        from site_coffee where {LISTED}""",
     )[0]
     catalog = _q(
         con,
-        """
-        select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
-               tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
-        from site_coffee where is_listed and not is_wholesale and not is_chain order by roaster_name, title""",
+        f"""
+        select c.coffee_id, c.roaster_name, c.roaster_state, c.title, c.url, c.{shown} as origin_country, c.process,
+               c.roast_level, c.tasting_notes, c.price_per_100g, c.min_price_usd, c.in_stock, c.catalog_status,
+               c.first_seen,
+               -- Added after main's columns, so readers that look columns up by position or name keep working:
+               -- the stable roaster key, and the roaster's city as public_roaster stores it.
+               c.roaster_id, r.city as roaster_city
+        from site_coffee c join public_roaster r using (roaster_id)
+        where c.is_listed and not c.is_wholesale
+        -- Each roaster's coffees together, in a stable order; the page sorts the names A–Z in the reader's locale.
+        order by c.roaster_name, c.roaster_id, c.title, c.coffee_id""",
     )
-    reach = _q(
-        con,
-        """
-        select count(distinct origin_country) as origins,
-               count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
+    # The states are the listed coffees' roasters' (the same roasters as totals.roasters); the origins are the
+    # single-origin listings' countries.
+    reach = (
+        _q(
+            con,
+            """
+        select count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
                bool_or(roaster_state = 'DC') as has_dc, bool_or(roaster_state = 'PR') as has_pr
-        from site_coffee where is_listed and catalog_status <> 'archived' and not is_wholesale and not is_chain""".format(
-            states=", ".join(f"'{s}'" for s in STATES)
-        ),
-    )[0]
+        from site_coffee where {listed}""".format(states=", ".join(f"'{s}'" for s in STATES), listed=LISTED),
+        )[0]
+        | _q(con, f"select count(distinct origin_country) as origins from site_coffee where {SINGLE_ORIGIN}")[
+            0
+        ]
+    )
     origin_counts = _q(
         con,
-        """
-        select origin_country, count(*) as n from site_coffee
-        where in_stock and not is_wholesale and not is_blend and not is_chain and origin_country is not null
+        f"""
+        select {shown} as origin_country, count(*) as n from site_coffee where {SINGLE_ORIGIN} and in_stock
         group by 1 order by n desc, 1 limit 8""",
     )
     week = _q(
@@ -335,7 +448,7 @@ def build(db: Path, out: Path) -> Path:
                count(*) filter (where event = 'removed') as removed
         -- A left join: a product no longer classed as coffee has left dim_coffee, but its events still count.
         from fct_price_event e left join dim_coffee c using (coffee_id)
-        where not coalesce(c.is_wholesale, false) and e.roaster_id in (select roaster_id from public_roaster)
+        where not coalesce(c.is_wholesale, false) and e.roaster_id in (select roaster_id from site_roaster)
           and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
     )[0]
     for r in new + catalog:
@@ -360,13 +473,13 @@ def build(db: Path, out: Path) -> Path:
             "Median price per 100 g by origin",
         ),
         "process": hbar_chart(
-            [(r["process"], r["n"], f"{r['process']}: {r['n']} coffees") for r in processes],
+            [(r["process"], r["n"], f"{r['process']}: {r['n']:,} coffees in stock") for r in processes],
             "{:,.0f}",
-            "Coffees in stock by process",
+            "Single-origin coffees in stock by process",
         ),
         "origins": hbar_chart(
             [
-                (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']} coffees in stock")
+                (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']:,} coffees in stock")
                 for r in origin_counts
             ],
             "{:,.0f}",
@@ -387,6 +500,8 @@ def build(db: Path, out: Path) -> Path:
         week=week | {"new": new_count},
         new=new[:6],
         charts=charts,
+        # The origin chart's numbers as a table, for screen readers and anyone who'd rather read them.
+        origin_counts=origin_counts,
         links=link,
         public_tables=len(public.PUBLIC_TABLES),
         generated=f"{generated:%B} {generated.day}, {generated:%Y}",
@@ -409,6 +524,23 @@ def build(db: Path, out: Path) -> Path:
     (out / "bot" / "index.html").write_text(with_csp(bot))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
+    cols = list(catalog[0]) if catalog else []
+    data = json.dumps(
+        {
+            # Which release this is and under what licence; the page's script reads only columns and rows.
+            "release": {
+                "release_build_id": release["release_build_id"],
+                "release_run_date": release["release_run_date"],
+                "contract": f"{release['contract']['id']}@{release['contract']['version']}",
+                "license": release["license"]["id"],
+                "license_url": release["license"]["url"],
+            },
+            "columns": cols,
+            "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
+        },
+        separators=(",", ":"),
+    )
+    (cat / "catalog.json").write_text(data)
     html = env.get_template("index.html").render(
         links=link,
         jsonld=jsonld,
@@ -420,26 +552,14 @@ def build(db: Path, out: Path) -> Path:
         origin_price=origin_price,
         processes=processes,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
+        # The page fetches catalog.json?b=<a hash of the file>: a new page never reads a cached older file, even
+        # after a code-only redeploy of the same release. (Pages ignores the query, so a cached older page gets the
+        # current file; that is safe because the file only ever gains columns.)
+        data_key=hashlib.sha256(data.encode()).hexdigest()[:12],
+        state_titles=STATE_TITLES,
+        state_words=STATE_WORDS,
     )
     (cat / "index.html").write_text(with_csp(html))
-    cols = list(catalog[0]) if catalog else []
-    (cat / "catalog.json").write_text(
-        json.dumps(
-            {
-                # Which release this is and under what licence; the page's script reads only columns and rows.
-                "release": {
-                    "release_build_id": release["release_build_id"],
-                    "release_run_date": release["release_run_date"],
-                    "contract": f"{release['contract']['id']}@{release['contract']['version']}",
-                    "license": release["license"]["id"],
-                    "license_url": release["license"]["url"],
-                },
-                "columns": cols,
-                "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
-            },
-            separators=(",", ":"),
-        )
-    )
     site = str(link["site"])
     (out / "robots.txt").write_text(robots_txt(site))
     day = f"{generated:%Y-%m-%d}"

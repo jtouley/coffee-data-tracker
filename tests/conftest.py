@@ -9,6 +9,15 @@ from coffeedata.adapters import shopify, squarespace, woocommerce
 from coffeedata.lake import Lake
 from coffeedata.models import Roaster
 
+# The accuracy floors' report and annotations (tests/evalfloor.py, docs/TRIAGE.md).
+from .evalfloor import (  # noqa: F401
+    pytest_itemcollected,
+    pytest_runtest_call,
+    pytest_runtest_logreport,
+    pytest_sessionfinish,
+    pytest_terminal_summary,
+)
+
 FIX = Path(__file__).parent / "fixtures"
 
 
@@ -68,6 +77,14 @@ def fixture_items(roasters):
 
 
 @pytest.fixture
+def dbt_installed():
+    """For tests that build with dbt (lakehelp.needs_dbt): skip without dbt, fail instead under REQUIRE_DBT=1."""
+    from .smoke import require_dbt
+
+    require_dbt()
+
+
+@pytest.fixture
 def no_network(monkeypatch):
     """The smoke suite's guard (tests/smoke.py): no connection off this machine, and no API keys."""
     from .smoke import block_network
@@ -91,3 +108,17 @@ def _own_dbt_target(tmp_path_factory):
     mp.setattr(cli, "DBT_TARGET", target)
     yield
     mp.undo()
+
+
+def wait_for_sends() -> None:
+    """Until every send app/mail.py's `later` started has finished and been logged. /api/forgot's reply doesn't wait
+    for its email, so a test that checks the outbox after it waits here first (a wait, not a timing bound)."""
+    import time
+
+    from app import mail
+
+    for _ in range(3000):
+        if not mail._running:
+            return
+        time.sleep(0.01)
+    raise AssertionError("a send never finished")

@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.5.0
+version: 3.1.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -146,7 +146,14 @@ schema:
   - name: origin_country
     logicalType: string
     physicalType: varchar
-    description: Origin country, from the rules or Claude's extraction.
+    description: Origin country as its ISO 3166-1 English short name (e.g. 'Ethiopia', 'Tanzania, United Republic
+      of', 'Viet Nam'), from the rules or Claude's extraction. Null when the listing names no single country (not
+      stated, a blend's or multi-origin offer's list, a continent, or New Guinea, which two countries share).
+  - name: origin_country_code
+    logicalType: string
+    physicalType: varchar
+    description: The origin country's ISO 3166-1 alpha-2 code (e.g. 'ET', 'TZ', 'VN'); null exactly when
+      origin_country is.
   - name: origin_region
     logicalType: string
     physicalType: varchar
@@ -355,13 +362,29 @@ schema:
     severity: error
     description: Every public price is one the store states in USD (or, with no currency stated, a US roaster's);
       a price in another currency stays in the raw lake only. Every public roaster is in the US.
+  - type: custom
+    engine: dbt
+    implementation: tests/origin_countries_are_mapped.sql
+    dimension: conformity
+    severity: warning
+    description: Every origin a coffee was captured with resolves to one ISO 3166-1 country or to a listed
+      non-country (a list of several origins, a continent, a place two countries share). A new spelling warns and
+      is published with no country or code, never a guess, and opens a triage issue; it doesn't hold back a release.
+  - type: custom
+    engine: dbt
+    implementation: tests/origin_country_iso_matches_iso.sql
+    dimension: conformity
+    severity: error
+    description: Each mapped spelling's alpha-3 code and short name are ISO 3166-1's for its alpha-2 code.
 - name: public_roaster
   physicalName: public_roaster
   physicalType: table
   description: >-
     One row per published roaster from the registry: in the US, not opted out, with at least one coffee seen, and
     known from a source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap
-    alone). A store outside the US (a registry correction) is never published.
+    alone). A store outside the US (a registry correction) is never published. One store is one row: a second
+    domain serving the same store (an alias) is never published, nor its coffees. A chain (more than 20 stores, or
+    a hand-checked registry override) is never published, nor its coffees or price events.
   synonyms:
   - synonym: roasteries
   - synonym: coffee roasters
@@ -431,6 +454,23 @@ schema:
     logicalType: date
     physicalType: date
     description: The weekly run that build checked; every row of a release has the same value.
+  quality:
+  - type: custom
+    engine: dbt
+    implementation: tests/public_roasters_unique_by_host.sql
+    dimension: uniqueness
+    severity: error
+    description: One store is one public roaster. No two public roasters have resolved hosts with the same key
+      (lower case, without a leading www, shop or store label); a second domain of a store is an alias, left out
+      with its coffees and price events.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_tables_have_no_chain.sql
+    dimension: conformity
+    severity: error
+    description: No public roaster is a chain, and no public coffee or price event is a chain's. A chain has more
+      than 20 stores (the registry's store count) unless a hand-checked override says otherwise; it is still
+      crawled and stays in the internal data.
 - name: public_price_event
   physicalName: public_price_event
   physicalType: table
@@ -520,9 +560,14 @@ schema:
   - name: origin_country
     logicalType: string
     physicalType: varchar
-    description: Origin country.
+    description: Origin country, its ISO 3166-1 English short name.
     primaryKey: true
     primaryKeyPosition: 1
+    required: true
+  - name: origin_country_code
+    logicalType: string
+    physicalType: varchar
+    description: The origin country's ISO 3166-1 alpha-2 code.
     required: true
   - name: process
     logicalType: string

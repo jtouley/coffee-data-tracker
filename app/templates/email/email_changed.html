@@ -1,0 +1,8 @@
+{% extends "_layout.html" %}
+{% block preview %}If that wasn’t you, reply to this email.{% endblock %}
+{% block heading %}The email on your account changed{% endblock %}
+{% block body %}
+<p style="margin:0;">{% if by_owner %}The owner of registry.coffee removed this email from the account <strong>{{ username }}</strong>.{% elif removed %}This email was removed from the account <strong>{{ username }}</strong>.{% else %}The account <strong>{{ username }}</strong> now uses a different email. This one won’t get its password reset links any more.{% endif %}</p>
+<p style="margin:16px 0 0;">If that wasn’t you, reply to this email.</p>
+{% endblock %}
+{% block foot %}You get this email whenever the email on your account changes, so you’d know if it wasn’t you.{% endblock %}

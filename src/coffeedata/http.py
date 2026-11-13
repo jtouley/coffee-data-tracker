@@ -5,6 +5,7 @@ from __future__ import annotations
 import contextlib
 import copy
 import email.utils
+import hashlib
 import logging
 import math
 import os
@@ -12,6 +13,7 @@ import random
 import re
 import threading
 import time
+import unicodedata
 from collections import Counter
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
@@ -249,6 +251,55 @@ class Unavailable(FetchError):
 class SiteDisallowed(Unavailable, Blocked):
     """robots.txt disallows the whole site (/), not just the catalog path: the store is closed to us (Big Guns,
     deactivated, 2026-10-31). Still a Blocked, so callers that try another path on a block keep doing so."""
+
+
+class ScheduleOnlyHost(Blocked):
+    """A host only the scheduled importers workflow may fetch (SCHEDULE_ONLY_HOSTS), asked for by any other client."""
+
+
+# Hosts no client may fetch unless it was built for the scheduled importers job (PoliteClient(schedule_only_ok=True),
+# cli.cmd_importer_snapshot): Royal Coffee, whose terms restrict automated access and AI tools (importers.py). Kept as
+# SHA-256 of the bare host, so the address itself is written only in .github/workflows/importers.yml. A host covers
+# its subdomains. The roaster registry, discovery and add-roaster refuse it too (registry.is_storefront_host, current).
+SCHEDULE_ONLY_HOSTS_SHA256 = frozenset({"1c556bc56014079a0a09b5ee70a3382f52ef714ade7280acdb9f187c3ba736bb"})
+
+
+def _schedule_only_name(name: str) -> bool:
+    labels = name.strip(".").split(".")
+    return any(
+        hashlib.sha256(".".join(labels[i:]).encode()).hexdigest() in SCHEDULE_ONLY_HOSTS_SHA256
+        for i in range(len(labels) - 1)
+    )
+
+
+def _host_spellings(h: str) -> set[str]:
+    """Every host `h` (a host, domain or URL) can name: the host the HTTP library will connect to (httpx.URL, which
+    maps other dot characters to "." and applies IDNA) and the host urlsplit reads, for the text as written and for
+    its compatibility-normalized form (NFKC: full-width letters and dots). Where either can't read it, also its
+    host-like parts, so a malformed value that contains the store is still refused."""
+    names: set[str] = set()
+    for text in dict.fromkeys((h, unicodedata.normalize("NFKC", h))):
+        target = text if "//" in text else f"//{text}"
+        failed = False
+        try:
+            names.add(httpx.URL(target).raw_host.decode("ascii", "replace"))
+        except (httpx.InvalidURL, ValueError, TypeError, UnicodeError):
+            failed = True
+        try:
+            names.add(urlsplit(target).hostname or "")
+        except ValueError:
+            failed = True
+        if failed:
+            names |= set(re.findall(r"[a-z0-9][a-z0-9.-]*", text.lower()))
+    return {n.lower().strip(".") for n in names if n}
+
+
+def schedule_only_host(host: str | None) -> bool:
+    """Whether `host` (a host, domain or URL) is, or is under, one of SCHEDULE_ONLY_HOSTS_SHA256, in any spelling the
+    HTTP library treats as that host (_host_spellings). Never raises: a malformed value ("[www.roaster.example](http",
+    an unmatched bracket) is refused when any host-like part of it is the store, and is otherwise not the store."""
+    h = (host or "").strip()
+    return any(_schedule_only_name(name) for name in _host_spellings(h))
 
 
 # What Shopify's closed or deactivated storefront page says (lowercased). Read only on a non-200, non-JSON answer
@@ -532,8 +583,12 @@ class PoliteClient:
         limiters: dict[str, PlatformLimiter] | None = None,
         max_response_bytes: int | None = None,
         deadline_s: float | None = None,
+        schedule_only_ok: bool = False,
     ):
         self.min_interval = min_interval
+        # Only the scheduled importers job builds a client that may reach SCHEDULE_ONLY_HOSTS; every other one (the
+        # crawl, the probe, discovery) refuses them outright, robots.txt included (ScheduleOnlyHost).
+        self.schedule_only_ok = schedule_only_ok
         # deadline_s: seconds from now after which no request is sent (DeadlineReached): the crawl job's window, so a
         # catalog still being read when it ends stops there and is stored as partial, instead of running past the job.
         self.deadline = None if deadline_s is None else time.monotonic() + deadline_s
@@ -840,6 +895,9 @@ class PoliteClient:
         # URLs (without query) that redirected us away while carrying our params.
         sent_params: set[str] = set()
         for hop in range(MAX_REDIRECTS + 1):
+            if not self.schedule_only_ok and schedule_only_host(url):
+                # the message never parses the URL again: a malformed one is refused as cleanly as any other
+                raise ScheduleOnlyHost("refused: a host only the scheduled importers job may fetch")
             if not robots and not self._allowed(url):
                 raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
             r = self._send_retrying(url, params, page=not robots)

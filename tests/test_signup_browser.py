@@ -14,7 +14,7 @@ import pytest
 
 from app.auth import Sessions
 from app.main import create_app
-from app.rules import check_password, check_username, clean_label
+from app.rules import check_email, check_password, check_username, clean_email, clean_label
 from coffeedata.lake import Lake
 from tests import signup_seed
 from tests.test_app_browser import BROWSER, _playwright, _serve
@@ -44,7 +44,7 @@ def test_signup_in_a_browser(tmp_path):
     apps = [
         _app(tmp_path / "plain"),
         _app(tmp_path / "slow", publish_delay=15),
-        _app(tmp_path / "bumped", legal="November 5, 2026"),
+        _app(tmp_path / "bumped", legal="December 31, 2026"),  # newer than what the seed accepted
     ]
     servers = [_serve(a) for a in apps]
     out = os.environ.get("SIGNUP_SCREENSHOTS") or "-"
@@ -74,7 +74,12 @@ def test_the_page_and_the_server_give_the_same_verdicts_in_the_same_words(tmp_pa
                   "abcabcabcab", "é" * 5, "café crème", "MAYA is here and fine"]  # fmt: skip
     notes = ["Sam", "  Sam \n at\tthe  café ", "cafe\u0301 on 5th", "bell\x07 ", "👩\u200d💻 dev", "a\x1fb", "a\x85b",
              "a\u3000b", "\ufeffx", "   ", "x" * 61]  # fmt: skip
+    emails = ["maya@example.com", "  Maya.Lee@EXAMPLE.Com ", "maya@example", "maya example.com", "@example.com",
+              "maya@@example.com", "maya@.com.", "maya@example.", "maya@exa mple.com", "maya@exa\u3000mple.com",
+              "a@b.c", "émile@café.fr", "x" * 243 + "@example.com", "x" * 242 + "@example.com", "", "  ",
+              "maya@ÉXAMPLE.COM", "first+tag@example.co.uk"]  # fmt: skip
     cases = {
+        "emails": [[e, req] for e in emails for req in (False, True)],
         "usernames": USERNAMES,
         "passwords": [[p, u] for p in passwords for u in ("maya", "")],
         "notes": notes,
@@ -94,3 +99,4 @@ def test_the_page_and_the_server_give_the_same_verdicts_in_the_same_words(tmp_pa
     assert page["usernames"] == [check_username(u) for u in USERNAMES]
     assert page["passwords"] == [check_password(p, u) for p, u in cases["passwords"]]
     assert page["notes"] == [clean_label(n) or "" for n in notes]
+    assert page["emails"] == [[clean_email(e), check_email(e, req)] for e, req in cases["emails"]]

@@ -26,11 +26,12 @@ class NoNetwork(OSError):
 
 
 def require(tool: str, available: bool, flag: str) -> None:
-    """Skip a smoke test whose tool isn't installed, except where `flag` is set (CI's smoke job sets REQUIRE_DBT and
-    REQUIRE_BROWSER): there a missing tool fails the test, so the check never passes green having run nothing."""
+    """Skip a test whose tool isn't installed, except where `flag` is 1 (CI's test and smoke jobs set REQUIRE_DBT=1,
+    and REQUIRE_BROWSER=1): there a missing tool fails the test, so the check never passes green having run nothing.
+    Any other value, "0" included, is unset."""
     if available:
         return
-    if os.environ.get(flag):
+    if os.environ.get(flag) == "1":
         pytest.fail(f"{flag} is set, but {tool} isn't installed")
     pytest.skip(f"{tool} not installed")
 
