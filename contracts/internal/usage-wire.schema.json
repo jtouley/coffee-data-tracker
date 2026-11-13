@@ -1,0 +1,354 @@
+{
+  "$defs": {
+    "UsageEvent": {
+      "additionalProperties": false,
+      "description": "One event as a page script sends it. Strict: an unknown name or a bad value drops the event.",
+      "properties": {
+        "cities": {
+          "items": {
+            "maxLength": 60,
+            "minLength": 1,
+            "pattern": "^[^\\x00-\\x1f\\x7f]*$",
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Cities",
+          "type": "array"
+        },
+        "coffee_id": {
+          "anyOf": [
+            {
+              "maxLength": 221,
+              "pattern": "^[a-z0-9-]+(?:\\.[a-z0-9-]+)+:[^\\x00-\\x1f\\x7f@]{1,120}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Coffee Id"
+        },
+        "device": {
+          "anyOf": [
+            {
+              "enum": [
+                "phone",
+                "desktop"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Device"
+        },
+        "entry": {
+          "default": false,
+          "title": "Entry",
+          "type": "boolean"
+        },
+        "event": {
+          "enum": [
+            "page_view",
+            "search",
+            "filter_state",
+            "click_out"
+          ],
+          "title": "Event",
+          "type": "string"
+        },
+        "event_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Id"
+        },
+        "in_stock": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "In Stock"
+        },
+        "origin": {
+          "anyOf": [
+            {
+              "maxLength": 60,
+              "minLength": 1,
+              "pattern": "^[^\\x00-\\x1f\\x7f]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Origin"
+        },
+        "process": {
+          "anyOf": [
+            {
+              "maxLength": 60,
+              "minLength": 1,
+              "pattern": "^[^\\x00-\\x1f\\x7f]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Process"
+        },
+        "query": {
+          "anyOf": [
+            {
+              "maxLength": 1000,
+              "pattern": "^[^\\x00-\\x1f\\x7f]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Query"
+        },
+        "rank": {
+          "anyOf": [
+            {
+              "maximum": 100000,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rank"
+        },
+        "referrer": {
+          "anyOf": [
+            {
+              "maxLength": 300,
+              "pattern": "^[^\\x00-\\x1f\\x7f]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Referrer"
+        },
+        "release": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{8}T[0-9]{6}-[0-9a-f]{6}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Release"
+        },
+        "results_n": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Results N"
+        },
+        "roaster_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 3,
+              "pattern": "^[a-z0-9-]+(?:\\.[a-z0-9-]+)+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Roaster Id"
+        },
+        "sort": {
+          "anyOf": [
+            {
+              "enum": [
+                "roaster",
+                "asc",
+                "desc"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sort"
+        },
+        "state": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Z]{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "State"
+        },
+        "states": {
+          "items": {
+            "pattern": "^[A-Z]{2}$",
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "States",
+          "type": "array"
+        },
+        "surface": {
+          "enum": [
+            "landing",
+            "catalog",
+            "privacy",
+            "terms",
+            "bot",
+            "app_search",
+            "app_coffee"
+          ],
+          "title": "Surface",
+          "type": "string"
+        },
+        "utm_campaign": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "minLength": 1,
+              "pattern": "^[a-z0-9._-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Utm Campaign"
+        },
+        "utm_medium": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "minLength": 1,
+              "pattern": "^[a-z0-9._-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Utm Medium"
+        },
+        "utm_source": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "minLength": 1,
+              "pattern": "^[a-z0-9._-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Utm Source"
+        },
+        "webdriver": {
+          "default": false,
+          "title": "Webdriver",
+          "type": "boolean"
+        },
+        "zero_results": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Zero Results"
+        }
+      },
+      "required": [
+        "event",
+        "surface"
+      ],
+      "title": "UsageEvent",
+      "type": "object"
+    }
+  },
+  "$id": "https://github.com/jtouley/coffee-data-tracker/blob/main/contracts/internal/usage-wire.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "The body of POST /e to the usage collector (app/usage.py). Generated by app/usage_events.py; tests/test_usage_collector.py fails when it and the code disagree. Per event, beyond the fields' own rules: a click_out names its roaster_id, and only a click_out carries roaster_id, coffee_id or rank; a coffee_id starts with its roaster_id and ':'; a page_view carries no query, cities or states; only an entry event (a page load's first) carries referrer or utm_*; query is cut to 100 characters, never refused for length up to 1000; origin, process and cities refuse '@' and runs of 7 or more digits (with phone or card separators). An event that breaks a rule is dropped alone; the reply is 204 whatever happens.",
+  "properties": {
+    "events": {
+      "items": {
+        "$ref": "#/$defs/UsageEvent"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "events"
+  ],
+  "title": "Usage collector wire format",
+  "type": "object",
+  "x-collector": {
+    "contentType": "any (a no-cors fetch sends text/plain); the body is parsed as JSON",
+    "credentials": "never: fetch with credentials 'omit', mode 'no-cors', keepalive",
+    "dropped": "Sec-GPC: 1 or DNT: 1 (the page should send nothing then)",
+    "maxBodyBytes": 4096,
+    "method": "POST",
+    "origin": "required, one of COFFEEDATA_USAGE_ORIGINS (registry.coffee, www, app); a missing or 'null' Origin is dropped, so the fetch sets referrerPolicy 'strict-origin-when-cross-origin'",
+    "path": "/e",
+    "reply": "204, empty, always"
+  }
+}

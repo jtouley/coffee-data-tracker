@@ -35,6 +35,11 @@ by dbt and never released:
 
     raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
 
+Anonymous search, filter and click-out events from the site and the app go to a fifth private dataset
+(`Lake.usage()`, app/usage.py), append-only and never published; only the usage dbt models read it:
+
+    events/day=YYYY-MM-DD/batch=<id>.parquet              one row per event, the IP already masked (usage_events)
+
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
 
@@ -570,10 +575,58 @@ SCHEMAS["importer_raw"] = pa.schema(
     ]
 )
 
-# Tables that live in the photo, users or importers dataset rather than the main lake.
+# The values usage_events' coded columns take (app/usage_events.py refuses anything else; the usage contract's enums).
+# Surfaces: the site's pages, and the app's two (the bag page's catalog search, the coffee page's Shop link).
+USAGE_VALUES: dict[str, tuple[str, ...]] = {
+    "event": ("page_view", "search", "filter_state", "click_out"),
+    "surface": ("landing", "catalog", "privacy", "terms", "bot", "app_search", "app_coffee"),
+    "device": ("phone", "desktop"),
+    "sort": ("roaster", "asc", "desc"),  # the catalog's Sort select
+    "source": ("utm", "referrer", "direct", "internal"),
+}
+# Search, filter and click-out events (app/usage.py, docs: the analytics design, section 0), in their own private
+# dataset (Lake.usage()): one row per event, written by the collector, append-only, never published. Nothing in a
+# row identifies a person, browser, device, session or page load: no full IP (ip_prefix is the /24 or /40 it was
+# masked to before anything was written), no user agent (only the bot flag), no referrer path or query.
+SCHEMAS["usage_events"] = pa.schema(
+    [
+        ("event_id", pa.string()),  # random, from the page; only for dropping a retried duplicate
+        ("received_at", pa.timestamp("s", tz="UTC")),  # the collector's clock, truncated to the hour
+        ("event", pa.string()),  # page_view, search, filter_state, click_out
+        ("surface", pa.string()),
+        ("release", pa.string()),  # the catalog build the page was showing
+        ("device", pa.string()),  # phone or desktop
+        ("query", pa.string()),  # as typed, capped at 100 characters
+        ("cities", pa.list_(pa.string())),
+        ("states", pa.list_(pa.string())),
+        ("origin", pa.string()),
+        ("process", pa.string()),
+        ("state", pa.string()),
+        ("in_stock", pa.bool_()),
+        ("sort", pa.string()),
+        ("results_n", pa.int32()),
+        ("zero_results", pa.bool_()),
+        ("roaster_id", pa.string()),
+        ("coffee_id", pa.string()),
+        ("rank", pa.int32()),
+        (
+            "source",
+            pa.string(),
+        ),  # utm, referrer, direct or internal; null on events after a page load's first
+        ("referrer_domain", pa.string()),
+        ("utm_source", pa.string()),
+        ("utm_medium", pa.string()),
+        ("utm_campaign", pa.string()),
+        ("ip_prefix", pa.string()),  # IPv4 /24 or IPv6 /40, as a network: 203.0.113.0/24
+        ("bot", pa.bool_()),
+    ]
+)
+
+# Tables that live in the photo, users, importers or usage dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
 USER_TABLES = ("users", "invites", "consents", "contacts", "recs_erasures")
 IMPORTER_TABLES = ("importer_raw",)
+USAGE_TABLES = ("usage_events",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -603,6 +656,7 @@ GLOBS = {
     "contacts": "contacts/*.parquet",
     "recs_erasures": "recs_erasures/*.parquet",
     "importer_raw": "raw/*/*.parquet",
+    "usage_events": "events/*/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -634,11 +688,14 @@ SCHEMA_FILES = {
     "contacts": "contacts/user_id=schema.parquet",
     "recs_erasures": "recs_erasures/user_id=schema.parquet",
     "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
+    "usage_events": "events/day=0000-00-00/batch=schema.parquet",
 }
 PENDING_DELETES = (
     "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset
 )
-LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES)
+LAKE_TABLES = tuple(
+    t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES + USAGE_TABLES
+)
 
 
 _REMOTE_FOLDERS: dict[str, frozenset[str] | None] = {}
@@ -779,6 +836,13 @@ class Lake:
         (dbt/): only the private one (dbt_importers/, `coffeedata importer-build`) reads it, into its own database."""
         url = os.environ.get("COFFEEDATA_IMPORTERS") or "lake-importers"
         return cls(url, staging="build/importers-staging", tables=IMPORTER_TABLES)
+
+    @classmethod
+    def usage(cls) -> Lake:
+        """The private usage dataset: COFFEEDATA_USAGE, or ./lake-usage. Written only by the collector (app/usage.py),
+        read only by the usage dbt models; never published, never a release table."""
+        url = os.environ.get("COFFEEDATA_USAGE") or "lake-usage"
+        return cls(url, staging="build/usage-staging", tables=USAGE_TABLES)
 
     # --- writing -------------------------------------------------------------------------------------
 

@@ -1,0 +1,9 @@
+# The usage collector (app/usage.py, src/terraform/usage.tf), for the page scripts on registry.coffee and
+# app.registry.coffee. One place: the site build and the app read it; nothing else names the collector's address.
+#
+# collector_url is Cloud Run's deterministic address of the service, https://registry-coffee-usage-<project
+# number>.us-central1.run.app (Terraform's output usage_url, known at plan). Empty until the service exists
+# (usage_enabled in src/terraform/ci.tfvars): the pages then send nothing at all. Set it in a PR once the apply
+# that creates the service has run; tests/test_usage_collector.py checks its shape. Pages POST to <collector_url>/e
+# and their CSP allows connect-src <collector_url>.
+collector_url = ""
