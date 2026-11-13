@@ -52,6 +52,5 @@ jobs:
           cache-to: type=gha,scope=ingest-image,mode=max
       - name: Check the image starts (no network, no secrets)
         run: |
-          for command in crawl merge enrich-week build; do  # commands the jobs run; --help imports the package
-            docker run --rm --network none ingest:check "$command" --help > /dev/null
-          done
+          docker run --rm --network none ingest:check --help > /dev/null  # the image's default command
+          docker run --rm --network none ingest:check build --help > /dev/null

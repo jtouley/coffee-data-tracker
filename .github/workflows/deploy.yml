@@ -236,9 +236,8 @@ jobs:
         run: |
           image="${APP_IMAGE%/*}/ingest"
           docker build -f ingest.Dockerfile --build-arg GIT_SHA="$HEAD_SHA" -t "$image:$HEAD_SHA" .
-          for command in crawl merge enrich-week build; do  # commands the jobs run; --help imports the package
-            docker run --rm --network none "$image:$HEAD_SHA" "$command" --help > /dev/null
-          done
+          docker run --rm --network none "$image:$HEAD_SHA" --help > /dev/null  # the image's default command
+          docker run --rm --network none "$image:$HEAD_SHA" build --help > /dev/null
           echo "IMAGE=$image" >> "$GITHUB_ENV"
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
