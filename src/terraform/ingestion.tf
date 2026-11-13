@@ -14,16 +14,14 @@ variable "ingest_schedule_enabled" {
   default     = false
 }
 
-variable "ingest_image_tag" {
-  description = "Tag of the ingest image (ingest.Dockerfile) in the app's Artifact Registry repository."
-  type        = string
-  default     = "latest"
-}
-
 variable "ingest_image" {
-  description = "The full ingest image every job runs, pinned by digest (`<repo>/ingest@sha256:<digest>`, RUNBOOK section 4). Cloud Run resolves a tag only when a job is created or updated, so a rebuilt `:latest` reaches no job until this changes. Empty = the `ingest_image_tag` form, for compatibility."
+  description = "The ingest image every job runs, by digest: `<repo>/ingest@sha256:<digest>`. Required, and never a tag: ingestion runs one known image, and a tag such as `:latest` would be re-resolved to whatever it points at whenever a job is updated. docs/ingestion/RUNBOOK.md section 1 reads the digest of the image GitHub built for a commit and checks its provenance."
   type        = string
   default     = ""
+  validation {
+    condition     = can(regex("^[a-z0-9.-]+/[a-z0-9._/-]+@sha256:[0-9a-f]{64}$", var.ingest_image))
+    error_message = "ingest_image must be pinned by digest: <region>-docker.pkg.dev/<project>/<repository>/ingest@sha256:<64 hex>, in terraform.tfvars or with -var. Get the digest for main's commit with docs/ingestion/verified-ingest-image.sh (docs/ingestion/RUNBOOK.md section 1). A tag such as :latest is refused."
+  }
 }
 
 variable "egress_echo_url" {
@@ -77,8 +75,7 @@ variable "woo_generic_subnet_cidr" {
 }
 
 locals {
-  ingest_image = var.ingest_image != "" ? var.ingest_image : "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/ingest:${var.ingest_image_tag}"
-  staging      = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
+  staging = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
 
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
@@ -408,7 +405,7 @@ resource "google_cloud_run_v2_job" "ingest" {
       }
 
       containers {
-        image   = local.ingest_image
+        image   = var.ingest_image
         command = each.value.command
         args    = each.value.args
         resources {
@@ -537,8 +534,8 @@ output "ingest_jobs" {
 }
 
 output "ingest_image" {
-  description = "The image every ingest job runs (pinned by digest once `ingest_image` is set)."
-  value       = local.ingest_image
+  description = "The image every ingest job runs, by digest."
+  value       = var.ingest_image
 }
 
 output "ingest_staging_bucket" {

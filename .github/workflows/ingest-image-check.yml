@@ -1,0 +1,46 @@
+# Build the ingestion jobs' image (ingest.Dockerfile) and check it starts, without pushing it, so a Dockerfile,
+# lockfile or package change that breaks the image fails on the pull request and not after the merge, where
+# deploy.yml's ingest-image job builds and pushes it for real. Nothing here is pushed, signed in to or deployed.
+# - It runs only when something the image is built from changes.
+# - The build and the checks are the same commands as deploy.yml's ingest-image job: keep the two in step. No
+#   layer cache, so that they stay the same (a few minutes a run).
+# - It is its own workflow, not a job in ci: ci has no path filter, and deploy waits on ci.
+name: ingest-image-check
+on:
+  pull_request:
+    paths:
+      - ingest.Dockerfile
+      - ingest.Dockerfile.dockerignore
+      - pyproject.toml
+      - uv.lock
+      - README.md
+      - "src/**"
+      - "!src/terraform/**"
+      - "config/**"
+      - "contracts/**"
+      - "dbt/**"
+      - marketplace/LISTING.md
+      - .github/workflows/ingest-image-check.yml
+permissions:
+  contents: read
+concurrency:
+  group: ingest-image-check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      # BuildKit, so ingest.Dockerfile.dockerignore applies. The checks: the CLI starts, the packages the jobs
+      # import are there, DuckDB's httpfs loads; with no network and no secrets. Not more than that.
+      - name: Build, and check the image starts
+        env:
+          DOCKER_BUILDKIT: "1"
+        run: |
+          docker build -f ingest.Dockerfile --provenance=false --build-arg GIT_SHA="$GITHUB_SHA" -t ingest:check .
+          docker run --rm --network none ingest:check --help > /dev/null  # the image's default command
+          docker run --rm --network none ingest:check build --help > /dev/null
+          docker run --rm --network none --entrypoint python ingest:check -c \
+            'import dbt, duckdb, coffeedata.quality; duckdb.sql("LOAD httpfs")'

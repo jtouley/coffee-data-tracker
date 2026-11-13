@@ -158,3 +158,20 @@ def test_a_failure_reporting_the_coverage_claims_never_stops_the_build_record(mo
     assert cli.cmd_build(args) is False  # record_build's verdict, so the build was recorded
     assert recorded == ["2026-10-26"]
     assert "coverage claims not reported: a partial coffee.duckdb" in caplog.text
+
+
+def test_help_works_for_the_cli_and_every_subcommand(capsys):
+    """`--help` is the ingest image's default command, and deploy.yml runs it to check a new image starts. argparse
+    formats help text with `%`, so a bare percent sign in any help string (it was "8%" once) made it raise."""
+    import re
+
+    with pytest.raises(SystemExit) as top:
+        cli.main(["--help"])
+    assert top.value.code == 0
+    commands = re.search(r"\{([^}]+)\}", capsys.readouterr().out).group(1).split(",")
+    assert {"crawl", "merge", "enrich-week", "build", "egress-check"} <= set(commands)
+    for command in commands:
+        with pytest.raises(SystemExit) as sub:
+            cli.main([command, "--help"])
+        assert sub.value.code == 0, command
+        assert f"usage: coffeedata {command}" in capsys.readouterr().out, command
