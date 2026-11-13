@@ -36,3 +36,7 @@ src/terraform/**/*.json
 
 # Local PR review notes; never committed.
 .context/
+dbt_usage/target/
+dbt_usage/logs/
+dbt_usage/.user.yml
+lake-usage/

@@ -1121,6 +1121,72 @@ def cmd_importer_build(args: argparse.Namespace) -> bool:
     return ok
 
 
+def cmd_usage_build(args: argparse.Namespace) -> bool:
+    """The usage reports: the private dbt project (dbt_usage/) over $COFFEEDATA_USAGE, read only, into its own
+    database, build/usage.duckdb, after checking the geo files config/geo.lock pins. Exits 1 if a model or check
+    failed (the search-text detector included). Prints counts only: dbt's output goes to --log-file (default
+    build/usage-dbt.log, never the console), since a failing query's error could quote a search. With --alerts-out,
+    writes the detector's triage alert (counts and pattern names, never text; "not measured" when the models didn't
+    build) for `python -m coffeedata.triage prod`."""
+    import tempfile
+
+    import duckdb
+
+    from . import usage_build
+
+    catalog = None
+    if args.catalog:
+        catalog = {t: str((args.catalog / f"{t}.parquet").resolve()) for t in ("dim_roaster", "dim_coffee")}
+    with tempfile.TemporaryDirectory() as target:
+        ok = usage_build.build(catalog=catalog, today=_today(), target=Path(target), log=args.log_file)
+        counts = usage_build.run_counts(Path(target))
+        db = usage_build.ROOT / usage_build.DB
+        found: list | None = None
+        if db.exists():
+            try:
+                found = usage_build.detector_counts(db, Path(target))
+            except (duckdb.Error, ValueError):
+                found = None
+    alert = usage_build.detector_alert(found)
+    if args.alerts_out:
+        args.alerts_out.write_text(json.dumps([alert], indent=1))
+    _print({"build": "passed" if ok else "failed", "dbt": counts, "detector": alert["summary"]})
+    return ok
+
+
+def cmd_geo_update(args: argparse.Namespace) -> None:
+    """Prepare a new pinned geo database (geo.py) from DB-IP's and GeoNames' downloads, measure what masking costs on
+    it, and print the lock entries; --write-lock replaces config/geo.lock (a reviewed PR's change). Uploading the two
+    files to the usage dataset's geo/ folder is the owner's step. With --old-geo, prints how many stored events would
+    change city."""
+    from . import geo
+
+    out = args.out
+    dbip = f"geo/dbip-city-lite-{args.dbip_release[:7]}.parquet"
+    cities = f"geo/geonames-{args.cities_release}.parquet"
+    measured = geo.prepare_dbip(args.dbip, out / dbip)
+    named = geo.prepare_cities(args.cities, args.admin1, out / cities)
+    entries = {
+        geo.DBIP: {"file": dbip, "release": args.dbip_release, "sha256": geo.sha256(out / dbip),
+                   "source": args.dbip_url or geo.DBIP_URL.format(month=args.dbip_release[:7]),
+                   "source_sha256": geo.sha256(args.dbip), "licence": "CC BY 4.0",
+                   "attribution": "IP Geolocation by DB-IP (https://db-ip.com)"},
+        geo.CITIES: {"file": cities, "release": args.cities_release, "sha256": geo.sha256(out / cities),
+                     "source": geo.CITIES_URL, "source_sha256": geo.sha256(args.cities),
+                     "admin1_source": geo.ADMIN1_URL, "admin1_sha256": geo.sha256(args.admin1),
+                     "licence": "CC BY 4.0", "attribution": "City populations by GeoNames (https://www.geonames.org)"},
+    }  # fmt: skip
+    _print({"dbip": measured, "cities": named})
+    if args.old_geo:
+        from .usage_build import dataset, sources
+
+        _print({"events_changing_city": geo.changed_events(sources(dataset()), args.old_geo, out / dbip)})
+    text = geo.render_lock(entries)
+    print(text)
+    if args.write_lock:
+        geo.LOCK.write_text(text)
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1411,6 +1477,33 @@ def main(argv: list[str] | None = None) -> None:
         help="after a build that passed, send importer_offers to the private dataset's derived/ (replaced each "
         "build; needs an hf:// COFFEEDATA_IMPORTERS)",
     )
+
+    ub = add(
+        "usage-build",
+        cmd_usage_build,
+        "derive the usage reports (private dbt project) from $COFFEEDATA_USAGE into their own private database",
+    )
+    ub.add_argument(
+        "--log-file",
+        type=Path,
+        help="where dbt's output goes (default build/usage-dbt.log; never the console)",
+    )
+    ub.add_argument(
+        "--catalog", type=Path, help="a folder with the served release's dim_roaster/dim_coffee.parquet"
+    )
+    ub.add_argument("--alerts-out", type=Path, help="write the detector's triage alert JSON here")
+    gu = add("geo-update", cmd_geo_update, "prepare a new pinned IP-to-city database and its lock entries")
+    gu.add_argument("--dbip", type=Path, required=True, help="DB-IP IP to City Lite CSV download (.csv.gz)")
+    gu.add_argument("--dbip-release", required=True, help="its release date, YYYY-MM-DD")
+    gu.add_argument("--dbip-url", help="where it was downloaded (default: DB-IP's free URL for that month)")
+    gu.add_argument("--cities", type=Path, required=True, help="GeoNames cities500.zip")
+    gu.add_argument("--admin1", type=Path, required=True, help="GeoNames admin1CodesASCII.txt")
+    gu.add_argument("--cities-release", required=True, help="the GeoNames download's date, YYYY-MM-DD")
+    gu.add_argument("--out", type=Path, default=Path("build/geo-update"))
+    gu.add_argument(
+        "--old-geo", type=Path, help="the locked DB-IP parquet, to count events whose city would change"
+    )
+    gu.add_argument("--write-lock", action="store_true", help="replace config/geo.lock")
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 
