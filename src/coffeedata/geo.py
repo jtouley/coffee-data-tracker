@@ -294,10 +294,10 @@ def changed_events(sources: list[str], old: Path, new: Path) -> int:
                 f"from p asof left join read_parquet('{path}') as r on p.ip_hex >= r.ip_start"
             )
 
-        (changed,) = con.execute(
+        row = con.execute(
             f"select coalesce(sum(a.n), 0) from ({place(old)}) as a inner join ({place(new)}) as b using (ip_hex) "
             "where a.place is distinct from b.place"
         ).fetchone()
-        return int(changed)
+        return int(row[0]) if row else 0  # an aggregate always returns one row; fetchone() is typed Optional
     finally:
         con.close()
