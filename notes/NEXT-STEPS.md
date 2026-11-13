@@ -357,6 +357,10 @@ Backlog, not started until the owner says so:
   by-hand Cloud Build route stays only as the runbook fallback. Terraform moves into GitHub too: plan posted on the PR,
   apply waits for the owner's Approve click in a protected environment. Needs the ruleset on main first; design in the
   session scratchpad (design-tf-ci), its own high-review PRs after cutover 2.
+- Terraform in CI (owner, 2026-11-13): the second approver account and the terraform-apply environment are NOT
+  happening now. Continue without them: checked-in tfvars and guard scripts, then the read-only plan-on-PR workflow,
+  after #153 and #154 land. No apply workflow and no write identity until the owner sets up a separate approver; the
+  apply stays in the owner's shell. Reason: this session acts as jtouley with admin, so jtouley-as-approver is no gate.
 - Royal derivation: fixed in #152 (owner asked, 2026-11-12). Reviewed, CI green, held as draft for the held-out score:
   per CLAUDE.md it waits for the first scheduled week after 11-18 (week 11-09 was read while building). Then score main
   and #152 on a hash split grouped by lot, two labelers plus a tiebreak, Wilson intervals; merge if not worse.
