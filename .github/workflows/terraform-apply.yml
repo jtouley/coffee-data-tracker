@@ -30,12 +30,17 @@ on:
       - ".github/workflows/terraform-apply.yml"
   workflow_dispatch:
 permissions: {}
-# One at a time, never cancelled: a run waiting for its approval holds the group, and later runs wait behind it.
-# A run you won't approve: Reject it (or cancel it) and the next one goes ahead. GitHub ends an unanswered one after
-# 30 days. Terraform's state lock also covers the owner's shell.
+# One at a time, never cancelled while running: a run waiting for its approval holds the group. GitHub keeps one
+# pending run behind it, the newest: a newer push replaces an older pending run (which never planned, so nothing is
+# lost; the newest commit's plan covers it). A run you won't approve: Reject it and the pending one goes ahead.
+# GitHub ends an unanswered one after 30 days. Terraform's state lock also covers the owner's shell.
 concurrency:
   group: terraform-apply
   cancel-in-progress: false
+# bash -eo pipefail in every step: a failed command inside a pipeline fails the step.
+defaults:
+  run:
+    shell: bash
 env:
   TF_ROOT: src/terraform
   TF_IN_AUTOMATION: "1"
@@ -145,8 +150,13 @@ jobs:
           python3 -I "$GUARD" check "$RUNNER_TEMP/plan.json"
           python3 -I "$GUARD" render "$RUNNER_TEMP/plan.json" >"$RUNNER_TEMP/render.md"
           # What the fresh plan before the apply must match: actions, address, and the planned values, hashed.
-          changeset=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
-            | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/plan.json" | sha256sum | cut -d' ' -f1)
+          # Moves, imports and output changes alone are real changes too (an empty list here): only a plan JSON that
+          # can't be read stops the run.
+          jq -e '.resource_changes | type == "array"' "$RUNNER_TEMP/plan.json" >/dev/null \
+            || { echo "::error::Couldn't read the plan's change set."; exit 1; }
+          changes=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
+            | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/plan.json")
+          changeset=$(printf '%s' "$changes" | sha256sum | cut -d' ' -f1)
           rm -f "$RUNNER_TEMP/plan.json"
           { echo "changed=true"; echo "changeset=$changeset"; } >> "$GITHUB_OUTPUT"
       - name: Save the plan and show what is to be approved
@@ -317,8 +327,13 @@ jobs:
             terraform -chdir="$TF_ROOT" show -json -no-color "$RUNNER_TEMP/fresh" >"$RUNNER_TEMP/fresh.json" 2>"$logs/show.log"
           ) || { scrubbed plan; stop "The fresh plan for the drift check failed. Nothing was applied."; }
           rm -f "$RUNNER_TEMP/fresh"
-          fresh=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
-            | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/fresh.json" | sha256sum | cut -d' ' -f1)
+          jq -e '.resource_changes | type == "array"' "$RUNNER_TEMP/fresh.json" >/dev/null \
+            || stop "Couldn't read the fresh plan. Nothing was applied."
+          changes=$(jq -cS '[.resource_changes[] | select(.change.actions != ["no-op"])
+            | [.address, .change.actions, .change.after, .change.after_unknown]] | sort' "$RUNNER_TEMP/fresh.json") \
+            || stop "Couldn't read the fresh plan. Nothing was applied."
+          [ -n "$changes" ] || stop "Couldn't read the fresh plan. Nothing was applied."
+          fresh=$(printf '%s' "$changes" | sha256sum | cut -d' ' -f1)
           [ "$fresh" = "$CHANGESET" ] || stop "The infrastructure changed since the plan (a fresh plan differs from the approved one). Run the workflow again for a new plan. Nothing was applied."
           rm -f "$RUNNER_TEMP"/*.json
 

@@ -3,6 +3,7 @@
     raw         ingest -> lake          snapshots, bodies, fetches, and parked progress files
     manifest    every job -> control    run_manifests (the roasters an ingest sets out to fetch) and job_manifests
     enrichment  enrichment job -> lake  enrichments (Claude's llm rows; older lakes also hold crawl-time rules rows)
+    usage       collector -> usage lake usage_events (anonymous search, filter and click-out events; private)
 
 Each is written to contracts/internal/<name>.odcs.yaml, from lake.SCHEMAS (columns and types) and contract_docs
 (descriptions and quality rules). They are internal: never published, and nothing reads them at runtime; the
@@ -32,7 +33,7 @@ import pyarrow as pa
 import yaml
 
 from . import contract_docs
-from .lake import FETCH_STATUSES, GLOBS, SCHEMAS
+from .lake import FETCH_STATUSES, GLOBS, SCHEMAS, USAGE_VALUES
 from .models import CatalogItem
 
 # The repo's contracts/internal/: this assumes a source or editable install, which is fine because only the
@@ -96,6 +97,20 @@ CONTRACTS: dict[str, dict[str, Any]] = {
         "producer": "post-load enrichment job (enrich-week)",
         "producer_code": ["src/coffeedata/enrich.py"],
         "consumers": ["dbt (stg_enrichments, dim_coffee)"],
+    },
+    "usage": {
+        "tables": ["usage_events"],
+        "producer": "the usage collector (app/usage.py, POST /e on its run.app address)",
+        "producer_code": ["app/usage.py", "app/usage_events.py"],
+        # What the page scripts send the collector: the envelope, each event's fields and the collector's rules.
+        "links": [
+            (
+                "contracts/internal/usage-wire.schema.json",
+                "The wire format the page scripts send (JSON Schema)",
+            )
+        ],
+        "consumers": ["dbt (models/usage/: stg_usage_events, int_usage_location)"],
+        "values": {f"usage_events.{c}": list(v) for c, v in USAGE_VALUES.items()},
     },
 }
 
@@ -193,6 +208,7 @@ def generate(name: str, version: str) -> dict:
         ),
         ("src/coffeedata/raw_contracts.py", "implementation", "The generator of this file"),
         *((p, "implementation", "Producer") for p in spec["producer_code"]),
+        *((p, "implementation", d) for p, d in spec.get("links", [])),
         (
             "tests/test_raw_contracts.py",
             "implementation",

@@ -7,18 +7,21 @@ acknowledged without writing; anything else is a correction (a new record, lates
 
 from __future__ import annotations
 
+import hashlib
 import logging
 import threading
 import time
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
 from typing import Any
 
+import pyarrow.parquet as pq
 from pydantic import BaseModel, ValidationError
 
 from coffeedata import shots
-from coffeedata.lake import Lake
-from coffeedata.models import Bag, Equipment, Shot
+from coffeedata.lake import Lake, no_files
+from coffeedata.models import Bag, Equipment, Rating, RecResponse, Shot
 
 from . import logs
 
@@ -34,6 +37,8 @@ MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is lo
 # crashing the only instance, which Cloud Run would answer with "no available instance" until another starts.
 STARTUP_READS = 3
 SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
+SLATE_TTL = 600  # seconds the picks export (marts/mart_rec_slate.parquet) is kept before it's read again
+SLATE_RECHECK = 60  # an answer for a coffee not in the copy held reads it again, at most this often (seconds)
 
 
 class NotFound(KeyError):
@@ -42,6 +47,92 @@ class NotFound(KeyError):
 
 class Invalid(ValueError):
     """A request that can't be applied, with a message to show."""
+
+
+class Unavailable(RuntimeError):
+    """Something a write is checked against (the catalog, the picks) couldn't be read: try again later."""
+
+
+class NotInTest(PermissionError):
+    """Their test records were erased, and they haven't joined the test again since."""
+
+
+ERASURES_TTL = 5.0  # seconds a read of the erasures is reused; erase.SETTLE waits far longer than this
+
+
+class Erasures:
+    """The erasures of people's "Your next bag" records (recs_erasures in the users dataset, written by
+    `delete-user --only-recs`), read again before every rating and answer read or written: the command runs while
+    the app does, and the app learns of it only from the dataset.
+
+    The dataset's folder list is listed afresh for each read, never taken from the process's cache (review B4): an
+    app that listed the dataset before the first erasure would otherwise never look for one. Only a fresh listing
+    without the folder means "no erasures"; any other failure (a 404 for a folder that is listed is an auth
+    failure) is Unavailable, so writes wait. A read is reused for ERASURES_TTL, and never across an erasure made in
+    this process (erase.ERASURES)."""
+
+    def __init__(self, users: Lake, ttl: float = ERASURES_TTL):
+        self.users, self.ttl = users, ttl
+        self._cache: tuple[dict[str, tuple[datetime, frozenset[str]]], float, int] | None = None
+        self._lock = threading.Lock()
+
+    def _sources(self) -> list[str]:
+        from coffeedata import lake as lake_mod
+
+        out = [str(self.users.root / lake_mod.GLOBS["recs_erasures"])]
+        if self.users.remote:
+            lake_mod._REMOTE_FOLDERS.pop(self.users.url, None)  # a fresh listing, not this process's last one
+            folders = lake_mod.remote_folders(self.users.url)
+            if folders is None:
+                raise Unavailable("Couldn't check your test records right now. Try again shortly.")
+            if "recs_erasures" in folders:
+                out.append(f"{self.users.url}/{lake_mod.GLOBS['recs_erasures']}")
+        return out
+
+    def _read(self) -> list[tuple]:
+        if "recs_erasures" not in self.users.tables:
+            return []
+        try:
+            files = ", ".join(f"'{s}'" for s in self._sources())
+            return (
+                self.users.connect()
+                .execute(
+                    "select user_id, logged_at, rating_ids from "
+                    f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
+                )
+                .fetchall()
+            )
+        except Unavailable:
+            raise
+        except Exception as e:  # noqa: BLE001 - duckdb's IOException, or the network: fail closed
+            log.warning("reading the test erasures failed (%s)", type(e).__name__)
+            raise Unavailable("Couldn't check your test records right now. Try again shortly.") from None
+
+    @staticmethod
+    def _fold(rows: list[tuple]) -> dict[str, tuple[datetime, frozenset[str]]]:
+        out: dict[str, tuple[datetime, frozenset[str]]] = {}
+        for uid, at, ids in rows:
+            if uid is None or at is None:
+                continue
+            prev = out.get(uid)
+            out[uid] = (
+                max(at, prev[0]) if prev else at,
+                frozenset(ids or ()) | (prev[1] if prev else frozenset()),
+            )
+        return out
+
+    def all(self, fresh: bool = False) -> dict[str, tuple[datetime, frozenset[str]]]:
+        from coffeedata import erase
+
+        with self._lock:
+            hit, now = self._cache, time.monotonic()
+            if fresh or hit is None or now - hit[1] >= self.ttl or hit[2] != erase.ERASURES:
+                generation = erase.ERASURES
+                hit = self._cache = (self._fold(self._read()), time.monotonic(), generation)
+            return hit[0]
+
+    def of(self, user_id: str, fresh: bool = False) -> tuple[datetime, frozenset[str]] | None:
+        return self.all(fresh).get(user_id)
 
 
 @dataclass
@@ -59,6 +150,13 @@ class _Pending:
     done: threading.Event = field(default_factory=threading.Event)
 
 
+REC_TABLES = ("ratings", "rec_responses")
+
+
+def _never_joined(user_id: str) -> None:
+    return None
+
+
 def _model[M: BaseModel](cls: type[M], row: dict) -> M:
     return cls(**{k: v for k, v in row.items() if k in cls.model_fields and v is not None})
 
@@ -68,6 +166,12 @@ def coffee_key(x: Shot | Bag) -> str:
     return x.coffee_id or f"freetext:{(x.coffee_freetext or '').strip().lower()}"
 
 
+def response_key(user_id: str, slate_id: str, coffee_id: str) -> str:
+    """One answer's key, also its file name stem: a catalog id ("roaster.com:123") isn't safe in a file name, so
+    the coffee is named by a hash of its id. The record itself carries the coffee_id."""
+    return f"{user_id}__{slate_id}__{hashlib.sha256(coffee_id.encode()).hexdigest()[:16]}"
+
+
 class Store:
     def __init__(self, lake: Lake, owner_id: str):
         self.lake, self.owner_id = lake, owner_id
@@ -75,21 +179,48 @@ class Store:
         self.shots: dict[str, Rec] = {}
         self.bags: dict[str, Rec] = {}
         self.equipment: dict[str, Rec] = {}
+        self.ratings: dict[str, Rec] = {}
+        self.responses: dict[str, Rec] = {}  # response_key -> the latest answer
+        self._slates: tuple[dict[str, set[tuple[str, str]]], float] | None = None  # user -> {(slate, coffee)}
+        self._slate_lock = threading.Lock()  # one read of the picks export at a time
+        self._slate_failed: float | None = None  # when the last read of it failed, to back off
+        # Whether an export was ever read: before PR 3's first one, "no export" is just empty.
+        self._slates_real = False
+        # One rating or answer write at a time per person: each reads what's stored, checks it and writes, and two
+        # at once could both pass a check or merge into the same old answer (review B1).
+        self._user_locks: dict[str, threading.Lock] = {}
+        # Erasures (delete-user --only-recs): user -> (when, the rating ids that went). Set by use_erasures.
+        self.erasures: Erasures | None = None
+        self.joined_at: Any = _never_joined  # when they last joined the test (Accounts.experiment_since)
+        self._dropped: set[str] = set()  # staged test records deleted before upload (erased): never stored
+        self._erased: dict[str, tuple[datetime, frozenset[str]]] = {}
         self._coffees: dict[str, tuple[dict | None, float]] = {}
         self._staged: dict[str, datetime] = {}
         self._pending: dict[tuple[str, str], _Pending] = {}  # the latest record per key still being published
-        for table, key, cls, into in (
-            ("shots", "shot_id", Shot, self.shots),
-            ("bags", "bag_id", Bag, self.bags),
-            ("equipment", "equipment_id", Equipment, self.equipment),
+        # (table, key, model, into, whether a record with no user is the owner's: those from before accounts are;
+        # the recommendation test's records always name their user)
+        for table, key, cls, into, owners in (
+            ("shots", "shot_id", Shot, self.shots, True),
+            ("bags", "bag_id", Bag, self.bags, True),
+            ("equipment", "equipment_id", Equipment, self.equipment, True),
+            ("ratings", "rating_id", Rating, self.ratings, False),
         ):
             rows = self._seed_shots() if table == "shots" else None
             for row in lake.latest(table, key, attempts=STARTUP_READS) if rows is None else rows:
-                row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
+                if owners:
+                    row["user_id"] = row["user_id"] or owner_id
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
                 except ValidationError as e:
                     log.warning("skipping %s %s: %s", table, row[key], e)
+        for row in lake.latest("rec_responses", ("user_id", "slate_id", "coffee_id"), attempts=STARTUP_READS):
+            try:
+                item = _model(RecResponse, row)
+            except ValidationError as e:
+                log.warning("skipping rec_responses %s: %s", row["slate_id"], e)
+                continue
+            key = response_key(row["user_id"], item.slate_id, item.coffee_id)
+            self.responses[key] = Rec(item, row["logged_at"])
 
     def _seed_shots(self) -> list[dict] | None:
         """Current shots from the weekly marts/fct_shot.parquet export plus the shot files written after it,
@@ -173,11 +304,15 @@ class Store:
 
     def coffee(self, coffee_id: str | None) -> dict | None:
         """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
+        return self._lookup(coffee_id)[0]
+
+    def _lookup(self, coffee_id: str | None) -> tuple[dict | None, bool]:
+        """A coffee's catalog facts, and whether the answer is known: False when the export couldn't be read."""
         if not coffee_id:
-            return None
+            return None, True
         hit = self._coffees.get(coffee_id)
         if hit and (hit[0] is not None or time.monotonic() - hit[1] < MISS_TTL):
-            return hit[0]
+            return hit[0], True
         src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
         try:
             cur = self.lake.connect().execute(
@@ -190,10 +325,10 @@ class Store:
             found = {k: v for k, v in zip(cols, row, strict=True) if k in keep} if row else None
         except Exception as e:  # noqa: BLE001 - no catalog export yet, or the network
             log.info("no catalog facts for %s: %s", coffee_id, e)
-            return None  # not cached: try again next time
+            return None, False  # not cached: try again next time
         # A coffee not in this week's export is asked again after MISS_TTL, not never.
         self._coffees[coffee_id] = (found, time.monotonic())
-        return found
+        return found, True
 
     def bags_of(self, user_id: str) -> list[Bag]:
         """This person's bags, the one used most recently first (a bag with no shots by when it was opened)."""
@@ -316,7 +451,15 @@ class Store:
 
     # --- writes --------------------------------------------------------------------------------------
 
-    def _commit(self, recs: dict[str, Rec], key: str, item: Any, table: str, deleted: bool = False) -> bool:
+    def _commit(
+        self,
+        recs: dict[str, Rec],
+        key: str,
+        item: Any,
+        table: str,
+        deleted: bool = False,
+        not_before: datetime | None = None,
+    ) -> bool:
         """One lake file for one record, published before returning; the cache changes only after that. Returns
         whether a record was written: one identical to the latest, stored or still being published, isn't.
 
@@ -342,7 +485,8 @@ class Store:
             # It failed to publish: look again, and write it if nothing else has.
         with self.lock:
             prev = recs.get(key)
-            after = max((t for t in (prev and prev.logged_at, self._staged.get(key)) if t), default=None)
+            stamps = (prev and prev.logged_at, self._staged.get(key), not_before)
+            after = max((t for t in stamps if t), default=None)
             if table == "shots":
                 at = shots.record(item, self.lake, deleted, after=after)
             else:
@@ -354,8 +498,17 @@ class Store:
             self._staged[key] = at  # the next record for this key sorts after this one, published or not
             mine = self._pending[mark] = _Pending(item, deleted)
         started = time.perf_counter()
+        rel = f"{table}/{key}__{at:%Y%m%dT%H%M%S}.parquet"
         try:
+            if table in REC_TABLES:
+                # Checked again just before the upload (and by the publish's own screen, for whatever it sends):
+                # a person erased since this write's own check gets nothing stored (review B5).
+                self._screen([self.lake.root / rel])
+                if rel in self._dropped:
+                    raise NotInTest(key)
             self.lake.publish(f"app: {table} {key}")
+            if table in REC_TABLES and rel in self._dropped:
+                raise NotInTest(key)
         except BaseException:
             with self.lock:
                 if self._pending.get(mark) is mine:
@@ -510,3 +663,262 @@ class Store:
         if not (prev and prev.item == bag):
             self._commit(self.bags, bag.bag_id, bag, "bags")
         return bag, matches
+
+    # --- the "Your next bag" test: coffee ratings and answers to the picks ----------------------------------------
+
+    def ratings_of(self, user_id: str) -> list[Rating]:
+        """This person's current ratings, oldest first, with any erasure of theirs read again first."""
+        with self._user_lock(user_id):
+            self._honour(user_id)
+            return self._ratings_of(user_id)
+
+    def responses_of(self, user_id: str, slate_id: str | None = None) -> list[RecResponse]:
+        with self._user_lock(user_id):
+            self._honour(user_id)
+            return self._responses_of(user_id, slate_id)
+
+    def _ratings_of(self, user_id: str) -> list[Rating]:
+        return [r.item for r in sorted(self._mine(self.ratings, user_id), key=lambda r: r.logged_at)]
+
+    def _responses_of(self, user_id: str, slate_id: str | None = None) -> list[RecResponse]:
+        return [
+            r.item
+            for r in list(self.responses.values())
+            if r.item.user_id == user_id and (slate_id is None or r.item.slate_id == slate_id)
+        ]
+
+    def _in_catalog(self, coffee_id: str) -> bool:
+        """Whether the catalog export has this coffee. Unavailable when the export couldn't be read, so a phone's
+        save is tried again rather than refused for good."""
+        found, known = self._lookup(coffee_id)
+        if not known:  # the read itself failed, whatever an older read said
+            raise Unavailable("The catalog isn't available right now. Try again shortly.")
+        return found is not None
+
+    def _read_slates(self) -> dict[str, set[tuple[str, str]]]:
+        """Every (slate_id, coffee_id) per person, from the picks export dbt writes (mart_rec_slate: user_id,
+        slate_id, position, coffee_id); none before the first export exists. Unavailable if the read fails, and if
+        the export goes missing after one was read (review S7): a missing file then is a failure, not "no picks"."""
+        src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("mart_rec_slate"))
+        try:
+            rows = (
+                self.lake.connect()
+                .execute(f"select user_id, slate_id, coffee_id from read_parquet([{src}])")
+                .fetchall()
+            )
+        except Exception as e:  # noqa: BLE001 - duckdb's IOException: no export yet, or the network
+            if not (no_files(e) or "404" in str(e)) or self._slates_real:
+                log.warning("reading the picks export failed (%s)", type(e).__name__)
+                raise Unavailable("Your picks couldn't be read right now. Try again shortly.") from None
+            rows = []
+        else:
+            self._slates_real = True  # an export exists: from now on, a missing one is a failed read
+        out: dict[str, set[tuple[str, str]]] = {}
+        for uid, sid, cid in rows:
+            out.setdefault(uid, set()).add((sid, cid))
+        return out
+
+    def slate_pairs(self, user_id: str) -> set[tuple[str, str]]:
+        """(slate_id, coffee_id) of every coffee this person was suggested, read again after SLATE_TTL."""
+        return self._slate_pairs(user_id, SLATE_TTL)[0]
+
+    def _slate_pairs(self, user_id: str, older_than: float) -> tuple[set[tuple[str, str]], bool]:
+        """The pairs, and whether they were read just now. The export is read again once the copy held is
+        `older_than` seconds old, by one request at a time. If that read fails the copy held is used; only with
+        none held is it Unavailable. After a failed read the export isn't tried again for SLATE_RECHECK (S8)."""
+        fresh = False
+        with self._slate_lock:
+            cached, now = self._slates, time.monotonic()
+            due = cached is None or now - cached[1] >= older_than
+            backing_off = self._slate_failed is not None and now - self._slate_failed < SLATE_RECHECK
+            if due and backing_off and cached is None:
+                raise Unavailable("Your picks couldn't be read right now. Try again shortly.")
+            if due and not backing_off:
+                try:
+                    cached = self._slates = (self._read_slates(), time.monotonic())
+                    self._slate_failed, fresh = None, True
+                except Unavailable:
+                    self._slate_failed = time.monotonic()
+                    if cached is None:
+                        raise
+        assert cached is not None  # every path above either read it, held it or raised
+        return cached[0].get(user_id, set()), fresh
+
+    def _in_slate(self, user_id: str, slate_id: str, coffee_id: str) -> None:
+        """Refuse (404) a coffee that isn't one of this person's picks, but only on a read made just now: one the
+        copy held lacks may be in an export published since, so the export is read again (at most once a
+        SLATE_RECHECK), and while that's too soon the answer is try-again (503), never a refusal of a new slate."""
+        pair = (slate_id, coffee_id)
+        for older_than in (SLATE_TTL, SLATE_RECHECK):
+            pairs, fresh = self._slate_pairs(user_id, older_than)
+            if pair in pairs:
+                return
+            if fresh:
+                raise NotFound(coffee_id)
+        raise Unavailable("Your picks may have just changed. This is sent again shortly.")
+
+    def use_erasures(self, erasures: Erasures, joined_at: Any) -> None:
+        """Honour the erasures from now on: those already recorded at once (at start), and each person's again
+        before every read and write of their ratings and answers."""
+        self.erasures, self.joined_at = erasures, joined_at
+        self.lake.screen = self._screen  # every upload of this lake drops erased test records first
+        for attempt in range(STARTUP_READS):
+            try:
+                found = erasures.all(fresh=True)
+                break
+            except Unavailable:
+                if attempt == STARTUP_READS - 1:
+                    # Not fatal: every read and write of someone's test records reads their erasure again.
+                    log.warning("the test erasures couldn't be read at start; each person's is read on use")
+                    return
+                time.sleep(2 ** (attempt + 1))
+        for user_id, marker in found.items():
+            self._apply_erasure(user_id, marker)
+
+    def _gone(self, user_id: str, marker: tuple[datetime, frozenset[str]], logged_at: datetime) -> bool:
+        """Whether a record of theirs logged then is erased: everything before a rejoin after the erasure, and
+        everything if they haven't joined again."""
+        joined = self.joined_at(user_id)
+        return not (joined and joined > marker[0]) or logged_at < joined
+
+    def _screen(self, paths: list[Path]) -> None:
+        """Delete the staged test records of erased people (review B5): a write that passed its check before the
+        erasure was visible, or one whose upload failed and still waits. Reads the erasures fresh; if that fails,
+        Unavailable, and nothing is uploaded."""
+        if self.erasures is None:
+            return
+        candidates = [p for p in paths if p.parent.name in REC_TABLES and "__" in p.name and p.exists()]
+        if not candidates:
+            return
+        markers = self.erasures.all(fresh=True)
+        for p in candidates:
+            try:
+                rows = pq.read_table(p, columns=["user_id", "logged_at"]).to_pylist()
+            except FileNotFoundError:
+                continue
+            for row in rows[:1]:
+                marker = markers.get(row["user_id"])
+                if marker and self._erased.get(row["user_id"]) != marker:
+                    self._apply_erasure(row["user_id"], marker)  # newly seen: their memory and files go too
+                if marker and self._gone(row["user_id"], marker, row["logged_at"]):
+                    p.unlink(missing_ok=True)
+                    self._dropped.add(p.relative_to(self.lake.root).as_posix())
+                    log.info("dropped an erased test record before upload")
+
+    def _apply_erasure(self, user_id: str, marker: tuple[datetime, frozenset[str]]) -> None:
+        """Drop from memory every rating and answer of theirs made before they joined the test again after the
+        erasure; all of them if they haven't. (A record made after the erasure but before a rejoin can only be
+        one this process wrote before it saw the erasure: the file went with the erasure.)"""
+        self._erased[user_id] = marker
+        with self.lock:
+            rating_ids = set(marker[1]) | {
+                r.item.rating_id for r in self.ratings.values() if r.item.user_id == user_id
+            }
+            for recs in (self.ratings, self.responses):
+                for key in [k for k, r in recs.items() if r.item.user_id == user_id
+                            and self._gone(user_id, marker, r.logged_at)]:  # fmt: skip
+                    del recs[key]
+        # Their files still here (staged for upload, or in a local lake) go too, every version.
+        root = self.lake.root
+        self._screen([*(f for rid in rating_ids for f in (root / "ratings").glob(f"{rid}__*.parquet")),
+                      *(root / "rec_responses").glob(f"{user_id}__*.parquet")])  # fmt: skip
+
+    def _honour(self, user_id: str) -> tuple[datetime, frozenset[str]] | None:
+        """Read the person's erasure again and apply it. Unavailable if it can't be read: a write then waits."""
+        if self.erasures is None:
+            return None
+        marker = self.erasures.of(user_id)
+        if marker:
+            self._apply_erasure(user_id, marker)
+        return marker
+
+    def erased_at(self, user_id: str) -> datetime | None:
+        """When the person's test records were last erased, read again now; None if never."""
+        with self._user_lock(user_id):
+            marker = self._honour(user_id)
+        return marker[0] if marker else None
+
+    def _floor(self, user_id: str, marker: tuple[datetime, frozenset[str]] | None) -> datetime | None:
+        """After an erasure, new records are stamped after the rejoin, which may be stamped ahead of the clock, so
+        the rule "nothing from before the rejoin" never drops one of them."""
+        return self.joined_at(user_id) if marker else None
+
+    def _may_take_part(self, user_id: str, marker: tuple[datetime, frozenset[str]] | None) -> None:
+        if marker:
+            joined = self.joined_at(user_id)
+            if not (joined and joined > marker[0]):
+                raise NotInTest(user_id)
+
+    def _user_lock(self, user_id: str) -> threading.Lock:
+        with self.lock:
+            return self._user_locks.setdefault(user_id, threading.Lock())
+
+    def save_rating(self, user_id: str, data: dict) -> tuple[Rating, bool]:
+        """A 1-5 rating of a catalog coffee. A correction (the same rating_id) keeps its coffee and context; a
+        rating that was undone stays undone. Returns the rating and whether a new record was written."""
+        rating = Rating(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
+        with self._user_lock(user_id):
+            marker = self._honour(user_id)
+            self._may_take_part(user_id, marker)
+            if marker and rating.rating_id in marker[1]:
+                raise Invalid("That rating was deleted at your request, so it can't be saved again.")
+            prev = self._owned(self.ratings, rating.rating_id, user_id)
+            if prev:
+                if prev.item.coffee_id != rating.coffee_id:
+                    raise Invalid("A rating can't move to another coffee. Rate that coffee instead.")
+                rating = rating.model_copy(update={"context": prev.item.context})
+                if prev.item == rating:
+                    return rating, False  # a resend, including one that arrives after Undo
+                if prev.deleted:
+                    raise Invalid("That rating was undone, so it can't be changed. Rate the coffee again.")
+            else:
+                if any(
+                    r.coffee_id == rating.coffee_id and r.context == rating.context
+                    for r in self._ratings_of(user_id)
+                ):
+                    raise Invalid("You've rated this coffee already. Change that rating instead.")
+                if not self._in_catalog(rating.coffee_id):
+                    raise Invalid("That coffee isn't in the catalog, so it can't be rated here.")
+            return rating, self._commit(
+                self.ratings, rating.rating_id, rating, "ratings", not_before=self._floor(user_id, marker)
+            )
+
+    def retract_rating(self, user_id: str, rating_id: str) -> bool:
+        """Undo: a retraction record (deleted = true), never a delete. Retracting twice writes once."""
+        with self._user_lock(user_id):
+            marker = self._honour(user_id)  # an erased rating is gone: nothing to undo
+            prev = self._owned(self.ratings, rating_id, user_id)
+            if prev is None:
+                raise NotFound(rating_id)
+            if prev.deleted:
+                return False
+            floor = self._floor(user_id, marker)
+            return self._commit(self.ratings, rating_id, prev.item, "ratings", deleted=True, not_before=floor)
+
+    def save_rec_response(self, user_id: str, data: dict) -> tuple[RecResponse, bool]:
+        """An answer to one suggested coffee: interest, the pick, or both. What the body leaves out is kept from
+        the last answer. Picking a coffee un-picks the slate's other one, with a new record for it."""
+        data = {k: v for k, v in data.items() if k != "user_id"}
+        item = RecResponse(**data, user_id=user_id)
+        self._in_slate(user_id, item.slate_id, item.coffee_id)
+        key = response_key(user_id, item.slate_id, item.coffee_id)
+        with self._user_lock(user_id):
+            marker = self._honour(user_id)
+            self._may_take_part(user_id, marker)
+            floor = self._floor(user_id, marker)
+            prev = self.responses.get(key)
+            if prev:
+                kept = prev.item.model_dump(exclude={"user_id"})
+                item = RecResponse(
+                    **({k: v for k, v in kept.items() if k not in data} | data), user_id=user_id
+                )
+            if item.interest is None and not item.picked:
+                raise Invalid("Choose how this coffee sounds, or pick it.")
+            written = self._commit(self.responses, key, item, "rec_responses", not_before=floor)
+            if item.picked:
+                for other in self._responses_of(user_id, item.slate_id):
+                    if other.picked and other.coffee_id != item.coffee_id:
+                        unpick = other.model_copy(update={"picked": False})
+                        okey = response_key(user_id, other.slate_id, other.coffee_id)
+                        self._commit(self.responses, okey, unpick, "rec_responses", not_before=floor)
+            return item, written

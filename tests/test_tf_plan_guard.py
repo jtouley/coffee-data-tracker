@@ -371,6 +371,277 @@ def test_moves_and_imports_are_listed_and_a_pool_import_is_refused():
     assert guard.workload_identity(plan(d)) == ["google_iam_workload_identity_pool.imported"]
 
 
+APPLY_SA = "serviceAccount:registry-coffee-tf-apply@coffee-data-tracker.iam.gserviceaccount.com"
+
+
+@pytest.mark.parametrize(
+    "rtype, after, after_unknown",
+    [
+        # a key for a guarded account, or for any account: sign-in is keyless
+        ("google_service_account_key", {"service_account_id": "registry-coffee-deploy"}, None),
+        (
+            "google_service_account_key",
+            {"service_account_id": "projects/p/serviceAccounts/other@p.iam.gserviceaccount.com"},
+            None,
+        ),
+        # service account IAM naming its account by numeric unique id
+        (
+            "google_service_account_iam_member",
+            {
+                "service_account_id": "projects/p/serviceAccounts/104729000000000000001",
+                "role": "roles/viewer",
+                "member": "user:a@example.com",
+            },
+            None,
+        ),
+        # a secret or bucket grant to the apply (or plan) account
+        (
+            "google_secret_manager_secret_iam_member",
+            {"secret_id": "HF_TOKEN", "role": "roles/secretmanager.secretAccessor", "member": APPLY_SA},
+            None,
+        ),
+        (
+            "google_storage_bucket_iam_member",
+            {
+                "bucket": "b",
+                "role": "roles/storage.objectViewer",
+                "member": APPLY_SA.replace("apply", "plan"),
+            },
+            None,
+        ),
+        # a grant to the deploy account beyond its own registry and service roles
+        (
+            "google_secret_manager_secret_iam_member",
+            {"secret_id": "HF_TOKEN", "role": "roles/secretmanager.secretAccessor", "member": DEPLOY},
+            None,
+        ),
+        # project-wide impersonation or key roles, to anyone
+        (
+            "google_project_iam_member",
+            {"project": "p", "role": "roles/iam.serviceAccountTokenCreator", "member": "user:a@example.com"},
+            None,
+        ),
+        (
+            "google_project_iam_member",
+            {"project": "p", "role": "roles/iam.serviceAccountKeyAdmin", "member": "group:g@example.com"},
+            None,
+        ),
+        (
+            "google_project_iam_binding",
+            {"project": "p", "role": "roles/iam.serviceAccountUser", "members": ["user:a@example.com"]},
+            None,
+        ),
+        # impersonation of another account, on that account
+        (
+            "google_service_account_iam_member",
+            {
+                "service_account_id": "projects/p/serviceAccounts/registry-coffee-run@p.iam.gserviceaccount.com",
+                "role": "roles/iam.serviceAccountTokenCreator",
+                "member": "user:a@example.com",
+            },
+            None,
+        ),
+    ],
+)
+def test_keys_numeric_ids_grants_and_impersonation_are_refused(rtype, after, after_unknown):
+    d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
+    got = results(d)
+    assert got.pop("guarded-accounts") == [f"{rtype}.extra"]
+    assert not any(got.values())
+
+
+def test_a_project_role_unknown_at_plan_is_refused():
+    rtype = "google_project_iam_member"
+    d = _sa_change(
+        doc("good"), f"{rtype}.extra", rtype, {"project": "p", "member": "user:a@example.com"}, {"role": True}
+    )
+    assert guard.guarded_accounts(plan(d)) == [f"{rtype}.extra"]  # the workload-identity guard refuses it too
+
+
+def test_ordinary_grants_pass():
+    d = _sa_change(
+        doc("good"),
+        "google_secret_manager_secret_iam_member.run",
+        "google_secret_manager_secret_iam_member",
+        {
+            "secret_id": "HF_TOKEN",
+            "role": "roles/secretmanager.secretAccessor",
+            "member": "serviceAccount:registry-coffee-run@p.iam.gserviceaccount.com",
+        },
+    )
+    _sa_change(
+        d,
+        "google_project_iam_member.viewer",
+        "google_project_iam_member",
+        {"project": "p", "role": "roles/viewer", "member": "user:a@example.com"},
+    )
+    assert guard.guarded_accounts(plan(d)) == []
+
+
+@pytest.mark.parametrize(
+    "rtype, after",
+    [
+        (
+            "google_compute_router_peer",
+            {"name": "bgp", "router": "registry-coffee-ingest", "region": "us-central1"},
+        ),
+        ("google_compute_router_interface", {"name": "if", "router": "registry-coffee-ingest"}),
+        (
+            "google_compute_vpn_tunnel",
+            {"name": "t", "router": "projects/p/regions/r/routers/registry-coffee-ingest"},
+        ),
+        ("google_compute_network_firewall_policy_association", {"name": "a", "attachment_target": NETWORK}),
+        ("google_vpc_access_connector", {"name": "c", "network": "registry-coffee-ingest"}),
+    ],
+)
+def test_anything_else_on_the_ingest_network_or_router_is_refused(rtype, after):
+    d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after)
+    got = results(d)
+    assert got.pop("shopify-network-path") == [f"{rtype}.extra"]
+    assert not any(got.values())
+
+
+def _service(after_image, before_image="us-docker.pkg.dev/cloudrun/container/hello", actions=("update",)):
+    def side(image):
+        return {"name": "registry-coffee", "template": [{"containers": [{"image": image}]}]}
+
+    return {
+        "address": "google_cloud_run_v2_service.app",
+        "type": "google_cloud_run_v2_service",
+        "change": {
+            "actions": list(actions),
+            "before": None if before_image is None else side(before_image),
+            "after": side(after_image),
+            "after_unknown": {},
+        },
+    }
+
+
+APP = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:" + "d" * 64
+
+
+@pytest.mark.parametrize(
+    "rc, refused",
+    [
+        (_service(APP), False),
+        (_service("us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app:latest"), True),
+        (_service("evil.example/app@sha256:" + "d" * 64), True),
+        (
+            _service(
+                "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/ingest@sha256:" + "d" * 64
+            ),
+            True,
+        ),
+        (_service("x", before_image="x"), False),  # unchanged: deploys set the image, not Terraform
+        (_service(APP, before_image=None, actions=("create",)), False),
+    ],
+)
+def test_a_service_image_terraform_sets_must_be_the_app_pinned(rc, refused):
+    d = doc("good")
+    d["resource_changes"].append(rc)
+    assert guard.app_image_pinned(plan(d)) == (["google_cloud_run_v2_service.app"] if refused else [])
+
+
+def test_render_says_what_changes_never_values():
+    d = doc("good")
+    rc = _service(APP)
+    rc["change"]["before"]["labels"] = {"team": "a"}
+    rc["change"]["after"]["labels"] = {"team": "b", "SECRET_KEY_NAME": "x"}
+    d["resource_changes"].append(rc)
+    text = guard.render(plan(d))
+    line = next(x for x in text.splitlines() if "google_cloud_run_v2_service.app" in x)
+    assert "template.containers.image" in line and "labels.team" in line
+    assert "SECRET_KEY_NAME" not in line and "1 more not shown" in line
+    assert APP not in text and "evil" not in text
+
+
+def test_a_value_equal_to_the_routers_name_is_not_an_attachment():
+    # the ingest account's id is "<service>-ingest", the router's name: it isn't on the network
+    d = _sa_change(
+        doc("good"),
+        "google_service_account.ingest",
+        "google_service_account",
+        {"account_id": "registry-coffee-ingest"},
+    )
+    d["resource_changes"][-1]["change"]["actions"] = ["update"]
+    assert guard.shopify_network_path(plan(d)) == []
+
+
+def test_a_grant_to_an_account_created_in_the_same_plan_passes():
+    d = _sa_change(
+        doc("good"),
+        "google_service_account.new",
+        "google_service_account",
+        {"account_id": "registry-coffee-new"},
+    )
+    _sa_change(
+        d,
+        "google_project_iam_member.new",
+        "google_project_iam_member",
+        {"project": "p", "role": "roles/viewer"},
+        {"member": True},
+    )
+    _sa_change(
+        d,
+        "google_secret_manager_secret_iam_member.new",
+        "google_secret_manager_secret_iam_member",
+        {"secret_id": "HF_TOKEN", "role": "roles/secretmanager.secretAccessor"},
+        {"member": True},
+    )
+    assert guard.guarded_accounts(plan(d)) == []
+
+
+def test_the_deploy_account_gets_only_its_two_roles():
+    rtype = "google_cloud_run_v2_service_iam_member"
+    d = _sa_change(doc("good"), f"{rtype}.deploy_admin", rtype, {"role": "roles/run.admin", "member": DEPLOY})
+    _sa_change(d, f"{rtype}.deploy", rtype, {"role": "roles/run.developer", "member": DEPLOY})
+    assert guard.guarded_accounts(plan(d)) == [f"{rtype}.deploy_admin"]
+
+
+@pytest.mark.parametrize(
+    "rtype, after",
+    [
+        ("google_project_iam_custom_role", {"role_id": "x", "permissions": ["iam.serviceAccounts.actAs"]}),
+        (
+            "google_storage_bucket_iam_member",
+            {"bucket": "b", "role": "projects/p/roles/x", "member": "user:a@example.com"},
+        ),
+        (
+            "google_storage_bucket_iam_member",
+            {
+                "bucket": "b",
+                "role": "roles/iam.serviceAccountOpenIdTokenCreator",
+                "member": "user:a@example.com",
+            },
+        ),
+        (
+            "google_project_iam_member",
+            {"project": "p", "role": "roles/iam.roleAdmin", "member": "user:a@example.com"},
+        ),
+    ],
+)
+def test_custom_roles_and_impersonation_roles_are_refused_anywhere(rtype, after):
+    d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after)
+    assert guard.guarded_accounts(plan(d)) == [f"{rtype}.extra"]
+
+
+def test_a_principal_set_member_with_an_ordinary_role_is_a_workload_identity_grant():
+    rtype = "google_project_iam_member"
+    member = "principalSet://iam.googleapis.com/projects/1/locations/global/workloadIdentityPools/github/attribute.repository/x/y"
+    d = _sa_change(
+        doc("good"), f"{rtype}.extra", rtype, {"project": "p", "role": "roles/viewer", "member": member}
+    )
+    assert guard.workload_identity(plan(d)) == [f"{rtype}.extra"]
+
+
+def test_creating_the_service_with_its_placeholder_image_passes():
+    d = doc("good")
+    d["resource_changes"].append(
+        _service("us-docker.pkg.dev/cloudrun/container/hello", before_image=None, actions=("create",))
+    )
+    assert guard.app_image_pinned(plan(d)) == []
+
+
 def test_true_is_not_one():
     assert not guard.jq_equal(True, 1)
     assert guard.jq_equal(1, 1.0)

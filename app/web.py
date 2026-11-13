@@ -224,8 +224,8 @@ class RejectProbes:
 def client_ip(request: Request, hops: int) -> str:
     """The phone's address for rate limits. Behind `hops` proxies that each append to X-Forwarded-For, it's that
     many entries from the right; anything further left was sent by the client and can't be trusted."""
-    if hops > 0:
-        chain = [p.strip() for p in request.headers.get("x-forwarded-for", "").split(",") if p.strip()]
-        if len(chain) >= hops:
-            return chain[-hops]
-    return request.client.host if request.client else ""
+    from .limits import forwarded_client
+
+    return forwarded_client(
+        request.headers.get("x-forwarded-for", ""), request.client.host if request.client else None, hops
+    )

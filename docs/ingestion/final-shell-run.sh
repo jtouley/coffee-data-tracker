@@ -69,6 +69,14 @@ cd "$CHECKOUT"
 git fetch -q origin main
 git checkout -q --detach origin/main
 echo "main at $(git log -1 --oneline)"
+# local edits or untracked .tf files would be planned and applied too (terraform.tfvars is ignored, so it's fine)
+[ -z "$(git status --porcelain)" ] || die "the checkout has local changes or untracked files: clean it first (git status)"
+# Terraform loads every *.tf, *.tf.json and *.auto.tfvars(.json) in a root, gitignored or not: refuse any but your
+# terraform.tfvars, so only main's configuration is planned.
+loaded=$(git status --porcelain --ignored -- src/terraform \
+  | grep -E '^!! src/terraform/(bootstrap/)?[^/]+\.(tf|tf\.json|tfvars|tfvars\.json)$' \
+  | grep -vx '!! src/terraform/terraform.tfvars' || true)
+[ -z "$loaded" ] || die "ignored files Terraform would load: ${loaded//'!! '/}"
 for f in "$BOOT/main.tf" scripts/tf_plan_guard.py .github/workflows/terraform-apply.yml "$TF/ci.tfvars"; do
   [ -f "$f" ] || die "main has no $f: merge the Terraform-in-GitHub PRs first"
 done
@@ -118,12 +126,21 @@ rc=0
 python3 -I scripts/tf_plan_guard.py check "$WORK/main.json" || rc=$?
 [ "$rc" != 2 ] || die "the guard can't read this plan"
 if [ "$rc" = 1 ]; then
-  # Two guards protect what only you change, here: who can deploy, plan or apply. Anything else stops the run.
-  other=$(python3 -I scripts/tf_plan_guard.py check "$WORK/main.json" | sed -n 's/^FAIL \([a-z-]*\).*/\1/p' \
-    | grep -vxE 'workload-identity|guarded-accounts' || true)
+  # Two guards protect what only you change, here: who can deploy, plan or apply. And cutover 2 may still create the
+  # WooCommerce/generic NAT on the ingest router, which shopify-network-path refuses in CI: that one creation, alone,
+  # is yours to confirm too. Anything else stops the run.
+  out=$(python3 -I scripts/tf_plan_guard.py check "$WORK/main.json" || true)
+  other=$(sed -n 's/^FAIL \([a-z-]*\).*/\1/p' <<<"$out" | grep -vxE 'workload-identity|guarded-accounts' || true)
+  woo=google_compute_router_nat.woo_generic_egress
+  if [ "$other" = shopify-network-path ] && [ "$(sed -n 's/^FAIL shopify-network-path: //p' <<<"$out")" = "$woo" ] \
+    && jq -e --arg a "$woo" '[.resource_changes[] | select(.address == $a) | .change.actions] == [["create"]]' \
+      "$WORK/main.json" >/dev/null; then
+    other=""
+  fi
   [ -z "$other" ] || die "the guard refuses this plan: $(echo "$other" | tr '\n' ' ')"
-  echo "The FAIL lines above change who can deploy, plan or apply. Only you change these, here."
-  ask "they are expected (such as the deploy identity's condition, #127): go on?"
+  echo "The FAIL lines above change who can deploy, plan or apply, or create the WooCommerce/generic NAT."
+  echo "Only you change these, here."
+  ask "they are expected (such as the deploy identity's condition, #127, or cutover 2's second NAT): go on?"
 fi
 echo "-- changes --"
 python3 -I scripts/tf_plan_guard.py render "$WORK/main.json" || die "couldn't list the changes"
@@ -178,8 +195,8 @@ BAD=$(jq -r '.resource_changes[]? | select(.change.actions | index("delete")) | 
 echo "-- changes (addresses only) --"
 jq -r '.resource_changes[]? | select(.change.actions != ["no-op"] and .change.actions != ["read"])
   | "\(.change.actions | join("+"))\t\(.address)"' "$WORK/boot.json" | sort
-echo "expect (first run): 50 creates: two pools and providers, two accounts and their workload identity bindings,"
-echo "        six custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
+echo "expect (first run): 51 creates: two pools and providers, two accounts and their workload identity bindings,"
+echo "        seven custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
 ask "apply exactly this plan?"
 tfrun apply "$BOOT" apply -input=false -no-color "$WORK/boot.plan"
 grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$WORK/apply.log" || true

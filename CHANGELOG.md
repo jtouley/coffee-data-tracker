@@ -25,6 +25,26 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   `config/usage.toml` (the only new CSP origin, added only once that is set; until then nothing is sent); nothing is
   stored in the browser, no id is made, and nothing is sent with Global Privacy Control or Do Not Track. Links out carry `utm_source=registry.coffee&utm_medium=referral` (`coffeedata/beacon.py`);
   `catalog.json` keeps the roasters' links as they are. The privacy policy says what is counted.
+- A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
+  deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never
+  the app. `POST /e` answers every request with an empty 204; it takes at most 4 KB and 20 events, refuses any event
+  its strict schema doesn't name (`app/usage_events.py`; the wire format is
+  `contracts/internal/usage-wire.schema.json`), drops Global Privacy Control and Do Not Track, foreign origins, more
+  than 600 events a minute or 10,000 a day per masked prefix and 6,000 a minute or 200,000 a day per instance, and
+  flags known bots. The caller's IP is masked to IPv4 /24 or IPv6 /40 before anything is kept (no prefix for private
+  or link-local addresses); a referrer is cut to its host; the user agent becomes the bot flag; cookies and every
+  other header are never read; filter values refuse anything shaped like an email, phone or card number. Events go to
+  the private dataset `jtouley/coffee-usage` (`Lake.usage()`, table `usage_events`,
+  `events/day=YYYY-MM-DD/batch=<id>.parquet`) at most once a minute, inside the request that finds 200 waiting or the
+  oldest 15 minutes old, and at shutdown within 8 seconds; memory and unpublished staging are capped, and what's lost
+  is counted. Its log holds counts only, at WARNING when a limit dropped events and ERROR when events were lost, which
+  the new "usage events dropped or lost" alert emails; Terraform excludes Cloud Run's request log for it. Terraform
+  deploys it, like the ingest jobs: the service runs `usage_image`, the app's attested image from main pinned by
+  digest in `ci.tfvars` (a PR bumps it), and `deploy.yml` tags that digest so the registry keeps it. The service
+  waits for `usage_enabled` (off) until the apply account holds the grants `src/terraform/bootstrap/iam.tf` now lists
+  (docs/app/RUNNING.md, "Usage"). Internal contract `usage` 1.0.0. The page scripts and the dbt models are separate
+  PRs.
+
 - The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
   one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly
   runs only (a Monday with a full manifest, or from before manifests), each judged on what it stored (the roasters
@@ -176,6 +196,18 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   summary by origin, is new.
 
 ### Fixed
+
+- **No published value comes from OpenStreetMap (#90).** `public_roaster` left out roasters known only from
+  OpenStreetMap (ODbL), but `stg_registry` took a roaster's name, city and state from its newest registry row
+  whatever the source, so a roaster found by Overture and later by OpenStreetMap would have published
+  OpenStreetMap's values. A roaster known from an open source (Overture, the curated seed or a manual add) now takes
+  them from open sources only (per field, the newest non-null open value); a value only OpenStreetMap gave stays
+  null. A source counts as open only as a whole name (`overture`, `overture-<release>`, `curated`, `manual`), so
+  `is_publishable` no longer accepts a name that merely starts like one. New staging tables `stg_registry_records`
+  (the lake's registry records, with `is_open_source`) and `stg_roaster_seed` (`config/roasters.csv`), and macros
+  `is_open_source` and `is_open_record_source`. Public contract 3.2.0 adds the error rule
+  `public_values_have_open_provenance`: every published roaster name, city and state is one an open source gave.
+  No published value changes on today's lake, whose registry has no discovery rows yet.
 
 - **The `discover` and `probe` jobs record new roasters, and say that they ran.** Neither had left anything in the
   lake: `discover` runs monthly and its first slot (Nov 1) came before the schedule was on, so the registry stayed

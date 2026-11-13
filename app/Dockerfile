@@ -36,4 +36,6 @@ EXPOSE 8080
 # One process: accounts, the shot cache and the sign-in limits live in memory (so the host runs one instance).
 # No --proxy-headers: the app takes the phone's address for its sign-in limits from the X-Forwarded-For entry the
 # host's front end appended (COFFEEDATA_PROXY_HOPS from the right), never from what the client sent.
-CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port \"$PORT\" --no-proxy-headers"]
+# COFFEEDATA_APP picks the module: the app (app.main) unless the service sets it, as the usage collector does
+# (app.usage, src/terraform/usage.tf).
+CMD ["sh", "-c", "exec uvicorn \"${COFFEEDATA_APP:-app.main}:app\" --host 0.0.0.0 --port \"$PORT\" --no-proxy-headers"]

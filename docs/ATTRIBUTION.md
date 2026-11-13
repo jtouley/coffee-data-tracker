@@ -3,7 +3,8 @@
 The public dataset (the public tables, their exports, the site's catalog JSON and the marketplace shares) is
 released under the [CDLA-Permissive-2.0](../licenses/CDLA-Permissive-2.0.txt); the code is under the
 [MIT License](../LICENSE). It draws on the sources below. Roasters known only from OpenStreetMap are left out of
-the public tables.
+the public tables, and the roasters they do list carry no value from OpenStreetMap: each name, city and state comes
+from Overture, the curated seed or a manual add (dbt test `public_values_have_open_provenance`).
 
 - **Roaster discovery: Overture Maps Places.** © Overture Maps Foundation. Licensed under the
   [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/). Source datasets carry their own attribution, listed in the
