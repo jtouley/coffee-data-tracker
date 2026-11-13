@@ -6,7 +6,6 @@ products.json sets cart_currency=DKK, a Square Online page embeds storeInfo.curr
 schema.org's priceCurrency carry it per price."""
 
 import csv
-import shutil
 from datetime import date
 from pathlib import Path
 
@@ -21,7 +20,7 @@ from coffeedata.http import PoliteClient
 from coffeedata.models import CatalogItem, Roaster, Variant, currency_code
 
 from .conftest import FIX, load
-from .lakehelp import probe, product, run
+from .lakehelp import needs_dbt, probe, product, run
 
 
 def _r(host="x.com", platform="shopify", rid=None):
@@ -296,7 +295,7 @@ def test_the_seed_corrects_the_roasters_outside_the_us():
 
 # --- dbt: USD prices and US roasters only in the public tables ---------------------------------------
 
-dbt = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+dbt = needs_dbt
 
 
 def _config_with(tmp_path, *extra: dict) -> Path:

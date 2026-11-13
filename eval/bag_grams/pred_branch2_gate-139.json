@@ -1,0 +1,2502 @@
+{
+ "107roasters.com:0c827a350347": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "107roasters.com:4841b211d67f": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "19coffee.com:64ac20e7ccd99d231bb25dc3": {
+  "grams": 2268,
+  "p100": 4.23,
+  "variant_id": "01bbaa06-8840-48ba-b5b3-b7ccf4e0a39e"
+ },
+ "2tencoffeeroasters.com:67454e63c81cd63291e58ff6": {
+  "grams": 2268,
+  "p100": 2.87,
+  "variant_id": "3cfa4447-c548-40ce-9eb9-9c68b84c5d9e"
+ },
+ "360fcoffee.com:9997298925849": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "51128612978969"
+ },
+ "4seasonscoffee.com:4677600870539": {
+  "grams": 454,
+  "p100": 3.29,
+  "variant_id": "38067238142119"
+ },
+ "606.coffee:1684": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "802coffee.com:7679367053395": {
+  "grams": 2268,
+  "p100": 4.67,
+  "variant_id": "43022155743315"
+ },
+ "802coffee.com:8698710601": {
+  "grams": 2268,
+  "p100": 4.14,
+  "variant_id": "885119549449"
+ },
+ "abednegocoffee.com:1093": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "abednegocoffee.com:1097": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "abednegocoffee.com:53": {
+  "grams": 907,
+  "p100": 3.8,
+  "variant_id": "1785"
+ },
+ "adieuroasters.com:b36bf0d0710e": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "aegiscoffeeroasters.com:203": {
+  "grams": 340,
+  "p100": 4.71,
+  "variant_id": "11e8deced2d35a27b2680cc47a2ae330"
+ },
+ "aegiscoffeeroasters.com:216": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "aerocoffeeroasters.com:1ad5c0bc4ca4": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "aerocoffeeroasters.com:86ad58381853": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "ahillofbeans.com:5821362962600": {
+  "grams": 454,
+  "p100": 4.85,
+  "variant_id": "36344542822568"
+ },
+ "alleghenycoffee.com:594eb9f6e58c6247578821b5": {
+  "grams": 454,
+  "p100": 5.28,
+  "variant_id": "c4947fb8-c524-4fb6-a120-01b899881073"
+ },
+ "alleghenycoffee.com:595163cfe3df28c0f0ff9425": {
+  "grams": 454,
+  "p100": 5.28,
+  "variant_id": "54fb0da9-f7d9-4ddb-9ebd-b51ee216e6f9"
+ },
+ "alleghenycoffee.com:630e2fe5a769f325c1f4fe04": {
+  "grams": 454,
+  "p100": 5.28,
+  "variant_id": "b8640b4f-7bc2-44e6-bd73-b438fc96d07d"
+ },
+ "allenstreetroasters.com:212": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "ampersand-coffee.com:8786043076826": {
+  "grams": 2268,
+  "p100": 5.2,
+  "variant_id": "46222795899098"
+ },
+ "anaheimcoffee.com:140": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "anaheimcoffee.com:86": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "anvilcoffee.com:8889029445": {
+  "grams": 2268,
+  "p100": 3.44,
+  "variant_id": "7053243383862"
+ },
+ "aperturecoffee.com:630231c3100c4a40f45c54a9": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "aromaridge.com:7534642757873": {
+  "grams": 454,
+  "p100": 4.39,
+  "variant_id": "42710891462897"
+ },
+ "aromaridge.com:7534643937521": {
+  "grams": 340,
+  "p100": 4.99,
+  "variant_id": "42880155353329"
+ },
+ "arsagas.com:60d6a28d57c4a5715c904203": {
+  "grams": 2268,
+  "p100": 5.16,
+  "variant_id": "f5c09f9a-3feb-4d1c-bc68-8ce654983d5b"
+ },
+ "ascensioncoffee.com:8330199662762": {
+  "grams": 2268,
+  "p100": 4.63,
+  "variant_id": "47814451200170"
+ },
+ "atomicroastery.com:6890861101174": {
+  "grams": 2268,
+  "p100": 5.16,
+  "variant_id": "40131819733110"
+ },
+ "backroadscoffee.com:4648175272039": {
+  "grams": 340,
+  "p100": 5.0,
+  "variant_id": "32645500665959"
+ },
+ "badbeanscoffee.com:15898": {
+  "grams": 907,
+  "p100": 4.19,
+  "variant_id": "26319"
+ },
+ "badbeanscoffee.com:24419": {
+  "grams": 340,
+  "p100": 5.29,
+  "variant_id": "24455"
+ },
+ "bakersfieldroasting.com:1cd04e95-e5a2-3eb0-bc4a-2305953b828e": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "baldguybrew.com:8211324535083": {
+  "grams": 454,
+  "p100": 4.18,
+  "variant_id": "44865539047723"
+ },
+ "barnyardcoffee.com:5647449456796": {
+  "grams": 907,
+  "p100": 4.96,
+  "variant_id": "43971071541472"
+ },
+ "beanstockcoffee.com:15423772819770": {
+  "grams": 454,
+  "p100": 3.96,
+  "variant_id": "67847867105594"
+ },
+ "bellatorroasting.com:167": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "bellatorroasting.com:238": {
+  "grams": 227,
+  "p100": 3.96,
+  "variant_id": "TN46NZ736M2PKUTKEMFXUVUC"
+ },
+ "berksbeans.com:4052": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "bigfootcoffeeroasters.com:19": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "bisbeecoffee.com:10281188917541": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "52289587347749"
+ },
+ "blackandbrasscoffee.com:11095": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "blackandbrasscoffee.com:12764": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "blackbayoucoffeeroasters.com:41": {
+  "grams": 1361,
+  "p100": 3.67,
+  "variant_id": "43"
+ },
+ "blackcoffeeroastingco.com:113940": {
+  "grams": 907,
+  "p100": 4.74,
+  "variant_id": "113942"
+ },
+ "blackgoldroasters.com:7493703762157": {
+  "grams": 2268,
+  "p100": 4.41,
+  "variant_id": "42200133304557"
+ },
+ "blacksiloroasting.com:2aa69a091e7c": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "blacksiloroasting.com:a64ce848873e": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "blackwaterroasters.com:60e1daba12e5ba565dc8625a": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "f12dfbd9-be98-4304-92de-afc303bac624"
+ },
+ "bluechipcoffeeroaster.com:8277055996224": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "44903565263168"
+ },
+ "bluejazzcoffee.com:4366372208718": {
+  "grams": 907,
+  "p100": 5.28,
+  "variant_id": "31230772871246"
+ },
+ "bluemindroasting.com:5e546316c9e76f0603b92ed9": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "81bc09ab-dcc7-431e-bff3-cca011744fa8"
+ },
+ "bluestrawberrycoffee.com:63b64624438e350ea9ae049a": {
+  "grams": 907,
+  "p100": 4.3,
+  "variant_id": "7b4742a4-92c1-4d39-9680-5cdb46b9fa75"
+ },
+ "bluestrawberrycoffee.com:6614163b194c5137cae5fc58": {
+  "grams": 907,
+  "p100": 4.3,
+  "variant_id": "3ffd2544-4ddc-4e79-9017-5c48229f313b"
+ },
+ "bodhileafcoffee.com:1375947905": {
+  "grams": 2268,
+  "p100": 5.16,
+  "variant_id": "40552449549"
+ },
+ "boldbeancoffee.com:8150407741691": {
+  "grams": 2268,
+  "p100": 4.41,
+  "variant_id": "44733798547707"
+ },
+ "bongojava.com:5742445953185": {
+  "grams": 2268,
+  "p100": 5.38,
+  "variant_id": "36763925151905"
+ },
+ "bongojava.com:6066993201313": {
+  "grams": 2268,
+  "p100": 5.25,
+  "variant_id": "39307283890337"
+ },
+ "bonitoroaster.com:6801604214919": {
+  "grams": 340,
+  "p100": 7.35,
+  "variant_id": "40238163427463"
+ },
+ "bonjocoffee.com:15474240029041": {
+  "grams": 2268,
+  "p100": 5.38,
+  "variant_id": "63309568442737"
+ },
+ "boomtownroasters.com:9108111229084": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "boomtownroasters.com:9215571132572": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "47450917535900"
+ },
+ "boxxcoffee.la:7202798960684": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "41985759805484"
+ },
+ "boxxcoffee.la:7736539086892": {
+  "grams": 2268,
+  "p100": 7.5,
+  "variant_id": "43839999901740"
+ },
+ "brahambrewingcompany.com:40": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "YQ5B7VC4W4D6GYPNYLZGGJ3Q"
+ },
+ "breakroasters.com:7632636575802": {
+  "grams": 907,
+  "p100": 8.11,
+  "variant_id": "41723310145594"
+ },
+ "bridgetunnel.coffee:66": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "brightandearlycoffee.com:10944071251": {
+  "grams": 2268,
+  "p100": 2.81,
+  "variant_id": "43376754131"
+ },
+ "brightandearlycoffee.com:10954530067": {
+  "grams": 2268,
+  "p100": 2.81,
+  "variant_id": "43426361939"
+ },
+ "briocoffeeworks.com:9081550962921": {
+  "grams": 2268,
+  "p100": 4.79,
+  "variant_id": "50093093486825"
+ },
+ "buddhabeanscoffee.com:2093049970799": {
+  "grams": 340,
+  "p100": 8.53,
+  "variant_id": "20540436643951"
+ },
+ "bwcroasters.com:8571432239282": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "45875092684978"
+ },
+ "caffedartealaska.com:7122914ab983": {
+  "grams": 454,
+  "p100": 3.73,
+  "variant_id": "0"
+ },
+ "caffeinacoffee.com:7724860113123": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "camanoislandcoffee.com:253": {
+  "grams": 454,
+  "p100": 5.72,
+  "variant_id": "255"
+ },
+ "camanoislandcoffee.com:32": {
+  "grams": 454,
+  "p100": 5.72,
+  "variant_id": "33"
+ },
+ "camanoislandcoffee.com:76": {
+  "grams": 454,
+  "p100": 5.72,
+  "variant_id": "77"
+ },
+ "capheroasters.com:11010567930049": {
+  "grams": 2268,
+  "p100": 4.41,
+  "variant_id": "50376876032193"
+ },
+ "capitalcityroasters.com:412": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "capitalcityroasters.com:495": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "captainscoffee.com:508381691951": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "casabrasilcoffees.com:32671": {
+  "grams": 2268,
+  "p100": 4.85,
+  "variant_id": "32676"
+ },
+ "cashuacoffee.com:7086149992497": {
+  "grams": 2268,
+  "p100": 3.44,
+  "variant_id": "41253391597617"
+ },
+ "caspercoffeeroasters.com:426": {
+  "grams": 454,
+  "p100": 3.96,
+  "variant_id": "428"
+ },
+ "cavallinicoffee.com:8080085448": {
+  "grams": 454,
+  "p100": 3.44,
+  "variant_id": "68060148301867"
+ },
+ "cbrccoffee.com:10391691559187": {
+  "grams": 998,
+  "p100": 3.85,
+  "variant_id": "54134097772819"
+ },
+ "cellardoorcoffee.com:5e92d847a219": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "ceremonycoffee.com:11737182229": {
+  "grams": 2268,
+  "p100": 4.94,
+  "variant_id": "52864962133"
+ },
+ "chadlouscoffeeroasters.com:375": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "cherryrivercoffee.com:9720371740901": {
+  "grams": 2268,
+  "p100": 4.37,
+  "variant_id": "50598871236837"
+ },
+ "chesapeake.coffee:10391691624723": {
+  "grams": 998,
+  "p100": 4.25,
+  "variant_id": "54134098297107"
+ },
+ "clearlakecoffeeroasters.com:5356188893340": {
+  "grams": 454,
+  "p100": 3.08,
+  "variant_id": "34904638390428"
+ },
+ "coastalcoffeeroasters.com:664a9131f70aea387c29b552": {
+  "grams": 2268,
+  "p100": 4.23,
+  "variant_id": "da8b3f24-4724-43db-8f36-c9ab773642e2"
+ },
+ "coastalcoffeeroasters.com:664a9161c0031f160637c202": {
+  "grams": 2268,
+  "p100": 4.54,
+  "variant_id": "390bff14-0fbc-4ee0-8c27-a24479d0b912"
+ },
+ "coffee4kids.org:0fefffdf63b5": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffee4kids.org:3650d07d9d41": {
+  "grams": 340,
+  "p100": 4.71,
+  "variant_id": "0"
+ },
+ "coffee4kids.org:a6b219ff34ac": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "0"
+ },
+ "coffee4kids.org:a72f9d08ab0b": {
+  "grams": 2268,
+  "p100": 3.31,
+  "variant_id": "0"
+ },
+ "coffeeam.com:4371001704550": {
+  "grams": 2268,
+  "p100": 2.86,
+  "variant_id": "31128484249702"
+ },
+ "coffeeam.com:4371041878118": {
+  "grams": 2268,
+  "p100": 3.3,
+  "variant_id": "31128662704230"
+ },
+ "coffeeam.com:4371045974118": {
+  "grams": 2268,
+  "p100": 3.08,
+  "variant_id": "31128678465638"
+ },
+ "coffeebean.com:8456309702809": {
+  "grams": 283,
+  "p100": 6.0,
+  "variant_id": "45500118007961"
+ },
+ "coffeebydesign.com:8531698057529": {
+  "grams": 2268,
+  "p100": 4.96,
+  "variant_id": "46021365825849"
+ },
+ "coffeebydesign.com:8531702153529": {
+  "grams": 2268,
+  "p100": 4.96,
+  "variant_id": "46021399413049"
+ },
+ "coffeebydesign.com:8531709264185": {
+  "grams": 454,
+  "p100": 5.51,
+  "variant_id": "46021458133305"
+ },
+ "coffeebydesign.com:8784669966649": {
+  "grams": 2268,
+  "p100": 4.96,
+  "variant_id": "47083164696889"
+ },
+ "coffeebytheroast.com:59301938c534a5187d71da7f": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeecabooseroasters.com:f443d4658141": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeecityusacafe.com:284": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeecityusacafe.com:334": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeecityusacafe.com:456": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeecityusacafe.com:815": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeecityusacafe.com:86": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeefactoryroasters.com:373428224032": {
+  "grams": 454,
+  "p100": 3.95,
+  "variant_id": "4718422196256"
+ },
+ "coffeelatitudes.com:225": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeelatitudes.com:24": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeelatitudes.com:337": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeelatitudes.com:QLAUNOQAZMI3OFFLX6SMUYTC": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeeoregon.com:59c1edc4c534a55b61a8a35b": {
+  "grams": 340,
+  "p100": 4.69,
+  "variant_id": "faf397ce-6e18-44a7-b549-930e43ebe05a"
+ },
+ "coffeeoutthere.com:9663000150259": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeeroasterlnk.com:10369735754019": {
+  "grams": 454,
+  "p100": 7.75,
+  "variant_id": "55594680582435"
+ },
+ "coffeeroasterlnk.com:4696874713163": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "coffeetree.com:5e83a7c7e8df63239319a328": {
+  "grams": 2268,
+  "p100": 4.96,
+  "variant_id": "83c8ec42-a2f6-4c65-9dd1-9df6d01298cb"
+ },
+ "coffeolroasting.com:7647529173075": {
+  "grams": 2270,
+  "p100": 3.26,
+  "variant_id": "42883539566675"
+ },
+ "contemporoast.com:9190944440555": {
+  "grams": 2268,
+  "p100": 4.63,
+  "variant_id": "47161519407339"
+ },
+ "conversatiocoffee.com:9268774043956": {
+  "grams": 567,
+  "p100": 1.23,
+  "variant_id": "48879229567284"
+ },
+ "coppercanyoncoffeeroasters.com:8079825371450": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "44280724291898"
+ },
+ "counterculturecoffee.com:7310837350477": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "countrymorningcoffee.com:1387210145885": {
+  "grams": 2268,
+  "p100": 3.22,
+  "variant_id": "12398716911709"
+ },
+ "countrymorningcoffee.com:348823551": {
+  "grams": 2268,
+  "p100": 3.22,
+  "variant_id": "5208696963"
+ },
+ "countrymorningcoffee.com:7234058551450": {
+  "grams": 2268,
+  "p100": 3.22,
+  "variant_id": "41583618916506"
+ },
+ "countrymorningcoffee.com:7987848315034": {
+  "grams": 2268,
+  "p100": 3.22,
+  "variant_id": "44128920567962"
+ },
+ "crazymountaincoffee.com:63f95b3d1379fa03c9d46408": {
+  "grams": 907,
+  "p100": 4.08,
+  "variant_id": "4946f2e3-f26d-4276-a2ae-598095c85881"
+ },
+ "crazymountaincoffee.com:668ed32ac95262045a6b15d0": {
+  "grams": 1361,
+  "p100": 4.41,
+  "variant_id": "61408d63-fc36-4f93-b186-3487746bef8a"
+ },
+ "crcoffeeroasters.com:774": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "821"
+ },
+ "cruciblecoffee.com:7984855973953": {
+  "grams": 2268,
+  "p100": 5.73,
+  "variant_id": "44215347806273"
+ },
+ "cuevascoffee.com:6061673709734": {
+  "grams": 340,
+  "p100": 3.53,
+  "variant_id": "37506305032358"
+ },
+ "cunninghamcoffeeroasters.com:5e9287b75e4b116e0989f23d": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "2d786af9-51ea-443c-9248-91ebc8b717ed"
+ },
+ "cuptocupcoffee.com:5a04bfeb085229bb2bef0aba": {
+  "grams": 2268,
+  "p100": 3.31,
+  "variant_id": "c7568852-4f66-43e4-9244-c94380f02275"
+ },
+ "currentcroproasting.com:55072": {
+  "grams": 2268,
+  "p100": 4.41,
+  "variant_id": "55075"
+ },
+ "customroasting.net:48888a8a9ca8": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "dapperandwise.com:8219084489013": {
+  "grams": 2268,
+  "p100": 6.31,
+  "variant_id": "44806791528757"
+ },
+ "darkhorsecoffeeroasters.com:67c9d9255b6e616830c355ab": {
+  "grams": 2268,
+  "p100": 5.2,
+  "variant_id": "85742a3a-5cfe-4ab5-95a4-47bf4fb263e7"
+ },
+ "daybreak.coffee:8751": {
+  "grams": 907,
+  "p100": 4.96,
+  "variant_id": "8753"
+ },
+ "daybreakcoffee.com:782": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "dayglow.coffee:8431896821826": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "destinationcoffees.com:8894855676196": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "47487707054372"
+ },
+ "devocion.com:7441162207347": {
+  "grams": 340,
+  "p100": 7.43,
+  "variant_id": "41430471082099"
+ },
+ "dillanos.com:10256587456806": {
+  "grams": 340,
+  "p100": 5.75,
+  "variant_id": "51413680128294"
+ },
+ "dirtygirlcoffee.com:283": {
+  "grams": 1000,
+  "p100": 4.8,
+  "variant_id": "285"
+ },
+ "doomsdaycoffeeroast.com:94": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "doxieroastworks.com:9250990031004": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "47584749879452"
+ },
+ "drcroasters.com:2213": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "drcroasters.com:5361": {
+  "grams": 340,
+  "p100": 5.29,
+  "variant_id": "5382"
+ },
+ "drcroasters.com:5437": {
+  "grams": 340,
+  "p100": 5.29,
+  "variant_id": "5458"
+ },
+ "duetorricoffee.com:1896310374451": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "17437360554035"
+ },
+ "duetorricoffee.com:1896350187571": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "17437448208435"
+ },
+ "durangocoffee.com:11758": {
+  "grams": 340,
+  "p100": 7.13,
+  "variant_id": "11759"
+ },
+ "eldoradocoffee.com:14910856462705": {
+  "grams": 1701,
+  "p100": 3.94,
+  "variant_id": "52064551371121"
+ },
+ "eldoradocoffee.com:7540314112154": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "eldoradocoffee.com:7944950218906": {
+  "grams": 2268,
+  "p100": 5.95,
+  "variant_id": "44411537260698"
+ },
+ "elmcityroastery.com:26": {
+  "grams": 340,
+  "p100": 4.71,
+  "variant_id": "TYX6KTKCCNHDH6XP4CEMXKD3"
+ },
+ "enderlycoffee.com:a66cb468a16a": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "equalexchange.coop:10571554312": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "equalexchange.coop:8407430824126": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "equatorcoffees.com:6801976950866": {
+  "grams": 2268,
+  "p100": 4.59,
+  "variant_id": "41176982880338"
+ },
+ "escondidospecialtycoffee.com:10050281668912": {
+  "grams": 907,
+  "p100": 4.85,
+  "variant_id": "50496764182832"
+ },
+ "espressorepublic.com:15395426828324": {
+  "grams": 2268,
+  "p100": 5.47,
+  "variant_id": "67583965069348"
+ },
+ "ethnos.coffee:9540122509618": {
+  "grams": 907,
+  "p100": 5.51,
+  "variant_id": "49079975149874"
+ },
+ "ethnos.coffee:9677516013874": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "ethosroasters.com:5941c05d2994ca9f066016d4": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "8c55ac3a-f32b-4eae-a50f-691408d31384"
+ },
+ "euroroast.com:2067": {
+  "grams": 907,
+  "p100": 3.53,
+  "variant_id": "2069"
+ },
+ "eveningstarcoffeeroasters.com:1579": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "1581"
+ },
+ "eveningstarcoffeeroasters.com:3769": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "3773"
+ },
+ "eveningstarcoffeeroasters.com:6457": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "6461"
+ },
+ "fairhoperoasting.com:561c32d7e4b0ad2124484683": {
+  "grams": 2268,
+  "p100": 3.17,
+  "variant_id": "cf4a8208-1033-465b-a15f-61056d354572"
+ },
+ "fetchroasters.com:4692639940682": {
+  "grams": 2268,
+  "p100": 4.63,
+  "variant_id": "32349904961610"
+ },
+ "fikabeans.com:4f806616ec67": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "fingerlakescoffee.com:7529514696923": {
+  "grams": 2268,
+  "p100": 3.52,
+  "variant_id": "46233673859291"
+ },
+ "fingerlakescoffee.com:7529515024603": {
+  "grams": 2268,
+  "p100": 3.52,
+  "variant_id": "46233672876251"
+ },
+ "fortyweightcoffee.com:63db28b5ee83342f1dfe0d0a": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "a217530f-09c6-4132-892a-0ee4bb27712c"
+ },
+ "freedomhillcoffee.com:6677678948551": {
+  "grams": 340,
+  "p100": 5.59,
+  "variant_id": "39775608996039"
+ },
+ "frenchtownroasters.com:8144332652766": {
+  "grams": 454,
+  "p100": 5.07,
+  "variant_id": "44379651277022"
+ },
+ "fulcrumcoffee.com:8514647654722": {
+  "grams": 2268,
+  "p100": 2.37,
+  "variant_id": "45913430556994"
+ },
+ "fulcrumcoffee.com:9854859772226": {
+  "grams": 340,
+  "p100": 1.84,
+  "variant_id": "50206823186754"
+ },
+ "genesisroasters.com:6768524984393": {
+  "grams": 2268,
+  "p100": 3.79,
+  "variant_id": "40666201194569"
+ },
+ "gillespie.coffee:12075375556": {
+  "grams": 1000,
+  "p100": 5.5,
+  "variant_id": "52632310020"
+ },
+ "gimmecoffee.com:8267645550811": {
+  "grams": 2268,
+  "p100": 5.3,
+  "variant_id": "44879376154843"
+ },
+ "giusepperoasters.com:93cc363a9bc3": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "globalgourmetcoffee.com:9588690714871": {
+  "grams": 454,
+  "p100": 3.52,
+  "variant_id": "49644789596407"
+ },
+ "globalgourmetcoffee.com:9642551017719": {
+  "grams": 454,
+  "p100": 2.74,
+  "variant_id": "49592789303543"
+ },
+ "globalgourmetcoffee.com:9642597548279": {
+  "grams": 454,
+  "p100": 2.74,
+  "variant_id": "49592866177271"
+ },
+ "globalgourmetcoffee.com:9642609377527": {
+  "grams": 454,
+  "p100": 2.74,
+  "variant_id": "49592873222391"
+ },
+ "globalgourmetcoffee.com:9644316295415": {
+  "grams": 454,
+  "p100": 2.74,
+  "variant_id": "49598696980727"
+ },
+ "goldenhillscoffee.com:e0046728d4a9": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "goldenlanterncoffee.com:9508417208534": {
+  "grams": 907,
+  "p100": 11.03,
+  "variant_id": "50396789866710"
+ },
+ "goldiescoffeeroasters.com:5c8ec8b5e79c7057fcd3dfa6": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "goodluckcr.com:633901886ac86777f0abc3f9": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "gostcoffee.com:6255f092b964": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "gothamroasters.com:62829366ab94c76cff510518": {
+  "grams": 2268,
+  "p100": 5.07,
+  "variant_id": "7bc05580-7fc7-4fdb-bd81-1d862fa9564b"
+ },
+ "greatergoodsroasting.com:8148046414083": {
+  "grams": 2268,
+  "p100": 7.05,
+  "variant_id": "46268674474243"
+ },
+ "greatlakescoffeeroasters.com:9292d4ff3da1": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "greatlakescoffeeroasters.com:ad0e7dabd152": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "greatlakescoffeeroasters.com:be9a645de428": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "greatlakescoffeeroasters.com:c75b5b10baf7": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "greatlakescoffeeroasters.com:cfc74f6da85f": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "greencastlecoffee.com:7424938475700": {
+  "grams": 454,
+  "p100": 3.63,
+  "variant_id": "42565548638388"
+ },
+ "greencastlecoffee.com:7436598837428": {
+  "grams": 454,
+  "p100": 3.63,
+  "variant_id": "42565621121204"
+ },
+ "greencastlecoffee.com:7436654641332": {
+  "grams": 454,
+  "p100": 3.63,
+  "variant_id": "42565658443956"
+ },
+ "greencastlecoffee.com:7440348119220": {
+  "grams": 454,
+  "p100": 3.85,
+  "variant_id": "42565744361652"
+ },
+ "groundswellcoffeeroasters.com:4426525048902": {
+  "grams": 340,
+  "p100": 5.29,
+  "variant_id": "31439340798022"
+ },
+ "guadaluperoastery.com:9126364774656": {
+  "grams": 340,
+  "p100": 5.43,
+  "variant_id": "46817717649664"
+ },
+ "guilfordroastingcompany.com:8643751674030": {
+  "grams": 907,
+  "p100": 4.74,
+  "variant_id": "46068765393070"
+ },
+ "gwlrcc.com:689a2c02a91cc65d1e5f9d10": {
+  "grams": 907,
+  "p100": 4.41,
+  "variant_id": "8a6a2cd4-3145-496c-8fd8-764ad73132fd"
+ },
+ "gwlrcc.com:689a3fa0cb7ab337e07cbd2e": {
+  "grams": 907,
+  "p100": 4.96,
+  "variant_id": "ccee2466-cfdb-4250-9f42-4cec7d35a730"
+ },
+ "hammercoffee.com:2080364481": {
+  "grams": 2268,
+  "p100": 4.35,
+  "variant_id": "42603446632501"
+ },
+ "hammerheadcoffee.com:90532511761": {
+  "grams": 2268,
+  "p100": 3.08,
+  "variant_id": "31892503003207"
+ },
+ "hansacoffee.com:1882652548": {
+  "grams": 2268,
+  "p100": 3.68,
+  "variant_id": "14596863492"
+ },
+ "hemispherecoffeeroasters.com:10389462515905": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "hemispherecoffeeroasters.com:3948161499201": {
+  "grams": 2268,
+  "p100": 4.28,
+  "variant_id": "29525725577281"
+ },
+ "hickorygrovecoffee.com:WBAbbeyHillOrchard4lbs": {
+  "grams": 1814,
+  "p100": 2.48,
+  "variant_id": "0"
+ },
+ "hiddenfortresscoffee.com:856": {
+  "grams": 907,
+  "p100": 5.29,
+  "variant_id": "859"
+ },
+ "highpointroasters.com:86": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "highwirecoffee.com:8154573504763": {
+  "grams": 2268,
+  "p100": 6.4,
+  "variant_id": "44745725477115"
+ },
+ "idiomacoffee.com:690271584316": {
+  "grams": 907,
+  "p100": 5.73,
+  "variant_id": "47747543367989"
+ },
+ "inccoffeeroasters.com:d0166453b00f": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "independentroasters.com:596262a38419c269d9c64da2": {
+  "grams": 340,
+  "p100": 4.69,
+  "variant_id": "ed459708-665b-48c2-a232-a26972942306"
+ },
+ "innkeeperscoffee.com:5a0c7c99f9619a2a3686e051": {
+  "grams": 2268,
+  "p100": 3.17,
+  "variant_id": "f7a024a4-dcc5-4bb4-aba1-53298d10bf3e"
+ },
+ "innkeeperscoffee.com:5a0c844524a6944522daab83": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "779f66bf-4eb9-4ced-a538-512f8341a809"
+ },
+ "intentroasting.com:6a3edc77ac41db618c454071": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "9e3028df-69c5-4217-816b-b407c0d8013f"
+ },
+ "iowacr.com:94386208": {
+  "grams": 2268,
+  "p100": 2.56,
+  "variant_id": "220745276"
+ },
+ "irvingfarm.com:3394728453": {
+  "grams": 2268,
+  "p100": 5.56,
+  "variant_id": "41854188683347"
+ },
+ "ithacacoffee.com:4689122558051": {
+  "grams": 907,
+  "p100": 4.19,
+  "variant_id": "32988999155811"
+ },
+ "jaho.com:7973278351449": {
+  "grams": 2268,
+  "p100": 5.73,
+  "variant_id": "42420730036313"
+ },
+ "java-gourmet.com:9779385165": {
+  "grams": 369,
+  "p100": 4.88,
+  "variant_id": "36595140173"
+ },
+ "javaboulevard.com:8980286144769": {
+  "grams": 454,
+  "p100": 2.64,
+  "variant_id": "46991609856257"
+ },
+ "javacoffee.com:8b772a876a87": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "javaestate.com:7654475595846": {
+  "grams": 2268,
+  "p100": 2.83,
+  "variant_id": "42029599621190"
+ },
+ "javajiveroasters.com:307fc04969a0": {
+  "grams": 340,
+  "p100": 5.0,
+  "variant_id": "0"
+ },
+ "jbrookscoffeeroasters.com:9511476527426": {
+  "grams": 2268,
+  "p100": 4.57,
+  "variant_id": "48852016824642"
+ },
+ "jenningsjava.com:208": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "jettycoffeeroasters.com:11051317644": {
+  "grams": 340,
+  "p100": 5.59,
+  "variant_id": "41602245388"
+ },
+ "joebeanroasters.com:6771071680663": {
+  "grams": 340,
+  "p100": 6.18,
+  "variant_id": "47199345639662"
+ },
+ "joescoffeehouse.com:8301581926704": {
+  "grams": 454,
+  "p100": 5.06,
+  "variant_id": "44990615322928"
+ },
+ "joviroasters.com:18865": {
+  "grams": 340,
+  "p100": 5.59,
+  "variant_id": "18868"
+ },
+ "jporganiccoffee.com:8925051683036": {
+  "grams": 2268,
+  "p100": 5.51,
+  "variant_id": "46426057179356"
+ },
+ "jsacoffee.com:11598160582": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "39316751876205"
+ },
+ "jsacoffee.com:1490663080045": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "39723471732845"
+ },
+ "jsacoffee.com:4705892237421": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "39316760985709"
+ },
+ "jubileeroastingco.com:9266593562866": {
+  "grams": 2268,
+  "p100": 4.63,
+  "variant_id": "50101761704178"
+ },
+ "juicenjavacafe.com:1377": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "justbe.coffee:3144": {
+  "grams": 907,
+  "p100": 4.41,
+  "variant_id": "3151"
+ },
+ "kahacoffee.com:7907126051052": {
+  "grams": 907,
+  "p100": 4.96,
+  "variant_id": "43770197999852"
+ },
+ "kahacoffee.com:7907130147052": {
+  "grams": 2268,
+  "p100": 5.56,
+  "variant_id": "43770205372652"
+ },
+ "kahwacoffee.com:7926181593330": {
+  "grams": 907,
+  "p100": 4.41,
+  "variant_id": "44574183457010"
+ },
+ "katzcoffee.com:10503": {
+  "grams": 907,
+  "p100": 4.07,
+  "variant_id": "43820"
+ },
+ "katzcoffee.com:584": {
+  "grams": 907,
+  "p100": 4.07,
+  "variant_id": "42984"
+ },
+ "katzcoffee.com:619": {
+  "grams": 907,
+  "p100": 4.07,
+  "variant_id": "44428"
+ },
+ "keenbeancoffee.com:66abba03eba91e2534da584d": {
+  "grams": 340,
+  "p100": 4.34,
+  "variant_id": "eaedd3cc-b3fb-4da5-9c6a-f987e6c413fd"
+ },
+ "kingsarmscoffee.com:15465490252029": {
+  "grams": 250,
+  "p100": 13.6,
+  "variant_id": "71776966803709"
+ },
+ "kingsarmscoffee.com:9510682886332": {
+  "grams": 1000,
+  "p100": 7.7,
+  "variant_id": "71524664705277"
+ },
+ "lacremacoffeecompany.com:7657666085017": {
+  "grams": 2268,
+  "p100": 3.24,
+  "variant_id": "43134405148825"
+ },
+ "laddercoffeespokane.com:4925465362503": {
+  "grams": 2268,
+  "p100": 5.6,
+  "variant_id": "39975340703815"
+ },
+ "lajavaroastinghouse.com:1094": {
+  "grams": 454,
+  "p100": 3.52,
+  "variant_id": "1095"
+ },
+ "lancastercountycoffee.com:6980775968934": {
+  "grams": 2268,
+  "p100": 4.08,
+  "variant_id": "41297282531494"
+ },
+ "lavajavamaui.com:500": {
+  "grams": 227,
+  "p100": 17.6,
+  "variant_id": "577"
+ },
+ "lavajavamaui.com:507": {
+  "grams": 227,
+  "p100": 15.4,
+  "variant_id": "582"
+ },
+ "leavenworthcoffeeroasters.com:5e6aa3b42a969461559e561d": {
+  "grams": 907,
+  "p100": 3.52,
+  "variant_id": "d7507331-b7f9-441c-9078-9f1b6ec5d05f"
+ },
+ "ledgercoffee.com:28": {
+  "grams": 283,
+  "p100": 6.71,
+  "variant_id": "IHOOAPNN5TQH3GKN6P2RW4VJ"
+ },
+ "lit610.com:10550": {
+  "grams": 2268,
+  "p100": 2.81,
+  "variant_id": "10552"
+ },
+ "littledreamercoffee.com:293": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "littledreamercoffee.com:DPPNAOD6TFYIAOOQUSXRJRUN": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "littledreamercoffee.com:GASDRT4CTRJHY6EVJ3KFVTOI": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "localroasters.com:1764063641673": {
+  "grams": 340,
+  "p100": 5.29,
+  "variant_id": "19873570029641"
+ },
+ "looneybeanmammoth.com:15361000276041": {
+  "grams": 2268,
+  "p100": 3.35,
+  "variant_id": "54591598493769"
+ },
+ "loreroasters.com:9029255201084": {
+  "grams": 2268,
+  "p100": 6.61,
+  "variant_id": "48223133139260"
+ },
+ "lovethecook.com:3690805428277": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "41243691810977"
+ },
+ "lowcountrycoffeeroasters.com:7907709976687": {
+  "grams": 907,
+  "p100": 4.47,
+  "variant_id": "43739096154223"
+ },
+ "lynnhavencoffee.com:27": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "manbotcoffeeroasters.com:5bd351ea652dea12fcc739f2": {
+  "grams": 340,
+  "p100": 5.59,
+  "variant_id": "a77ac3aa-a3cc-49ab-b3e4-403f2ffb348d"
+ },
+ "mareacoffee.com:72931246124": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "9124732534828"
+ },
+ "martinhenrycoffee.com:246650": {
+  "grams": 907,
+  "p100": 3.9,
+  "variant_id": "246663"
+ },
+ "matadorcoffee.com:a326c17a644c": {
+  "grams": 340,
+  "p100": 5.87,
+  "variant_id": "0"
+ },
+ "mazevocoffee.com:9533815111": {
+  "grams": 2268,
+  "p100": 2.87,
+  "variant_id": "35040998663"
+ },
+ "mediciroasting.com:8958055809276": {
+  "grams": 2268,
+  "p100": 4.76,
+  "variant_id": "47116436078844"
+ },
+ "meritcoffee.com:6591970246741": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "methodicalcoffee.com:275355271197": {
+  "grams": 2268,
+  "p100": 4.88,
+  "variant_id": "3945456336925"
+ },
+ "mikesheascafe.com:135": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "millmountaincoffee.com:123": {
+  "grams": 454,
+  "p100": 3.52,
+  "variant_id": "11efd428da0f16339e873cecef6dbaf0"
+ },
+ "minimumwagetims.com:8204756451381": {
+  "grams": 227,
+  "p100": 7.93,
+  "variant_id": "45856332939317"
+ },
+ "mintcitycoffee.com:8635670069426": {
+  "grams": 454,
+  "p100": 4.41,
+  "variant_id": "46650592231602"
+ },
+ "modernlovect.com:5f9343b2a0b2305883d73b0c": {
+  "grams": 340,
+  "p100": 5.88,
+  "variant_id": "4d952cc3-68dc-4399-8338-95fbe36ca330"
+ },
+ "moodusmud.com:18": {
+  "grams": 340,
+  "p100": 4.94,
+  "variant_id": "OK2BBQQOZS5NZ3BGM2YWCIOW"
+ },
+ "moodusmud.com:2": {
+  "grams": 340,
+  "p100": 4.94,
+  "variant_id": "CL4KC7VHMQBUSTCDJRNMZXYQ"
+ },
+ "morghanrakecoffee.com:598e48a7cd19": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "moundsviewroasters.com:7844080025642": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "44225551106090"
+ },
+ "mountainmamaroasters.com:ec90a5446bb7": {
+  "grams": 340,
+  "p100": 4.71,
+  "variant_id": "0"
+ },
+ "mountainphoenixcoffee.com:2066": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "mrdapper.coffee:8868330504500": {
+  "grams": 907,
+  "p100": 4.74,
+  "variant_id": "47336561017140"
+ },
+ "mtnairroasting.com:44800": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "naguacoffee.com:044428a31e3e": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "napavalleycoffee.com:5aa94147f9619a4570741eb5": {
+  "grams": 340,
+  "p100": 5.28,
+  "variant_id": "0701ca18-1caf-43c8-b199-0c73dde1fa94"
+ },
+ "napavalleycoffee.com:6036d11c1b7f2e41dd12562a": {
+  "grams": 340,
+  "p100": 5.28,
+  "variant_id": "99eb2502-cb18-475f-bf9b-8df372fa0404"
+ },
+ "napavalleycoffee.com:62bc71152af02c2396d489bb": {
+  "grams": 340,
+  "p100": 5.28,
+  "variant_id": "fb348982-4737-4b1b-b857-4487684e8aad"
+ },
+ "napavalleycoffee.com:62be18072af02c2396d54ea8": {
+  "grams": 340,
+  "p100": 5.28,
+  "variant_id": "82680e2c-a3d8-4988-a207-72bcc97b0dea"
+ },
+ "netcoffees.net:28ac893bb693": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "newenglandcoffee.com:276623": {
+  "grams": 454,
+  "p100": 2.42,
+  "variant_id": "276624"
+ },
+ "nicoletticoffee.com:6762482663484": {
+  "grams": 998,
+  "p100": 4.5,
+  "variant_id": "39752043429948"
+ },
+ "nossacoffee.com:4429565460578": {
+  "grams": 2268,
+  "p100": 4.5,
+  "variant_id": "31656778661986"
+ },
+ "obliquecoffeeroasters.com:2073": {
+  "grams": 454,
+  "p100": 5.29,
+  "variant_id": "2074"
+ },
+ "oddboxcoffee.com:8108856901694": {
+  "grams": 2268,
+  "p100": 5.51,
+  "variant_id": "43150448066622"
+ },
+ "offsetcoffee.com:8175471558881": {
+  "grams": 2268,
+  "p100": 5.51,
+  "variant_id": "45816615207137"
+ },
+ "olycrest.com:63": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "olycrest.com:79": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "oneworldroasters.com:63": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "ootopia.com:674259035dcc6d1de45dec67": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "orangesky.coffee:OJRQK7COO7JIQZ3ECWPD6UUN": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "owleyecoffee.com:7192290492477": {
+  "grams": 2268,
+  "p100": 4.32,
+  "variant_id": "40968338505789"
+ },
+ "pagosaroasters.com:488": {
+  "grams": 2268,
+  "p100": 5.51,
+  "variant_id": "491"
+ },
+ "pangeacoffeeroasters.com:5938443286e6c076dbe55cf0": {
+  "grams": 2268,
+  "p100": 4.55,
+  "variant_id": "08110d1a-8701-40e6-838d-1304f73174c5"
+ },
+ "paperboyroasting.com:a56cb24ccf96": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "paperboyroasting.com:d69410122abe": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "parabolacoffee.com:17dc455c380c": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "patriotcraftcoffee.com:36748": {
+  "grams": 907,
+  "p100": 4.4,
+  "variant_id": "36749"
+ },
+ "peets.com:6562467971116": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "pennycoffeeroasters.com:6775072653390": {
+  "grams": 2268,
+  "p100": 6.61,
+  "variant_id": "39912684617806"
+ },
+ "perknbeans.com:26a08cbfc0b2": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "phillyfairtrade.com:9108393263259": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "piatanoirroast.com:8466228314284": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "45297016012972"
+ },
+ "picacho.coffee:6852258955424": {
+  "grams": 2268,
+  "p100": 6.17,
+  "variant_id": "44011138646233"
+ },
+ "piercebroscoffee.com:7217481482390": {
+  "grams": 2268,
+  "p100": 5.41,
+  "variant_id": "41004811583638"
+ },
+ "piercebroscoffee.com:7217484759190": {
+  "grams": 2268,
+  "p100": 5.92,
+  "variant_id": "41004820299926"
+ },
+ "pioneercoffeeroasters.com:10509043728679": {
+  "grams": 2268,
+  "p100": 5.47,
+  "variant_id": "52411915239719"
+ },
+ "pisgahroasters.com:9228162385": {
+  "grams": 2268,
+  "p100": 3.58,
+  "variant_id": "33539481041"
+ },
+ "pitotticoffee.com:9520222339361": {
+  "grams": 340,
+  "p100": 5.59,
+  "variant_id": "50104876990753"
+ },
+ "politecoffee.com:15382438412470": {
+  "grams": 2268,
+  "p100": 5.51,
+  "variant_id": "67547722186934"
+ },
+ "poolsixcoffeeroasters.com:8017209753782": {
+  "grams": 2268,
+  "p100": 2.87,
+  "variant_id": "43315225493686"
+ },
+ "portcitycoffee.com:559c178adfd8": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "portcitycoffee.com:afe7299c8c6c": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "pourcityroasters.com:7392": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "7395"
+ },
+ "praxiscoffee.com:188": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "provinggroundcoffeeroaster.com:6aae96612e05f72738d3fa13": {
+  "grams": 283,
+  "p100": 6.36,
+  "variant_id": "97a69f83-5f08-452c-ab9a-d08502169a23"
+ },
+ "ptscoffee.com:10304175210544": {
+  "grams": 2268,
+  "p100": 6.43,
+  "variant_id": "50739719209008"
+ },
+ "purposeroasters.com:8148651211": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "pvroasters.com:4982008676411": {
+  "grams": 454,
+  "p100": 3.69,
+  "variant_id": "33972483522619"
+ },
+ "pyramidcityroasters.com:572188327969": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "49044131184794"
+ },
+ "quartermaine.com:10127456905": {
+  "grams": 454,
+  "p100": 5.06,
+  "variant_id": "41352171529"
+ },
+ "quartertonecoffee.com:677c2aa09970d14898605261": {
+  "grams": 249,
+  "p100": 6.43,
+  "variant_id": "9202b514-a84f-49b1-8c8e-70a9eb1335cc"
+ },
+ "queencitycoffeeroasters.com:4616330641473": {
+  "grams": 454,
+  "p100": 4.41,
+  "variant_id": "32289043775553"
+ },
+ "rainshadowcoffee.com:5c130dea2b6a2887997a17e7": {
+  "grams": 907,
+  "p100": 4.58,
+  "variant_id": "faeb3a06-98c7-4cbc-8a4a-604f636ccd31"
+ },
+ "ramsheadcoffee.com:4489448489048": {
+  "grams": 2268,
+  "p100": 4.23,
+  "variant_id": "32261798625368"
+ },
+ "ranchmanroasters.com:10654261346607": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "51524521034031"
+ },
+ "ravensbrew.com:11456377606": {
+  "grams": 340,
+  "p100": 5.57,
+  "variant_id": "46900149958"
+ },
+ "readingcoffee.com:6940956360756": {
+  "grams": 2268,
+  "p100": 3.98,
+  "variant_id": "40663724294196"
+ },
+ "readysetcoffee.com:4309646082099": {
+  "grams": 2268,
+  "p100": 4.63,
+  "variant_id": "30994294734899"
+ },
+ "redbannercoffee.com:196": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "JYKSC5LQRHOJQ6YSQOLTMJH5"
+ },
+ "reddingroasters.com:520a16c11a7b": {
+  "grams": 454,
+  "p100": 5.51,
+  "variant_id": "0"
+ },
+ "reddingroasters.com:6f6f8554b54c": {
+  "grams": 454,
+  "p100": 5.51,
+  "variant_id": "0"
+ },
+ "redeyeroasters.com:5c8c7300fa0d604ae3df91f5": {
+  "grams": 340,
+  "p100": 6.47,
+  "variant_id": "aa593fa7-0822-45d6-be36-ea2f790c1b6e"
+ },
+ "redletterroasters.com:7484365570131": {
+  "grams": 2268,
+  "p100": 2.43,
+  "variant_id": "42346332815443"
+ },
+ "redstartroasters.com:10363897676022": {
+  "grams": 250,
+  "p100": 5.2,
+  "variant_id": "51966061773046"
+ },
+ "regentcoffee.com:9488467230997": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "reprisecoffee.com:6a5fa36eb545114fe3872c2b": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "revecoffeeroasters.com:1580": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "reviveroasting.com:31": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "reviveroasting.com:IUUZH2NKZUTBRIBTCBLV6P2E": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "risingstarcoffee.com:38143": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "risingtideroastcollab.com:15403598512420": {
+  "grams": 2268,
+  "p100": 3.09,
+  "variant_id": "67928018583844"
+ },
+ "riversbendcoffeeroasters.com:4346": {
+  "grams": 340,
+  "p100": 4.71,
+  "variant_id": "4348"
+ },
+ "roasters.biz:8": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "roasting.com:13646": {
+  "grams": 454,
+  "p100": 4.39,
+  "variant_id": "14148"
+ },
+ "roasting.com:647126": {
+  "grams": 454,
+  "p100": 4.39,
+  "variant_id": "647127"
+ },
+ "roastingplant.com:10410967662904": {
+  "grams": 454,
+  "p100": 13.0,
+  "variant_id": "51756072599864"
+ },
+ "roastingplant.com:11396629454": {
+  "grams": 454,
+  "p100": 7.49,
+  "variant_id": "45590907726"
+ },
+ "rockymountainroasting.com:7270912983127": {
+  "grams": 2268,
+  "p100": 3.02,
+  "variant_id": "41407971983447"
+ },
+ "rootscoffeeco.com:4419209953347": {
+  "grams": 340,
+  "p100": 3.82,
+  "variant_id": "31488774537283"
+ },
+ "rowancoffeeroasters.com:22": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "sabbathcoffeeroasters.com:8242898665702": {
+  "grams": 2268,
+  "p100": 4.47,
+  "variant_id": "43828323418342"
+ },
+ "sabbathcoffeeroasters.com:9783791681766": {
+  "grams": 227,
+  "p100": 9.69,
+  "variant_id": "48031884640486"
+ },
+ "sandiegocoffee.com:4557107527726": {
+  "grams": 2268,
+  "p100": 3.4,
+  "variant_id": "41133161775150"
+ },
+ "sandiegocoffee.com:4557488685102": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "41133158039598"
+ },
+ "savannahcoffee.com:8863197298998": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "47568556163382"
+ },
+ "seafoamroastingcompany.com:2": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "seafoamroastingcompany.com:HPXULWLIEYFYVVHQQH2NRQUM": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "seldoviaroastingco.com:7555519643854": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "43028894941390"
+ },
+ "sellwoodcoffee.com:6": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "serafinacoffeebar.com:364115376135191": {
+  "grams": 340,
+  "p100": 5.88,
+  "variant_id": "0"
+ },
+ "serafinacoffeeroasters.com:364115376135191": {
+  "grams": 340,
+  "p100": 5.88,
+  "variant_id": "0"
+ },
+ "serafinacoffeeroasters.com:364215376135191": {
+  "grams": 340,
+  "p100": 5.88,
+  "variant_id": "0"
+ },
+ "sharewellcoffee.com:c3c9a4fbf366": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "shenandoahjoe.com:67784c6564c3b829bd94ca92": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "shenandoahjoe.com:67784cb964c3b829bd94caed": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "siblingcoffeeroasters.com:4034": {
+  "grams": 340,
+  "p100": 5.59,
+  "variant_id": "KDQVMABYWM3ALVOC7C73D3FY"
+ },
+ "sigbrew.com:86f76c0874b1": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "signetcoffee.com:2272": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "silverstreamcoffeeroasters.com:7512148344914": {
+  "grams": 2268,
+  "p100": 4.85,
+  "variant_id": "42241088847954"
+ },
+ "singlebatchcoffeeroasters.com:6870739845165": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "sloroasted.com:6769653383353": {
+  "grams": 454,
+  "p100": 3.96,
+  "variant_id": "40216488411321"
+ },
+ "sloroasted.com:7992503501077": {
+  "grams": 340,
+  "p100": 4.41,
+  "variant_id": "43737486262549"
+ },
+ "smithrockcoffeeroaster.com:65301411a2028366a6f61848": {
+  "grams": 2268,
+  "p100": 3.31,
+  "variant_id": "7122816d-c4f0-4144-92fa-a4b23fde4d86"
+ },
+ "snakeriverroastingco.com:8204992773": {
+  "grams": 2268,
+  "p100": 5.07,
+  "variant_id": "32199673221"
+ },
+ "solarroast.com:8720702308489": {
+  "grams": 340,
+  "p100": 4.85,
+  "variant_id": "47240991211657"
+ },
+ "speckledax.com:136": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "138"
+ },
+ "staufs.com:5911e7c915cf7d4978f4ad25": {
+  "grams": 2268,
+  "p100": 5.16,
+  "variant_id": "3c79750f-07e7-475e-9b96-b690b9f2be3a"
+ },
+ "steamwhistlecoffee.com:49": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "stedmancoffee.com:010": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "stedmancoffee.com:016": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "stedmancoffee.com:1016": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "steelcupcoffee.com:152": {
+  "grams": 340,
+  "p100": 5.37,
+  "variant_id": "153"
+ },
+ "steeloakcoffee.com:9470305927323": {
+  "grams": 340,
+  "p100": 6.03,
+  "variant_id": "49978422919323"
+ },
+ "stillvibrato.com:67b7f0a979799508e9b06191": {
+  "grams": 907,
+  "p100": 6.5,
+  "variant_id": "7348b1d1-7c1f-4146-916b-1b5e1330e3b8"
+ },
+ "stiverscoffee.biz:9077971583192": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "stokedroasters.com:2501481541": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "41350692944"
+ },
+ "stovetoproasters.com:7767132962877": {
+  "grams": 2268,
+  "p100": 4.59,
+  "variant_id": "42827545608253"
+ },
+ "stridercoffee.com:6288276259007": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "38095259107519"
+ },
+ "stridercoffee.com:7451394441407": {
+  "grams": 340,
+  "p100": 5.15,
+  "variant_id": "42249168847039"
+ },
+ "strongtreecoffee.com:609d471f127f406327c7baa2": {
+  "grams": 2268,
+  "p100": 3.44,
+  "variant_id": "7473a1ff-0601-475c-985d-128b10c49803"
+ },
+ "strongtreecoffee.com:609d47236033344a1342aba9": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "a3bcd9ae-4328-4cbb-ba93-bf791b6ece36"
+ },
+ "strongtreecoffee.com:609d4738127f406327c7baac": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "9820ac76-a7db-4cbb-b2af-246fe76a4782"
+ },
+ "stthomasroasters.com:326": {
+  "grams": 227,
+  "p100": 4.85,
+  "variant_id": "1192"
+ },
+ "stthomasroasters.com:335": {
+  "grams": 227,
+  "p100": 4.85,
+  "variant_id": "1140"
+ },
+ "sugarcreekcoffee.com:7e629e2e5224": {
+  "grams": 2268,
+  "p100": 3.31,
+  "variant_id": "0"
+ },
+ "sumerce.coffee:7646102880350": {
+  "grams": 250,
+  "p100": 7.6,
+  "variant_id": "42785531854942"
+ },
+ "suncoffeeroasters.com:322": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "suncoffeeroasters.com:333": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "suncoffeeroasters.com:334": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "sunshinecoffeeroasters.com:1555610501179": {
+  "grams": 2268,
+  "p100": 3.53,
+  "variant_id": "14531842146363"
+ },
+ "swaycoffeeroasters.com:5deea1da99d5d037ef422a9b": {
+  "grams": 907,
+  "p100": 4.19,
+  "variant_id": "127ce22f-e717-45ca-8e54-21631b883bc0"
+ },
+ "tagcoffee.com:7904732282924": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "takelmaroasting.com:438417588235": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "41902762918059"
+ },
+ "talitha.com:8733390733631": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "temeculacoffeeroasters.com:7752742207645": {
+  "grams": 340,
+  "p100": 4.12,
+  "variant_id": "43542984556701"
+ },
+ "terranovacoffee.net:1329717893": {
+  "grams": 454,
+  "p100": 3.63,
+  "variant_id": "4127462917"
+ },
+ "terraverdecoffee.com:160": {
+  "grams": 2268,
+  "p100": 2.22,
+  "variant_id": "2270"
+ },
+ "thecafeconnection.com:5579459362982": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "35664807985318"
+ },
+ "thecafeconnection.com:5593652035750": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "35655697760422"
+ },
+ "thecafeconnection.com:5593653346470": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "35655703986342"
+ },
+ "thecafeconnection.com:5593677234342": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "thecafeconnection.com:5593679036582": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "35668973715622"
+ },
+ "thecafeconnection.com:6912541982886": {
+  "grams": 907,
+  "p100": 3.36,
+  "variant_id": "40702840799398"
+ },
+ "thecafeconnection.com:9581382992167": {
+  "grams": 340,
+  "p100": 4.04,
+  "variant_id": "49219240395047"
+ },
+ "thecrackedbeanroastery.com:131": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "thekookaburracoffee.com:5976469fcd0f6801324ae566": {
+  "grams": 2268,
+  "p100": 4.85,
+  "variant_id": "0d2384bf-31c5-496b-ab86-61f275abbb4e"
+ },
+ "themusecoffee.co:8432171843781": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "thoumayest.com:7672461295705": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "43158292693081"
+ },
+ "threeshipscoffee.com:10320793862232": {
+  "grams": 283,
+  "p100": 8.48,
+  "variant_id": "50525353345112"
+ },
+ "threeshipscoffee.com:8953501417560": {
+  "grams": 1361,
+  "p100": 5.51,
+  "variant_id": "44671888130136"
+ },
+ "tierrasplanasroasters.com:1820250210339": {
+  "grams": 907,
+  "p100": 3.53,
+  "variant_id": "40732138438691"
+ },
+ "tinkercoffee.com:8889104499004": {
+  "grams": 2268,
+  "p100": 3.88,
+  "variant_id": "47876089512252"
+ },
+ "tmwardcoffee.com:5241589187": {
+  "grams": 454,
+  "p100": 2.97,
+  "variant_id": "16187543171"
+ },
+ "torkecoffee.com:234816533": {
+  "grams": 2268,
+  "p100": 3.75,
+  "variant_id": "531578853"
+ },
+ "touchycoffee.com:8467837092011": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "46111760744619"
+ },
+ "treelinecoffee.com:7141958418620": {
+  "grams": 2268,
+  "p100": 6.04,
+  "variant_id": "42878675976445"
+ },
+ "troubadourcoffeeroasters.com:9176143855844": {
+  "grams": 454,
+  "p100": 7.6,
+  "variant_id": "49574019924196"
+ },
+ "trucup.com:4082249793": {
+  "grams": 2268,
+  "p100": 3.08,
+  "variant_id": "47104795443480"
+ },
+ "turksheadcoffee.com:118433775644": {
+  "grams": 907,
+  "p100": 4.41,
+  "variant_id": "6062931181596"
+ },
+ "tvicr.com:a7b91c02e2c9": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "twistedrivercoffeeroaster.com:7508618215513": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "uncommoncoffeeroasters.com:6932873805908": {
+  "grams": 2268,
+  "p100": 3.88,
+  "variant_id": "40432222535764"
+ },
+ "uncommongroundsllc.com:7884873171046": {
+  "grams": 2268,
+  "p100": 5.03,
+  "variant_id": "44839323205734"
+ },
+ "undergroundscoffeebuffalo.com:72b116991fc7": {
+  "grams": 2268,
+  "p100": 4.19,
+  "variant_id": "0"
+ },
+ "uniquecoffeeroasters.com:8406279627": {
+  "grams": 454,
+  "p100": 3.74,
+  "variant_id": "28886126219"
+ },
+ "uniquecoffeeroasters.com:8406281739": {
+  "grams": 454,
+  "p100": 3.74,
+  "variant_id": "28886139659"
+ },
+ "upperleftroasters.com:10369868595487": {
+  "grams": 2200,
+  "p100": 6.36,
+  "variant_id": "51583832293663"
+ },
+ "usroast.com:1339005861923": {
+  "grams": 2268,
+  "p100": 3.68,
+  "variant_id": "12282427572259"
+ },
+ "usroast.com:6847020761173": {
+  "grams": 2268,
+  "p100": 2.65,
+  "variant_id": "40333619331157"
+ },
+ "uticacoffeeroasting.com:7819064770649": {
+  "grams": 2268,
+  "p100": 3.66,
+  "variant_id": "41948997845081"
+ },
+ "utopiancoffee.com:10799728361784": {
+  "grams": 2268,
+  "p100": 5.34,
+  "variant_id": "52719849079096"
+ },
+ "vanelis.com:1505540571234": {
+  "grams": 340,
+  "p100": 6.59,
+  "variant_id": "13701444370530"
+ },
+ "veltonscoffee.com:9240732237962": {
+  "grams": 454,
+  "p100": 5.07,
+  "variant_id": "49871972106378"
+ },
+ "verenastreet.com:15397386256706": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "verterecoffee.com:6606330658929": {
+  "grams": 454,
+  "p100": 5.07,
+  "variant_id": "39444731560049"
+ },
+ "verterecoffee.com:6829451477105": {
+  "grams": 454,
+  "p100": 4.85,
+  "variant_id": "40103498121329"
+ },
+ "vertigocoffee.com:43": {
+  "grams": 2268,
+  "p100": 3.97,
+  "variant_id": "5104"
+ },
+ "vibrantcoffeeroasters.com:632c915676b44e4a3fd4cb67": {
+  "grams": 2268,
+  "p100": 5.34,
+  "variant_id": "48044fbc-e156-4b5c-96f3-2b00570914c6"
+ },
+ "victrolacoffee.com:10180319445274": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "51884824690970"
+ },
+ "victrolacoffee.com:10336443597082": {
+  "grams": 2268,
+  "p100": 5.29,
+  "variant_id": "52576869417242"
+ },
+ "vividcoffee.com:6a13ab3aca5f313c7fee3d60": {
+  "grams": 907,
+  "p100": 17.64,
+  "variant_id": "47e6cf6e-a2c0-4dc7-8d5f-3f56d9e49992"
+ },
+ "vividcoffee.com:6acd1e74c2a7e50a06c34c61": {
+  "grams": 907,
+  "p100": 6.62,
+  "variant_id": "41fda05d-8da1-4980-8178-b87e2ddc2487"
+ },
+ "wagoncoffeeroasters.com:9304388862203": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "weaverscoffee.com:11161675092": {
+  "grams": 454,
+  "p100": 8.14,
+  "variant_id": "45938474132"
+ },
+ "whiffroasters.com:648": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "whistlepunk.coffee:6844a309cc6de75b44db52a0": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "whistlepunk.coffee:687808c26588572799f71dfc": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "woodlandcoffeeroaster.com:74d9edef4b3e": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "woodshedroast.com:8413211394211": {
+  "grams": 397,
+  "p100": 2.77,
+  "variant_id": "44563810287779"
+ },
+ "wrightfarmcoffeeroasters.com:6324e8b81c3deb79cbcbb722": {
+  "grams": 2268,
+  "p100": 3.57,
+  "variant_id": "796df9d7-b418-4adb-9932-717633a8869e"
+ },
+ "wyobuckinbeans.com:10071978377506": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "yaggyroad.com:109": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "yaggyroad.com:124": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "yaggyroad.com:15": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "yaggyroad.com:295": {
+  "grams": 2268,
+  "p100": 2.98,
+  "variant_id": "R4LADXELZYSNWYQ2V4F2ECZR"
+ },
+ "yaggyroad.com:431": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "yupcoffee.com:620be5c207f17c77f01622f0": {
+  "grams": 2268,
+  "p100": 3.31,
+  "variant_id": "de7fdb47-3212-4390-976f-1968ef0e341f"
+ },
+ "zeliebeanscoffee.com:7055475212456": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ },
+ "zoescoffee.com:59503e9ce110eb6a78d0684b": {
+  "grams": 454,
+  "p100": 3.96,
+  "variant_id": "c894607b-9afd-4d0d-bd7d-945b8105930c"
+ },
+ "zolocoffee.com:134140901": {
+  "grams": null,
+  "p100": null,
+  "variant_id": null
+ }
+}

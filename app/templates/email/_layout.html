@@ -1,0 +1,24 @@
+{#- The emails' one layout (spec §5): inline styles only, the app's paper and ink, Newsreader for the heading with a
+    serif fallback, one accent button, no images and no tracking. -#}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>{{ subject }}</title>
+</head>
+<body style="margin:0;padding:0;background:#f6f5f2;color:#1b1714;">
+<div style="display:none;max-height:0;overflow:hidden;">{% block preview %}{% endblock %}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f5f2;">
+<tr><td align="center" style="padding:32px 16px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;">
+<tr><td style="font:500 15px/1.2 Newsreader,Georgia,'Times New Roman',serif;color:#5f574e;padding-bottom:24px;">registry.coffee</td></tr>
+<tr><td style="font:500 28px/1.15 Newsreader,Georgia,'Times New Roman',serif;color:#1b1714;padding-bottom:16px;">{% block heading %}{% endblock %}</td></tr>
+<tr><td style="font:400 16px/1.5 Archivo,Helvetica,Arial,sans-serif;color:#1b1714;">{% block body %}{% endblock %}</td></tr>
+<tr><td style="font:400 13px/1.45 Archivo,Helvetica,Arial,sans-serif;color:#5f574e;padding-top:32px;">{% block foot %}{% endblock %}</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>

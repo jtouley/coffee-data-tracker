@@ -16,6 +16,12 @@ vars:
   config_dir: "config"
   # Failed weekly runs in a row before a roaster is unreachable. The weekly run passes registry.MAX_FAILURES.
   max_failures: 3
+  # A roaster with more stores than this is a chain (the owner's rule: "a chain is anything with over 20 stores").
+  # The store count is stg_registry.locations; seeds/chain_overrides.csv decides over it, either way, with a reason.
+  # A chain is still crawled and stays in the internal marts; public_roaster leaves it out of every public output.
+  chain_store_threshold: 20
+  # chain_flags (not set here): the build's snapshot's chain flags, [{roaster_id, chain}], from the admin's Sources
+  # page. `coffeedata build` passes them once a published snapshot carries them; they then replace the seed.
   # Who owns shots logged before accounts existed (their user_id is null). The build passes the real id.
   owner_user_id: "owner"
   # Claude's verdicts to use (verdict.py); empty means the rules alone. The build passes the configured ones.
@@ -78,6 +84,11 @@ vars:
   # count only the roasters a crawl pass has reached (run_completeness attempted), with the same thresholds. The
   # weekly build leaves it false, so a roaster the week never reached still counts against the run.
   attempted_only: false
+  # The crawl success SLO (#96, mart_crawl_slo): more than crawl_slo_target of the known roasters fetched ok each
+  # run, and its error budget over the last crawl_slo_window_runs recorded runs (4 weekly runs: about 28 days).
+  # The owner's target, a benchmark: no test reads these, and nothing here blocks a build (min_ok_share does).
+  crawl_slo_target: 0.99
+  crawl_slo_window_runs: 4
   # Anomaly bands (build_metrics_in_band) on the ok shares (overall and per adapter, low side only) and the three
   # volume metrics (both sides): median +/- band_k x 1.4826 x MAD over the latest passing build of each of the last
   # band_window runs since the last accepted change, or band_min_*_halfwidth when that is wider (share: absolute;
@@ -124,6 +135,11 @@ vars:
   price_outlier_high_z: 6
   price_outlier_min_group: 30
   claim_tolerance: 0.15
+  # The name dim_coffee.origin_country_display (and so the site) gives an origin country: `common` takes
+  # seeds/origin_display_name.csv where it has one ("Tanzania" for "Tanzania, United Republic of"), `iso` the ISO
+  # 3166-1 short name. Display only: origin_country and origin_country_code stay ISO's in every table. The owner's
+  # one switch; `coffeedata build` (the weekly run) and the site, which reads the served release, both follow it.
+  origin_names: common
   # The rule settings (coffeedata.rules.dbt_var: the flag_* models and readiness in int_catalog_decided).
   # `coffeedata build` always passes them, from the build's snapshot or rules.DEFAULTS; these are those defaults,
   # for dbt run by hand and the unit tests (tests/test_flags.py checks they match).

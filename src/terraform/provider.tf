@@ -24,9 +24,13 @@ provider "google" {
 }
 
 locals {
-  # The app's secrets, mounted as environment variables. Values are never in Terraform or its state.
-  secrets = ["HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE"]
-  image   = "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/app"
+  # The app's secrets, as environment variables. Values are never in Terraform or its state.
+  # The two email secrets always exist, whatever var.email says, so turning email off never destroys EMAIL_KEY or
+  # its versions (review H2): var.email decides only whether the service mounts them (cloud_run.tf), and so whether
+  # the app's email features show (docs/app/RUNNING.md, "Email").
+  email_secrets = ["EMAIL_KEY", "RESEND_API_KEY"]
+  secrets       = concat(["HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE"], local.email_secrets)
+  image         = "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/app"
 }
 
 # The APIs the resources below need.

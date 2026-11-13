@@ -1,0 +1,7 @@
+Your password was changed
+
+The password for {{ username }} was just changed, and every device was signed out.
+
+If that wasn’t you, reply to this email.
+
+registry.coffee

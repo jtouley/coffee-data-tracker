@@ -77,7 +77,7 @@ CONTRACTS: dict[str, dict[str, Any]] = {
     },
     "manifest": {
         "tables": ["run_manifests", "job_manifests"],
-        "producer": "every job (crawl, crawl-retry, merge, enrich, fetch-health, classify, build)",
+        "producer": "every job (discover, probe, crawl, crawl-retry, merge, enrich, fetch-health, classify, build)",
         "producer_code": [
             "src/coffeedata/control.py",
             "src/coffeedata/cli.py",

@@ -32,7 +32,7 @@ body { margin: 0; background: var(--surface-0); color: var(--text-primary);
 .serif { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
 a { color: var(--accent); }
-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0; }
+nav { display: flex; flex-wrap: wrap; row-gap: 4px; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0; }  /* wraps rather than scroll at 320 px with a wide system font (DejaVu Sans) */
 .mark-word { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; color: var(--text-primary); text-decoration: none; }
 .mark-word .dot { color: var(--accent); }
 nav .right { display: flex; align-items: center; gap: 16px; font-size: 14px; }

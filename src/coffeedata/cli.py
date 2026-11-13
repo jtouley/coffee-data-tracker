@@ -9,6 +9,7 @@ import os
 import subprocess
 import sys
 import time
+from collections import Counter
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -24,6 +25,7 @@ SERVED_DB = Path("build/served.duckdb")  # the served release's tables, for the 
 WEEKLY_CRAWL_MIN = 150.0
 # crawl-retry without a connector stops starting stores here, under the same 240-minute limit as the crawls.
 CRAWL_RETRY_MIN = 225.0
+DISCOVER_SOURCES = ("osm", "overture")  # the order the discover job runs them: the smaller one first
 MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot", "mart_bag"]
 
 
@@ -81,35 +83,223 @@ def cmd_init(args: argparse.Namespace) -> None:
     )
 
 
-def cmd_discover(args: argparse.Namespace) -> None:
-    from . import discover
+def _error(e: BaseException) -> str:
+    return f"{type(e).__name__}: {e}"[:500]
 
+
+def _known_roasters(lake: Lake) -> set[str]:
+    """Every roaster_id in the seed or the lake's registry, before this source's rows: what "new" is measured against.
+    A source run after another in the same execution (Overture after OSM) counts the first one's roasters as known,
+    so the run's new roasters are the sum of `new` over its sources, not one source's figure."""
+    from . import registry
+
+    con = lake.connect()
+    sql = f"""select roaster_id from read_csv(?, header = true, all_varchar = true)
+              union select roaster_id from {lake.scan("registry")} where roaster_id is not null"""
+    return {r[0] for r in con.execute(sql, [str(registry.SEED)]).fetchall()}
+
+
+def _discover_done(lake: Lake, week: str, source: str) -> bool:
+    """Cloud Run's retry of this execution (CLOUD_RUN_TASK_ATTEMPT > 0): did an earlier attempt record `source`
+    already? Its rows are in staging or the dataset, so the retry doesn't record (or ask Overpass for) them again."""
+    from . import control
+
+    return any(r["status"] == "done" for r in control.this_execution(lake, week, "discover", source))
+
+
+def discover_source(
+    lake: Lake,
+    source: str,
+    release: str | None = None,
+    states: list[str] | None = None,
+    week: str | None = None,
+) -> dict:
+    """Record one open dataset's roasters in the registry, with a job_manifests start and end row (job discover,
+    connector = the source) under `week` (default: this week's Monday), as every pipeline job has. Raises, after the
+    end row says `failed`, when the source gave nothing usable: Overture's scan found no roaster, or Overpass left
+    more than half the states unanswered (an outage; the states it did answer are still recorded)."""
+    from . import connectors, control, discover
+
+    week = week or connectors.week_of(_today())
+    if _discover_done(lake, week, source):
+        print(f"{source}: already recorded by an earlier attempt of this execution", file=sys.stderr)
+        return {"source": source, "skipped": True}
+    started = control.execution() | {"release": release, "states": states}
+    job = control.start(lake, "discover", week, source, detail=started)
+    try:
+        failed: list[str] = []
+        outage = None
+        if source == "overture":
+            release = release or discover.overture_latest_release()
+            found = discover.overture(release)
+            # ~3,100 in October 2026: none means the scan or Overture's schema broke, not "no roasters"
+            if not found:
+                raise RuntimeError(f"Overture {release}: the scan found no roasters")
+        else:
+            asked = states or discover.US_STATES
+            found = discover.osm(asked, failed=failed)
+            if 2 * len(failed) > len(asked):
+                outage = f"Overpass left {len(failed)} of {len(asked)} states unanswered (an outage?)"
+        try:
+            known: set[str] | None = _known_roasters(lake)
+        except Exception as e:  # noqa: BLE001 - only the "new" count needs it; the rows are recorded either way
+            logging.warning("couldn't read the known roasters (%s); not counting new ones", _error(e))
+            known = None
+        now = datetime.now(UTC).replace(microsecond=0)
+        rows = [r | {"added_at": now, "opted_out": False} for r in found]
+        key = (release or "latest") if source == "overture" else _today()
+        path = lake.write("registry", f"registry/source={source}/{key}-{new_batch_id()}.parquet", rows)
+    except BaseException as e:  # a crash, or an interrupt: the end row says the attempt failed
+        control.finish(lake, job, "failed", detail=started | {"error": _error(e)})
+        raise
+    new = sorted({r["roaster_id"] for r in rows} - known) if known is not None else []
+    out = {
+        "source": source,
+        "release": release if source == "overture" else None,
+        "recorded": len(rows),
+        "new": len(new) if known is not None else None,
+        "new_sample": new[:20],
+        "failed_states": failed,
+        "file": path.relative_to(lake.root).as_posix() if path else None,
+    }
+    control.finish(
+        lake,
+        job,
+        "failed" if outage else "done",
+        ok=len(rows),
+        errors=len(failed),
+        detail=started | out | ({"error": outage} if outage else {}),
+    )
+    # What Overpass did answer is recorded; the job fails so the owner hears of it and runs it again.
+    if outage:
+        raise RuntimeError(outage)
+    if failed:  # a partial outage (half the states or fewer) ends `done`: say which states are missing
+        logging.warning(
+            "discover %s: Overpass didn't answer %d states: %s", source, len(failed), ", ".join(failed)
+        )
+    print(
+        f"{source}: {len(rows)} roasters recorded, {out['new']} new (new ones are picked up by the next probe)"
+        + (f"; Overpass didn't answer {', '.join(failed)}" if failed else "")
+    )
+    return out
+
+
+def cmd_discover(args: argparse.Namespace) -> None:
+    """Each source on its own: one that fails (Overpass down, Overture unreadable) is recorded as failed and the
+    others still run. With --publish, each source's rows go to the dataset as soon as they're recorded, so a later
+    source's failure (or the job's memory limit) never loses them. Exits non-zero if any source failed."""
     lake = Lake()
-    found = discover.overture(args.release) if args.source == "overture" else discover.osm(args.states)
-    now = datetime.now(UTC).replace(microsecond=0)
-    rows = [r | {"added_at": now, "opted_out": False} for r in found]
-    key = (args.release or "latest") if args.source == "overture" else _today()
-    lake.write("registry", f"registry/source={args.source}/{key}-{new_batch_id()}.parquet", rows)
-    print(f"{args.source}: {len(rows)} roasters recorded (new ones are picked up by the next probe)")
+    sources = [args.source] if isinstance(args.source, str) else list(dict.fromkeys(args.source))
+    failed = []
+    for src in sources:
+        try:
+            discover_source(lake, src, args.release, args.states)
+        except Exception as e:  # noqa: BLE001 - the other sources still run; the exit status says this one failed
+            logging.error("discover %s failed: %s", src, _error(e))
+            failed.append(src)
+        if getattr(args, "publish", False) and lake.remote:
+            try:
+                print(f"published {lake.publish(f'discover {src}')} files to {lake.url}")
+            except Exception as e:  # noqa: BLE001 - staged files stay and the job's final publish (or the next) sends them
+                logging.error("publish after discover %s failed: %s", src, _error(e))
+                failed.append(f"publish {src}")
+    if failed:
+        raise SystemExit(f"discover failed: {', '.join(failed)}")
+
+
+def probe_todo(states: list, run_date: str, stale_days: int) -> list[str]:
+    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`;
+    never-probed ones (new from discovery) first, then the longest unprobed, so a run stopped by its deadline has
+    asked the ones that most need it, and the next run carries on with the rest."""
+    cutoff = (date.fromisoformat(run_date) - timedelta(days=stale_days)).isoformat()
+    todo = [s for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
+    todo.sort(key=lambda s: (s.last_probed is not None, s.last_probed or "", s.roaster.roaster_id))
+    return [s.roaster.roaster_id for s in todo]
 
 
 def cmd_probe(args: argparse.Namespace) -> None:
-    from . import discover, ingest, registry
+    """Probe stale roasters' sites. Each batch of results is written to the lake as it finishes, so a run that stops
+    early (its deadline, a crash, Cloud Run's timeout) keeps what it probed, and the job's publish sends it. With
+    --deadline-min it starts no roaster after that many minutes from its start; the rest wait for the next run
+    (status `deadline` in its job_manifests end row)."""
+    from . import connectors, control, discover, ingest, registry
 
+    t0 = time.monotonic()
     lake = Lake()
-    states = registry.current(lake)
-    cutoff = (date.fromisoformat(args.run_date) - timedelta(days=args.stale_days)).isoformat()
-    todo = [
-        s.roaster.roaster_id for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff
-    ]
-    if args.only:
-        todo = [args.only]
-    if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
-        todo = sorted(todo, key=ingest.sample_key)[: args.sample]
-    rows = discover.probe(todo, workers=args.workers, run_date=args.run_date)
-    lake.write_partition("probes", args.run_date, new_batch_id(), rows)
+    week = connectors.week_of(args.run_date)
+    job = control.start(lake, "probe", week, detail=control.execution())
+    files: list[str] = []
+
+    def write(batch: list[dict]) -> None:
+        path = lake.write_partition("probes", args.run_date, new_batch_id(), batch)
+        if path:
+            files.append(path.name)
+
+    rows: list[dict] = []
+    todo: list[str] = []
+    states: list = []
+    try:
+        states = registry.current(lake)
+        todo = probe_todo(states, args.run_date, args.stale_days)
+        if args.only:
+            todo = [args.only]
+        if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
+            todo = sorted(todo, key=ingest.sample_key)[: args.sample]
+        deadline_min = getattr(args, "deadline_min", None)
+        left = None
+        # A Cloud Run retry keeps the first attempt's window (it ends before the crawls). For a retry the window is
+        # already measured up to now, from the first attempt's start, so this attempt's setup isn't taken off again;
+        # a first attempt's window is the full deadline, less the setup since t0.
+        if deadline_min is not None:
+            window = connectors._window_left(lake, "probe", None, week, deadline_min)
+            left = max(0.0, min(60 * window, 60 * deadline_min - (time.monotonic() - t0)))
+        rows = discover.probe(
+            todo, workers=args.workers, run_date=args.run_date, deadline_s=left, on_batch=write
+        )
+    except BaseException as e:  # what was written stays staged; the end row says the attempt failed
+        control.finish(
+            lake,
+            job,
+            "failed",
+            todo=len(todo),
+            detail=control.detail_of(job) | {"error": _error(e), "files": len(files)},
+        )
+        raise
     ok = sum(r["status"] == "ok" for r in rows)
-    print(f"probed {len(rows)} roasters ({ok} reachable)")
+    left_over = len(todo) - len(rows)
+    # Probed roasters that are now aliases of another roaster's store (the state after this probe's rows, so the
+    # crawl's own rule): never crawled or published. Only a report: a failure to read it never fails the probe.
+    try:
+        same = registry.same_store([r["roaster_id"] for r in rows], states, registry.current(lake))
+    except Exception as e:  # noqa: BLE001
+        logging.warning("probe: the same-store report failed: %s", e)
+        same = {}
+    detail = control.detail_of(job) | {
+        "probed": len(rows),
+        "by_status": dict(Counter(r["status"] for r in rows)),
+        "same_store": same,
+        "files": len(files),
+        "minutes": round((time.monotonic() - t0) / 60, 1),
+    }
+    control.finish(
+        lake,
+        job,
+        "deadline" if left_over else "done",
+        todo=len(todo),
+        ok=ok,
+        errors=len(rows) - ok,
+        skipped=left_over,
+        detail=detail,
+    )
+    print(
+        f"probed {len(rows)} of {len(todo)} roasters ({ok} reachable)"
+        + (f"; deadline reached, {left_over} left for the next run" if left_over else "")
+    )
+    if detail["same_store"]:
+        print(
+            f"{len(detail['same_store'])} probed roaster(s) serve another roaster's store and are aliases of it "
+            "(not crawled): " + ", ".join(f"{a} -> {b}" for a, b in list(detail["same_store"].items())[:20])
+        )
 
 
 def cmd_ingest(args: argparse.Namespace) -> None:
@@ -187,9 +377,16 @@ def _test_id(v: str) -> str:
 
 
 def cmd_merge(args: argparse.Namespace) -> None:
-    from . import connectors
+    """Refuses to start over an earlier merge attempt of the week that failed or never ended (still running, or
+    dead part-way): redoing it is the owner's call (chain.refuse_unfinished), so the job has no automatic retry."""
+    from . import chain, connectors
 
-    _print(connectors.merge(Lake(), args.run_date))
+    lake = Lake()
+    try:
+        chain.refuse_unfinished(lake, args.run_date, "merge")
+    except chain.PreconditionFailed as e:
+        raise SystemExit(str(e)) from None
+    _print(connectors.merge(lake, args.run_date))
 
 
 def cmd_crawl_retry(args: argparse.Namespace) -> None:
@@ -252,10 +449,37 @@ def cmd_fetch_health(args: argparse.Namespace) -> None:
                           "systemic": out["systemic"]}))  # fmt: skip
 
 
+def _precondition(lake: Lake, day: str | None = None, default_jobs: str | None = None) -> dict | None:
+    """The Tuesday chain's precondition (chain.py, issue #84): go on only once the jobs before this one are done
+    for the week, waiting until its deadline; otherwise exit non-zero, so the Cloud Run execution fails and its
+    alert emails the owner. None when this process has no precondition (COFFEEDATA_AFTER_JOB unset, no default).
+    A check that doesn't pass, for any reason, also stops the commands after it in the same execution."""
+    from . import chain
+
+    day = day or _today()
+    try:
+        chain.refuse_after_failed(day)
+        return chain.check(lake, day, default_jobs)
+    except chain.PreconditionFailed as e:
+        chain.mark_failed(day, str(e))
+        raise SystemExit(str(e)) from None
+    except BaseException as e:
+        chain.mark_failed(day, f"{type(e).__name__}: {e}")
+        raise
+
+
 def cmd_enrich_week(args: argparse.Namespace) -> None:
+    """After the week's merge, always: it waits for it until the job's deadline, then fails (it used to print
+    `waiting` and exit 0, which skipped a week's enrichment without an alert)."""
     from . import connectors
 
-    _print(connectors.enrich_week(Lake(), args.run_date, args.limit, submit=args.submit))
+    lake = Lake()
+    pre = _precondition(lake, args.run_date, default_jobs="merge")
+    # The precondition has checked the merge (or the owner skipped it): no second, unguarded read of it here.
+    out = connectors.enrich_week(
+        lake, args.run_date, args.limit, submit=args.submit, require_merge=pre is None
+    )
+    _print(out | {"precondition": pre})
 
 
 def cmd_egress_check(args: argparse.Namespace) -> None:
@@ -298,6 +522,10 @@ def cmd_classify(args: argparse.Namespace) -> None:
     from . import connectors, control
 
     lake = Lake()
+    # In the weekly build job, classify is the first step: it waits here for the week's merge and enrichment, so
+    # the verdicts are submitted for the whole week's products, not for a half-merged one. The week is today's,
+    # as the build's check is, whatever --run-date either is given.
+    _precondition(lake)
     # The control plane's start and end rows (job classify), for the week the verdicts are for.
     job = control.start(lake, "classify", connectors.week_of(args.run_date or _today()),
                         detail={"model": verdict.model(), **control.execution()})  # fmt: skip
@@ -435,10 +663,6 @@ def dbt_build(
     return passed, results
 
 
-def _error(e: BaseException) -> str:
-    return f"{type(e).__name__}: {e}"[:500]
-
-
 def cmd_build(args: argparse.Namespace) -> bool:
     """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
     marts (what the site, the app, the public export and the MCP tools other than run_sql read); a failing one is still kept, with its results and a
@@ -447,6 +671,10 @@ def cmd_build(args: argparse.Namespace) -> bool:
     from . import control, quality
 
     lake = Lake()
+    # The weekly build job only (COFFEEDATA_AFTER_JOB): no build of a week whose merge and enrichment aren't done,
+    # and none after a classify whose own check didn't pass. Before the merge the lake's latest run is still last
+    # week's, which could pass and be served again.
+    _precondition(lake)
     db = Path(args.db)
     if db.exists():
         db.unlink()  # derived: always rebuilt from the lake
@@ -724,6 +952,9 @@ def cmd_load_snowflake(args: argparse.Namespace) -> None:
     )
 
 
+DISCOVER_TIMEOUT = timedelta(hours=4)  # the discover job's task timeout (src/terraform/ingestion.tf, 14400s)
+
+
 def cmd_weekly(args: argparse.Namespace) -> None:
     """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
     from . import verdict
@@ -747,11 +978,36 @@ def cmd_weekly(args: argparse.Namespace) -> None:
             )
             .fetchall()
         }
-        for src in ("overture", "osm"):
+        from . import control
+        from .connectors import week_of
+        from .lake import retry_transient
+
+        # A source whose last discover this month ended `failed` (an Overpass outage still records what it answered)
+        # or never ended (a killed attempt) is not done: re-running asks it again. Discover rows sit under their
+        # week's Monday, so the month's start from the week of the 1st (the Cloud Run job's week, when it ran).
+        first, last_week = week_of(f"{month}-01"), week_of(run)
+        last = {
+            r["connector"]: r
+            for r in retry_transient(control.rows, lake)
+            if r["job"] == "discover" and first <= r["run_date"].isoformat() <= last_week
+        }
+
+        def killed(r: dict) -> bool:
+            """A `running` row older than the discover job's task timeout: that attempt died. A younger one may
+            still be running (the Cloud Run job of the 1st), so it isn't started again alongside it."""
+            started = r["started_at"] if r["started_at"].tzinfo else r["started_at"].replace(tzinfo=UTC)
+            return control.now() - started > DISCOVER_TIMEOUT
+
+        done -= {
+            src
+            for src, r in last.items()
+            if r["status"] == "failed" or (r["status"] == "running" and killed(r))
+        }
+        for src in DISCOVER_SOURCES:
             if src in done and not args.discover:
                 continue  # once a month; re-running the week doesn't re-record it
             try:
-                cmd_discover(argparse.Namespace(source=src, release=None, states=None))
+                discover_source(lake, src, week=week_of(run))
             except Exception as e:  # noqa: BLE001 - discovery is best-effort; the catalog run must still happen
                 logging.warning("discover %s failed: %s", src, e)
     # Publish after every step that records new data, so a later failure (build, export, Snowflake, site) or a
@@ -918,6 +1174,75 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
 
 
+def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
+    """This week's private snapshot of each importer's public offer list (importers.py). Exits 1 if any failed."""
+    from . import importers
+    from .http import PoliteClient
+
+    if unknown := set(args.importer or ()) - set(importers.IMPORTERS):
+        raise SystemExit(
+            f"no importer {', '.join(sorted(unknown))}; known: {', '.join(sorted(importers.IMPORTERS))}"
+        )
+    if args.accept_drop and (scheduled := set(args.importer or ()) & set(importers.SCHEDULE_ONLY)):
+        raise SystemExit(
+            f"{', '.join(sorted(scheduled))} is fetched only by the scheduled run; a drop there can't be accepted"
+            " on a dispatch"
+        )
+    if args.accept_drop and len(set(args.importer or ())) != 1:
+        raise SystemExit(
+            "--accept-drop needs exactly one --importer: the override covers the importer checked by hand"
+        )
+    lake = Lake.importers()
+    if args.require_hub and not lake.remote:
+        # a local lake on a CI runner is thrown away with it: the run would report "stored" and keep nothing
+        raise SystemExit(f"COFFEEDATA_IMPORTERS must be an hf://datasets/ URL here, not {lake.url!r}")
+    # One page per host for the HTML importers; Royal's listing pages wait ROYAL_PAGE_INTERVAL (importers.read_royal)
+    # on top of the client's spacing. A slow page gets a minute. This is the one client allowed to reach a host only
+    # the scheduled importers job fetches (http.schedule_only_host); importers.royal_listing_url decides whether it does.
+    # The run stops at IMPORTERS_DEADLINE_S, a little under the workflow's job timeout, so a long Royal pass ends as a
+    # recorded failure (DeadlineReached) instead of a killed job.
+    with PoliteClient(
+        timeout=60.0, retries=3, schedule_only_ok=True, deadline_s=importers.IMPORTERS_DEADLINE_S
+    ) as client:
+        results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
+    _print(results)
+    return all(r["status"] != "failed" for r in results)
+
+
+def cmd_importer_build(args: argparse.Namespace) -> bool:
+    """The importers' derived view: the private dbt project (dbt_importers/) over $COFFEEDATA_IMPORTERS, read only,
+    into its own database file, build/importers.duckdb (importers.DB, the only place it builds). Exits 1 if a model or
+    check failed.
+
+    With --log-file, dbt's output goes to that file and only counts are printed (importers.run_counts): what the
+    workflow does, since its log is public and a failing query's error can quote a lot's value. With --publish, a
+    build that passed is sent to the private dataset (importers.publish_derived, counts printed); a failed build
+    sends nothing, so the copy there stays the last good one."""
+    import tempfile
+
+    from . import importers
+
+    lake = Lake.importers()
+    if args.publish and not lake.remote:
+        raise SystemExit(
+            f"--publish needs COFFEEDATA_IMPORTERS to be an hf://datasets/ URL, not {lake.url!r}"
+        )
+    if args.log_file is None:
+        ok = importers.build(lake)
+        counts = None
+    else:
+        with tempfile.TemporaryDirectory() as target:
+            ok = importers.build(lake, target=Path(target), log=args.log_file)
+            counts = importers.run_counts(Path(target))
+    summary: dict = {"build": "passed" if ok else "failed"}
+    if counts is not None:
+        summary["dbt"] = counts
+    _print(summary)
+    if ok and args.publish:
+        _print({"published": importers.publish_derived(lake, sha=os.environ.get("GITHUB_SHA"))})
+    return ok
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -931,10 +1256,15 @@ def main(argv: list[str] | None = None) -> None:
 
     ini = add("init", cmd_init, "create the lake (for hf://: the dataset repo, card and table schemas)")
     ini.add_argument("--public", action="store_true", help="make a new HF dataset public (default private)")
-    d = add("discover", cmd_discover, "record roasters from an open dataset")
-    d.add_argument("source", choices=["overture", "osm"])
+    d = add("discover", cmd_discover, "record roasters from open datasets (each source on its own)")
+    d.add_argument("source", nargs="+", choices=DISCOVER_SOURCES, help="one or more, run in the order given")
     d.add_argument("--release", help="Overture release (default: latest)")
     d.add_argument("--states", nargs="*", help="OSM: limit to these state codes")
+    d.add_argument(
+        "--publish",
+        action="store_true",
+        help="publish to the remote lake after each source (the Cloud Run job)",
+    )
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
@@ -942,6 +1272,11 @@ def main(argv: list[str] | None = None) -> None:
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
     pr.add_argument("--run-date", type=_run_date, default=_today())
+    pr.add_argument(
+        "--deadline-min",
+        type=_positive_float,
+        help="start no roaster after this many minutes; the rest wait for the next run",
+    )
 
     i = add("ingest", cmd_ingest, "fetch catalogs for this run (skips roasters already fetched in it)")
     i.add_argument("--run-date", type=_run_date, default=_today())
@@ -1004,7 +1339,9 @@ def main(argv: list[str] | None = None) -> None:
     ew.add_argument("--limit", type=int, default=2000)
     ew.add_argument("--submit", action="store_true", help="send to Claude (spends); without it, only count")
     add(
-        "egress-check", cmd_egress_check, "flag egress IPs refused on >8% of first contacts two runs in a row"
+        "egress-check",
+        cmd_egress_check,
+        "flag egress IPs refused on >8%% of first contacts two runs in a row",
     )
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
@@ -1175,6 +1512,43 @@ def main(argv: list[str] | None = None) -> None:
         "--skip-if-unserved",
         action="store_true",
         help="with --served: build nothing and exit 0 when no release is served yet (the site workflow)",
+    )
+
+    imp = add(
+        "importer-snapshot",
+        cmd_importer_snapshot,
+        "this week's private snapshot of green importers' public offer lists ($COFFEEDATA_IMPORTERS)",
+    )
+    imp.add_argument(
+        "--importer",
+        action="append",
+        help="only this importer (repeatable): cafe_imports, interamerican, royal_coffee (scheduled runs only)",
+    )
+    imp.add_argument(
+        "--accept-drop",
+        action="store_true",
+        help="with one --importer: store its week even with under half the lots of its last stored week (a real "
+        "drop, checked by hand)",
+    )
+    imp.add_argument(
+        "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
+    )
+
+    ib = add(
+        "importer-build",
+        cmd_importer_build,
+        "derive importer offers (private dbt project) from $COFFEEDATA_IMPORTERS into their own private database",
+    )
+    ib.add_argument(
+        "--log-file",
+        type=Path,
+        help="write dbt's output to this file and print only counts (CI: its log is public)",
+    )
+    ib.add_argument(
+        "--publish",
+        action="store_true",
+        help="after a build that passed, send importer_offers to the private dataset's derived/ (replaced each "
+        "build; needs an hf:// COFFEEDATA_IMPORTERS)",
     )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")

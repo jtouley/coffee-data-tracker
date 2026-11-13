@@ -1,0 +1,14 @@
+version: 2
+
+# Intermediate models that models/schema.yml doesn't describe. dbt takes one entry per model, so a model is
+# described either here or there, never in both (docs/dbt/CONVENTION.md, section 7).
+models:
+  - name: int_current_catalog
+    description: >-
+      One row per coffee in the current catalog, as on the site: dim_coffee's rows that are listed now, without the
+      roasters' archived back catalogs (macro is_current). Its columns are dim_coffee's. mart_market and the volume
+      metrics of mart_build_profile count it.
+    columns:
+      - name: coffee_id
+        description: "<roaster domain>:<store product id> (dim_coffee.coffee_id)."
+        data_tests: [unique, not_null]

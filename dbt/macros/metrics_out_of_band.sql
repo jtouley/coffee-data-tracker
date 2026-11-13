@@ -7,6 +7,10 @@
     least min_adapter_roasters roasters with a catalog. One row per metric out of band. The rules are in
     tests/build_metrics_in_band.sql. -#}
 {% macro metrics_out_of_band(banded, min_share_halfwidth=none) -%}
+-- depends_on: {{ ref('stg_builds') }}
+-- depends_on: {{ ref('mart_build_profile') }}
+{# The refs below sit inside the var check (as_of_run); the two lines above declare them whatever the vars, so a
+    test that calls this macro depends on its models in dbt's graph (docs/dbt/CONVENTION.md, section 5). #}
 {%- set share_halfwidth = min_share_halfwidth if min_share_halfwidth is not none else var('band_min_share_halfwidth') %}
 {%- set volume = ['listed_coffees', 'in_stock_coffees', 'roasters_with_coffee'] %}
 {%- if var('as_of_run') %}

@@ -1,0 +1,8 @@
+{% extends "_layout.html" %}
+{% block preview %}Every device was signed out.{% endblock %}
+{% block heading %}Your password was changed{% endblock %}
+{% block body %}
+<p style="margin:0;">The password for <strong>{{ username }}</strong> was just changed, and every device was signed out.</p>
+<p style="margin:16px 0 0;">If that wasn’t you, reply to this email.</p>
+{% endblock %}
+{% block foot %}You get this email whenever your password is reset, so you’d know if it wasn’t you.{% endblock %}
