@@ -354,9 +354,16 @@ def cmd_crawl(args: argparse.Namespace) -> None:
 
 
 def cmd_merge(args: argparse.Namespace) -> None:
-    from . import connectors
+    """Refuses to start over an earlier merge attempt of the week that failed or never ended (still running, or
+    dead part-way): redoing it is the owner's call (chain.refuse_unfinished), so the job has no automatic retry."""
+    from . import chain, connectors
 
-    _print(connectors.merge(Lake(), args.run_date))
+    lake = Lake()
+    try:
+        chain.refuse_unfinished(lake, args.run_date, "merge")
+    except chain.PreconditionFailed as e:
+        raise SystemExit(str(e)) from None
+    _print(connectors.merge(lake, args.run_date))
 
 
 def cmd_crawl_retry(args: argparse.Namespace) -> None:
@@ -412,10 +419,37 @@ def cmd_fetch_health(args: argparse.Namespace) -> None:
                           "systemic": out["systemic"]}))  # fmt: skip
 
 
+def _precondition(lake: Lake, day: str | None = None, default_jobs: str | None = None) -> dict | None:
+    """The Tuesday chain's precondition (chain.py, issue #84): go on only once the jobs before this one are done
+    for the week, waiting until its deadline; otherwise exit non-zero, so the Cloud Run execution fails and its
+    alert emails the owner. None when this process has no precondition (COFFEEDATA_AFTER_JOB unset, no default).
+    A check that doesn't pass, for any reason, also stops the commands after it in the same execution."""
+    from . import chain
+
+    day = day or _today()
+    try:
+        chain.refuse_after_failed(day)
+        return chain.check(lake, day, default_jobs)
+    except chain.PreconditionFailed as e:
+        chain.mark_failed(day, str(e))
+        raise SystemExit(str(e)) from None
+    except BaseException as e:
+        chain.mark_failed(day, f"{type(e).__name__}: {e}")
+        raise
+
+
 def cmd_enrich_week(args: argparse.Namespace) -> None:
+    """After the week's merge, always: it waits for it until the job's deadline, then fails (it used to print
+    `waiting` and exit 0, which skipped a week's enrichment without an alert)."""
     from . import connectors
 
-    _print(connectors.enrich_week(Lake(), args.run_date, args.limit, submit=args.submit))
+    lake = Lake()
+    pre = _precondition(lake, args.run_date, default_jobs="merge")
+    # The precondition has checked the merge (or the owner skipped it): no second, unguarded read of it here.
+    out = connectors.enrich_week(
+        lake, args.run_date, args.limit, submit=args.submit, require_merge=pre is None
+    )
+    _print(out | {"precondition": pre})
 
 
 def cmd_egress_check(args: argparse.Namespace) -> None:
@@ -456,6 +490,10 @@ def cmd_classify(args: argparse.Namespace) -> None:
         )
         return
     lake = Lake()
+    # In the weekly build job, classify is the first step: it waits here for the week's merge and enrichment, so
+    # the verdicts are submitted for the whole week's products, not for a half-merged one. The week is today's,
+    # as the build's check is, whatever --run-date either is given.
+    _precondition(lake)
     out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
     deadline = time.monotonic() + args.wait * 60
     # Wait for this run's batches only; whatever is still running is collected by the next run.
@@ -590,6 +628,10 @@ def cmd_build(args: argparse.Namespace) -> bool:
     from . import quality
 
     lake = Lake()
+    # The weekly build job only (COFFEEDATA_AFTER_JOB): no build of a week whose merge and enrichment aren't done,
+    # and none after a classify whose own check didn't pass. Before the merge the lake's latest run is still last
+    # week's, which could pass and be served again.
+    _precondition(lake)
     db = Path(args.db)
     if db.exists():
         db.unlink()  # derived: always rebuilt from the lake
