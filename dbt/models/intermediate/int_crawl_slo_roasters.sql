@@ -18,11 +18,15 @@
 -- the stored runs of 2026-10-27, 10-28 and 10-30), and a Monday with only sample, --only or retry_failed
 -- manifests, have no rows here and spend no budget. A week whose crawl never started has no stored run, so no row
 -- and no budget spent either: freshness:served_age_days is what reports a missed week.
--- Known in a run: every roaster the run listed (its manifests, any mode: the crawl's pool, which is the roasters
--- with a platform, not opted out and not an alias when it started) or tried, plus every roaster an earlier stored
--- run listed or tried that this one didn't (expected_by_run false). Those are the roasters the crawl has stopped
--- trying (unreachable after max_failures failed runs): they count as not fetched, so giving up on a store never
--- raises the share. A roaster no run has listed or tried yet has no row, whatever the registry says about it now.
+-- Known in a run: every roaster the run listed in a full manifest (the crawl's pool when it started: the roasters
+-- with a platform, not opted out and not an alias), or, for a run from before manifests, tried; plus every roaster
+-- an earlier scored run listed that this one didn't (expected_by_run false). Those are the roasters the crawl has
+-- stopped trying (unreachable after max_failures failed runs): they count as not fetched, so giving up on a store
+-- never raises the share. A partial pull (an --only, "Pull now", sample or retry_failed manifest, or an ad-hoc run)
+-- never makes a roaster known: a roaster only such a pull touched has no row in that run or any later one. Nor
+-- does the registry alone: a roaster no scored run has listed has no row, and one removed from the registry (no
+-- int_roaster_state row now) has no row in the runs that didn't list it. That removal, like an alias, is read as
+-- it is now (raw has no date for it).
 --
 -- counted is false, with excluded_reason, only for a roaster the run didn't list:
 --   opted_out  it had opted out before the run started (stg_registry.opted_out_at; an opt-out stated in the seed
@@ -61,13 +65,20 @@ manifests as (
     from {{ ref('stg_run_manifests') }} m join anchor a on m.run_date <= a.run_date
     group by m.run_date, m.roaster_id
 ),
+-- The roasters a run set out to fetch: its full manifests' rows; a run from before manifests, the ones it tried.
+listed_ids as (
+    select run_date, roaster_id from manifests where full_run
+    union
+    select t.run_date, t.roaster_id from attempts t
+    where not exists (select 1 from manifests m where m.run_date = t.run_date)
+),
 listed as (
-    select coalesce(m.run_date, t.run_date) as run_date, coalesce(m.roaster_id, t.roaster_id) as roaster_id,
-           m.status, coalesce(t.adapter, m.adapter) as adapter, t.roaster_id is not null as attempted,
-           coalesce(t.ok, false) as ok, coalesce(t.unavailable, false) as unavailable,
-           coalesce(t.quarantined, false) as quarantined, t.challenge
-    from manifests m
-    full outer join attempts t on t.run_date = m.run_date and t.roaster_id = m.roaster_id
+    select i.run_date, i.roaster_id, m.status, coalesce(t.adapter, m.adapter) as adapter,
+           t.roaster_id is not null as attempted, coalesce(t.ok, false) as ok,
+           coalesce(t.unavailable, false) as unavailable, coalesce(t.quarantined, false) as quarantined, t.challenge
+    from listed_ids i
+    left join manifests m on m.run_date = i.run_date and m.roaster_id = i.roaster_id
+    left join attempts t on t.run_date = i.run_date and t.roaster_id = i.roaster_id
 ),
 stored_runs as (
     select run_date, min(started_at) as started_at, bool_or(full_run) as has_full_manifest,
@@ -83,8 +94,14 @@ scored_runs as (
     select run_date, started_at from stored_runs
     where isodow(run_date) = 1 and (has_full_manifest or not has_manifest)
 ),
-first_listed as (select roaster_id, min(run_date) as run_date from listed group by roaster_id),
-connectors as (select run_date, roaster_id, adapter from listed where adapter is not null),
+first_listed as (
+    select l.roaster_id, min(l.run_date) as run_date from listed l join scored_runs r using (run_date)
+    group by l.roaster_id
+),
+connectors as (
+    select l.run_date, l.roaster_id, l.adapter from listed l join scored_runs r using (run_date)
+    where l.adapter is not null
+),
 judged as (
     select
         r.run_date, f.roaster_id, l.status, l.roaster_id is not null as expected_by_run,
@@ -113,6 +130,7 @@ judged as (
     asof left join connectors p on p.roaster_id = f.roaster_id and p.run_date < r.run_date
     left join {{ ref('int_roaster_state') }} s on s.roaster_id = f.roaster_id
     left join {{ ref('stg_registry') }} g on g.roaster_id = f.roaster_id
+    where l.roaster_id is not null or s.roaster_id is not null
 )
 select run_date, roaster_id, platform, status, excluded_reason is null as counted, excluded_reason,
        expected_by_run, attempted, ok, outcome, is_build_run

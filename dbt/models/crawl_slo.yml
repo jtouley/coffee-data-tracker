@@ -4,8 +4,8 @@
 # A benchmark, never a gate. int_crawl_slo_roasters, mart_crawl_slo and mart_crawl_slo_profile are tagged
 # report_only, so `coffeedata build` builds and tests them after the gate, in the step whose outcome never decides
 # the build (cli.dbt_build), and nothing in the gate reads them. Their data tests are warnings too, for good: there
-# is no plan for the measurement to block. Each table's grain is checked by tests/crawl_slo_grains.sql, one column at
-# a time (the generic `grain` test of #157 replaces it once that is merged).
+# is no plan for the measurement to block. stg_run_manifests's grain test is a warning as well, so the SLO adds
+# nothing that can fail the gate.
 version: 2
 
 models:
@@ -14,6 +14,10 @@ models:
       One row per run manifest and roaster: what an ingest recorded, before fetching, that it set out to fetch
       (ingest.manifest_rows), with the roaster's status, platform and adapter as that ingest saw them, the run's mode
       (full, sample, only or retry_failed; null in a file from before the column) and when the ingest started.
+    data_tests:
+      - grain:
+          arguments: {columns: [manifest_id, roaster_id]}
+          config: {severity: warn}
     columns:
       - name: run_date
         description: The run the manifest belongs to.
@@ -38,6 +42,10 @@ models:
       being built) and roaster known in it: listed or tried by the run, or by an earlier stored run. Whether it
       counts in the crawl success SLO and how the run left it. Read from what the runs stored, so the same raw gives
       the same rows and a run built again later has the rows it had; only an alias is read as it is now.
+    data_tests:
+      - grain:
+          arguments: {columns: [run_date, roaster_id]}
+          config: {severity: warn}
     columns:
       - name: run_date
         description: The scored run.
@@ -97,6 +105,10 @@ models:
       whether it met the target (var crawl_slo_target, 0.99), the burn rate, and the error budget left over the
       window that ends at that run (it and the scored runs before it, crawl_slo_window_runs in all). A benchmark:
       nothing fails a build on it.
+    data_tests:
+      - grain:
+          arguments: {columns: [run_date, platform]}
+          config: {severity: warn}
     columns:
       - name: run_date
         description: A scored run.
@@ -237,6 +249,43 @@ unit_tests:
         - {run_date: 2026-11-02, roaster_id: optout.com, platform: shopify, counted: false, excluded_reason: opted_out, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
         - {run_date: 2026-11-02, roaster_id: seedout.com, platform: shopify, counted: false, excluded_reason: opted_out, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
         - {run_date: 2026-11-02, roaster_id: alias.com, platform: shopify, counted: false, excluded_reason: alias, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
+
+  - name: crawl_slo_partial_pulls_and_removed_roasters_are_not_known
+    description: >-
+      Built as of 2026-11-02. A roaster only an --only pull on a Wednesday touched (pulled.com, 10-28), and one only
+      a "Pull now" in the weekly run touched (pullnow.com: an `only` manifest on 11-02, beside the full one), are not
+      known in any run: no row, though both pulls failed. removed.com, tried in 10-26 and since removed from the
+      registry, keeps its 10-26 row and isn't known in 11-02.
+    model: int_crawl_slo_roasters
+    overrides:
+      vars:
+        as_of_run: "2026-11-02"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {run_date: 2026-10-26, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: removed.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-28, roaster_id: pulled.com, ok: false, adapter: generic, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-28 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: pullnow.com, ok: false, adapter: woocommerce, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 12:00:00+00"}
+      - input: ref('stg_run_manifests')
+        rows:
+          - {run_date: 2026-10-28, manifest_id: m0, started_at: "2026-10-28 08:00:00+00", roaster_id: pulled.com, status: pending, adapter: generic, mode: only}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: a.com, status: active, adapter: shopify, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m2, started_at: "2026-11-02 12:00:00+00", roaster_id: pullnow.com, status: pending, adapter: woocommerce, mode: only}
+      - input: ref('int_roaster_state')
+        rows:
+          - {roaster_id: a.com, opted_out: false, status: active}
+          - {roaster_id: pulled.com, opted_out: false, status: pending}
+          - {roaster_id: pullnow.com, opted_out: false, status: pending}
+      - input: ref('stg_registry')
+        format: sql
+        rows: select null::varchar as roaster_id, null::timestamptz as opted_out_at where false
+    expect:
+      rows:
+        - {run_date: 2026-10-26, roaster_id: a.com, counted: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: removed.com, counted: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: a.com, counted: true, ok: true, outcome: ok, is_build_run: true}
 
   - name: crawl_slo_share_interval_and_target
     description: >-

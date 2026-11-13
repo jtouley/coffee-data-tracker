@@ -250,8 +250,11 @@ tests in `dbt/models/crawl_slo.yml`). Each run is judged on what that run stored
   day (`--run-date` defaults to today; the lake holds 2026-10-27, 10-28 and 10-30) and a Monday with only sample,
   `--only` or `retry_failed` manifests are not scored and spend no budget. A week whose crawl never started has no
   stored run either; `freshness:served_age_days` reports that.
-- **Known roasters (the denominator).** Every roaster the run listed in its manifests or tried, plus every roaster
-  an earlier stored run listed or tried that this one didn't. The manifest is the crawl's pool when the run
+- **Known roasters (the denominator).** Every roaster the run listed in a full manifest (for a run from before
+  manifests, every roaster it tried), plus every roaster an earlier scored run listed that this one didn't. A
+  partial pull (`--only`, "Pull now", sample, `retry_failed`, or an ad-hoc run) never makes a roaster known, and a
+  roaster removed from the registry is not known in the runs that didn't list it (read as the registry is now, like
+  an alias). The manifest is the crawl's pool when the run
   started: the roasters with a platform, not opted out and not an alias, which is the owner's "expected to fetch".
   The second part is the roasters the crawl has stopped trying (`unreachable` after three failed runs): they count
   as not fetched, so giving up on a store never raises the share.
