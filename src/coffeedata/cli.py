@@ -445,8 +445,9 @@ def cmd_enrich_week(args: argparse.Namespace) -> None:
 
     lake = Lake()
     pre = _precondition(lake, args.run_date, default_jobs="merge")
+    # The precondition has checked the merge (or the owner skipped it): no second, unguarded read of it here.
     out = connectors.enrich_week(
-        lake, args.run_date, args.limit, submit=args.submit, require_merge=not (pre or {}).get("skipped")
+        lake, args.run_date, args.limit, submit=args.submit, require_merge=pre is None
     )
     _print(out | {"precondition": pre})
 

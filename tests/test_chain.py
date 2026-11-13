@@ -840,3 +840,167 @@ def test_a_week_merged_twice_builds_the_same_marts_as_one_merged_once(
     connectors.merge(lk, WEEK)
     a, b = _marts(build(clean, tmp_path / "a")), _marts(build(lk, tmp_path / "b"))
     assert a == b and a["events"] and len(a["complete"]) == 4
+
+
+# --- the final review's follow-ups ----------------------------------------------------------------------------------
+
+
+@pytest.fixture
+def staged_remote(tmp_path, monkeypatch) -> Lake:
+    """A remote lake whose dataset is out of reach (no network): only staging is read, as on the first poll."""
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lk = Lake("hf://datasets/someone/coffee")
+    monkeypatch.setattr(lk, "remote_has", lambda table: False)
+    monkeypatch.setattr(lk, "connect", lambda: __import__("duckdb").connect())
+    return lk
+
+
+def test_a_poll_during_the_merges_rollup_never_reads_an_unpublished_merge_as_done(staged_remote, monkeypatch):
+    """The review's reproduction: the merge's `done` row is staged and a rollup runs between the poll's listing of
+    the week's files and its read of them. The file it lists is gone when it reads it; the rollup's file, with the
+    same `done` row, is still staged. Before the fix that read as published (`done`) for one poll."""
+    lk = staged_remote
+    row = control.start(lk, "merge", WEEK)
+    control.finish(lk, row, "done")  # two files: the start row and the end row, both staged
+    real, rolled = chain.pq.read_table, []
+
+    def read_after_a_rollup(path, *a, **k):
+        if not rolled:  # the merge's rollup, between listing and read (it reads the files with pq too)
+            rolled.append(None)
+            rolled[0] = control.rollup(lk, WEEK)
+        return real(path, *a, **k)
+
+    monkeypatch.setattr(chain.pq, "read_table", read_after_a_rollup)
+    assert chain.state(lk, WEEK, "merge") == chain.NOT_PUBLISHED
+    assert rolled == [2]  # the rollup did run under the read, and the file the poll listed was gone
+    assert (
+        chain.state(lk, WEEK, "merge") == chain.NOT_PUBLISHED
+    )  # the next poll finds the rollup's file staged
+    clock = Clock()
+    with pytest.raises(chain.PreconditionFailed, match="`merge`: done, not yet published"):
+        chain.require(lk, WEEK, "merge", wait_s=60, sleep=clock.sleep, clock=clock)
+
+
+PERMANENT_ERRORS = [
+    OSError('IO Error: Cannot open file "/mnt/staging/job_manifests/run_date=2026-11-02/x.parquet": Permission denied'),
+    PermissionError(13, "Permission denied"),
+    OSError("Connection Error: Connection already closed!"),
+    OSError("HTTP Error: HTTP GET error on 'https://huggingface.co/...' (HTTP 403)"),
+    OSError("401 Client Error: Unauthorized for url"),
+    Exception('Binder Error: Referenced column "attempt_id" not found in FROM clause!'),
+    Exception("Invalid Input Error: No magic bytes found at end of file"),
+]  # fmt: skip
+
+
+@pytest.mark.parametrize("error", PERMANENT_ERRORS, ids=lambda e: str(e)[:40])
+def test_a_permission_or_schema_error_fails_at_once_instead_of_waiting(lake, monkeypatch, error):
+    """Waiting 90 minutes would not fix these: they are raised on the first read, with their own message."""
+    assert not chain.retryable(error)
+    monkeypatch.setattr(chain, "week_rows", lambda *a: (_ for _ in ()).throw(error))
+    clock = Clock()
+    with pytest.raises(type(error), match=re.escape(str(error)[:30])):
+        chain.require(lake, WEEK, ("merge", "enrich"), wait_s=5400, sleep=clock.sleep, clock=clock)
+    with pytest.raises(type(error)):
+        chain.refuse_unfinished(lake, TUESDAY, "merge", sleep=clock.sleep)
+    assert clock.sleeps == []
+
+
+def test_a_wait_that_ends_unreadable_says_what_the_last_read_failed_on(lake, monkeypatch):
+    monkeypatch.setattr(
+        chain, "week_rows", lambda *a: (_ for _ in ()).throw(OSError("IO Error: Could not connect to server"))
+    )
+    clock = Clock()
+    with pytest.raises(chain.PreconditionFailed) as e:
+        chain.require(lake, WEEK, "merge", wait_s=120, sleep=clock.sleep, clock=clock)
+    assert "`merge`: unreadable" in str(e.value)
+    assert "the last failed read: OSError: IO Error: Could not connect to server" in str(e.value)
+
+
+def test_the_merges_refusal_check_retries_a_dropped_read_and_then_fails_closed(lake, monkeypatch):
+    """With no automatic retry of the merge, one dropped read must not stop the week; a read that never comes back
+    fails closed with the error, after the same short waits as a check with no wait left."""
+    _attempt(lake, "merge", None)
+    real, calls = chain.week_rows, []
+
+    def flaky(*a):
+        calls.append(1)
+        if len(calls) <= 2:
+            raise OSError("HTTP 429 Too Many Requests")
+        return real(*a)
+
+    monkeypatch.setattr(chain, "week_rows", flaky)
+    clock = Clock()
+    with pytest.raises(
+        chain.PreconditionFailed, match="start row and no end row"
+    ):  # it did read, and refused
+        chain.refuse_unfinished(lake, TUESDAY, "merge", sleep=clock.sleep)
+    assert clock.sleeps == list(chain.UNREADABLE_WAITS[:2])
+
+    monkeypatch.setattr(chain, "week_rows", lambda *a: (_ for _ in ()).throw(OSError("Stale file handle")))
+    clock = Clock()
+    with pytest.raises(chain.PreconditionFailed, match=r"could not be read.*Stale file handle"):
+        chain.refuse_unfinished(lake, TUESDAY, "merge", sleep=clock.sleep)
+    assert clock.sleeps == list(chain.UNREADABLE_WAITS)
+
+
+def test_a_done_and_a_failed_end_row_in_the_same_second_read_as_failed(lake):
+    """A rollup that raises at once can leave `done` and `failed` for one attempt with the same ended_at (to the
+    second). Whichever file is read first, the attempt reads as failed: fail closed."""
+    row = control.start(lake, "merge", WEEK)
+    done = control.finish(lake, row, "done")
+    control.write(lake, done | {"status": "failed", "detail": {"error": "OSError: boom"}})  # same ended_at
+    assert chain.state(lake, WEEK, "merge") == "failed"
+    with pytest.raises(chain.PreconditionFailed, match="`merge`: failed"):
+        chain.require(lake, WEEK, "merge")
+    with pytest.raises(chain.PreconditionFailed, match=r"failed \(OSError: boom\)"):
+        chain.refuse_unfinished(lake, TUESDAY, "merge")
+
+
+def test_one_poll_reads_the_week_once_whatever_it_checks(lake, monkeypatch):
+    _attempt(lake, "merge", "done")
+    _attempt(lake, "enrich", "done")
+    real, reads = chain.week_rows, []
+    monkeypatch.setattr(chain, "week_rows", lambda *a: reads.append(1) or real(*a))
+    chain.require(lake, WEEK, ("merge", "enrich"))
+    assert reads == [1]
+
+
+def test_enrich_week_does_not_read_the_merge_again_after_its_precondition(lake, monkeypatch, capsys):
+    """The CLI's check passed: enrich_week is told so, and never returns the old exit-0 `waiting` from a second,
+    unguarded read (here a read that would see no merge)."""
+    from coffeedata import extract
+
+    monkeypatch.setattr(extract, "llm_enabled", lambda: False)
+    _attempt(lake, "merge", "done")
+    seen = []
+    real = connectors.enrich_week
+    monkeypatch.setattr(
+        connectors, "enrich_week", lambda *a, **k: seen.append(k["require_merge"]) or real(*a, **k)
+    )
+    monkeypatch.setattr(chain, "state", lambda *a: "missing")  # what a second read would wrongly see
+    monkeypatch.setattr(
+        chain, "require", lambda *a, **k: {"after": ["merge"], "status": "done", "waited_s": 0}
+    )
+    cli.main(["enrich-week", "--run-date", TUESDAY])
+    assert seen == [False] and "waiting" not in capsys.readouterr().out
+
+
+def test_a_re_merge_adds_not_attempted_rows_for_roasters_registered_since(
+    tmp_path, monkeypatch, registry_of_three
+):
+    """The merge's "not attempted" rows share one id per week: a re-merge adds those of a roaster registered after
+    the first merge, and none twice."""
+    lk = _crawled_week(tmp_path / "lake")
+    connectors.merge(lk, WEEK)
+    before = _stored(lk, *DATA)
+    states = registry.current(lk) + [
+        registry.RoasterState(
+            Roaster(roaster_id="g2.com", name="g2", host="g2.com", platform="wix"), "active", None
+        )
+    ]
+    monkeypatch.setattr(registry, "current", lambda lake, seed=None: states)
+    out = connectors.merge(lk, WEEK)
+    assert out["written"] == {"run_manifests": 1}
+    assert [r[1] for r in _lake_rows(lk)[0]["expected"]] == ["g.com", "g2.com"] and _lake_rows(lk)[1] == 2
+    assert before.items() <= _stored(lk, *DATA).items()  # only added
+    assert connectors.merge(lk, WEEK)["written"] == {}

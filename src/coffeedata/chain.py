@@ -27,7 +27,8 @@ and until the publish commits, the week's files are still on their way to the da
 
 While waiting, a read that fails because the job being waited for is at that moment replacing the files (the
 merge's rollup and every publish remove the week's job_manifests files from staging), or on the connection, or on a
-429, counts as "not done yet" and is tried again at the next poll, until the same deadline.
+429, counts as "not done yet" and is tried again at the next poll, until the same deadline. Any other failure (a
+permission or schema error, a corrupt file, a bug) is raised at once: waiting would not fix it.
 
 The merge has no job before it, but it has a guard of the same kind (`refuse_unfinished`): it won't start over an
 earlier merge attempt of the week that failed or never ended, since that attempt may have stopped part-way.
@@ -65,7 +66,18 @@ UNREADABLE_WAITS = (2.0, 6.0, 18.0)
 NOT_A_REASON = {"0", "false", "no", "off", "n", "f", "none", "null"}
 # What a read looks like, in DuckDB's or the filesystem's error text, when a file listed a moment ago is gone or was
 # replaced (GCSFuse: a stale handle), or the dataset's host answered 429. lake.transient covers the connection.
-VANISHED_MARKERS = ("no such file", "cannot open file", "stale file handle", "http 429", "too many requests")
+VANISHED_MARKERS = ("no such file", "stale file handle", "http 429", "too many requests")
+# ... and what is never worth waiting through, even where a transient marker also matches ("connection already
+# closed" contains "connection"): a refused permission or credential, a closed connection object (a bug), a schema.
+FATAL_MARKERS = (
+    "permission denied",
+    "forbidden",
+    "unauthorized",
+    "http 401",
+    "http 403",
+    "connection already closed",
+    "binder error",
+)
 NOT_PUBLISHED = "done, not yet published"
 
 
@@ -79,10 +91,13 @@ def _utc_now() -> datetime:
 
 def retryable(e: Exception) -> bool:
     """A read of the control table that is worth trying again: a dropped connection (lake.transient), a file that
-    vanished or went stale between the listing and the read, or a 429."""
+    vanished or went stale between the listing and the read, or a 429. Never a permission, credential or schema
+    error, or a closed connection object, whatever else the message says."""
+    msg = str(e).lower()
+    if isinstance(e, PermissionError) or any(m in msg for m in FATAL_MARKERS):
+        return False
     if isinstance(e, FileNotFoundError) or (isinstance(e, OSError) and e.errno == errno.ESTALE):
         return True
-    msg = str(e).lower()
     return transient(e) or any(m in msg for m in VANISHED_MARKERS)
 
 
@@ -113,24 +128,30 @@ def week_rows(lake: Lake, week: str) -> list[dict]:
         for r in found:
             if not r["attempt_id"]:
                 continue
-            rank = (r["status"] != "running", r["ended_at"].timestamp() if r["ended_at"] else 0.0)
+            # an end row over a start row; then the later end; on a tie to the second, anything but `done` (a
+            # `failed` written in the same second as a `done` must not read as done: fail closed)
+            ended = r["ended_at"].timestamp() if r["ended_at"] else 0.0
+            rank = (r["status"] != "running", ended, r["status"] != "done")
             if r["attempt_id"] not in best or rank > best[r["attempt_id"]]["_rank"]:
                 best[r["attempt_id"]] = r | {"_rank": rank}
     return [{k: v for k, v in r.items() if k != "_rank"} for r in best.values()]
 
 
-def latest(lake: Lake, week: str, job: str) -> dict | None:
+def latest(lake: Lake, week: str, job: str, rows: list[dict] | None = None) -> dict | None:
     """The latest attempt (by start time) of `job` for the week, or None. The latest, not any: a done merge
     followed by one still running (a re-run for a late connector, or one that died half-way) is not a finished
-    merge. started_at is to the second: of two attempts in the same one, the unfinished one counts (fail closed)."""
-    attempts = [r for r in week_rows(lake, week) if r["job"] == job]
+    merge. started_at is to the second: of two attempts in the same one, the unfinished one counts (fail closed).
+    `rows`: the week's rows already read (week_rows), so one poll reads the week once whatever it checks."""
+    attempts = [r for r in (week_rows(lake, week) if rows is None else rows) if r["job"] == job]
     return max(attempts, key=lambda r: (r["started_at"], r["status"] != "done")) if attempts else None
 
 
 def _still_staged(lake: Lake, week: str, attempt_id: str) -> bool:
     """Whether the attempt's `done` row is still in staging of a remote lake: its job hasn't published yet (a
     publish uploads everything staged in one commit, then clears staging). A local lake has no publish to wait
-    for. A file that vanishes while it is read was just published or rolled up: not staged."""
+    for. A file that vanishes while it is read means staging is changing under this read: the merge's rollup
+    replaces the week's files with one (still staged) before its publish, so a vanished file proves nothing. It
+    counts as still staged, and the next poll decides."""
     if not lake.remote:
         return False
     for f in sorted(_week_folder(lake, week).glob("*.parquet")):
@@ -138,17 +159,20 @@ def _still_staged(lake: Lake, week: str, attempt_id: str) -> bool:
             rows = pq.read_table(f, columns=["attempt_id", "status"]).to_pylist()
         except Exception as e:
             if retryable(e):
-                continue
+                log.warning(
+                    "a staged job_manifests file changed while it was read (%s): not published yet", e
+                )
+                return True
             raise
         if any(r["attempt_id"] == attempt_id and r["status"] == "done" for r in rows):
             return True
     return False
 
 
-def state(lake: Lake, week: str, job: str) -> str:
+def state(lake: Lake, week: str, job: str, rows: list[dict] | None = None) -> str:
     """The status of the latest attempt of `job` for the week: done, running, failed or deadline; `missing` when it
     has no row; NOT_PUBLISHED when its end row says done and its publish hasn't cleared staging yet."""
-    row = latest(lake, week, job)
+    row = latest(lake, week, job, rows)
     if row is None:
         return "missing"
     if row["status"] == "done" and _still_staged(lake, week, row["attempt_id"]):
@@ -178,16 +202,17 @@ def wait_budget_s(deadline: str | None, now: datetime) -> float:
     return max(left, 0.0)
 
 
-def _states(lake: Lake, week: str, jobs: tuple[str, ...]) -> dict[str, str]:
-    """Each job's state, from one read of the week per job; `unreadable` for all when a read fails in a way worth
-    trying again (retryable). Any other error is raised."""
+def _states(lake: Lake, week: str, jobs: tuple[str, ...]) -> tuple[dict[str, str], str | None]:
+    """Each job's state, from one read of the week; `unreadable` for all, with the error, when the read fails in a
+    way worth trying again (retryable). Any other error is raised, at once."""
     try:
-        return {job: state(lake, week, job) for job in jobs}
+        rows = week_rows(lake, week)
+        return {job: state(lake, week, job, rows) for job in jobs}, None
     except Exception as e:
         if not retryable(e):
             raise
         log.warning("reading job_manifests failed (%s)", e)
-        return dict.fromkeys(jobs, "unreadable")
+        return dict.fromkeys(jobs, "unreadable"), f"{type(e).__name__}: {e}"[:300]
 
 
 def _describe(states: dict[str, str]) -> str:
@@ -207,14 +232,17 @@ def require(
     """Return once the latest attempt of every one of `jobs` for the week is done and published, polling for at
     most `wait_s` seconds (capped at MAX_WAIT_S); raise PreconditionFailed if one still isn't. A read that fails
     in a retryable way counts as "not done yet" and is tried again at the next poll, until the same deadline; with
-    no wait left it gets UNREADABLE_WAITS, then fails closed. Any other error is raised."""
+    no wait left it gets UNREADABLE_WAITS, then fails closed, naming the last read error. Any other error (a
+    permission or schema error) is raised at once."""
     sleep, clock = sleep or time.sleep, clock or time.monotonic
     jobs = (jobs,) if isinstance(jobs, str) else tuple(jobs)
     budget = min(max(wait_s, 0.0), MAX_WAIT_S)
     started = clock()
     grace = list(UNREADABLE_WAITS)
+    last_error = None
     while True:
-        states = _states(lake, week, jobs)
+        states, error = _states(lake, week, jobs)
+        last_error = error or last_error
         waited = clock() - started
         if all(s == "done" for s in states.values()):
             if waited >= 1:
@@ -227,7 +255,13 @@ def require(
                 continue
             raise PreconditionFailed(
                 f"precondition failed: this week's ({week}) jobs before this one are not all done in job_manifests "
-                f"(latest attempts: {_describe(states)}), after waiting {waited / 60:.0f} min. Nothing was run. "
+                f"(latest attempts: {_describe(states)}), after waiting {waited / 60:.0f} min"
+                + (
+                    f"; the last failed read: {last_error}"
+                    if "unreadable" in states.values() and last_error
+                    else ""
+                )
+                + ". Nothing was run. "
                 f"See docs/ingestion/RUNBOOK.md §5.2; to run anyway, set {SKIP_ENV}=<reason> on the execution."
             )
         log.warning(
@@ -264,7 +298,8 @@ def check(lake: Lake, day: str, default_jobs: str | None = None) -> dict | None:
     week = week_of(day)
     if reason := skip_reason():
         try:
-            states = {job: state(lake, week, job) for job in jobs}
+            rows = week_rows(lake, week)
+            states = {job: state(lake, week, job, rows) for job in jobs}
         except Exception as e:  # the override must work even when the control table can't be read
             states = dict.fromkeys(jobs, f"unreadable ({type(e).__name__})")
         log.warning(
@@ -278,7 +313,29 @@ def check(lake: Lake, day: str, default_jobs: str | None = None) -> dict | None:
     return require(lake, week, jobs, wait_budget_s(os.environ.get(DEADLINE_ENV), _utc_now()))
 
 
-def refuse_unfinished(lake: Lake, day: str, job: str) -> dict | None:
+def _latest_with_retries(lake: Lake, week: str, job: str, sleep: Callable[[float], None]) -> dict | None:
+    """latest(), with UNREADABLE_WAITS between tries of a read that fails in a retryable way; then it fails closed
+    (PreconditionFailed, naming the error). Any other error is raised at once."""
+    grace = list(UNREADABLE_WAITS)
+    while True:
+        try:
+            return latest(lake, week, job)
+        except Exception as e:
+            if not retryable(e):
+                raise
+            if not grace:
+                raise PreconditionFailed(
+                    f"precondition failed: this week's ({week}) job_manifests could not be read to check for an "
+                    f"unfinished `{job}` ({type(e).__name__}: {str(e)[:300]}). Nothing was run. See "
+                    f"docs/ingestion/RUNBOOK.md §5.2; to run anyway, set {SKIP_ENV}=<reason> on the execution."
+                ) from None
+            log.warning("reading job_manifests failed (%s); trying again", e)
+            sleep(grace.pop(0))
+
+
+def refuse_unfinished(
+    lake: Lake, day: str, job: str, *, sleep: Callable[[float], None] | None = None
+) -> dict | None:
     """Refuse to start `job` over its latest attempt this week if that one failed or has no end row. No end row:
     it is still running (two merges at once would each add the other's rows) or was killed part-way. Failed: it
     raised, perhaps part-way. Redoing its work is the owner's decision, not a blind retry's. Raises
@@ -304,7 +361,7 @@ def refuse_unfinished(lake: Lake, day: str, job: str) -> dict | None:
             status,
         )
         return {"unfinished": job, "status": status, "skipped": reason}
-    row = latest(lake, week, job)
+    row = _latest_with_retries(lake, week, job, sleep or time.sleep)
     if row is None or row["status"] not in ("running", "failed"):
         return None
     if row["status"] == "failed":

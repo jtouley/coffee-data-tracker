@@ -454,7 +454,13 @@ def _merge_week(lake: Lake, week: str, job: dict) -> dict:
         # A re-run merge (a late connector) adds only what the lake doesn't have yet.
         con.register("new", tbl)
         key = {"run_manifests": "manifest_id", "fetches": "batch_id", "snapshots": "batch_id"}.get(table)
-        if key:
+        if table == "run_manifests":
+            # By manifest id, as before; the merge's own "not attempted" rows (one id per week, missing-<week>) by
+            # id and roaster, so a re-merge still adds those of roasters registered after the first merge.
+            q = f"""select * from new n where not exists (
+                        select 1 from {lake.scan(table)} s where s.manifest_id = n.manifest_id
+                        and (n.manifest_id not like 'missing-%' or s.roaster_id is not distinct from n.roaster_id))"""
+        elif key:
             q = f"select * from new where {key} not in (select distinct {key} from {lake.scan(table)} where {key} is not null)"
         else:
             q = f"select * from new where body_hash not in (select body_hash from {lake.scan('bodies')})"
