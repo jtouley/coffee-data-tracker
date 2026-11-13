@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110f" media="(prefers-color-scheme: dark)">
+<title>{{ title or "Admin" }} · admin.registry.coffee</title>
+<link rel="preload" href="{{ asset('fonts/archivo.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ asset('fonts/newsreader.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('app.css') }}">
+<link rel="stylesheet" href="{{ asset('admin.css') }}">
+<script src="{{ asset('admin.js') }}" defer></script>
+</head>
+<body class="admin{% if narrow %} narrow{% endif %}">
+<a class="skip" href="#main">Skip to the content</a>
+<header class="bar">
+  <a class="mark serif" href="/week">admin.registry.coffee</a>
+  {% if on %}
+  <nav aria-label="Pages" class="tabs">
+    {% for p in pages %}<a href="/{{ p }}"{% if on == p %} class="on" aria-current="page"{% endif %}>{{ p | capitalize }}</a>{% endfor %}
+  </nav>
+  <a class="acct{% if on == 'account' %} on{% endif %}" href="/account"{% if on == "account" %} aria-current="page"{% endif %}>Account</a>
+  {% endif %}
+</header>
+<main class="screen" id="main" tabindex="-1">
+{% block main %}{% endblock %}
+</main>
+</body>
+</html>

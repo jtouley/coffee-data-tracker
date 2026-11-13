@@ -635,7 +635,10 @@ def add_override(
 def release_files(lake: Lake, build_id: str) -> dict[str, str]:
     """A release's tables: staged locally until published, then read from the remote lake. Only the files directly
     in the build's folder: its ops tables (ops/, OPS_TABLES) are never release tables."""
-    local = {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/*.parquet")}
+    staged = not (lake.read_only and lake.remote)  # a remote reader stages nothing: read the remote lake only
+    local = (
+        {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/*.parquet")} if staged else {}
+    )
     if local or not lake.remote:
         return local
     return {
@@ -647,7 +650,12 @@ def release_files(lake: Lake, build_id: str) -> dict[str, str]:
 
 def ops_files(lake: Lake, build_id: str) -> dict[str, str]:
     """A build's ops tables (OPS_TABLES), staged locally until published, then read from the remote lake."""
-    local = {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/ops/*.parquet")}
+    staged = not (lake.read_only and lake.remote)
+    local = (
+        {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/ops/*.parquet")}
+        if staged
+        else {}
+    )
     if local or not lake.remote:
         return local
     return {
@@ -655,6 +663,15 @@ def ops_files(lake: Lake, build_id: str) -> dict[str, str]:
         for f in _remote_releases(lake.url)
         if Path(f).parent.name == "ops" and Path(f).parent.parent.name == f"build={build_id}"
     }
+
+
+def forget_listings() -> None:
+    """Drop the remote listings kept for the life of the process (the releases/ tree, the top-level folders), so a
+    long-running reader (the admin) sees releases written since. A job reads once and never needs this."""
+    from .lake import _REMOTE_FOLDERS
+
+    _remote_releases.cache_clear()
+    _REMOTE_FOLDERS.clear()
 
 
 @functools.lru_cache(maxsize=8)

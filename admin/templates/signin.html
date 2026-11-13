@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% set narrow = true %}
+{% block main %}
+<h1 class="serif title mt32">Sign in</h1>
+{% if ended %}<p class="notice mt12" role="status">Your session ended. Sign in again.</p>{% endif %}
+<p class="body mt12">With one of your passkeys. There is no password.</p>
+<form class="auth" data-flow="signin" data-next="{{ next }}" novalidate>
+  <div class="hint" data-hint role="alert"></div>
+  <button class="btn primary mt8" type="submit" data-busy="Waiting for your passkey…">Sign in with a passkey</button>
+</form>
+<p class="mt24"><a class="btn text start" href="/recover">Lost both passkeys? Use a recovery code</a></p>
+{% endblock %}

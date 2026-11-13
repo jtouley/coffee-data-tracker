@@ -58,6 +58,18 @@ variable "service" {
   default     = "registry-coffee"
 }
 
+variable "admin_domain" {
+  description = "The admin's own hostname (admin.tf): its sign-in origin and passkeys' relying party."
+  type        = string
+  default     = "admin.registry.coffee"
+}
+
+variable "admin_cold_start_min_samples" {
+  description = "Container starts an hour needs before the admin's cold-start alert can fire, so one slow start never pages (docs/design/admin-registry.md §7.1)."
+  type        = number
+  default     = 3
+}
+
 variable "email" {
   description = "Email recovery (docs/app/signup-ux-spec.md §5): mounts the EMAIL_KEY and RESEND_API_KEY secrets on the app and adds the \"email not sent\" alert. The secrets themselves always exist; turning this off only unmounts them. Turn on after the Resend domain is verified and both secrets have values (RUNNING.md, \"Email\")."
   type        = bool
