@@ -9,7 +9,9 @@ Production has no labels, so a rule's health is read from proxies (docs/TRIAGE.m
 - distribution shift against the previous run's served release: listed volume ratio, the share of previous coffees
   still listed, the share of common coffees whose value changed, and the median shift of price_per_100g and grams;
 - the build's own record (the lake's builds table): mart_build_profile's fetch shares and the dbt band tests that
-  only warn (reused, not recomputed), and the served release's age.
+  only warn (reused, not recomputed), and the served release's age;
+- the crawl success SLO (#96; dbt's mart_crawl_slo, read from the same record): whether the run fetched more than
+  99% of the known roasters, how fast it spent its error budget and what is left of it. Warnings only.
 
     python -m coffeedata.prod_health fetch <lake-url> <dir>       # read-only download of what `measure` needs
     python -m coffeedata.prod_health measure <dir> <metrics.json> # the metrics of the served release
@@ -93,6 +95,28 @@ MEDIANS = {
 # mart_build_profile metrics reused from the builds table (shares; low is bad).
 BUILD_SHARES = ("run_ok_share", "run_catalog_ok_share")
 BUILD_PREFIXES = ("adapter_ok_share:",)
+# The crawl success SLO (#96), computed by dbt (mart_crawl_slo, recorded through mart_build_profile): judged on
+# fixed bounds, warnings only. The target itself lives in dbt (var crawl_slo_target): crawl_slo_met is 1 when the
+# run's share is above it. Per platform, crawl_slo_met:<platform> only reports (report_only): it names the
+# platforms below the target in an alert the overall SLO opened, and never opens one itself.
+SLO_METRICS = ("crawl_slo_met", "crawl_slo_burn_rate", "crawl_slo_budget_remaining")
+SLO_PLATFORM_PREFIX = "crawl_slo_met:"
+SLO_PLATFORMS = (
+    "generic",
+    "shopify",
+    "square_online",
+    "squarespace",
+    "woocommerce",
+)  # models.Roaster.adapter
+# A run that burns error budget this many times faster than the target allows spends a whole window's budget by
+# itself: dbt's crawl_slo_window_runs (tests/test_crawl_slo.py checks the two agree).
+SLO_FAST_BURN = 4.0
+SLO_REPORTED = "build:" + SLO_PLATFORM_PREFIX
+SLO_BOUNDS: dict[str, dict[str, Any]] = {
+    "build:crawl_slo_met": {"warning_below": 1.0},
+    "build:crawl_slo_burn_rate": {"warning_above": SLO_FAST_BURN},
+    "build:crawl_slo_budget_remaining": {"warning_below": 0.0},
+}
 # dbt tests that only warn, whose failures are worth a triage issue (status warn with failures > 0).
 WARN_TESTS = (
     "build_metrics_in_band",
@@ -210,7 +234,9 @@ def build_metrics(builds: Iterable[Path], build_id: str) -> dict[str, float]:
     for metric, value in con.execute(
         f"select unique_id, value from {src} where kind = 'metric' and build_id = ?", [build_id]
     ).fetchall():
-        if value is not None and (metric in BUILD_SHARES or metric.startswith(BUILD_PREFIXES)):
+        if value is not None and (
+            metric in BUILD_SHARES + SLO_METRICS or metric.startswith((*BUILD_PREFIXES, SLO_PLATFORM_PREFIX))
+        ):
             out[f"build:{metric}"] = round(float(value), 6)
     for uid, failures in con.execute(
         f"select unique_id, failures from {src} where kind = 'node' and resource_type = 'test' and build_id = ?",
@@ -350,12 +376,15 @@ def judge(
     run_date: str | None = None,
 ) -> list[dict[str, Any]]:
     """One result per configured metric: ok, warning or critical; expected (a breach an acknowledged change
-    explains); or not_measured (a required one is a warning). Severity is the worst bound crossed."""
+    explains); or not_measured (a required one is a warning). Severity is the worst bound crossed. A `report_only`
+    metric is judged the same way and marked: `alerts` never opens an issue for it alone."""
     results = []
     for m in cfg["metric"]:
         name, value = m["name"], metrics.get(m["name"])
         r: dict[str, Any] = {"metric": name, "rule": m["rule"], "value": value, "baseline": m.get("baseline")}
         r["status"] = "ok"
+        if m.get("report_only"):
+            r["report_only"] = True
         if value is None:
             r["status"] = "warning" if m.get("required") else "not_measured"
             r["why"] = (
@@ -386,7 +415,8 @@ def alerts(
 ) -> list[dict]:
     """The triage alerts (coffeedata.triage's input), one per rule: firing with its breaches, or recovered with the
     checks that were measured. A metric not measured is left out, so it can never count as recovered. No measured
-    value goes into an alert (the lake is private): the metric, its status and its bound."""
+    value goes into an alert (the lake is private): the metric, its status and its bound. A report_only metric's
+    breach is listed in the alert its rule's other metrics opened, and neither opens nor keeps one open itself."""
     by_rule: dict[str, list[dict]] = {}
     for r in results:
         if r["status"] != "not_measured":
@@ -394,8 +424,11 @@ def alerts(
     s = measured["served"]
     out = []
     for rule, rs in sorted(by_rule.items()):
-        bad = [r for r in rs if r["status"] in BREACH]
-        shown = bad + [r for r in rs if r["status"] == "expected"] if bad else rs
+        bad = [r for r in rs if r["status"] in BREACH and not r.get("report_only")]
+        detail = [
+            r for r in rs if r["status"] == "expected" or (r["status"] in BREACH and r.get("report_only"))
+        ]
+        shown = bad + detail if bad else rs
         out.append({
             "key": f"prod:{rule}",
             "kind": "prod",
@@ -421,20 +454,26 @@ def _scope(metric: str) -> str:
     parts = metric.split(":")
     if parts[0] in ("fill", "abstain", "coverage", "rows") and len(parts) == 3:
         return parts[2]
-    if metric.startswith(("shift:rows_ratio:listed:", "build:adapter_ok_share:")):
+    if metric.startswith(
+        ("shift:rows_ratio:listed:", "build:adapter_ok_share:", "build:" + SLO_PLATFORM_PREFIX)
+    ):
         return parts[-1]
     return "all"
 
 
 def _check_line(r: dict) -> dict[str, Any]:
     status = r["status"] if r["status"] != "warning" or "bound" in r else "not measured (required)"
+    if r.get("report_only") and r["status"] in BREACH:
+        status = "report only"  # one of triage.OK: past its bound, shown, and not a failing check
     return {
         "set": _scope(r["metric"]),
         "name": r["metric"],
         "status": status,
         "threshold": r.get("bound"),
         "op": r.get("op"),
-        "unit": "count" if r["metric"].startswith(("rows:", "build:test:", "freshness:")) else "share",
+        "unit": "count"
+        if r["metric"].startswith(("rows:", "build:test:", "freshness:", "build:crawl_slo_burn_rate"))
+        else "share",
         "pr": r.get("pr"),
     }
 
@@ -453,6 +492,8 @@ def summary(measured: dict[str, Any], results: list[dict[str, Any]]) -> str:
     for r in sorted(results, key=lambda r: (order[r["status"]], r["rule"], r["metric"])):
         bound = f"{r['op']} {r['bound']:.4g}" if r.get("bound") is not None else ""
         note = f"#{r['pr']}: {r['why']}" if r.get("pr") else r.get("why", "")
+        if r.get("report_only"):
+            note = "report only: never opens an issue by itself"
         lines.append(f"| {r['status']} | {r['rule']} | `{r['metric']}` | {bound} | {note} |")
     return "\n".join(lines) + "\n"
 
@@ -497,6 +538,8 @@ def _rule_of(name: str) -> str:
         return rest.split(":")[1]
     if name.startswith("build:test:") or name == "build:passed":
         return "build-tests"
+    if name.startswith("build:crawl_slo_"):
+        return "crawl-slo"
     if kind == "build":
         return "fetch"
     return kind
@@ -583,6 +626,12 @@ def baseline(
         "warning_below": MIN_VERDICT_SHARE,
         "critical_below": MIN_VERDICT_SHARE - 0.15,
     }
+    # The crawl success SLO (#96): fixed bounds, whatever the history says. dbt decides `met` against its target.
+    fixed |= SLO_BOUNDS
+    for platform in sorted(
+        {*SLO_PLATFORMS, *(n.rpartition(":")[2] for n in hist if n.startswith(SLO_REPORTED))}
+    ):
+        fixed[SLO_REPORTED + platform] = {"report_only": True, "warning_below": 1.0}
     lines = [
         "# Production-run health thresholds (coffeedata.prod_health; what each alert means: docs/TRIAGE.md).",
         "# Generated by `python -m coffeedata.prod_health baseline` from the release history in the lake, then",
@@ -601,6 +650,11 @@ def baseline(
         f"# on the build's own gate (min_verdict_share {MIN_VERDICT_SHARE}), the served release's age on the weekly",
         f"# cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; above {CADENCE_DAYS['critical']:g}: two).",
         "# `flagged`: history values outside their own warning band, possible regressions to look at.",
+        "# The crawl success SLO (rule crawl-slo, #96; docs/TRIAGE.md): fixed bounds, warnings only. met is 1 when",
+        "# the run fetched more than dbt's crawl_slo_target (0.99) of the known roasters; burn_rate above "
+        f"{SLO_FAST_BURN:g}: one run",
+        "# spent a whole window's error budget; budget_remaining below 0: the window is overspent. `report_only`:",
+        "# listed in an alert another metric of its rule opened, never opening one itself (the per-platform met).",
         "version = 2",
         f'revision = "{computed}"',
         f"releases = {json.dumps(labels)}",
@@ -630,7 +684,7 @@ def baseline(
             lines.append('basis = "no history yet: a fixed bound (see the comment above)"')
         if name.startswith("fill:") and name.count(":") == 1 and name != "fill:classifier":
             lines.append("required = true")
-        lines += [f"{k} = {v}" for k, v in bnd.items()] + [""]
+        lines += [f"{k} = {json.dumps(v)}" for k, v in bnd.items()] + [""]
     return hist, "\n".join(lines), flagged_all
 
 

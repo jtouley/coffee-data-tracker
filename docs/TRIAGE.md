@@ -91,6 +91,7 @@ value. The lake is private and this repository is public. Get the values locally
 | `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (a wiped enrichments table, a key change). A stalled enrichment job keeps its rows, so coverage stays flat or sinks slowly and may not alert |
 | `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing |
 | `fetch` | `build:run_ok_share`, `build:run_catalog_ok_share`, `build:adapter_ok_share:<platform>` (mart_build_profile, reused) | fetches failing. fetch-health (RUNBOOK.md §8) should have said so too |
+| `crawl-slo` | `build:crawl_slo_met` (1: the run fetched more than 99% of the known roasters), `build:crawl_slo_burn_rate`, `build:crawl_slo_budget_remaining`; `build:crawl_slo_met:<platform>` only reports (mart_crawl_slo, recorded by the build) | the crawl missed its SLO. Warnings only, and never a reason to roll back: see [The crawl success SLO](#the-crawl-success-slo) |
 | `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`, `origin_countries_are_mapped`: an origin spelling the ISO seed doesn't have, published with no country until it is labelled and added, eval/origin_iso); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
 | `freshness` | `freshness:served_age_days`: days from the served release's run (a Monday) to the check (Tuesday) | warning above 7 (one missed week), critical above 14 (two). No build passed, or nothing was served |
 
@@ -232,6 +233,71 @@ Don't roll back for:
 After a rollback, the next prod-health run measures the release that is served then. Run it by hand
 (`gh workflow run prod-health`) to confirm the issue closes.
 
+## The crawl success SLO
+
+The owner's target (#96, 2026-11-02): **more than 99% of the known roasters are fetched ok in each weekly run**,
+as one aggregate over every connector. It is a benchmark, not a gate. Nothing fails a build or holds back a
+release on it; the gate's floors stay `run_ok_rate` (90% of the roasters with a catalog) and `adapter_ok_rate`.
+A miss opens the `prod:crawl-slo` issue as a warning on Tuesday, and that is all it does.
+
+**The indicator**, as dbt computes it (`crawl_slo_roasters`, then `mart_crawl_slo`; the edge cases are unit
+tests in `dbt/models/crawl_slo.yml`):
+
+- **Known roasters (the denominator).** For a run: every roaster the run listed (`run_manifests`) or tried, plus
+  every roaster the registry listed before the run's first fetch. That contains `run_completeness`'s expected set,
+  and adds what it leaves out: a roaster the crawl has stopped trying (`unreachable` after three failed runs) and
+  one a manifest didn't list. Giving up on a store never raises the share.
+- **Success (the numerator).** An attempt in the run was ok: `int_roaster_runs.ok`, the same `ok` as
+  `run_completeness` and `run_ok_share`. A retry that fixed a failure counts. So does a partial read, and an ok
+  fetch of a store with no products (the week #96 records, 2,424 of 2,540, counts both).
+- **Counted as not fetched:** a failed fetch; a store parked or rate-limited that no later attempt of the run
+  read; one an edge challenged; one that crashed the crawler twice (quarantined); a store found closed,
+  password-protected or disallowed that run (`unavailable`); a roaster the run never reached; a roaster the crawl
+  has stopped trying. The gate's ok rates leave closed and quarantined stores and no-catalog roasters out; the SLO
+  does not (the owner: "unreachable and no-catalog roasters count against the SLO").
+- **Chains count** like any other roaster: they are crawled, and only left out of the public tables.
+- **Not counted**, with the reason in `crawl_slo_roasters.excluded_reason`:
+  - `opted_out`: the owner or the roaster said not to fetch it. This is the only switch-off the data has today;
+    a new one (a flag set in the admin) is not excluded until it reaches the roaster's status;
+  - `alias`: another roaster_id for a store that is already counted once;
+  - `no_platform`: no connector can be named for it (never probed ok, or its probe got an HTTP error), and the
+    run neither listed nor tried it. The owner's definition is roasters "with a platform";
+  - a roaster the registry added after the run started has no row.
+
+Where the owner's notes don't decide, the stricter reading was taken: closed and quarantined stores, and
+roasters the crawl gave up on, count against the SLO. Each can be loosened later; the outcome column
+(`ok`, `failed`, `challenged`, `unavailable`, `quarantined`, `not_attempted`) shows how much of a miss each one is.
+
+**The numbers** (`mart_crawl_slo`, one row per stored run and platform; `all` is the SLO):
+
+- `sli` with its Wilson 95% interval (`sli_low`, `sli_high`), and `met` (above the target; exactly 99% is a miss);
+- `burn_rate`: (1 − sli) / (1 − target). 1 is the rate the target allows. Above 4, one run has spent the whole
+  window's budget;
+- `budget_remaining`: the share of the window's error budget left. The window is **anchored on the run**, not on
+  a date: that run and the stored runs before it, 4 in all (`crawl_slo_window_runs`; about 28 days of weekly
+  runs). The budget is the failures the target allows over the window's roasters, 1% of them. Below 0, the
+  window is overspent.
+
+Everything is counted from the stored runs alone: no clock, and no earlier build's output. The same raw gives
+the same rows, and building an older run again (`as_of_run`) gives that run's numbers again, with the window
+ending at it. One thing is read as the raw has it now and not as it was at the run: a roaster's state (opted
+out, alias, platform). A roaster that opts out later leaves the earlier runs' denominators too.
+
+**The alert** (`config/prod_health.toml`, rule `crawl-slo`; fixed bounds, warnings only, no critical bound):
+
+| Metric | Warns when | Meaning |
+|---|---|---|
+| `build:crawl_slo_met` | below 1 | the served release's run fetched 99% or less |
+| `build:crawl_slo_burn_rate` | above 4 | that run alone spent more than a window's budget |
+| `build:crawl_slo_budget_remaining` | below 0 | the window is overspent, even if this run met the target |
+| `build:crawl_slo_met:<platform>` | never by itself | `report only` in the issue's table: the platforms below 99%, so a miss points at its connector |
+
+When it fires: read which platforms are marked `report only`, then the outcomes for the run, on a local copy of
+the build's database (`select platform, outcome, count(*) from crawl_slo_roasters where counted and run_date =
+'<run>' group by all`). A platform-wide failure is fetch-health's and the `fetch` rule's to act on; the SLO issue
+stays open, updated each Tuesday, until a run is above 99% and the window is back within budget. Until the
+served build's image has these models, the metrics show as "not measured" and nothing opens.
+
 ## Thresholds
 
 `config/prod_health.toml` is the single versioned list (`version` 2, `revision`). It is generated by
@@ -254,7 +320,8 @@ around it:
 - **Abstain and changed shares** (high side): the median plus at least 0.02 for a warning and 0.05 for critical.
 - **Volume ratios**: 1 ± at least 0.10 / 0.25. **Median shifts**: 0 ± at least 0.05 / 0.15.
 - **Fixed, with no history**: a warn-only band test warns on any failure, and the classifier is judged on
-  `min_verdict_share` 0.85. Release age warns above 7 days and is critical above 14.
+  `min_verdict_share` 0.85. Release age warns above 7 days and is critical above 14. The crawl success SLO's
+  bounds are fixed too ([above](#the-crawl-success-slo)); regenerating the file keeps them.
 
 **Flagged history.** A history value outside its own warning band is not used to widen the band. It is listed as
 `flagged` in the config, as a possible regression to look into. At revision 2026-11-12:

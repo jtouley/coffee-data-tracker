@@ -11,6 +11,10 @@
 # on the build's own gate (min_verdict_share 0.85), the served release's age on the weekly
 # cadence (above 7 days: a missed week; above 14: two).
 # `flagged`: history values outside their own warning band, possible regressions to look at.
+# The crawl success SLO (rule crawl-slo, #96; docs/TRIAGE.md): fixed bounds, warnings only. met is 1 when
+# the run fetched more than dbt's crawl_slo_target (0.99) of the known roasters; burn_rate above 4: one run
+# spent a whole window's error budget; budget_remaining below 0: the window is overspent. `report_only`:
+# listed in an alert another metric of its rule opened, never opening one itself (the per-platform met).
 version = 2
 revision = "2026-11-12"
 releases = ["lake@c3f7595 marts (2026-10-27)", "lake@41b68c6 marts (2026-10-28)", "release 20261104T041920-5060ad (run 2026-11-02)", "release 20261110T061836-971bfe (run 2026-11-09)"]
@@ -109,6 +113,59 @@ baseline = 0.8643
 history = [0.8646, 0.864]
 warning_below = 0.8384
 critical_below = 0.7779
+
+[[metric]]
+name = "build:crawl_slo_budget_remaining"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_below = 0.0
+
+[[metric]]
+name = "build:crawl_slo_burn_rate"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_above = 4.0
+
+[[metric]]
+name = "build:crawl_slo_met"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_below = 1.0
+
+[[metric]]
+name = "build:crawl_slo_met:generic"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_below = 1.0
+
+[[metric]]
+name = "build:crawl_slo_met:shopify"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_below = 1.0
+
+[[metric]]
+name = "build:crawl_slo_met:square_online"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_below = 1.0
+
+[[metric]]
+name = "build:crawl_slo_met:squarespace"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_below = 1.0
+
+[[metric]]
+name = "build:crawl_slo_met:woocommerce"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_below = 1.0
 
 [[metric]]
 name = "build:passed"
