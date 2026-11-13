@@ -60,8 +60,9 @@ egress IP, for the WooCommerce and generic crawls, is applied on its own: §2.1.
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
   `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7), until §2.1 sets crawl-woocommerce's
   and crawl-generic's to 0; `crawl-generic` has 8Gi, and
-  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
-  else on a job, beyond the image: stop.
+  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). Since #84 (§5.2), once:
+  `merge`'s `max_retries` 1 → 0, and `COFFEEDATA_AFTER_JOB` and `COFFEEDATA_AFTER_DEADLINE_UTC` added to
+  `enrich-week` and `build`. A plan that shows anything else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
   endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
   `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
@@ -500,7 +501,8 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
   lake, `public_coffee_is_fresh` fails such a build (the public catalog's newest `last_seen` is the newer run), so
   resuming last week after this Monday's crawl has written fetches fails too. Roll back to the previous release
   instead (`coffeedata rollback`, or `rollback_to` above), or build the latest week.
-- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
+- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`; after a
+  merge attempt that died, it refuses until told to: §5.2). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
 - **Recover a merged week from the archive** (within 30 days of its merge; then the bucket's lifecycle rule has
   deleted it). The merge moves each connector's partition, unchanged, to
@@ -749,15 +751,32 @@ gets one day worse each day until this week's release is served.
 | d, after 11:17 | the bad release was green and exported; the rollback re-exports | as above |
 | nothing fixed | red | broken from Wednesday |
 
-### 5.2 The build ran before the merge finished
+### 5.2 A Tuesday job failed its precondition (the chain: merge, enrich-week, build)
 
-The Tuesday jobs run on fixed clock times, not on completion (issue #84): merge at 03:17 (up to 240 min, and one
-retry), enrich-week at 04:17, build at 06:17. `build` never checks for a finished merge. It judges the latest run in
-the lake, which before the merge is still last week's. Freshness uses a strict `<`, so last Monday counts as fresh on
-Tuesday, and such a build can pass and serve last week's data as a new release. enrich-week before a merge prints
-`waiting: no merge this week yet` and exits 0, so nothing alerts.
+The Tuesday jobs still start on fixed clock times: merge at 03:17, enrich-week at 04:17, build at 06:17. Since
+issue #84 each of the last two first checks the control table (`src/coffeedata/chain.py`, read-only):
 
-**How to tell:**
+| Job | Runs only once | Waits until (UTC) | Then |
+|---|---|---|---|
+| `enrich-week` | this week's latest `merge` attempt is `done` | 05:47 | exits non-zero, nothing sent to Claude |
+| `build` (its `classify`, then its `build`) | this week's latest `enrich` attempt is `done` | 07:47 | both exit non-zero: no verdicts submitted, no build, no release |
+| `merge` | no earlier `merge` attempt of the week is left without an end row | no wait | exits non-zero, nothing merged |
+
+A job that is waiting logs `waiting for this week's (<week>) <job>: its latest attempt is <status>` every minute. One
+that gives up prints `precondition failed: ...` with the status it last saw, and its execution fails, which sends
+`registry.coffee: ingest job <job> failed` (§6). The deadline is a clock time: `classify`, `build` and Cloud Run's
+retry of the job all share it, so a failed chain doesn't wait twice. A run by hand after the deadline, or more than
+two hours before it, checks once and doesn't wait.
+
+Statuses: `missing` (no row: the job before never started, or is itself still waiting), `running` (at work, or dead:
+a killed attempt never writes an end row), `failed`, `unreadable` (the dataset couldn't be read). Only `done` passes.
+
+**The merge has no automatic retry** (`max_retries = 0`). A merge that dies leaves a `running` row, so enrich-week
+and the build fail their preconditions that morning, and a second `merge` refuses to start over it. Running it
+again loses and repeats no row (it adds only rows the lake lacks, and changes no file the dead attempt stored), but
+it is the owner's decision, and its archive lands in a second `merge=<batch>` folder (§5, "Recover a merged week").
+
+**How to tell where the chain stopped:**
 
 ```sh
 uv run python - <<'EOF'
@@ -772,26 +791,38 @@ for r in control.rows(lake, os.environ["WEEK"]):
     if r["job"] in ("merge", "enrich"):
         print(r["job"], r["status"], r["started_at"], r["ended_at"])
 EOF
-for j in merge build; do
+for j in merge enrich-week build; do
   gcloud run jobs executions list --job $j --region $REGION --limit 2 \
     --format='table(name,status.startTime,status.completionTime)'
 done
 ```
 
-The build ran too early if the latest build judged **last week's Monday** instead of `$WEEK`, or started before the
-merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
-
-**Recourse:** once the merge's row is `done`, run enrich-week (if it waited) and the build again:
+**Recourse**, from the first job that failed, in order. Each later job passes its own check once the one before it
+is `done`, so those need no override:
 
 ```sh
-gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
+# 1. The merge died (a `running` row, and no merge execution still running in the list above):
+gcloud run jobs execute merge --region $REGION --wait \
+  --update-env-vars COFFEEDATA_SKIP_PRECONDITION="the 03:17 merge died and none is running"
+# 2. enrich-week, once the merge's latest row is `done`:
+gcloud run jobs execute enrich-week --region $REGION --wait
+# 3. the build, once the latest enrich row is `done`:
+gcloud run jobs execute build --region $REGION --wait
+# or the same build told to judge $WEEK (the rebuild form other sections refer to):
 gcloud run jobs execute build --region $REGION --wait \
   --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
 ```
 
-`--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
-week again. The early release has last week's data, so it is a harmless baseline. Confirm the fix (§5.1 e). After
-11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
+**The override.** `COFFEEDATA_SKIP_PRECONDITION=<reason>` on one execution skips that job's check (for the build
+job, both `classify`'s and `build`'s). It logs `PRECONDITION SKIPPED by COFFEEDATA_SKIP_PRECONDITION: <reason>` and
+the status it skipped over. Use it for a deliberate run without the job before it: a build when enrichment can't run
+(an Anthropic outage), with `--update-env-vars COFFEEDATA_SKIP_PRECONDITION="enrich failed, building on stored
+enrichments"`; or a job run by hand on a Monday, when the new week has no merge yet. Never set it in Terraform. A
+build run with it before the week's merge judges the latest run in the lake, which is then still last week's, and
+can pass and serve last week's data as a new release: use the `--run-date $WEEK` form above as well, so
+it fails as incomplete instead.
+
+After 11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
 
 ### 5.3 A crawl that ends `deadline`: skipped or partial
 

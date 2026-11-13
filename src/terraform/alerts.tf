@@ -102,8 +102,8 @@ resource "google_monitoring_alert_policy" "down" {
 # a job. `run.googleapis.com/job/completed_execution_count` (DELTA, resource cloud_run_job with job_name and location,
 # metric label `result`) counts completed executions; in PromQL it is
 # run_googleapis_com:job_completed_execution_count. It counts executions, not task attempts: an execution's result is
-# decided after its retries (max_retries: 0 for Shopify's, WooCommerce's and generic's crawls, crawl-retry and
-# fetch-health, 1 otherwise, ingestion.tf), so an attempt that dies and a retry that succeeds is one `succeeded`
+# decided after its retries (max_retries: 0 for Shopify's, WooCommerce's and generic's crawls, crawl-retry,
+# fetch-health and the merge, 1 otherwise, ingestion.tf), so an attempt that dies and a retry that succeeds is one `succeeded`
 # execution and sends no email (the dead attempt stays visible in job_manifests: a `running` row with no end row, and
 # the retry's start row lists it under detail.dead_attempts). It fires on a failed retry, on the 240-minute timeout,
 # or on a failed attempt of a job without retries; a crawl that hits its deadline exits 0 and isn't a failure.

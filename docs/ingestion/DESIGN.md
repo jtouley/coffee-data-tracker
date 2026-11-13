@@ -386,7 +386,7 @@ Tuesdays") say. The earlier spread (connectors Mon–Fri, merge/enrich/build on 
 | Mon 15:17 | the five `*-resume` entries | the same five jobs again: each resumes its own connector's roasters without an ok fetch this week | 19:17 |
 | Mon 21:47 | `crawl-retry` and the four `*-retry` entries | the third pass: Shopify's parked stores, on the NAT IP (`crawl-retry`); every other connector's own crawl job again, on that job's egress, resuming every roaster without an ok fetch this week | Tue 01:47 |
 | Tue 03:17 | `merge` | every connector's partition for Monday's week into the lake's tables | 07:17 |
-| Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (otherwise it reports `waiting` and sends nothing: run it again by hand) | 08:17 |
+| Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (it waits for it until 05:47, then fails and emails: RUNBOOK §5.2) | 08:17 |
 | Tue 06:17 | `build` | verdicts, build + gate, publish, egress-check | 10:17 |
 | Tue 11:17 | `site.yml` (Actions, at cutover) | the site, the public export and the Snowflake load from the served release | |
 
@@ -848,9 +848,13 @@ Next:
 
 Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps review; item 15 above is the first):
 
-27. **Chain merge → enrich → build by completion, not fixed times** (N2): `enrich-week` and `build` fail closed unless
-    this week's `merge` end row is `done` in `job_manifests` (or one job runs the chain), so a slow merge never
-    hands enrichment or the build a half-merged week.
+27. **Chain merge → enrich → build by completion, not fixed times** (N2). Done as a precondition (issue #84,
+    `chain.py`): the schedule still starts each job, and `enrich-week` and the build job (`classify`, `build`) go on
+    only once the latest attempt of the job before them is `done` in `job_manifests`, waiting until a deadline
+    (05:47, 07:47 UTC) and failing the execution otherwise. The merge has no automatic retry and refuses to start
+    over an attempt that never ended. Still to do: start each job when the one before ends (Cloud Workflows, or one
+    job running the chain), which removes the idle wait and the fixed slots; and a lock so two merges can't run
+    at once (item 9).
 28. **A service account per job class** (N3): only `enrich-week` and `build` can read `ANTHROPIC_API_KEY`; the crawl
     jobs, which parse untrusted roaster HTML, can't.
 29. **Ingestion secrets apart from the app's** (N4): `INGEST_HF_TOKEN` (fine-grained to the dataset) and
