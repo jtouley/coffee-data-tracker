@@ -511,6 +511,45 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
     ]
 
 
+def test_public_tables_never_carry_an_openstreetmap_value(lake, tmp_path):
+    """Field-level provenance (#90): a roaster known from an open source and later found by OpenStreetMap (ODbL)
+    publishes the open source's name, city and state in public_roaster and public_coffee, never OpenStreetMap's.
+    A city only OpenStreetMap gave is not published. The gate test public_values_have_open_provenance passes."""
+    now = datetime(2026, 10, 1, tzinfo=UTC)
+    later = datetime(2026, 10, 8, tzinfo=UTC)
+    lake.write("registry", "registry/source=overture-2026-09-17.0/a.parquet", [
+        {"added_at": now, "source": "overture-2026-09-17.0", "roaster_id": "overture.coffee",
+         "name": "Overture Roasters", "state": "OR", "locations": 1},
+    ])  # fmt: skip
+    lake.write("registry", "registry/source=osm/b.parquet", [
+        {"added_at": later, "source": "osm", "roaster_id": "overture.coffee", "name": "OSM Roasters",
+         "city": "Portland", "state": "WA", "locations": 1},
+        # curated in the seed (tests/fixtures/roasters.csv: Onyx Coffee Lab, Rogers, AR)
+        {"added_at": later, "source": "osm", "roaster_id": "onyxcoffeelab.com", "name": "Onyx OSM",
+         "city": "Bentonville", "state": "MO", "locations": 1},
+    ])  # fmt: skip
+    for rid in ("onyxcoffeelab.com", "overture.coffee"):
+        probe(lake, "2026-10-18", rid)
+        run(lake, "2026-10-19", rid, [product("A")])
+    con = build(lake, tmp_path)
+
+    assert con.execute(
+        "select roaster_id, roaster_name, city, state from public_roaster order by roaster_id"
+    ).fetchall() == [
+        ("onyxcoffeelab.com", "Onyx Coffee Lab", "Rogers", "AR"),
+        ("overture.coffee", "Overture Roasters", None, "OR"),
+    ]
+    assert con.execute(
+        "select distinct roaster_id, roaster_name, roaster_state from public_coffee order by roaster_id"
+    ).fetchall() == [
+        ("onyxcoffeelab.com", "Onyx Coffee Lab", "AR"),
+        ("overture.coffee", "Overture Roasters", "OR"),
+    ]
+    con.close()
+    r = run_dbt(lake, tmp_path, "test", "--select", "public_values_have_open_provenance")
+    assert r.returncode == 0 and "PASS=1 " in r.stdout, r.stdout[-2000:]
+
+
 def test_old_and_new_shots_with_equipment_and_bags(lake, tmp_path):
     from datetime import datetime
 
@@ -1029,7 +1068,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=37 " in r.stdout
+    assert "PASS=38 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1386,16 +1425,27 @@ GUARD_BREAKS = {
     "variant_grams_are_valid": "delete from stg_variant_grams",
     # a published roaster that is a chain: public_roaster would have stopped leaving chains out
     "public_tables_have_no_chain": "update dim_roaster set is_chain = true where roaster_id = 'onyxcoffeelab.com'",
+    # a published value only OpenStreetMap gave (#90; the lake below has an osm record of Onyx in Bentonville):
+    # stg_registry would have let it through
+    "public_values_have_open_provenance": "update public_roaster set city = 'Bentonville' "
+    "where roaster_id = 'onyxcoffeelab.com'",
 }
 
 
 def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path):
     """price_per_100g_in_range, sane_coffee_listings, unique_runs, public_tables_are_facts_only,
-    variant_grams_are_valid and public_tables_have_no_chain pass on every synthetic build, since the models never produce such a row. Each is made to fail here, so a guard that stopped
+    variant_grams_are_valid, public_tables_have_no_chain and public_values_have_open_provenance pass on every
+    synthetic build, since the models never produce such a row. Each is made to fail here, so a guard that stopped
     selecting anything (a renamed column, a dropped ref) would show."""
     rid = "onyxcoffeelab.com"
     probe(lake, "2026-10-18", rid)
     run(lake, "2026-10-19", rid, [product("A"), product("B", 18.0)])
+    # An OpenStreetMap record of Onyx (curated in the seed, so it publishes the seed's city, Rogers): the value
+    # public_values_have_open_provenance's break plants is one OpenStreetMap did give.
+    lake.write("registry", "registry/source=osm/x.parquet", [
+        {"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "osm", "roaster_id": rid, "name": "Onyx",
+         "city": "Bentonville", "state": "AR", "locations": 1},
+    ])  # fmt: skip
     build(lake, tmp_path).close()
     db = tmp_path / "coffee.duckdb"
     clean = tmp_path / "clean.duckdb"

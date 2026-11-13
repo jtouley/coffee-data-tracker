@@ -162,6 +162,10 @@ models:
       stg_runs: {+materialized: table}
       stg_run_overrides: {+materialized: table}
       stg_registry: {+materialized: table}
+      # Read by stg_registry and by the gate public_values_have_open_provenance: one read of the lake and the seed
+      # per build, so the gate checks the same records the pick used.
+      stg_registry_records: {+materialized: table}
+      stg_roaster_seed: {+materialized: table}
       stg_bags: {+materialized: table}
     intermediate:
       # Results more than one model reads, computed once.

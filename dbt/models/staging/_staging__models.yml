@@ -34,15 +34,26 @@ models:
         description: The store platform the probe found (shopify, woocommerce, squarespace, square_online, generic).
   - name: stg_registry
     description: >-
-      One row per roaster the registry knows: the seed list (config/roasters.csv) joined with the roasters the lake
-      adds by discovery or by hand (raw registry, the newest row per roaster). Every roaster stays a row: opted-out
-      ones and aliases are flagged (opted_out, alias_of), not removed.
+      One row per roaster the registry knows: the seed list (stg_roaster_seed) joined with the roasters the lake
+      adds by discovery or by hand (stg_registry_records, the newest record per roaster). Every roaster stays a row:
+      opted-out ones and aliases are flagged (opted_out, alias_of), not removed. A roaster known from an open source
+      (Overture, curated, manual) takes its name, city and state from open sources only, never from OpenStreetMap
+      (ODbL), so the public tables carry no OpenStreetMap value (#90).
     columns:
       - name: roaster_id
         description: The roaster's normalized domain; the key of every roaster model.
         data_tests: [unique, not_null]
       - name: roaster_name
-        description: The roaster's name (the lake's newest, else the seed's).
+        description: >-
+          The roaster's name. Known from an open source: the newest non-null open value in the lake, else the seed's
+          (when its sources are open), never an OpenStreetMap one; name, city and state are picked per field. Known only from OpenStreetMap (never public): the lake's
+          newest, else the seed's.
+      - name: city
+        description: >-
+          The roaster's city, picked as roaster_name is: null when only OpenStreetMap gave one to a roaster an open
+          source knows.
+      - name: state
+        description: The roaster's state, picked as roaster_name is.
       - name: locations
         description: >-
           Its store count as discovery counted it (US Overture places listing its website that are roasteries); 1
@@ -65,6 +76,46 @@ models:
           Null: decided by host alone (macros/roaster_alias.sql).
       - name: first_added
         description: When the lake first listed it; null for a roaster from the seed list alone.
+  - name: stg_registry_records
+    description: >-
+      One row per record of the lake's raw registry: a roaster added by discovery (overture-<release>, osm) or by
+      hand (manual), with is_open_source. stg_registry picks each roaster's values from these; the test
+      public_values_have_open_provenance checks every published registry value against them. A row without a
+      roaster_id (the lake's zero-row schema file reads as none) is left out.
+    data_tests:
+      # Raw registry has no key of its own: a source lists a roaster again in a later run, and two records of one
+      # roaster can share a second (tests/test_reproducible.py's lake holds such a tie). The whole record is the key,
+      # so this fails when raw holds the same record twice, a double write. Warn, not error: every pick stg_registry
+      # makes is unchanged by a repeat, so a duplicate changes no output. The plan: once discovery has written to
+      # the lake (its first osm and overture runs), check the history for exact repeats, and make this an error if
+      # it has none, so a double write fails the build from then on.
+      - grain:
+          arguments:
+            columns: [roaster_id, source, added_at, name, city, state, locations, opted_out]
+            nullable: [source, added_at, name, city, state, locations, opted_out]
+          config: {severity: warn}
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+      - name: source
+        description: Where the record came from (overture-<release>, osm, manual).
+      - name: added_at
+        description: When the record was written (UTC).
+      - name: is_open_source
+        description: >-
+          The record's whole source may feed the public tables (macros/roaster_alias.sql is_open_record_source:
+          overture, overture-<release>, curated, manual); false for OpenStreetMap (ODbL), a name that only starts
+          like an open one (manual-osm-import), several sources at once (overture+osm) and anything else.
+  - name: stg_roaster_seed
+    description: >-
+      One row per roaster in the seed list (config/roasters.csv): the curated and Overture-derived roasters
+      stg_registry starts from, empty text read as null.
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain.
+        data_tests: [unique, not_null]
+      - name: sources
+        description: Where the seed knows it from (overture, curated), joined with +.
   - name: stg_run_overrides
     description: >-
       One row per roaster-week a person decided on: the latest override (accept, reject or use_batch) of the
