@@ -55,7 +55,8 @@ class Server:
         port = _port()
         self.proc = subprocess.Popen(
             [*as_user, str(b / "postgres"), "-D", str(data), "-p", str(port), "-h", "127.0.0.1", "-k", str(self.root),
-             "-c", "fsync=off", "-c", "synchronous_commit=off", "-c", "full_page_writes=off"],
+             "-c", "fsync=off", "-c", "synchronous_commit=off", "-c", "full_page_writes=off",
+             "-c", "max_connections=200"],  # headroom: each test closes its pools (conftest.pg_url)
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         )  # fmt: skip
         self.url = f"postgresql://postgres@127.0.0.1:{port}/postgres"

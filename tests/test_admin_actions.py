@@ -704,6 +704,31 @@ def test_an_idle_connection_is_dropped_and_a_double_submit_answers_once(pg_url, 
     assert len(out) == 2 and out[0] == out[1]
 
 
+def test_close_ends_the_pools_connections(pg_url):
+    """close() ends every pooled connection (the tests close each pool at teardown, conftest.pg_url, so a worker
+    never runs out of Postgres connections); the next transaction opens a new one."""
+    db = pg_url.rsplit("/", 1)[1]
+    probe = url_connect(pg_url.rsplit("/", 1)[0] + "/postgres")
+
+    def clients() -> int:
+        con = probe()
+        try:
+            cur = con.cursor()
+            cur.execute("select count(*) from pg_stat_activity where datname = %s", (db,))
+            return cur.fetchone()[0]
+        finally:
+            con.close()
+
+    cp = ControlPlane(url_connect(pg_url))
+    cp.migrate()
+    assert clients() == 1
+    cp.close()
+    assert clients() == 0
+    cp.ping()
+    assert clients() == 1
+    cp.close()
+
+
 # --- the final review's fixes ----------------------------------------------------------------------------------
 
 

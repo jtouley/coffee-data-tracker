@@ -1068,7 +1068,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=38 " in r.stdout
+    assert "PASS=39 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
