@@ -24,8 +24,11 @@ def test_the_jobs_the_admin_starts_are_the_jobs_it_may_start():
     assert pulls and all(
         s.args and s.args[0].startswith("rc=0; coffeedata pull --only a.example ") for s in pulls
     )
-    line = next(x for x in ingestion.splitlines() if x.strip().startswith('"pull"'))
-    assert 'args = ["coffeedata pull --help"]' in line and "retries = 0" in line
+    # The job's whole block, one line or several (`"pull" = { ... }`), with Terraform's alignment spaces collapsed.
+    job = re.search(r'^\s+"pull"\s+=\s+\{(.*?)\}\s*$', ingestion, re.M | re.S)
+    assert job, "no pull job in ingestion.tf"
+    block = " ".join(job.group(1).split())
+    assert 'args = ["coffeedata pull --help"]' in block and "retries = 0" in block
 
 
 def test_the_publish_job_does_nothing_without_the_admins_arguments():

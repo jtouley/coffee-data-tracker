@@ -14,11 +14,13 @@ from (
     {%- set flagged = var('source_roasters', []) %}
     {%- if flagged %}
     union all
-    select roaster_id, source, added_at, name, city, state, locations, false as opted_out
-    from {{ lake('candidates') }}
-    where roaster_id in ({{ sql_strings(flagged) }})
-      -- one the registry already lists is a record there: its place adds nothing (and would repeat the record)
-      and roaster_id not in (select roaster_id from {{ lake('registry') }} where roaster_id is not null)
+    select c.roaster_id, c.source, c.added_at, c.name, c.city, c.state, c.locations, false as opted_out
+    from {{ lake('candidates') }} c
+    where c.roaster_id in ({{ sql_strings(flagged) }})
+      -- only the same record (roaster and source) the registry already holds is left out, so it isn't repeated; a
+      -- record of the same roaster from another source (OpenStreetMap) doesn't hide the place's open one
+      and not exists (select 1 from {{ lake('registry') }} r
+                      where r.roaster_id = c.roaster_id and r.source is not distinct from c.source)
     {%- endif %}
 )
 where roaster_id is not null

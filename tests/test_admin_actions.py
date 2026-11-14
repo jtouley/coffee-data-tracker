@@ -744,7 +744,8 @@ def test_close_ends_the_pools_connections(pg_url):
     assert clients() == 1
     cp.close()
     assert clients() == 0
-    cp.ping()
+    with cp.tx() as cur:
+        cur.execute("select 1")
     assert clients() == 1
     cp.close()
 
