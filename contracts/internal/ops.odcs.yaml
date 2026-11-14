@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-ops
-version: 1.0.0
+version: 1.1.0
 name: Coffee Data internal ops contract
 status: active
 domain: coffee
@@ -271,7 +271,8 @@ schema:
     physicalType: string
     required: false
     description: 'Why: verdict:<label> when Claude''s verdict decided, else the rule that did: excluded:<rule>, sauce, sweets,
-      drinks, coffee_words, country, demonym, coffee_type or signals:<n>.'
+      drinks, coffee_words, country, demonym, coffee_type or signals:<n>; decision:<action> when the owner''s decision overrides
+      them.'
   quality:
   - id: product_decisions_ops_columns
     description: each ops file has exactly the contract's columns and types, and none is a release table.
@@ -301,6 +302,187 @@ schema:
   customProperties:
   - property: lakeGlob
     value: releases/*/*/ops/product_decisions.parquet
+- name: mart_flags
+  physicalName: mart_flags
+  physicalType: table
+  description: 'Ops: every flag a rule raised in the build, one row per rule and product, with its polarity, evidence and
+    the product''s summary: ready to remove, and its evidence group (dbt mart_flags).'
+  properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
+  - name: rule
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The rule that raised the flag (coffeedata.rules.RULE_TYPES).
+  - name: family
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The rule''s family (classifier, catalog or listing): readiness counts distinct families.'
+  - name: polarity
+    logicalType: string
+    physicalType: string
+    required: false
+    description: supports (a removal), doubts (a removal) or restore, from the build's rule settings.
+  - name: direction
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The rule''s direction (verdict_flip: added or removed); empty for a rule with one.'
+  - name: coffee_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The product flagged.
+  - name: roaster_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The roaster's normalized domain.
+  - name: input_hash
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The product version its latest record is (the owner can decide by it).
+  - name: title
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The title as the store sent it (latest record).
+  - name: product_type
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The store's product type (latest record).
+  - name: evidence
+    logicalType: string
+    physicalType: string
+    required: false
+    description: What the rule saw, as JSON (shown on the admin's Case page).
+  - name: evidence_key
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The evidence without the product's identity.
+  - name: evidence_hash
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'A hash of the store and every flag''s evidence_key on the product: a store''s products with equal evidence
+      group.'
+  - name: decision
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The owner's decision the build applied (include or exclude), else null.
+  - name: classifier_is_coffee
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: The classifier's answer for the latest version, before any decision.
+  - name: was_public
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: In the served release's public_coffee.
+  - name: ready_flags
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: Its removal is ready as far as the build can tell (supports from enough families, no doubt, no coverage
+      problem); the admin adds the live check.
+  - name: coverage_problem
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: This run failed to fetch the product's store although it has a catalog.
+  - name: supports_families
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Distinct families of its supports flags.
+  - name: doubts
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Its doubts flags.
+  - name: restores
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Its restore flags.
+  - name: public_rows
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: 'Public rows a removal touches: its public_coffee row and its public_price_event rows.'
+  - name: verdict_label
+    logicalType: string
+    physicalType: string
+    required: false
+    description: Claude's stored label for the latest version, if any.
+  - name: classified_by
+    logicalType: string
+    physicalType: string
+    required: false
+    description: claude (a stored verdict decided) or rules.
+  - name: reason
+    logicalType: string
+    physicalType: string
+    required: false
+    description: Why the classifier answered as it did (stg_products.reason).
+  - name: url
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The product's page on the store, as sent.
+  - name: tags
+    logicalType: array
+    physicalType: 'list<item: string>'
+    items:
+      logicalType: string
+      physicalType: string
+    required: false
+    description: The store's tags (latest record).
+  - name: bag_sizes_g
+    logicalType: array
+    physicalType: 'list<item: int32>'
+    items:
+      logicalType: integer
+      physicalType: int32
+    required: false
+    description: Each variant's weight in grams, as sent.
+  - name: prices_usd
+    logicalType: array
+    physicalType: 'list<item: double>'
+    items:
+      logicalType: number
+      physicalType: double
+    required: false
+    description: Each variant's price in USD (null when the store states another currency).
+  - name: description
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The description's text, first 2,000 characters.
+  quality:
+  - id: mart_flags_ops_columns
+    description: each ops file has exactly the contract's columns and types, and none is a release table.
+    type: custom
+    engine: pytest
+    implementation: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+  customProperties:
+  - property: lakeGlob
+    value: releases/*/*/ops/mart_flags.parquet
 authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/lake.py
   type: implementation
@@ -323,6 +505,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/product_decisions.sql
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/mart_flags.sql
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -335,6 +520,6 @@ customProperties:
   value:
   - the owner's command center (admin.registry.coffee)
 - property: interfaceFingerprint
-  value: 106a5474e48e89c2
+  value: 9ca0591bf60c4c5d
 - property: docsFingerprint
-  value: 19ca94645995c7c0
+  value: 8631cc37f7d18683

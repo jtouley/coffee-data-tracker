@@ -200,10 +200,12 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
     from admin.controlplane import ControlPlane, url_connect
 
     from .admin_fakes import FakeJobs, Pipeline
+    from .admin_fixture import flag_served_build
 
     lake = tmp_path / "lake"
     shutil.copytree(built["lake"], lake)
     w1, w2, w3 = built["weeks"]
+    flag_served_build(lake, w1, built["builds"][w1])
     fakes = {k: FakeJobs() for k in ("act", "window", "slow")}
     fakes["slow"].delay_s = 3
     fakes["act"].on_finish = Pipeline(lake, tmp_path / "act" / "snapshots", w3)

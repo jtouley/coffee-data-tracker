@@ -1061,13 +1061,14 @@ def test_states_are_the_fifty():
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
     partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
-    per store, and product_decisions' latest record. They read hand-written rows, but dbt reads the column types of
-    their inputs from built tables, so a small lake is built first."""
+    per store, product_decisions' latest record, and the guard and readiness (int_catalog_decided). They read
+    hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
+    first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=37 " in r.stdout
+    assert "PASS=39 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):

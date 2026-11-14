@@ -593,7 +593,7 @@ def dbt_build(
     select, target, extra_roots and flags are for `fetch-health`: only the nodes it names, its own target folder (the
     weekly build's artifacts are left alone), more lake roots to read (its copy of the unmerged crawl output) and
     more dbt flags."""
-    from . import quality, registry, shots, verdict
+    from . import quality, registry, rules, shots, verdict
 
     roots = [str(lake.root), *extra_roots] + ([lake.url] if lake.remote else [])
     folders = remote_folders(lake.url) if lake.remote else None
@@ -612,6 +612,7 @@ def dbt_build(
             # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
             "require_verdicts": not verdict.rules_only_allowed(),
             "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
+            "rules": rules.dbt_var(None),  # cmd_build passes the snapshot's settings
         }
         | (extra_vars or {})
     )
@@ -710,7 +711,7 @@ def _snapshot(args: argparse.Namespace, lake: Lake, served: str | None) -> dict 
 
 
 def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_id: str) -> bool:
-    from . import decisions, quality
+    from . import decisions, quality, rules
 
     extra: dict = {"as_of_run": run_date, "today": _today(), "build_id": build_id}
     served_release = quality.served(lake)
@@ -723,6 +724,9 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
     recorded: list[dict] = []
     if draft:
         recorded.append({"kind": "draft", "unique_id": draft})
+    extra["rules"] = rules.dbt_var(
+        decisions.settings_of(snap)
+    )  # the snapshot's rule settings, else the defaults
     if snap is not None:
         extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
         recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),

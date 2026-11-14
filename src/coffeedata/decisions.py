@@ -7,6 +7,10 @@ the digest (fail closed: a snapshot that is missing, changed or malformed stops 
 stg_decisions, through var decisions_path), and records it in its own builds rows (kind snapshot), so the weekly
 build applies the served build's decisions from the lake alone, with no bucket and no database.
 
+A snapshot also carries the rule settings (coffeedata.rules) and the roasters whose crawl flag is off, when the
+admin set them: the build reads its rules from it (no `settings`: rules.DEFAULTS), and a scheduled crawl skips
+the served snapshot's crawl-off roasters (ingest.select_states).
+
 The same snapshot is the source of `coffeedata decide export-labels`: owner corrections as candidate labels for the
 classifier's train set only (CLAUDE.md: one labeler, never a sealed test example).
 """
@@ -20,6 +24,8 @@ import re
 from collections.abc import Iterable
 from pathlib import Path
 
+from . import rules
+
 VERSION = 1
 SUBJECTS = ("coffee_id", "input_hash")
 ACTIONS = ("include", "exclude")
@@ -27,9 +33,10 @@ SNAPSHOT_ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 # A decision's fields in a snapshot; only subject_kind, subject and action reach dbt.
 # coffee_ids: for a decision by version, every coffee sharing it (the admin's export resolves them; export-labels
-# checks each against the held-out sets).
+# checks each against the held-out sets). evidence_hash: the store and the flags' evidence the decision was made on
+# (group approval).
 FIELDS = ("decision_id", "subject_kind", "subject", "action", "reason", "actor", "decided_at", "coffee_id",
-          "input_hash", "roaster_id", "title", "coffee_ids")  # fmt: skip
+          "input_hash", "roaster_id", "title", "coffee_ids", "evidence_hash")  # fmt: skip
 
 
 class SnapshotError(RuntimeError):
@@ -42,13 +49,25 @@ def digest(doc: dict) -> str:
 
 
 def check(doc: object) -> list[dict]:
-    """The decisions of a well-formed snapshot, or SnapshotError. At most one decision per subject."""
+    """The decisions of a well-formed snapshot, or SnapshotError. At most one decision per subject; settings and
+    roasters, when present, must be readable by this code."""
     if (
         not isinstance(doc, dict)
         or doc.get("version") != VERSION
         or not isinstance(doc.get("decisions"), list)
     ):
         raise SnapshotError("not a decisions snapshot (version 1)")
+    if "settings" in doc:
+        try:
+            rules.check(doc["settings"], strict=False)
+        except rules.SettingsError as e:
+            raise SnapshotError(f"its rule settings can't be read: {e}") from e
+    roasters_ = doc.get("roasters", [])
+    if not isinstance(roasters_, list) or not all(
+        isinstance(r, dict) and isinstance(r.get("roaster_id"), str) and isinstance(r.get("crawl"), bool)
+        for r in roasters_
+    ):
+        raise SnapshotError("roasters must be a list of {roaster_id, crawl}")
     seen: set[tuple[str, str]] = set()
     out = []
     for d in doc["decisions"]:
@@ -64,15 +83,32 @@ def check(doc: object) -> list[dict]:
     return out
 
 
-def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict]) -> dict:
-    """A snapshot document. `decisions` are effective decisions (one per subject)."""
+def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], settings: dict | None = None,
+             roasters: Iterable[dict] = ()) -> dict:  # fmt: skip
+    """A snapshot document. `decisions` are effective decisions (one per subject); `settings` the rule settings
+    version to build with (left out: the defaults); `roasters` each roaster's current crawl flag where it was set."""
     if not SNAPSHOT_ID.fullmatch(snapshot_id):
         raise ValueError("bad snapshot id")
     doc = {"version": VERSION, "snapshot_id": snapshot_id, "created_at": created_at,
            "decisions": sorted(({f: d.get(f) for f in FIELDS} for d in decisions),
                                key=lambda d: (d["subject_kind"], d["subject"]))}  # fmt: skip
+    if settings is not None:
+        doc["settings"] = settings
+    if roasters := sorted(({"roaster_id": r["roaster_id"], "crawl": bool(r["crawl"])} for r in roasters),
+                          key=lambda r: r["roaster_id"]):  # fmt: skip
+        doc["roasters"] = roasters
     check(doc)
     return doc
+
+
+def settings_of(doc: dict | None) -> dict:
+    """The rule settings a snapshot builds with: its own, else the defaults."""
+    return rules.check((doc or {}).get("settings") or rules.DEFAULTS, strict=False)
+
+
+def crawl_off(doc: dict | None) -> set[str]:
+    """The roasters a snapshot turns the crawl flag off for."""
+    return {r["roaster_id"] for r in (doc or {}).get("roasters", []) if not r["crawl"]}
 
 
 def key(snapshot_id: str) -> str:

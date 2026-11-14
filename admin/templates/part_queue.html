@@ -1,0 +1,141 @@
+{% from "_macros.html" import status, ev, write_off, write_button %}
+{% macro summary(r) -%}
+{{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
+{%- endmacro %}
+{# The decision a product's flags propose: exclude when its removal is ready (two families, no doubt), include (keep
+   it) when a flag argues to restore it, else none: open the case and decide there. #}
+{% macro proposal(r) -%}{{ "exclude" if r.ready else "include" if r.restores else "" }}{%- endmacro %}
+{# Exclude or Include products: the confirm sheet asks the reason and whether by coffee or by version (admin.js). #}
+{% macro decide(action, items, label, cls="text") -%}
+<form class="inline-form" data-write="/api/decisions" data-ask="reason kind" data-confirm-label="{{ action | capitalize }}" data-confirm-title="{{ action | capitalize }} {{ 'this product' if items | length == 1 else (items | length) ~ ' products' }}?"
+      data-confirm="{{ (items[:5] | map(attribute='title') | map('default', '') | join('; ')) }}{{ '; and ' ~ (items | length - 5) ~ ' more' if items | length > 5 }}. {{ 'Leave out of the catalog, even if the classifier says coffee' if action == 'exclude' else 'Keep in the catalog as coffee, even if the classifier says not' }}. Nothing is served until a draft of it is published (Release).">
+  <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="action" value="{{ action }}"><input type="hidden" name="items" value='[{% for m in items %}{{ item(m) }}{{ "," if not loop.last }}{% endfor %}]' data-json>
+  <button class="btn {{ cls }} inline" type="submit" data-busy="Recording…">{{ label }}</button>
+</form>
+{%- endmacro %}
+{% macro item(r) -%}{{ {"coffee_id": r.coffee_id, "input_hash": r.input_hash, "roaster_id": r.roaster_id, "title": r.title, "evidence_hash": r.evidence_hash, "seen_coffee_id": r.dc.decision_id if r.dc else none, "seen_input_hash": r.dh.decision_id if r.dh else none} | tojson }}{%- endmacro %}
+<div data-state="{{ 'data' if build else 'empty' }}">
+{{ write_off(writes_off) }}
+{% if not build %}
+  <div class="state empty mt16"><h2 class="section">Nothing to review</h2><p class="body">Nothing is served yet, so no build has flags: <code>marts/release.parquet</code> doesn’t exist.</p></div>
+{% elif f.case %}
+{# --- one product's case ------------------------------------------------------------------------------------- #}
+  <p class="mt12"><a class="ev" href="/queue">← Queue</a></p>
+  {% if not case %}
+  <div class="state empty mt16"><h2 class="section">No open flags on {{ f.case }}</h2><p class="body">Build {{ build }}’s <code>mart_flags</code> has no row for it: no rule flags it, or the build has no flags (written from this change on). <a class="ev" href="/catalog?{{ {"q": f.case} | urlencode }}">Find it in the Catalog</a>.</p></div>
+  {% else %}
+  {% set pr, r = case.product, case.summary %}
+  <h2 class="serif title-s">{{ ev(pr.url, pr.title or pr.coffee_id) }}</h2>
+  <p class="answer" data-answer>{{ summary(r) or "no open flag" }} · {{ n(pr.public_rows) }} public row{{ "s" if pr.public_rows != 1 }}</p>
+  <p class="src">From build {{ build }}’s <code>mart_flags</code> and <code>fetches</code>, and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+
+  <h2 class="section">Decision</h2>
+  {% if r.decided %}
+    <p class="body">{{ status("ok") }} {{ r.decided.action | capitalize }}d{% if r.decided.group_id %} with its group{% endif %}: in the next draft (Release).</p>
+    {% if not writes_off %}{{ write_button("/api/decisions/" ~ r.decided.decision_id ~ "/undo", "Undo", "Undo the " ~ r.decided.action ~ " of " ~ (pr.title or pr.coffee_id) ~ "? The rules and the classifier decide it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
+  {% elif writes_off %}<p class="body">—</p>
+  {% else %}
+    {% set want = proposal(r) %}
+    <p class="body">{% if pr.ready_flags %}Its removal is ready as far as the build can tell: supports from {{ pr.supports_families }} families, no doubt. Publish also needs a live check of the store (below).{% elif pr.doubts %}A doubt is open, so its removal can’t be ready: decide only if you have checked it yourself.{% else %}Not ready: removal needs supports from two families and no doubt.{% endif %}</p>
+    <div class="actions mt12">
+      {{ decide("exclude", [r], "Exclude…", "primary" if want == "exclude" else "secondary") }}
+      {{ decide("include", [r], "Include…", "primary" if want == "include" else "secondary") }}
+    </div>
+  {% endif %}
+
+  <h2 class="section">Flags</h2>
+  <ul class="flags">{% for fl in case.flags %}
+    <li><strong>{{ fl.rule }}</strong> <span class="meta">({{ fl.family }})</span> · {{ fl.polarity }}{% if fl.direction %} · {{ fl.direction }}{% endif %}
+      <dl class="facts">{% for k, v in fl.evidence.items() %}<dt>{{ k | replace("_", " ") }}</dt><dd>{{ v if v is not none else "—" }}</dd>{% endfor %}</dl></li>
+  {% endfor %}</ul>
+
+  <h2 class="section">Product</h2>
+  {% set shared = case.flags | selectattr("rule", "equalto", "shared_body") | list %}
+  <dl class="facts">
+    <dt>Classifier</dt><dd>{{ "coffee" if pr.classifier_is_coffee else "not coffee" }} · {{ pr.classified_by or "—" }}{% if pr.reason %}: {{ pr.reason }}{% endif %}</dd>
+    <dt>Verdict</dt><dd>{{ pr.verdict_label or "none" }}</dd>
+    <dt>Type</dt><dd>{{ pr.product_type or "—" }}</dd>
+    <dt>Tags</dt><dd>{{ (pr.tags or []) | join(", ") or "—" }}</dd>
+    <dt>Sizes</dt><dd>{{ (pr.bag_sizes_g or []) | map("string") | join(", ") or "—" }}{% if pr.bag_sizes_g and pr.bag_sizes_g | select | list %} g{% endif %}</dd>
+    <dt>Prices</dt><dd>{% for p in pr.prices_usd or [] %}{{ "$" ~ ("%.2f" | format(p)) if p is not none else "not USD" }}{{ ", " if not loop.last }}{% else %}—{% endfor %}</dd>
+    <dt>Roaster</dt><dd><a class="ev" href="/queue?{{ {"roaster": pr.roaster_id} | urlencode }}">{{ pr.roaster_id }}</a>’s flags</dd>
+  </dl>
+  <h3 class="label mt16">Description{% if shared %} · the same text is on {{ shared[0].evidence.products }} of the roaster’s products{% endif %}</h3>
+  <p class="desc">{{ pr.description or "No description." }}</p>
+
+  <h2 class="section">Store</h2>
+  {% set off = crawl and not crawl.crawl %}
+  <p class="body">Crawl flag: <strong>{{ "off" if off else "on" }}</strong>{% if crawl %} ({{ crawl.reason }}; {{ crawl.actor }}, {{ t(crawl.at) }} UTC){% endif %}. Off stops scheduled crawls of the store once a draft carrying it is published; a live check still runs.</p>
+  {% if not writes_off %}
+  <form class="inline-form" data-write="/api/roasters/{{ pr.roaster_id }}/crawl" data-ask="reason" data-confirm="Turn the crawl flag {{ 'on' if off else 'off' }} for {{ pr.roaster_id }}? It goes into the next draft; scheduled crawls follow once it is published." data-confirm-label="Turn {{ 'on' if off else 'off' }}">
+    <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="crawl" value="{{ 'on' if off else 'off' }}"><input type="hidden" name="seen" value="{{ 'off' if off else 'on' }}">
+    <button class="btn secondary inline" type="submit" data-busy="Recording…">Turn crawling {{ "on" if off else "off" }}…</button>
+  </form>
+  {% endif %}
+  <p class="body mt12">Live check: {% if test %}{{ status(test.status or "running") }} test crawl started {{ t(test.started_at) }} UTC{% if answers %}; the store {{ "answered" if answers | selectattr("ok") | list else "didn’t answer" }}{% endif %}.{% else %}none in the last 7 days. A removal’s Publish needs one.{% endif %}</p>
+  {% if not writes_off and case.adapter in connectors %}
+  <form class="inline-form" data-write="/api/jobs/crawl-one/runs" data-preview="/api/jobs/crawl-one/plan" data-confirm-label="Start">
+    <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="connector" value="{{ case.adapter }}"><input type="hidden" name="roaster" value="{{ pr.roaster_id }}"><input type="hidden" name="mode" value="test">
+    <button class="btn secondary inline" type="submit" data-busy="Checking…">Live check (test crawl)…</button>
+  </form>
+  {% endif %}
+  {% if case.fetches %}
+  <div class="frame mt12" tabindex="0" role="region" aria-label="Fetches"><table class="dense">
+    <caption>The store’s fetches, the last {{ case.fetches | length }} runs</caption>
+    <thead><tr><th scope="col">Run</th><th scope="col">Fetched</th><th scope="col" class="n">Products</th><th scope="col" class="n">Attempts</th><th scope="col">Last error</th></tr></thead>
+    <tbody>{% for x in case.fetches %}<tr><th scope="row">{{ x.run_date }}</th><td>{{ status("ok" if x.ok else x.last_status or "failed") }}</td><td class="n">{{ n(x.products) }}</td><td class="n">{{ x.attempts }}</td><td class="err">{{ x.last_error or "—" }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% else %}<p class="body">No fetches of the store in the lake.</p>{% endif %}
+  {% endif %}
+{% else %}
+{# --- the queue ----------------------------------------------------------------------------------------------- #}
+  {% if not q.recorded %}
+  <div class="state empty mt16"><h2 class="section">Build {{ build }} has no flags</h2><p class="body">Its ops tables have no <code>mart_flags</code>: builds write it from this change on.</p></div>
+  {% else %}
+  <p class="answer" data-answer>{{ n(q.matching) }} product{{ "s" if q.matching != 1 }} with open flags · {{ n(q.ready) }} ready to remove · {{ n(q.public_rows) }} public rows</p>
+  <p class="src">From served build {{ build }}’s <code>mart_flags</code> and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+  <form class="picker" method="get" action="/queue">
+    <label class="facet"><span class="label">Roaster</span><input class="input small" name="roaster" value="{{ f.roaster or '' }}" autocomplete="off" spellcheck="false"></label>
+    <label class="facet"><span class="label">Rule</span><select name="rule" class="select" data-autosubmit><option value="">Any</option>{% for rid, pol, cnt in q.by_rule %}<option value="{{ rid }}"{% if f.rule == rid %} selected{% endif %}>{{ rid }} ({{ pol }}) {{ n(cnt) }}</option>{% endfor %}</select></label>
+    <label class="facet"><span class="label">Products</span><select name="state" class="select" data-autosubmit>{% for s in states %}<option value="{{ '' if s == 'open' else s }}"{% if (f.state or 'open') == s %} selected{% endif %}>{{ s }}</option>{% endfor %}</select></label>
+    <button class="btn secondary inline" type="submit">Show</button>
+  </form>
+  {% if not q.rows %}
+  <div class="state empty mt16"><h2 class="section">Nothing to review</h2><p class="body">No open flag matches, as of build {{ build }}.{% if f.roaster or f.rule or f.state %} <a class="ev" href="/queue">Show every open flag</a>.{% endif %}</p></div>
+  {% else %}
+  <div class="frame mt12" tabindex="0" role="region" aria-label="Flagged products"><table class="dense flagged">
+    <caption>Products {{ q.offset + 1 }}–{{ q.offset + q.rows | length }} of {{ n(q.matching) }}, by the public rows a removal touches; products with the same evidence together</caption>
+    <thead><tr><th scope="col">Product</th><th scope="col">Flags</th><th scope="col">Decision</th><th scope="col" class="n">Public rows</th><th scope="col">Roaster</th></tr></thead>
+    <tbody>{% for g in q.rows | groupby("evidence_hash") | sort(attribute="list.0.group_rows", reverse=true) %}{% set members = g.list %}
+      {% if members[0].group_n > 1 %}{% set want = proposal(members[0]) %}<tr class="grp"><th scope="rowgroup" colspan="2">{{ members[0].group_n }} products of {{ members[0].roaster_id }} with the same evidence: {{ members[0].rules | join(", ") }} · {{ summary(members[0]) }}</th>
+        <td>{% set open = members | rejectattr("decided") | list %}{% if want and open and not writes_off %}{{ decide(want, open, (want | capitalize) ~ " these " ~ (open | length) ~ "…") }}{% else %}—{% endif %}</td><td class="n">{{ n(members[0].group_rows) }}</td><td></td></tr>{% endif %}
+      {% for r in members %}<tr>
+        <th scope="row"><a class="ev" href="/queue?{{ {"case": r.coffee_id} | urlencode }}">{{ r.title or r.coffee_id }}</a></th>
+        <td>{{ summary(r) }}</td>
+        <td>{% if r.decided %}{{ r.decided.action }}d · next draft{% elif proposal(r) and not writes_off and r.group_n == 1 %}{{ decide(proposal(r), [r], (proposal(r) | capitalize) ~ "…") }}{% else %}—{% endif %}</td>
+        <td class="n">{{ n(r.public_rows) }}</td><td>{{ r.roaster_id }}</td>
+      </tr>{% endfor %}
+    {% endfor %}</tbody>
+  </table></div>
+  {% if q.matching > q.page %}<nav class="pager" aria-label="Pages of results">{% if q.offset %}<a class="ev" href="/queue?{{ (pager + [("offset", q.offset - q.page)]) | urlencode }}">Previous {{ q.page }}</a>{% endif %}<span class="meta">{{ q.offset // q.page + 1 }} of {{ (q.matching + q.page - 1) // q.page }}</span>{% if q.offset + q.page < q.matching %}<a class="ev" href="/queue?{{ (pager + [("offset", q.offset + q.page)]) | urlencode }}">Next {{ q.page }}</a>{% endif %}</nav>{% endif %}
+  {% endif %}
+  {% endif %}
+
+  {# --- the rule settings ------------------------------------------------------------------------------------- #}
+  <details class="settings mt24">
+    <summary class="section">Rule settings · {% if settings.version_id %}version <code>{{ settings.version_id }}</code>, {{ settings.actor }}, {{ t(settings.at) }} UTC{% else %}the defaults{% endif %}</summary>
+    <p class="body">The code defines each rule; these settings configure it. A change goes into the next draft, and nothing changes for anyone until it is published. One that changes how a rule decides (a family, a polarity, readiness) needs its full evaluation before Publish.</p>
+    {% if writes_off %}<pre class="json">{{ settings_json }}</pre>{% else %}
+    <form class="settings-form" data-write="/api/settings" data-preview="/api/settings/check" data-confirm-title="Save the rule settings?" data-confirm-label="Save">
+      <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="based_on" value="{{ settings.version_id or '' }}">
+      <label class="flabel" for="settings-doc">Settings (JSON; checked against the code’s schema)</label>
+      <textarea class="input json" id="settings-doc" name="doc" rows="18" spellcheck="false" autocomplete="off">{{ settings_json }}</textarea>
+      <label class="flabel" for="settings-reason">Reason (recorded)</label>
+      <input class="input" id="settings-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off">
+      <div class="actions mt12"><button class="btn secondary inline" type="submit" data-busy="Checking…">Check and save…</button></div>
+    </form>
+    {% endif %}
+    {% if history %}<ul class="checks mt12" aria-label="Earlier versions">{% for h in history %}<li><code>{{ h.version_id }}</code> <span>{{ h.actor }}, {{ t(h.at) }} UTC: {{ h.reason }} · {{ h.changed | join(", ") }}{% if h.decides %} (decides: {{ h.decides | join(", ") }}){% endif %}</span></li>{% endfor %}</ul>{% endif %}
+  </details>
+{% endif %}
+</div>

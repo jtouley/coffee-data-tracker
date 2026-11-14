@@ -331,6 +331,78 @@ const errors = [];
       assert.equal((await r.json()).version, 1);
     });
 
+    await check("Queue: open flags by product, the evidence group first, one line each", async () => {
+      await page.goto(`${cfg.act}/queue`);
+      await settled(page);
+      assert.match(await page.textContent("[data-answer]"), /3 products with open flags · 2 ready to remove/);
+      assert.match(await page.textContent("tr.grp"), /2 products of [^ ]+ with the same evidence: non_coffee_type, verdict_flip · 2 supports · ready/);
+      assert.match(await page.textContent("main"), /1 doubt · 1 restore/);
+      await shoot(page, "queue");
+    });
+
+    await check("Queue: a case shows each flag's polarity and evidence, the listing, the fetches and the store", async () => {
+      await page.click("table.flagged tbody tr:not(.grp) th a >> nth=2");
+      await settled(page);
+      const text = await page.textContent("main");
+      for (const re of [/shared_body/, /doubts/, /restore/, /this sample pack includes three bags/, /Crawl flag/, /Live check/, /fetches, the last/]) assert.match(text, re);
+      await shoot(page, "case");
+    });
+
+    await check("Case: turn the store's crawl flag off (a confirm with a reason)", async () => {
+      await page.click("form[data-write$='/crawl'] button[type=submit]");
+      await page.waitForSelector("dialog#confirm[open] #confirm-reason");
+      assert.match(await page.textContent("dialog#confirm"), /Turn the crawl flag off/);
+      await page.fill("#confirm-reason", "sells no coffee: drink mixes only");
+      await page.click("[data-confirm-go]");
+      await toast(page, /Crawl flag off/);
+      await settled(page);
+      assert.match(await page.textContent("main"), /sells no coffee: drink mixes only/);
+    });
+
+    await check("Queue: exclude the evidence group in one decision; its rows then say next draft", async () => {
+      await page.goto(`${cfg.act}/queue`);
+      await settled(page);
+      await page.click("tr.grp button[type=submit]");
+      await page.waitForSelector("dialog#confirm[open] #confirm-reason");
+      assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /Exclude 2 products/);
+      await shoot(page, "queue-group-confirm", true);
+      await page.fill("#confirm-reason", "drink mixes: two families agree");
+      await page.click("[data-confirm-go]");
+      await toast(page, /Recorded 2 decisions/);
+      await settled(page);
+      assert.equal(await page.locator("text=excluded · next draft").count(), 2);
+    });
+
+    await check("Queue: a settings edit that changes how a rule decides is checked first, and says it needs its evaluation", async () => {
+      await page.click("details.settings summary");
+      const doc = await page.inputValue("#settings-doc");
+      await page.fill("#settings-doc", doc.replace('"added": "supports"', '"added": "doubts"'));
+      await page.fill("#settings-reason", "a re-added coffee only doubts a removal");
+      await page.click("form.settings-form button[type=submit]");
+      await page.waitForFunction(() => document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent.includes("full evaluation"));
+      await shoot(page, "settings-check", true);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Saved rule settings/);
+      await settled(page);
+      assert.match(await page.textContent("details.settings summary"), /version/);
+    });
+
+    await check("Queue: settings the code can't read are refused, and nothing is saved", async () => {
+      if (!(await page.locator("details.settings").getAttribute("open"))) await page.click("details.settings summary");
+      await page.fill("#settings-doc", '{"schema": 1, "rules": []');
+      await page.fill("#settings-reason", "a broken edit");
+      await page.click("form.settings-form button[type=submit]");
+      await page.waitForFunction(() => /valid JSON/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
+      assert.equal(await page.getAttribute("[data-confirm-go]", "aria-disabled"), "true");
+      await page.click("dialog#confirm [data-close]");
+    });
+
+    await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {
+      await page.goto(`${cfg.act}/release`);
+      await settled(page);
+      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag not in it/);
+    });
+
     await check("The Monday window: refused, then started with a recorded reason", async () => {
       const { ctx, page: p } = await open(browser, "window", "/jobs#merge");
       if (!(await p.locator("details#merge").getAttribute("open"))) await p.click("details#merge summary");

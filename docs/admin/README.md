@@ -1,8 +1,9 @@
 # admin.registry.coffee
 
 The owner's command center, behind passkey sign-in: what the pipeline wrote to the lake, and the actions that
-replace the CLI. It implements `docs/design/admin-registry.md` (#112): start any pipeline job off-cycle, include or
-exclude a coffee, build those decisions as a draft, Publish it, Roll back. The admin reads the lake and never writes
+replace the CLI. It implements `docs/design/admin-registry.md` (#112): review the build's flags, start any pipeline
+job off-cycle, include or exclude a coffee, change the rule settings and a store's crawl flag, build those changes as
+a draft, Publish it, Roll back. The admin reads the lake and never writes
 it: the lake changes only through the pipeline's own Cloud Run jobs, which the admin starts. The pages' design is in
 [DESIGN.md](DESIGN.md).
 
@@ -11,6 +12,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Page | Answers | Actions | Reads |
 |---|---|---|---|
 | Week | Did the week land (each connector's passes, merge, enrich, classify, build, the served release), and what failed (by HTTP status, challenge, partial, quarantined; the trend; every failed store) | a Test crawl link per failed store | `job_manifests`, `fetches`, `builds`, `serving_log`, ops `run_completeness` |
+| Queue | The served build's open flags by product, sorted by the public rows a removal touches, products with the same evidence together, one line each ("2 supports · ready", "1 doubt · 1 restore"); a product's case (`?case=<coffee_id>`): each flag with its polarity and evidence, the classifier's answer, the listing (type, tags, sizes, prices, description and how many products share it), the store's last 8 runs of fetches, its crawl flag and live check; the rule settings | Exclude or Include one product, or a group with the same evidence; Live check (a test crawl); the store's crawl flag; edit the rule settings | ops `mart_flags`, `fetches`, the control plane |
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
 | Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
@@ -64,6 +66,7 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
   - CLAUDE.md step 9's running total stays at 50 or fewer: the public coffees the published drafts' decisions changed
     since the last recorded full evaluation, plus this draft's (Release records an evaluation, which starts the total
     again);
+  - a rule settings change to how a rule decides has its evaluation (`coffeedata.rules.EVALUATED`);
   - the owner typed the count, when more than 50 public rows leave;
   - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
     version) answered a test crawl of the store, or of its whole connector, in the last 7 days.
@@ -78,10 +81,45 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
   decisions.json` turns them into candidate labels for the classifier's train set only. A coffee in the sealed test
   set or the validation set is left out and only counted (CLAUDE.md: an owner correction is one labeler).
 
+## Rules and flags
+
+Code defines the rule types (`coffeedata.rules.RULE_TYPES`); the admin's settings configure them, as versions in
+the control plane, checked against the deployed code before they are saved. Each draft's snapshot carries the
+settings and the crawl flags, so builds read them without the database; a build without a snapshot uses the
+defaults.
+
+- **Flags** are computed in the build (dbt `flag_<rule>`, collected in the ops table `mart_flags`), never in the
+  admin. Each has a polarity: `supports` a removal, `doubts` it, or argues to `restore` the product.
+  - `verdict_flip` (classifier): the classifier's answer differs from the served release. `removed` (it was public)
+    is `restore`; `added` (seen before, now coffee) is `supports`.
+  - `shared_body` (catalog, `doubts`): the description, or a paragraph of 60 characters or more, is on 3 or more of
+    the store's products: pasted text.
+  - `non_coffee_type` (listing, `supports`, proposes exclude): the store's product type names a kind that isn't
+    coffee (drink mix, nuts, books, parts).
+- **Readiness.** A removal is ready only with `supports` from two distinct families, no open doubt and no coverage
+  problem at the store (dbt `int_catalog_decided.ready_flags`, tested by `ready_removals_have_no_doubts`), and an
+  answered live check of the store (Publish).
+- **Group approval.** A group is one store's products with the same flags' evidence (`evidence_hash`, which includes
+  the store). The Queue offers one decision for the group, and that decision records the evidence; the store's one
+  live check covers it. A live check never speaks for another store, so evidence shared across stores (a verdict
+  label, a product type) doesn't make a group.
+- **Flags change nothing public.** A removal is the owner's decision in a draft. A guard that kept doubted classifier
+  removals public was evaluated and cut: 4 of the 150 products it held on the sealed test were coffee
+  (`eval/guard/RESULTS.md`).
+- **Settings edits.** A change to how a rule decides (a family, a polarity or proposal, readiness)
+  needs its full evaluation before Publish whatever it counts: Publish stays off until `coffeedata.rules.EVALUATED`
+  names that exact value, which lands with the evaluation on `main`; returning to the defaults never needs one. A
+  param change only changes which products are flagged.
+- **The crawl flag.** Off stops scheduled crawls of the store (`ingest.select_states`, crawl-retry's parked stores
+  and the fetch-health re-fetch) once a draft carrying it is published; a live check still runs.
+- **Adding a rule** is one `RuleType` entry in `coffeedata.rules`, its model `dbt/models/intermediate/flags/
+  flag_<id>.sql` and its `schema.yml` entry, and its default in `dbt_project.yml`'s `rules` var (a test checks the
+  var matches the code). The settings schema, the Queue, the Case and the readiness come from the entry.
+
 ## The control plane
 
 Postgres (`admin/controlplane.py`, migrations in `admin/migrations/*.sql`): the audit trail, decisions as events,
-job runs, snapshots, drafts and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
+job runs, snapshots, drafts, rule settings versions, crawl flags and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
 TRUNCATE). The admin applies its migrations on its first use of the database after it starts (the first page or write
 that needs it), once each, under an advisory lock, in a `control` schema it creates and owns. They are additive and
 forward-only, so rolling the admin's image back to an earlier one leaves a schema it can still use.
