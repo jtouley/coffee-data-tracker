@@ -849,9 +849,9 @@ def cmd_publish_release(args: argparse.Namespace) -> None:
             raise SystemExit(f"publish-release: the served release is {now}, not the draft's baseline {args.baseline}: "
                              "build the draft again on it")  # fmt: skip
         if args.build != now:
-            quality.serve(lake, args.build, args.reason, action="publish", previous=now)
+            quality.serve(lake, args.build, args.reason, SERVED_DB, action="publish", previous=now)
     else:
-        quality.rollback(lake, args.build, args.reason)
+        quality.rollback(lake, args.build, args.reason, SERVED_DB)
     cmd_publish(argparse.Namespace(message=f"{args.action} release {args.build}"))
     print(f"serving release {args.build}")
 
@@ -890,7 +890,7 @@ def cmd_rollback(args: argparse.Namespace) -> None:
     from . import quality
 
     lake = Lake()
-    to = quality.rollback(lake, args.to, args.reason)
+    to = quality.rollback(lake, args.to, args.reason, SERVED_DB)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)
     print(f"serving release {to}")

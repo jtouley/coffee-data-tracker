@@ -854,10 +854,13 @@ def serve(
     return db
 
 
-def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
+def rollback(
+    lake: Lake, to: str | None = None, reason: str = "", db: Path = Path("build/served.duckdb")
+) -> str:
     """Serve an earlier passing release: `to` ('served': the one served now), or the passing release before the one
     served now. Serving the release served now again (to 'served', or its build id) is a re-export, logged as
-    action reexport, not rollback: the served release doesn't change."""
+    action reexport, not rollback: the served release doesn't change. `db` gets the release's tables, as in
+    `serve`."""
     now = (served(lake) or {}).get("build_id")
     hidden = unpublished_drafts(lake)
     if to in hidden:
@@ -875,7 +878,7 @@ def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
             raise ValueError("no earlier passing release to roll back to")
         to = earlier[-1]
     action = "reexport" if to == now else "rollback"
-    serve(lake, to, reason or f"{action} from {now}", action=action, previous=now)
+    serve(lake, to, reason or f"{action} from {now}", db, action=action, previous=now)
     return to
 
 

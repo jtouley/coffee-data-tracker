@@ -158,6 +158,16 @@ class ControlPlane:
             cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
             yield cur, self.claim(cur, key)
 
+    def close(self) -> None:
+        """Close every pooled connection. The pool stays usable: the next transaction opens a new one."""
+        while True:
+            try:
+                con, _ = self._pool.get_nowait()
+            except queue.Empty:
+                return
+            with contextlib.suppress(Exception):
+                con.close()
+
     def migrate(self) -> list[str]:
         """Apply every migration not yet applied, in order, in one transaction under an advisory lock. Returns the
         ones applied now."""
