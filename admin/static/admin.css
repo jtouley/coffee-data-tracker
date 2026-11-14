@@ -4,14 +4,14 @@
 body.admin { max-width: 1200px; }
 body.admin.narrow { max-width: 480px; }
 .admin .screen { padding: 8px 16px 48px; min-width: 0; }
-.skip { position: absolute; left: -9999px; top: 8px; }
-.skip:focus { left: 16px; z-index: 2; background: var(--sheet); padding: 8px 12px; border-radius: 8px; }
+.skip { position: absolute; inset-inline-start: -9999px; top: 8px; }
+.skip:focus { inset-inline-start: 16px; z-index: 2; background: var(--sheet); padding: 8px 12px; border-radius: 8px; }
 main:focus { outline: none; }
 
 /* Header: the wordmark, then the page tabs on their own line on a phone (they scroll sideways if they must) */
 .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; padding: 8px 16px 0; border-bottom: 1px solid var(--rule); }
 .bar .mark { font-size: 1.25rem; min-height: 48px; display: flex; align-items: center; }
-.bar .acct { margin-left: auto; font-size: 0.9375rem; color: var(--ink-2); font-weight: 500; min-height: 48px; display: flex; align-items: center; }
+.bar .acct { margin-inline-start: auto; font-size: 0.9375rem; color: var(--ink-2); font-weight: 500; min-height: 48px; display: flex; align-items: center; }
 .bar .acct.on { color: var(--ink); font-weight: 600; }
 /* On a phone: the wordmark and Account on one row, the tabs below. On a desktop: one row, Account at the end. */
 .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 12px; flex: 1 1 100%;
@@ -39,13 +39,13 @@ a.ev.small { font-size: 0.8125rem; font-weight: 500; }
 .frame { overflow-x: auto; max-width: 100%; margin-top: 8px; border-top: 1px solid var(--rule); }
 .frame:focus-visible { outline-offset: 0; }
 table { border-collapse: separate; border-spacing: 0; width: auto; min-width: min(100%, 40rem); font-size: 0.8125rem; line-height: 1.35; }
-caption { text-align: left; font-size: 0.8125rem; color: var(--ink-2); padding: 8px 0; caption-side: top; }
-th, td { text-align: left; padding: 8px 16px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+caption { text-align: start; font-size: 0.8125rem; color: var(--ink-2); padding: 8px 0; caption-side: top; }
+th, td { text-align: start; padding-block: 8px; padding-inline: 0 16px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 thead th { color: var(--ink-2); font-weight: 600; white-space: nowrap; position: sticky; top: 0; background: var(--paper); }
 tbody th { font-weight: 500; white-space: nowrap; }
 table.dense td, table.dense th { padding-top: 6px; padding-bottom: 6px; white-space: nowrap; }
 table.dense td.err { white-space: normal; min-width: 16rem; max-width: 32rem; color: var(--ink-2); }
-th:first-child, td:first-child { position: sticky; left: 0; background: var(--paper); z-index: 1; padding-left: 0; }
+th:first-child, td:first-child { position: sticky; inset-inline-start: 0; background: var(--paper); z-index: 1; padding-inline-start: 0; }
 .n { text-align: right; font-variant-numeric: tabular-nums; }
 tr.sel th, tr.sel td { background: var(--panel); }
 td a.ev, th a.ev { display: inline-block; min-height: 24px; }
@@ -63,7 +63,6 @@ td a.ev, th a.ev { display: inline-block; min-height: 24px; }
 .st-none { color: var(--ink-2); }
 .st-none i { height: 2px; background: var(--ink-2); }
 .unexplained { color: var(--danger); font-weight: 600; }
-tr.bad th:first-child { box-shadow: inset 3px 0 0 var(--danger); padding-left: 8px; }
 
 /* States */
 .state { padding: 16px 0; }
@@ -75,7 +74,7 @@ tr.bad th:first-child { box-shadow: inset 3px 0 0 var(--danger); padding-left: 8
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Pickers, search and facets */
-.picker { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+.picker { display: flex; flex-wrap: wrap; align-items: end; gap: 8px 12px; margin-top: 8px; }
 .select { min-height: 44px; max-width: 100%; border: 1px solid var(--control); border-radius: 8px; background: var(--sheet);
   color: var(--ink); font: inherit; font-size: 0.9375rem; padding: 0 12px; }
 .search { margin-top: 16px; }
@@ -104,17 +103,22 @@ tr.bad th:first-child { box-shadow: inset 3px 0 0 var(--danger); padding-left: 8
 dialog.sheet { border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); color: var(--ink); padding: 16px 24px 24px;
   width: min(36rem, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; }
 dialog.sheet::backdrop { background: rgb(20 17 15 / 0.45); }
+dialog.sheet { overscroll-behavior: contain; }
+@media (max-width: 759px) { /* on a phone every sheet rises from the bottom, as the app's does */
+  dialog.sheet { margin: auto 0 0; width: 100%; max-width: 100%; border-radius: 14px 14px 0 0; }
+}
 dialog.sheet .steps { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 4px; }
 dialog.sheet .steps strong { display: block; font-size: 0.8125rem; font-weight: 600; margin: 4px 0; }
 dialog.sheet .steps code { display: block; background: var(--panel); border-radius: 8px; padding: 8px 12px; overflow-wrap: anywhere; }
 .refused { color: var(--danger); font-weight: 600; font-size: 0.9375rem; }
 dialog .btn.danger { background: var(--danger); color: var(--paper); border-color: var(--danger); }
 .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+/* The outcome line is the app's undo strip (docs/app/DESIGN.md): --panel, radius 8, ink text, an accent action. */
 .toast { position: fixed; left: 16px; right: 16px; bottom: 16px; margin: 0 auto; max-width: 40rem; z-index: 3;
-  background: var(--ink); color: var(--paper); border-radius: 8px; padding: 12px 16px; display: flex; align-items: center;
-  gap: 12px; font-size: 0.9375rem; }
+  background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 16px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; font-size: 0.9375rem; }
 .toast[hidden] { display: none; }
-.toast .btn.text { color: var(--paper); text-decoration: underline; min-height: 44px; }
+.toast .btn.text { color: var(--accent); min-height: 44px; }
 .bulk { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
   background: var(--panel); border-radius: 8px; padding: 8px 12px; margin-top: 12px; font-size: 0.9375rem; }
 .bulk[hidden] { display: none; }
@@ -130,22 +134,25 @@ table.dense td.pick + th { white-space: normal; min-width: 9rem; max-width: 13re
 .choice label { display: block; padding-left: 28px; text-indent: -28px; min-height: 24px; }
 .choice input { width: 18px; height: 18px; margin: 0 10px 0 0; vertical-align: -3px; accent-color: var(--accent); }
 .title-s { font-size: 1.5rem; line-height: 1.25; margin: 8px 0 8px; color: var(--ink); font-weight: 500; }
-.jobs { list-style: none; padding: 0; margin: 8px 0 0; border-top: 1px solid var(--rule); }
-.jobs > li { border-bottom: 1px solid var(--rule); }
-.jobs summary { min-height: 48px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 12px 0; cursor: pointer; }
-.jobs .jname { font-weight: 600; font-size: 0.9375rem; color: var(--ink); min-width: 9rem; }
 .jobform { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); padding: 0 0 16px; align-items: end; }
-.jobform .actions, .jobform .hint { grid-column: 1 / -1; }
+.jobform .actions { grid-column: 1 / -1; }
+.runform { display: grid; gap: 12px; margin-top: 12px; }
+.runform [hidden] { display: none; }
+.titlebar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.title-actions { display: flex; gap: 8px; align-items: center; margin-top: 16px; }
+.title-actions .help { min-width: 44px; padding: 0; justify-content: center; font-weight: 600; }
+.btn.text.danger { color: var(--danger); }
+.rowmenu .menu .meta, .rowmenu .menu code.args { display: block; padding: 4px 12px; white-space: normal; overflow-wrap: anywhere; }
+table.runs { width: 100%; }
+table.runs th, table.runs td { vertical-align: middle; }
+table.runs td.act, table.runs th.act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
 .checks { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; font-size: 0.9375rem; }
 .checks li { display: flex; gap: 8px; align-items: baseline; }
-details.args { display: inline; }
-details.args summary { display: inline; cursor: pointer; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-details.args[open] code { display: block; margin-top: 4px; }
 
 /* Queue and Case: a group of products with the same evidence reads as a band above its rows; a flag's evidence and a
    description are text to read, so they wrap; the settings are code-like JSON. No new colours. */
 table.flagged tbody th { white-space: normal; min-width: 9rem; max-width: 22rem; }
-table.flagged td .btn.text { min-height: 24px; padding-top: 0; padding-bottom: 0; vertical-align: baseline; }
+table.flagged td .btn.text { min-height: 24px; padding-block: 0; vertical-align: baseline; line-height: inherit; }
 tr.grp th, tr.grp td { background: var(--panel); font-weight: 500; white-space: normal; }
 ul.flags { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 16px; font-size: 0.9375rem; }
 p.desc { white-space: pre-line; overflow-wrap: anywhere; max-width: 72ch; font-size: 0.9375rem; line-height: 1.5; margin: 8px 0 0; }
@@ -154,3 +161,93 @@ textarea.json, pre.json { font-family: ui-monospace, SFMono-Regular, Menlo, mono
   width: 100%; min-height: 16rem; white-space: pre; overflow: auto; }
 dialog.sheet [data-confirm-body] p + p { margin-top: 8px; }
 pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
+
+/* Sources: one Filter / Sort panel (a sheet on a phone, a popover on a desktop); compact rows, each with a quiet
+   status and a ⋯ menu; selecting rows (the box, or a tap on the row) shows the action bar at the bottom. */
+dialog.panel { margin: auto 0 0; width: 100%; max-width: 100%; max-height: 85dvh; border-radius: 14px 14px 0 0;
+  overscroll-behavior: contain; }
+@media (min-width: 760px) {
+  dialog.panel { margin: 0; top: var(--panel-top, 120px); left: var(--panel-left, 16px); width: 32rem; border-radius: 8px;
+    border-color: var(--control); }
+  dialog.panel::backdrop { background: transparent; }
+}
+dialog.panel .facets { margin-top: 12px; gap: 8px 12px; }
+.sorts { border: 0; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+.sorts .radio { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 0.9375rem; }
+.sorts .radio input { width: 20px; height: 20px; accent-color: var(--accent); }
+dialog.panel .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.sources-page { padding-bottom: 128px; }
+/* Sources' table: on a desktop one dense row per place with sortable columns and a sticky header; on a phone the
+   same table shows the name, a line of metadata and the status, stacked (the .wide cells hide, .narrow shows). */
+table.sources { width: 100%; border-collapse: collapse; margin-top: 8px; table-layout: fixed; }
+table.sources th, table.sources td { padding-block: 0; padding-inline: 0 12px; height: 44px; vertical-align: middle;
+  text-align: start; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+table.sources thead th { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--control);
+  position: sticky; top: 0; z-index: 2; background: var(--paper); }
+table.sources thead a.sort { color: inherit; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; }
+@media (hover: hover) { table.sources thead a.sort:hover { color: var(--accent); } }
+table.sources thead [aria-sort] { color: var(--ink); }
+table.sources tbody tr { border-bottom: 1px solid var(--rule); }
+table.sources tbody tr:has(input[data-pick]) { cursor: pointer; } /* selectable only while writes are on */
+table.sources tbody tr:has(input[data-pick]:checked) > * { background: var(--panel); } /* the whole row, box included */
+@media (hover: hover) { table.sources tbody tr:hover > * { background: var(--panel); } } /* a row is selectable */
+table.sources tbody th { font-weight: 500; }
+table.sources td.pick + th { position: static; } /* no pinned column here */
+table.sources thead th.pick + th { left: auto; } /* the header row stays sticky to the top only */
+table.sources .status { font-size: 0.8125rem; color: var(--ink-2); }
+table.sources td.c-seen { font-variant-numeric: tabular-nums; }
+table.sources td a.ev { display: inline; } /* so a long domain ends in an ellipsis, not under the next column */
+table.sources td.c-tag, table.sources td.c-hint, table.sources td.c-city, table.sources td.c-state { color: var(--ink-2); font-size: 0.8125rem; }
+table.sources th.pick { width: 44px; }
+table.sources th.act { width: 44px; }
+table.sources th.act, table.sources td.act { padding-inline-end: 4px; text-align: end; overflow: visible; position: relative; }
+table.sources .narrow { display: none; }
+@media (min-width: 760px) {
+  table.sources .c-name { width: 22%; } table.sources .c-domain { width: 18%; } table.sources .c-city { width: 11%; }
+  table.sources .c-state { width: 4.5rem; } table.sources .c-tag { width: 7.5rem; } table.sources .c-hint { width: 13%; }
+  table.sources .c-status { width: 9.5rem; } table.sources .c-seen { width: 6.5rem; }
+}
+html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row never sits under the sticky header */
+@media (max-width: 759px) {
+  table.sources .wide { display: none; }
+  table.sources tbody th { white-space: normal; height: auto; padding-block: 8px; }
+  table.sources .pname, table.sources .narrow { display: block; overflow-wrap: anywhere; }
+  table.sources .narrow { font-size: 0.8125rem; font-weight: 400; color: var(--ink-2); }
+  table.sources thead th { position: static; }
+}
+.rowmenu > summary { list-style: none; min-width: 44px; justify-content: center; font-size: 1.25rem; }
+.rowmenu > summary::-webkit-details-marker { display: none; }
+.rowmenu .menu { position: absolute; inset-inline-end: 0; top: calc(100% - 4px); z-index: 4; display: grid; min-width: 12rem; padding: 4px;
+  background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; text-align: start; }
+.rowmenu .menu .inline-form { display: block; }
+.rowmenu .menu .btn { width: 100%; justify-content: flex-start; padding: 0 12px; }
+dialog.panel h2 { margin-top: 0; }
+@media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sorts[data-narrow-only] { display: none; } }
+dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
+@media (max-width: 759px) { .searchrow .btn.wide-only { display: none; } } /* Enter searches */
+html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 136px; }
+.bulk.bar-bottom { position: fixed; top: auto; left: 8px; right: 8px; bottom: 8px; margin: 0 auto; max-width: 40rem; z-index: 3;
+  gap: 8px; padding: 8px; flex-wrap: nowrap; border: 1px solid var(--control); }
+.bulk.bar-bottom [data-bulk-count] { flex: 1; min-width: 0; padding-left: 4px; }
+.bulk.bar-bottom .btn.secondary.inline { padding: 0 12px; }
+@media (max-width: 759px) { /* the count on its own line, the actions under it */
+  .bulk.bar-bottom { flex-wrap: wrap; }
+  .bulk.bar-bottom [data-bulk-count] { flex-basis: 100%; }
+}
+/* Phone tabs scroll sideways: a fade at an edge with tabs past it (admin.js fit), so a cut tab reads as more. */
+@media (max-width: 759px) {
+  .tabs.more-start { mask-image: linear-gradient(to right, transparent, #000 24px); }
+  .tabs.more-end { mask-image: linear-gradient(to left, transparent, #000 24px); }
+  .tabs.more-start.more-end { mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+}
+dialog .plan-details { margin-top: 8px; }
+
+/* Every fold shows that it opens: a chevron after its summary, down while closed and up while open; a summary is
+   15 px ink, under the section headings (17 px), and the accent stays for what is tapped. */
+.admin details:not(.rowmenu) > summary::after { content: ""; display: inline-block; width: 7px; height: 7px;
+  margin-inline-start: 8px; border-inline-end: 1.75px solid currentColor; border-bottom: 1.75px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); }
+.admin details[open]:not(.rowmenu) > summary::after { transform: translateY(2px) rotate(-135deg); }
+@media (prefers-reduced-motion: no-preference) { .admin details > summary::after { transition: transform 120ms ease-out; } }
+.admin details:not(.rowmenu) > summary.btn.text { font-size: 0.9375rem; font-weight: 500; color: var(--ink); }
+.admin h2.section { font-size: 1.0625rem; color: var(--ink); }

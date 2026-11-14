@@ -7,6 +7,7 @@ Every pipeline step *adds* files and never rewrites another run's files:
     fetches/run_date=YYYY-MM-DD/batch=<id>.parquet        one row per roaster fetch attempt (ok / error)
     probes/run_date=YYYY-MM-DD/batch=<id>.parquet         storefront platform detection results
     registry/source=<s>/<key>.parquet                     roasters added by discovery or by hand
+    candidates/source=<s>/<key>.parquet                   discovery's whole source list, one file per run
     enrichments/method=<m>/run_date=.../batch=<id>.parquet extracted attributes, keyed by body_hash
     llm_batches/state=<submitted|collected>/<id>.parquet  Claude Message Batches bookkeeping
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
@@ -213,6 +214,24 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("tagged_roastery", pa.bool_()),
             ("roast_in_name", pa.bool_()),
             ("opted_out", pa.bool_()),
+        ]
+    ),
+    # The source list (discover.overture_places): every place a discovery run read, roasters and cafés alike, one
+    # row per website domain and run. Recorded only: nothing is fetched from these sites, and a place is probed or
+    # crawled only once it is in the registry or the owner flags it a roaster in the admin (registry.current).
+    "candidates": pa.schema(
+        [
+            ("added_at", pa.timestamp("s", tz="UTC")),
+            ("source", pa.string()),
+            ("roaster_id", pa.string()),
+            ("name", pa.string()),
+            ("city", pa.string()),
+            ("state", pa.string()),
+            ("website", pa.string()),
+            ("locations", pa.int32()),
+            ("confidence", pa.float64()),
+            ("tags", pa.list_(pa.string())),  # coffee_roastery, coffee_shop, cafe
+            ("roast_in_name", pa.bool_()),
         ]
     ),
     "enrichments": pa.schema(
@@ -725,6 +744,7 @@ GLOBS = {
     "fetches": "fetches/*/*.parquet",
     "probes": "probes/*/*.parquet",
     "registry": "registry/*/*.parquet",
+    "candidates": "candidates/*/*.parquet",
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
@@ -761,6 +781,7 @@ SCHEMA_FILES = {
     "fetches": "fetches/run_date=0000-00-00/batch=schema.parquet",
     "probes": "probes/run_date=0000-00-00/batch=schema.parquet",
     "registry": "registry/source=schema/schema.parquet",
+    "candidates": "candidates/source=schema/schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",

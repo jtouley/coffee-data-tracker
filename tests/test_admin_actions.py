@@ -4,6 +4,7 @@ and undo, drafts over a snapshot, Publish's readiness, Roll back, and that every
 idempotent, audited, and fails closed. The lake is never written."""
 
 import json
+import re
 from datetime import UTC, date, datetime
 
 import pytest
@@ -60,7 +61,7 @@ def test_every_action_names_a_real_pipeline_job_and_checked_fields():
         assert set(a.fields) <= set(jobs.FIELDS), a.key
     p = {"connectors": "all", "connector": "shopify", "roaster": "onyxcoffeelab.com", "mode": "test",
          "week": W3, "test_id": "t-1", "draft_id": "d-1", "snapshot_id": "s-1", "sha256": "0" * 64,
-         "build": B1, "baseline": B1, "reason": "why"}  # fmt: skip
+         "build": B1, "baseline": B1, "reason": "why", "roasters": "a.example,b.example"}  # fmt: skip
     for a in jobs.ACTIONS.values():
         for s in a.steps(p):
             assert s.job in jobs.JOB_NAMES, (a.key, s.job)
@@ -69,6 +70,18 @@ def test_every_action_names_a_real_pipeline_job_and_checked_fields():
     assert full[0].args[-2:] == ["--test", "t-1"]
     count = jobs.ACTIONS["crawl-one"].steps(p | {"mode": "count"})[0]
     assert count.args == ["crawl", "--connector", "shopify", "--only", "onyxcoffeelab.com", "--run-date", W3]
+    (pull,) = jobs.ACTIONS["pull"].steps(p)  # Pull now: one job, the named places only
+    assert pull.job == "pull" and pull.args[0].startswith(
+        f"rc=0; coffeedata pull --only a.example,b.example --run-date {W3} "
+    )
+
+
+@pytest.mark.parametrize(
+    "roasters", ["a.example; rm -rf /", "a.example,,b.example", ",".join(f"s{i}.example" for i in range(21))]
+)
+def test_pull_takes_only_domains(roasters):
+    with pytest.raises(ValueError):
+        jobs.checked(jobs.ACTIONS["pull"], {"roasters": roasters}, date(2026, 11, 5), lambda: "t")
 
 
 @pytest.mark.parametrize(
@@ -96,11 +109,16 @@ def test_the_windows():
 
 def test_migrations_apply_once_and_every_table_is_append_only(pg_url):
     cp = ControlPlane(url_connect(pg_url))
-    assert cp.migrate() == ["0001_control_plane.sql", "0002_evaluations.sql", "0003_rules.sql"]
+    assert cp.migrate() == [
+        "0001_control_plane.sql",
+        "0002_evaluations.sql",
+        "0003_rules.sql",
+        "0004_sources.sql",
+    ]
     assert cp.migrate() == []  # every instance runs it at start: idempotent
     cp.audit_now("owner", "decide", "x", "ok")
     for sql in ("update control.audit set actor = 'x'", "delete from control.audit", "truncate control.audit",
-                "delete from control.decisions", "delete from control.rule_settings",
+                "delete from control.decisions", "delete from control.rule_settings", "delete from control.source_flags",
                 "update control.roaster_state set crawl = true"):  # fmt: skip
         with pytest.raises(Exception, match="append-only"), cp.tx() as cur:
             cur.execute(sql)
@@ -129,12 +147,18 @@ def test_every_write_is_refused_signed_out_and_cross_site(tmp_path, lake, pg_url
     writes = [
         r for r in app.routes if "POST" in getattr(r, "methods", set()) and not r.path.startswith("/api/auth")
     ]
-    # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save, crawl
-    assert len(writes) == 13
+    # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save,
+    # crawl flag, source flags and their undo
+    assert len(writes) == 15
     anon = TestClient(app, base_url=ORIGIN)
     for r in writes:
         url = r.path.replace("{action}", "merge").replace("{run_id}", "r").replace("{target}", "d")
-        url = url.replace("{draft_id}", "d").replace("{build_id}", B1).replace("{roaster_id}", "a.example")
+        url = (
+            url.replace("{draft_id}", "d")
+            .replace("{build_id}", B1)
+            .replace("{roaster_id}", "a.example")
+            .replace("{batch}", "f")
+        )
         assert anon.post(url, json={"key": "k"}, headers=WRITE).status_code == 401, url
         assert c.post(url, json={"key": "k"}).status_code == 403, url  # no same-origin markers: CSRF
         assert (
@@ -163,11 +187,7 @@ def test_a_job_start_shows_its_plan_then_starts_once_and_is_audited(tmp_path, la
     assert r1.status_code == r2.status_code == 200 and r1.json() == r2.json()
     assert len([x for x in fake.calls if x[0] == "run"]) == 1
     (run,) = app.state.writes.control.runs()
-    assert (
-        run["job"] == "crawl-shopify"
-        and run["mode"] == "test"
-        and run["actor"].startswith("owner (passkey cred-abc")
-    )
+    assert run["job"] == "crawl-shopify" and run["mode"] == "test" and run["actor"] == "owner"
     (a,) = [x for x in audit(app) if x["action"] == "job_start"]
     assert a["outcome"] == "ok" and a["detail"]["runs"][0]["execution"].endswith("crawl-shopify-00001")
     # the Jobs page shows it running, with its logs link, and polls while it runs
@@ -690,7 +710,7 @@ def test_an_idle_connection_is_dropped_and_a_double_submit_answers_once(pg_url, 
     cp = ControlPlane(lambda: made.append(1) or connect())
     cp.migrate()
     monkeypatch.setattr(controlplane, "IDLE_S", 0)
-    cp.ping()
+    cp.source_flags([])  # any read takes a connection
     assert len(made) == 2  # the pooled one was idle too long: a new connection
     monkeypatch.setattr(controlplane, "IDLE_S", 120)
     out = []
@@ -724,7 +744,8 @@ def test_close_ends_the_pools_connections(pg_url):
     assert clients() == 1
     cp.close()
     assert clients() == 0
-    cp.ping()
+    with cp.tx() as cur:
+        cur.execute("select 1")
     assert clients() == 1
     cp.close()
 
@@ -758,7 +779,7 @@ def test_a_drafts_gate_says_it_passed_against_the_last_published_build(tmp_path,
     assert f"Build {b3} passed" in page and f"compared with {B1}" in page
 
 
-def test_the_live_check_counts_any_answer_a_connector_test_and_every_roaster_of_a_version(
+def test_the_live_check_counts_a_stores_own_answer_never_a_connector_test_and_every_roaster_of_a_version(
     tmp_path, lake, pg_url
 ):
     app, c, fake = make(tmp_path, lake.root, pg_url)
@@ -783,9 +804,13 @@ def test_the_live_check_counts_any_answer_a_connector_test_and_every_roaster_of_
     with pytest.MonkeyPatch.context() as m:  # ...then a later failed test of the same store
         m.setattr(app.state.writes.control, "recent_test", lambda *a, **k: None)
         test({"connector": "shopify", "roaster": "good.example"}, 0)
-    test({"connectors": "woocommerce"}, 1)  # a whole-connector test covers other.example
+    test({"connectors": "woocommerce"}, 1)  # a whole-connector test doesn't say other.example answered
     page = c.get(f"/part/release?build={b3}").text
-    assert "2 of 2 stores answered" in page
+    assert "no answered test crawl in 7 days: other.example" in page
+    with pytest.MonkeyPatch.context() as m:
+        m.setattr(app.state.writes.control, "recent_test", lambda *a, **k: None)
+        test({"connector": "woocommerce", "roaster": "other.example"}, 1)  # its own test does
+    assert "2 of 2 stores answered" in c.get(f"/part/release?build={b3}").text
 
 
 def test_step_9s_running_total_spans_drafts_until_an_evaluation_is_recorded(
@@ -865,3 +890,18 @@ def test_the_export_lists_every_coffee_of_a_version(tmp_path, lake, pg_url):
     assert d["subject_kind"] == "input_hash" and d["coffee_ids"] == []  # no coffee in the served build has it
     rows, skipped = decisions.export_labels(doc, set())
     assert rows == [] and skipped == 1  # a version with no listed coffees is never exported
+
+
+def test_every_internal_link_on_every_page_leads_somewhere(tmp_path, lake, pg_url):
+    """No page links to a page that isn't there (Week linked the merged-away /gate)."""
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    seen = set()
+    for page in ("week", "queue", "jobs", "release", "catalog", "sources", "log"):
+        for href in re.findall(r'href="(/[^"#]*)', c.get(f"/part/{page}").text):
+            href = href.replace("&amp;", "&")
+            if href.startswith(("/api/", "/static/")) or href in seen:
+                continue
+            seen.add(href)
+            r = c.get(href)
+            assert r.status_code == 200 and "There is no such page" not in r.text, href
+    assert seen and not any(h.startswith("/gate") for h in seen)

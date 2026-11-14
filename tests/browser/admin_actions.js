@@ -86,18 +86,23 @@ async function open(browser, server, path, viewport = { width: 1280, height: 900
   return { ctx, page };
 }
 
-// Open a job's form on the Jobs page, fill it, press Start…, and wait for the confirm sheet's plan.
-async function startForm(page, action, fill = {}) {
-  await page.goto(`${cfg.act}/jobs#${action}`);
-  await settled(page);
-  const d = page.locator(`details#${action}`);
-  if (!(await d.getAttribute("open"))) await d.locator("summary").click();
+// Run a job (the button beside the title): pick the job, fill its fields, press Run…, and wait for the confirm's plan.
+async function openRun(page, action, fill = {}) {
+  await page.click("[data-title-actions] button:text-is('Run a job')");
+  await page.waitForSelector("dialog#run-job[open]");
+  await page.selectOption("dialog#run-job [data-job]", action);
   for (const [k, v] of Object.entries(fill)) {
-    const el = d.locator(`[name=${k}]`);
+    const el = page.locator(`dialog#run-job [name=${k}]`);
     if ((await el.evaluate((e) => e.tagName)) === "SELECT") await el.selectOption(v);
     else await el.fill(v);
   }
-  await d.locator("button[type=submit]").click();
+}
+
+async function startForm(page, action, fill = {}) {
+  await page.goto(`${cfg.act}/jobs`);
+  await settled(page);
+  await openRun(page, action, fill);
+  await page.click("dialog#run-job button[type=submit]");
   await page.waitForSelector("dialog#confirm[open] .steps, dialog#confirm[open] .refused", { timeout: 15000 });
 }
 
@@ -110,12 +115,24 @@ const errors = [];
   let servedBefore = null;
 
   try {
-    await check("Jobs: nothing started yet (empty), every job listed with its help", async () => {
+    await check("Jobs: nothing started yet (empty); one Run a job button and a ? help beside the title", async () => {
       assert.match(await page.textContent("[data-answer]"), /0 running · 0 started from here/);
-      for (const label of ["Crawl", "Crawl one roaster", "Shopify retry", "Fetch health", "Merge", "Enrich", "Classify", "Build"]) {
-        assert.ok(await page.isVisible(`.jname:text-is("${label}")`), label);
-      }
       await shoot(page, "jobs-empty");
+      await page.click("[data-title-actions] button.help");
+      await page.waitForSelector("dialog#help-jobs[open]");
+      const help = await page.textContent("dialog#help-jobs");
+      for (const label of ["Crawl", "Crawl one roaster", "Shopify retry", "Fetch health", "Merge", "Enrich", "Classify", "Build", "Site"]) {
+        assert.match(help, new RegExp(label), label);
+      }
+      await shoot(page, "jobs-help", true);
+      await page.keyboard.press("Escape");
+      await openRun(page, "crawl", { connectors: "shopify" });
+      assert.ok(await page.isHidden("dialog#run-job [data-field=roaster]"), "only the chosen job's fields");
+      assert.match(await page.textContent("dialog#run-job [data-job-hint]"), /Every store on one platform/);
+      await shoot(page, "jobs-run-sheet", true);
+      await page.selectOption("dialog#run-job [data-job]", "site");
+      assert.ok(await page.isVisible("dialog#run-job [data-site] a"), "Site is a link to GitHub");
+      await page.keyboard.press("Escape");
     });
 
     await check("Catalog: exclude one coffee (confirm with a reason), then Undo from the outcome", async () => {
@@ -229,14 +246,14 @@ const errors = [];
       await page.dblclick("[data-confirm-go]");
       await toast(page, /Started fetch-health/);
       await settled(page);
-      assert.equal(await page.locator("[data-runs] tbody tr", { hasText: "fetch-health" }).count(), 1);
+      assert.equal(await page.locator("[data-runs] tbody tr", { hasText: "Fetch health" }).count(), 1);
     });
 
     await check("Jobs: failure, with Cloud Run's message", async () => {
       await ctl("/finish?job=fetch-health&status=failed&message=Task%20failed%3A%20exit%201");
       await page.reload();
       await settled(page);
-      assert.match(await page.textContent("[data-runs] tr.bad"), /failed[\s\S]*Task failed: exit 1/);
+      assert.match(await page.textContent("[data-runs] tbody tr >> nth=0"), /failed[\s\S]*Task failed: exit 1/);
       await shoot(page, "jobs-failed");
     });
 
@@ -245,6 +262,7 @@ const errors = [];
       await page.click("[data-confirm-go]");
       await toast(page, /Started merge/);
       await settled(page);
+      await page.click("[data-runs] tbody tr >> nth=0 >> summary"); // Cancel is in the run's ⋯
       await page.click("[data-runs] form[data-write$='/cancel'] button");
       await page.waitForSelector("dialog#confirm[open]");
       assert.ok(await page.locator("[data-confirm-go].danger").count());
@@ -397,16 +415,124 @@ const errors = [];
       await page.click("dialog#confirm [data-close]");
     });
 
+    await check("Sources: search first, one Filter / Sort panel, compact rows with a quiet status and a ⋯ menu", async () => {
+      await page.goto(`${cfg.act}/sources`);
+      await settled(page);
+      const main = await page.textContent("main");
+      assert.match(main, /to review of .* places/);
+      assert.match(main, /roasters from the registry · 0 flagged as roasters/);
+      assert.match(main, /Unreviewed/);
+      assert.equal(await page.locator("table.sources tbody form[data-now]:visible").count(), 0, "no action button on a row");
+      assert.ok(await page.evaluate(() => document.querySelector("form.search").compareDocumentPosition(document.querySelector("[data-answer]")) & Node.DOCUMENT_POSITION_FOLLOWING), "the search comes first");
+      await shoot(page, "sources");
+      await page.setViewportSize({ width: 390, height: 844 });
+      for (const sel of ["[data-panel]", ".tabs a.on", "table.sources tbody summary >> nth=0"]) { // on screen at 390, 44 px targets
+        const box = await page.locator(sel).first().boundingBox();
+        assert.ok(box && box.x >= 0 && box.x + box.width <= 390 && box.height >= 44, `${sel} at ${JSON.stringify(box)}`);
+      }
+      await page.setViewportSize({ width: 320, height: 640 }); // reflow at 320 px (WCAG 1.4.10): no sideways scroll
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth), 0);
+      await page.setViewportSize({ width: 1280, height: 900 });
+      await page.click("[data-panel]");
+      await page.waitForSelector("dialog#filters[open]");
+      await shoot(page, "sources-panel", true);
+      await page.keyboard.press("Escape");
+      await page.waitForFunction(() => !document.querySelector("dialog#filters").open);
+      await page.click("[data-panel]");
+      assert.ok(await page.isHidden("dialog#filters fieldset.sorts"), "a desktop sorts by the table's headers");
+      await page.selectOption("dialog#filters select[name=tag]", "coffee_shop");
+      await page.click("dialog#filters button[type=submit]");
+      await settled(page);
+      assert.match(await page.textContent("[data-panel]"), /Filter \/ Sort \(1\)/);
+      assert.match(await page.textContent("[data-answer-matching]"), / of .* places match/);
+    });
+
+    await check("Sources (desktop): a data table; a header sorts by its column, both ways, and says so (aria-sort)", async () => {
+      await page.goto(`${cfg.act}/sources`);
+      await settled(page);
+      const heads = await page.$$eval("table.sources thead th", (ths) => ths.filter((t) => t.offsetParent && !t.querySelector(".vh")).map((t) => t.textContent.replace(/[↑↓]/g, "").trim()));
+      assert.deepEqual(heads.filter(Boolean), ["Name", "Domain", "City", "State", "Tag", "Hints", "Status", "First seen"]);
+      const row = await page.locator("table.sources tbody tr >> nth=0").boundingBox();
+      assert.ok(row.height >= 44 && row.height < 56, `a dense row, ${row.height}px`);
+      await page.click("table.sources thead a.sort:has-text('First seen')");
+      await settled(page);
+      assert.equal(await page.getAttribute("table.sources thead th[aria-sort]", "aria-sort"), "ascending");
+      await page.click("table.sources thead a.sort:has-text('First seen')");
+      await settled(page);
+      assert.equal(await page.getAttribute("table.sources thead th[aria-sort]", "aria-sort"), "descending");
+      assert.match(await page.textContent("table.sources thead th[aria-sort]"), /First seen↓/);
+      await shoot(page, "sources-sorted");
+      await page.evaluate(() => scrollTo(0, 2000)); // the header stays in view
+      const top = await page.locator("table.sources thead th >> nth=1").boundingBox();
+      assert.ok(top.y >= -1 && top.y < 60, `sticky header at ${top.y}`);
+    });
+
+    await check("Sources: a row's ⋯ menu flags one place Roaster (keyboard too), then Undo from the outcome", async () => {
+      await page.goto(`${cfg.act}/sources?q=${encodeURIComponent("https://www.ember-roastworks.example/shop")}`); // a pasted address finds its domain
+      await settled(page);
+      assert.match(await page.textContent("[data-answer-matching]"), /^1 of /);
+      assert.match(await page.textContent("table.sources"), /roast in the name/);
+      await page.focus("table.sources summary");
+      await page.keyboard.press("Enter");
+      await page.waitForSelector("details[data-rowmenu][open]");
+      await page.keyboard.press("Escape");
+      await page.waitForFunction(() => !document.querySelector("details[data-rowmenu][open]"));
+      assert.ok(await page.evaluate(() => document.activeElement.matches("details[data-rowmenu] summary")), "focus back on ⋯");
+      await page.click("table.sources summary");
+      await shoot(page, "sources-menu", true);
+      await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
+      await toast(page, /Marked 1 place as a roaster\./);
+      await settled(page);
+      assert.match(await page.textContent("table.sources"), /Roaster/);
+      await page.click("[data-result] [data-undo]");
+      await toast(page, /Undone \(1\)/);
+      await settled(page);
+      assert.match(await page.textContent("table.sources"), /Unreviewed/);
+      await page.click("table.sources summary");
+      await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
+      await toast(page, /^Marked 1 place as a roaster\.$/);
+      await page.waitForFunction(() => /Roaster/.test(document.querySelector("table.sources td.c-status")?.textContent || "") && !/Unreviewed/.test(document.querySelector("table.sources td.c-status").textContent));
+    });
+
+    await check("Sources: Pull now from a row's ⋯ menu: the Jobs confirm in plain words, one job (probe, then a counted crawl)", async () => {
+      await page.click("table.sources summary");
+      await page.click("details[data-rowmenu][open] button:text-is('Pull now')");
+      await page.waitForSelector("dialog#confirm[open] .plan-details");
+      assert.ok(await page.isHidden("[data-result]"), "the outcome line steps aside for the confirm");
+      assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /^Probe and crawl 1 place\?$/);
+      assert.match(await page.textContent("dialog#confirm [data-confirm-body]"), /^ember-roastworks\.example\. One job probes them, then crawls/);
+      assert.ok(!(await page.isVisible("dialog#confirm .steps")), "the command waits behind Details");
+      await shoot(page, "sources-pull-confirm", true);
+      await page.click("dialog#confirm .plan-details summary");
+      assert.match(await page.textContent("dialog#confirm .steps"), /coffeedata pull --only ember-roastworks\.example --run-date/);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Started pull/);
+      await ctl("/finish?job=pull");
+    });
+
+    await check("Sources: select two places (tap a row, tick a box), then Not a roaster from the action bar", async () => {
+      await page.goto(`${cfg.act}/sources?status=unreviewed`);
+      await settled(page);
+      await page.click("table.sources tbody tr >> nth=0 >> .pname"); // a tap on the row selects it
+      await page.check("input[data-pick] >> nth=1");
+      assert.match(await page.textContent("[data-bulk-count]"), /2 selected/);
+      await shoot(page, "sources-selected", true);
+      await page.click("[data-bulk] button:text-is('Not a roaster')");
+      await toast(page, /Marked 2 places as not roasters\./);
+      await settled(page);
+      assert.match(await page.textContent("[data-counts]"), /1 flagged as a roaster · 2 flagged as not roasters/);
+    });
+
     await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {
       await page.goto(`${cfg.act}/release`);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag not in it/);
+      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag not in it/);
     });
 
     await check("The Monday window: refused, then started with a recorded reason", async () => {
-      const { ctx, page: p } = await open(browser, "window", "/jobs#merge");
-      if (!(await p.locator("details#merge").getAttribute("open"))) await p.click("details#merge summary");
-      await p.click("details#merge button[type=submit]");
+      const { ctx, page: p } = await open(browser, "window", "/jobs");
+      await openRun(p, "merge");
+      await p.click("dialog#run-job button[type=submit]");
       await p.waitForSelector("dialog#confirm[open] .notice");
       assert.match(await p.textContent("dialog#confirm"), /Monday crawl window/);
       await p.click("[data-confirm-go]");
@@ -421,9 +547,9 @@ const errors = [];
     });
 
     await check("A slow Cloud Run: the Confirm button shows it is working, then the outcome", async () => {
-      const { ctx, page: p } = await open(browser, "slow", "/jobs#fetch-health", { width: 390, height: 844 });
-      if (!(await p.locator("details#fetch-health").getAttribute("open"))) await p.click("details#fetch-health summary");
-      await p.click("details#fetch-health button[type=submit]");
+      const { ctx, page: p } = await open(browser, "slow", "/jobs", { width: 390, height: 844 });
+      await openRun(p, "fetch-health");
+      await p.click("dialog#run-job button[type=submit]");
       await p.waitForSelector("dialog#confirm[open] .steps");
       await p.click("[data-confirm-go]");
       await p.waitForSelector("[data-confirm-go][aria-disabled=true] .cup");

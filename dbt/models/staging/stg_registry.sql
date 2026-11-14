@@ -1,6 +1,8 @@
 {% set fields = ['name', 'city', 'state'] -%}
--- Seed list (config/roasters.csv: stg_roaster_seed) plus roasters added in the lake by discovery or by hand
--- (stg_registry_records).
+-- Seed list (config/roasters.csv: stg_roaster_seed) plus roasters added in the lake by discovery or by hand, and the
+-- places of the source list the build's snapshot flags as roasters (both in stg_registry_records), less the roasters
+-- it flags not a roaster (var not_roasters; the admin's Sources page): the same rule as registry.current, so the crawl
+-- and the build agree.
 with seed as (select * from {{ ref('stg_roaster_seed') }}),
 -- Every pick has a total order (the newest row; on a tie in added_at, the value itself), and sources are listed
 -- alphabetically: the same lake builds the same table whatever order DuckDB reads its rows in.
@@ -51,3 +53,7 @@ select
     case when not coalesce(s.opted_out, false) then a.opted_out_at end as opted_out_at
 from seed s
 full outer join added a using (roaster_id)
+{%- set dropped = var('not_roasters', []) %}
+{%- if dropped %}
+where coalesce(s.roaster_id, a.roaster_id) not in ({{ sql_strings(dropped) }})
+{%- endif %}

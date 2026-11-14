@@ -129,9 +129,10 @@ def discover_source(
     try:
         failed: list[str] = []
         outage = None
+        places: list[dict] = []
         if source == "overture":
             release = release or discover.overture_latest_release()
-            found = discover.overture(release)
+            found, places = discover.overture_places(release)
             # ~3,100 in October 2026: none means the scan or Overture's schema broke, not "no roasters"
             if not found:
                 raise RuntimeError(f"Overture {release}: the scan found no roasters")
@@ -148,7 +149,13 @@ def discover_source(
         now = datetime.now(UTC).replace(microsecond=0)
         rows = [r | {"added_at": now, "opted_out": False} for r in found]
         key = (release or "latest") if source == "overture" else _today()
-        path = lake.write("registry", f"registry/source={source}/{key}-{new_batch_id()}.parquet", rows)
+        batch = new_batch_id()
+        path = lake.write("registry", f"registry/source={source}/{key}-{batch}.parquet", rows)
+        if (
+            places
+        ):  # the whole source list, for the admin's Sources page: recorded only, never fetched or crawled
+            lake.write("candidates", f"candidates/source={source}/{key}-{batch}.parquet",
+                       [r | {"added_at": now} for r in places])  # fmt: skip
     except BaseException as e:  # a crash, or an interrupt: the end row says the attempt failed
         control.finish(lake, job, "failed", detail=started | {"error": _error(e)})
         raise
@@ -160,6 +167,7 @@ def discover_source(
         "new": len(new) if known is not None else None,
         "new_sample": new[:20],
         "failed_states": failed,
+        "places": len(places),
         "file": path.relative_to(lake.root).as_posix() if path else None,
     }
     control.finish(
@@ -241,8 +249,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
     try:
         states = registry.current(lake)
         todo = probe_todo(states, args.run_date, args.stale_days)
-        if args.only:
-            todo = [args.only]
+        if args.only:  # one domain, or several joined by commas (the admin's Pull now)
+            todo = args.only.split(",")
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
             todo = sorted(todo, key=ingest.sample_key)[: args.sample]
         deadline_min = getattr(args, "deadline_min", None)
@@ -300,6 +308,26 @@ def cmd_probe(args: argparse.Namespace) -> None:
             f"{len(detail['same_store'])} probed roaster(s) serve another roaster's store and are aliases of it "
             "(not crawled): " + ", ".join(f"{a} -> {b}" for a, b in list(detail["same_store"].items())[:20])
         )
+
+
+def cmd_pull(args: argparse.Namespace) -> None:
+    """The admin's Pull now, as one job: probe the places, then a counted crawl of each one that answered with a
+    storefront, on its platform's connector, into the week `--run-date` names (the admin picks the next week when
+    this week's merge is done, so the next merge and build keep the data). Nothing else of the registry is asked."""
+    from . import connectors, discover
+    from .models import adapter_of
+
+    lake = Lake()
+    places = [p for p in args.only.split(",") if p]
+    rows = discover.probe(places, workers=4, run_date=_today())
+    lake.write_partition("probes", _today(), new_batch_id(), rows)
+    found: dict[str, list[str]] = {}
+    for r in rows:  # only a storefront this probe found: a place with no platform is never crawled
+        if r["status"] == "ok" and r.get("platform"):
+            found.setdefault(adapter_of(r["platform"]), []).append(r["roaster_id"])
+    print(f"pull: probed {len(rows)} places, {sum(map(len, found.values()))} with a storefront")
+    for connector, ids in sorted(found.items()):
+        _print(connectors.crawl(lake, connector, args.run_date, only=",".join(sorted(ids))))
 
 
 def cmd_ingest(args: argparse.Namespace) -> None:
@@ -727,6 +755,10 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
     extra["rules"] = rules.dbt_var(
         decisions.settings_of(snap)
     )  # the snapshot's rule settings, else the defaults
+    extra["source_roasters"] = decisions.source_roasters(
+        snap
+    )  # places flagged roasters: stg_registry adds them
+    extra["not_roasters"] = decisions.not_roasters(snap)  # flagged not a roaster: stg_registry drops them
     if snap is not None:
         extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
         recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),
@@ -1344,7 +1376,7 @@ def main(argv: list[str] | None = None) -> None:
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
-    pr.add_argument("--only")
+    pr.add_argument("--only", help="probe these roaster_ids (domains, comma-separated), registry or not")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
     pr.add_argument("--run-date", type=_run_date, default=_today())
@@ -1353,6 +1385,12 @@ def main(argv: list[str] | None = None) -> None:
         type=_positive_float,
         help="start no roaster after this many minutes; the rest wait for the next run",
     )
+
+    pu = add(
+        "pull", cmd_pull, "probe places, then a counted crawl of each storefront found (the admin's Pull now)"
+    )
+    pu.add_argument("--only", required=True, help="the places: domains, comma-separated")
+    pu.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to crawl into")
 
     i = add("ingest", cmd_ingest, "fetch catalogs for this run (skips roasters already fetched in it)")
     i.add_argument("--run-date", type=_run_date, default=_today())
@@ -1382,7 +1420,9 @@ def main(argv: list[str] | None = None) -> None:
     cr.add_argument("--slice", help="crawl one slice k/n of a salted-hash split of its roasters, e.g. 0/3")
     cr.add_argument("--salt", default="arm", help="the split's salt (record it with the results)")
     cr.add_argument(
-        "--only", help="fetch this one roaster_id, even if done or quarantined this week (RUNBOOK section 7)"
+        "--only",
+        help="fetch this roaster_id (or several, comma-separated), even if done or quarantined this week "
+        "(RUNBOOK section 7); a place of the source list the owner flagged is fetched before it's in a published registry",
     )
     cr.add_argument("--test", type=_test_id, help=TEST_HELP)
     mg = add("merge", cmd_merge, "union the week's connector partitions into the run dbt reads")

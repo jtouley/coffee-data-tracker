@@ -1,6 +1,11 @@
-<div class="state error" role="alert" data-state="error">
+{% if control %}<div class="state error" role="alert" data-state="error">
+  <h2 class="section group-title">Couldn’t reach the control plane</h2>
+  <p class="body">The control plane didn’t answer: {{ error }}.</p>
+  <p class="meta">Nothing was written. The lake’s pages still read; try again shortly.</p>
+  <button class="btn secondary inline mt12" type="button" data-retry>Retry</button>
+</div>{% else %}<div class="state error" role="alert" data-state="error">
   <h2 class="section group-title">Couldn’t read the lake</h2>
   <p class="body">Couldn’t read <code>{{ files }}</code>: {{ error }}.</p>
   <p class="meta">Nothing was changed: the admin only reads the lake.</p>
   <button class="btn secondary inline mt12" type="button" data-retry>Retry</button>
-</div>
+</div>{% endif %}

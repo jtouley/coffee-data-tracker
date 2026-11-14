@@ -37,6 +37,7 @@ MIGRATIONS = Path(__file__).parent / "migrations"
 IDLE_S = 120  # a pooled connection idle longer than this is dropped, not reused
 LOCK = 0x61646D696E  # pg_advisory_xact_lock key for migrations ("admin")
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
+SOURCE_FLAGS = ("roaster", "not_roaster", "unreviewed")
 ID_ROASTER = re.compile(r"[a-z0-9][a-z0-9.-]{0,252}")  # a roaster id is its store's domain
 
 
@@ -98,8 +99,6 @@ class ControlPlane:
     def __init__(self, connect: Callable[[], Any], size: int = 4):
         self._connect = connect
         self._pool: queue.LifoQueue = queue.LifoQueue(maxsize=size)
-        self._migrated = False
-        self._lock = threading.Lock()
 
     # --- connections and transactions ----------------------------------------------------------------------------
 
@@ -151,6 +150,14 @@ class ControlPlane:
                 with contextlib.suppress(Exception):
                     con.close()
 
+    @contextlib.contextmanager
+    def once(self, key: str) -> Iterator[tuple[Any, dict | None]]:
+        """An idempotent write's transaction: locked on its key, with the key's first answer if it has one (the
+        caller returns that, and otherwise remembers its own answer before the block ends)."""
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            yield cur, self.claim(cur, key)
+
     def close(self) -> None:
         """Close every pooled connection. The pool stays usable: the next transaction opens a new one."""
         while True:
@@ -179,12 +186,7 @@ class ControlPlane:
                 cur.execute(f.read_text())
                 cur.execute("insert into control.schema_migrations (name) values (%s)", (f.name,))
                 applied.append(f.name)
-        self._migrated = True
         return applied
-
-    def ping(self) -> None:
-        with self.tx() as cur:
-            cur.execute("select 1")
 
     # --- writes ----------------------------------------------------------------------------------------------------
 
@@ -234,9 +236,8 @@ class ControlPlane:
         reason = _reason(reason)
         if not items or len(items) > 500:
             raise ValueError("decide 1 to 500 products at a time")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             subjects = sorted({str(it[kind]) for it in items if it.get(kind)})
             if not subjects:
@@ -252,15 +253,7 @@ class ControlPlane:
             ids = []
             by_subject = {str(it[kind]): it for it in items if it.get(kind)}
             for s in subjects:
-                it, did = by_subject[s], new_id("d")
-                cur.execute(
-                    "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
-                    "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
-                    "values (%s, 1, 'approved', %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                    (did, kind, s, action, reason, actor, group, it.get("coffee_id"), it.get("input_hash"),
-                     it.get("roaster_id"), (it.get("title") or "")[:300], it.get("evidence_hash") or None),
-                )  # fmt: skip
-                ids.append(did)
+                ids.append(self._approve(cur, kind, s, action, reason, actor, group, by_subject[s]))
             out = {"ok": True, "decisions": ids, "group": group, "count": len(ids)}
             self.audit(cur, actor, "decide", group or f"{kind}:{subjects[0]}", "ok",
                        {"action": action, "kind": kind, "subjects": subjects[:50], "count": len(subjects),
@@ -275,9 +268,8 @@ class ControlPlane:
         reason = (reason or "").strip() or "undo"
         if not ID.fullmatch(target):
             raise ValueError("bad decision id")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
             cur.execute(
@@ -288,24 +280,70 @@ class ControlPlane:
             rows = cur.fetchall()
             if not rows:
                 raise ValueError("no such decision")
-            reverted = []
-            for did, kind, subject, _action, seq in rows:
-                latest = self._latest(cur, kind, [subject]).get(subject)
-                if not latest or latest["decision_id"] != did or latest["event"] != "approved":
-                    continue
-                cur.execute(
-                    "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
-                    "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
-                    "select decision_id, %s, 'reverted', subject_kind, subject, action, %s, %s, group_id, coffee_id, "
-                    "input_hash, roaster_id, title, evidence_hash from control.decisions "
-                    "where decision_id = %s and seq = 1",
-                    (seq + 1, reason[:500] if len(reason) >= 3 else "undo", actor, did),
-                )  # fmt: skip
-                reverted.append(did)
+            reverted = self._revert(cur, actor, rows, reason)
             out = {"ok": True, "reverted": reverted, "count": len(reverted)}
             self.audit(cur, actor, "undo", target, "ok", {"reverted": reverted, "reason": reason})
             self.remember(cur, key, out)
             return out
+
+    @staticmethod
+    def _approve(cur, kind: str, subject: str, action: str, reason: str, actor: str, group: str | None,
+                 it: dict) -> str:  # fmt: skip
+        """Record one approved decision; returns its id."""
+        did = new_id("d")
+        cur.execute(
+            "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
+            "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
+            "values (%s, 1, 'approved', %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+            (did, kind, subject, action, reason, actor, group, it.get("coffee_id"), it.get("input_hash"),
+             it.get("roaster_id"), (it.get("title") or "")[:300], it.get("evidence_hash") or None),
+        )  # fmt: skip
+        return did
+
+    def _revert(self, cur, actor: str, rows: list[tuple], reason: str) -> list[str]:
+        """Revert each decision (decision_id, kind, subject, action, its last seq) that is still its subject's latest
+        approved event: the subject goes back to the classifier. Returns the decisions reverted."""
+        reverted = []
+        for did, kind, subject, _action, seq in rows:
+            latest = self._latest(cur, kind, [subject]).get(subject)
+            if not latest or latest["decision_id"] != did or latest["event"] != "approved":
+                continue
+            cur.execute(
+                "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
+                "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
+                "select decision_id, %s, 'reverted', subject_kind, subject, action, %s, %s, group_id, coffee_id, "
+                "input_hash, roaster_id, title, evidence_hash from control.decisions "
+                "where decision_id = %s and seq = 1",
+                (seq + 1, reason[:500] if len(reason) >= 3 else "undo", actor, did),
+            )  # fmt: skip
+            reverted.append(did)
+        return reverted
+
+    def _source_excludes(self, cur, batch: str, places: list[str] | None = None) -> list[tuple]:
+        """The exclude decisions a Not a roaster batch made (for these places), as _revert takes them."""
+        cur.execute(
+            "select decision_id, subject_kind, subject, action, max(seq) from control.decisions "
+            "where group_id = %s and (%s::text[] is null or roaster_id = any(%s)) group by 1, 2, 3, 4",
+            (batch, places, places),
+        )
+        return cur.fetchall()
+
+    def _reexclude(self, cur, actor: str, earlier: str, place: str, batch: str) -> list[str]:
+        """Exclude again the coffees an earlier Not a roaster batch excluded for `place`, now under `batch` (the
+        place's latest flag, so a later change finds them)."""
+        cur.execute(
+            "select distinct subject, coffee_id, input_hash, roaster_id, title from control.decisions "
+            "where group_id = %s and roaster_id = %s and subject_kind = 'coffee_id' and action = 'exclude'",
+            (earlier, place),
+        )
+        cols = ("subject", "coffee_id", "input_hash", "roaster_id", "title")
+        items = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+        latest = self._latest(cur, "coffee_id", [i["subject"] for i in items])
+        return [self._approve(cur, "coffee_id", i["subject"], "exclude", f"not a roaster: {place} (Sources)", actor,
+                              batch, i)  # fmt: skip
+                for i in items
+                if not ((latest.get(i["subject"]) or {}).get("event") == "approved"
+                        and latest[i["subject"]]["action"] == "exclude")]  # fmt: skip
 
     def save_settings(self, actor: str, key: str, doc: object, based_on: str | None, reason: str) -> dict:
         """A new rule settings version, checked against the deployed code (rules.check), based on the version the
@@ -313,9 +351,8 @@ class ControlPlane:
         which changes decide (rules.decides). Idempotent on `key`; an edit that changes nothing is refused."""
         reason = _reason(reason)
         new = rules.check(doc)
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 2,))
             now = self._settings(cur)
@@ -369,9 +406,8 @@ class ControlPlane:
         reason = _reason(reason)
         if not ID_ROASTER.fullmatch(roaster_id or ""):
             raise ValueError("bad roaster id")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("crawl:" + roaster_id,))
             now = self._crawl(cur, [roaster_id]).get(roaster_id, {}).get("crawl", True)
@@ -401,6 +437,121 @@ class ControlPlane:
         """Each roaster's latest crawl flag row (a roaster never changed has none: crawl on)."""
         with self.tx() as cur:
             return self._crawl(cur, roaster_ids)
+
+    # --- the source list's flags (the Sources page) --------------------------------------------------------------
+
+    def flag_sources(
+        self,
+        actor: str,
+        key: str,
+        flag: str,
+        places: list[str],
+        seen: dict[str, str | None],
+        coffees: list[dict] | None = None,
+    ) -> dict:
+        """Flag places of the source list `roaster` or `not_roaster` (or back to `unreviewed`), as one batch. `seen`
+        maps each place to the batch the page showed as its latest flag (None: none): a place flagged since makes the
+        write a Conflict. Idempotent on `key`; undone with undo_flags."""
+        if flag not in SOURCE_FLAGS:
+            raise ValueError("flag a place roaster, not_roaster or unreviewed")
+        places = sorted({p for p in places if ID_ROASTER.fullmatch(p or "")})
+        if not places or len(places) > 1000:
+            raise ValueError("flag 1 to 1,000 places at a time")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            now = self._source_flags(cur, places)
+            stale = [p for p in places if (now.get(p) or {}).get("batch_id") != seen.get(p)]
+            if stale:
+                raise Conflict(
+                    f"{len(stale)} of these were flagged since the page was loaded: reload and flag again"
+                )
+            batch = new_id("f").lower()
+            for p in places:
+                cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, actor) values (%s, %s, %s, %s)",
+                            (batch, p, flag, actor))  # fmt: skip
+            # A place leaving Not a roaster gets its coffees back: its exclusions are reverted.
+            restored = []
+            for p in places:
+                if (now.get(p) or {}).get("flag") == "not_roaster":
+                    restored += self._revert(cur, actor, self._source_excludes(cur, now[p]["batch_id"], [p]),
+                                             f"{p} is no longer flagged not a roaster")  # fmt: skip
+            # Not a roaster takes the store's coffees out of the public catalog: an exclude decision for each (the
+            # batch is their group, so Undo reverts both).
+            excluded = []
+            if flag == "not_roaster":
+                cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
+                by_id = {str(c["coffee_id"]): c for c in coffees or [] if c.get("coffee_id")}
+                latest = self._latest(cur, "coffee_id", sorted(by_id))
+                for cid, c in sorted(by_id.items()):
+                    if (latest.get(cid) or {}).get("event") == "approved" and latest[cid][
+                        "action"
+                    ] == "exclude":
+                        continue  # already excluded
+                    excluded.append(self._approve(cur, "coffee_id", cid, "exclude",
+                                                  f"not a roaster: {c.get('roaster_id')} (Sources)", actor, batch, c))  # fmt: skip
+            out = {"ok": True, "batch_id": batch, "flag": flag, "count": len(places), "excluded": len(excluded),
+                   "restored": len(restored), "places": places[:20]}  # fmt: skip
+            self.audit(cur, actor, "source_flag", batch, "ok",
+                       out | {"places": places[:50], "decisions": excluded[:200], "reverted": restored[:200]})  # fmt: skip
+            self.remember(cur, key, out)
+            return out
+
+    def undo_flags(self, actor: str, key: str, batch: str) -> dict:
+        """Put each place of a batch back to the flag it had before it, if the batch is still its latest flag."""
+        if not ID.fullmatch(batch):
+            raise ValueError("bad batch id")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            cur.execute("select roaster_id from control.source_flags where batch_id = %s", (batch,))
+            places = sorted({r[0] for r in cur.fetchall()})
+            if not places:
+                raise ValueError("no such batch")
+            now = self._source_flags(cur, places)
+            undo = new_id("f").lower()
+            undone: list[str] = []
+            reexcluded: list[str] = []
+            for p in places:
+                if (now.get(p) or {}).get("batch_id") != batch:
+                    continue  # flagged again since: that later flag stands
+                cur.execute("select flag, batch_id from control.source_flags where roaster_id = %s and batch_id <> %s "
+                            "and id < (select max(id) from control.source_flags where batch_id = %s) "
+                            "order by id desc limit 1", (p, batch, batch))  # fmt: skip
+                before = cur.fetchone()
+                cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, undoes, actor) "
+                            "values (%s, %s, %s, %s, %s)",
+                            (undo, p, before[0] if before else "unreviewed", batch, actor))  # fmt: skip
+                undone.append(p)
+                if before and before[0] == "not_roaster":  # back to Not a roaster: its coffees leave again
+                    reexcluded += self._reexclude(cur, actor, before[1], p, undo)
+            # Undo of a Not a roaster batch puts its places' coffees back too.
+            restored = self._revert(cur, actor, self._source_excludes(cur, batch, undone), "undo")
+            out = {"ok": True, "reverted": undone, "count": len(undone), "restored": len(restored),
+                   "excluded": len(reexcluded)}  # fmt: skip
+            self.audit(
+                cur, actor, "source_flag_undo", batch, "ok", {"places": undone[:50], "count": len(undone)}
+            )
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _source_flags(cur, places: list[str] | None = None) -> dict[str, dict]:
+        cur.execute(
+            "select distinct on (roaster_id) roaster_id, flag, batch_id, actor, at from control.source_flags "
+            + ("where roaster_id = any(%s) " if places is not None else "")
+            + "order by roaster_id, id desc",
+            (places,) if places is not None else (),
+        )
+        return {r[0]: dict(zip(("roaster_id", "flag", "batch_id", "actor", "at"), r, strict=True))
+                for r in cur.fetchall()}  # fmt: skip
+
+    def source_flags(self, places: list[str] | None = None) -> dict[str, dict]:
+        """Each flagged place's latest flag (a place never flagged has none: unreviewed)."""
+        with self.tx() as cur:
+            return self._source_flags(cur, places)
 
     def record_run(self, cur, run: dict) -> None:
         cur.execute(
@@ -568,9 +719,8 @@ class ControlPlane:
 
     def record_evaluation(self, actor: str, key: str, path: str, reason: str) -> dict:
         """A full evaluation of the classifier's output, done: the running total starts again from here."""
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("insert into control.evaluations (actor, path, reason) values (%s, %s, %s)",
                         (actor, path, reason))  # fmt: skip

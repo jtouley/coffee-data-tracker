@@ -1029,7 +1029,7 @@ def test_pages_say_what_they_read(tmp_path, lake):
     assert "2 of 5 connectors landed" in week and f"Serving week {W1}; week {W3} has data" in week
     release = c.get(f"/part/release?build={B2}").text  # Gate and Changes, one page
     assert 'class="unexplained"' in release and "3 rows change" in release
-    assert "1 failing and 1 warning tests of 3" in release and "1 passing tests" in release
+    assert "1 failing and 1 warning tests of 3" in release and "1 passing test<" in release
     assert "javascript:" not in c.get(f"/part/catalog?build={B2}").text + c.get("/part/week").text
     b1 = c.get(f"/part/release?build={B1}").text
     assert "No changes" in b1 or "Not recorded" in b1

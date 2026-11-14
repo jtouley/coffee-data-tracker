@@ -18,7 +18,7 @@ import json
 import re
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
 from coffeedata import decisions as snap
@@ -35,6 +35,9 @@ TYPE_OVER = 50  # Publish asks for the count of public rows that leave above thi
 LIVE_CHECK_DAYS = 7
 STEP9_LIMIT = 50  # CLAUDE.md step 9: over this many products changed, the full evaluation
 REASON = re.compile(r"[^\x00-\x1f\x7f]{3,300}")
+
+
+RUNS_WAIT_S = 10  # Writes.runs: how long the runs' live status may take in all
 
 
 class StartedUnrecorded(Exception):
@@ -91,12 +94,27 @@ class Writes:
         """The steps an action would start, with the guards' refusals and the window it falls in: the confirm step
         shows exactly this, and `start` checks it again."""
         action = registry.ACTIONS.get(key)
-        if action is None or action.page != "jobs":
+        if action is None or action.page not in ("jobs", "sources"):
             raise ValueError("no such job action")
         await self.ready()
         today = self.now().date()
         params = registry.checked(action, raw, today, lambda: new_id("t").lower()[:40])
-        return await self._guarded(action, params)
+        if (
+            action.key == "pull"
+        ):  # a counted crawl into a week whose merge is still to come, so the data is kept
+            state = await self.read(queries.week_state, params["week"])
+            if state["merge_done"]:
+                params["week"] = registry.week_of(
+                    (date.fromisoformat(params["week"]) + timedelta(days=7)).isoformat()
+                )
+            params["mode"] = "count"
+        plan = await self._guarded(action, params)
+        if action.key == "pull":  # only places the owner flagged Roaster
+            places = params["roasters"].split(",")
+            flags = await asyncio.to_thread(self.control.source_flags, places)
+            plan.refusals += [f"{d} isn't flagged Roaster: flag it first" for d in places
+                              if (flags.get(d) or {}).get("flag") != "roaster"]  # fmt: skip
+        return plan
 
     async def _guarded(self, action: registry.Action, params: dict) -> registry.Plan:
         steps = action.steps(params)
@@ -167,9 +185,8 @@ class Writes:
         started: list[dict] = []
         errors: list[str] = []
         try:
-            with self.control.tx() as cur:
-                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                if (first := self.control.claim(cur, key)) is not None:
+            with self.control.once(key) as (cur, first):
+                if first is not None:
                     return first
                 jobs = sorted({s.job for s in plan.steps})
                 for job in jobs:
@@ -186,7 +203,8 @@ class Writes:
                         continue
                     started.append({"run_id": new_id("r"), "action": plan.action.key, "job": s.job, "args": s.args,
                                     "mode": plan.params.get("mode"), "week": plan.params.get("week"),
-                                    "test_id": plan.params.get("test_id"), "roaster_id": plan.params.get("roaster"),
+                                    "test_id": plan.params.get("test_id"),
+                                    "roaster_id": plan.params.get("roaster") or plan.params.get("roasters"),
                                     "execution": ex.name, "actor": actor, "override_reason": override})  # fmt: skip
                 out = self._record(cur, actor, key, plan, override, started, errors, extra, answer)
         except ControlPlaneError:
@@ -238,9 +256,8 @@ class Writes:
                 raise ValueError("no such run")
             cancelled = False
             try:
-                with self.control.tx() as cur:
-                    cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                    if (first := self.control.claim(cur, key)) is not None:
+                with self.control.once(key) as (cur, first):
+                    if first is not None:
                         return first
                     self.jobs.cancel(run["execution"])
                     cancelled = True
@@ -265,23 +282,28 @@ class Writes:
         await self.ready()
         rows = await asyncio.to_thread(self.control.runs, limit)
 
-        def live():
-            for r in rows:
-                r["status"], r["log_uri"] = r["final"] or "unknown", logs_url(r["execution"] or "")
-                if not r["execution"] or r["final"]:  # a finished run's outcome is recorded: no API call
-                    continue
-                try:
-                    e = self.jobs.execution(r["execution"])
-                except (JobsError, ValueError) as err:
-                    r["message"] = str(err)
-                    continue
-                r["status"], r["message"], r["duration_s"] = e.status, e.message, e.duration_s
-                r["log_uri"] = e.log_uri or r["log_uri"]
-                if e.status in ("succeeded", "failed", "cancelled"):
-                    self.control.run_status(r["run_id"], e.status, e.duration_s, e.message)
-                    r["final"] = e.status
+        def live(r: dict) -> None:
+            try:
+                e = self.jobs.execution(r["execution"])
+            except (JobsError, ValueError) as err:
+                r["message"] = str(err)
+                return
+            r["status"], r["message"], r["duration_s"] = e.status, e.message, e.duration_s
+            r["log_uri"] = e.log_uri or r["log_uri"]
+            if e.status in ("succeeded", "failed", "cancelled"):
+                self.control.run_status(r["run_id"], e.status, e.duration_s, e.message)
+                r["final"] = e.status
 
-        await asyncio.to_thread(live)
+        for r in rows:
+            r["status"], r["log_uri"] = r["final"] or "unknown", logs_url(r["execution"] or "")
+        # The unfinished runs' live status, together and within RUNS_WAIT_S in all: a slow Cloud Run leaves a run's
+        # status "unknown" for this read instead of holding the page past its own deadline.
+        todo = [r for r in rows if r["execution"] and not r["final"]]
+        if todo:
+            _, late = await asyncio.wait([asyncio.ensure_future(asyncio.to_thread(live, r)) for r in todo],
+                                            timeout=RUNS_WAIT_S)  # fmt: skip
+            for task in late:
+                task.cancel()
         tests = [r["test_id"] for r in rows if r["test_id"]]
         if tests:
             answers = await self.read(queries.test_results, tests)
@@ -363,16 +385,45 @@ class Writes:
         written(action="crawl_flag", subject=roaster_id, outcome="ok", crawl=crawl)
         return out
 
+    # --- the source list's flags ---------------------------------------------------------------------------------
+
+    async def flag_sources(self, actor: str, key: str, body: dict) -> dict:
+        await self.ready()
+        items = body.get("items")
+        if not isinstance(items, list) or not all(isinstance(i, dict) for i in items):
+            raise ValueError("no places chosen")
+        places = [str(i.get("roaster_id") or "") for i in items]
+        seen = {str(i.get("roaster_id")): (str(i["seen"]) if i.get("seen") else None) for i in items}
+        coffees: list[dict] = []
+        if (
+            body.get("flag") == "not_roaster" and self.catalog is not None
+        ):  # their coffees leave the catalog too
+            served = await self.read(queries.served)
+            if served:
+                coffees = await self.read(lambda _l, _c: self.catalog.of_roasters(served["build_id"], places))
+        out = await asyncio.to_thread(
+            self.control.flag_sources, actor, key, str(body.get("flag")), places, seen, coffees
+        )
+        written(action="source_flag", subject=out["batch_id"], outcome="ok", count=out["count"])
+        return out
+
+    async def undo_flags(self, actor: str, key: str, batch: str) -> dict:
+        await self.ready()
+        out = await asyncio.to_thread(self.control.undo_flags, actor, key, batch)
+        written(action="source_flag_undo", subject=batch, outcome="ok", count=out["count"])
+        return out
+
     # --- release: draft, publish, roll back, discard ---------------------------------------------------------------
 
     async def pending(self, served: dict | None = None, drafts: list[dict] | None = None) -> dict:
-        """The effective decisions, rule settings and crawl flags against the served build's snapshot: what a draft
-        would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
+        """The effective decisions, rule settings, crawl flags and source-list roasters against the served build's
+        snapshot: what a draft would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
-        effective, settings, states = await asyncio.gather(
+        effective, settings, states, flags = await asyncio.gather(
             asyncio.to_thread(self.control.effective),
             asyncio.to_thread(self.control.settings),
             asyncio.to_thread(self.control.roaster_states),
+            asyncio.to_thread(self.control.source_flags),
         )
         if served is None:
             served = await self.read(queries.served)
@@ -389,7 +440,33 @@ class Writes:
         now_settings = snap.settings_of({"settings": doc} if doc else None)
         settings_changed = rules.changed(snap.settings_of(served_doc), now_settings)
         crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
-        mine = (now, now_settings, set(off))
+        # Flags on the source list: places flagged roaster join the registry; registry roasters (which inherit
+        # roaster) flagged not a roaster leave it.
+        # `known`: the registry without the flags (the served release's, less the places its snapshot added), so a
+        # published place stays in the next draft. With nothing served, every not-roaster flag is kept.
+        # No flag at all: no read of the release. A served release without its registry fails closed: the served
+        # snapshot's flags are kept, and a draft is refused until the registry can be read.
+        sources_error = None
+        known: set[str] = set()
+        if flags and served:
+            got = await self.read(queries.registry_ids, served["build_id"])
+            if got is None:
+                sources_error = (f"The served release {served['build_id']}'s registry (dim_roaster) can't be read, "
+                                 "so the source flags can't be applied: try again shortly")  # fmt: skip
+            # the registry without the served flags: less the places it added, plus the roasters it dropped
+            known = ((got or set()) - set(snap.source_roasters(served_doc))) | set(
+                snap.not_roasters(served_doc)
+            )
+        if sources_error:
+            sources, dropped = snap.source_roasters(served_doc), snap.not_roasters(served_doc)
+        else:
+            sources = sorted(p for p, f in flags.items() if f["flag"] == "roaster" and p not in known)
+            dropped = sorted(
+                p for p, f in flags.items() if f["flag"] == "not_roaster" and (p in known or not served)
+            )
+        sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
+                                 | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
+        mine = (now, now_settings, set(off), sources, dropped)
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -400,23 +477,29 @@ class Writes:
                 break
             got = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
             if got and ({(x["subject_kind"], x["subject"], x["action"]) for x in got["decisions"]},
-                        snap.settings_of(got), snap.crawl_off(got)) == mine:  # fmt: skip
+                        snap.settings_of(got), snap.crawl_off(got), snap.source_roasters(got),
+                        snap.not_roasters(got)) == mine:  # fmt: skip
                 drafted = d["draft_id"]
             break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
                 "settings": doc, "settings_version": settings["version_id"], "settings_changed": settings_changed,
-                "crawl_off": off, "crawl_changed": crawl_changed,
+                "crawl_off": off, "crawl_changed": crawl_changed, "sources": sources, "not_roasters": dropped,
+                "sources_changed": sources_changed, "sources_error": sources_error,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
         p = await self.pending()
-        if not (p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"]):
-            raise ValueError(
-                "Nothing to build: the decisions, rule settings and crawl flags are the served release's"
-            )
+        if p["sources_error"]:
+            raise registry.Refused([p["sources_error"]])
+        if not (
+            p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
+        ):
+            raise ValueError("Nothing to build: the decisions, rule settings, crawl flags and source flags are the "
+                             "served release's")  # fmt: skip
         sid, did = new_id("s").lower(), new_id("draft").lower()
         doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"], p["settings"],
-                            [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]])  # fmt: skip
+                            [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]], p["sources"],
+                            p["not_roasters"])  # fmt: skip
         digest = snap.digest(doc)
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]
@@ -475,13 +558,14 @@ class Writes:
         )
         ok = [t for t in tests if any(a.get("ok") for a in answers.get(t["test_id"], [])
                                       if a["connector"] == t["connector"])]  # fmt: skip
-        stores = {t["roaster_id"] for t in ok if t["roaster_id"]}  # a test of the store itself
-        connectors = {t["connector"] for t in ok if not t["roaster_id"]}  # or of its whole connector
-        missing = [r for r, conn in effect["removal_roasters"] if r not in stores and conn not in connectors]
+        # Only a test of the store itself: a connector-wide test's end row counts the connector's fetches, not
+        # whether this store answered (its per-store rows stay in the test's own partition).
+        stores = {t["roaster_id"] for t in ok if t["roaster_id"]}
+        missing = [r for r, _conn in effect["removal_roasters"] if r not in stores]
         n = len(effect["removal_roasters"])
         checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
                        "why": ("this draft removes nothing" if not n else
-                               f"{n} of {n} stores answered a test crawl (of the store or its connector) in the last "
+                               f"{n} of {n} stores answered a test crawl of the store in the last "
                                f"{LIVE_CHECK_DAYS} days" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
@@ -610,9 +694,8 @@ class Writes:
                  "publishing" if draft and draft["last_event"] == "publish_started" else None)  # fmt: skip
 
         def go():
-            with self.control.tx() as cur:
-                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                if (first := self.control.claim(cur, key)) is not None:
+            with self.control.once(key) as (cur, first):
+                if first is not None:
                     return first
                 cur.execute("select 1 from control.drafts where draft_id = %s", (draft_id,))
                 if not cur.fetchone():

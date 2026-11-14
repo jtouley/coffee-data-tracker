@@ -16,6 +16,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
 | Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
+| Sources | Every place discovery has listed (lake `candidates`: roastery-tagged places, and cafés and coffee shops with a storefront website) and every roaster in the registry, one row per domain, with its status (Roaster (inherited), Roaster, Not a roaster, Unreviewed), its hints (tag, "roast" in the name), and what the last discovery run added or dropped | Search (a pasted address finds its domain); one Filter / Sort panel (status, origin, tag, state, city); on a desktop a table whose headers sort by Name, Domain, City, State, Tag, Hints, Status or First seen (on a phone, the sheet's sort options); select rows (box or tap) and flag them Roaster or Not a roaster from the action bar, or one place from its ⋯ menu (also Clear the flag, Open site); Undo | the lake's `candidates`, the served release's `dim_roaster`, the control plane |
 | Log | Every write: who, when, what, the outcome | download the decisions (for `coffeedata decide export-labels`) | the control plane |
 
 The Catalog copies a build's two files into a local DuckDB file once (releases are immutable) and filters there.
@@ -69,7 +70,8 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
   - a rule settings change to how a rule decides has its evaluation (`coffeedata.rules.EVALUATED`);
   - the owner typed the count, when more than 50 public rows leave;
   - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
-    version) answered a test crawl of the store, or of its whole connector, in the last 7 days.
+    version) answered a test crawl of the store itself in the last 7 days (a connector-wide test doesn't say which
+    stores answered).
 
   It starts the `publish` job (`publish-release --action publish`). "Published" is read from `serving_log`, never
   set. A draft being published, or published, can't be discarded.
@@ -80,6 +82,51 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
 - **Labels:** Log's download is the effective decisions as a snapshot, with each version's coffees listed; `coffeedata decide export-labels --snapshot
   decisions.json` turns them into candidate labels for the classifier's train set only. A coffee in the sealed test
   set or the validation set is left out and only counted (CLAUDE.md: an owner correction is one labeler).
+
+## Sources
+
+Discovery (`coffeedata discover overture`) reads Overture's coffee places. Roastery-tagged places go straight into
+the registry, as before. Every place it reads (the roasteries, plus `coffee_shop` and `cafe` places whose website
+passes `registry.is_storefront_host`) is also recorded in the lake's `candidates` table, without any request to the
+place's site.
+
+The Sources page lists those places together with the served release's registry (the curated seed, the issue forms
+and discovery's roasteries). It copies them into a local DuckDB file once per discovery run and served build, the
+way the Catalog does, and searches and pages there (100 rows a page; about 47,000 places).
+
+- **Every registry roaster inherits Roaster.** With no flag set, the registry, the probe and the crawl are exactly
+  what they were (`tests/test_sources.py::test_the_registry_and_the_crawl_are_unchanged_until_flagged`).
+- **Flags** are written to `control.source_flags` (append-only). Each write is CSRF-checked, idempotent on its key,
+  audited in the same transaction, refused with 409 if another tab flagged the place since the page loaded, and
+  undoable as a batch.
+- **Flags reach the crawl through the snapshot.** The next draft carries `sources` (listed places flagged Roaster,
+  not already in the registry) and `not_roasters` (registry roasters flagged Not a roaster). Once that draft is
+  published, `registry.current` adds the flagged places from `candidates` and drops the not-roasters, so the probe
+  and the weekly crawl pick them up or leave them. dbt's `stg_registry` adds the same places through the var
+  `source_roasters`. A newly flagged roaster is probed at the next probe run and crawled once a probe finds its
+  platform. Unreviewed places are never probed or crawled. A snapshot that can't be read applies no flags.
+- **Not a roaster leaves the crawl, the build and the catalog.** The next draft's snapshot carries it in
+  `not_roasters`: `registry.current` drops it from the probe and the crawl, and dbt `stg_registry` (var
+  `not_roasters`) drops it from `dim_roaster` and the public roaster table. In the same write it records an exclude
+  decision for each of the store's coffees in the served release (grouped under the flag's batch). Undo restores the
+  flag and the coffees; flagging it Roaster or clearing the flag reverts the exclusions, and undoing that excludes
+  them again.
+- **Pull now.** The action bar (for the selected places) and a Roaster place's ⋯ menu offer Pull now. It is one
+  Cloud Run job, `pull` (`coffeedata pull --only <domains> --run-date <week>`, then a publish of its probe rows):
+  it probes the places, then crawls each one that answered with a storefront, counted, on its platform's connector,
+  in the same execution. Nothing waits for a page to be open, and no GET starts anything. The week is this week
+  until its merge is done, then next week: a merged week's partition is never read again, and next week's merge and
+  build keep the data (that place counts as done for next week's crawl). It runs on any day, with the same guards
+  (overlap, and the Monday and Tuesday windows with the owner's override) and the same audit, and Jobs shows it.
+  No Publish is needed: `--only` crawls a place of the source list before it is in a published registry
+  (`ingest.select_states`); the next published draft carries the flag, so the weekly crawl keeps it. Only places
+  flagged Roaster can be pulled; a place whose probe finds no storefront is not crawled. The job leaves from the
+  WooCommerce and generic NAT IP (`src/terraform/ingestion.tf`).
+- **Fails closed.** If the served release's `dim_roaster` can't be read while there are flags, Release says so and
+  refuses a draft, rather than treating the registry as empty. If the flags can't be read (control plane down),
+  Sources still lists the places but shows no status and no flag counts.
+- **Hints never flag anything.** The hints are the Overture tag and "roast" in the name. The evidence from the
+  screening experiment (#130) is not shown: it is not in the lake, and the admin reads only the lake.
 
 ## Rules and flags
 

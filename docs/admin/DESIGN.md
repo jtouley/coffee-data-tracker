@@ -285,3 +285,110 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 - **The rule types' list** in the settings fold went: it repeated the schema and the README.
 - **Code:** the Case reads the Queue's own summary row; the Queue's totals come with its rows (one scan fewer); one
   reason check in the control plane; `AUDITED` on one line.
+
+## Sources (the fourth pass)
+
+### Who and what
+
+The owner, with a roaster's name or address in mind (from a bag, a shop or a link someone sent): **is it in our
+list, and is it a roaster?** They search, find the row and flag it in one click. On another evening they might work
+through the unreviewed cafés whose names say "roast".
+
+### Decisions on the design
+
+- **Search first, one Filter / Sort button beside it.** A pasted address (`https://www.example.com/shop`) searches
+  for its domain. Every filter (status, origin, tag, state, city) and the sort (status, name, state, newest) sit in one
+  panel: a sheet at the bottom on a phone, a popover under the button on a desktop. The button shows how many are in
+  use. On a phone, Enter searches and the Search button is hidden, so the box keeps its width.
+- **A data table on a desktop, stacked rows on a phone.** At 760 px and wider each place is one dense 44 px row:
+  select, Name, Domain (a link), City, State, Tag, Hints, Status, First seen, ⋯. A header sorts by its column and
+  again the other way (`aria-sort`, an arrow); the header row stays at the top while the page scrolls; long cells
+  end in an ellipsis with the full text in a `title`; dates are tabular. On a phone the same table shows the name,
+  a muted line of domain, city, hints and status, and the ⋯; the sheet's Sort by options replace the headers.
+- **No action buttons on rows.** The status is a quiet word (Roaster, Roaster (inherited), Not a roaster,
+  Unreviewed). Selecting rows (the box, or a tap
+  on the row) shows a sticky action bar at the bottom: "N selected · Roaster · Not a roaster · Clear". That is the
+  main path, for one place or many. Each row's ⋯ menu has the same actions for that place, Clear the flag on an
+  explicit flag, and Open site. Undo is in the outcome line.
+- **One count line.** "N to review of M places · new and gone in the latest run", then one small line of the other
+  statuses. The Status and Tag facets carry the per-status and per-tag counts.
+- **No "add a roaster" form:** discovery lists about 47,000 places; search, then flag.
+- **Inherited is a status, not a flag.** Nothing happens to a registry roaster unless the owner flags one.
+- **Reuse.** `catalog.Filters` takes its facets and search columns from the class, so `SourceFilters` subclasses
+  it and adds the sort. The pager is a shared macro. The panel and the ⋯ menu are the page's own (a `<dialog>` and a
+  `<details>`), styled from the existing tokens.
+
+### Skills used (the redesign's review)
+
+Run on the screenshots of the realistic fixture (about 3,000 cafés beside the registry), at 390 px and desktop,
+light and dark:
+- MengTo `no-ai-design-slop`: the hint rendered in the danger colour (it borrowed the form-error class), which says
+  "error" for a neutral cue. It is now plain `--ink-2` text, like the rest of the row's metadata.
+- Owl-Listener `critique-information-density`: the count line ran to four lines on a phone. It is now one answer
+  line plus one small line. The filter panel stacked five full-width selects; it now uses two columns.
+- Owl-Listener `accessibility-audit`: the action bar could hide the focused row (WCAG 2.4.11); the page now reserves
+  scroll padding while it shows. Its count is announced (`aria-live`). The ⋯ menu closes on Escape and returns focus;
+  the panel is a modal dialog with Escape and its title. Targets are 44 px. axe passes.
+- Krehel `better-layout`: on a phone the search box shrank to fit three controls (Search, Filter / Sort); the
+  Search button is hidden there. The panel's actions fell below the fold on a phone sheet; they are sticky at its
+  foot. The action bar wrapped Clear to a second line at 390 px; it fits one line. On a desktop the status sat far
+  from its row's ⋯; it is right-aligned beside it.
+
+### The owner's two decisions
+
+- **Pull now** is in the action bar for the selected places and in the ⋯ menu of a place flagged Roaster. It opens
+  the same confirm sheet as every job, titled in words ("Probe and crawl 2 places?"), naming the places, with the
+  exact commands under Details and the window's override when one is needed. The outcome line stays short ("Marked
+  1 place as a roaster." · Undo · Dismiss) and steps aside while a confirm is open. Its live status is one small line on Sources
+  ("Pull now: probe succeeded · crawl-shopify running · Jobs"), which polls while a run is going.
+- **Not a roaster** says what it did in the outcome line: "2 coffees leave the catalog in the next draft". Undo says
+  what came back.
+
+### Following Bench Scale (`docs/app/DESIGN.md`)
+
+- **Flat, with hairlines.** The panel, the ⋯ menu and the action bar have a `--control` border and no shadow ("shadows
+  read as smudges"). The phone panel is the app's sheet: `--sheet`, 14 px top corners, rising from the bottom.
+- **Status text** is the app's: 13 px `--ink-2`, no border, after the name. Chips stay tappable only (the filter
+  chips); status is never a chip or a badge.
+- **One accent meaning.** The accent marks what you can tap (⋯, Clear, the menu's items); the one filled button is
+  "Show places" in the panel and Search on a desktop.
+- **Type and space** from the app's scale (13, 15, 17, 24; 4 to 24 px steps); the panel's title is the serif, as
+  every sheet's is.
+- **Departures, and why:** no grabber on the sheet (it can't be dragged; Close and Escape dismiss it); 44 px targets
+  rather than the app's 48, as everywhere in the admin (it's read at a desk, and dense); the action bar sits at the
+  foot like the app's dock, not at the top like the Catalog's bulk bar, because the owner asked for it there on a
+  phone.
+
+### Cut
+
+- The screening evidence as a hint (see the README: not in the lake).
+- An "add a roaster" form, at the owner's request.
+- The row buttons, the Flag, Hints, Origin and City columns, the Hint and Change facets, the by-tag run and the
+  explanation paragraph.
+
+### The reviews' fixes
+
+- A place flagged Roaster stays in every later draft once it is published. The registry it is compared against is
+  the served release's less the places that release's snapshot added.
+- The page's copy is keyed on the `candidates` file listing (no read of the files) and made from exactly those files.
+- Without the flags (control plane down), the page shows no status, no flag counts and no Status facet.
+
+## The stack review's round
+
+An independent review of the four admin PRs, then the owner's "super cluttery" on Jobs. What changed:
+
+- **Jobs:** one "Run a job" button and a "?" beside the title (shell.html's title actions, filled from each part's
+  `<template data-title>`). The run sheet (a sheet on a phone, a popover on a desktop) has a Job dropdown, one hint
+  line, only the chosen job's fields, and Run, which opens the usual confirm with every guard and the window's
+  override. Site is a link to GitHub. The page is the Runs table: Started, the job in plain words ("Test crawl ·
+  Shopify · onyxcoffeelab.com"), Status, Took, Logs, and a ⋯ with Cancel (in the danger colour, named) and the raw
+  arguments. One count line.
+- **Help, not prose:** Week, Release, Queue and Catalog keep their answer line first; what they read and how they
+  work moved behind the "?" (the `help` macro). Week dropped its Connectors table and "Builds of week" (the answer
+  line and the job attempts already say it); its build links go to Release.
+- **Folds show a chevron** and are 15 px ink; section headings are 17 px ink, so they outweigh the folds. The outcome
+  line is the app's undo strip (`--panel`), not an inverted bar. The data region is no longer a live region, so a
+  poll doesn't re-read the tables; the outcome line keeps `role=status`.
+- Skills invoked: `critique-information-density`, `hicks-law`, `form-design`, `better-layout`, `no-ai-design-slop`,
+  `accessibility-audit`, `critique-affordance`, `critique-visual-hierarchy`, `python-resilience`,
+  `dbt-transformation-patterns`, `/simplify`.

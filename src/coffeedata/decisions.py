@@ -68,6 +68,10 @@ def check(doc: object) -> list[dict]:
         for r in roasters_
     ):
         raise SnapshotError("roasters must be a list of {roaster_id, crawl}")
+    for k in ("sources", "not_roasters"):
+        listed = doc.get(k, [])
+        if not isinstance(listed, list) or not all(isinstance(r, str) and r for r in listed):
+            raise SnapshotError(f"{k} must be a list of domains")
     seen: set[tuple[str, str]] = set()
     out = []
     for d in doc["decisions"]:
@@ -84,9 +88,12 @@ def check(doc: object) -> list[dict]:
 
 
 def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], settings: dict | None = None,
-             roasters: Iterable[dict] = ()) -> dict:  # fmt: skip
+             roasters: Iterable[dict] = (), sources: Iterable[str] = (),
+             not_roasters: Iterable[str] = ()) -> dict:  # fmt: skip
     """A snapshot document. `decisions` are effective decisions (one per subject); `settings` the rule settings
-    version to build with (left out: the defaults); `roasters` each roaster's current crawl flag where it was set."""
+    version to build with (left out: the defaults); `roasters` each roaster's current crawl flag where it was set;
+    `sources` the source-list places the owner flagged as roasters (the registry adds them: registry.current);
+    `not_roasters` the registry's roasters the owner flagged not a roaster (the registry drops them)."""
     if not SNAPSHOT_ID.fullmatch(snapshot_id):
         raise ValueError("bad snapshot id")
     doc = {"version": VERSION, "snapshot_id": snapshot_id, "created_at": created_at,
@@ -97,6 +104,10 @@ def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], setti
     if roasters := sorted(({"roaster_id": r["roaster_id"], "crawl": bool(r["crawl"])} for r in roasters),
                           key=lambda r: r["roaster_id"]):  # fmt: skip
         doc["roasters"] = roasters
+    if sources := sorted(set(sources)):
+        doc["sources"] = sources
+    if not_roasters := sorted(set(not_roasters)):
+        doc["not_roasters"] = not_roasters
     check(doc)
     return doc
 
@@ -104,6 +115,26 @@ def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], setti
 def settings_of(doc: dict | None) -> dict:
     """The rule settings a snapshot builds with: its own, else the defaults."""
     return rules.check((doc or {}).get("settings") or rules.DEFAULTS, strict=False)
+
+
+def source_roasters(doc: dict | None) -> list[str]:
+    """The source-list places a snapshot flags as roasters (sorted)."""
+    return list((doc or {}).get("sources", []))
+
+
+def not_roasters(doc: dict | None) -> list[str]:
+    """The registry's roasters a snapshot flags not a roaster (sorted): never probed or crawled."""
+    return list((doc or {}).get("not_roasters", []))
+
+
+def served_doc(lake) -> dict | None:
+    """The published snapshot: the served build's, read from its builds row (no bucket, no database); None when
+    nothing is served or it has none. Raises on a failed read: each caller chooses how to fail."""
+    from . import quality
+
+    build = (quality.served(lake) or {}).get("build_id")
+    pinned = quality.build_snapshot(lake, build) if build else None
+    return (pinned or {}).get("doc")
 
 
 def crawl_off(doc: dict | None) -> set[str]:
