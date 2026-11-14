@@ -32,6 +32,31 @@ def _rules_only(monkeypatch):
     monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
 
 
+REPO_SERVED_DB = Path(__file__).resolve().parents[1] / "build" / "served.duckdb"
+
+
+def _stat(p: Path) -> tuple[int, int] | None:
+    try:
+        st = p.stat()
+    except FileNotFoundError:
+        return None
+    return st.st_ino, st.st_mtime_ns
+
+
+@pytest.fixture(autouse=True)
+def _no_repo_served_db():
+    """No test may write the checkout's build/served.duckdb (quality.serve's cwd-relative default): every xdist
+    worker shares that one file, so two tests serving at once fight over its DuckDB lock. A test serves into its own
+    tmp_path (cli.SERVED_DB, or `db=`). A file that was already there, from a local build, is left alone."""
+    before = _stat(REPO_SERVED_DB)
+    yield
+    if _stat(REPO_SERVED_DB) != before:
+        pytest.fail(
+            f"{REPO_SERVED_DB} changed during this test (or one running beside it in another xdist worker): "
+            "serve into tmp_path (cli.SERVED_DB, or db=) instead"
+        )
+
+
 def load_roasters() -> dict[str, Roaster]:
     """The recorded stores (fixtures/roasters.csv), keyed by roaster id."""
     with (FIX / "roasters.csv").open() as f:
@@ -108,6 +133,40 @@ def _own_dbt_target(tmp_path_factory):
     mp.setattr(cli, "DBT_TARGET", target)
     yield
     mp.undo()
+
+
+@pytest.fixture(scope="session")
+def pg_server(tmp_path_factory):
+    """A local Postgres for the admin's control plane (tests/pg.py): one per test session and xdist worker."""
+    from .pg import Server, bindir
+
+    if not (bindir() or os.environ.get("ADMIN_TEST_DATABASE_URL")):
+        if os.environ.get("REQUIRE_POSTGRES"):
+            pytest.fail("REQUIRE_POSTGRES is set but no Postgres server binaries are installed")
+        pytest.skip("no Postgres server binaries (initdb) installed")
+    server = Server(tmp_path_factory.mktemp("pg")).start()
+    yield server
+    server.stop()
+
+
+@pytest.fixture
+def pg_url(pg_server, monkeypatch):
+    """A fresh, empty database on the test Postgres. Every ControlPlane the test makes is closed at teardown: an
+    open pool's idle connections otherwise last until the worker ends, and enough tests in one worker exhaust the
+    server's max_connections ("too many clients already")."""
+    from admin.controlplane import ControlPlane
+
+    made: list[ControlPlane] = []
+    init = ControlPlane.__init__
+
+    def tracked(self, *a, **kw):
+        init(self, *a, **kw)
+        made.append(self)
+
+    monkeypatch.setattr(ControlPlane, "__init__", tracked)
+    yield pg_server.database()
+    for cp in made:
+        cp.close()
 
 
 def wait_for_sends() -> None:

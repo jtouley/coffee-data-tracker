@@ -1,9 +1,11 @@
 """admin.registry.coffee: the owner's command center (docs/admin/README.md).
 
-Read-only pages over the lake (Week, Failures, Gate, Changes, Catalog) behind passkey sign-in (auth.py). Every
-route but PUBLIC needs a live session, checked in one place (`gate`) before any route runs, so a route added later
-is signed-in by default, and an unknown path answers 401 like a known one. A misconfigured service answers 503 to
-everything. The lake is opened read-only and never written.
+Five pages behind passkey sign-in (auth.py): Week (did it land, what failed), Jobs (start, watch and cancel the
+pipeline's Cloud Run jobs), Release (a build's gate and changes; draft, Publish, Roll back), Catalog (every product;
+include or exclude it), Log (every write). Every route but PUBLIC needs a live session, checked in one place
+(`gate`) before any route runs, so a route added later is signed-in by default, and an unknown path answers 401 like
+a known one. A misconfigured service answers 503 to everything. The lake is opened read-only and never written:
+writes go to the control plane, and the lake changes only through the pipeline's jobs (writes.py).
 
 Run it with `uvicorn --factory admin.main:create_app` (`make admin` locally; docs/admin/README.md).
 """
@@ -14,12 +16,11 @@ import asyncio
 import contextlib
 import contextvars
 import hashlib
-import json
-import logging
 import mimetypes
 import re
+import secrets
 import time
-from collections.abc import Callable
+from collections.abc import Awaitable, Callable
 from concurrent.futures import ThreadPoolExecutor
 from datetime import UTC, datetime
 from pathlib import Path
@@ -30,43 +31,39 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from coffeedata import quality
+from coffeedata import decisions, quality
 from coffeedata.lake import Lake
 
-from . import queries
+from . import jobs, logs, queries
 from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
 from .catalog import FACETS, Catalog, Filters
 from .config import Settings, from_env
-
-log = logging.getLogger("admin")
-
-
-def emit(severity: str, **fields) -> None:
-    """One JSON object per line, with its severity: Cloud Run reads it as a structured entry, so alerts can match
-    its fields (src/terraform/admin.tf). Never a header, cookie, token, code or request body."""
-    level = logging.ERROR if severity == "ERROR" else logging.INFO
-    log.log(level, json.dumps({"severity": severity, **fields}, default=str))
-
-
-def _log_setup() -> None:
-    if not log.handlers:
-        handler = logging.StreamHandler()
-        handler.setFormatter(logging.Formatter("%(message)s"))
-        log.addHandler(handler)
-        log.setLevel(logging.INFO)
-        log.propagate = False
-
+from .controlplane import Conflict, ControlPlaneError
+from .logs import emit
+from .runjobs import JobsError
+from .store import StoreError
+from .writes import StartedUnrecorded, Writes
 
 HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
 COOKIE_SECURE = "__Host-admin"  # host-only, Secure, path=/
 COOKIE_LOCAL = "admin_session"  # http://localhost only
-PAGES = ("week", "failures", "gate", "changes", "catalog")
+PAGES = ("week", "jobs", "release", "catalog", "log")
+# What each page's data region reads, named on its loading state.
+READS = {
+    "week": "job_manifests, fetches, builds and serving_log",
+    "jobs": "job_runs and Cloud Run executions",
+    "release": "builds, release_changes, serving_log and drafts",
+    "catalog": "product_decisions, dim_coffee and decisions",
+    "log": "the control plane's audit",
+}
+AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation")
+WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 BUILD_RE = re.compile(r"^[0-9A-Za-z-]{1,64}$")
 
-# Reachable signed out. Everything else needs a session (tests/test_admin_routes.py walks every route).
+# Reachable signed out. Everything else needs a session (tests/test_admin.py walks every route).
 PUBLIC = {
     ("GET", "/health"),
     ("GET", "/signin"),
@@ -227,15 +224,26 @@ def _fmt_t(v: Any) -> str:
 
 
 def create_app(
-    settings: Settings | None = None, reader: Reader | None = None, slow_s: float = SLOW_S
+    settings: Settings | None = None,
+    reader: Reader | None = None,
+    slow_s: float = SLOW_S,
+    now: Callable[[], datetime] | None = None,
 ) -> FastAPI:
-    """The admin app. `reader` and `slow_s` are for tests (a slow or broken lake); the service uses the defaults."""
+    """The admin app. `reader`, `slow_s` and `now` are for tests (a slow or broken lake, a fixed clock); the service
+    uses the defaults."""
     settings = settings or from_env()
-    _log_setup()
+    logs.setup()
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     assets = Assets()
     env = Environment(loader=FileSystemLoader(HERE / "templates"), autoescape=select_autoescape(["html"]))
-    env.globals |= {"asset": assets, "pages": PAGES, "n": _fmt_n, "t": _fmt_t, "slow_s": slow_s}
+    env.globals |= {
+        "asset": assets,
+        "pages": PAGES,
+        "n": _fmt_n,
+        "t": _fmt_t,
+        "slow_s": slow_s,
+        "new_key": new_key,
+    }
     cookie = COOKIE_SECURE if settings.secure_cookies else COOKIE_LOCAL
     auth: Auth | None = None
     if not settings.problems:
@@ -248,7 +256,15 @@ def create_app(
     lake = Lake(settings.lake_url, read_only=True)
     reader = reader or Reader(lake, settings.lake_timeout_s)
     catalog = Catalog(reader.lake, settings.cache_dir)
-    app.state.settings, app.state.auth, app.state.reader = settings, auth, reader
+    writes: Writes | None = None
+    if not settings.writes_off:
+        assert settings.control and settings.jobs and settings.snapshots
+        writes = Writes(settings.control, settings.jobs, settings.snapshots, reader.run, catalog=catalog,
+                        **({"now": now} if now else {}))  # fmt: skip
+    else:
+        emit("WARNING", event="admin_writes_off", reasons=settings.writes_off)
+    limiter = Limiter()
+    app.state.settings, app.state.auth, app.state.reader, app.state.writes = settings, auth, reader, writes
 
     def page(name: str, status: int = 200, **ctx) -> HTMLResponse:
         return HTMLResponse(env.get_template(name).render(**ctx), status)
@@ -523,7 +539,8 @@ def create_app(
 
     # --- signed in: pages ---------------------------------------------------------------------------------
     # Each page is a shell that renders at once (no lake read) and a part (/part/<page>) that admin.js loads into
-    # it, so the page shows the loading, slow and error states while the lake is read.
+    # it, so the page shows the loading, slow and error states while the lake is read. The writes (jobs, decisions,
+    # drafts, Publish) go through `write`, below.
 
     def _week_arg(v: str | None) -> str | None:
         return v if v and WEEK_RE.match(v) else None
@@ -531,43 +548,51 @@ def create_app(
     def _build_arg(v: str | None) -> str | None:
         return v if v and BUILD_RE.match(v) else None
 
-    def shell(request: Request, name: str, reading: str) -> HTMLResponse:
+    def shell(request: Request, name: str) -> HTMLResponse:
         q = request.url.query
-        return page("shell.html", on=name, part=f"/part/{name}" + (f"?{q}" if q else ""), reading=reading,
-                    title=name.capitalize())  # fmt: skip
+        return page("shell.html", on=name, part=f"/part/{name}" + (f"?{q}" if q else ""), reading=READS[name],
+                    title=name.capitalize(), writes_off=settings.writes_off)  # fmt: skip
 
-    @app.get("/week", response_class=HTMLResponse)
-    async def week_page(request: Request):
-        return shell(request, "week", "job_manifests, builds and serving_log")
+    def shell_route(name: str) -> Callable:
+        async def route(request: Request) -> HTMLResponse:
+            return shell(request, name)
 
-    @app.get("/failures", response_class=HTMLResponse)
-    async def failures_page(request: Request):
-        return shell(request, "failures", "fetches and run_completeness")
+        return route
 
-    @app.get("/gate", response_class=HTMLResponse)
-    async def gate_page(request: Request):
-        return shell(request, "gate", "builds")
+    for name in PAGES:  # one shell route per page, all alike
+        app.add_api_route(f"/{name}", shell_route(name), methods=["GET"], response_class=HTMLResponse)
 
-    @app.get("/changes", response_class=HTMLResponse)
-    async def changes_page(request: Request):
-        return shell(request, "changes", "release_changes")
-
-    @app.get("/catalog", response_class=HTMLResponse)
-    async def catalog_page(request: Request):
-        return shell(request, "catalog", "product_decisions and dim_coffee")
-
-    async def part(name: str, files: str, build: Callable) -> HTMLResponse:
+    async def part(name: str, build: Callable, files: str | None = None) -> HTMLResponse:
         """A page's data region: its template with the query's result, or the error state."""
+        files = files or READS[name]
         started = datetime.now(UTC)
         reader.start()  # one deadline for all of this part's reads
         try:
             ctx = await build()
         except LakeTimeout as e:
             return page("part_error.html", 504, files=files, error=str(e))
+        except ControlPlaneError as e:
+            emit("ERROR", event="admin_control_plane_failed", page=name, error=str(e)[:200])
+            return page("part_error.html", 503, files="the control plane", error=_reason(e), control=True)
         except Exception as e:  # noqa: BLE001 - shown as the error state; the class only, never a trace
             emit("ERROR", event="admin_read_failed", page=name, error=type(e).__name__)
             return page("part_error.html", 502, files=files, error=_reason(e))
-        return page(f"part_{name}.html", read_at=started, files=files, **ctx)
+        return page(
+            f"part_{name}.html", read_at=started, files=files, **({"writes_off": settings.writes_off} | ctx)
+        )
+
+    DOWN = "the control plane can't be read right now, so decisions, drafts and runs aren't shown"
+
+    async def plane(read: Callable[[], Awaitable[Any]], default: Any, down: list[str]) -> Any:
+        """A control-plane read for a page that also reads the lake: on an outage the page keeps the lake's part,
+        says so once, and offers no action (`down` gets the reason)."""
+        try:
+            return await read()
+        except ControlPlaneError as e:
+            emit("ERROR", event="admin_control_plane_failed", error=str(e)[:200])
+            if DOWN not in down:
+                down.append(DOWN)
+            return default
 
     async def common(week: str | None) -> dict:
         weeks = await reader.run(queries.weeks)
@@ -578,88 +603,293 @@ def create_app(
             stale = {"served": str(served.get("run_date"))[:10], "latest": weeks[0]}
         return {"weeks": weeks, "week": chosen, "served": served, "stale": stale}
 
-    async def pick_build(build: str | None, week: str | None = None) -> tuple[list[dict], str | None]:
-        all_builds = await reader.run(queries.builds)
-        ids = [b["build_id"] for b in all_builds]
-        if build in ids:
-            return all_builds, build
-        served = await reader.run(queries.served)
-        if served and served["build_id"] in ids:
-            return all_builds, served["build_id"]
-        return all_builds, ids[0] if ids else None
-
     @app.get("/part/week", response_class=HTMLResponse)
     async def week_part(week: str | None = None):
         async def build():
             c = await common(_week_arg(week))
             data = await reader.run(queries.week, c["week"]) if c["week"] else None
-            return c | {"data": data}
-
-        return await part("week", "job_manifests, builds, serving_log", build)
-
-    @app.get("/part/failures", response_class=HTMLResponse)
-    async def failures_part(week: str | None = None):
-        async def build():
-            c = await common(_week_arg(week))
-            data = await reader.run(queries.failures, c["week"]) if c["week"] else None
+            fails = await reader.run(queries.failures, c["week"]) if c["week"] else None
             trend = await reader.run(queries.failure_trend)
-            return c | {"data": data, "trend": trend}
+            return c | {
+                "data": data,
+                "failures": fails,
+                "trend": trend,
+                "connectors": jobs.FIELDS["connector"].choices,
+            }
 
-        return await part("failures", "fetches, run_completeness", build)
+        return await part("week", build)
 
-    @app.get("/part/gate", response_class=HTMLResponse)
-    async def gate_part(build: str | None = None):
-        async def make():
-            all_builds, chosen = await pick_build(_build_arg(build))
-            data = await reader.run(queries.gate, chosen) if chosen else None
-            return {"builds": all_builds, "build": chosen, "data": data}
-
-        return await part("gate", "builds", make)
-
-    @app.get("/part/changes", response_class=HTMLResponse)
-    async def changes_part(request: Request, build: str | None = None):
+    @app.get("/part/release", response_class=HTMLResponse)
+    async def release_part(request: Request, build: str | None = None):
         p = request.query_params
 
         async def make():
-            all_builds, chosen = await pick_build(_build_arg(build))
+            off = list(settings.writes_off)
+            rel = await reader.run(queries.releases)
+            served = await reader.run(queries.served)  # read once: pending and readiness are given it
+            all_builds = rel["builds"]
+            ids = [b["build_id"] for b in all_builds]
+            runs, drafts, pending = {}, [], None
+            if writes:
+                runs = {r["run_id"]: r for r in await plane(lambda: writes.runs(20), [], off)}
+                drafts = await plane(lambda: asyncio.to_thread(writes.control.drafts, 20), [], off)
+                pending = await plane(lambda: writes.pending(served, drafts), None, off)
+            chosen = _build_arg(build)
+            if chosen not in ids:  # the newest draft that was built, else the served build, else the newest
+                built = [rel["by_draft"][d["draft_id"]] for d in drafts if d["draft_id"] in rel["by_draft"]]
+                chosen = (
+                    (built[0] if built else None)
+                    or (served or {}).get("build_id")
+                    or (ids[0] if ids else None)
+                )
+            info = next((b for b in all_builds if b["build_id"] == chosen), None)
+            draft = next((d for d in drafts if info and d["draft_id"] == info["draft_id"]), None)
+            ready = (
+                await plane(lambda: writes.readiness(draft, rel, served), None, off)
+                if writes and draft
+                else None
+            )
             try:
                 offset = max(0, int(p.get("offset") or 0))
             except ValueError:
                 offset = 0
-            data = (
-                await reader.run(
-                    queries.changes,
-                    chosen,
-                    p.get("table") or None,
-                    p.get("change") or None,
-                    p.get("reason") or None,
-                    200,
-                    offset,
-                )  # fmt: skip
-                if chosen
-                else None
-            )
-            return {"builds": all_builds, "build": chosen, "data": data, "filters": dict(p), "offset": offset}
+            gate = await reader.run(queries.gate, chosen) if chosen else None
+            changes = await reader.run(queries.changes, chosen, p.get("table") or None, p.get("change") or None,
+                                       p.get("reason") or None, 200, offset) if chosen else None  # fmt: skip
+            for d in drafts:
+                b = rel["by_draft"].get(d["draft_id"])
+                bi = next((x for x in all_builds if x["build_id"] == b), None)
+                d["build_id"], d["state"] = b, _draft_state(d, bi, served, runs.get(d["run_id"]))
+            return {"builds": all_builds, "build": chosen, "info": info, "served": served, "drafts": drafts,
+                    "draft": draft, "ready": ready, "pending": pending, "gate": gate, "changes": changes,
+                    "filters": dict(p), "offset": offset, "writes_off": off}  # fmt: skip
 
-        return await part("changes", "release_changes", make)
+        return await part("release", make)
+
+    @app.get("/part/jobs", response_class=HTMLResponse)
+    async def jobs_part(request: Request):
+        async def make():
+            off = list(settings.writes_off)
+            runs = await plane(lambda: writes.runs(30), [], off) if writes else []
+            return {"writes_off": off, "actions": [a for a in jobs.ACTIONS.values() if a.page == "jobs"], "fields": jobs.FIELDS,
+                    "runs": runs, "running": any(r["status"] in ("pending", "running") for r in runs),
+                    "prefill": dict(request.query_params),
+                    "today": datetime.now(UTC).date().isoformat()}  # fmt: skip
+
+        return await part("jobs", make, "job_runs and Cloud Run executions")
 
     @app.get("/part/catalog", response_class=HTMLResponse)
     async def catalog_part(request: Request, build: str | None = None):
         f = Filters.from_query(request.query_params)
 
         async def make():
-            all_builds, chosen = await pick_build(_build_arg(build))
+            rel = await reader.run(queries.releases)
+            served = (await reader.run(queries.served)) or {}
+            ids = [b["build_id"] for b in rel["builds"]]
+            chosen = _build_arg(build)
+            chosen = chosen if chosen in ids else served.get("build_id") or (ids[0] if ids else None)
             data = await reader.run(lambda _lake, _con: catalog.search(chosen, f)) if chosen else None
-            return {"builds": all_builds, "build": chosen, "data": data, "f": f, "facets": FACETS,
-                    "qs": _qs(request, f, chosen)}  # fmt: skip
+            off = list(settings.writes_off)
+            if data and writes:  # each row's latest decision, by coffee and by version
+                latest = await plane(lambda: asyncio.to_thread(
+                    writes.control.latest, [r["coffee_id"] for r in data["rows"]],
+                    [r["input_hash"] for r in data["rows"] if r.get("input_hash")]),
+                    {"coffee_id": {}, "input_hash": {}}, off)  # fmt: skip
+                for r in data["rows"]:
+                    r["dc"] = latest["coffee_id"].get(r["coffee_id"])
+                    r["dh"] = latest["input_hash"].get(r.get("input_hash") or "")
+                    live = [d for d in (r["dc"], r["dh"]) if d and d["event"] == "approved"]
+                    r["decision"] = live[0] if live else None
+            return {"builds": rel["builds"], "build": chosen, "data": data, "f": f, "facets": FACETS,
+                    "qs": _qs(request, f, chosen), "writes_off": off}  # fmt: skip
 
-        return await part("catalog", "product_decisions, dim_coffee", make)
+        return await part("catalog", make)
+
+    @app.get("/part/log", response_class=HTMLResponse)
+    async def log_part(action: str | None = None, offset: int = 0):
+        async def make():
+            if not writes:
+                return {"rows": [], "total": 0, "action": None, "offset": 0, "actions": AUDITED}
+            a = action if action in AUDITED else None
+            rows, total = await asyncio.to_thread(writes.control.audit_log, 100, max(0, offset), a)
+            return {"rows": rows, "total": total, "action": a, "offset": max(0, offset), "actions": AUDITED}
+
+        return await part("log", make, "the control plane's audit")
+
+    # --- signed in: writes --------------------------------------------------------------------------------------
+    # Every write: the gate's CSRF check (POST, same origin) and session first; then writes on, the per-session
+    # limit, a JSON body with an idempotency key, and the write itself, which records its audit row in the same
+    # transaction (writes.py). Refusals say why; nothing is half done.
+
+    def actor(request: Request) -> str:
+        s: Session = request.state.session
+        return f"owner (passkey {s.credential_id[:8]})"
+
+    def on() -> Writes:
+        """The writes, inside `write` (which has answered 503 already when they are off)."""
+        assert writes is not None
+        return writes
+
+    async def write(
+        request: Request, fn: Callable[[str, str, dict], Awaitable[Any]], replay: bool = True
+    ) -> Response:
+        if writes is None:
+            return JSONResponse({"detail": "Writes are off: " + "; ".join(settings.writes_off) + "."}, 503)
+        if not limiter.allow(request.state.session.key):
+            return JSONResponse({"detail": "Too many writes in a few minutes. Wait, then try again."}, 429)
+        try:
+            body = await request.json()
+        except ValueError:
+            body = None
+        if not isinstance(body, dict) or not isinstance(body.get("key"), str):
+            return JSONResponse({"detail": "Bad request."}, 400)
+        try:
+            # A key already used (a double submit, a retry): its first answer, before any check that the first
+            # write's own effect would now fail (the job it started is running).
+            key = f"{request.url.path}:{body['key']}"  # one write's key never replays another write's answer
+            first = await on().replay(key) if replay else None
+            out = first if first is not None else await fn(actor(request), key, body)
+        except jobs.Refused as e:
+            return JSONResponse(
+                {"detail": "Refused.", "reasons": e.reasons, "overridable": e.overridable}, 409
+            )
+        except Conflict as e:
+            return JSONResponse({"detail": str(e)}, 409)
+        except ValueError as e:
+            return JSONResponse({"detail": str(e)}, 400)
+        except (ControlPlaneError, StoreError) as e:
+            emit("ERROR", event="admin_write_failed", path=request.url.path, error=str(e)[:200])
+            return JSONResponse({"detail": "The control plane couldn't record this, so nothing was done. "
+                                           "Try again shortly."}, 503)  # fmt: skip
+        except StartedUnrecorded as e:
+            return JSONResponse({"detail": f"Cloud Run {e.verb} {e}, but the control plane couldn't record it. "
+                                           "See Jobs and Cloud Run before trying again."}, 500)  # fmt: skip
+        except JobsError as e:
+            emit("ERROR", event="admin_write_failed", path=request.url.path, error=str(e)[:200])
+            return JSONResponse({"detail": str(e)}, 502)
+        return JSONResponse(out)
+
+    @app.post("/api/jobs/{action}/plan")
+    async def job_plan(request: Request, action: str):
+        async def go(_actor, _key, body):
+            p = await on().plan(action, body)
+            return {"steps": [{"job": s.job, "args": s.args} for s in p.steps], "refusals": p.refusals,
+                    "window": p.window, "params": p.params}  # fmt: skip
+
+        return await write(request, go, replay=False)  # a preview acts on nothing
+
+    @app.post("/api/jobs/{action}/runs")
+    async def job_start(request: Request, action: str):
+        return await write(request, lambda a, k, b: on().start(a, k, action, b, b.get("override") or None))
+
+    @app.post("/api/jobs/runs/{run_id}/cancel")
+    async def job_cancel(request: Request, run_id: str):
+        return await write(request, lambda a, k, b: on().cancel(a, k, run_id))
+
+    @app.post("/api/decisions")
+    async def decide(request: Request):
+        return await write(request, lambda a, k, b: on().decide(a, k, b))
+
+    @app.post("/api/decisions/{target}/undo")
+    async def undo(request: Request, target: str):
+        return await write(request, lambda a, k, b: on().undo(a, k, target, b.get("reason")))
+
+    @app.post("/api/drafts")
+    async def draft(request: Request):
+        return await write(request, lambda a, k, b: on().build_draft(a, k, b.get("override") or None))
+
+    @app.post("/api/drafts/{draft_id}/publish")
+    async def publish(request: Request, draft_id: str):
+        return await write(
+            request,
+            lambda a, k, b: on().publish(
+                a, k, draft_id, b.get("typed"), b.get("reason"), b.get("override") or None
+            ),
+        )
+
+    @app.post("/api/evaluations")
+    async def evaluation(request: Request):
+        return await write(
+            request, lambda a, k, b: on().evaluation(a, k, str(b.get("path") or ""), b.get("reason"))
+        )
+
+    @app.post("/api/drafts/{draft_id}/discard")
+    async def discard(request: Request, draft_id: str):
+        return await write(request, lambda a, k, b: on().discard(a, k, draft_id))
+
+    @app.post("/api/releases/{build_id}/rollback")
+    async def rollback(request: Request, build_id: str):
+        return await write(
+            request, lambda a, k, b: on().rollback(a, k, build_id, b.get("reason"), b.get("override") or None)
+        )
+
+    @app.get("/api/decisions/export")
+    async def export(request: Request):
+        """The effective decisions as a snapshot document: the input of `coffeedata decide export-labels`."""
+        if writes is None:
+            return JSONResponse({"detail": "Writes are off: no control plane."}, 503)
+        try:
+            await writes.ready()
+            effective = await asyncio.to_thread(writes.control.effective)
+            served = await reader.run(queries.served)
+            hashes = [d["subject"] for d in effective if d["subject_kind"] == "input_hash"]
+            if (
+                hashes and served
+            ):  # each version's coffees, so export-labels checks every one against held-out sets
+                members = await reader.run(lambda _l, _c: catalog.members(served["build_id"], [], hashes))
+                for d in effective:
+                    if d["subject_kind"] == "input_hash":
+                        d["coffee_ids"] = sorted(
+                            m["coffee_id"] for m in members if m["input_hash"] == d["subject"]
+                        )
+        except ControlPlaneError:
+            return JSONResponse({"detail": "The control plane can't be read right now."}, 503)
+        doc = decisions.snapshot("export", datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), effective)
+        return JSONResponse(doc, headers={"Content-Disposition": 'attachment; filename="decisions.json"'})
 
     @app.exception_handler(404)
     async def not_found(request: Request, exc):
         return page("error.html", 404, message="There is no such page.", title="Not found")
 
     return app
+
+
+class Limiter:
+    """At most `n` writes per session in 10 minutes (design §5.3: write limits per identity)."""
+
+    def __init__(self, n: int = WRITES_PER_10_MIN):
+        self.n = n
+        self.seen: dict[str, list[float]] = {}
+
+    def allow(self, who: str) -> bool:
+        now = time.monotonic()
+        recent = [t for t in self.seen.get(who, []) if now - t < 600]
+        if len(recent) >= self.n:
+            self.seen[who] = recent
+            return False
+        self.seen[who] = [*recent, now]
+        return True
+
+
+def new_key() -> str:
+    """A form's idempotency key: a double submit or a retry of it acts once."""
+    return secrets.token_urlsafe(18)
+
+
+def _draft_state(d: dict, build: dict | None, served: dict | None, run: dict | None) -> str:
+    """A draft's state, derived (design §5.1): discarded, building, failed (its build), stale (the served release
+    changed since), published (served now or before, from serving_log), or ready to review."""
+    if d["last_event"] == "discarded":
+        return "discarded"
+    if build is None:
+        return "failed" if run and run.get("status") in ("failed", "cancelled") else "building"
+    if build.get("ever_served"):
+        return "published"
+    if not build["passed"]:
+        return "failed"
+    if (served or {}).get("build_id") != d["baseline"]:
+        return "stale"
+    return "publishing" if d["last_event"] == "publish_started" else "built"
 
 
 def _reason(e: Exception) -> str:

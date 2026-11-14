@@ -9,7 +9,7 @@ with obs as (
            coalesce(v.available, true) as available
     from {{ ref('stg_snapshots') }} s
     join {{ ref('stg_products') }} p using (input_hash), unnest(s.variants) as t(v)
-    where p.is_coffee
+    where {{ decided('s.decision', 'p.is_coffee') }}
       -- not an alias's copy of its canonical id's catalog (dim_coffee leaves aliases out the same way)
       and s.roaster_id not in (
           select roaster_id from {{ ref('int_roaster_state') }} where roaster_id <> canonical_roaster_id

@@ -1,29 +1,95 @@
 # admin.registry.coffee
 
-The owner's command center: read-only pages over what the pipeline wrote to the lake, behind passkey sign-in. It is
-the first slice of `docs/design/admin-registry.md` (#112): the Week, Failures, Gate, Changes and Catalog pages, the
-service and its sign-in. It writes nothing to the lake, and nothing about the data anywhere: drafts, decisions and
-jobs come later. The pages' design is in [DESIGN.md](DESIGN.md).
+The owner's command center, behind passkey sign-in: what the pipeline wrote to the lake, and the actions that
+replace the CLI. It implements `docs/design/admin-registry.md` (#112): start any pipeline job off-cycle, include or
+exclude a coffee, build those decisions as a draft, Publish it, Roll back. The admin reads the lake and never writes
+it: the lake changes only through the pipeline's own Cloud Run jobs, which the admin starts. The pages' design is in
+[DESIGN.md](DESIGN.md).
 
 ## Pages
 
-Each is a plain query over named lake files, and says which ones under its answer line.
-
-| Page | Answers | Reads |
-|---|---|---|
-| Week | Did the week land: each connector's passes, merge, enrich, classify and the build, and the served release | `job_manifests`, `builds`, `serving_log`, `marts/release.parquet` |
-| Failures | Which stores failed and why: by HTTP status, challenge (SiteGround, Cloudflare), partial and quarantined, and the trend across weeks | `fetches`, the week's build's ops `run_completeness` |
-| Gate | The build's data tests, failing first, and its metrics against the previous passing build | `builds` |
-| Changes | What the build's public tables change against the served release, by table, change and reason, `unexplained` marked | ops `release_changes` |
-| Catalog | Every product, coffee or not, with search and facet filters | ops `product_decisions` and the release's `dim_coffee` |
+| Page | Answers | Actions | Reads |
+|---|---|---|---|
+| Week | Did the week land (each connector's passes, merge, enrich, classify, build, the served release), and what failed (by HTTP status, challenge, partial, quarantined; the trend; every failed store) | a Test crawl link per failed store | `job_manifests`, `fetches`, `builds`, `serving_log`, ops `run_completeness` |
+| Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
+| Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
+| Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
+| Log | Every write: who, when, what, the outcome | download the decisions (for `coffeedata decide export-labels`) | the control plane |
 
 The Catalog copies a build's two files into a local DuckDB file once (releases are immutable) and filters there.
-Failures, Changes and the full Catalog need a build made after #124 (the ops tables); for older builds the pages say
-so, and Failures counts from `fetches` by the same challenge rule as dbt's `stg_fetches`.
+The lake is opened with `Lake(read_only=True)`: nothing is created, every write method raises `ReadOnlyLake`, and a
+remote lake is read directly, never through a staging folder.
 
-The lake is opened with `Lake(read_only=True)`: nothing is created (not even the schema files a writer adds), every
-write method raises `ReadOnlyLake`, and a remote lake is read directly, never through a staging folder.
-`tests/test_admin.py` and `tests/test_admin_browser.py` check that the lake's files are unchanged after every page.
+## Jobs
+
+Every job is one entry in `admin/jobs.py` (`ACTIONS`): its fields and the Cloud Run job and arguments it starts.
+The admin starts them with the Cloud Run Admin API's run-with-overrides, as `gcloud run jobs execute --args` did:
+
+| Action | Job and arguments |
+|---|---|
+| Crawl (one connector, or all five: a full crawl) | `crawl-<connector>`: `crawl --connector <c>` + the mode |
+| Crawl one roaster (`--only`; in test mode, the live check of a store) | `crawl-<connector>`: `crawl --connector <c> --only <roaster>` + the mode |
+| Shopify retry | `crawl-retry`: `crawl-retry --connector shopify` + the mode |
+| Fetch health | `fetch-health --run-date <week> --force` |
+| Merge | `merge --run-date <week>` |
+| Enrich | `enrich-week --submit --run-date <week>` |
+| Classify | the `build` job: `coffeedata classify`, then `publish` |
+| Build | the `build` job with its own arguments (it serves the release if it passes) |
+| Draft build, Publish, Roll back | from Release: `build --draft … --snapshot …`; the `publish` job's `publish-release` |
+
+**Modes.** *test* (the default) writes to the week's `test=<id>` sub-partition, which the merge never reads, and its
+`job_manifests` rows say arm `test`, so it never counts as the week's crawl. *count* writes into week W's
+partition like the scheduled passes; it is refused once W's merge is done.
+
+**Guards.** A job with a running execution isn't started again. Starts are refused from Monday 09:00 UTC until the
+week's merge is done and on Tuesday 03:00-12:00 UTC, unless the owner gives a reason, which is recorded. One test
+crawl per roaster a day. The site isn't a job here: it deploys from the served release by the `site` workflow on
+GitHub, which the admin holds no token for (Jobs links to it).
+
+Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_jobs` (`src/terraform/admin_control.tf`);
+`tests/test_admin_terraform.py` fails if the two differ.
+
+## Decisions, drafts and Publish
+
+- A **decision** is an event in the control plane: `include` or `exclude`, for a coffee (`coffee_id`) or a product
+  version (`input_hash`, every product sharing it), with a reason. A coffee's own decision wins over its version's.
+  Undo appends a `reverted` event. Several products decided together are a group, undone together.
+- **Build a draft:** the admin writes the effective decisions as an immutable snapshot to its snapshot bucket, then
+  starts the build job with `build --draft <id> --snapshot <id> --snapshot-sha256 <digest>`. The build checks the
+  digest (a changed or missing snapshot fails it), applies the decisions in dbt (`stg_decisions`, `decided()`,
+  the `decisions_applied` test), records the build with its draft id and snapshot, and never serves it.
+- **Publish** is off until:
+  - the draft build passed;
+  - the served release is still the one it was built against;
+  - CLAUDE.md step 9's running total stays at 50 or fewer: the public coffees the published drafts' decisions changed
+    since the last recorded full evaluation, plus this draft's (Release records an evaluation, which starts the total
+    again);
+  - the owner typed the count, when more than 50 public rows leave;
+  - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
+    version) answered a test crawl of the store, or of its whole connector, in the last 7 days.
+
+  It starts the `publish` job (`publish-release --action publish`). "Published" is read from `serving_log`, never
+  set. A draft being published, or published, can't be discarded.
+- **Roll back** serves a release that was served before (`publish-release --action rollback`); an unpublished draft
+  can't be rolled back to.
+- **The weekly build** applies the served build's snapshot, which its builds row carries, so it needs no bucket and
+  no database.
+- **Labels:** Log's download is the effective decisions as a snapshot, with each version's coffees listed; `coffeedata decide export-labels --snapshot
+  decisions.json` turns them into candidate labels for the classifier's train set only. A coffee in the sealed test
+  set or the validation set is left out and only counted (CLAUDE.md: an owner correction is one labeler).
+
+## The control plane
+
+Postgres (`admin/controlplane.py`, migrations in `admin/migrations/*.sql`): the audit trail, decisions as events,
+job runs, snapshots, drafts and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
+TRUNCATE). The admin applies its migrations on its first use of the database after it starts (the first page or write
+that needs it), once each, under an advisory lock, in a `control` schema it creates and owns. They are additive and
+forward-only, so rolling the admin's image back to an earlier one leaves a schema it can still use.
+
+Hosted, it is Cloud SQL for PostgreSQL 16 (`admin_control.tf`), reached through the Cloud SQL Python Connector with
+IAM database authentication: the admin's service account is the database user and there is no password anywhere.
+Every write is recorded in the same transaction as its effect and fails closed: if the control plane can't record a
+write, nothing is started, decided or published (503).
 
 ## Sign-in
 
@@ -60,6 +126,14 @@ bucket when hosted, in a local folder on a laptop. It is not lake data.
 | `HF_TOKEN` | a fine-grained Hugging Face token with read access to the lake dataset only (secret `ADMIN_HF_TOKEN`) | required |
 | `COFFEEDATA_LAKE` | the lake (the image's default is the production dataset) | |
 | `ADMIN_CACHE_DIR` | where the Catalog's per-build files go | `/tmp/admin-cache` |
+| `ADMIN_DB_INSTANCE`, `ADMIN_DB_USER`, `ADMIN_DB_NAME` | the control plane: Cloud SQL connection name, the IAM database user, the database | set by Terraform |
+| `ADMIN_DATABASE_URL` | a local Postgres instead (`postgresql://user@host:port/db`), on a laptop only | refused |
+| `GOOGLE_CLOUD_PROJECT`, `ADMIN_RUN_REGION` | where the pipeline's Cloud Run jobs are | set by Terraform |
+| `ADMIN_SNAPSHOT_BUCKET` | where drafts' snapshots go (the build job mounts it read-only) | set by Terraform |
+| `ADMIN_SNAPSHOT_DIR` | a local folder instead, on a laptop only | refused |
+
+Without the database, Cloud Run or the snapshot store, the pages still read the lake and every action says why it is
+off.
 
 ## Running it locally
 
@@ -74,6 +148,11 @@ codes. Delete `build/admin-state` to start over.
 
 ## Tests
 
+- `tests/test_admin_actions.py`: every write against a local Postgres (`tests/pg.py` starts one; `REQUIRE_POSTGRES=1`
+  makes its absence a failure) and a fake Cloud Run (`tests/admin_fakes.py`): the guards, idempotency, the audit,
+  CSRF and sign-in, fail-closed, decisions, drafts, Publish's checks, Roll back. `tests/test_drafts.py`: draft builds
+  over a snapshot through dbt, publish-release, export-labels. `src/terraform/tests/admin_grants.tftest.hcl`: the
+  admin's grants (`terraform test`, a mock provider).
 - `tests/test_admin.py`: every query on a small synthetic lake, the Catalog's cache and facets, sign-in end to end
   with a software authenticator, the state store, the settings, a walk over every route signed out (only the
   public ones answer), and that no page writes to the lake.
@@ -84,6 +163,18 @@ codes. Delete `build/admin-state` to start over.
 
 ## Deploying
 
-Terraform: `src/terraform/admin.tf`, with the service, its own service account, the three empty secrets, the state
-bucket, the domain mapping, and three alerts (errors, passkeys changed, and the cold start that revisits the
-language, §7.1 of the design). The owner applies a reviewed plan. The owner's steps are in the PR that added this.
+Terraform: `src/terraform/admin.tf` (the service, its own service account, the three empty secrets, the state
+bucket, the domain mapping, and alerts on errors, passkey changes and the cold start) and `admin_control.tf` (the
+Cloud SQL instance, its IAM database user, the snapshot bucket, the job grants and an alert on every write). The
+owner applies a reviewed plan.
+
+**Once, after the first apply:** the admin's IAM database user needs the right to create its schema in the `admin`
+database. As the `postgres` user (Cloud SQL Studio, or `gcloud sql connect registry-coffee-admin --user=postgres
+--database=admin` after setting that user's password in the console):
+
+```sql
+GRANT CREATE ON DATABASE admin TO "registry-coffee-admin-run@<project>.iam";
+```
+
+(`terraform output admin_db_user` prints the name.) The admin then creates the `control` schema and its tables at
+its next start, and owns them. Nothing else is granted to it.

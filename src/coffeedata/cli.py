@@ -334,6 +334,7 @@ def cmd_crawl(args: argparse.Namespace) -> None:
         part=args.slice,
         salt=args.salt,
         only=args.only,
+        test=getattr(args, "test", None),
     )
     _print(out)
     # A crawl stopped by its deadline is a finished job, not a failed one: it exits 0, and its job_manifests end row
@@ -353,6 +354,28 @@ def cmd_crawl(args: argparse.Namespace) -> None:
         )
 
 
+TEST_HELP = (
+    "a test crawl (the admin's Jobs page): write to its own test=<id> sub-partition of the week, which the merge "
+    "never reads, so it never counts as the week's crawl"
+)
+
+
+def _draft_id(v: str) -> str:
+    from .decisions import SNAPSHOT_ID
+
+    if not SNAPSHOT_ID.fullmatch(v):
+        raise argparse.ArgumentTypeError("a draft id is 1-64 lowercase letters, digits and dashes")
+    return v
+
+
+def _test_id(v: str) -> str:
+    from .connectors import TEST_ID
+
+    if not TEST_ID.fullmatch(v):
+        raise argparse.ArgumentTypeError("a test id is 1-40 lowercase letters, digits and dashes")
+    return v
+
+
 def cmd_merge(args: argparse.Namespace) -> None:
     """Refuses to start over an earlier merge attempt of the week that failed or never ended (still running, or
     dead part-way): redoing it is the owner's call (chain.refuse_unfinished), so the job has no automatic retry."""
@@ -370,12 +393,19 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     from . import ingest
 
     lake, run_date = Lake(), args.run_date
+    if getattr(args, "test", None) and not args.connector:
+        raise SystemExit("crawl-retry --test needs --connector")
     if args.connector:  # design B: the connector's own partition, its job_manifests rows and the crash guard
         from . import connectors
 
         _print(
             connectors.crawl_retry(
-                lake, args.connector, run_date, workers=args.workers, deadline_min=args.deadline_min
+                lake,
+                args.connector,
+                run_date,
+                workers=args.workers,
+                deadline_min=args.deadline_min,
+                test=getattr(args, "test", None),
             )
         )
         return
@@ -651,7 +681,9 @@ def cmd_build(args: argparse.Namespace) -> bool:
     # site, the app) checks the last real run instead of an empty "today". Freshness is measured against today.
     run_date = getattr(args, "run_date", None) or quality.latest_run(lake) or _today()
     build_id = new_batch_id()  # every release table carries it as release_build_id
-    job = control.start(lake, "build", run_date, detail={"build_id": build_id, **control.execution()})
+    draft = getattr(args, "draft", None)
+    job = control.start(lake, "build", run_date, detail={"build_id": build_id, **control.execution()}
+                        | ({"draft": draft} if draft else {}))  # fmt: skip
     try:
         passed = _build(args, lake, db, run_date, build_id)
     except BaseException as e:  # a crash, or a SystemExit or interrupt: the end row says the attempt failed
@@ -663,12 +695,38 @@ def cmd_build(args: argparse.Namespace) -> bool:
     return passed
 
 
+def _snapshot(args: argparse.Namespace, lake: Lake, served: str | None) -> dict | None:
+    """The decisions snapshot this build applies: the one named (`--snapshot`, a draft's), else the served build's,
+    read from its builds row (so the weekly build needs no bucket and no database). Fails closed: a snapshot that
+    can't be read or doesn't match its digest stops the build, never builds as if there were no decisions."""
+    from . import decisions, quality
+
+    if getattr(args, "snapshot", None):
+        return decisions.load(args.snapshot, args.snapshot_sha256 or "")
+    pinned = quality.build_snapshot(lake, served) if served else None
+    if pinned is None:
+        return None
+    return decisions.verified(pinned["doc"], pinned["snapshot_id"], pinned["sha256"] or "")
+
+
 def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_id: str) -> bool:
-    from . import quality
+    from . import decisions, quality
 
     extra: dict = {"as_of_run": run_date, "today": _today(), "build_id": build_id}
     served_release = quality.served(lake)
     served = (served_release or {}).get("build_id")
+    draft = getattr(args, "draft", None)
+    try:
+        snap = _snapshot(args, lake, served)
+    except decisions.SnapshotError as e:
+        raise SystemExit(f"build: {e}") from e
+    recorded: list[dict] = []
+    if draft:
+        recorded.append({"kind": "draft", "unique_id": draft})
+    if snap is not None:
+        extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
+        recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),
+                         "rows": len(snap["decisions"]), "payload": json.dumps(snap, sort_keys=True)})  # fmt: skip
     if (
         served
     ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
@@ -716,8 +774,13 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
         logging.warning("verdict coverage not reported: %s", e)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
-        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
+        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took, tuple(recorded)
     )
+    if draft:  # a draft writes no personal marts and is never served here: only Publish serves it
+        print(
+            f"draft {draft}: build {build_id} {'passed' if passed else 'failed'} its checks; recorded, not served"
+        )
+        return passed
     _write_personal_marts(lake, db, quality.SERVED_MARTS)
     if not passed:
         print(
@@ -731,6 +794,43 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
     quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB, previous=served)
     print(f"built {db}; serving release {build_id}")
     return True
+
+
+def cmd_publish_release(args: argparse.Namespace) -> None:
+    """The publish job (the admin's Publish and Roll back): serve a recorded passing build, then upload the lake.
+    publish: a draft, only while the served release is still the one it was built against (--baseline); rollback: an
+    earlier release, never an unpublished draft. The site and the public export follow from the served release
+    (site.yml), as after the weekly build. Re-serving the same build is idempotent, so a failed upload is retried by
+    running this again."""
+    from . import quality
+
+    lake = Lake()
+    now = (quality.served(lake) or {}).get("build_id")
+    if args.action == "publish":
+        if args.build not in quality.drafts(lake):
+            raise SystemExit(f"publish-release: build {args.build} is not a draft build")
+        if args.baseline != (now or "none") and args.build != now:
+            raise SystemExit(f"publish-release: the served release is {now}, not the draft's baseline {args.baseline}: "
+                             "build the draft again on it")  # fmt: skip
+        if args.build != now:
+            quality.serve(lake, args.build, args.reason, SERVED_DB, action="publish", previous=now)
+    else:
+        quality.rollback(lake, args.build, args.reason, SERVED_DB)
+    cmd_publish(argparse.Namespace(message=f"{args.action} release {args.build}"))
+    print(f"serving release {args.build}")
+
+
+def cmd_decide(args: argparse.Namespace) -> None:
+    """`decide export-labels`: a decisions snapshot (the admin's export) as candidate train labels (CLAUDE.md)."""
+    from . import decisions
+
+    doc = json.loads(Path(args.snapshot).read_text())
+    decisions.check(doc)
+    rows, skipped = decisions.export_labels(doc, decisions.held_out(Path(args.repo)))
+    Path(args.out).write_text("".join(json.dumps(r, sort_keys=True) + "\n" for r in rows))
+    print(
+        f"{len(rows)} candidate train labels written to {args.out}; {skipped} left out (held out, or no coffee_id)"
+    )
 
 
 def _write_personal_marts(lake: Lake, db: Path, catalog: tuple[str, ...]) -> None:
@@ -754,7 +854,7 @@ def cmd_rollback(args: argparse.Namespace) -> None:
     from . import quality
 
     lake = Lake()
-    to = quality.rollback(lake, args.to, args.reason)
+    to = quality.rollback(lake, args.to, args.reason, SERVED_DB)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)
     print(f"serving release {to}")
@@ -783,7 +883,8 @@ def cmd_build_hashes(args: argparse.Namespace) -> bool:
     from . import quality
 
     lake = Lake()
-    history = [b for b, _, _ in quality.builds(lake)]
+    hidden = quality.unpublished_drafts(lake)  # the default is never a draft no one published
+    history = [b for b, _, _ in quality.builds(lake) if b not in hidden]
     build = args.build or (history[-1] if history else None)
     if not build:
         _print({"error": "no builds in this lake"})
@@ -1279,6 +1380,7 @@ def main(argv: list[str] | None = None) -> None:
     cr.add_argument(
         "--only", help="fetch this one roaster_id, even if done or quarantined this week (RUNBOOK section 7)"
     )
+    cr.add_argument("--test", type=_test_id, help=TEST_HELP)
     mg = add("merge", cmd_merge, "union the week's connector partitions into the run dbt reads")
     mg.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to merge")
     rr = add("crawl-retry", cmd_crawl_retry, "resume the run's parked stores from their blocked page")
@@ -1290,6 +1392,7 @@ def main(argv: list[str] | None = None) -> None:
         type=_positive_float,
         help=f"stop starting stores after this many minutes (default: the connector's, else {CRAWL_RETRY_MIN:.0f})",
     )
+    rr.add_argument("--test", type=_test_id, help=TEST_HELP + " (needs --connector)")
 
     dq = add(
         "fetch-health",
@@ -1353,6 +1456,30 @@ def main(argv: list[str] | None = None) -> None:
         help="turn off the verdict gate (verdicts_cover_catalog) for a deliberate rules-only build (local and dev "
         "runs; also COFFEEDATA_ALLOW_RULES_ONLY=1)",
     )
+
+    b.add_argument(
+        "--draft", type=_draft_id, help="a draft build (the admin's): recorded with this id, never served"
+    )
+    b.add_argument("--snapshot", help="the decisions snapshot to apply (its id in COFFEEDATA_SNAPSHOTS)")
+    b.add_argument("--snapshot-sha256", help="the snapshot's digest, as the admin recorded it")
+
+    pr2 = add(
+        "publish-release", cmd_publish_release, "serve a draft (publish) or an earlier release (rollback)"
+    )
+    pr2.add_argument("--build", required=True)
+    pr2.add_argument("--action", choices=["publish", "rollback"], required=True)
+    pr2.add_argument(
+        "--baseline", help="publish: the served build the draft was built against ('none': nothing)"
+    )
+    pr2.add_argument("--reason", required=True)
+
+    dc = add(
+        "decide", cmd_decide, "the owner's decisions: export-labels (candidate train labels from a snapshot)"
+    )
+    dc.add_argument("what", choices=["export-labels"])
+    dc.add_argument("--snapshot", required=True, help="a decisions snapshot JSON (the admin's export)")
+    dc.add_argument("--out", default="build/owner_labels.jsonl")
+    dc.add_argument("--repo", default=".", help="the checkout with eval/sealed and tests/fixtures (held out)")
 
     bd = add(
         "build-diff", cmd_build_diff, "what changed between two builds (default: the last two that passed)"

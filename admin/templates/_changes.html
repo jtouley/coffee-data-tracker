@@ -1,0 +1,27 @@
+{% from "_macros.html" import source %}
+{% set data = changes %}
+<h2 class="section group-title" id="changes">Changes</h2>
+{% if not data.recorded %}
+  <div class="state empty"><h3 class="section">Not recorded for this build</h3><p class="body">Build {{ build }} has no <code>release_changes</code> ops table. Builds write it from #124 on.</p></div>
+{% elif not data.total %}
+  <div class="state empty"><h3 class="section">No changes</h3><p class="body">Build {{ build }}’s public tables are the same as the release served when it was built: <code>release_changes</code> has no rows.</p></div>
+{% else %}
+  {% set by = {} %}
+  <p class="answer">{{ n(data.total) }} rows change{% if data.unexplained %} · <span class="unexplained">{{ n(data.unexplained) }} unexplained</span>{% else %} · none unexplained{% endif %}</p>
+  {{ source(data.source, read_at) }}
+  {% if data.total > 20 %}
+  <div class="frame" tabindex="0" role="region" aria-label="Counts"><table>
+    <caption>Counts by table, change and reason</caption>
+    <thead><tr><th scope="col">Table</th><th scope="col">Change</th><th scope="col">Reason</th><th scope="col" class="n">Rows</th></tr></thead>
+    <tbody>{% for c in data.counts %}<tr{% if c.reason == "unexplained" %} class="bad"{% endif %}><th scope="row">{{ c.table_name }}</th><td>{{ c.change }}</td><td>{% if c.reason == "unexplained" %}<span class="unexplained">unexplained</span>{% else %}{{ c.reason }}{% endif %}</td><td class="n"><a class="ev" href="/release?build={{ build }}&amp;table={{ c.table_name | urlencode }}&amp;change={{ c.change | urlencode }}&amp;reason={{ c.reason | urlencode }}#changes">{{ n(c.n) }}</a></td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% endif %}
+  <h3 class="section">Rows{% if filters.get("table") or filters.get("change") or filters.get("reason") %}: {{ [filters.get("table"), filters.get("change"), filters.get("reason")] | select | join(" · ") }} <a class="ev small" href="/release?build={{ build }}#changes">show all</a>{% endif %}</h3>
+  <p class="meta">{{ n(data.matching) }} rows{% if data.matching > data.rows | length %}, {{ offset + 1 }}–{{ offset + data.rows | length }} shown{% endif %}, unexplained first.</p>
+  <div class="frame" tabindex="0" role="region" aria-label="Rows"><table class="dense">
+    <caption>The rows of <code>release_changes</code></caption>
+    <thead><tr><th scope="col">Table</th><th scope="col">Item</th><th scope="col">Change</th><th scope="col">Reason</th></tr></thead>
+    <tbody>{% for r in data.rows %}<tr{% if r.reason == "unexplained" %} class="bad"{% endif %}><th scope="row">{{ r.table_name }}</th><td><code>{{ r.item }}</code></td><td>{{ r.change }}</td><td>{% if r.reason == "unexplained" %}<span class="unexplained">unexplained</span>{% else %}{{ r.reason }}{% endif %}</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% if data.matching > offset + data.rows | length %}<p class="mt12"><a class="ev" href="/release?{{ {"build": build, "table": filters.get("table", ""), "change": filters.get("change", ""), "reason": filters.get("reason", ""), "offset": offset + 200} | urlencode }}">Next 200 rows</a></p>{% endif %}
+{% endif %}

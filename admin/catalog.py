@@ -30,6 +30,7 @@ COLUMN = {
     "stock": "stock",
 }
 PAGE = 100
+CACHE_VERSION = "v2"  # the products table's shape: a new version makes new files (v2: input_hash, platform)
 FACET_VALUES = 40
 BUILD_ID = re.compile(r"^[0-9A-Za-z-]{1,64}$")
 
@@ -115,7 +116,7 @@ class Catalog:
     def path(self, build_id: str) -> Path:
         if not BUILD_ID.match(build_id):
             raise ValueError("bad build id")
-        return self.dir / f"catalog-{build_id}.duckdb"
+        return self.dir / f"catalog-{CACHE_VERSION}-{build_id}.duckdb"
 
     def ensure(self, build_id: str) -> dict:
         """The build's catalog file, made if missing. Returns what it was made from."""
@@ -165,7 +166,8 @@ class Catalog:
                 base = f"""
                     select p.coffee_id, p.roaster_id, p.product_id, p.title, p.product_type, p.url,
                            p.first_seen, p.last_seen, p.is_listed, p.is_coffee, p.classified_by, p.verdict_model,
-                           p.verdict_label, p.reason, {dim("title", "varchar")} as coffee_name,
+                           p.verdict_label, p.reason, p.input_hash, {dim("platform", "varchar")} as platform,
+                           {dim("title", "varchar")} as coffee_name,
                            {dim("origin_country", "varchar")} as origin_country, {dim("process", "varchar")} as process,
                            {dim("in_stock", "boolean")} as in_stock, {dim("min_price_usd", "double")} as min_price_usd,
                            {dim("price_per_100g", "double")} as price_per_100g, d.coffee_id is not null as in_dim_coffee
@@ -176,7 +178,8 @@ class Catalog:
                     select coffee_id, roaster_id, null::varchar as product_id, title, null::varchar as product_type,
                            url, null::date as first_seen, null::date as last_seen, is_listed, true as is_coffee,
                            {dim("classified_by", "varchar")} as classified_by, null::varchar as verdict_model,
-                           null::varchar as verdict_label, null::varchar as reason, title as coffee_name,
+                           null::varchar as verdict_label, null::varchar as reason, null::varchar as input_hash,
+                           {dim("platform", "varchar")} as platform, title as coffee_name,
                            origin_country, process, in_stock, min_price_usd, price_per_100g, true as in_dim_coffee
                     from dim d"""
                 made_from = "dim_coffee only (this build has no product_decisions)"
@@ -209,6 +212,25 @@ class Catalog:
             if p != keep:
                 p.unlink(missing_ok=True)
 
+    def members(self, build_id: str, coffee_ids: list[str], hashes: list[str]) -> list[dict]:
+        """The build's products with these coffee ids or versions (input_hash), with their roaster and platform: who a
+        decision by version covers (every product sharing it, across roasters)."""
+        if not (coffee_ids or hashes):
+            return []
+        self.ensure(build_id)
+        con = duckdb.connect(str(self.path(build_id)), read_only=True)
+        try:
+            rows = con.execute(
+                "select coffee_id, input_hash, roaster_id, platform from products "
+                "where coffee_id in (select unnest(?::varchar[])) or input_hash in (select unnest(?::varchar[]))",
+                [coffee_ids, hashes],
+            ).fetchall()
+        finally:
+            con.close()
+        return [
+            dict(zip(("coffee_id", "input_hash", "roaster_id", "platform"), r, strict=True)) for r in rows
+        ]
+
     def search(self, build_id: str, f: Filters) -> dict:
         try:
             meta = self.ensure(build_id)
@@ -223,7 +245,7 @@ class Catalog:
             rows = con.execute(
                 f"""select coffee_id, roaster_id, product_id, title, coffee_name, product_type, url, is_listed,
                            is_coffee, coffee, classified_by, verdict_label, reason, origin_country, process, stock,
-                           min_price_usd, price_per_100g, listed, last_seen
+                           min_price_usd, price_per_100g, listed, last_seen, input_hash, platform
                     from products {where}
                     order by roaster_id, title, coffee_id limit {PAGE} offset {(f.page - 1) * PAGE}""",
                 params,

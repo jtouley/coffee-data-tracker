@@ -156,6 +156,11 @@ locals {
       args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
       egress  = "default", claude = true, memory = "8Gi", retries = 0
     }
+    # The admin's Publish and Roll back (admin_control.tf): serve a recorded build and upload the lake. Never
+    # scheduled; started only with the admin's argument override (publish-release --build ... --action ...). Its own
+    # arguments only print the help. Retries 0: a failed serve is started again by the owner, and serving the same
+    # build again is idempotent.
+    "publish" = { command = ["coffeedata"], args = ["publish-release", "--help"], egress = "default", claude = false, memory = "4Gi", retries = 0 }
   }
 
   # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): every connector's
@@ -166,6 +171,9 @@ locals {
   # failed, came back empty or short (re-fetch is off); Tuesday merge,
   # enrichment, build. The release is stamped Monday and published
   # Tuesday, at most 8 days old (contracts/public-catalog.odcs.yaml, max_run_age_days).
+  # Jobs that read the admin's decisions snapshots (a draft build: build --draft --snapshot), mounted read-only.
+  snapshot_jobs = toset(["build"])
+
   ingest_schedule = {
     "discover"                   = { job = "discover", cron = "17 3 1 * *" } # the 1st of each month
     "probe"                      = { job = "probe", cron = "17 7 * * 1" }
@@ -425,6 +433,17 @@ resource "google_cloud_run_v2_job" "ingest" {
         }
       }
 
+      dynamic "volumes" {
+        for_each = contains(local.snapshot_jobs, each.key) ? [google_storage_bucket.admin_snapshots.name] : []
+        content {
+          name = "snapshots"
+          gcs {
+            bucket    = volumes.value
+            read_only = true
+          }
+        }
+      }
+
       containers {
         image   = var.ingest_image
         command = each.value.command
@@ -438,6 +457,20 @@ resource "google_cloud_run_v2_job" "ingest" {
         volume_mounts {
           name       = "staging"
           mount_path = local.staging
+        }
+        dynamic "volume_mounts" {
+          for_each = contains(local.snapshot_jobs, each.key) ? ["/mnt/snapshots"] : []
+          content {
+            name       = "snapshots"
+            mount_path = volume_mounts.value
+          }
+        }
+        dynamic "env" {
+          for_each = contains(local.snapshot_jobs, each.key) ? ["/mnt/snapshots"] : []
+          content {
+            name  = "COFFEEDATA_SNAPSHOTS" # coffeedata.decisions reads snapshots/<id>.json here
+            value = env.value
+          }
         }
         env {
           name  = "COFFEEDATA_STAGING"
@@ -526,6 +559,7 @@ resource "google_cloud_run_v2_job" "ingest" {
     google_storage_bucket_iam_member.ingest_staging,
     google_compute_router_nat.shopify_egress,
     google_compute_router_nat.woo_generic_egress,
+    google_storage_bucket_iam_member.ingest_snapshots,
   ]
 }
 

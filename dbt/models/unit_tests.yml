@@ -48,7 +48,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true, 'is_usd': true}]),
               ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false, 'is_usd': true}]),
@@ -95,7 +95,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
@@ -302,6 +302,12 @@ unit_tests:
               [{'variant_id': 'v', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true,
                 'currency': 'USD'}] as variants))
     given:
+      - input: ref('stg_decisions')
+        format: sql
+        rows: |
+          select null::varchar as decision_id, null::varchar as subject_kind, null::varchar as subject,
+                 null::varchar as action, null::varchar as subject_key
+          where false
       - input: ref('stg_runs')
         rows:
           - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}
@@ -599,7 +605,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:A', 'A', 'kA', [{'variant_id': 'a1', 'title': '1/2 lb', 'price_usd': 10.0, 'grams': 907, 'available': true},
                                   {'variant_id': 'a2', 'title': '5-lb-bag', 'price_usd': 70.0, 'grams': null, 'available': true}]),
               ('r:B', 'B', 'kB', [{'variant_id': 'b1', 'title': '12 oz', 'price_usd': 17.0, 'grams': 340, 'available': true}])
@@ -636,6 +642,54 @@ unit_tests:
         - {coffee_id: "r:A", price_per_100g: 3.09, bag_sizes_g: "[227, 2268]"}
         - {coffee_id: "r:B", price_per_100g: 5.0, bag_sizes_g: "[340]"}
 
+  - name: rules_complete_is_false_for_an_owner_included_non_coffee
+    description: >-
+      dim_coffee.rules_complete is never null. O1: the owner included a product the rules call not coffee
+      (stg_products.needs_llm is null: the rules extracted nothing), so it is false, with enrichment_method rules.
+      R1: a rules coffee they describe fully (needs_llm false) is true; R2: one they don't (needs_llm true) is false.
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select decision, coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+                 date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
+                 'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
+                 coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+          from (values ('r:O1', 'include'), ('r:R1', null), ('r:R2', null)) t(coffee_id, decision)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:O1", is_coffee: false, needs_llm: null, classified_by: rules, is_wholesale: false}
+          - {input_hash: "r:R1", is_coffee: true, needs_llm: false, classified_by: rules, is_wholesale: false}
+          - {input_hash: "r:R2", is_coffee: true, needs_llm: true, classified_by: rules, is_wholesale: false}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
+      - input: ref('stg_variant_grams')
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('int_origin_country')
+        format: sql
+        rows: >-
+          select null::varchar as raw_value, null::varchar as kind, null::varchar as alpha2, null::varchar as alpha3,
+                 null::varchar as iso_short_name, null::varchar as region, null::varchar as display_name where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:O1", rules_complete: false, enrichment_method: rules}
+        - {coffee_id: "r:R1", rules_complete: true, enrichment_method: rules}
+        - {coffee_id: "r:R2", rules_complete: false, enrichment_method: rules}
+
   # --- Rules pinned by the rules audit (docs/RULES.md) ---------------------------------------------------------------
 
   - name: price_per_100g_band_size_window_and_availability
@@ -651,7 +705,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
+          select null::varchar as decision, coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, coffee_id as input_hash, 'b' as body_hash,
                  coffee_id as grams_key,
@@ -733,7 +787,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+          select null::varchar as decision, coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
                  date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
                  'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
                  coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
@@ -890,7 +944,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
+          select null::varchar as decision, 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
                  'r:F1' as grams_key,

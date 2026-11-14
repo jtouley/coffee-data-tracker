@@ -1,5 +1,7 @@
 // admin.registry.coffee: loads each page's data region (with its loading, slow and error states), submits facet
-// filters, and runs the WebAuthn ceremonies for sign-in. No inline script anywhere (CSP script-src 'self').
+// filters, runs the WebAuthn ceremonies for sign-in, and every write: a confirm step (with the exact job arguments,
+// the guards' refusals and a typed count where asked), one POST with the form's idempotency key, the outcome, and
+// Undo for a decision. No inline script anywhere (CSP script-src 'self').
 "use strict";
 
 const b64u = {
@@ -22,17 +24,22 @@ async function post(url, body) {
   });
   let data = {};
   try { data = await r.json(); } catch { /* an empty or non-JSON reply */ }
-  if (!r.ok) throw Object.assign(new Error(data.detail || `The server refused (${r.status}).`), { status: r.status });
+  if (r.status === 401) {
+    location.assign(`/signin?ended=1&next=${encodeURIComponent(location.pathname + location.search)}`);
+  }
+  if (!r.ok) throw Object.assign(new Error(data.detail || `The server refused (${r.status}).`), { status: r.status, data });
   return data;
 }
 
 // --- data regions -------------------------------------------------------------------------------------------
 
-function loadPart(section) {
+// quiet: refresh in place (after a write, or a poll while a job runs) without showing the loading state again.
+function loadPart(section, quiet) {
   const url = section.dataset.part;
   const loading = section.dataset.loadingHtml || section.innerHTML;
   section.dataset.loadingHtml = loading;
-  section.innerHTML = loading;
+  clearTimeout(section.pollTimer);
+  if (!quiet) section.innerHTML = loading;
   section.setAttribute("aria-busy", "true");
   const slow = setTimeout(() => {
     const note = section.querySelector("[data-slow-note]");
@@ -45,11 +52,16 @@ function loadPart(section) {
         location.assign(`/signin?ended=1&next=${encodeURIComponent(next)}`);
         return;
       }
-      section.innerHTML = await r.text(); // server-rendered and escaped by the template engine
+      const html = await r.text(); // server-rendered and escaped by the template engine
+      if (quiet && !r.ok) return; // keep what is shown; the next poll tries again
+      section.innerHTML = html;
+      const poll = section.querySelector("[data-poll]");
+      if (poll) section.pollTimer = setTimeout(() => loadPart(section, true), Number(poll.dataset.poll) * 1000);
       // Filters start open where there's room for them beside the results; on a phone they fold away.
       if (matchMedia("(min-width: 760px)").matches) section.querySelectorAll("[data-filters]").forEach((d) => { d.open = true; });
     })
     .catch(() => {
+      if (quiet) return;
       section.innerHTML =
         '<div class="state error" role="alert" data-state="error"><h2 class="section">Couldn’t reach the admin</h2>' +
         '<p class="body">The request didn’t complete: the network or the service is down.</p>' +
@@ -229,4 +241,214 @@ document.addEventListener("click", async (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("section[data-part]").forEach(loadPart);
+});
+
+// --- writes ------------------------------------------------------------------------------------------------------
+
+const $ = (root, sel) => root.querySelector(sel);
+
+function fields(form) {
+  const body = {};
+  for (const [k, v] of new FormData(form)) body[k] = v;
+  form.querySelectorAll("input[data-json]").forEach((i) => { body[i.name] = JSON.parse(i.value); });
+  return body;
+}
+
+function reloadParts() {
+  document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
+}
+
+function showResult(text, undo) {
+  const box = document.querySelector("[data-result]");
+  if (!box) return;
+  $(box, "[data-result-text]").textContent = text;
+  const b = $(box, "[data-undo]");
+  b.hidden = !undo;
+  b.dataset.target = undo || "";
+  box.hidden = false;
+  clearTimeout(showResult.timer);
+  showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
+}
+
+function describe(out) {
+  if (out.runs) {
+    const started = out.runs.map((r) => `${r.job} (${r.execution})`).join(", ");
+    const failed = (out.errors || []).join("; ");
+    return (started ? `Started ${started}.` : "Nothing started.") + (failed ? ` Not started: ${failed}` : "");
+  }
+  if (out.decisions) return `Recorded ${out.count} decision${out.count === 1 ? "" : "s"}. Build a draft on Release to see the change.`;
+  if (out.reverted) return out.count ? `Undone (${out.count}). The classifier decides again in the next draft.` : "Already superseded: nothing to undo.";
+  return "Done.";
+}
+
+function refusal(err) {
+  const reasons = err.data && err.data.reasons;
+  if (reasons && reasons.length) return "Refused: " + reasons.join(" · ");
+  if (err.status === 503) return err.message || "Writes are off right now.";
+  return err.message || "Something went wrong. Try again.";
+}
+
+function renderPlan(box, plan) {
+  box.textContent = "";
+  const p = document.createElement("p");
+  p.textContent = plan.steps.length === 1 ? "This starts one Cloud Run job:" : `This starts ${plan.steps.length} Cloud Run jobs:`;
+  const ul = document.createElement("ul");
+  ul.className = "steps";
+  for (const s of plan.steps) {
+    const li = document.createElement("li");
+    const job = document.createElement("strong");
+    job.textContent = `Cloud Run job ${s.job}`;
+    const code = document.createElement("code");
+    code.textContent = s.args ? s.args.join(" ") : "(its own arguments)";
+    li.append(job, code);
+    ul.append(li);
+  }
+  box.append(p, ul);
+  for (const r of plan.refusals || []) {
+    const x = document.createElement("p");
+    x.className = "refused";
+    x.textContent = `Refused: ${r}`;
+    box.append(x);
+  }
+  if (plan.window) {
+    const w = document.createElement("p");
+    w.className = "notice";
+    w.textContent = `Now is inside ${plan.window}. Starting needs a reason, which is recorded.`;
+    box.append(w);
+  }
+}
+
+// One confirm dialog for every write form: data-confirm (text) or data-preview (the plan from the server), an
+// optional typed value (data-type), then the POST. The idempotency key comes with the form, so a double click, a
+// retry after a timeout, or a second tab acts once.
+async function confirmWrite(form) {
+  const d = document.getElementById("confirm");
+  const body = $(d, "[data-confirm-body]");
+  const hint = $(d, "[data-confirm-hint]");
+  const go = $(d, "[data-confirm-go]");
+  const typeWrap = $(d, "[data-type-wrap]");
+  const overWrap = $(d, "[data-override-wrap]");
+  const typed = $(d, "#confirm-type");
+  const over = $(d, "#confirm-override");
+  const ask = (form.dataset.ask || "").split(" ");
+  const reason = $(d, "#confirm-reason");
+  $(d, "[data-ask-reason]").hidden = !ask.includes("reason");
+  $(d, "[data-ask-kind]").hidden = !ask.includes("kind");
+  reason.value = form.dataset.reason || "";
+  if ("picks" in form.dataset) { // the Catalog's ticked rows: what the decision covers, named in the sheet
+    const items = picks();
+    form.querySelector("input[name=items]").value = JSON.stringify(items);
+    const names = items.slice(0, 5).map((i) => i.title || i.coffee_id).join("; ");
+    form.dataset.confirmTitle = `${form.dataset.confirmLabel} ${items.length === 1 ? "this product" : `${items.length} products`}?`;
+    form.dataset.confirmText = `${names}${items.length > 5 ? `; and ${items.length - 5} more` : ""}.`;
+  }
+  $(d, "[data-confirm-title]").textContent = form.dataset.confirmTitle || (form.dataset.confirmLabel ? `${form.dataset.confirmLabel}?` : "Confirm");
+  go.textContent = form.dataset.confirmLabel || "Confirm";
+  go.classList.toggle("danger", "danger" in form.dataset);
+  go.classList.toggle("primary", !("danger" in form.dataset));
+  hint.textContent = "";
+  typed.value = "";
+  over.value = "";
+  typeWrap.hidden = !form.dataset.type;
+  $(d, "[data-type-want]").textContent = form.dataset.type || "";
+  overWrap.hidden = true;
+  go.removeAttribute("aria-disabled");
+  body.textContent = [form.dataset.confirmText, form.dataset.confirm].filter(Boolean).join(" ");
+  if (!d.open) d.showModal();
+  if (form.dataset.preview) {
+    body.textContent = "Checking what this starts…";
+    go.setAttribute("aria-disabled", "true");
+    try {
+      const plan = await post(form.dataset.preview, fields(form));
+      renderPlan(body, plan);
+      if (!(plan.refusals || []).length) go.removeAttribute("aria-disabled");
+      overWrap.hidden = !plan.window;
+    } catch (err) {
+      body.textContent = refusal(err);
+      return;
+    }
+  }
+  go.onclick = async () => {
+    if (go.getAttribute("aria-disabled") === "true") return;
+    if (form.dataset.type && typed.value.trim() !== form.dataset.type) {
+      hint.textContent = `Type ${form.dataset.type} to confirm.`;
+      typed.focus();
+      return;
+    }
+    hint.textContent = "";
+    busy(go, true);
+    try {
+      const extra = { confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined };
+      if (ask.includes("reason")) extra.reason = reason.value;
+      if (ask.includes("kind")) extra.kind = d.querySelector("input[name=confirm-kind]:checked").value;
+      const out = await post(form.dataset.write, { ...fields(form), ...extra });
+      d.close();
+      showResult(describe(out), out.decisions ? out.group || out.decisions[0] : undefined);
+      reloadParts();
+    } catch (err) {
+      hint.textContent = refusal(err);
+      if (err.data && err.data.overridable) {
+        overWrap.hidden = false;
+        over.focus();
+      }
+    } finally {
+      busy(go, false);
+    }
+  };
+}
+
+document.addEventListener("submit", (e) => {
+  const form = e.target.closest("form[data-write]");
+  if (!form) return;
+  e.preventDefault();
+  const button = form.querySelector('button[type="submit"]');
+  if (button && button.getAttribute("aria-disabled") === "true") return;
+  confirmWrite(form);
+});
+
+document.addEventListener("click", (e) => {
+  const close = e.target.closest("[data-close]");
+  if (close) close.closest("dialog").close();
+});
+
+// --- Catalog: the ticked rows a decision covers, and undo ---------------------------------------------------
+
+function picks() {
+  return [...document.querySelectorAll("input[data-pick]:checked")].map((c) => JSON.parse(c.dataset.pick));
+}
+
+function updateBulk() {
+  const bar = document.querySelector("[data-bulk]");
+  if (!bar) return;
+  const n = picks().length;
+  bar.hidden = n === 0;
+  $(bar, "[data-bulk-count]").textContent = `${n} chosen`;
+}
+
+document.addEventListener("change", (e) => {
+  if (e.target.matches("[data-pick-all]")) {
+    document.querySelectorAll("input[data-pick]").forEach((c) => { c.checked = e.target.checked; });
+  }
+  if (e.target.matches("[data-pick], [data-pick-all]")) updateBulk();
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("[data-bulk-clear]")) return;
+  document.querySelectorAll("input[data-pick], input[data-pick-all]").forEach((c) => { c.checked = false; });
+  updateBulk();
+});
+
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-undo]");
+  if (!b || !b.dataset.target) return;
+  busy(b, true);
+  try {
+    const out = await post(`/api/decisions/${encodeURIComponent(b.dataset.target)}/undo`, { key: crypto.randomUUID(), reason: "undo right after deciding" });
+    showResult(describe(out));
+    reloadParts();
+  } catch (err) {
+    showResult(refusal(err));
+  } finally {
+    busy(b, false);
+  }
 });
