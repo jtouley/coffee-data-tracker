@@ -1,6 +1,6 @@
 # Screening discovery candidates for roasters that sell beans online
 
-Status: proposal, 2026-11-16. Nothing here is built. Owner: jtouley. Checked against `origin/main` at `36d5e3d` and
+Status: accepted 2026-11-16 (owner: "D1 yes, defaults"; #174). Nothing here is built. Owner: jtouley. Checked against `origin/main` at `36d5e3d` and
 draft PR #131 (`admin-sources`, `70712ae`). No roaster, café or importer site was fetched for this note.
 
 **What the owner asked for.** Screen the discovery candidates by probing politely, state by state, over weeks; for a
@@ -47,7 +47,7 @@ acceptance, unsure to review, low dropped. Abstain rather than guess.
   - about 740 requests to screen the 210 curated roasters once;
   - re-screens of the same sites after 28, 180 or 365 days (section 3.5).
 
-  Separately, the evaluation needs about **1,550 labelling site visits**, about 265 of them by the owner (section 5.2).
+  Separately, the evaluation needs about **1,535 labelling site visits**, about 265 of them by the owner (section 5.2).
 - **Why.** The owner's time, not recall. Under the 2026-11-07 decision the owner flags the source list by hand, so the
   roasters found are those the owner gets to. That is about 47,000 rows; at 20 seconds a row, about 260 hours. The
   screen narrows that to a short Suggested list and a review list.
@@ -555,7 +555,7 @@ Each PR follows "one review, fixes, one", and `make smoke` passes on each.
 
 | # | Decision | Recommended default | Why |
 |---|---|---|---|
-| D1 | Reverse the 2026-11-07 decision ([#130's closing comment](https://github.com/jtouley/coffee-data-tracker/pull/130#issuecomment-6713710366): "No site is fetched to decide what to crawl"). The screen sends about 155,000 requests from default egress to about 44,000 sites not in the registry, over about 8 weeks, then re-screens after 28, 180 or 365 days. It also sends about 740 requests to curated roasters, and the evaluation needs about 1,535 labelling site visits | **Yes, if the owner confirms in writing**; the flag and Publish stay the owner's, with no admission | Hand-flagging about 47,000 rows is about 260 hours of the owner's time; the screen cuts that to a Suggested list and a review list |
+| D1 | Reverse the 2026-11-07 decision ([#130's closing comment](https://github.com/jtouley/coffee-data-tracker/pull/130#issuecomment-6713710366): "No site is fetched to decide what to crawl"). The screen sends about 155,000 requests from default egress to about 44,000 sites not in the registry, over about 8 weeks, then re-screens after 28, 180 or 365 days. It also sends about 740 requests to curated roasters, and the evaluation needs about 1,535 labelling site visits | **Yes: confirmed by the owner 2026-11-16 ("D1 yes, defaults")**; the flag and Publish stay the owner's, with no admission | Hand-flagging about 47,000 rows is about 260 hours of the owner's time; the screen cuts that to a Suggested list and a review list |
 | D2 | Labellers | **Two Claude subagents. The owner settles every disagreement, including re-settling #130's 84 Claude-settled ones, and spot-checks 50 test items: about 265 owner site visits** | Cheap, and a person breaks the shared blind spots with the Claude stage |
 | D3 | Ship bar | **Suggested precision ≥ 95% (lower bound ≥ 88%); confidently wrong ≤ 3%; dropped-in-scope ≤ 2%; recall ≥ 40% suggested, ≥ 75% with review** | Bulk accept is only safe when nearly every row is right; #130's 10.6% wrong was too high for that |
 | D4 | Claude's role | **Promote only** (review → suggested); never drop | A demotion error loses a roaster unseen. Validation can still pick promote-and-demote if it measures better |
