@@ -11,12 +11,15 @@ import httpx
 
 from ..http import (
     BLOCK_STATUSES,
+    Blocked,
     DeadlineReached,
     FetchError,
     PartialCatalog,
     PoliteClient,
     asked_wait,
+    block_status,
     causes,
+    challenged,
     store_wait,
 )
 from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
@@ -179,7 +182,36 @@ def parse_product(p: dict, roaster: Roaster, currency: str | None = None) -> Cat
 def fetch(
     client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
 ) -> list[CatalogItem]:
-    """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
+    """The whole catalog. A storefront the probe saw only by its markers (platform `shopify?`) that doesn't serve
+    /products.json (404, 410, or not a catalog) is read from its sitemap and product pages instead (adapters.generic),
+    through the same client: Shopify's budget and IP. A block, a challenge or a deadline is the answer, never a
+    reason to read the pages."""
+    if roaster.platform != "shopify?":
+        return _fetch(client, roaster, resume, known_products)
+    try:
+        items = _fetch(client, roaster, resume, known_products)
+    except FetchError as e:
+        if not not_served(e):
+            raise
+        from . import generic
+
+        client.note_route(f"pages: /products.json not served ({e})"[:300])
+        return generic.read_pages(client, roaster)
+    client.note_route("shopify /products.json: a storefront the probe saw by Shopify's markers")
+    return items
+
+
+def not_served(e: FetchError) -> bool:
+    """/products.json isn't served (a 404 or 410, or a 200 that isn't the catalog), and nothing refused us."""
+    if challenged(e) or block_status(e) or isinstance(e, StoreBlocked | Blocked | PageBlocked):
+        return False
+    return e.status in (404, 410) or str(e).startswith(("not JSON", "unexpected /products.json"))
+
+
+def _fetch(
+    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+) -> list[CatalogItem]:
+    """The whole catalog from /products.json. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
     known_products: the store's product count at its latest ok fetch, which lets a short page end the catalog."""
     items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
     for page in count((resume or {}).get("page", 1)):

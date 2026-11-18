@@ -47,7 +47,16 @@ from .http import (
 )
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
-from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, HostRateLimited, PlatformLimiter, RateLimited
+from .ratelimit import (
+    SHOPIFY_CONCURRENCY,
+    SHOPIFY_HOSTED,
+    SHOPIFY_HOSTED_CONCURRENCY,
+    SHOPIFY_HOSTED_RPS,
+    SHOPIFY_RPS,
+    HostRateLimited,
+    PlatformLimiter,
+    RateLimited,
+)
 
 log = logging.getLogger(__name__)
 
@@ -286,6 +295,39 @@ def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
     return {r[0] for r in rows}
 
 
+# The newest robots.txt each host answered with (a `live` record in fetches.robots or probes.robots), for
+# http.PoliteClient's fallback when the live file is unreachable. Only answers about the rules are stored (a 2xx, a
+# 401/403, another 4xx but a block), so whichever is newest is the store's latest word: a later 403 is never undercut
+# by an older, looser copy. The client itself checks the age (http.ROBOTS_COPY_MAX_AGE_S).
+ROBOTS_COPIES_SQL = """
+with copies as (
+    select unnest(robots) as r from {fetches} where robots is not null
+    union all
+    select unnest(robots) as r from {probes} where robots is not null
+)
+select r.host as host, r.fetched_at as fetched_at, r.status as status, r.body as body
+from copies
+where r.source = 'live' and r.host is not null and r.fetched_at is not null and r.status is not null
+qualify row_number() over (partition by r.host order by r.fetched_at desc, r.status, r.body) = 1
+"""
+
+
+def robots_copies(lake: Lake) -> dict[str, dict]:
+    """host -> its newest stored robots.txt ({fetched_at, status, body}). None stored yet, or unreadable (a lake from
+    before raw 1.7.0 has no robots column at all): {} and the client behaves as it always did: no copy, no crawl."""
+    try:
+        con = lake.connect()
+        rows = con.execute(
+            ROBOTS_COPIES_SQL.format(fetches=lake.scan("fetches"), probes=lake.scan("probes"))
+        ).fetchall()
+    except Exception as e:  # noqa: BLE001 - fail closed: without copies nothing is fetched past an unreachable file
+        log.warning(
+            "robots.txt copies not read (%s): an unreachable robots.txt stops its store, as before", e
+        )
+        return {}
+    return {h: {"fetched_at": t, "status": s, "body": b} for h, t, s, b in rows}
+
+
 def sample_key(roaster_id: str) -> str:
     """Stable order for --sample: unaffected by roasters being added, shared by probe and ingest."""
     return hashlib.sha1(roaster_id.encode()).hexdigest()
@@ -439,6 +481,9 @@ def rows_for(
                 # an ok fetch that read only part of the catalog (stopped at the run's deadline); else complete
                 "partial": res.partial if res.status == "ok" else None,
                 "crawl_delays": res.stats.crawl_delays or None,
+                "transport_errors": res.stats.transport_errors or None,
+                "robots": res.stats.robots or None,
+                "catalog_route": res.stats.route,
             }
         )
         for it in res.items:
@@ -569,9 +614,15 @@ def run(
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget. Any other platform
     # with a shared budget (a connector's config: connectors.Connector.rps) gets its own, set up the same way.
-    rates = {"shopify": shopify_rps} | {k: v for k, v in (platform_rps or {}).items() if k != "shopify"}
+    # Shopify storefronts the generic adapter reads (adapters.generic) share their own budget (SHOPIFY_HOSTED).
+    rates = {"shopify": shopify_rps, SHOPIFY_HOSTED: SHOPIFY_HOSTED_RPS} | {
+        k: v for k, v in (platform_rps or {}).items() if k not in ("shopify", SHOPIFY_HOSTED)
+    }
+    concurrency = {SHOPIFY_HOSTED: SHOPIFY_HOSTED_CONCURRENCY}
     limiters = {
-        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
+        name: PlatformLimiter(
+            name, rate=rps, max_concurrent=concurrency.get(name, SHOPIFY_CONCURRENCY), per_host=per_host
+        )
         for name, rps in rates.items()
     }
     shopify = limiters["shopify"]
@@ -595,6 +646,7 @@ def run(
         # manifest publish and the lake reads above came first)
         PoliteClient(
             limiters=limiters,
+            robots_copies=robots_copies(lake),
             **({"deadline_s": None if deadline is None else deadline - time.monotonic()} | (client_kw or {})),
         ) as client,
         ThreadPoolExecutor(workers) as ex,

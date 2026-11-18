@@ -19,6 +19,7 @@ from ..http import (
     challenge_error,
 )
 from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
+from ..ratelimit import SHOPIFY_HOSTED
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, scrub_surrogates, to_float
 
@@ -150,14 +151,74 @@ def _partial_reason(failed: list[str], unread: list[str]) -> str:
     return "; ".join(parts)
 
 
-def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+# Shopify's sitemap index names its children sitemap_products_1.xml, sitemap_pages_1.xml... (with ?from=&to= ranges):
+# the store is a Shopify storefront. Run 2026-11-16: 23 generic stores newly answered Cloudflare's challenge on the
+# dedicated IP, most on Shopify's sitemap files and /products/ pages (one request per product).
+_SHOPIFY_SITEMAP = re.compile(r"/sitemap_(products|pages|collections|blogs|articles)_\d+\.xml", re.I)
+
+
+def shopify_sitemap(index: list[str]) -> bool:
+    """A sitemap index that lists Shopify's own product sitemaps (sitemap_products_N.xml)."""
+    return any(
+        _SHOPIFY_SITEMAP.search(urlparse(u).path) and "/sitemap_products_" in urlparse(u).path.lower()
+        for u in index
+    )
+
+
+def _shopify_catalog(
+    client: PoliteClient, roaster: Roaster, resume: dict | None, known_products: int | None
+) -> list[CatalogItem] | None:
+    """A Shopify storefront's catalog from /products.json (shopify.fetch: one request per 250 products, instead of one
+    per product page), or None when the store doesn't serve it (shopify.not_served). A block, a challenge or a
+    deadline is the fetch's answer, as for any Shopify store: never a reason to read the pages instead."""
+    from . import shopify
+
+    try:
+        items = shopify.fetch(client, roaster, resume=resume, known_products=known_products)
+    except FetchError as e:
+        if not shopify.not_served(e):
+            raise
+        client.note_route(f"pages: /products.json not served ({e})"[:300])
+        return None
+    client.note_route("shopify /products.json: its sitemap index is Shopify's")
+    return items
+
+
+def fetch(
+    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+) -> list[CatalogItem]:
+    """A store's catalog from its sitemap's product pages (schema.org JSON-LD). A store whose sitemap index turns out
+    to be Shopify's (sitemap_products_N.xml), not yet known as one to the registry, is read from /products.json
+    instead, and from then on every request it makes counts against the Shopify-hosted budget
+    (ratelimit.SHOPIFY_HOSTED). The probe marks such a store `shopify?` (discover.probe_one), and from then on the
+    Shopify job crawls it (models.Roaster.adapter). resume and known_products: as shopify.fetch."""
+    return read_pages(client, roaster, resume, known_products, detect_shopify=True)
+
+
+def read_pages(
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None = None,
+    known_products: int | None = None,
+    detect_shopify: bool = False,
+) -> list[CatalogItem]:
+    """The catalog from the sitemap's product pages, each page's JSON-LD (shopify.fetch reads a `shopify?` store's
+    pages this way when it has no /products.json; woocommerce.fetch a store whose robots.txt disallows the Store
+    API)."""
     items: dict[str, CatalogItem] = {}
     failed: list[str] = []  # product pages that couldn't be read: "url (why)"
+    disallowed = 0  # of those, the ones robots.txt disallows us
     # The sitemap is the only list of product pages: one it can't read (a block, a 5xx, or a file over the protocol's
     # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog. A sub-sitemap it couldn't read
     # (`unread`) leaves the list incomplete: the products read are stored as partial, never as the whole catalog.
     unread: list[str] = []
-    urls = product_urls(sitemap_urls(client, roaster.host, unread))
+    index: list[str] = []
+    found = sitemap_urls(client, roaster.host, unread, index)
+    if detect_shopify and shopify_sitemap(index):
+        client = client.for_platform(SHOPIFY_HOSTED)  # a Shopify storefront: its requests share that budget
+        if (shop := _shopify_catalog(client, roaster, resume, known_products)) is not None:
+            return shop
+    urls = product_urls(found)
     # Every product page is read: no cap, and no giving up after the first pages without Product markup (the old
     # GIVE_UP_AFTER = 10 stored the rest of the catalog as empty). Only the run's deadline stops it: partial.
     for n, url in enumerate(urls):
@@ -175,6 +236,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 f"HTTP {e.response.status_code}" if isinstance(e, httpx.HTTPStatusError) else type(e).__name__
             )
             failed.append(f"{url} ({why})")
+            disallowed += isinstance(e, Blocked)
             continue
         if err := challenge_error(r, url):
             # an edge's challenge (a 202, or a challenge header): a refusal, like a block, never a failed page
@@ -192,6 +254,9 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         # products read are stored as partial (kept listed, never delisted), and the rest of the catalog isn't lost.
         # Nothing read at all is the fetch's error, never an empty catalog.
         msg = _partial_reason(failed, unread)
+        if not items and failed and disallowed == len(failed) and not unread:
+            # robots.txt disallows every product page it lists: the store is closed to us, as a robots block
+            raise Blocked(f"https://{roaster.host}/ (robots.txt disallows all {len(failed)} product pages)")
         if not items:
             raise FetchError(msg)
         raise PartialCatalog(msg, list(items.values()))

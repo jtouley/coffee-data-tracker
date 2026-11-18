@@ -316,7 +316,8 @@ def test_every_platform_limiter_is_set_up_like_shopifys(lake, monkeypatch):
     monkeypatch.setattr(ingest, "PlatformLimiter", spy)
     monkeypatch.setattr(ingest, "blocked_hosts", lambda lake, run_date: {"earlier.com"})
     ingest.run(lake, [], WEEK, mode="retry_failed", platform_rps={"squarespace": 2.0})
-    assert set(made) == {"shopify", "squarespace"}
+    # and the Shopify-hosted generic stores' own budget (ratelimit.SHOPIFY_HOSTED), set up the same way
+    assert set(made) == {"shopify", "squarespace", ratelimit.SHOPIFY_HOSTED}
     for lim in made.values():
         assert lim.count_bursts is False and "earlier.com" in lim.ever_blocked
 

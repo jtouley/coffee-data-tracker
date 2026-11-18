@@ -207,13 +207,43 @@ def cmd_discover(args: argparse.Namespace) -> None:
         raise SystemExit(f"discover failed: {', '.join(failed)}")
 
 
-def probe_todo(states: list, run_date: str, stale_days: int) -> list[str]:
-    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`;
-    never-probed ones (new from discovery) first, then the longest unprobed, so a run stopped by its deadline has
-    asked the ones that most need it, and the next run carries on with the rest."""
-    cutoff = (date.fromisoformat(run_date) - timedelta(days=stale_days)).isoformat()
-    todo = [s for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
-    todo.sort(key=lambda s: (s.last_probed is not None, s.last_probed or "", s.roaster.roaster_id))
+def unreachable_backoff_days(failed_probes: int, unreachable_days: int, stale_days: int) -> int:
+    """How long an unreachable roaster waits between probes: `unreachable_days` after an ok probe (or the seed's),
+    doubled for each probe that failed since (7, 14, 28 days), never longer than `stale_days`, the wait every other
+    roaster gets."""
+    return min(unreachable_days * 2 ** min(failed_probes, 8), stale_days)
+
+
+def probe_todo(states: list, run_date: str, stale_days: int, unreachable_days: int = 7) -> list[str]:
+    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`; or
+    unreachable (the crawl stopped trying it: registry STATE_SQL) and last probed longer ago than its backoff
+    (unreachable_backoff_days). A probe that answers ok after its failed fetches puts an unreachable roaster back in
+    the crawl; before, nothing re-probed one inside `stale_days`, and the seed's probe date (2026-10-26) kept 66
+    roasters out of the 2026-11-16 run (probe todo 0). Never-probed ones (new from discovery) first, then the
+    unreachable ones due, then the longest unprobed, so a run stopped by its deadline has asked the ones that most
+    need it, and the next run carries on with the rest."""
+    day = date.fromisoformat(run_date)
+    cutoff = (day - timedelta(days=stale_days)).isoformat()
+
+    def due_unreachable(s) -> bool:
+        if s.status != "unreachable":
+            return False
+        wait = unreachable_backoff_days(getattr(s, "failed_probes", 0), unreachable_days, stale_days)
+        return (s.last_probed or "") <= (day - timedelta(days=wait)).isoformat()
+
+    todo = [
+        s
+        for s in states
+        if s.status != "opted_out" and ((s.last_probed or "") < cutoff or due_unreachable(s))
+    ]
+    todo.sort(
+        key=lambda s: (
+            s.last_probed is not None,
+            not due_unreachable(s),
+            s.last_probed or "",
+            s.roaster.roaster_id,
+        )
+    )
     return [s.roaster.roaster_id for s in todo]
 
 
@@ -240,7 +270,7 @@ def cmd_probe(args: argparse.Namespace) -> None:
     states: list = []
     try:
         states = registry.current(lake)
-        todo = probe_todo(states, args.run_date, args.stale_days)
+        todo = probe_todo(states, args.run_date, args.stale_days, getattr(args, "unreachable_days", 7))
         if args.only:
             todo = [args.only]
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
@@ -254,7 +284,12 @@ def cmd_probe(args: argparse.Namespace) -> None:
             window = connectors._window_left(lake, "probe", None, week, deadline_min)
             left = max(0.0, min(60 * window, 60 * deadline_min - (time.monotonic() - t0)))
         rows = discover.probe(
-            todo, workers=args.workers, run_date=args.run_date, deadline_s=left, on_batch=write
+            todo,
+            workers=args.workers,
+            run_date=args.run_date,
+            deadline_s=left,
+            on_batch=write,
+            robots_copies=ingest.robots_copies(lake),
         )
     except BaseException as e:  # what was written stays staged; the end row says the attempt failed
         control.finish(
@@ -1212,6 +1247,13 @@ def main(argv: list[str] | None = None) -> None:
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
+    pr.add_argument(
+        "--unreachable-days",
+        type=int,
+        default=7,
+        help="re-probe an unreachable roaster this many days after its last ok probe, doubling per failed probe "
+        "(at most --stale-days)",
+    )
     pr.add_argument("--only")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)

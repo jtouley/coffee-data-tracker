@@ -42,6 +42,16 @@ SHOPIFY_CONCURRENCY = 8
 # ~340 stores x ~4.6 requests is ~1,600 requests: about 13 minutes, far inside the 225-minute window. The same
 # limiter as Shopify's (8 requests at once, paused and slowed by 429s).
 SQUARESPACE_RPS = 2.0
+# Shopify storefronts the generic crawl reads (probe platform `shopify?`, or a Shopify sitemap index:
+# adapters.generic): one budget for all of them, on the generic job's IP, apart from the Shopify job's own (another
+# IP). Run 2026-11-16: 23 of them newly answered Cloudflare's challenge (`cf-mitigated: challenge`, 429/403) on the
+# dedicated IP while their pages were read with only per-host spacing, many stores at once. Each is now read from
+# /products.json (one request per 250 products) at 1 request/s across all of them, 4 at once: stricter than Shopify's
+# own job (SHOPIFY_RPS, 8 at once), and far below the ~20 stores x tens of pages a minute before. About 30 stores x
+# ~3 requests is ~90 requests: under two minutes.
+SHOPIFY_HOSTED = "shopify_hosted"
+SHOPIFY_HOSTED_RPS = 1.0
+SHOPIFY_HOSTED_CONCURRENCY = 4
 
 
 class RateLimited(FetchError):

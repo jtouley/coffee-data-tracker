@@ -735,7 +735,8 @@ def test_ingest_turns_burst_counting_off_for_a_retry_pass(lake, monkeypatch):
     monkeypatch.setattr(ingest, "PlatformLimiter", spy)
     ingest.run(lake, [], "2026-10-26", mode="retry_failed")
     ingest.run(lake, [], "2026-10-26", mode="full")
-    assert [lim.count_bursts for lim in seen] == [False, True]
+    # every limiter of a run (Shopify's and the Shopify-hosted generic stores'), alike
+    assert [lim.count_bursts for lim in seen] == [False, False, True, True]
 
 
 def test_a_later_job_of_the_run_never_counts_a_store_that_blocked_earlier(lake, monkeypatch):

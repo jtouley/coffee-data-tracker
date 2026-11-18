@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import USER_AGENT, Blocked, DeadlineReached, PoliteClient, RobotsUnavailable
+from .http import USER_AGENT, Blocked, DeadlineReached, FetchError, PoliteClient, RobotsUnavailable
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
@@ -329,7 +329,25 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
     html = home.text.lower()
     platform = next((p for p, pat in HTML_MARKERS if re.search(pat, html)), "other")
+    if platform == "other" and _shopify_sitemap_index(client, host):
+        platform = "shopify?"  # crawled by the Shopify job from now on (models.Roaster.adapter)
     return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
+
+
+def _shopify_sitemap_index(client: PoliteClient, host: str) -> bool:
+    """The site's /sitemap.xml is Shopify's index (sitemap_products_N.xml children): a Shopify storefront with no
+    marker on its home page (run 2026-11-16: such stores were crawled page by page as generic ones). One request,
+    under robots.txt like any other; anything but a readable index is no evidence."""
+    from .adapters.generic import shopify_sitemap
+    from .sitemap import _locs
+
+    try:
+        r = client.get(f"https://{host}/sitemap.xml")
+    except DeadlineReached:
+        raise  # no answer about the site: _safe_probe gives it no row
+    except (FetchError, httpx.HTTPError):
+        return False
+    return r.status_code == 200 and b"<sitemapindex" in r.content and shopify_sitemap(_locs(r.content))
 
 
 # Probe rows are handed to `on_batch` (one lake file each) every PROBE_FLUSH_S seconds, or sooner at PROBE_BATCH rows:
@@ -347,6 +365,7 @@ def probe(
     on_batch: Callable[[list[dict]], object] | None = None,
     batch_size: int = PROBE_BATCH,
     flush_s: float = PROBE_FLUSH_S,
+    robots_copies: dict[str, dict] | None = None,
 ) -> list[dict]:
     """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten), one per roaster
     probed, in the order they finished.
@@ -364,16 +383,21 @@ def probe(
     def one(client: PoliteClient, domain: str) -> dict | None:
         if stop is not None and time.monotonic() >= stop:
             return None
-        res = _safe_probe(client, domain)
+        with client.track() as stats:
+            res = _safe_probe(client, domain)
         if res is None:
             return None
         now = datetime.now(UTC).replace(microsecond=0)
-        return {"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": domain, **res}
+        # the robots.txt it went by (a live answer is stored: ingest.robots_copies reads it for the crawl's fallback)
+        return {"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": domain, **res,
+                "robots": stats.robots or None}  # fmt: skip
 
     # Spaced like the catalog crawl (at least 1 s per host, or its robots.txt Crawl-delay), and robots.txt is read
     # and honoured first, as it is for every PoliteClient request.
     with (
-        PoliteClient(min_interval=1.0, timeout=12, retries=2, deadline_s=deadline_s) as client,
+        PoliteClient(
+            min_interval=1.0, timeout=12, retries=2, deadline_s=deadline_s, robots_copies=robots_copies
+        ) as client,
         ThreadPoolExecutor(workers) as ex,
     ):
         futures = [ex.submit(one, client, d) for d in domains]

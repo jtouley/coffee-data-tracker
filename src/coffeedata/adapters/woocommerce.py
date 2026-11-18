@@ -13,6 +13,7 @@ from ..http import (
     FetchError,
     PartialCatalog,
     PoliteClient,
+    SiteDisallowed,
     block_status,
     causes,
     challenged,
@@ -329,8 +330,40 @@ def variation_prices(
         currencies[vid] = _currency(one.get("prices"))
 
 
+# The Store API's path. A store whose robots.txt disallows it to us (Yoast's `Disallow: /wp-json/` and
+# `Disallow: /?rest_route=` under `User-agent: *`: martinhenrycoffee.com, 2026-11-16) is read the way robots.txt does
+# allow: its sitemap, then each product page's JSON-LD (adapters.generic), under the same rules and spacing.
+STORE_API_PATH = "/wp-json/wc/store/v1/products"
+
+
+def _api_disallowed(client: PoliteClient, roaster: Roaster, e: Blocked) -> bool:
+    """The Store API itself is what robots.txt disallows us: a Blocked on its first page (not a SiteDisallowed: a
+    store closed to us stays closed), for the store's own host."""
+    return not isinstance(e, SiteDisallowed) and str(e).startswith(f"https://{roaster.host}{STORE_API_PATH}")
+
+
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
-    base = f"https://{roaster.host}/wp-json/wc/store/v1/products"
+    try:
+        return _store_api(client, roaster)
+    except Blocked as e:
+        if not _api_disallowed(client, roaster, e):
+            raise
+    # Every page the generic path reads is checked against the same robots.txt (a product page it disallows is
+    # Blocked like any other) and spaced the same; nothing here asks for the Store API again.
+    from . import generic
+
+    client.note_route(
+        f"generic: robots.txt disallows the Store API ({STORE_API_PATH}); sitemap and product pages"
+    )
+    items = generic.read_pages(client, roaster)
+    if not items:
+        # the sitemap listed no product page we may read: not an empty catalog, still the robots block it was
+        raise Blocked(f"https://{roaster.host}{STORE_API_PATH} (and no product page in its sitemap)")
+    return items
+
+
+def _store_api(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+    base = f"https://{roaster.host}{STORE_API_PATH}"
     raw: list[dict] = []
     prices: dict[str, float | None] = {}
     stock: dict[str, bool | None] = {}

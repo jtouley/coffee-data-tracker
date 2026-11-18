@@ -67,9 +67,12 @@ COLUMNS: dict[str, dict[str, str]] = {
         "rate_limited": "429 responses.",
         "duration_s": "How long the attempt took.",
         "code_version": "The code that made it (git sha).",
-        "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0) and egress IP.",
+        "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0), egress IP, and the robots.txt copy it was sent under (robots: live or cached, robots_age_s; from raw 1.7.0).",
         "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
         "crawl_delays": "Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied; null when none asked, and before raw 1.5.0.",
+        "transport_errors": "Each request that got no HTTP response (the first 20): host, path, whether it was robots.txt, the phase it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, connect, read_timeout, read, protocol...), the exception's class and its innermost cause's, its message (200 characters) and the egress IP; null when none, and before raw 1.7.0.",
+        "robots": "The robots.txt each host's requests went by: live (fetched in this job; its time, HTTP status and, on the fetch that fetched it, a 2xx's body up to 500 KiB) or cached (a stored live copy at most 30 days old, used because the live file was unreachable: its time, status and age in seconds); null before raw 1.7.0.",
+        "catalog_route": "How the catalog was read when not by its adapter's own path, and why (a WooCommerce store whose robots.txt disallows the Store API, read from its sitemap and product pages; a Shopify storefront the generic crawl read from /products.json); null otherwise, and before raw 1.7.0.",
     },
     "run_manifests": {
         "run_date": _RUN,

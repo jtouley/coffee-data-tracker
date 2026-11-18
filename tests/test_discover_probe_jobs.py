@@ -45,8 +45,10 @@ def _registry_row(rid: str) -> dict:
 
 
 def _probe_args(**kw) -> argparse.Namespace:
+    # unreachable_days 28 (the stale cadence): these tests are about discovery and stale probing; the seed's
+    # unreachable roasters' earlier re-check has its own tests below
     base = {"stale_days": 28, "only": None, "sample": None, "workers": 2, "run_date": "2026-11-02",
-            "deadline_min": None}  # fmt: skip
+            "deadline_min": None, "unreachable_days": 28}  # fmt: skip
     return argparse.Namespace(**(base | kw))
 
 
