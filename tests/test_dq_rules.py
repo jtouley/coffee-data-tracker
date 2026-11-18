@@ -152,10 +152,14 @@ def test_the_public_tables_reconcile_and_a_reclassified_product_is_no_disagreeme
         "update dim_roaster set coffees_listed = coffees_listed + 1",  # listed_total
         "update public_price_event set roaster_id = 'elsewhere.com' where coffee_id like '%:A'",  # event_roaster
         "insert into fct_price_event (coffee_id, roaster_id, event) values ('onyxcoffeelab.com:gone', "
-        "'onyxcoffeelab.com', 'new')",  # an orphan that is still coffee (no record at all)
+        "'onyxcoffeelab.com', 'new')",  # an orphan event: the relationships test's, not the reconciliation's
     )
     r = _test(lake, tmp_path, "public_tables_reconcile")
-    assert r.returncode == 0 and re.search(r"WARN 4 public_tables_reconcile", r.stdout), r.stdout[-3000:]
+    assert r.returncode == 0 and re.search(r"WARN 3 public_tables_reconcile", r.stdout), r.stdout[-3000:]
+    r = _test(lake, tmp_path, "relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_")
+    assert r.returncode != 0 and re.search(r"FAIL 1 relationships_fct_price_event_coffee_id", r.stdout), (
+        r.stdout[-3000:]
+    )
 
 
 def _release(tmp_path, name: str, run_date: str = WEEK2, drop: dict | None = None) -> dict[str, dict]:

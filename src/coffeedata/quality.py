@@ -83,7 +83,7 @@ def record_build(
     """Append this build's release and record to the lake: passing or not, nothing is lost. `results` holds one
     run_results.json per dbt step (models, then tests); `duration_s` is how long they took. Every row carries the
     build's environment: the CI run, dbt's and the key packages' versions, and what decided its verdicts
-    (`verdicts`: verdict_model, verdict_definition, image_digest, rules_only_override, verdicts_in_flight). Returns
+    (`verdicts`: verdict_model, verdict_definition, configured_image, rules_only_override, verdicts_in_flight). Returns
     the recorded verdict: `passed`, and only if every release table was written, since a release missing a table
     can't be served, and only if Claude's verdicts were checked (verdict.gate_problem) or rules only was explicitly
     allowed by a named override."""
@@ -94,7 +94,7 @@ def record_build(
     build_id = build_id or new_batch_id()  # the one the tables carry as release_build_id, when given
     verdicts = verdicts or {}
     # cmd_build passes its override; any other caller gets COFFEEDATA_ALLOW_RULES_ONLY=1's, as serve does.
-    override = verdicts.get("rules_only_override") or rules_only_override()
+    override = verdicts.get("rules_only_override") or rules_only_override(lake_url=lake.url)
     problem = gate_problem(
         verdicts.get("verdict_model"), _dbt_vars(results).get("require_verdicts"), _gate_status(results)
     )
@@ -124,7 +124,7 @@ def record_build(
         "duration_s": None if duration_s is None else round(duration_s, 3),
         "verdict_model": verdicts.get("verdict_model") or None,
         "verdict_definition": verdicts.get("verdict_definition"),
-        "image_digest": verdicts.get("image_digest"),
+        "configured_image": verdicts.get("configured_image"),
         "rules_only_override": override,
         "verdicts_in_flight": verdicts.get("verdicts_in_flight"),
     }
@@ -843,7 +843,7 @@ def servable(lake: Lake, build_id: str, rules_only_override: str | None = None) 
             "release %s: %s; rules only, allowed by %s (its build record)", build_id, problem, recorded
         )
         return None
-    allowed = rules_only_override or env_override()
+    allowed = rules_only_override or env_override(lake_url=lake.url)
     if allowed:
         refuse_on_remote(allowed, lake.url)
     if not allowed:
@@ -859,8 +859,10 @@ def servable(lake: Lake, build_id: str, rules_only_override: str | None = None) 
 def rollback(
     lake: Lake, to: str | None = None, reason: str = "", rules_only_override: str | None = None
 ) -> str:
-    """Serve an earlier passing release: `to` ('served': the one served now), or the passing release before the one
-    served now. `rules_only_override` names why a release without checked verdicts may be served (serve)."""
+    """Serve an earlier passing release: `to` ('served': the one served now), or the newest passing release before
+    the one served now that can be served (servable: its verdicts were checked, or `rules_only_override` allows it);
+    earlier releases that can't be are skipped and logged. `rules_only_override` names why a release without checked
+    verdicts may be served (serve)."""
     now = (served(lake) or {}).get("build_id")
     passing = [b for b, _, ok in builds(lake) if ok]
     if to == "served":  # the same release again: re-export it and rebuild the site, with no crawl
@@ -871,7 +873,24 @@ def rollback(
         earlier = passing[: passing.index(now)] if now in passing else passing[:-1]
         if not earlier:
             raise ValueError("no earlier passing release to roll back to")
-        to = earlier[-1]
+        refused = []
+        for b in reversed(earlier):
+            try:
+                servable(lake, b, rules_only_override)
+            except ValueError as e:
+                refused.append(f"{b} ({e})")
+                continue
+            to = b
+            break
+        else:
+            raise ValueError(
+                f"no earlier passing release can be served: {len(refused)} passed their checks, none had Claude's "
+                f"verdicts checked: {'; '.join(refused)}"
+            )
+        if refused:
+            log.warning(
+                "rollback skipped %d newer release(s) that can't be served: %s", len(refused), refused
+            )
     serve(
         lake, to, reason or f"rollback from {now}", action="rollback", previous=now,
         rules_only_override=rules_only_override,

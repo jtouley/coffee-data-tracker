@@ -446,7 +446,8 @@ def build(db: Path, out: Path) -> Path:
         """
         select count(*) filter (where event = 'price') as price_changes,
                count(*) filter (where event = 'removed') as removed
-        -- A left join: a product no longer classed as coffee has left dim_coffee, but its events still count.
+        -- fct_price_event keeps only coffees in dim_coffee, so a product reclassified as not coffee has no events
+        -- and is neither a price change nor a delisting here; the join only reads is_wholesale.
         from fct_price_event e left join dim_coffee c using (coffee_id)
         where not coalesce(c.is_wholesale, false) and e.roaster_id in (select roaster_id from site_roaster)
           and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",

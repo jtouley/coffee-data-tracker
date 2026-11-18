@@ -137,7 +137,10 @@ What can and can't be measured yet:
   events whose product is still coffee. On all five replayed builds: 0 disagreements. The 24 orphan events of 11-02
   (10 coffees) are the items: 3 in train (all labelled by_design, all products whose latest record is classified
   not coffee) and 7 in test, scored in totals only (see "Results"). Main's relationships warning reports all 24;
-  the new rule reports none of them.
+  the new rule reports none of them. Since #181, `fct_price_event` keeps only coffees in `dim_coffee`, so a
+  reclassified product has no events and the `orphan_event` check is gone from `public_tables_reconcile`: an orphan
+  can no longer be by design, and `fct_price_event`'s relationships test (now an error) fails the build on one.
+  `recon_eval.py` replays the rule as it was scored.
 - Release against release (`release_changes`): every added, removed or changed row of the four public tables
   against the served release, with a reason. Validation case, the verdict backfill 956abd -> 5060ad (run 11-02),
   rebuilt on this branch with `COFFEEDATA_VERDICT_MODEL=claude-haiku-5-5` and 956abd as the served release (its

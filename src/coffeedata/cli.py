@@ -539,9 +539,15 @@ def cmd_classify(args: argparse.Namespace) -> None:
     waiting = set(out["submit"].get("batch_ids", []))
     while waiting and time.monotonic() < deadline:
         time.sleep(60)
-        got = verdict.collect(lake, args.run_date)
-        out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
-        waiting &= verdict.open_batch_ids(lake)
+        # One failed read of the lake (a 429, a timeout) never ends the wait: it is logged and counted, and the
+        # next minute tries again. At the deadline classify goes on with what it collected.
+        try:
+            got = verdict.collect(lake, args.run_date)
+            out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
+            waiting &= verdict.open_batch_ids(lake)
+        except Exception as e:  # noqa: BLE001 - the lake's and the API's errors; the wait only retries
+            out["wait_read_failures"] = out.get("wait_read_failures", 0) + 1
+            logging.warning("classify: a read during the wait failed, retrying next minute: %s", e)
     if waiting:
         # The wait ran out: the build after this classifies those versions by the rules, counts them in its record
         # (verdicts_in_flight), and verdicts_cover_catalog still judges the share. The next run collects them.
@@ -617,7 +623,7 @@ def dbt_build(
             "verdict_definition": verdict.DEFINITION_VERSION,
             # verdicts_cover_catalog: fails a build with no verdict model, or too few listed coffees decided by
             # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
-            "require_verdicts": not verdict.rules_only_allowed(),
+            "require_verdicts": not verdict.rules_only_allowed(lake.url),
             "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
         }
         | (extra_vars or {})
@@ -757,7 +763,7 @@ def cmd_build(args: argparse.Namespace) -> bool:
         lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took,
         verdicts={
             "verdict_model": verdict.model(), "verdict_definition": verdict.DEFINITION_VERSION,
-            "image_digest": verdict.image(), "rules_only_override": override, "verdicts_in_flight": in_flight,
+            "configured_image": verdict.image(), "rules_only_override": override, "verdicts_in_flight": in_flight,
         },
     )  # fmt: skip
     _write_personal_marts(lake, db, quality.SERVED_MARTS)

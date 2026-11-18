@@ -803,7 +803,7 @@ release. If the publish is what failed, go to **f**.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+     --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
@@ -844,7 +844,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+     --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -1003,7 +1003,7 @@ gcloud run jobs execute enrich-week --region $REGION --wait
 gcloud run jobs execute build --region $REGION --wait
 # or the same build told to judge $WEEK (the rebuild form other sections refer to):
 gcloud run jobs execute build --region $REGION --wait \
-  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+  --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
 **The override.** `COFFEEDATA_SKIP_PRECONDITION=<reason>` on one execution skips that job's check (for the build
@@ -1117,8 +1117,10 @@ Now three things stop that from happening silently:
   named override, which the build record (`builds.rules_only_override`) or the serving log's reason carries:
   `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` on the build, or `coffeedata rollback --to <build>
   --allow-rules-only --reason "<why>"`, and only on a local lake: on a remote one every form is refused. Every build record also carries
-  `verdict_model`, `verdict_definition`, `image_digest` (the job's `COFFEEDATA_INGEST_IMAGE`, Terraform's
-  `ingest_image`) and `verdicts_in_flight`; `git_sha` is stamped by the image build (#124).
+  `verdict_model`, `verdict_definition`, `configured_image` and `verdicts_in_flight`. `configured_image` is the image
+  Terraform configured the job with (`ingest_image`, passed as `COFFEEDATA_INGEST_IMAGE`), not proof of what ran: a
+  job changed outside Terraform still reports it, and an image older than the field (the 11-09 case) reports
+  nothing. What code ran is `git_sha`, stamped into the image when it is built (#124).
 
 **The expected share and its lag.** About 95%, not 100%. The build job's classify waits up to 45 minutes
 (`--wait 45`) for the batch it submits, so this week's new and changed versions are usually in this week's build.

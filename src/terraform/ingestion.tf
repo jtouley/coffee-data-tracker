@@ -503,8 +503,8 @@ resource "google_cloud_run_v2_job" "ingest" {
             value = env.value.deadline_utc
           }
         }
-        # The image this job runs, by digest: the build records it (builds.image_digest), so a release says which
-        # image built it. Last, so a plan adds it without shifting the entries above.
+        # The image this job is configured with, by digest: the build records it (builds.configured_image). It is
+        # what Terraform set, not proof of what ran (git_sha is). Last, so a plan adds it without shifting the rest.
         env {
           name  = "COFFEEDATA_INGEST_IMAGE"
           value = var.ingest_image

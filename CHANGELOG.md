@@ -195,6 +195,20 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- **A release whose coffee-or-not verdicts weren't checked is never served (#181).** The 2026-11-09 weekly build ran an
+  image without a verdict model, its gate never ran, and it was served for a week. Now a build with no verdict model,
+  the gate off, or no passing `verdicts_cover_catalog` is recorded as failed. `serve`, `rollback` and `site --served`
+  refuse such a release unless a named rules-only override allows it, and the build record and serving log carry the
+  override. On a remote lake every form of the override is refused, and `weekly.yml` no longer passes one. A plain
+  `rollback` skips releases that can't be served. The build job's `classify` waits up to 45 minutes for the week's
+  verdicts. Build records gain `verdict_model`, `verdict_definition`, `configured_image`, `rules_only_override` and
+  `verdicts_in_flight`.
+- **A product reclassified as not coffee is no longer counted as delisted (#181).** `fct_price_event` now keeps only
+  coffees in `dim_coffee`, so such a product's events go with it instead of reading as a removal. This changes a
+  public figure: the site's weekly "delisted" count for the 2026-11-16 week drops by 358 (3,229 to 2,871), and for
+  2026-11-09 by 23 (2,583 to 2,560). Price changes are unchanged, and `public_price_event` was already filtered.
+  `fct_price_event`'s relationships test to `dim_coffee` is now an error.
+
 - **No published value comes from OpenStreetMap (#90).** `public_roaster` left out roasters known only from
   OpenStreetMap (ODbL), but `stg_registry` took a roaster's name, city and state from its newest registry row
   whatever the source, so a roaster found by Overture and later by OpenStreetMap would have published

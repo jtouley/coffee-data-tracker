@@ -342,12 +342,13 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("package_versions", pa.string()),
             ("duration_s", pa.float64()),
             # What decided the release's coffee-or-not verdicts (added 2026-11; older files read back as null): the
-            # verdict model and definition hash dbt was given, the ingest image by digest (when the job knows it),
+            # verdict model and definition hash dbt was given, the ingest image the job was configured with
+            # (Terraform's ingest_image, not proof of what ran: git_sha says what code ran; verdict.image),
             # the named rules-only override that let a build without checked verdicts pass (null in production),
             # and how many product versions were still awaiting Claude's verdict, so classified by the rules.
             ("verdict_model", pa.string()),
             ("verdict_definition", pa.string()),
-            ("image_digest", pa.string()),
+            ("configured_image", pa.string()),
             ("rules_only_override", pa.string()),
             ("verdicts_in_flight", pa.int64()),
         ]

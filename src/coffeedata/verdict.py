@@ -82,7 +82,8 @@ RULES_ONLY_ENV = "COFFEEDATA_ALLOW_RULES_ONLY"
 def refuse_on_remote(override: str, lake_url: str | None = None) -> str:
     """The override, if the lake is local. A remote lake (any `://` URL: hf://, s3://, gs://) is one that is
     published and served, so rules only is refused there whatever asks for it: a SystemExit naming the override.
-    `lake_url` defaults to COFFEEDATA_LAKE, as Lake() reads it."""
+    Deliberately stricter than Lake.remote (hf:// only): any scheme, file:// included, fails safe. `lake_url` is
+    the Lake in use's URL where the caller has one, else COFFEEDATA_LAKE, as Lake() reads it."""
     url = os.environ.get("COFFEEDATA_LAKE", "") if lake_url is None else lake_url
     if "://" in url:
         raise SystemExit(
@@ -93,23 +94,23 @@ def refuse_on_remote(override: str, lake_url: str | None = None) -> str:
     return override
 
 
-def rules_only_allowed() -> bool:
+def rules_only_allowed(lake_url: str | None = None) -> bool:
     """The explicit opt-out for local and dev runs (COFFEEDATA_ALLOW_RULES_ONLY=1): classify skips without a model
     or credentials, and the build's verdict gate is off. Never set in production: on a remote lake it is refused
     (refuse_on_remote)."""
     if os.environ.get(RULES_ONLY_ENV, "").strip().lower() not in ("1", "true", "yes"):
         return False
-    refuse_on_remote(f"{RULES_ONLY_ENV}=1")
+    refuse_on_remote(f"{RULES_ONLY_ENV}=1", lake_url)
     return True
 
 
-def rules_only_override(flag: bool = False) -> str | None:
+def rules_only_override(flag: bool = False, lake_url: str | None = None) -> str | None:
     """The named opt-out that lets a build without Claude's verdicts pass and be served, or None in production:
     which switch allowed it (`--allow-rules-only`, or COFFEEDATA_ALLOW_RULES_ONLY=1). The build record and the
     serving log carry it, so a rules-only release always says why it was allowed. Refused on a remote lake."""
     if flag:
-        return refuse_on_remote("--allow-rules-only")
-    if rules_only_allowed():
+        return refuse_on_remote("--allow-rules-only", lake_url)
+    if rules_only_allowed(lake_url):
         return f"{RULES_ONLY_ENV}=1"
     return None
 
@@ -135,8 +136,11 @@ IMAGE_ENV = "COFFEEDATA_INGEST_IMAGE"
 
 
 def image() -> str | None:
-    """The ingest image this process runs, pinned by digest (`<repo>/ingest@sha256:<digest>`), when the job knows
-    it: the Cloud Run jobs get it from Terraform's ingest_image (src/terraform/ingestion.tf). None elsewhere."""
+    """The ingest image the job is configured with (`<repo>/ingest@sha256:<digest>`): Terraform's ingest_image,
+    passed to every Cloud Run job as COFFEEDATA_INGEST_IMAGE (src/terraform/ingestion.tf). It is what Terraform set,
+    not proof of what ran: a job whose image was changed outside Terraform still reports the configured one, and an
+    image older than this field reports nothing. What code ran is builds.git_sha, stamped into the image at build
+    time (#124). None outside the jobs."""
     return os.environ.get(IMAGE_ENV) or None
 
 

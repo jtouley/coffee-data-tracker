@@ -477,7 +477,7 @@ def test_record_build_fails_a_build_whose_verdicts_werent_checked(lake, tmp_path
     monkeypatch.setattr(quality, "RELEASE_TABLES", ())
     args = (lake, tmp_path / "missing.duckdb", "2026-11-09", tmp_path / "none.json")
     digest = "r/ingest@sha256:" + "a" * 64
-    info = {"verdict_model": "m", "verdict_definition": verdict.DEFINITION_VERSION, "image_digest": digest,
+    info = {"verdict_model": "m", "verdict_definition": verdict.DEFINITION_VERSION, "configured_image": digest,
             "verdicts_in_flight": 7}  # fmt: skip
     assert quality.record_build(*args, results("m", True, "pass"), True, "ok", verdicts=info) is True
     old = {"verdict_model": ""}
@@ -490,7 +490,7 @@ def test_record_build_fails_a_build_whose_verdicts_werent_checked(lake, tmp_path
         r[0]: r[1:]
         for r in lake.connect()
         .execute(
-            f"select build_id, status, verdict_model, verdict_definition, image_digest, rules_only_override, "
+            f"select build_id, status, verdict_model, verdict_definition, configured_image, rules_only_override, "
             f"verdicts_in_flight from {lake.scan('builds')} where kind = 'build'"
         )
         .fetchall()
@@ -518,7 +518,7 @@ def test_the_build_records_its_verdict_inputs_and_override(lake, monkeypatch, tm
     assert _dbt_vars(monkeypatch, tmp_path, build())["require_verdicts"] is True
     assert seen["verdicts"] == {
         "verdict_model": "m", "verdict_definition": verdict.DEFINITION_VERSION,
-        "image_digest": "r/ingest@sha256:" + "b" * 64, "rules_only_override": None, "verdicts_in_flight": 12,
+        "configured_image": "r/ingest@sha256:" + "b" * 64, "rules_only_override": None, "verdicts_in_flight": 12,
     }  # fmt: skip
     _dbt_vars(monkeypatch, tmp_path, build(allow_rules_only=True))
     assert seen["verdicts"]["rules_only_override"] == "--allow-rules-only"
@@ -579,6 +579,74 @@ def test_classify_waits_for_its_batch_then_says_what_is_still_open(lake, monkeyp
     assert json.loads(out.out)["still_open"] == ["mb1"]
     assert "1 verdict batch(es) still open after 2 min" in out.err
     assert clock[0] == 120  # it waited the full two minutes
+
+
+def test_a_failed_read_during_the_wait_is_retried_not_fatal(lake, monkeypatch, capsys, caplog):
+    """The wait reads the lake every minute; on hf:// a read can 429 or time out. One failure is logged and counted,
+    the next minute tries again, and the batch is still collected within the wait."""
+    import duckdb
+
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    clock = [0.0]
+    monkeypatch.setattr("time.monotonic", lambda: clock[0])
+    monkeypatch.setattr("time.sleep", lambda s: clock.__setitem__(0, clock[0] + s))
+    reads = []
+
+    def collect(lk, d=None):
+        reads.append(clock[0])
+        if clock[0] == 60:  # the first read of the wait fails
+            raise duckdb.HTTPException("HTTP 429 (Too Many Requests)")
+        return {"collected": 3 if clock[0] == 120 else 0}
+
+    monkeypatch.setattr(verdict, "collect", collect)
+    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: set() if clock[0] >= 120 else {"mb1"})
+    cli.main(["classify", "--wait", "5"])  # returns: exit 0
+    out = capsys.readouterr()
+    got = json.loads(out.out)
+    assert got["wait_read_failures"] == 1 and got["collect_after_wait"] == 3 and "still_open" not in got
+    assert "a read during the wait failed, retrying next minute: HTTP 429" in caplog.text
+    assert clock[0] == 120  # it stopped waiting once the batch was collected
+
+    # Every read failing: the wait runs out, and classify goes on, saying what is still open.
+    clock[0] = 0.0
+    monkeypatch.setattr(verdict, "collect", lambda lk, d=None: {"collected": 0} if clock[0] == 0 else 1 / 0)
+    cli.main(["classify", "--wait", "3"])
+    got = json.loads(capsys.readouterr().out)
+    assert got["wait_read_failures"] == 3 and got["still_open"] == ["mb1"]
+
+
+def test_rollback_skips_releases_that_cant_be_served(lake, monkeypatch):
+    """After the guard, a plain `rollback` from the 11-16 release would pick 11-09, which can't be served (no verdict
+    model). It picks the newest earlier release that can be, and says plainly when none can."""
+    import pytest
+
+    from coffeedata import quality
+
+    _no_verdicts(monkeypatch)
+    _record(lake, "b1026", "m", True, "pass")
+    _record(lake, "b1102", "", None, None)
+    _record(lake, "b1109", "m", True, None)  # the gate never ran
+    _record(lake, "b1116", "m", True, "pass")
+    history = ["b1026", "b1102", "b1109", "b1116"]
+    monkeypatch.setattr(quality, "builds", lambda lk: [(b, "2026-11-16", True) for b in history])
+    monkeypatch.setattr(quality, "served", lambda lk: {"build_id": "b1116"})
+    served = []
+    monkeypatch.setattr(
+        quality, "serve", lambda lk, b, reason, **kw: served.append((b, kw["rules_only_override"]))
+    )
+    assert quality.rollback(lake) == "b1026"
+    # With a named override, the newest earlier release is servable again (its record still says why).
+    assert quality.rollback(lake, rules_only_override="rollback --allow-rules-only (fork)") == "b1109"
+    assert served == [("b1026", None), ("b1109", "rollback --allow-rules-only (fork)")]
+    history.remove("b1026")
+    with pytest.raises(ValueError, match=r"no earlier passing release can be served: 2 passed their checks"):
+        quality.rollback(lake)
+    assert len(served) == 2
 
 
 def test_in_flight_counts_versions_awaiting_this_models_verdict(lake, monkeypatch):
@@ -677,6 +745,7 @@ def test_no_job_workflow_or_terraform_sets_the_rules_only_override():
         *(root / "src/terraform").rglob("*.tfvars*"),
         root / "app/Dockerfile",
         root / "ingest.Dockerfile",
+        root / "ingest.cloudbuild.yaml",
     ]
     assert files
     setting = [str(f.relative_to(root)) for f in files if "ALLOW_RULES_ONLY" in f.read_text(errors="ignore")]
