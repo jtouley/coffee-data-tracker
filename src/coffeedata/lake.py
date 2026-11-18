@@ -110,6 +110,42 @@ BLOCK = pa.struct(
         ("x_request_id", pa.string()),
         ("egress_ip", pa.string()),
         ("sg_captcha", pa.string()),
+        # Added in raw 1.7.0 (null in older files): the robots.txt the request was made under, `live` (fetched in
+        # this job) or `cached` (a stored copy, the live one unreachable: http.ROBOTS_COPY_MAX_AGE_S), and the
+        # cached copy's age in seconds (0 for live).
+        ("robots", pa.string()),
+        ("robots_age_s", pa.float64()),
+    ]
+)
+# A request that got no HTTP response (http.transport_record, raw 1.7.0): where and in which phase it failed (dns,
+# connect_timeout, connection_refused, connection_reset, tls, read_timeout...: http.transport_phase), the exception's
+# class and its innermost cause's, its message (cut at 200 characters), and the egress IP it left from.
+TRANSPORT_ERROR = pa.struct(
+    [
+        ("at", pa.timestamp("s", tz="UTC")),
+        ("host", pa.string()),
+        ("path", pa.string()),
+        ("robots_txt", pa.bool_()),
+        ("phase", pa.string()),
+        ("error_class", pa.string()),
+        ("cause_class", pa.string()),
+        ("detail", pa.string()),
+        ("egress_ip", pa.string()),
+    ]
+)
+# The robots.txt a fetch's requests to one host went by (http.RequestStats.robots, raw 1.7.0): `live` (fetched in this
+# job, with the time and HTTP status it answered and, on the fetch that fetched it, its body: a 2xx's text, null for
+# a 4xx) or `cached` (the stored live copy used because the live file was unreachable: its fetch time, status and
+# age; no body, it is stored where it was fetched). Append-only like the rest of the row: a host's stored copies are
+# its `live` records (ingest.robots_copies).
+ROBOTS_COPY = pa.struct(
+    [
+        ("host", pa.string()),
+        ("source", pa.string()),
+        ("fetched_at", pa.timestamp("s", tz="UTC")),
+        ("age_s", pa.float64()),
+        ("status", pa.int32()),
+        ("body", pa.string()),
     ]
 )
 
@@ -184,6 +220,10 @@ SCHEMAS: dict[str, pa.Schema] = {
             # Crawl-delay, the value as written, the spacing used (capped at http.MAX_CRAWL_DELAY), and whether the
             # cap applied.
             ("crawl_delays", pa.list_(CRAWL_DELAY)),
+            # Added with raw contract 1.7.0 (older files read back as null): each request that got no HTTP
+            # response, with the phase it failed in; and the robots.txt each host's requests went by.
+            ("transport_errors", pa.list_(TRANSPORT_ERROR)),
+            ("robots", pa.list_(ROBOTS_COPY)),
         ]
     ),
     "probes": pa.schema(
@@ -196,6 +236,9 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("http_status", pa.int32()),
             ("final_host", pa.string()),
             ("platform", pa.string()),
+            # Added with raw contract 1.7.0 (older files read back as null): the robots.txt the probe went by, as
+            # fetches.robots (a probe leaves from Cloud Run's default egress, so its live copies count too).
+            ("robots", pa.list_(ROBOTS_COPY)),
         ]
     ),
     "registry": pa.schema(
