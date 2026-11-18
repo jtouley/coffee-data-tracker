@@ -62,7 +62,9 @@ def declared_sitemaps(client: PoliteClient, host: str) -> list[str]:
     return out
 
 
-def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = None) -> list[str]:
+def sitemap_urls(
+    client: PoliteClient, host: str, unread: list[str] | None = None, index: list[str] | None = None
+) -> list[str]:
     """Every URL in sitemap.xml and, for a sitemap index, in every sitemap it lists. A 404 means the site has none
     ([]); a robots block, network error or any other status of sitemap.xml itself raises FetchError, so a fetch can't
     mistake "couldn't read it" for "nothing there"; so does a sitemap over SITEMAP_MAX_BYTES (ResponseTooLarge).
@@ -74,7 +76,8 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     challenge (_refusal) still raises: the store is deferred or refused, as for any page.
 
     When /sitemap.xml is a 404, the sitemap the store's robots.txt names on its own host (declared_sitemaps: Yoast's
-    /sitemap_index.xml) is read instead, the first that answers 200."""
+    /sitemap_index.xml) is read instead, the first that answers 200. index: filled with a sitemap index's sub-sitemap
+    URLs (what platform made the sitemap: generic reads Shopify's names)."""
     client = client.with_max_response(max(client.max_response_bytes, SITEMAP_MAX_BYTES))
     r = _get(client, f"https://{host}/sitemap.xml")
     if r.status_code == 404:
@@ -91,6 +94,8 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     if b"<sitemapindex" not in r.content:
         return _locs(r.content)
     locs = _locs(r.content)
+    if index is not None:
+        index.extend(locs)
     urls: list[str] = []
     # Product sitemaps first: Shopify/Woo/BigCommerce name them that way.
     for sm in sorted(locs, key=lambda u: "product" not in u.lower()):

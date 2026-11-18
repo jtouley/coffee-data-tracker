@@ -226,7 +226,8 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("robots", pa.list_(ROBOTS_COPY)),
             # Added with raw contract 1.7.0 (null before, and when the adapter read the catalog its own way): how
             # the catalog was read instead, and why (a WooCommerce store whose robots.txt disallows the Store API,
-            # read from its sitemap and product pages).
+            # read from its sitemap and product pages; a Shopify storefront the generic crawl read from
+            # /products.json).
             ("catalog_route", pa.string()),
         ]
     ),
