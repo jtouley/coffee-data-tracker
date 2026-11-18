@@ -207,11 +207,12 @@ def cmd_discover(args: argparse.Namespace) -> None:
         raise SystemExit(f"discover failed: {', '.join(failed)}")
 
 
-def unreachable_backoff_days(failed_probes: int, unreachable_days: int, stale_days: int) -> int:
+def unreachable_backoff_days(failures: int, unreachable_days: int, stale_days: int) -> int:
     """How long an unreachable roaster waits between probes: `unreachable_days` after an ok probe (or the seed's),
-    doubled for each probe that failed since (7, 14, 28 days), never longer than `stale_days`, the wait every other
-    roaster gets."""
-    return min(unreachable_days * 2 ** min(failed_probes, 8), stale_days)
+    doubled for each failure since (7, 14, 28 days), never longer than `stale_days`, the wait every other roaster
+    gets. failures: the probes that failed since the last ok one, plus the crawl runs that failed since it (a store
+    whose home page answers the probe but whose catalog keeps refusing us backs off as well)."""
+    return min(unreachable_days * 2 ** min(failures, 8), stale_days)
 
 
 def probe_todo(states: list, run_date: str, stale_days: int, unreachable_days: int = 7) -> list[str]:
@@ -228,7 +229,8 @@ def probe_todo(states: list, run_date: str, stale_days: int, unreachable_days: i
     def due_unreachable(s) -> bool:
         if s.status != "unreachable":
             return False
-        wait = unreachable_backoff_days(getattr(s, "failed_probes", 0), unreachable_days, stale_days)
+        failures = getattr(s, "failed_probes", 0) + getattr(s, "failed_runs", 0)
+        wait = unreachable_backoff_days(failures, unreachable_days, stale_days)
         return (s.last_probed or "") <= (day - timedelta(days=wait)).isoformat()
 
     todo = [
@@ -275,6 +277,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
             todo = [args.only]
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
             todo = sorted(todo, key=ingest.sample_key)[: args.sample]
+        # Read before the window is measured, so its time comes out of the window (from t0), never on top of it
+        copies = ingest.robots_copies(lake, args.run_date)
         deadline_min = getattr(args, "deadline_min", None)
         left = None
         # A Cloud Run retry keeps the first attempt's window (it ends before the crawls). For a retry the window is
@@ -289,7 +293,7 @@ def cmd_probe(args: argparse.Namespace) -> None:
             run_date=args.run_date,
             deadline_s=left,
             on_batch=write,
-            robots_copies=ingest.robots_copies(lake),
+            robots_copies=copies,
         )
     except BaseException as e:  # what was written stays staged; the end row says the attempt failed
         control.finish(

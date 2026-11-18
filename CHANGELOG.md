@@ -18,11 +18,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
-- Crawl recovery after the 2026-11-16 run: unreachable roasters are probed again on a 7/14/28-day backoff; requests
-  that got no HTTP response are recorded with their phase (`fetches.transport_errors`); an unreachable robots.txt
-  may be stood in for by the site's own copy from the last 30 days (`fetches.robots`, `probes.robots`); a WooCommerce
-  store whose robots.txt disallows the Store API is read from its sitemap and product pages
-  (`fetches.catalog_route`). Raw contract 1.7.0.
+- Crawl recovery after the 2026-11-16 run: unreachable roasters are probed again on a 7/14/28-day backoff (failed
+  probes and failed crawl runs since the last ok probe both count); requests that got no HTTP response are recorded
+  with their phase (`fetches.transport_errors`); an unreachable robots.txt may be stood in for by the site's own
+  copy from the last 30 days (`fetches.robots`, `probes.robots`), followed exactly. Raw contract 1.7.0.
 
 - A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
   deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never

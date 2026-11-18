@@ -100,8 +100,8 @@ TRANSPORT_DETAIL_CHARS = 200
 # `live`) is used if it is at most this old, and its rules are followed exactly; older or none, nothing is fetched,
 # as before. A challenge, a 401/403 and a pause (429, 430, 503, a 5xx with a long Retry-After) never use a copy.
 ROBOTS_COPY_MAX_AGE_S = 30 * 86400.0
-# RFC 9309 2.5: crawlers MUST parse at least 500 KiB; the body we store is cut there (the rules past it are lost to
-# any parser that stops at the minimum, ours included: RobotsRules reads what it is given).
+# RFC 9309 2.5: crawlers MUST parse at least 500 KiB. The live rules are always parsed from the whole file; only the
+# body we store is cut, at its last complete line within this many bytes (http.stored_body).
 ROBOTS_BODY_MAX_BYTES = 500 * 1024
 EGRESS_TTL = 60.0  # seconds an egress-IP lookup is reused (default egress can change IP between connections)
 _egress_lock = threading.Lock()
@@ -610,18 +610,6 @@ class RobotsRules:
 
     def __init__(self, lines: Iterable[str] = (), disallow_all: bool = False) -> None:
         self.disallow_all = disallow_all
-        lines = list(lines)
-        # The file's Sitemap lines (RFC 9309 2.3.5: not tied to any group), in order: where a store says its sitemap
-        # is when /sitemap.xml isn't it (Yoast's /sitemap_index.xml). Read like any URL, under these same rules.
-        self.sitemaps: list[str] = list(
-            dict.fromkeys(
-                v.strip()
-                for raw in lines
-                if (kv := raw.lstrip("\ufeff").split("#", 1)[0].partition(":"))[1]
-                and kv[0].strip().lower() == "sitemap"
-                and (v := kv[2].strip())
-            )
-        )
         groups = _robots_groups(lines)
         current, old = ([g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS)
         selected = [current or [g for g in groups if "*" in g.agents]] + ([old] if old else [])
@@ -664,9 +652,6 @@ class RequestStats:
     # stored copy, used because the live one was unreachable), fetched_at and age_s of the copy, its HTTP status, and
     # body (only on the fetch that fetched it live, so each body is stored once)}
     robots: list[dict] = field(default_factory=list)
-    # How the catalog was read when not by its adapter's own path (PoliteClient.note_route): e.g. a WooCommerce store
-    # whose robots.txt disallows the Store API, read from its sitemap and product pages
-    route: str | None = None
 
     def note(
         self,
@@ -709,6 +694,32 @@ class RequestStats:
                     d["body"] = record["body"]
                 return
         self.robots.append(dict(record))
+
+
+def stored_body(text: str | None) -> str | None:
+    """The robots.txt body to store: the whole file up to ROBOTS_BODY_MAX_BYTES, cut at the end of its last complete
+    line, so no rule is stored half-written (a cut `Allow: /private/public-only` would read as `Allow: /private/`).
+    A file with no line break inside the limit stores nothing (None): a copy that would read as no rules is never
+    kept. A copy that was cut is followed exactly as stored (the rules past the cut are lost to it)."""
+    if text is None:
+        return None
+    raw = text.encode("utf-8", "surrogatepass")
+    if len(raw) <= ROBOTS_BODY_MAX_BYTES:
+        return text
+    end = raw.rfind(b"\n", 0, ROBOTS_BODY_MAX_BYTES)
+    return raw[: end + 1].decode("utf-8", "ignore") if end >= 0 else None
+
+
+def robots_host_key(netloc: str) -> str:
+    """One spelling per host for PoliteClient.robots_used: lower case, IDNA (punycode), no default :443, so a
+    response's normalized host (httpx) finds the record its URL's spelling made."""
+    key = netloc.strip().lower()
+    if key.endswith(":443"):
+        key = key[:-4]
+    try:
+        return key.encode("idna").decode("ascii")
+    except UnicodeError:
+        return key
 
 
 def _is_rules_answer(status: int) -> bool:
@@ -821,28 +832,19 @@ class PoliteClient:
             robots = None
             if response is not None:
                 try:
-                    robots = self.robots_used.get(response.request.url.netloc.decode("ascii"))
+                    robots = self.robots_used.get(
+                        robots_host_key(response.request.url.netloc.decode("ascii"))
+                    )
                 except RuntimeError:  # a response built without a request (tests)
                     robots = None
             stats.note(status, retry, page, response, robots)
-
-    def robots_sitemaps(self, host: str) -> list[str]:
-        """The Sitemap URLs the host's robots.txt names (RobotsRules.sitemaps), once its rules are known."""
-        rp = self._robots.get(host)
-        return list(rp.sitemaps) if rp is not None else []
-
-    def note_route(self, route: str) -> None:
-        """Record, on this thread's fetch (fetches.catalog_route), that the catalog was read another way than its
-        adapter's own: the reason, as one line."""
-        if (stats := getattr(self._local, "stats", None)) is not None:
-            stats.route = route
 
     def _note_transport(self, url: str, e: BaseException, robots_request: bool) -> None:
         if (stats := getattr(self._local, "stats", None)) is not None:
             stats.note_transport(transport_record(url, e, robots_request))
 
     def _note_robots(self, host: str, body: str | None = None) -> None:
-        rec = self.robots_used.get(host)
+        rec = self.robots_used.get(robots_host_key(host))
         if rec is not None and (stats := getattr(self._local, "stats", None)) is not None:
             stats.note_robots(rec | {"body": body})
 
@@ -980,11 +982,11 @@ class PoliteClient:
             age = (self._now() - copy["fetched_at"]).total_seconds()
             log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)", host, u.error,
                         copy["fetched_at"].isoformat(), age / 86400)  # fmt: skip
-            self.robots_used[host] = {"host": host, "source": "cached", "fetched_at": copy["fetched_at"],
+            self.robots_used[robots_host_key(host)] = {"host": host, "source": "cached", "fetched_at": copy["fetched_at"],
                                       "age_s": round(age, 1), "status": copy["status"]}  # fmt: skip
             return robots_rules(copy["status"], copy.get("body")), None
         now = self._now().replace(microsecond=0)
-        self.robots_used[host] = {
+        self.robots_used[robots_host_key(host)] = {
             "host": host,
             "source": "live",
             "fetched_at": now,
@@ -999,6 +1001,10 @@ class PoliteClient:
         copy = self.robots_copies.get(host)
         if copy is None or copy.get("fetched_at") is None or copy.get("status") is None:
             return None
+        if 200 <= copy["status"] < 300 and copy.get("body") is None:
+            # a 2xx record without its file (the fetches that only went by it, or a cut that left nothing) is no
+            # copy of the rules: read as one, it would allow everything
+            return None
         age = (self._now() - copy["fetched_at"]).total_seconds()
         return copy if 0 <= age <= ROBOTS_COPY_MAX_AGE_S else None
 
@@ -1011,7 +1017,8 @@ class PoliteClient:
         429, 430 or 5xx, or a network error raises RobotsUnavailable and is remembered for ROBOTS_RETRY_AFTER (a
         pause: its wait): nothing is ever fetched from a host without its rules.
 
-        Returns the rules, the HTTP status and the body (a 2xx's, cut at ROBOTS_BODY_MAX_BYTES; None otherwise). When
+        Returns the rules (from the whole file), the HTTP status and the body to store (stored_body: a 2xx's, cut at
+        its last complete line within ROBOTS_BODY_MAX_BYTES; None otherwise). When
         the file was unreachable (no response: a timeout, a refused or reset connection, TLS, DNS; or a 5xx that
         isn't a pause), raises _Unreachable instead, so _robots_for may use a stored copy; with none, its
         RobotsUnavailable is raised as before."""
@@ -1044,12 +1051,9 @@ class PoliteClient:
             no_answer = False
             challenged = is_challenge(r)
             if not challenged and _is_rules_answer(r.status_code):
-                body = r.text if 200 <= r.status_code < 300 else None
-                if body is not None and len(body.encode("utf-8", "surrogatepass")) > ROBOTS_BODY_MAX_BYTES:
-                    body = body.encode("utf-8", "surrogatepass")[:ROBOTS_BODY_MAX_BYTES].decode(
-                        "utf-8", "ignore"
-                    )
-                return robots_rules(r.status_code, body), r.status_code, body
+                # The live rules always come from the whole file, as before; only the stored copy is cut
+                text = r.text if 200 <= r.status_code < 300 else None
+                return robots_rules(r.status_code, text), r.status_code, stored_body(text)
             # A challenge page standing in for robots.txt is no answer about the rules (run 2026-11-02: SiteGround's
             # 202 was read as "no robots.txt"); neither is a 1xx, a 3xx without a location, a 429/430 or a 5xx. The
             # host is unavailable for now.
