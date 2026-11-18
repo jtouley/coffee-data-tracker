@@ -449,7 +449,7 @@ def test_a_release_without_checked_verdicts_is_never_served(lake, monkeypatch):
         with pytest.raises(ValueError, match=why):
             quality.servable(lake, b)
     assert quality.servable(lake, "bgood") is None
-    assert quality.servable(lake, "bnamed") == "--allow-rules-only"  # its record names the override
+    assert quality.servable(lake, "bnamed") is None  # its record names the override (and the serving log has it)
     assert quality.servable(lake, "b0909", "rollback --allow-rules-only (fork)") == (
         "rollback --allow-rules-only (fork)"
     )

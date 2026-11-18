@@ -1070,7 +1070,7 @@ alone (on the sealed set, 10.7% of the products the rules keep are not coffee, a
 Now three things stop that from happening silently:
 
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
-  which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
+  which. The build job keeps going (`rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
   so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
   before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
@@ -1085,12 +1085,25 @@ Now three things stop that from happening silently:
   `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
   Claude's verdicts (<model> N); the rest by the rules`.
 - **`verdict_model` is required in Terraform**, with no empty default.
+- **A release whose verdicts weren't checked is never served.** The 2026-11-09 build ran an outdated image without
+  the model: its dbt vars had `verdict_model = ''`, `verdicts_cover_catalog` never ran, every test it had passed,
+  and it was served for a week. Now `record_build` fails a build with no verdict model, with the gate off, or without
+  a passing `verdicts_cover_catalog`, and `serve`, `rollback` and `coffeedata site --served` refuse such a release
+  (`quality.servable`, which also reads records written before this from their dbt vars). The only way through is a
+  named override, which the build record (`builds.rules_only_override`) or the serving log's reason carries:
+  `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` on the build (local and dev lakes, a fork without a key),
+  or `coffeedata rollback --to <build> --allow-rules-only --reason "<why>"`. Every build record also carries
+  `verdict_model`, `verdict_definition`, `image_digest` (the job's `COFFEEDATA_INGEST_IMAGE`, Terraform's
+  `ingest_image`) and `verdicts_in_flight`; `git_sha` is stamped by the image build (#124).
 
-**The expected share and its lag.** About 95%, not 100%. The build job's classify submits this week's new and
-changed product versions and doesn't wait for them, so they get verdicts at next week's build: 2.5% of listed
-coffees in the 2026-11-02 run (1,114 of 44,593). An `unsure` verdict is left to the rules too, about 3% on the
-validation set. 85% leaves room for a week with nearly 3x the usual new versions. To get this week's versions in
-before the build, run classify with a wait (`coffeedata classify --wait 60`) before rebuilding.
+**The expected share and its lag.** About 95%, not 100%. The build job's classify waits up to 45 minutes
+(`--wait 45`) for the batch it submits, so this week's new and changed versions are usually in this week's build.
+Past 45 minutes the build uses the verdicts stored so far and the rules for the versions still awaiting one; its log
+says `verdicts: N product versions still await Claude's verdict`, the build record counts them
+(`builds.verdicts_in_flight`), `verdicts_cover_catalog` still judges the share, and the next run collects the batch.
+Before the wait, 2.5% of listed coffees in the 2026-11-02 run (1,114 of 44,593) waited a week. An `unsure` verdict is
+left to the rules too, about 3% on the validation set. 85% leaves room for a week with nearly 3x the usual new
+versions. To get a late batch in before a rebuild, run classify with a longer wait (`coffeedata classify --wait 60`).
 
 **A failed classify** (the log says `Claude's verdicts are expected but can't run: no ...`): check
 `verdict_model` in `terraform.tfvars` and the job's env (`gcloud run jobs describe build --region $REGION

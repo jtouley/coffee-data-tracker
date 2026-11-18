@@ -668,7 +668,11 @@ def cmd_build(args: argparse.Namespace) -> bool:
     if override:
         extra["require_verdicts"] = False
         print(f"verdicts: rules only, allowed by {override}; this release is recorded as such", file=sys.stderr)
-    in_flight = verdict.in_flight(lake)
+    try:  # only a count for the record: a failed read never stops the build
+        in_flight: int | None = verdict.in_flight(lake)
+    except Exception as e:  # noqa: BLE001 - duckdb errors; duckdb is imported lazily
+        logging.warning("verdicts in flight not counted: %s", e)
+        in_flight = None
     if in_flight:  # classify's wait ran out: those versions are classified by the rules this week
         print(
             f"verdicts: {in_flight:,} product versions still await Claude's verdict; this build classifies them by "
