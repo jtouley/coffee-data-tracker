@@ -831,17 +831,21 @@ def servable(lake: Lake, build_id: str, rules_only_override: str | None = None) 
     (verdict_check), or when its build record names the rules-only override that allowed it (logged here). The name
     of a serve-time override (the one given, else COFFEEDATA_ALLOW_RULES_ONLY=1) when only that allows it, for the
     serving log's reason. A ValueError naming the problem otherwise."""
+    from .verdict import refuse_on_remote
     from .verdict import rules_only_override as env_override
 
     problem, recorded = verdict_check(lake, build_id)
     if problem is None:
         return None
     if recorded:
+        refuse_on_remote(f"{recorded}, its build record", lake.url)  # never served from a remote lake
         log.warning(
             "release %s: %s; rules only, allowed by %s (its build record)", build_id, problem, recorded
         )
         return None
     allowed = rules_only_override or env_override()
+    if allowed:
+        refuse_on_remote(allowed, lake.url)
     if not allowed:
         raise ValueError(
             f"release {build_id} can't be served: {problem}. Claude's verdicts are required "

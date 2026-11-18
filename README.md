@@ -280,7 +280,7 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them, unless the variable `ALLOW_RULES_ONLY` is `1` (a rules-only catalog, for a fork without Claude). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them (a rules-only catalog is for a local lake only; on a remote lake it is refused). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.

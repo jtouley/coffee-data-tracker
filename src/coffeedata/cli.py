@@ -636,6 +636,8 @@ def cmd_build(args: argparse.Namespace) -> bool:
     copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
     from . import quality, verdict
 
+    # A rules-only override is refused on a remote lake (verdict.refuse_on_remote), before any work.
+    override = verdict.rules_only_override(getattr(args, "allow_rules_only", False))
     lake = Lake()
     # The weekly build job only (COFFEEDATA_AFTER_JOB): no build of a week whose merge and enrichment aren't done,
     # and none after a classify whose own check didn't pass. Before the merge the lake's latest run is still last
@@ -664,7 +666,6 @@ def cmd_build(args: argparse.Namespace) -> bool:
             "previous_release_run_date": str((served_release or {}).get("run_date") or ""),
         }
     # The named switch that lets this build pass without checked verdicts (None in production), recorded with it.
-    override = verdict.rules_only_override(getattr(args, "allow_rules_only", False))
     if override:
         extra["require_verdicts"] = False
         print(
@@ -753,15 +754,16 @@ def _write_personal_marts(lake: Lake, db: Path, catalog: tuple[str, ...]) -> Non
 
 def cmd_rollback(args: argparse.Namespace) -> None:
     """Serve an earlier passing release, then re-export the public tables and rebuild the site from it."""
-    from . import quality
+    from . import quality, verdict
 
     lake = Lake()
-    # A release whose verdicts weren't checked is served only with the flag and a reason, both logged.
+    # A release whose verdicts weren't checked is served only with the flag and a reason, both logged, and only from
+    # a local lake (verdict.refuse_on_remote).
     override = None
     if getattr(args, "allow_rules_only", False):
         if not args.reason:
             raise SystemExit("rollback --allow-rules-only needs --reason: the serving log records why")
-        override = f"rollback --allow-rules-only ({args.reason})"
+        override = verdict.refuse_on_remote(f"rollback --allow-rules-only ({args.reason})", lake.url)
     to = quality.rollback(lake, args.to, args.reason, rules_only_override=override)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)

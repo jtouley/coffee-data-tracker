@@ -79,18 +79,36 @@ def model() -> str | None:
 RULES_ONLY_ENV = "COFFEEDATA_ALLOW_RULES_ONLY"
 
 
+def refuse_on_remote(override: str, lake_url: str | None = None) -> str:
+    """The override, if the lake is local. A remote lake (any `://` URL: hf://, s3://, gs://) is one that is
+    published and served, so rules only is refused there whatever asks for it: a SystemExit naming the override.
+    `lake_url` defaults to COFFEEDATA_LAKE, as Lake() reads it."""
+    url = os.environ.get("COFFEEDATA_LAKE", "") if lake_url is None else lake_url
+    if "://" in url:
+        raise SystemExit(
+            f"rules only ({override}) is refused on a remote lake ({url}): every release built or served there "
+            "needs Claude's verdicts. The override is for a local lake and tests only (docs/ingestion/RUNBOOK.md, "
+            "verdicts)."
+        )
+    return override
+
+
 def rules_only_allowed() -> bool:
     """The explicit opt-out for local and dev runs (COFFEEDATA_ALLOW_RULES_ONLY=1): classify skips without a model
-    or credentials, and the build's verdict gate is off. Never set in production."""
-    return os.environ.get(RULES_ONLY_ENV, "").strip().lower() in ("1", "true", "yes")
+    or credentials, and the build's verdict gate is off. Never set in production: on a remote lake it is refused
+    (refuse_on_remote)."""
+    if os.environ.get(RULES_ONLY_ENV, "").strip().lower() not in ("1", "true", "yes"):
+        return False
+    refuse_on_remote(f"{RULES_ONLY_ENV}=1")
+    return True
 
 
 def rules_only_override(flag: bool = False) -> str | None:
     """The named opt-out that lets a build without Claude's verdicts pass and be served, or None in production:
     which switch allowed it (`--allow-rules-only`, or COFFEEDATA_ALLOW_RULES_ONLY=1). The build record and the
-    serving log carry it, so a rules-only release always says why it was allowed."""
+    serving log carry it, so a rules-only release always says why it was allowed. Refused on a remote lake."""
     if flag:
-        return "--allow-rules-only"
+        return refuse_on_remote("--allow-rules-only")
     if rules_only_allowed():
         return f"{RULES_ONLY_ENV}=1"
     return None
@@ -155,6 +173,8 @@ def missing() -> list[str]:
 def require(allow_rules_only: bool = False) -> bool:
     """Whether verdicts can run. Without a model or credentials: False when rules only is allowed (the flag or
     COFFEEDATA_ALLOW_RULES_ONLY), else a SystemExit that names what is missing."""
+    if allow_rules_only:  # refused on a remote lake before anything else, whether or not verdicts could run
+        refuse_on_remote("--allow-rules-only")
     gaps = missing()
     if not gaps:
         return True

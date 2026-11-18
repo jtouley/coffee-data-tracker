@@ -1091,8 +1091,8 @@ Now three things stop that from happening silently:
   a passing `verdicts_cover_catalog`, and `serve`, `rollback` and `coffeedata site --served` refuse such a release
   (`quality.servable`, which also reads records written before this from their dbt vars). The only way through is a
   named override, which the build record (`builds.rules_only_override`) or the serving log's reason carries:
-  `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` on the build (local and dev lakes, a fork without a key),
-  or `coffeedata rollback --to <build> --allow-rules-only --reason "<why>"`. Every build record also carries
+  `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` on the build, or `coffeedata rollback --to <build>
+  --allow-rules-only --reason "<why>"`, and only on a local lake: on a remote one every form is refused. Every build record also carries
   `verdict_model`, `verdict_definition`, `image_digest` (the job's `COFFEEDATA_INGEST_IMAGE`, Terraform's
   `ingest_image`) and `verdicts_in_flight`; `git_sha` is stamped by the image build (#124).
 
@@ -1141,10 +1141,12 @@ and last week's release stays served. That is the gate working: don't opt out ar
 4. Add the number of products whose `is_coffee` changed to the running total in `eval/sealed/README.md` (CLAUDE.md
    step 9).
 
-**Rules only on purpose** (a fork without Claude, a local lake, tests): `--allow-rules-only` on `classify`, `build`
-and `weekly`, or `COFFEEDATA_ALLOW_RULES_ONLY=1` (the `ALLOW_RULES_ONLY` repository variable for `weekly.yml`).
-`make` sets it for a local lake. Never set it on the Cloud Run jobs: a rules-only release keeps about four times the
-non-coffee.
+**Rules only on purpose** (a local lake, tests): `--allow-rules-only` on `classify`, `build` and `weekly`, or
+`COFFEEDATA_ALLOW_RULES_ONLY=1`. `make` sets it for a local lake. On a remote lake (any `://` URL: `hf://`, `s3://`)
+it is refused: `classify`, `build`, `weekly`, `serve`, `rollback` and `site --served` exit naming the override, and a
+build record that carries one is never served from there (`verdict.refuse_on_remote`). No job, workflow or Terraform
+sets it; `weekly.yml` no longer passes an `ALLOW_RULES_ONLY` variable. A rules-only release keeps about four times
+the non-coffee.
 
 ### 5.6 Verifying a release: rebuild it from raw and compare hashes
 

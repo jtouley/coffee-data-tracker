@@ -4,6 +4,8 @@ import json
 from datetime import UTC, datetime
 from types import SimpleNamespace
 
+import pytest
+
 from coffeedata import verdict
 from coffeedata.lake import new_batch_id
 
@@ -612,3 +614,70 @@ def test_terraform_build_job_waits_for_the_verdicts_and_knows_its_image():
         'timeout         = "14400s"' in tf
         and '"build"       = { job = "merge,enrich", deadline_utc = "07:47" }' in tf
     )
+
+
+REMOTE_LAKES = ("hf://datasets/someone/coffee-data", "s3://bucket/coffee-data", "gs://bucket/lake")
+
+
+def test_rules_only_is_refused_on_a_remote_lake(lake, monkeypatch, tmp_path):
+    """A remote lake is published and served, so no form of the rules-only override works there: the env var, the
+    flag on classify, build and weekly, rollback's flag, a serve-time override or one a build record carries. Each
+    exits naming the override before any work; on a local lake each still works."""
+    from coffeedata import cli, quality
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")  # conftest sets it too: the suite's local lakes
+    assert verdict.rules_only_allowed() and verdict.rules_only_override() == "COFFEEDATA_ALLOW_RULES_ONLY=1"
+    assert verdict.require(True) is False  # local: allowed
+
+    worked = []
+    monkeypatch.setattr(cli, "Lake", lambda *a, **k: worked.append("lake") or pytest.fail("work started"))
+    for url in REMOTE_LAKES:
+        monkeypatch.setenv("COFFEEDATA_LAKE", url)
+        for call in (verdict.rules_only_allowed, verdict.rules_only_override, verdict.require):
+            with pytest.raises(SystemExit, match="refused on a remote lake"):
+                call()
+        monkeypatch.delenv("COFFEEDATA_ALLOW_RULES_ONLY")
+        assert verdict.rules_only_override() is None  # no override asked: nothing to refuse
+        for call in (lambda: verdict.rules_only_override(True), lambda: verdict.require(True)):
+            with pytest.raises(SystemExit, match=r"--allow-rules-only\) is refused on a remote lake"):
+                call()
+        for argv in (
+            ["classify", "--allow-rules-only"],
+            ["build", "--allow-rules-only"],
+            ["weekly", "--allow-rules-only"],
+        ):
+            with pytest.raises(SystemExit, match="refused on a remote lake"):
+                cli.main(argv)
+        monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
+    assert worked == []  # each refused before it opened the lake
+
+    # serve, rollback and site --served all decide through quality.servable, on the lake's own URL.
+    monkeypatch.delenv("COFFEEDATA_ALLOW_RULES_ONLY")
+    for recorded in (None, "--allow-rules-only"):
+        monkeypatch.setattr(quality, "verdict_check", lambda lk, b, r=recorded: ("no verdict model", r))
+        for url in REMOTE_LAKES:
+            remote = SimpleNamespace(url=url)
+            with pytest.raises(SystemExit, match="refused on a remote lake"):
+                quality.servable(remote, "b1", None if recorded else "rollback --allow-rules-only (why)")
+        local = SimpleNamespace(url=str(tmp_path / "lake"))
+        allowed = quality.servable(local, "b1", None if recorded else "rollback --allow-rules-only (why)")
+        assert allowed == (None if recorded else "rollback --allow-rules-only (why)")
+
+
+def test_no_job_workflow_or_terraform_sets_the_rules_only_override():
+    """The override is for a local lake and tests: no GitHub workflow, Terraform file or Dockerfile sets it, so a
+    production run can't ask for it (and on a remote lake coffeedata would refuse it anyway)."""
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    files = [
+        *(root / ".github/workflows").glob("*.y*ml"),
+        *(root / "src/terraform").rglob("*.tf"),
+        *(root / "src/terraform").rglob("*.tfvars*"),
+        root / "app/Dockerfile",
+        root / "ingest.Dockerfile",
+    ]
+    assert files
+    setting = [str(f.relative_to(root)) for f in files if "ALLOW_RULES_ONLY" in f.read_text(errors="ignore")]
+    assert setting == []
