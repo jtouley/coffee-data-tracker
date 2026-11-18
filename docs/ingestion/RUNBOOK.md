@@ -803,7 +803,7 @@ release. If the publish is what failed, go to **f**.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+     --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
@@ -844,7 +844,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+     --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -1003,7 +1003,7 @@ gcloud run jobs execute enrich-week --region $REGION --wait
 gcloud run jobs execute build --region $REGION --wait
 # or the same build told to judge $WEEK (the rebuild form other sections refer to):
 gcloud run jobs execute build --region $REGION --wait \
-  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+  --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
 **The override.** `COFFEEDATA_SKIP_PRECONDITION=<reason>` on one execution skips that job's check (for the build
@@ -1094,7 +1094,7 @@ alone (on the sealed set, 10.7% of the products the rules keep are not coffee, a
 Now three things stop that from happening silently:
 
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
-  which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
+  which. The build job keeps going (`rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
   so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
   before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
@@ -1109,12 +1109,27 @@ Now three things stop that from happening silently:
   `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
   Claude's verdicts (<model> N); the rest by the rules`.
 - **`verdict_model` is required in Terraform**, with no empty default.
+- **A release whose verdicts weren't checked is never served.** The 2026-11-09 build ran an outdated image without
+  the model: its dbt vars had `verdict_model = ''`, `verdicts_cover_catalog` never ran, every test it had passed,
+  and it was served for a week. Now `record_build` fails a build with no verdict model, with the gate off, or without
+  a passing `verdicts_cover_catalog`, and `serve`, `rollback` and `coffeedata site --served` refuse such a release
+  (`quality.servable`, which also reads records written before this from their dbt vars). The only way through is a
+  named override, which the build record (`builds.rules_only_override`) or the serving log's reason carries:
+  `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` on the build, or `coffeedata rollback --to <build>
+  --allow-rules-only --reason "<why>"`, and only on a local lake: on a remote one every form is refused. Every build record also carries
+  `verdict_model`, `verdict_definition`, `configured_image` and `verdicts_in_flight`. `configured_image` is the image
+  Terraform configured the job with (`ingest_image`, passed as `COFFEEDATA_INGEST_IMAGE`), not proof of what ran: a
+  job changed outside Terraform still reports it, and an image older than the field (the 11-09 case) reports
+  nothing. What code ran is `git_sha`, stamped into the image when it is built (#124).
 
-**The expected share and its lag.** About 95%, not 100%. The build job's classify submits this week's new and
-changed product versions and doesn't wait for them, so they get verdicts at next week's build: 2.5% of listed
-coffees in the 2026-11-02 run (1,114 of 44,593). An `unsure` verdict is left to the rules too, about 3% on the
-validation set. 85% leaves room for a week with nearly 3x the usual new versions. To get this week's versions in
-before the build, run classify with a wait (`coffeedata classify --wait 60`) before rebuilding.
+**The expected share and its lag.** About 95%, not 100%. The build job's classify waits up to 45 minutes
+(`--wait 45`) for the batch it submits, so this week's new and changed versions are usually in this week's build.
+Past 45 minutes the build uses the verdicts stored so far and the rules for the versions still awaiting one; its log
+says `verdicts: N product versions still await Claude's verdict`, the build record counts them
+(`builds.verdicts_in_flight`), `verdicts_cover_catalog` still judges the share, and the next run collects the batch.
+Before the wait, 2.5% of listed coffees in the 2026-11-02 run (1,114 of 44,593) waited a week. An `unsure` verdict is
+left to the rules too, about 3% on the validation set. 85% leaves room for a week with nearly 3x the usual new
+versions. To get a late batch in before a rebuild, run classify with a longer wait (`coffeedata classify --wait 60`).
 
 **A failed classify** (the log says `Claude's verdicts are expected but can't run: no ...`): check
 `verdict_model` in `terraform.tfvars` and the job's env (`gcloud run jobs describe build --region $REGION
@@ -1152,10 +1167,12 @@ and last week's release stays served. That is the gate working: don't opt out ar
 4. Add the number of products whose `is_coffee` changed to the running total in `eval/sealed/README.md` (CLAUDE.md
    step 9).
 
-**Rules only on purpose** (a fork without Claude, a local lake, tests): `--allow-rules-only` on `classify`, `build`
-and `weekly`, or `COFFEEDATA_ALLOW_RULES_ONLY=1` (the `ALLOW_RULES_ONLY` repository variable for `weekly.yml`).
-`make` sets it for a local lake. Never set it on the Cloud Run jobs: a rules-only release keeps about four times the
-non-coffee.
+**Rules only on purpose** (a local lake, tests): `--allow-rules-only` on `classify`, `build` and `weekly`, or
+`COFFEEDATA_ALLOW_RULES_ONLY=1`. `make` sets it for a local lake. On a remote lake (any `://` URL: `hf://`, `s3://`)
+it is refused: `classify`, `build`, `weekly`, `serve`, `rollback` and `site --served` exit naming the override, and a
+build record that carries one is never served from there (`verdict.refuse_on_remote`). No job, workflow or Terraform
+sets it; `weekly.yml` no longer passes an `ALLOW_RULES_ONLY` variable. A rules-only release keeps about four times
+the non-coffee.
 
 ### 5.6 Verifying a release: rebuild it from raw and compare hashes
 
