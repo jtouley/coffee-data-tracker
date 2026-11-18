@@ -402,7 +402,9 @@ def test_terraform_requires_the_verdict_model_and_the_build_job_fails_on_a_faile
     assert var and "default" not in var.group(1) and 'trimspace(var.verdict_model) != ""' in var.group(1)
     assert "for_each = each.value.claude ? [var.verdict_model] : []" in tf
     build = re.search(r'"build" = \{.*?args += \["(.*?)"\]', tf, re.S)
-    assert build and build.group(1).startswith("rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1;")
+    assert build and build.group(1).startswith(
+        "rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1;"
+    )
     assert build.group(1).endswith("exit $rc")
 
 
@@ -449,7 +451,9 @@ def test_a_release_without_checked_verdicts_is_never_served(lake, monkeypatch):
         with pytest.raises(ValueError, match=why):
             quality.servable(lake, b)
     assert quality.servable(lake, "bgood") is None
-    assert quality.servable(lake, "bnamed") is None  # its record names the override (and the serving log has it)
+    assert (
+        quality.servable(lake, "bnamed") is None
+    )  # its record names the override (and the serving log has it)
     assert quality.servable(lake, "b0909", "rollback --allow-rules-only (fork)") == (
         "rollback --allow-rules-only (fork)"
     )
@@ -465,7 +469,9 @@ def test_record_build_fails_a_build_whose_verdicts_werent_checked(lake, tmp_path
         nodes = [{"unique_id": GATE, "status": gate}] if gate else []
         return [{"args": {"vars": {"verdict_model": model, "require_verdicts": require}}, "results": nodes}]
 
-    # No release here: record_build's verdict below is the verdict guard's alone.
+    # No release here: record_build's verdict below is the verdict guard's alone. The suite allows rules only by
+    # default (conftest); production doesn't, so neither does this test.
+    monkeypatch.delenv("COFFEEDATA_ALLOW_RULES_ONLY", raising=False)
     monkeypatch.setattr(quality, "RELEASE_TABLES", ())
     args = (lake, tmp_path / "missing.duckdb", "2026-11-09", tmp_path / "none.json")
     digest = "r/ingest@sha256:" + "a" * 64
@@ -480,10 +486,12 @@ def test_record_build_fails_a_build_whose_verdicts_werent_checked(lake, tmp_path
     assert quality.record_build(*args, results("", False, "pass"), True, "named", verdicts=named) is True
     rec = {
         r[0]: r[1:]
-        for r in lake.connect().execute(
+        for r in lake.connect()
+        .execute(
             f"select build_id, status, verdict_model, verdict_definition, image_digest, rules_only_override, "
             f"verdicts_in_flight from {lake.scan('builds')} where kind = 'build'"
-        ).fetchall()
+        )
+        .fetchall()
     }
     assert rec["ok"] == ("pass", "m", verdict.DEFINITION_VERSION, digest, None, 7)
     assert rec["old"][0] == "fail" and rec["nogate"][0] == "fail"
@@ -525,7 +533,9 @@ def test_the_site_refuses_a_served_release_without_checked_verdicts(lake, monkey
     _record(lake, "b0909", "", None, None)
     monkeypatch.setattr(quality, "served", lambda lk: {"build_id": "b0909", "run_date": "2026-11-09"})
     monkeypatch.setattr(quality, "materialize", lambda *a: pytest.fail("materialized"))
-    ns = argparse.Namespace(served=True, skip_if_unserved=True, db=str(tmp_path / "s.duckdb"), out=str(tmp_path))
+    ns = argparse.Namespace(
+        served=True, skip_if_unserved=True, db=str(tmp_path / "s.duckdb"), out=str(tmp_path)
+    )
     with pytest.raises(SystemExit, match="isn't rendered: release b0909 can't be served: no verdict model"):
         cli.cmd_site(ns)
 
@@ -592,8 +602,13 @@ def test_terraform_build_job_waits_for_the_verdicts_and_knows_its_image():
 
     tf = (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
     build = re.search(r'"build" = \{.*?args += \["(.*?)"\]', tf, re.S)
-    assert build and build.group(1).startswith("rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build")
+    assert build and build.group(1).startswith(
+        "rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build"
+    )
     assert re.search(r'name += "COFFEEDATA_INGEST_IMAGE"\s+value += var\.ingest_image', tf)
     assert verdict.IMAGE_ENV == "COFFEEDATA_INGEST_IMAGE"
     # The wait fits: up to 90 minutes for the chain (07:47 from 06:17), 45 for the verdicts, inside 240.
-    assert 'timeout         = "14400s"' in tf and '"build"       = { job = "merge,enrich", deadline_utc = "07:47" }' in tf
+    assert (
+        'timeout         = "14400s"' in tf
+        and '"build"       = { job = "merge,enrich", deadline_utc = "07:47" }' in tf
+    )

@@ -89,11 +89,12 @@ def record_build(
     allowed by a named override."""
     import duckdb
 
-    from .verdict import gate_problem
+    from .verdict import gate_problem, rules_only_override
 
     build_id = build_id or new_batch_id()  # the one the tables carry as release_build_id, when given
     verdicts = verdicts or {}
-    override = verdicts.get("rules_only_override")
+    # cmd_build passes its override; any other caller gets COFFEEDATA_ALLOW_RULES_ONLY=1's, as serve does.
+    override = verdicts.get("rules_only_override") or rules_only_override()
     problem = gate_problem(
         verdicts.get("verdict_model"), _dbt_vars(results).get("require_verdicts"), _gate_status(results)
     )
@@ -226,7 +227,12 @@ def _gate_status(results: list[dict]) -> str | None:
     from .verdict import GATE_TEST
 
     return next(
-        (r.get("status") for step in results for r in step.get("results") or [] if r.get("unique_id") == GATE_TEST),
+        (
+            r.get("status")
+            for step in results
+            for r in step.get("results") or []
+            if r.get("unique_id") == GATE_TEST
+        ),
         None,
     )
 
@@ -831,7 +837,9 @@ def servable(lake: Lake, build_id: str, rules_only_override: str | None = None) 
     if problem is None:
         return None
     if recorded:
-        log.warning("release %s: %s; rules only, allowed by %s (its build record)", build_id, problem, recorded)
+        log.warning(
+            "release %s: %s; rules only, allowed by %s (its build record)", build_id, problem, recorded
+        )
         return None
     allowed = rules_only_override or env_override()
     if not allowed:

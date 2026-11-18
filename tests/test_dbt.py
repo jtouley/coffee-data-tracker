@@ -1331,7 +1331,8 @@ def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tm
 
 def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
     # Review #2 and #5: the week's price changes and removals, and the archived count, leave wholesale out too
-    # (and only wholesale: an event of a coffee dim_coffee no longer keeps still counts).
+    # A product reclassified as not coffee leaves dim_coffee and, with it, fct_price_event (its events would read
+    # as a removal it never had), so it counts in neither number.
     from coffeedata import site
 
     rid = "onyxcoffeelab.com"
@@ -1341,9 +1342,10 @@ def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
         product("WGUJI", title="Wholesale - 5LB Ethiopia Guji"),
         product("WKEN", title="Wholesale - 5LB Kenya Kiambu"),
         product("GONE"),
+        product("LEFT", title="Kenya Nyeri"),
     ])  # fmt: skip
-    run(lake, "2026-10-26", rid, [  # WKEN is gone
-        product("GONE", coffee=False),  # no longer coffee: out of dim_coffee, but its removal still counts
+    run(lake, "2026-10-26", rid, [  # LEFT and WKEN are gone
+        product("GONE", coffee=False),  # no longer coffee: out of dim_coffee and fct_price_event, not a removal
         product("GUJI", price=22.0, title="Ethiopia Guji"),
         product("WGUJI", price=99.0, title="Wholesale - 5LB Ethiopia Guji"),  # repriced
         tagged("OLD", ["Archived"], available=False, title="Colombia Supremo"),

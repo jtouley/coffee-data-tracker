@@ -494,7 +494,7 @@ def cmd_classify(args: argparse.Namespace) -> None:
     # the verdicts are submitted for the whole week's products, not for a half-merged one. The week is today's,
     # as the build's check is, whatever --run-date either is given.
     _precondition(lake)
-    out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+    out: dict = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
     deadline = time.monotonic() + args.wait * 60
     # Wait for this run's batches only; whatever is still running is collected by the next run.
     waiting = set(out["submit"].get("batch_ids", []))
@@ -667,7 +667,9 @@ def cmd_build(args: argparse.Namespace) -> bool:
     override = verdict.rules_only_override(getattr(args, "allow_rules_only", False))
     if override:
         extra["require_verdicts"] = False
-        print(f"verdicts: rules only, allowed by {override}; this release is recorded as such", file=sys.stderr)
+        print(
+            f"verdicts: rules only, allowed by {override}; this release is recorded as such", file=sys.stderr
+        )
     try:  # only a count for the record: a failed read never stops the build
         in_flight: int | None = verdict.in_flight(lake)
     except Exception as e:  # noqa: BLE001 - duckdb errors; duckdb is imported lazily
