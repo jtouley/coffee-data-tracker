@@ -326,6 +326,30 @@ Shopify's: it carries only Shopify's traffic.
 **Back to default egress** (both jobs): set `egress = "default"` for crawl-woocommerce and crawl-generic in
 `ingestion.tf` and apply (2 to change). The address stays reserved, and billed, until its resource is removed.
 
+### 2.2 Did the NAT drop connections? (read only)
+
+On 2026-11-16, 36 generic stores' robots.txt got no HTTP response from this IP on every pass: three tries, each
+failing in about 0.15 s, while the same stores answered 200 in 0.2 s from default egress on 11-09. Two causes fit:
+the NAT dropping connections (port allocation `DROPPED`, which the gateway logs with `filter = "ERRORS_ONLY"`), or
+the stores' hosts refusing this IP. From raw 1.7.0 each such request is in `fetches.transport_errors` with its phase
+(dns, connect_timeout, connection_refused, connection_reset, tls, read_timeout...). To confirm or rule out the NAT,
+run this in Cloud Shell (it only reads logs; set `PROJECT_ID` to the project's id first):
+
+```sh
+gcloud logging read '
+  resource.type="nat_gateway"
+  AND resource.labels.gateway_name="registry-coffee-woo-generic-egress"
+  AND jsonPayload.allocation_status="DROPPED"
+  AND timestamp>="2026-11-16T09:00:00Z" AND timestamp<="2026-11-16T23:00:00Z"' \
+  --project="$PROJECT_ID" --limit=500 \
+  --format='table(timestamp, jsonPayload.connection.src_ip, jsonPayload.connection.src_port, jsonPayload.connection.dest_ip, jsonPayload.connection.dest_port)'
+```
+
+No rows: the NAT dropped nothing, and the cause is on the stores' side (their hosts or firewalls answering this IP
+with a reset or refusal); next week's `transport_errors` phases say which. Rows: the NAT ran out of ports for
+those destinations. Count them per `dest_ip`, compare with the generic crawl's 32 workers, and bring the counts to
+the next PR (the gateway's port settings are in `ingestion.tf`; a change goes through the GitHub plan and apply).
+
 ## 3. Confirmation run: Shopify, three arms (today)
 
 Ran on 2026-11-01 (salt `confirm-2026-11-01`, week 2026-11-02, image 7419da12). The results and the decision are in
@@ -1270,8 +1294,13 @@ for r in control.rows(Lake(), '$WEEK'):
         print(r['job'], r['connector'], r['status'], r['ok'], r['errors'], r['skipped'], r['detail'])"
 ```
 
-The probe (Mondays 07:17) asks the roasters never probed (new from discovery) first, then those last probed more
-than 28 days before (one probed exactly 28 days earlier waits a week). It writes what it has probed to the lake
+The probe (Mondays 07:17) asks the roasters never probed (new from discovery) first, then the `unreachable` ones
+whose re-check is due, then those last probed more than 28 days before (one probed exactly 28 days earlier waits a
+week). An unreachable roaster (the crawl stopped trying it: three failed runs, or a probe platform `http_*` or none)
+is asked again 7 days after its last ok probe (or the seed's), then 14 and 28 days after each probe that failed since
+(`--unreachable-days`, never longer than `--stale-days`). An ok probe newer than its failed fetches puts it back in
+the crawl. Before 2026-11-18 nothing re-probed an unreachable roaster inside the 28 days, so the 2026-11-16 probe
+had `todo` 0 and 66 roasters stayed out of that week's crawl (meanbeanroasters.com among them). It writes what it has probed to the lake
 every 10 minutes as it goes and starts no roaster after 100 minutes from its first attempt's start (a Cloud Run
 retry keeps that window), so it ends before the 09:17 crawls; what's left waits for next Monday (end row `deadline`,
 `skipped` = the count left). Its publish runs whatever the probe's exit. A week with nothing stale still writes its
