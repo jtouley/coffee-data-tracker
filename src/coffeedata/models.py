@@ -27,13 +27,6 @@ class Roaster(BaseModel):
         p = self.platform.rstrip("?")
         if self.platform in ("shopify", "woocommerce"):
             return self.platform  # type: ignore[return-value]
-        if self.platform == "shopify?":
-            # A Shopify storefront the probe saw by its markers (cdn.shopify.com), or by its Shopify sitemap index
-            # (discover.probe_one), whose /products.json didn't answer the probe. It is crawled by the Shopify job,
-            # from Shopify's IP and under Shopify's budget (run 2026-11-16: 19 of them drew Cloudflare's challenge
-            # as generic stores on the WooCommerce/generic IP); shopify.fetch reads its pages if /products.json
-            # isn't served.
-            return "shopify"
         if p in ("squarespace", "square_online"):
             return p  # type: ignore[return-value]
         return "generic"

@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import USER_AGENT, Blocked, DeadlineReached, FetchError, PoliteClient, RobotsUnavailable
+from .http import USER_AGENT, Blocked, DeadlineReached, PoliteClient, RobotsUnavailable
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
@@ -329,25 +329,7 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
     html = home.text.lower()
     platform = next((p for p, pat in HTML_MARKERS if re.search(pat, html)), "other")
-    if platform == "other" and _shopify_sitemap_index(client, host):
-        platform = "shopify?"  # crawled by the Shopify job from now on (models.Roaster.adapter)
     return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
-
-
-def _shopify_sitemap_index(client: PoliteClient, host: str) -> bool:
-    """The site's /sitemap.xml is Shopify's index (sitemap_products_N.xml children): a Shopify storefront with no
-    marker on its home page (run 2026-11-16: such stores were crawled page by page as generic ones). One request,
-    under robots.txt like any other; anything but a readable index is no evidence."""
-    from .adapters.generic import shopify_sitemap
-    from .sitemap import _locs
-
-    try:
-        r = client.get(f"https://{host}/sitemap.xml")
-    except DeadlineReached:
-        raise  # no answer about the site: _safe_probe gives it no row
-    except (FetchError, httpx.HTTPError):
-        return False
-    return r.status_code == 200 and b"<sitemapindex" in r.content and shopify_sitemap(_locs(r.content))
 
 
 # Probe rows are handed to `on_batch` (one lake file each) every PROBE_FLUSH_S seconds, or sooner at PROBE_BATCH rows:

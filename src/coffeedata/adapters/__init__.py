@@ -28,7 +28,4 @@ def fetch_catalog(
     view = client.for_platform(roaster.adapter)
     if roaster.adapter == "shopify" and (resume is not None or known_products is not None):
         return shopify.fetch(view, roaster, resume=resume, known_products=known_products)
-    if roaster.adapter == "generic" and (resume is not None or known_products is not None):
-        # a Shopify storefront the generic crawl reads from /products.json (generic.fetch) resumes the same way
-        return generic.fetch(view, roaster, resume=resume, known_products=known_products)
     return ADAPTERS[roaster.adapter](view, roaster)

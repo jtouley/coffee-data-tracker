@@ -64,7 +64,6 @@ select
         as expected_from,
     coalesce(t.adapter, p.adapter, case
         when d.platform in ('shopify', 'woocommerce') then d.platform
-        when d.platform = 'shopify?' then 'shopify'  -- a Shopify storefront the probe saw by its markers
         when rtrim(d.platform, '?') in ('squarespace', 'square_online') then rtrim(d.platform, '?')
         else 'generic' end) as adapter,
     case

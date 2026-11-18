@@ -47,16 +47,7 @@ from .http import (
 )
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
-from .ratelimit import (
-    SHOPIFY_CONCURRENCY,
-    SHOPIFY_HOSTED,
-    SHOPIFY_HOSTED_CONCURRENCY,
-    SHOPIFY_HOSTED_RPS,
-    SHOPIFY_RPS,
-    HostRateLimited,
-    PlatformLimiter,
-    RateLimited,
-)
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, HostRateLimited, PlatformLimiter, RateLimited
 
 log = logging.getLogger(__name__)
 
@@ -614,15 +605,9 @@ def run(
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget. Any other platform
     # with a shared budget (a connector's config: connectors.Connector.rps) gets its own, set up the same way.
-    # Shopify storefronts the generic adapter reads (adapters.generic) share their own budget (SHOPIFY_HOSTED).
-    rates = {"shopify": shopify_rps, SHOPIFY_HOSTED: SHOPIFY_HOSTED_RPS} | {
-        k: v for k, v in (platform_rps or {}).items() if k not in ("shopify", SHOPIFY_HOSTED)
-    }
-    concurrency = {SHOPIFY_HOSTED: SHOPIFY_HOSTED_CONCURRENCY}
+    rates = {"shopify": shopify_rps} | {k: v for k, v in (platform_rps or {}).items() if k != "shopify"}
     limiters = {
-        name: PlatformLimiter(
-            name, rate=rps, max_concurrent=concurrency.get(name, SHOPIFY_CONCURRENCY), per_host=per_host
-        )
+        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
         for name, rps in rates.items()
     }
     shopify = limiters["shopify"]

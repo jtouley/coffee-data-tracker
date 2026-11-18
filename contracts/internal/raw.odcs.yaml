@@ -472,8 +472,7 @@ schema:
     physicalType: string
     required: false
     description: How the catalog was read when not by its adapter's own path, and why (a WooCommerce store whose robots.txt
-      disallows the Store API, read from its sitemap and product pages; a Shopify storefront the generic crawl read from
-      /products.json); null otherwise, and before raw 1.7.0.
+      disallows the Store API, read from its sitemap and product pages); null otherwise, and before raw 1.7.0.
   quality:
   - id: fetch_status_values
     description: fetches.status is one of the contract's values.
@@ -639,4 +638,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 1ad444d0228f4536
 - property: docsFingerprint
-  value: 79a3fd7f4a14f661
+  value: 5a1a22728336dedc

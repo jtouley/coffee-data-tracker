@@ -5,8 +5,6 @@
 - A: 36 generic stores whose robots.txt got no HTTP response were recorded only as `RobotsUnavailable <url>`: the
   fetch row now says which phase failed (fetches.transport_errors).
 - 5: an unreachable robots.txt may be stood in for by the last one stored, at most 30 days old (RFC 9309 2.4).
-- B: Shopify storefronts the generic adapter read page by page drew Cloudflare's challenge: they are read from
-  /products.json, under their own budget.
 - 6: a WooCommerce store whose robots.txt disallows the Store API (martinhenrycoffee.com) is read from its sitemap
   and product pages.
 - E: registry corrections (kaldi.com, galvestoncoffeeroasters.com) through the seed.
@@ -31,9 +29,8 @@ import pytest
 from coffeedata import cli, discover, http, ingest, registry
 from coffeedata.adapters import fetch_catalog, generic, woocommerce
 from coffeedata.http import Blocked, PoliteClient, RobotsUnavailable, SiteDisallowed
-from coffeedata.lake import SCHEMAS, Lake
+from coffeedata.lake import SCHEMAS
 from coffeedata.models import Roaster
-from coffeedata.ratelimit import SHOPIFY_HOSTED, PlatformLimiter
 
 NOW = datetime(2026, 11, 23, 9, 17, tzinfo=UTC)
 
@@ -56,7 +53,10 @@ def _state(rid, status, last, failed=0):
 def test_an_unreachable_roaster_is_probed_again_within_the_week():
     """The 2026-11-16 case: an unreachable roaster whose last probe is the seed's (2026-10-26) was never asked
     again before 2026-11-30 (on main, probe_todo returns [] here)."""
-    states = [_state("meanbeanroasters.com", "unreachable", "2026-11-02"), _state("ok.com", "active", "2026-10-26")]
+    states = [
+        _state("meanbeanroasters.com", "unreachable", "2026-11-02"),
+        _state("ok.com", "active", "2026-10-26"),
+    ]
     assert cli.probe_todo(states, "2026-11-16", 28) == ["meanbeanroasters.com"]
     assert cli.probe_todo(states, "2026-11-23", 28) == ["meanbeanroasters.com"]
 
@@ -112,21 +112,34 @@ def test_meanbean_unreachable_after_a_transient_404_is_reprobed_and_returns(lake
 
     def probe_one(client, d):
         asked.append(d)
-        return {"status": "ok", "final_host": "meanbeanroasters.com", "platform": "woocommerce", "http_status": 200}
+        return {
+            "status": "ok",
+            "final_host": "meanbeanroasters.com",
+            "platform": "woocommerce",
+            "http_status": 200,
+        }
 
     monkeypatch.setattr(discover, "probe_one", probe_one)
-    monkeypatch.setattr(registry, "current", lambda lk, s=seed, dropped=frozenset(): registry._current(lk, seed))
+    monkeypatch.setattr(
+        registry, "current", lambda lk, s=seed, dropped=frozenset(): registry._current(lk, seed)
+    )
     args = argparse.Namespace(stale_days=28, unreachable_days=7, only=None, sample=None, workers=1,
                               run_date="2026-11-23", deadline_min=None)  # fmt: skip
     cli.cmd_probe(args)
     assert asked == ["meanbeanroasters.com"]
     # the probe's row is stored in the lake (the probes table held only its schema on 2026-11-16)
-    rows = [r for f in sorted((lake.root / "probes").glob("run_date=2*/*.parquet")) for r in pq.read_table(f).to_pylist()]
+    rows = [
+        r
+        for f in sorted((lake.root / "probes").glob("run_date=2*/*.parquet"))
+        for r in pq.read_table(f).to_pylist()
+    ]
     assert [(r["roaster_id"], r["status"], r["platform"]) for r in rows] == [
         ("meanbeanroasters.com", "ok", "woocommerce")
     ]
     (after,) = registry._current(lake, seed)
-    assert after.status not in ("unreachable", "opted_out", "alias") and after.roaster.adapter == "woocommerce"
+    assert (
+        after.status not in ("unreachable", "opted_out", "alias") and after.roaster.adapter == "woocommerce"
+    )
     assert ingest.crawlable(after, set())
 
 
@@ -150,7 +163,9 @@ def test_failed_probes_since_the_last_ok_one_are_counted(lake, tmp_path):
 def test_kaldi_com_and_galveston_are_not_roasters():
     """kaldi.com is an espresso-equipment parts catalog (the roaster is kaldiscoffee.com); galvestoncoffeeroasters.com
     redirects to an unrelated site. Both are dropped through the seed's not_a_roaster rows."""
-    assert registry.not_a_roaster_site("kaldi.com") and registry.not_a_roaster_site("galvestoncoffeeroasters.com")
+    assert registry.not_a_roaster_site("kaldi.com") and registry.not_a_roaster_site(
+        "galvestoncoffeeroasters.com"
+    )
     assert not registry.not_a_roaster_site("kaldiscoffee.com")
 
 
@@ -170,10 +185,19 @@ def _wrapped(exc_type, inner: BaseException):
 @pytest.mark.parametrize(
     "error, phase",
     [
-        (_wrapped(httpx.ConnectError, ConnectionResetError(104, "Connection reset by peer")), "connection_reset"),
-        (_wrapped(httpx.ConnectError, ConnectionRefusedError(111, "Connection refused")), "connection_refused"),
+        (
+            _wrapped(httpx.ConnectError, ConnectionResetError(104, "Connection reset by peer")),
+            "connection_reset",
+        ),
+        (
+            _wrapped(httpx.ConnectError, ConnectionRefusedError(111, "Connection refused")),
+            "connection_refused",
+        ),
         (_wrapped(httpx.ConnectError, socket.gaierror(-2, "Name or service not known")), "dns"),
-        (_wrapped(httpx.ConnectError, ssl.SSLError(1, "[SSL: WRONG_VERSION_NUMBER] wrong version number")), "tls"),
+        (
+            _wrapped(httpx.ConnectError, ssl.SSLError(1, "[SSL: WRONG_VERSION_NUMBER] wrong version number")),
+            "tls",
+        ),
         (httpx.ConnectError("[Errno -3] Temporary failure in name resolution"), "dns"),
         (httpx.ConnectTimeout("timed out"), "connect_timeout"),
         (httpx.ReadTimeout("timed out"), "read_timeout"),
@@ -293,7 +317,11 @@ def test_a_500_uses_the_copy_but_a_pause_does_not():
 
 @pytest.mark.parametrize(
     "status, headers",
-    [(403, {"cf-mitigated": "challenge"}), (202, {"sg-captcha": "challenge"}), (429, {"cf-mitigated": "challenge"})],
+    [
+        (403, {"cf-mitigated": "challenge"}),
+        (202, {"sg-captcha": "challenge"}),
+        (429, {"cf-mitigated": "challenge"}),
+    ],
 )
 def test_a_challenge_never_uses_a_copy(status, headers):
     def handler(request):
@@ -315,7 +343,9 @@ def test_a_live_robots_txt_is_recorded_with_its_body_once_and_blocks_say_which_c
             c.get("https://store.com/a")  # 429 on every try
         with c.track() as second, pytest.raises(httpx.HTTPStatusError):
             c.get("https://store.com/b")
-    assert second.robots[0]["source"] == "live" and second.robots[0]["body"] is None  # the body is stored once
+    assert (
+        second.robots[0]["source"] == "live" and second.robots[0]["body"] is None
+    )  # the body is stored once
     assert first.robots[0]["source"] == "live" and first.robots[0]["body"] == "User-agent: *\nAllow: /\n"
     assert first.blocks and first.blocks[0]["robots"] == "live" and first.blocks[0]["robots_age_s"] == 0.0
 
@@ -325,7 +355,14 @@ def test_robots_copies_reads_the_newest_live_record_from_fetches_and_probes(lake
     t1, t2 = datetime(2026, 11, 9, tzinfo=UTC), datetime(2026, 11, 16, tzinfo=UTC)
 
     def rec(at, status, body, source="live"):
-        return {"host": "store.com", "source": source, "fetched_at": at, "age_s": 0.0, "status": status, "body": body}
+        return {
+            "host": "store.com",
+            "source": source,
+            "fetched_at": at,
+            "age_s": 0.0,
+            "status": status,
+            "body": body,
+        }
 
     lake.write_partition("fetches", "2026-11-09", "f", [
         _fetch("store.com", "2026-11-09", "ok", t1) | {"robots": [rec(t1, 200, "User-agent: *\nAllow: /\n")]}])  # fmt: skip
@@ -342,111 +379,6 @@ def test_the_fetches_and_probes_schemas_carry_the_new_columns():
     names = set(SCHEMAS["fetches"].names)
     assert {"transport_errors", "robots", "catalog_route"} <= names
     assert "robots" in SCHEMAS["probes"].names
-
-
-# --- B: Shopify storefronts the generic crawl reads ------------------------------------------------------------------
-
-
-def _shopify_store(products_json_status=200, challenge=False):
-    seen = []
-
-    def handler(request):
-        p = request.url.path
-        seen.append(p)
-        if p == "/robots.txt":
-            return httpx.Response(200, text="User-agent: *\nDisallow: /cart\n")
-        if p == "/products.json":
-            if challenge:
-                return httpx.Response(429, headers={"cf-mitigated": "challenge"}, text="<html>")
-            if products_json_status != 200:
-                return httpx.Response(products_json_status, text="nope")
-            page = int(request.url.params.get("page", "1"))
-            prods = [] if page > 1 else [{"id": 1, "title": "Ethiopia", "handle": "ethiopia",
-                                          "variants": [{"id": 11, "title": "12 oz", "price": "20.00"}]}]  # fmt: skip
-            return httpx.Response(200, json={"products": prods})
-        if p == "/sitemap.xml":
-            return httpx.Response(200, text=(
-                "<sitemapindex><sitemap><loc>https://shop.com/sitemap_products_1.xml?from=1&amp;to=9</loc></sitemap>"
-                "</sitemapindex>"))  # fmt: skip
-        if p.startswith("/sitemap_products_1.xml"):
-            return httpx.Response(200, text="<urlset><url><loc>https://shop.com/products/ethiopia</loc></url></urlset>")
-        if p == "/products/ethiopia":
-            ld = {"@type": "Product", "name": "Ethiopia", "sku": "E1", "offers": {"price": "20", "priceCurrency": "USD"}}
-            return httpx.Response(200, text=f'<script type="application/ld+json">{json.dumps(ld)}</script>')
-        return httpx.Response(404)
-
-    return handler, seen
-
-
-def _limited_client(handler, name):
-    lim = PlatformLimiter(name, rate=1000.0, max_concurrent=4, sleep=lambda s: None)
-    return PoliteClient(transport=httpx.MockTransport(handler), min_interval=0, limiters={name: lim}), lim
-
-
-def test_a_shopify_marked_store_is_crawled_by_the_shopify_job():
-    """`shopify?` (the probe saw cdn.shopify.com, but /products.json didn't answer it): before, the generic job read
-    it page by page from the WooCommerce/generic IP, where 19 such stores drew Cloudflare's challenge on 2026-11-16.
-    Now the Shopify adapter, so the crawl-shopify job (connectors filter by adapter), its IP and its budget."""
-    assert Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?").adapter == "shopify"
-    assert Roaster(roaster_id="x.com", name="X", host="x.com", platform="other").adapter == "generic"
-
-
-def test_a_shopify_marked_store_is_read_from_products_json_under_shopifys_budget():
-    handler, seen = _shopify_store()
-    client, lim = _limited_client(handler, "shopify")
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?")
-    with client, client.track() as stats:
-        items = fetch_catalog(client, r)
-    assert [i.title for i in items] == ["Ethiopia"] and items[0].platform == "shopify"
-    assert "/products/ethiopia" not in seen and "/sitemap.xml" not in seen
-    assert stats.route.startswith("shopify /products.json") and lim.stats["requests"] == len(seen)
-
-
-def test_a_marked_store_without_products_json_is_read_from_its_pages_on_the_same_budget():
-    handler, seen = _shopify_store(products_json_status=404)
-    client, lim = _limited_client(handler, "shopify")
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?")
-    with client, client.track() as stats:
-        items = fetch_catalog(client, r)
-    assert [i.title for i in items] == ["Ethiopia"] and items[0].platform == "generic"
-    assert "/products/ethiopia" in seen and stats.route.startswith("pages: /products.json not served")
-    assert lim.stats["requests"] == len(seen)  # every request, robots.txt included, on Shopify's budget
-
-
-def test_a_challenge_on_products_json_is_the_answer_never_a_reason_to_read_pages():
-    handler, seen = _shopify_store(challenge=True)
-    client, _ = _limited_client(handler, "shopify")
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?")
-    with client, pytest.raises(http.FetchError) as e:
-        fetch_catalog(client, r)
-    assert http.challenged(e.value) and "/products/ethiopia" not in seen and "/sitemap.xml" not in seen
-
-
-def test_a_generic_store_whose_sitemap_is_shopifys_reads_products_json_under_the_hosted_budget():
-    """Not yet re-probed: the generic job finds Shopify's sitemap index and reads /products.json (a few requests
-    instead of one per product), at the Shopify-hosted budget (1 request/s, 4 at once, across all of them)."""
-    handler, seen = _shopify_store()
-    client, lim = _limited_client(handler, SHOPIFY_HOSTED)
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="other")
-    with client, client.track() as stats:
-        items = fetch_catalog(client, r)
-    assert [i.title for i in items] == ["Ethiopia"] and "/products/ethiopia" not in seen
-    assert stats.route == "shopify /products.json: its sitemap index is Shopify's" and lim.stats["requests"] >= 1
-
-
-def test_the_probe_marks_a_store_with_shopifys_sitemap_index():
-    handler, _ = _shopify_store()
-
-    def probing(request):
-        if request.url.path == "/":
-            return httpx.Response(200, text="<html>no markers</html>")
-        if request.url.path == "/products.json":
-            return httpx.Response(403, text="no")  # didn't answer the probe
-        return handler(request)
-
-    with PoliteClient(transport=httpx.MockTransport(probing), min_interval=0) as c:
-        res = discover.probe_one(c, "shop.com")
-    assert res["status"] == "ok" and res["platform"] == "shopify?"
 
 
 # --- 6: a WooCommerce store whose robots.txt disallows the Store API -------------------------------------------------
@@ -473,12 +405,23 @@ def _woo_store(robots: str):
         if p == "/sitemap.xml":
             return httpx.Response(404)
         if p == "/sitemap_index.xml":
-            return httpx.Response(200, text=(
-                "<sitemapindex><sitemap><loc>https://woo.com/product-sitemap.xml</loc></sitemap></sitemapindex>"))
+            return httpx.Response(
+                200,
+                text=(
+                    "<sitemapindex><sitemap><loc>https://woo.com/product-sitemap.xml</loc></sitemap></sitemapindex>"
+                ),
+            )
         if p == "/product-sitemap.xml":
-            return httpx.Response(200, text="<urlset><url><loc>https://woo.com/product/kenya/</loc></url></urlset>")
+            return httpx.Response(
+                200, text="<urlset><url><loc>https://woo.com/product/kenya/</loc></url></urlset>"
+            )
         if p == "/product/kenya/":
-            ld = {"@type": "Product", "name": "Kenya", "sku": "K1", "offers": {"price": "18", "priceCurrency": "USD"}}
+            ld = {
+                "@type": "Product",
+                "name": "Kenya",
+                "sku": "K1",
+                "offers": {"price": "18", "priceCurrency": "USD"},
+            }
             return httpx.Response(200, text=f'<script type="application/ld+json">{json.dumps(ld)}</script>')
         return httpx.Response(404)
 
@@ -501,7 +444,9 @@ def test_a_store_api_disallowed_by_robots_is_read_from_the_sitemap_robots_names(
 
 
 def test_a_store_that_also_disallows_its_product_pages_stays_blocked():
-    handler, seen = _woo_store(YOAST.replace("Disallow: /?rest_route=", "Disallow: /?rest_route=\nDisallow: /product/"))
+    handler, seen = _woo_store(
+        YOAST.replace("Disallow: /?rest_route=", "Disallow: /?rest_route=\nDisallow: /product/")
+    )
     with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c, pytest.raises(Blocked):
         fetch_catalog(c, WOO)
     assert "/product/kenya/" not in seen and not any(p.startswith("/wp-json/") for p in seen)
@@ -509,7 +454,10 @@ def test_a_store_that_also_disallows_its_product_pages_stays_blocked():
 
 def test_a_store_closed_to_us_stays_closed():
     handler, seen = _woo_store("User-agent: *\nDisallow: /\n")
-    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c, pytest.raises(SiteDisallowed):
+    with (
+        PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c,
+        pytest.raises(SiteDisallowed),
+    ):
         fetch_catalog(c, WOO)
     assert seen == ["/robots.txt"]
 
@@ -522,7 +470,5 @@ def test_the_store_api_path_is_unchanged_when_allowed():
     assert "/sitemap.xml" not in seen and any(p.startswith("/wp-json/") for p in seen)
 
 
-def test_woocommerce_fallback_uses_the_generic_adapter_module():
-    assert woocommerce.STORE_API_PATH == "/wp-json/wc/store/v1/products" and generic.shopify_sitemap(
-        ["https://x.com/sitemap_products_1.xml?from=1&to=2"]
-    )
+def test_woocommerce_fallback_reads_the_generic_pages():
+    assert woocommerce.STORE_API_PATH == "/wp-json/wc/store/v1/products" and callable(generic.read_pages)
