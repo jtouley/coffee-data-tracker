@@ -64,6 +64,26 @@ def build(lake, tmp_path, check=True, **extra_vars):
     return con
 
 
+def test_price_events_only_for_coffees_in_dim_coffee(lake, tmp_path):
+    """dim_coffee keeps a product only if its latest version is coffee; fct_price_event filtered each version on its
+    own, so a product reclassified as not coffee kept its events and read as `removed` (2026-11-16: 1,313 events
+    for coffees the catalog didn't have, the relationships warning up from 70)."""
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A", 20.0), product("R", 15.0, title="Ethiopia Guji Natural")])
+    # R's next version reads as not coffee (a verdict or the rules): dim_coffee drops it, with its history.
+    run(lake, "2026-10-26", rid, [product("A", 21.0), product("R", 15.0, coffee=False, title="Guji Mug")])
+    con = build(lake, tmp_path)
+    assert {r[0] for r in con.execute("select product_id from dim_coffee").fetchall()} == {"A"}
+    events = sorted(con.execute("select run_date, coffee_id, event from fct_price_event").fetchall())
+    assert events == [
+        (date(2026, 10, 19), f"{rid}:A", "new"),
+        (date(2026, 10, 26), f"{rid}:A", "price"),
+    ]  # no `new` and no false `removed` for R
+    assert con.execute(
+        "select count(*) from fct_price_event where coffee_id not in (select coffee_id from dim_coffee)"
+    ).fetchone() == (0,)
+
+
 def test_history_is_derived_from_successful_runs(lake, tmp_path):
     rid = "onyxcoffeelab.com"
     run(

@@ -147,13 +147,19 @@ locals {
     # sends it), or the egress check's non-zero exit (an IP over 8% refusals two runs in a row). The build still
     # runs after a failed classify, on the verdicts already stored: its own verdict gate decides whether that
     # release is served.
+    # classify waits up to 45 minutes for the batch it submits (it used to submit and return, so the build 16 s
+    # later never saw that week's verdicts). Past 45, the build uses the verdicts stored so far and the rules for the
+    # versions still awaiting one, prints and records how many (builds.verdicts_in_flight), and its verdict gate
+    # still judges the share; the next run collects the batch. Time: up to 90 minutes waiting for the merge and the
+    # enrichment (ingest_job_after), 45 for the verdicts, then the build (about 5 minutes on 2026-11-17) and the
+    # publish, inside the job's 240.
     # Retries 0: a second attempt is a second build. It takes a new build id, stamps a second release for the same
     # week with the first as its baseline, moves the served pointer and replaces marts/, so a re-run would change
     # what the first run stored and a rollback to "previous" would land on the same week. The alert tells the
     # owner, and a person re-runs the step that failed (RUNBOOK §5.1, §5.5).
     "build" = {
       command = ["sh", "-c"]
-      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
+      args    = ["rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\" || rc=1; coffeedata egress-check || rc=1; exit $rc"]
       egress  = "default", claude = true, memory = "8Gi", retries = 0
     }
   }
@@ -201,7 +207,7 @@ locals {
   # them. Past the deadline the job exits non-zero having run nothing, so its execution fails and emails the owner
   # (alerts.tf). enrich-week waits up to 90 minutes for the merge (which so has 150 from 03:17); the build job (its
   # classify, then its build) up to 90 for the merge and the enrichment, which leaves it 150 of its 240 minutes
-  # and ends before site.yml's 11:17. A clock time, not a duration: classify and build share the one deadline, and
+  # (45 of them classify's wait for the week's verdicts) and ends before site.yml's 11:17. A clock time, not a duration: classify and build share the one deadline, and
   # so does Cloud Run's retry of enrich-week (the build has none). A run by hand skips the check with
   # COFFEEDATA_SKIP_PRECONDITION=<reason> (RUNBOOK §5.2).
   ingest_job_after = {
@@ -496,6 +502,12 @@ resource "google_cloud_run_v2_job" "ingest" {
             name  = "COFFEEDATA_AFTER_DEADLINE_UTC"
             value = env.value.deadline_utc
           }
+        }
+        # The image this job runs, by digest: the build records it (builds.image_digest), so a release says which
+        # image built it. Last, so a plan adds it without shifting the entries above.
+        env {
+          name  = "COFFEEDATA_INGEST_IMAGE"
+          value = var.ingest_image
         }
       }
     }

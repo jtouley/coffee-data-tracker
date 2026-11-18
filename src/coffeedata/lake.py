@@ -298,6 +298,15 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("dbt_version", pa.string()),
             ("package_versions", pa.string()),
             ("duration_s", pa.float64()),
+            # What decided the release's coffee-or-not verdicts (added 2026-11; older files read back as null): the
+            # verdict model and definition hash dbt was given, the ingest image by digest (when the job knows it),
+            # the named rules-only override that let a build without checked verdicts pass (null in production),
+            # and how many product versions were still awaiting Claude's verdict, so classified by the rules.
+            ("verdict_model", pa.string()),
+            ("verdict_definition", pa.string()),
+            ("image_digest", pa.string()),
+            ("rules_only_override", pa.string()),
+            ("verdicts_in_flight", pa.int64()),
         ]
     ),
     # What an ingest set out to fetch, written before its first request: one row per roaster it intends to

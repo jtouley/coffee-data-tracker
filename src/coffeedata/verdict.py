@@ -85,6 +85,63 @@ def rules_only_allowed() -> bool:
     return os.environ.get(RULES_ONLY_ENV, "").strip().lower() in ("1", "true", "yes")
 
 
+def rules_only_override(flag: bool = False) -> str | None:
+    """The named opt-out that lets a build without Claude's verdicts pass and be served, or None in production:
+    which switch allowed it (`--allow-rules-only`, or COFFEEDATA_ALLOW_RULES_ONLY=1). The build record and the
+    serving log carry it, so a rules-only release always says why it was allowed."""
+    if flag:
+        return "--allow-rules-only"
+    if rules_only_allowed():
+        return f"{RULES_ONLY_ENV}=1"
+    return None
+
+
+# The build record's verdict guard: the gate's test, as dbt names it in run_results.
+GATE_TEST = "test.coffeedata.verdicts_cover_catalog"
+
+
+def gate_problem(model_id: str | None, require_verdicts: object, gate_status: str | None) -> str | None:
+    """Why a build can't be served for want of verdicts, or None when its verdicts were checked: a verdict model was
+    set, the verdict gate was on (require_verdicts) and verdicts_cover_catalog ran and passed. The 2026-11-09 build
+    ran an image without the model and without the gate, passed every test it had, and was served for a week."""
+    if not model_id:
+        return "no verdict model (COFFEEDATA_VERDICT_MODEL was empty)"
+    if require_verdicts is not True:
+        return "the verdict gate was off (require_verdicts was not set)"
+    if gate_status != "pass":
+        return f"verdicts_cover_catalog {'did not run' if gate_status is None else gate_status}"
+    return None
+
+
+IMAGE_ENV = "COFFEEDATA_INGEST_IMAGE"
+
+
+def image() -> str | None:
+    """The ingest image this process runs, pinned by digest (`<repo>/ingest@sha256:<digest>`), when the job knows
+    it: the Cloud Run jobs get it from Terraform's ingest_image (src/terraform/ingestion.tf). None elsewhere."""
+    return os.environ.get(IMAGE_ENV) or None
+
+
+def in_flight(lake: Lake) -> int:
+    """Product versions sent to Claude for this model and definition whose batch isn't collected yet: a build now
+    classifies them by the rules (verdicts_cover_catalog still judges the share), and records how many."""
+    model_id = model()
+    if not model_id:
+        return 0
+    vb = lake.scan("verdict_batches")
+    row = (
+        lake.connect()
+        .execute(
+            f"""with b as (select * from {vb} where model = $model and definition = $definition)
+            select count(distinct custom_id) from b where state = 'submitted'
+              and batch_id not in (select batch_id from b where state = 'collected')""",
+            {"model": model_id, "definition": DEFINITION_VERSION},
+        )
+        .fetchone()
+    )
+    return int(row[0]) if row else 0
+
+
 def missing() -> list[str]:
     """What classify needs and doesn't have: the verdict model, Anthropic credentials, or both."""
     out = [] if model() else ["COFFEEDATA_VERDICT_MODEL"]
