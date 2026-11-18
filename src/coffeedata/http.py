@@ -610,6 +610,19 @@ class RobotsRules:
 
     def __init__(self, lines: Iterable[str] = (), disallow_all: bool = False) -> None:
         self.disallow_all = disallow_all
+        lines = list(lines)
+        # The file's Sitemap lines (RFC 9309 2.3.5: not tied to any group), in order: where a store says its sitemap
+        # is when /sitemap.xml isn't it (Yoast's /sitemap_index.xml). Read like any URL, under these same rules, and
+        # only by the WooCommerce adapter's fallback (sitemap.sitemap_urls, declared).
+        self.sitemaps: list[str] = list(
+            dict.fromkeys(
+                v.strip()
+                for raw in lines
+                if (kv := raw.lstrip("\ufeff").split("#", 1)[0].partition(":"))[1]
+                and kv[0].strip().lower() == "sitemap"
+                and (v := kv[2].strip())
+            )
+        )
         groups = _robots_groups(lines)
         current, old = ([g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS)
         selected = [current or [g for g in groups if "*" in g.agents]] + ([old] if old else [])
@@ -652,6 +665,9 @@ class RequestStats:
     # stored copy, used because the live one was unreachable), fetched_at and age_s of the copy, its HTTP status, and
     # body (only on the fetch that fetched it live, so each body is stored once)}
     robots: list[dict] = field(default_factory=list)
+    # How the catalog was read when not by its adapter's own path (PoliteClient.note_route): a WooCommerce store whose
+    # robots.txt disallows the Store API, read from its sitemap and product pages
+    route: str | None = None
 
     def note(
         self,
@@ -838,6 +854,17 @@ class PoliteClient:
                 except RuntimeError:  # a response built without a request (tests)
                     robots = None
             stats.note(status, retry, page, response, robots)
+
+    def robots_sitemaps(self, host: str) -> list[str]:
+        """The Sitemap URLs the host's robots.txt names (RobotsRules.sitemaps), once its rules are known."""
+        rp = self._robots.get(host)
+        return list(rp.sitemaps) if rp is not None else []
+
+    def note_route(self, route: str) -> None:
+        """Record, on this thread's fetch (fetches.catalog_route), that the catalog was read another way than its
+        adapter's own: the reason, as one line."""
+        if (stats := getattr(self._local, "stats", None)) is not None:
+            stats.route = route
 
     def _note_transport(self, url: str, e: BaseException, robots_request: bool) -> None:
         if (stats := getattr(self._local, "stats", None)) is not None:

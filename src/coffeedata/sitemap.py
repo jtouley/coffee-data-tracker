@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
+from urllib.parse import urlparse
 
 import httpx
 
@@ -50,7 +51,47 @@ def _refusal(e: BaseException | None, r: httpx.Response | None = None) -> bool:
     return e is not None and bool(block_status(e) or challenged(e))
 
 
-def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = None) -> list[str]:
+def declared_sitemaps(client: PoliteClient, host: str) -> list[str]:
+    """The Sitemap URLs the host's robots.txt names on the host itself (http.RobotsRules.sitemaps), never another
+    host's: a store's own word for where its sitemap is. Its robots.txt is already read: this sends nothing."""
+    out = []
+    for u in client.robots_sitemaps(host):
+        p = urlparse(u)
+        if p.scheme in ("http", "https") and p.netloc.lower() == host.lower():
+            out.append(p._replace(scheme="https", fragment="").geturl())
+    return out
+
+
+def _first_declared(client: PoliteClient, host: str) -> httpx.Response | None:
+    """The first sitemap the host's robots.txt names (declared_sitemaps) that answers 200, else None."""
+    for url in declared_sitemaps(client, host):
+        if url.rstrip("/") == f"https://{host}/sitemap.xml":
+            continue  # the one that just answered 404
+        try:
+            r = _get(client, url)
+        except DeadlineReached:
+            raise
+        except Blocked:
+            log.info("%s: declared sitemap disallowed by robots.txt, skipped: %s", host, url)
+            continue
+        except FetchError as e:
+            if _refusal(e):
+                raise
+            log.warning("%s: declared sitemap unreadable, skipped: %s", host, e)
+            continue
+        if _refusal(None, r):
+            raise FetchError(
+                f"sitemap HTTP {r.status_code}: {url}", status=r.status_code, challenge=is_challenge(r)
+            )
+        if r.status_code == 200:
+            return r
+        log.warning("%s: declared sitemap HTTP %d, skipped: %s", host, r.status_code, url)
+    return None
+
+
+def sitemap_urls(
+    client: PoliteClient, host: str, unread: list[str] | None = None, declared: bool = False
+) -> list[str]:
     """Every URL in sitemap.xml and, for a sitemap index, in every sitemap it lists. A 404 means the site has none
     ([]); a robots block, network error or any other status of sitemap.xml itself raises FetchError, so a fetch can't
     mistake "couldn't read it" for "nothing there"; so does a sitemap over SITEMAP_MAX_BYTES (ResponseTooLarge).
@@ -59,9 +100,17 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     (a 404 or 410, a 5xx, a timeout, a file over the cap) is skipped and its URL added to `unread`, so the caller knows
     the list is incomplete (generic stores the catalog as partial). A 404 or 410 too: the index still lists it, and
     nothing says it held no products, so its products are kept listed (partial), never read as delisted. A pause or a
-    challenge (_refusal) still raises: the store is deferred or refused, as for any page."""
+    challenge (_refusal) still raises: the store is deferred or refused, as for any page.
+
+    declared (only the WooCommerce adapter's fallback, for a store whose robots.txt disallows the Store API): when
+    /sitemap.xml is a 404, the sitemaps the store's robots.txt names on its own host (declared_sitemaps: Yoast's
+    /sitemap_index.xml) are tried in order, and the first that answers 200 is read. One that answers anything else,
+    times out or is disallowed is skipped for the next; a pause or a challenge still raises. With none read, it is
+    as if there were no sitemap ([]). Every other caller reads /sitemap.xml alone, as before."""
     client = client.with_max_response(max(client.max_response_bytes, SITEMAP_MAX_BYTES))
     r = _get(client, f"https://{host}/sitemap.xml")
+    if r.status_code == 404 and declared:
+        r = _first_declared(client, host) or r
     if r.status_code == 404:
         return []
     if r.status_code != 200:

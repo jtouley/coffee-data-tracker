@@ -488,6 +488,7 @@ def rows_for(
                 "crawl_delays": res.stats.crawl_delays or None,
                 "transport_errors": res.stats.transport_errors or None,
                 "robots": res.stats.robots or None,
+                "catalog_route": res.stats.route,
             }
         )
         for it in res.items:

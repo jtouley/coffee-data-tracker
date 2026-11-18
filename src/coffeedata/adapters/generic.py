@@ -151,13 +151,22 @@ def _partial_reason(failed: list[str], unread: list[str]) -> str:
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+    """A store's catalog from its sitemap's product pages (schema.org JSON-LD)."""
+    return read_pages(client, roaster)
+
+
+def read_pages(client: PoliteClient, roaster: Roaster, declared: bool = False) -> list[CatalogItem]:
+    """The catalog from the sitemap's product pages, each page's JSON-LD (also woocommerce.fetch's, for a store whose
+    robots.txt disallows the Store API). declared: also try the sitemaps robots.txt names when /sitemap.xml is a 404
+    (sitemap.sitemap_urls): only that fallback asks for it; every generic store reads /sitemap.xml alone."""
     items: dict[str, CatalogItem] = {}
     failed: list[str] = []  # product pages that couldn't be read: "url (why)"
+    disallowed = 0  # of those, the ones robots.txt disallows us
     # The sitemap is the only list of product pages: one it can't read (a block, a 5xx, or a file over the protocol's
     # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog. A sub-sitemap it couldn't read
     # (`unread`) leaves the list incomplete: the products read are stored as partial, never as the whole catalog.
     unread: list[str] = []
-    urls = product_urls(sitemap_urls(client, roaster.host, unread))
+    urls = product_urls(sitemap_urls(client, roaster.host, unread, declared=declared))
     # Every product page is read: no cap, and no giving up after the first pages without Product markup (the old
     # GIVE_UP_AFTER = 10 stored the rest of the catalog as empty). Only the run's deadline stops it: partial.
     for n, url in enumerate(urls):
@@ -175,6 +184,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 f"HTTP {e.response.status_code}" if isinstance(e, httpx.HTTPStatusError) else type(e).__name__
             )
             failed.append(f"{url} ({why})")
+            disallowed += isinstance(e, Blocked)
             continue
         if err := challenge_error(r, url):
             # an edge's challenge (a 202, or a challenge header): a refusal, like a block, never a failed page
@@ -192,6 +202,9 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         # products read are stored as partial (kept listed, never delisted), and the rest of the catalog isn't lost.
         # Nothing read at all is the fetch's error, never an empty catalog.
         msg = _partial_reason(failed, unread)
+        if not items and failed and disallowed == len(failed) and not unread:
+            # robots.txt disallows every product page it lists: the store is closed to us, as a robots block
+            raise Blocked(f"https://{roaster.host}/ (robots.txt disallows all {len(failed)} product pages)")
         if not items:
             raise FetchError(msg)
         raise PartialCatalog(msg, list(items.values()))

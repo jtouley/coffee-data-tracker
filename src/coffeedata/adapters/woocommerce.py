@@ -13,6 +13,7 @@ from ..http import (
     FetchError,
     PartialCatalog,
     PoliteClient,
+    SiteDisallowed,
     block_status,
     causes,
     challenged,
@@ -329,8 +330,37 @@ def variation_prices(
         currencies[vid] = _currency(one.get("prices"))
 
 
+# The Store API's path. A store whose robots.txt disallows it to us (Yoast's `Disallow: /wp-json/` and
+# `Disallow: /?rest_route=` under `User-agent: *`: martinhenrycoffee.com, 2026-11-16) is read the way robots.txt does
+# allow: its sitemap, then each product page's JSON-LD (adapters.generic), under the same rules and spacing.
+STORE_API_PATH = "/wp-json/wc/store/v1/products"
+
+
+class _StoreApiDisallowed(Exception):
+    """robots.txt disallows the Store API's first listing page itself: nothing was read from the API."""
+
+
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
-    base = f"https://{roaster.host}/wp-json/wc/store/v1/products"
+    try:
+        return _store_api(client, roaster)
+    except _StoreApiDisallowed:
+        pass
+    # Every page the generic path reads is checked against the same robots.txt (a product page it disallows is
+    # Blocked like any other) and spaced the same; nothing here asks for the Store API again.
+    from . import generic
+
+    client.note_route(
+        f"generic: robots.txt disallows the Store API ({STORE_API_PATH}); sitemap and product pages"
+    )
+    items = generic.read_pages(client, roaster, declared=True)
+    if not items:
+        # the sitemap listed no product page we may read: not an empty catalog, still the robots block it was
+        raise Blocked(f"https://{roaster.host}{STORE_API_PATH} (and no product page in its sitemap)")
+    return items
+
+
+def _store_api(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+    base = f"https://{roaster.host}{STORE_API_PATH}"
     raw: list[dict] = []
     prices: dict[str, float | None] = {}
     stock: dict[str, bool | None] = {}
@@ -345,6 +375,13 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                     prices |= dict.fromkeys(_variation_ids(p), _price(p.get("prices")))
         needs = [p for p in raw if _needs_variation_prices(p)]
         variation_prices(client, base, roaster.host, needs, prices, stock, gone, currencies)
+    except Blocked as e:
+        # Only a block on the first listing page's own URL, before anything was read, turns into the sitemap path: a
+        # store closed to us (SiteDisallowed) stays closed, and a block later on (a variation lookup) fails this fetch
+        # as before, never throwing away what the API answered for a second read of the whole store.
+        if raw or isinstance(e, SiteDisallowed) or str(e) != base:
+            raise
+        raise _StoreApiDisallowed(str(e)) from e
     except DeadlineReached as e:
         # Only products read whole: listed, with every size priced or known gone. The rest stay as they were.
         done = [
