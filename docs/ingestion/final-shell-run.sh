@@ -197,9 +197,8 @@ jq -r '.resource_changes[]? | select(.change.actions != ["no-op"] and .change.ac
   | "\(.change.actions | join("+"))\t\(.address)"' "$WORK/boot.json" | sort
 echo "expect (first run): 56 creates: two pools and providers, two accounts and their workload identity bindings,"
 echo "        nine custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
-echo "expect (a later run): only what src/terraform/bootstrap/ changed since its last apply, as updates in place or"
-echo "        creates; e.g. after the apply account was given read on the image registry: 1 update in place,"
-echo "        google_project_iam_custom_role.tf_repository. No changes means it is current."
+echo "        On a later run: only what src/terraform/bootstrap/ changed since its last apply. A bootstrap change alone"
+echo "        is applied by hand instead (docs/app/RUNNING.md, \"re-apply the bootstrap\")."
 ask "apply exactly this plan?"
 tfrun apply "$BOOT" apply -input=false -no-color "$WORK/boot.plan"
 grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$WORK/apply.log" || true
