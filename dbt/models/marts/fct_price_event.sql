@@ -4,16 +4,17 @@
 -- event needs both sides in USD, so a currency the store states for the first time never reads as a price change.
 -- A USD price is compared with the bag's previous USD observation (window wu), so a run priced in another currency
 -- in between doesn't hide a USD to USD change. previous_price_run is the run previous_price_usd comes from.
+-- Only coffees in dim_coffee, the same rule it applies: a product whose latest version isn't coffee drops out
+-- entirely, with its history, so no event points at a coffee the catalog doesn't have. Without this, a product the
+-- verdicts reclassified (an earlier version coffee, the latest not) read as `removed` (2026-11-16: 1,313 events).
+-- dim_coffee also leaves aliases' copies of their canonical id's catalog out.
 with obs as (
     select s.coffee_id, s.roaster_id, s.run_date, s.fetched_at, v.variant_id, v.price_usd, v.is_usd,
            coalesce(v.available, true) as available
     from {{ ref('stg_snapshots') }} s
     join {{ ref('stg_products') }} p using (input_hash), unnest(s.variants) as t(v)
     where {{ decided('s.decision', 'p.is_coffee') }}
-      -- not an alias's copy of its canonical id's catalog (dim_coffee leaves aliases out the same way)
-      and s.roaster_id not in (
-          select roaster_id from {{ ref('int_roaster_state') }} where roaster_id <> canonical_roaster_id
-      )
+      and s.coffee_id in (select coffee_id from {{ ref('dim_coffee') }})
 ),
 o as (
     select *,

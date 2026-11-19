@@ -215,13 +215,45 @@ def cmd_discover(args: argparse.Namespace) -> None:
         raise SystemExit(f"discover failed: {', '.join(failed)}")
 
 
-def probe_todo(states: list, run_date: str, stale_days: int) -> list[str]:
-    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`;
-    never-probed ones (new from discovery) first, then the longest unprobed, so a run stopped by its deadline has
-    asked the ones that most need it, and the next run carries on with the rest."""
-    cutoff = (date.fromisoformat(run_date) - timedelta(days=stale_days)).isoformat()
-    todo = [s for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
-    todo.sort(key=lambda s: (s.last_probed is not None, s.last_probed or "", s.roaster.roaster_id))
+def unreachable_backoff_days(failures: int, unreachable_days: int, stale_days: int) -> int:
+    """How long an unreachable roaster waits between probes: `unreachable_days` after an ok probe (or the seed's),
+    doubled for each failure since (7, 14, 28 days), never longer than `stale_days`, the wait every other roaster
+    gets. failures: the probes that failed since the last ok one, plus the crawl runs that failed since it (a store
+    whose home page answers the probe but whose catalog keeps refusing us backs off as well)."""
+    return min(unreachable_days * 2 ** min(failures, 8), stale_days)
+
+
+def probe_todo(states: list, run_date: str, stale_days: int, unreachable_days: int = 7) -> list[str]:
+    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`; or
+    unreachable (the crawl stopped trying it: registry STATE_SQL) and last probed longer ago than its backoff
+    (unreachable_backoff_days). A probe that answers ok after its failed fetches puts an unreachable roaster back in
+    the crawl; before, nothing re-probed one inside `stale_days`, and the seed's probe date (2026-10-26) kept 66
+    roasters out of the 2026-11-16 run (probe todo 0). Never-probed ones (new from discovery) first, then the
+    unreachable ones due, then the longest unprobed, so a run stopped by its deadline has asked the ones that most
+    need it, and the next run carries on with the rest."""
+    day = date.fromisoformat(run_date)
+    cutoff = (day - timedelta(days=stale_days)).isoformat()
+
+    def due_unreachable(s) -> bool:
+        if s.status != "unreachable":
+            return False
+        failures = getattr(s, "failed_probes", 0) + getattr(s, "failed_runs", 0)
+        wait = unreachable_backoff_days(failures, unreachable_days, stale_days)
+        return (s.last_probed or "") <= (day - timedelta(days=wait)).isoformat()
+
+    todo = [
+        s
+        for s in states
+        if s.status != "opted_out" and ((s.last_probed or "") < cutoff or due_unreachable(s))
+    ]
+    todo.sort(
+        key=lambda s: (
+            s.last_probed is not None,
+            not due_unreachable(s),
+            s.last_probed or "",
+            s.roaster.roaster_id,
+        )
+    )
     return [s.roaster.roaster_id for s in todo]
 
 
@@ -248,11 +280,13 @@ def cmd_probe(args: argparse.Namespace) -> None:
     states: list = []
     try:
         states = registry.current(lake)
-        todo = probe_todo(states, args.run_date, args.stale_days)
+        todo = probe_todo(states, args.run_date, args.stale_days, getattr(args, "unreachable_days", 7))
         if args.only:  # one domain, or several joined by commas (the admin's Pull now)
             todo = args.only.split(",")
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
             todo = sorted(todo, key=ingest.sample_key)[: args.sample]
+        # Read before the window is measured, so its time comes out of the window (from t0), never on top of it
+        copies = ingest.robots_copies(lake, args.run_date)
         deadline_min = getattr(args, "deadline_min", None)
         left = None
         # A Cloud Run retry keeps the first attempt's window (it ends before the crawls). For a retry the window is
@@ -262,7 +296,12 @@ def cmd_probe(args: argparse.Namespace) -> None:
             window = connectors._window_left(lake, "probe", None, week, deadline_min)
             left = max(0.0, min(60 * window, 60 * deadline_min - (time.monotonic() - t0)))
         rows = discover.probe(
-            todo, workers=args.workers, run_date=args.run_date, deadline_s=left, on_batch=write
+            todo,
+            workers=args.workers,
+            run_date=args.run_date,
+            deadline_s=left,
+            on_batch=write,
+            robots_copies=copies,
         )
     except BaseException as e:  # what was written stays staged; the end row says the attempt failed
         control.finish(
@@ -563,16 +602,32 @@ def cmd_classify(args: argparse.Namespace) -> None:
             # A draft's review (the admin's Classify these): exactly the versions its build's census lists as taken
             # out by a new filter with no verdict, still pending (verdict.review_rows).
             only = verdict.review_rows(lake, verdict.model() or "", args.prefilter_build)
-        out = {"collect": verdict.collect(lake, args.run_date),
+        out: dict = {"collect": verdict.collect(lake, args.run_date),
                "submit": verdict.submit(lake, args.limit, only=only, run_date=args.run_date)}  # fmt: skip
         deadline = time.monotonic() + args.wait * 60
         # Wait for this run's batches only; whatever is still running is collected by the next run.
         waiting = set(out["submit"].get("batch_ids", []))
         while waiting and time.monotonic() < deadline:
             time.sleep(60)
-            got = verdict.collect(lake, args.run_date)
-            out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
-            waiting &= verdict.open_batch_ids(lake)
+            # One failed read of the lake (a 429, a timeout) never ends the wait: it is logged and counted, and the
+            # next minute tries again. At the deadline classify goes on with what it collected.
+            try:
+                got = verdict.collect(lake, args.run_date)
+                out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
+                waiting &= verdict.open_batch_ids(lake)
+            except Exception as e:  # noqa: BLE001 - the lake's and the API's errors; the wait only retries
+                out["wait_read_failures"] = out.get("wait_read_failures", 0) + 1
+                logging.warning("classify: a read during the wait failed, retrying next minute: %s", e)
+        if waiting:
+            # The wait ran out: the build after this classifies those versions by the rules, counts them in its
+            # record (verdicts_in_flight), and verdicts_cover_catalog still judges the share. The next run collects
+            # them.
+            out["still_open"] = sorted(waiting)
+            print(
+                f"classify: {len(waiting)} verdict batch(es) still open after {args.wait} min; the build uses the "
+                "stored verdicts and the rules for the versions awaiting one",
+                file=sys.stderr,
+            )
     except BaseException as e:  # a crash, or an interrupt in the wait: the end row says the attempt failed
         control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
         raise
@@ -644,7 +699,7 @@ def dbt_build(
             "verdict_definition": verdict.DEFINITION_VERSION,
             # verdicts_cover_catalog: fails a build with no verdict model, or too few listed coffees decided by
             # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
-            "require_verdicts": not verdict.rules_only_allowed(),
+            "require_verdicts": not verdict.rules_only_allowed(lake.url),
             "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
             "rules": rules.dbt_var(None),  # cmd_build passes the snapshot's settings
         }
@@ -702,8 +757,10 @@ def cmd_build(args: argparse.Namespace) -> bool:
     marts (what the site, the app, the public export and the MCP tools other than run_sql read); a failing one is still kept, with its results and a
     copy of its catalog marts, for `build-diff`. Returns whether the checks passed. The control plane gets a start
     and an end row (job build): done when it passed and was served, failed when its checks failed or it crashed."""
-    from . import control, quality
+    from . import control, quality, verdict
 
+    # A rules-only override is refused on a remote lake (verdict.refuse_on_remote), before any work.
+    override = verdict.rules_only_override(getattr(args, "allow_rules_only", False))
     lake = Lake()
     # The weekly build job only (COFFEEDATA_AFTER_JOB): no build of a week whose merge and enrichment aren't done,
     # and none after a classify whose own check didn't pass. Before the merge the lake's latest run is still last
@@ -720,7 +777,7 @@ def cmd_build(args: argparse.Namespace) -> bool:
     job = control.start(lake, "build", run_date, detail={"build_id": build_id, **control.execution()}
                         | ({"draft": draft} if draft else {}))  # fmt: skip
     try:
-        passed = _build(args, lake, db, run_date, build_id)
+        passed = _build(args, lake, db, run_date, build_id, override)
     except BaseException as e:  # a crash, or a SystemExit or interrupt: the end row says the attempt failed
         control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
         raise
@@ -744,8 +801,10 @@ def _snapshot(args: argparse.Namespace, lake: Lake, served: str | None) -> dict 
     return decisions.verified(pinned["doc"], pinned["snapshot_id"], pinned["sha256"] or "")
 
 
-def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_id: str) -> bool:
-    from . import decisions, quality, rules
+def _build(
+    args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_id: str, override: str | None
+) -> bool:
+    from . import decisions, quality, rules, verdict
 
     extra: dict = {"as_of_run": run_date, "today": _today(), "build_id": build_id}
     served_release = quality.served(lake)
@@ -799,8 +858,23 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
             "previous_release_status": status,
             "previous_release_run_date": str((served_release or {}).get("run_date") or ""),
         }
-    if getattr(args, "allow_rules_only", False):
+    # The named switch that lets this build pass without checked verdicts (None in production), recorded with it.
+    if override:
         extra["require_verdicts"] = False
+        print(
+            f"verdicts: rules only, allowed by {override}; this release is recorded as such", file=sys.stderr
+        )
+    try:  # only a count for the record: a failed read never stops the build
+        in_flight: int | None = verdict.in_flight(lake)
+    except Exception as e:  # noqa: BLE001 - duckdb errors; duckdb is imported lazily
+        logging.warning("verdicts in flight not counted: %s", e)
+        in_flight = None
+    if in_flight:  # classify's wait ran out: those versions are classified by the rules this week
+        print(
+            f"verdicts: {in_flight:,} product versions still await Claude's verdict; this build classifies them by "
+            "the rules (verdicts_cover_catalog judges the share), and the next build collects them",
+            file=sys.stderr,
+        )
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
         # It skips the anomaly bands too, and records accepted_volume_change, so their history restarts at it.
@@ -834,8 +908,12 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
         logging.warning("verdict coverage not reported: %s", e)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
-        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took, tuple(recorded)
-    )
+        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took, tuple(recorded),
+        verdicts={
+            "verdict_model": verdict.model(), "verdict_definition": verdict.DEFINITION_VERSION,
+            "configured_image": verdict.image(), "rules_only_override": override, "verdicts_in_flight": in_flight,
+        },
+    )  # fmt: skip
     if draft:  # a draft writes no personal marts and is never served here: only Publish serves it
         print(
             f"draft {draft}: build {build_id} {'passed' if passed else 'failed'} its checks; recorded, not served"
@@ -911,10 +989,17 @@ def _write_personal_marts(lake: Lake, db: Path, catalog: tuple[str, ...]) -> Non
 
 def cmd_rollback(args: argparse.Namespace) -> None:
     """Serve an earlier passing release, then re-export the public tables and rebuild the site from it."""
-    from . import quality
+    from . import quality, verdict
 
     lake = Lake()
-    to = quality.rollback(lake, args.to, args.reason, SERVED_DB)
+    # A release whose verdicts weren't checked is served only with the flag and a reason, both logged, and only from
+    # a local lake (verdict.refuse_on_remote).
+    override = None
+    if getattr(args, "allow_rules_only", False):
+        if not args.reason:
+            raise SystemExit("rollback --allow-rules-only needs --reason: the serving log records why")
+        override = verdict.refuse_on_remote(f"rollback --allow-rules-only ({args.reason})", lake.url)
+    to = quality.rollback(lake, args.to, args.reason, SERVED_DB, rules_only_override=override)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)
     print(f"serving release {to}")
@@ -1198,6 +1283,11 @@ def cmd_site(args: argparse.Namespace) -> None:
                 "nothing is served yet: the site is built from the served release, which the first weekly run "
                 "whose checks pass creates (or `coffeedata rollback --to <build>`)"
             )
+        # A release served without checked verdicts (an outdated image's build served itself) isn't rendered.
+        try:
+            quality.servable(Lake(), release["build_id"])
+        except ValueError as e:
+            raise SystemExit(f"the served release isn't rendered: {e}") from None
         quality.materialize(Lake(), release["build_id"], Path(args.db))
     print(site.build(Path(args.db), Path(args.out)))
 
@@ -1400,6 +1490,13 @@ def main(argv: list[str] | None = None) -> None:
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
+    pr.add_argument(
+        "--unreachable-days",
+        type=int,
+        default=7,
+        help="re-probe an unreachable roaster this many days after its last ok probe, doubling per failed probe "
+        "(at most --stale-days)",
+    )
     pr.add_argument("--only", help="probe these roaster_ids (domains, comma-separated), registry or not")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
@@ -1581,6 +1678,12 @@ def main(argv: list[str] | None = None) -> None:
         "--to", help="build id of the release to serve, or 'served' to re-export the served one (no crawl)"
     )
     rb.add_argument("--reason", default="", help="recorded in marts/release.parquet")
+    rb.add_argument(
+        "--allow-rules-only",
+        action="store_true",
+        help="serve a release whose Claude verdicts weren't checked (no verdict model, or verdicts_cover_catalog "
+        "didn't run); needs --reason, and the serving log records it",
+    )
     rb.add_argument("--out", default="build/site")
 
     ov = add("override", cmd_override, "accept, reject or pin one roaster-week's fetch for the history")

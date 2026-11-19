@@ -20,7 +20,7 @@ Dropped before anything is kept, and counted (the counts are all it logs): Globa
 an Origin that isn't ours (a missing or "null" one too); a body over MAX_BODY or with more than MAX_EVENTS events;
 an event the schema refuses (app/usage_events.py); over the limits per masked prefix (PER_MINUTE, PER_DAY) or the
 instance's (CEILING_PER_MINUTE, DAILY_CAP); past the memory caps. A flush line logs at WARNING when anything was
-dropped for a limit or a publish failed, and at ERROR when events were lost; the usage alert (alerts.tf) fires on
+dropped for a limit or a publish failed, and at ERROR when events were lost; the usage alert (src/terraform/usage.tf) fires on
 either.
 
 The client's address is read from X-Forwarded-For the way the app does (limits.forwarded_client), masked at once
