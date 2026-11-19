@@ -227,8 +227,9 @@ def state_sql(
         cols = "added_at, source, roaster_id, name, city, state, locations"
         registry = (f"(select {cols}, opted_out from {registry} "
                     f"union all select {cols}, false as opted_out "
-                    f"from {lake.scan('candidates')} where roaster_id in ({listed}) "
-                    f"and roaster_id not in (select roaster_id from {registry} where roaster_id is not null))")  # fmt: skip
+                    f"from {lake.scan('candidates')} c where roaster_id in ({listed}) "
+                    f"and not exists (select 1 from {registry} r where r.roaster_id = c.roaster_id "
+                    f"and r.source is not distinct from c.source))")  # fmt: skip
     return STATE_SQL.format(
         registry=registry,
         probes=lake.scan("probes"),

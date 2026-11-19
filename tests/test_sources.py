@@ -188,10 +188,18 @@ def test_the_build_registers_a_flagged_place_like_the_crawl(lake, monkeypatch, t
     snaps = tmp_path / "snapshots"
     monkeypatch.setenv("COFFEEDATA_SNAPSHOTS", str(snaps))
     lake.write("candidates", "candidates/source=overture/a.parquet",
-               [place("beanhouse.example", "Bean House"), place("teashop.example", "Tea Shop")])  # fmt: skip
+               [place("beanhouse.example", "Bean House"), place("teashop.example", "Tea Shop"),
+                place("osmtoo.example", "Osm Too Open")])  # fmt: skip
+    # A flagged place OpenStreetMap already added: its Overture record still counts (only the same roaster and
+    # source is skipped), so it is published with its open name, never the OSM one.
+    lake.write("registry", "registry/source=osm/x.parquet",
+               [{"added_at": NOW, "source": "osm", "roaster_id": "osmtoo.example", "name": "Osm Too ODbL"}])  # fmt: skip
     run(lake, "2026-10-19", "beanhouse.example", [product(str(i)) for i in range(30)])
+    run(lake, "2026-10-19", "osmtoo.example", [product(str(i)) for i in range(5)])
     dropped = "107roasters.com"  # a seed roaster the owner flagged not a roaster
-    doc = decisions.snapshot("s1", "t", [], sources=["beanhouse.example"], not_roasters=[dropped])
+    doc = decisions.snapshot(
+        "s1", "t", [], sources=["beanhouse.example", "osmtoo.example"], not_roasters=[dropped]
+    )
     (snaps / "snapshots").mkdir(parents=True)
     (snaps / decisions.key("s1")).write_text(json.dumps(doc, sort_keys=True))
     args = argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-19", accept_volume_change=False,
@@ -202,3 +210,7 @@ def test_the_build_registers_a_flagged_place_like_the_crawl(lake, monkeypatch, t
     rows = dict(duckdb.connect().execute(f"select roaster_id, sources from '{f}'").fetchall())
     assert rows.get("beanhouse.example") == "overture-2026-10" and "teashop.example" not in rows
     assert dropped not in rows and len(rows) > 1000  # not a roaster: out of the build too, the rest kept
+    assert "overture-2026-10" in rows["osmtoo.example"]
+    pub = quality.release_files(Lake(), draft)["public_roaster"]
+    names = dict(duckdb.connect().execute(f"select roaster_id, roaster_name from '{pub}'").fetchall())
+    assert names.get("osmtoo.example") == "Osm Too Open"
