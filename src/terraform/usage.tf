@@ -15,6 +15,7 @@
 #   "Usage"): until then an apply of these would fail partway, so the default creates only the account and the
 #   empty secret, which the apply and plan accounts can already manage.
 # - usage_token: mounts the secret once it has a value.
+# usage_enabled needs usage_image pinned and usage_token on (the service's precondition).
 
 locals {
   usage_service = "${var.service}-usage"
@@ -76,7 +77,8 @@ resource "google_cloud_run_v2_service" "usage" {
       max_instance_count = 2 # the cost ceiling; the per-prefix limits are per instance
     }
     containers {
-      # Google's sample image until ci.tfvars pins one (it ignores COFFEEDATA_APP and answers every path).
+      # The precondition below refuses an empty usage_image while the service exists; the sample image stays only
+      # so this expression never yields an empty image.
       image = var.usage_image != "" ? var.usage_image : "us-docker.pkg.dev/cloudrun/container/hello"
       resources {
         limits = {
@@ -132,6 +134,13 @@ resource "google_cloud_run_v2_service" "usage" {
     # Unlike the app's service, Terraform owns the image (usage_image). client and client_version: set by gcloud if
     # anyone ever deploys by hand. scaling: the service-level block reads back as zeros (cloud_run.tf).
     ignore_changes = [client, client_version, scaling]
+    # Never a public collector on Google's sample image, or one that can't publish what it accepts: usage_enabled
+    # needs usage_image pinned and usage_token on, however the variables are set (ci.tfvars, terraform.tfvars, -var,
+    # TF_VAR_*). usage_image's own validation already holds it to the app's image by digest.
+    precondition {
+      condition     = var.usage_image != "" && var.usage_token
+      error_message = "usage_enabled needs usage_image (the app's image by digest) and usage_token = true, set together in ci.tfvars (docs/app/RUNNING.md, \"Turning usage on\")."
+    }
   }
   depends_on = [google_secret_manager_secret_iam_member.usage_token, google_logging_project_exclusion.usage_requests]
 }

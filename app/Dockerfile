@@ -29,6 +29,8 @@ RUN uv sync --locked --no-dev --extra app
 # DuckDB's httpfs extension (reading the lake over hf://), installed now rather than downloaded on every cold start.
 RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user app ./app
+# config/usage.toml: the usage collector's address, for the CSP and the page script (coffeedata.beacon).
+COPY --chown=user config ./config
 # The admin (admin.registry.coffee) runs from this same image: `uvicorn --factory admin.main:create_app` (docs/admin/README.md).
 COPY --chown=user admin ./admin
 

@@ -7,6 +7,7 @@ axe-core is installed. CATALOG_SCREENSHOTS=<dir> keeps the screenshots."""
 
 import json
 import os
+import re
 import subprocess
 import threading
 from functools import partial
@@ -14,7 +15,6 @@ from http.server import ThreadingHTTPServer
 from pathlib import Path
 
 import pytest
-from jinja2 import Environment, PackageLoader, select_autoescape
 
 from coffeedata import site
 
@@ -49,7 +49,7 @@ ROASTERS = [
 COLUMNS = ["coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
            "tasting_notes", "price_per_100g", "min_price_usd", "in_stock", "catalog_status", "first_seen",
            "roaster_id", "roaster_city"]  # fmt: skip
-BUILD = "20261110T061836-test01"
+BUILD = "20261110T061836-0a1b2c"  # lake.new_batch_id()'s shape, which the usage collector checks
 KEY = "0123abcd4567"  # site.build passes a hash of catalog.json
 
 
@@ -57,7 +57,8 @@ def coffee(
     roaster: str, title: str, process: str = "washed", notes=("cocoa",), in_stock: bool = True, price=6.5
 ) -> dict:
     rid, name, city, state = next(r for r in ROASTERS if r[0] == roaster)
-    return {"coffee_id": f"{rid}:{title}", "roaster_name": name, "roaster_state": state, "title": title,
+    # roaster_id:product_id, as the stores' ids look (the usage collector checks the shape)
+    return {"coffee_id": f"{rid}:{re.sub('[^a-z0-9]+', '-', title.lower()).strip('-')}", "roaster_name": name, "roaster_state": state, "title": title,
             "url": f"https://{rid}/", "origin_country": "Ethiopia", "process": process, "roast_level": "light",
             "tasting_notes": list(notes), "price_per_100g": price, "min_price_usd": 22.0, "in_stock": in_stock,
             "catalog_status": "active", "first_seen": "2026-10-26", "roaster_id": rid, "roaster_city": city}  # fmt: skip
@@ -100,7 +101,7 @@ def catalog() -> dict:
     }
 
 
-def render(out: Path) -> None:
+def render(out: Path, collector: str | None = None) -> None:
     """The catalog page as site.build renders it, with its two charts drawn by site.hbar_chart (they set the page's
     width at 320 px) and empty counts."""
     origins = [("Papua New Guinea", 4.51), ("Ethiopia", 5.07), ("Colombia", 4.71), ("Kenya", 5.51)]
@@ -111,15 +112,14 @@ def render(out: Path) -> None:
         ),
         "process": site.hbar_chart([(p, n, f"{p}: {n:,}") for p, n in processes], "{:,.0f}", "By process"),
     }
-    env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
-    html = env.get_template("index.html").render(
+    html = site.environment().get_template("index.html").render(
         links=site.links(), jsonld="", totals={"coffees": 0, "in_stock": 0, "roasters": 0}, status_rows=[],
         charts=charts, new=[], coverage={"registry": {}}, origin_price=[{"origin_country": o, "n": 5, "med": v} for o, v in origins],
         processes=[{"process": p, "n": n} for p, n in processes], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
-        state_words=site.STATE_WORDS,
+        state_words=site.STATE_WORDS, usage=site.usage("catalog", {"release_build_id": BUILD}, collector),
     )  # fmt: skip
     (out / "catalog").mkdir(parents=True)
-    (out / "catalog" / "index.html").write_text(site.with_csp(html))
+    (out / "catalog" / "index.html").write_text(site.with_csp(html, collector))
     (out / "catalog" / "catalog.json").write_text(json.dumps(catalog()))
 
 

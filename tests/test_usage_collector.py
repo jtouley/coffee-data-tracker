@@ -748,8 +748,8 @@ def _code(path: str) -> str:
 
 
 def test_the_terraform_keeps_to_the_collectors_own_resources():
-    """Its own account, one secret it alone reads, scale to zero and at most two instances, the pinned image (Google's
-    sample image until one is pinned) owned by Terraform, no custom domain, the request-log exclusion made before the
+    """Its own account, one secret it alone reads, scale to zero and at most two instances, the pinned image (with the
+    token, required by a precondition while the service exists) owned by Terraform, no custom domain, the request-log exclusion made before the
     service; the service and what hangs off it only with usage_enabled; no grant to the deploy, plan or apply
     accounts or any impersonation role (the plan guard's to refuse, the owner's to grant)."""
     code = _code("src/terraform/usage.tf")
@@ -785,8 +785,9 @@ def test_the_terraform_keeps_to_the_collectors_own_resources():
 
 
 def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs():
-    """actAs on the collector's account (and no other new one), log exclusions only (no sinks, buckets or delete),
-    and the plan account their read; the main root's plan stays green without them while usage_enabled is off."""
+    """actAs on the collector's account (and no other new one), log exclusions and the loss alert's notification
+    rule only (no sinks, buckets or delete), and the plan account the exclusions' read; ci.tfvars turns usage_enabled
+    on only with the image pinned and the token."""
     code = _code("src/terraform/bootstrap/iam.tf")
     assert 'usage            = "${var.service}-usage"' in code
     assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage"])' in code
@@ -795,7 +796,9 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
     )
     assert {k: sorted(re.findall(r'"([^"]+)"', v)) for k, v in perms.items()} == {
         "tfApplyLogExclusions": ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list",
-                                 "logging.exclusions.update"],
+                                 "logging.exclusions.update", "logging.notificationRules.create",
+                                 "logging.notificationRules.get", "logging.notificationRules.list",
+                                 "logging.notificationRules.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
     }  # fmt: skip
     apply = code[code.index('resource "google_project_iam_member" "tf_apply_custom"') :]
@@ -811,7 +814,70 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
     assert "logging.sinks" not in code and "roles/logging" not in code
     variables = _code("src/terraform/variables.tf")
     assert re.search(r'variable "usage_enabled" \{[^}]*default\s*=\s*false', variables, re.S)
-    assert not re.search(r"^usage_enabled\s*=\s*true", (ROOT / "src/terraform/ci.tfvars").read_text(), re.M)
+    # Switched on in one PR (RUNNING.md, "Turning usage on", step 3): never the service without its pinned image and
+    # its token, so the public service never runs Google's sample image or a collector that can't publish.
+    # No end-of-line anchor, and Terraform's "true" string too: a trailing comment or quotes never skip the check.
+    tfvars = (ROOT / "src/terraform/ci.tfvars").read_text()
+    if re.search(r'^\s*usage_enabled\s*=\s*"?true"?\b', tfvars, re.M):
+        assert re.search(r'^\s*usage_token\s*=\s*"?true"?\b', tfvars, re.M)
+        images = re.findall(r'^\s*usage_image\s*=\s*"([^"]*)"', tfvars, re.M)
+        assert len(images) == 1 and _usage_image_pattern().fullmatch(images[0])
+    # The same rule in Terraform itself, for every way the variables are set (-var, terraform.tfvars, TF_VAR_*).
+    service = _code("src/terraform/usage.tf")
+    service = service[service.index('resource "google_cloud_run_v2_service" "usage"') :]
+    service = service[: service.index("\n}\n")]
+    assert re.search(
+        r'precondition \{\s*condition\s*=\s*var\.usage_image != "" && var\.usage_token\b', service
+    )
+
+
+@pytest.mark.parametrize("script", ["scripts/tf_break_glass.sh", "docs/ingestion/final-shell-run.sh"])
+def test_the_owners_shell_plans_load_ci_tfvars_after_terraform_tfvars(script):
+    """ci.tfvars is the one source of usage_enabled, usage_token and usage_image (and verdict_model): a shell plan
+    without it would destroy the collector and its log exclusion. Each owner script passes it to its main-root plan,
+    after terraform.tfvars (loaded automatically, or first with -var-file), so ci.tfvars wins as it does in GitHub."""
+    code = (ROOT / script).read_text()
+    plans = [
+        line
+        for line in code.splitlines()
+        if re.search(r"\bplan -input=false\b", line) and "$BOOT" not in line
+    ]
+    assert plans, script
+    for line in plans:
+        assert re.search(r'-var-file="?(ci\.tfvars|\$CITFVARS)"?', line), line
+        if '-var-file="$TFVARS"' in line:
+            assert line.index('-var-file="$TFVARS"') < line.index('-var-file="$CITFVARS"'), line
+    if "CITFVARS=" in code:
+        assert 'CITFVARS="$PWD/$TF/ci.tfvars"' in code
+    assert "never GitHub's ci.tfvars" not in code
+
+
+# A `terraform plan` or `terraform apply` the runbooks tell the owner to run on the main root. Not one that applies a
+# saved plan (`apply x.plan`: the variables were fixed at plan), the bootstrap root's, or prose naming the command.
+_TF_COMMAND = re.compile(r"\bterraform (plan|apply)\b(?P<rest>[^`\n]*)")
+_NOT_A_MAIN_ROOT_COMMAND = (
+    "-out=b.plan",  # the bootstrap root (RUNNING.md, re-applying the bootstrap)
+    "plan -destroy",  # the bootstrap root (RUNNING.md, revoking the pipeline's access)
+    "The next `terraform apply` reverts it",
+    "`terraform plan` refuses a size",
+)
+
+
+@pytest.mark.parametrize("doc", ["docs/ingestion/RUNBOOK.md", "docs/app/RUNNING.md"])
+def test_the_runbooks_hand_commands_load_ci_tfvars(doc):
+    """After usage_enabled, a hand plan or apply without ci.tfvars offers to destroy the collector and its log
+    exclusion (RUNBOOK section 5's emergency apply most of all): every main-root command in the runbooks passes it."""
+    seen = 0
+    for n, line in enumerate((ROOT / doc).read_text().splitlines(), 1):
+        if any(s in line for s in _NOT_A_MAIN_ROOT_COMMAND):
+            continue
+        for m in _TF_COMMAND.finditer(line):
+            args = m.group("rest").split("#")[0].split()
+            if m.group(1) == "apply" and args and not args[0].startswith("-"):
+                continue  # a saved plan
+            seen += 1
+            assert "-var-file=ci.tfvars" in args, f"{doc}:{n}: {line.strip()}"
+    assert seen >= 3, doc  # the pattern still finds the commands
 
 
 def test_the_collector_url_is_in_one_checked_in_place():

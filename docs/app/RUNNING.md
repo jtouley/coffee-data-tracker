@@ -142,7 +142,7 @@ Nothing here was created for you. Once, in this order:
    cd src/terraform
    cp terraform.tfvars.example terraform.tfvars   # billing_account, owner_email
    terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
-   terraform apply -target=google_project_service.apis -target=google_secret_manager_secret.app
+   terraform apply -var-file=ci.tfvars -target=google_project_service.apis -target=google_secret_manager_secret.app
    ```
 
 5. **Secret values**, one version for each of the five (Terraform only creates the empty secrets; values never go
@@ -163,7 +163,7 @@ Nothing here was created for you. Once, in this order:
    ```
 
    (The app strips surrounding whitespace from every secret anyway, so a stray newline does no harm.) Then
-   everything else: `terraform apply`.
+   everything else: `terraform apply -var-file=ci.tfvars`.
 6. **GitHub variables** (Settings → Secrets and variables → Actions → Variables), from `terraform output`:
    `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE`. Then run the deploy workflow once, or push to main.
 7. **DNS:** add `CNAME app -> ghs.googlehosted.com.` at Namecheap (`runbook/check-dns.sh` checks it). The
@@ -311,11 +311,17 @@ the workflow again; the new plan shows what is left. A lock left by a dead runne
 (`google_billing_budget.monthly`), the plan account's project-scoped budget role isn't enough: give it
 `roles/billing.viewer` on the billing account instead (`src/terraform/bootstrap/iam.tf`).
 
-**What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can
-set IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the
-staging bucket (and so raw ingestion data), and run any image as the runtime, ingest or scheduler account. That is
-what the approval is for: read the IAM section of the summary first. It cannot write a workload identity pool or
-provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
+**What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can set
+IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the staging
+bucket (and so raw ingestion data), read the image repository's images, which Cloud Run checks as whoever deploys a job
+or service (its role holds no push or delete permission itself, though the repository's settings and IAM it can change
+reach both), run any image as the runtime, ingest or scheduler account, and create log-based alert policies and
+notification channels of any type. That last one means an approved apply could copy fields of matching log entries
+(through a policy's `label_extractors` or its documentation) into a notification on a channel it creates, such as a
+webhook to an outside address: a narrow path for log content, not a sink, and the guard checks neither channel types nor
+extractors. That is what the approval is for: read the IAM section of the summary first, and for any new or changed
+notification channel its type and address, and any `label_extractors` on an alert. It cannot write a workload identity
+pool or provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
 - any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
   any account, or a custom role;
 - a grant on any resource that names the plan or apply account; one that names the deploy account, except exactly
@@ -352,8 +358,9 @@ the break-glass below, are the owner's, from Cloud Shell.
   `scripts/tf_plan_guard.py` and `src/terraform/**`.
 
 **Break-glass** (GitHub down, or the pipeline broken): in Cloud Shell, with a clean checkout of `main` and your
-`terraform.tfvars`, run `bash scripts/tf_break_glass.sh`. It plans into a private temporary folder, runs the guard,
-lists the changes and applies that saved plan only after a yes. If the guard refuses, it applies only after you type
+`terraform.tfvars`, run `bash scripts/tf_break_glass.sh`. It loads main's `ci.tfvars` after your `terraform.tfvars`,
+as GitHub does, so it plans the same settings. It plans into a private temporary folder, runs the guard, lists the
+changes and applies that saved plan only after a yes. If the guard refuses, it applies only after you type
 `override <reason>`, which it appends, with the time, the commit and the refusing guards, to `~/break-glass.log`.
 It refuses a checkout that isn't main's tip, or that holds a file Terraform would load beyond main's (an ignored
 `*_override.tf` or `*.auto.tfvars`, say). The state lock is shared, so this is safe beside a waiting run.
@@ -362,7 +369,7 @@ If the script itself is broken, by hand (each step only if the one before succee
 
 ```bash
 cd src/terraform && d=$(mktemp -d) && terraform init -backend-config="bucket=coffee-data-tracker-tfstate" >/dev/null &&
-  terraform plan -out="$d/bg.plan" >"$d/plan.log" 2>&1 && terraform show -json "$d/bg.plan" >"$d/bg.json" &&
+  terraform plan -var-file=ci.tfvars -out="$d/bg.plan" >"$d/plan.log" 2>&1 && terraform show -json "$d/bg.plan" >"$d/bg.json" &&
   python3 -I ../../scripts/tf_plan_guard.py check "$d/bg.json" && python3 -I ../../scripts/tf_plan_guard.py render "$d/bg.json" &&
   read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply "$d/bg.plan"; rm -rf "$d"
 ```
@@ -374,7 +381,71 @@ script's bootstrap step refuses any replace, so it is for a first apply only):
 `TF_VAR_billing_account=<from your terraform.tfvars> terraform plan -out=b.plan`, then `terraform apply b.plan`. The plan
 shows: create `google_project_iam_custom_role.tf_plan_object`, and replace
 `google_storage_bucket_iam_member.tf_apply_plans` (its role changes, so it is replaced); nothing else. If the bootstrap
-was never applied, the first run creates everything (51 resources) with the final roles.
+was never applied, the first run creates everything (56 resources) with the final roles.
+
+**If every `google_cloud_run_v2_job` update fails** (or the usage service's) with `Docker-GetManifest
+permission_denied` on `artifactregistry.repositories.downloadArtifacts` (Cloud Audit Logs, principal
+`registry-coffee-tf-apply@…`): the apply account can't read the image it deploys. Cloud Run asks whoever deploys for
+Artifact Registry Reader on the image's repository. The apply account's repository role `tfApplyRepository`
+(`tf_repository` in `src/terraform/bootstrap/iam.tf`) holds that role's repository-scoped read permissions, on the
+`registry-coffee` repository only, since the change that added them. Re-apply the bootstrap once, by hand, from the
+repository's root in Cloud Shell:
+
+```bash
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
+```
+
+Read the plan before the yes: `0 to add, 1 to change, 0 to destroy`, an update in place of
+`google_project_iam_custom_role.tf_repository` (its title and permissions), and nothing else. That holds when the
+bootstrap was current with main before this change (the `tfApplyPlanObject` re-apply above and the collector's grants
+below included). If the plan shows anything but that 1 update, a replace included (a pending `tfApplyPlanObject`
+re-apply replaces `google_storage_bucket_iam_member.tf_apply_plans`), answer no and ask first. Then run
+`terraform-apply` again from main. `bash docs/ingestion/final-shell-run.sh` reaches the same plan at its step 6, but
+only after steps 1 to 5, which plan and apply the main root from Cloud Shell; use it only when the main root has
+nothing pending (its step 3 then shows no changes). If a further denial names another `artifactregistry.*` read
+permission, add it to `tfApplyRepository` the same way (and to `tests/test_bootstrap_roles.py`); the predefined Reader
+role on this one repository is the documented fallback.
+
+**If a log-based alert policy fails to create** (a `condition_matched_log` alert, such as
+`google_monitoring_alert_policy.usage_dropped[0]`) and Cloud Audit Logs show, for principal
+`registry-coffee-tf-apply@…`, `google.monitoring.v3.AlertPolicyService.CreateAlertPolicy` with `Permission
+'logging.notificationRules.create' denied on resource '//logging.googleapis.com/projects/<project>/locations/global'`:
+Logging creates a notification rule under every log-based alert policy, and creating one needs
+`logging.notificationRules.create` on the project, which `roles/monitoring.alertPolicyEditor` doesn't hold. The apply
+account's logging role `tfApplyLogExclusions` (`tf_log_exclusions` in `src/terraform/bootstrap/iam.tf`) holds
+`logging.notificationRules.create`, `.get`, `.list` and `.update` since the change that added them; no `.delete`, like
+its exclusions (the guard refuses deletes). The log-based alerts in `alerts.tf` (`errors`, `ingest_schedule_failed` and,
+with `email` on, `email_not_sent`) were made from Cloud Shell before the pipeline existed, which is why only a new one
+fails; switching `email` on later is another log-based create through the pipeline, which this now allows. If a later
+update of a log-based alert (a changed condition, say) is denied on another `logging.notificationRules` permission,
+`.delete` most likely, add it to `tfApplyLogExclusions` the same way (and to `tests/test_bootstrap_roles.py`). The plan
+account needs nothing new: it reads alert policies through `roles/monitoring.viewer`. Re-apply the bootstrap once, by
+hand, from the repository's root in Cloud Shell, with the same command block as the `Docker-GetManifest` entry just
+above:
+
+```bash
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
+```
+
+Read the plan before the yes: `0 to add, 1 to change, 0 to destroy`, an update in place of
+`google_project_iam_custom_role.tf_log_exclusions` (its title, and the four `logging.notificationRules` permissions
+added), and nothing else: the role keeps its id and its existing grant (`tf_apply_custom["log_exclusions"]`), so no new
+role or grant is created. That holds when the bootstrap was current with main before this change (the
+`tfApplyRepository` re-apply above included); if that one is still pending, the plan also shows its update of
+`google_project_iam_custom_role.tf_repository` (`0 to add, 2 to change, 0 to destroy`). Anything else, a replace
+included: answer no and ask first. Then run GitHub's `terraform-apply` again from main, signed in as the main account
+(never `jtouleyrou`, whose start the workflow refuses): Actions → terraform-apply → Run workflow, branch `main` (it runs
+only on main); `jtouleyrou` approves it as usual. That run is for what the failed run left: its plan shows the alert
+policy alone, `1 to add, 0 to change, 0 to destroy`. Custom-role changes can take a few minutes to reach every check: if
+the same denial comes back at once, wait and run it again.
 
 **The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
 deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed
@@ -483,13 +554,13 @@ you". The app starts either way.
    secret at version `latest`, so they need values before `email = true` mounts them. Nothing below prints a key:
 
    ```bash
-   terraform apply   # with email = false (the default): creates the two empty secrets if they aren't there yet
+   terraform apply -var-file=ci.tfvars   # with email = false (the default): creates the two empty secrets if they aren't there yet
    (umask 077; openssl rand -base64 32 | tr -d '\n' > email_key.txt)   # copy it into your password manager now
    gcloud secrets versions add EMAIL_KEY --data-file=email_key.txt && shred -u email_key.txt
    gcloud secrets versions add RESEND_API_KEY --data-file=-   # paste the Resend key, then Ctrl-D
    ```
 
-   Then set `email = true` in `terraform.tfvars` and `terraform apply`: it mounts both and adds the alert, and Cloud
+   Then set `email = true` in `terraform.tfvars` and `terraform apply -var-file=ci.tfvars`: it mounts both and adds the alert, and Cloud
    Run makes a new revision.
 
 5. **Check it.** In the app: Setup → Add email, with your own address. The confirm email arrives (check the spam
@@ -645,7 +716,7 @@ failed) or ERROR (events lost).
 | What | Where | Value |
 |---|---|---|
 | `usage_enabled` | `ci.tfvars` (a PR) | `true` creates the service, its public invoker, its request-log exclusion and its alert; `false` (the default): only its account and the empty secret |
-| `usage_image` | `ci.tfvars` (a PR) | The app's image from a deploy run on main, by digest (`<GCP_IMAGE>@sha256:<64 hex>`); empty runs Google's sample image |
+| `usage_image` | `ci.tfvars` (a PR) | The app's image from a deploy run on main, by digest (`<GCP_IMAGE>@sha256:<64 hex>`); required (with `usage_token`) once `usage_enabled` is on: a Terraform precondition refuses the service without both |
 | `usage_token` | `ci.tfvars` (a PR) | `true` mounts `USAGE_HF_TOKEN` as `HF_TOKEN`; `false` (the default) leaves the collector unable to publish |
 | `USAGE_HF_TOKEN` secret | Secret Manager: always exists | A fine-grained Hugging Face token with write access to `jtouley/coffee-usage` only |
 | `collector_url` | `config/usage.toml` (a PR) | `usage_url`'s value once the service exists |
@@ -657,18 +728,20 @@ day per masked prefix (a /24 or /40 can be a whole carrier's NAT pool or a Priva
 
 ### The apply account's grants for the collector
 
-The main root manages the collector's account (from the first apply after `usage.tf` merged, with `usage_enabled`
-off: the plan and apply accounts can already manage it and the empty secret). Before `usage_enabled` can be turned
-on, the apply account must be able to act as that account and to write the one log exclusion, and the plan account
-to read it. They are in `src/terraform/bootstrap/iam.tf` (`tfApplyLogExclusions`, `tfPlanLogExclusions`, and
-`usage` in `tf_apply_acts_as`). Give them **after** that first apply has made `registry-coffee-usage`, in one of
-two ways:
+The main root manages the collector's account (from the first apply after `usage.tf` merged, with `usage_enabled` off:
+the plan and apply accounts can already manage it and the empty secret). Before `usage_enabled` can be turned on, the
+apply account must be able to act as that account, to write the one log exclusion and to create the loss alert's Logging
+notification rule (`logging.notificationRules.create`, `.get`, `.list`, `.update`: the alert is log-based), and the plan
+account to read the exclusion. They are in `src/terraform/bootstrap/iam.tf` (`tfApplyLogExclusions`, which holds both
+the exclusion and the notification-rule permissions, `tfPlanLogExclusions`, and `usage` in `tf_apply_acts_as`). Give
+them **after** that first apply has made `registry-coffee-usage`, in one of two ways:
 
 - **Re-apply the bootstrap root** from Cloud Shell, as it was applied before (plan, read it: two custom roles, three
   grants, nothing else changes; apply).
 - **Or in the Cloud Console**, the same grants by hand:
-  1. IAM & Admin → Roles → Create role: ID `tfApplyLogExclusions`, title "Terraform apply: create and update log
-     exclusions", permissions `logging.exclusions.create`, `.get`, `.list`, `.update`. Again: ID
+  1. IAM & Admin → Roles → Create role: ID `tfApplyLogExclusions`, title "Terraform apply: log exclusions and
+     log-based alerts' rules", permissions `logging.exclusions.create`, `.get`, `.list`, `.update` and
+     `logging.notificationRules.create`, `.get`, `.list`, `.update` (the collector's alert is log-based). Again: ID
      `tfPlanLogExclusions`, title "Terraform plan: read log exclusions", permissions `logging.exclusions.get`,
      `.list`.
   2. IAM & Admin → IAM → Grant access: principal `registry-coffee-tf-apply@<project>.iam.gserviceaccount.com`, role
@@ -703,8 +776,10 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
    first, then the service, its invoker and the alert.
 4. `collector_url` in `config/usage.toml` set to `usage_url` (the apply's output, or the service's URL on its Cloud
    Run page), in a PR: from then on the pages send events.
-5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does every other request; the service's
-   log shows a `usage flush` line counting it as `foreign_origin` at its next flush.
+5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does any other method on `/e`
+   (`GET <collector_url>/health` answers 200, and any other path 404; `/healthz` is for the startup probe only,
+   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage flush` line counting
+   it as `foreign_origin` at its next flush.
 
 ## Using it on the phone
 
