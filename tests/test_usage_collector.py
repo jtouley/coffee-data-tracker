@@ -916,7 +916,10 @@ def test_deploy_keeps_the_pinned_usage_image_and_never_deploys_it():
     wf = (ROOT / ".github/workflows/deploy.yml").read_text()
     step = wf[wf.index("- name: Keep the usage collector's pinned image") :]
     step = step[: step.index("\n\n")]
-    assert "src/terraform/ci.tfvars" in step and 'tags add "$usage" "$IMAGE:pinned-usage-' in step
+    assert "src/terraform/ci.tfvars" in step and 'tag="pinned-usage-' in step
+    assert 'tags add "$usage" "$IMAGE:$tag"' in step
+    # Idempotent: an existing tag on the same digest is left alone (re-adding needs tags.delete).
+    assert 'images describe "$IMAGE:$tag"' in step and '[ "$current" = "$digest" ]' in step
     assert "run deploy" not in step and "registry-coffee-usage" not in wf
     keep = (ROOT / "src/terraform/artifact_registry.tf").read_text()
     assert re.search(r'tag_prefixes = \["pinned"', keep)  # pinned-usage-* is kept

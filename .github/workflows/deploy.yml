@@ -170,7 +170,22 @@ jobs:
             echo "::error::ci.tfvars' usage_image isn't $IMAGE pinned by digest."
             exit 1
           fi
-          gcloud artifacts docker tags add "$usage" "$IMAGE:pinned-usage-${BASH_REMATCH[1]:0:12}" --quiet
+          digest="sha256:${BASH_REMATCH[1]}"
+          tag="pinned-usage-${BASH_REMATCH[1]:0:12}"
+          # Idempotent: a later deploy finds the tag already on this digest. Moving or re-adding an existing tag needs
+          # artifactregistry.tags.delete, which the deploy account doesn't hold (and shouldn't): skip when it's there.
+          # Empty when the tag doesn't exist yet (describe fails); otherwise the digest it points at.
+          current=$(gcloud artifacts docker images describe "$IMAGE:$tag" --format='value(image_summary.digest)' \
+            --quiet 2>/dev/null || true)
+          if [ -n "$current" ]; then
+            if [ "$current" = "$digest" ]; then
+              echo "$tag already points at $digest: nothing to do."
+              exit 0
+            fi
+            echo "::error::$tag points at $current, not $digest. Moving a tag needs a person (the deploy account can't delete tags)."
+            exit 1
+          fi
+          gcloud artifacts docker tags add "$usage" "$IMAGE:$tag" --quiet
 
   # The admin (admin.registry.coffee) runs the same image as its own service: the same digest, after the app.
   deploy-admin:
