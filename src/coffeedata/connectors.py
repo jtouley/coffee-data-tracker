@@ -16,6 +16,10 @@ Services, one job each, timed by Cloud Scheduler and coordinated only through th
   and nothing else reads archive/); the week's control rows are rolled into one file.
 - post-load enrichment (`coffeedata enrich-week`): after the merge, Claude's candidates from the raw rows.
 - weekly build + gate, then publish: the existing `build` and `publish` steps.
+
+The Tuesday jobs (merge, enrich-week, build) start at fixed times, and each of the last two first checks in the
+control table that the one before it is done for the week, waiting until a deadline and failing if it isn't
+(chain.py).
 """
 
 from __future__ import annotations
@@ -407,6 +411,16 @@ def merge(lake: Lake, day: str) -> dict:
     connectors landed comes from the control table (job_manifests), not from the other jobs."""
     week = week_of(day)
     job = control.start(lake, "merge", week)
+    try:
+        return _merge_week(lake, week, job)
+    except Exception as e:
+        # An end row for a merge that raised, as the crawls write: the control table then tells "raised" (failed,
+        # with the error) from "killed" (a start row alone). Either way the jobs after it don't run on this week.
+        control.finish(lake, job, "failed", detail={"error": f"{type(e).__name__}: {e}"[:500]})
+        raise
+
+
+def _merge_week(lake: Lake, week: str, job: dict) -> dict:
     con = lake.connect()
     landed = control.landed(lake, week)
     present = {c: partition(lake, c, week) for c in sorted(landed) if partition(lake, c, week).exists()}
@@ -430,15 +444,23 @@ def merge(lake: Lake, day: str) -> dict:
             # run_completeness as not attempted, instead of the run looking complete without them.
             states, _ = ingest.select_states(lake, week)
             gone = [s for s in states if s.roaster.adapter in missing]
+            # One id per week, not per merge: the check below then adds these rows once, however often the week
+            # is merged (a per-merge id stored them again on every re-run).
             rows = ingest.manifest_rows(
-                [s.roaster for s in gone], date.fromisoformat(week), f"missing-{batch}",
+                [s.roaster for s in gone], date.fromisoformat(week), f"missing-{week}",
                 {s.roaster.roaster_id: s.status for s in gone}, "full", None,
             )  # fmt: skip
             tbl = pa.concat_tables([tbl, pa.Table.from_pylist(rows, schema=SCHEMAS[table])])
         # A re-run merge (a late connector) adds only what the lake doesn't have yet.
         con.register("new", tbl)
         key = {"run_manifests": "manifest_id", "fetches": "batch_id", "snapshots": "batch_id"}.get(table)
-        if key:
+        if table == "run_manifests":
+            # By manifest id, as before; the merge's own "not attempted" rows (one id per week, missing-<week>) by
+            # id and roaster, so a re-merge still adds those of roasters registered after the first merge.
+            q = f"""select * from new n where not exists (
+                        select 1 from {lake.scan(table)} s where s.manifest_id = n.manifest_id
+                        and (n.manifest_id not like 'missing-%' or s.roaster_id is not distinct from n.roaster_id))"""
+        elif key:
             q = f"select * from new where {key} not in (select distinct {key} from {lake.scan(table)} where {key} is not null)"
         else:
             q = f"select * from new where body_hash not in (select body_hash from {lake.scan('bodies')})"
@@ -469,15 +491,19 @@ def merge(lake: Lake, day: str) -> dict:
     }
 
 
-def enrich_week(lake: Lake, day: str, limit: int = 2000, submit: bool = False) -> dict:
+def enrich_week(
+    lake: Lake, day: str, limit: int = 2000, submit: bool = False, require_merge: bool = True
+) -> dict:
     """The post-load enrichment job: after the week's merge (it reads that from the control table), Claude's
     candidates come from the raw rows (enrich.candidates, the build's own rules). It spends only when asked to
     (submit: `--submit` on the scheduled job) and it has credentials (enrich.collect + enrich.run); otherwise it
-    only counts them."""
-    from . import enrich, extract
+    only counts them. The CLI checks the merge first (chain.py: it waits, then fails loudly), so the `waiting`
+    answer here is for callers of this function; require_merge=False is the owner's logged override."""
+    from . import chain, enrich, extract
 
     week = week_of(day)
-    if not any(r["job"] == "merge" and r["status"] == "done" for r in control.rows(lake, week)):
+    # the chain's one definition of a done merge: its latest attempt this week, done and published
+    if require_merge and chain.state(lake, week, "merge") != "done":
         return {"run_date": week, "status": "waiting: no merge this week yet"}
     job = control.start(lake, "enrich", week)
     out: dict[str, Any]

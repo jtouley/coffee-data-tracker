@@ -439,3 +439,17 @@ def test_select_parked_done_query_retries_a_dropped_connection(tmp_path, monkeyp
     assert [s.roaster.roaster_id for s in states] == ["parked.example"]
     assert resume["parked.example"]["page"] == 3
     assert failures == [] and waits == [2.0]
+
+
+def test_latest_breaks_a_same_second_tie_by_file_name_not_read_order(lake):
+    # Review S4: two records of one key in the same second (two app revisions during a deploy).
+    from datetime import UTC, datetime
+
+    at = datetime(2026, 11, 13, 7, tzinfo=UTC)
+    for name, rating in (("r1__20261113T070000-b", 2), ("r1__20261113T070000-a", 5)):
+        lake.write(
+            "ratings", f"ratings/{name}.parquet", [{"rating_id": "r1", "rating": rating, "logged_at": at}]
+        )
+    for _ in range(5):
+        (row,) = lake.latest("ratings", "rating_id")
+        assert row["rating"] == 2 and "filename" not in row

@@ -11,7 +11,8 @@
 #   in a job with contents: read and actions: read (the importers workflow's runs). The alert job has GITHUB_TOKEN
 #   with issues: write (and contents: read, for its checkout), never the Hub token.
 # - This repository is public: the artifact, the log and the issue carry importer keys, statuses, weeks (Mondays)
-#   and run links, never a lot or a store's address.
+#   and run links, and a failed fetch's HTTP status code and phase (the importers run's importer-results artifact),
+#   never a lot or a store's address.
 # - A check that couldn't judge the week opens `pipeline:importers-health` instead of `importers:weekly`: no token,
 #   a failed listing (a Hub outage, a rejected token) or a failed runs listing, and, once a week is due, a dataset
 #   the Hub calls "not found" (a wrong IMPORTERS_URL, or a token that can't read it: the Hub answers both alike).
@@ -52,9 +53,24 @@ jobs:
           mkdir -p "$RUNNER_TEMP/importers"
           # written whole or not at all: a failed call leaves no runs.json, and the alert job opens the pipeline issue
           gh api "repos/$GITHUB_REPOSITORY/actions/workflows/importers.yml/runs?branch=main&per_page=100" \
-            --jq '[.workflow_runs[] | {event, status, conclusion, created_at, html_url}]' \
+            --jq '[.workflow_runs[] | {id, event, status, conclusion, created_at, html_url}]' \
             > "$RUNNER_TEMP/runs.json.tmp"
           mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
+      - name: The due week's runs' importer results (keys, statuses, failure kinds, HTTP status codes; no address)
+        # importers.yml's importer-results artifact (importers.public_results) of the due week's scheduled run and
+        # each completed run after it (triage importer-result-runs), so the issue can name a failed fetch's kind and
+        # status code. Best effort: a run without one (expired, or its snapshot never ran) is passed over.
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: |
+          python3 -m coffeedata.triage importer-result-runs "$RUNNER_TEMP/importers/runs.json" |
+            while read -r id; do
+              gh run download "$id" --repo "$GITHUB_REPOSITORY" --name importer-results \
+                --dir "$RUNNER_TEMP/importers/results/$id" || echo "run $id: no importer-results artifact"
+            done
       - name: Each importer's latest stored week (file names only, read-only)
         # also after a failed runs listing, so the weeks are still judged (by the time alone)
         if: ${{ !cancelled() }}

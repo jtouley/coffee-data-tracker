@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 3.1.0
+version: 3.2.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -471,6 +471,15 @@ schema:
     description: No public roaster is a chain, and no public coffee or price event is a chain's. A chain has more
       than 20 stores (the registry's store count) unless a hand-checked override says otherwise; it is still
       crawled and stays in the internal data.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_values_have_open_provenance.sql
+    dimension: conformity
+    severity: error
+    description: Every published roaster name, city and state (in public_roaster, and in public_coffee's
+      roaster_name and roaster_state) is one a source that may be redistributed gave for that roaster (Overture,
+      the curated seed or a manual add). No value OpenStreetMap (ODbL) alone gave is published, even for a roaster
+      also known from another source.
 - name: public_price_event
   physicalName: public_price_event
   physicalType: table

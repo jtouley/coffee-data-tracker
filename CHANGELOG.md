@@ -18,6 +18,50 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
+  `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
+  the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a
+  click out or when the page is hidden, by `fetch` without credentials to the collector's address in
+  `config/usage.toml` (the only new CSP origin, added only once that is set; until then nothing is sent); nothing is
+  stored in the browser, no id is made, and nothing is sent with Global Privacy Control or Do Not Track. Links out carry `utm_source=registry.coffee&utm_medium=referral` (`coffeedata/beacon.py`);
+  `catalog.json` keeps the roasters' links as they are. The privacy policy says what is counted.
+- Crawl recovery after the 2026-11-16 run: unreachable roasters are probed again on a 7/14/28-day backoff (failed
+  probes and failed crawl runs since the last ok probe both count); requests that got no HTTP response are recorded
+  with their phase (`fetches.transport_errors`); an unreachable robots.txt may be stood in for by the site's own
+  copy from the last 30 days (`fetches.robots`, `probes.robots`), followed exactly. Raw contract 1.7.0.
+
+- A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
+  deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never
+  the app. `POST /e` answers every request with an empty 204; it takes at most 4 KB and 20 events, refuses any event
+  its strict schema doesn't name (`app/usage_events.py`; the wire format is
+  `contracts/internal/usage-wire.schema.json`), drops Global Privacy Control and Do Not Track, foreign origins, more
+  than 600 events a minute or 10,000 a day per masked prefix and 6,000 a minute or 200,000 a day per instance, and
+  flags known bots. The caller's IP is masked to IPv4 /24 or IPv6 /40 before anything is kept (no prefix for private
+  or link-local addresses); a referrer is cut to its host; the user agent becomes the bot flag; cookies and every
+  other header are never read; filter values refuse anything shaped like an email, phone or card number. Events go to
+  the private dataset `jtouley/coffee-usage` (`Lake.usage()`, table `usage_events`,
+  `events/day=YYYY-MM-DD/batch=<id>.parquet`) at most once a minute, inside the request that finds 200 waiting or the
+  oldest 15 minutes old, and at shutdown within 8 seconds; memory and unpublished staging are capped, and what's lost
+  is counted. Its log holds counts only, at WARNING when a limit dropped events and ERROR when events were lost, which
+  the new "usage events dropped or lost" alert emails; Terraform excludes Cloud Run's request log for it. Terraform
+  deploys it, like the ingest jobs: the service runs `usage_image`, the app's attested image from main pinned by
+  digest in `ci.tfvars` (a PR bumps it), and `deploy.yml` tags that digest so the registry keeps it. The service
+  waits for `usage_enabled` (off) until the apply account holds the grants `src/terraform/bootstrap/iam.tf` now lists
+  (docs/app/RUNNING.md, "Usage"). Internal contract `usage` 1.0.0. The page scripts and the dbt models are separate
+  PRs.
+
+- The crawl success SLO is measured (#96): more than 99% of the known roasters fetched ok in each weekly run, as
+  one aggregate over every connector. dbt's `int_crawl_slo_roasters` holds the definition: the scheduled weekly
+  runs only (a Monday with a full manifest, or from before manifests), each judged on what it stored (the roasters
+  its manifests listed or it tried, plus those earlier runs listed that it gave up on; closed and quarantined
+  stores count against it). `mart_crawl_slo` has the share per run and platform with its Wilson 95% interval, the
+  burn rate and the error budget over the four runs ending at each run. Both are counted from the stored runs
+  alone, so the same raw builds the same rows and an older run rebuilt gives its numbers again. They are report
+  only, built after the gate; `mart_crawl_slo_profile` is recorded in the builds table, and the production health
+  check warns on it under a new rule, `crawl-slo` (`config/prod_health.toml`; docs/TRIAGE.md, "The crawl success
+  SLO"). No gate reads it, and the 90% floor is unchanged. New staging model `stg_run_manifests`, and
+  `stg_registry.opted_out_at`.
+
 - Chains leave the public data. A roaster is a chain when it has more than 20 stores (dbt var
   `chain_store_threshold`; the store count is the registry's `locations`, from discovery's Overture scan), unless
   `dbt/seeds/chain_overrides.csv` decides otherwise, either way, with a reason. `int_roaster_state.is_chain` decides
@@ -157,6 +201,32 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   summary by origin, is new.
 
 ### Fixed
+
+- **A release whose coffee-or-not verdicts weren't checked is never served (#181).** The 2026-11-09 weekly build ran an
+  image without a verdict model, its gate never ran, and it was served for a week. Now a build with no verdict model,
+  the gate off, or no passing `verdicts_cover_catalog` is recorded as failed. `serve`, `rollback` and `site --served`
+  refuse such a release unless a named rules-only override allows it, and the build record and serving log carry the
+  override. On a remote lake every form of the override is refused, and `weekly.yml` no longer passes one. A plain
+  `rollback` skips releases that can't be served. The build job's `classify` waits up to 45 minutes for the week's
+  verdicts. Build records gain `verdict_model`, `verdict_definition`, `configured_image`, `rules_only_override` and
+  `verdicts_in_flight`.
+- **A product reclassified as not coffee is no longer counted as delisted (#181).** `fct_price_event` now keeps only
+  coffees in `dim_coffee`, so such a product's events go with it instead of reading as a removal. This changes a
+  public figure: the site's weekly "delisted" count for the 2026-11-16 week drops by 358 (3,229 to 2,871), and for
+  2026-11-09 by 23 (2,583 to 2,560). Price changes are unchanged, and `public_price_event` was already filtered.
+  `fct_price_event`'s relationships test to `dim_coffee` is now an error.
+
+- **No published value comes from OpenStreetMap (#90).** `public_roaster` left out roasters known only from
+  OpenStreetMap (ODbL), but `stg_registry` took a roaster's name, city and state from its newest registry row
+  whatever the source, so a roaster found by Overture and later by OpenStreetMap would have published
+  OpenStreetMap's values. A roaster known from an open source (Overture, the curated seed or a manual add) now takes
+  them from open sources only (per field, the newest non-null open value); a value only OpenStreetMap gave stays
+  null. A source counts as open only as a whole name (`overture`, `overture-<release>`, `curated`, `manual`), so
+  `is_publishable` no longer accepts a name that merely starts like one. New staging tables `stg_registry_records`
+  (the lake's registry records, with `is_open_source`) and `stg_roaster_seed` (`config/roasters.csv`), and macros
+  `is_open_source` and `is_open_record_source`. Public contract 3.2.0 adds the error rule
+  `public_values_have_open_provenance`: every published roaster name, city and state is one an open source gave.
+  No published value changes on today's lake, whose registry has no discovery rows yet.
 
 - **The `discover` and `probe` jobs record new roasters, and say that they ran.** Neither had left anything in the
   lake: `discover` runs monthly and its first slot (Nov 1) came before the schedule was on, so the registry stayed

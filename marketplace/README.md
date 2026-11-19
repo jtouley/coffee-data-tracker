@@ -5,7 +5,9 @@ dbt test fails the build if any of them ever exposes descriptions, images, store
 
 - Product descriptions, images, handles, tags and the shot log are excluded.
 - Opted-out roasters are excluded.
-- Roasters known only from OpenStreetMap are excluded.
+- Roasters known only from OpenStreetMap are excluded, and no published value (a roaster's name, city or state)
+  comes from OpenStreetMap: a roaster also known from Overture, the curated seed or a manual add publishes those
+  sources' values (`public_values_have_open_provenance` fails the build otherwise).
 - Chains (more than 20 stores, or marked by hand in `dbt/seeds/chain_overrides.csv`) are excluded.
 
 `coffeedata export-public --to <dest>` writes them as Parquet. With `PUBLIC_EXPORT_URL` set, the weekly run does

@@ -43,7 +43,8 @@ from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' 
 - Product descriptions and images. They're the roasters' own content; every coffee links back through `source_url`.
 - Store-internal ids other than the product id in `coffee_id` (`<roaster domain>:<store product id>`, stable across weeks).
 - Personal data, and roasters that opted out.
-- Roasters known only from OpenStreetMap.
+- Roasters known only from OpenStreetMap, and any value OpenStreetMap alone gave: a roaster's name, city and state
+  come from Overture, the curated seed or a manual add.
 - Chains: roasters with more than 20 stores (or marked as chains by hand), and their coffees. They are still read
   each week; they are left out of the public data.
 

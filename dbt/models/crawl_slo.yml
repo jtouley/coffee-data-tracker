@@ -1,0 +1,348 @@
+# The crawl success SLO (#96): its models' properties and unit tests, kept apart from schema.yml and unit_tests.yml.
+# The definition in words: docs/TRIAGE.md, "The crawl success SLO".
+#
+# A benchmark, never a gate. int_crawl_slo_roasters, mart_crawl_slo and mart_crawl_slo_profile are tagged
+# report_only, so `coffeedata build` builds and tests them after the gate, in the step whose outcome never decides
+# the build (cli.dbt_build), and nothing in the gate reads them. Their data tests are warnings too, for good: there
+# is no plan for the measurement to block. stg_run_manifests's grain test is a warning as well, so the SLO adds
+# nothing that can fail the gate.
+version: 2
+
+models:
+  - name: stg_run_manifests
+    description: >-
+      One row per run manifest and roaster: what an ingest recorded, before fetching, that it set out to fetch
+      (ingest.manifest_rows), with the roaster's status, platform and adapter as that ingest saw them, the run's mode
+      (full, sample, only or retry_failed; null in a file from before the column) and when the ingest started.
+    data_tests:
+      - grain:
+          arguments: {columns: [manifest_id, roaster_id]}
+          config: {severity: warn}
+    columns:
+      - name: run_date
+        description: The run the manifest belongs to.
+      - name: manifest_id
+        description: The ingest that wrote it.
+      - name: started_at
+        description: When that ingest started.
+      - name: roaster_id
+        description: A roaster the ingest set out to fetch.
+      - name: status
+        description: The roaster's status when the ingest started (registry.RoasterState).
+      - name: platform
+        description: The roaster's platform when the ingest started.
+      - name: adapter
+        description: The connector that fetches it (models.Roaster.adapter).
+      - name: mode
+        description: full, sample, only or retry_failed; null in a file from before the column.
+
+  - name: int_crawl_slo_roasters
+    description: >-
+      One row per scored run (a Monday, the weekly run's date, with a full manifest or none at all; up to the run
+      being built) and roaster known in it: listed or tried by the run, or by an earlier stored run. Whether it
+      counts in the crawl success SLO and how the run left it. Read from what the runs stored, so the same raw gives
+      the same rows and a run built again later has the rows it had; only an alias is read as it is now.
+    data_tests:
+      - grain:
+          arguments: {columns: [run_date, roaster_id]}
+          config: {severity: warn}
+    columns:
+      - name: run_date
+        description: The scored run.
+        data_tests: [{not_null: &warn {config: {severity: warn}}}]
+      - name: roaster_id
+        description: A roaster the run listed or tried, or one an earlier stored run listed or tried.
+        data_tests: [{not_null: *warn}]
+      - name: platform
+        description: >-
+          Its connector as the runs recorded it: the run's latest attempt's adapter, else its manifest's, else its
+          latest earlier listing's.
+        data_tests: [{not_null: *warn}]
+      - name: status
+        description: Its status when the run's manifest listed it (stg_run_manifests.status); null otherwise.
+      - name: counted
+        description: It is in the SLO's denominator (excluded_reason is null).
+        data_tests: [{not_null: *warn}]
+      - name: excluded_reason
+        description: >-
+          Why it isn't counted, only for a roaster the run didn't list or try. opted_out: it opted out before the run
+          started (stg_registry.opted_out_at; an opt-out in the seed list has no date and counts from the start).
+          alias: another roaster_id serves the same store, which is counted (read as it is now: raw has no date
+          for it). Null when counted.
+        data_tests:
+          - accepted_values:
+              arguments: {values: [opted_out, alias]}
+              config: {severity: warn}
+      - name: expected_by_run
+        description: >-
+          The run listed it (its manifests) or tried it. False for a roaster only an earlier run listed: one the
+          crawl has stopped trying (unreachable), which counts as not fetched.
+        data_tests: [{not_null: *warn}]
+      - name: attempted
+        description: The run has a fetch for it (int_roaster_runs), as run_completeness.attempted.
+        data_tests: [{not_null: *warn}]
+      - name: ok
+        description: >-
+          The SLO's success: an attempt in the run was ok (int_roaster_runs.ok, as run_completeness.ok). A retry
+          that fixed a failure, a partial read and an ok fetch that found no products all count; nothing else does.
+        data_tests: [{not_null: *warn}]
+      - name: outcome
+        description: >-
+          ok, or why not: unavailable (found closed, password-protected or disallowed this run), quarantined
+          (crashed its crawl twice), challenged (an edge's anti-bot page), failed (any other failed fetch, a parked
+          or rate-limited store among them), not_attempted (the run never reached it).
+        data_tests:
+          - accepted_values:
+              arguments: {values: [ok, unavailable, quarantined, challenged, failed, not_attempted]}
+              config: {severity: warn}
+      - name: is_build_run
+        description: The row's run is the run being built (as_of_run, else the latest stored run).
+
+  - name: mart_crawl_slo
+    description: >-
+      One row per scored run (int_crawl_slo_roasters) and platform: 'all' is the crawl success SLO, the share of
+      known roasters fetched ok, and each connector shows where a miss comes from. With its Wilson 95% interval,
+      whether it met the target (var crawl_slo_target, 0.99), the burn rate, and the error budget left over the
+      window that ends at that run (it and the scored runs before it, crawl_slo_window_runs in all). A benchmark:
+      nothing fails a build on it.
+    data_tests:
+      - grain:
+          arguments: {columns: [run_date, platform]}
+          config: {severity: warn}
+    columns:
+      - name: run_date
+        description: A scored run.
+        data_tests: [{not_null: *warn}]
+      - name: platform
+        description: "'all' for the SLO itself, else a connector (int_crawl_slo_roasters.platform)."
+        data_tests: [{not_null: *warn}]
+      - name: roasters
+        description: The roasters counted (the denominator).
+      - name: ok
+        description: Those fetched ok.
+      - name: failed
+        description: Those not fetched ok (roasters - ok).
+      - name: sli
+        description: ok / roasters.
+      - name: sli_low
+        description: The lower end of the share's Wilson 95% interval.
+      - name: sli_high
+        description: The upper end of the share's Wilson 95% interval.
+      - name: target
+        description: The SLO's target (var crawl_slo_target).
+      - name: met
+        description: The share is above the target (more than 99%; exactly 99% is a miss).
+      - name: burn_rate
+        description: >-
+          How fast this run spent error budget: (1 - sli) / (1 - target). 1 is exactly the rate the target allows;
+          about crawl_slo_window_runs is a whole window's budget in one run.
+      - name: window_runs
+        description: >-
+          The scored runs in the window, which ends at this row's run (at most crawl_slo_window_runs; the same runs
+          for every platform). Never anchored on a calendar date or the day of the build.
+      - name: window_roasters
+        description: The roasters counted over the window's runs.
+      - name: window_failed
+        description: Those not fetched ok over the window's runs.
+      - name: window_sli
+        description: The share fetched ok over the window.
+      - name: window_budget
+        description: The failures the target allows over the window, (1 - target) x window_roasters.
+      - name: budget_remaining
+        description: >-
+          The share of the window's error budget left, 1 - window_failed / window_budget. 1: nothing spent; 0: all
+          of it; below 0: overspent (the window is under the target).
+      - name: is_build_run
+        description: The row's run is the run being built.
+
+  - name: mart_crawl_slo_profile
+    description: >-
+      One row per crawl success SLO metric of the run being built (mart_crawl_slo's is_build_run rows), named as
+      mart_build_profile names its own; `coffeedata build` records them in the lake's builds table beside
+      mart_build_profile's, for the production health check. Empty when the run being built isn't a scored run.
+    columns:
+      - name: metric
+        description: >-
+          crawl_slo_roasters, crawl_slo_ok, crawl_slo_share and crawl_slo_met, each also per platform
+          (crawl_slo_met:shopify); crawl_slo_burn_rate, crawl_slo_budget_remaining and crawl_slo_window_runs overall.
+        data_tests: [{unique: *warn}, {not_null: *warn}]
+      - name: value
+        description: The metric's value.
+
+unit_tests:
+  - name: crawl_slo_scores_the_weekly_runs_on_what_each_run_recorded
+    description: >-
+      The SLO's definition, case by case (#96), built as of 2026-11-09. Scored: 10-26 (a Monday from before
+      manifests) and 11-02 (a Monday with a full manifest). Not scored: 10-28, an ad-hoc ingest on a Wednesday;
+      11-09, a Monday with only a sample manifest (so is_build_run is false everywhere and the build records no SLO);
+      11-16, after the run being built. In 11-02: a fetch that worked, one whose retry worked, a failed one, a
+      closed store, a quarantined one, a challenged one, one the manifest listed and the run never reached, and one
+      only the ad-hoc run had listed: all counted. Roasters 10-26 tried and 11-02 didn't list: given up, counted as
+      not fetched with their old connector; opted out before 11-02 (in the lake, or in the seed list with no date),
+      not counted; opted out after it, counted; now an alias, not counted. In 10-26 every roaster it tried counts,
+      whatever became of it later, and late.com, first seen after it, has no row.
+    model: int_crawl_slo_roasters
+    overrides:
+      vars:
+        as_of_run: "2026-11-09"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {run_date: 2026-10-26, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: b.com, ok: false, adapter: woocommerce, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: gone.com, ok: true, adapter: squarespace, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: optout.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: seedout.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: optlater.com, ok: true, adapter: generic, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: alias.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-28, roaster_id: late.com, ok: true, adapter: generic, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-28 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: b.com, ok: true, adapter: woocommerce, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: late.com, ok: false, adapter: generic, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: closed.com, ok: false, adapter: shopify, unavailable: true, quarantined: false, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: crashed.com, ok: false, adapter: generic, unavailable: false, quarantined: true, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: chal.com, ok: false, adapter: woocommerce, unavailable: false, quarantined: false, challenge: siteground, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-09, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-09 09:00:00+00"}
+          - {run_date: 2026-11-16, roaster_id: a.com, ok: false, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-16 09:00:00+00"}
+      - input: ref('stg_run_manifests')
+        rows:
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: a.com, status: active, adapter: shopify, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: b.com, status: active, adapter: woocommerce, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m2, started_at: "2026-11-02 21:00:00+00", roaster_id: b.com, status: active, adapter: woocommerce, mode: retry_failed}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: late.com, status: pending, adapter: generic, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: closed.com, status: active, adapter: shopify, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: crashed.com, status: active, adapter: generic, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: chal.com, status: no_catalog, adapter: woocommerce, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: skipped.com, status: pending, adapter: squarespace, mode: full}
+          - {run_date: 2026-11-09, manifest_id: m3, started_at: "2026-11-09 06:00:00+00", roaster_id: a.com, status: active, adapter: shopify, mode: sample}
+      - input: ref('int_roaster_state')
+        rows:
+          - {roaster_id: a.com, opted_out: false, status: active}
+          - {roaster_id: gone.com, opted_out: false, status: unreachable}
+          - {roaster_id: optout.com, opted_out: true, status: opted_out}
+          - {roaster_id: seedout.com, opted_out: true, status: opted_out}
+          - {roaster_id: optlater.com, opted_out: true, status: opted_out}
+          - {roaster_id: alias.com, opted_out: false, status: alias}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: optout.com, opted_out_at: "2026-10-30 00:00:00+00"}
+          - {roaster_id: seedout.com, opted_out_at: null}
+          - {roaster_id: optlater.com, opted_out_at: "2026-11-05 00:00:00+00"}
+    expect:
+      rows:
+        - {run_date: 2026-10-26, roaster_id: a.com, platform: shopify, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: b.com, platform: woocommerce, counted: true, excluded_reason: null, expected_by_run: true, ok: false, outcome: failed, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: gone.com, platform: squarespace, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: optout.com, platform: shopify, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: seedout.com, platform: shopify, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: optlater.com, platform: generic, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: alias.com, platform: shopify, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: a.com, platform: shopify, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: b.com, platform: woocommerce, counted: true, excluded_reason: null, expected_by_run: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: late.com, platform: generic, counted: true, excluded_reason: null, expected_by_run: true, ok: false, outcome: failed, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: closed.com, platform: shopify, counted: true, excluded_reason: null, expected_by_run: true, ok: false, outcome: unavailable, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: crashed.com, platform: generic, counted: true, excluded_reason: null, expected_by_run: true, ok: false, outcome: quarantined, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: chal.com, platform: woocommerce, counted: true, excluded_reason: null, expected_by_run: true, ok: false, outcome: challenged, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: skipped.com, platform: squarespace, counted: true, excluded_reason: null, expected_by_run: true, ok: false, outcome: not_attempted, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: gone.com, platform: squarespace, counted: true, excluded_reason: null, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: optlater.com, platform: generic, counted: true, excluded_reason: null, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: optout.com, platform: shopify, counted: false, excluded_reason: opted_out, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: seedout.com, platform: shopify, counted: false, excluded_reason: opted_out, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: alias.com, platform: shopify, counted: false, excluded_reason: alias, expected_by_run: false, ok: false, outcome: not_attempted, is_build_run: false}
+
+  - name: crawl_slo_partial_pulls_and_removed_roasters_are_not_known
+    description: >-
+      Built as of 2026-11-02. A roaster only an --only pull on a Wednesday touched (pulled.com, 10-28), and one only
+      a "Pull now" in the weekly run touched (pullnow.com: an `only` manifest on 11-02, beside the full one), are not
+      known in any run: no row, though both pulls failed. removed.com, tried in 10-26 and since removed from the
+      registry, keeps its 10-26 row and isn't known in 11-02.
+    model: int_crawl_slo_roasters
+    overrides:
+      vars:
+        as_of_run: "2026-11-02"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {run_date: 2026-10-26, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-26, roaster_id: removed.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-26 09:00:00+00"}
+          - {run_date: 2026-10-28, roaster_id: pulled.com, ok: false, adapter: generic, unavailable: false, quarantined: false, challenge: null, first_at: "2026-10-28 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: a.com, ok: true, adapter: shopify, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 09:00:00+00"}
+          - {run_date: 2026-11-02, roaster_id: pullnow.com, ok: false, adapter: woocommerce, unavailable: false, quarantined: false, challenge: null, first_at: "2026-11-02 12:00:00+00"}
+      - input: ref('stg_run_manifests')
+        rows:
+          - {run_date: 2026-10-28, manifest_id: m0, started_at: "2026-10-28 08:00:00+00", roaster_id: pulled.com, status: pending, adapter: generic, mode: only}
+          - {run_date: 2026-11-02, manifest_id: m1, started_at: "2026-11-02 06:00:00+00", roaster_id: a.com, status: active, adapter: shopify, mode: full}
+          - {run_date: 2026-11-02, manifest_id: m2, started_at: "2026-11-02 12:00:00+00", roaster_id: pullnow.com, status: pending, adapter: woocommerce, mode: only}
+      - input: ref('int_roaster_state')
+        rows:
+          - {roaster_id: a.com, opted_out: false, status: active}
+          - {roaster_id: pulled.com, opted_out: false, status: pending}
+          - {roaster_id: pullnow.com, opted_out: false, status: pending}
+      - input: ref('stg_registry')
+        format: sql
+        rows: select null::varchar as roaster_id, null::timestamptz as opted_out_at where false
+    expect:
+      rows:
+        - {run_date: 2026-10-26, roaster_id: a.com, counted: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-10-26, roaster_id: removed.com, counted: true, ok: true, outcome: ok, is_build_run: false}
+        - {run_date: 2026-11-02, roaster_id: a.com, counted: true, ok: true, outcome: ok, is_build_run: true}
+
+  - name: crawl_slo_share_interval_and_target
+    description: >-
+      The share, its Wilson 95% interval and the target, on the week the issue records (#96: 2,424 of 2,540, 95.43%,
+      94.6-96.2%), and the target's edge: 199 of 200 (99.5%) meets it, 198 of 200 (exactly 99%) doesn't ("more than
+      99%"). The overall row adds the platforms up, and leaves out the rows that aren't counted. With no earlier
+      run the window is this run alone, so the budget left is 1 minus the burn rate.
+    model: mart_crawl_slo
+    given:
+      - input: ref('int_crawl_slo_roasters')
+        format: sql
+        rows: |
+          select date '2026-11-02' as run_date, 'shopify' as platform, true as counted, i <= 2424 as ok,
+                 true as is_build_run
+          from range(1, 2541) t(i)
+          union all select date '2026-11-02', 'woocommerce', true, i <= 199, true from range(1, 201) t(i)
+          union all select date '2026-11-02', 'generic', true, i <= 198, true from range(1, 201) t(i)
+          union all select date '2026-11-02', 'generic', false, false, true from range(1, 50) t(i)
+    expect:
+      rows:
+        - {platform: shopify, roasters: 2540, ok: 2424, failed: 116, sli: 0.954331, sli_low: 0.945503, sli_high: 0.961786, met: false, burn_rate: 4.566929, window_runs: 1, budget_remaining: -3.566929, is_build_run: true}
+        - {platform: woocommerce, roasters: 200, ok: 199, failed: 1, sli: 0.995, sli_low: 0.972226, sli_high: 0.999117, met: true, burn_rate: 0.5, window_runs: 1, budget_remaining: 0.5, is_build_run: true}
+        - {platform: generic, roasters: 200, ok: 198, failed: 2, sli: 0.99, sli_low: 0.964278, sli_high: 0.997253, met: false, burn_rate: 1.0, window_runs: 1, budget_remaining: 0.0, is_build_run: true}
+        - {platform: all, roasters: 2940, ok: 2821, failed: 119, sli: 0.959524, sli_low: 0.95178, sli_high: 0.966068, met: false, burn_rate: 4.047619, window_runs: 1, budget_remaining: -3.047619, is_build_run: true}
+
+  - name: crawl_slo_error_budget_ends_at_each_run
+    description: >-
+      The error budget's window ends at the row's run: that run and the scored runs before it, crawl_slo_window_runs
+      (4) in all, whatever the day of the build. 1,000 roasters a run allow 10 failures a run. Five scored runs fail
+      500, 0, 5, 25 and 20. The oldest has left the window by the fifth, whose window allows 40 failures and spent
+      50: overspent by a quarter, with this run burning at twice the allowed rate. Each earlier run keeps the
+      numbers of the window that ended at it. The window is the same runs for every platform: generic, counted only
+      in the first and the last run, has only its last run in the last window (the first is five runs back).
+    model: mart_crawl_slo
+    given:
+      - input: ref('int_crawl_slo_roasters')
+        format: sql
+        rows: |
+          select r.run_date, 'shopify' as platform, true as counted, i > r.failed as ok,
+                 r.run_date = date '2026-11-02' as is_build_run
+          from (values (date '2026-10-05', 500), (date '2026-10-12', 0), (date '2026-10-19', 5),
+                       (date '2026-10-26', 25), (date '2026-11-02', 20)) r(run_date, failed)
+          cross join range(1, 1001) t(i)
+          union all
+          select d, 'generic', true, false, d = date '2026-11-02'
+          from (values (date '2026-10-05'), (date '2026-11-02')) r(d)
+    expect:
+      rows:
+        - {run_date: 2026-10-05, platform: all, roasters: 1001, failed: 501, met: false, burn_rate: 50.04995, window_runs: 1, window_roasters: 1001, window_failed: 501, budget_remaining: -49.04995, is_build_run: false}
+        - {run_date: 2026-10-12, platform: all, roasters: 1000, failed: 0, met: true, burn_rate: 0.0, window_runs: 2, window_roasters: 2001, window_failed: 501, budget_remaining: -24.037481, is_build_run: false}
+        - {run_date: 2026-10-19, platform: all, roasters: 1000, failed: 5, met: true, burn_rate: 0.5, window_runs: 3, window_roasters: 3001, window_failed: 506, budget_remaining: -15.861046, is_build_run: false}
+        - {run_date: 2026-10-26, platform: all, roasters: 1000, failed: 25, met: false, burn_rate: 2.5, window_runs: 4, window_roasters: 4001, window_failed: 531, budget_remaining: -12.271682, is_build_run: false}
+        - {run_date: 2026-11-02, platform: all, roasters: 1001, failed: 21, met: false, burn_rate: 2.097902, window_runs: 4, window_roasters: 4001, window_failed: 51, budget_remaining: -0.274681, is_build_run: true}
+        - {run_date: 2026-10-05, platform: shopify, roasters: 1000, failed: 500, met: false, burn_rate: 50.0, window_runs: 1, window_roasters: 1000, window_failed: 500, budget_remaining: -49.0, is_build_run: false}
+        - {run_date: 2026-10-12, platform: shopify, roasters: 1000, failed: 0, met: true, burn_rate: 0.0, window_runs: 2, window_roasters: 2000, window_failed: 500, budget_remaining: -24.0, is_build_run: false}
+        - {run_date: 2026-10-19, platform: shopify, roasters: 1000, failed: 5, met: true, burn_rate: 0.5, window_runs: 3, window_roasters: 3000, window_failed: 505, budget_remaining: -15.833333, is_build_run: false}
+        - {run_date: 2026-10-26, platform: shopify, roasters: 1000, failed: 25, met: false, burn_rate: 2.5, window_runs: 4, window_roasters: 4000, window_failed: 530, budget_remaining: -12.25, is_build_run: false}
+        - {run_date: 2026-11-02, platform: shopify, roasters: 1000, failed: 20, met: false, burn_rate: 2.0, window_runs: 4, window_roasters: 4000, window_failed: 50, budget_remaining: -0.25, is_build_run: true}
+        - {run_date: 2026-10-05, platform: generic, roasters: 1, failed: 1, met: false, burn_rate: 100.0, window_runs: 1, window_roasters: 1, window_failed: 1, budget_remaining: -99.0, is_build_run: false}
+        - {run_date: 2026-11-02, platform: generic, roasters: 1, failed: 1, met: false, burn_rate: 100.0, window_runs: 4, window_roasters: 1, window_failed: 1, budget_remaining: -99.0, is_build_run: true}

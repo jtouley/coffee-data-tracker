@@ -1,0 +1,212 @@
+# The Terraform plan on pull requests that touch the infrastructure: fmt, init, validate, plan, the guards
+# (scripts/tf_plan_guard.py), then one PR comment, updated in place, listing the guard verdicts and the resource
+# addresses that change with their actions. Read-only: it never applies. The plan that is applied is made by the
+# apply workflow on main, behind the terraform-apply environment's approval. docs/ingestion/RUNBOOK.md section 9
+# says how to read the comment.
+#
+# - Signs in as the read-only plan identity (repository variables GCP_TF_PLAN_PROVIDER and GCP_TF_PLAN_SA). Until
+#   both are set, the plan is skipped and the comment says so. A pull request from a fork never signs in: it gets
+#   no OIDC token or secrets anyway, and deploy.yml's check job still runs fmt and validate on it.
+# - Variables: src/terraform/ci.tfvars (checked in), the secrets TF_VAR_BILLING_ACCOUNT and TF_VAR_OWNER_EMAIL, and
+#   the repository variables TF_VAR_INGEST_IMAGE, TF_VAR_INGEST_SCHEDULE_ENABLED (both required), TF_VAR_EMAIL,
+#   TF_VAR_BUDGET_USD and TF_VAR_INGEST_JOB_MEMORY (optional: unset means the default in variables.tf).
+# - This repository is public, and a plan, its JSON and Terraform's own messages can hold any variable in clear.
+#   Nothing Terraform prints reaches the log: every command's output goes to files in the runner's temp folder,
+#   which are deleted and never uploaded, and a failure prints only the guard script's `errors` summary (a fixed
+#   message, file:line, and addresses that pass its scrubber). TF_LOG is unset. The comment is the guard script's
+#   `render`, which prints addresses and actions only and fails closed (no change list at all) if it can't scrub.
+# - The PR's plan is advisory (`-lock=false`). One plan at a time per pull request: a newer push cancels the older.
+name: terraform-plan
+on:
+  pull_request:
+    paths: ["src/terraform/**", "scripts/tf_plan_guard.py", ".github/workflows/terraform-plan.yml"]
+permissions: {}
+concurrency:
+  group: terraform-plan-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+    steps:
+      - name: Sign in, or skip?
+        id: gate
+        env:
+          FORK: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
+          PROVIDER: ${{ vars.GCP_TF_PLAN_PROVIDER }}
+          SA: ${{ vars.GCP_TF_PLAN_SA }}
+        run: |
+          if [ "$FORK" = "true" ]; then
+            echo "::notice::Pull request from a fork: no sign-in and no plan. deploy.yml's check job runs fmt and validate."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          elif [ -z "$PROVIDER" ] || [ -z "$SA" ]; then
+            echo "::notice::No plan: set the GCP_TF_PLAN_PROVIDER and GCP_TF_PLAN_SA repository variables (the read-only plan identity) first."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  plan:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write  # for Workload Identity Federation, as the read-only plan identity
+    outputs:
+      failed: ${{ steps.terraform.outputs.failed }}  # the Terraform command that failed, if one did
+      guards: ${{ steps.guards.outputs.result }}  # pass, fail or error (couldn't read or scrub the plan)
+      comment: ${{ steps.guards.outputs.comment }}  # base64 of the scrubbed Markdown; empty unless it was made
+    env:
+      TF_IN_AUTOMATION: "1"
+      TF_INPUT: "0"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e  # v4.0.1
+        with:
+          terraform_version: "1.9.8"
+          terraform_wrapper: false  # the wrapper copies stdout into step outputs and the log
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_TF_PLAN_PROVIDER }}
+          service_account: ${{ vars.GCP_TF_PLAN_SA }}
+      - name: Terraform (output kept off the log)
+        id: terraform
+        working-directory: src/terraform
+        env:
+          BUCKET: ${{ vars.TF_STATE_BUCKET || 'coffee-data-tracker-tfstate' }}
+          TF_VAR_billing_account: ${{ secrets.TF_VAR_BILLING_ACCOUNT }}
+          TF_VAR_owner_email: ${{ secrets.TF_VAR_OWNER_EMAIL }}
+          TF_VAR_ingest_image: ${{ vars.TF_VAR_INGEST_IMAGE }}
+          TF_VAR_ingest_schedule_enabled: ${{ vars.TF_VAR_INGEST_SCHEDULE_ENABLED }}
+          TF_VAR_email: ${{ vars.TF_VAR_EMAIL }}
+          TF_VAR_budget_usd: ${{ vars.TF_VAR_BUDGET_USD }}
+          TF_VAR_ingest_job_memory: ${{ vars.TF_VAR_INGEST_JOB_MEMORY }}
+        run: |
+          unset TF_LOG TF_LOG_CORE TF_LOG_PROVIDER TF_LOG_PATH
+          missing=""
+          for v in TF_VAR_billing_account TF_VAR_owner_email TF_VAR_ingest_image TF_VAR_ingest_schedule_enabled; do
+            [ -n "${!v}" ] || missing="$missing ${v^^}"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Set these repository secrets or variables first:$missing"
+            echo "failed=setup" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          for v in TF_VAR_email TF_VAR_budget_usd TF_VAR_ingest_job_memory; do  # unset: the default applies
+            [ -n "${!v}" ] || unset "$v"
+          done
+          logs="$RUNNER_TEMP/tf-logs"
+          mkdir -p "$logs"
+          step() {  # step NAME args...: run one command with its output in files; on failure, the scrubbed summary
+            local name=$1
+            shift
+            if ! terraform "$@" >"$logs/$name.log" 2>&1; then
+              python3 -I "$GITHUB_WORKSPACE/scripts/tf_plan_guard.py" errors "$name" "$logs/$name.log"
+              echo "failed=$name" >> "$GITHUB_OUTPUT"
+              rm -rf "$logs" "$RUNNER_TEMP/tfplan"
+              exit 1
+            fi
+          }
+          step fmt fmt -check -recursive
+          step init init -input=false -lockfile=readonly -no-color -backend-config="bucket=$BUCKET"
+          step validate validate -no-color
+          step plan plan -input=false -lock=false -no-color -var-file=ci.tfvars -out="$RUNNER_TEMP/tfplan"
+          if ! terraform show -json -no-color "$RUNNER_TEMP/tfplan" >"$RUNNER_TEMP/plan.json" 2>"$logs/show.log"; then
+            python3 -I "$GITHUB_WORKSPACE/scripts/tf_plan_guard.py" errors show "$logs/show.log"
+            echo "failed=show" >> "$GITHUB_OUTPUT"
+            rm -rf "$logs" "$RUNNER_TEMP/tfplan" "$RUNNER_TEMP/plan.json"
+            exit 1
+          fi
+          rm -rf "$logs" "$RUNNER_TEMP/tfplan"
+          echo "Planned. Terraform's output is not shown: the change list is in the step summary and the PR comment."
+      - name: Guards and change list
+        id: guards
+        run: |
+          guard="python3 -I scripts/tf_plan_guard.py"
+          if ! $guard render "$RUNNER_TEMP/plan.json" > "$RUNNER_TEMP/plan.md"; then
+            echo "result=error" >> "$GITHUB_OUTPUT"
+            echo "::error::Couldn't read the plan, or make a change list that is safe to show (refusal above). Nothing from the plan is shown."
+            exit 1
+          fi
+          rc=0
+          $guard check "$RUNNER_TEMP/plan.json" || rc=$?
+          case "$rc" in 0) result=pass ;; 1) result=fail ;; *) result=error ;; esac
+          echo "result=$result" >> "$GITHUB_OUTPUT"
+          if [ "$result" = "error" ]; then
+            echo "::error::Couldn't read the plan, or name what failed safely (refusal above). Nothing from the plan is shown."
+            exit 1
+          fi
+          cat "$RUNNER_TEMP/plan.md" >> "$GITHUB_STEP_SUMMARY"
+          echo "comment=$(base64 -w0 "$RUNNER_TEMP/plan.md")" >> "$GITHUB_OUTPUT"
+          if [ "$result" = "fail" ]; then
+            echo "::error::The plan breaks a guard (above). The apply would refuse it: change the PR, or make the change by hand as RUNBOOK section 9 says."
+            exit 1
+          fi
+      - name: Delete the plan
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/plan.json" "$RUNNER_TEMP/plan.md" "$RUNNER_TEMP/tfplan" "$RUNNER_TEMP/tf-logs"
+
+  comment:
+    # Runs no Terraform and holds no cloud identity: it only posts what the plan job rendered. It posts on every
+    # run, whatever happened (skipped, cancelled, errored), so an older comment never stays up over a newer push.
+    needs: [gate, plan]
+    if: always() && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Post or update the plan comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESULT: ${{ needs.plan.result }}
+          FAILED: ${{ needs.plan.outputs.failed }}
+          GUARDS: ${{ needs.plan.outputs.guards }}
+          COMMENT_B64: ${{ needs.plan.outputs.comment }}
+          PR: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          MERGE_SHA: ${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          marker='<!-- terraform-plan -->'
+          body="$RUNNER_TEMP/body.md"
+          case "$RESULT/$GUARDS" in
+            skipped/*) status="**No plan**: the plan identity isn't set up yet (repository variables GCP_TF_PLAN_PROVIDER and GCP_TF_PLAN_SA)." ;;
+            cancelled/*) status="**Cancelled**: a newer push replaces this run." ;;
+            */pass) status="Guards: **pass**." ;;
+            */fail) status="Guards: **FAIL**. The apply would refuse this plan." ;;
+            */error) status="**Errored**: the plan couldn't be read, or its change list couldn't be scrubbed, so none is shown." ;;
+            *)
+              case "$FAILED" in
+                fmt|init|validate|plan|show) status="**The plan errored** at \`terraform $FAILED\`: no change list. Terraform's messages are kept off this public page; the run's log names the files, lines and resources." ;;
+                setup) status="**The plan errored**: repository secrets or variables are missing (the run's log names them)." ;;
+                *) status="**The plan errored** before Terraform ran (sign-in or setup): no change list. See the run." ;;
+              esac ;;
+          esac
+          {
+            echo "$marker"
+            echo "## Terraform plan"
+            echo
+            echo "PR head \`$HEAD_SHA\` (planned as merged with main, \`$MERGE_SHA\`). [Run]($RUN_URL)."
+            echo
+            echo "$status"
+            echo
+            if [ -n "$COMMENT_B64" ]; then
+              base64 -d <<< "$COMMENT_B64"
+              echo
+            fi
+            echo "_Advisory: the plan that is applied is made again on main and approved there._"
+          } > "$body"
+          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate \
+            --jq ".[] | select(.user.login == \"github-actions[bot]\" and (.body | startswith(\"$marker\"))) | .id" | head -n1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F "body=@$body" >/dev/null
+          else
+            gh api -X POST "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -F "body=@$body" >/dev/null
+          fi

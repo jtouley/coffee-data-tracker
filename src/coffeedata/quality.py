@@ -78,14 +78,31 @@ def record_build(
     passed: bool,
     build_id: str | None = None,
     duration_s: float | None = None,
+    verdicts: dict | None = None,
 ) -> bool:
     """Append this build's release and record to the lake: passing or not, nothing is lost. `results` holds one
     run_results.json per dbt step (models, then tests); `duration_s` is how long they took. Every row carries the
-    build's environment: the CI run, dbt's and the key packages' versions. Returns the recorded verdict: `passed`,
-    and only if every release table was written, since a release missing a table can't be served."""
+    build's environment: the CI run, dbt's and the key packages' versions, and what decided its verdicts
+    (`verdicts`: verdict_model, verdict_definition, configured_image, rules_only_override, verdicts_in_flight). Returns
+    the recorded verdict: `passed`, and only if every release table was written, since a release missing a table
+    can't be served, and only if Claude's verdicts were checked (verdict.gate_problem) or rules only was explicitly
+    allowed by a named override."""
     import duckdb
 
+    from .verdict import gate_problem, rules_only_override
+
     build_id = build_id or new_batch_id()  # the one the tables carry as release_build_id, when given
+    verdicts = verdicts or {}
+    # cmd_build passes its override; any other caller gets COFFEEDATA_ALLOW_RULES_ONLY=1's, as serve does.
+    override = verdicts.get("rules_only_override") or rules_only_override(lake_url=lake.url)
+    problem = gate_problem(
+        verdicts.get("verdict_model"), _dbt_vars(results).get("require_verdicts"), _gate_status(results)
+    )
+    if problem and override:
+        log.warning("build %s has no checked verdicts (%s); allowed by %s", build_id, problem, override)
+    elif problem:
+        log.error("build %s can't be served: %s", build_id, problem)
+        passed = False
     manifest = _read_json(manifest_path)
     nodes = manifest.get("nodes") or {}
     ci_run_id, ci_run_url = lineage.ci_run()
@@ -105,6 +122,11 @@ def record_build(
         "dbt_version": dbt_version,
         "package_versions": lineage.package_versions(),
         "duration_s": None if duration_s is None else round(duration_s, 3),
+        "verdict_model": verdicts.get("verdict_model") or None,
+        "verdict_definition": verdicts.get("verdict_definition"),
+        "configured_image": verdicts.get("configured_image"),
+        "rules_only_override": override,
+        "verdicts_in_flight": verdicts.get("verdicts_in_flight"),
     }
     con = duckdb.connect(str(db), read_only=True) if db.exists() else None
     written = set()
@@ -159,6 +181,10 @@ def record_build(
         metrics = con.execute("select metric, value from mart_build_profile").fetchall() if con else []
     except duckdb.Error:
         metrics = []
+    try:  # the crawl success SLO (#96): report only, built after the gate, so absent when its step failed
+        metrics += con.execute("select metric, value from mart_crawl_slo_profile").fetchall() if con else []
+    except duckdb.Error as e:
+        log.warning("build %s: no crawl success SLO recorded: %s", build_id, e)
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
     rows += [base | h for h in hashes]
     # The release notes: how many rows of each public table this build adds, removes or changes against the
@@ -180,6 +206,72 @@ def record_build(
     if con:
         con.close()
     return passed
+
+
+def _dbt_vars(results: list[dict]) -> dict:
+    """The vars dbt ran with, from the first run_results that has them."""
+    for r in results:
+        found = (r.get("args") or {}).get("vars")
+        if isinstance(found, str):  # older dbt wrote --vars as its raw text
+            try:
+                found = json.loads(found)
+            except ValueError:
+                found = None
+        if isinstance(found, dict):
+            return found
+    return {}
+
+
+def _gate_status(results: list[dict]) -> str | None:
+    """verdicts_cover_catalog's status in these run_results, or None when it didn't run."""
+    from .verdict import GATE_TEST
+
+    return next(
+        (
+            r.get("status")
+            for step in results
+            for r in step.get("results") or []
+            if r.get("unique_id") == GATE_TEST
+        ),
+        None,
+    )
+
+
+def verdict_check(lake: Lake, build_id: str) -> tuple[str | None, str | None]:
+    """(problem, override) for a recorded build: why it can't be served for want of Claude's verdicts (None: they
+    were checked), and the named rules-only override its record carries, if any. Records written before the verdict
+    columns read the model and the gate's switch from the dbt vars in their run_results."""
+    from .verdict import GATE_TEST, gate_problem
+
+    con = lake.connect()
+    b = f"(select * from {lake.scan('builds')} where build_id = ?)"
+    cur = con.execute(f"select * from {b} where kind = 'build'", [build_id])
+    cols = [d[0] for d in cur.description]
+    row = cur.fetchone()
+    if not row:
+        return f"no build record for {build_id}", None
+    record = dict(zip(cols, row, strict=True))
+    arts = dict(
+        con.execute(
+            f"select unique_id, payload from {b} where kind = 'artifact' and unique_id like 'run_results.%'",
+            [build_id],
+        ).fetchall()
+    )
+    results = [_read_payload(arts.get(f"run_results.{s}.json")) for s in ("build", "test")]
+    dbt_vars = _dbt_vars(results)
+    gate = con.execute(
+        f"select status from {b} where kind = 'node' and unique_id = ?", [build_id, GATE_TEST]
+    ).fetchone()
+    model_id = record.get("verdict_model") or dbt_vars.get("verdict_model")
+    problem = gate_problem(model_id, dbt_vars.get("require_verdicts"), gate[0] if gate else None)
+    return problem, record.get("rules_only_override")
+
+
+def _read_payload(payload: str | None) -> dict:
+    try:
+        return json.loads(payload) if payload else {}
+    except ValueError:
+        return {}
 
 
 def stage_previous_release(lake: Lake, build_id: str, dest: Path, attempts: int = 3) -> tuple[dict, str]:
@@ -695,11 +787,14 @@ def serve(
     db: Path = Path("build/served.duckdb"),
     action: str = "serve",
     previous: str | None | object = _UNREAD,
+    rules_only_override: str | None = None,
 ) -> Path:
     """Make a release the one customers get: its catalog marts replace marts/, marts/release.parquet records it,
     serving_log gets a row for it (`action`: serve or rollback; `previous`: the release it replaces, read from
     marts/release.parquet when not given; None: nothing was served), and `db` gets every release table, for the public export and the site.
-    Returns `db`."""
+    A release whose verdicts weren't checked (servable) is refused unless rules only is allowed by a named override:
+    its build record's, `rules_only_override` (rollback --allow-rules-only) or COFFEEDATA_ALLOW_RULES_ONLY=1; the
+    override is logged and written into serving_log's reason. Returns `db`."""
     import duckdb
     import pyarrow as pa
     import pyarrow.parquet as pq
@@ -710,6 +805,8 @@ def serve(
     run_date, ok = passed[build_id]
     if not ok:
         raise ValueError(f"build {build_id} failed its checks; only a passing release can be served")
+    if allowed := servable(lake, build_id, rules_only_override):
+        reason = f"{reason} [rules only, allowed by {allowed}]"
     if previous is _UNREAD:  # None is an answer (nothing served yet), not a reason to read again
         previous = (served(lake) or {}).get("build_id")
     con = _materialize(lake, build_id, db)
@@ -729,9 +826,43 @@ def serve(
     return db
 
 
-def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
-    """Serve an earlier passing release: `to` ('served': the one served now), or the passing release before the one
-    served now."""
+def servable(lake: Lake, build_id: str, rules_only_override: str | None = None) -> str | None:
+    """Whether a recorded release may be served for its verdicts. None when Claude's verdicts were checked
+    (verdict_check), or when its build record names the rules-only override that allowed it (logged here). The name
+    of a serve-time override (the one given, else COFFEEDATA_ALLOW_RULES_ONLY=1) when only that allows it, for the
+    serving log's reason. A ValueError naming the problem otherwise."""
+    from .verdict import refuse_on_remote
+    from .verdict import rules_only_override as env_override
+
+    problem, recorded = verdict_check(lake, build_id)
+    if problem is None:
+        return None
+    if recorded:
+        refuse_on_remote(f"{recorded}, its build record", lake.url)  # never served from a remote lake
+        log.warning(
+            "release %s: %s; rules only, allowed by %s (its build record)", build_id, problem, recorded
+        )
+        return None
+    allowed = rules_only_override or env_override(lake_url=lake.url)
+    if allowed:
+        refuse_on_remote(allowed, lake.url)
+    if not allowed:
+        raise ValueError(
+            f"release {build_id} can't be served: {problem}. Claude's verdicts are required "
+            "(docs/ingestion/RUNBOOK.md, verdicts); a deliberate rules-only release needs a named override "
+            "(`coffeedata rollback --allow-rules-only`, or COFFEEDATA_ALLOW_RULES_ONLY=1)"
+        )
+    log.warning("release %s: %s; served as rules only, allowed by %s", build_id, problem, allowed)
+    return allowed
+
+
+def rollback(
+    lake: Lake, to: str | None = None, reason: str = "", rules_only_override: str | None = None
+) -> str:
+    """Serve an earlier passing release: `to` ('served': the one served now), or the newest passing release before
+    the one served now that can be served (servable: its verdicts were checked, or `rules_only_override` allows it);
+    earlier releases that can't be are skipped and logged. `rules_only_override` names why a release without checked
+    verdicts may be served (serve)."""
     now = (served(lake) or {}).get("build_id")
     passing = [b for b, _, ok in builds(lake) if ok]
     if to == "served":  # the same release again: re-export it and rebuild the site, with no crawl
@@ -742,8 +873,28 @@ def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
         earlier = passing[: passing.index(now)] if now in passing else passing[:-1]
         if not earlier:
             raise ValueError("no earlier passing release to roll back to")
-        to = earlier[-1]
-    serve(lake, to, reason or f"rollback from {now}", action="rollback", previous=now)
+        refused = []
+        for b in reversed(earlier):
+            try:
+                servable(lake, b, rules_only_override)
+            except ValueError as e:
+                refused.append(f"{b} ({e})")
+                continue
+            to = b
+            break
+        else:
+            raise ValueError(
+                f"no earlier passing release can be served: {len(refused)} passed their checks, none had Claude's "
+                f"verdicts checked: {'; '.join(refused)}"
+            )
+        if refused:
+            log.warning(
+                "rollback skipped %d newer release(s) that can't be served: %s", len(refused), refused
+            )
+    serve(
+        lake, to, reason or f"rollback from {now}", action="rollback", previous=now,
+        rules_only_override=rules_only_override,
+    )  # fmt: skip
     return to
 
 

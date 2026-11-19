@@ -3,7 +3,8 @@
 The public dataset (the public tables, their exports, the site's catalog JSON and the marketplace shares) is
 released under the [CDLA-Permissive-2.0](../licenses/CDLA-Permissive-2.0.txt); the code is under the
 [MIT License](../LICENSE). It draws on the sources below. Roasters known only from OpenStreetMap are left out of
-the public tables.
+the public tables, and the roasters they do list carry no value from OpenStreetMap: each name, city and state comes
+from Overture, the curated seed or a manual add (dbt test `public_values_have_open_provenance`).
 
 - **Roaster discovery: Overture Maps Places.** © Overture Maps Foundation. Licensed under the
   [CDLA-Permissive-2.0](https://cdla.dev/permissive-2-0/). Source datasets carry their own attribution, listed in the
@@ -15,3 +16,11 @@ the public tables.
   to the roasters; this project stores only what a shopper sees, and links every coffee back to its roaster.
 - **Enrichment.** Attributes in the lake's `enrichments/` are extracted from those listings by rules, or by Claude
   (`method = 'llm'`), and can be wrong; the roaster's listing is authoritative.
+
+The private usage counts (never published; see the privacy policy's "What we count") place each visit's shortened IP
+address with two more sources:
+
+- **IP to city: DB-IP "IP to City Lite".** © [DB-IP](https://db-ip.com), licensed under
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The pinned file is named in `config/geo.lock`.
+- **City populations: GeoNames.** © [GeoNames](https://www.geonames.org), licensed under
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The pinned file is named in `config/geo.lock`.

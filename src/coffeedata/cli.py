@@ -207,13 +207,45 @@ def cmd_discover(args: argparse.Namespace) -> None:
         raise SystemExit(f"discover failed: {', '.join(failed)}")
 
 
-def probe_todo(states: list, run_date: str, stale_days: int) -> list[str]:
-    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`;
-    never-probed ones (new from discovery) first, then the longest unprobed, so a run stopped by its deadline has
-    asked the ones that most need it, and the next run carries on with the rest."""
-    cutoff = (date.fromisoformat(run_date) - timedelta(days=stale_days)).isoformat()
-    todo = [s for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
-    todo.sort(key=lambda s: (s.last_probed is not None, s.last_probed or "", s.roaster.roaster_id))
+def unreachable_backoff_days(failures: int, unreachable_days: int, stale_days: int) -> int:
+    """How long an unreachable roaster waits between probes: `unreachable_days` after an ok probe (or the seed's),
+    doubled for each failure since (7, 14, 28 days), never longer than `stale_days`, the wait every other roaster
+    gets. failures: the probes that failed since the last ok one, plus the crawl runs that failed since it (a store
+    whose home page answers the probe but whose catalog keeps refusing us backs off as well)."""
+    return min(unreachable_days * 2 ** min(failures, 8), stale_days)
+
+
+def probe_todo(states: list, run_date: str, stale_days: int, unreachable_days: int = 7) -> list[str]:
+    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`; or
+    unreachable (the crawl stopped trying it: registry STATE_SQL) and last probed longer ago than its backoff
+    (unreachable_backoff_days). A probe that answers ok after its failed fetches puts an unreachable roaster back in
+    the crawl; before, nothing re-probed one inside `stale_days`, and the seed's probe date (2026-10-26) kept 66
+    roasters out of the 2026-11-16 run (probe todo 0). Never-probed ones (new from discovery) first, then the
+    unreachable ones due, then the longest unprobed, so a run stopped by its deadline has asked the ones that most
+    need it, and the next run carries on with the rest."""
+    day = date.fromisoformat(run_date)
+    cutoff = (day - timedelta(days=stale_days)).isoformat()
+
+    def due_unreachable(s) -> bool:
+        if s.status != "unreachable":
+            return False
+        failures = getattr(s, "failed_probes", 0) + getattr(s, "failed_runs", 0)
+        wait = unreachable_backoff_days(failures, unreachable_days, stale_days)
+        return (s.last_probed or "") <= (day - timedelta(days=wait)).isoformat()
+
+    todo = [
+        s
+        for s in states
+        if s.status != "opted_out" and ((s.last_probed or "") < cutoff or due_unreachable(s))
+    ]
+    todo.sort(
+        key=lambda s: (
+            s.last_probed is not None,
+            not due_unreachable(s),
+            s.last_probed or "",
+            s.roaster.roaster_id,
+        )
+    )
     return [s.roaster.roaster_id for s in todo]
 
 
@@ -240,11 +272,13 @@ def cmd_probe(args: argparse.Namespace) -> None:
     states: list = []
     try:
         states = registry.current(lake)
-        todo = probe_todo(states, args.run_date, args.stale_days)
+        todo = probe_todo(states, args.run_date, args.stale_days, getattr(args, "unreachable_days", 7))
         if args.only:
             todo = [args.only]
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
             todo = sorted(todo, key=ingest.sample_key)[: args.sample]
+        # Read before the window is measured, so its time comes out of the window (from t0), never on top of it
+        copies = ingest.robots_copies(lake, args.run_date)
         deadline_min = getattr(args, "deadline_min", None)
         left = None
         # A Cloud Run retry keeps the first attempt's window (it ends before the crawls). For a retry the window is
@@ -254,7 +288,12 @@ def cmd_probe(args: argparse.Namespace) -> None:
             window = connectors._window_left(lake, "probe", None, week, deadline_min)
             left = max(0.0, min(60 * window, 60 * deadline_min - (time.monotonic() - t0)))
         rows = discover.probe(
-            todo, workers=args.workers, run_date=args.run_date, deadline_s=left, on_batch=write
+            todo,
+            workers=args.workers,
+            run_date=args.run_date,
+            deadline_s=left,
+            on_batch=write,
+            robots_copies=copies,
         )
     except BaseException as e:  # what was written stays staged; the end row says the attempt failed
         control.finish(
@@ -354,9 +393,16 @@ def cmd_crawl(args: argparse.Namespace) -> None:
 
 
 def cmd_merge(args: argparse.Namespace) -> None:
-    from . import connectors
+    """Refuses to start over an earlier merge attempt of the week that failed or never ended (still running, or
+    dead part-way): redoing it is the owner's call (chain.refuse_unfinished), so the job has no automatic retry."""
+    from . import chain, connectors
 
-    _print(connectors.merge(Lake(), args.run_date))
+    lake = Lake()
+    try:
+        chain.refuse_unfinished(lake, args.run_date, "merge")
+    except chain.PreconditionFailed as e:
+        raise SystemExit(str(e)) from None
+    _print(connectors.merge(lake, args.run_date))
 
 
 def cmd_crawl_retry(args: argparse.Namespace) -> None:
@@ -412,10 +458,37 @@ def cmd_fetch_health(args: argparse.Namespace) -> None:
                           "systemic": out["systemic"]}))  # fmt: skip
 
 
+def _precondition(lake: Lake, day: str | None = None, default_jobs: str | None = None) -> dict | None:
+    """The Tuesday chain's precondition (chain.py, issue #84): go on only once the jobs before this one are done
+    for the week, waiting until its deadline; otherwise exit non-zero, so the Cloud Run execution fails and its
+    alert emails the owner. None when this process has no precondition (COFFEEDATA_AFTER_JOB unset, no default).
+    A check that doesn't pass, for any reason, also stops the commands after it in the same execution."""
+    from . import chain
+
+    day = day or _today()
+    try:
+        chain.refuse_after_failed(day)
+        return chain.check(lake, day, default_jobs)
+    except chain.PreconditionFailed as e:
+        chain.mark_failed(day, str(e))
+        raise SystemExit(str(e)) from None
+    except BaseException as e:
+        chain.mark_failed(day, f"{type(e).__name__}: {e}")
+        raise
+
+
 def cmd_enrich_week(args: argparse.Namespace) -> None:
+    """After the week's merge, always: it waits for it until the job's deadline, then fails (it used to print
+    `waiting` and exit 0, which skipped a week's enrichment without an alert)."""
     from . import connectors
 
-    _print(connectors.enrich_week(Lake(), args.run_date, args.limit, submit=args.submit))
+    lake = Lake()
+    pre = _precondition(lake, args.run_date, default_jobs="merge")
+    # The precondition has checked the merge (or the owner skipped it): no second, unguarded read of it here.
+    out = connectors.enrich_week(
+        lake, args.run_date, args.limit, submit=args.submit, require_merge=pre is None
+    )
+    _print(out | {"precondition": pre})
 
 
 def cmd_egress_check(args: argparse.Namespace) -> None:
@@ -456,15 +529,34 @@ def cmd_classify(args: argparse.Namespace) -> None:
         )
         return
     lake = Lake()
-    out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+    # In the weekly build job, classify is the first step: it waits here for the week's merge and enrichment, so
+    # the verdicts are submitted for the whole week's products, not for a half-merged one. The week is today's,
+    # as the build's check is, whatever --run-date either is given.
+    _precondition(lake)
+    out: dict = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
     deadline = time.monotonic() + args.wait * 60
     # Wait for this run's batches only; whatever is still running is collected by the next run.
     waiting = set(out["submit"].get("batch_ids", []))
     while waiting and time.monotonic() < deadline:
         time.sleep(60)
-        got = verdict.collect(lake, args.run_date)
-        out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
-        waiting &= verdict.open_batch_ids(lake)
+        # One failed read of the lake (a 429, a timeout) never ends the wait: it is logged and counted, and the
+        # next minute tries again. At the deadline classify goes on with what it collected.
+        try:
+            got = verdict.collect(lake, args.run_date)
+            out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
+            waiting &= verdict.open_batch_ids(lake)
+        except Exception as e:  # noqa: BLE001 - the lake's and the API's errors; the wait only retries
+            out["wait_read_failures"] = out.get("wait_read_failures", 0) + 1
+            logging.warning("classify: a read during the wait failed, retrying next minute: %s", e)
+    if waiting:
+        # The wait ran out: the build after this classifies those versions by the rules, counts them in its record
+        # (verdicts_in_flight), and verdicts_cover_catalog still judges the share. The next run collects them.
+        out["still_open"] = sorted(waiting)
+        print(
+            f"classify: {len(waiting)} verdict batch(es) still open after {args.wait} min; the build uses the "
+            "stored verdicts and the rules for the versions awaiting one",
+            file=sys.stderr,
+        )
     _print(out)
     if err := out["submit"].get("error"):
         # A rejected key or an API outage leaves this week's new versions without verdicts. Fail like a missing
@@ -531,7 +623,7 @@ def dbt_build(
             "verdict_definition": verdict.DEFINITION_VERSION,
             # verdicts_cover_catalog: fails a build with no verdict model, or too few listed coffees decided by
             # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
-            "require_verdicts": not verdict.rules_only_allowed(),
+            "require_verdicts": not verdict.rules_only_allowed(lake.url),
             "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
         }
         | (extra_vars or {})
@@ -587,9 +679,15 @@ def cmd_build(args: argparse.Namespace) -> bool:
     """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
     marts (what the site, the app, the public export and the MCP tools other than run_sql read); a failing one is still kept, with its results and a
     copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
-    from . import quality
+    from . import quality, verdict
 
+    # A rules-only override is refused on a remote lake (verdict.refuse_on_remote), before any work.
+    override = verdict.rules_only_override(getattr(args, "allow_rules_only", False))
     lake = Lake()
+    # The weekly build job only (COFFEEDATA_AFTER_JOB): no build of a week whose merge and enrichment aren't done,
+    # and none after a classify whose own check didn't pass. Before the merge the lake's latest run is still last
+    # week's, which could pass and be served again.
+    _precondition(lake)
     db = Path(args.db)
     if db.exists():
         db.unlink()  # derived: always rebuilt from the lake
@@ -612,8 +710,23 @@ def cmd_build(args: argparse.Namespace) -> bool:
             "previous_release_status": status,
             "previous_release_run_date": str((served_release or {}).get("run_date") or ""),
         }
-    if getattr(args, "allow_rules_only", False):
+    # The named switch that lets this build pass without checked verdicts (None in production), recorded with it.
+    if override:
         extra["require_verdicts"] = False
+        print(
+            f"verdicts: rules only, allowed by {override}; this release is recorded as such", file=sys.stderr
+        )
+    try:  # only a count for the record: a failed read never stops the build
+        in_flight: int | None = verdict.in_flight(lake)
+    except Exception as e:  # noqa: BLE001 - duckdb errors; duckdb is imported lazily
+        logging.warning("verdicts in flight not counted: %s", e)
+        in_flight = None
+    if in_flight:  # classify's wait ran out: those versions are classified by the rules this week
+        print(
+            f"verdicts: {in_flight:,} product versions still await Claude's verdict; this build classifies them by "
+            "the rules (verdicts_cover_catalog judges the share), and the next build collects them",
+            file=sys.stderr,
+        )
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
         # It skips the anomaly bands too, and records accepted_volume_change, so their history restarts at it.
@@ -647,8 +760,12 @@ def cmd_build(args: argparse.Namespace) -> bool:
         logging.warning("verdict coverage not reported: %s", e)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
-        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
-    )
+        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took,
+        verdicts={
+            "verdict_model": verdict.model(), "verdict_definition": verdict.DEFINITION_VERSION,
+            "configured_image": verdict.image(), "rules_only_override": override, "verdicts_in_flight": in_flight,
+        },
+    )  # fmt: skip
     _write_personal_marts(lake, db, quality.SERVED_MARTS)
     if not passed:
         print(
@@ -682,10 +799,17 @@ def _write_personal_marts(lake: Lake, db: Path, catalog: tuple[str, ...]) -> Non
 
 def cmd_rollback(args: argparse.Namespace) -> None:
     """Serve an earlier passing release, then re-export the public tables and rebuild the site from it."""
-    from . import quality
+    from . import quality, verdict
 
     lake = Lake()
-    to = quality.rollback(lake, args.to, args.reason)
+    # A release whose verdicts weren't checked is served only with the flag and a reason, both logged, and only from
+    # a local lake (verdict.refuse_on_remote).
+    override = None
+    if getattr(args, "allow_rules_only", False):
+        if not args.reason:
+            raise SystemExit("rollback --allow-rules-only needs --reason: the serving log records why")
+        override = verdict.refuse_on_remote(f"rollback --allow-rules-only ({args.reason})", lake.url)
+    to = quality.rollback(lake, args.to, args.reason, rules_only_override=override)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)
     print(f"serving release {to}")
@@ -968,6 +1092,11 @@ def cmd_site(args: argparse.Namespace) -> None:
                 "nothing is served yet: the site is built from the served release, which the first weekly run "
                 "whose checks pass creates (or `coffeedata rollback --to <build>`)"
             )
+        # A release served without checked verdicts (an outdated image's build served itself) isn't rendered.
+        try:
+            quality.servable(Lake(), release["build_id"])
+        except ValueError as e:
+            raise SystemExit(f"the served release isn't rendered: {e}") from None
         quality.materialize(Lake(), release["build_id"], Path(args.db))
     print(site.build(Path(args.db), Path(args.out)))
 
@@ -983,7 +1112,7 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
 
     main, photos, users = Lake(), Lake.photos(), Lake.users()
     try:
-        p = erase.plan(args.username, main, photos, users, force=args.force)
+        p = erase.plan(args.username, main, photos, users, force=args.force, only_recs=args.only_recs)
     except erase.EraseError as e:
         sys.exit(str(e))
     print(f"{p.username} ({p.user_id}):")
@@ -993,8 +1122,18 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
             print(f"    {rel}")
     for m in p.marts:
         print(f"  marts/{m}.parquet: rewritten without their rows")
+    for src in p.absent:
+        print(f"  {src}: no files there yet, nothing to delete")
     if args.dry_run:
         print("Dry run: nothing deleted.")
+        return
+    if args.only_recs:
+        print(f"Recording the erasure, then waiting {erase.SETTLE:.0f} s for uploads already under way.")
+        done = erase.erase_recs(p, main, photos, users)
+        n = sum(len(v) for v in done.files.values())
+        print(
+            f"Deleted {n} files. The app refuses their old ratings and answers from now on; nothing to redeploy."
+        )
         return
     erase.apply(p, main, photos, users)
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
@@ -1028,10 +1167,17 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     # The run stops at IMPORTERS_DEADLINE_S, a little under the workflow's job timeout, so a long Royal pass ends as a
     # recorded failure (DeadlineReached) instead of a killed job.
     with PoliteClient(
-        timeout=60.0, retries=3, schedule_only_ok=True, deadline_s=importers.IMPORTERS_DEADLINE_S
+        timeout=60.0,
+        retries=3,
+        schedule_only_ok=True,
+        deadline_s=importers.IMPORTERS_DEADLINE_S,
+        redact_hosts=True,  # its log is public: no line names a host or URL (Royal's address)
     ) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
+    if args.results:
+        args.results.parent.mkdir(parents=True, exist_ok=True)
+        args.results.write_text(json.dumps(importers.public_results(results), indent=1) + "\n")
     return all(r["status"] != "failed" for r in results)
 
 
@@ -1069,6 +1215,72 @@ def cmd_importer_build(args: argparse.Namespace) -> bool:
     return ok
 
 
+def cmd_usage_build(args: argparse.Namespace) -> bool:
+    """The usage reports: the private dbt project (dbt_usage/) over $COFFEEDATA_USAGE, read only, into its own
+    database, build/usage.duckdb, after checking the geo files config/geo.lock pins. Exits 1 if a model or check
+    failed (the search-text detector included). Prints counts only: dbt's output goes to --log-file (default
+    build/usage-dbt.log, never the console), since a failing query's error could quote a search. With --alerts-out,
+    writes the detector's triage alert (counts and pattern names, never text; "not measured" when the models didn't
+    build) for `python -m coffeedata.triage prod`."""
+    import tempfile
+
+    import duckdb
+
+    from . import usage_build
+
+    catalog = None
+    if args.catalog:
+        catalog = {t: str((args.catalog / f"{t}.parquet").resolve()) for t in ("dim_roaster", "dim_coffee")}
+    with tempfile.TemporaryDirectory() as target:
+        ok = usage_build.build(catalog=catalog, today=_today(), target=Path(target), log=args.log_file)
+        counts = usage_build.run_counts(Path(target))
+        db = usage_build.ROOT / usage_build.DB
+        found: list | None = None
+        if db.exists():
+            try:
+                found = usage_build.detector_counts(db, Path(target))
+            except (duckdb.Error, ValueError):
+                found = None
+    alert = usage_build.detector_alert(found)
+    if args.alerts_out:
+        args.alerts_out.write_text(json.dumps([alert], indent=1))
+    _print({"build": "passed" if ok else "failed", "dbt": counts, "detector": alert["summary"]})
+    return ok
+
+
+def cmd_geo_update(args: argparse.Namespace) -> None:
+    """Prepare a new pinned geo database (geo.py) from DB-IP's and GeoNames' downloads, measure what masking costs on
+    it, and print the lock entries; --write-lock replaces config/geo.lock (a reviewed PR's change). Uploading the two
+    files to the usage dataset's geo/ folder is the owner's step. With --old-geo, prints how many stored events would
+    change city."""
+    from . import geo
+
+    out = args.out
+    dbip = f"geo/dbip-city-lite-{args.dbip_release[:7]}.parquet"
+    cities = f"geo/geonames-{args.cities_release}.parquet"
+    measured = geo.prepare_dbip(args.dbip, out / dbip)
+    named = geo.prepare_cities(args.cities, args.admin1, out / cities)
+    entries = {
+        geo.DBIP: {"file": dbip, "release": args.dbip_release, "sha256": geo.sha256(out / dbip),
+                   "source": args.dbip_url or geo.DBIP_URL.format(month=args.dbip_release[:7]),
+                   "source_sha256": geo.sha256(args.dbip), "licence": "CC BY 4.0",
+                   "attribution": "IP Geolocation by DB-IP (https://db-ip.com)"},
+        geo.CITIES: {"file": cities, "release": args.cities_release, "sha256": geo.sha256(out / cities),
+                     "source": geo.CITIES_URL, "source_sha256": geo.sha256(args.cities),
+                     "admin1_source": geo.ADMIN1_URL, "admin1_sha256": geo.sha256(args.admin1),
+                     "licence": "CC BY 4.0", "attribution": "City populations by GeoNames (https://www.geonames.org)"},
+    }  # fmt: skip
+    _print({"dbip": measured, "cities": named})
+    if args.old_geo:
+        from .usage_build import dataset, sources
+
+        _print({"events_changing_city": geo.changed_events(sources(dataset()), args.old_geo, out / dbip)})
+    text = geo.render_lock(entries)
+    print(text)
+    if args.write_lock:
+        geo.LOCK.write_text(text)
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1094,6 +1306,13 @@ def main(argv: list[str] | None = None) -> None:
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
+    pr.add_argument(
+        "--unreachable-days",
+        type=int,
+        default=7,
+        help="re-probe an unreachable roaster this many days after its last ok probe, doubling per failed probe "
+        "(at most --stale-days)",
+    )
     pr.add_argument("--only")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
@@ -1163,7 +1382,9 @@ def main(argv: list[str] | None = None) -> None:
     ew.add_argument("--limit", type=int, default=2000)
     ew.add_argument("--submit", action="store_true", help="send to Claude (spends); without it, only count")
     add(
-        "egress-check", cmd_egress_check, "flag egress IPs refused on >8% of first contacts two runs in a row"
+        "egress-check",
+        cmd_egress_check,
+        "flag egress IPs refused on >8%% of first contacts two runs in a row",
     )
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
@@ -1234,6 +1455,12 @@ def main(argv: list[str] | None = None) -> None:
         "--to", help="build id of the release to serve, or 'served' to re-export the served one (no crawl)"
     )
     rb.add_argument("--reason", default="", help="recorded in marts/release.parquet")
+    rb.add_argument(
+        "--allow-rules-only",
+        action="store_true",
+        help="serve a release whose Claude verdicts weren't checked (no verdict model, or verdicts_cover_catalog "
+        "didn't run); needs --reason, and the serving log records it",
+    )
     rb.add_argument("--out", default="build/site")
 
     ov = add("override", cmd_override, "accept, reject or pin one roaster-week's fetch for the history")
@@ -1286,11 +1513,20 @@ def main(argv: list[str] | None = None) -> None:
     s.add_argument("--json", help="shot fields as JSON (add)")
     s.add_argument("--file", help="issue body file (from-issue); default stdin")
 
-    du = add("delete-user", cmd_delete_user, "delete one person's shots, bags, gear, photos and account")
+    du = add(
+        "delete-user",
+        cmd_delete_user,
+        "delete one person's shots, bags, gear, ratings, answers to their picks, photos and account",
+    )
     du.add_argument("username")
     du.add_argument("--dry-run", action="store_true", help="list the files, delete nothing")
     du.add_argument(
         "--force", action="store_true", help="even if the account isn't turned off (the app isn't running)"
+    )
+    du.add_argument(
+        "--only-recs",
+        action="store_true",
+        help="only their 'Your next bag' ratings and answers; the account stays on and signed in",
     )
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")
@@ -1331,6 +1567,12 @@ def main(argv: list[str] | None = None) -> None:
     imp.add_argument(
         "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
     )
+    imp.add_argument(
+        "--results",
+        type=Path,
+        help="also write each importer's key, week, status, and a failed fetch's HTTP status and phase to this JSON "
+        "file (importers.public_results: no error text, no URL), for importers-alerts",
+    )
 
     ib = add(
         "importer-build",
@@ -1348,6 +1590,33 @@ def main(argv: list[str] | None = None) -> None:
         help="after a build that passed, send importer_offers to the private dataset's derived/ (replaced each "
         "build; needs an hf:// COFFEEDATA_IMPORTERS)",
     )
+
+    ub = add(
+        "usage-build",
+        cmd_usage_build,
+        "derive the usage reports (private dbt project) from $COFFEEDATA_USAGE into their own private database",
+    )
+    ub.add_argument(
+        "--log-file",
+        type=Path,
+        help="where dbt's output goes (default build/usage-dbt.log; never the console)",
+    )
+    ub.add_argument(
+        "--catalog", type=Path, help="a folder with the served release's dim_roaster/dim_coffee.parquet"
+    )
+    ub.add_argument("--alerts-out", type=Path, help="write the detector's triage alert JSON here")
+    gu = add("geo-update", cmd_geo_update, "prepare a new pinned IP-to-city database and its lock entries")
+    gu.add_argument("--dbip", type=Path, required=True, help="DB-IP IP to City Lite CSV download (.csv.gz)")
+    gu.add_argument("--dbip-release", required=True, help="its release date, YYYY-MM-DD")
+    gu.add_argument("--dbip-url", help="where it was downloaded (default: DB-IP's free URL for that month)")
+    gu.add_argument("--cities", type=Path, required=True, help="GeoNames cities500.zip")
+    gu.add_argument("--admin1", type=Path, required=True, help="GeoNames admin1CodesASCII.txt")
+    gu.add_argument("--cities-release", required=True, help="the GeoNames download's date, YYYY-MM-DD")
+    gu.add_argument("--out", type=Path, default=Path("build/geo-update"))
+    gu.add_argument(
+        "--old-geo", type=Path, help="the locked DB-IP parquet, to count events whose city would change"
+    )
+    gu.add_argument("--write-lock", action="store_true", help="replace config/geo.lock")
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 

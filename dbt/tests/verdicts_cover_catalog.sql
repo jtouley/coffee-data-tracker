@@ -1,3 +1,6 @@
+-- The refs below sit inside a var check, so dbt would see them only when the build's vars are set; this line
+-- declares them whatever the vars (docs/dbt/CONVENTION.md, section 5). The test itself is unchanged.
+-- depends_on: {{ ref('dim_coffee') }}
 -- Claude's verdicts ran for this release: a build without a verdict model, or with too few listed coffees decided
 -- by one, fails. Until 2026-11 every release was the rules alone (about 10.7% non-coffee kept, against 2.7% with
 -- verdicts) because the build job never had a model and classify skipped with exit 0. Checked only when

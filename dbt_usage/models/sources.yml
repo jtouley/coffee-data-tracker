@@ -1,0 +1,42 @@
+version: 2
+
+# The raw table this project reads (docs/dbt/CONVENTION.md section 4): declared for lineage and docs. The models read
+# it through the usage_raw() macro (var('usage_sources'): the staged glob and the Hub's), which a plain source can't
+# express, as in the main project.
+sources:
+  - name: usage
+    description: The private usage dataset (jtouley/coffee-usage), written only by the collector (app/usage.py); append-only, never published.
+    tables:
+      - name: usage_events
+        description: >
+          One row per event as the collector stored it (lake.SCHEMAS['usage_events'], contract usage 1.0.0), under
+          events/day=YYYY-MM-DD/batch=<id>.parquet. The IP is already masked; no identifier of a person, browser,
+          device, session or page load.
+        loaded_at_field: received_at
+        columns:
+          - {name: event_id, description: "Random id from the page; only for dropping a retried duplicate."}
+          - {name: received_at, description: "The collector's clock, truncated to the hour, UTC."}
+          - {name: event, description: "page_view, search, filter_state or click_out."}
+          - {name: surface, description: "landing, catalog, privacy, terms, bot, app_search or app_coffee."}
+          - {name: release, description: "The catalog build the page was showing."}
+          - {name: device, description: "phone or desktop."}
+          - {name: query, description: "The search as typed, capped at 100 characters."}
+          - {name: cities, description: "Catalog cities the page's parser read from the search."}
+          - {name: states, description: "Catalog states the page's parser read from the search."}
+          - {name: origin, description: "Origin filter."}
+          - {name: process, description: "Process filter."}
+          - {name: state, description: "State filter."}
+          - {name: in_stock, description: "In-stock filter."}
+          - {name: sort, description: "Sort: roaster, asc or desc."}
+          - {name: results_n, description: "How many results the page showed."}
+          - {name: zero_results, description: "Whether it showed none."}
+          - {name: roaster_id, description: "For a click-out, the roaster."}
+          - {name: coffee_id, description: "For a click-out to a coffee's page, the coffee."}
+          - {name: rank, description: "For a click-out from a result list, the position."}
+          - {name: source, description: "utm, referrer, direct or internal on a load's first event; null after."}
+          - {name: referrer_domain, description: "The referrer's host name, for source referrer."}
+          - {name: utm_source, description: "utm_source, for source utm."}
+          - {name: utm_medium, description: "utm_medium, for source utm."}
+          - {name: utm_campaign, description: "utm_campaign, for source utm."}
+          - {name: ip_prefix, description: "The IP masked at collection (IPv4 /24, IPv6 /40), as a network."}
+          - {name: bot, description: "The collector's bot flag."}

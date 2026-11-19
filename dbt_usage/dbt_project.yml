@@ -1,0 +1,78 @@
+# Site and app usage: a private dbt project of its own, never part of the main build (dbt/), like dbt_importers/.
+#
+# It reads the private usage dataset (jtouley/coffee-usage: raw events, and the pinned geo files config/geo.lock
+# names) and builds into a database file of its own, build/usage.duckdb (set by `coffeedata usage-build`; any other
+# target is refused), which nothing public opens: not the main build, the release, the public tables or contracts,
+# the site, the public dataset, Snowflake or the MCP server (tests/test_usage_dbt.py). Every build re-derives
+# everything from raw and the locked geo files: same raw plus same lock gives the same rows.
+name: coffeedata_usage
+version: "0.1.0"
+config-version: 2
+profile: coffeedata_usage
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target"]
+
+# Before anything is built: the target is the private database and nothing else (macros/private_target.sql).
+on-run-start:
+  - "{{ refuse_unless_private_target() }}"
+
+vars:
+  # The raw event files to read (usage_build.sources(): the staged glob and the Hub's when remote). Empty: no events.
+  usage_sources: []
+  # The locked geo files, verified against config/geo.lock by usage_build before dbt runs (empty: no location).
+  geo_db: ""
+  geo_cities: ""
+  # The lock's entries, recorded in ops_usage_build ({key: {file, release, sha256}}).
+  geo_lock: {}
+  # The served release's dim_roaster and dim_coffee (parquet paths): the ids clicks are checked against and the
+  # vocabulary a query's words are checked against. Empty: no ids to check, and every word counts as unknown.
+  catalog_roasters: ""
+  catalog_coffees: ""
+  # The day of the build, for the freshness warning (empty: no check). Never the wall clock inside a model.
+  today: ""
+  # The coded columns' values: the collector's (lake.USAGE_VALUES, contract usage 1.0.0). A new one is added there
+  # first, then here; tests/test_usage_dbt.py fails while the two differ.
+  usage_events: ["page_view", "search", "filter_state", "click_out"]
+  usage_surfaces: ["landing", "catalog", "privacy", "terms", "bot", "app_search", "app_coffee"]
+  usage_devices: ["phone", "desktop"]
+  usage_sorts: ["roaster", "asc", "desc"]
+  usage_sources_kinds: ["utm", "referrer", "direct", "internal"]
+  # Report thresholds (design section 3): a value is shown for a week only if it occurred on at least
+  # usage_min_days distinct UTC days in the usage_window_days days ending on the week's last day; a query with a
+  # word outside the release's vocabulary needs usage_min_days_unknown_word. Days, not counts: one person repeating
+  # a search would pass any count.
+  usage_window_days: 90
+  usage_min_days: 3
+  usage_min_days_unknown_word: 5
+  # City floors (design section 5): a city is named only with at least city_min_population people (GeoNames), events
+  # on city_min_days distinct days in the window and city_min_week_events in the week shown; a city x facet cell
+  # needs city_cell_min_events. Below any of them the event counts under "other, <region>".
+  city_min_population: 50000
+  city_min_days: 10
+  city_min_week_events: 20
+  city_cell_min_events: 10
+  # Volume bands (warn only): a roaster's week above roaster_band_ratio x the median of its previous
+  # band_weeks weeks (and above roaster_band_floor clicks), or the week's events outside 1/volume_band_ratio to
+  # volume_band_ratio x the median of the previous band_weeks weeks once band_min_weeks of them exist.
+  roaster_band_ratio: 5
+  roaster_band_floor: 50
+  volume_band_ratio: 3
+  band_weeks: 8
+  band_min_weeks: 4
+
+models:
+  coffeedata_usage:
+    +materialized: table
+    staging:
+      # Views over raw and the geo files; stg_usage_events is a table because every later model reads it.
+      +materialized: view
+      stg_usage_events: {+materialized: table}
+
+data_tests:
+  coffeedata_usage:
+    # Never keep a failing row: a test over search text could store the text it found.
+    +store_failures: false

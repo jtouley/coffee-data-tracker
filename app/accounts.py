@@ -48,6 +48,9 @@ BACKOFF_AFTER, BACKOFF_MAX = 10, 30.0
 # Accounts made before acceptance was recorded agreed to the terms in force then, by the "By joining you agree" line
 # on the join page. They count as having accepted that version, so a later LEGAL_UPDATED asks them again.
 TERMS_BEFORE_RECORDS = "November 2, 2026"
+# The wording of the "Your next bag" consent the person agreed to. Change it whenever that consent's words change,
+# so each joining is recorded against the words it was given with.
+EXPERIMENT_VERSION = "your-next-bag-1"
 
 _hasher = PasswordHasher.from_parameters(RFC_9106_LOW_MEMORY)  # Argon2id, 64 MiB, 3 passes, 4 lanes
 # Each hash or verify takes 64 MiB while it runs, and requests run in a thread pool of up to 40. A burst of sign-ins
@@ -272,6 +275,9 @@ class Consent:
     insights: bool | None = None  # counted in roaster insights; None: never changed, which counts as on
     insights_at: datetime | None = None
     insights_version: str | None = None
+    experiment: bool | None = None  # joined the "Your next bag" test; None: never asked
+    experiment_at: datetime | None = None
+    experiment_version: str | None = None
 
 
 _KEEP = object()  # "leave the marketing choice as it was"
@@ -361,7 +367,8 @@ class Accounts:
                     Consent(row["user_id"], row["terms_version"], row["privacy_version"], row["terms_at"],
                             row["source"], row.get("marketing"), row.get("marketing_at"),
                             row.get("marketing_version"), row.get("insights"), row.get("insights_at"),
-                            row.get("insights_version")),
+                            row.get("insights_version"), row.get("experiment"), row.get("experiment_at"),
+                            row.get("experiment_version")),
                     row["logged_at"],
                 )  # fmt: skip
         self.contacts: dict[str, tuple[Contact, datetime]] = {}
@@ -446,12 +453,20 @@ class Accounts:
         return inv, at
 
     def _stage_consent(
-        self, user_id: str, source: str, marketing: object = _KEEP, insights: object = _KEEP
+        self,
+        user_id: str,
+        source: str,
+        marketing: object = _KEEP,
+        insights: object = _KEEP,
+        experiment: object = _KEEP,
+        after: datetime | None = None,
     ) -> tuple[Consent, datetime]:
         """A new acceptance (signup, reaccept) records the current Terms; a choice changed in Setup (`settings`)
         keeps the acceptance it had. The marketing and roaster-insights choices are carried forward unless given."""
         prev = self.consents.get(user_id)
         at = self._next_at(prev)
+        if after and at <= after:  # joining the test again after an erasure is recorded after it
+            at = after + timedelta(seconds=1)
         if source == "settings":
             # Only a choice changes. An account with no record yet accepted the terms of its day by
             # joining (TERMS_BEFORE_RECORDS), and this mustn't claim it accepted anything newer.
@@ -466,7 +481,9 @@ class Accounts:
             if prev:
                 c = replace(c, marketing=prev[0].marketing, marketing_at=prev[0].marketing_at,
                             marketing_version=prev[0].marketing_version, insights=prev[0].insights,
-                            insights_at=prev[0].insights_at, insights_version=prev[0].insights_version)  # fmt: skip
+                            insights_at=prev[0].insights_at, insights_version=prev[0].insights_version,
+                            experiment=prev[0].experiment, experiment_at=prev[0].experiment_at,
+                            experiment_version=prev[0].experiment_version)  # fmt: skip
         if marketing is not _KEEP:  # None: never offered, so no time or version either (review L2)
             offered = isinstance(marketing, bool)
             c = replace(
@@ -477,6 +494,10 @@ class Accounts:
             )
         if insights is not _KEEP:
             c = replace(c, insights=bool(insights), insights_at=at, insights_version=self.legal)
+        if experiment is not _KEEP:
+            c = replace(
+                c, experiment=bool(experiment), experiment_at=at, experiment_version=EXPERIMENT_VERSION
+            )
         row = {
             "user_id": user_id,
             "logged_at": at,
@@ -490,6 +511,9 @@ class Accounts:
             "insights": c.insights,
             "insights_at": c.insights_at,
             "insights_version": c.insights_version,
+            "experiment": c.experiment,
+            "experiment_at": c.experiment_at,
+            "experiment_version": c.experiment_version,
         }
         self.lake.write("consents", f"consents/{user_id}__{at:%Y%m%dT%H%M%S}.parquet", [row])
         return c, at
@@ -1344,6 +1368,25 @@ class Accounts:
             if self.get(user_id) is None:
                 raise AccountError("No such account.")
             staged = self._stage_consent(user_id, "settings", insights=on)
+            self._commit(f"app: consents {user_id}", consents=(staged,))
+
+    def experiment(self, user_id: str) -> bool:
+        """Whether this member is in the "Your next bag" test: only once they've joined it, and not after leaving."""
+        hit = self.consents.get(user_id)
+        return bool(hit and hit[0].experiment is True)
+
+    def experiment_since(self, user_id: str) -> datetime | None:
+        """When this member last joined the test, while they're in it; None otherwise."""
+        hit = self.consents.get(user_id)
+        return hit[0].experiment_at if hit and hit[0].experiment is True else None
+
+    def set_experiment(self, user_id: str, on: bool, after: datetime | None = None) -> None:
+        """Joining or leaving the test: recorded with when, and the wording of the consent (EXPERIMENT_VERSION).
+        `after`: the person's latest erasure of their test records, which a joining must come after."""
+        with self.lock:
+            if self.get(user_id) is None:
+                raise AccountError("No such account.")
+            staged = self._stage_consent(user_id, "settings", experiment=on, after=after)
             self._commit(f"app: consents {user_id}", consents=(staged,))
 
     def insights_excluded(self) -> set[str]:

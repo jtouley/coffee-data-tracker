@@ -1,0 +1,22 @@
+# The pinned geo files the usage build reads (src/coffeedata/geo.py, docs/usage/README.md).
+# Changed only by a reviewed PR; `coffeedata geo-update` writes it.
+
+[dbip_city_lite]
+file = "geo/dbip-city-lite-2026-11.parquet"
+release = "2026-11-01"
+sha256 = "dc469c3de56816b025f18fa706208859b681632322e0384585f0775a75e59653"
+source = "https://download.db-ip.com/free/dbip-city-lite-2026-11.csv.gz"
+source_sha256 = "f796ba4f3e999259080cc90fb695633bc22c524b1e72e804c96029a79dc1f637"
+licence = "CC BY 4.0"
+attribution = "IP Geolocation by DB-IP (https://db-ip.com)"
+
+[geonames_cities]
+file = "geo/geonames-2026-11-13.parquet"
+release = "2026-11-13"
+sha256 = "57adb748edbafe291b96587baf5c58d46b4179816ae61c0d8349cd6e4a99903c"
+source = "https://download.geonames.org/export/dump/cities500.zip"
+source_sha256 = "d18e5db6d913ffc5aab65890698168a694f8552c3f43046f3ae3d870c9ac820a"
+admin1_source = "https://download.geonames.org/export/dump/admin1CodesASCII.txt"
+admin1_sha256 = "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3"
+licence = "CC BY 4.0"
+attribution = "City populations by GeoNames (https://www.geonames.org)"

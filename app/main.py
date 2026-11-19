@@ -29,7 +29,7 @@ from fastapi.templating import Jinja2Templates
 from pydantic import ValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from coffeedata import shots
+from coffeedata import beacon, shots
 from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
 from coffeedata.site import APP
@@ -49,7 +49,8 @@ from .auth import (
     hosted,
     missing_secrets,
 )
-from .store import Invalid, NotFound, Store, coffee_key
+from .limits import Windows
+from .store import Erasures, Invalid, NotFound, NotInTest, Store, Unavailable, coffee_key
 
 HERE = Path(__file__).parent
 STARTED = (
@@ -59,6 +60,9 @@ MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
 READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
 PHOTO_MISS_TTL = 300  # seconds an unknown photo id answers 404 without another lookup
 RECENTLY_FINISHED_DAYS = 30  # a correction can move a shot to a bag finished this recently
+# Coffee ratings and answers to the picks, together, per account per hour. The test needs about a dozen in all; a
+# record that was already stored (a resend) isn't counted. In memory, like the other limits (app/limits.py).
+RECS_PER_HOUR = 60
 log = logging.getLogger(__name__)
 
 
@@ -75,7 +79,7 @@ class Agree(Exception):
 IN_APP = re.compile(r"\b(Instagram)\b|(FBAN/|FBAV/|FB_IAB/|FBIOS)|(MessengerForiOS)")
 # Paths someone who still has to accept the new terms may write to.
 AGREE_FREE = {"/api/agree", "/api/signout", "/api/signout-everywhere"}
-FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes at least: a lookup plus a send fits well inside
+FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes: the lookup fits well inside; never the send
 NUDGE_COOKIE = "nudge-email"  # "Not now" on Today's add-an-email prompt, for 90 days (spec §5)
 
 
@@ -119,6 +123,7 @@ def create_app(
     photos_lake: Lake | None = None,
     labels_client: Any = None,
     mailer: mail.Mailer | None = None,
+    usage_collector: str | None = None,  # the collector's origin; None reads config/usage.toml, "" means none
 ) -> FastAPI:
     if auth is None:
         clean_secrets()
@@ -141,10 +146,13 @@ def create_app(
     # Links in emails are built on the app's fixed address, never the request's Host header (OWASP Forgot Password,
     # "Host Header Injection").
     app_url = (os.environ.get("APP_URL") or APP).rstrip("/")
-    # Emails go out inside the request (review H1): Cloud Run gives an instance CPU only while it serves a request
-    # (cpu_idle), so work left for after the reply could stall until the next request, or be lost when the instance
-    # stops. Where a reply mustn't say whether an email went (forgot, and an address verified on another account),
-    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad).
+    # Emails go out inside the request (review H1), with one exception: Cloud Run gives an instance CPU only while
+    # it serves a request (cpu_idle), so work left for after the reply could stall until the next request, or be lost
+    # when the instance stops. The exception is forgot's reset link. Its reply mustn't say whether a link went, so
+    # the send starts during the reply's fixed floor but the reply never waits for it (mail.later); a send slower
+    # than the floor runs on after the reply and can arrive late or be lost, and the person can ask again. The other
+    # place a reply mustn't say so (an address verified on another account) waits about as long as a send instead
+    # (mail.pad).
     app.state.forgot_floor = FORGOT_FLOOR
     app.state.mailer = mailer
     assets = web.Assets()
@@ -154,6 +162,10 @@ def create_app(
     templates.env.globals.update(site=site_links())
     templates.env.globals.update(rules=rules.for_page())  # the sign-up rules, for the page script (rules.py)
     templates.env.globals.update(email_on=email_on)
+    templates.env.filters["referral"] = beacon.with_referral  # utm_source=registry.coffee on links to a store
+    # The usage collector (config/usage.toml): app.js counts only when it has an address, and the CSP allows it.
+    collector = beacon.collector_url() if usage_collector is None else usage_collector or None
+    templates.env.globals.update(usage_url=beacon.events_url(collector))
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
@@ -166,7 +178,9 @@ def create_app(
             return page(request, "error.html", status=500, code=500)
         return JSONResponse({"detail": "Something went wrong on the server."}, 500)
 
-    app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error))  # type: ignore[arg-type]
+    renew = sessions.set_cookie if sessions else None
+    policy = web.csp(collector)
+    app.middleware("http")(web.middleware(renew, COOKIE, on_error, policy))  # type: ignore[arg-type]
     app.middleware("http")(logs.middleware)  # it sees the final status, error pages included
     app.add_middleware(web.RejectProbes)  # outermost: scanner paths stop here, unlogged
     hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0)
@@ -609,9 +623,10 @@ def create_app(
     @app.post("/api/forgot", dependencies=[Depends(anyone)])
     async def post_forgot(body: dict, request: Request) -> dict:
         """A username or an email. One reply for an account with a verified email and for no account at all; an
-        account with no verified email is told so on the form (owner decision; see Accounts.forgot). The link is
-        sent inside the request (review H1), and every answer that gets past the limits is held to the same floor
-        (FORGOT_FLOOR), so those alike replies take the same time unless sending runs past it. The floor is an
+        account with no verified email is told so on the form (owner decision; see Accounts.forgot). Every answer
+        that gets past the limits is held to the same floor (FORGOT_FLOOR), counted from the lookup alone. The
+        link's send starts during the floor, while the request still has CPU (review H1), but the reply never waits
+        for it (mail.later): however slow or failed the send, the reply's time doesn't change. The floor is an
         async sleep and the work runs in the thread pool, so a burst of requests holds no worker thread while it
         waits (final review N1). An answer refused by a limit comes back at once, with the same words."""
         s = email_only()
@@ -626,7 +641,7 @@ def create_app(
             return {"ok": True}
         try:
             if answer == "send" and acct is not None:
-                await run_in_threadpool(send_reset, acct.user_id)
+                mail.later("reset", acct.user_id, send_reset)  # the reply never waits for the send
         finally:
             await asyncio.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
         if answer == "no_email":
@@ -1215,6 +1230,12 @@ def create_app(
             raise HTTPException(404, "not found") from None
         except Invalid as e:
             raise HTTPException(422, str(e)) from None
+        except Unavailable as e:
+            raise HTTPException(503, str(e)) from None
+        except NotInTest:
+            raise HTTPException(
+                409, "Your test answers were deleted. Join the “Your next bag” test again to take part."
+            ) from None
 
     @app.post("/api/shots")
     def post_shot(body: dict, me: OutboxWriter) -> dict:
@@ -1232,6 +1253,68 @@ def create_app(
     @app.post("/api/equipment")
     def post_equipment(body: dict, me: OutboxWriter) -> dict:
         return {"equipment_id": run(store.save_equipment, me.user_id, body).equipment_id}
+
+    # --- the "Your next bag" recommendation test: coffee ratings and answers to the picks -----------------------
+
+    rec_windows = Windows()
+    if sessions is not None:  # erasures live in the users dataset, beside the consents they're compared with
+        store.use_erasures(Erasures(sessions.accounts.lake), sessions.accounts.experiment_since)
+
+    def in_test(me: User) -> None:
+        """Ratings and answers are kept only for members who joined the test (an `experiment` consent). Without
+        accounts (local development) there's no one else to ask."""
+        if sessions is not None and not sessions.accounts.experiment(me.user_id):
+            raise HTTPException(409, "Join the “Your next bag” test first. Nothing was saved.")
+
+    def counted(me: User, fn: Any, *args: Any) -> tuple[Any, bool]:
+        """Run a write under the per-account limit. Over it: 429, which the phone's outbox keeps and sends again.
+        A refusal (4xx) counts, so made-up coffees can't cost unlimited catalog reads; a resend that wrote nothing
+        and our own failures (5xx, try again) don't."""
+        key, at = f"recs:{me.user_id}", time.monotonic()
+        if not rec_windows.take({key: (RECS_PER_HOUR, 3600)}, at):
+            raise HTTPException(
+                429, "Too many saves for now. They’re kept on this phone and sent again later."
+            )
+        try:
+            item, written = run(fn, me.user_id, *args)
+        except HTTPException as e:
+            if e.status_code >= 500:
+                rec_windows.refund(key, at)
+            raise
+        except BaseException:
+            rec_windows.refund(key, at)
+            raise
+        if not written:
+            rec_windows.refund(key, at)
+        return item, written
+
+    @app.post("/api/experiment")
+    def post_experiment(body: dict, me: Writer) -> dict:
+        """Join or leave the test. Leaving stops new ratings and answers; deleting them is a deletion request."""
+        s = accounts_only()
+        if not isinstance(body.get("experiment"), bool):
+            raise HTTPException(422, "experiment must be true or false")
+        # A joining after an erasure is recorded after it; leaving needs no read, so it never waits on one (S9).
+        erased = run(store.erased_at, me.user_id) if body["experiment"] else None
+        s.accounts.set_experiment(me.user_id, body["experiment"], after=erased)
+        return {"experiment": body["experiment"]}
+
+    @app.post("/api/ratings")
+    def post_rating(body: dict, me: OutboxWriter) -> dict:
+        in_test(me)
+        rating, written = counted(me, store.save_rating, body)
+        return {"rating_id": rating.rating_id, "written": written}
+
+    @app.post("/api/ratings/{rating_id}/retract")
+    def retract_rating(rating_id: str, me: OutboxWriter) -> dict:
+        # Undo works after leaving the test too: it only takes a rating back.
+        return {"rating_id": rating_id, "written": run(store.retract_rating, me.user_id, rating_id)}
+
+    @app.post("/api/rec-responses")
+    def post_rec_response(body: dict, me: OutboxWriter) -> dict:
+        in_test(me)
+        item, written = counted(me, store.save_rec_response, body)
+        return {"slate_id": item.slate_id, "coffee_id": item.coffee_id, "written": written}
 
     photo_lake = photos_lake or Lake.photos()
     reads_today: dict[

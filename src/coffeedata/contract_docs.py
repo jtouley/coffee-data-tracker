@@ -11,6 +11,9 @@ TABLES: dict[str, str] = {
     "run_manifests": "What an ingest set out to fetch, written before its first request: one row per roaster.",
     "job_manifests": "The control plane: one row when a job starts and one when it ends, per connector and week.",
     "enrichments": "Claude's extracted attributes per product description (llm rows; older lakes also hold rules rows).",
+    "usage_events": "One anonymous search, filter, click-out or page-view event from registry.coffee or "
+    "app.registry.coffee, as the collector accepted it: private, append-only, never published. No identifier of a "
+    "person, browser, device, session or page load; no full IP, user agent, cookie, or referrer path or query.",
 }
 
 _RUN = "The weekly run (the Monday of its ISO week)."
@@ -64,9 +67,11 @@ COLUMNS: dict[str, dict[str, str]] = {
         "rate_limited": "429 responses.",
         "duration_s": "How long the attempt took.",
         "code_version": "The code that made it (git sha).",
-        "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0) and egress IP.",
+        "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0), egress IP, and the robots.txt copy it was sent under (robots: live or cached, robots_age_s; from raw 1.7.0).",
         "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
         "crawl_delays": "Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied; null when none asked, and before raw 1.5.0.",
+        "transport_errors": "Each request that got no HTTP response (the first 20): host, path, whether it was robots.txt, the phase it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, connect, read_timeout, read, protocol...), the exception's class and its innermost cause's, its message (200 characters) and the egress IP; null when none, and before raw 1.7.0.",
+        "robots": "The robots.txt each host's requests went by: live (fetched in this job; its time, HTTP status and, on the fetch that fetched it, a 2xx's body up to 500 KiB) or cached (a stored live copy at most 30 days old, used because the live file was unreachable: its time, status and age in seconds); null before raw 1.7.0.",
     },
     "run_manifests": {
         "run_date": _RUN,
@@ -123,6 +128,44 @@ COLUMNS: dict[str, dict[str, str]] = {
         "tasting_notes": "The roaster's tasting notes.",
         "is_blend": "A blend.",
         "is_decaf": "Decaffeinated.",
+    },
+    "usage_events": {
+        "event_id": "A random version-4 UUID the page makes per event, or null when it sent none (the collector "
+        "never makes one up); only for dropping a retried duplicate, never a visitor, session or page-load id.",
+        "received_at": "When the collector received it (UTC), truncated to the hour.",
+        "event": "page_view, search (results settled), filter_state (filters settled) or click_out (a link to a "
+        "roaster's or coffee's store).",
+        "surface": "Where it happened: a site page (landing, catalog, privacy, terms, bot) or the app (app_search: the "
+        "bag page's catalog search; app_coffee: a coffee page's Shop link).",
+        "release": "The catalog build the page was showing (its build id); null in the app.",
+        "device": "phone or desktop, as the page judged it from its width.",
+        "query": "The search text as typed, capped at 100 characters; not scrubbed. A dbt detector counts any that "
+        "look like an email, phone or card number and alerts on the count, never the text.",
+        "cities": "Catalog cities the page's parser read in the search text (no '@' or runs of 7+ digits).",
+        "states": "Catalog states the page's parser read in the search text, as two-letter codes.",
+        "origin": "The Origin filter (a country), or null for all (no '@' or runs of 7+ digits).",
+        "process": "The Process filter, or null for all (no '@' or runs of 7+ digits).",
+        "state": "The State filter (the roaster's state, a two-letter code), or null for all.",
+        "in_stock": "The In stock filter.",
+        "sort": "The Sort select: roaster, asc or desc (price per 100 g).",
+        "results_n": "Coffees shown for the search and filters.",
+        "zero_results": "Whether the search and filters found nothing.",
+        "roaster_id": "A click_out's roaster (its normalized domain, the catalog's roaster id), as the page sent it; "
+        "checked against the release in dbt.",
+        "coffee_id": "A click_out's coffee, if the link was a coffee's: <roaster_id>:<the store's product id>.",
+        "rank": "A click_out's position in the result list, from 1; null off a result list.",
+        "source": "On a page load's first event only: utm (it had utm_* tags), referrer, direct or internal (one of "
+        "our own hosts); null on every later event.",
+        "referrer_domain": "The referring site's host name only (never its path or query); null unless source is "
+        "referrer, or when the referrer had no usable host name.",
+        "utm_source": "The landing URL's utm_source (lower-case, at most 40 of a-z 0-9 . _ -).",
+        "utm_medium": "The landing URL's utm_medium, same rules.",
+        "utm_campaign": "The landing URL's utm_campaign, same rules.",
+        "ip_prefix": "The caller's IP masked at collection, before anything was written: IPv4 /24, IPv6 /40, as a "
+        "network (203.0.113.0/24). Personal data: used only to derive country, region and city in dbt "
+        "(int_usage_location) and for nothing else. The full IP is never stored or logged.",
+        "bot": "A known bot's user agent, no user agent, or navigator.webdriver: excluded in dbt. The user agent "
+        "itself is never kept.",
     },
 }
 
@@ -186,5 +229,22 @@ QUALITY: dict[str, list[dict]] = {
          "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "dim_coffee",
                                               "columns": ["process", "roast_level"], "test": "accepted_values"},
          "enforced_by": "dbt dim_coffee accepted_values"},
+    ],
+    "usage": [
+        {"id": "writer_columns", "tables": ["usage_events"], "dimension": "conformity", "severity": "error",
+         "rule": "the collector writes exactly the contract's columns, and its coded columns only the contract's values",
+         "engine": "pytest",
+         "implementation": "tests/test_usage_collector.py::test_rows_follow_the_usage_contract"},
+        {"id": "ip_prefix_is_masked", "tables": ["usage_events"], "dimension": "conformity", "severity": "error",
+         "rule": "ip_prefix is an IPv4 /24 or IPv6 /40 network, never a full address, and no other column holds one",
+         "engine": "pytest",
+         "implementation": "tests/test_usage_collector.py::test_no_row_can_hold_a_full_address"},
+        {"id": "query_capped", "tables": ["usage_events"], "dimension": "conformity", "severity": "error",
+         "rule": "query is at most 100 characters",
+         "engine": "pytest", "implementation": "tests/test_usage_collector.py::test_query_is_kept_as_typed_and_capped"},
+        {"id": "no_identifier", "tables": ["usage_events"], "dimension": "conformity", "severity": "error",
+         "rule": "nothing written or logged holds the full IP, a cookie or the user agent",
+         "engine": "pytest",
+         "implementation": "tests/test_usage_collector.py::test_canary_leaves_no_ip_or_cookie_in_the_lake_or_logs"},
     ],
 }  # fmt: skip

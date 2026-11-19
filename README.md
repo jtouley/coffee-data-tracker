@@ -280,7 +280,7 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them, unless the variable `ALLOW_RULES_ONLY` is `1` (a rules-only catalog, for a fork without Claude). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them (a rules-only catalog is for a local lake only; on a remote lake it is refused). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
@@ -556,8 +556,12 @@ old one, and writes a description-only change at the same version.
   sites low. Requests identify as `RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)`;
   [registry.coffee/bot](https://registry.coffee/bot) says what it crawls and how to opt out.
 - `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
-  without its rules: if `robots.txt` answers 429, 430 or 5xx, or can't be fetched at all, even after retries, the
-  site is skipped and asked again 15 minutes later, so a site whose `robots.txt` never answers is never crawled.
+  without its rules: if `robots.txt` answers 429, 430 or 503 (a pause), a challenge, or (with no stored copy, below)
+  another 5xx or nothing at all, even after retries, the site is skipped and asked again 15 minutes later, so a site
+  whose `robots.txt` never answers is never crawled. When `robots.txt` is unreachable (no response, or a 5xx that
+  isn't a pause) and we stored the site's own answer within the last 30 days, that copy's rules are followed exactly
+  (RFC 9309 2.4 allows a cached copy); older or none, nothing is fetched. Every fetch row records which copy was
+  used (`fetches.robots`: live, or cached with its age).
   Requests to a host, robots.txt, catalog fetches and platform probes alike, are at least 1 second apart.
 - robots.txt is read as RFC 9309 says, by our own matcher (`http.RobotsRules`): the groups for `RegistryCoffeeBot`
   apply, or the `*` group when none names it (product-token matching: case-insensitive, the exact token), and any

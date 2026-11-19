@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import duckdb
 import pytest
 
 from coffeedata import registry
@@ -220,3 +221,33 @@ def test_an_alias_is_never_crawled():
     from coffeedata import ingest
 
     assert "alias" not in ingest.INGESTABLE
+
+
+@pytest.mark.parametrize(
+    "sources, roaster_open, record_open",
+    [
+        ("overture", True, True),
+        ("overture-2026-09-17.0", True, True),
+        ("curated", True, True),
+        ("manual", True, True),
+        ("curated+overture", True, False),
+        # open only through its overture part: as a record's source it is not open (stg_registry_records)
+        ("overture+osm", True, False),
+        ("osm+overture-2026-09-17.0", True, False),
+        ("osm", False, False),
+        # a name that only starts like an open source is not one (#90)
+        ("manual-osm-import", False, False),
+        ("curated-from-osm", False, False),
+        ("osm+manual-osm-import", False, False),
+        ("xmanual", False, False),
+        ("", False, False),
+        (None, False, False),
+    ],
+)
+def test_open_sources_match_whole_names(sources, roaster_open, record_open):
+    """macros/roaster_alias.sql: is_open_source (a roaster's sources, joined with +: public_roaster's rule and
+    stg_registry's) and is_open_record_source (one registry record's source) match whole source names only."""
+    m = registry.alias_macros()
+    con = duckdb.connect()
+    got = con.execute(f"select {m.is_open_source('?')}, {m.is_open_record_source('?')}", [sources, sources])
+    assert got.fetchone() == (roaster_open, record_open)

@@ -53,9 +53,11 @@ jobs:
       - name: Check the Terraform
         working-directory: src/terraform
         run: |
-          terraform fmt -check
+          terraform fmt -check -recursive
           terraform init -backend=false -input=false
           terraform validate
+          terraform -chdir=bootstrap init -backend=false -input=false
+          terraform -chdir=bootstrap validate
 
   deploy:
     # A green ci run on a push to main in this repository (a fork's pull request from its own branch named main
@@ -150,6 +152,45 @@ jobs:
           elif [ "$latest" != "100" ]; then
             echo "::warning::$SERVICE's traffic is pinned (${latest}% to the newest revision), so this deploy serves no one. After a rollback, move it back: RUNNING.md, Rolling back."
           fi
+      # The usage collector runs the app image ci.tfvars pins (usage_image, src/terraform/usage.tf); Terraform
+      # deploys it, not this workflow. Tag that digest `pinned-usage-<12 hex>` so the registry's cleanup (keep the
+      # pinned* tags, artifact_registry.tf) never deletes the image the collector's next cold start needs. Creating
+      # the tag is within the deploy account's registry writer role (moving one isn't: that needs tags.delete); it
+      # changes no service.
+      - name: Keep the usage collector's pinned image
+        if: steps.tip.outputs.current == 'true'
+        env:
+          IMAGE: ${{ vars.GCP_IMAGE }}
+        run: |
+          usage=$(sed -n 's/^usage_image *= *"\(.*\)"$/\1/p' src/terraform/ci.tfvars)
+          if [ -z "$usage" ]; then
+            echo "usage_image isn't pinned in ci.tfvars: the collector runs Google's sample image. Nothing to keep."
+            exit 0
+          fi
+          if ! [[ "$usage" =~ ^"$IMAGE"@sha256:([0-9a-f]{64})$ ]]; then
+            echo "::error::ci.tfvars' usage_image isn't $IMAGE pinned by digest."
+            exit 1
+          fi
+          digest="sha256:${BASH_REMATCH[1]}"
+          tag="pinned-usage-${BASH_REMATCH[1]:0:12}"
+          # Idempotent: a later deploy finds the tag already on this digest. Moving or re-adding an existing tag needs
+          # artifactregistry.tags.delete, which the deploy account doesn't hold (and shouldn't). Only "not found" means
+          # the tag is missing; any other describe error stops the run and shows its own message.
+          if current=$(gcloud artifacts docker images describe "$IMAGE:$tag" \
+              --format='value(image_summary.digest)' --quiet 2>describe.err); then
+            if [ "$current" = "$digest" ]; then
+              echo "$tag already points at $digest: nothing to do."
+            else
+              echo "::error::$tag points at $current, not $digest. Moving a tag needs a person (the deploy account can't delete tags)."
+              exit 1
+            fi
+          elif grep -qiE 'not found|NOT_FOUND' describe.err; then
+            gcloud artifacts docker tags add "$usage" "$IMAGE:$tag" --quiet
+          else
+            cat describe.err >&2
+            echo "::error::Couldn't read $tag's digest (above). Not tagging blind."
+            exit 1
+          fi
 
   # The admin (admin.registry.coffee) runs the same image as its own service: the same digest, after the app.
   deploy-admin:
@@ -198,3 +239,115 @@ jobs:
         env:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
         run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
+
+  # The ingestion jobs' image (ingest.Dockerfile), built from the same commit and under the same conditions as the
+  # app's: it runs only when the deploy job pushed the app's image for this commit, so only for main's tip once ci
+  # passed (or a forced manual run), and never for a pull request or a fork. It doesn't wait for the app's rollout
+  # to succeed: the image depends on the commit, not on the app (`!cancelled()`, as for `attest`). It still runs
+  # after the deploy job, not beside it, because that job holds the checks it relies on (is this main's tip, did ci
+  # pass); a second copy of them here could drift. It is pushed beside the app's image, in the
+  # same repository (<repository>/ingest, where the deploy identity can already push), tagged with the commit.
+  # **It deploys nothing.** The Cloud Run jobs run the digest Terraform pins (`ingest_image`), and the owner applies
+  # that by hand (docs/ingestion/RUNBOOK.md §1 and §4, which read this image's digest by its commit tag). No moving
+  # tag such as `latest` is pushed. A failure here fails the run but changes neither the app nor the admin.
+  # It signs the image's build provenance itself, as its last step: it already holds `id-token: write` to push, so
+  # a separate job for that would only be one more job able to sign in to Google Cloud (see `attest`, below). If
+  # that step fails the image is in the registry without provenance, and RUNBOOK.md §1's script refuses it:
+  # "Re-run failed jobs" builds, pushes and signs it again.
+  ingest-image:
+    needs: deploy
+    if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write  # for Workload Identity Federation, and the signing certificate (Sigstore)
+      attestations: write  # store the attestation
+    env:
+      REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}  # the commit the deploy job built
+      APP_IMAGE: ${{ vars.GCP_IMAGE }}  # <repository>/app
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ env.HEAD_SHA }}
+          persist-credentials: false
+      # Before any sign-in: build the image and run it, with no network and no secrets. This catches an image
+      # whose CLI can't start, whose lockfile lost a package the jobs import, or that lacks DuckDB's httpfs; it
+      # doesn't prove a crawl or a build works. BuildKit, so ingest.Dockerfile.dockerignore applies.
+      # --provenance=false: one plain image per push, not an index with BuildKit's own attestation beside it, so
+      # the registry's "5 most recent" counts commits. The provenance that counts is the signed one below.
+      - name: Build, and check the image starts
+        env:
+          DOCKER_BUILDKIT: "1"
+        run: |
+          image="${APP_IMAGE%/*}/ingest"
+          docker build -f ingest.Dockerfile --provenance=false --build-arg GIT_SHA="$HEAD_SHA" \
+            -t "$image:$HEAD_SHA" .
+          docker run --rm --network none "$image:$HEAD_SHA" --help > /dev/null  # the image's default command
+          docker run --rm --network none "$image:$HEAD_SHA" build --help > /dev/null
+          docker run --rm --network none --entrypoint python "$image:$HEAD_SHA" -c \
+            'import dbt, duckdb, coffeedata.quality; duckdb.sql("LOAD httpfs")'
+          echo "IMAGE=$image" >> "$GITHUB_ENV"
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SA }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      - name: Push
+        id: push
+        run: |
+          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+          docker push "$IMAGE:$HEAD_SHA"
+          # The registry's digest for what was just pushed: the tag can move, the digest can't.
+          ref=$(docker inspect --format '{{join .RepoDigests "\n"}}' "$IMAGE:$HEAD_SHA" |
+            awk -v p="$IMAGE@sha256:" 'index($0, p) == 1 {print; exit}')
+          if ! [[ "$ref" =~ @sha256:[0-9a-f]{64}$ ]]; then
+            echo "::error::No registry digest for $IMAGE:$HEAD_SHA after the push."
+            exit 1
+          fi
+          echo "name=$IMAGE" >> "$GITHUB_OUTPUT"
+          echo "digest=${ref#*@}" >> "$GITHUB_OUTPUT"
+          echo "Pushed \`$ref\` (not deployed: pin it in Terraform, RUNBOOK.md §4)." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6  # v4.2.2
+        with:  # no predicate: SLSA build provenance
+          subject-name: ${{ steps.push.outputs.name }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+
+  # Signed build provenance (SLSA) for the app's image: which workflow run and commit made the digest the deploy job
+  # pushed. It is stored with the repository's attestations, not in the registry; check an image with
+  #   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker
+  # - A job of its own, beside deploy-admin, so it can't hold back the app's or the admin's deploy. It can turn the
+  #   run red after production has been updated (Sigstore or GitHub's attestations API down): "Re-run failed jobs"
+  #   signs the same digest again and deploys nothing (docs/app/RUNNING.md, "A red run after a deploy").
+  # - It runs whenever the deploy job pushed an image, even if the deploy step then failed, so every pushed image
+  #   has provenance (one may be deployed by hand later).
+  # - `id-token: write` is for the signing certificate. This job never signs in to Google Cloud, but nothing stops
+  #   it: the Workload Identity condition (src/terraform/deploy.tf) accepts a token from any job of this workflow
+  #   on main, so this job, and the action it runs, could act as the deploy account. Moving it to its own workflow
+  #   file would close that, but then the workflow that signs isn't the one that built the image. The fix that
+  #   keeps both is a Terraform change the owner applies (RUNNING.md, same section).
+  attest:
+    needs: deploy
+    if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      id-token: write  # the signing certificate (Sigstore)
+      attestations: write  # store the attestation
+    env:
+      IMAGE_REF: ${{ needs.deploy.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>
+    steps:
+      - name: Split the image reference
+        id: ref
+        run: |
+          if ! [[ "$IMAGE_REF" =~ ^[^@]+@sha256:[0-9a-f]{64}$ ]]; then
+            echo "::error::Not an image reference with a digest: $IMAGE_REF"
+            exit 1
+          fi
+          echo "name=${IMAGE_REF%@*}" >> "$GITHUB_OUTPUT"
+          echo "digest=${IMAGE_REF#*@}" >> "$GITHUB_OUTPUT"
+      - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6  # v4.2.2
+        with:  # no predicate: SLSA build provenance
+          subject-name: ${{ steps.ref.outputs.name }}
+          subject-digest: ${{ steps.ref.outputs.digest }}

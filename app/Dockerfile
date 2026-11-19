@@ -1,9 +1,12 @@
 # The app's image, for any container host (Cloud Run today). Build from the repository root:
 #   docker build -f app/Dockerfile .
 # Nothing in it is specific to one host: the port comes from $PORT, secrets from the environment.
-FROM python:3.12-slim
+# uv, as a named stage: Dependabot updates a pinned FROM, not a COPY --from=<image>.
+FROM ghcr.io/astral-sh/uv:0.11.32@sha256:df4cae8f3a96d175e2e5f992e597550000edbe78fdc2594d5cd8de1a217f504c AS uv
 
-COPY --from=ghcr.io/astral-sh/uv:0.11.32 /uv /usr/local/bin/uv
+FROM python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+
+COPY --from=uv /uv /usr/local/bin/uv
 
 RUN useradd -m -u 1000 user
 USER user
@@ -26,9 +29,13 @@ RUN uv sync --locked --no-dev --extra app
 # DuckDB's httpfs extension (reading the lake over hf://), installed now rather than downloaded on every cold start.
 RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user app ./app
+# config/usage.toml: the usage collector's address, for the CSP and the page script (coffeedata.beacon).
+COPY --chown=user config ./config
 
 EXPOSE 8080
 # One process: accounts, the shot cache and the sign-in limits live in memory (so the host runs one instance).
 # No --proxy-headers: the app takes the phone's address for its sign-in limits from the X-Forwarded-For entry the
 # host's front end appended (COFFEEDATA_PROXY_HOPS from the right), never from what the client sent.
-CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port \"$PORT\" --no-proxy-headers"]
+# COFFEEDATA_APP picks the module: the app (app.main) unless the service sets it, as the usage collector does
+# (app.usage, src/terraform/usage.tf).
+CMD ["sh", "-c", "exec uvicorn \"${COFFEEDATA_APP:-app.main}:app\" --host 0.0.0.0 --port \"$PORT\" --no-proxy-headers"]

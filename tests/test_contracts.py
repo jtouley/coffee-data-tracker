@@ -78,11 +78,23 @@ def test_dbt_enforces_each_table_as_contracted(obj):
                 if isinstance(t, dict) and "accepted_values" in t
             )
             assert sorted(accepted["arguments"]["values"]) == sorted(e["value"] for e in p["enum"])
-    if len(keys) > 1:  # a composite key: one model-level unique test over all its columns
-        grain = [
-            t["unique"]["arguments"]["column_name"] for t in model.get("data_tests") or [] if "unique" in t
-        ]
-        assert any(all(k["name"] in g for k in keys) for g in grain), "composite key has no unique test"
+    if (
+        len(keys) > 1
+    ):  # a composite key: the grain test (dbt/tests/generic/grain.sql) over exactly its columns
+        grain = [t["grain"]["arguments"] for t in model.get("data_tests") or [] if "grain" in t]
+        assert [sorted(g["columns"]) for g in grain] == [sorted(k["name"] for k in keys)], "composite key"
+        assert not any(g.get("nullable") for g in grain), "a key column of a public table is never null"
+
+
+@pytest.mark.parametrize("obj", ODCS["schema"], ids=lambda o: o["name"])
+def test_dbt_describes_each_table_in_the_contracts_words(obj):
+    """dbt's descriptions of a public table and its columns (dbt docs, the manifest) are the contract's, word for
+    word, so the two can't drift: change the contract first, then copy the text into dbt/models/schema.yml."""
+    model = DBT_MODELS[obj["name"]]
+    assert model["description"] == obj["description"]
+    assert {c["name"]: c.get("description") for c in model["columns"]} == {
+        p["name"]: p["description"] for p in obj["properties"]
+    }
 
 
 def test_quality_rules_name_dbt_tests_that_exist():

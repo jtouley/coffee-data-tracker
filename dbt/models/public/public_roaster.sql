@@ -2,7 +2,9 @@
 --   * not opted out
 --   * has contributed at least one coffee (the registry also holds roasters never fetched)
 --   * known from a source other than OpenStreetMap (Overture, the curated seed, or a manual add). Roasters known
---     *only* from OpenStreetMap (ODbL) are excluded. The filter is per roaster, not per field (#90).
+--     *only* from OpenStreetMap (ODbL) are excluded. The filter is per roaster; per field, stg_registry takes a
+--     roaster's name, city and state from those open sources only, never from OpenStreetMap (#90), and
+--     tests/public_values_have_open_provenance.sql holds the line.
 --   * in the US: the dataset covers US roasters (contracts/public-catalog.odcs.yaml, coffee-data.odps.yaml). A
 --     store outside it (stg_registry.country, a hand-checked seed correction) stays in the lake and the internal
 --     marts, never in the public tables, which all follow this one (public_coffee joins it).

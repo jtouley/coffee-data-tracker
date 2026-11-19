@@ -1,0 +1,16 @@
+coffeedata_usage:
+  target: usage
+  outputs:
+    usage:
+      type: duckdb
+      # No default: only `coffeedata usage-build` (usage_build.build) sets it, to build/usage.duckdb; the project's
+      # on-run-start refuses any other path (macros/private_target.sql).
+      path: "{{ env_var('COFFEEDATA_USAGE_DB') }}"
+      threads: 2
+      extensions: [httpfs]
+      # Every build in UTC: received_at's date and week must not depend on the machine's zone.
+      settings:
+        TimeZone: UTC
+      secrets:
+        - type: huggingface
+          token: "{{ env_var('HF_TOKEN', 'none') }}"

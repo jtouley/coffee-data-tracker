@@ -6,8 +6,11 @@ raw:
   1.4.0: a3b629543dcba7eb
   1.5.0: 1ab99e0abd460ae3
   1.6.0: d58e68611eceb3f6
+  1.7.0: 3437ab2505ea2ba8
 manifest:
   1.1.0: d775e9935559e256
   1.2.0: d775e9935559e256
 enrichment:
   1.1.0: 476da22198cd35e9
+usage:
+  1.0.0: 68296dd4374bc721

@@ -13,7 +13,7 @@ It runs on free tiers. The only fixed cost is the domain.
 How it's locked down:
 
 - **Workflows.** Actions are pinned to commit SHAs, and Dependabot (`.github/dependabot.yml`) opens a monthly PR to
-  update them and the lockfile. The weekly job, which holds the secrets and reads third-party sites, can only read
+  update them and the lockfile, and a weekly one for the Dockerfiles' base images, which are pinned by digest. The weekly job, which holds the secrets and reads third-party sites, can only read
   the repo; only the deploy job can publish Pages. Checkouts don't keep the git token. The issue-form workflow only
   acts on the owner's issues and passes issue text through files and environment variables, never the shell.
 - **The site.** It's static, with no server, cookies or third-party scripts. Each page has a Content-Security-Policy

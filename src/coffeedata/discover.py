@@ -347,6 +347,7 @@ def probe(
     on_batch: Callable[[list[dict]], object] | None = None,
     batch_size: int = PROBE_BATCH,
     flush_s: float = PROBE_FLUSH_S,
+    robots_copies: dict[str, dict] | None = None,
 ) -> list[dict]:
     """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten), one per roaster
     probed, in the order they finished.
@@ -364,16 +365,21 @@ def probe(
     def one(client: PoliteClient, domain: str) -> dict | None:
         if stop is not None and time.monotonic() >= stop:
             return None
-        res = _safe_probe(client, domain)
+        with client.track() as stats:
+            res = _safe_probe(client, domain)
         if res is None:
             return None
         now = datetime.now(UTC).replace(microsecond=0)
-        return {"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": domain, **res}
+        # the robots.txt it went by (a live answer is stored: ingest.robots_copies reads it for the crawl's fallback)
+        return {"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": domain, **res,
+                "robots": stats.robots or None}  # fmt: skip
 
     # Spaced like the catalog crawl (at least 1 s per host, or its robots.txt Crawl-delay), and robots.txt is read
     # and honoured first, as it is for every PoliteClient request.
     with (
-        PoliteClient(min_interval=1.0, timeout=12, retries=2, deadline_s=deadline_s) as client,
+        PoliteClient(
+            min_interval=1.0, timeout=12, retries=2, deadline_s=deadline_s, robots_copies=robots_copies
+        ) as client,
         ThreadPoolExecutor(workers) as ex,
     ):
         futures = [ex.submit(one, client, d) for d in domains]
