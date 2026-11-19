@@ -18,12 +18,20 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
-- Crawl recovery after the 2026-11-16 run: unreachable roasters are probed again on a 7/14/28-day backoff; requests
-  that got no HTTP response are recorded with their phase (`fetches.transport_errors`); an unreachable robots.txt
-  may be stood in for by the site's own copy from the last 30 days (`fetches.robots`, `probes.robots`); `shopify?`
-  storefronts are crawled by the Shopify job, and a generic store with Shopify's sitemap reads /products.json under
-  its own budget; a WooCommerce store whose robots.txt disallows the Store API is read from its sitemap and product
-  pages (`fetches.catalog_route`). Raw contract 1.7.0.
+- Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
+  `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
+  the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a
+  click out or when the page is hidden, by `fetch` without credentials to the collector's address in
+  `config/usage.toml` (the only new CSP origin, added only once that is set; until then nothing is sent); nothing is
+  stored in the browser, no id is made, and nothing is sent with Global Privacy Control or Do Not Track. Links out carry `utm_source=registry.coffee&utm_medium=referral` (`coffeedata/beacon.py`);
+  `catalog.json` keeps the roasters' links as they are. The privacy policy says what is counted.
+- Crawl recovery after the 2026-11-16 run: unreachable roasters are probed again on a 7/14/28-day backoff (failed
+  probes and failed crawl runs since the last ok probe both count); requests that got no HTTP response are recorded
+  with their phase (`fetches.transport_errors`); an unreachable robots.txt may be stood in for by the site's own
+  copy from the last 30 days (`fetches.robots`, `probes.robots`), followed exactly. Raw contract 1.7.0.
+- `shopify?` storefronts are crawled by the Shopify job, from /products.json (their pages when it isn't served); a
+  generic store whose sitemap index is Shopify's reads /products.json under its own budget (1 request/s, 4 at once);
+  the probe marks such a store `shopify?`. Recorded in `fetches.catalog_route`. Raw contract 1.8.0.
 
 - A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
   deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never
@@ -196,6 +204,20 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   summary by origin, is new.
 
 ### Fixed
+
+- **A release whose coffee-or-not verdicts weren't checked is never served (#181).** The 2026-11-09 weekly build ran an
+  image without a verdict model, its gate never ran, and it was served for a week. Now a build with no verdict model,
+  the gate off, or no passing `verdicts_cover_catalog` is recorded as failed. `serve`, `rollback` and `site --served`
+  refuse such a release unless a named rules-only override allows it, and the build record and serving log carry the
+  override. On a remote lake every form of the override is refused, and `weekly.yml` no longer passes one. A plain
+  `rollback` skips releases that can't be served. The build job's `classify` waits up to 45 minutes for the week's
+  verdicts. Build records gain `verdict_model`, `verdict_definition`, `configured_image`, `rules_only_override` and
+  `verdicts_in_flight`.
+- **A product reclassified as not coffee is no longer counted as delisted (#181).** `fct_price_event` now keeps only
+  coffees in `dim_coffee`, so such a product's events go with it instead of reading as a removal. This changes a
+  public figure: the site's weekly "delisted" count for the 2026-11-16 week drops by 358 (3,229 to 2,871), and for
+  2026-11-09 by 23 (2,583 to 2,560). Price changes are unchanged, and `public_price_event` was already filtered.
+  `fct_price_event`'s relationships test to `dim_coffee` is now an error.
 
 - **No published value comes from OpenStreetMap (#90).** `public_roaster` left out roasters known only from
   OpenStreetMap (ODbL), but `stg_registry` took a roaster's name, city and state from its newest registry row

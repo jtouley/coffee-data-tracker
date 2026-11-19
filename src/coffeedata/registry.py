@@ -175,6 +175,19 @@ recent as (
            min(run_date) filter (where ok and products > 0) as first_catalog_run
     from runs group by roaster_id
 ),
+-- Crawl runs that failed since the roaster's last ok probe (since the seed's probe date when the lake has none): a
+-- store whose home page answers the probe but whose catalog keeps failing or refusing us backs off too.
+failed_runs as (
+    select r.roaster_id, count(*) as failed_runs
+    from roasters r
+    join runs ru using (roaster_id)
+    left join last_good_probe g using (roaster_id)
+    where not ru.ok
+      and case when g.probed_at is not null then ru.last_at > g.probed_at
+               when r.seed_probed is not null then ru.run_date > r.seed_probed
+               else true end
+    group by r.roaster_id
+),
 last_ok as (
     select * from fetches where status = 'ok'
     qualify row_number() over (partition by roaster_id order by fetched_at desc, batch_id desc) = 1
@@ -187,6 +200,7 @@ select
     coalesce(g.platform, r.seed_platform) as platform,
     coalesce(cast(lp.probed_at as date), r.seed_probed) as last_probed,
     coalesce(fp.failed_probes, 0) as failed_probes,
+    coalesce(fr.failed_runs, 0) as failed_runs,
     case
         when r.opted_out then 'opted_out'
         when rc.attempts >= {k} and rc.errors = rc.attempts
@@ -202,6 +216,7 @@ from roasters r
 left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join failed_probes fp using (roaster_id)
+left join failed_runs fr using (roaster_id)
 left join recent rc using (roaster_id)
 left join last_ok lo using (roaster_id)
 left join last_ok_coffees lc using (roaster_id)  -- registered by connect_for_state
@@ -214,7 +229,7 @@ canonical as (
 )
 select
     b.roaster_id, b.name, b.city, b.state, b.locations, b.opted_out, b.host, b.platform, b.last_probed,
-    b.failed_probes,
+    b.failed_probes, b.failed_runs,
     case when b.status <> 'opted_out' and c.canonical_roaster_id <> b.roaster_id then 'alias' else b.status end
         as status,
     c.canonical_roaster_id
@@ -310,8 +325,10 @@ class RoasterState:
     last_probed: str | None
     # the roaster_id its store is crawled and published under (itself unless status is alias); None where unknown
     canonical_roaster_id: str | None = None
-    # probes that failed since its last ok one (all, if none was): an unreachable roaster's re-probe backoff
+    # probes that failed since its last ok one (all, if none was), and crawl runs that failed since that probe (or
+    # the seed's): together, an unreachable roaster's re-probe backoff (cli.unreachable_backoff_days)
     failed_probes: int = 0
+    failed_runs: int = 0
 
 
 def current(
@@ -350,6 +367,7 @@ def _current(lake: Lake, seed: Path, dropped: frozenset[str] | set[str] = frozen
                 str(r["last_probed"]) if r["last_probed"] else None,
                 r["canonical_roaster_id"],
                 int(r["failed_probes"] or 0),
+                int(r["failed_runs"] or 0),
             )
         )
     return out

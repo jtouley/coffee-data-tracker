@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.7.0
+version: 1.8.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -471,9 +471,8 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: How the catalog was read when not by its adapter's own path, and why (a WooCommerce store whose robots.txt
-      disallows the Store API, read from its sitemap and product pages; a Shopify storefront the generic crawl read from
-      /products.json); null otherwise, and before raw 1.7.0.
+    description: 'How the catalog was read when not by its adapter''s own path, and why: for example from the store''s sitemap
+      and product pages instead of its platform''s API, or the other way round; null otherwise, and before raw 1.8.0.'
   quality:
   - id: fetch_status_values
     description: fetches.status is one of the contract's values.
@@ -639,4 +638,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 1ad444d0228f4536
 - property: docsFingerprint
-  value: 79a3fd7f4a14f661
+  value: 23836309c7887097

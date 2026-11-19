@@ -60,7 +60,7 @@ production.
 2. **Apply the `keep-pinned` cleanup policy, the same day as the merge**, from the merged main:
    ```sh
    cd src/terraform && rm -f keep.plan
-   terraform plan -target=google_artifact_registry_repository.app -out keep.plan
+   terraform plan -var-file=ci.tfvars -target=google_artifact_registry_repository.app -out keep.plan
    # 0 to add, 1 to change (google_artifact_registry_repository.app, in place: + cleanup_policies "keep-pinned"),
    # 0 to destroy. Anything else: stop.
    ```
@@ -201,7 +201,7 @@ repository variables, let the workflow build the image, then plan for real with 
 ```sh
 cd src/terraform
 terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
-terraform plan -var ingest_schedule_enabled=false -out ingest.plan
+terraform plan -var-file=ci.tfvars -var ingest_schedule_enabled=false -out ingest.plan
 ```
 
 **Expected plan in a fresh project: 41 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
@@ -268,7 +268,7 @@ job's `egress` is `default`, `shopify` or `woo_generic`.
 
 ```sh
 cd src/terraform
-terraform plan -out egress.plan
+terraform plan -var-file=ci.tfvars -out egress.plan
 ```
 
 **Expected plan: 3 to add, 2 to change, 0 to destroy.**
@@ -608,7 +608,7 @@ scheduled job.
    Plan, pinning every job to it while turning the schedule on:
    ```sh
    cd src/terraform && rm -f ingest.plan
-   terraform plan -var ingest_image="${PINNED:?not verified: stop}" -var ingest_schedule_enabled=true -out ingest.plan
+   terraform plan -var-file=ci.tfvars -var ingest_image="${PINNED:?not verified: stop}" -var ingest_schedule_enabled=true -out ingest.plan
    # 16 to add (google_cloud_scheduler_job.ingest), 12 to change (each job's image, to $PINNED), 0 to destroy
    ```
    Apply only a plan you just read, and check every job:
@@ -647,7 +647,7 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
 
 - **Stop the Cloud Run schedule** (the jobs and data stay):
   ```sh
-  cd src/terraform && terraform apply -var ingest_schedule_enabled=false
+  cd src/terraform && terraform apply -var-file=ci.tfvars -var ingest_schedule_enabled=false
   ```
   For an urgent stop of a single entry: `gcloud scheduler jobs pause registry-coffee-<entry> --location $REGION`.
 - **Run the old weekly pipeline from Actions** (its crawl is kept for one week):
@@ -803,7 +803,7 @@ release. If the publish is what failed, go to **f**.
 
    ```sh
    gcloud run jobs execute build --region $REGION --wait \
-     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+     --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK --accept-volume-change || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
@@ -844,7 +844,7 @@ every roaster it fetched. A past week's missing run doesn't need repair: merging
    ```sh
    gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
    gcloud run jobs execute build --region $REGION --wait \
-     --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+     --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -1003,7 +1003,7 @@ gcloud run jobs execute enrich-week --region $REGION --wait
 gcloud run jobs execute build --region $REGION --wait
 # or the same build told to judge $WEEK (the rebuild form other sections refer to):
 gcloud run jobs execute build --region $REGION --wait \
-  --args="rc=0; coffeedata classify || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
+  --args="rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build --run-date $WEEK || rc=1; coffeedata publish --message rebuild || rc=1; exit \$rc"
 ```
 
 **The override.** `COFFEEDATA_SKIP_PRECONDITION=<reason>` on one execution skips that job's check (for the build
@@ -1094,7 +1094,7 @@ alone (on the sealed set, 10.7% of the products the rules keep are not coffee, a
 Now three things stop that from happening silently:
 
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
-  which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
+  which. The build job keeps going (`rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
   so the `ingest job build failed` email arrives. Every step of that chain is the same: it runs whatever the steps
   before it did, and its own failure fails the execution. That includes the publish (#83): a publish that fails
@@ -1109,12 +1109,27 @@ Now three things stop that from happening silently:
   `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
   Claude's verdicts (<model> N); the rest by the rules`.
 - **`verdict_model` is required in Terraform**, with no empty default.
+- **A release whose verdicts weren't checked is never served.** The 2026-11-09 build ran an outdated image without
+  the model: its dbt vars had `verdict_model = ''`, `verdicts_cover_catalog` never ran, every test it had passed,
+  and it was served for a week. Now `record_build` fails a build with no verdict model, with the gate off, or without
+  a passing `verdicts_cover_catalog`, and `serve`, `rollback` and `coffeedata site --served` refuse such a release
+  (`quality.servable`, which also reads records written before this from their dbt vars). The only way through is a
+  named override, which the build record (`builds.rules_only_override`) or the serving log's reason carries:
+  `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` on the build, or `coffeedata rollback --to <build>
+  --allow-rules-only --reason "<why>"`, and only on a local lake: on a remote one every form is refused. Every build record also carries
+  `verdict_model`, `verdict_definition`, `configured_image` and `verdicts_in_flight`. `configured_image` is the image
+  Terraform configured the job with (`ingest_image`, passed as `COFFEEDATA_INGEST_IMAGE`), not proof of what ran: a
+  job changed outside Terraform still reports it, and an image older than the field (the 11-09 case) reports
+  nothing. What code ran is `git_sha`, stamped into the image when it is built (#124).
 
-**The expected share and its lag.** About 95%, not 100%. The build job's classify submits this week's new and
-changed product versions and doesn't wait for them, so they get verdicts at next week's build: 2.5% of listed
-coffees in the 2026-11-02 run (1,114 of 44,593). An `unsure` verdict is left to the rules too, about 3% on the
-validation set. 85% leaves room for a week with nearly 3x the usual new versions. To get this week's versions in
-before the build, run classify with a wait (`coffeedata classify --wait 60`) before rebuilding.
+**The expected share and its lag.** About 95%, not 100%. The build job's classify waits up to 45 minutes
+(`--wait 45`) for the batch it submits, so this week's new and changed versions are usually in this week's build.
+Past 45 minutes the build uses the verdicts stored so far and the rules for the versions still awaiting one; its log
+says `verdicts: N product versions still await Claude's verdict`, the build record counts them
+(`builds.verdicts_in_flight`), `verdicts_cover_catalog` still judges the share, and the next run collects the batch.
+Before the wait, 2.5% of listed coffees in the 2026-11-02 run (1,114 of 44,593) waited a week. An `unsure` verdict is
+left to the rules too, about 3% on the validation set. 85% leaves room for a week with nearly 3x the usual new
+versions. To get a late batch in before a rebuild, run classify with a longer wait (`coffeedata classify --wait 60`).
 
 **A failed classify** (the log says `Claude's verdicts are expected but can't run: no ...`): check
 `verdict_model` in `terraform.tfvars` and the job's env (`gcloud run jobs describe build --region $REGION
@@ -1152,10 +1167,12 @@ and last week's release stays served. That is the gate working: don't opt out ar
 4. Add the number of products whose `is_coffee` changed to the running total in `eval/sealed/README.md` (CLAUDE.md
    step 9).
 
-**Rules only on purpose** (a fork without Claude, a local lake, tests): `--allow-rules-only` on `classify`, `build`
-and `weekly`, or `COFFEEDATA_ALLOW_RULES_ONLY=1` (the `ALLOW_RULES_ONLY` repository variable for `weekly.yml`).
-`make` sets it for a local lake. Never set it on the Cloud Run jobs: a rules-only release keeps about four times the
-non-coffee.
+**Rules only on purpose** (a local lake, tests): `--allow-rules-only` on `classify`, `build` and `weekly`, or
+`COFFEEDATA_ALLOW_RULES_ONLY=1`. `make` sets it for a local lake. On a remote lake (any `://` URL: `hf://`, `s3://`)
+it is refused: `classify`, `build`, `weekly`, `serve`, `rollback` and `site --served` exit naming the override, and a
+build record that carries one is never served from there (`verdict.refuse_on_remote`). No job, workflow or Terraform
+sets it; `weekly.yml` no longer passes an `ALLOW_RULES_ONLY` variable. A rules-only release keeps about four times
+the non-coffee.
 
 ### 5.6 Verifying a release: rebuild it from raw and compare hashes
 
@@ -1338,7 +1355,7 @@ a GitHub triage issue per rule that breaches, read from the lake by a GitHub wor
 
 ```sh
 cd src/terraform
-terraform plan -out alerts.plan
+terraform plan -var-file=ci.tfvars -out alerts.plan
 terraform apply alerts.plan
 ```
 
@@ -1465,7 +1482,7 @@ never a different verdict or exit code).
 1. Once this PR's commit is on main, its ingest image is built by the deploy workflow: pin its digest in
    `ingest_image` (section 1, and section 4's pinning step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
    `COFFEEDATA_DQ_REFETCH` unset) only from it.
-2. `cd src/terraform && terraform plan -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
+2. `cd src/terraform && terraform plan -var-file=ci.tfvars -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
    `google_cloud_run_v2_job.ingest["fetch-health"]`, its invoker binding
    `google_cloud_run_v2_job_iam_member.scheduler["fetch-health"]`, the Scheduler entry
    `google_cloud_scheduler_job.ingest["fetch-health"]` (only with `ingest_schedule_enabled = true`), and the alert
@@ -1547,8 +1564,11 @@ A pull request that touches `src/terraform/**` (or the guard script, or the work
 applies anything, and the PR's plan is advisory: the plan that is applied is made again on main, by the apply
 workflow.
 
-Where CI's variables come from (your shell is unchanged: it still reads `terraform.tfvars`):
-- `src/terraform/ci.tfvars`, checked in, passed only by CI with `-var-file`: `verdict_model`.
+Where CI's variables come from (your shell still reads `terraform.tfvars`, and must also pass
+`-var-file=ci.tfvars` to any plan or apply by hand, as `scripts/tf_break_glass.sh` and `final-shell-run.sh` do):
+- `src/terraform/ci.tfvars`, checked in, passed with `-var-file` by every plan route, after `terraform.tfvars`:
+  `verdict_model`, and the usage collector's `usage_enabled`, `usage_token` and `usage_image`. Without it, a plan
+  proposes destroying the collector.
 - Repository **secrets** `TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL`: `billing_account` and `owner_email`.
 - Repository **variables**, holding what `terraform.tfvars` holds today: `TF_VAR_INGEST_IMAGE` and
   `TF_VAR_INGEST_SCHEDULE_ENABLED` (required), and `TF_VAR_EMAIL`, `TF_VAR_BUDGET_USD` and `TF_VAR_INGEST_JOB_MEMORY`

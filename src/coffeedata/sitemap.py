@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import logging
 import re
-from urllib.parse import urlparse
 
 import httpx
 
@@ -51,17 +50,6 @@ def _refusal(e: BaseException | None, r: httpx.Response | None = None) -> bool:
     return e is not None and bool(block_status(e) or challenged(e))
 
 
-def declared_sitemaps(client: PoliteClient, host: str) -> list[str]:
-    """The Sitemap URLs the host's robots.txt names on the host itself (http.RobotsRules.sitemaps), never another
-    host's: a store's own word for where its sitemap is. Its robots.txt is already read: this sends nothing."""
-    out = []
-    for u in client.robots_sitemaps(host):
-        p = urlparse(u)
-        if p.scheme in ("http", "https") and p.netloc.lower() == host.lower():
-            out.append(p._replace(scheme="https", fragment="").geturl())
-    return out
-
-
 def sitemap_urls(
     client: PoliteClient, host: str, unread: list[str] | None = None, index: list[str] | None = None
 ) -> list[str]:
@@ -75,18 +63,10 @@ def sitemap_urls(
     nothing says it held no products, so its products are kept listed (partial), never read as delisted. A pause or a
     challenge (_refusal) still raises: the store is deferred or refused, as for any page.
 
-    When /sitemap.xml is a 404, the sitemap the store's robots.txt names on its own host (declared_sitemaps: Yoast's
-    /sitemap_index.xml) is read instead, the first that answers 200. index: filled with a sitemap index's sub-sitemap
-    URLs (what platform made the sitemap: generic reads Shopify's names)."""
+    index: filled with a sitemap index's sub-sitemap URLs (what platform made the sitemap: generic reads Shopify's
+    names)."""
     client = client.with_max_response(max(client.max_response_bytes, SITEMAP_MAX_BYTES))
     r = _get(client, f"https://{host}/sitemap.xml")
-    if r.status_code == 404:
-        for url in declared_sitemaps(client, host):
-            if url.rstrip("/") == f"https://{host}/sitemap.xml":
-                continue
-            r = _get(client, url)
-            if r.status_code != 404:
-                break
     if r.status_code == 404:
         return []
     if r.status_code != 200:

@@ -5,10 +5,6 @@
 - A: 36 generic stores whose robots.txt got no HTTP response were recorded only as `RobotsUnavailable <url>`: the
   fetch row now says which phase failed (fetches.transport_errors).
 - 5: an unreachable robots.txt may be stood in for by the last one stored, at most 30 days old (RFC 9309 2.4).
-- B: Shopify storefronts the generic adapter read page by page drew Cloudflare's challenge: they are read from
-  /products.json, under their own budget.
-- 6: a WooCommerce store whose robots.txt disallows the Store API (martinhenrycoffee.com) is read from its sitemap
-  and product pages.
 - E: registry corrections (kaldi.com, galvestoncoffeeroasters.com) through the seed.
 
 No test sends a request anywhere: every response comes from an httpx.MockTransport.
@@ -17,7 +13,6 @@ No test sends a request anywhere: every response comes from an httpx.MockTranspo
 from __future__ import annotations
 
 import argparse
-import json
 import socket
 import ssl
 import types
@@ -29,11 +24,9 @@ import pyarrow.parquet as pq
 import pytest
 
 from coffeedata import cli, discover, http, ingest, registry
-from coffeedata.adapters import fetch_catalog, generic, woocommerce
 from coffeedata.http import Blocked, PoliteClient, RobotsUnavailable, SiteDisallowed
 from coffeedata.lake import SCHEMAS
 from coffeedata.models import Roaster
-from coffeedata.ratelimit import SHOPIFY_HOSTED, PlatformLimiter
 
 NOW = datetime(2026, 11, 23, 9, 17, tzinfo=UTC)
 
@@ -354,7 +347,7 @@ def test_a_live_robots_txt_is_recorded_with_its_body_once_and_blocks_say_which_c
 
 
 def test_robots_copies_reads_the_newest_live_record_from_fetches_and_probes(lake):
-    assert ingest.robots_copies(lake) == {}  # nothing stored yet: no copy, as before
+    assert ingest.robots_copies(lake, "2026-11-23") == {}  # nothing stored yet: no copy, as before
     t1, t2 = datetime(2026, 11, 9, tzinfo=UTC), datetime(2026, 11, 16, tzinfo=UTC)
 
     def rec(at, status, body, source="live"):
@@ -373,221 +366,148 @@ def test_robots_copies_reads_the_newest_live_record_from_fetches_and_probes(lake
         {"run_date": t2.date(), "batch_id": "p", "probed_at": t2, "roaster_id": "store.com", "status": "ok",
          "http_status": 200, "final_host": "store.com", "platform": "other",
          "robots": [rec(t2, 403, None), rec(t2 + timedelta(days=1), 200, "x", source="cached")]}])  # fmt: skip
-    copies = ingest.robots_copies(lake)
+    copies = ingest.robots_copies(lake, "2026-11-23")
     assert copies["store.com"]["status"] == 403  # the newest answer, the stricter one: never a cached record
     assert copies["store.com"]["fetched_at"] == t2
 
 
 def test_the_fetches_and_probes_schemas_carry_the_new_columns():
     names = set(SCHEMAS["fetches"].names)
-    assert {"transport_errors", "robots", "catalog_route"} <= names
+    assert {"transport_errors", "robots"} <= names
     assert "robots" in SCHEMAS["probes"].names
 
 
-# --- B: Shopify storefronts the generic crawl reads ------------------------------------------------------------------
+# --- review of #178 (2026-11-18): each finding reproduced ------------------------------------------------------------
 
 
-def _shopify_store(products_json_status=200, challenge=False):
-    seen = []
+def test_a_2xx_copy_without_its_body_is_never_used(lake):
+    """Finding 1, the reviewer's repro: the only stored record for store.com is a live 200 without a body (written by a
+    fetch that only went by the file, its reader's row never stored). Before, it read as no rules and
+    GET /private was sent. Neither the query nor the client may treat it as a copy."""
+    t = datetime(2026, 11, 16, 9, tzinfo=UTC)
+    rec = {"host": "store.com", "source": "live", "fetched_at": t, "age_s": 0.0, "status": 200, "body": None}
+    lake.write_partition(
+        "fetches", "2026-11-16", "f", [_fetch("store.com", "2026-11-16", "ok", t) | {"robots": [rec]}]
+    )
+    assert ingest.robots_copies(lake, "2026-11-23") == {}
+    handler, seen = _down_robots()
+    copies = {"store.com": {"fetched_at": NOW - timedelta(days=7), "status": 200, "body": None}}
+    with _client(handler, copies) as c, pytest.raises(RobotsUnavailable):
+        c.get("https://store.com/private")
+    assert set(seen) == {"/robots.txt"}
+
+
+def _big_robots(cut_inside: str) -> str:
+    """A robots.txt whose 500 KiB mark falls inside `cut_inside`, the last line of the file."""
+    head = "User-agent: *\nDisallow: /private\n"
+    filler_line = "# " + "x" * 98 + "\n"
+    budget = http.ROBOTS_BODY_MAX_BYTES - len(head) - 8  # the mark lands 8 bytes into the last line
+    filler = filler_line * (budget // len(filler_line))
+    filler += "#" * (budget - len(filler) - 1) + "\n"
+    return head + filler + cut_inside + "\n"
+
+
+def test_live_rules_come_from_the_whole_file_and_only_the_stored_copy_is_cut():
+    """Finding 2, the reviewer's repro: `Disallow: /private` then `Allow: /private/public-only`, with the 500 KiB
+    mark inside the Allow line. Cut there, the line read `Allow: /private/` and /private/secret was allowed."""
+    text = _big_robots("Allow: /private/public-only")
+    assert len(text.encode()) > http.ROBOTS_BODY_MAX_BYTES
 
     def handler(request):
-        p = request.url.path
-        seen.append(p)
-        if p == "/robots.txt":
-            return httpx.Response(200, text="User-agent: *\nDisallow: /cart\n")
-        if p == "/products.json":
-            if challenge:
-                return httpx.Response(429, headers={"cf-mitigated": "challenge"}, text="<html>")
-            if products_json_status != 200:
-                return httpx.Response(products_json_status, text="nope")
-            page = int(request.url.params.get("page", "1"))
-            prods = [] if page > 1 else [{"id": 1, "title": "Ethiopia", "handle": "ethiopia",
-                                          "variants": [{"id": 11, "title": "12 oz", "price": "20.00"}]}]  # fmt: skip
-            return httpx.Response(200, json={"products": prods})
-        if p == "/sitemap.xml":
-            return httpx.Response(200, text=(
-                "<sitemapindex><sitemap><loc>https://shop.com/sitemap_products_1.xml?from=1&amp;to=9</loc></sitemap>"
-                "</sitemapindex>"))  # fmt: skip
-        if p.startswith("/sitemap_products_1.xml"):
-            return httpx.Response(
-                200, text="<urlset><url><loc>https://shop.com/products/ethiopia</loc></url></urlset>"
-            )
-        if p == "/products/ethiopia":
-            ld = {
-                "@type": "Product",
-                "name": "Ethiopia",
-                "sku": "E1",
-                "offers": {"price": "20", "priceCurrency": "USD"},
-            }
-            return httpx.Response(200, text=f'<script type="application/ld+json">{json.dumps(ld)}</script>')
-        return httpx.Response(404)
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text=text)
+        return httpx.Response(200, text="ok")
 
-    return handler, seen
+    with _client(handler) as c, c.track() as stats:
+        with pytest.raises(Blocked):
+            c.get("https://store.com/private/secret")
+        assert c.get("https://store.com/private/public-only").status_code == 200  # the whole file's rules
+    body = stats.robots[0]["body"]
+    assert body.endswith("\n") and len(body.encode()) <= http.ROBOTS_BODY_MAX_BYTES
+    assert "Allow: /private/" not in body  # the half line is never stored
+    # the cut copy, used when the file is unreachable, is followed exactly: /private stays disallowed
+    down, _ = _down_robots()
+    copy = {"store.com": {"fetched_at": NOW - timedelta(days=1), "status": 200, "body": body}}
+    with _client(down, copy) as c, pytest.raises(Blocked):
+        c.get("https://store.com/private/secret")
 
 
-def _limited_client(handler, name):
-    lim = PlatformLimiter(name, rate=1000.0, max_concurrent=4, sleep=lambda s: None)
-    return PoliteClient(transport=httpx.MockTransport(handler), min_interval=0, limiters={name: lim}), lim
+def test_a_file_with_no_line_break_inside_the_limit_stores_no_copy():
+    assert http.stored_body("x" * (http.ROBOTS_BODY_MAX_BYTES + 10)) is None
+    assert http.stored_body("") == ""  # an empty 2xx (allow everything) is a real answer, kept
 
 
-def test_a_shopify_marked_store_is_crawled_by_the_shopify_job():
-    """`shopify?` (the probe saw cdn.shopify.com, but /products.json didn't answer it): before, the generic job read
-    it page by page from the WooCommerce/generic IP, where 19 such stores drew Cloudflare's challenge on 2026-11-16.
-    Now the Shopify adapter, so the crawl-shopify job (connectors filter by adapter), its IP and its budget."""
-    assert Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?").adapter == "shopify"
-    assert Roaster(roaster_id="x.com", name="X", host="x.com", platform="other").adapter == "generic"
+def test_at_the_same_second_a_403_beats_a_200(lake):
+    """Finding 3: two jobs read the same host in the same second; the stricter answer is the copy."""
+    t = datetime(2026, 11, 16, 9, tzinfo=UTC)
+
+    def rec(status, body):
+        return {
+            "host": "store.com",
+            "source": "live",
+            "fetched_at": t,
+            "age_s": 0.0,
+            "status": status,
+            "body": body,
+        }
+
+    lake.write_partition("fetches", "2026-11-16", "f", [
+        _fetch("store.com", "2026-11-16", "ok", t) | {"robots": [rec(200, "User-agent: *\nAllow: /\n")]},
+        _fetch("store.com", "2026-11-16", "error", t) | {"robots": [rec(403, None)]},
+    ])  # fmt: skip
+    assert ingest.robots_copies(lake, "2026-11-23")["store.com"]["status"] == 403
 
 
-def test_a_shopify_marked_store_is_read_from_products_json_under_shopifys_budget():
-    handler, seen = _shopify_store()
-    client, lim = _limited_client(handler, "shopify")
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?")
-    with client, client.track() as stats:
-        items = fetch_catalog(client, r)
-    assert [i.title for i in items] == ["Ethiopia"] and items[0].platform == "shopify"
-    assert "/products/ethiopia" not in seen and "/sitemap.xml" not in seen
-    assert stats.route.startswith("shopify /products.json") and lim.stats["requests"] == len(seen)
+def test_copies_are_read_only_from_the_last_31_days(lake):
+    """Finding 7: a bounded read. A run older than the copy's age limit is never scanned."""
+    old, new = datetime(2026, 10, 12, tzinfo=UTC), datetime(2026, 11, 9, tzinfo=UTC)
 
+    def rec(at, host):
+        return {"host": host, "source": "live", "fetched_at": at, "age_s": 0.0, "status": 404, "body": None}
 
-def test_a_marked_store_without_products_json_is_read_from_its_pages_on_the_same_budget():
-    handler, seen = _shopify_store(products_json_status=404)
-    client, lim = _limited_client(handler, "shopify")
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?")
-    with client, client.track() as stats:
-        items = fetch_catalog(client, r)
-    assert [i.title for i in items] == ["Ethiopia"] and items[0].platform == "generic"
-    assert "/products/ethiopia" in seen and stats.route.startswith("pages: /products.json not served")
-    assert lim.stats["requests"] == len(seen)  # every request, robots.txt included, on Shopify's budget
-
-
-def test_a_challenge_on_products_json_is_the_answer_never_a_reason_to_read_pages():
-    handler, seen = _shopify_store(challenge=True)
-    client, _ = _limited_client(handler, "shopify")
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="shopify?")
-    with client, pytest.raises(http.FetchError) as e:
-        fetch_catalog(client, r)
-    assert http.challenged(e.value) and "/products/ethiopia" not in seen and "/sitemap.xml" not in seen
-
-
-def test_a_generic_store_whose_sitemap_is_shopifys_reads_products_json_under_the_hosted_budget():
-    """Not yet re-probed: the generic job finds Shopify's sitemap index and reads /products.json (a few requests
-    instead of one per product), at the Shopify-hosted budget (1 request/s, 4 at once, across all of them)."""
-    handler, seen = _shopify_store()
-    client, lim = _limited_client(handler, SHOPIFY_HOSTED)
-    r = Roaster(roaster_id="shop.com", name="S", host="shop.com", platform="other")
-    with client, client.track() as stats:
-        items = fetch_catalog(client, r)
-    assert [i.title for i in items] == ["Ethiopia"] and "/products/ethiopia" not in seen
-    assert (
-        stats.route == "shopify /products.json: its sitemap index is Shopify's" and lim.stats["requests"] >= 1
+    lake.write_partition(
+        "fetches",
+        "2026-10-12",
+        "a",
+        [_fetch("old.com", "2026-10-12", "ok", old) | {"robots": [rec(old, "old.com")]}],
     )
+    lake.write_partition(
+        "fetches",
+        "2026-11-09",
+        "b",
+        [_fetch("new.com", "2026-11-09", "ok", new) | {"robots": [rec(new, "new.com")]}],
+    )
+    assert set(ingest.robots_copies(lake, "2026-11-23")) == {"new.com"}
 
 
-def test_the_probe_marks_a_store_with_shopifys_sitemap_index():
-    handler, _ = _shopify_store()
-
-    def probing(request):
-        if request.url.path == "/":
-            return httpx.Response(200, text="<html>no markers</html>")
-        if request.url.path == "/products.json":
-            return httpx.Response(403, text="no")  # didn't answer the probe
-        return handler(request)
-
-    with PoliteClient(transport=httpx.MockTransport(probing), min_interval=0) as c:
-        res = discover.probe_one(c, "shop.com")
-    assert res["status"] == "ok" and res["platform"] == "shopify?"
-
-
-# --- 6: a WooCommerce store whose robots.txt disallows the Store API -------------------------------------------------
-
-YOAST = """User-agent: *
-Disallow: /wp-json/
-Disallow: /?rest_route=
-
-Sitemap: https://woo.com/sitemap_index.xml
-"""
+def test_the_backoff_counts_crawl_failures_after_an_ok_probe(lake, tmp_path):
+    """Finding 6: a store whose home page answers the probe but whose catalog keeps failing or refusing us (kaldi.com's
+    pattern) was due again a week after each ok probe; each failed crawl run since that probe now doubles the wait."""
+    seed = _seed(tmp_path, [MEANBEAN | {"platform": "woocommerce", "last_probed": "2026-11-02"}])
+    for day in ("2026-11-09", "2026-11-16", "2026-11-23"):
+        at = datetime.fromisoformat(day).replace(hour=9, tzinfo=UTC)
+        lake.write_partition(
+            "fetches", day, f"b{day}", [_fetch("meanbeanroasters.com", day, "error", at, error="HTTP 429")]
+        )
+    (s,) = registry._current(lake, seed)
+    assert (s.status, s.failed_probes, s.failed_runs) == ("unreachable", 0, 3)
+    assert cli.probe_todo([s], "2026-11-23", 28) == []  # 28 days, not 7
+    assert cli.probe_todo([s], "2026-11-30", 28) == ["meanbeanroasters.com"]
+    st = _state("x.com", "unreachable", "2026-11-09")
+    st.failed_runs = 1
+    assert cli.probe_todo([st], "2026-11-16", 28) == [] and cli.probe_todo([st], "2026-11-23", 28) == [
+        "x.com"
+    ]
 
 
-def _woo_store(robots: str):
-    seen = []
+def test_a_block_record_finds_its_robots_copy_whatever_the_hosts_spelling():
+    """Nit 10: robots_used was keyed as the URL spelled the host, the response's host is normalized."""
 
     def handler(request):
-        p = request.url.path
-        seen.append(p)
-        if p == "/robots.txt":
-            return httpx.Response(200, text=robots)
-        if p.startswith("/wp-json/"):
-            return httpx.Response(200, json=[{"id": 7, "name": "Kenya", "prices": {"price": "1800", "currency_code": "USD",
-                                                                              "currency_minor_unit": 2}}])  # fmt: skip
-        if p == "/sitemap.xml":
-            return httpx.Response(404)
-        if p == "/sitemap_index.xml":
-            return httpx.Response(
-                200,
-                text=(
-                    "<sitemapindex><sitemap><loc>https://woo.com/product-sitemap.xml</loc></sitemap></sitemapindex>"
-                ),
-            )
-        if p == "/product-sitemap.xml":
-            return httpx.Response(
-                200, text="<urlset><url><loc>https://woo.com/product/kenya/</loc></url></urlset>"
-            )
-        if p == "/product/kenya/":
-            ld = {
-                "@type": "Product",
-                "name": "Kenya",
-                "sku": "K1",
-                "offers": {"price": "18", "priceCurrency": "USD"},
-            }
-            return httpx.Response(200, text=f'<script type="application/ld+json">{json.dumps(ld)}</script>')
-        return httpx.Response(404)
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nAllow: /\n")
+        return httpx.Response(403, headers={"cf-mitigated": "challenge"}, text="<html>")
 
-    return handler, seen
-
-
-WOO = Roaster(roaster_id="woo.com", name="W", host="woo.com", platform="woocommerce")
-
-
-def test_a_store_api_disallowed_by_robots_is_read_from_the_sitemap_robots_names():
-    """martinhenrycoffee.com, 2026-11-16: Yoast's `Disallow: /wp-json/` under `User-agent: *`, product pages
-    allowed, its sitemap at /sitemap_index.xml. Before: `Blocked: .../wp-json/wc/store/v1/products`, 72 coffees
-    lost."""
-    handler, seen = _woo_store(YOAST)
-    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c, c.track() as stats:
-        items = fetch_catalog(c, WOO)
-    assert [i.title for i in items] == ["Kenya"]
-    assert not any(p.startswith("/wp-json/") for p in seen)  # never asked: robots.txt is checked first
-    assert stats.route.startswith("generic: robots.txt disallows the Store API")
-
-
-def test_a_store_that_also_disallows_its_product_pages_stays_blocked():
-    handler, seen = _woo_store(
-        YOAST.replace("Disallow: /?rest_route=", "Disallow: /?rest_route=\nDisallow: /product/")
-    )
-    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c, pytest.raises(Blocked):
-        fetch_catalog(c, WOO)
-    assert "/product/kenya/" not in seen and not any(p.startswith("/wp-json/") for p in seen)
-
-
-def test_a_store_closed_to_us_stays_closed():
-    handler, seen = _woo_store("User-agent: *\nDisallow: /\n")
-    with (
-        PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c,
-        pytest.raises(SiteDisallowed),
-    ):
-        fetch_catalog(c, WOO)
-    assert seen == ["/robots.txt"]
-
-
-def test_the_store_api_path_is_unchanged_when_allowed():
-    handler, seen = _woo_store("User-agent: *\nAllow: /\n")
-    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0) as c, c.track() as stats:
-        items = fetch_catalog(c, WOO)
-    assert [i.title for i in items] == ["Kenya"] and stats.route is None
-    assert "/sitemap.xml" not in seen and any(p.startswith("/wp-json/") for p in seen)
-
-
-def test_woocommerce_fallback_uses_the_generic_adapter_module():
-    assert woocommerce.STORE_API_PATH == "/wp-json/wc/store/v1/products" and generic.shopify_sitemap(
-        ["https://x.com/sitemap_products_1.xml?from=1&to=2"]
-    )
+    with _client(handler) as c, c.track() as stats:
+        c.get("https://Store.COM:443/a")
+    assert stats.blocks and stats.blocks[0]["robots"] == "live"

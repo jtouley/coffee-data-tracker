@@ -224,10 +224,8 @@ SCHEMAS: dict[str, pa.Schema] = {
             # response, with the phase it failed in; and the robots.txt each host's requests went by.
             ("transport_errors", pa.list_(TRANSPORT_ERROR)),
             ("robots", pa.list_(ROBOTS_COPY)),
-            # Added with raw contract 1.7.0 (null before, and when the adapter read the catalog its own way): how
-            # the catalog was read instead, and why (a WooCommerce store whose robots.txt disallows the Store API,
-            # read from its sitemap and product pages; a Shopify storefront the generic crawl read from
-            # /products.json).
+            # Added with raw contract 1.8.0 (null before, and when the adapter read the catalog its own way): how
+            # the catalog was read instead, and why (PoliteClient.note_route).
             ("catalog_route", pa.string()),
         ]
     ),
@@ -346,6 +344,16 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("dbt_version", pa.string()),
             ("package_versions", pa.string()),
             ("duration_s", pa.float64()),
+            # What decided the release's coffee-or-not verdicts (added 2026-11; older files read back as null): the
+            # verdict model and definition hash dbt was given, the ingest image the job was configured with
+            # (Terraform's ingest_image, not proof of what ran: git_sha says what code ran; verdict.image),
+            # the named rules-only override that let a build without checked verdicts pass (null in production),
+            # and how many product versions were still awaiting Claude's verdict, so classified by the rules.
+            ("verdict_model", pa.string()),
+            ("verdict_definition", pa.string()),
+            ("configured_image", pa.string()),
+            ("rules_only_override", pa.string()),
+            ("verdicts_in_flight", pa.int64()),
         ]
     ),
     # What an ingest set out to fetch, written before its first request: one row per roaster it intends to
