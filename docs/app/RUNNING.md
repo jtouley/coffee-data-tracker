@@ -94,11 +94,14 @@ Check an image's provenance (it needs `gh` signed in, and read access to the reg
 
 ```bash
 gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker \
-  --signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml --source-ref refs/heads/main
+  --signer-workflow jtouley/coffee-data-tracker/.github/workflows/attest.yml --source-ref refs/heads/main
 ```
 
-It proves the digest was built by `deploy.yml` on main, and from which commit. It doesn't prove ci passed on that
-commit: a manual deploy with `force` builds and signs too.
+It proves the digest was signed by `attest.yml` on main, in a run of `deploy.yml` (the attestation's build config),
+and from which commit. It doesn't prove ci passed on that commit: a manual deploy with `force` builds and signs too.
+An app image signed before `attest.yml` existed names `deploy.yml` as its signer: check it with
+`--signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml` instead. The ingest image is signed by
+`deploy.yml`'s `ingest-image` job, so its check (RUNBOOK §1) names `deploy.yml`.
 
 **A red run after a deploy.** If `deploy` (and `deploy-admin`) are green and only `attest` or `ingest-image` is
 red, production was updated and is fine; what is missing is a signature or the ingest image.
@@ -111,14 +114,35 @@ red, production was updated and is fine; what is missing is a signature or the i
   An ingest image whose signing failed stays in the registry unsigned; RUNBOOK §1's script refuses it until the
   job is re-run.
 
-**Which jobs can act as the deploy account.** The Workload Identity condition (`src/terraform/deploy.tf`) accepts
-a token from any job of `deploy.yml` running on `main` that has `id-token: write`. `deploy`, `deploy-admin` and
-`ingest-image` need that: they push or deploy. `attest` has `id-token: write` only to get a signing certificate
-and never signs in to Google Cloud, but the condition would let it. To close that, give the three jobs that need
-the cloud a GitHub environment each (`deploy-admin` has `admin`), map `attribute.environment` to
-`assertion.environment` in the provider, and add `assertion.environment in ['<those names>']` to its condition.
-Apply that and merge the workflow change together: a job with no environment is refused once the condition is
-applied, and that includes the deploy itself.
+**Which jobs can act as the deploy account.** The Workload Identity provider (`src/terraform/deploy.tf`) accepts a
+token only when all of these hold, the same claims the bootstrap's plan and apply providers pin:
+- `repository_id`, `repository_owner_id` and `repository` are this repository's (the ids can't be re-registered by
+  someone else, a name can), and the runner is GitHub-hosted;
+- `ref` is `refs/heads/main` and the event is `workflow_run` or `workflow_dispatch`, the two `deploy.yml` deploys on;
+- both `workflow_ref` and `job_workflow_ref` are `.github/workflows/deploy.yml@refs/heads/main`.
+
+The deploy account's grant names the repository by id (`attribute.repository_id`), not by name.
+
+GitHub's token names the workflow file a job is written in, never the job: every job written in `deploy.yml` has the
+same claims, so the condition can't tell them apart. Inside `deploy.yml` the line is `id-token: write`: only
+`deploy`, `deploy-admin` and `ingest-image` hold it, the three that push or deploy. `attest` needs a token for its
+signing certificate, so its steps live in `attest.yml`, a reusable workflow `deploy.yml` calls in the same run; its
+token's `job_workflow_ref` is `attest.yml`, which the condition refuses. `tests/test_deploy_identity.py` pins the
+condition's terms and checks that no other job holds `id-token: write` or Google sign-in. A GitHub environment per
+deploying job would also separate them, but needs repository settings and an apply in the same moment as the merge.
+
+`ingest-image` signs its own image as its last step, so GitHub's signing action runs in a job already signed in as
+the deploy account; moving that signature to `attest.yml` too would change RUNBOOK §1's signer check.
+
+**Changing this provider or its grant.** The guard refuses any change to a workload identity pool, provider or a
+grant on them (`workload-identity`), and any replace, so these changes never go through GitHub: the owner applies
+them from Cloud Shell with `scripts/tf_break_glass.sh` and a typed `override` (Break-glass, below). The script plans
+only main's tip, so merge first, then apply. Between the two, `terraform-apply.yml` runs on main stop at the guard;
+apply promptly. Workflow changes that only narrow which jobs hold `id-token: write` work under the old and the new
+condition alike. For the change that added the ids and `job_workflow_ref`, the expected plan was: the provider
+`github` updated in place (condition, and `attribute.repository_id` added to the mapping), and
+`google_service_account_iam_member.deploy_from_github` replaced, the new grant created before the old one is
+removed; nothing else. Anything more in the list: stop and don't type the override.
 
 ### Owner's steps
 

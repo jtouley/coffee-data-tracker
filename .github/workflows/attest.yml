@@ -1,0 +1,44 @@
+# Signed build provenance (SLSA) for the app's image, called by deploy.yml's `attest` job, in the same run, once the
+# deploy job has pushed an image. It runs only as a reusable workflow: it has no trigger of its own.
+#
+# Why a file of its own: GitHub's OIDC token names the workflow file a job is written in (job_workflow_ref), never the
+# job. The deploy account's Workload Identity condition (src/terraform/deploy.tf) accepts only jobs written in
+# deploy.yml, so this job, which needs `id-token: write` for its signing certificate, can't sign in to Google Cloud
+# as the deploy account, and neither can the action it runs. It never needed to.
+#
+# The attestation still records the run and the commit that built the image: its build config is deploy.yml (the
+# workflow that ran), its signer this file. Check an image (docs/app/RUNNING.md):
+#   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker \
+#     --signer-workflow jtouley/coffee-data-tracker/.github/workflows/attest.yml --source-ref refs/heads/main
+name: attest
+on:
+  workflow_call:
+    inputs:
+      image:
+        description: "<GCP_IMAGE>@sha256:<digest>: what the deploy job pushed"
+        type: string
+        required: true
+permissions: {}
+jobs:
+  attest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      id-token: write  # the signing certificate (Sigstore); not accepted by the deploy account's condition
+      attestations: write  # store the attestation
+    env:
+      IMAGE_REF: ${{ inputs.image }}
+    steps:
+      - name: Split the image reference
+        id: ref
+        run: |
+          if ! [[ "$IMAGE_REF" =~ ^[^@]+@sha256:[0-9a-f]{64}$ ]]; then
+            echo "::error::Not an image reference with a digest: $IMAGE_REF"
+            exit 1
+          fi
+          echo "name=${IMAGE_REF%@*}" >> "$GITHUB_OUTPUT"
+          echo "digest=${IMAGE_REF#*@}" >> "$GITHUB_OUTPUT"
+      - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6  # v4.2.2
+        with:  # no predicate: SLSA build provenance
+          subject-name: ${{ steps.ref.outputs.name }}
+          subject-digest: ${{ steps.ref.outputs.digest }}
