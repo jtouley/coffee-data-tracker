@@ -7,26 +7,15 @@
 --     roaster (listed and not archived, and in stock; wholesale left out on both sides);
 --   listed_total: the sum of dim_roaster.coffees_listed against mart_build_profile's listed_coffees (the gate's
 --     count), two definitions of "listed" that must not drift apart;
---   event_roaster: a public price event whose roaster_id isn't its public_coffee row's;
---   orphan_event: a price event whose coffee isn't in dim_coffee, unless the product's latest record is classified
---     as not coffee. That one is by design: dim_coffee drops a product reclassified as not coffee and keeps its past
---     events (fct_price_event's relationships test warns on every orphan, these included).
+--   event_roaster: a public price event whose roaster_id isn't its public_coffee row's.
+-- A price event whose coffee isn't in dim_coffee is no longer checked here: fct_price_event keeps only coffees in
+-- dim_coffee (a product reclassified as not coffee takes its events with it), and its relationships test to
+-- dim_coffee is an error, so a build with such an event fails there.
 with listed as (
     select roaster_id,
            count(*) filter (where is_listed and catalog_status <> 'archived') as coffees_listed,
            count(*) filter (where in_stock) as coffees_in_stock
     from {{ ref('public_coffee') }} where not is_wholesale group by roaster_id
-),
-latest as (
-    select s.coffee_id, {{ decided('s.decision', 'p.is_coffee') }} as is_coffee
-    from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
-    qualify row_number() over (partition by s.coffee_id order by s.run_date desc) = 1
-),
-orphans as (
-    select e.coffee_id, any_value(e.roaster_id) as roaster_id, count(*) as events
-    from {{ ref('fct_price_event') }} e
-    where not exists (select 1 from {{ ref('dim_coffee') }} d where d.coffee_id = e.coffee_id)
-    group by e.coffee_id
 )
 select 'roaster_counts' as check_name, r.roaster_id as item,
        format('coffees_listed {} vs {} rows; coffees_in_stock {} vs {} rows', r.coffees_listed,
@@ -43,7 +32,3 @@ select 'event_roaster', e.coffee_id, format('event roaster {} vs coffee roaster 
 from {{ ref('public_price_event') }} e join {{ ref('public_coffee') }} c using (coffee_id)
 where e.roaster_id <> c.roaster_id
 group by all
-union all
-select 'orphan_event', o.coffee_id, format('{} events; the product is still coffee or has no record', o.events)
-from orphans o left join latest l using (coffee_id)
-where l.is_coffee is distinct from false

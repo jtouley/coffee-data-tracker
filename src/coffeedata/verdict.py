@@ -81,10 +81,89 @@ def model() -> str | None:
 RULES_ONLY_ENV = "COFFEEDATA_ALLOW_RULES_ONLY"
 
 
-def rules_only_allowed() -> bool:
+def refuse_on_remote(override: str, lake_url: str | None = None) -> str:
+    """The override, if the lake is local. A remote lake (any `://` URL: hf://, s3://, gs://) is one that is
+    published and served, so rules only is refused there whatever asks for it: a SystemExit naming the override.
+    Deliberately stricter than Lake.remote (hf:// only): any scheme, file:// included, fails safe. `lake_url` is
+    the Lake in use's URL where the caller has one, else COFFEEDATA_LAKE, as Lake() reads it."""
+    url = os.environ.get("COFFEEDATA_LAKE", "") if lake_url is None else lake_url
+    if "://" in url:
+        raise SystemExit(
+            f"rules only ({override}) is refused on a remote lake ({url}): every release built or served there "
+            "needs Claude's verdicts. The override is for a local lake and tests only (docs/ingestion/RUNBOOK.md, "
+            "verdicts)."
+        )
+    return override
+
+
+def rules_only_allowed(lake_url: str | None = None) -> bool:
     """The explicit opt-out for local and dev runs (COFFEEDATA_ALLOW_RULES_ONLY=1): classify skips without a model
-    or credentials, and the build's verdict gate is off. Never set in production."""
-    return os.environ.get(RULES_ONLY_ENV, "").strip().lower() in ("1", "true", "yes")
+    or credentials, and the build's verdict gate is off. Never set in production: on a remote lake it is refused
+    (refuse_on_remote)."""
+    if os.environ.get(RULES_ONLY_ENV, "").strip().lower() not in ("1", "true", "yes"):
+        return False
+    refuse_on_remote(f"{RULES_ONLY_ENV}=1", lake_url)
+    return True
+
+
+def rules_only_override(flag: bool = False, lake_url: str | None = None) -> str | None:
+    """The named opt-out that lets a build without Claude's verdicts pass and be served, or None in production:
+    which switch allowed it (`--allow-rules-only`, or COFFEEDATA_ALLOW_RULES_ONLY=1). The build record and the
+    serving log carry it, so a rules-only release always says why it was allowed. Refused on a remote lake."""
+    if flag:
+        return refuse_on_remote("--allow-rules-only", lake_url)
+    if rules_only_allowed(lake_url):
+        return f"{RULES_ONLY_ENV}=1"
+    return None
+
+
+# The build record's verdict guard: the gate's test, as dbt names it in run_results.
+GATE_TEST = "test.coffeedata.verdicts_cover_catalog"
+
+
+def gate_problem(model_id: str | None, require_verdicts: object, gate_status: str | None) -> str | None:
+    """Why a build can't be served for want of verdicts, or None when its verdicts were checked: a verdict model was
+    set, the verdict gate was on (require_verdicts) and verdicts_cover_catalog ran and passed. The 2026-11-09 build
+    ran an image without the model and without the gate, passed every test it had, and was served for a week."""
+    if not model_id:
+        return "no verdict model (COFFEEDATA_VERDICT_MODEL was empty)"
+    if require_verdicts is not True:
+        return "the verdict gate was off (require_verdicts was not set)"
+    if gate_status != "pass":
+        return f"verdicts_cover_catalog {'did not run' if gate_status is None else gate_status}"
+    return None
+
+
+IMAGE_ENV = "COFFEEDATA_INGEST_IMAGE"
+
+
+def image() -> str | None:
+    """The ingest image the job is configured with (`<repo>/ingest@sha256:<digest>`): Terraform's ingest_image,
+    passed to every Cloud Run job as COFFEEDATA_INGEST_IMAGE (src/terraform/ingestion.tf). It is what Terraform set,
+    not proof of what ran: a job whose image was changed outside Terraform still reports the configured one, and an
+    image older than this field reports nothing. What code ran is builds.git_sha, stamped into the image at build
+    time (#124). None outside the jobs."""
+    return os.environ.get(IMAGE_ENV) or None
+
+
+def in_flight(lake: Lake) -> int:
+    """Product versions sent to Claude for this model and definition whose batch isn't collected yet: a build now
+    classifies them by the rules (verdicts_cover_catalog still judges the share), and records how many."""
+    model_id = model()
+    if not model_id:
+        return 0
+    vb = lake.scan("verdict_batches")
+    row = (
+        lake.connect()
+        .execute(
+            f"""with b as (select * from {vb} where model = $model and definition = $definition)
+            select count(distinct custom_id) from b where state = 'submitted'
+              and batch_id not in (select batch_id from b where state = 'collected')""",
+            {"model": model_id, "definition": DEFINITION_VERSION},
+        )
+        .fetchone()
+    )
+    return int(row[0]) if row else 0
 
 
 def missing() -> list[str]:
@@ -100,6 +179,8 @@ def missing() -> list[str]:
 def require(allow_rules_only: bool = False) -> bool:
     """Whether verdicts can run. Without a model or credentials: False when rules only is allowed (the flag or
     COFFEEDATA_ALLOW_RULES_ONLY), else a SystemExit that names what is missing."""
+    if allow_rules_only:  # refused on a remote lake before anything else, whether or not verdicts could run
+        refuse_on_remote("--allow-rules-only")
     gaps = missing()
     if not gaps:
         return True
