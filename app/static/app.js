@@ -1397,7 +1397,7 @@ function accountForm(form, done = null) {
     } catch (err) {
       if (err instanceof Unreachable) {
         busy.stop("Try again");
-        return say(form, UNREACHABLE);
+        return say(form, err instanceof Busy ? err.message : UNREACHABLE);
       }
       busy.stop();
       if (err.status >= 500) return say(form, OUR_SIDE);
@@ -1726,6 +1726,7 @@ function preference(group, name, plain) {
 // --- Signing in and the account -----------------------------------------------------------------------
 
 class Unreachable extends Error {} // no reply: offline, timed out, or a gateway error while the app wakes up
+class Busy extends Unreachable {} // the app turned a password check away for a moment (503 with Retry-After): its words
 
 // A JSON POST with a deadline: past it (130 s, just over Cloud Run's 120 s request limit) the request is given up.
 // A refusal carries the server's words: a plain string, or a list of {field, rule, message} for errors that belong
@@ -1747,7 +1748,11 @@ async function post(url, body, { timeout = 130000 } = {}) {
     clearTimeout(timer);
   }
   if (r.ok) return r.json();
-  if ([502, 503, 504].includes(r.status)) throw new Unreachable(UNREACHABLE);
+  if ([502, 503, 504].includes(r.status)) {
+    // The app's own "too busy, try again" has a Retry-After and words for the person; a gateway's 503 has neither.
+    const busy = r.status === 503 && r.headers.get("Retry-After") ? (await r.json().catch(() => ({}))).detail : null;
+    throw typeof busy === "string" && busy ? new Busy(busy) : new Unreachable(UNREACHABLE);
+  }
   const detail = (await r.json().catch(() => ({}))).detail;
   const list = Array.isArray(detail) ? detail : [];
   const words = typeof detail === "string" ? detail : list.map((d) => (typeof d === "string" ? d : d?.message)).filter(Boolean).join(" ");

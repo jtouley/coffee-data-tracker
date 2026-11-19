@@ -9,6 +9,7 @@ signs that user out everywhere.
 from __future__ import annotations
 
 import base64
+import contextlib
 import hashlib
 import hmac
 import json
@@ -18,6 +19,7 @@ import threading
 import time
 import uuid
 from collections import defaultdict, deque
+from collections.abc import Iterator
 from dataclasses import dataclass, replace
 from datetime import UTC, datetime, timedelta
 
@@ -56,7 +58,54 @@ _hasher = PasswordHasher.from_parameters(RFC_9106_LOW_MEMORY)  # Argon2id, 64 Mi
 # Each hash or verify takes 64 MiB while it runs, and requests run in a thread pool of up to 40. A burst of sign-ins
 # could take more memory than the 1 GiB instance has, so at most this many run at once; the rest wait their turn.
 HASHES_AT_ONCE = 4
-_hashing = threading.BoundedSemaphore(HASHES_AT_ONCE)
+# Waiting threads are threads the rest of the app can't use: a spread-out burst of guesses could otherwise hold all
+# 40 while each waits its turn. So at most this many wait, each for at most HASH_WAIT_S; anyone past that is turned
+# away at once with a 503 and Retry-After, and nothing is counted against their username or address.
+HASH_WAITERS = 16
+HASH_WAIT_S = 10.0
+RETRY_AFTER_S = 5
+BUSY = "Lots of sign-ins are being checked right now. Wait a few seconds and try again."
+
+
+class Busy(Exception):
+    """Too many password checks are running or waiting: try again shortly (HTTP 503 with Retry-After). Not an
+    AccountError, so no handler that turns those into a form's reply can swallow it."""
+
+    def __init__(self) -> None:
+        super().__init__(BUSY)
+
+
+class HashGate:
+    """At most `slots` password hashes at once, at most `waiters` waiting for one, each for at most `wait` seconds.
+    Past either, `Busy` is raised instead of blocking."""
+
+    def __init__(self, slots: int, waiters: int, wait: float) -> None:
+        self.slots = threading.BoundedSemaphore(slots)
+        self.max_waiters, self.wait = waiters, wait
+        self.waiting = 0
+        self.lock = threading.Lock()
+
+    @contextlib.contextmanager
+    def __call__(self) -> Iterator[None]:
+        if not self.slots.acquire(blocking=False):
+            with self.lock:
+                if self.waiting >= self.max_waiters:
+                    raise Busy
+                self.waiting += 1
+            try:
+                got = self.slots.acquire(timeout=self.wait)
+            finally:
+                with self.lock:
+                    self.waiting -= 1
+            if not got:
+                raise Busy
+        try:
+            yield
+        finally:
+            self.slots.release()
+
+
+_hashing = HashGate(HASHES_AT_ONCE, HASH_WAITERS, HASH_WAIT_S)
 
 
 @dataclass(frozen=True)
@@ -393,7 +442,7 @@ class Accounts:
 
     def _hash(self, password: str) -> str:
         """Of the NFC form (NIST 800-63B §3.1.1.2), so a composed and a decomposed é are the same password."""
-        with _hashing:
+        with _hashing():
             return _hasher.hash(self._peppered(nfc(password)))
 
     def _verify(self, password_hash: str, password: str) -> bool:
@@ -401,7 +450,7 @@ class Accounts:
         tries = [nfc(password)] + ([password] if nfc(password) != password else [])
         for pw in tries:
             try:
-                with _hashing:
+                with _hashing():
                     if _hasher.verify(password_hash, self._peppered(pw)):
                         return True
             except (VerificationError, InvalidHashError):
@@ -664,7 +713,12 @@ class Accounts:
             self.limiter.release(ukey, now)
             raise AccountError("Too many tries. Wait 15 minutes and try again.")
         acct = self.by_name(name)
-        ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
+        try:
+            ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
+        except Busy:  # turned away before checking: not a wrong guess, so it counts against nothing
+            for key in (pkey, ikey, ukey):
+                self.limiter.release(key, now)
+            raise
         if not ok or acct is None or acct.disabled:
             raise AccountError(MISMATCH)
         self.limiter.clear(pkey)
