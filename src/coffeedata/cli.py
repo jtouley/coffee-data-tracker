@@ -978,7 +978,7 @@ def cmd_rollback(args: argparse.Namespace) -> None:
         if not args.reason:
             raise SystemExit("rollback --allow-rules-only needs --reason: the serving log records why")
         override = verdict.refuse_on_remote(f"rollback --allow-rules-only ({args.reason})", lake.url)
-    to = quality.rollback(lake, args.to, args.reason, SERVED_DB, rules_only_override=override)
+    to = quality.rollback(lake, args.to, args.reason, db=SERVED_DB, rules_only_override=override)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)
     print(f"serving release {to}")
