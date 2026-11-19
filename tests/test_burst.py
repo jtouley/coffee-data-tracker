@@ -207,7 +207,7 @@ def test_past_the_waiting_line_password_checks_are_turned_away_not_queued(tmp_pa
         t.start()
     # The 4 past the line come back at once, while the 2 running and 3 waiting are still held.
     deadline = time.monotonic() + 5
-    while results.count("busy") < 4 and time.monotonic() < deadline:
+    while (results.count("busy") < 4 or held.started < 2 or gate.waiting < 3) and time.monotonic() < deadline:
         time.sleep(0.01)
     assert results == ["busy"] * 4 and held.started == 2 and gate.waiting == 3
     held.go.set()
@@ -256,3 +256,101 @@ def test_a_shed_sign_in_is_a_503_with_retry_after_and_counts_no_failure(lake, tm
     # With a slot free, the same sign-in works.
     r = c.post("/api/signin", json={"username": "jtouley", "password": pw}, headers=w)
     assert r.status_code == 200
+
+
+def _owner_accounts(tmp_path) -> "accounts_mod.Accounts":
+    users = Lake(str(tmp_path / "users"), tables=USER_TABLES)
+    accts = accounts_mod.Accounts(users, "pepper-" + "p" * 16, "s" * 40, "K7QD-M2XF-9RPA-T4WE")
+    accts.create_owner("K7QD-M2XF-9RPA-T4WE", "jtouley", "correct horse battery", "198.51.100.1", agree=True)
+    return accts
+
+
+def test_a_checked_guess_is_always_counted_even_if_a_later_slot_would_be_refused(tmp_path, monkeypatch):
+    """Both forms of a password (NFC, then as typed) are checked under one slot, so the gate can only refuse before
+    any check runs. The review's reproduction: a gate that refuses every acquisition after the first, and a guess
+    with a decomposed character (two forms). Each of three guesses was checked, so each is counted."""
+    import contextlib
+
+    accts = _owner_accounts(tmp_path)
+    calls = {"n": 0}
+
+    @contextlib.contextmanager
+    def gate():
+        calls["n"] += 1
+        if calls["n"] >= 2:
+            raise accounts_mod.Busy
+        yield
+
+    monkeypatch.setattr(accounts_mod, "_hashing", gate)
+    decomposed = "cafe\u0301 wrong guess here"
+    for _ in range(3):
+        calls["n"] = 0
+        with pytest.raises(accounts_mod.AccountError):
+            accts.sign_in("jtouley", decomposed, "203.0.113.9")
+        assert calls["n"] == 1  # one slot for both forms
+    assert len(accts.limiter.fails["ip:203.0.113.9"]) == 3
+    assert len(accts.limiter.fails["u:jtouley"]) == 3
+    # The same holds for re-authentication before a sensitive change.
+    calls["n"] = 0
+    user_id = accts.by_name("jtouley").user_id
+    with pytest.raises(accounts_mod.AccountError):
+        accts._reauth(user_id, decomposed)
+    assert len(accts.limiter.fails[f"reauth:u:{user_id}"]) == 1
+
+
+def test_the_waiting_line_is_first_come_first_served():
+    """A slot freed while someone waits goes to them, not to a newcomer who arrives just after."""
+    gate = accounts_mod.HashGate(slots=1, waiters=2, wait=0.3)
+    entered: list[str] = []
+    release = threading.Event()
+
+    def first_in_line():
+        with gate():
+            entered.append("waiter")
+            release.wait(5)
+
+    holder = gate()
+    holder.__enter__()
+    t = threading.Thread(target=first_in_line)
+    t.start()
+    deadline = time.monotonic() + 5
+    while gate.waiting < 1 and time.monotonic() < deadline:
+        time.sleep(0.01)
+    holder.__exit__(None, None, None)  # the slot passes to the waiter...
+    with pytest.raises(accounts_mod.Busy), gate():  # ...so the newcomer waits, and runs out of time
+        entered.append("newcomer")
+    release.set()
+    t.join(5)
+    assert entered == ["waiter"] and gate.waiting == 0
+    with gate():  # and the slot is free again
+        pass
+
+
+def test_a_right_password_is_never_answered_with_busy_by_the_rehash(tmp_path, monkeypatch):
+    import contextlib
+
+    accts = _owner_accounts(tmp_path)
+    before = accts.by_name("jtouley").password_hash
+    calls = {"n": 0}
+
+    @contextlib.contextmanager
+    def gate():
+        calls["n"] += 1
+        if calls["n"] >= 2:  # the check gets its slot; the rehash after it doesn't
+            raise accounts_mod.Busy
+        yield
+
+    real = accounts_mod._hasher
+
+    class NeedsRehash:
+        verify = staticmethod(real.verify)
+        hash = staticmethod(real.hash)
+
+        @staticmethod
+        def check_needs_rehash(h):
+            return True
+
+    monkeypatch.setattr(accounts_mod, "_hashing", gate)
+    monkeypatch.setattr(accounts_mod, "_hasher", NeedsRehash())
+    acct = accts.sign_in("jtouley", "correct horse battery", "203.0.113.9")
+    assert acct.username == "jtouley" and accts.by_name("jtouley").password_hash == before

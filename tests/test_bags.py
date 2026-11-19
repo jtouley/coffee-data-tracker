@@ -486,6 +486,26 @@ def test_a_bags_photo_id_is_a_plain_id(bad):
     assert Bag(bag_id="b1", photo_id="0b9f6c1e-5a7d-4c3e-9d2a-1f0e8b7c6a54").photo_id
 
 
+def test_a_stored_bag_with_an_old_style_photo_id_is_kept_without_it(monkeypatch, caplog):
+    """A bag stored before photo ids were checked on bags keeps loading; only the bad link goes, and the log names
+    the bag, not the value (review of #194)."""
+    from app import store as store_mod
+
+    row = {"bag_id": "b1", "user_id": "u1", "photo_id": "IMG_0001.jpg", "coffee_freetext": "Hambela",
+           "logged_at": "2026-11-01T00:00:00+00:00", "deleted": False}  # fmt: skip
+
+    class FakeLake:
+        def latest(self, table, key, attempts=None):
+            return [dict(row)] if table == "bags" else []
+
+    monkeypatch.setattr(store_mod.Store, "_seed_shots", lambda self: [])
+    s = store_mod.Store(FakeLake(), "owner")
+    assert "b1" in s.bags
+    bag = s.bags["b1"].item
+    assert bag.photo_id is None and bag.coffee_freetext == "Hambela" and bag.user_id == "u1"
+    assert "b1" in caplog.text and "IMG_0001" not in caplog.text
+
+
 def test_a_bag_with_a_path_for_its_photo_is_refused(catalog, tmp_path):
     app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
     c = TestClient(app)

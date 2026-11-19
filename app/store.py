@@ -21,7 +21,7 @@ from pydantic import BaseModel, ValidationError
 
 from coffeedata import shots
 from coffeedata.lake import Lake, no_files
-from coffeedata.models import Bag, Equipment, Rating, RecResponse, Shot
+from coffeedata.models import SAFE_ID, Bag, Equipment, Rating, RecResponse, Shot
 
 from . import logs
 
@@ -209,6 +209,15 @@ class Store:
             for row in lake.latest(table, key, attempts=STARTUP_READS) if rows is None else rows:
                 if owners:
                     row["user_id"] = row["user_id"] or owner_id
+                if (
+                    table == "bags"
+                    and row.get("photo_id") is not None
+                    and not SAFE_ID.fullmatch(row["photo_id"])
+                ):
+                    # From before photo ids were checked on bags. No photo can be stored under such an id (the photo
+                    # routes always checked it), so only the link goes; the bag stays. Writes stay strict.
+                    log.warning("bag %s: dropping a photo id that isn't a plain id", row[key])
+                    row["photo_id"] = None
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
                 except ValidationError as e:

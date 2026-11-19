@@ -1311,7 +1311,8 @@ async function postRetrying(url, body) {
     try {
       return await post(url, body);
     } catch (err) {
-      if (!(err instanceof Unreachable) || i >= RETRY_WAITS.length) throw err;
+      // Busy (the app turning password checks away) isn't retried here: sending again adds to the load it reports.
+      if (!(err instanceof Unreachable) || err instanceof Busy || i >= RETRY_WAITS.length) throw err;
       await sleep(RETRY_WAITS[i]);
     }
   }
