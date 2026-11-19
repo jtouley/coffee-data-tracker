@@ -3,7 +3,8 @@
 #   image repository and its IAM; eight empty secrets and their IAM; the Cloud Run service, its IAM and its domain
 #   mapping; the usage collector's service and its IAM, and one log exclusion (usage.tf); the ingestion network
 #   (network, two subnets, router, two NATs, two static addresses); the staging bucket and its IAM; the Cloud Run jobs
-#   and their IAM; Cloud Scheduler jobs; a notification channel, alert policies and an uptime check; the billing
+#   and their IAM; Cloud Scheduler jobs; a notification channel, alert policies (the log-based ones with a Logging
+#   notification rule underneath) and an uptime check; the billing
 #   budget; `data.google_project`.
 # Specific roles throughout: no owner, editor, projectIamAdmin, workloadIdentityPoolAdmin, roleAdmin or
 # serviceAccountKeyAdmin. A missing permission fails closed, with a 403 that names it.
@@ -132,12 +133,27 @@ resource "google_project_iam_custom_role" "tf_secrets" {
   ]
 }
 
-# The usage collector's request-log exclusion (usage.tf). Not roles/logging.configWriter, which can also write sinks
-# (send logs anywhere) and buckets: exclusions only, and no delete (the guard refuses deletes; that is by hand).
+# The usage collector's request-log exclusion (usage.tf), and the Logging notification rule under each log-based
+# alert policy (condition_matched_log: alerts.tf, usage.tf). Creating one calls Monitoring's CreateAlertPolicy, which
+# needs logging.notificationRules.create on the project as well ("Configure log-based alerting policies"; Logging's
+# access-control page, "Permissions for log-based alerting policies"); without it usage_dropped failed with
+# "Permission 'logging.notificationRules.create' denied". update for a changed filter, get and list to read the rule
+# back. Not roles/logging.configWriter, which can also write sinks (send logs anywhere) and buckets: exclusions and
+# notification rules only, and no delete of either (the guard refuses deletes; that is by hand). The role id stays
+# (changing it would replace the role and its grant); the title says what it covers now.
 resource "google_project_iam_custom_role" "tf_log_exclusions" {
-  role_id     = "tfApplyLogExclusions"
-  title       = "Terraform apply: create and update log exclusions"
-  permissions = ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list", "logging.exclusions.update"]
+  role_id = "tfApplyLogExclusions"
+  title   = "Terraform apply: log exclusions and log-based alerts' rules"
+  permissions = [
+    "logging.exclusions.create",
+    "logging.exclusions.get",
+    "logging.exclusions.list",
+    "logging.exclusions.update",
+    "logging.notificationRules.create",
+    "logging.notificationRules.get",
+    "logging.notificationRules.list",
+    "logging.notificationRules.update",
+  ]
 }
 
 resource "google_project_iam_custom_role" "tf_log_exclusions_reader" {

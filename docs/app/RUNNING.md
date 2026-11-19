@@ -406,6 +406,38 @@ nothing pending (its step 3 then shows no changes). If a further denial names an
 permission, add it to `tfApplyRepository` the same way (and to `tests/test_bootstrap_roles.py`); the predefined Reader
 role on this one repository is the documented fallback.
 
+**If a log-based alert policy fails to create** (a `condition_matched_log` alert, such as
+`google_monitoring_alert_policy.usage_dropped[0]`) and Cloud Audit Logs show, for principal
+`registry-coffee-tf-apply@…`, `google.monitoring.v3.AlertPolicyService.CreateAlertPolicy` with `Permission
+'logging.notificationRules.create' denied on resource '//logging.googleapis.com/projects/<project>/locations/global'`:
+Logging creates a notification rule under every log-based alert policy, and creating one needs
+`logging.notificationRules.create` on the project, which `roles/monitoring.alertPolicyEditor` doesn't hold. The
+apply account's logging role `tfApplyLogExclusions` (`tf_log_exclusions` in `src/terraform/bootstrap/iam.tf`) holds
+`logging.notificationRules.create`, `.get`, `.list` and `.update` since the change that added them; no `.delete`,
+like its exclusions (the guard refuses deletes). The job-failure alerts in `alerts.tf` were made from Cloud Shell
+before the pipeline existed, which is why only a new one fails. The plan account needs nothing new: it reads alert
+policies through `roles/monitoring.viewer`. Re-apply the bootstrap once, by hand, from the repository's root in
+Cloud Shell, with the same command block as the `Docker-GetManifest` entry just above:
+
+```bash
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
+```
+
+Read the plan before the yes: `0 to add, 1 to change, 0 to destroy`, an update in place of
+`google_project_iam_custom_role.tf_log_exclusions` (its title, and the four `logging.notificationRules` permissions
+added), and nothing else: the role keeps its id and its existing grant (`tf_apply_custom["log_exclusions"]`), so no
+new role or grant is created. That holds when the bootstrap was current with main before this change (the
+`tfApplyRepository` re-apply above included); if that one is still pending, the plan also shows its update of
+`google_project_iam_custom_role.tf_repository` (`0 to add, 2 to change, 0 to destroy`). Anything else, a replace
+included: answer no and ask first. Then run GitHub's `terraform-apply` again from main (Actions → terraform-apply →
+Run workflow, branch `main`; it runs only on main) for what the failed run left: its plan shows the alert policy
+alone, `1 to add, 0 to change, 0 to destroy`. Custom-role changes can take a few minutes to reach every check: if the
+same denial comes back at once, wait and run it again.
+
 **The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
 deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed
 in as the owner, Settings, Environments, New environment, `terraform-apply`:
@@ -697,8 +729,9 @@ two ways:
 - **Re-apply the bootstrap root** from Cloud Shell, as it was applied before (plan, read it: two custom roles, three
   grants, nothing else changes; apply).
 - **Or in the Cloud Console**, the same grants by hand:
-  1. IAM & Admin → Roles → Create role: ID `tfApplyLogExclusions`, title "Terraform apply: create and update log
-     exclusions", permissions `logging.exclusions.create`, `.get`, `.list`, `.update`. Again: ID
+  1. IAM & Admin → Roles → Create role: ID `tfApplyLogExclusions`, title "Terraform apply: log exclusions and
+     log-based alerts' rules", permissions `logging.exclusions.create`, `.get`, `.list`, `.update` and
+     `logging.notificationRules.create`, `.get`, `.list`, `.update` (the collector's alert is log-based). Again: ID
      `tfPlanLogExclusions`, title "Terraform plan: read log exclusions", permissions `logging.exclusions.get`,
      `.list`.
   2. IAM & Admin → IAM → Grant access: principal `registry-coffee-tf-apply@<project>.iam.gserviceaccount.com`, role
