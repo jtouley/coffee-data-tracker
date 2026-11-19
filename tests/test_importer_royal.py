@@ -12,6 +12,7 @@ import contextlib
 import dataclasses
 import hashlib
 import json
+import logging
 import re
 import subprocess
 from datetime import UTC, date, datetime, timedelta
@@ -659,7 +660,116 @@ def test_a_run_past_its_deadline_is_a_recorded_failure(tmp_path, monkeypatch):
         client.deadline = 0.0  # already passed
         res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
     assert res[0]["status"] == "failed" and "DeadlineReached" in res[0]["error"] and calls == []
+    assert (res[0]["http_status"], res[0]["phase"]) == (None, "listing page 1")
+    assert "shop.example" not in res[0]["error"]
     assert not (lake.root / importers.path(importers.ROYAL, MON)).exists()
+
+
+# --- a failed fetch: its HTTP status and phase, never the address --------------------------------------------------
+
+
+def _failing_store(code: int, on: str, calls: list[httpx.Request], pages: list[list[dict]] | None = None):
+    """A made-up store whose `on` request (`robots`, or `page N` of the listing) answers `code`, every other one as
+    _store does; the client retries as the weekly command's does (3 tries), without the waits."""
+    pages = pages if pages is not None else _pages_of(250)
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request)
+        if request.url.path == "/robots.txt":
+            if on == "robots":
+                return httpx.Response(code, text="")
+            return httpx.Response(200, text="User-agent: *\nDisallow:\n")
+        n = int(request.url.params["page"])
+        if on == f"page {n}":
+            return httpx.Response(code, text="")
+        return httpx.Response(200, json={"products": pages[n - 1] if n <= len(pages) else []})
+
+    return PoliteClient(min_interval=0, retries=3, transport=httpx.MockTransport(handler))
+
+
+@pytest.mark.parametrize("code", [403, 429, 503])
+@pytest.mark.parametrize(
+    ("on", "phase"),
+    [("page 1", "listing page 1"), ("page 2", "listing page 2"), ("robots", "robots")],
+)
+def test_a_failed_fetch_records_its_status_code_and_phase_never_the_address(
+    tmp_path, monkeypatch, caplog, code, on, phase
+):
+    """A refusal (403), rate limiting (429) and the site failing (503) each give their code and where the fetch
+    failed in the result (the 2026-11-18 run recorded only "FetchError: HTTPStatusError <url>"), and neither the
+    result, the run's printed results, its importer-results file nor the log names the store's address."""
+    from coffeedata import cli
+    from coffeedata import http as http_mod
+
+    monkeypatch.setattr(http_mod.time, "sleep", lambda s: None)  # the retries' backoff
+    monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 3)
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    calls: list[httpx.Request] = []
+    caplog.set_level(logging.DEBUG)
+    caplog.set_level(logging.WARNING, logger="httpx")  # as the command sets it (cli.main)
+    with _failing_store(code, on, calls) as client:
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    (r,) = res
+    assert (r["status"], r["http_status"], r["phase"]) == ("failed", code, phase)
+    assert r["error"].startswith(f"FetchFailed: HTTP {code} at {phase} (")
+    assert not (lake.root / importers.path(importers.ROYAL, MON)).exists()
+    pages_asked = [c for c in calls if c.url.path != "/robots.txt"]
+    assert len(pages_asked) >= {"robots": 0, "page 1": 1, "page 2": 2}[on]
+    # the code is in the log line too, and nothing anywhere names the store
+    logged = "\n".join(rec.getMessage() for rec in caplog.records)
+    assert f"royal_coffee: FetchFailed: HTTP {code} at {phase}" in logged
+    printed = json.dumps(res)
+    public = json.dumps(importers.public_results(res))
+    for text in (printed, logged, public):
+        assert "shop.example" not in text and "://" not in text and "products.json" not in text, text
+    assert importers.public_results(res) == [
+        {
+            "importer": "royal_coffee",
+            "week": "2026-11-09",
+            "status": "failed",
+            "http_status": code,
+            "phase": phase,
+        }
+    ]
+
+    # the command writes the same public results for importers-alerts, and nothing else
+    monkeypatch.setattr(importers, "snapshot", lambda *a, **k: res)
+    monkeypatch.setenv("COFFEEDATA_IMPORTERS", str(tmp_path / "importers"))
+    out = tmp_path / "results" / "results.json"
+    with pytest.raises(SystemExit) as exit_:
+        cli.main(["importer-snapshot", "--results", str(out)])
+    assert exit_.value.code == 1  # a failed importer fails the run
+    assert json.loads(out.read_text()) == importers.public_results(res)
+
+
+def test_a_robots_disallow_and_a_network_error_have_no_status_code(tmp_path, monkeypatch):
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    with _store(_pages_of(250), [], robots="User-agent: *\nDisallow: /products.json\n") as client:
+        (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert (r["http_status"], r["phase"]) == (None, "robots")
+    assert r["error"] == "FetchFailed: no HTTP status at robots (Blocked)"
+
+    def down(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nDisallow:\n")
+        raise httpx.ConnectError("connection refused to https://shop.example/products.json", request=request)
+
+    with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(down)) as client:
+        (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert (r["http_status"], r["phase"]) == (None, "listing page 1")
+    assert "ConnectError" in r["error"] and "shop.example" not in r["error"]
+
+
+def test_any_other_failure_has_its_urls_and_the_importers_host_taken_out():
+    e = RuntimeError("upload of https://huggingface.co/x failed; shop.example said no; WWW.Shop.Example too")
+    assert importers.public_error(e, "https://www.shop.example/products.json") == (
+        "RuntimeError: upload of <url> failed; <host> said no; <host> too"
+    )
+    assert importers.public_error(importers.LayoutChanged("royal_coffee: page 2 is not a listing"), None) == (
+        "LayoutChanged: royal_coffee: page 2 is not a listing"
+    )
 
 
 def test_no_other_client_can_reach_the_store_and_the_roaster_crawl_never_lists_it(lake, monkeypatch):

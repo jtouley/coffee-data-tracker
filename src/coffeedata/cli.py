@@ -1171,6 +1171,9 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     ) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
+    if args.results:
+        args.results.parent.mkdir(parents=True, exist_ok=True)
+        args.results.write_text(json.dumps(importers.public_results(results), indent=1) + "\n")
     return all(r["status"] != "failed" for r in results)
 
 
@@ -1559,6 +1562,12 @@ def main(argv: list[str] | None = None) -> None:
     )
     imp.add_argument(
         "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
+    )
+    imp.add_argument(
+        "--results",
+        type=Path,
+        help="also write each importer's key, week, status, and a failed fetch's HTTP status and phase to this JSON "
+        "file (importers.public_results: no error text, no URL), for importers-alerts",
     )
 
     ib = add(

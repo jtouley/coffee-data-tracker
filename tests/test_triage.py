@@ -569,6 +569,85 @@ def test_a_failed_scheduled_run_opens_one_issue_with_keys_and_statuses_only():
         assert word not in table_and_text.replace("https://github.com/o/r/", ""), word
 
 
+def _results(*records):
+    return [
+        {"importer": name, "week": week, "status": status, "http_status": code, "phase": phase}
+        for name, week, status, code, phase in records
+    ]
+
+
+@pytest.mark.parametrize(
+    ("code", "phase", "shown"),
+    [
+        (403, "listing page 1", "HTTP 403 at listing page 1"),
+        (429, "listing page 2", "HTTP 429 at listing page 2"),
+        (503, "robots", "HTTP 503 at robots"),
+        (None, "robots", "no HTTP status at robots"),
+        (None, None, "failed, not a fetch"),
+    ],
+)
+def test_the_issue_names_a_failed_fetchs_status_code_and_phase(tmp_path, code, phase, shown):
+    """The run's importer-results artifact (importers.public_results) gives the missing importer's HTTP status and
+    phase, so the owner can tell a block (403) from rate limiting (429) or the site down (5xx) without the log."""
+    weeks = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16")
+    run = dict(_run("2026-11-18T17:52:10Z", "failure"), id=44)
+    results = {"44": _results(("cafe_imports", "2026-11-16", "stored", None, None),
+                              ("royal_coffee", "2026-11-16", "failed", code, phase))}  # fmt: skip
+    gh = FakeGitHub()
+    alerts = triage.importer_alerts(weeks, [run], _at("2026-11-18T19:30"), CHECK, "abc123", results)
+    triage.sync(alerts, gh, now="2026-11-19")
+    body = gh.store[0]["body"]
+    assert "| Importer | Status | Last stored week | Failed fetch |" in body
+    assert f"| `royal_coffee` | missing 1 week | none | {shown} |" in body
+    assert "| `cafe_imports` | ok | 2026-11-16 | – |" in body
+    assert f"royal_coffee ({shown}): no stored week for 2026-11-16." in body
+
+    # the same through the command, from the folder the check job fills (results/<run id>/results.json)
+    (tmp_path / "weeks.json").write_text(json.dumps(weeks))
+    (tmp_path / "runs.json").write_text(json.dumps([run]))
+    (tmp_path / "results" / "44").mkdir(parents=True)
+    (tmp_path / "results" / "44" / "results.json").write_text(json.dumps(results["44"]))
+    env = {k: v for k, v in os.environ.items() if k not in ("GITHUB_TOKEN", "GH_TOKEN")}
+    r = subprocess.run(
+        [sys.executable, "-m", "coffeedata.triage", "importers", str(tmp_path), "--dry-run",
+         "--now", "2026-11-19T09:23"],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
+    assert r.returncode == 0, r.stderr
+    assert f"| `royal_coffee` | missing 1 week | none | {shown} |" in r.stdout
+
+
+def test_the_newest_runs_failure_for_the_due_week_is_shown_and_anything_else_is_passed_over():
+    weeks = _weeks(cafe_imports="2026-11-16")
+    runs = [
+        dict(_run("2026-11-18T17:52:10Z", "failure"), id=1),
+        dict(_run("2026-11-18T20:10:00Z", "failure", event="workflow_dispatch", n=8), id=2),
+    ]
+    results = {
+        "1": _results(("royal_coffee", "2026-11-16", "failed", 403, "listing page 1"),
+                      ("interamerican", "2026-11-16", "failed", 503, "page")),
+        # the newer dispatch: interamerican failed again, differently; Royal is skipped on a dispatch
+        "2": _results(("interamerican", "2026-11-16", "failed", 429, "page"),
+                      ("royal_coffee", "2026-11-16", "skipped", None, None)),
+        "3": _results(("royal_coffee", "2026-11-16", "failed", 500, "page")),  # not a listed run
+    }  # fmt: skip
+    failures = triage.importer_failures(results, runs, triage.date(2026, 11, 16))
+    assert failures == {"royal_coffee": "HTTP 403 at listing page 1", "interamerican": "HTTP 429 at page"}
+    assert triage.importer_failures(results, runs, triage.date(2026, 11, 9)) == {}
+    # malformed files and values: passed over, never shown as they are
+    bad = {"1": None, "2": [{"importer": "royal_coffee", "week": "2026-11-16", "status": "failed",
+                              "http_status": "https://shop.example/", "phase": "at https://shop.example/x"}]}  # fmt: skip
+    assert triage.importer_failures(bad, runs, triage.date(2026, 11, 16)) == {
+        "royal_coffee": "failed, not a fetch"
+    }
+    assert triage.importer_failures(None, None, triage.date(2026, 11, 16)) == {}
+    alerts = triage.importer_alerts(weeks, runs, _at("2026-11-18T20:30"), CHECK, "abc123", results)
+    (weekly,) = [a for a in alerts if a["key"] == "importers:weekly"]
+    assert weekly["summary"].startswith(
+        "interamerican (HTTP 429 at page), royal_coffee (HTTP 403 at listing page 1): no stored week for 2026-11-16."
+    )
+
+
 def test_a_run_that_never_happened_is_caught_by_thursdays_check_and_counted_weekly():
     gh = FakeGitHub()
     last_week = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16", royal_coffee="2026-11-16")
@@ -780,6 +859,13 @@ def test_the_importers_alerts_workflow_and_the_importers_queue():
     # the runs listing is written whole or not at all (a failed call leaves no runs.json)
     runs_step = next(s for s in wf["jobs"]["check"]["steps"] if "gh api" in s.get("run", ""))
     assert "runs.json.tmp" in runs_step["run"] and "mv " in runs_step["run"]
+    assert "{id, event, status," in runs_step["run"]  # each run's id, for its importer-results artifact
+    # the runs' importer-results artifacts (HTTP status codes), best effort, with GITHUB_TOKEN only
+    dl = next(s for s in steps if "gh run download" in s.get("run", ""))
+    assert dl["continue-on-error"] is True and dl["if"] == "${{ !cancelled() }}"
+    assert dl["env"] == {"GH_TOKEN": "${{ github.token }}"}
+    assert "--name importer-results" in dl["run"] and '"$RUNNER_TEMP/importers/results/$id"' in dl["run"]
+    assert steps.index(runs_step) < steps.index(dl)
 
 
 def test_the_due_week_follows_the_importers_cron():

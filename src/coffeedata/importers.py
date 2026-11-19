@@ -64,7 +64,15 @@ from urllib.parse import urljoin, urlsplit
 import httpx
 import pyarrow.parquet as pq
 
-from .http import FetchError, PoliteClient, challenge_error
+from .http import (
+    Blocked,
+    FetchError,
+    PoliteClient,
+    RobotsUnavailable,
+    ScheduleOnlyHost,
+    causes,
+    challenge_error,
+)
 from .lake import Lake, _same_file
 
 log = logging.getLogger(__name__)
@@ -530,7 +538,12 @@ def read_royal(
     for page in range(1, ROYAL_MAX_PAGES + 1):
         if page > 1:
             (sleep or time.sleep)(ROYAL_PAGE_INTERVAL)
-        data = client.fetch_json(url, limit=ROYAL_PAGE_LIMIT, page=page)
+        try:
+            data = client.fetch_json(url, limit=ROYAL_PAGE_LIMIT, page=page)
+        except ScheduleOnlyHost:
+            raise  # our own guard, not the store's answer; its message names no host
+        except (FetchError, httpx.HTTPError) as e:
+            raise fetch_failed(e, f"listing page {page}") from None  # the original names the address
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise LayoutChanged(f"{ROYAL}: page {page} is not a /products.json listing")
         batch = [p for p in data["products"] if isinstance(p, dict)]
@@ -1007,17 +1020,85 @@ def last_count(lake: Lake, importer: str, week: date) -> int | None:
         return pq.read_metadata(local).num_rows
 
 
+class FetchFailed(FetchError):
+    """An importer's fetch failed, said without its address: the HTTP status it got (`http_status`, also `status`;
+    None when no response gave one: a network error, a robots.txt disallow, the run's deadline), the phase it failed
+    in (`robots`, `page`, `listing page N`) and the class names of the error and its causes. The original error's
+    message names the URL or the host, so it is dropped (`raise ... from None`): the snapshot's result and log are in
+    a public repository's run, and Royal's address must never reach them (royal_listing_url)."""
+
+    def __init__(self, phase: str, http_status: int | None, kinds: list[str]) -> None:
+        what = f"HTTP {http_status}" if http_status is not None else "no HTTP status"
+        super().__init__(f"{what} at {phase} ({' from '.join(kinds)})", status=http_status)
+        self.phase = phase
+        self.http_status = http_status
+
+
+def _http_status(e: BaseException) -> int | None:
+    """The HTTP status one error in a chain carries: robots.txt's answer (one that wasn't rules, or a 401/403 that
+    disallowed everything), a wrapped HTTPStatusError's response (a retried status once retries ran out: 429, 430,
+    5xx), or a FetchError's own (any other non-200)."""
+    if isinstance(e, RobotsUnavailable):
+        return e.http_status if e.http_status is not None else e.status
+    if isinstance(e, httpx.HTTPStatusError):
+        return e.response.status_code
+    if isinstance(e, Blocked) and e.robots_status is not None:  # robots.txt answered 401 or 403
+        return e.robots_status
+    if isinstance(e, FetchError):
+        return e.status
+    return None
+
+
+def fetch_failed(e: BaseException, phase: str) -> FetchFailed:
+    """`e` (a FetchError or httpx error, with its causes) as a FetchFailed: its HTTP status, and `phase`, or `robots`
+    when robots.txt didn't answer with rules or disallows the URL (it is asked for before the host's first request)."""
+    if isinstance(e, FetchFailed):
+        return e
+    chain = list(causes(e))
+    if any(isinstance(c, RobotsUnavailable | Blocked) for c in chain):
+        phase = "robots"
+    status = next((s for c in chain if (s := _http_status(c)) is not None), None)
+    return FetchFailed(phase, status, list(dict.fromkeys(type(c).__name__ for c in chain)))
+
+
+# Any URL in a failure's text (a defense beside FetchFailed, for an error raised elsewhere)
+_URL_TEXT = re.compile(r"\b[a-z][a-z0-9+.-]*://[^\s'\"<>)]+", re.I)
+
+
+def public_error(e: BaseException, url: str | None) -> str:
+    """A failed importer's error as the result and the log give it: its class and message, with any URL and the
+    importer's host taken out, at most 500 characters. A fetch's error is a FetchFailed, which names neither."""
+    text = _URL_TEXT.sub("<url>", f"{type(e).__name__}: {e}")
+    if host := urlsplit(url or "").hostname:
+        for h in sorted({host, host.removeprefix("www.")}, key=len, reverse=True):  # www. first
+            text = re.sub(re.escape(h), "<host>", text, flags=re.I)
+    return text[:500]
+
+
 def fetch(client: PoliteClient, url: str) -> str:
-    """The page's HTML, or FetchError: a block, a robots.txt disallow, a challenge or any status but 200."""
+    """The page's HTML, or FetchFailed (phase `page`, or `robots`): a block, a robots.txt disallow, a challenge or
+    any status but 200."""
     try:
         r = client.get(url)
-    except httpx.HTTPError as e:
-        raise FetchError(f"{type(e).__name__} {url}") from e
-    if err := challenge_error(r, url):
-        raise err
-    if r.status_code != 200:
-        raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
+        if err := challenge_error(r, url):
+            raise err
+        if r.status_code != 200:
+            raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
+    except ScheduleOnlyHost:
+        raise  # our own guard, not the site's answer; its message names no host
+    except (FetchError, httpx.HTTPError) as e:
+        raise fetch_failed(e, "page") from None  # the original names the URL
     return r.text
+
+
+# What a result may carry outside the private dataset (the importer-results artifact, which importers-alerts reads):
+# keys, weeks, statuses, counts, and a failed fetch's HTTP status and phase. Never an error's text, a note or a URL.
+PUBLIC_RESULT_KEYS = ("importer", "week", "status", "http_status", "phase")
+
+
+def public_results(results: list[dict]) -> list[dict]:
+    """The snapshot's results reduced to PUBLIC_RESULT_KEYS (a missing key is left out)."""
+    return [{k: r[k] for k in PUBLIC_RESULT_KEYS if k in r} for r in results]
 
 
 def snapshot(
@@ -1031,14 +1112,16 @@ def snapshot(
     is written.
 
     One result per importer: `stored` (with its row and null-cell counts), `skipped` (the week was already stored,
-    so the page isn't fetched again) or `failed` (with the error). Every importer is tried; the caller fails the run
-    when any failed. Nothing is written for a failed importer.
+    so the page isn't fetched again) or `failed`, with the error (public_error: never a URL), and `http_status` and
+    `phase` (a failed fetch's HTTP status and where it failed, FetchFailed; None for any other failure). Every
+    importer is tried; the caller fails the run when any failed. Nothing is written for a failed importer.
     """
     ensure_private(lake)
     week = week_of(now().date())
     results: list[dict] = []
     for name in names or list(IMPORTERS):
         imp, rel = IMPORTERS[name], path(name, week)
+        url: str | None = None
         try:
             url = imp.where()
             if url is None:  # Royal, on any run but a scheduled one's first attempt
@@ -1111,13 +1194,20 @@ def snapshot(
                 | extra
             )
         except Exception as e:  # noqa: BLE001 - reported per importer; the caller fails the run
-            log.error("%s: %s: %s", name, type(e).__name__, e)
+            if not isinstance(e, FetchFailed | ScheduleOnlyHost) and isinstance(
+                e, FetchError | httpx.HTTPError
+            ):
+                e = fetch_failed(e, "fetch")  # a fetch outside fetch() and read_royal's: said the same way
+            error = public_error(e, url)
+            log.error("%s: %s", name, error)
             results.append(
                 {
                     "importer": name,
                     "week": str(week),
                     "status": "failed",
-                    "error": f"{type(e).__name__}: {e}"[:500],
+                    "error": error,
+                    "http_status": e.http_status if isinstance(e, FetchFailed) else None,
+                    "phase": e.phase if isinstance(e, FetchFailed) else None,
                 }
             )
     return results

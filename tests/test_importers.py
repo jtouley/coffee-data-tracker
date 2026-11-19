@@ -6,6 +6,7 @@ public."""
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 import types
@@ -367,16 +368,29 @@ def test_a_changed_page_fails_that_importer_and_writes_nothing_for_it(tmp_path):
     assert not (lake.root / importers.path("cafe_imports", MON)).exists()
 
 
-def test_a_failed_fetch_fails_loudly(tmp_path):
+@pytest.mark.parametrize("code", [403, 429, 503])
+def test_a_failed_fetch_fails_loudly_with_its_status_code_and_no_url(tmp_path, monkeypatch, caplog, code):
+    from coffeedata import http as http_mod
+
+    monkeypatch.setattr(http_mod.time, "sleep", lambda s: None)  # the retries' backoff
+
     def handler(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/robots.txt":
             return httpx.Response(200, text="User-agent: *\nDisallow:\n")
-        return httpx.Response(403, text="no")
+        return httpx.Response(code, text="no")
 
-    with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
+    caplog.set_level(logging.DEBUG)
+    caplog.set_level(logging.WARNING, logger="httpx")  # as the command sets it (cli.main)
+    with PoliteClient(min_interval=0, retries=3, transport=httpx.MockTransport(handler)) as client:
         res = importers.snapshot(_local(tmp_path), client, now=lambda: NOW)
     assert [r["status"] for r in res] == ["failed", "failed", "skipped"]
-    assert all("HTTP 403" in r["error"] for r in res[:2])
+    assert [(r["http_status"], r["phase"]) for r in res[:2]] == [(code, "page")] * 2
+    assert all(r["error"].startswith(f"FetchFailed: HTTP {code} at page (") for r in res[:2])
+    logged = "\n".join(rec.getMessage() for rec in caplog.records)
+    for text in (json.dumps(res), logged):
+        assert (
+            "://" not in text and "cafeimports.com" not in text and "interamericancoffee.com" not in text
+        ), text
 
 
 def test_robots_disallow_is_respected(tmp_path):
@@ -1117,13 +1131,26 @@ def test_workflow_runs_on_main_only_and_never_on_pull_requests():
     assert "importer-snapshot" not in yaml.safe_dump(jobs["build"])
 
 
-def test_the_workflow_never_uploads_an_artifact_or_prints_the_build():
-    """This repository is public, and so are its runs' artifacts and logs: the importers workflow uploads no artifact
-    and no cache, and the build's dbt output goes to a file on the runner (--log-file), never to the log."""
+def test_the_workflow_uploads_only_the_public_results_and_never_prints_the_build():
+    """This repository is public, and so are its runs' artifacts and logs: the importers workflow uploads no cache and
+    one artifact, the snapshot's importer-results (importers.public_results: keys, weeks, statuses, a failed fetch's
+    HTTP status and phase; no error text, no URL), and the build's dbt output goes to a file on the runner
+    (--log-file), never to the log."""
     text = (Path(__file__).parent.parent / ".github/workflows/importers.yml").read_text()
     wf = yaml.safe_load(text)
-    uses = [s.get("uses", "") for job in wf["jobs"].values() for s in job["steps"]]
-    assert not any(u.startswith(("actions/upload-artifact", "actions/cache")) for u in uses), uses
+    uploads = [
+        (name, s) for name, job in wf["jobs"].items() for s in job["steps"]
+        if s.get("uses", "").startswith(("actions/upload-artifact", "actions/cache"))
+    ]  # fmt: skip
+    assert [(name, s["uses"].split("@")[0], s["with"]["name"]) for name, s in uploads] == [
+        ("snapshot", "actions/upload-artifact", "importer-results")
+    ]
+    (upload,) = [s for _, s in uploads]
+    assert upload["with"]["path"] == "${{ runner.temp }}/importer-results/results.json"
+    assert "env" not in upload  # never the Hub token
+    snap = next(s for s in wf["jobs"]["snapshot"]["steps"] if "importer-snapshot" in s.get("run", ""))
+    assert '--results "$RUNNER_TEMP/importer-results/results.json"' in snap["run"]
+    assert importers.PUBLIC_RESULT_KEYS == ("importer", "week", "status", "http_status", "phase")
     build = next(s for s in wf["jobs"]["build"]["steps"] if "importer-build" in s.get("run", ""))
     log = '--log-file "$RUNNER_TEMP/importer-build/dbt.log"'
     assert log in build["run"] and build["run"].count("dbt.log") == 1  # written there, never read back out
