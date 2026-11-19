@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import html as htmllib
+import json
 import logging
+import re
 from collections.abc import Iterator
 
 import httpx
@@ -336,6 +339,116 @@ def variation_prices(
 STORE_API_PATH = "/wp-json/wc/store/v1/products"
 
 
+# A WooCommerce product page, as WordPress and WooCommerce's own templates print it. The product's post id is the
+# Store API's product id: WordPress's body class `postid-<id>` (get_body_class), WooCommerce's `<div id="product-<id>">`
+# (content-single-product.php), or the `<link rel="shortlink" href="...?p=<id>">` WordPress prints (wp_shortlink_wp_head).
+_POSTID = re.compile(r"<body\b[^>]*\bclass=[\"'][^\"']*\bpostid-(\d+)\b", re.I)
+_PRODUCT_DIV = re.compile(r"<div\b[^>]*\bid=[\"']product-(\d+)[\"'][^>]*>", re.I)
+_SHORTLINK = re.compile(
+    r"<link\b(?=[^>]*\brel=[\"']shortlink[\"'])[^>]*\bhref=[\"'][^\"']*[?&](?:amp;)?p=(\d+)", re.I
+)
+# A variable product's sizes, inline in its add-to-cart form (single-product/add-to-cart/variable.php): each
+# variation's id, attribute values, display_price and is_in_stock. `false` when the product has more variations than
+# the store's woocommerce_ajax_variation_threshold (30 by default): the form then asks for each one by AJAX.
+_VARIATIONS = re.compile(r"\bdata-product_variations=([\"'])(.*?)\1", re.S)
+_CLASS = re.compile(r"\bclass=[\"']([^\"']*)[\"']", re.I)
+# Its categories and tags (single-product/meta.php): the names the Store API lists as `categories` and `tags`.
+_META = re.compile(r"<span\b[^>]*\bclass=[\"'](?:posted_in|tagged_as)[\"'][^>]*>(.*?)</span>", re.S | re.I)
+_TAG_LINK = re.compile(r"<a\b[^>]*\brel=[\"']tag[\"'][^>]*>(.*?)</a>", re.S | re.I)
+
+
+def post_id(page: str) -> str | None:
+    """The product's post id on its own page (the Store API's product id), or None."""
+    # The body class and the shortlink name the queried post itself; the product div comes before any related
+    # product's in the template, and those are list items without an id (content-product.php).
+    for rx in (_POSTID, _SHORTLINK, _PRODUCT_DIV):
+        if m := rx.search(page):
+            return m.group(1)
+    return None
+
+
+def page_variations(page: str) -> list[dict] | None:
+    """The variations inline in the page's add-to-cart form, or None when it has none (a simple product, or more
+    variations than the store shows inline)."""
+    if not (m := _VARIATIONS.search(page)):
+        return None
+    try:
+        data = json.loads(htmllib.unescape(m.group(2)))
+    except ValueError:
+        return None
+    return (
+        [v for v in data if isinstance(v, dict) and "variation_id" in v] if isinstance(data, list) else None
+    )
+
+
+def _product_classes(page: str, pid: str) -> list[str]:
+    for m in _PRODUCT_DIV.finditer(page):
+        if m.group(1) == pid and (c := _CLASS.search(m.group(0))):
+            return c.group(1).split()
+    return []
+
+
+def parse_page(page: str, url: str, roaster: Roaster) -> CatalogItem | None:
+    """A WooCommerce product page read in place of the Store API (a store whose robots.txt disallows it), with the
+    Store API's identity, so the product keeps its coffee_id and its sizes their price series:
+    - product_id: its post id (post_id), platform `woocommerce`;
+    - a variable product's sizes: each variation's id, its attribute values joined by a space as the Store API
+      answered them for this store (`ground-drip 12oz`; an `any` attribute is empty), display_price, is_in_stock;
+    - a simple product: one size whose id is the product's, titled with its name, as parse_product does;
+    - product_type (`simple`, `variable`...) from its `product-type-` class; tags from its category and tag links.
+    A page without a post id keeps the JSON-LD's ids and platform `generic` (generic.page_item); a variable product
+    whose sizes aren't inline keeps the JSON-LD's offers, under its post id."""
+    from . import generic
+
+    base = generic.page_item(page, url, roaster)
+    if base is None or (pid := post_id(page)) is None:
+        return base
+    classes = _product_classes(page, pid)
+    kind = next((c.removeprefix("product-type-") for c in classes if c.startswith("product-type-")), "")
+    currency = next((v.currency for v in base.variants if v.currency), None)
+    variations = page_variations(page)
+    variants = base.variants
+    if variations:
+        variants = []
+        for v in variations:
+            attrs = a if isinstance(a := v.get("attributes"), dict) else {}
+            label = " ".join(str(a or "") for a in attrs.values())
+            stock = v.get("is_in_stock")
+            variants.append(
+                Variant(
+                    variant_id=str(v["variation_id"]),
+                    title=label,
+                    price_usd=_to_price(v.get("display_price")),
+                    grams=parse_grams(label),
+                    available=stock if isinstance(stock, bool) else None,
+                    currency=currency,
+                )
+            )
+    elif kind in ("simple", "") and len(base.variants) == 1:
+        one = base.variants[0]
+        variants = [
+            one.model_copy(update={"variant_id": pid, "title": base.title, "grams": parse_grams(base.title)})
+        ]
+    tags = sorted({html_to_text(t) for span in _META.findall(page) for t in _TAG_LINK.findall(span)} - {""})
+    return base.model_copy(
+        update={
+            "product_id": pid,
+            "platform": "woocommerce",
+            "product_type": kind,
+            "tags": tags,
+            "variants": variants,
+            "payload_hash": payload_hash({"jsonld": base.payload_hash, "variations": variations}),
+        }
+    )
+
+
+def _to_price(value: object) -> float | None:
+    try:
+        return float(value) if value not in (None, "") else None  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return None
+
+
 class _StoreApiDisallowed(Exception):
     """robots.txt disallows the Store API's first listing page itself: nothing was read from the API."""
 
@@ -352,7 +465,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     client.note_route(
         f"generic: robots.txt disallows the Store API ({STORE_API_PATH}); sitemap and product pages"
     )
-    items = generic.read_pages(client, roaster, declared=True)
+    items = generic.read_pages(client, roaster, declared=True, parse=parse_page)
     if not items:
         # the sitemap listed no product page we may read: not an empty catalog, still the robots block it was
         raise Blocked(f"https://{roaster.host}{STORE_API_PATH} (and no product page in its sitemap)")

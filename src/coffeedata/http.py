@@ -665,8 +665,7 @@ class RequestStats:
     # stored copy, used because the live one was unreachable), fetched_at and age_s of the copy, its HTTP status, and
     # body (only on the fetch that fetched it live, so each body is stored once)}
     robots: list[dict] = field(default_factory=list)
-    # How the catalog was read when not by its adapter's own path (PoliteClient.note_route): a WooCommerce store whose
-    # robots.txt disallows the Store API, read from its sitemap and product pages
+    # How the catalog was read when not by its adapter's own path, and why (PoliteClient.note_route)
     route: str | None = None
 
     def note(

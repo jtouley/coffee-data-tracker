@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections.abc import Callable
 from urllib.parse import urlparse
 
 import httpx
@@ -155,10 +156,24 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     return read_pages(client, roaster)
 
 
-def read_pages(client: PoliteClient, roaster: Roaster, declared: bool = False) -> list[CatalogItem]:
+def page_item(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
+    """A product page's own product, from its first JSON-LD Product (later blocks are related products); None when it
+    has none."""
+    for p in jsonld_products(html)[:1]:
+        return parse_jsonld(p, url, roaster)
+    return None
+
+
+def read_pages(
+    client: PoliteClient,
+    roaster: Roaster,
+    declared: bool = False,
+    parse: Callable[[str, str, Roaster], CatalogItem | None] = page_item,
+) -> list[CatalogItem]:
     """The catalog from the sitemap's product pages, each page's JSON-LD (also woocommerce.fetch's, for a store whose
     robots.txt disallows the Store API). declared: also try the sitemaps robots.txt names when /sitemap.xml is a 404
-    (sitemap.sitemap_urls): only that fallback asks for it; every generic store reads /sitemap.xml alone."""
+    (sitemap.sitemap_urls): only that fallback asks for it; every generic store reads /sitemap.xml alone. parse: what
+    a page's product is (html, url, roaster): page_item, or woocommerce.parse_page, which keeps the Store API's ids."""
     items: dict[str, CatalogItem] = {}
     failed: list[str] = []  # product pages that couldn't be read: "url (why)"
     disallowed = 0  # of those, the ones robots.txt disallows us
@@ -194,8 +209,7 @@ def read_pages(client: PoliteClient, roaster: Roaster, declared: bool = False) -
         if r.status_code != 200:
             failed.append(f"{url} (HTTP {r.status_code})")
             continue
-        for p in jsonld_products(r.text)[:1]:  # the page's own product; later blocks are related products
-            item = parse_jsonld(p, url, roaster)
+        if (item := parse(r.text, url, roaster)) is not None:
             items.setdefault(item.product_id, item)
     if failed or unread:
         # A product page or a sub-sitemap that couldn't be read: the products on it would look delisted, so the

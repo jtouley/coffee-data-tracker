@@ -30,7 +30,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   with their phase (`fetches.transport_errors`); an unreachable robots.txt may be stood in for by the site's own
   copy from the last 30 days (`fetches.robots`, `probes.robots`), followed exactly. Raw contract 1.7.0.
 - A WooCommerce store whose robots.txt disallows the Store API is read from its sitemap (or the one its robots.txt
-  names) and product pages, under the same rules; recorded in `fetches.catalog_route`. Raw contract 1.8.0.
+  names) and product pages, under the same rules; recorded in `fetches.catalog_route`. Raw contract 1.8.0. Each
+  page keeps the Store API's identity (`woocommerce.parse_page`): the product's post id, each size's variation id,
+  platform `woocommerce`.
 
 - A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
   deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never

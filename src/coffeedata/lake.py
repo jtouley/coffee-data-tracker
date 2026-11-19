@@ -225,8 +225,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("transport_errors", pa.list_(TRANSPORT_ERROR)),
             ("robots", pa.list_(ROBOTS_COPY)),
             # Added with raw contract 1.8.0 (null before, and when the adapter read the catalog its own way): how
-            # the catalog was read instead, and why (a WooCommerce store whose robots.txt disallows the Store API,
-            # read from its sitemap and product pages).
+            # the catalog was read instead, and why (PoliteClient.note_route).
             ("catalog_route", pa.string()),
         ]
     ),
