@@ -6,4 +6,4 @@
 # (usage_enabled in src/terraform/ci.tfvars): the pages then send nothing at all. Set it in a PR once the apply
 # that creates the service has run; tests/test_usage_collector.py checks its shape. Pages POST to <collector_url>/e
 # and their CSP allows connect-src <collector_url>.
-collector_url = ""
+collector_url = "https://registry-coffee-usage-866312183550.us-central1.run.app"
