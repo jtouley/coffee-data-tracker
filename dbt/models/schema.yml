@@ -762,10 +762,11 @@ models:
       - name: coffee_id
         data_tests:
           - not_null
-          # A product later reclassified as not coffee leaves dim_coffee but keeps its past events.
+          # Only coffees in dim_coffee (its rule: the latest version decides), so this holds by construction. A
+          # product later reclassified as not coffee leaves both, with its past events; it used to keep them here
+          # and read as `removed` (a warning of 1,313 rows on 2026-11-16). An error now: a failure is a bug.
           - relationships:
               arguments: {to: ref('dim_coffee'), field: coffee_id}
-              config: {severity: warn}
       - name: event
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}

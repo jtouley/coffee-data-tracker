@@ -15,7 +15,7 @@ import threading
 import time
 import unicodedata
 from collections import Counter
-from collections.abc import Iterable, Iterator
+from collections.abc import Callable, Iterable, Iterator
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
@@ -89,6 +89,20 @@ BLOCK_HEADERS = (
     "sg-captcha",
 )
 MAX_BLOCKS_PER_FETCH = 20  # a store that refuses every try doesn't fill its fetch row with copies
+# A request that got no HTTP response at all (fetches.transport_errors): the first 20 per fetch, each with the phase it
+# failed in (transport_phase) and the egress IP, so a run's data says why (run 2026-11-16: 36 generic stores whose
+# robots.txt got no response were recorded only as "RobotsUnavailable <url>").
+MAX_TRANSPORT_ERRORS_PER_FETCH = 20
+TRANSPORT_DETAIL_CHARS = 200
+# RFC 9309 2.4: "If a crawler cannot fetch robots.txt due to the server being unreachable, a crawler MAY use a cached
+# copy ... for up to 24 hours or longer". The owner's rule (2026-11-18): when robots.txt is unreachable (no response,
+# or a 5xx that isn't a pause), the newest robots.txt we stored for that host (fetches.robots, probes.robots, source
+# `live`) is used if it is at most this old, and its rules are followed exactly; older or none, nothing is fetched,
+# as before. A challenge, a 401/403 and a pause (429, 430, 503, a 5xx with a long Retry-After) never use a copy.
+ROBOTS_COPY_MAX_AGE_S = 30 * 86400.0
+# RFC 9309 2.5: crawlers MUST parse at least 500 KiB. The live rules are always parsed from the whole file; only the
+# body we store is cut, at its last complete line within this many bytes (http.stored_body).
+ROBOTS_BODY_MAX_BYTES = 500 * 1024
 EGRESS_TTL = 60.0  # seconds an egress-IP lookup is reused (default egress can change IP between connections)
 _egress_lock = threading.Lock()
 _egress: dict[str, Any] = {"ip": None, "at": None}
@@ -213,12 +227,97 @@ def is_challenge(r: httpx.Response) -> bool:
     )
 
 
-def block_record(r: httpx.Response) -> dict:
-    """What one refused or blocked response said about itself (raw.fetches.blocks)."""
+def block_record(r: httpx.Response, robots: dict | None = None) -> dict:
+    """What one refused or blocked response said about itself (raw.fetches.blocks). robots: the robots.txt copy the
+    request was made under (PoliteClient.robots_used for its host): `live` or `cached`, and a cached copy's age."""
     h = r.headers
     return {"at": datetime.now(UTC).replace(microsecond=0), "status": r.status_code, "host": r.url.host,
             "path": r.url.path, **{k.replace("-", "_"): h.get(k) for k in BLOCK_HEADERS},
-            "egress_ip": egress_ip()}  # fmt: skip
+            "egress_ip": egress_ip(),
+            "robots": (robots or {}).get("source"), "robots_age_s": (robots or {}).get("age_s")}  # fmt: skip
+
+
+def _chain(e: BaseException) -> Iterator[BaseException]:
+    """e and every exception behind it (__cause__ and __context__), each once: httpx raises its own error from
+    httpcore's, which was raised while handling the socket's or ssl's."""
+    seen: set[int] = set()
+    todo: list[BaseException] = [e]
+    while todo:
+        c = todo.pop(0)
+        if id(c) in seen:
+            continue
+        seen.add(id(c))
+        yield c
+        todo += [x for x in (c.__cause__, c.__context__) if x is not None]
+
+
+_DNS_TEXT = ("name or service not known", "temporary failure in name resolution", "nodename nor servname",
+             "getaddrinfo", "no address associated", "name resolution")  # fmt: skip
+
+
+def transport_phase(e: BaseException) -> str:
+    """Where a request that got no HTTP response failed: dns, connect_timeout, connection_refused, connection_reset,
+    tls, connect (another connect failure), read_timeout, write_timeout, pool_timeout (our own pool), read, write,
+    protocol (the server broke HTTP), or other. Read from the exception and the ones behind it (_chain); the text of
+    the message decides only when no exception type does."""
+    import socket
+    import ssl
+
+    chain = list(_chain(e))
+    for kind, phase in (
+        (httpx.ConnectTimeout, "connect_timeout"),
+        (httpx.ReadTimeout, "read_timeout"),
+        (httpx.WriteTimeout, "write_timeout"),
+        (httpx.PoolTimeout, "pool_timeout"),
+    ):
+        if isinstance(e, kind):
+            return phase
+    for c in chain:
+        if isinstance(c, socket.gaierror):
+            return "dns"
+        if isinstance(c, ssl.SSLError | ssl.CertificateError):
+            return "tls"
+        if isinstance(c, ConnectionRefusedError):
+            return "connection_refused"
+        if isinstance(c, ConnectionResetError | BrokenPipeError):
+            return "connection_reset"
+    text = " ".join(str(c) for c in chain).lower()
+    if any(t in text for t in _DNS_TEXT):
+        return "dns"
+    if "ssl" in text or "tls" in text or "certificate" in text:
+        return "tls"
+    if "connection refused" in text or "errno 111" in text:
+        return "connection_refused"
+    if "reset by peer" in text or "errno 104" in text or "connection reset" in text:
+        return "connection_reset"
+    for other, phase in (
+        (httpx.ConnectError, "connect"),
+        (httpx.ReadError, "read"),
+        (httpx.WriteError, "write"),
+        (httpx.RemoteProtocolError, "protocol"),
+        (httpx.TimeoutException, "read_timeout"),
+    ):
+        if isinstance(e, other):
+            return phase
+    return "other"
+
+
+def transport_record(url: str, e: BaseException, robots_request: bool) -> dict:
+    """One request that got no HTTP response (raw.fetches.transport_errors)."""
+    u = urlparse(url)
+    inner = [c for c in _chain(e) if c is not e]
+    return {
+        "at": datetime.now(UTC).replace(microsecond=0),
+        "host": u.hostname,
+        "path": u.path,
+        "robots_txt": robots_request,
+        "phase": transport_phase(e),
+        "error_class": type(e).__name__,
+        # the innermost cause's class (an OSError, ssl's error), which the phase was read from
+        "cause_class": type(inner[-1]).__name__ if inner else None,
+        "detail": str(e)[:TRANSPORT_DETAIL_CHARS] or None,
+        "egress_ip": egress_ip(),
+    }
 
 
 class FetchError(Exception):
@@ -547,6 +646,12 @@ class RequestStats:
     # Each host asked of whose robots.txt names a Crawl-delay for us: {host, asked (as written), applied_s (the
     # spacing used between its requests), capped (asked more than MAX_CRAWL_DELAY)}
     crawl_delays: list[dict] = field(default_factory=list)
+    # transport_record() of each request that got no HTTP response, the first 20
+    transport_errors: list[dict] = field(default_factory=list)
+    # Each host whose robots.txt this fetch's requests went by: {host, source (live: fetched in this job; cached: a
+    # stored copy, used because the live one was unreachable), fetched_at and age_s of the copy, its HTTP status, and
+    # body (only on the fetch that fetched it live, so each body is stored once)}
+    robots: list[dict] = field(default_factory=list)
 
     def note(
         self,
@@ -554,13 +659,14 @@ class RequestStats:
         retry: bool = False,
         page: bool = True,
         response: httpx.Response | None = None,
+        robots: dict | None = None,
     ) -> None:
         if (
             response is not None
             and (status in LOGGED_BLOCK_STATUSES or is_challenge(response))
             and len(self.blocks) < MAX_BLOCKS_PER_FETCH
         ):
-            self.blocks.append(block_record(response))
+            self.blocks.append(block_record(response, robots))
         self.requests += 1
         self.retries += retry
         if status is not None:
@@ -571,6 +677,75 @@ class RequestStats:
     def note_delay(self, record: dict) -> None:
         if all(d["host"] != record["host"] for d in self.crawl_delays):
             self.crawl_delays.append(record)
+
+    def note_transport(self, record: dict) -> None:
+        if len(self.transport_errors) < MAX_TRANSPORT_ERRORS_PER_FETCH:
+            self.transport_errors.append(record)
+
+    def note_robots(self, record: dict) -> None:
+        """Once per host per fetch; a later record with the body (the live fetch itself) fills it in."""
+        for d in self.robots:
+            if d["host"] == record["host"]:
+                if (
+                    d.get("body") is None
+                    and record.get("body") is not None
+                    and d["source"] == record["source"]
+                ):
+                    d["body"] = record["body"]
+                return
+        self.robots.append(dict(record))
+
+
+def stored_body(text: str | None) -> str | None:
+    """The robots.txt body to store: the whole file up to ROBOTS_BODY_MAX_BYTES, cut at the end of its last complete
+    line, so no rule is stored half-written (a cut `Allow: /private/public-only` would read as `Allow: /private/`).
+    A file with no line break inside the limit stores nothing (None): a copy that would read as no rules is never
+    kept. A copy that was cut is followed exactly as stored (the rules past the cut are lost to it)."""
+    if text is None:
+        return None
+    raw = text.encode("utf-8", "surrogatepass")
+    if len(raw) <= ROBOTS_BODY_MAX_BYTES:
+        return text
+    end = raw.rfind(b"\n", 0, ROBOTS_BODY_MAX_BYTES)
+    return raw[: end + 1].decode("utf-8", "ignore") if end >= 0 else None
+
+
+def robots_host_key(netloc: str) -> str:
+    """One spelling per host for PoliteClient.robots_used: lower case, IDNA (punycode), no default :443, so a
+    response's normalized host (httpx) finds the record its URL's spelling made."""
+    key = netloc.strip().lower()
+    if key.endswith(":443"):
+        key = key[:-4]
+    try:
+        return key.encode("idna").decode("ascii")
+    except UnicodeError:
+        return key
+
+
+def _is_rules_answer(status: int) -> bool:
+    """An answer about the rules (not challenged): any 2xx (the file), a 401/403 (disallow everything), or any other
+    4xx but a block (no robots.txt: no restrictions, RFC 9309)."""
+    return 200 <= status < 300 or (400 <= status < 500 and status not in BLOCK_STATUSES)
+
+
+def robots_rules(status: int, body: str | None) -> RobotsRules | None:
+    """The rules an answer about robots.txt gives (_is_rules_answer), live or a stored copy alike: a 2xx's body is
+    parsed (RFC 9309 2.3.1.1: a 204, or one with no rules, allows everything), a 401 or 403 disallows everything,
+    and any other 4xx means there is no robots.txt (None: no restrictions)."""
+    if 200 <= status < 300:
+        return RobotsRules((body or "").splitlines())
+    if status in (401, 403):
+        return RobotsRules(disallow_all=True)
+    return None
+
+
+class _Unreachable(Exception):
+    """robots.txt got no answer (or a 5xx that isn't a pause) and a stored copy may stand in: _robots_for decides.
+    error: the RobotsUnavailable to raise if no copy does."""
+
+    def __init__(self, error: RobotsUnavailable) -> None:
+        super().__init__(str(error))
+        self.error = error
 
 
 class PoliteClient:
@@ -584,8 +759,16 @@ class PoliteClient:
         max_response_bytes: int | None = None,
         deadline_s: float | None = None,
         schedule_only_ok: bool = False,
+        robots_copies: dict[str, dict] | None = None,
+        clock: Callable[[], datetime] | None = None,
     ):
         self.min_interval = min_interval
+        # host -> the newest robots.txt stored for it ({fetched_at, status, body}: ingest.robots_copies), used only
+        # when its live robots.txt is unreachable and the copy is at most ROBOTS_COPY_MAX_AGE_S old
+        self.robots_copies = robots_copies or {}
+        self._now = clock or (lambda: datetime.now(UTC))
+        # host -> the robots.txt record its rules came from in this job (RequestStats.robots, without the body)
+        self.robots_used: dict[str, dict] = {}
         # Only the scheduled importers job builds a client that may reach SCHEDULE_ONLY_HOSTS; every other one (the
         # crawl, the probe, discovery) refuses them outright, robots.txt included (ScheduleOnlyHost).
         self.schedule_only_ok = schedule_only_ok
@@ -646,7 +829,24 @@ class PoliteClient:
         response: httpx.Response | None = None,
     ) -> None:
         if (stats := getattr(self._local, "stats", None)) is not None:
-            stats.note(status, retry, page, response)
+            robots = None
+            if response is not None:
+                try:
+                    robots = self.robots_used.get(
+                        robots_host_key(response.request.url.netloc.decode("ascii"))
+                    )
+                except RuntimeError:  # a response built without a request (tests)
+                    robots = None
+            stats.note(status, retry, page, response, robots)
+
+    def _note_transport(self, url: str, e: BaseException, robots_request: bool) -> None:
+        if (stats := getattr(self._local, "stats", None)) is not None:
+            stats.note_transport(transport_record(url, e, robots_request))
+
+    def _note_robots(self, host: str, body: str | None = None) -> None:
+        rec = self.robots_used.get(robots_host_key(host))
+        if rec is not None and (stats := getattr(self._local, "stats", None)) is not None:
+            stats.note_robots(rec | {"body": body})
 
     def close(self) -> None:
         self._client.close()
@@ -732,7 +932,8 @@ class PoliteClient:
                             down[1].challenge,
                             max(0.0, down[0] - time.monotonic()),
                         )
-                    rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
+                    # raises RobotsUnavailable: nothing is fetched. body: the live file, stored with this fetch
+                    rules, body = self._robots_for(host)
                     if (delay := self._crawl_delay(host, rules)) is not None and delay["capped"]:
                         log.warning(
                             "%s: robots.txt Crawl-delay %r capped at %.0f s",
@@ -745,6 +946,8 @@ class PoliteClient:
                         self._robots_down.pop(host, None)
                         # Known from now on: no robots.txt request left to share.
                         self._robots_locks.pop(host, None)
+                    self._note_robots(host, body)
+        self._note_robots(host)  # every fetch whose requests went by the host's rules records which copy
         rp = self._robots[host]
         return rp is None or rp.can_fetch(url)
 
@@ -766,14 +969,59 @@ class PoliteClient:
             return False
         return not rp.can_fetch(urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
-    def _fetch_robots(self, host: str) -> RobotsRules | None:
+    def _robots_for(self, host: str) -> tuple[RobotsRules | None, str | None]:
+        """The host's rules, and the body to store when they came live (RequestStats.robots). Sets robots_used[host]
+        to the record of where they came from: `live`, or `cached` (a stored copy, used only when the live robots.txt
+        was unreachable: _fetch_robots raised _Unreachable)."""
+        try:
+            rules, status, body = self._fetch_robots(host)
+        except _Unreachable as u:
+            copy = self._usable_copy(host)
+            if copy is None:
+                raise u.error from u.__cause__
+            age = (self._now() - copy["fetched_at"]).total_seconds()
+            log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)", host, u.error,
+                        copy["fetched_at"].isoformat(), age / 86400)  # fmt: skip
+            self.robots_used[robots_host_key(host)] = {"host": host, "source": "cached", "fetched_at": copy["fetched_at"],
+                                      "age_s": round(age, 1), "status": copy["status"]}  # fmt: skip
+            return robots_rules(copy["status"], copy.get("body")), None
+        now = self._now().replace(microsecond=0)
+        self.robots_used[robots_host_key(host)] = {
+            "host": host,
+            "source": "live",
+            "fetched_at": now,
+            "age_s": 0.0,
+            "status": status,
+        }
+        return rules, body
+
+    def _usable_copy(self, host: str) -> dict | None:
+        """The stored copy of the host's robots.txt, if there is one at most ROBOTS_COPY_MAX_AGE_S old (and not from
+        the future: a copy is never newer than now)."""
+        copy = self.robots_copies.get(host)
+        if copy is None or copy.get("fetched_at") is None or copy.get("status") is None:
+            return None
+        if 200 <= copy["status"] < 300 and copy.get("body") is None:
+            # a 2xx record without its file (the fetches that only went by it, or a cut that left nothing) is no
+            # copy of the rules: read as one, it would allow everything
+            return None
+        age = (self._now() - copy["fetched_at"]).total_seconds()
+        return copy if 0 <= age <= ROBOTS_COPY_MAX_AGE_S else None
+
+    def _fetch_robots(self, host: str) -> tuple[RobotsRules | None, int, str | None]:
         """The host's rules: a 2xx is parsed (RFC 9309 2.3.1.1: a 204, or a 2xx with no rules in its body, allows
         everything), a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...) means it has no
         robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an edge's challenge,
         whatever its status (SiteGround's 202, or a 2xx or any 4xx, 401 and 403 included, with a challenge header,
         such as Cloudflare's 403 with `cf-mitigated: challenge`), a 1xx or 3xx (a redirect without a location), a
         429, 430 or 5xx, or a network error raises RobotsUnavailable and is remembered for ROBOTS_RETRY_AFTER (a
-        pause: its wait): nothing is ever fetched from a host without its rules."""
+        pause: its wait): nothing is ever fetched from a host without its rules.
+
+        Returns the rules (from the whole file), the HTTP status and the body to store (stored_body: a 2xx's, cut at
+        its last complete line within ROBOTS_BODY_MAX_BYTES; None otherwise). When
+        the file was unreachable (no response: a timeout, a refused or reset connection, TLS, DNS; or a 5xx that
+        isn't a pause), raises _Unreachable instead, so _robots_for may use a stored copy; with none, its
+        RobotsUnavailable is raised as before."""
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
@@ -783,6 +1031,7 @@ class PoliteClient:
             # fetches don't each download it again up to the cap.
             err = RobotsUnavailable(f"robots.txt for {host} too large ({e})")
             cause: Exception | None = e
+            no_answer = False  # an answer, just not a robots.txt: never stands in for a copy
         except httpx.HTTPError as e:
             # DNS failure, refused or timed-out connection to this host itself (not a host it redirected to): down.
             hostname = urlparse(f"https://{host}").hostname
@@ -791,20 +1040,20 @@ class PoliteClient:
             except RuntimeError:  # raised without a request attached
                 failed_host = hostname
             unreachable = isinstance(e, httpx.ConnectError | httpx.ConnectTimeout) and failed_host == hostname
-            err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__}: {e})", unreachable)
+            err = RobotsUnavailable(
+                f"robots.txt for {host} failed ({type(e).__name__}: {e}; phase {transport_phase(e)})",
+                unreachable,
+            )
             cause = e
+            # no response at all (not our redirect handling: too many redirects, an unsupported scheme)
+            no_answer = isinstance(e, httpx.TransportError) and not isinstance(e, httpx.UnsupportedProtocol)
         else:
+            no_answer = False
             challenged = is_challenge(r)
-            if (
-                200 <= r.status_code < 300 and not challenged
-            ):  # RFC 9309 2.3.1.1: any 2xx is the file (204: empty)
-                return RobotsRules(r.text.splitlines())
-            if r.status_code in (401, 403) and not challenged:  # a challenge is no answer about the rules
-                return RobotsRules(disallow_all=True)
-            if 400 <= r.status_code < 500 and r.status_code not in BLOCK_STATUSES and not challenged:
-                # RFC 9309's "unavailable": no robots.txt, no restrictions. Square Online's API host
-                # (cdn5.editmysite.com) answers 400 here, so every Square Online catalog depends on this.
-                return None
+            if not challenged and _is_rules_answer(r.status_code):
+                # The live rules always come from the whole file, as before; only the stored copy is cut
+                text = r.text if 200 <= r.status_code < 300 else None
+                return robots_rules(r.status_code, text), r.status_code, stored_body(text)
             # A challenge page standing in for robots.txt is no answer about the rules (run 2026-11-02: SiteGround's
             # 202 was read as "no robots.txt"); neither is a 1xx, a 3xx without a location, a 429/430 or a 5xx. The
             # host is unavailable for now.
@@ -812,6 +1061,8 @@ class PoliteClient:
             block = r.status_code in BLOCK_STATUSES and not challenged
             paused = None if challenged else server_pause(r)  # a 5xx with a long Retry-After: a pause too
             status = r.status_code if challenged or block or paused is not None else None
+            # a 5xx that is neither a pause nor a challenge: the server couldn't serve the file (RFC 9309 2.3.1.4)
+            no_answer = 500 <= r.status_code < 600 and not (challenged or block or paused is not None)
             wait = paused
             if block:  # a pause: asked again once it has passed (at most MAX_STORE_WAIT), the store deferred till then
                 wait = asked_wait(r)
@@ -822,12 +1073,15 @@ class PoliteClient:
             cause = None
         # This fetch fails (the deferred rounds and the retry pass try again) and the host stays unknown, asked again
         # after ROBOTS_RETRY_AFTER (a block: its wait), so a site whose robots.txt never answers is never crawled.
+        final = RobotsUnavailable(
+            f"{err}; not fetching without it", err.unreachable, err.status, err.challenge, err.wait
+        )
+        if no_answer and self._usable_copy(host) is not None:
+            raise _Unreachable(final) from cause  # _robots_for uses the copy: not remembered as down
         with self._lock:
             until = ROBOTS_RETRY_AFTER if err.wait is None else err.wait
             self._robots_down[host] = (time.monotonic() + until, err)
-        raise RobotsUnavailable(
-            f"{err}; not fetching without it", err.unreachable, err.status, err.challenge, err.wait
-        ) from cause
+        raise final from cause
 
     def _wait_turn(self, host: str) -> None:
         """Wait for the host's turn: min_interval after its last request, or its robots.txt Crawl-delay (up to
@@ -865,8 +1119,9 @@ class PoliteClient:
             except ResponseTooLarge as e:  # an answer, but never retried: counted with its status
                 self._note(e.status, retry=attempt > 0, page=page)
                 raise
-            except httpx.HTTPError:
+            except httpx.HTTPError as e:
                 self._note(None, retry=attempt > 0, page=page)
+                self._note_transport(url, e, robots_request=not page)
                 if last:
                     raise
             else:

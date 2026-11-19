@@ -28,6 +28,8 @@ wordpress.com,not_a_roaster,
 gmail.com,not_a_roaster,
 tryperdiem.com,not_a_roaster,"Per Diem's own site, which Overture lists for Java House's North Liberty location (crawl 2026-11-02)"
 orderspoon.com,not_a_roaster,"Spoon's ordering marketplace, which Overture lists as a cafe's website (crawl 2026-11-02)"
+kaldi.com,not_a_roaster,"An espresso-equipment parts catalog (BFC, Bunn, Mahlkönig, La Marzocco, Rancilio parts; 4,989 of its 5,000 products had no type), not a roaster: fetch 2026-10-26 read 5,000 products, later runs failed paging it; the roaster Kaldi's Coffee is kaldiscoffee.com (crawl 2026-11-16 triage)"
+galvestoncoffeeroasters.com,not_a_roaster,"The domain no longer serves the roaster: it redirects to mspuiyischolarship.com, an unrelated site (probe 2026-10-26 final host; 0 products in every fetch since 2026-10-26; robots.txt asked of that host in crawl 2026-11-16)"
 shopify.com,platform,a closed store's domain can redirect to the platform's home page
 squarespace.com,platform,
 wix.com,platform,
