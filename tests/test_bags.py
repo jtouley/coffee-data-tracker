@@ -433,6 +433,87 @@ def test_reads_are_capped_per_day(catalog, tmp_path):
     assert r.json()["status"] == "read"
 
 
+def test_the_photo_maps_are_bounded(catalog, tmp_path, monkeypatch):
+    """The in-memory reads, replies and daily counts drop their least recently used entries past a cap, like the
+    photo cache, so a long-lived instance can't grow them without end (security self-assessment L-4)."""
+    from app import main
+
+    monkeypatch.setattr(main, "PHOTO_READS_KEPT", 2)
+    monkeypatch.setattr(main, "REPLIES_KEPT", 2)
+    monkeypatch.setattr(main, "READ_COUNTS_KEPT", 2)
+    fake = FakeClient(LABEL)
+    app, _ = app_with(catalog, tmp_path, fake)
+    c = TestClient(app)
+    maps = app.state.photo_maps
+    small = jpeg(400, 300)
+    for i in range(4):
+        who = {"x-test-user": f"u{i}", "X-Expected-User": f"u{i}"}
+        r = c.post(f"/api/photos/p{i}", content=small, headers=W | {"Content-Type": "image/jpeg"} | who)
+        assert r.json()["status"] == "read"
+        assert all(len(m) <= 2 for m in maps.values())
+    assert list(maps["photo_reads"]) == ["p2", "p3"] and list(maps["last_reply"]) == ["p2", "p3"]
+    assert [user for user, _ in maps["reads_today"]] == ["u2", "u3"]
+    # A resend of a kept photo still gets its reply without a second read, and becomes the most recent.
+    who = {"x-test-user": "u2", "X-Expected-User": "u2"}
+    c.post("/api/photos/p2", content=small, headers=W | {"Content-Type": "image/jpeg"} | who)
+    assert len(fake.calls) == 4 and list(maps["last_reply"]) == ["p3", "p2"]
+
+
+def test_bounded_put_drops_the_least_recently_used():
+    from collections import OrderedDict
+
+    from app.main import bounded_put
+
+    m: OrderedDict[str, int] = OrderedDict()
+    for k in "abc":
+        bounded_put(m, k, 1, cap=2)
+    assert list(m) == ["b", "c"]
+    bounded_put(m, "b", 2, cap=2)  # an update counts as a use
+    bounded_put(m, "d", 1, cap=2)
+    assert m == OrderedDict([("b", 2), ("d", 1)])
+
+
+@pytest.mark.parametrize("bad", ["../../etc", "a/b", "..", "", "x" * 65])
+def test_a_bags_photo_id_is_a_plain_id(bad):
+    """photo_id is checked like every other id (security self-assessment L-3); None stays allowed."""
+    from pydantic import ValidationError
+
+    from coffeedata.models import Bag
+
+    with pytest.raises(ValidationError):
+        Bag(bag_id="b1", photo_id=bad)
+    assert Bag(bag_id="b1").photo_id is None
+    assert Bag(bag_id="b1", photo_id="0b9f6c1e-5a7d-4c3e-9d2a-1f0e8b7c6a54").photo_id
+
+
+def test_a_stored_bag_with_an_old_style_photo_id_is_kept_without_it(monkeypatch, caplog):
+    """A bag stored before photo ids were checked on bags keeps loading; only the bad link goes, and the log names
+    the bag, not the value (review of #194)."""
+    from app import store as store_mod
+
+    row = {"bag_id": "b1", "user_id": "u1", "photo_id": "IMG_0001.jpg", "coffee_freetext": "Hambela",
+           "logged_at": "2026-11-01T00:00:00+00:00", "deleted": False}  # fmt: skip
+
+    class FakeLake:
+        def latest(self, table, key, attempts=None):
+            return [dict(row)] if table == "bags" else []
+
+    monkeypatch.setattr(store_mod.Store, "_seed_shots", lambda self: [])
+    s = store_mod.Store(FakeLake(), "owner")
+    assert "b1" in s.bags
+    bag = s.bags["b1"].item
+    assert bag.photo_id is None and bag.coffee_freetext == "Hambela" and bag.user_id == "u1"
+    assert "b1" in caplog.text and "IMG_0001" not in caplog.text
+
+
+def test_a_bag_with_a_path_for_its_photo_is_refused(catalog, tmp_path):
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    body = {"bag_id": "b1", "coffee_freetext": "x", "photo_id": "../../etc"}
+    assert c.post("/api/bags", json=body, headers=W).status_code == 422
+    assert app.state.store.bag("owner", "b1") is None
+
+
 def test_without_a_key_the_photo_is_kept_and_the_person_types(catalog, tmp_path, monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     photos_lake = Lake(str(tmp_path / "photos"), tables=("photos",))

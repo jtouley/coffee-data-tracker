@@ -36,7 +36,7 @@ from coffeedata.site import APP
 from coffeedata.site import links as site_links
 
 from . import labels, logs, mail, photos, rules, views, web
-from .accounts import AccountError
+from .accounts import RETRY_AFTER_S, AccountError, Busy
 from .auth import (
     COOKIE,
     Auth,
@@ -63,7 +63,21 @@ RECENTLY_FINISHED_DAYS = 30  # a correction can move a shot to a bag finished th
 # Coffee ratings and answers to the picks, together, per account per hour. The test needs about a dozen in all; a
 # record that was already stored (a resend) isn't counted. In memory, like the other limits (app/limits.py).
 RECS_PER_HOUR = 60
+# The label reads, replies and daily read counts kept in memory for the photo routes, each capped like the photo
+# cache: past the cap the least recently used entry goes. A dropped read or reply only means a late bag or a resend
+# pays for a fresh read; a dropped count is for someone who hasn't read a label since thousands of others have.
+PHOTO_READS_KEPT = 2048
+REPLIES_KEPT = 2048
+READ_COUNTS_KEPT = 10_000
 log = logging.getLogger(__name__)
+
+
+def bounded_put[K, V](m: OrderedDict[K, V], key: K, value: V, cap: int) -> None:
+    """Set m[key] as its most recent entry, then drop the least recently used past `cap`."""
+    m[key] = value
+    m.move_to_end(key)
+    while len(m) > cap:
+        m.popitem(last=False)
 
 
 class SignIn(Exception):
@@ -292,6 +306,12 @@ def create_app(
         if wants_html(request):
             return page(request, "error.html", status=exc.status_code, code=exc.status_code)
         return JSONResponse({"detail": exc.detail}, exc.status_code, headers=getattr(exc, "headers", None))
+
+    @app.exception_handler(Busy)
+    async def busy(request: Request, exc: Busy) -> Response:
+        """Too many password checks running or waiting (app/accounts.py, HashGate). Only the /api/ routes check
+        passwords; the forms show the detail and say to try again (app.js, Busy)."""
+        return JSONResponse({"detail": str(exc)}, 503, headers={"Retry-After": str(RETRY_AFTER_S)})
 
     @app.exception_handler(RequestValidationError)
     async def bad_request(request: Request, exc: RequestValidationError) -> Response:
@@ -1317,12 +1337,14 @@ def create_app(
         return {"slate_id": item.slate_id, "coffee_id": item.coffee_id, "written": written}
 
     photo_lake = photos_lake or Lake.photos()
-    reads_today: dict[
-        tuple[str, str], int
-    ] = {}  # (user, date) -> label reads; in memory, so a restart resets it
+    # (user, date) -> label reads; in memory, so a restart resets it
+    reads_today: OrderedDict[tuple[str, str], int] = OrderedDict()
     # photo_id -> (user, matched coffee_id, score, raw read, roast date): in memory, for the offline hand-off
-    photo_reads: dict[str, tuple[str, str | None, int | None, str | None, str | None]] = {}
-    last_reply: dict[str, tuple[str, dict]] = {}  # photo_id -> (owner, reply): a resend isn't read twice
+    photo_reads: OrderedDict[str, tuple[str, str | None, int | None, str | None, str | None]] = OrderedDict()
+    last_reply: OrderedDict[str, tuple[str, dict]] = (
+        OrderedDict()
+    )  # photo_id -> (owner, reply): a resend isn't read twice
+    app.state.photo_maps = {"reads_today": reads_today, "photo_reads": photo_reads, "last_reply": last_reply}
     # One upload of a photo at a time: two copies in flight together (the outbox resending one still on its way)
     # would both miss last_reply and pay for two reads. The second waits, then gets the first's reply. A photo's
     # lock goes once no upload of it is in flight, whichever way the last one ended (reply, limit, 409, error).
@@ -1400,12 +1422,13 @@ def create_app(
                 owner, reply = last_reply[photo_id]
                 if owner != me.user_id:
                     raise HTTPException(409, "That photo id is taken.")
+                last_reply.move_to_end(photo_id)
                 return reply
             key = (me.user_id, datetime.now(UTC).date().isoformat())
             if reads_today.get(key, 0) >= READS_PER_DAY:
                 # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
                 return {"photo_id": None, "status": "limit", "label": None, "raw": None}
-            reads_today[key] = reads_today.get(key, 0) + 1
+            bounded_put(reads_today, key, reads_today.get(key, 0) + 1, READ_COUNTS_KEPT)
             # The dataset commit (which can retry for a while) and the label read run side by side.
             saved, result = await asyncio.gather(
                 run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
@@ -1428,9 +1451,10 @@ def create_app(
                 # Kept so a bag that cites this photo can use the read, whichever of the two reaches the server first
                 # (offline, the photo and the bag wait in the outbox together).
                 coffee_id = (out["match"] or {}).get("coffee_id")
-                photo_reads[photo_id] = (me.user_id, coffee_id, out["score"], result.raw, out["roast_date"])
+                kept = (me.user_id, coffee_id, out["score"], result.raw, out["roast_date"])
+                bounded_put(photo_reads, photo_id, kept, PHOTO_READS_KEPT)
                 await run_in_threadpool(apply_read, me.user_id, photo_id)
-            last_reply[photo_id] = (me.user_id, out)
+            bounded_put(last_reply, photo_id, (me.user_id, out), REPLIES_KEPT)
             return out
 
     def apply_read(user_id: str, photo_id: str) -> None:
@@ -1439,6 +1463,7 @@ def create_app(
         hit = photo_reads.get(photo_id)
         if not hit or hit[0] != user_id or not hit[1]:
             return
+        photo_reads.move_to_end(photo_id)  # used: last to go
         for bag in store.bags_of(user_id):
             if bag.photo_id == photo_id and not bag.coffee_id:
                 update = {"coffee_id": hit[1], "match_score": hit[2], "read_json": bag.read_json or hit[3]}
