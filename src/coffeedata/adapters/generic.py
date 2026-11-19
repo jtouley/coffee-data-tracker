@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from typing import TYPE_CHECKING
 from urllib.parse import urlparse
 
 import httpx
@@ -22,6 +23,9 @@ from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, 
 from ..ratelimit import SHOPIFY_HOSTED
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, scrub_surrogates, to_float
+
+if TYPE_CHECKING:
+    from .shopify import Identity
 
 # Shopify/Woo /product(s)/x, Wix /product-page/x, Square Online /product/x/ID, BigCommerce /x/ under /shop/.
 _PRODUCTISH = re.compile(
@@ -166,7 +170,11 @@ def shopify_sitemap(index: list[str]) -> bool:
 
 
 def _shopify_catalog(
-    client: PoliteClient, roaster: Roaster, resume: dict | None, known_products: int | None
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None,
+    known_products: int | None,
+    identity: Identity | None = None,
 ) -> list[CatalogItem] | None:
     """A Shopify storefront's catalog from /products.json (shopify.fetch: one request per 250 products, instead of one
     per product page), or None when the store doesn't serve it (shopify.not_served). A block, a challenge or a
@@ -174,7 +182,9 @@ def _shopify_catalog(
     from . import shopify
 
     try:
-        items = shopify.fetch(client, roaster, resume=resume, known_products=known_products)
+        items = shopify.fetch(
+            client, roaster, resume=resume, known_products=known_products, identity=identity
+        )
     except FetchError as e:
         if not shopify.not_served(e):
             raise
@@ -185,14 +195,19 @@ def _shopify_catalog(
 
 
 def fetch(
-    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None = None,
+    known_products: int | None = None,
+    identity: Identity | None = None,
 ) -> list[CatalogItem]:
     """A store's catalog from its sitemap's product pages (schema.org JSON-LD). A store whose sitemap index turns out
     to be Shopify's (sitemap_products_N.xml), not yet known as one to the registry, is read from /products.json
     instead, and from then on every request it makes counts against the Shopify-hosted budget
     (ratelimit.SHOPIFY_HOSTED). The probe marks such a store `shopify?` (discover.probe_one), and from then on the
-    Shopify job crawls it (models.Roaster.adapter). resume and known_products: as shopify.fetch."""
-    return read_pages(client, roaster, resume, known_products, detect_shopify=True)
+    Shopify job crawls it (models.Roaster.adapter). resume, known_products and identity: as shopify.fetch (the
+    products this adapter stored keep their ids)."""
+    return read_pages(client, roaster, resume, known_products, detect_shopify=True, identity=identity)
 
 
 def read_pages(
@@ -201,6 +216,7 @@ def read_pages(
     resume: dict | None = None,
     known_products: int | None = None,
     detect_shopify: bool = False,
+    identity: Identity | None = None,
 ) -> list[CatalogItem]:
     """The catalog from the sitemap's product pages, each page's JSON-LD (shopify.fetch reads a `shopify?` store's
     pages this way when it has no /products.json)."""
@@ -214,7 +230,7 @@ def read_pages(
     found = sitemap_urls(client, roaster.host, unread, index)
     if detect_shopify and shopify_sitemap(index):
         client = client.for_platform(SHOPIFY_HOSTED)  # a Shopify storefront: its requests share that budget
-        if (shop := _shopify_catalog(client, roaster, resume, known_products)) is not None:
+        if (shop := _shopify_catalog(client, roaster, resume, known_products, identity)) is not None:
             return shop
     urls = product_urls(found)
     # Every product page is read: no cap, and no giving up after the first pages without Product markup (the old
