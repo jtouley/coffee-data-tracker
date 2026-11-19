@@ -586,7 +586,7 @@ def test_classify_waits_for_its_batch_then_says_what_is_still_open(lake, monkeyp
     monkeypatch.setattr("time.monotonic", lambda: clock[0])
     monkeypatch.setattr("time.sleep", lambda s: clock.__setitem__(0, clock[0] + s))
     monkeypatch.setattr(verdict, "collect", lambda lk, d=None: {"collected": 0})
-    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n, **_kw: {"submitted": 3, "batch_ids": ["mb1"]})
     monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: {"mb1"})
     cli.main(["classify", "--wait", "2"])
     out = capsys.readouterr()
@@ -617,7 +617,7 @@ def test_a_failed_read_during_the_wait_is_retried_not_fatal(lake, monkeypatch, c
         return {"collected": 3 if clock[0] == 120 else 0}
 
     monkeypatch.setattr(verdict, "collect", collect)
-    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n, **_kw: {"submitted": 3, "batch_ids": ["mb1"]})
     monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: set() if clock[0] >= 120 else {"mb1"})
     cli.main(["classify", "--wait", "5"])  # returns: exit 0
     out = capsys.readouterr()
