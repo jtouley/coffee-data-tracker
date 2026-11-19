@@ -224,6 +224,9 @@ SCHEMAS: dict[str, pa.Schema] = {
             # response, with the phase it failed in; and the robots.txt each host's requests went by.
             ("transport_errors", pa.list_(TRANSPORT_ERROR)),
             ("robots", pa.list_(ROBOTS_COPY)),
+            # Added with raw contract 1.8.0 (null before, and when the adapter read the catalog its own way): how
+            # the catalog was read instead, and why (PoliteClient.note_route).
+            ("catalog_route", pa.string()),
         ]
     ),
     "probes": pa.schema(

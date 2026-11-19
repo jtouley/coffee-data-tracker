@@ -29,6 +29,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   probes and failed crawl runs since the last ok probe both count); requests that got no HTTP response are recorded
   with their phase (`fetches.transport_errors`); an unreachable robots.txt may be stood in for by the site's own
   copy from the last 30 days (`fetches.robots`, `probes.robots`), followed exactly. Raw contract 1.7.0.
+- `shopify?` storefronts are crawled by the Shopify job, from /products.json (their pages when it isn't served); a
+  generic store whose sitemap index is Shopify's reads /products.json under its own budget (1 request/s, 4 at once);
+  the probe marks such a store `shopify?`. Recorded in `fetches.catalog_route`. Raw contract 1.8.0. A product the
+  generic adapter stored keeps its product id and its variants' ids (`ingest.legacy_identity`, by handle), so no
+  coffee_id changes and every price series continues.
 
 - A usage collector (the analytics design, PRs 1 and 2): `app/usage.py`, its own Cloud Run service at Cloud Run's
   deterministic run.app address (`src/terraform/usage.tf`; `config/usage.toml` holds it for the page scripts), never

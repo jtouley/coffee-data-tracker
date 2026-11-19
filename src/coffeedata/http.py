@@ -652,6 +652,8 @@ class RequestStats:
     # stored copy, used because the live one was unreachable), fetched_at and age_s of the copy, its HTTP status, and
     # body (only on the fetch that fetched it live, so each body is stored once)}
     robots: list[dict] = field(default_factory=list)
+    # How the catalog was read when not by its adapter's own path, and why (PoliteClient.note_route)
+    route: str | None = None
 
     def note(
         self,
@@ -838,6 +840,12 @@ class PoliteClient:
                 except RuntimeError:  # a response built without a request (tests)
                     robots = None
             stats.note(status, retry, page, response, robots)
+
+    def note_route(self, route: str) -> None:
+        """Record, on this thread's fetch (fetches.catalog_route), that the catalog was read another way than its
+        adapter's own: the reason, as one line."""
+        if (stats := getattr(self._local, "stats", None)) is not None:
+            stats.route = route
 
     def _note_transport(self, url: str, e: BaseException, robots_request: bool) -> None:
         if (stats := getattr(self._local, "stats", None)) is not None:

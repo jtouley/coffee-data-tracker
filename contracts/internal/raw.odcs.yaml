@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.7.0
+version: 1.8.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -467,6 +467,12 @@ schema:
     description: 'The robots.txt each host''s requests went by: live (fetched in this job; its time, HTTP status and, on
       the fetch that fetched it, a 2xx''s body up to 500 KiB) or cached (a stored live copy at most 30 days old, used because
       the live file was unreachable: its time, status and age in seconds); null before raw 1.7.0.'
+  - name: catalog_route
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'How the catalog was read when not by its adapter''s own path, and why: for example from the store''s sitemap
+      and product pages instead of its platform''s API, or the other way round; null otherwise, and before raw 1.8.0.'
   quality:
   - id: fetch_status_values
     description: fetches.status is one of the contract's values.
@@ -630,6 +636,6 @@ customProperties:
   - enrichment job
   - registry
 - property: interfaceFingerprint
-  value: 3437ab2505ea2ba8
+  value: 1ad444d0228f4536
 - property: docsFingerprint
-  value: feb9c37dd6c3b540
+  value: 23836309c7887097

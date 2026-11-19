@@ -6,17 +6,22 @@ import logging
 import re
 from datetime import UTC, datetime
 from itertools import count
+from typing import NamedTuple
+from urllib.parse import unquote
 
 import httpx
 
 from ..http import (
     BLOCK_STATUSES,
+    Blocked,
     DeadlineReached,
     FetchError,
     PartialCatalog,
     PoliteClient,
     asked_wait,
+    block_status,
     causes,
+    challenged,
     store_wait,
 )
 from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
@@ -136,20 +141,61 @@ def page_currency(r: httpx.Response) -> str | None:
     return currency_code(sent.group(1).strip()) if sent else None
 
 
-def parse_product(p: dict, roaster: Roaster, currency: str | None = None) -> CatalogItem:
-    """currency: the page's (page_currency), which every variant's price is in."""
+class Legacy(NamedTuple):
+    """A product's identity from before the store was read from /products.json: the product id the generic adapter
+    stored it under (its page's JSON-LD productID or sku, else a hash of its URL), and whether its variant ids were
+    their offers' positions (0, 1, 2...: the page's offers carried no sku) rather than generic's rule (sku, else
+    position)."""
+
+    product_id: str
+    positional: bool
+
+
+# A store crawled page by page (the generic adapter) that is now read from /products.json (platform `shopify?`, or a
+# Shopify sitemap index): normalized handle -> Legacy (ingest.legacy_identity, from the lake's generic rows).
+Identity = dict[str, Legacy]
+
+
+def identity_key(handle: str) -> str:
+    """A handle as both adapters see it: generic takes it from the page URL's last segment, percent-encoded
+    (`k-cups%C2%AE`); /products.json gives it decoded (`k-cups®`)."""
+    return unquote(handle).strip().lower()
+
+
+def generic_variant_ids(variants: list[dict], positional: bool = False) -> list[str]:
+    """The variant ids generic.parse_jsonld gives the same variants, read from a Shopify page's JSON-LD (one offer
+    per variant, in the variants' order, each with the variant's sku): the sku, else the position; a repeated id gets
+    `#<position>`. positional: the page's offers carried no sku, so the position alone."""
+    out: list[str] = []
+    for i, v in enumerate(variants):
+        vid = str(i) if positional else str(v.get("sku") or i)
+        if vid in out:
+            vid = f"{vid}#{i}"
+        out.append(vid)
+    return out
+
+
+def parse_product(
+    p: dict, roaster: Roaster, currency: str | None = None, identity: Identity | None = None
+) -> CatalogItem:
+    """currency: the page's (page_currency), which every variant's price is in. identity: a store the generic adapter
+    read before (Identity): a product it stored keeps that product id, and its variants the ids generic gave them,
+    so its coffee_id and price history continue; a product it never stored takes Shopify's ids."""
     tags = p.get("tags") or []
     if isinstance(tags, str):
         tags = [t.strip() for t in tags.split(",") if t.strip()]
+    raw = [v for v in p.get("variants") or [] if isinstance(v, dict)]
+    legacy = (identity or {}).get(identity_key(str(p.get("handle") or "")))
+    vids = generic_variant_ids(raw, legacy.positional) if legacy else [str(v["id"]) for v in raw]
     variants = []
-    for v in p.get("variants") or []:
+    for v, vid in zip(raw, vids, strict=True):
         title = " ".join(str(v.get(k) or "") for k in ("title", "option1", "option2", "option3"))
         grams = parse_grams(title)
         if grams is None and isinstance(v.get("grams"), int) and 30 <= v["grams"] <= 25_000:
             grams = v["grams"]
         variants.append(
             Variant(
-                variant_id=str(v["id"]),
+                variant_id=vid,
                 title=str(v.get("title") or ""),
                 price_usd=to_float(v.get("price")),
                 grams=grams,
@@ -160,7 +206,7 @@ def parse_product(p: dict, roaster: Roaster, currency: str | None = None) -> Cat
     image = next((i.get("src") if isinstance(i, dict) else str(i) for i in p.get("images") or []), None)
     return CatalogItem(
         roaster_id=roaster.roaster_id,
-        product_id=str(p["id"]),
+        product_id=legacy.product_id if legacy else str(p["id"]),
         handle=p.get("handle") or str(p["id"]),
         url=f"https://{roaster.host}/products/{p.get('handle')}",
         title=(p.get("title") or "").strip(),
@@ -177,9 +223,46 @@ def parse_product(p: dict, roaster: Roaster, currency: str | None = None) -> Cat
 
 
 def fetch(
-    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None = None,
+    known_products: int | None = None,
+    identity: Identity | None = None,
 ) -> list[CatalogItem]:
-    """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
+    """The whole catalog. A storefront the probe saw only by its markers (platform `shopify?`) that doesn't serve
+    /products.json (404, 410, or not a catalog) is read from its sitemap and product pages instead (adapters.generic),
+    through the same client: Shopify's budget and IP. A block, a challenge or a deadline is the answer, never a
+    reason to read the pages. identity: as parse_product."""
+    if roaster.platform != "shopify?":
+        return _fetch(client, roaster, resume, known_products, identity)
+    try:
+        items = _fetch(client, roaster, resume, known_products, identity)
+    except FetchError as e:
+        if not not_served(e):
+            raise
+        from . import generic
+
+        client.note_route(f"pages: /products.json not served ({e})"[:300])
+        return generic.read_pages(client, roaster)
+    client.note_route("shopify /products.json: a storefront the probe saw by Shopify's markers")
+    return items
+
+
+def not_served(e: FetchError) -> bool:
+    """/products.json isn't served (a 404 or 410, or a 200 that isn't the catalog), and nothing refused us."""
+    if challenged(e) or block_status(e) or isinstance(e, StoreBlocked | Blocked | PageBlocked):
+        return False
+    return e.status in (404, 410) or str(e).startswith(("not JSON", "unexpected /products.json"))
+
+
+def _fetch(
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None = None,
+    known_products: int | None = None,
+    identity: Identity | None = None,
+) -> list[CatalogItem]:
+    """The whole catalog from /products.json. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
     known_products: the store's product count at its latest ok fetch, which lets a short page end the catalog."""
     items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
     for page in count((resume or {}).get("page", 1)):
@@ -202,7 +285,9 @@ def fetch(
         # An empty page ends the catalog, and so does a store that ignores `page` and repeats itself, or (with
         # SHORT_PAGE_ENDS) a page shorter than the limit once the store's last known count is reached.
         currency = page_currency(r)
-        new = {i.product_id: i for i in (parse_product(p, roaster, currency) for p in data["products"])}
+        new = {
+            i.product_id: i for i in (parse_product(p, roaster, currency, identity) for p in data["products"])
+        }
         if not new.keys() - items.keys():
             break
         items |= new

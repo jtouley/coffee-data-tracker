@@ -27,7 +27,7 @@ import httpx
 
 from . import crashguard, lineage, registry
 from .adapters import fetch_catalog
-from .adapters.shopify import PageBlocked, StoreBlocked
+from .adapters.shopify import Identity, Legacy, PageBlocked, StoreBlocked, identity_key
 from .http import (
     BLOCK_STATUSES,
     MAX_STORE_WAIT,
@@ -47,7 +47,16 @@ from .http import (
 )
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
-from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, HostRateLimited, PlatformLimiter, RateLimited
+from .ratelimit import (
+    SHOPIFY_CONCURRENCY,
+    SHOPIFY_HOSTED,
+    SHOPIFY_HOSTED_CONCURRENCY,
+    SHOPIFY_HOSTED_RPS,
+    SHOPIFY_RPS,
+    HostRateLimited,
+    PlatformLimiter,
+    RateLimited,
+)
 
 log = logging.getLogger(__name__)
 
@@ -179,14 +188,23 @@ class Result:
 
 
 def ingest_one(
-    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None = None,
+    known_products: int | None = None,
+    identity: Identity | None = None,
 ) -> Result:
+    """identity: the ids its products were stored under by the generic adapter (legacy_identity), which they keep
+    when the store is read from /products.json instead (shopify.parse_product)."""
     res = Result(roaster, datetime.now(UTC).replace(microsecond=0))
     start = time.monotonic()
     with client.track() as res.stats:
         try:
             res.items = list(
-                {i.product_id: i for i in fetch_catalog(client, roaster, resume, known_products)}.values()
+                {
+                    i.product_id: i
+                    for i in fetch_catalog(client, roaster, resume, known_products, **_ids(identity))
+                }.values()
             )  # feeds repeat items
         except PartialCatalog as e:
             if e.items:  # what it read, marked partial: dbt keeps the rest listed instead of delisting it
@@ -213,6 +231,11 @@ def ingest_one(
     return res
 
 
+def _ids(identity: Identity | None) -> dict:
+    """identity as a keyword argument, only when there is one (a store the generic adapter never read passes none)."""
+    return {"identity": identity} if identity else {}
+
+
 def _attempt(
     client: PoliteClient,
     roaster: Roaster,
@@ -220,6 +243,7 @@ def _attempt(
     known: int | None,
     guard: crashguard.Guard | None = None,
     last: bool = False,
+    identity: Identity | None = None,
 ) -> Result:
     """One roaster's fetch, in a worker. Its in-flight marker (guard) is written when the worker starts it, not when
     it is queued (every roaster is queued at once), and removed when it returns: only the fetches actually running
@@ -228,10 +252,10 @@ def _attempt(
         guard.start(roaster.roaster_id)
     try:
         with client.last_try(last):
-            if resume is None and known is None:
+            if resume is None and known is None and not identity:
                 res = ingest_one(client, roaster)
             else:
-                res = ingest_one(client, roaster, resume, known)
+                res = ingest_one(client, roaster, resume, known, **_ids(identity))
     except Exception:  # contained by run(): the fetch returned, with an error
         if guard is not None:
             guard.end(roaster.roaster_id)
@@ -250,6 +274,35 @@ def known_products(lake: Lake) -> dict[str, int]:
             where status = 'ok' and products > 0 and not coalesce(partial, false) and roaster_id is not null
             group by 1"""
     return dict(retry_transient(lambda: lake.connect().execute(q).fetchall()))
+
+
+def legacy_identity(lake: Lake, roaster_ids: set[str]) -> dict[str, Identity]:
+    """For each of roaster_ids, the ids the generic adapter stored its products under, by handle
+    (shopify.identity_key): the product id of its latest generic row for that handle, and whether that row's variant
+    ids were positions only (shopify.Legacy). A store first read page by page and now from /products.json (platform
+    `shopify?`, or a Shopify sitemap index) keeps them, so moving it changes no coffee_id and breaks no price series.
+
+    Only generic rows count, and all of them (no time window): rows written after the move carry the same ids, and a
+    product first seen after it keeps Shopify's own. One product id is never given to two handles: the handle of its
+    latest row has it. Ties on fetched_at break by product id and handle, so the answer doesn't depend on read order."""
+    if not roaster_ids:
+        return {}
+    q = f"""with g as (
+                select roaster_id, handle, product_id, fetched_at,
+                       [v.variant_id for v in variants] = [x::varchar for x in range(len(variants))] as by_position
+                from {lake.scan("snapshots")}
+                where platform = 'generic' and roaster_id in (select unnest(?)) and handle is not null
+                  and product_id is not null),
+            h as (select * from g qualify row_number() over (
+                      partition by roaster_id, lower(handle) order by fetched_at desc, product_id, handle) = 1)
+            select roaster_id, handle, product_id, by_position from h qualify row_number() over (
+                partition by roaster_id, product_id order by fetched_at desc, handle) = 1
+            order by all"""
+    rows = retry_transient(lambda: lake.connect().execute(q, [sorted(roaster_ids)]).fetchall())
+    out: dict[str, Identity] = {}
+    for rid, handle, pid, positional in rows:
+        out.setdefault(rid, {}).setdefault(identity_key(handle), Legacy(pid, bool(positional)))
+    return out
 
 
 # A store whose fetch ended partial (an ok fetch marked partial, no complete one) in each of this many run dates in a
@@ -488,6 +541,7 @@ def rows_for(
                 "crawl_delays": res.stats.crawl_delays or None,
                 "transport_errors": res.stats.transport_errors or None,
                 "robots": res.stats.robots or None,
+                "catalog_route": res.stats.route,
             }
         )
         for it in res.items:
@@ -565,6 +619,13 @@ def run(
     # empty page: its latest complete ok fetch is the very fetch that came back short, and a suspect's short count
     # as the known size would let a short page end the re-fetch at the same truncation.
     known = {k: v for k, v in known_products(lake).items() if k not in refetch}
+    # Stores the generic adapter may have read before that can be read from /products.json now (platform `shopify?`,
+    # crawled by the Shopify job; or a generic store whose sitemap index is Shopify's): their products keep the ids
+    # they were stored under (legacy_identity). A store the registry knows as `shopify` was never read page by page.
+    identity = legacy_identity(
+        lake,
+        {r.roaster_id for r in roasters if r.platform != "shopify" and r.adapter in ("shopify", "generic")},
+    )
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []
@@ -620,9 +681,15 @@ def run(
     # with a shared budget (a connector's config: connectors.Connector.rps) gets its own, set up the same way.
     # the stored robots.txt copies an unreachable robots.txt may fall back to (http.ROBOTS_COPY_MAX_AGE_S)
     copies = robots_copies(lake, run_date)
-    rates = {"shopify": shopify_rps} | {k: v for k, v in (platform_rps or {}).items() if k != "shopify"}
+    # Shopify storefronts the generic adapter reads (adapters.generic) share their own budget (SHOPIFY_HOSTED).
+    rates = {"shopify": shopify_rps, SHOPIFY_HOSTED: SHOPIFY_HOSTED_RPS} | {
+        k: v for k, v in (platform_rps or {}).items() if k not in ("shopify", SHOPIFY_HOSTED)
+    }
+    concurrency = {SHOPIFY_HOSTED: SHOPIFY_HOSTED_CONCURRENCY}
     limiters = {
-        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
+        name: PlatformLimiter(
+            name, rate=rps, max_concurrent=concurrency.get(name, SHOPIFY_CONCURRENCY), per_host=per_host
+        )
         for name, rps in rates.items()
     }
     shopify = limiters["shopify"]
@@ -685,7 +752,16 @@ def run(
             p = progress.get(r.roaster_id)
             resume_at = p and {"page": p["page"], "items": p["items"]}
             last = round_ == rounds - 1
-            fut = ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id), guard, last)
+            fut = ex.submit(
+                _attempt,
+                client,
+                r,
+                resume_at,
+                known.get(r.roaster_id),
+                guard,
+                last,
+                identity.get(r.roaster_id),
+            )
             futures[fut] = r
             running.add(fut)
 

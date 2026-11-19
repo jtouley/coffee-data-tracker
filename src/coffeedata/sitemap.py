@@ -50,7 +50,9 @@ def _refusal(e: BaseException | None, r: httpx.Response | None = None) -> bool:
     return e is not None and bool(block_status(e) or challenged(e))
 
 
-def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = None) -> list[str]:
+def sitemap_urls(
+    client: PoliteClient, host: str, unread: list[str] | None = None, index: list[str] | None = None
+) -> list[str]:
     """Every URL in sitemap.xml and, for a sitemap index, in every sitemap it lists. A 404 means the site has none
     ([]); a robots block, network error or any other status of sitemap.xml itself raises FetchError, so a fetch can't
     mistake "couldn't read it" for "nothing there"; so does a sitemap over SITEMAP_MAX_BYTES (ResponseTooLarge).
@@ -59,7 +61,10 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     (a 404 or 410, a 5xx, a timeout, a file over the cap) is skipped and its URL added to `unread`, so the caller knows
     the list is incomplete (generic stores the catalog as partial). A 404 or 410 too: the index still lists it, and
     nothing says it held no products, so its products are kept listed (partial), never read as delisted. A pause or a
-    challenge (_refusal) still raises: the store is deferred or refused, as for any page."""
+    challenge (_refusal) still raises: the store is deferred or refused, as for any page.
+
+    index: filled with a sitemap index's sub-sitemap URLs (what platform made the sitemap: generic reads Shopify's
+    names)."""
     client = client.with_max_response(max(client.max_response_bytes, SITEMAP_MAX_BYTES))
     r = _get(client, f"https://{host}/sitemap.xml")
     if r.status_code == 404:
@@ -69,6 +74,8 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     if b"<sitemapindex" not in r.content:
         return _locs(r.content)
     locs = _locs(r.content)
+    if index is not None:
+        index.extend(locs)
     urls: list[str] = []
     # Product sitemaps first: Shopify/Woo/BigCommerce name them that way.
     for sm in sorted(locs, key=lambda u: "product" not in u.lower()):
