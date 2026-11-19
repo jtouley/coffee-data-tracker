@@ -214,7 +214,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
       <h4>Just arrived</h4>
       {% if new %}
       <ul class="arrivals">
-        {% for c in new %}<li><div>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.title }}</a>{% else %}<b>{{ c.title }}</b>{% endif %}
+        {% for c in new %}<li><div>{% if c.url %}<a href="{{ c.url | referral }}" rel="noopener" data-out data-roaster="{{ c.roaster_id or '' }}" data-coffee="{{ c.coffee_id or '' }}">{{ c.title }}</a>{% else %}<b>{{ c.title }}</b>{% endif %}
           <div class="meta">{{ c.roaster_name }}{% if c.origin_country %} · {{ c.origin_country }}{% endif %}{% if c.process %} · {{ c.process }}{% endif %}</div></div>
           <span class="price">{% if c.price_per_100g %}${{ "%.2f"|format(c.price_per_100g) }}/100 g{% endif %}</span></li>{% endfor %}
       </ul>
@@ -303,6 +303,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 <script>
 (() => {
 {% include "_common.js" %}
+{% include "_usage.js" %}
 
   document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
     try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = "Copied"; }

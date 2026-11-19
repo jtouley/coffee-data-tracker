@@ -14,6 +14,7 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="{{ asset('icons/icon.svg') }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}">
+{% if usage_url %}<meta name="usage" content="{{ usage_url }}">{% endif %}
 <script src="{{ asset('app.js') }}" defer></script>
 </head>
 <body>
