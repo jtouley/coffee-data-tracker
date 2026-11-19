@@ -209,10 +209,13 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
     fakes["act"].on_finish = Pipeline(lake, tmp_path / "act" / "snapshots", w3)
     ports = {k: _port() for k in ("act", "window", "off", "down", "slow")}
 
+    pools: list[ControlPlane] = []  # closed at the end, so their connections don't outlive the test
+
     def app(name, fake=None, control=None, now=None):
         st = _settings(tmp_path / name, f"http://127.0.0.1:{ports[name]}", lake)
         if fake is not None:
             st.control = control or ControlPlane(url_connect(pg_server.database()))
+            pools.append(st.control)
             st.jobs, st.snapshots, st.writes_off = fake, FileStore(tmp_path / name / "snapshots"), []
         return create_app(st, now=now)
 
@@ -240,6 +243,8 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
             for server, thread in servers:
                 server.should_exit = True
                 thread.join()
+            for cp in pools:
+                cp.close()
     print(r.stdout[-8000:])
     assert r.returncode == 0, r.stdout[-6000:] + r.stderr[-4000:]
     # the admin wrote nothing to the lake it read from; only the fake pipeline wrote its copy
