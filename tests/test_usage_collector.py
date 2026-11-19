@@ -849,6 +849,34 @@ def test_the_owners_shell_plans_load_ci_tfvars_after_terraform_tfvars(script):
     assert "never GitHub's ci.tfvars" not in code
 
 
+# A `terraform plan` or `terraform apply` the runbooks tell the owner to run on the main root. Not one that applies a
+# saved plan (`apply x.plan`: the variables were fixed at plan), the bootstrap root's, or prose naming the command.
+_TF_COMMAND = re.compile(r"\bterraform (plan|apply)\b(?P<rest>[^`\n]*)")
+_NOT_A_MAIN_ROOT_COMMAND = (
+    "-out=b.plan",  # the bootstrap root (RUNNING.md, re-applying the bootstrap)
+    "plan -destroy",  # the bootstrap root (RUNNING.md, revoking the pipeline's access)
+    "The next `terraform apply` reverts it",
+    "`terraform plan` refuses a size",
+)
+
+
+@pytest.mark.parametrize("doc", ["docs/ingestion/RUNBOOK.md", "docs/app/RUNNING.md"])
+def test_the_runbooks_hand_commands_load_ci_tfvars(doc):
+    """After usage_enabled, a hand plan or apply without ci.tfvars offers to destroy the collector and its log
+    exclusion (RUNBOOK section 5's emergency apply most of all): every main-root command in the runbooks passes it."""
+    seen = 0
+    for n, line in enumerate((ROOT / doc).read_text().splitlines(), 1):
+        if any(s in line for s in _NOT_A_MAIN_ROOT_COMMAND):
+            continue
+        for m in _TF_COMMAND.finditer(line):
+            args = m.group("rest").split("#")[0].split()
+            if m.group(1) == "apply" and args and not args[0].startswith("-"):
+                continue  # a saved plan
+            seen += 1
+            assert "-var-file=ci.tfvars" in args, f"{doc}:{n}: {line.strip()}"
+    assert seen >= 3, doc  # the pattern still finds the commands
+
+
 def test_the_collector_url_is_in_one_checked_in_place():
     """config/usage.toml holds it: empty until the service exists, then Cloud Run's deterministic address, the same
     shape as Terraform's output usage_url."""

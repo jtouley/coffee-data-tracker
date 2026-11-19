@@ -120,6 +120,10 @@ say "3. plan the main root with that image"
 # request-log exclusion. Where both files set a value, ci.tfvars wins, as it does in GitHub.
 MAIN="$WORK/main-root"; TFVARS="$PWD/$TF/terraform.tfvars"; CITFVARS="$PWD/$TF/ci.tfvars"
 mkdir "$MAIN" && cp "$TF"/*.tf "$TF/.terraform.lock.hcl" "$MAIN/"
+keys(){ sed -n -E 's/^[[:space:]]*([a-z_]+)[[:space:]]*=.*/\1/p' "$1" | sort -u; }
+# Before anything is planned: the settings both files hold, where ci.tfvars' value is the one this plan uses.
+both=$(keys "$TFVARS" | grep -xF -f <(keys "$CITFVARS") | tr '\n' ' ' || true)
+[ -z "$both" ] || echo "NOTE: terraform.tfvars and ci.tfvars both set: $both. ci.tfvars' values win in this plan."
 ask "init, check and plan $TF with your terraform.tfvars, main's ci.tfvars and the image above (nothing changes yet)?"
 tfrun init "$MAIN" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$P-tfstate"
 tfrun fmt "$MAIN" fmt -check -no-color
@@ -152,7 +156,9 @@ python3 -I scripts/tf_plan_guard.py render "$WORK/main.json" || die "couldn't li
 echo "expect: updates to every job (the pinned image; discover and probe commands, #132/#133); the build job's"
 echo "        command and retries 1 -> 0 (#154); the job-failure alert policies' text (#154); the image registry's"
 echo "        keep-pinned cleanup rule (#153); and, if not applied before: alert policies, the deploy identity's"
-echo "        condition (#127), the two empty email secrets (#134), the second subnet/IP/NAT, the 21:47 retries."
+echo "        condition (#127), the two empty email secrets (#134), the second subnet/IP/NAT, the 21:47 retries;"
+echo "        and, if GitHub hasn't applied ci.tfvars' usage settings yet, 4 creates for the usage collector (its"
+echo "        request-log exclusion, service, public invoker and alert; this needs the bootstrap's usage grants)."
 echo "        Nothing may be deleted or replaced (checked above). Read the list before answering."
 ask "apply exactly this plan?"
 not_now
@@ -233,13 +239,14 @@ for pair in billing_account:TF_VAR_BILLING_ACCOUNT owner_email:TF_VAR_OWNER_EMAI
   echo "set ${pair#*:}"
 done
 # What GitHub's plan won't see: a setting in terraform.tfvars that no variable above or ci.tfvars carries.
-keys(){ sed -n -E 's/^[[:space:]]*([a-z_]+)[[:space:]]*=.*/\1/p' "$1" | sort -u; }
 known='billing_account|owner_email|ingest_image|ingest_schedule_enabled|email|budget_usd|ingest_job_memory'
 left=$(keys "$TF/terraform.tfvars" | grep -vxE "$known" | grep -vxF -f <(keys "$CITFVARS") | tr '\n' ' ' || true)
 [ -z "$left" ] || echo "NOTE: terraform.tfvars also sets: $left. GitHub's plan doesn't; add them to ci.tfvars or a TF_VAR_* variable."
-# Every plan loads ci.tfvars after terraform.tfvars, so a value set in both is ci.tfvars' everywhere.
-both=$(keys "$TF/terraform.tfvars" | grep -xF -f <(keys "$CITFVARS") | tr '\n' ' ' || true)
-[ -z "$both" ] || echo "NOTE: terraform.tfvars also sets $both; ci.tfvars overrides them in every plan, so remove them there."
+# Every scripted and documented plan loads ci.tfvars after terraform.tfvars, so a value set in both is ci.tfvars'.
+# Leaving both is fine: verdict_model has no default, so terraform.tfvars keeps it for any plan without ci.tfvars.
+[ -z "$both" ] || printf '%s\n' "NOTE: terraform.tfvars and ci.tfvars both set: $both." \
+  "      ci.tfvars wins wherever it is loaded (GitHub, the owner's scripts, the runbooks' commands). Leaving both is" \
+  "      fine: verdict_model has no default, so keep it in terraform.tfvars too."
 
 say "8. first importers run (skip it if cutover 2 already started one)"
 ask "run importers.yml on main (importer=all; a manual run never fetches Royal)?"

@@ -60,7 +60,7 @@ production.
 2. **Apply the `keep-pinned` cleanup policy, the same day as the merge**, from the merged main:
    ```sh
    cd src/terraform && rm -f keep.plan
-   terraform plan -target=google_artifact_registry_repository.app -out keep.plan
+   terraform plan -var-file=ci.tfvars -target=google_artifact_registry_repository.app -out keep.plan
    # 0 to add, 1 to change (google_artifact_registry_repository.app, in place: + cleanup_policies "keep-pinned"),
    # 0 to destroy. Anything else: stop.
    ```
@@ -201,7 +201,7 @@ repository variables, let the workflow build the image, then plan for real with 
 ```sh
 cd src/terraform
 terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
-terraform plan -var ingest_schedule_enabled=false -out ingest.plan
+terraform plan -var-file=ci.tfvars -var ingest_schedule_enabled=false -out ingest.plan
 ```
 
 **Expected plan in a fresh project: 41 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
@@ -268,7 +268,7 @@ job's `egress` is `default`, `shopify` or `woo_generic`.
 
 ```sh
 cd src/terraform
-terraform plan -out egress.plan
+terraform plan -var-file=ci.tfvars -out egress.plan
 ```
 
 **Expected plan: 3 to add, 2 to change, 0 to destroy.**
@@ -608,7 +608,7 @@ scheduled job.
    Plan, pinning every job to it while turning the schedule on:
    ```sh
    cd src/terraform && rm -f ingest.plan
-   terraform plan -var ingest_image="${PINNED:?not verified: stop}" -var ingest_schedule_enabled=true -out ingest.plan
+   terraform plan -var-file=ci.tfvars -var ingest_image="${PINNED:?not verified: stop}" -var ingest_schedule_enabled=true -out ingest.plan
    # 16 to add (google_cloud_scheduler_job.ingest), 12 to change (each job's image, to $PINNED), 0 to destroy
    ```
    Apply only a plan you just read, and check every job:
@@ -647,7 +647,7 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
 
 - **Stop the Cloud Run schedule** (the jobs and data stay):
   ```sh
-  cd src/terraform && terraform apply -var ingest_schedule_enabled=false
+  cd src/terraform && terraform apply -var-file=ci.tfvars -var ingest_schedule_enabled=false
   ```
   For an urgent stop of a single entry: `gcloud scheduler jobs pause registry-coffee-<entry> --location $REGION`.
 - **Run the old weekly pipeline from Actions** (its crawl is kept for one week):
@@ -1355,7 +1355,7 @@ a GitHub triage issue per rule that breaches, read from the lake by a GitHub wor
 
 ```sh
 cd src/terraform
-terraform plan -out alerts.plan
+terraform plan -var-file=ci.tfvars -out alerts.plan
 terraform apply alerts.plan
 ```
 
@@ -1482,7 +1482,7 @@ never a different verdict or exit code).
 1. Once this PR's commit is on main, its ingest image is built by the deploy workflow: pin its digest in
    `ingest_image` (section 1, and section 4's pinning step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
    `COFFEEDATA_DQ_REFETCH` unset) only from it.
-2. `cd src/terraform && terraform plan -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
+2. `cd src/terraform && terraform plan -var-file=ci.tfvars -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
    `google_cloud_run_v2_job.ingest["fetch-health"]`, its invoker binding
    `google_cloud_run_v2_job_iam_member.scheduler["fetch-health"]`, the Scheduler entry
    `google_cloud_scheduler_job.ingest["fetch-health"]` (only with `ingest_schedule_enabled = true`), and the alert

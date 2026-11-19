@@ -142,7 +142,7 @@ Nothing here was created for you. Once, in this order:
    cd src/terraform
    cp terraform.tfvars.example terraform.tfvars   # billing_account, owner_email
    terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
-   terraform apply -target=google_project_service.apis -target=google_secret_manager_secret.app
+   terraform apply -var-file=ci.tfvars -target=google_project_service.apis -target=google_secret_manager_secret.app
    ```
 
 5. **Secret values**, one version for each of the five (Terraform only creates the empty secrets; values never go
@@ -163,7 +163,7 @@ Nothing here was created for you. Once, in this order:
    ```
 
    (The app strips surrounding whitespace from every secret anyway, so a stray newline does no harm.) Then
-   everything else: `terraform apply`.
+   everything else: `terraform apply -var-file=ci.tfvars`.
 6. **GitHub variables** (Settings → Secrets and variables → Actions → Variables), from `terraform output`:
    `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE`. Then run the deploy workflow once, or push to main.
 7. **DNS:** add `CNAME app -> ghs.googlehosted.com.` at Namecheap (`runbook/check-dns.sh` checks it). The
@@ -484,13 +484,13 @@ you". The app starts either way.
    secret at version `latest`, so they need values before `email = true` mounts them. Nothing below prints a key:
 
    ```bash
-   terraform apply   # with email = false (the default): creates the two empty secrets if they aren't there yet
+   terraform apply -var-file=ci.tfvars   # with email = false (the default): creates the two empty secrets if they aren't there yet
    (umask 077; openssl rand -base64 32 | tr -d '\n' > email_key.txt)   # copy it into your password manager now
    gcloud secrets versions add EMAIL_KEY --data-file=email_key.txt && shred -u email_key.txt
    gcloud secrets versions add RESEND_API_KEY --data-file=-   # paste the Resend key, then Ctrl-D
    ```
 
-   Then set `email = true` in `terraform.tfvars` and `terraform apply`: it mounts both and adds the alert, and Cloud
+   Then set `email = true` in `terraform.tfvars` and `terraform apply -var-file=ci.tfvars`: it mounts both and adds the alert, and Cloud
    Run makes a new revision.
 
 5. **Check it.** In the app: Setup → Add email, with your own address. The confirm email arrives (check the spam
@@ -705,7 +705,8 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
 4. `collector_url` in `config/usage.toml` set to `usage_url` (the apply's output, or the service's URL on its Cloud
    Run page), in a PR: from then on the pages send events.
 5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does any other method on `/e`
-   (`/health` and `/healthz` answer 200, any other path 404); the service's log shows a `usage flush` line counting
+   (`GET <collector_url>/health` answers 200, and any other path 404; `/healthz` is for the startup probe only,
+   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage flush` line counting
    it as `foreign_origin` at its next flush.
 
 ## Using it on the phone

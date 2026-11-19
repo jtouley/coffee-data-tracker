@@ -1,9 +1,10 @@
 # Checked-in settings for every plan of this root, and their one source: GitHub's plan and apply
 # (terraform-plan.yml, terraform-apply.yml) and the owner's scripts (scripts/tf_break_glass.sh,
-# docs/ingestion/final-shell-run.sh) all pass it with `-var-file=ci.tfvars`, after terraform.tfvars, so a value set
-# here wins over the same one there. A plan by hand from the shell must pass it too, or it proposes undoing these
-# (the usage collector would be destroyed). Not an *.auto.tfvars: the guarded routes load it explicitly, and the
-# existing hand commands keep working as written. Only real, public values go here, never a placeholder.
+# docs/ingestion/final-shell-run.sh) and the hand commands in RUNNING.md and RUNBOOK.md all pass it with
+# `-var-file=ci.tfvars`, after terraform.tfvars, so a value set here wins over the same one there. Any other plan by
+# hand must pass it too, or it proposes undoing these (the usage collector would be destroyed). Not an
+# *.auto.tfvars: every route loads it explicitly (tests/test_usage_collector.py checks the scripts and the runbooks'
+# commands). Only real, public values go here, never a placeholder.
 #
 # Where the other values come from in CI (docs/ingestion/RUNBOOK.md section 9):
 # - repository secrets TF_VAR_BILLING_ACCOUNT and TF_VAR_OWNER_EMAIL: billing_account and owner_email;
