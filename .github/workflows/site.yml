@@ -27,6 +27,8 @@ on:
     paths:
       - "src/coffeedata/templates/**"
       - "src/coffeedata/site.py"
+      - "src/coffeedata/beacon.py"
+      - "config/usage.toml"
       - "src/coffeedata/public.py"
       - "contracts/public-catalog.odcs.yaml"
       - ".github/workflows/site.yml"

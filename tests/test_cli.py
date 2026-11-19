@@ -152,7 +152,7 @@ def test_a_failure_reporting_the_coverage_claims_never_stops_the_build_record(mo
 
     monkeypatch.setattr(quality, "coverage_claim_messages", broken)
     recorded = []
-    monkeypatch.setattr(quality, "record_build", lambda *a: recorded.append(a[2]) or False)
+    monkeypatch.setattr(quality, "record_build", lambda *a, **k: recorded.append(a[2]) or False)
     monkeypatch.setattr(cli, "_write_personal_marts", lambda *a: None)
     args = argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-26")
     assert cli.cmd_build(args) is False  # record_build's verdict, so the build was recorded

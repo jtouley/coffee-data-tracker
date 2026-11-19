@@ -125,24 +125,41 @@ def test_a_price_per_100g_far_from_its_peers_warns(lake, tmp_path):
 
 
 def test_the_public_tables_reconcile_and_a_reclassified_product_is_no_disagreement(lake, tmp_path):
-    """The 2026-11-02 case: products reclassified as not coffee leave dim_coffee and keep their events (24 orphan
-    events); that is by design, so the reconciliation passes while fct_price_event's relationships test warns."""
+    """The 2026-11-02 case: products reclassified as not coffee leave dim_coffee. They used to keep their events (24
+    orphan events in that release, 1,313 by 2026-11-16, each read as a false `removed`), and fct_price_event's
+    relationships test only warned. Now fct_price_event keeps only coffees in dim_coffee, by dim_coffee's own
+    latest-version rule: the reclassified product has no events at all, the relationships test is an error and
+    passes, and the reconciliation still passes."""
     run(lake, WEEK1, "onyxcoffeelab.com", [product("A"), product("P", title="French Roast Single Cups")])
     run(lake, WEEK2, "onyxcoffeelab.com", [product("A"), product("P", coffee=False, title="Mug P")])
     manifest(lake, WEEK2, ["onyxcoffeelab.com"])
     r = build(lake, tmp_path, check=False, as_of_run=WEEK2)
     assert r.returncode == 0 and re.search(r"PASS public_tables_reconcile", r.stdout), r.stdout[-3000:]
-    assert re.search(r"WARN \d+ relationships_fct_price_event_coffee_id", r.stdout), r.stdout[-3000:]
+    assert re.search(r"PASS relationships_fct_price_event_coffee_id", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    events = dict(
+        con.execute(
+            "select split_part(coffee_id, ':', 2), count(*) from fct_price_event group by 1"
+        ).fetchall()
+    )
+    in_dim = {r[0] for r in con.execute("select split_part(coffee_id, ':', 2) from dim_coffee").fetchall()}
+    con.close()
+    assert "P" not in events and "P" not in in_dim  # neither its week-1 `new` nor a false `removed` in week 2
+    assert events.get("A", 0) >= 1 and "A" in in_dim
     _break(
         tmp_path,
         "update public_roaster set coffees_listed = coffees_listed + 1",  # roaster_counts
         "update dim_roaster set coffees_listed = coffees_listed + 1",  # listed_total
         "update public_price_event set roaster_id = 'elsewhere.com' where coffee_id like '%:A'",  # event_roaster
         "insert into fct_price_event (coffee_id, roaster_id, event) values ('onyxcoffeelab.com:gone', "
-        "'onyxcoffeelab.com', 'new')",  # an orphan that is still coffee (no record at all)
+        "'onyxcoffeelab.com', 'new')",  # an orphan event: the relationships test's, not the reconciliation's
     )
     r = _test(lake, tmp_path, "public_tables_reconcile")
-    assert r.returncode == 0 and re.search(r"WARN 4 public_tables_reconcile", r.stdout), r.stdout[-3000:]
+    assert r.returncode == 0 and re.search(r"WARN 3 public_tables_reconcile", r.stdout), r.stdout[-3000:]
+    r = _test(lake, tmp_path, "relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_")
+    assert r.returncode != 0 and re.search(r"FAIL 1 relationships_fct_price_event_coffee_id", r.stdout), (
+        r.stdout[-3000:]
+    )
 
 
 def _release(tmp_path, name: str, run_date: str = WEEK2, drop: dict | None = None) -> dict[str, dict]:

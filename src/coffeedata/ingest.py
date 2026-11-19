@@ -20,7 +20,7 @@ from collections.abc import Sequence
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor
 from concurrent.futures import wait as wait_any
 from dataclasses import dataclass, field
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import httpx
@@ -286,6 +286,53 @@ def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
     return {r[0] for r in rows}
 
 
+# The newest robots.txt each host answered with (a `live` record in fetches.robots or probes.robots), for
+# http.PoliteClient's fallback when the live file is unreachable. Only answers about the rules are stored (a 2xx, a
+# 401/403, another 4xx but a block), so whichever is newest is the store's latest word. A 2xx record without its body
+# (every fetch but the one that read the file live records it so) is never a copy: read as one, it would allow
+# everything. Two answers at the same second: the most restrictive wins (401/403, then a 2xx file, then another 4xx),
+# so a 403 is never undercut by a 200. Only rows from runs since `since` are read (a copy older than
+# http.ROBOTS_COPY_MAX_AGE_S is never used, and the client checks the age itself), each host's newest one kept.
+ROBOTS_COPIES_SQL = """
+with copies as (
+    select unnest(robots) as r from {fetches} where robots is not null and run_date >= ?
+    union all
+    select unnest(robots) as r from {probes} where robots is not null and run_date >= ?
+)
+select r.host as host, r.fetched_at as fetched_at, r.status as status, r.body as body
+from copies
+where r.source = 'live' and r.host is not null and r.fetched_at is not null and r.status is not null
+  and (r.status not between 200 and 299 or r.body is not null)
+qualify row_number() over (
+    partition by r.host
+    order by r.fetched_at desc,
+             case when r.status in (401, 403) then 0 when r.status between 200 and 299 then 1 else 2 end,
+             r.status, r.body
+) = 1
+"""
+# Days of rows robots_copies reads: one more than the copy's age limit (30 days), as run dates are Mondays.
+ROBOTS_COPY_WINDOW_DAYS = 31
+
+
+def robots_copies(lake: Lake, run_date: str | date | None = None) -> dict[str, dict]:
+    """host -> its newest stored robots.txt ({fetched_at, status, body}), from the runs of the last
+    ROBOTS_COPY_WINDOW_DAYS before `run_date` (default today). None stored yet, or unreadable (a lake from before raw
+    1.7.0 has no robots column at all): {} and the client behaves as it always did: no copy, no crawl."""
+    day = date.today() if run_date is None else date.fromisoformat(str(run_date))
+    since = day - timedelta(days=ROBOTS_COPY_WINDOW_DAYS)
+    try:
+        con = lake.connect()
+        rows = con.execute(
+            ROBOTS_COPIES_SQL.format(fetches=lake.scan("fetches"), probes=lake.scan("probes")), [since, since]
+        ).fetchall()
+    except Exception as e:  # noqa: BLE001 - fail closed: without copies nothing is fetched past an unreachable file
+        log.warning(
+            "robots.txt copies not read (%s): an unreachable robots.txt stops its store, as before", e
+        )
+        return {}
+    return {h: {"fetched_at": t, "status": s, "body": b} for h, t, s, b in rows}
+
+
 def sample_key(roaster_id: str) -> str:
     """Stable order for --sample: unaffected by roasters being added, shared by probe and ingest."""
     return hashlib.sha1(roaster_id.encode()).hexdigest()
@@ -460,6 +507,8 @@ def rows_for(
                 # an ok fetch that read only part of the catalog (stopped at the run's deadline); else complete
                 "partial": res.partial if res.status == "ok" else None,
                 "crawl_delays": res.stats.crawl_delays or None,
+                "transport_errors": res.stats.transport_errors or None,
+                "robots": res.stats.robots or None,
             }
         )
         for it in res.items:
@@ -590,6 +639,8 @@ def run(
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget. Any other platform
     # with a shared budget (a connector's config: connectors.Connector.rps) gets its own, set up the same way.
+    # the stored robots.txt copies an unreachable robots.txt may fall back to (http.ROBOTS_COPY_MAX_AGE_S)
+    copies = robots_copies(lake, run_date)
     rates = {"shopify": shopify_rps} | {k: v for k, v in (platform_rps or {}).items() if k != "shopify"}
     limiters = {
         name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
@@ -616,6 +667,7 @@ def run(
         # manifest publish and the lake reads above came first)
         PoliteClient(
             limiters=limiters,
+            robots_copies=copies,
             **({"deadline_s": None if deadline is None else deadline - time.monotonic()} | (client_kw or {})),
         ) as client,
         ThreadPoolExecutor(workers) as ex,

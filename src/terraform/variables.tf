@@ -95,7 +95,7 @@ variable "usage_token" {
 }
 
 variable "usage_image" {
-  description = "The image the usage collector runs: an app image deploy.yml built from main, by digest (`<region>-docker.pkg.dev/<project>/<service>/app@sha256:<64 hex>`), set in ci.tfvars. Empty (the default) runs Google's sample image. Never a tag: a tag moves, a digest doesn't."
+  description = "The image the usage collector runs: an app image deploy.yml built from main, by digest (`<region>-docker.pkg.dev/<project>/<service>/app@sha256:<64 hex>`), set in ci.tfvars. Empty is the default, and refused while usage_enabled is on (usage.tf's precondition). Never a tag: a tag moves, a digest doesn't."
   type        = string
   default     = ""
   validation {
