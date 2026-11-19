@@ -387,15 +387,18 @@ Artifact Registry Reader on the image's repository. The apply account's reposito
 repository's root in Cloud Shell:
 
 ```bash
-cd src/terraform/bootstrap && terraform init -backend-config="bucket=coffee-data-tracker-tfstate" &&
-  export TF_VAR_billing_account="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
-  terraform plan -input=false -out=b.plan && terraform show b.plan
-# read it: 1 to change, google_project_iam_custom_role.tf_repository (update in place), nothing else; then
-terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
 ```
 
-The plan shows exactly that if the bootstrap was current with main before (the `tfApplyPlanObject` re-apply above and
-the collector's grants below included); otherwise it also shows those, and nothing that deletes. Then run
+Read the plan before the yes: `0 to add, 1 to change, 0 to destroy`, an update in place of
+`google_project_iam_custom_role.tf_repository` (its title and permissions), and nothing else. That holds when the
+bootstrap was current with main before this change (the `tfApplyPlanObject` re-apply above and the collector's grants
+below included). If the plan shows anything but that 1 update, a replace included (a pending `tfApplyPlanObject`
+re-apply replaces `google_storage_bucket_iam_member.tf_apply_plans`), answer no and ask first. Then run
 `terraform-apply` again from main. `bash docs/ingestion/final-shell-run.sh` reaches the same plan at its step 6, but
 only after steps 1 to 5, which plan and apply the main root from Cloud Shell; use it only when the main root has
 nothing pending (its step 3 then shows no changes). If a further denial names another `artifactregistry.*` read

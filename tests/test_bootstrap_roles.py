@@ -17,7 +17,7 @@ ROLE = re.compile(r'role_id\s*=\s*"(\w+)"[^}]*?permissions\s*=\s*\[([^\]]*)\]', 
 RESOURCE = re.compile(r'^resource "(\w+)" "(\w+)" \{\n(.*?)^\}', re.M | re.S)
 
 # roles/artifactregistry.reader's permissions at repository scope (IAM roles reference, Artifact Registry), less
-# exportArtifacts and the Maven, npm and Python reads; plus the repository's settings and IAM. Nothing that writes
+# repositories.list (checked on the location), exportArtifacts and the Maven, npm and Python reads; plus the repository's settings and IAM. Nothing that writes
 # an image, a tag, a file or a package, or deletes anything.
 REPOSITORY_READ = [
     "artifactregistry.attachments.get",
@@ -31,7 +31,6 @@ REPOSITORY_READ = [
     "artifactregistry.packages.list",
     "artifactregistry.repositories.downloadArtifacts",
     "artifactregistry.repositories.get",
-    "artifactregistry.repositories.list",
     "artifactregistry.repositories.listEffectiveTags",
     "artifactregistry.repositories.listTagBindings",
     "artifactregistry.repositories.readViaVirtualRepository",
@@ -50,7 +49,12 @@ REPOSITORY_SETTINGS = [
 
 
 def _roles() -> dict[str, list[str]]:
-    return {rid: sorted(re.findall(r'"([^"]+)"', body)) for rid, body in ROLE.findall(IAM.read_text())}
+    code = IAM.read_text()
+    roles = {rid: sorted(re.findall(r'"([^"]+)"', body)) for rid, body in ROLE.findall(code)}
+    declared = len(re.findall(r'^resource "google_project_iam_custom_role"', code, re.M))
+    # A role the pattern can't read (permissions before role_id, a non-literal list) must fail, not be skipped.
+    assert len(roles) == declared, f"parsed {sorted(roles)} of {declared} custom roles"
+    return roles
 
 
 def _resources() -> list[tuple[str, str, str]]:

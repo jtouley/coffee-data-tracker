@@ -77,7 +77,8 @@ resource "google_project_iam_custom_role" "tf_service_accounts" {
 # Cloud Run's "Create jobs" page (Required roles) asks the deployer for Artifact Registry Reader on the image's
 # repository, so this holds the read permissions roles/artifactregistry.reader has at repository scope (IAM roles
 # reference, Artifact Registry). Left out: its project-level ones (locations, projectconfigs, projectsettings,
-# resourcemanager.projects), exportArtifacts (copies images out), and the Maven, npm and Python reads (a Docker
+# resourcemanager.projects), repositories.list (checked on the location, the repositories.list method's reference
+# says, so no effect granted here), exportArtifacts (copies images out), and the Maven, npm and Python reads (a Docker
 # repository). No upload, tag, delete or other write permission; update and setIamPolicy are its settings and IAM.
 resource "google_project_iam_custom_role" "tf_repository" {
   role_id = "tfApplyRepository"
@@ -95,7 +96,6 @@ resource "google_project_iam_custom_role" "tf_repository" {
     "artifactregistry.repositories.downloadArtifacts",
     "artifactregistry.repositories.get",
     "artifactregistry.repositories.getIamPolicy",
-    "artifactregistry.repositories.list",
     "artifactregistry.repositories.listEffectiveTags",
     "artifactregistry.repositories.listTagBindings",
     "artifactregistry.repositories.readViaVirtualRepository",
