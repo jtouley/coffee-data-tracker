@@ -79,10 +79,29 @@ def test_every_custom_role_holds_exactly_its_permissions():
                            "secretmanager.secrets.getIamPolicy", "secretmanager.secrets.list",
                            "secretmanager.secrets.setIamPolicy", "secretmanager.secrets.update"],
         "tfApplyLogExclusions": ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list",
-                                 "logging.exclusions.update"],
+                                 "logging.exclusions.update", "logging.notificationRules.create",
+                                 "logging.notificationRules.get", "logging.notificationRules.list",
+                                 "logging.notificationRules.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
         "tfPlanBudgetReader": ["billing.resourcebudgets.read", "resourcemanager.projects.get"],
     }  # fmt: skip
+
+
+def test_only_the_apply_account_writes_logging_notification_rules_and_never_deletes_one():
+    """A log-based alert policy (condition_matched_log) creates a Logging notification rule underneath: CreateAlertPolicy
+    failed for the apply account with `logging.notificationRules.create` denied. It holds create, get, list and update
+    in `tfApplyLogExclusions`, and no delete (the guard refuses deletes). The plan account reads alert policies through
+    roles/monitoring.viewer and needs no notification-rule permission."""
+    held = {
+        rid: [p for p in perms if p.startswith("logging.notificationRules.")]
+        for rid, perms in _roles().items()
+    }
+    assert {rid: perms for rid, perms in held.items() if perms} == {
+        "tfApplyLogExclusions": ["logging.notificationRules.create", "logging.notificationRules.get",
+                                 "logging.notificationRules.list", "logging.notificationRules.update"],
+    }  # fmt: skip
+    granted = {p for perms in _roles().values() for p in perms}
+    assert "logging.notificationRules.delete" not in granted and "logging.notificationRules.*" not in granted
 
 
 def test_no_custom_role_holds_an_artifact_registry_permission_outside_the_allowlist():

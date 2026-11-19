@@ -785,8 +785,9 @@ def test_the_terraform_keeps_to_the_collectors_own_resources():
 
 
 def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs():
-    """actAs on the collector's account (and no other new one), log exclusions only (no sinks, buckets or delete),
-    and the plan account their read; ci.tfvars turns usage_enabled on only with the image pinned and the token."""
+    """actAs on the collector's account (and no other new one), log exclusions and the loss alert's notification
+    rule only (no sinks, buckets or delete), and the plan account the exclusions' read; ci.tfvars turns usage_enabled
+    on only with the image pinned and the token."""
     code = _code("src/terraform/bootstrap/iam.tf")
     assert 'usage            = "${var.service}-usage"' in code
     assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage"])' in code
@@ -795,7 +796,9 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
     )
     assert {k: sorted(re.findall(r'"([^"]+)"', v)) for k, v in perms.items()} == {
         "tfApplyLogExclusions": ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list",
-                                 "logging.exclusions.update"],
+                                 "logging.exclusions.update", "logging.notificationRules.create",
+                                 "logging.notificationRules.get", "logging.notificationRules.list",
+                                 "logging.notificationRules.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
     }  # fmt: skip
     apply = code[code.index('resource "google_project_iam_member" "tf_apply_custom"') :]
