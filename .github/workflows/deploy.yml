@@ -154,8 +154,9 @@ jobs:
           fi
       # The usage collector runs the app image ci.tfvars pins (usage_image, src/terraform/usage.tf); Terraform
       # deploys it, not this workflow. Tag that digest `pinned-usage-<12 hex>` so the registry's cleanup (keep the
-      # pinned* tags, artifact_registry.tf) never deletes the image the collector's next cold start needs. Tagging
-      # is within the deploy account's registry writer role; it changes no service.
+      # pinned* tags, artifact_registry.tf) never deletes the image the collector's next cold start needs. Creating
+      # the tag is within the deploy account's registry writer role (moving one isn't: that needs tags.delete); it
+      # changes no service.
       - name: Keep the usage collector's pinned image
         if: steps.tip.outputs.current == 'true'
         env:
@@ -170,7 +171,26 @@ jobs:
             echo "::error::ci.tfvars' usage_image isn't $IMAGE pinned by digest."
             exit 1
           fi
-          gcloud artifacts docker tags add "$usage" "$IMAGE:pinned-usage-${BASH_REMATCH[1]:0:12}" --quiet
+          digest="sha256:${BASH_REMATCH[1]}"
+          tag="pinned-usage-${BASH_REMATCH[1]:0:12}"
+          # Idempotent: a later deploy finds the tag already on this digest. Moving or re-adding an existing tag needs
+          # artifactregistry.tags.delete, which the deploy account doesn't hold (and shouldn't). Only "not found" means
+          # the tag is missing; any other describe error stops the run and shows its own message.
+          if current=$(gcloud artifacts docker images describe "$IMAGE:$tag" \
+              --format='value(image_summary.digest)' --quiet 2>describe.err); then
+            if [ "$current" = "$digest" ]; then
+              echo "$tag already points at $digest: nothing to do."
+            else
+              echo "::error::$tag points at $current, not $digest. Moving a tag needs a person (the deploy account can't delete tags)."
+              exit 1
+            fi
+          elif grep -qiE 'not found|NOT_FOUND' describe.err; then
+            gcloud artifacts docker tags add "$usage" "$IMAGE:$tag" --quiet
+          else
+            cat describe.err >&2
+            echo "::error::Couldn't read $tag's digest (above). Not tagging blind."
+            exit 1
+          fi
 
   # The admin (admin.registry.coffee) runs the same image as its own service: the same digest, after the app.
   deploy-admin:
