@@ -313,7 +313,9 @@ the workflow again; the new plan shows what is left. A lock left by a dead runne
 
 **What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can
 set IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the
-staging bucket (and so raw ingestion data), and run any image as the runtime, ingest or scheduler account. That is
+staging bucket (and so raw ingestion data), read the image repository's images, which Cloud Run checks as whoever
+deploys a job or service (its role holds no push or delete permission itself, though the repository's settings and
+IAM it can change reach both), and run any image as the runtime, ingest or scheduler account. That is
 what the approval is for: read the IAM section of the summary first. It cannot write a workload identity pool or
 provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
 - any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
@@ -374,7 +376,34 @@ script's bootstrap step refuses any replace, so it is for a first apply only):
 `TF_VAR_billing_account=<from your terraform.tfvars> terraform plan -out=b.plan`, then `terraform apply b.plan`. The plan
 shows: create `google_project_iam_custom_role.tf_plan_object`, and replace
 `google_storage_bucket_iam_member.tf_apply_plans` (its role changes, so it is replaced); nothing else. If the bootstrap
-was never applied, the first run creates everything (51 resources) with the final roles.
+was never applied, the first run creates everything (56 resources) with the final roles.
+
+**If every `google_cloud_run_v2_job` update fails** (or the usage service's) with `Docker-GetManifest
+permission_denied` on `artifactregistry.repositories.downloadArtifacts` (Cloud Audit Logs, principal
+`registry-coffee-tf-apply@…`): the apply account can't read the image it deploys. Cloud Run asks whoever deploys for
+Artifact Registry Reader on the image's repository. The apply account's repository role `tfApplyRepository`
+(`tf_repository` in `src/terraform/bootstrap/iam.tf`) holds that role's repository-scoped read permissions, on the
+`registry-coffee` repository only, since the change that added them. Re-apply the bootstrap once, by hand, from the
+repository's root in Cloud Shell:
+
+```bash
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
+```
+
+Read the plan before the yes: `0 to add, 1 to change, 0 to destroy`, an update in place of
+`google_project_iam_custom_role.tf_repository` (its title and permissions), and nothing else. That holds when the
+bootstrap was current with main before this change (the `tfApplyPlanObject` re-apply above and the collector's grants
+below included). If the plan shows anything but that 1 update, a replace included (a pending `tfApplyPlanObject`
+re-apply replaces `google_storage_bucket_iam_member.tf_apply_plans`), answer no and ask first. Then run
+`terraform-apply` again from main. `bash docs/ingestion/final-shell-run.sh` reaches the same plan at its step 6, but
+only after steps 1 to 5, which plan and apply the main root from Cloud Shell; use it only when the main root has
+nothing pending (its step 3 then shows no changes). If a further denial names another `artifactregistry.*` read
+permission, add it to `tfApplyRepository` the same way (and to `tests/test_bootstrap_roles.py`); the predefined Reader
+role on this one repository is the documented fallback.
 
 **The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
 deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed

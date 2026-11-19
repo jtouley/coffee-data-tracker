@@ -15,7 +15,9 @@
 #
 # What the apply account CAN do once an apply is approved, because the main root manages it: set IAM on the secrets
 # (so grant itself or anyone a secret's value), the image repository, the Cloud Run service and jobs, and the staging
-# bucket (so reach raw ingestion data); and run any image as the runtime, ingest or scheduler account, which hold
+# bucket (so reach raw ingestion data); read the image repository's images, which Cloud Run needs from whoever deploys
+# a job or service (its role holds no push or delete permission itself, but its settings can set cleanup policies and
+# its IAM can grant write); and run any image as the runtime, ingest or scheduler account, which hold
 # secret access and the staging bucket. The approval, the guard and the checks in terraform-apply.yml are the gate
 # on all of that, not these roles. The plan account can read every resource's settings and IAM, and the state (the
 # billing account id, the owner's email, the egress IPs), from any same-repository pull request.
@@ -70,14 +72,41 @@ resource "google_project_iam_custom_role" "tf_service_accounts" {
 
 # The image repository's settings and IAM (cleanup policies, the deploy account's writer role), on that repository
 # only: not roles/artifactregistry.admin, which can also delete images, the pinned one included.
+# And read its images: Cloud Run resolves a job's or the usage service's image as the account that deploys it, so
+# without downloadArtifacts every google_cloud_run_v2_job update failed with Docker-GetManifest permission_denied.
+# Cloud Run's "Create jobs" page (Required roles) asks the deployer for Artifact Registry Reader on the image's
+# repository, so this holds the read permissions roles/artifactregistry.reader has at repository scope (IAM roles
+# reference, Artifact Registry). Left out: its project-level ones (locations, projectconfigs, projectsettings,
+# resourcemanager.projects), repositories.list (checked on the location, the repositories.list method's reference
+# says, so no effect granted here), exportArtifacts (copies images out), and the Maven, npm and Python reads (a Docker
+# repository). No upload, tag, delete or other write permission; update and setIamPolicy are its settings and IAM.
 resource "google_project_iam_custom_role" "tf_repository" {
   role_id = "tfApplyRepository"
-  title   = "Terraform apply: a repository's settings and IAM, no images"
+  title   = "Terraform apply: a repository's settings and IAM, read images"
   permissions = [
+    "artifactregistry.attachments.get",
+    "artifactregistry.attachments.list",
+    "artifactregistry.dockerimages.get",
+    "artifactregistry.dockerimages.list",
+    "artifactregistry.files.download",
+    "artifactregistry.files.get",
+    "artifactregistry.files.list",
+    "artifactregistry.packages.get",
+    "artifactregistry.packages.list",
+    "artifactregistry.repositories.downloadArtifacts",
     "artifactregistry.repositories.get",
     "artifactregistry.repositories.getIamPolicy",
+    "artifactregistry.repositories.listEffectiveTags",
+    "artifactregistry.repositories.listTagBindings",
+    "artifactregistry.repositories.readViaVirtualRepository",
     "artifactregistry.repositories.setIamPolicy",
     "artifactregistry.repositories.update",
+    "artifactregistry.rules.get",
+    "artifactregistry.rules.list",
+    "artifactregistry.tags.get",
+    "artifactregistry.tags.list",
+    "artifactregistry.versions.get",
+    "artifactregistry.versions.list",
   ]
 }
 
@@ -151,7 +180,7 @@ resource "google_artifact_registry_repository_iam_member" "tf_plan" {
   project    = var.project_id
   location   = var.region
   repository = local.image_repository
-  role       = "roles/artifactregistry.reader" # the repository's settings (cleanup policies)
+  role       = "roles/artifactregistry.reader" # the repository's settings (cleanup policies); it never deploys a job
   member     = local.plan_member
 }
 
