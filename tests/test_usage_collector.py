@@ -748,8 +748,8 @@ def _code(path: str) -> str:
 
 
 def test_the_terraform_keeps_to_the_collectors_own_resources():
-    """Its own account, one secret it alone reads, scale to zero and at most two instances, the pinned image (Google's
-    sample image until one is pinned) owned by Terraform, no custom domain, the request-log exclusion made before the
+    """Its own account, one secret it alone reads, scale to zero and at most two instances, the pinned image (with the
+    token, required by a precondition while the service exists) owned by Terraform, no custom domain, the request-log exclusion made before the
     service; the service and what hangs off it only with usage_enabled; no grant to the deploy, plan or apply
     accounts or any impersonation role (the plan guard's to refuse, the owner's to grant)."""
     code = _code("src/terraform/usage.tf")
@@ -813,10 +813,40 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
     assert re.search(r'variable "usage_enabled" \{[^}]*default\s*=\s*false', variables, re.S)
     # Switched on in one PR (RUNNING.md, "Turning usage on", step 3): never the service without its pinned image and
     # its token, so the public service never runs Google's sample image or a collector that can't publish.
+    # No end-of-line anchor, and Terraform's "true" string too: a trailing comment or quotes never skip the check.
     tfvars = (ROOT / "src/terraform/ci.tfvars").read_text()
-    if re.search(r"^usage_enabled\s*=\s*true\s*$", tfvars, re.M):
-        assert re.search(r'^usage_image\s*=\s*"[^"]+"\s*$', tfvars, re.M)
-        assert re.search(r"^usage_token\s*=\s*true\s*$", tfvars, re.M)
+    if re.search(r'^\s*usage_enabled\s*=\s*"?true"?\b', tfvars, re.M):
+        assert re.search(r'^\s*usage_token\s*=\s*"?true"?\b', tfvars, re.M)
+        images = re.findall(r'^\s*usage_image\s*=\s*"([^"]*)"', tfvars, re.M)
+        assert len(images) == 1 and _usage_image_pattern().fullmatch(images[0])
+    # The same rule in Terraform itself, for every way the variables are set (-var, terraform.tfvars, TF_VAR_*).
+    service = _code("src/terraform/usage.tf")
+    service = service[service.index('resource "google_cloud_run_v2_service" "usage"') :]
+    service = service[: service.index("\n}\n")]
+    assert re.search(
+        r'precondition \{\s*condition\s*=\s*var\.usage_image != "" && var\.usage_token\b', service
+    )
+
+
+@pytest.mark.parametrize("script", ["scripts/tf_break_glass.sh", "docs/ingestion/final-shell-run.sh"])
+def test_the_owners_shell_plans_load_ci_tfvars_after_terraform_tfvars(script):
+    """ci.tfvars is the one source of usage_enabled, usage_token and usage_image (and verdict_model): a shell plan
+    without it would destroy the collector and its log exclusion. Each owner script passes it to its main-root plan,
+    after terraform.tfvars (loaded automatically, or first with -var-file), so ci.tfvars wins as it does in GitHub."""
+    code = (ROOT / script).read_text()
+    plans = [
+        line
+        for line in code.splitlines()
+        if re.search(r"\bplan -input=false\b", line) and "$BOOT" not in line
+    ]
+    assert plans, script
+    for line in plans:
+        assert re.search(r'-var-file="?(ci\.tfvars|\$CITFVARS)"?', line), line
+        if '-var-file="$TFVARS"' in line:
+            assert line.index('-var-file="$TFVARS"') < line.index('-var-file="$CITFVARS"'), line
+    if "CITFVARS=" in code:
+        assert 'CITFVARS="$PWD/$TF/ci.tfvars"' in code
+    assert "never GitHub's ci.tfvars" not in code
 
 
 def test_the_collector_url_is_in_one_checked_in_place():

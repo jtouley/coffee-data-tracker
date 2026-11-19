@@ -6,7 +6,8 @@
 #   1. checks: main is checked out and has what this needs; the weekly pipeline isn't due; no job running; the state
 #      bucket has uniform access and versioning
 #   2. the ingest image GitHub built and signed for main's commit (verified-ingest-image.sh), tagged pinned-<commit>
-#   3. plan the main root with your terraform.tfvars and that image, run the guard, show the list, apply
+#   3. plan the main root with your terraform.tfvars, main's ci.tfvars and that image, run the guard, show the list,
+#      apply
 #   4. verify: every job runs the pinned image; the schedules; the two egress IPs (for the SiteGround ticket)
 #   5. keep the pinned image in your terraform.tfvars
 #   6. plan and apply the bootstrap root (src/terraform/bootstrap: the plan and apply identities, the plans bucket)
@@ -111,15 +112,19 @@ ask "tag it $PIN, so the registry keeps it?"
 gcloud artifacts docker tags add "$IMG" "$REPO:$PIN" --quiet >/dev/null 2>&1 || die "couldn't tag the image to keep it"
 
 say "3. plan the main root with that image"
-# Your terraform.tfvars only, and never GitHub's ci.tfvars or any *.auto.tfvars: the root's .tf files are copied to
-# the private folder, so this run plans the same whatever order the PRs merged in. The state is the same.
-MAIN="$WORK/main-root"; TFVARS="$PWD/$TF/terraform.tfvars"
+# Your terraform.tfvars, then main's checked-in ci.tfvars (as GitHub's plan and apply load it), and never any
+# *.auto.tfvars: the root's .tf files are copied to the private folder, so nothing else in src/terraform is loaded.
+# ci.tfvars comes from the same checkout of main as the .tf files. It used to be left out so this run planned the same
+# whatever order the PRs merged in. It is loaded now because it holds settings with no other source (the usage
+# collector's usage_enabled, usage_token and usage_image): without it this plan would destroy the collector and its
+# request-log exclusion. Where both files set a value, ci.tfvars wins, as it does in GitHub.
+MAIN="$WORK/main-root"; TFVARS="$PWD/$TF/terraform.tfvars"; CITFVARS="$PWD/$TF/ci.tfvars"
 mkdir "$MAIN" && cp "$TF"/*.tf "$TF/.terraform.lock.hcl" "$MAIN/"
-ask "init, check and plan $TF with your terraform.tfvars and the image above (nothing changes yet)?"
+ask "init, check and plan $TF with your terraform.tfvars, main's ci.tfvars and the image above (nothing changes yet)?"
 tfrun init "$MAIN" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$P-tfstate"
 tfrun fmt "$MAIN" fmt -check -no-color
 tfrun validate "$MAIN" validate -no-color
-tfrun plan "$MAIN" plan -input=false -no-color -var-file="$TFVARS" -var "ingest_image=$IMG" -out="$WORK/main.plan"
+tfrun plan "$MAIN" plan -input=false -no-color -var-file="$TFVARS" -var-file="$CITFVARS" -var "ingest_image=$IMG" -out="$WORK/main.plan"
 terraform -chdir="$MAIN" show -json "$WORK/main.plan" >"$WORK/main.json" 2>"$WORK/show.log" || die "terraform show failed"
 echo "-- guard --"
 rc=0
@@ -204,7 +209,7 @@ unset TF_VAR_billing_account
 
 say "7. GitHub repository variables and secrets"
 terraform -chdir="$BOOT" output -json github_variables >"$WORK/vars.json" 2>"$WORK/output.log" || die "terraform output failed (bootstrap)"
-# Your values, as this run's plan used them (terraform.tfvars, the variables' defaults, the pinned image).
+# Your values, as this run's plan used them (terraform.tfvars, ci.tfvars, the variables' defaults, the pinned image).
 val(){ jq -c --arg n "$1" '.variables[$n].value' "$WORK/main.json"; }
 raw(){ jq -j --arg n "$1" '.variables[$n].value' "$WORK/main.json"; }
 sets(){ grep -qE "^[[:space:]]*$1[[:space:]]*=" "$TF/terraform.tfvars"; }
@@ -228,11 +233,13 @@ for pair in billing_account:TF_VAR_BILLING_ACCOUNT owner_email:TF_VAR_OWNER_EMAI
   echo "set ${pair#*:}"
 done
 # What GitHub's plan won't see: a setting in terraform.tfvars that no variable above or ci.tfvars carries.
-known='billing_account|owner_email|ingest_image|ingest_schedule_enabled|email|budget_usd|ingest_job_memory|verdict_model'
-left=$(sed -n -E 's/^[[:space:]]*([a-z_]+)[[:space:]]*=.*/\1/p' "$TF/terraform.tfvars" | grep -vxE "$known" | sort -u | tr '\n' ' ' || true)
+keys(){ sed -n -E 's/^[[:space:]]*([a-z_]+)[[:space:]]*=.*/\1/p' "$1" | sort -u; }
+known='billing_account|owner_email|ingest_image|ingest_schedule_enabled|email|budget_usd|ingest_job_memory'
+left=$(keys "$TF/terraform.tfvars" | grep -vxE "$known" | grep -vxF -f <(keys "$CITFVARS") | tr '\n' ' ' || true)
 [ -z "$left" ] || echo "NOTE: terraform.tfvars also sets: $left. GitHub's plan doesn't; add them to ci.tfvars or a TF_VAR_* variable."
-ci_model=$(sed -n -E 's/^[[:space:]]*verdict_model[[:space:]]*=[[:space:]]*"([^"]*)".*/\1/p' "$TF/ci.tfvars")
-[ "$(raw verdict_model)" = "$ci_model" ] || echo "NOTE: verdict_model in terraform.tfvars differs from ci.tfvars; GitHub's plan would change it."
+# Every plan loads ci.tfvars after terraform.tfvars, so a value set in both is ci.tfvars' everywhere.
+both=$(keys "$TF/terraform.tfvars" | grep -xF -f <(keys "$CITFVARS") | tr '\n' ' ' || true)
+[ -z "$both" ] || echo "NOTE: terraform.tfvars also sets $both; ci.tfvars overrides them in every plan, so remove them there."
 
 say "8. first importers run (skip it if cutover 2 already started one)"
 ask "run importers.yml on main (importer=all; a manual run never fetches Royal)?"

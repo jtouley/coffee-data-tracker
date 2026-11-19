@@ -1564,8 +1564,11 @@ A pull request that touches `src/terraform/**` (or the guard script, or the work
 applies anything, and the PR's plan is advisory: the plan that is applied is made again on main, by the apply
 workflow.
 
-Where CI's variables come from (your shell is unchanged: it still reads `terraform.tfvars`):
-- `src/terraform/ci.tfvars`, checked in, passed only by CI with `-var-file`: `verdict_model`.
+Where CI's variables come from (your shell still reads `terraform.tfvars`, and must also pass
+`-var-file=ci.tfvars` to any plan or apply by hand, as `scripts/tf_break_glass.sh` and `final-shell-run.sh` do):
+- `src/terraform/ci.tfvars`, checked in, passed with `-var-file` by every plan route, after `terraform.tfvars`:
+  `verdict_model`, and the usage collector's `usage_enabled`, `usage_token` and `usage_image`. Without it, a plan
+  proposes destroying the collector.
 - Repository **secrets** `TF_VAR_BILLING_ACCOUNT` and `TF_VAR_OWNER_EMAIL`: `billing_account` and `owner_email`.
 - Repository **variables**, holding what `terraform.tfvars` holds today: `TF_VAR_INGEST_IMAGE` and
   `TF_VAR_INGEST_SCHEDULE_ENABLED` (required), and `TF_VAR_EMAIL`, `TF_VAR_BUDGET_USD` and `TF_VAR_INGEST_JOB_MEMORY`
