@@ -1,5 +1,5 @@
-# The image takes only pyproject.toml, uv.lock, README.md, src/ and app/ (app/Dockerfile); keep the rest out of the
-# build context.
+# The image takes only pyproject.toml, uv.lock, README.md, src/, app/ and config/ (app/Dockerfile); keep the rest out
+# of the build context.
 .git
 .venv
 .claude
