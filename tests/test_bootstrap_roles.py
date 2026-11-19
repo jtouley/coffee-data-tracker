@@ -100,8 +100,8 @@ def test_only_the_apply_account_writes_logging_notification_rules_and_never_dele
         "tfApplyLogExclusions": ["logging.notificationRules.create", "logging.notificationRules.get",
                                  "logging.notificationRules.list", "logging.notificationRules.update"],
     }  # fmt: skip
-    code = IAM.read_text()
-    assert "notificationRules.delete" not in code and "notificationRules.*" not in code
+    granted = {p for perms in _roles().values() for p in perms}
+    assert "logging.notificationRules.delete" not in granted and "logging.notificationRules.*" not in granted
 
 
 def test_no_custom_role_holds_an_artifact_registry_permission_outside_the_allowlist():

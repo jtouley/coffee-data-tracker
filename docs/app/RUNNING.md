@@ -311,13 +311,17 @@ the workflow again; the new plan shows what is left. A lock left by a dead runne
 (`google_billing_budget.monthly`), the plan account's project-scoped budget role isn't enough: give it
 `roles/billing.viewer` on the billing account instead (`src/terraform/bootstrap/iam.tf`).
 
-**What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can
-set IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the
-staging bucket (and so raw ingestion data), read the image repository's images, which Cloud Run checks as whoever
-deploys a job or service (its role holds no push or delete permission itself, though the repository's settings and
-IAM it can change reach both), and run any image as the runtime, ingest or scheduler account. That is
-what the approval is for: read the IAM section of the summary first. It cannot write a workload identity pool or
-provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
+**What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can set
+IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the staging
+bucket (and so raw ingestion data), read the image repository's images, which Cloud Run checks as whoever deploys a job
+or service (its role holds no push or delete permission itself, though the repository's settings and IAM it can change
+reach both), run any image as the runtime, ingest or scheduler account, and create log-based alert policies and
+notification channels of any type. That last one means an approved apply could copy fields of matching log entries
+(through a policy's `label_extractors` or its documentation) into a notification on a channel it creates, such as a
+webhook to an outside address: a narrow path for log content, not a sink, and the guard checks neither channel types nor
+extractors. That is what the approval is for: read the IAM section of the summary first, and for any new or changed
+notification channel its type and address, and any `label_extractors` on an alert. It cannot write a workload identity
+pool or provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
 - any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
   any account, or a custom role;
 - a grant on any resource that names the plan or apply account; one that names the deploy account, except exactly
@@ -411,13 +415,17 @@ role on this one repository is the documented fallback.
 `registry-coffee-tf-apply@…`, `google.monitoring.v3.AlertPolicyService.CreateAlertPolicy` with `Permission
 'logging.notificationRules.create' denied on resource '//logging.googleapis.com/projects/<project>/locations/global'`:
 Logging creates a notification rule under every log-based alert policy, and creating one needs
-`logging.notificationRules.create` on the project, which `roles/monitoring.alertPolicyEditor` doesn't hold. The
-apply account's logging role `tfApplyLogExclusions` (`tf_log_exclusions` in `src/terraform/bootstrap/iam.tf`) holds
-`logging.notificationRules.create`, `.get`, `.list` and `.update` since the change that added them; no `.delete`,
-like its exclusions (the guard refuses deletes). The job-failure alerts in `alerts.tf` were made from Cloud Shell
-before the pipeline existed, which is why only a new one fails. The plan account needs nothing new: it reads alert
-policies through `roles/monitoring.viewer`. Re-apply the bootstrap once, by hand, from the repository's root in
-Cloud Shell, with the same command block as the `Docker-GetManifest` entry just above:
+`logging.notificationRules.create` on the project, which `roles/monitoring.alertPolicyEditor` doesn't hold. The apply
+account's logging role `tfApplyLogExclusions` (`tf_log_exclusions` in `src/terraform/bootstrap/iam.tf`) holds
+`logging.notificationRules.create`, `.get`, `.list` and `.update` since the change that added them; no `.delete`, like
+its exclusions (the guard refuses deletes). The log-based alerts in `alerts.tf` (`errors`, `ingest_schedule_failed` and,
+with `email` on, `email_not_sent`) were made from Cloud Shell before the pipeline existed, which is why only a new one
+fails; switching `email` on later is another log-based create through the pipeline, which this now allows. If a later
+update of a log-based alert (a changed condition, say) is denied on another `logging.notificationRules` permission,
+`.delete` most likely, add it to `tfApplyLogExclusions` the same way (and to `tests/test_bootstrap_roles.py`). The plan
+account needs nothing new: it reads alert policies through `roles/monitoring.viewer`. Re-apply the bootstrap once, by
+hand, from the repository's root in Cloud Shell, with the same command block as the `Docker-GetManifest` entry just
+above:
 
 ```bash
 cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
@@ -429,14 +437,15 @@ cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -ba
 
 Read the plan before the yes: `0 to add, 1 to change, 0 to destroy`, an update in place of
 `google_project_iam_custom_role.tf_log_exclusions` (its title, and the four `logging.notificationRules` permissions
-added), and nothing else: the role keeps its id and its existing grant (`tf_apply_custom["log_exclusions"]`), so no
-new role or grant is created. That holds when the bootstrap was current with main before this change (the
+added), and nothing else: the role keeps its id and its existing grant (`tf_apply_custom["log_exclusions"]`), so no new
+role or grant is created. That holds when the bootstrap was current with main before this change (the
 `tfApplyRepository` re-apply above included); if that one is still pending, the plan also shows its update of
 `google_project_iam_custom_role.tf_repository` (`0 to add, 2 to change, 0 to destroy`). Anything else, a replace
-included: answer no and ask first. Then run GitHub's `terraform-apply` again from main (Actions → terraform-apply →
-Run workflow, branch `main`; it runs only on main) for what the failed run left: its plan shows the alert policy
-alone, `1 to add, 0 to change, 0 to destroy`. Custom-role changes can take a few minutes to reach every check: if the
-same denial comes back at once, wait and run it again.
+included: answer no and ask first. Then run GitHub's `terraform-apply` again from main, signed in as the main account
+(never `jtouleyrou`, whose start the workflow refuses): Actions → terraform-apply → Run workflow, branch `main` (it runs
+only on main); `jtouleyrou` approves it as usual. That run is for what the failed run left: its plan shows the alert
+policy alone, `1 to add, 0 to change, 0 to destroy`. Custom-role changes can take a few minutes to reach every check: if
+the same denial comes back at once, wait and run it again.
 
 **The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
 deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed
@@ -719,12 +728,13 @@ day per masked prefix (a /24 or /40 can be a whole carrier's NAT pool or a Priva
 
 ### The apply account's grants for the collector
 
-The main root manages the collector's account (from the first apply after `usage.tf` merged, with `usage_enabled`
-off: the plan and apply accounts can already manage it and the empty secret). Before `usage_enabled` can be turned
-on, the apply account must be able to act as that account and to write the one log exclusion, and the plan account
-to read it. They are in `src/terraform/bootstrap/iam.tf` (`tfApplyLogExclusions`, `tfPlanLogExclusions`, and
-`usage` in `tf_apply_acts_as`). Give them **after** that first apply has made `registry-coffee-usage`, in one of
-two ways:
+The main root manages the collector's account (from the first apply after `usage.tf` merged, with `usage_enabled` off:
+the plan and apply accounts can already manage it and the empty secret). Before `usage_enabled` can be turned on, the
+apply account must be able to act as that account, to write the one log exclusion and to create the loss alert's Logging
+notification rule (`logging.notificationRules.create`, `.get`, `.list`, `.update`: the alert is log-based), and the plan
+account to read the exclusion. They are in `src/terraform/bootstrap/iam.tf` (`tfApplyLogExclusions`, which holds both
+the exclusion and the notification-rule permissions, `tfPlanLogExclusions`, and `usage` in `tf_apply_acts_as`). Give
+them **after** that first apply has made `registry-coffee-usage`, in one of two ways:
 
 - **Re-apply the bootstrap root** from Cloud Shell, as it was applied before (plan, read it: two custom roles, three
   grants, nothing else changes; apply).

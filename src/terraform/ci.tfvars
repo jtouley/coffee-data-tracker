@@ -17,12 +17,13 @@
 # Claude's coffee-or-not verdicts for the build job; the same value as the VERDICT_MODEL repository variable.
 verdict_model = "claude-haiku-5-5"
 
-# The usage collector (usage.tf). usage_image: an app image deploy.yml built from main, by digest (the "Build and
-# push" step's log and the attest job name it). Bumping it here, in a PR, is how the collector is deployed; deploy.yml
-# tags the digest set here so the registry's cleanup keeps it. usage_enabled: true once the apply account can act as
-# the collector's account, write log exclusions and read the registry; usage_token: true once the USAGE_HF_TOKEN
-# secret has an enabled version (RUNNING.md, "Usage"). usage_enabled needs both usage_image and usage_token
-# (usage.tf's precondition).
+# The usage collector (usage.tf). usage_image: an app image deploy.yml built from main, by digest (the "Build and push"
+# step's log and the attest job name it). Bumping it here, in a PR, is how the collector is deployed; deploy.yml tags
+# the digest set here so the registry's cleanup keeps it. usage_enabled: true once the apply account can act as the
+# collector's account, write log exclusions, create the loss alert's Logging notification rule
+# (logging.notificationRules.create/get/list/update in tfApplyLogExclusions) and read the registry; usage_token: true
+# once the USAGE_HF_TOKEN secret has an enabled version (RUNNING.md, "Usage"). usage_enabled needs both usage_image and
+# usage_token (usage.tf's precondition).
 # Pinned: deploy.yml run 44253151612 on main at 10de76a (#181), "Build and push" step; its attest job signed this
 # digest (attestation 68996644).
 usage_image   = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:5945b9b7628093efb159d425584b05c0b8e4a6776a1b83ee4fe2f8d967d1c537"
