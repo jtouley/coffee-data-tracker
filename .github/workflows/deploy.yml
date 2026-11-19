@@ -302,9 +302,11 @@ jobs:
   #   signs the same digest again and deploys nothing (docs/app/RUNNING.md, "A red run after a deploy").
   # - It runs whenever the deploy job pushed an image, even if the deploy step then failed, so every pushed image
   #   has provenance (one may be deployed by hand later).
-  # - Its steps are in attest.yml, a reusable workflow, so its `id-token: write` (the signing certificate) can't sign
-  #   in to Google Cloud: the deploy account's condition (src/terraform/deploy.tf) accepts only jobs written in this
-  #   file, by the token's job_workflow_ref. It is still this run, so the attestation names this run and commit.
+  # - Its steps are in attest.yml, a reusable workflow, so once the owner has applied deploy.tf's provider change its
+  #   `id-token: write` (the signing certificate) can't sign in to Google Cloud: that condition accepts only jobs
+  #   written in this file, by the token's job_workflow_ref (until the apply, the old condition reads only
+  #   workflow_ref, which is this file for attest too). It is still this run, so the attestation names this run and
+  #   commit, and its build config is this file (RUNNING.md's check pins both).
   attest:
     needs: deploy
     if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}

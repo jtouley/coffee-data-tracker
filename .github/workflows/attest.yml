@@ -1,15 +1,16 @@
 # Signed build provenance (SLSA) for the app's image, called by deploy.yml's `attest` job, in the same run, once the
-# deploy job has pushed an image. It runs only as a reusable workflow: it has no trigger of its own.
+# deploy job has pushed an image. It runs only as a reusable workflow: it has no trigger of its own, and only
+# deploy.yml calls it (tests/test_deploy_identity.py).
 #
 # Why a file of its own: GitHub's OIDC token names the workflow file a job is written in (job_workflow_ref), never the
-# job. The deploy account's Workload Identity condition (src/terraform/deploy.tf) accepts only jobs written in
-# deploy.yml, so this job, which needs `id-token: write` for its signing certificate, can't sign in to Google Cloud
-# as the deploy account, and neither can the action it runs. It never needed to.
+# job. Once the provider change in src/terraform/deploy.tf is applied (by the owner, by hand), the deploy account's
+# Workload Identity condition accepts only jobs written in deploy.yml, so this job, which needs `id-token: write` for
+# its signing certificate, can't sign in to Google Cloud as the deploy account, and neither can the action it runs.
+# Until that apply, the old condition reads only workflow_ref, which is deploy.yml here too. It never signs in.
 #
-# The attestation still records the run and the commit that built the image: its build config is deploy.yml (the
-# workflow that ran), its signer this file. Check an image (docs/app/RUNNING.md):
-#   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker \
-#     --signer-workflow jtouley/coffee-data-tracker/.github/workflows/attest.yml --source-ref refs/heads/main
+# The attestation records the run and the commit that built the image: its build config is deploy.yml (the workflow
+# that ran), its signer this file. Check an image with docs/app/RUNNING.md's command, which pins both (and --repo:
+# this file is public, so another repository could call it; --repo refuses those attestations).
 name: attest
 on:
   workflow_call:
@@ -21,6 +22,7 @@ on:
 permissions: {}
 jobs:
   attest:
+    if: github.repository == 'jtouley/coffee-data-tracker'  # a call from another repository does nothing
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

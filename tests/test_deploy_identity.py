@@ -7,7 +7,10 @@ written in, never the job, so inside deploy.yml the line is `id-token: write`: o
 it, and `attest` signs from a reusable workflow (attest.yml), whose job_workflow_ref the condition refuses.
 """
 
+import importlib.util
+import json
 import re
+import sys
 from pathlib import Path
 
 import yaml
@@ -106,6 +109,13 @@ def _id_token(permissions) -> bool:
     return isinstance(permissions, dict) and permissions.get("id-token") == "write"
 
 
+def _holders(wf: dict) -> set[str]:
+    """The jobs written in this workflow (not calls of a reusable one) whose token can be minted."""
+    return {
+        name for name, job in wf["jobs"].items() if _id_token(job.get("permissions")) and "uses" not in job
+    }
+
+
 def _signs_in(job: dict) -> bool:
     return any(GCP_AUTH in str(step.get("uses", "")) for step in job.get("steps", []))
 
@@ -113,11 +123,8 @@ def _signs_in(job: dict) -> bool:
 def test_only_the_jobs_that_push_or_deploy_can_sign_in_to_google_cloud():
     wf = _workflow("deploy.yml")
     assert not _id_token(wf.get("permissions")), "deploy.yml's top-level permissions must not grant id-token"
-    holders = {
-        name for name, job in wf["jobs"].items() if _id_token(job.get("permissions")) and "uses" not in job
-    }
     signs_in = {name for name, job in wf["jobs"].items() if _signs_in(job)}
-    assert holders == SIGNS_IN
+    assert _holders(wf) == SIGNS_IN
     assert signs_in == SIGNS_IN
     # Every job that signs in names its own permissions (no inherited write-all).
     assert all(isinstance(wf["jobs"][n].get("permissions"), dict) for n in SIGNS_IN)
@@ -138,6 +145,21 @@ def test_attest_signs_from_a_reusable_workflow_that_never_signs_in():
     assert GCP_AUTH not in (WORKFLOWS / "attest.yml").read_text()
 
 
+def test_only_deploy_yml_calls_attest_yml():
+    """The app image's check pins the signer (attest.yml) and the build config (deploy.yml); this keeps the two in
+    step: no other workflow of this repository can produce an attest.yml signature."""
+    callers = {
+        wf.name
+        for wf in WORKFLOWS.glob("*.y*ml")
+        for job in (yaml.safe_load(wf.read_text()).get("jobs") or {}).values()
+        if "attest.yml" in str(job.get("uses", ""))
+    }
+    assert callers == {"deploy.yml"}
+    # And nothing calls it any other way (a step's `uses:` can't call a workflow, but a typo would hide here).
+    mentions = {wf.name for wf in WORKFLOWS.glob("*.y*ml") if "workflows/attest.yml" in _code(wf)}
+    assert mentions <= {"deploy.yml"}
+
+
 def test_the_check_catches_a_signing_job_holding_the_deploy_token():
     """The rule above, on a deploy.yml where attest is a plain job again with id-token: write."""
     wf = _workflow("deploy.yml")
@@ -146,17 +168,12 @@ def test_the_check_catches_a_signing_job_holding_the_deploy_token():
         "permissions": {"id-token": "write"},
         "steps": [{"run": "true"}],
     }
-    holders = {n for n, j in wf["jobs"].items() if _id_token(j.get("permissions")) and "uses" not in j}
-    assert holders != SIGNS_IN
+    assert _holders(wf) != SIGNS_IN
 
 
 def test_the_guard_refuses_this_change_so_it_is_applied_by_hand():
-    """The plan this change makes (the provider updated in place, the grant replaced) is refused by the guard's
-    workload-identity check, so it never applies through GitHub: the owner applies it with tf_break_glass.sh."""
-    import importlib.util
-    import json
-    import sys
-
+    """The plan this change makes (the provider updated in place, the grant replaced) is refused by the guard, so it
+    never applies through GitHub: the owner applies it with tf_break_glass.sh and an override."""
     spec = importlib.util.spec_from_file_location("tf_plan_guard", ROOT / "scripts/tf_plan_guard.py")
     assert spec and spec.loader
     guard = importlib.util.module_from_spec(spec)
@@ -196,7 +213,13 @@ def test_the_guard_refuses_this_change_so_it_is_applied_by_hand():
             },
         },
     ]
-    assert guard.workload_identity(guard.load(json.dumps(d))) == [
-        "google_iam_workload_identity_pool_provider.github",
-        "google_service_account_iam_member.deploy_from_github",
-    ]
+    # Exactly these three refuse it, and nothing else: break-glass's override covers them (RUNNING.md).
+    failing = {name: bad for name, _, bad in guard.run_guards(guard.load(json.dumps(d))) if bad}
+    assert failing == {
+        "no-delete-or-replace": ["google_service_account_iam_member.deploy_from_github"],
+        "workload-identity": [
+            "google_iam_workload_identity_pool_provider.github",
+            "google_service_account_iam_member.deploy_from_github",
+        ],
+        "guarded-accounts": ["google_service_account_iam_member.deploy_from_github"],
+    }

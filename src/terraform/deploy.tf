@@ -9,6 +9,8 @@
 # - workflow_ref, "<repo>/<path>@<ref>" of the top-level workflow, and job_workflow_ref, the file whose job asks: a
 #   job of a reusable workflow that deploy.yml calls has that file's job_workflow_ref, not deploy.yml's, so it is
 #   refused. That is how `attest` is kept off this account: deploy.yml calls it as a reusable workflow (attest.yml).
+#   That holds once this condition is applied; the guard refuses any change here, so the owner applies it by hand
+#   (docs/app/RUNNING.md, "Changing this provider or its grant").
 #
 # GitHub's token names no job: every job written in deploy.yml itself has the same claims, so this condition can't
 # tell one of its jobs from another. Which of them may sign in is decided in deploy.yml, by `id-token: write`
@@ -58,8 +60,12 @@ resource "google_service_account" "deploy" {
 }
 
 # By the repository's immutable id, not its name. Changing the member replaces this grant: the new one is made after
-# the provider maps repository_id (depends_on) and before the old one is removed (create_before_destroy), so there is
-# no moment in the apply when neither grant exists.
+# the provider maps repository_id (depends_on) and before the old one is removed (create_before_destroy), so the
+# IAM policy always holds one of them. Token exchanges see the new mapping and grant only once IAM has propagated
+# them, which can take minutes: a deploy right after the apply can get a 403, and a re-run succeeds.
+# create_before_destroy also applies to what this grant depends on (the provider, the pool, the deploy account) if one
+# of them is ever replaced. All three have fixed ids, so such a replace would fail with a conflict rather than half
+# apply; the guard refuses those replaces anyway.
 resource "google_service_account_iam_member" "deploy_from_github" {
   service_account_id = google_service_account.deploy.name
   role               = "roles/iam.workloadIdentityUser"
