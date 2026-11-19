@@ -15,6 +15,7 @@ import json
 import logging
 import re
 import subprocess
+from collections.abc import Callable
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -660,7 +661,7 @@ def test_a_run_past_its_deadline_is_a_recorded_failure(tmp_path, monkeypatch):
         client.deadline = 0.0  # already passed
         res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
     assert res[0]["status"] == "failed" and "DeadlineReached" in res[0]["error"] and calls == []
-    assert (res[0]["http_status"], res[0]["phase"]) == (None, "listing page 1")
+    assert (res[0]["http_status"], res[0]["phase"], res[0]["kind"]) == (None, "listing page 1", "deadline")
     assert "shop.example" not in res[0]["error"]
     assert not (lake.root / importers.path(importers.ROYAL, MON)).exists()
 
@@ -690,7 +691,7 @@ def _failing_store(code: int, on: str, calls: list[httpx.Request], pages: list[l
 @pytest.mark.parametrize("code", [403, 429, 503])
 @pytest.mark.parametrize(
     ("on", "phase"),
-    [("page 1", "listing page 1"), ("page 2", "listing page 2"), ("robots", "robots")],
+    [("page 1", "listing page 1"), ("page 2", "listing page 2"), ("robots", "robots at listing page 1")],
 )
 def test_a_failed_fetch_records_its_status_code_and_phase_never_the_address(
     tmp_path, monkeypatch, caplog, code, on, phase
@@ -711,7 +712,7 @@ def test_a_failed_fetch_records_its_status_code_and_phase_never_the_address(
     with _failing_store(code, on, calls) as client:
         res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
     (r,) = res
-    assert (r["status"], r["http_status"], r["phase"]) == ("failed", code, phase)
+    assert (r["status"], r["http_status"], r["phase"], r["kind"]) == ("failed", code, phase, "http_status")
     assert r["error"].startswith(f"FetchFailed: HTTP {code} at {phase} (")
     assert not (lake.root / importers.path(importers.ROYAL, MON)).exists()
     pages_asked = [c for c in calls if c.url.path != "/robots.txt"]
@@ -730,6 +731,7 @@ def test_a_failed_fetch_records_its_status_code_and_phase_never_the_address(
             "status": "failed",
             "http_status": code,
             "phase": phase,
+            "kind": "http_status",
         }
     ]
 
@@ -748,8 +750,8 @@ def test_a_robots_disallow_and_a_network_error_have_no_status_code(tmp_path, mon
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with _store(_pages_of(250), [], robots="User-agent: *\nDisallow: /products.json\n") as client:
         (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
-    assert (r["http_status"], r["phase"]) == (None, "robots")
-    assert r["error"] == "FetchFailed: no HTTP status at robots (Blocked)"
+    assert (r["http_status"], r["phase"], r["kind"]) == (None, "robots at listing page 1", "disallowed")
+    assert r["error"] == "FetchFailed: disallowed at robots at listing page 1 (Blocked)"
 
     def down(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/robots.txt":
@@ -758,7 +760,7 @@ def test_a_robots_disallow_and_a_network_error_have_no_status_code(tmp_path, mon
 
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(down)) as client:
         (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
-    assert (r["http_status"], r["phase"]) == (None, "listing page 1")
+    assert (r["http_status"], r["phase"], r["kind"]) == (None, "listing page 1", "connect")
     assert "ConnectError" in r["error"] and "shop.example" not in r["error"]
 
 
@@ -1068,3 +1070,91 @@ def test_the_importers_client_never_names_a_host_or_url_in_its_own_logs(monkeypa
     with contextlib.suppress(SystemExit):
         cli.main(["importer-snapshot"])
     assert seen == {"redact": True}
+
+
+def _answer(page: Callable[[httpx.Request], httpx.Response]):
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nDisallow:\n")
+        return page(request)
+
+    return handler
+
+
+def _timeout(request: httpx.Request) -> httpx.Response:
+    raise httpx.ReadTimeout("no answer from https://shop.example/products.json", request=request)
+
+
+@pytest.mark.parametrize(
+    ("page", "kind", "code", "error"),
+    [
+        (lambda r: httpx.Response(403, headers={"cf-mitigated": "challenge"}), "challenge", 403,
+         "challenge, HTTP 403 at listing page 1"),
+        (lambda r: httpx.Response(202, text=""), "challenge", 202, "challenge, HTTP 202 at listing page 1"),
+        (lambda r: httpx.Response(200, text="x" * 64), "too_large", 200, "too_large, HTTP 200 at listing page 1"),
+        (lambda r: httpx.Response(402, text="<p>This store is unavailable</p>", headers={"content-type": "text/html"}),
+         "unavailable", None, "unavailable at listing page 1"),
+        (lambda r: httpx.Response(200, text="<html>not json</html>"), "not_json", None, "not_json at listing page 1"),
+        (_timeout, "timeout", None, "timeout at listing page 1"),
+    ],
+)  # fmt: skip
+def test_each_failure_names_its_kind_so_a_200_never_reads_as_a_plain_status(
+    tmp_path, monkeypatch, page, kind, code, error
+):
+    """A challenge, an oversized answer, a closed store, a body that isn't JSON and a timeout each name their kind
+    in the result and the public results, not "HTTP 200" or "no HTTP status"."""
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(_answer(page)),
+                      max_response_bytes=32) as client:  # fmt: skip
+        (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert (r["kind"], r["http_status"], r["phase"]) == (kind, code, "listing page 1")
+    assert r["error"].startswith(f"FetchFailed: {error} (") and "shop.example" not in r["error"]
+    (pub,) = importers.public_results([r])
+    assert pub["kind"] == kind and set(pub) == set(importers.PUBLIC_RESULT_KEYS)
+
+
+def test_the_public_results_hold_only_checked_values():
+    """public_results checks each value as triage does on reading: an HTTP status from 100 to 599, a phase of words
+    and one number, a kind from FETCH_KINDS; anything else is written as null."""
+    bad = {"importer": "royal_coffee", "week": "2026-11-09", "status": "failed", "error": "https://shop.example/x",
+           "note": "shop.example", "http_status": True, "phase": "at https://shop.example/", "kind": "shop.example"}  # fmt: skip
+    assert importers.public_results([bad]) == [
+        {"importer": "royal_coffee", "week": "2026-11-09", "status": "failed", "http_status": None, "phase": None,
+         "kind": None}
+    ]  # fmt: skip
+    for code, ok in ((99, None), (100, 100), (599, 599), (600, None), ("403", None)):
+        assert importers.public_results([{"http_status": code}]) == [{"http_status": ok}]
+    long = "listing page " + "x" * 40
+    assert importers.public_results([{"phase": long}]) == [{"phase": None}]
+    assert importers.public_results([{"phase": "robots at listing page 12"}]) == [
+        {"phase": "robots at listing page 12"}
+    ]
+
+
+def test_a_royal_capable_client_always_redacts_and_any_client_redacts_a_schedule_only_host(
+    monkeypatch, caplog
+):
+    """redaction can't be turned off on a client allowed a schedule-only host, and a schedule-only host is redacted
+    by every client's log lines, whatever its options."""
+    from coffeedata import http as http_mod
+
+    assert PoliteClient(schedule_only_ok=True, redact_hosts=False).redact_hosts is True
+    assert PoliteClient(schedule_only_ok=True).redact_hosts is True
+    assert PoliteClient(redact_hosts=True).redact_hosts is True
+    assert PoliteClient().redact_hosts is False and PoliteClient(redact_hosts=False).redact_hosts is False
+
+    # a made-up host put on the schedule-only list: never named, even by a client with redaction off
+    monkeypatch.setattr(
+        http_mod,
+        "SCHEDULE_ONLY_HOSTS_SHA256",
+        http_mod.SCHEDULE_ONLY_HOSTS_SHA256 | {hashlib.sha256(b"shop.example").hexdigest()},
+    )
+    client = PoliteClient(schedule_only_ok=True, redact_hosts=False)
+    assert client._log_host("shop.example") == "<host>"
+    err = http_mod.RobotsUnavailable("robots.txt for shop.example answered 503", http_status=503)
+    assert client._log_error(err, "shop.example") == "RobotsUnavailable, HTTP 503"
+    crawl = PoliteClient()
+    assert crawl._log_host("shop.example") == "<host>" and crawl._log_host("other.example") == "other.example"
+    assert crawl._log_error(err, "shop.example") == "RobotsUnavailable, HTTP 503"
+    assert crawl._log_error(err, "other.example") == str(err)

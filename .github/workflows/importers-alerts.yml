@@ -56,15 +56,17 @@ jobs:
             --jq '[.workflow_runs[] | {id, event, status, conclusion, created_at, html_url}]' \
             > "$RUNNER_TEMP/runs.json.tmp"
           mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
-      - name: The newest runs' importer results (keys, statuses, HTTP status codes and phases; no address)
-        # importers.yml's importer-results artifact (importers.public_results), so the issue can name a failed
-        # fetch's status code. Best effort: a run without one (expired, or its snapshot never ran) is passed over.
+      - name: The due week's runs' importer results (keys, statuses, failure kinds, HTTP status codes; no address)
+        # importers.yml's importer-results artifact (importers.public_results) of the due week's scheduled run and
+        # each completed run after it (triage importer-result-runs), so the issue can name a failed fetch's kind and
+        # status code. Best effort: a run without one (expired, or its snapshot never ran) is passed over.
         if: ${{ !cancelled() }}
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
         run: |
-          jq -r '[.[] | select(.status == "completed")][:5][] | .id' "$RUNNER_TEMP/importers/runs.json" |
+          python3 -m coffeedata.triage importer-result-runs "$RUNNER_TEMP/importers/runs.json" |
             while read -r id; do
               gh run download "$id" --repo "$GITHUB_REPOSITORY" --name importer-results \
                 --dir "$RUNNER_TEMP/importers/results/$id" || echo "run $id: no importer-results artifact"

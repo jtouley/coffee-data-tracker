@@ -775,10 +775,11 @@ class PoliteClient:
     ):
         self.min_interval = min_interval
         # redact_hosts: this client's own log lines never name a host or URL (`<host>` instead, and a failure by its
-        # class and HTTP status, not its message). Defaults to schedule_only_ok: the importers job's client, whose
-        # log is a public repository's run and must never carry Royal's address (importers.royal_listing_url). The
-        # crawl's clients keep naming hosts.
-        self.redact_hosts = schedule_only_ok if redact_hosts is None else redact_hosts
+        # class and HTTP status, not its message). Always on for a client allowed a schedule-only host (the importers
+        # job's, whose log is a public repository's run and must never carry Royal's address:
+        # importers.royal_listing_url): it can't be turned off there. The crawl's clients keep naming hosts, but never
+        # a schedule-only one (_log_host).
+        self.redact_hosts = schedule_only_ok or bool(redact_hosts)
         # host -> the newest robots.txt stored for it ({fetched_at, status, body}: ingest.robots_copies), used only
         # when its live robots.txt is unreachable and the copy is at most ROBOTS_COPY_MAX_AGE_S old
         self.robots_copies = robots_copies or {}
@@ -969,13 +970,14 @@ class PoliteClient:
         return rp is None or rp.can_fetch(url)
 
     def _log_host(self, host: str) -> str:
-        """The host as this client's log lines name it: `<host>` when redact_hosts is set."""
-        return "<host>" if self.redact_hosts else host
+        """The host as this client's log lines name it: `<host>` when redact_hosts is set, or when it is a host only
+        the scheduled importers job may fetch, whatever the client."""
+        return "<host>" if self.redact_hosts or schedule_only_host(host) else host
 
-    def _log_error(self, e: BaseException) -> str:
-        """An error as this client's log lines give it: its message, or with redact_hosts its class and the HTTP
-        status it carries (a message can name the host or URL)."""
-        if not self.redact_hosts:
+    def _log_error(self, e: BaseException, host: str) -> str:
+        """An error about `host` as this client's log lines give it: its message, or, where _log_host redacts the
+        host, its class and the HTTP status it carries (a message can name the host or URL)."""
+        if self._log_host(host) == host:
             return str(e)
         code = getattr(e, "http_status", None) or getattr(e, "status", None)
         return f"{type(e).__name__}" + (f", HTTP {code}" if code else "")
@@ -1010,7 +1012,7 @@ class PoliteClient:
                 raise u.error from u.__cause__
             age = (self._now() - copy["fetched_at"]).total_seconds()
             log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)",
-                        self._log_host(host), self._log_error(u.error), copy["fetched_at"].isoformat(),
+                        self._log_host(host), self._log_error(u.error, host), copy["fetched_at"].isoformat(),
                         age / 86400)  # fmt: skip
             self.robots_used[robots_host_key(host)] = {"host": host, "source": "cached", "fetched_at": copy["fetched_at"],
                                       "age_s": round(age, 1), "status": copy["status"]}  # fmt: skip

@@ -1134,7 +1134,7 @@ def test_workflow_runs_on_main_only_and_never_on_pull_requests():
 def test_the_workflow_uploads_only_the_public_results_and_never_prints_the_build():
     """This repository is public, and so are its runs' artifacts and logs: the importers workflow uploads no cache and
     one artifact, the snapshot's importer-results (importers.public_results: keys, weeks, statuses, a failed fetch's
-    HTTP status and phase; no error text, no URL), and the build's dbt output goes to a file on the runner
+    kind, HTTP status and phase; no error text, no URL), and the build's dbt output goes to a file on the runner
     (--log-file), never to the log."""
     text = (Path(__file__).parent.parent / ".github/workflows/importers.yml").read_text()
     wf = yaml.safe_load(text)
@@ -1150,7 +1150,9 @@ def test_the_workflow_uploads_only_the_public_results_and_never_prints_the_build
     assert "env" not in upload  # never the Hub token
     snap = next(s for s in wf["jobs"]["snapshot"]["steps"] if "importer-snapshot" in s.get("run", ""))
     assert '--results "$RUNNER_TEMP/importer-results/results.json"' in snap["run"]
-    assert importers.PUBLIC_RESULT_KEYS == ("importer", "week", "status", "http_status", "phase")
+    assert importers.PUBLIC_RESULT_KEYS == ("importer", "week", "status", "http_status", "phase", "kind")
+    # best effort: a failed upload never fails the job (`build` needs it), and a re-run's replaces the first's
+    assert upload["continue-on-error"] is True and upload["with"]["overwrite"] is True
     build = next(s for s in wf["jobs"]["build"]["steps"] if "importer-build" in s.get("run", ""))
     log = '--log-file "$RUNNER_TEMP/importer-build/dbt.log"'
     assert log in build["run"] and build["run"].count("dbt.log") == 1  # written there, never read back out

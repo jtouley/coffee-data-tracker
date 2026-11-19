@@ -164,10 +164,11 @@ Quick checklist:
    - **No scheduled run started.** Check that `importers` is enabled in the Actions tab: someone may have disabled
      it by hand. GitHub can also drop or delay a scheduled event under load. Since `queue: max`, a dispatch no
      longer cancels a pending scheduled run.
-   - **The run failed.** The table's Failed fetch column gives a failed fetch's HTTP status and where it failed
-     (`robots`, `page`, `listing page N`), from the run's `importer-results` artifact: 403 is a refusal (a block),
-     429 rate limiting, 5xx the site down or failing; "no HTTP status" is a network error, a robots.txt disallow or
-     the run's deadline. For more, open the linked run and read the `importer-snapshot` step's line per importer, its
+   - **The run failed.** The table's Failed fetch column gives the latest run's failure for that importer, from
+     its `importer-results` artifact: the kind, the HTTP status and where it failed (`page`, `listing page N`, or
+     `robots at ...`). HTTP 403 is a refusal (a block), 429 rate limiting, 5xx the site down or failing. An edge's
+     challenge, a closed store, a robots.txt disallow, no connection, a timeout and the run's deadline are named as
+     such. A blank cell means the latest run left no results, so open it. For more, open the linked run and read the `importer-snapshot` step's line per importer, its
      status and error (never the address: `importers.FetchFailed`). In comments here, give the importer, its status
      and the code only. A run
      also ends `failure` when only its `build` job failed. That stores every week, so it opens
@@ -430,7 +431,7 @@ in-memory GitHub.
   check only lists the importers dataset's file names (`triage importers-weeks`); it never fetches an importer and
   never dispatches `importers`.
 - **Importers.** The issue, the log and the `importers-health` and `importer-results` artifacts carry importer keys,
-  statuses, Mondays, run links and a failed fetch's HTTP status and phase, never a lot or a store's address.
+  statuses, Mondays, run links and a failed fetch's kind, HTTP status and phase, never a lot or a store's address.
 - The Cloud Run jobs get no GitHub token, and no GCP resource was added. prod-health reads the lake read-only and
   never writes to it.
 - To test without touching GitHub: `python -m coffeedata.triage evals <report.json> --workflow ci --dry-run`

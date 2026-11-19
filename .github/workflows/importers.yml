@@ -28,7 +28,8 @@
 #
 # A failed fetch is reported by its HTTP status and phase (robots, page, listing page N), never its address
 # (importers.FetchFailed): a 403 is a refusal, a 429 rate limiting, a 5xx the site failing. The snapshot job's one
-# artifact, importer-results, holds each importer's key, week, status, HTTP status and phase and nothing else
+# artifact, importer-results, holds each importer's key, week, status, failure kind, HTTP status and phase and
+# nothing else
 # (importers.public_results: no error text, no URL), the same as its log line; importers-alerts reads it so the
 # triage issue can name the status code.
 #
@@ -117,13 +118,17 @@ jobs:
           if [ "$IMPORTER" = all ]; then IMPORTER=""; fi
           uv run coffeedata importer-snapshot --require-hub ${IMPORTER:+--importer "$IMPORTER"} ${ACCEPT_DROP:+--accept-drop} \
             --results "$RUNNER_TEMP/importer-results/results.json"
-      # keys, weeks, statuses, HTTP status codes and phases only (importers.public_results), for importers-alerts
+      # keys, weeks, statuses, failure kinds, HTTP status codes and phases only (importers.public_results), for
+      # importers-alerts. Best effort: a failed upload never fails the job (the weeks are stored, and `build` needs
+      # it to pass), and a re-run's upload replaces the first attempt's.
       - if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: importer-results
           path: ${{ runner.temp }}/importer-results/results.json
           if-no-files-found: ignore
+          overwrite: true
           retention-days: 90
 
   build:
