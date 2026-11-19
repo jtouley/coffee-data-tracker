@@ -15,7 +15,8 @@
 #
 # What the apply account CAN do once an apply is approved, because the main root manages it: set IAM on the secrets
 # (so grant itself or anyone a secret's value), the image repository, the Cloud Run service and jobs, and the staging
-# bucket (so reach raw ingestion data); and run any image as the runtime, ingest or scheduler account, which hold
+# bucket (so reach raw ingestion data); read (pull, never push or delete) the image repository's images, which Cloud
+# Run needs from whoever deploys a job; and run any image as the runtime, ingest or scheduler account, which hold
 # secret access and the staging bucket. The approval, the guard and the checks in terraform-apply.yml are the gate
 # on all of that, not these roles. The plan account can read every resource's settings and IAM, and the state (the
 # billing account id, the owner's email, the egress IPs), from any same-repository pull request.
@@ -69,11 +70,14 @@ resource "google_project_iam_custom_role" "tf_service_accounts" {
 }
 
 # The image repository's settings and IAM (cleanup policies, the deploy account's writer role), on that repository
-# only: not roles/artifactregistry.admin, which can also delete images, the pinned one included.
+# only: not roles/artifactregistry.admin, which can also delete images, the pinned one included. And read its images
+# (downloadArtifacts): Cloud Run resolves a job's image manifest as the account that deploys it, so without it every
+# google_cloud_run_v2_job update fails with Docker-GetManifest permission_denied. Never upload, tag or delete.
 resource "google_project_iam_custom_role" "tf_repository" {
   role_id = "tfApplyRepository"
-  title   = "Terraform apply: a repository's settings and IAM, no images"
+  title   = "Terraform apply: a repository's settings and IAM, read images"
   permissions = [
+    "artifactregistry.repositories.downloadArtifacts",
     "artifactregistry.repositories.get",
     "artifactregistry.repositories.getIamPolicy",
     "artifactregistry.repositories.setIamPolicy",
@@ -151,7 +155,7 @@ resource "google_artifact_registry_repository_iam_member" "tf_plan" {
   project    = var.project_id
   location   = var.region
   repository = local.image_repository
-  role       = "roles/artifactregistry.reader" # the repository's settings (cleanup policies)
+  role       = "roles/artifactregistry.reader" # the repository's settings (cleanup policies); it never deploys a job
   member     = local.plan_member
 }
 
