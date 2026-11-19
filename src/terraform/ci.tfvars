@@ -18,3 +18,8 @@ verdict_model = "claude-haiku-5-5"
 # tags the digest set here so the registry's cleanup keeps it. Unset: Google's sample image. usage_enabled: true once
 # the apply account can act as the collector's account and write log exclusions; usage_token: true once the
 # USAGE_HF_TOKEN secret has a value (RUNNING.md, "Usage").
+# Pinned: deploy.yml run 44253151612 on main at 10de76a (#181), "Build and push" step; its attest job signed this
+# digest (attestation 68996644).
+usage_image   = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:5945b9b7628093efb159d425584b05c0b8e4a6776a1b83ee4fe2f8d967d1c537"
+usage_enabled = true
+usage_token   = true

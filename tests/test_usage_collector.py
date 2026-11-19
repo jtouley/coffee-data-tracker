@@ -786,7 +786,7 @@ def test_the_terraform_keeps_to_the_collectors_own_resources():
 
 def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs():
     """actAs on the collector's account (and no other new one), log exclusions only (no sinks, buckets or delete),
-    and the plan account their read; the main root's plan stays green without them while usage_enabled is off."""
+    and the plan account their read; ci.tfvars turns usage_enabled on only with the image pinned and the token."""
     code = _code("src/terraform/bootstrap/iam.tf")
     assert 'usage            = "${var.service}-usage"' in code
     assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage"])' in code
@@ -811,7 +811,12 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
     assert "logging.sinks" not in code and "roles/logging" not in code
     variables = _code("src/terraform/variables.tf")
     assert re.search(r'variable "usage_enabled" \{[^}]*default\s*=\s*false', variables, re.S)
-    assert not re.search(r"^usage_enabled\s*=\s*true", (ROOT / "src/terraform/ci.tfvars").read_text(), re.M)
+    # Switched on in one PR (RUNNING.md, "Turning usage on", step 3): never the service without its pinned image and
+    # its token, so the public service never runs Google's sample image or a collector that can't publish.
+    tfvars = (ROOT / "src/terraform/ci.tfvars").read_text()
+    if re.search(r"^usage_enabled\s*=\s*true\s*$", tfvars, re.M):
+        assert re.search(r'^usage_image\s*=\s*"[^"]+"\s*$', tfvars, re.M)
+        assert re.search(r"^usage_token\s*=\s*true\s*$", tfvars, re.M)
 
 
 def test_the_collector_url_is_in_one_checked_in_place():
