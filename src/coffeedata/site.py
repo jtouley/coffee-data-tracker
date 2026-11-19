@@ -170,7 +170,7 @@ APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides i
 # SET AT MERGE (#169): the day the usage-counting policy text goes live. This PR merges last, after the collector
 # (#167) is live with its log exclusion and the dbt PR (#170) is in; replace the date with that day when merging.
 # Every member is asked to accept the updated policy once (Accounts.needs_agree). Before: November 8, 2026 (#134).
-LEGAL_UPDATED = "November 13, 2026"
+LEGAL_UPDATED = "November 19, 2026"
 # The crawler page's (bot.html) "Last updated" date: change it whenever that page changes.
 BOT_UPDATED = "November 2, 2026"
 FIRST_RUN = "2026-10-26"  # the first weekly run the public data covers (the start of temporalCoverage)
