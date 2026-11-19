@@ -142,7 +142,7 @@ Nothing here was created for you. Once, in this order:
    cd src/terraform
    cp terraform.tfvars.example terraform.tfvars   # billing_account, owner_email
    terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
-   terraform apply -target=google_project_service.apis -target=google_secret_manager_secret.app
+   terraform apply -var-file=ci.tfvars -target=google_project_service.apis -target=google_secret_manager_secret.app
    ```
 
 5. **Secret values**, one version for each of the five (Terraform only creates the empty secrets; values never go
@@ -163,7 +163,7 @@ Nothing here was created for you. Once, in this order:
    ```
 
    (The app strips surrounding whitespace from every secret anyway, so a stray newline does no harm.) Then
-   everything else: `terraform apply`.
+   everything else: `terraform apply -var-file=ci.tfvars`.
 6. **GitHub variables** (Settings → Secrets and variables → Actions → Variables), from `terraform output`:
    `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE`. Then run the deploy workflow once, or push to main.
 7. **DNS:** add `CNAME app -> ghs.googlehosted.com.` at Namecheap (`runbook/check-dns.sh` checks it). The
@@ -354,8 +354,9 @@ the break-glass below, are the owner's, from Cloud Shell.
   `scripts/tf_plan_guard.py` and `src/terraform/**`.
 
 **Break-glass** (GitHub down, or the pipeline broken): in Cloud Shell, with a clean checkout of `main` and your
-`terraform.tfvars`, run `bash scripts/tf_break_glass.sh`. It plans into a private temporary folder, runs the guard,
-lists the changes and applies that saved plan only after a yes. If the guard refuses, it applies only after you type
+`terraform.tfvars`, run `bash scripts/tf_break_glass.sh`. It loads main's `ci.tfvars` after your `terraform.tfvars`,
+as GitHub does, so it plans the same settings. It plans into a private temporary folder, runs the guard, lists the
+changes and applies that saved plan only after a yes. If the guard refuses, it applies only after you type
 `override <reason>`, which it appends, with the time, the commit and the refusing guards, to `~/break-glass.log`.
 It refuses a checkout that isn't main's tip, or that holds a file Terraform would load beyond main's (an ignored
 `*_override.tf` or `*.auto.tfvars`, say). The state lock is shared, so this is safe beside a waiting run.
@@ -364,7 +365,7 @@ If the script itself is broken, by hand (each step only if the one before succee
 
 ```bash
 cd src/terraform && d=$(mktemp -d) && terraform init -backend-config="bucket=coffee-data-tracker-tfstate" >/dev/null &&
-  terraform plan -out="$d/bg.plan" >"$d/plan.log" 2>&1 && terraform show -json "$d/bg.plan" >"$d/bg.json" &&
+  terraform plan -var-file=ci.tfvars -out="$d/bg.plan" >"$d/plan.log" 2>&1 && terraform show -json "$d/bg.plan" >"$d/bg.json" &&
   python3 -I ../../scripts/tf_plan_guard.py check "$d/bg.json" && python3 -I ../../scripts/tf_plan_guard.py render "$d/bg.json" &&
   read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply "$d/bg.plan"; rm -rf "$d"
 ```
@@ -512,13 +513,13 @@ you". The app starts either way.
    secret at version `latest`, so they need values before `email = true` mounts them. Nothing below prints a key:
 
    ```bash
-   terraform apply   # with email = false (the default): creates the two empty secrets if they aren't there yet
+   terraform apply -var-file=ci.tfvars   # with email = false (the default): creates the two empty secrets if they aren't there yet
    (umask 077; openssl rand -base64 32 | tr -d '\n' > email_key.txt)   # copy it into your password manager now
    gcloud secrets versions add EMAIL_KEY --data-file=email_key.txt && shred -u email_key.txt
    gcloud secrets versions add RESEND_API_KEY --data-file=-   # paste the Resend key, then Ctrl-D
    ```
 
-   Then set `email = true` in `terraform.tfvars` and `terraform apply`: it mounts both and adds the alert, and Cloud
+   Then set `email = true` in `terraform.tfvars` and `terraform apply -var-file=ci.tfvars`: it mounts both and adds the alert, and Cloud
    Run makes a new revision.
 
 5. **Check it.** In the app: Setup → Add email, with your own address. The confirm email arrives (check the spam
@@ -674,7 +675,7 @@ failed) or ERROR (events lost).
 | What | Where | Value |
 |---|---|---|
 | `usage_enabled` | `ci.tfvars` (a PR) | `true` creates the service, its public invoker, its request-log exclusion and its alert; `false` (the default): only its account and the empty secret |
-| `usage_image` | `ci.tfvars` (a PR) | The app's image from a deploy run on main, by digest (`<GCP_IMAGE>@sha256:<64 hex>`); empty runs Google's sample image |
+| `usage_image` | `ci.tfvars` (a PR) | The app's image from a deploy run on main, by digest (`<GCP_IMAGE>@sha256:<64 hex>`); required (with `usage_token`) once `usage_enabled` is on: a Terraform precondition refuses the service without both |
 | `usage_token` | `ci.tfvars` (a PR) | `true` mounts `USAGE_HF_TOKEN` as `HF_TOKEN`; `false` (the default) leaves the collector unable to publish |
 | `USAGE_HF_TOKEN` secret | Secret Manager: always exists | A fine-grained Hugging Face token with write access to `jtouley/coffee-usage` only |
 | `collector_url` | `config/usage.toml` (a PR) | `usage_url`'s value once the service exists |
@@ -732,8 +733,10 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
    first, then the service, its invoker and the alert.
 4. `collector_url` in `config/usage.toml` set to `usage_url` (the apply's output, or the service's URL on its Cloud
    Run page), in a PR: from then on the pages send events.
-5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does every other request; the service's
-   log shows a `usage flush` line counting it as `foreign_origin` at its next flush.
+5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does any other method on `/e`
+   (`GET <collector_url>/health` answers 200, and any other path 404; `/healthz` is for the startup probe only,
+   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage flush` line counting
+   it as `foreign_origin` at its next flush.
 
 ## Using it on the phone
 
