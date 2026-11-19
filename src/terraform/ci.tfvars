@@ -1,6 +1,10 @@
-# Settings for the plan in GitHub (.github/workflows/terraform-plan.yml), which passes this file with
-# `-var-file=ci.tfvars`. Not an *.auto.tfvars on purpose: the owner's shell never loads it, so the shell's
-# terraform.tfvars keeps working exactly as before. Only real, public values go here, never a placeholder.
+# Checked-in settings for every plan of this root, and their one source: GitHub's plan and apply
+# (terraform-plan.yml, terraform-apply.yml) and the owner's scripts (scripts/tf_break_glass.sh,
+# docs/ingestion/final-shell-run.sh) and the hand commands in RUNNING.md and RUNBOOK.md all pass it with
+# `-var-file=ci.tfvars`, after terraform.tfvars, so a value set here wins over the same one there. Any other plan by
+# hand must pass it too, or it proposes undoing these (the usage collector would be destroyed). Not an
+# *.auto.tfvars: every route loads it explicitly (tests/test_usage_collector.py checks the scripts and the runbooks'
+# commands). Only real, public values go here, never a placeholder.
 #
 # Where the other values come from in CI (docs/ingestion/RUNBOOK.md section 9):
 # - repository secrets TF_VAR_BILLING_ACCOUNT and TF_VAR_OWNER_EMAIL: billing_account and owner_email;
@@ -15,6 +19,12 @@ verdict_model = "claude-haiku-5-5"
 
 # The usage collector (usage.tf). usage_image: an app image deploy.yml built from main, by digest (the "Build and
 # push" step's log and the attest job name it). Bumping it here, in a PR, is how the collector is deployed; deploy.yml
-# tags the digest set here so the registry's cleanup keeps it. Unset: Google's sample image. usage_enabled: true once
-# the apply account can act as the collector's account and write log exclusions; usage_token: true once the
-# USAGE_HF_TOKEN secret has a value (RUNNING.md, "Usage").
+# tags the digest set here so the registry's cleanup keeps it. usage_enabled: true once the apply account can act as
+# the collector's account, write log exclusions and read the registry; usage_token: true once the USAGE_HF_TOKEN
+# secret has an enabled version (RUNNING.md, "Usage"). usage_enabled needs both usage_image and usage_token
+# (usage.tf's precondition).
+# Pinned: deploy.yml run 44253151612 on main at 10de76a (#181), "Build and push" step; its attest job signed this
+# digest (attestation 68996644).
+usage_image   = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:5945b9b7628093efb159d425584b05c0b8e4a6776a1b83ee4fe2f8d967d1c537"
+usage_enabled = true
+usage_token   = true
