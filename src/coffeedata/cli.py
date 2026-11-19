@@ -533,15 +533,30 @@ def cmd_classify(args: argparse.Namespace) -> None:
     # the verdicts are submitted for the whole week's products, not for a half-merged one. The week is today's,
     # as the build's check is, whatever --run-date either is given.
     _precondition(lake)
-    out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+    out: dict = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
     deadline = time.monotonic() + args.wait * 60
     # Wait for this run's batches only; whatever is still running is collected by the next run.
     waiting = set(out["submit"].get("batch_ids", []))
     while waiting and time.monotonic() < deadline:
         time.sleep(60)
-        got = verdict.collect(lake, args.run_date)
-        out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
-        waiting &= verdict.open_batch_ids(lake)
+        # One failed read of the lake (a 429, a timeout) never ends the wait: it is logged and counted, and the
+        # next minute tries again. At the deadline classify goes on with what it collected.
+        try:
+            got = verdict.collect(lake, args.run_date)
+            out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
+            waiting &= verdict.open_batch_ids(lake)
+        except Exception as e:  # noqa: BLE001 - the lake's and the API's errors; the wait only retries
+            out["wait_read_failures"] = out.get("wait_read_failures", 0) + 1
+            logging.warning("classify: a read during the wait failed, retrying next minute: %s", e)
+    if waiting:
+        # The wait ran out: the build after this classifies those versions by the rules, counts them in its record
+        # (verdicts_in_flight), and verdicts_cover_catalog still judges the share. The next run collects them.
+        out["still_open"] = sorted(waiting)
+        print(
+            f"classify: {len(waiting)} verdict batch(es) still open after {args.wait} min; the build uses the "
+            "stored verdicts and the rules for the versions awaiting one",
+            file=sys.stderr,
+        )
     _print(out)
     if err := out["submit"].get("error"):
         # A rejected key or an API outage leaves this week's new versions without verdicts. Fail like a missing
@@ -608,7 +623,7 @@ def dbt_build(
             "verdict_definition": verdict.DEFINITION_VERSION,
             # verdicts_cover_catalog: fails a build with no verdict model, or too few listed coffees decided by
             # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
-            "require_verdicts": not verdict.rules_only_allowed(),
+            "require_verdicts": not verdict.rules_only_allowed(lake.url),
             "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
         }
         | (extra_vars or {})
@@ -664,8 +679,10 @@ def cmd_build(args: argparse.Namespace) -> bool:
     """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
     marts (what the site, the app, the public export and the MCP tools other than run_sql read); a failing one is still kept, with its results and a
     copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
-    from . import quality
+    from . import quality, verdict
 
+    # A rules-only override is refused on a remote lake (verdict.refuse_on_remote), before any work.
+    override = verdict.rules_only_override(getattr(args, "allow_rules_only", False))
     lake = Lake()
     # The weekly build job only (COFFEEDATA_AFTER_JOB): no build of a week whose merge and enrichment aren't done,
     # and none after a classify whose own check didn't pass. Before the merge the lake's latest run is still last
@@ -693,8 +710,23 @@ def cmd_build(args: argparse.Namespace) -> bool:
             "previous_release_status": status,
             "previous_release_run_date": str((served_release or {}).get("run_date") or ""),
         }
-    if getattr(args, "allow_rules_only", False):
+    # The named switch that lets this build pass without checked verdicts (None in production), recorded with it.
+    if override:
         extra["require_verdicts"] = False
+        print(
+            f"verdicts: rules only, allowed by {override}; this release is recorded as such", file=sys.stderr
+        )
+    try:  # only a count for the record: a failed read never stops the build
+        in_flight: int | None = verdict.in_flight(lake)
+    except Exception as e:  # noqa: BLE001 - duckdb errors; duckdb is imported lazily
+        logging.warning("verdicts in flight not counted: %s", e)
+        in_flight = None
+    if in_flight:  # classify's wait ran out: those versions are classified by the rules this week
+        print(
+            f"verdicts: {in_flight:,} product versions still await Claude's verdict; this build classifies them by "
+            "the rules (verdicts_cover_catalog judges the share), and the next build collects them",
+            file=sys.stderr,
+        )
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
         # It skips the anomaly bands too, and records accepted_volume_change, so their history restarts at it.
@@ -728,8 +760,12 @@ def cmd_build(args: argparse.Namespace) -> bool:
         logging.warning("verdict coverage not reported: %s", e)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
-        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
-    )
+        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took,
+        verdicts={
+            "verdict_model": verdict.model(), "verdict_definition": verdict.DEFINITION_VERSION,
+            "configured_image": verdict.image(), "rules_only_override": override, "verdicts_in_flight": in_flight,
+        },
+    )  # fmt: skip
     _write_personal_marts(lake, db, quality.SERVED_MARTS)
     if not passed:
         print(
@@ -763,10 +799,17 @@ def _write_personal_marts(lake: Lake, db: Path, catalog: tuple[str, ...]) -> Non
 
 def cmd_rollback(args: argparse.Namespace) -> None:
     """Serve an earlier passing release, then re-export the public tables and rebuild the site from it."""
-    from . import quality
+    from . import quality, verdict
 
     lake = Lake()
-    to = quality.rollback(lake, args.to, args.reason)
+    # A release whose verdicts weren't checked is served only with the flag and a reason, both logged, and only from
+    # a local lake (verdict.refuse_on_remote).
+    override = None
+    if getattr(args, "allow_rules_only", False):
+        if not args.reason:
+            raise SystemExit("rollback --allow-rules-only needs --reason: the serving log records why")
+        override = verdict.refuse_on_remote(f"rollback --allow-rules-only ({args.reason})", lake.url)
+    to = quality.rollback(lake, args.to, args.reason, rules_only_override=override)
     cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
     _export_and_site(SERVED_DB, args.out)
     print(f"serving release {to}")
@@ -1049,6 +1092,11 @@ def cmd_site(args: argparse.Namespace) -> None:
                 "nothing is served yet: the site is built from the served release, which the first weekly run "
                 "whose checks pass creates (or `coffeedata rollback --to <build>`)"
             )
+        # A release served without checked verdicts (an outdated image's build served itself) isn't rendered.
+        try:
+            quality.servable(Lake(), release["build_id"])
+        except ValueError as e:
+            raise SystemExit(f"the served release isn't rendered: {e}") from None
         quality.materialize(Lake(), release["build_id"], Path(args.db))
     print(site.build(Path(args.db), Path(args.out)))
 
@@ -1400,6 +1448,12 @@ def main(argv: list[str] | None = None) -> None:
         "--to", help="build id of the release to serve, or 'served' to re-export the served one (no crawl)"
     )
     rb.add_argument("--reason", default="", help="recorded in marts/release.parquet")
+    rb.add_argument(
+        "--allow-rules-only",
+        action="store_true",
+        help="serve a release whose Claude verdicts weren't checked (no verdict model, or verdicts_cover_catalog "
+        "didn't run); needs --reason, and the serving log records it",
+    )
     rb.add_argument("--out", default="build/site")
 
     ov = add("override", cmd_override, "accept, reject or pin one roaster-week's fetch for the history")

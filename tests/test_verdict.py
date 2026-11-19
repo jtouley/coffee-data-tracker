@@ -4,6 +4,8 @@ import json
 from datetime import UTC, datetime
 from types import SimpleNamespace
 
+import pytest
+
 from coffeedata import verdict
 from coffeedata.lake import new_batch_id
 
@@ -402,5 +404,349 @@ def test_terraform_requires_the_verdict_model_and_the_build_job_fails_on_a_faile
     assert var and "default" not in var.group(1) and 'trimspace(var.verdict_model) != ""' in var.group(1)
     assert "for_each = each.value.claude ? [var.verdict_model] : []" in tf
     build = re.search(r'"build" = \{.*?args += \["(.*?)"\]', tf, re.S)
-    assert build and build.group(1).startswith("rc=0; coffeedata classify || rc=1; coffeedata build || rc=1;")
+    assert build and build.group(1).startswith(
+        "rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build || rc=1;"
+    )
     assert build.group(1).endswith("exit $rc")
+
+
+# --- never serve a build without verdicts (the 2026-11-09 release) ----------------------------------------------
+
+GATE = "test.coffeedata.verdicts_cover_catalog"  # as dbt names the verdict gate in run_results
+
+
+def _record(lake, build_id: str, model: str, require, gate: str | None, **columns):
+    """A passing build record as `coffeedata build` writes it: its verdict row, the dbt vars in run_results, and the
+    verdict gate's node (absent when `gate` is None, as in the image without it)."""
+    now = datetime(2026, 11, 10, 6, 21, tzinfo=UTC)
+    base = {"build_id": build_id, "built_at": now} | columns
+    dbt_vars = {"verdict_model": model, "verdict_definition": verdict.DEFINITION_VERSION}
+    if require is not None:
+        dbt_vars["require_verdicts"] = require
+    results = json.dumps({"args": {"vars": dbt_vars}, "results": []})
+    rows = [
+        base | {"kind": "build", "unique_id": "build", "status": "pass"},
+        base | {"kind": "artifact", "unique_id": "run_results.build.json", "payload": results},
+    ]
+    if gate is not None:
+        rows.append(base | {"kind": "node", "unique_id": GATE, "status": gate})
+    lake.write("builds", f"builds/run_date=2026-11-09/build={build_id}.parquet", rows)
+
+
+def test_a_release_without_checked_verdicts_is_never_served(lake, monkeypatch):
+    """The 11-09 build: an image without the verdict model, whose dbt vars had verdict_model '' and no
+    require_verdicts, and no verdicts_cover_catalog node. Every test it had passed, and it was served for a week."""
+    import pytest
+
+    from coffeedata import quality
+
+    _no_verdicts(monkeypatch)
+    _record(lake, "b0909", "", None, None)  # as recorded on 2026-11-10
+    _record(lake, "bgood", "m", True, "pass")
+    _record(lake, "bnogate", "m", True, None)
+    _record(lake, "boff", "m", False, "pass")  # the gate ran with require_verdicts off: it checked nothing
+    _record(lake, "bnamed", "", False, "pass", rules_only_override="--allow-rules-only")
+
+    with pytest.raises(ValueError, match=r"can't be served: no verdict model"):
+        quality.serve(lake, "b0909", "build for 2026-11-09")
+    for b, why in (("bnogate", "verdicts_cover_catalog did not run"), ("boff", "the verdict gate was off")):
+        with pytest.raises(ValueError, match=why):
+            quality.servable(lake, b)
+    assert quality.servable(lake, "bgood") is None
+    assert (
+        quality.servable(lake, "bnamed") is None
+    )  # its record names the override (and the serving log has it)
+    assert quality.servable(lake, "b0909", "rollback --allow-rules-only (fork)") == (
+        "rollback --allow-rules-only (fork)"
+    )
+    monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
+    assert quality.servable(lake, "b0909") == "COFFEEDATA_ALLOW_RULES_ONLY=1"
+    assert not (lake.root / "marts" / "release.parquet").exists()  # nothing was served
+
+
+def test_record_build_fails_a_build_whose_verdicts_werent_checked(lake, tmp_path, monkeypatch, caplog):
+    from coffeedata import quality
+
+    def results(model: str, require, gate: str | None) -> list[dict]:
+        nodes = [{"unique_id": GATE, "status": gate}] if gate else []
+        return [{"args": {"vars": {"verdict_model": model, "require_verdicts": require}}, "results": nodes}]
+
+    # No release here: record_build's verdict below is the verdict guard's alone. The suite allows rules only by
+    # default (conftest); production doesn't, so neither does this test.
+    monkeypatch.delenv("COFFEEDATA_ALLOW_RULES_ONLY", raising=False)
+    monkeypatch.setattr(quality, "RELEASE_TABLES", ())
+    args = (lake, tmp_path / "missing.duckdb", "2026-11-09", tmp_path / "none.json")
+    digest = "r/ingest@sha256:" + "a" * 64
+    info = {"verdict_model": "m", "verdict_definition": verdict.DEFINITION_VERSION, "configured_image": digest,
+            "verdicts_in_flight": 7}  # fmt: skip
+    assert quality.record_build(*args, results("m", True, "pass"), True, "ok", verdicts=info) is True
+    old = {"verdict_model": ""}
+    assert quality.record_build(*args, results("", None, None), True, "old", verdicts=old) is False
+    assert "can't be served: no verdict model" in caplog.text
+    assert quality.record_build(*args, results("m", True, None), True, "nogate", verdicts=info) is False
+    named = info | {"verdict_model": "", "rules_only_override": "--allow-rules-only"}
+    assert quality.record_build(*args, results("", False, "pass"), True, "named", verdicts=named) is True
+    rec = {
+        r[0]: r[1:]
+        for r in lake.connect()
+        .execute(
+            f"select build_id, status, verdict_model, verdict_definition, configured_image, rules_only_override, "
+            f"verdicts_in_flight from {lake.scan('builds')} where kind = 'build'"
+        )
+        .fetchall()
+    }
+    assert rec["ok"] == ("pass", "m", verdict.DEFINITION_VERSION, digest, None, 7)
+    assert rec["old"][0] == "fail" and rec["nogate"][0] == "fail"
+    assert rec["named"][0] == "pass" and rec["named"][4] == "--allow-rules-only"
+    assert quality.servable(lake, "ok") is None
+
+
+def test_the_build_records_its_verdict_inputs_and_override(lake, monkeypatch, tmp_path):
+    import argparse
+
+    from coffeedata import cli, quality
+
+    seen = {}
+    monkeypatch.setattr(quality, "record_build", lambda *a, **k: seen.update(k) or False)
+    monkeypatch.setattr(cli, "_write_personal_marts", lambda *a: None)
+    monkeypatch.setattr(verdict, "in_flight", lambda lk: 12)
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("COFFEEDATA_INGEST_IMAGE", "r/ingest@sha256:" + "b" * 64)
+    db = str(tmp_path / "coffee.duckdb")
+    build = lambda **kw: lambda cli: cli.cmd_build(argparse.Namespace(db=db, run_date="2026-10-19", **kw))  # noqa: E731
+    assert _dbt_vars(monkeypatch, tmp_path, build())["require_verdicts"] is True
+    assert seen["verdicts"] == {
+        "verdict_model": "m", "verdict_definition": verdict.DEFINITION_VERSION,
+        "configured_image": "r/ingest@sha256:" + "b" * 64, "rules_only_override": None, "verdicts_in_flight": 12,
+    }  # fmt: skip
+    _dbt_vars(monkeypatch, tmp_path, build(allow_rules_only=True))
+    assert seen["verdicts"]["rules_only_override"] == "--allow-rules-only"
+
+
+def test_the_site_refuses_a_served_release_without_checked_verdicts(lake, monkeypatch, tmp_path):
+    import argparse
+
+    import pytest
+
+    from coffeedata import cli, quality
+
+    _no_verdicts(monkeypatch)
+    _record(lake, "b0909", "", None, None)
+    monkeypatch.setattr(quality, "served", lambda lk: {"build_id": "b0909", "run_date": "2026-11-09"})
+    monkeypatch.setattr(quality, "materialize", lambda *a: pytest.fail("materialized"))
+    ns = argparse.Namespace(
+        served=True, skip_if_unserved=True, db=str(tmp_path / "s.duckdb"), out=str(tmp_path)
+    )
+    with pytest.raises(SystemExit, match="isn't rendered: release b0909 can't be served: no verdict model"):
+        cli.cmd_site(ns)
+
+
+def test_rollback_to_a_release_without_verdicts_needs_a_named_reason(lake, monkeypatch):
+    import pytest
+
+    from coffeedata import cli, quality
+
+    _no_verdicts(monkeypatch)
+    got = []
+    monkeypatch.setattr(quality, "rollback", lambda lk, to, reason, rules_only_override=None: got.append(
+        rules_only_override) or "b0")  # fmt: skip
+    monkeypatch.setattr(cli, "cmd_publish", lambda a: None)
+    monkeypatch.setattr(cli, "_export_and_site", lambda *a: None)
+    with pytest.raises(SystemExit, match="needs --reason"):
+        cli.main(["rollback", "--to", "b0", "--allow-rules-only"])
+    cli.main(["rollback", "--to", "b0", "--allow-rules-only", "--reason", "fork without a key"])
+    cli.main(["rollback", "--to", "b0"])
+    assert got == ["rollback --allow-rules-only (fork without a key)", None]
+
+
+def test_classify_waits_for_its_batch_then_says_what_is_still_open(lake, monkeypatch, capsys):
+    """The build job's classify submitted at 06:19:10 and the build began at 06:19:26: that week's verdicts were
+    never in it. With --wait it collects them; past the wait it says so and the build counts what is missing."""
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    clock = [0.0]
+    monkeypatch.setattr("time.monotonic", lambda: clock[0])
+    monkeypatch.setattr("time.sleep", lambda s: clock.__setitem__(0, clock[0] + s))
+    monkeypatch.setattr(verdict, "collect", lambda lk, d=None: {"collected": 0})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: {"mb1"})
+    cli.main(["classify", "--wait", "2"])
+    out = capsys.readouterr()
+    assert json.loads(out.out)["still_open"] == ["mb1"]
+    assert "1 verdict batch(es) still open after 2 min" in out.err
+    assert clock[0] == 120  # it waited the full two minutes
+
+
+def test_a_failed_read_during_the_wait_is_retried_not_fatal(lake, monkeypatch, capsys, caplog):
+    """The wait reads the lake every minute; on hf:// a read can 429 or time out. One failure is logged and counted,
+    the next minute tries again, and the batch is still collected within the wait."""
+    import duckdb
+
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    clock = [0.0]
+    monkeypatch.setattr("time.monotonic", lambda: clock[0])
+    monkeypatch.setattr("time.sleep", lambda s: clock.__setitem__(0, clock[0] + s))
+    reads = []
+
+    def collect(lk, d=None):
+        reads.append(clock[0])
+        if clock[0] == 60:  # the first read of the wait fails
+            raise duckdb.HTTPException("HTTP 429 (Too Many Requests)")
+        return {"collected": 3 if clock[0] == 120 else 0}
+
+    monkeypatch.setattr(verdict, "collect", collect)
+    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: set() if clock[0] >= 120 else {"mb1"})
+    cli.main(["classify", "--wait", "5"])  # returns: exit 0
+    out = capsys.readouterr()
+    got = json.loads(out.out)
+    assert got["wait_read_failures"] == 1 and got["collect_after_wait"] == 3 and "still_open" not in got
+    assert "a read during the wait failed, retrying next minute: HTTP 429" in caplog.text
+    assert clock[0] == 120  # it stopped waiting once the batch was collected
+
+    # Every read failing: the wait runs out, and classify goes on, saying what is still open.
+    clock[0] = 0.0
+    monkeypatch.setattr(verdict, "collect", lambda lk, d=None: {"collected": 0} if clock[0] == 0 else 1 / 0)
+    cli.main(["classify", "--wait", "3"])
+    got = json.loads(capsys.readouterr().out)
+    assert got["wait_read_failures"] == 3 and got["still_open"] == ["mb1"]
+
+
+def test_rollback_skips_releases_that_cant_be_served(lake, monkeypatch):
+    """After the guard, a plain `rollback` from the 11-16 release would pick 11-09, which can't be served (no verdict
+    model). It picks the newest earlier release that can be, and says plainly when none can."""
+    import pytest
+
+    from coffeedata import quality
+
+    _no_verdicts(monkeypatch)
+    _record(lake, "b1026", "m", True, "pass")
+    _record(lake, "b1102", "", None, None)
+    _record(lake, "b1109", "m", True, None)  # the gate never ran
+    _record(lake, "b1116", "m", True, "pass")
+    history = ["b1026", "b1102", "b1109", "b1116"]
+    monkeypatch.setattr(quality, "builds", lambda lk: [(b, "2026-11-16", True) for b in history])
+    monkeypatch.setattr(quality, "served", lambda lk: {"build_id": "b1116"})
+    served = []
+    monkeypatch.setattr(
+        quality, "serve", lambda lk, b, reason, **kw: served.append((b, kw["rules_only_override"]))
+    )
+    assert quality.rollback(lake) == "b1026"
+    # With a named override, the newest earlier release is servable again (its record still says why).
+    assert quality.rollback(lake, rules_only_override="rollback --allow-rules-only (fork)") == "b1109"
+    assert served == [("b1026", None), ("b1109", "rollback --allow-rules-only (fork)")]
+    history.remove("b1026")
+    with pytest.raises(ValueError, match=r"no earlier passing release can be served: 2 passed their checks"):
+        quality.rollback(lake)
+    assert len(served) == 2
+
+
+def test_in_flight_counts_versions_awaiting_this_models_verdict(lake, monkeypatch):
+    _no_verdicts(monkeypatch)
+    assert verdict.in_flight(lake) == 0  # no model: nothing is awaited
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    at = datetime(2026, 11, 17, 6, 19, tzinfo=UTC)
+    row = {"at": at, "model": "m", "definition": verdict.DEFINITION_VERSION}
+    lake.write("verdict_batches", "verdict_batches/state=submitted/a.parquet", [
+        row | {"batch_id": "a", "state": "submitted", "custom_id": h} for h in ("h1", "h2")])  # fmt: skip
+    lake.write("verdict_batches", "verdict_batches/state=submitted/b.parquet", [
+        row | {"batch_id": "b", "state": "submitted", "custom_id": "h3"}])  # fmt: skip
+    lake.write("verdict_batches", "verdict_batches/state=collected/b.parquet", [
+        row | {"batch_id": "b", "state": "collected", "custom_id": "h3"}])  # fmt: skip
+    lake.write("verdict_batches", "verdict_batches/state=submitted/c.parquet", [
+        row | {"batch_id": "c", "state": "submitted", "custom_id": "h4", "model": "other"}])  # fmt: skip
+    assert verdict.in_flight(lake) == 2
+
+
+def test_terraform_build_job_waits_for_the_verdicts_and_knows_its_image():
+    import re
+    from pathlib import Path
+
+    tf = (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
+    build = re.search(r'"build" = \{.*?args += \["(.*?)"\]', tf, re.S)
+    assert build and build.group(1).startswith(
+        "rc=0; coffeedata classify --wait 45 || rc=1; coffeedata build"
+    )
+    assert re.search(r'name += "COFFEEDATA_INGEST_IMAGE"\s+value += var\.ingest_image', tf)
+    assert verdict.IMAGE_ENV == "COFFEEDATA_INGEST_IMAGE"
+    # The wait fits: up to 90 minutes for the chain (07:47 from 06:17), 45 for the verdicts, inside 240.
+    assert (
+        'timeout         = "14400s"' in tf
+        and '"build"       = { job = "merge,enrich", deadline_utc = "07:47" }' in tf
+    )
+
+
+REMOTE_LAKES = ("hf://datasets/someone/coffee-data", "s3://bucket/coffee-data", "gs://bucket/lake")
+
+
+def test_rules_only_is_refused_on_a_remote_lake(lake, monkeypatch, tmp_path):
+    """A remote lake is published and served, so no form of the rules-only override works there: the env var, the
+    flag on classify, build and weekly, rollback's flag, a serve-time override or one a build record carries. Each
+    exits naming the override before any work; on a local lake each still works."""
+    from coffeedata import cli, quality
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")  # conftest sets it too: the suite's local lakes
+    assert verdict.rules_only_allowed() and verdict.rules_only_override() == "COFFEEDATA_ALLOW_RULES_ONLY=1"
+    assert verdict.require(True) is False  # local: allowed
+
+    worked = []
+    monkeypatch.setattr(cli, "Lake", lambda *a, **k: worked.append("lake") or pytest.fail("work started"))
+    for url in REMOTE_LAKES:
+        monkeypatch.setenv("COFFEEDATA_LAKE", url)
+        for call in (verdict.rules_only_allowed, verdict.rules_only_override, verdict.require):
+            with pytest.raises(SystemExit, match="refused on a remote lake"):
+                call()
+        monkeypatch.delenv("COFFEEDATA_ALLOW_RULES_ONLY")
+        assert verdict.rules_only_override() is None  # no override asked: nothing to refuse
+        for call in (lambda: verdict.rules_only_override(True), lambda: verdict.require(True)):
+            with pytest.raises(SystemExit, match=r"--allow-rules-only\) is refused on a remote lake"):
+                call()
+        for argv in (
+            ["classify", "--allow-rules-only"],
+            ["build", "--allow-rules-only"],
+            ["weekly", "--allow-rules-only"],
+        ):
+            with pytest.raises(SystemExit, match="refused on a remote lake"):
+                cli.main(argv)
+        monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
+    assert worked == []  # each refused before it opened the lake
+
+    # serve, rollback and site --served all decide through quality.servable, on the lake's own URL.
+    monkeypatch.delenv("COFFEEDATA_ALLOW_RULES_ONLY")
+    for recorded in (None, "--allow-rules-only"):
+        monkeypatch.setattr(quality, "verdict_check", lambda lk, b, r=recorded: ("no verdict model", r))
+        for url in REMOTE_LAKES:
+            remote = SimpleNamespace(url=url)
+            with pytest.raises(SystemExit, match="refused on a remote lake"):
+                quality.servable(remote, "b1", None if recorded else "rollback --allow-rules-only (why)")
+        local = SimpleNamespace(url=str(tmp_path / "lake"))
+        allowed = quality.servable(local, "b1", None if recorded else "rollback --allow-rules-only (why)")
+        assert allowed == (None if recorded else "rollback --allow-rules-only (why)")
+
+
+def test_no_job_workflow_or_terraform_sets_the_rules_only_override():
+    """The override is for a local lake and tests: no GitHub workflow, Terraform file or Dockerfile sets it, so a
+    production run can't ask for it (and on a remote lake coffeedata would refuse it anyway)."""
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    files = [
+        *(root / ".github/workflows").glob("*.y*ml"),
+        *(root / "src/terraform").rglob("*.tf"),
+        *(root / "src/terraform").rglob("*.tfvars*"),
+        root / "app/Dockerfile",
+        root / "ingest.Dockerfile",
+        root / "ingest.cloudbuild.yaml",
+    ]
+    assert files
+    setting = [str(f.relative_to(root)) for f in files if "ALLOW_RULES_ONLY" in f.read_text(errors="ignore")]
+    assert setting == []

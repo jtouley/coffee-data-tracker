@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Break-glass: apply src/terraform/ from Cloud Shell when GitHub is down or the pipeline is broken
-# (docs/app/RUNNING.md, "Changing the infrastructure"). Run from a clean checkout of main with your terraform.tfvars:
+# (docs/app/RUNNING.md, "Changing the infrastructure"). Run from a clean checkout of main with your terraform.tfvars
+# (it also loads main's checked-in ci.tfvars, after yours, as GitHub's plan does):
 #   bash scripts/tf_break_glass.sh
 # It plans into a private temporary folder (deleted at the end: a plan holds every value in clear), runs the guard,
 # shows the change list and applies that saved plan only after a yes. If the guard refuses, it applies only after you
@@ -40,7 +41,9 @@ loaded=$(git status --porcelain --ignored -- src/terraform \
 git fetch -q origin main 2>/dev/null || echo "Couldn't reach GitHub: comparing with the main fetched last."
 [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ] || die "this isn't main's tip: git checkout --detach origin/main"
 tfrun init init -input=false -lockfile=readonly -no-color -backend-config="bucket=${TF_STATE_BUCKET:-coffee-data-tracker-tfstate}"
-tfrun plan plan -input=false -no-color -out="$W/bg.plan"
+# ci.tfvars after your terraform.tfvars, as GitHub's plan and apply load it: the settings it holds (the usage
+# collector's, verdict_model) have that one checked-in source, so this plan never proposes undoing them.
+tfrun plan plan -input=false -no-color -var-file=ci.tfvars -out="$W/bg.plan"
 terraform -chdir="$TF" show -json -no-color "$W/bg.plan" >"$W/bg.json" 2>"$W/show.log" || die "terraform show failed"
 rc=0
 python3 -I "$GUARD" check "$W/bg.json" || rc=$?
