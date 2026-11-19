@@ -42,9 +42,9 @@ unit_tests:
       price that then gets one.
     model: fct_price_event
     given:
-      - input: ref('int_roaster_state')
+      - input: ref('dim_coffee')
         format: sql
-        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+        rows: select unnest(['r:A', 'r:B', 'r:C', 'r:D']) as coffee_id
       - input: ref('stg_snapshots')
         format: sql
         rows: |
@@ -89,9 +89,9 @@ unit_tests:
       again in the partial 10-26, is relisted there. S, first read in a partial run, is new.
     model: fct_price_event
     given:
-      - input: ref('int_roaster_state')
+      - input: ref('dim_coffee')
         format: sql
-        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+        rows: select unnest(['r:P', 'r:Q', 'r:R', 'r:S']) as coffee_id
       - input: ref('stg_snapshots')
         format: sql
         rows: |

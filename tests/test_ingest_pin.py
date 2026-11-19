@@ -78,7 +78,10 @@ def test_the_block_in_the_runbook_is_the_one_tested():
     assert "verified-ingest-image.sh" in block and "tags add" in block
     runbook = (ROOT / "docs/ingestion/RUNBOOK.md").read_text()
     assert '|| echo "STOP' not in runbook  # a check that prints and carries on
-    assert 'terraform plan -var ingest_image="${PINNED:?' in runbook and "rm -f ingest.plan" in runbook
+    assert (
+        'terraform plan -var-file=ci.tfvars -var ingest_image="${PINNED:?' in runbook
+        and "rm -f ingest.plan" in runbook
+    )
 
 
 @pytest.mark.parametrize("interactive", [False, True])
