@@ -1167,7 +1167,11 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     # The run stops at IMPORTERS_DEADLINE_S, a little under the workflow's job timeout, so a long Royal pass ends as a
     # recorded failure (DeadlineReached) instead of a killed job.
     with PoliteClient(
-        timeout=60.0, retries=3, schedule_only_ok=True, deadline_s=importers.IMPORTERS_DEADLINE_S
+        timeout=60.0,
+        retries=3,
+        schedule_only_ok=True,
+        deadline_s=importers.IMPORTERS_DEADLINE_S,
+        redact_hosts=True,  # its log is public: no line names a host or URL (Royal's address)
     ) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)

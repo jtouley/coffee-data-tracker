@@ -1014,3 +1014,57 @@ def test_rules_abstain_when_unsure(k, derived):
         "region": got["region"],
     }[field]
     assert value == expected
+
+
+def test_the_importers_client_never_names_a_host_or_url_in_its_own_logs(monkeypatch, caplog):
+    """The importers job's log is public, so its client's own lines (a capped Crawl-delay, a stored robots.txt used
+    because the live one was unreachable) say `<host>`, never the store's host or a URL. A crawl client's lines keep
+    the host, as before."""
+    from coffeedata import cli
+    from coffeedata import http as http_mod
+
+    monkeypatch.setattr(http_mod.time, "sleep", lambda s: None)  # the capped Crawl-delay's wait
+    caplog.set_level(logging.DEBUG)
+    caplog.set_level(logging.WARNING, logger="httpx")  # as the command sets it (cli.main)
+
+    def capped(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nCrawl-delay: 600\n")
+        return httpx.Response(200, json={"products": []})
+
+    def unreachable(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            raise httpx.ConnectError("connection refused to https://shop.example/robots.txt", request=request)
+        return httpx.Response(200, json={"products": []})
+
+    now = datetime(2026, 11, 11, 17, 37, tzinfo=UTC)
+    copies = {
+        "shop.example": {"fetched_at": now - timedelta(days=1), "status": 200, "body": "User-agent: *\n"}
+    }
+
+    def logs(handler, **kw) -> str:
+        caplog.clear()
+        with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler), clock=lambda: now,
+                          robots_copies=copies, **kw) as client:  # fmt: skip
+            client.fetch_json(LISTING, limit=250, page=1)
+        return "\n".join(rec.getMessage() for rec in caplog.records)
+
+    for handler, line in ((capped, "<host>: robots.txt Crawl-delay '600' capped at 60 s"),
+                          (unreachable, "<host>: robots.txt unreachable (RobotsUnavailable); using the copy")):  # fmt: skip
+        text = logs(handler, schedule_only_ok=True)  # the importers job's client: redacted by default
+        assert line in text, text
+        assert "shop.example" not in text and "://" not in text and "robots.txt for" not in text, text
+        assert logs(handler, schedule_only_ok=True, redact_hosts=True) == text
+        assert "shop.example" in logs(handler)  # a crawl client's lines keep the host
+
+    # the weekly command builds its client with redact_hosts
+    seen = {}
+
+    def fake(lake, client, *a, **k):
+        seen["redact"] = client.redact_hosts
+        return []
+
+    monkeypatch.setattr(importers, "snapshot", fake)
+    with contextlib.suppress(SystemExit):
+        cli.main(["importer-snapshot"])
+    assert seen == {"redact": True}

@@ -771,8 +771,14 @@ class PoliteClient:
         schedule_only_ok: bool = False,
         robots_copies: dict[str, dict] | None = None,
         clock: Callable[[], datetime] | None = None,
+        redact_hosts: bool | None = None,
     ):
         self.min_interval = min_interval
+        # redact_hosts: this client's own log lines never name a host or URL (`<host>` instead, and a failure by its
+        # class and HTTP status, not its message). Defaults to schedule_only_ok: the importers job's client, whose
+        # log is a public repository's run and must never carry Royal's address (importers.royal_listing_url). The
+        # crawl's clients keep naming hosts.
+        self.redact_hosts = schedule_only_ok if redact_hosts is None else redact_hosts
         # host -> the newest robots.txt stored for it ({fetched_at, status, body}: ingest.robots_copies), used only
         # when its live robots.txt is unreachable and the copy is at most ROBOTS_COPY_MAX_AGE_S old
         self.robots_copies = robots_copies or {}
@@ -948,7 +954,7 @@ class PoliteClient:
                     if (delay := self._crawl_delay(host, rules)) is not None and delay["capped"]:
                         log.warning(
                             "%s: robots.txt Crawl-delay %r capped at %.0f s",
-                            host,
+                            self._log_host(host),
                             delay["asked"],
                             delay["applied_s"],
                         )
@@ -961,6 +967,18 @@ class PoliteClient:
         self._note_robots(host)  # every fetch whose requests went by the host's rules records which copy
         rp = self._robots[host]
         return rp is None or rp.can_fetch(url)
+
+    def _log_host(self, host: str) -> str:
+        """The host as this client's log lines name it: `<host>` when redact_hosts is set."""
+        return "<host>" if self.redact_hosts else host
+
+    def _log_error(self, e: BaseException) -> str:
+        """An error as this client's log lines give it: its message, or with redact_hosts its class and the HTTP
+        status it carries (a message can name the host or URL)."""
+        if not self.redact_hosts:
+            return str(e)
+        code = getattr(e, "http_status", None) or getattr(e, "status", None)
+        return f"{type(e).__name__}" + (f", HTTP {code}" if code else "")
 
     def _crawl_delay(self, host: str, rules: RobotsRules | None) -> dict | None:
         """The Crawl-delay record for a host whose robots.txt asks one: the spacing its requests get is the larger of
@@ -991,8 +1009,9 @@ class PoliteClient:
             if copy is None:
                 raise u.error from u.__cause__
             age = (self._now() - copy["fetched_at"]).total_seconds()
-            log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)", host, u.error,
-                        copy["fetched_at"].isoformat(), age / 86400)  # fmt: skip
+            log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)",
+                        self._log_host(host), self._log_error(u.error), copy["fetched_at"].isoformat(),
+                        age / 86400)  # fmt: skip
             self.robots_used[robots_host_key(host)] = {"host": host, "source": "cached", "fetched_at": copy["fetched_at"],
                                       "age_s": round(age, 1), "status": copy["status"]}  # fmt: skip
             return robots_rules(copy["status"], copy.get("body")), None
