@@ -290,6 +290,6 @@ def test_the_build_passes_the_snapshots_chain_flags_to_dbt(chains, monkeypatch, 
     args = argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-19", accept_volume_change=False,
                               draft="d1", snapshot="s1", snapshot_sha256=decisions.digest(doc))  # fmt: skip
     with pytest.raises(Stop):
-        cli._build(args, lake, tmp_path / "coffee.duckdb", "2026-10-19", "b1")
+        cli._build(args, lake, tmp_path / "coffee.duckdb", "2026-10-19", "b1", None)
     assert seen.get("chain_flags") == chains
     assert ("chain_flags" in seen) == (chains is not None)
