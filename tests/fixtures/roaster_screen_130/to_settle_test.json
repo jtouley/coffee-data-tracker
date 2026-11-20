@@ -1,0 +1,771 @@
+[
+{
+"id": "te-01968011",
+"domain": "rivercafe.com",
+"website": "https://rivercafe.com/",
+"name": "Flavors Café",
+"city": "New York",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-01968011",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "site is a restaurant"
+},
+"label_B": {
+"id": "te-01968011",
+"label": "out_of_scope",
+"kind": "other",
+"note": "website is a different restaurant"
+}
+},
+{
+"id": "te-07323248",
+"domain": "lunarbaycoffeeco.com",
+"website": "https://lunarbaycoffeeco.com/",
+"name": "Lunar Bay Coffee Co",
+"city": "Crawfordville",
+"state": "FL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-07323248",
+"label": "out_of_scope",
+"kind": "other",
+"note": "Cloudflare challenge, did not load after retry"
+},
+"label_B": {
+"id": "te-07323248",
+"label": "unsure",
+"kind": "other",
+"note": "bot challenge (403); could not view"
+}
+},
+{
+"id": "te-11335850",
+"domain": "earlydogcoffee.com",
+"website": "https://earlydogcoffee.com/",
+"name": "Early Dog Coffee Golden",
+"city": "Golden",
+"state": "CO",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-11335850",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "no roasting claim"
+},
+"label_B": {
+"id": "te-11335850",
+"label": "unsure",
+"kind": "cafe",
+"note": "says coffee roaster in meta; bulk coffee on pickup menu; no roasting story"
+}
+},
+{
+"id": "te-12331523",
+"domain": "beantrustcoffee.com",
+"website": "https://beantrustcoffee.com/",
+"name": "Beantrust Coffeebar",
+"city": "Beverly",
+"state": "MA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-12331523",
+"label": "unsure",
+"kind": "reseller",
+"note": "sells own-label bags; no roasting claim"
+},
+"label_B": {
+"id": "te-12331523",
+"label": "unsure",
+"kind": "cafe",
+"note": "sells unbranded bags online; no clear claim it roasts"
+}
+},
+{
+"id": "te-15481877",
+"domain": "melitta.com",
+"website": "https://melitta.com/",
+"name": "Melittaf - European Coffee Classics",
+"city": "Cherry Hill",
+"state": "NJ",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-15481877",
+"label": "out_of_scope",
+"kind": "other",
+"note": "Cloudflare block, did not load"
+},
+"label_B": {
+"id": "te-15481877",
+"label": "unsure",
+"kind": "roaster",
+"note": "site returns 403 to fetches; could not view"
+}
+},
+{
+"id": "te-25614485",
+"domain": "brewportcoffee.com",
+"website": "https://brewportcoffee.com/",
+"name": "Brewport Coffee House",
+"city": "Bellport",
+"state": "NY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-25614485",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label bags online; no roasting claim"
+},
+"label_B": {
+"id": "te-25614485",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label bags online; no roasting claim"
+}
+},
+{
+"id": "te-30427905",
+"domain": "chutzpahcoffeeco.com",
+"website": "https://chutzpahcoffeeco.com/",
+"name": "Chutzpah Coffee Company",
+"city": "Norfolk",
+"state": "VA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-30427905",
+"label": "unsure",
+"kind": "reseller",
+"note": "brand; no roasting claim"
+},
+"label_B": {
+"id": "te-30427905",
+"label": "unsure",
+"kind": "reseller",
+"note": "own-brand kosher coffee sold online; no claim it roasts"
+}
+},
+{
+"id": "te-30636713",
+"domain": "drinkdript.com",
+"website": "https://drinkdript.com/",
+"name": "Dript Coffee",
+"city": "Philadelphia",
+"state": "PA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-30636713",
+"label": "in_scope",
+"kind": "roaster"
+},
+"label_B": {
+"id": "te-30636713",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "sells local roasters' coffee"
+}
+},
+{
+"id": "te-33378534",
+"domain": "thechefscornercafe.com",
+"website": "https://thechefscornercafe.com/",
+"name": "The Chefs Corner Cafe",
+"city": "Mineola",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-33378534",
+"label": "out_of_scope",
+"kind": "other",
+"note": "TLS failure"
+},
+"label_B": {
+"id": "te-33378534",
+"label": "out_of_scope",
+"kind": "cafe"
+}
+},
+{
+"id": "te-35198423",
+"domain": "bastioncoffeeco.com",
+"website": "https://bastioncoffeeco.com/",
+"name": "Bastion Coffee",
+"city": "Portland",
+"state": "OR",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-35198423",
+"label": "unsure",
+"kind": "roaster",
+"note": "roasts on shared roaster; web shop showed no products"
+},
+"label_B": {
+"id": "te-35198423",
+"label": "in_scope",
+"kind": "roaster"
+}
+},
+{
+"id": "te-35529810",
+"domain": "cremacoffeeproducts.com",
+"website": "https://cremacoffeeproducts.com/",
+"name": "Crema Coffee Products",
+"city": "Crown Point",
+"state": "IN",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-35529810",
+"label": "unsure",
+"kind": "reseller",
+"note": "espresso tools brand; beans \"roasted fresh\", roaster not named"
+},
+"label_B": {
+"id": "te-35529810",
+"label": "unsure",
+"kind": "reseller",
+"note": "espresso-tools store with a few beans; no roasting claim"
+}
+},
+{
+"id": "te-35735804",
+"domain": "sunnybearcoffeeco.com",
+"website": "https://sunnybearcoffeeco.com/",
+"name": "Sunny Bear Rescue Coffee Co.",
+"city": "Partlow",
+"state": "VA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-35735804",
+"label": "unsure",
+"kind": "reseller",
+"note": "\"our roasting style\" but roaster unclear"
+},
+"label_B": {
+"id": "te-35735804",
+"label": "unsure",
+"kind": "reseller",
+"note": "charity coffee brand; vague roasting claim, likely private label"
+}
+},
+{
+"id": "te-36969220",
+"domain": "quesuavecafe.com",
+"website": "https://quesuavecafe.com/",
+"name": "Que Suave Cafe",
+"city": "Socorro",
+"state": "NM",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-36969220",
+"label": "unsure",
+"kind": "cafe",
+"note": "own blend beans shippable; no roasting claim"
+},
+"label_B": {
+"id": "te-36969220",
+"label": "unsure",
+"kind": "cafe",
+"note": "own blend 12oz shippable, \"locally roasted\"; unclear by whom"
+}
+},
+{
+"id": "te-41873966",
+"domain": "brynmorcoffee.com",
+"website": "https://brynmorcoffee.com/",
+"name": "Brynmor Coffee",
+"city": "Lakewood",
+"state": "CO",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-41873966",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "te-41873966",
+"label": "out_of_scope",
+"kind": "roaster",
+"note": "roasts own beans; no online shop"
+}
+},
+{
+"id": "te-45658569",
+"domain": "parktower.buddybrew.com",
+"website": "https://parktower.buddybrew.com/",
+"name": "Buddy Brew Coffee",
+"city": "Tampa",
+"state": "FL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-45658569",
+"label": "in_scope",
+"kind": "roaster",
+"note": "subdomain TLS fail; main buddybrew.com site"
+},
+"label_B": {
+"id": "te-45658569",
+"label": "out_of_scope",
+"kind": "other",
+"note": "subdomain does not load (DNS error page)"
+}
+},
+{
+"id": "te-46228239",
+"domain": "staggeringox.com",
+"website": "https://staggeringox.com/",
+"name": "Red Atlas",
+"city": "Helena",
+"state": "MT",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-46228239",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "restaurant"
+},
+"label_B": {
+"id": "te-46228239",
+"label": "out_of_scope",
+"kind": "other",
+"note": "different business site"
+}
+},
+{
+"id": "te-51504050",
+"domain": "cravecoffeecompany.com",
+"website": "https://cravecoffeecompany.com/",
+"name": "Crave Coffee",
+"city": "Yakima",
+"state": "WA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-51504050",
+"label": "unsure",
+"kind": "cafe",
+"note": "sells house blend bags; no roasting claim"
+},
+"label_B": {
+"id": "te-51504050",
+"label": "unsure",
+"kind": "cafe",
+"note": "sells 1lb bags online; roasting not stated"
+}
+},
+{
+"id": "te-51825315",
+"domain": "surjecoffee.com",
+"website": "https://surjecoffee.com/",
+"name": "Surje Coffee at The Gallery",
+"city": "El Cajon",
+"state": "CA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-51825315",
+"label": "in_scope",
+"kind": "roaster"
+},
+"label_B": {
+"id": "te-51825315",
+"label": "unsure",
+"kind": "reseller",
+"note": "own-brand bags, \"small-batch roasted in California\", roaster not named"
+}
+},
+{
+"id": "te-55519915",
+"domain": "birdsandbeanscoffee.com",
+"website": "https://birdsandbeanscoffee.com/",
+"name": "Birds & Beans Coffee",
+"city": "Manchester Center",
+"state": "VT",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-55519915",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "no roasting claim; web search: roasted by partner"
+},
+"label_B": {
+"id": "te-55519915",
+"label": "unsure",
+"kind": "reseller",
+"note": "own-brand bags online; no roasting claim"
+}
+},
+{
+"id": "te-61182183",
+"domain": "freshtribela.com",
+"website": "https://freshtribela.com/",
+"name": "Fresh Tribe La",
+"city": "Los Angeles",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-61182183",
+"label": "unsure",
+"kind": "reseller",
+"note": "Ethiopian coffee \"locally roasted\"; roaster unclear"
+},
+"label_B": {
+"id": "te-61182183",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label bag in gift sets; says locally roasted, roaster unclear"
+}
+},
+{
+"id": "te-65883530",
+"domain": "grindcoffee.co",
+"website": "https://grindcoffee.co/",
+"name": "Grind Coffee Co.",
+"city": "Edinburg",
+"state": "TX",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-65883530",
+"label": "in_scope",
+"kind": "roaster",
+"note": "\"we roast it\""
+},
+"label_B": {
+"id": "te-65883530",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-brand bags online; no roasting claim"
+}
+},
+{
+"id": "te-67049553",
+"domain": "t4sanpablo.com",
+"website": "https://t4sanpablo.com/",
+"name": "T4",
+"city": "San Pablo",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-67049553",
+"label": "out_of_scope",
+"kind": "other",
+"note": "TLS cert mismatch"
+},
+"label_B": {
+"id": "te-67049553",
+"label": "out_of_scope",
+"kind": "cafe"
+}
+},
+{
+"id": "te-67480442",
+"domain": "beanzncream.com",
+"website": "https://beanzncream.com/",
+"name": "Beanz n’ Cream",
+"city": "San Mateo",
+"state": "FL",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-67480442",
+"label": "unsure",
+"kind": "roaster",
+"note": "roasts; online store under different brand"
+},
+"label_B": {
+"id": "te-67480442",
+"label": "unsure",
+"kind": "roaster",
+"note": "says it roasts; bags sold on a differently branded linked store"
+}
+},
+{
+"id": "te-68161490",
+"domain": "blendcoffeekicks.com",
+"website": "https://blendcoffeekicks.com/",
+"name": "Blend Coffee & Kicks",
+"city": "Seattle",
+"state": "WA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-68161490",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "sources from purveyors"
+},
+"label_B": {
+"id": "te-68161490",
+"label": "unsure",
+"kind": "cafe",
+"note": "1lb bag online; no roasting claim"
+}
+},
+{
+"id": "te-71874889",
+"domain": "aquamoscoffeecollaborative.com",
+"website": "https://aquamoscoffeecollaborative.com/",
+"name": "Aquamos Coffee & Ice Cream",
+"city": "Waupaca",
+"state": "WI",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-71874889",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label beans; no roasting claim"
+},
+"label_B": {
+"id": "te-71874889",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label bags online; no roasting claim"
+}
+},
+{
+"id": "te-75657778",
+"domain": "papakwans.com",
+"website": "https://papakwans.com/",
+"name": "Papa Kwan’s",
+"city": "North Palm Beach",
+"state": "FL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-75657778",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"our own roasts\" ambiguous"
+},
+"label_B": {
+"id": "te-75657778",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"our own roasts\" bags in cart; unclear who roasts"
+}
+},
+{
+"id": "te-76789649",
+"domain": "lalalandcafe.com",
+"website": "https://lalalandcafe.com/",
+"name": "La La Land",
+"city": "Calabasas",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-76789649",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "te-76789649",
+"label": "unsure",
+"kind": "cafe",
+"note": "own bags, \"hand-roasted\", roaster not named"
+}
+},
+{
+"id": "te-77347053",
+"domain": "happyplacecoffeerevolution.com",
+"website": "https://happyplacecoffeerevolution.com/",
+"name": "Happy Place Coffee & Eats",
+"city": "Woodbridge",
+"state": "VA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "te-77347053",
+"label": "unsure",
+"kind": "cafe",
+"note": "Jessy's Premium brand bags; roaster unclear"
+},
+"label_B": {
+"id": "te-77347053",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-brand farm coffee bags; no roasting claim"
+}
+},
+{
+"id": "te-77644054",
+"domain": "richcoast.com",
+"website": "https://richcoast.com/",
+"name": "Rich Coast Coffee",
+"city": "Lewistown",
+"state": "PA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-77644054",
+"label": "unsure",
+"kind": "reseller",
+"note": "distributor with own-label bags"
+},
+"label_B": {
+"id": "te-77644054",
+"label": "unsure",
+"kind": "reseller",
+"note": "coffee service distributor with own-label bags; no roasting claim"
+}
+},
+{
+"id": "te-77701285",
+"domain": "valentiacoffee.com",
+"website": "https://valentiacoffee.com/",
+"name": "Valentia Coffee",
+"city": "Madison",
+"state": "WI",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-77701285",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"small batch roasted\" retail; roaster unclear"
+},
+"label_B": {
+"id": "te-77701285",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"roasted in small batches\", ships bags; unclear by whom"
+}
+},
+{
+"id": "te-84275776",
+"domain": "coffeebeancafebr.com",
+"website": "https://coffeebeancafebr.com/",
+"name": "Coffee Bean Cafe",
+"city": "Baton Rouge",
+"state": "LA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-84275776",
+"label": "unsure",
+"kind": "other",
+"note": "robots.txt disallows all"
+},
+"label_B": {
+"id": "te-84275776",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS bot-check page; content not viewable"
+}
+},
+{
+"id": "te-88248099",
+"domain": "monacoscoffee.com",
+"website": "https://monacoscoffee.com/",
+"name": "Monaco's Coffee",
+"city": "Geneva",
+"state": "NY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-88248099",
+"label": "unsure",
+"kind": "roaster",
+"note": "roasts own; online bag sale not visible"
+},
+"label_B": {
+"id": "te-88248099",
+"label": "unsure",
+"kind": "roaster",
+"note": "house-roasted; could not find bags for sale online"
+}
+},
+{
+"id": "te-91263731",
+"domain": "coffeeandteacollective.com",
+"website": "https://coffeeandteacollective.com/",
+"name": "Coffee & Tea Collective",
+"city": "San Diego",
+"state": "CA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-91263731",
+"label": "in_scope",
+"kind": "roaster"
+},
+"label_B": {
+"id": "te-91263731",
+"label": "out_of_scope",
+"kind": "other",
+"note": "redirects to a broken store host"
+}
+},
+{
+"id": "te-93943276",
+"domain": "cafetal.coffee",
+"website": "https://cafetal.coffee/",
+"name": "Cafetal Coffee & Familia",
+"city": "Tempe",
+"state": "AZ",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-93943276",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"roasted with passion\"; retail; roaster unclear"
+},
+"label_B": {
+"id": "te-93943276",
+"label": "unsure",
+"kind": "cafe",
+"note": "family-farm coffee, retail on pickup menu; who roasts unclear"
+}
+},
+{
+"id": "te-95039129",
+"domain": "whammycoffee.com",
+"website": "https://whammycoffee.com/",
+"name": "Whammy Coffee",
+"city": "Birmingham",
+"state": "AL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-95039129",
+"label": "in_scope",
+"kind": "roaster",
+"note": "web search confirms own roasting"
+},
+"label_B": {
+"id": "te-95039129",
+"label": "unsure",
+"kind": "cafe",
+"note": "12oz bags online; no roasting claim"
+}
+},
+{
+"id": "te-96019681",
+"domain": "takemetoreverie.com",
+"website": "https://takemetoreverie.com/",
+"name": "𝚁𝚎𝚟𝚎𝚛𝚒𝚎 𝙲𝚘𝚏𝚏𝚎𝚎 𝙲𝚘𝚖𝚙𝚊𝚗𝚢",
+"city": "Carmel",
+"state": "NY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-96019681",
+"label": "unsure",
+"kind": "roaster",
+"note": "\"roasted in the Hudson Valley\", own production space; unclear"
+},
+"label_B": {
+"id": "te-96019681",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"roasted in the Hudson Valley\"; unclear if by them"
+}
+},
+{
+"id": "te-98729223",
+"domain": "herbandalchemy.com",
+"website": "https://herbandalchemy.com/",
+"name": "Herb & Alchemy",
+"city": "Chicago",
+"state": "IL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "te-98729223",
+"label": "unsure",
+"kind": "reseller",
+"note": "herb-infused coffee; roaster unclear"
+},
+"label_B": {
+"id": "te-98729223",
+"label": "unsure",
+"kind": "reseller",
+"note": "herb-infused coffee brand; cofounder is a roaster, no claim they roast it"
+}
+}
+]

@@ -1,0 +1,326 @@
+[
+ {
+  "id": "tr-00957584",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "farm cafe; 1 lb coffee in farm store is provided through another farm/roaster"
+ },
+ {
+  "id": "tr-01022668",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "describes its own roasting; roasted coffee orderable online (pickup or shipping)"
+ },
+ {
+  "id": "tr-01906697",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "online bags, but roastery page says \"our roaster is a local company\"; also says \"we roast\""
+ },
+ {
+  "id": "tr-02829305",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "coffee shop; drinks and food only"
+ },
+ {
+  "id": "tr-05696224",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "boba/ice cream cafe"
+ },
+ {
+  "id": "tr-06429888",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "drive-thru cafe sells own whole-bean bags online; no statement of who roasts"
+ },
+ {
+  "id": "tr-06807588",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "sweets shop/cafe; no coffee bags"
+ },
+ {
+  "id": "tr-07399102",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "bookstore cafe; drinks only"
+ },
+ {
+  "id": "tr-07752879",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "church bookstore cafe; sells other roasters' bags"
+ },
+ {
+  "id": "tr-10223751",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "matcha cafe"
+ },
+ {
+  "id": "tr-13944577",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "breakfast/lunch restaurant"
+ },
+ {
+  "id": "tr-14468979",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "cookie company"
+ },
+ {
+  "id": "tr-16814536",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "Peru coffee sold online \"roasted in SF bay area\"; unclear if roasted by them"
+ },
+ {
+  "id": "tr-20347237",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "diner"
+ },
+ {
+  "id": "tr-21097177",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; online menu drinks/food and merch only"
+ },
+ {
+  "id": "tr-22133448",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "restaurant cafe; loaded once in browser, later 502s"
+ },
+ {
+  "id": "tr-23539235",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; coffee roasted by a roaster down the road"
+ },
+ {
+  "id": "tr-23711468",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "church cafe"
+ },
+ {
+  "id": "tr-26519375",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "cafe/creative space sells own-label bags online; no statement of who roasts"
+ },
+ {
+  "id": "tr-32274389",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "catering/banquet business"
+ },
+ {
+  "id": "tr-36489080",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "placeholder coffee-shop site, no shop; first fetches reset/502"
+ },
+ {
+  "id": "tr-39150166",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "pod maker with factories; sells whole bean bags; roasting by them implied, not stated"
+ },
+ {
+  "id": "tr-39897745",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; drinks/food"
+ },
+ {
+  "id": "tr-41439543",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "coffee shop; drinks only"
+ },
+ {
+  "id": "tr-43713636",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "\"our small-batch roasting process\"; 12oz bags online"
+ },
+ {
+  "id": "tr-43940189",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe selling another roaster's bag"
+ },
+ {
+  "id": "tr-45375248",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe"
+ },
+ {
+  "id": "tr-45945112",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe"
+ },
+ {
+  "id": "tr-48247343",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves and sells another Portland roaster's beans"
+ },
+ {
+  "id": "tr-53656408",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; coffees roasted by named outside roasters"
+ },
+ {
+  "id": "tr-55810131",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "60-year roasting history, now owner's label; 1 lb bags in cart"
+ },
+ {
+  "id": "tr-57033833",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "house-roasted coffee; food truck, no online bag sales"
+ },
+ {
+  "id": "tr-57755891",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "\"we roast our own beans\"; bags in online cart, pickup only"
+ },
+ {
+  "id": "tr-61203706",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; drinks only"
+ },
+ {
+  "id": "tr-62617597",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "coffee brand with cafe, bags online; no statement of who roasts"
+ },
+ {
+  "id": "tr-65480752",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "bags online, \"expertly roasted, locally\"; not clear by whom"
+ },
+ {
+  "id": "tr-67307756",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "template-like store with placeholder text; no roasting claim"
+ },
+ {
+  "id": "tr-68229898",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "mobile coffee; merch only"
+ },
+ {
+  "id": "tr-72433093",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "African coffee bags and green coffee online; no statement of who roasts"
+ },
+ {
+  "id": "tr-72829837",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "herbs/apothecary shop"
+ },
+ {
+  "id": "tr-73560811",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe"
+ },
+ {
+  "id": "tr-74526242",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "cafe sells own-label 12oz bags online; no statement of who roasts"
+ },
+ {
+  "id": "tr-79061098",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "has a roastery; no own online bag sales (delivery apps only)"
+ },
+ {
+  "id": "tr-81863574",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "restaurant"
+ },
+ {
+  "id": "tr-83363092",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "FAQ: does not roast, beans from another roaster"
+ },
+ {
+  "id": "tr-84117351",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "art gallery/gift shop with coffee bar"
+ },
+ {
+  "id": "tr-90962867",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "restaurant cafe"
+ },
+ {
+  "id": "tr-92641726",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "\"we roast small batches\"; bags online"
+ },
+ {
+  "id": "tr-94651829",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe/coffee trailer"
+ },
+ {
+  "id": "tr-95661217",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "coffee shop sells own-label roast online; no statement of who roasts"
+ },
+ {
+  "id": "tr-97036264",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "French-language cafe/bar, no shop"
+ },
+ {
+  "id": "tr-97748512",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe serving another roaster's coffee"
+ },
+ {
+  "id": "tr-98352074",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "coffee shop; drinks/food only"
+ },
+ {
+  "id": "tr-99803666",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "\"Fine Roasted Coffees\" with online store, but site never says it roasts"
+ }
+]

@@ -1,0 +1,631 @@
+[
+{
+"id": "va-00832075",
+"domain": "hotchocolatesparrow.com",
+"website": "https://hotchocolatesparrow.com/",
+"name": "Hot Chocolate Sparrow",
+"city": "Orleans",
+"state": "MA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-00832075",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "candy/cafe; no roasting claim"
+},
+"label_B": {
+"id": "va-00832075",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "candy shop sells 1lb bags (Sparrow Blend, origins), no roasting claim"
+}
+},
+{
+"id": "va-05861623",
+"domain": "mandrakecafenyc.com",
+"website": "https://mandrakecafenyc.com/",
+"name": "Mandrake Café",
+"city": "New York",
+"state": "NY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-05861623",
+"label": "out_of_scope",
+"kind": "roaster",
+"note": "claims local roasting; no bags online"
+},
+"label_B": {
+"id": "va-05861623",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "mentions local roasting process; no bag sales online"
+}
+},
+{
+"id": "va-08922234",
+"domain": "occ-cafe.craftydelivers.com",
+"website": "https://occ-cafe.craftydelivers.com/",
+"name": "Cafe ‘73",
+"city": "Chicago",
+"state": "IL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-08922234",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "va-08922234",
+"label": "out_of_scope",
+"kind": "other",
+"note": "office catering platform"
+}
+},
+{
+"id": "va-16508489",
+"domain": "tricklebeecafe.org",
+"website": "https://tricklebeecafe.org/",
+"name": "Tricklebee Cafe",
+"city": "Milwaukee",
+"state": "WI",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-16508489",
+"label": "out_of_scope",
+"kind": "other",
+"note": "unreachable (TLS cert mismatch)"
+},
+"label_B": {
+"id": "va-16508489",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "pay-what-you-can community cafe"
+}
+},
+{
+"id": "va-18005324",
+"domain": "deltagrounds.com",
+"website": "https://deltagrounds.com/",
+"name": "Delta Grounds Coffee",
+"city": "Oak Grove",
+"state": "LA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-18005324",
+"label": "unsure",
+"kind": "cafe",
+"note": "own 12oz bags on Square store; roaster not stated"
+},
+"label_B": {
+"id": "va-18005324",
+"label": "unsure",
+"kind": "reseller",
+"note": "own-label 12oz bags online; no info on who roasts"
+}
+},
+{
+"id": "va-18022624",
+"domain": "bigyellowcoffee.com",
+"website": "https://bigyellowcoffee.com/",
+"name": "Yellow Elk Coffee",
+"city": "Miami",
+"state": "FL",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-18022624",
+"label": "out_of_scope",
+"kind": "other",
+"note": "store unavailable (402)"
+},
+"label_B": {
+"id": "va-18022624",
+"label": "unsure",
+"kind": "other",
+"note": "robots.txt disallows all"
+}
+},
+{
+"id": "va-20805083",
+"domain": "tintotimeusa.com",
+"website": "https://tintotimeusa.com/",
+"name": "Tinto Time",
+"city": "Brick Twp",
+"state": "NJ",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-20805083",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "no roasting, no shop"
+},
+"label_B": {
+"id": "va-20805083",
+"label": "unsure",
+"kind": "other",
+"note": "proxy relay reset"
+}
+},
+{
+"id": "va-21619865",
+"domain": "zekescoffeepgh.com",
+"website": "https://zekescoffeepgh.com/",
+"name": "Zeke's Coffee Pittsburgh",
+"city": "Pittsburgh",
+"state": "PA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-21619865",
+"label": "out_of_scope",
+"kind": "other",
+"note": "unreachable (reset/503)"
+},
+"label_B": {
+"id": "va-21619865",
+"label": "unsure",
+"kind": "other",
+"note": "proxy relay reset"
+}
+},
+{
+"id": "va-26456373",
+"domain": "drinkyoungcoffee.com",
+"website": "https://drinkyoungcoffee.com/",
+"name": "Young Coffee",
+"city": "New York",
+"state": "NY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-26456373",
+"label": "unsure",
+"kind": "other",
+"note": "one own-label bag, sold out; roasting not stated"
+},
+"label_B": {
+"id": "va-26456373",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "one own-label bag, sold out; no roasting info"
+}
+},
+{
+"id": "va-26660766",
+"domain": "coffeeontheriver.net",
+"website": "https://coffeeontheriver.net/",
+"name": "Coffee on the River",
+"city": "Lansing",
+"state": "IA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-26660766",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "no roasting claim; shop empty"
+},
+"label_B": {
+"id": "va-26660766",
+"label": "unsure",
+"kind": "other",
+"note": "proxy relay reset"
+}
+},
+{
+"id": "va-28491984",
+"domain": "themixcafe.com",
+"website": "https://themixcafe.com/",
+"name": "The Mix Cafe",
+"city": "Waco",
+"state": "TX",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-28491984",
+"label": "out_of_scope",
+"kind": "other",
+"note": "site expired"
+},
+"label_B": {
+"id": "va-28491984",
+"label": "unsure",
+"kind": "other",
+"note": "robots.txt disallows all"
+}
+},
+{
+"id": "va-45605993",
+"domain": "kismetcoffeecompany.com",
+"website": "https://kismetcoffeecompany.com/",
+"name": "Kismet Coffee Company",
+"city": "Bay Shore",
+"state": "NY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-45605993",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label Kismet Roast bag; roaster not stated"
+},
+"label_B": {
+"id": "va-45605993",
+"label": "unsure",
+"kind": "reseller",
+"note": "own-label bags online; no info on who roasts"
+}
+},
+{
+"id": "va-47477657",
+"domain": "empirecoffeetea.com",
+"website": "https://empirecoffeetea.com/",
+"name": "Empire Coffee & Tea",
+"city": "Hoboken",
+"state": "NJ",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-47477657",
+"label": "unsure",
+"kind": "reseller",
+"note": "title says roaster; about only says fresh roasted"
+},
+"label_B": {
+"id": "va-47477657",
+"label": "in_scope",
+"kind": "roaster",
+"note": "\"Premier Coffee Roaster\""
+}
+},
+{
+"id": "va-47717164",
+"domain": "orders.cremaespressogourmet.com",
+"website": "https://orders.cremaespressogourmet.com/",
+"name": "Crema Espresso Gourmet",
+"city": "Dunwoody",
+"state": "GA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-47717164",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label beans on Square store; roaster not stated"
+},
+"label_B": {
+"id": "va-47717164",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "beans category, no roasting claim"
+}
+},
+{
+"id": "va-55577712",
+"domain": "dps-siteplatform.com",
+"website": "https://dps-siteplatform.com/",
+"name": "Ramona's Cafe",
+"city": "San Antonio",
+"state": "TX",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-55577712",
+"label": "out_of_scope",
+"kind": "other",
+"note": "unreachable (reset/503)"
+},
+"label_B": {
+"id": "va-55577712",
+"label": "unsure",
+"kind": "other",
+"note": "proxy relay reset"
+}
+},
+{
+"id": "va-58859344",
+"domain": "theimbingbrand.com",
+"website": "https://theimbingbrand.com/",
+"name": "The IMBing Lounge",
+"city": "Palm Coast",
+"state": "FL",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-58859344",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label bags; roaster not stated"
+},
+"label_B": {
+"id": "va-58859344",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "lounge sells own-label bags, no roasting claim"
+}
+},
+{
+"id": "va-60048692",
+"domain": "baristas.tv",
+"website": "https://baristas.tv/",
+"name": "Baristas coffee",
+"city": "Tacoma",
+"state": "WA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-60048692",
+"label": "unsure",
+"kind": "other",
+"note": "own-brand white coffee bags; roasting not stated"
+},
+"label_B": {
+"id": "va-60048692",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "product brand; bags out of stock"
+}
+},
+{
+"id": "va-60473311",
+"domain": "drinkhuff.com",
+"website": "https://drinkhuff.com/",
+"name": "Huff Coffee",
+"city": "Palos Hills",
+"state": "IL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-60473311",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"Coffee Roasters\" name, beans for sale; no roasting story"
+},
+"label_B": {
+"id": "va-60473311",
+"label": "unsure",
+"kind": "roaster",
+"note": "\"Huff Coffee Roasters\" branding only"
+}
+},
+{
+"id": "va-61285355",
+"domain": "macyscoffee.net",
+"website": "https://macyscoffee.net/",
+"name": "Macy's European Coffee House",
+"city": "Flagstaff",
+"state": "AZ",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-61285355",
+"label": "unsure",
+"kind": "roaster",
+"note": "own 1lb bags online; site does not say who roasts"
+},
+"label_B": {
+"id": "va-61285355",
+"label": "in_scope",
+"kind": "roaster",
+"note": "1lb bags in Ecwid cart; in-house roasting confirmed by search"
+}
+},
+{
+"id": "va-67392005",
+"domain": "felicianacoffee.com",
+"website": "https://felicianacoffee.com/",
+"name": "Feliciana Coffee",
+"city": "United States Air Force Academy",
+"state": "CO",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-67392005",
+"label": "unsure",
+"kind": "reseller",
+"note": "\"ARA ... roast them under Feliciana\"; unclear who roasts"
+},
+"label_B": {
+"id": "va-67392005",
+"label": "unsure",
+"kind": "roaster",
+"note": "\"ARA... roast them under Feliciana\"; roaster unclear"
+}
+},
+{
+"id": "va-67418073",
+"domain": "ponyexpresso.com",
+"website": "https://ponyexpresso.com/",
+"name": "Jax Gourmet Coffee & Snow",
+"city": "Scottsbluff",
+"state": "NE",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-67418073",
+"label": "out_of_scope",
+"kind": "other",
+"note": "unreachable (reset/503; parking IP)"
+},
+"label_B": {
+"id": "va-67418073",
+"label": "unsure",
+"kind": "other",
+"note": "proxy relay reset"
+}
+},
+{
+"id": "va-67497673",
+"domain": "pilarcoffeebar.com",
+"website": "https://pilarcoffeebar.com/",
+"name": "Pilar Coffee Bar & Iced Treats",
+"city": "Deerfield Beach",
+"state": "FL",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-67497673",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "chain"
+},
+"label_B": {
+"id": "va-67497673",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "cafe franchise own-label bags, no roasting claim"
+}
+},
+{
+"id": "va-67568645",
+"domain": "borderlandscoffeeco.com",
+"website": "https://borderlandscoffeeco.com/",
+"name": "Borderlands Coffee Co",
+"city": "Eureka",
+"state": "SD",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-67568645",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label flavored bags; roasting not stated"
+},
+"label_B": {
+"id": "va-67568645",
+"label": "in_scope",
+"kind": "roaster",
+"note": "roasted to order"
+}
+},
+{
+"id": "va-68902041",
+"domain": "essentialbaking.com",
+"website": "https://essentialbaking.com/",
+"name": "Essential Baking Company",
+"city": "Seattle",
+"state": "WA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-68902041",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "bakery"
+},
+"label_B": {
+"id": "va-68902041",
+"label": "out_of_scope",
+"kind": "other",
+"note": "bakery"
+}
+},
+{
+"id": "va-71995476",
+"domain": "bootleggercoffeeco.com",
+"website": "https://bootleggercoffeeco.com/",
+"name": "Bootlegger Coffee Co",
+"city": "Mt Pleasant",
+"state": "SC",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-71995476",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "mobile bar; family roaster separate brand"
+},
+"label_B": {
+"id": "va-71995476",
+"label": "out_of_scope",
+"kind": "roaster",
+"note": "mobile coffee; no online bags"
+}
+},
+{
+"id": "va-76417882",
+"domain": "hawaiislocalbuzz.com",
+"website": "https://hawaiislocalbuzz.com/",
+"name": "Hawaii's Local Buzz Store & Showroom",
+"city": "Honolulu",
+"state": "HI",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-76417882",
+"label": "unsure",
+"kind": "other",
+"note": "farm coffee sold roasted; roaster not stated"
+},
+"label_B": {
+"id": "va-76417882",
+"label": "unsure",
+"kind": "other",
+"note": "bot challenge 403"
+}
+},
+{
+"id": "va-79362009",
+"domain": "magdalenacoffee.com",
+"website": "https://magdalenacoffee.com/",
+"name": "Magdalena Coffee & Houseplants",
+"city": "Miami",
+"state": "FL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-79362009",
+"label": "unsure",
+"kind": "cafe",
+"note": "own-label bags; roaster not stated"
+},
+"label_B": {
+"id": "va-79362009",
+"label": "unsure",
+"kind": "reseller",
+"note": "own-label bags from family farm; roaster not stated"
+}
+},
+{
+"id": "va-82960847",
+"domain": "trixiescoffee.myshopify.com",
+"website": "https://trixiescoffee.myshopify.com/",
+"name": "Trixie's Coffee Shop",
+"city": "Montgomery",
+"state": "TX",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-82960847",
+"label": "in_scope",
+"kind": "roaster",
+"note": "\"roasted to order\", \"our roaster\""
+},
+"label_B": {
+"id": "va-82960847",
+"label": "unsure",
+"kind": "roaster",
+"note": "\"From Our Roaster\", \"Roasted For You\"; ambiguous"
+}
+},
+{
+"id": "va-93661826",
+"domain": "blackpearlcaffeine.com",
+"website": "https://blackpearlcaffeine.com/",
+"name": "Black Pearl Café",
+"city": "Muscatine",
+"state": "IA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "va-93661826",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "no roasting (via WebFetch)"
+},
+"label_B": {
+"id": "va-93661826",
+"label": "unsure",
+"kind": "other",
+"note": "proxy relay reset"
+}
+},
+{
+"id": "va-97887396",
+"domain": "teawithtae.com",
+"website": "https://teawithtae.com/",
+"name": "Tea with Tae (Warehouse) | No Retail or In-Person | Local Pickup Only!",
+"city": "Golden",
+"state": "CO",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-97887396",
+"label": "out_of_scope",
+"kind": "other",
+"note": "unreachable (site challenge 403)"
+},
+"label_B": {
+"id": "va-97887396",
+"label": "unsure",
+"kind": "other",
+"note": "bot challenge 403"
+}
+}
+]

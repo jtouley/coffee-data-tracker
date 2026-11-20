@@ -1,0 +1,1119 @@
+[
+{
+"id": "tr-00957584",
+"domain": "heather-ridge-farm.com",
+"website": "https://heather-ridge-farm.com/",
+"name": "Bees Knees Cafe",
+"city": "Preston Hollow",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-00957584",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "farm store; coffee from Stoneledge Farm"
+},
+"label_B": {
+"id": "tr-00957584",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "farm cafe; sells 'Coffee Whole Beans', no roasting claim"
+}
+},
+{
+"id": "tr-01022668",
+"domain": "serendipityroastingcompany.com",
+"website": "https://serendipityroastingcompany.com/",
+"name": "Serendipity Roasting Company",
+"city": "Eldon",
+"state": "MO",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-01022668",
+"label": "in_scope",
+"kind": "roaster",
+"note": "Square shop category Order Roasted Coffee; roasting company"
+},
+"label_B": {
+"id": "tr-01022668",
+"label": "unsure",
+"kind": "roaster",
+"note": "JS-only site; name says roasting co, content unreadable"
+}
+},
+{
+"id": "tr-01906697",
+"domain": "thearrowheadcoffee.com",
+"website": "https://thearrowheadcoffee.com/",
+"name": "Arrowhead Coffee",
+"city": "Yacolt",
+"state": "WA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-01906697",
+"label": "unsure",
+"kind": "reseller",
+"note": "\"our roaster is a local company\" vs \"we roast\"; unclear who roasts"
+},
+"label_B": {
+"id": "tr-01906697",
+"label": "in_scope",
+"kind": "roaster",
+"note": "roastery; online coffee shop"
+}
+},
+{
+"id": "tr-02829305",
+"domain": "1828coffee.com",
+"website": "https://1828coffee.com/",
+"name": "1828 Coffee Co.",
+"city": "Zebulon",
+"state": "GA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-02829305",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "Square cafe menu"
+},
+"label_B": {
+"id": "tr-02829305",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-05696224",
+"domain": "sweet-nation.com",
+"website": "https://sweet-nation.com/",
+"name": "The Sweet Nation",
+"city": "Gadsden",
+"state": "AL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-05696224",
+"label": "out_of_scope",
+"kind": "other",
+"note": "sweets shop, no coffee content"
+},
+"label_B": {
+"id": "tr-05696224",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-06429888",
+"domain": "renegadecoffeeaz.com",
+"website": "https://renegadecoffeeaz.com/",
+"name": "Renegade Coffee Company",
+"city": "Mesa",
+"state": "AZ",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-06429888",
+"label": "unsure",
+"kind": "cafe",
+"note": "\"locally roasted in Arizona\", no claim they roast"
+},
+"label_B": {
+"id": "tr-06429888",
+"label": "unsure",
+"kind": "cafe",
+"note": "beans 'locally roasted in Arizona', unclear who roasts"
+}
+},
+{
+"id": "tr-06807588",
+"domain": "sheerasweets.com",
+"website": "https://sheerasweets.com/",
+"name": "Cafe Sheera",
+"city": "Beverly Hills",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-06807588",
+"label": "out_of_scope",
+"kind": "other",
+"note": "sweets"
+},
+"label_B": {
+"id": "tr-06807588",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "sweets shop"
+}
+},
+{
+"id": "tr-07399102",
+"domain": "prairiewitchcoffee.com",
+"website": "https://prairiewitchcoffee.com/",
+"name": "Prairie Witch Coffee",
+"city": "Okmulgee",
+"state": "OK",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-07399102",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "bookstore cafe"
+},
+"label_B": {
+"id": "tr-07399102",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-07752879",
+"domain": "thegroundsatmeck.com",
+"website": "https://thegroundsatmeck.com/",
+"name": "The Grounds Bookstore and Cafe",
+"city": "Charlotte",
+"state": "NC",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-07752879",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "bookstore cafe"
+},
+"label_B": {
+"id": "tr-07752879",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-10223751",
+"domain": "recess.love",
+"website": "https://recess.love/",
+"name": "Recess",
+"city": "Indianapolis",
+"state": "IN",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-10223751",
+"label": "out_of_scope",
+"kind": "other",
+"note": "matcha"
+},
+"label_B": {
+"id": "tr-10223751",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "matcha cafe"
+}
+},
+{
+"id": "tr-13944577",
+"domain": "wildeatstx.com",
+"website": "https://wildeatstx.com/",
+"name": "Wild Eats",
+"city": "Lubbock",
+"state": "TX",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-13944577",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-13944577",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-14468979",
+"domain": "feedyoursoul.com",
+"website": "https://feedyoursoul.com/",
+"name": "Feed Your Soul Cafe",
+"city": "New York",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-14468979",
+"label": "out_of_scope",
+"kind": "other",
+"note": "cookies"
+},
+"label_B": {
+"id": "tr-14468979",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "cookie bakery"
+}
+},
+{
+"id": "tr-16814536",
+"domain": "grinchos.online",
+"website": "https://grinchos.online/",
+"name": "Grinchos",
+"city": "San Jose",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-16814536",
+"label": "unsure",
+"kind": "reseller",
+"note": "Peru coffee \"roasted in SF bay area\", no claim they roast"
+},
+"label_B": {
+"id": "tr-16814536",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "Peruvian coffee roasted/bagged at origin"
+}
+},
+{
+"id": "tr-20347237",
+"domain": "citycafe-tx.com",
+"website": "https://citycafe-tx.com/",
+"name": "City Cafe",
+"city": "Iowa Park",
+"state": "TX",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-20347237",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-20347237",
+"label": "out_of_scope",
+"kind": "other",
+"note": "site does not load after retry"
+}
+},
+{
+"id": "tr-21097177",
+"domain": "arbucklecraftcoffee.com",
+"website": "https://arbucklecraftcoffee.com/",
+"name": "Arbuckle Craft Coffee & Bagels",
+"city": "Ada",
+"state": "OK",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-21097177",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "Square cafe menu"
+},
+"label_B": {
+"id": "tr-21097177",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-22133448",
+"domain": "thefaintinggoatcafe.com",
+"website": "https://thefaintinggoatcafe.com/",
+"name": "The Fainting Goat Cafe",
+"city": "Nashville",
+"state": "TN",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-22133448",
+"label": "out_of_scope",
+"kind": "other",
+"note": "unreachable"
+},
+"label_B": {
+"id": "tr-22133448",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": ""
+}
+},
+{
+"id": "tr-23539235",
+"domain": "reddaisycafe.com",
+"website": "https://reddaisycafe.com/",
+"name": "Red Daisy Cafe",
+"city": "Millville",
+"state": "DE",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-23539235",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "coffee roasted by others nearby"
+},
+"label_B": {
+"id": "tr-23539235",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-23711468",
+"domain": "fireside.cafe",
+"website": "https://fireside.cafe/",
+"name": "WSCC Fireside Cafe",
+"city": "Springfield",
+"state": "IL",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-23711468",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "Square cafe menu"
+},
+"label_B": {
+"id": "tr-23711468",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-26519375",
+"domain": "landtoseanyc.com",
+"website": "https://landtoseanyc.com/",
+"name": "Land to Sea",
+"city": "Brooklyn",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-26519375",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "cafe; own-label bags, no roasting claim"
+},
+"label_B": {
+"id": "tr-26519375",
+"label": "in_scope",
+"kind": "roaster",
+"note": "product pages: 'we roast this coffee'"
+}
+},
+{
+"id": "tr-32274389",
+"domain": "kenaicatering.com",
+"website": "https://kenaicatering.com/",
+"name": "Iditarod Cafe",
+"city": "Kenai",
+"state": "AK",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-32274389",
+"label": "out_of_scope",
+"kind": "other",
+"note": "catering"
+},
+"label_B": {
+"id": "tr-32274389",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "catering"
+}
+},
+{
+"id": "tr-36489080",
+"domain": "kateskoffee.com",
+"website": "https://kateskoffee.com/",
+"name": "Kate's Koffee",
+"city": "Las Vegas",
+"state": "NV",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-36489080",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "placeholder"
+},
+"label_B": {
+"id": "tr-36489080",
+"label": "out_of_scope",
+"kind": "other",
+"note": "site does not load after retry"
+}
+},
+{
+"id": "tr-39150166",
+"domain": "drinkmauds.com",
+"website": "https://drinkmauds.com/",
+"name": "Maud's Coffee & Tea",
+"city": "San Diego",
+"state": "CA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-39150166",
+"label": "unsure",
+"kind": "reseller",
+"note": "pod co-packer; unclear if it roasts its whole bean"
+},
+"label_B": {
+"id": "tr-39150166",
+"label": "in_scope",
+"kind": "roaster",
+"note": "batch-roasted in own San Diego/NY factories; whole bean bags online"
+}
+},
+{
+"id": "tr-39897745",
+"domain": "jos15.com",
+"website": "https://jos15.com/",
+"name": "JOS Fifteen Coffee, Ice Cream, Bakery, and Sweets",
+"city": "Antioch",
+"state": "TN",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-39897745",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "Square cafe; own coffee bag, no roasting claim"
+},
+"label_B": {
+"id": "tr-39897745",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-41439543",
+"domain": "firstdatecoffeeshops.com",
+"website": "https://firstdatecoffeeshops.com/",
+"name": "First Date Coffee Shop",
+"city": "Toms River",
+"state": "NJ",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-41439543",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-41439543",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-43713636",
+"domain": "bonescoffee.com",
+"website": "https://bonescoffee.com/",
+"name": "Bones Coffee",
+"city": "Cape Coral",
+"state": "FL",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-43713636",
+"label": "in_scope",
+"kind": "roaster",
+"note": "small-batch roasting"
+},
+"label_B": {
+"id": "tr-43713636",
+"label": "unsure",
+"kind": "roaster",
+"note": "only 'Roasted Small Batch', no who/where"
+}
+},
+{
+"id": "tr-43940189",
+"domain": "mycafe.buzz",
+"website": "https://mycafe.buzz/",
+"name": "My Cafe Buzz",
+"city": "Bellefonte",
+"state": "PA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-43940189",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-43940189",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-45375248",
+"domain": "freerangecafe.com",
+"website": "https://freerangecafe.com/",
+"name": "Free Range Cafe",
+"city": "Hagerstown",
+"state": "MD",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-45375248",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "locally roasted, not by them"
+},
+"label_B": {
+"id": "tr-45375248",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-45945112",
+"domain": "freelperkcafe.com",
+"website": "https://freelperkcafe.com/",
+"name": "Freel Perk Cafe",
+"city": "South Lake Tahoe",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-45945112",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-45945112",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-48247343",
+"domain": "sexycoffeepdx.com",
+"website": "https://sexycoffeepdx.com/",
+"name": "GrindHouse Coffee",
+"city": "Portland",
+"state": "OR",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-48247343",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-48247343",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-53656408",
+"domain": "ph.coffee",
+"website": "https://ph.coffee/",
+"name": "PH Coffee",
+"city": "Kansas City",
+"state": "MO",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-53656408",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "coffee from other roasters"
+},
+"label_B": {
+"id": "tr-53656408",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "Hammerhand Coffee Roasters; bags in cafe only"
+}
+},
+{
+"id": "tr-55810131",
+"domain": "drinkconti.com",
+"website": "https://drinkconti.com/",
+"name": "Conti Coffee",
+"city": "Louisville",
+"state": "KY",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-55810131",
+"label": "in_scope",
+"kind": "roaster",
+"note": "60-yr roaster, Wix cart"
+},
+"label_B": {
+"id": "tr-55810131",
+"label": "unsure",
+"kind": "roaster",
+"note": "bought a roasting company; unclear current roasting/consumer shop"
+}
+},
+{
+"id": "tr-57033833",
+"domain": "bakedbrewed.com",
+"website": "https://bakedbrewed.com/",
+"name": "Baked and Brewed Cafe",
+"city": "Alton",
+"state": "NH",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-57033833",
+"label": "unsure",
+"kind": "roaster",
+"note": "house roasted; Square category House Roasted Coffee, items not visible"
+},
+"label_B": {
+"id": "tr-57033833",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-57755891",
+"domain": "fuellafayette.com",
+"website": "https://fuellafayette.com/",
+"name": "Fuel West",
+"city": "West Lafayette",
+"state": "IN",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-57755891",
+"label": "in_scope",
+"kind": "roaster",
+"note": "roastery; Whole Bean Shipped category"
+},
+"label_B": {
+"id": "tr-57755891",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-61203706",
+"domain": "sugarbarrelco.com",
+"website": "https://sugarbarrelco.com/",
+"name": "Sugar Barrel",
+"city": "Fisher",
+"state": "IL",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-61203706",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-61203706",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-62617597",
+"domain": "petrolcoffee.com",
+"website": "https://petrolcoffee.com/",
+"name": "Thunder Road Cafe",
+"city": "West Hollywood",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-62617597",
+"label": "unsure",
+"kind": "roaster",
+"note": "Petrol Coffee \"roasted to order in LA\", no claim they roast"
+},
+"label_B": {
+"id": "tr-62617597",
+"label": "unsure",
+"kind": "roaster",
+"note": "Petrol Coffee 'roasted to order in LA', no claim they roast"
+}
+},
+{
+"id": "tr-65480752",
+"domain": "oldkatycoffee.com",
+"website": "https://oldkatycoffee.com/",
+"name": "Old Katy Coffee",
+"city": "Katy",
+"state": "TX",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-65480752",
+"label": "unsure",
+"kind": "reseller",
+"note": "\"expertly roasted, locally\", roaster not stated"
+},
+"label_B": {
+"id": "tr-65480752",
+"label": "unsure",
+"kind": "reseller",
+"note": "'expertly roasted, locally', roaster not named"
+}
+},
+{
+"id": "tr-67307756",
+"domain": "3blackcatscafe.com",
+"website": "https://3blackcatscafe.com/",
+"name": "3 black cats",
+"city": "Brooklyn",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-67307756",
+"label": "out_of_scope",
+"kind": "other",
+"note": "empty shop/guides site"
+},
+"label_B": {
+"id": "tr-67307756",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "template store, no roasting claim"
+}
+},
+{
+"id": "tr-68229898",
+"domain": "jacscoffee.us",
+"website": "https://jacscoffee.us/",
+"name": "Jac's Coffee",
+"city": "Kenilworth",
+"state": "NJ",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-68229898",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "mobile coffee"
+},
+"label_B": {
+"id": "tr-68229898",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-72433093",
+"domain": "richlandhub.com",
+"website": "https://richlandhub.com/",
+"name": "Richlandhub",
+"city": "Vancouver",
+"state": "WA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-72433093",
+"label": "out_of_scope",
+"kind": "reseller",
+"note": "works with roasters"
+},
+"label_B": {
+"id": "tr-72433093",
+"label": "unsure",
+"kind": "reseller",
+"note": "sells roasted + green African coffee; who roasts not stated"
+}
+},
+{
+"id": "tr-72829837",
+"domain": "earthselements.co",
+"website": "https://earthselements.co/",
+"name": "Luna Mobile Cafe",
+"city": "Walhalla",
+"state": "SC",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-72829837",
+"label": "out_of_scope",
+"kind": "other",
+"note": "essential oils"
+},
+"label_B": {
+"id": "tr-72829837",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-73560811",
+"domain": "coffeecupcafenc.com",
+"website": "https://coffeecupcafenc.com/",
+"name": "Coffee Cup Cafe",
+"city": "Clyde",
+"state": "NC",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-73560811",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-73560811",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-74526242",
+"domain": "urbanacoffee.com",
+"website": "https://urbanacoffee.com/",
+"name": "Urbana Cafe and Gallery",
+"city": "New York",
+"state": "NY",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-74526242",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-74526242",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-79061098",
+"domain": "sujuscoffee.com",
+"website": "https://sujuscoffee.com/",
+"name": "Suju's Coffee & Tea",
+"city": "Fremont",
+"state": "CA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-79061098",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "no roasting claim"
+},
+"label_B": {
+"id": "tr-79061098",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only; says 'freshly roasted coffee beans', unclear who roasts"
+}
+},
+{
+"id": "tr-81863574",
+"domain": "daracafeandbrew.com",
+"website": "https://daracafeandbrew.com/",
+"name": "Da Ra Cafe and Brew",
+"city": "Eugene",
+"state": "OR",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-81863574",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-81863574",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-83363092",
+"domain": "cafeconmigo.com",
+"website": "https://cafeconmigo.com/",
+"name": "Cafe Conmigo - Wexford",
+"city": "Wexford",
+"state": "PA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-83363092",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-83363092",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-84117351",
+"domain": "thebackyardia.com",
+"website": "https://thebackyardia.com/",
+"name": "The Back Yard",
+"city": "Collins",
+"state": "IA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-84117351",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-84117351",
+"label": "out_of_scope",
+"kind": "other",
+"note": "art workshops"
+}
+},
+{
+"id": "tr-90962867",
+"domain": "lh.cafe",
+"website": "https://lh.cafe/",
+"name": "Lake House Cafe - Andover",
+"city": "Andover",
+"state": "NJ",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-90962867",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-90962867",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-92641726",
+"domain": "brokencoffeeus.com",
+"website": "https://brokencoffeeus.com/",
+"name": "Broken Coffee - Cheongdam Food Hall",
+"city": "Las Vegas",
+"state": "NV",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-92641726",
+"label": "in_scope",
+"kind": "roaster",
+"note": "roasted locally in LV"
+},
+"label_B": {
+"id": "tr-92641726",
+"label": "unsure",
+"kind": "reseller",
+"note": "bags sold, no roasting claim"
+}
+},
+{
+"id": "tr-94651829",
+"domain": "casagracecoffee.com",
+"website": "https://casagracecoffee.com/",
+"name": "Casa Grace Coffee Co.",
+"city": "Baytown",
+"state": "TX",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-94651829",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-94651829",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-95661217",
+"domain": "rainbeaujos.com",
+"website": "https://rainbeaujos.com/",
+"name": "Rainbeau Jo's",
+"city": "Lihue",
+"state": "HI",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-95661217",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-95661217",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-97036264",
+"domain": "silver-cafe.com",
+"website": "https://silver-cafe.com/",
+"name": "Silver Cafe",
+"city": "San Francisco",
+"state": "CA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-97036264",
+"label": "out_of_scope",
+"kind": "cafe",
+"note": "French cafe site"
+},
+"label_B": {
+"id": "tr-97036264",
+"label": "out_of_scope",
+"kind": "other",
+"note": "French art venue"
+}
+},
+{
+"id": "tr-97748512",
+"domain": "beforeandaftersperryvillesstore.com",
+"website": "https://beforeandaftersperryvillesstore.com/",
+"name": "Before & After",
+"city": "Sperryville",
+"state": "VA",
+"overture_tag": "cafe",
+"label_A": {
+"id": "tr-97748512",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-97748512",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-98352074",
+"domain": "hebrewscoffeelbk.com",
+"website": "https://hebrewscoffeelbk.com/",
+"name": "He-Brews Coffee",
+"city": "Lubbock",
+"state": "TX",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-98352074",
+"label": "out_of_scope",
+"kind": "cafe"
+},
+"label_B": {
+"id": "tr-98352074",
+"label": "unsure",
+"kind": "cafe",
+"note": "JS-only site, content not readable"
+}
+},
+{
+"id": "tr-99803666",
+"domain": "arbucklesgourmetcoffee.com",
+"website": "https://arbucklesgourmetcoffee.com/",
+"name": "Arbuckle's Coffee",
+"city": "Verona",
+"state": "PA",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "tr-99803666",
+"label": "unsure",
+"kind": "roaster",
+"note": "\"Fine Roasted Coffees\"; store pages fail TLS"
+},
+"label_B": {
+"id": "tr-99803666",
+"label": "unsure",
+"kind": "roaster",
+"note": "old site, 'Fine Roasted Coffees'; roasting and cart unclear"
+}
+}
+]

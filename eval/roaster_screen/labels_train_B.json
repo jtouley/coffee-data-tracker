@@ -1,0 +1,1202 @@
+[
+ {
+  "id": "tr-00155784",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasting page; online coffee shop"
+ },
+ {
+  "id": "tr-00957584",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "farm cafe; sells 'Coffee Whole Beans', no roasting claim"
+ },
+ {
+  "id": "tr-01022668",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "JS-only site; name says roasting co, content unreadable"
+ },
+ {
+  "id": "tr-01150219",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roastery and coffee shop; shop/subscriptions"
+ },
+ {
+  "id": "tr-01553024",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-01871029",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves locally roasted coffee"
+ },
+ {
+  "id": "tr-01906697",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roastery; online coffee shop"
+ },
+ {
+  "id": "tr-02474523",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "500 error"
+ },
+ {
+  "id": "tr-02829305",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-03142441",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "sells beans from an outside roaster"
+ },
+ {
+  "id": "tr-03488285",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasting facility; online shop"
+ },
+ {
+  "id": "tr-05662761",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "site is SanVel Coffee Roasters, roasted weekly; shop"
+ },
+ {
+  "id": "tr-05696224",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-05935299",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-06239278",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "Shopify store unavailable"
+ },
+ {
+  "id": "tr-06429888",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "beans 'locally roasted in Arizona', unclear who roasts"
+ },
+ {
+  "id": "tr-06807588",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "sweets shop"
+ },
+ {
+  "id": "tr-07046837",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": ""
+ },
+ {
+  "id": "tr-07100486",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no roasting claim, no products"
+ },
+ {
+  "id": "tr-07242060",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "city site, does not load"
+ },
+ {
+  "id": "tr-07399102",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-07752879",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-09408575",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-10223751",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "matcha cafe"
+ },
+ {
+  "id": "tr-10806529",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves Colectivo"
+ },
+ {
+  "id": "tr-11704030",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no online bag shop; roasting unclear"
+ },
+ {
+  "id": "tr-11904200",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-12103427",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "college site, does not load"
+ },
+ {
+  "id": "tr-12708079",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-13944577",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-13966154",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site does not load after retry"
+ },
+ {
+  "id": "tr-14423514",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site does not load after retry"
+ },
+ {
+  "id": "tr-14468979",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cookie bakery"
+ },
+ {
+  "id": "tr-15109666",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "instant coffee only, no roasting claim"
+ },
+ {
+  "id": "tr-16076232",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-16444682",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-16814536",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "Peruvian coffee roasted/bagged at origin"
+ },
+ {
+  "id": "tr-16958143",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast; bean shop"
+ },
+ {
+  "id": "tr-17227077",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-18475610",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-20347237",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site does not load after retry"
+ },
+ {
+  "id": "tr-20349617",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "parked lander"
+ },
+ {
+  "id": "tr-20661639",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasted by former foster youth; online shop (domain covenantcoffee.org)"
+ },
+ {
+  "id": "tr-21042314",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-21097177",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-21148720",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-22133448",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-22143513",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-23399776",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "small batch roasted; shop"
+ },
+ {
+  "id": "tr-23539235",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-23711468",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-24216784",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-24294114",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-24466671",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "third-party directory page"
+ },
+ {
+  "id": "tr-24742008",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast; online shop"
+ },
+ {
+  "id": "tr-25324353",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site expired"
+ },
+ {
+  "id": "tr-25438325",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-26519375",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "product pages: 'we roast this coffee'"
+ },
+ {
+  "id": "tr-26906886",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": ""
+ },
+ {
+  "id": "tr-27480037",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-28225767",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain for sale"
+ },
+ {
+  "id": "tr-28574328",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "brewery cafe serving Broadsheet"
+ },
+ {
+  "id": "tr-28737022",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "locally-roasted beans"
+ },
+ {
+  "id": "tr-29129361",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "redirects to unrelated org"
+ },
+ {
+  "id": "tr-29762886",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-29859595",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "bot-check page, did not load"
+ },
+ {
+  "id": "tr-30009104",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "placeholder WordPress"
+ },
+ {
+  "id": "tr-30157515",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-30318239",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "site coming soon; mentions DOMA roasting"
+ },
+ {
+  "id": "tr-31455407",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "shop is merch only"
+ },
+ {
+  "id": "tr-32212073",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "parked lander"
+ },
+ {
+  "id": "tr-32274389",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "catering"
+ },
+ {
+  "id": "tr-32858584",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Kona farm, roasted daily; shop"
+ },
+ {
+  "id": "tr-33650074",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "sports nutrition"
+ },
+ {
+  "id": "tr-34304876",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no coffee bags in shop"
+ },
+ {
+  "id": "tr-34467314",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "roasted by Carrboro Coffee Roasters"
+ },
+ {
+  "id": "tr-34707398",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "about: roasting coffee beans; shop"
+ },
+ {
+  "id": "tr-35171704",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-36056375",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "Wix domain not connected"
+ },
+ {
+  "id": "tr-36489080",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site does not load after retry"
+ },
+ {
+  "id": "tr-36712718",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-36883106",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "game store"
+ },
+ {
+  "id": "tr-36890201",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "smokehouse/gift shop"
+ },
+ {
+  "id": "tr-38492326",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "bot-check page, did not load"
+ },
+ {
+  "id": "tr-39150166",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "batch-roasted in own San Diego/NY factories; whole bean bags online"
+ },
+ {
+  "id": "tr-39182257",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-39865977",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-39897745",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-40264030",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-41077785",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "diner chain"
+ },
+ {
+  "id": "tr-41439543",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-41746545",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-41784528",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-41952109",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast it"
+ },
+ {
+  "id": "tr-41972388",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "522 error"
+ },
+ {
+  "id": "tr-42362919",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-43713636",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "only 'Roasted Small Batch', no who/where"
+ },
+ {
+  "id": "tr-43940189",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-44160982",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "domain redirects to Inheritance Coffee (Pensacola roaster)"
+ },
+ {
+  "id": "tr-44634125",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-45356076",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "locally roasted beans"
+ },
+ {
+  "id": "tr-45375248",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-45945112",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-46041723",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-46259221",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-46909000",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "locally-roasted coffee on drip"
+ },
+ {
+  "id": "tr-47272699",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-48247343",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-48435669",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "chain corporate site (Canada)"
+ },
+ {
+  "id": "tr-48877089",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-49521329",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roast our own beans; shop"
+ },
+ {
+  "id": "tr-50607383",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "redirects to catering company"
+ },
+ {
+  "id": "tr-51274211",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-53630534",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "government site"
+ },
+ {
+  "id": "tr-53656408",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Hammerhand Coffee Roasters; bags in cafe only"
+ },
+ {
+  "id": "tr-54598955",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "DNS failure"
+ },
+ {
+  "id": "tr-55786748",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast in Hoquiam; shop"
+ },
+ {
+  "id": "tr-55810131",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "bought a roasting company; unclear current roasting/consumer shop"
+ },
+ {
+  "id": "tr-56386699",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "redirects to spam"
+ },
+ {
+  "id": "tr-56521606",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-57033833",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-57039600",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "kratom lounge"
+ },
+ {
+  "id": "tr-57755891",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-57934336",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-58158665",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "redirects to spam"
+ },
+ {
+  "id": "tr-60532116",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-60748360",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no shop found"
+ },
+ {
+  "id": "tr-61203706",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-61385758",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "spam"
+ },
+ {
+  "id": "tr-61765120",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "brews Taxus Street"
+ },
+ {
+  "id": "tr-62497715",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "cannabis"
+ },
+ {
+  "id": "tr-62617597",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Petrol Coffee 'roasted to order in LA', no claim they roast"
+ },
+ {
+  "id": "tr-62828904",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "third-party directory page"
+ },
+ {
+  "id": "tr-63499507",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "store unavailable"
+ },
+ {
+  "id": "tr-65173489",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roast in house"
+ },
+ {
+  "id": "tr-65480752",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "'expertly roasted, locally', roaster not named"
+ },
+ {
+  "id": "tr-66777030",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "beans coming soon"
+ },
+ {
+  "id": "tr-66872146",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast in small batches; beans shop"
+ },
+ {
+  "id": "tr-67172965",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-67307756",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "template store, no roasting claim"
+ },
+ {
+  "id": "tr-67724125",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "grown and roasted by family; shop"
+ },
+ {
+  "id": "tr-68038813",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-68175706",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roastery; online store"
+ },
+ {
+  "id": "tr-68229898",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-68775624",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain for sale"
+ },
+ {
+  "id": "tr-69123102",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast on Probat; shop"
+ },
+ {
+  "id": "tr-69217629",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site does not load after retry"
+ },
+ {
+  "id": "tr-69345743",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "preserves company"
+ },
+ {
+  "id": "tr-69451956",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "restaurant"
+ },
+ {
+  "id": "tr-70174632",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-70481875",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "third-party directory page"
+ },
+ {
+  "id": "tr-71364197",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "not the cafe's site"
+ },
+ {
+  "id": "tr-71774163",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-72433093",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "sells roasted + green African coffee; who roasts not stated"
+ },
+ {
+  "id": "tr-72720448",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "specialty roaster, roasted to order; shop"
+ },
+ {
+  "id": "tr-72829837",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-73106270",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "candy shop selling Portland Roasters coffee"
+ },
+ {
+  "id": "tr-73560811",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-73929721",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "clothing store"
+ },
+ {
+  "id": "tr-74526242",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-75365616",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves Coava"
+ },
+ {
+  "id": "tr-75683452",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "link page, no shop"
+ },
+ {
+  "id": "tr-75808158",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "gift shop"
+ },
+ {
+  "id": "tr-76294766",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-78281861",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-78550643",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "business association directory"
+ },
+ {
+  "id": "tr-79061098",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only; says 'freshly roasted coffee beans', unclear who roasts"
+ },
+ {
+  "id": "tr-80462022",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no shop; partner spam page"
+ },
+ {
+  "id": "tr-81616986",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no bag shop"
+ },
+ {
+  "id": "tr-81863574",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-83363092",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-83422328",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "university department"
+ },
+ {
+  "id": "tr-84117351",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "art workshops"
+ },
+ {
+  "id": "tr-86869736",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-86869865",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "sewing patterns"
+ },
+ {
+  "id": "tr-89670401",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "multi-brand K-cup/coffee retailer"
+ },
+ {
+  "id": "tr-89751525",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "master roasters; shop"
+ },
+ {
+  "id": "tr-90089754",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-90962867",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-91199574",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-92535391",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain for sale"
+ },
+ {
+  "id": "tr-92641726",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "bags sold, no roasting claim"
+ },
+ {
+  "id": "tr-92917955",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasting standards; coffee shop online"
+ },
+ {
+  "id": "tr-93049182",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast our coffee; shop"
+ },
+ {
+  "id": "tr-94022848",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": ""
+ },
+ {
+  "id": "tr-94191418",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain does not resolve"
+ },
+ {
+  "id": "tr-94651829",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-95222404",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "bot-check page, did not load"
+ },
+ {
+  "id": "tr-95224014",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no online shop; coffee 'hand roasted' sourced"
+ },
+ {
+  "id": "tr-95301319",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roastery; add to cart"
+ },
+ {
+  "id": "tr-95661217",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-97036264",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "French art venue"
+ },
+ {
+  "id": "tr-97332760",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "proudly serving another roaster"
+ },
+ {
+  "id": "tr-97748512",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-98027642",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "site does not load after retry"
+ },
+ {
+  "id": "tr-98297894",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "farm store"
+ },
+ {
+  "id": "tr-98352074",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS-only site, content not readable"
+ },
+ {
+  "id": "tr-99037570",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "we roast; shop"
+ },
+ {
+  "id": "tr-99590426",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "proudly serving another roaster"
+ },
+ {
+  "id": "tr-99803666",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "old site, 'Fine Roasted Coffees'; roasting and cart unclear"
+ }
+]
