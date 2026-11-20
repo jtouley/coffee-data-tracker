@@ -338,7 +338,10 @@ class ResponseTooLarge(FetchError):
 
 
 class Blocked(FetchError):
-    """robots.txt disallows the URL."""
+    """robots.txt disallows the URL. robots_status: the HTTP status robots.txt answered with when that answer itself
+    disallowed everything (401 or 403: RobotsRules.refused_with), else None; `status` stays None."""
+
+    robots_status: int | None = None
 
 
 class Unavailable(FetchError):
@@ -439,7 +442,9 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
     or a challenge's.
     unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt. challenge:
     robots.txt was answered with an edge's challenge (is_challenge: a 202, or a challenge header on any status),
-    which ingest counts as a refusal and never defers."""
+    which ingest counts as a refusal and never defers. http_status: the HTTP status robots.txt answered with,
+    whatever it was (None: no answer), for a caller that reports it without the message, which names the host
+    (importers.fetch_failed); `status` keeps its narrower meaning above."""
 
     def __init__(
         self,
@@ -448,10 +453,12 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
         status: int | None = None,
         challenge: bool = False,
         wait: float | None = None,
+        http_status: int | None = None,
     ) -> None:
         super().__init__(message, status=status, challenge=challenge)
         self.unreachable = unreachable
         self.wait = wait
+        self.http_status = http_status
 
 
 class DeadlineReached(FetchError):
@@ -606,9 +613,11 @@ class RobotsRules:
     and `$` wildcards (2.2.3). /robots.txt itself is always allowed (2.2.2).
 
     crawl_delay: the longest Crawl-delay those groups ask, in seconds (math.inf when one doesn't parse), or None;
-    crawl_delay_asked: that value as written."""
+    crawl_delay_asked: that value as written. refused_with: the 401 or 403 that disallowed everything, if one did."""
 
-    def __init__(self, lines: Iterable[str] = (), disallow_all: bool = False) -> None:
+    def __init__(
+        self, lines: Iterable[str] = (), disallow_all: bool = False, refused_with: int | None = None
+    ) -> None:
         self.disallow_all = disallow_all
         lines = list(lines)
         # The file's Sitemap lines (RFC 9309 2.3.5: not tied to any group), in order: where a store says its sitemap
@@ -623,6 +632,7 @@ class RobotsRules:
                 and (v := kv[2].strip())
             )
         )
+        self.refused_with = refused_with
         groups = _robots_groups(lines)
         current, old = ([g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS)
         selected = [current or [g for g in groups if "*" in g.agents]] + ([old] if old else [])
@@ -750,7 +760,7 @@ def robots_rules(status: int, body: str | None) -> RobotsRules | None:
     if 200 <= status < 300:
         return RobotsRules((body or "").splitlines())
     if status in (401, 403):
-        return RobotsRules(disallow_all=True)
+        return RobotsRules(disallow_all=True, refused_with=status)
     return None
 
 
@@ -776,8 +786,15 @@ class PoliteClient:
         schedule_only_ok: bool = False,
         robots_copies: dict[str, dict] | None = None,
         clock: Callable[[], datetime] | None = None,
+        redact_hosts: bool | None = None,
     ):
         self.min_interval = min_interval
+        # redact_hosts: this client's own log lines never name a host or URL (`<host>` instead, and a failure by its
+        # class and HTTP status, not its message). Always on for a client allowed a schedule-only host (the importers
+        # job's, whose log is a public repository's run and must never carry Royal's address:
+        # importers.royal_listing_url): it can't be turned off there. The crawl's clients keep naming hosts, but never
+        # a schedule-only one (_log_host).
+        self.redact_hosts = schedule_only_ok or bool(redact_hosts)
         # host -> the newest robots.txt stored for it ({fetched_at, status, body}: ingest.robots_copies), used only
         # when its live robots.txt is unreachable and the copy is at most ROBOTS_COPY_MAX_AGE_S old
         self.robots_copies = robots_copies or {}
@@ -957,13 +974,14 @@ class PoliteClient:
                             down[1].status,
                             down[1].challenge,
                             max(0.0, down[0] - time.monotonic()),
+                            http_status=down[1].http_status,
                         )
                     # raises RobotsUnavailable: nothing is fetched. body: the live file, stored with this fetch
                     rules, body = self._robots_for(host)
                     if (delay := self._crawl_delay(host, rules)) is not None and delay["capped"]:
                         log.warning(
                             "%s: robots.txt Crawl-delay %r capped at %.0f s",
-                            host,
+                            self._log_host(host),
                             delay["asked"],
                             delay["applied_s"],
                         )
@@ -976,6 +994,19 @@ class PoliteClient:
         self._note_robots(host)  # every fetch whose requests went by the host's rules records which copy
         rp = self._robots[host]
         return rp is None or rp.can_fetch(url)
+
+    def _log_host(self, host: str) -> str:
+        """The host as this client's log lines name it: `<host>` when redact_hosts is set, or when it is a host only
+        the scheduled importers job may fetch, whatever the client."""
+        return "<host>" if self.redact_hosts or schedule_only_host(host) else host
+
+    def _log_error(self, e: BaseException, host: str) -> str:
+        """An error about `host` as this client's log lines give it: its message, or, where _log_host redacts the
+        host, its class and the HTTP status it carries (a message can name the host or URL)."""
+        if self._log_host(host) == host:
+            return str(e)
+        code = getattr(e, "http_status", None) or getattr(e, "status", None)
+        return f"{type(e).__name__}" + (f", HTTP {code}" if code else "")
 
     def _crawl_delay(self, host: str, rules: RobotsRules | None) -> dict | None:
         """The Crawl-delay record for a host whose robots.txt asks one: the spacing its requests get is the larger of
@@ -1006,8 +1037,9 @@ class PoliteClient:
             if copy is None:
                 raise u.error from u.__cause__
             age = (self._now() - copy["fetched_at"]).total_seconds()
-            log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)", host, u.error,
-                        copy["fetched_at"].isoformat(), age / 86400)  # fmt: skip
+            log.warning("%s: robots.txt unreachable (%s); using the copy from %s (%.1f days old)",
+                        self._log_host(host), self._log_error(u.error, host), copy["fetched_at"].isoformat(),
+                        age / 86400)  # fmt: skip
             self.robots_used[robots_host_key(host)] = {"host": host, "source": "cached", "fetched_at": copy["fetched_at"],
                                       "age_s": round(age, 1), "status": copy["status"]}  # fmt: skip
             return robots_rules(copy["status"], copy.get("body")), None
@@ -1055,7 +1087,7 @@ class PoliteClient:
         except ResponseTooLarge as e:
             # Not a robots.txt (a catch-all page, or a runaway one): remembered like a 5xx, so the host's later
             # fetches don't each download it again up to the cap.
-            err = RobotsUnavailable(f"robots.txt for {host} too large ({e})")
+            err = RobotsUnavailable(f"robots.txt for {host} too large ({e})", http_status=e.status)
             cause: Exception | None = e
             no_answer = False  # an answer, just not a robots.txt: never stands in for a copy
         except httpx.HTTPError as e:
@@ -1094,13 +1126,22 @@ class PoliteClient:
                 wait = asked_wait(r)
                 wait = ROBOTS_BLOCK_RETRY_AFTER if wait is None else store_wait(wait)
             err = RobotsUnavailable(
-                f"robots.txt for {host} {why}", status=status, challenge=challenged, wait=wait
+                f"robots.txt for {host} {why}",
+                status=status,
+                challenge=challenged,
+                wait=wait,
+                http_status=r.status_code,
             )
             cause = None
         # This fetch fails (the deferred rounds and the retry pass try again) and the host stays unknown, asked again
         # after ROBOTS_RETRY_AFTER (a block: its wait), so a site whose robots.txt never answers is never crawled.
         final = RobotsUnavailable(
-            f"{err}; not fetching without it", err.unreachable, err.status, err.challenge, err.wait
+            f"{err}; not fetching without it",
+            err.unreachable,
+            err.status,
+            err.challenge,
+            err.wait,
+            http_status=err.http_status,
         )
         if no_answer and self._usable_copy(host) is not None:
             raise _Unreachable(final) from cause  # _robots_for uses the copy: not remembered as down
@@ -1180,7 +1221,10 @@ class PoliteClient:
                 # the message never parses the URL again: a malformed one is refused as cleanly as any other
                 raise ScheduleOnlyHost("refused: a host only the scheduled importers job may fetch")
             if not robots and not self._allowed(url):
-                raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
+                blocked = SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
+                if (rules := self._robots.get(urlparse(url).netloc)) is not None:
+                    blocked.robots_status = rules.refused_with
+                raise blocked
             r = self._send_retrying(url, params, page=not robots)
             if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
                 r.history = history

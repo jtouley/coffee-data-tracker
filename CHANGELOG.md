@@ -283,6 +283,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Security
 
+- From the 2026-11-18 self-assessment: the weekly and issue-form workflows set each secret only on the step whose
+  `coffeedata` command reads it, and a test keeps workflow- and job-level `env` free of secrets; a bag's `photo_id`
+  is checked like the other ids; the app's in-memory label reads, replies and daily read counts are capped, least
+  recently used out first; password checks past a short waiting line are turned away with a 503 and Retry-After
+  instead of tying up request threads (the hashing parameters are unchanged); and registry.coffee publishes
+  `/.well-known/security.txt` (RFC 9116), pointing to SECURITY.md's private reporting route.
+
 - App: the sign-in, join, reset and change-password forms post, so a form app.js didn't wire never puts the
   password in the URL, and the sign-in screen's clearing of offline pages can no longer stop the forms being wired.
 
