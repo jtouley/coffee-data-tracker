@@ -1,0 +1,958 @@
+{
+"va-01370408": {
+"id": "va-01370408",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-02770767": {
+"id": "va-02770767",
+"kind": "other",
+"label": "out_of_scope",
+"note": "casino site"
+},
+"va-03340801": {
+"id": "va-03340801",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-03496141": {
+"id": "va-03496141",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-04377265": {
+"id": "va-04377265",
+"kind": "other",
+"label": "out_of_scope",
+"note": "resort site"
+},
+"va-04770696": {
+"id": "va-04770696",
+"kind": "other",
+"label": "out_of_scope",
+"note": "HVAC site"
+},
+"va-05386573": {
+"id": "va-05386573",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (site challenge 403)"
+},
+"va-05408271": {
+"id": "va-05408271",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-05818636": {
+"id": "va-05818636",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "sells Peace Coffee"
+},
+"va-07009832": {
+"id": "va-07009832",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-07642175": {
+"id": "va-07642175",
+"kind": "other",
+"label": "out_of_scope",
+"note": "meal delivery"
+},
+"va-08201971": {
+"id": "va-08201971",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no roasting claim"
+},
+"va-08599306": {
+"id": "va-08599306",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-09089874": {
+"id": "va-09089874",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-09719150": {
+"id": "va-09719150",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "restaurant"
+},
+"va-09833610": {
+"id": "va-09833610",
+"kind": "other",
+"label": "out_of_scope",
+"note": "404"
+},
+"va-10619474": {
+"id": "va-10619474",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-10891947": {
+"id": "va-10891947",
+"kind": "other",
+"label": "out_of_scope",
+"note": "parked domain"
+},
+"va-12375912": {
+"id": "va-12375912",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "pizza restaurant"
+},
+"va-12833353": {
+"id": "va-12833353",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-12883956": {
+"id": "va-12883956",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-13047568": {
+"id": "va-13047568",
+"kind": "other",
+"label": "out_of_scope",
+"note": "domain for sale"
+},
+"va-13435595": {
+"id": "va-13435595",
+"kind": "roaster",
+"label": "in_scope",
+"note": "says roasts in small batches"
+},
+"va-13445203": {
+"id": "va-13445203",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-14149652": {
+"id": "va-14149652",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves New Harvest"
+},
+"va-14591991": {
+"id": "va-14591991",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-15252359": {
+"id": "va-15252359",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-15397001": {
+"id": "va-15397001",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-15468596": {
+"id": "va-15468596",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (TLS error)"
+},
+"va-16190664": {
+"id": "va-16190664",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "sister brand Oak Roasters is separate site"
+},
+"va-16280607": {
+"id": "va-16280607",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-16295829": {
+"id": "va-16295829",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-16355147": {
+"id": "va-16355147",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-17133847": {
+"id": "va-17133847",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-18120043": {
+"id": "va-18120043",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "signature roast, no roasting claim, no bags online"
+},
+"va-19201031": {
+"id": "va-19201031",
+"kind": "other",
+"label": "out_of_scope",
+"note": "UK sweet shop"
+},
+"va-19214049": {
+"id": "va-19214049",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-19321816": {
+"id": "va-19321816",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "bakery"
+},
+"va-20502310": {
+"id": "va-20502310",
+"kind": "other",
+"label": "out_of_scope",
+"note": "shared roasting facility; no coffee for sale"
+},
+"va-21016470": {
+"id": "va-21016470",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-22919962": {
+"id": "va-22919962",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked domain"
+},
+"va-23843264": {
+"id": "va-23843264",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-24850126": {
+"id": "va-24850126",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-26173224": {
+"id": "va-26173224",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "bags roasted by others in Freestone"
+},
+"va-26261558": {
+"id": "va-26261558",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-26351886": {
+"id": "va-26351886",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-26652692": {
+"id": "va-26652692",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-27120056": {
+"id": "va-27120056",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-27124713": {
+"id": "va-27124713",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-28226533": {
+"id": "va-28226533",
+"kind": "roaster",
+"label": "in_scope",
+"note": "beans on its Square store"
+},
+"va-28242233": {
+"id": "va-28242233",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (site challenge 403)"
+},
+"va-28590338": {
+"id": "va-28590338",
+"kind": "other",
+"label": "out_of_scope",
+"note": "barista training school"
+},
+"va-28683977": {
+"id": "va-28683977",
+"kind": "roaster",
+"label": "in_scope",
+"note": "small batch roasted; some estate coffees"
+},
+"va-29764857": {
+"id": "va-29764857",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-29875635": {
+"id": "va-29875635",
+"kind": "roaster",
+"label": "in_scope",
+"note": "Dobson Creek store"
+},
+"va-30142003": {
+"id": "va-30142003",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-30535961": {
+"id": "va-30535961",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "boutique + cafe"
+},
+"va-31191110": {
+"id": "va-31191110",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-31779974": {
+"id": "va-31779974",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Perc"
+},
+"va-32338947": {
+"id": "va-32338947",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-34172192": {
+"id": "va-34172192",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-34177388": {
+"id": "va-34177388",
+"kind": "other",
+"label": "out_of_scope",
+"note": "parked domain"
+},
+"va-34177425": {
+"id": "va-34177425",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-34848562": {
+"id": "va-34848562",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-37025497": {
+"id": "va-37025497",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-37066800": {
+"id": "va-37066800",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "freshly roasted, no roasting claim"
+},
+"va-37080160": {
+"id": "va-37080160",
+"kind": "other",
+"label": "out_of_scope",
+"note": "domain for sale"
+},
+"va-37667848": {
+"id": "va-37667848",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-37747631": {
+"id": "va-37747631",
+"kind": "roaster",
+"label": "in_scope",
+"note": "Kona farm, small batch roasted"
+},
+"va-38951248": {
+"id": "va-38951248",
+"kind": "other",
+"label": "out_of_scope",
+"note": "caviar retailer"
+},
+"va-39394679": {
+"id": "va-39394679",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roastery; Square store"
+},
+"va-40459113": {
+"id": "va-40459113",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (TLS cert mismatch/503)"
+},
+"va-41033831": {
+"id": "va-41033831",
+"kind": "other",
+"label": "out_of_scope",
+"note": "gift shop"
+},
+"va-41360333": {
+"id": "va-41360333",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-43126715": {
+"id": "va-43126715",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-43327022": {
+"id": "va-43327022",
+"kind": "roaster",
+"label": "out_of_scope",
+"note": "roasts in house; no online bag sales"
+},
+"va-44399491": {
+"id": "va-44399491",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-45884630": {
+"id": "va-45884630",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-45933374": {
+"id": "va-45933374",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "fair trade market cafe"
+},
+"va-46477760": {
+"id": "va-46477760",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "locally roasted by others"
+},
+"va-46696894": {
+"id": "va-46696894",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Colectivo"
+},
+"va-47473697": {
+"id": "va-47473697",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "whole bean online; no roasting claim"
+},
+"va-47515545": {
+"id": "va-47515545",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-47517477": {
+"id": "va-47517477",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "restaurant"
+},
+"va-47718331": {
+"id": "va-47718331",
+"kind": "other",
+"label": "out_of_scope",
+"note": "beverage brand"
+},
+"va-48089609": {
+"id": "va-48089609",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Archetype"
+},
+"va-48277145": {
+"id": "va-48277145",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-49458795": {
+"id": "va-49458795",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-49624322": {
+"id": "va-49624322",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-49773667": {
+"id": "va-49773667",
+"kind": "other",
+"label": "out_of_scope",
+"note": "chocolatier"
+},
+"va-49797096": {
+"id": "va-49797096",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-50372144": {
+"id": "va-50372144",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-52325566": {
+"id": "va-52325566",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "bakery; no bags online"
+},
+"va-52482651": {
+"id": "va-52482651",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-52617141": {
+"id": "va-52617141",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "locally roasted by others"
+},
+"va-53124015": {
+"id": "va-53124015",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (TLS cert mismatch/503)"
+},
+"va-53615520": {
+"id": "va-53615520",
+"kind": "roaster",
+"label": "in_scope",
+"note": "\"roasted in Hattiesburg\"; bags online"
+},
+"va-53730172": {
+"id": "va-53730172",
+"kind": "other",
+"label": "out_of_scope",
+"note": "clothing boutique"
+},
+"va-55658329": {
+"id": "va-55658329",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-55773683": {
+"id": "va-55773683",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (site challenge 403)"
+},
+"va-55890544": {
+"id": "va-55890544",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-56140084": {
+"id": "va-56140084",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-57560003": {
+"id": "va-57560003",
+"kind": "reseller",
+"label": "out_of_scope",
+"note": "bags roasted by Dark Matter"
+},
+"va-57854480": {
+"id": "va-57854480",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-58490474": {
+"id": "va-58490474",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-58789412": {
+"id": "va-58789412",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-59090957": {
+"id": "va-59090957",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-59393801": {
+"id": "va-59393801",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Noble Coffee (via WebFetch)"
+},
+"va-59641856": {
+"id": "va-59641856",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-60117243": {
+"id": "va-60117243",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-60373977": {
+"id": "va-60373977",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-60374835": {
+"id": "va-60374835",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-61003253": {
+"id": "va-61003253",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "locally roasted by others"
+},
+"va-61144885": {
+"id": "va-61144885",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-61409624": {
+"id": "va-61409624",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-61748971": {
+"id": "va-61748971",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (site challenge 403)"
+},
+"va-62082330": {
+"id": "va-62082330",
+"kind": "roaster",
+"label": "in_scope",
+"note": "\"everything we make... freshly roasted\""
+},
+"va-62326465": {
+"id": "va-62326465",
+"kind": "roaster",
+"label": "in_scope",
+"note": "now Rare Breed Coffee"
+},
+"va-62377831": {
+"id": "va-62377831",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-62680088": {
+"id": "va-62680088",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-63112388": {
+"id": "va-63112388",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-64819789": {
+"id": "va-64819789",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hotel site"
+},
+"va-65080200": {
+"id": "va-65080200",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-65594448": {
+"id": "va-65594448",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-66373095": {
+"id": "va-66373095",
+"kind": "other",
+"label": "out_of_scope",
+"note": "bubble tea supplier"
+},
+"va-67652309": {
+"id": "va-67652309",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-67861499": {
+"id": "va-67861499",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roastery since 2013; Square store"
+},
+"va-68052302": {
+"id": "va-68052302",
+"kind": "other",
+"label": "out_of_scope",
+"note": "card shop"
+},
+"va-68611480": {
+"id": "va-68611480",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "opening soon; no bags"
+},
+"va-70894421": {
+"id": "va-70894421",
+"kind": "other",
+"label": "out_of_scope",
+"note": "farm market"
+},
+"va-72835172": {
+"id": "va-72835172",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-74193929": {
+"id": "va-74193929",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Mighty Missouri"
+},
+"va-74535535": {
+"id": "va-74535535",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Duluth Coffee"
+},
+"va-75696170": {
+"id": "va-75696170",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "wine bar"
+},
+"va-76279833": {
+"id": "va-76279833",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "sells Aperture"
+},
+"va-76822855": {
+"id": "va-76822855",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-77334108": {
+"id": "va-77334108",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-77783968": {
+"id": "va-77783968",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "bakery"
+},
+"va-78207044": {
+"id": "va-78207044",
+"kind": "other",
+"label": "out_of_scope",
+"note": "inn site"
+},
+"va-78228861": {
+"id": "va-78228861",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-78527915": {
+"id": "va-78527915",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-79063924": {
+"id": "va-79063924",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-79169073": {
+"id": "va-79169073",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "student coffeehouse"
+},
+"va-79754544": {
+"id": "va-79754544",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-79950602": {
+"id": "va-79950602",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-80169460": {
+"id": "va-80169460",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "restaurant (ordering page, 403)"
+},
+"va-80271305": {
+"id": "va-80271305",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-82220622": {
+"id": "va-82220622",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-82899032": {
+"id": "va-82899032",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-83020209": {
+"id": "va-83020209",
+"kind": "other",
+"label": "out_of_scope",
+"note": "design studio"
+},
+"va-84090568": {
+"id": "va-84090568",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-84407374": {
+"id": "va-84407374",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-84532891": {
+"id": "va-84532891",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasted at its bakery; 1lb bags online"
+},
+"va-84665389": {
+"id": "va-84665389",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "Batdorf & Bronson"
+},
+"va-87101516": {
+"id": "va-87101516",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-88022371": {
+"id": "va-88022371",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-89389633": {
+"id": "va-89389633",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-89805705": {
+"id": "va-89805705",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-90141928": {
+"id": "va-90141928",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "Lavazza"
+},
+"va-90658311": {
+"id": "va-90658311",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-91099741": {
+"id": "va-91099741",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"va-91193114": {
+"id": "va-91193114",
+"kind": "roaster",
+"label": "in_scope",
+"note": "shares roasting operation with part owner"
+},
+"va-92170280": {
+"id": "va-92170280",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-92833871": {
+"id": "va-92833871",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-93266856": {
+"id": "va-93266856",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-94561051": {
+"id": "va-94561051",
+"kind": "roaster",
+"label": "in_scope"
+},
+"va-94755031": {
+"id": "va-94755031",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked domain"
+},
+"va-98320104": {
+"id": "va-98320104",
+"kind": "roaster",
+"label": "in_scope",
+"note": "small-batch roasting; one coffee"
+},
+"va-98588846": {
+"id": "va-98588846",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable (DNS)"
+},
+"va-99056867": {
+"id": "va-99056867",
+"kind": "other",
+"label": "out_of_scope",
+"note": "bike shop"
+}
+}

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "va-00832075",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "candy shop/cafe sells 1 lb bags online (commodity origin names); no roasting claim, roaster not named"
+ },
+ {
+  "id": "va-05861623",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "one-page site, mentions 'local roasting process'; no bags for sale online"
+ },
+ {
+  "id": "va-08922234",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Square ordering of drinks only (browser)"
+ },
+ {
+  "id": "va-16508489",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "pay-what-you-can community cafe; no coffee bags"
+ },
+ {
+  "id": "va-18005324",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Square site: drink menu only, no bags (browser)"
+ },
+ {
+  "id": "va-18022624",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "robots.txt disallows all; site not read"
+ },
+ {
+  "id": "va-20805083",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "did not load (connection reset, retried incl. browser)"
+ },
+ {
+  "id": "va-21619865",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "did not load (connection reset, retried incl. browser); listings say closed"
+ },
+ {
+  "id": "va-26456373",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "one 12oz blend, sold out; no roasting claim"
+ },
+ {
+  "id": "va-26660766",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; no bags in shop"
+ },
+ {
+  "id": "va-28491984",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "robots.txt disallows all; site not read"
+ },
+ {
+  "id": "va-45605993",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "cafe/restaurant sells 'Kismet Roast' bags online; doesn't say who roasts"
+ },
+ {
+  "id": "va-47477657",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "old coffee & tea store sells own-label bags online; title says 'roaster' but no roasting statement; also resells brands"
+ },
+ {
+  "id": "va-47717164",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Square pickup ordering; house-blend bags, no roasting claim (browser)"
+ },
+ {
+  "id": "va-55577712",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "did not load (connection reset, retried incl. browser)"
+ },
+ {
+  "id": "va-58859344",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "lounge/cafe sells own-label bags online; no roasting claim"
+ },
+ {
+  "id": "va-60048692",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "pod/white-coffee brand that 'develops and markets'; inventory sold out, no checkout"
+ },
+ {
+  "id": "va-60473311",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "'HUFF Coffee Roasters', 'precise roasting'; 12oz-5lb bags with add to cart"
+ },
+ {
+  "id": "va-61285355",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "1 lb bags in online cart; roasts in-house per press (site itself silent)"
+ },
+ {
+  "id": "va-67392005",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "own-label Colombian coffee; blog says partnered with a local roaster"
+ },
+ {
+  "id": "va-67418073",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "did not load (connection reset, retried incl. browser)"
+ },
+ {
+  "id": "va-67497673",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "cafe chain; retail shop says it partners with a specialty roaster"
+ },
+ {
+  "id": "va-67568645",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "sells flavored/whole bean bags online; no roasting claim or about page"
+ },
+ {
+  "id": "va-68902041",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "bread bakery; no coffee"
+ },
+ {
+  "id": "va-71995476",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "owners roast (Coffee Roasters of Charleston) but bags sold online only on that differently-branded site; this site has no shop"
+ },
+ {
+  "id": "va-76417882",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Ka'u farm brand sells roasted coffee online; doesn't say who roasts"
+ },
+ {
+  "id": "va-79362009",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "cafe sells bags from family farm online; doesn't say who roasts"
+ },
+ {
+  "id": "va-82960847",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "'we roast them ourselves'; 1 lb bags with add to cart"
+ },
+ {
+  "id": "va-93661826",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "drink menu, pickup ordering only"
+ },
+ {
+  "id": "va-97887396",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "tea company; no coffee"
+ }
+]
