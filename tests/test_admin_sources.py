@@ -241,3 +241,57 @@ def test_a_header_sorts_by_its_column_both_ways(tmp_path, lake, pg_url):
     assert "Filter / Sort (1)" in down  # a non-default order counts
     newest = c.get("/part/sources?sort=newest").text  # the phone sheet's option
     assert 'aria-sort="descending"' in newest and 'value="newest" checked' in newest
+
+
+def _excluded(tmp_path, c, fake, key):
+    """The coffees a new draft's snapshot excludes (the last draft's build job finished first)."""
+    fake.finish("build")
+    d = post(c, "/api/drafts", {"key": key}).json()
+    doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
+    return {x["subject"] for x in doc["decisions"] if x["action"] == "exclude"}
+
+
+def test_flagging_a_place_not_a_roaster_again_never_brings_its_coffees_back(tmp_path, lake, pg_url):
+    """Once a Not a roaster flag is published its coffees are out of the served build, so the Catalog has none of them
+    to exclude again (coffees=[] below, as the served build's catalog then answers). A repeated flag, alone or in a
+    bulk selection with other places, leaves the place and its exclusions as they are."""
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    r = post(c, "/api/sources/flags", {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]})
+    b1 = r.json()["batch_id"]
+    assert _excluded(tmp_path, c, fake, "k2") == {"c1", "c2"}
+    cp = app.state.writes.control
+    seen = {"good.example": b1, "tea.example": None}
+    bulk = cp.flag_sources("owner", "k3", "not_roaster", ["good.example", "tea.example"], seen, [])
+    assert bulk["count"] == 1 and bulk["skipped"] == 1 and bulk["restored"] == 0
+    assert cp.source_flags(["good.example"])["good.example"]["batch_id"] == b1  # its flag is untouched
+    with pytest.raises(ValueError, match="already"):
+        cp.flag_sources("owner", "k4", "not_roaster", ["good.example"], {"good.example": b1}, [])
+    assert _excluded(tmp_path, c, fake, "k5") == {"c1", "c2"}
+    # Undo of the bulk flag puts tea.example back, and good.example's coffees stay out.
+    u = post(c, f"/api/sources/flags/{bulk['batch_id']}/undo", {"key": "k6"})
+    assert u.json()["reverted"] == ["tea.example"] and u.json()["restored"] == 0
+    assert _excluded(tmp_path, c, fake, "k7") == {"c1", "c2"}
+
+
+def test_undo_of_a_repeated_not_a_roaster_flag_keeps_the_earlier_flags_coffees_out(tmp_path, lake, pg_url):
+    """A repeated flag recorded before repeats were skipped: it reverted the first batch's excludes and excluded the
+    coffees again under its own. Its Undo puts the place back to the first batch's Not a roaster, and the coffees
+    stay out: the batch's excludes are reverted before the earlier ones are made again."""
+    from admin.controlplane import new_id
+
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    r = post(c, "/api/sources/flags", {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]})
+    b1, b2 = r.json()["batch_id"], new_id("f").lower()
+    cp = app.state.writes.control
+    with cp.tx() as cur:  # what flag_sources wrote for a repeat, before this change
+        cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, actor) values (%s, %s, %s, %s)",
+                    (b2, "good.example", "not_roaster", "owner"))  # fmt: skip
+        assert len(cp._revert(cur, "owner", cp._source_excludes(cur, b1, ["good.example"]), "again")) == 2
+        for cid in ("c1", "c2"):
+            cp._approve(cur, "coffee_id", cid, "exclude", "not a roaster: good.example (Sources)", "owner", b2,
+                        {"coffee_id": cid, "roaster_id": "good.example"})  # fmt: skip
+    assert _excluded(tmp_path, c, fake, "k2") == {"c1", "c2"}
+    u = post(c, f"/api/sources/flags/{b2}/undo", {"key": "k3"})
+    assert u.json()["reverted"] == ["good.example"] and u.json()["excluded"] == 2
+    assert cp.source_flags(["good.example"])["good.example"]["flag"] == "not_roaster"
+    assert _excluded(tmp_path, c, fake, "k4") == {"c1", "c2"}
