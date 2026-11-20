@@ -6,6 +6,10 @@ resolves a job's or the usage service's image as the account that deploys it, an
 `google_cloud_run_v2_job` update failed with `Docker-GetManifest permission_denied`. Cloud Run's "Create jobs" page
 asks the deployer for Artifact Registry Reader on the image's repository: `tfApplyRepository` holds that role's
 repository-scoped read permissions, on that one repository only.
+
+The admin (admin.tf, admin_control.tf on the admin stack) adds a service account the apply account acts as, two buckets
+made by name, a Cloud SQL instance, database and IAM user, and two project grants of Cloud SQL roles: the grants below
+cover those and nothing wider.
 """
 
 import re
@@ -84,6 +88,11 @@ def test_every_custom_role_holds_exactly_its_permissions():
                                  "logging.notificationRules.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
         "tfPlanBudgetReader": ["billing.resourcebudgets.read", "resourcemanager.projects.get"],
+        "tfApplyBucketCreate": ["storage.buckets.create"],
+        "tfApplyCloudSql": ["cloudsql.databases.create", "cloudsql.databases.get", "cloudsql.instances.create",
+                            "cloudsql.instances.get", "cloudsql.instances.update", "cloudsql.users.create",
+                            "cloudsql.users.get", "cloudsql.users.list"],
+        "tfApplySqlGrants": ["resourcemanager.projects.setIamPolicy"],
     }  # fmt: skip
 
 
@@ -141,3 +150,77 @@ def test_each_account_has_exactly_one_artifact_registry_grant_on_the_one_reposit
     # The repository role is bound nowhere else.
     code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
     assert code.count("google_project_iam_custom_role.tf_repository") == 1
+
+
+def _resource(kind: str, name: str) -> str:
+    found = [body for k, n, body in _resources() if (k, n) == (kind, name)]
+    assert len(found) == 1, (kind, name)
+    return found[0]
+
+
+def test_no_custom_role_holds_a_cloud_sql_delete_export_import_or_login():
+    """tfApplyCloudSql creates and reads the admin's instance, database and IAM user and updates the instance; never
+    deletes, copies data out or in, connects or logs in (roles/cloudsql.admin would)."""
+    held = {p for perms in _roles().values() for p in perms if p.startswith("cloudsql.")}
+    for p in held:
+        assert p.rsplit(".", 1)[1] in {"create", "get", "list", "update"}, p
+    assert "cloudsql.users.update" not in held and "cloudsql.databases.update" not in held
+    code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
+    assert '"roles/cloudsql.admin"' not in code and '"roles/cloudsql.editor"' not in code
+
+
+def test_the_apply_account_writes_project_iam_only_for_the_admins_two_cloud_sql_roles():
+    """Setting google_project_iam_member.admin_sql writes the project's IAM policy. setIamPolicy is held in one role,
+    bound once, with a condition that the change adds or removes only roles/cloudsql.client and
+    roles/cloudsql.instanceUser. Never projectIamAdmin, owner or editor."""
+    holders = [rid for rid, perms in _roles().items() if "resourcemanager.projects.setIamPolicy" in perms]
+    assert holders == ["tfApplySqlGrants"]
+    code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
+    assert code.count("google_project_iam_custom_role.tf_project_sql_grants") == 1
+    for role in (
+        "roles/resourcemanager.projectIamAdmin",
+        "roles/owner",
+        "roles/editor",
+        "roles/iam.securityAdmin",
+    ):
+        assert f'"{role}"' not in code, role
+    body = _resource("google_project_iam_member", "tf_apply_sql_grants")
+    assert "member  = local.apply_member" in body
+    assert (
+        "api.getAttribute('iam.googleapis.com/modifiedGrantsByRole', []).hasOnly(${jsonencode(local.sql_grant_roles)})"
+        in body
+    )
+    assert 'sql_grant_roles = ["roles/cloudsql.client", "roles/cloudsql.instanceUser"]' in code
+
+
+def test_the_admins_buckets_are_reached_only_by_name():
+    """The two buckets don't exist when the bootstrap applies, so their settings and IAM come from project grants
+    conditioned on their two names; bucket creation (checked on the project) is a role of its own."""
+    code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
+    assert (
+        'for b in ["admin-state", "admin-snapshots"] : '
+        "\"resource.name == 'projects/_/buckets/${var.project_id}-${b}'\"" in code
+    )
+    for name, role, member in (
+        ("tf_apply_admin_buckets", "tf_bucket_admin", "apply"),
+        ("tf_plan_admin_buckets", "tf_bucket_reader", "plan"),
+    ):
+        body = _resource("google_project_iam_member", name)
+        assert f"role    = google_project_iam_custom_role.{role}.id" in body
+        assert f"member  = local.{member}_member" in body
+        assert "expression = local.admin_buckets_condition" in body
+    # Bucket admin or reader at project scope only through those two conditioned grants.
+    for kind, name, body in _resources():
+        if kind == "google_project_iam_member" and re.search(r"tf_bucket_(admin|reader)\b", body):
+            assert name in {"tf_apply_admin_buckets", "tf_plan_admin_buckets"}, name
+    apply = _resource("google_project_iam_member", "tf_apply_custom")
+    assert "bucket_create    = google_project_iam_custom_role.tf_bucket_create.id" in apply
+    assert "cloud_sql        = google_project_iam_custom_role.tf_cloud_sql.id" in apply
+
+
+def test_the_apply_account_acts_as_the_admins_account_and_no_new_other():
+    code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
+    assert 'admin            = "${var.service}-admin-run"' in code
+    body = _resource("google_service_account_iam_member", "tf_apply_acts_as")
+    assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage", "admin"])' in body
+    assert 'role               = "roles/iam.serviceAccountUser"' in body

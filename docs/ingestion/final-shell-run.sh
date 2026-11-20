@@ -206,8 +206,8 @@ BAD=$(jq -r '.resource_changes[]? | select(.change.actions | index("delete")) | 
 echo "-- changes (addresses only) --"
 jq -r '.resource_changes[]? | select(.change.actions != ["no-op"] and .change.actions != ["read"])
   | "\(.change.actions | join("+"))\t\(.address)"' "$WORK/boot.json" | sort
-echo "expect (first run): 56 creates: two pools and providers, two accounts and their workload identity bindings,"
-echo "        nine custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
+echo "expect (first run): 66 creates: two pools and providers, two accounts and their workload identity bindings,"
+echo "        twelve custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
 echo "        On a later run: only what src/terraform/bootstrap/ changed since its last apply. A bootstrap change alone"
 echo "        is applied by hand instead (docs/app/RUNNING.md, \"re-apply the bootstrap\")."
 ask "apply exactly this plan?"

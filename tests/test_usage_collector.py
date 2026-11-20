@@ -787,12 +787,12 @@ def test_the_terraform_keeps_to_the_collectors_own_resources():
 
 
 def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs():
-    """actAs on the collector's account (and no other new one), log exclusions and the loss alert's notification
-    rule only (no sinks, buckets or delete), and the plan account the exclusions' read; ci.tfvars turns usage_enabled
-    on only with the image pinned and the token."""
+    """actAs on the collector's account (the admin's is in test_bootstrap_roles), log exclusions and the loss alert's
+    notification rule only (no sinks, buckets or delete), and the plan account the exclusions' read; ci.tfvars turns
+    usage_enabled on only with the image pinned and the token."""
     code = _code("src/terraform/bootstrap/iam.tf")
     assert 'usage            = "${var.service}-usage"' in code
-    assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage"])' in code
+    assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage", "admin"])' in code
     perms = dict(
         re.findall(r'role_id\s*=\s*"(tf\w*LogExclusions)"[^}]*?permissions\s*=\s*\[([^\]]*)\]', code, re.S)
     )

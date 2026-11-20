@@ -312,16 +312,20 @@ the workflow again; the new plan shows what is left. A lock left by a dead runne
 `roles/billing.viewer` on the billing account instead (`src/terraform/bootstrap/iam.tf`).
 
 **What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can set
-IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs and the staging
-bucket (and so raw ingestion data), read the image repository's images, which Cloud Run checks as whoever deploys a job
-or service (its role holds no push or delete permission itself, though the repository's settings and IAM it can change
-reach both), run any image as the runtime, ingest or scheduler account, and create log-based alert policies and
+IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs, the staging
+bucket (and so raw ingestion data) and the admin's two buckets (its sign-in state and drafts' snapshots), read the image
+repository's images, which Cloud Run checks as whoever deploys a job or service (its role holds no push or delete
+permission itself, though the repository's settings and IAM it can change reach both), run any image as the runtime,
+ingest, scheduler, usage or admin account, grant anyone `roles/cloudsql.client` or `roles/cloudsql.instanceUser` on the
+project, change the admin's Cloud SQL instance and create users on it (an authorized network and a password user would
+reach the control plane's data), and create log-based alert policies and
 notification channels of any type. That last one means an approved apply could copy fields of matching log entries
 (through a policy's `label_extractors` or its documentation) into a notification on a channel it creates, such as a
 webhook to an outside address: a narrow path for log content, not a sink, and the guard checks neither channel types nor
 extractors. That is what the approval is for: read the IAM section of the summary first, and for any new or changed
-notification channel its type and address, and any `label_extractors` on an alert. It cannot write a workload identity
-pool or provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
+notification channel its type and address, any `label_extractors` on an alert, and for the admin's Cloud SQL instance
+any authorized network or password user. It cannot write a workload identity pool or provider, a custom role, the
+project's IAM beyond grants of those two Cloud SQL roles, or IAM on any service account. The guard refuses:
 - any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
   any account, or a custom role;
 - a grant on any resource that names the plan or apply account; one that names the deploy account, except exactly
@@ -381,7 +385,7 @@ script's bootstrap step refuses any replace, so it is for a first apply only):
 `TF_VAR_billing_account=<from your terraform.tfvars> terraform plan -out=b.plan`, then `terraform apply b.plan`. The plan
 shows: create `google_project_iam_custom_role.tf_plan_object`, and replace
 `google_storage_bucket_iam_member.tf_apply_plans` (its role changes, so it is replaced); nothing else. If the bootstrap
-was never applied, the first run creates everything (56 resources) with the final roles.
+was never applied, the first run creates everything (66 resources) with the final roles.
 
 **If every `google_cloud_run_v2_job` update fails** (or the usage service's) with `Docker-GetManifest
 permission_denied` on `artifactregistry.repositories.downloadArtifacts` (Cloud Audit Logs, principal
@@ -446,6 +450,50 @@ included: answer no and ask first. Then run GitHub's `terraform-apply` again fro
 only on main); `jtouleyrou` approves it as usual. That run is for what the failed run left: its plan shows the alert
 policy alone, `1 to add, 0 to change, 0 to destroy`. Custom-role changes can take a few minutes to reach every check: if
 the same denial comes back at once, wait and run it again.
+
+**The apply account's grants for the admin** (`admin.tf`, `admin_control.tf`; docs/admin/README.md). The admin's
+first apply through GitHub needs, beyond what the apply account already has, all in `src/terraform/bootstrap/iam.tf`:
+- `tf_apply_acts_as["admin"]`: Service Account User on `registry-coffee-admin-run` only, so the admin service can run
+  as its own account;
+- `tfApplyBucketCreate` (`storage.buckets.create`, on the project: creation is checked before the bucket exists), and
+  `tfApplyBucketAdmin` through a project grant conditioned on the names `<project>-admin-state` and
+  `<project>-admin-snapshots` (`tf_apply_admin_buckets`): those two buckets' settings and IAM;
+- `tfApplyCloudSql`: create, read and update the admin's Cloud SQL instance, create and read its database and IAM
+  user; no delete, export, import, connect or login;
+- `tfApplySqlGrants` (`resourcemanager.projects.setIamPolicy` alone), granted with the condition
+  `api.getAttribute('iam.googleapis.com/modifiedGrantsByRole', []).hasOnly([...])` on exactly `roles/cloudsql.client`
+  and `roles/cloudsql.instanceUser`: the two grants of `google_project_iam_member.admin_sql`, and no other role. The
+  guard passes those two (a predefined role to an account the same plan creates); it still refuses any grant naming the
+  plan or apply account, and any impersonation or role-admin role;
+- for the plan account: `roles/cloudsql.viewer`, and `tfPlanBucketReader` through the same two-bucket condition
+  (`tf_plan_admin_buckets`).
+
+The account must exist before its grant can: the first apply after `admin.tf` merges creates `registry-coffee-admin-run`,
+its three secrets and their IAM, then stops at `google_storage_bucket.admin_state` (`storage.buckets.create` denied),
+which is expected. Then re-apply the bootstrap once, by hand, from the repository's root in Cloud Shell:
+
+```bash
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
+```
+
+Read the plan before the yes: `10 to add, 0 to change, 0 to destroy`: creates of
+`google_project_iam_custom_role.tf_bucket_create`, `.tf_cloud_sql` and `.tf_project_sql_grants`;
+`google_project_iam_member.tf_apply_custom["bucket_create"]`, `tf_apply_custom["cloud_sql"]`,
+`tf_apply_admin_buckets`, `tf_apply_sql_grants`, `tf_plan_admin_buckets` and `tf_plan["roles/cloudsql.viewer"]`; and
+`google_service_account_iam_member.tf_apply_acts_as["admin"]`. That holds when the bootstrap was current with main
+before this change; anything else, an update or a replace included: answer no and ask first. Before the next run, the
+domain mapping needs `registry-coffee-tf-apply@…` as a verified owner of `registry.coffee` in Google Search Console
+(Owner's steps, 3), as the account that applies it. Then run GitHub's `terraform-apply` again from main; its plan shows
+what the first run left. Applied before the admin's account exists, the same plan fails on
+`tf_apply_acts_as["admin"]` alone (the account isn't found) and applies the rest; re-apply once the account exists
+(`1 to add`). The admin stack's later Terraform (the Cloud SQL control plane, its two project grants, the snapshot
+bucket) needs nothing more. Still by hand, outside both roots: the deploy account's grants for deploying the admin
+(Cloud Run Developer on the admin service, Service Account User on `registry-coffee-admin-run` only; the guard refuses
+an impersonation role in Terraform), and the admin database user's `GRANT CREATE` (docs/admin/README.md, Deploying).
 
 **The `terraform-apply` environment** (made once by the owner; these steps are the record, and the way back if it is
 deleted or changed). `jtouleyrou` needs read access to the repository first (Settings, Collaborators). Then, signed
