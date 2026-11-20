@@ -443,6 +443,60 @@ def test_roll_back_only_to_a_release_that_was_served(tmp_path, lake, pg_url):
                                                  "--reason=the publish removed too much"])  # fmt: skip
 
 
+def test_publish_and_roll_back_never_start_beside_a_build_nor_a_build_beside_them(tmp_path, lake, pg_url):
+    """The build reads the served release when it starts and serves its own on top of it: a Publish or Roll back in
+    between would be silently replaced. So the publish job and the build job refuse to start beside each other, in
+    the plan and again under the jobs' locks."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    pq.write_table(pa.Table.from_pylist([{"build_id": "20261103T000000-dddddd", "run_date": date.fromisoformat(W2),
+                                          "reason": "x", "served_at": datetime(2026, 11, 4, tzinfo=UTC)}]),
+                   lake.root / "marts" / "release.parquet")  # fmt: skip
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    fake.run("build", None)  # the weekly build, or the admin's Build, Classify or Draft build
+    body = {"key": "k1", "reason": "the publish removed too much"}
+    r = post(c, f"/api/releases/{B1}/rollback", body)
+    assert r.status_code == 409 and any(x.startswith("build is running") for x in r.json()["reasons"])
+    assert not r.json()["overridable"]
+    assert [x for x in fake.calls if x[0] == "run" and x[1] == "publish"] == []
+    fake.finish("build")
+    assert post(c, f"/api/releases/{B1}/rollback", body | {"key": "k2"}).status_code == 200
+    # the publish job runs now: no build starts beside it
+    plan = post(c, "/api/jobs/build/plan", {"key": "k3"}).json()
+    assert any(x.startswith("publish is running") for x in plan["refusals"])
+    r = post(c, "/api/jobs/build/runs", {"key": "k3"})
+    assert r.status_code == 409 and [x for x in fake.calls if x[0] == "run" and x[1] == "build"] == [
+        ("run", "build", None)  # only the one this test started
+    ]
+    fake.finish("publish")
+    assert post(c, "/api/jobs/build/runs", {"key": "k4"}).status_code == 200
+
+
+def test_a_build_that_starts_between_the_plan_and_the_publish_is_seen_under_the_lock(tmp_path, lake, pg_url):
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    pq.write_table(pa.Table.from_pylist([{"build_id": "20261103T000000-dddddd", "run_date": date.fromisoformat(W2),
+                                          "reason": "x", "served_at": datetime(2026, 11, 4, tzinfo=UTC)}]),
+                   lake.root / "marts" / "release.parquet")  # fmt: skip
+
+    class Racing(FakeJobs):
+        def executions(
+            self, job, limit=10
+        ):  # the plan sees no build; the start sees the one that began since
+            self.calls.append(("list", job))
+            listed = [x for x in self.calls if x == ("list", job)]
+            return [] if len(listed) == 1 else super().executions(job, limit)
+
+    fake = Racing()
+    fake.run("build", None)
+    app, c, _ = make(tmp_path, lake.root, pg_url, fake=fake)
+    r = post(c, f"/api/releases/{B1}/rollback", {"key": "k1", "reason": "the publish removed too much"})
+    assert r.status_code == 409 and r.json()["reasons"][0].startswith("build is running")
+    assert [x for x in fake.calls if x[0] == "run"] == [("run", "build", None)]
+
+
 def test_the_decisions_export_feeds_export_labels(tmp_path, lake, pg_url):
     app, c, _ = make(tmp_path, lake.root, pg_url)
     post(c, "/api/decisions", {"key": "k1", "action": "exclude", "kind": "coffee_id", "reason": "a drink mix",

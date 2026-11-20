@@ -1305,10 +1305,17 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     # The run stops at IMPORTERS_DEADLINE_S, a little under the workflow's job timeout, so a long Royal pass ends as a
     # recorded failure (DeadlineReached) instead of a killed job.
     with PoliteClient(
-        timeout=60.0, retries=3, schedule_only_ok=True, deadline_s=importers.IMPORTERS_DEADLINE_S
+        timeout=60.0,
+        retries=3,
+        schedule_only_ok=True,
+        deadline_s=importers.IMPORTERS_DEADLINE_S,
+        redact_hosts=True,  # its log is public: no line names a host or URL (Royal's address)
     ) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
+    if args.results:
+        args.results.parent.mkdir(parents=True, exist_ok=True)
+        args.results.write_text(json.dumps(importers.public_results(results), indent=1) + "\n")
     return all(r["status"] != "failed" for r in results)
 
 
@@ -1723,6 +1730,12 @@ def main(argv: list[str] | None = None) -> None:
     )
     imp.add_argument(
         "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
+    )
+    imp.add_argument(
+        "--results",
+        type=Path,
+        help="also write each importer's key, week, status, and a failed fetch's HTTP status and phase to this JSON "
+        "file (importers.public_results: no error text, no URL), for importers-alerts",
     )
 
     ib = add(

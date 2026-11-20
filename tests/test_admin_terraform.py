@@ -25,3 +25,12 @@ def test_the_publish_job_does_nothing_without_the_admins_arguments():
     ingestion = (TF / "ingestion.tf").read_text()
     line = next(x for x in ingestion.splitlines() if x.strip().startswith('"publish"'))
     assert 'args = ["publish-release", "--help"]' in line and "retries = 0" in line
+
+
+def test_the_main_root_grants_the_admin_no_project_iam():
+    """The admin account's Cloud SQL project grants (client, instanceUser) are the bootstrap root's, applied by the
+    owner: the GitHub pipeline, which applies this root, never writes project IAM for it."""
+    for name in ("admin.tf", "admin_control.tf"):
+        code = "\n".join(line.split("#", 1)[0] for line in (TF / name).read_text().splitlines())
+        assert 'resource "google_project_iam_member"' not in code, name
+        assert "google_project_iam_member." not in code, name
