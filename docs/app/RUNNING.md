@@ -285,14 +285,17 @@ GitHub, and applies only after the owner's second account, `jtouleyrou`, approve
    ends there. Start it as the main account, never as `jtouleyrou`.
 3. **Approve, signed in as `jtouleyrou`.** Open the run (Actions, terraform-apply) and read its summary: the IAM
    changes, then each resource with the attributes that change (names, never values). Read the commit's diff of
-   `src/terraform/` too, and of `.github/workflows/terraform-*.yml` and `scripts/tf_plan_guard.py` if it touches
-   them: the approval page shows neither. Then Review deployments, Approve. A run you won't approve: Reject it, so the
-   pending run behind it can go ahead. GitHub keeps only the newest pending run (a newer push replaces an older one)
-   and ends an unanswered one after 30 days.
+   `src/terraform/` too, and of `.github/workflows/terraform-*.yml`, `scripts/tf_plan_guard.py` and
+   `scripts/tf_bootstrap_preflight.py` (which runs with the apply account's token) if it touches them: the approval
+   page shows none of these. Then Review deployments, Approve. A run you won't approve: Reject it, so the pending run
+   behind it can go ahead. GitHub keeps only the newest pending run (a newer push replaces an older one) and ends an
+   unanswered one after 30 days.
 4. **The apply job** refuses, changing nothing, unless:
    - this is the run's first attempt and `jtouleyrou` approved it;
    - the environment's settings read back exactly as set: that reviewer alone, self-review prevented, `main` only,
      no administrator bypass;
+   - the apply account holds every permission that `main`'s bootstrap grants it through project-level custom roles
+     (below, "A bootstrap change");
    - the plan is under a day old, no newer Terraform commit is on main, and the downloaded plan has the SHA-256 shown
      before the approval;
    - the state hasn't changed since the plan, the guard passes again, and a fresh plan shows the same changes (no
@@ -302,6 +305,30 @@ GitHub, and applies only after the owner's second account, `jtouleyrou`, approve
    It then applies that saved plan, never a fresh one, checks that every job runs the pinned image, and deletes the
    plan. After a refusal, run the workflow again from `main` once its cause is gone (a re-run of the same run never
    applies); the new plan waits for a new approval.
+
+**A bootstrap change** (`src/terraform/bootstrap/`) is never applied by GitHub: after it merges, the owner applies it
+by hand from Cloud Shell, before approving the next GitHub apply. The apply job enforces this: its first step
+with the apply account's token (`scripts/tf_bootstrap_preflight.py`) asks Resource Manager's `testIamPermissions`, as
+that account, for every permission of the custom roles `main`'s `bootstrap/iam.tf` grants it on the project without a
+condition. If one is missing, it stops before Terraform runs, naming each missing permission: "the bootstrap on main
+is ahead of what's applied". It runs after the approval because only an approved job of the `terraform-apply`
+environment can get the apply account's token (`bootstrap/main.tf`), so a refused run needs a new approval. It can't
+test conditional grants (the ones limited to named buckets or instances), grants on one resource (`tfApplyRepository`
+on the image repository, the staging bucket's role), acts-as on the runtime accounts, or predefined roles: a missing
+one of those still fails partway, as before. The by-hand bootstrap block, from the repository's root in Cloud Shell:
+
+```bash
+cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -backend-config="bucket=coffee-data-tracker-tfstate" &&
+  b="$(sed -n 's/^[[:space:]]*billing_account[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' ../terraform.tfvars)" &&
+  { [ -n "$b" ] || { echo "no billing_account in ../terraform.tfvars" >&2; false; }; } &&
+  export TF_VAR_billing_account="$b" && terraform plan -input=false -out=b.plan && terraform show b.plan &&
+  read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
+```
+
+Read the plan before the yes: only what the merged bootstrap change describes; anything else, a replace included:
+answer no and ask first. Then run `terraform-apply` again from `main` (a new run: a re-run never applies).
+Custom-role changes can take a few minutes to reach every check: if the check names the same permissions at once,
+wait and run it again.
 
 **If an apply fails partway**, Terraform keeps what it finished in the state and nothing else runs. Only a fixed
 message and the affected addresses are shown: Terraform's own messages can quote private values, and the
