@@ -241,7 +241,8 @@ def test_a_version_include_never_breaks_a_build_over_an_aliass_copy(lake, monkey
     assert cli.cmd_build(args("2026-10-19", draft="d1", snapshot="s1", snapshot_sha256=sha)) is True
     d1 = next(b for b, d in quality.drafts(lake).items() if d == "d1")
     assert {f"{main}:mug", f"{alias}:mug"} <= coffees(d1)
-    cli.main(["publish-release", "--build", d1, "--action", "publish", "--baseline", base, "--reason", "a gift set"])
+    pub = ["publish-release", "--build", d1, "--action", "publish", "--baseline", base]
+    cli.main([*pub, "--reason", "a gift set"])
 
     # The alias is resolved: the weekly build pins the served decisions, and the alias's copy is left out.
     probe(lake, "2026-10-20", alias, final_host=f"www.{main}")
@@ -250,7 +251,11 @@ def test_a_version_include_never_breaks_a_build_over_an_aliass_copy(lake, monkey
     today["d"] = "2026-10-26"
     assert cli.cmd_build(args("2026-10-26")) is True
     weekly = quality.served(lake)["build_id"]
-    assert weekly != d1 and f"{main}:mug" in coffees(weekly) and not any(c.startswith(alias) for c in coffees(weekly))
+    assert (
+        weekly != d1
+        and f"{main}:mug" in coffees(weekly)
+        and not any(c.startswith(alias) for c in coffees(weekly))
+    )
 
     # A new draft with the same version include, after the alias is resolved, builds too.
     sha = _write_snapshot(snaps, "s2", [_decision("input_hash", mug_hash, "include", 2, f"{main}:mug")])

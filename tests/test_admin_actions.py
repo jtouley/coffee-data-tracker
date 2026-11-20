@@ -482,7 +482,9 @@ def test_a_build_that_starts_between_the_plan_and_the_publish_is_seen_under_the_
                    lake.root / "marts" / "release.parquet")  # fmt: skip
 
     class Racing(FakeJobs):
-        def executions(self, job, limit=10):  # the plan sees no build; the start sees the one that began since
+        def executions(
+            self, job, limit=10
+        ):  # the plan sees no build; the start sees the one that began since
             self.calls.append(("list", job))
             listed = [x for x in self.calls if x == ("list", job)]
             return [] if len(listed) == 1 else super().executions(job, limit)
