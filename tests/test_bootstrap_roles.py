@@ -45,6 +45,12 @@ REPOSITORY_READ = [
     "artifactregistry.versions.get",
     "artifactregistry.versions.list",
 ]
+# tfApplyRegistry's, on the project: create a repository, list them, change their settings. Not setIamPolicy.
+REGISTRY_PROJECT = [
+    "artifactregistry.repositories.create",
+    "artifactregistry.repositories.list",
+    "artifactregistry.repositories.update",
+]
 REPOSITORY_SETTINGS = [
     "artifactregistry.repositories.getIamPolicy",
     "artifactregistry.repositories.setIamPolicy",
@@ -83,16 +89,22 @@ def test_every_custom_role_holds_exactly_its_permissions():
                            "secretmanager.secrets.getIamPolicy", "secretmanager.secrets.list",
                            "secretmanager.secrets.setIamPolicy", "secretmanager.secrets.update"],
         "tfApplyLogExclusions": ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list",
-                                 "logging.exclusions.update", "logging.notificationRules.create",
+                                 "logging.exclusions.update", "logging.logMetrics.create", "logging.logMetrics.get",
+                                 "logging.logMetrics.list", "logging.logMetrics.update",
+                                 "logging.notificationRules.create",
                                  "logging.notificationRules.get", "logging.notificationRules.list",
                                  "logging.notificationRules.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
         "tfPlanBudgetReader": ["billing.resourcebudgets.read", "resourcemanager.projects.get"],
         "tfApplyBucketCreate": ["storage.buckets.create"],
-        "tfApplyCloudSqlProject": ["cloudsql.databases.create", "cloudsql.databases.get",
-                                   "cloudsql.instances.create", "cloudsql.users.create", "cloudsql.users.get",
-                                   "cloudsql.users.list"],
-        "tfApplyCloudSql": ["cloudsql.instances.get", "cloudsql.instances.update"],
+        "tfApplyCloudSql": sorted(f"cloudsql.{kind}.{verb}" for kind in ("databases", "instances", "users")
+                                  for verb in ("create", "get", "list", "update")),
+        "tfApplyMonitoring": sorted(f"monitoring.{kind}.{verb}"
+                                    for kind in ("dashboards", "groups", "services", "slos", "snoozes")
+                                    for verb in ("create", "get", "list", "update")),
+        "tfApplyRegistry": sorted(REPOSITORY_READ + REGISTRY_PROJECT),
+        "tfPlanReader": ["artifactregistry.repositories.get", "artifactregistry.repositories.list",
+                         "logging.logMetrics.get", "logging.logMetrics.list"],
     }  # fmt: skip
 
 
@@ -114,13 +126,14 @@ def test_only_the_apply_account_writes_logging_notification_rules_and_never_dele
 
 
 def test_no_custom_role_holds_an_artifact_registry_permission_outside_the_allowlist():
-    allowed = set(REPOSITORY_READ + REPOSITORY_SETTINGS)
+    allowed = set(REPOSITORY_READ + REPOSITORY_SETTINGS + REGISTRY_PROJECT)
     held = {p for perms in _roles().values() for p in perms if p.startswith("artifactregistry.")}
     assert held <= allowed, sorted(held - allowed)
 
 
 def test_no_project_level_grant_of_an_artifact_registry_role_or_the_repository_role():
-    """Project-wide, the repository role would reach every repository: not in tf_apply, tf_apply_custom or any other."""
+    """Project-wide, the repository role (it holds setIamPolicy) would reach every repository: not in tf_apply,
+    tf_apply_custom or any other. tfApplyRegistry is project-wide by design and holds no setIamPolicy."""
     project = [(name, body) for kind, name, body in _resources() if kind == "google_project_iam_member"]
     assert {name for name, _ in project} >= {"tf_plan", "tf_plan_custom", "tf_apply", "tf_apply_custom"}
     for name, body in project:
@@ -159,36 +172,17 @@ def _resource(kind: str, name: str) -> str:
 
 
 def test_no_custom_role_holds_a_cloud_sql_delete_export_import_connect_or_login():
-    """The apply account creates Cloud SQL instances, databases and users, and reads and updates the admin's instance;
-    it never deletes, exports, imports, connects or logs in (roles/cloudsql.admin would).
-    Whether a replica, clone or restore needs more than instances.create isn't relied on: the guard refuses them."""
+    """The apply account creates, reads, lists and updates Cloud SQL instances, databases and users; it never deletes,
+    exports, imports, clones, connects or logs in (roles/cloudsql.admin would). Unconditioned: Cloud SQL's IAM
+    Conditions don't support users or databases, and document none for instance creation. The guard's cloud-sql-access
+    bounds what a plan can do with it."""
     held = {p for perms in _roles().values() for p in perms if p.startswith("cloudsql.")}
     for p in held:
         assert p.rsplit(".", 1)[1] in {"create", "get", "list", "update"}, p
-    assert "cloudsql.users.update" not in held and "cloudsql.databases.update" not in held
     code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
     assert '"roles/cloudsql.admin"' not in code and '"roles/cloudsql.editor"' not in code
-
-
-def test_only_instance_permissions_sit_under_the_instance_condition():
-    """Cloud SQL's IAM Conditions don't support cloudsql.databases.* or cloudsql.users.* (the Cloud SQL "IAM
-    Conditions" page, Limitations), so those, and instances.create (no documented name condition), are granted
-    unconditioned in tfApplyCloudSqlProject; the conditioned tfApplyCloudSql holds instance permissions only."""
-    roles = _roles()
-    assert all(p.startswith("cloudsql.instances.") for p in roles["tfApplyCloudSql"])
-    assert "cloudsql.instances.create" in roles["tfApplyCloudSqlProject"]
-    code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
-    assert (
-        "admin_instance_condition = \"resource.name == 'projects/${var.project_id}/instances/${var.service}-admin'\""
-        in code
-    )
-    body = _resource("google_project_iam_member", "tf_apply_cloud_sql")
-    assert "role    = google_project_iam_custom_role.tf_cloud_sql.id" in body
-    assert "member  = local.apply_member" in body
-    assert "expression = local.admin_instance_condition" in body
-    assert code.count("google_project_iam_custom_role.tf_cloud_sql.id") == 1  # bound nowhere else
     apply = _resource("google_project_iam_member", "tf_apply_custom")
-    assert "cloud_sql        = google_project_iam_custom_role.tf_cloud_sql_project.id" in apply
+    assert "cloud_sql        = google_project_iam_custom_role.tf_cloud_sql.id" in apply
 
 
 def test_the_pipeline_never_writes_project_iam():
@@ -228,29 +222,134 @@ def test_the_admins_cloud_sql_grants_are_the_owners_with_the_admin_stacks_condit
     )
 
 
-def test_the_admins_buckets_are_reached_only_by_name():
-    """The two buckets don't exist when the bootstrap applies, so their settings and IAM come from project grants
-    conditioned on their two names; bucket creation (checked on the project) is a role of its own."""
+def test_buckets_are_reached_by_the_projects_prefix_never_the_state_or_plans_bucket():
+    """New buckets don't exist when the bootstrap applies, so their settings and IAM come from project grants
+    conditioned on the "<project>-" prefix, minus the state and plans buckets; creation (checked on the project) is a
+    role of its own."""
     code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
-    assert (
-        'for b in ["admin-state", "admin-snapshots"] : '
-        "\"resource.name == 'projects/_/buckets/${var.project_id}-${b}'\"" in code
-    )
+    for clause in (
+        "\"resource.type == 'storage.googleapis.com/Bucket'\"",
+        "\"resource.name.startsWith('projects/_/buckets/${var.project_id}-')\"",
+        "\"resource.name != 'projects/_/buckets/${var.state_bucket}'\"",
+        "\"resource.name != 'projects/_/buckets/${google_storage_bucket.tf_plans.name}'\"",
+    ):
+        assert clause in code, clause
+    assert 'managed_buckets_condition = join(" && ", [' in code
     for name, role, member in (
-        ("tf_apply_admin_buckets", "tf_bucket_admin", "apply"),
-        ("tf_plan_admin_buckets", "tf_bucket_reader", "plan"),
+        ("tf_apply_buckets", "tf_bucket_admin", "apply"),
+        ("tf_plan_buckets", "tf_bucket_reader", "plan"),
     ):
         body = _resource("google_project_iam_member", name)
         assert f"role    = google_project_iam_custom_role.{role}.id" in body
         assert f"member  = local.{member}_member" in body
-        assert "expression = local.admin_buckets_condition" in body
+        assert "expression = local.managed_buckets_condition" in body
     # Bucket admin or reader at project scope only through those two conditioned grants.
     for kind, name, body in _resources():
         if kind == "google_project_iam_member" and re.search(r"tf_bucket_(admin|reader)\b", body):
-            assert name in {"tf_apply_admin_buckets", "tf_plan_admin_buckets"}, name
+            assert name in {"tf_apply_buckets", "tf_plan_buckets"}, name
     apply = _resource("google_project_iam_member", "tf_apply_custom")
     assert "bucket_create    = google_project_iam_custom_role.tf_bucket_create.id" in apply
-    assert "cloud_sql        = google_project_iam_custom_role.tf_cloud_sql_project.id" in apply
+
+
+# What the apply account held before the bounded set widened (main at d5d705e and since): the hard line is measured
+# against it.
+TODAY_APPLY_ROLES = {
+    "roles/browser",
+    "roles/serviceusage.serviceUsageAdmin",
+    "roles/iam.workloadIdentityPoolViewer",
+    "roles/iam.securityReviewer",
+    "roles/run.admin",
+    "roles/compute.networkAdmin",
+    "roles/cloudscheduler.admin",
+    "roles/monitoring.alertPolicyEditor",
+    "roles/monitoring.notificationChannelEditor",
+    "roles/monitoring.uptimeCheckConfigEditor",
+    "roles/iam.serviceAccountUser",  # tf_apply_acts_as, on the managed accounts only
+    "roles/billing.costsManager",  # the budget, on the billing account
+    "roles/storage.objectAdmin",  # the main root's state objects only (a condition)
+}
+TODAY_SET_IAM_POLICY_ROLES = {"tfApplyBucketAdmin", "tfApplyRepository", "tfApplySecrets"}
+TODAY_DELETES = {"storage.objects.delete"}  # tfApplyPlanObject: the saved plan, after the apply
+TODAY_SERVICE_ACCOUNT_PERMS = {f"iam.serviceAccounts.{v}" for v in ("create", "get", "list", "update")}
+
+
+def _apply_grants() -> list[tuple[str, str, str]]:
+    """Every grant to the apply account: (type, name, role expression)."""
+    out = []
+    for kind, name, body in _resources():
+        if kind.endswith("_iam_member") and "member" in body and "local.apply_member" in body:
+            role = re.search(r"^\s*role\s*=\s*(.+)$", body, re.M).group(1).strip()
+            out.append((kind, name, role))
+    return out
+
+
+def test_the_hard_line_holds():
+    """The bounded set widened to create, read, list and update the ordinary types of every service in use, and
+    nothing past the hard line: no project or service-account setIamPolicy, no iam.roles.*, no service-account
+    permission beyond today's, no keys, no workload identity pools, nothing on billing beyond the budget, nothing on
+    the state or plans buckets' IAM, no basic role, no predefined admin role beyond today's, no delete beyond today's,
+    setIamPolicy only in the roles that held it today."""
+    roles = _roles()
+    perms = {p for ps in roles.values() for p in ps}
+    forbidden_prefixes = (
+        "resourcemanager.projects.setIamPolicy",
+        "resourcemanager.projects.update",
+        "iam.roles.",
+        "iam.serviceAccountKeys.",
+        "iam.workloadIdentityPool",
+        "iam.denypolicies.",
+        "orgpolicy.",
+    )
+    assert not [p for p in perms if p.startswith(forbidden_prefixes)]
+    assert {p for p in perms if p.startswith("iam.serviceAccounts.")} <= TODAY_SERVICE_ACCOUNT_PERMS
+    assert {p for p in perms if p.startswith("billing.")} == {"billing.resourcebudgets.read"}
+    assert roles["tfPlanBudgetReader"] == ["billing.resourcebudgets.read", "resourcemanager.projects.get"]
+    assert {p for p in perms if p.endswith(".delete")} <= TODAY_DELETES
+    assert {rid for rid, ps in roles.items() if any(p.endswith(".setIamPolicy") for p in ps)} == (
+        TODAY_SET_IAM_POLICY_ROLES
+    )
+    assert not [p for p in perms if "*" in p]
+
+    # Predefined roles: none basic, no admin role the account didn't hold today, nothing new but the custom roles.
+    code = "\n".join(body for _, _, body in _resources())
+    named = set(re.findall(r'"(roles/[A-Za-z.]+)"', code))
+    assert not named & {"roles/owner", "roles/editor", "roles/viewer"}
+    apply_predefined = set()
+    for kind, name, role in _apply_grants():
+        if role.startswith("each.value"):
+            body = _resource(kind, name)
+            apply_predefined |= set(re.findall(r'"(roles/[A-Za-z.]+)"', body))
+        elif role.startswith('"roles/'):
+            apply_predefined.add(role.strip('"').split('"')[0])
+        else:
+            assert role.startswith("google_project_iam_custom_role."), (name, role)
+    assert apply_predefined <= TODAY_APPLY_ROLES, sorted(apply_predefined - TODAY_APPLY_ROLES)
+    admin = {r for r in named if re.search(r"admin", r, re.I)}
+    assert admin <= {r for r in TODAY_APPLY_ROLES if re.search(r"admin", r, re.I)}, sorted(admin)
+
+    # Service-account IAM: only the apply account acting as the main root's runtime accounts, as today.
+    sa = [(n, r) for k, n, r in _apply_grants() if k == "google_service_account_iam_member"]
+    assert sa == [("tf_apply_acts_as", '"roles/iam.serviceAccountUser"')]
+
+    # Billing: the budget role on the billing account, nothing else, as today.
+    billing = [(k, n) for k, n, _ in _resources() if k.startswith("google_billing")]
+    assert billing == [("google_billing_account_iam_member", "tf_apply")]
+
+    # The state and plans buckets: the four grants of today, none of a role holding setIamPolicy; the managed-bucket
+    # condition excludes both.
+    on_state_or_plans = sorted(
+        n
+        for k, n, b in _resources()
+        if k == "google_storage_bucket_iam_member"
+        and ("var.state_bucket" in b or "google_storage_bucket.tf_plans" in b)
+    )
+    assert on_state_or_plans == ["tf_apply_plans", "tf_apply_state", "tf_plan_plans", "tf_plan_state"]
+    for name in on_state_or_plans:
+        body = _resource("google_storage_bucket_iam_member", name)
+        assert "tf_bucket_admin" not in body and 'Admin"' not in body.replace("objectAdmin", "")
+    assert "resource.name != 'projects/_/buckets/${var.state_bucket}'" in code + "".join(
+        tf.read_text() for tf in ROOT.glob("*.tf")
+    )
 
 
 def test_the_apply_account_acts_as_the_admins_account_and_no_new_other():

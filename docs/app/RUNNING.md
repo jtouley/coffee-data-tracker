@@ -358,19 +358,34 @@ the workflow again; the new plan shows what is left. A lock left by a dead runne
 (`google_billing_budget.monthly`), the plan account's project-scoped budget role isn't enough: give it
 `roles/billing.viewer` on the billing account instead (`src/terraform/bootstrap/iam.tf`).
 
-**What an approved apply can do.** The apply account manages what the main root manages, so once you approve, it can set
-IAM on the secrets (and so reach their values), on the image repository, the Cloud Run service and jobs, the staging
-bucket (and so raw ingestion data) and the admin's two buckets (its sign-in state and drafts' snapshots), read the image
-repository's images, which Cloud Run checks as whoever deploys a job or service (its role holds no push or delete
-permission itself, though the repository's settings and IAM it can change reach both), run any image as the runtime,
-ingest, scheduler, usage or admin account, change the admin's Cloud SQL instance, create any new Cloud SQL instance, and
-databases and IAM users on any instance (Cloud SQL's IAM Conditions don't cover databases or users), and create
-log-based alert policies and notification channels of any type. That last one means an approved apply could copy fields of matching log entries
-(through a policy's `label_extractors` or its documentation) into a notification on a channel it creates, such as a
-webhook to an outside address: a narrow path for log content, not a sink, and the guard checks neither channel types nor
-extractors. That is what the approval is for: read the IAM section of the summary first, and for any new or changed
-notification channel its type and address, and any `label_extractors` on an alert. It cannot write a workload identity
-pool or provider, a custom role, the project's IAM, or IAM on any service account. The guard refuses:
+**What an approved apply can do.** The apply account can create, read, list and update the ordinary resource types of
+every service the main root runs. It has no delete beyond the saved plan's, and the guard refuses deletes. The services:
+Cloud Run services, jobs and domain mappings; Cloud Scheduler; Compute networking; Secret Manager secrets; Cloud Storage
+buckets; Artifact Registry repositories; Monitoring (alert policies, channels, uptime checks, dashboards, groups,
+services, SLOs, snoozes); Logging (exclusions, log-based metrics, notification rules); and Cloud SQL (instances,
+databases, users). The next resource of a kind already in use needs no bootstrap change. Once you approve, it can:
+- set IAM on the secrets (and so reach their values), on the image repository, the Cloud Run services and jobs, and on
+  every bucket named `<project>-…` except the state and plans buckets: the staging bucket (raw ingestion data), the
+  admin's two (its sign-in state and drafts' snapshots), and any it creates next;
+- create buckets and Artifact Registry repositories (a cost; a bucket named outside `<project>-…` can't be managed
+  afterwards);
+- read any repository's images, which Cloud Run checks as whoever deploys. The guard still pins the images a job or
+  service may run to this project's `<service>/ingest` and `<service>/app` by digest;
+- run any image as the runtime, ingest, scheduler, usage or admin account;
+- create and change any Cloud SQL instance, and its databases and users. The guard's `cloud-sql-access` refuses an
+  authorized network, an `ssl_mode` weaker than `ENCRYPTED_ONLY`, IAM authentication off, a root password, a replica,
+  clone or restore, and a user that isn't an IAM one or has a password. Logging in needs a grant only you make;
+- create log-based metrics, dashboards, SLOs and snoozes, alert policies and notification channels of any type.
+
+That last one means an approved apply could copy fields of matching log entries (through a policy's
+`label_extractors`, a log-based metric's labels, or a policy's documentation) into a notification on a channel it
+creates, such as a webhook to an outside address. That is a narrow path for log content, not a sink, and the guard
+checks neither channel types nor extractors. That is what the approval is for: read the IAM section of the summary
+first, and for any new or changed notification channel its type and address, and any `label_extractors`. It cannot
+write a workload identity
+pool or provider, a custom role, a key, the project's IAM, IAM on any service account, the state or plans bucket's IAM,
+or anything on billing beyond the budget (`tests/test_bootstrap_roles.py`, `test_the_hard_line_holds`). The guard
+refuses:
 - any change to the deploy, plan or apply account, anything else that names the plan or apply account, a key for
   any account, or a custom role;
 - a grant on any resource that names the plan or apply account; one that names the deploy account, except exactly
@@ -437,7 +452,7 @@ script's bootstrap step refuses any replace, so it is for a first apply only):
 `TF_VAR_billing_account=<from your terraform.tfvars> terraform plan -out=b.plan`, then `terraform apply b.plan`. The plan
 shows: create `google_project_iam_custom_role.tf_plan_object`, and replace
 `google_storage_bucket_iam_member.tf_apply_plans` (its role changes, so it is replaced); nothing else. If the bootstrap
-was never applied, the first run creates everything (68 resources) with the final roles. It runs after the main root
+was never applied, the first run creates everything (72 resources) with the final roles. It runs after the main root
 has made the accounts it grants on (`docs/ingestion/final-shell-run.sh` applies the main root first).
 
 **If every `google_cloud_run_v2_job` update fails** (or the usage service's) with `Docker-GetManifest
@@ -504,31 +519,39 @@ only on main); `jtouleyrou` approves it as usual. That run is for what the faile
 policy alone, `1 to add, 0 to change, 0 to destroy`. Custom-role changes can take a few minutes to reach every check: if
 the same denial comes back at once, wait and run it again.
 
-**The apply account's grants for the admin** (`admin.tf`, `admin_control.tf`; docs/admin/README.md), all in
-`src/terraform/bootstrap/iam.tf`:
+**The apply account's grants for the admin, and the wider bounded set** (`admin.tf`, `admin_control.tf`;
+docs/admin/README.md), all in `src/terraform/bootstrap/iam.tf`. Each permission's comment there says what it lets an
+approved apply do that it couldn't before.
 - `tf_apply_acts_as["admin"]`: Service Account User on `registry-coffee-admin-run` only, so the admin service can run
-  as its own account;
-- `tfApplyBucketCreate` (`storage.buckets.create`, on the project: creation is checked before the bucket exists), and
-  `tfApplyBucketAdmin` through a project grant conditioned on the names `<project>-admin-state` and
-  `<project>-admin-snapshots` (`tf_apply_admin_buckets`): those two buckets' settings and IAM;
-- `tfApplyCloudSqlProject`, on the project: create an instance, and create and read databases and users. Cloud
+  as its own account.
+- Cloud Storage:
+  - `tfApplyBucketCreate` (`storage.buckets.create`, on the project: creation is checked before the bucket exists);
+  - `tfApplyBucketAdmin` through a project grant on every `<project>-…` bucket except the state and plans buckets
+    (`tf_apply_buckets`): their settings and IAM.
+- Cloud SQL, `tfApplyCloudSql` on the project: create, read, list and update instances, databases and users. Cloud
   SQL's IAM Conditions page says conditions don't support `cloudsql.databases.*` or `cloudsql.users.*`. It lists
-  creating instances with a name prefix or suffix as a use case but documents no condition for it, so the create is
-  unconditioned too. The guard's `cloud-sql-access` bounds what an approved plan can create: IAM users without
-  passwords, and no replica, clone, restore or root password. Logging in needs `cloudsql.instances.login`, which no
-  pipeline grant gives;
-- `tfApplyCloudSql` through a project grant conditioned on the admin's instance name (`tf_apply_cloud_sql`): read and
-  update that instance. Neither role can delete, export, import, connect or log in;
-- for the plan account: `roles/cloudsql.viewer`, and `tfPlanBucketReader` through the same two-bucket condition
-  (`tf_plan_admin_buckets`);
-- not the apply account's: the admin account's two Cloud SQL project grants (`admin_sql`: `roles/cloudsql.client` and
+  creating instances with a name prefix or suffix as a use case but documents no condition for it, so the role is
+  unconditioned. The guard's `cloud-sql-access` bounds it.
+- Artifact Registry, `tfApplyRegistry` on the project: create repositories, read and change their settings, and read
+  their images. There is no `setIamPolicy`: that stays on the one repository (`tfApplyRepository`).
+- Monitoring, `tfApplyMonitoring`: dashboards, groups, services, SLOs and snoozes.
+- Logging: log-based metrics, added to `tfApplyLogExclusions`. There are still no sinks, log buckets or views.
+- For the plan account:
+  - `roles/cloudsql.viewer`;
+  - `tfPlanReader` (repositories' settings, log-based metrics);
+  - `tfPlanBucketReader` through the same bucket condition (`tf_plan_buckets`).
+- Not the apply account's: the admin account's two Cloud SQL project grants (`admin_sql`: `roles/cloudsql.client` and
   `roles/cloudsql.instanceUser`, conditioned on the admin's instance). Project IAM is never the pipeline's, so this
   root, applied by you, holds them.
 
 **Order.** The grants on `registry-coffee-admin-run` need the account to exist:
 1. #199 (`google_service_account.admin` alone in the main root) merges and `terraform-apply` applies it (`1 to add`,
    plus anything already pending on main: today `google_monitoring_alert_policy.usage_dropped[0]`).
-2. Then re-apply the bootstrap once, by hand, from the repository's root in Cloud Shell.
+2. Then re-apply the bootstrap once, by hand, from the repository's root in Cloud Shell. One tap opens it:
+   [Open in Cloud Shell](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/jtouley/coffee-data-tracker&cloudshell_git_branch=main&cloudshell_workspace=src/terraform/bootstrap)
+   (Google's "Open in Cloud Shell" page documents these parameters). It clones `main` and opens the terminal in
+   `src/terraform/bootstrap`. Your `terraform.tfvars` isn't in git: copy it to `src/terraform/terraform.tfvars` in that
+   clone first. Then `cd "$(git rev-parse --show-toplevel)"` and paste the block.
 3. Then the admin (#125) merges, and its first apply goes through.
 
 ```bash
@@ -539,12 +562,15 @@ cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -ba
   read -r -p "apply exactly this plan? [y/N] " a && [ "$a" = y ] && terraform apply b.plan; rm -f b.plan; unset TF_VAR_billing_account b a
 ```
 
-Read the plan before the yes: `12 to add, 0 to change, 0 to destroy`:
-- creates of `google_project_iam_custom_role.tf_bucket_create`, `.tf_cloud_sql_project` and `.tf_cloud_sql`;
-- `google_project_iam_member.tf_apply_custom["bucket_create"]`, `tf_apply_custom["cloud_sql"]`,
-  `tf_apply_admin_buckets`, `tf_apply_cloud_sql`, `tf_plan_admin_buckets`, `tf_plan["roles/cloudsql.viewer"]`,
+Read the plan before the yes: `16 to add, 1 to change, 0 to destroy`:
+- creates of `google_project_iam_custom_role.tf_bucket_create`, `.tf_cloud_sql`, `.tf_monitoring`, `.tf_registry` and
+  `.tf_plan_reader`;
+- `google_project_iam_member.tf_apply_custom["bucket_create"]`, `["cloud_sql"]`, `["monitoring"]` and
+  `["registry"]`, `tf_plan_custom["reader"]`, `tf_apply_buckets`, `tf_plan_buckets`, `tf_plan["roles/cloudsql.viewer"]`,
   `admin_sql["client"]` and `admin_sql["instance_user"]`;
-- `google_service_account_iam_member.tf_apply_acts_as["admin"]`.
+- `google_service_account_iam_member.tf_apply_acts_as["admin"]`;
+- an update in place of `google_project_iam_custom_role.tf_log_exclusions` (its title, and the four
+  `logging.logMetrics` permissions).
 
 That holds when the bootstrap was current with main before this change. Anything else, an update or a replace
 included: answer no and ask first. If `registry-coffee-admin-run` doesn't exist yet (#199 not applied), the apply fails

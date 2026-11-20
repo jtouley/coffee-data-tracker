@@ -798,7 +798,9 @@ def test_the_bootstrap_gives_the_apply_account_exactly_what_the_collector_needs(
     )
     assert {k: sorted(re.findall(r'"([^"]+)"', v)) for k, v in perms.items()} == {
         "tfApplyLogExclusions": ["logging.exclusions.create", "logging.exclusions.get", "logging.exclusions.list",
-                                 "logging.exclusions.update", "logging.notificationRules.create",
+                                 "logging.exclusions.update", "logging.logMetrics.create", "logging.logMetrics.get",
+                                 "logging.logMetrics.list", "logging.logMetrics.update",
+                                 "logging.notificationRules.create",
                                  "logging.notificationRules.get", "logging.notificationRules.list",
                                  "logging.notificationRules.update"],
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],

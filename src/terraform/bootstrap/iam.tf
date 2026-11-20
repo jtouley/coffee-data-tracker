@@ -17,22 +17,31 @@
 # pipeline: the guard refuses those changes too), the state and plans buckets' IAM or the billing account's; delete a
 # service account.
 #
-# What the apply account CAN do once an apply is approved, because the main root manages it: set IAM on the secrets (so
-# grant itself or anyone a secret's value), the image repository, the Cloud Run service and jobs, the staging bucket
-# (so reach raw ingestion data) and the admin's two buckets (its sign-in state, drafts' snapshots); change the admin's
-# Cloud SQL instance, create any new instance in the project, and create databases and users on any instance (Cloud
-# SQL's IAM Conditions don't cover databases or users; the guard refuses an authorized network, an ssl_mode weaker
-# than ENCRYPTED_ONLY, IAM authentication off, a root password, a replica, clone or restore, and a database user that
-# isn't an IAM one or carries a password: cloud-sql-access); never project IAM (project-iam-policy); read the image
-# repository's images, which Cloud Run needs from whoever deploys a job or service (its role holds no push or delete
-# permission itself, but its settings can set cleanup policies and its IAM can grant write); run any image as the
-# runtime, ingest, scheduler, usage or admin account, which hold secret access, the staging bucket and (the admin's)
-# its database, buckets and the named jobs; and create log-based alert policies and notification channels of any
-# type, so a policy whose label extractors or documentation copy log fields could send them to a channel it creates (a
-# webhook to an outside address, say): a narrow, reviewable path for log content, not a sink, and the guard doesn't
-# check channel types or extractors. The approval, the guard and the checks in terraform-apply.yml are the gate on all
-# of that, not these roles. The plan account can read every resource's settings and IAM, and the state (the billing
-# account id, the owner's email, the egress IPs), from any same-repository pull request.
+# What the apply account CAN do once an apply is approved. It holds create, read, list and update (no delete beyond
+# the saved plan's) for the ordinary types of every service the main root runs, so the next resource of a kind it
+# already runs needs no change here: Cloud Run services, jobs and domain mappings (run.admin), Cloud Scheduler,
+# Compute networking (networks, subnets, routers, NATs, addresses), Secret Manager secrets, Cloud Storage buckets,
+# Artifact Registry repositories, Monitoring (alert policies, channels, uptime checks, dashboards, groups, services,
+# SLOs, snoozes), Logging (exclusions, log-based metrics, notification rules) and Cloud SQL (instances, databases,
+# users). So it can: set IAM on the secrets (so grant itself or anyone a secret's value), the image repository, the
+# Cloud Run services and jobs, and every "<project>-" bucket but the state and plans buckets (the staging bucket's raw
+# ingestion data, the admin's sign-in state and snapshots); create buckets and repositories; deploy from any
+# repository's images (the guard pins the images it may run); change any Cloud SQL instance and create or change its
+# databases and users (the guard refuses an authorized network, an ssl_mode weaker than ENCRYPTED_ONLY, IAM
+# authentication off, a root password, a replica, clone or restore, and a database user that isn't an IAM one or
+# carries a password: cloud-sql-access); run any image as the runtime, ingest, scheduler, usage or admin account,
+# which hold secret access, the staging bucket and (the admin's) its database, buckets and the named jobs; and create
+# log-based metrics, alert policies and notification channels of any type, so a policy whose label extractors or
+# documentation copy log fields could send them to a channel it creates (a webhook to an outside address, say): a
+# narrow, reviewable path for log content, not a sink, and the guard doesn't check channel types or extractors.
+#
+# The hard line (tests/test_bootstrap_roles.py, test_the_hard_line_holds): never the project's IAM
+# (project-iam-policy refuses it too), IAM on a service account, a custom role, a key, a workload identity pool or
+# provider, billing beyond the budget, or the state and plans buckets' IAM; no basic role, no predefined admin role
+# beyond today's; setIamPolicy only in the three roles that held it before (secrets, the one repository, buckets).
+# The approval, the guard and the checks in terraform-apply.yml are the gate on all of that, not these roles. The plan
+# account can read every resource's settings and IAM, and the state (the billing account id, the owner's email, the
+# egress IPs), from any same-repository pull request.
 
 locals {
   plan_member  = "serviceAccount:${google_service_account.tf_plan.email}"
@@ -59,15 +68,17 @@ locals {
   image_repository = "projects/${var.project_id}/locations/${var.region}/repositories/${var.service}"
   staging_bucket   = "${var.project_id}-ingest-staging"
 
-  # The admin's two buckets (admin.tf, admin_control.tf), by name: they don't exist until the main root makes them, so
-  # the grants on them are project grants with this condition, not bucket grants. Both have uniform bucket-level
-  # access, which IAM conditions on Cloud Storage need.
-  admin_buckets_condition = join(" || ", [
-    for b in ["admin-state", "admin-snapshots"] : "resource.name == 'projects/_/buckets/${var.project_id}-${b}'"
+  # The project's buckets the apply account may manage (settings and IAM): every bucket whose name starts with
+  # "<project>-", by the main root's naming (the staging bucket, the admin's two, the next one), except the state and
+  # plans buckets, whose IAM is the owner's only. Cloud Build's "<project>_cloudbuild" doesn't match (an underscore).
+  # Project grants with this condition, since a new bucket doesn't exist when this root applies. IAM conditions on
+  # Cloud Storage need uniform bucket-level access, which every bucket the main root makes has.
+  managed_buckets_condition = join(" && ", [
+    "resource.type == 'storage.googleapis.com/Bucket'",
+    "resource.name.startsWith('projects/_/buckets/${var.project_id}-')",
+    "resource.name != 'projects/_/buckets/${var.state_bucket}'",
+    "resource.name != 'projects/_/buckets/${google_storage_bucket.tf_plans.name}'",
   ])
-
-  # The admin's Cloud SQL instance (admin_control.tf: "${var.service}-admin"), as IAM conditions name it.
-  admin_instance_condition = "resource.name == 'projects/${var.project_id}/instances/${var.service}-admin'"
 }
 
 # --- Custom roles: where a predefined role would give more than the root needs ---------------------------------------
@@ -79,16 +90,20 @@ resource "google_project_iam_custom_role" "tf_bucket_reader" {
   permissions = ["storage.buckets.get"]
 }
 
-# Change the staging bucket's settings and IAM (lifecycle rule, the ingest account's objectUser), never its objects.
+# Change a bucket's settings and IAM (lifecycle rule, versioning, who reads or writes its objects), never its objects:
+# on the staging bucket (tf_apply_staging) and, through tf_apply_buckets, on every "<project>-" bucket but the state
+# and plans buckets. This role held setIamPolicy before; what is new is its reach: the next bucket of the main root's
+# needs no bootstrap change, and an approved apply can set IAM on any such bucket, the admin's sign-in state included.
 resource "google_project_iam_custom_role" "tf_bucket_admin" {
   role_id     = "tfApplyBucketAdmin"
   title       = "Terraform apply: a bucket's settings and IAM"
   permissions = ["storage.buckets.get", "storage.buckets.getIamPolicy", "storage.buckets.setIamPolicy", "storage.buckets.update"]
 }
 
-# Create a bucket: the admin's `-admin-state` and `-admin-snapshots`. Checked on the project, before the bucket
-# exists, so not limited to those names; it reaches no existing bucket (a name in use fails). The new buckets' settings
-# and IAM are tfApplyBucketAdmin's, through a project grant limited to their names (tf_apply_admin_buckets).
+# Create a bucket (new: the admin's `-admin-state` and `-admin-snapshots`, and any later one). Checked on the project,
+# before the bucket exists, so not limited by name; it reaches no existing bucket (a name in use fails). New: an
+# approved apply can create any number of buckets (a cost). A bucket named outside "<project>-" can't be managed
+# afterwards (tf_apply_buckets), so it fails closed at its first settings read.
 resource "google_project_iam_custom_role" "tf_bucket_create" {
   role_id     = "tfApplyBucketCreate"
   title       = "Terraform apply: create a bucket"
@@ -143,6 +158,42 @@ resource "google_project_iam_custom_role" "tf_repository" {
   ]
 }
 
+# Any Artifact Registry repository in the project: create one, read and change its settings (cleanup policies, the
+# format's settings), and read its images, which Cloud Run checks as whoever deploys (the same read set as
+# tfApplyRepository). New: an approved apply can create a repository and deploy from any repository's images; the
+# guard's image pins (ingest-image-pinned, app-image-pinned) still allow only this project's `<service>/ingest` and
+# `<service>/app` images by digest. Not setIamPolicy (that stays on the one repository, tfApplyRepository), and no
+# upload, tag write or delete.
+resource "google_project_iam_custom_role" "tf_registry" {
+  role_id = "tfApplyRegistry"
+  title   = "Terraform apply: create repositories, their settings, read images"
+  permissions = [
+    "artifactregistry.attachments.get",
+    "artifactregistry.attachments.list",
+    "artifactregistry.dockerimages.get",
+    "artifactregistry.dockerimages.list",
+    "artifactregistry.files.download",
+    "artifactregistry.files.get",
+    "artifactregistry.files.list",
+    "artifactregistry.packages.get",
+    "artifactregistry.packages.list",
+    "artifactregistry.repositories.create",
+    "artifactregistry.repositories.downloadArtifacts",
+    "artifactregistry.repositories.get",
+    "artifactregistry.repositories.list",
+    "artifactregistry.repositories.listEffectiveTags",
+    "artifactregistry.repositories.listTagBindings",
+    "artifactregistry.repositories.readViaVirtualRepository",
+    "artifactregistry.repositories.update",
+    "artifactregistry.rules.get",
+    "artifactregistry.rules.list",
+    "artifactregistry.tags.get",
+    "artifactregistry.tags.list",
+    "artifactregistry.versions.get",
+    "artifactregistry.versions.list",
+  ]
+}
+
 # Read the saved plan it was approved for (by name and generation), and delete it after the apply. Not list or write.
 resource "google_project_iam_custom_role" "tf_plan_object" {
   role_id     = "tfApplyPlanObject"
@@ -177,14 +228,23 @@ resource "google_project_iam_custom_role" "tf_secrets" {
 # notification, on a channel it creates (a webhook, say). The guard checks neither channel types nor extractors;
 # RUNNING.md, "What an approved apply can do", says what to read before approving. The role id stays (changing it
 # would replace the role and its grant); the title says what it covers now.
+# And log-based metrics (logging.logMetrics create, get, list, update; new): an approved apply can count matching log
+# entries into a metric, which the alert policies it can already write can then use. A metric holds counts and
+# labels, not entries; its label extractors can copy a field's values into labels, readable by anyone with
+# monitoring.viewer in the project (no one outside it). Still no sinks (they export entries anywhere), log buckets
+# or views (retention, who reads logs), and no delete.
 resource "google_project_iam_custom_role" "tf_log_exclusions" {
   role_id = "tfApplyLogExclusions"
-  title   = "Terraform apply: log exclusions and log-based alerts' rules"
+  title   = "Terraform apply: log exclusions, log-based metrics, log-based alerts' rules"
   permissions = [
     "logging.exclusions.create",
     "logging.exclusions.get",
     "logging.exclusions.list",
     "logging.exclusions.update",
+    "logging.logMetrics.create",
+    "logging.logMetrics.get",
+    "logging.logMetrics.list",
+    "logging.logMetrics.update",
     "logging.notificationRules.create",
     "logging.notificationRules.get",
     "logging.notificationRules.list",
@@ -192,41 +252,78 @@ resource "google_project_iam_custom_role" "tf_log_exclusions" {
   ]
 }
 
-# The admin's control plane (admin_control.tf), in two roles, because Cloud SQL's IAM Conditions cover only some of
-# it. Google's "IAM Conditions" page for Cloud SQL, Limitations: "IAM Conditions don't support operations on the users
-# resource (cloudsql.users.* permissions) or the databases resource (cloudsql.databases.* permissions) in the Cloud SQL
-# Admin API", and resource-based conditions support only the Instance and BackupRun types.
-#
-# tfApplyCloudSqlProject, on the project, unconditioned: create an instance, and create and read databases and users
-# (users.list as well: the provider reads a user from the instance's list). The same page lists "Allowing users to
-# create instances with specific prefixes or suffixes" as a use case, but documents no condition or permission for it,
-# so the create isn't conditioned on a behaviour the docs don't state. So this allows any new instance in the
-# project, and a database or user on any instance. The guard bounds both (cloud-sql-access): no replica, clone or
-# restore, no root password, no authorized network, IAM sign-in on; a user only CLOUD_IAM_* with no password. Logging
-# in as such a user needs cloudsql.instances.login, which no pipeline grant gives (project IAM is the owner's), and
-# neither users.update nor users.delete is held.
-resource "google_project_iam_custom_role" "tf_cloud_sql_project" {
-  role_id = "tfApplyCloudSqlProject"
-  title   = "Terraform apply: create Cloud SQL instances, databases and users"
+# Cloud SQL, project-wide: create, read and change instances, databases and users (the admin's control plane in
+# admin_control.tf, and the next). Not roles/cloudsql.admin: no delete (the guard refuses deletes), export, import,
+# clone (a separate permission), connect or login. Unconditioned: Google's "IAM Conditions" page for Cloud SQL,
+# Limitations, says conditions don't support the users (cloudsql.users.*) or databases (cloudsql.databases.*)
+# resources, and it documents no condition for instance creation (it lists "creating instances with specific prefixes
+# or suffixes" only as a use case). New, beyond the admin's set: instances.list, instances.update on any instance (not
+# only the admin's), and databases.list, databases.update, users.update. What an approved apply can do with it is
+# bounded by the guard (cloud-sql-access) on every instance and user in a plan: no authorized network, encrypted
+# connections, IAM sign-in on, no root password, no replica, clone or restore, users CLOUD_IAM_* with no password (so
+# users.update can't set one through Terraform). Logging in needs cloudsql.instances.login, which no pipeline grant
+# gives. Operations are read through instances.get.
+resource "google_project_iam_custom_role" "tf_cloud_sql" {
+  role_id = "tfApplyCloudSql"
+  title   = "Terraform apply: Cloud SQL instances, databases and users"
   permissions = [
     "cloudsql.databases.create",
     "cloudsql.databases.get",
+    "cloudsql.databases.list",
+    "cloudsql.databases.update",
     "cloudsql.instances.create",
+    "cloudsql.instances.get",
+    "cloudsql.instances.list",
+    "cloudsql.instances.update",
     "cloudsql.users.create",
     "cloudsql.users.get",
     "cloudsql.users.list",
+    "cloudsql.users.update",
   ]
 }
 
-# tfApplyCloudSql, on the admin's instance only (tf_apply_cloud_sql: a condition on its resource.name,
-# projects/PROJECT_ID/instances/INSTANCE_ID, which Instance conditions support): read and change that instance. Not
-# roles/cloudsql.admin, which can also delete, export, import, connect and log in: none of those in either role, and
-# no update of a database or user (a change fails closed with a 403 that names the permission). Operations are read
-# through instances.get (not on the page; if polling is refused, the 403 names the permission).
-resource "google_project_iam_custom_role" "tf_cloud_sql" {
-  role_id     = "tfApplyCloudSql"
-  title       = "Terraform apply: the admin's Cloud SQL instance"
-  permissions = ["cloudsql.instances.get", "cloudsql.instances.update"]
+# Monitoring's other ordinary types (alert policies, channels and uptime checks are the predefined editors' below):
+# dashboards, groups, services and their SLOs, snoozes; create, get, list, update, no delete. New: an approved apply
+# can add or change dashboards and SLOs, and snooze an alert policy for a while (it can already edit or disable one
+# with alertPolicyEditor, so a snooze adds no new way to silence an alert).
+resource "google_project_iam_custom_role" "tf_monitoring" {
+  role_id = "tfApplyMonitoring"
+  title   = "Terraform apply: dashboards, groups, services, SLOs, snoozes"
+  permissions = [
+    "monitoring.dashboards.create",
+    "monitoring.dashboards.get",
+    "monitoring.dashboards.list",
+    "monitoring.dashboards.update",
+    "monitoring.groups.create",
+    "monitoring.groups.get",
+    "monitoring.groups.list",
+    "monitoring.groups.update",
+    "monitoring.services.create",
+    "monitoring.services.get",
+    "monitoring.services.list",
+    "monitoring.services.update",
+    "monitoring.slos.create",
+    "monitoring.slos.get",
+    "monitoring.slos.list",
+    "monitoring.slos.update",
+    "monitoring.snoozes.create",
+    "monitoring.snoozes.get",
+    "monitoring.snoozes.list",
+    "monitoring.snoozes.update",
+  ]
+}
+
+# The plan account's reads of what the apply account's wider set can create: any repository's settings and log-based
+# metrics. Settings only: no image download (it never deploys).
+resource "google_project_iam_custom_role" "tf_plan_reader" {
+  role_id = "tfPlanReader"
+  title   = "Terraform plan: repositories' settings, log-based metrics"
+  permissions = [
+    "artifactregistry.repositories.get",
+    "artifactregistry.repositories.list",
+    "logging.logMetrics.get",
+    "logging.logMetrics.list",
+  ]
 }
 
 resource "google_project_iam_custom_role" "tf_log_exclusions_reader" {
@@ -260,6 +357,7 @@ resource "google_project_iam_member" "tf_plan" {
 resource "google_project_iam_member" "tf_plan_custom" {
   for_each = {
     log_exclusions = google_project_iam_custom_role.tf_log_exclusions_reader.id
+    reader         = google_project_iam_custom_role.tf_plan_reader.id
   }
   project = var.project_id
   role    = each.value
@@ -280,14 +378,15 @@ resource "google_storage_bucket_iam_member" "tf_plan_staging" {
   member = local.plan_member
 }
 
-# The admin's two buckets' settings, as for the staging bucket; their IAM through securityReviewer.
-resource "google_project_iam_member" "tf_plan_admin_buckets" {
+# The managed buckets' settings (local.managed_buckets_condition), as for the staging bucket; their IAM through
+# securityReviewer.
+resource "google_project_iam_member" "tf_plan_buckets" {
   project = var.project_id
   role    = google_project_iam_custom_role.tf_bucket_reader.id
   member  = local.plan_member
   condition {
-    title      = "admin-buckets-only"
-    expression = local.admin_buckets_condition
+    title      = "managed-buckets-only"
+    expression = local.managed_buckets_condition
   }
 }
 
@@ -350,33 +449,24 @@ resource "google_project_iam_member" "tf_apply_custom" {
     secrets          = google_project_iam_custom_role.tf_secrets.id
     log_exclusions   = google_project_iam_custom_role.tf_log_exclusions.id
     bucket_create    = google_project_iam_custom_role.tf_bucket_create.id
-    cloud_sql        = google_project_iam_custom_role.tf_cloud_sql_project.id
+    cloud_sql        = google_project_iam_custom_role.tf_cloud_sql.id
+    monitoring       = google_project_iam_custom_role.tf_monitoring.id
+    registry         = google_project_iam_custom_role.tf_registry.id
   }
   project = var.project_id
   role    = each.value
   member  = local.apply_member
 }
 
-# The admin's two buckets' settings and IAM (versioning, the admin's creator and viewer, the ingest account's
-# viewer on the snapshots), as for the staging bucket, on those two names only.
-resource "google_project_iam_member" "tf_apply_admin_buckets" {
+# The managed buckets' settings and IAM (local.managed_buckets_condition): the admin's two (versioning, the admin's
+# creator and viewer, the ingest account's viewer on the snapshots) and the next; never the state or plans bucket.
+resource "google_project_iam_member" "tf_apply_buckets" {
   project = var.project_id
   role    = google_project_iam_custom_role.tf_bucket_admin.id
   member  = local.apply_member
   condition {
-    title      = "admin-buckets-only"
-    expression = local.admin_buckets_condition
-  }
-}
-
-# The admin's instance itself (tf_cloud_sql above), on that instance's name only.
-resource "google_project_iam_member" "tf_apply_cloud_sql" {
-  project = var.project_id
-  role    = google_project_iam_custom_role.tf_cloud_sql.id
-  member  = local.apply_member
-  condition {
-    title      = "admin-instance-only"
-    expression = local.admin_instance_condition
+    title      = "managed-buckets-only"
+    expression = local.managed_buckets_condition
   }
 }
 
