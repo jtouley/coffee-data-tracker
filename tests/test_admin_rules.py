@@ -13,7 +13,7 @@ from coffeedata import decisions, rules
 from coffeedata.lake import SCHEMAS, Lake
 
 from .test_admin import B1, W1, W3, build_lake, tree
-from .test_admin_actions import _draft_build, audit, make, post
+from .test_admin_actions import _draft_build, audit, chains_published, make, post
 
 
 def _flag(cid, rule, polarity, family, direction="", roaster="good.example", **kw):
@@ -180,6 +180,7 @@ def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, p
 
 
 def test_the_crawl_flag_is_a_versioned_conflict_checked_write(tmp_path, lake, pg_url):
+    chains_published(lake.root)  # the seed's chain flags are served: only this test's change is pending
     app, c, _ = make(tmp_path, lake.root, pg_url)
     assert (
         post(c, "/api/roasters/good.example/crawl", {"key": "k0", "crawl": "off", "reason": ""}).status_code

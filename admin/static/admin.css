@@ -195,6 +195,10 @@ table.sources tbody th { font-weight: 500; }
 table.sources td.pick + th { position: static; } /* no pinned column here */
 table.sources thead th.pick + th { left: auto; } /* the header row stays sticky to the top only */
 table.sources .status { font-size: 0.8125rem; color: var(--ink-2); }
+/* A long name ends in an ellipsis; its "· Chain" never does (the word is the status, the name can be read in full in
+   the narrow layout and the title). */
+table.sources .nameline { display: flex; min-width: 0; align-items: baseline; }
+table.sources .chainword { flex: none; white-space: pre; font-weight: 400; }
 table.sources td.c-seen { font-variant-numeric: tabular-nums; }
 table.sources td a.ev { display: inline; } /* so a long domain ends in an ellipsis, not under the next column */
 table.sources td.c-tag, table.sources td.c-hint, table.sources td.c-city, table.sources td.c-state { color: var(--ink-2); font-size: 0.8125rem; }
@@ -203,9 +207,10 @@ table.sources th.act { width: 44px; }
 table.sources th.act, table.sources td.act { padding-inline-end: 4px; text-align: end; overflow: visible; position: relative; }
 table.sources .narrow { display: none; }
 @media (min-width: 760px) {
-  table.sources .c-name { width: 22%; } table.sources .c-domain { width: 18%; } table.sources .c-city { width: 11%; }
+  table.sources .c-name { width: 26%; } table.sources .c-domain { width: 15%; } table.sources .c-city { width: 11%; }
   table.sources .c-state { width: 4.5rem; } table.sources .c-tag { width: 7.5rem; } table.sources .c-hint { width: 13%; }
   table.sources .c-status { width: 9.5rem; } table.sources .c-seen { width: 6.5rem; }
+  table.sources .nameline .pname { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 }
 html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row never sits under the sticky header */
 @media (max-width: 759px) {
@@ -221,6 +226,13 @@ html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row n
   background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; text-align: start; }
 .rowmenu .menu .inline-form { display: block; }
 .rowmenu .menu .btn { width: 100%; justify-content: flex-start; padding: 0 12px; }
+/* A second flag in the same menu (the chain flag under the roaster flag): its own group under a hairline, so two
+   near-identical labels for different flags never sit side by side. Its reason folds (details), so the action stays
+   in view on a phone. */
+.rowmenu .menugroup { border-top: 1px solid var(--rule); margin-top: 4px; padding-top: 4px; }
+.rowmenu .menugroup + .btn, .rowmenu .menugroup + a.btn { border-top: 1px solid var(--rule); margin-top: 4px; border-radius: 0; }
+.rowmenu .menugroup details.reason > summary { min-height: 44px; font-size: 0.8125rem; color: var(--ink-2); }
+.rowmenu .menugroup details.reason > p { padding-top: 0; }
 dialog.panel h2 { margin-top: 0; }
 @media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sorts[data-narrow-only] { display: none; } }
 dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
@@ -316,3 +328,8 @@ table.kf-list th, table.kf-list td { vertical-align: middle; }
   table.kf-list td.c-out:not(.draft)::before { content: "Takes out "; color: var(--ink-2); }
   table.kf-list td.c-in, table.kf-list td.c-out, table.kf-list td.c-check, table.kf-list td.c-why { font-size: 0.8125rem; }
 }
+/* The confirm sheet's reason wraps and grows with what is typed, so a long reason can be read whole before it is
+   recorded (field-sizing where the browser has it; else three lines, and it scrolls). */
+textarea.input.reason { display: block; min-height: 56px; height: auto; padding-block: 14px; line-height: 1.4; resize: vertical;
+  field-sizing: content; max-height: 12rem; overflow-wrap: anywhere; }
+@supports not (field-sizing: content) { textarea.input.reason { min-height: calc(3lh + 28px); } }
