@@ -1463,7 +1463,8 @@ def create_app(
         hit = photo_reads.get(photo_id)
         if not hit or hit[0] != user_id or not hit[1]:
             return
-        photo_reads.move_to_end(photo_id)  # used: last to go
+        with contextlib.suppress(KeyError):  # another request may have dropped it since the read above
+            photo_reads.move_to_end(photo_id)  # used: last to go
         for bag in store.bags_of(user_id):
             if bag.photo_id == photo_id and not bag.coffee_id:
                 update = {"coffee_id": hit[1], "match_score": hit[2], "read_json": bag.read_json or hit[3]}
