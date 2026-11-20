@@ -110,7 +110,7 @@ ACTIONS: dict[str, Action] = {
                ("week",), lambda p: [Step("enrich-week", ["enrich-week", "--submit", "--run-date", p["week"]])]),
         Action("classify", "Classify", "Claude's coffee-or-not verdicts for new product versions (spends).", (),
                lambda p: [Step("build", _sh('rc=0; coffeedata classify || rc=1; '
-                                            'coffeedata publish --message "classify (admin)"; exit $rc'))]),
+                                            'coffeedata publish --message "classify (admin)" || rc=1; exit $rc'))]),
         Action("build", "Build", "The weekly build: classify, build and gate. It serves the release if it passes.",
                (), lambda p: [Step("build", None)]),
         # From the Release page: a draft build over a decisions snapshot, Publish, Roll back.
@@ -118,7 +118,7 @@ ACTIONS: dict[str, Action] = {
                lambda p: [Step("build", _sh(
                    f"rc=0; coffeedata build --draft {p['draft_id']} --snapshot {p['snapshot_id']} "
                    f"--snapshot-sha256 {p['sha256']} || rc=1; "
-                   f'coffeedata publish --message "draft {p["draft_id"]}"; exit $rc'))],
+                   f'coffeedata publish --message "draft {p["draft_id"]}" || rc=1; exit $rc'))],
                page="release"),
         Action("publish", "Publish", "Serve a draft build: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",
