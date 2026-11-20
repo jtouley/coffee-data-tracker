@@ -81,6 +81,21 @@ be added in the repository's settings, as long as the app still runs that image 
 from there), so the app and the admin never stay on different images. A deploy while traffic is pinned (Rolling
 back, below) ends with a warning on the run, and leaves the admin where it is.
 
+**The admin's first apply** takes two applies, like the app's secrets (Owner's steps, 5): its service reads three
+secrets at version `latest`, and Cloud Run refuses a service whose secret has no version. `admin_enabled` in
+`src/terraform/ci.tfvars` (off by default) holds back the service, its public invoker, its domain mapping and its
+alerts. In order (the commands are in docs/admin/README.md, "The first apply, in order"):
+
+1. the first apply, with `admin_enabled = false`: the account, the three empty secrets and their grants, the state
+   bucket, and the control plane (the Cloud SQL instance, its database and IAM user, the snapshot bucket, the job
+   grants);
+2. you add the three secret values (`ADMIN_SESSION_SECRET`, `ADMIN_ENROLL_TOKEN`, `ADMIN_HF_TOKEN`);
+3. a small PR sets `admin_enabled = true` in `ci.tfvars`;
+4. its apply makes the service (on Google's sample image), the invoker, the domain mapping and the alerts;
+5. by hand, the deploy account's two grants: Cloud Run Developer on the admin service only, and Service Account User
+   on `registry-coffee-admin-run` only;
+6. set `GCP_ADMIN_SERVICE`; the next deploy puts the app's image on the admin.
+
 Once the deploy job has pushed the app's image, the same run does two more things, neither of which deploys
 anything, and both whether or not the rollout then succeeded:
 - `attest` signs build provenance for the app's image (which workflow run and commit made that digest);

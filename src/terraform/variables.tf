@@ -64,6 +64,12 @@ variable "admin_domain" {
   default     = "admin.registry.coffee"
 }
 
+variable "admin_enabled" {
+  description = "Creates the admin's service, its public invoker, its domain mapping and its alerts (admin.tf). Turn on in ci.tfvars once ADMIN_SESSION_SECRET, ADMIN_ENROLL_TOKEN and ADMIN_HF_TOKEN each have an enabled version (docs/admin/README.md, \"Deploying\"): the service reads them at version latest, and Cloud Run refuses to create it before that."
+  type        = bool
+  default     = false
+}
+
 variable "admin_cold_start_min_samples" {
   description = "Container starts an hour needs before the admin's cold-start alert can fire, so one slow start never pages (docs/design/admin-registry.md §7.1)."
   type        = number
