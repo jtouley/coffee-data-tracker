@@ -41,10 +41,11 @@ The admin starts them with the Cloud Run Admin API's run-with-overrides, as `gcl
 `job_manifests` rows say arm `test`, so it never counts as the week's crawl. *count* writes into week W's
 partition like the scheduled passes; it is refused once W's merge is done.
 
-**Guards.** A job with a running execution isn't started again. Starts are refused from Monday 09:00 UTC until the
-week's merge is done and on Tuesday 03:00-12:00 UTC, unless the owner gives a reason, which is recorded. One test
-crawl per roaster a day. The site isn't a job here: it deploys from the served release by the `site` workflow on
-GitHub, which the admin holds no token for (Jobs links to it).
+**Guards.** A job with a running execution isn't started again. Nor do the publish job (Publish, Roll back) and the
+build job run beside each other: the build serves its own release on top of the one served when it started. Starts
+are refused from Monday 09:00 UTC until the week's merge is done and on Tuesday 03:00-12:00 UTC, unless the owner
+gives a reason, which is recorded. One test crawl per roaster a day. The site isn't a job here: it deploys from the
+served release by the `site` workflow on GitHub, which the admin holds no token for (Jobs links to it).
 
 Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_jobs` (`src/terraform/admin_control.tf`);
 `tests/test_admin_terraform.py` fails if the two differ.

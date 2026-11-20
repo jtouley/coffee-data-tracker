@@ -193,6 +193,17 @@ def in_window(now: datetime, current: WeekState) -> str | None:
     return None
 
 
+# Jobs that never run beside each other, besides a job and itself. The build reads the served release (and so the
+# decisions snapshot it pins) at its start and serves its own release on top of it: a Publish or Roll back in between
+# would be replaced by a build without its decisions, with the wrong previous release in serving_log.
+EXCLUSIVE = {"publish": frozenset({"build"}), "build": frozenset({"publish"})}
+
+
+def exclusive(job_names: set[str]) -> set[str]:
+    """The jobs to check, and lock, before starting these: each, and every job it must not run beside."""
+    return set(job_names).union(*(EXCLUSIVE.get(j, ()) for j in job_names))
+
+
 def guard(plan: Plan, now: datetime, current: WeekState, target: WeekState, running: dict[str, str],
           recent_test: dict | None) -> Plan:  # fmt: skip
     """The guards' refusals for a plan (empty: it may start). `running`: job -> its running execution; `target`:
@@ -201,6 +212,9 @@ def guard(plan: Plan, now: datetime, current: WeekState, target: WeekState, runn
     for s in plan.steps:
         if s.job in running:
             out.append(f"{s.job} is already running ({running[s.job]}): wait for it, or cancel it first")
+        for other in sorted(EXCLUSIVE.get(s.job, ()) & running.keys()):
+            out.append(f"{other} is running ({running[other]}): {s.job} never runs beside it (the build serves its "
+                       "own release on top of the one served when it started); wait for it, or cancel it first")  # fmt: skip
     if plan.params.get("mode") == "count" and target.merge_done:
         out.append(f"week {target.week} is merged: a merged week's partition isn't crawled again "
                    "(run a test crawl, or the merge again and a draft build)")  # fmt: skip
