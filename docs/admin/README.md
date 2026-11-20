@@ -86,7 +86,48 @@ codes. Delete `build/admin-state` to start over.
 
 Terraform: `src/terraform/admin.tf`, with the service, its own service account, the three empty secrets, the state
 bucket, the domain mapping, and three alerts (errors, passkeys changed, and the cold start that revisits the
-language, §7.1 of the design). The owner applies a reviewed plan. The owner's steps are in the PR that added this.
-The first apply runs Google's sample image with no command. `deploy-admin` in `.github/workflows/deploy.yml` then
-deploys the app's image with the admin's entrypoint (`sh -c "exec uvicorn --factory admin.main:create_app ..."`),
-and Terraform leaves the image, command and args to it.
+language, §7.1 of the design). The owner applies a reviewed plan, in the order below.
+The service's first apply runs Google's sample image with no command. `deploy-admin` in
+`.github/workflows/deploy.yml` then deploys the app's image with the admin's entrypoint
+(`sh -c "exec uvicorn --factory admin.main:create_app ..."`), and Terraform leaves the image, command and args to it.
+
+### The first apply, in order
+
+The service reads its three secrets at version `latest`, and Cloud Run refuses to create a service whose secret has
+no version. Terraform makes the secrets empty (their values are never in Terraform or its state), so the service
+can't come in the same apply. `admin_enabled` (`src/terraform/ci.tfvars`, off by default) holds back the service
+and what names it: its public invoker, the domain mapping and the alerts.
+
+1. **The first apply, with `admin_enabled = false`** (as merged). It makes the account `registry-coffee-admin-run`
+   (unless it is already there), the three empty secrets with the account's read grant on each, the storage API,
+   and the state bucket with its two grants. No service yet.
+2. **Add the three secret values**, from your laptop or Cloud Shell, never in a file in the repository:
+
+   ```bash
+   python3 -c 'import secrets; print(secrets.token_urlsafe(48), end="")' | gcloud secrets versions add ADMIN_SESSION_SECRET --data-file=-
+   python3 -c 'import secrets; print(secrets.token_urlsafe(48), end="")' | tee /dev/tty | gcloud secrets versions add ADMIN_ENROLL_TOKEN --data-file=-   # note it: it enrolls the first passkey
+   gcloud secrets versions add ADMIN_HF_TOKEN --data-file=-   # paste, then Ctrl-D twice
+   ```
+
+   `ADMIN_HF_TOKEN` is a fine-grained Hugging Face token with read access to the lake dataset only, never the
+   app's `HF_TOKEN`.
+3. **A small PR sets `admin_enabled = true`** in `src/terraform/ci.tfvars`, and nothing else. Its plan adds six
+   resources: the service, its invoker, the domain mapping and the three alerts. Before it merges, the domain is
+   verified for the account that applies and its CAA record allows `pki.goog`, as for the app
+   (docs/app/RUNNING.md, Owner's steps, 3). Never before step 2: Cloud Run refuses the service and the apply stops
+   there.
+4. **Apply** (that PR's merge). The service starts on the sample image. Then DNS: `CNAME admin ->
+   ghs.googlehosted.com.`
+5. **The deploy account's two grants, by hand** (the plan guard refuses them in Terraform), each on one resource
+   only. Cloud Run Developer on the admin service, and Service Account User on `registry-coffee-admin-run`:
+
+   ```bash
+   gcloud run services add-iam-policy-binding registry-coffee-admin --region us-central1 \
+     --member "serviceAccount:registry-coffee-deploy@<project>.iam.gserviceaccount.com" --role roles/run.developer
+   gcloud iam service-accounts add-iam-policy-binding registry-coffee-admin-run@<project>.iam.gserviceaccount.com \
+     --member "serviceAccount:registry-coffee-deploy@<project>.iam.gserviceaccount.com" --role roles/iam.serviceAccountUser
+   ```
+
+   Never on the project. Without them `deploy-admin` fails with a 403.
+6. **Set the repository variable `GCP_ADMIN_SERVICE`** to `registry-coffee-admin`. The next deploy run puts the
+   app's image on the admin with its entrypoint. Then open `https://admin.registry.coffee` and enroll.

@@ -7,8 +7,17 @@
 #     the owner makes with read access to the lake dataset only.
 # Sign-in is in code (passkeys), as for the app, so the service itself is public. Every route but /health and the
 # sign-in routes needs a session, and the service answers 503 to everything when its settings are incomplete.
+#
+# One switch, in ci.tfvars and off by default (docs/admin/README.md, "Deploying"):
+# - admin_enabled: the service, its public invoker, its domain mapping and its alerts. The service mounts each of
+#   its three secrets at version latest, and Cloud Run refuses a revision whose secret has no version: with the
+#   switch off, an apply makes only the account, the empty secrets and their grants, and the bucket, which need
+#   nothing from the owner. The owner adds the three values, then a PR turns the switch on.
 
 locals {
+  admin_service = "${var.service}-admin"
+  admin_count   = var.admin_enabled ? 1 : 0
+
   # Secret Manager id => the environment variable the admin reads it as.
   admin_secrets = {
     ADMIN_SESSION_SECRET = "ADMIN_SESSION_SECRET" # 32+ random characters: signs the session cookie
@@ -66,7 +75,9 @@ resource "google_storage_bucket_iam_member" "admin_state" {
 }
 
 resource "google_cloud_run_v2_service" "admin" {
-  name                = "${var.service}-admin"
+  count = local.admin_count
+
+  name                = local.admin_service
   location            = var.region
   ingress             = "INGRESS_TRAFFIC_ALL"
   deletion_protection = false
@@ -143,7 +154,9 @@ resource "google_cloud_run_v2_service" "admin" {
 }
 
 resource "google_cloud_run_v2_service_iam_member" "admin_public" {
-  name     = google_cloud_run_v2_service.admin.name
+  count = local.admin_count
+
+  name     = google_cloud_run_v2_service.admin[0].name
   location = var.region
   role     = "roles/run.invoker"
   member   = "allUsers"
@@ -152,18 +165,22 @@ resource "google_cloud_run_v2_service_iam_member" "admin_public" {
 # Before this applies: the domain is verified for the applying account and its CAA record allows pki.goog, as for
 # the app (docs/app/RUNNING.md). Afterwards: the CNAME admin -> ghs.googlehosted.com.
 resource "google_cloud_run_domain_mapping" "admin" {
+  count = local.admin_count
+
   name     = var.admin_domain
   location = var.region
   metadata {
     namespace = var.project_id
   }
   spec {
-    route_name = google_cloud_run_v2_service.admin.name
+    route_name = google_cloud_run_v2_service.admin[0].name
   }
 }
 
 # Any ERROR line or 5xx: a lake read that failed, the sign-in state unreadable, or the service switched off.
 resource "google_monitoring_alert_policy" "admin_errors" {
+  count = local.admin_count
+
   display_name = "admin.registry.coffee: errors"
   combiner     = "OR"
   conditions {
@@ -171,7 +188,7 @@ resource "google_monitoring_alert_policy" "admin_errors" {
     condition_matched_log {
       filter = join(" AND ", [
         "resource.type=\"cloud_run_revision\"",
-        "resource.labels.service_name=\"${google_cloud_run_v2_service.admin.name}\"",
+        "resource.labels.service_name=\"${local.admin_service}\"",
         "(severity>=ERROR OR httpRequest.status>=500)",
       ])
     }
@@ -187,6 +204,8 @@ resource "google_monitoring_alert_policy" "admin_errors" {
 
 # An email whenever the passkeys change: enrollment, a passkey added, a recovery code used. None should surprise.
 resource "google_monitoring_alert_policy" "admin_passkeys" {
+  count = local.admin_count
+
   display_name = "admin.registry.coffee: passkeys changed"
   combiner     = "OR"
   conditions {
@@ -194,7 +213,7 @@ resource "google_monitoring_alert_policy" "admin_passkeys" {
     condition_matched_log {
       filter = join(" AND ", [
         "resource.type=\"cloud_run_revision\"",
-        "resource.labels.service_name=\"${google_cloud_run_v2_service.admin.name}\"",
+        "resource.labels.service_name=\"${local.admin_service}\"",
         "jsonPayload.event=\"admin_auth\"",
         "jsonPayload.outcome=\"ok\"",
         "jsonPayload.action=(\"enroll\" OR \"add_passkey\" OR \"recover\")",
@@ -220,14 +239,16 @@ resource "google_monitoring_alert_policy" "admin_passkeys" {
 # - condition_prometheus_query_language is in hashicorp/google 6.x (checked in the 6.50.0 schema). A threshold
 #   condition couldn't also require a minimum number of starts.
 resource "google_monitoring_alert_policy" "admin_cold_start" {
+  count = local.admin_count
+
   display_name = "admin.registry.coffee: cold start p95 > 2 s"
   combiner     = "OR"
   conditions {
     display_name = "container startup p95 over 1 h, at least ${var.admin_cold_start_min_samples} starts"
     condition_prometheus_query_language {
       query    = <<-EOT
-        histogram_quantile(0.95, sum by (le) (increase(run_googleapis_com:container_startup_latencies_bucket{monitored_resource="cloud_run_revision",service_name="${google_cloud_run_v2_service.admin.name}"}[1h]))) > 2000
-        and on() sum(increase(run_googleapis_com:container_startup_latencies_count{monitored_resource="cloud_run_revision",service_name="${google_cloud_run_v2_service.admin.name}"}[1h])) >= ${var.admin_cold_start_min_samples}
+        histogram_quantile(0.95, sum by (le) (increase(run_googleapis_com:container_startup_latencies_bucket{monitored_resource="cloud_run_revision",service_name="${local.admin_service}"}[1h]))) > 2000
+        and on() sum(increase(run_googleapis_com:container_startup_latencies_count{monitored_resource="cloud_run_revision",service_name="${local.admin_service}"}[1h])) >= ${var.admin_cold_start_min_samples}
       EOT
       duration = "0s"
     }
@@ -243,8 +264,8 @@ resource "google_monitoring_alert_policy" "admin_cold_start" {
 }
 
 output "admin_url" {
-  description = "The admin service's run.app URL (admin.registry.coffee once the domain mapping is live)."
-  value       = google_cloud_run_v2_service.admin.uri
+  description = "The admin service's run.app URL (admin.registry.coffee once the domain mapping is live); null while admin_enabled is off."
+  value       = one(google_cloud_run_v2_service.admin[*].uri)
 }
 
 output "admin_state_bucket" {

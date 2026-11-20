@@ -2,9 +2,10 @@
 # (terraform-plan.yml, terraform-apply.yml) and the owner's scripts (scripts/tf_break_glass.sh,
 # docs/ingestion/final-shell-run.sh) and the hand commands in RUNNING.md and RUNBOOK.md all pass it with
 # `-var-file=ci.tfvars`, after terraform.tfvars, so a value set here wins over the same one there. Any other plan by
-# hand must pass it too, or it proposes undoing these (the usage collector would be destroyed). Not an
-# *.auto.tfvars: every route loads it explicitly (tests/test_usage_collector.py checks the scripts and the runbooks'
-# commands). Only real, public values go here, never a placeholder.
+# hand must pass it too, or it proposes undoing these (the usage collector would be destroyed, and the admin's
+# service once admin_enabled is on). Not an *.auto.tfvars: every route loads it explicitly
+# (tests/test_usage_collector.py checks the scripts and the runbooks' commands). Only real, public values go here,
+# never a placeholder.
 #
 # Where the other values come from in CI (docs/ingestion/RUNBOOK.md section 9):
 # - repository secrets TF_VAR_BILLING_ACCOUNT and TF_VAR_OWNER_EMAIL: billing_account and owner_email;
@@ -29,3 +30,9 @@ verdict_model = "claude-haiku-5-5"
 usage_image   = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:5945b9b7628093efb159d425584b05c0b8e4a6776a1b83ee4fe2f8d967d1c537"
 usage_enabled = true
 usage_token   = true
+
+# The admin (admin.tf). admin_enabled: true once the three secrets the first apply made empty (ADMIN_SESSION_SECRET,
+# ADMIN_ENROLL_TOKEN, ADMIN_HF_TOKEN) each have an enabled version; that apply then creates the service, its public
+# invoker, its domain mapping and its alerts. Before that, Cloud Run would refuse the service (it reads each secret
+# at version latest) and the apply would fail partway. The order: docs/admin/README.md, "Deploying".
+admin_enabled = false
