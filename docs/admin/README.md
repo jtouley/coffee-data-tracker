@@ -166,7 +166,9 @@ codes. Delete `build/admin-state` to start over.
 Terraform: `src/terraform/admin.tf` (the service, its own service account, the three empty secrets, the state
 bucket, the domain mapping, and alerts on errors, passkey changes and the cold start) and `admin_control.tf` (the
 Cloud SQL instance, its IAM database user, the snapshot bucket, the job grants and an alert on every write). The
-owner applies a reviewed plan.
+owner applies a reviewed plan. The admin account's two Cloud SQL project grants (`cloudsql.client` and
+`cloudsql.instanceUser`, conditioned on its instance) are in the bootstrap root (`src/terraform/bootstrap`), which
+the owner applies first: the GitHub pipeline never writes project IAM.
 
 **Once, after the first apply:** the admin's IAM database user needs the right to create its schema in the `admin`
 database. As the `postgres` user (Cloud SQL Studio, or `gcloud sql connect registry-coffee-admin --user=postgres

@@ -159,9 +159,11 @@ resource "google_cloud_run_v2_service" "admin" {
   lifecycle {
     ignore_changes = [template[0].containers[0].image, client, client_version, scaling]
   }
+  # The Cloud SQL grants it needs to connect (client, instanceUser) come from the bootstrap root, applied by the
+  # owner before this one (admin_control.tf), so they are not in this list.
   depends_on = [
     google_secret_manager_secret_iam_member.admin, google_storage_bucket_iam_member.admin_state,
-    google_project_iam_member.admin_sql, google_storage_bucket_iam_member.admin_snapshots,
+    google_storage_bucket_iam_member.admin_snapshots,
   ]
 }
 

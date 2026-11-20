@@ -83,19 +83,10 @@ resource "google_sql_user" "admin" {
   type     = "CLOUD_IAM_SERVICE_ACCOUNT"
 }
 
-# Connect (cloudsql.client) and log in as its IAM user (cloudsql.instanceUser), on this instance only.
-resource "google_project_iam_member" "admin_sql" {
-  # Plain keys: the plan guard (scripts/tf_plan_guard.py) prints only addresses whose keys are plain words.
-  for_each = { client = "roles/cloudsql.client", instance_user = "roles/cloudsql.instanceUser" }
-  project  = var.project_id
-  role     = each.value
-  member   = "serviceAccount:${google_service_account.admin.email}"
-  condition {
-    title       = "only the admin's instance"
-    description = "The admin's control-plane database, nothing else."
-    expression  = "resource.name == \"projects/${var.project_id}/instances/${google_sql_database_instance.admin.name}\""
-  }
-}
+# Connect (cloudsql.client) and log in as its IAM user (cloudsql.instanceUser), on this instance only: two project
+# grants to the admin's account, conditioned on this instance. Project IAM is never written by the GitHub pipeline,
+# so they live in the bootstrap root (src/terraform/bootstrap), which the owner applies, under the same keys, roles
+# and condition (google_project_iam_member.admin_sql there).
 
 # Drafts' decisions snapshots: the admin creates them, the build job reads them (mounted read-only), nobody rewrites
 # them. Creating an object that exists needs delete permission, which no one here has.
