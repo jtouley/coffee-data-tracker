@@ -129,6 +129,32 @@ def test_the_jsonld_is_data_and_leaves_the_csp_alone():
     )
 
 
+def test_security_txt_points_to_the_private_report_route_and_expires():
+    """RFC 9116: Contact and Expires are required; Expires is under a year out (security self-assessment I-6). The
+    contact is SECURITY.md's own private route, and no email address is published."""
+    from datetime import UTC, datetime
+
+    built = datetime(2026, 11, 16, 9, 30, tzinfo=UTC)
+    text = site.security_txt("https://registry.coffee", built)
+    fields = [line.split(": ", 1) for line in text.splitlines() if line and not line.startswith("#")]
+    keys = [k for k, _ in fields]
+    values = dict(fields)
+    assert (
+        keys.count("Contact") == 1 and keys.count("Expires") == 1
+    )  # Expires: exactly once (RFC 9116 §2.5.5)
+    advisories = "https://github.com/jtouley/coffee-data-tracker/security/advisories/new"
+    assert values["Contact"] == advisories
+    assert advisories in (Path(__file__).parents[1] / "SECURITY.md").read_text()
+    assert values["Policy"] == "https://github.com/jtouley/coffee-data-tracker/blob/main/SECURITY.md"
+    assert values["Canonical"] == "https://registry.coffee/.well-known/security.txt"
+    expires = datetime.strptime(values["Expires"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC)
+    assert built < expires and (expires - built).days < 365
+    assert "@" not in text and "mailto:" not in text
+    assert text.endswith("\n") and "\r" not in text
+    # The same build gives the same file.
+    assert site.security_txt("https://registry.coffee", built) == text
+
+
 def test_robots_allows_everything_and_points_at_the_sitemap():
     assert site.robots_txt("https://registry.coffee") == (
         "User-agent: *\nAllow: /\n\nSitemap: https://registry.coffee/sitemap.xml\n"
