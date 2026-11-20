@@ -2,11 +2,11 @@
 
   python score.py agree <data dir> <set>
       agreement between labels_A.json and labels_B.json; writes to_settle.json (ids only) for the third labeler
-  python score.py score <data dir> <set> <name>=<predictions.json> ... [--without-verdict <stratum>]
+  python score.py score <data dir> <set> <name>=<predictions.json>[@<stratum>] ...
       each classifier's errors per stratum, with Wilson 95% intervals, the confidently wrong ones, and accuracy
-      weighted by stratum size. --without-verdict scores that stratum on the rules alone (predict.py's rules_only)
-  python score.py final <data dir> <name>=<predictions.json> ... [--without-verdict <stratum>]
-      the same on the sealed test set, once: it refuses a second run (it leaves test/FINAL_SCORED)
+      weighted by stratum size. @<stratum> scores that stratum on the rules alone (predict.py's rules_only)
+  python score.py final <data dir> <name>=<predictions.json>[@<stratum>] ...
+      the same on the sealed test set, once per name: it refuses a second run (it leaves test/FINAL_SCORED)
 
 The reference label of a product is the one labelers A and B agree on, else the third labeler's (labels_C.json).
 Products whose reference is "unsure" are left out and counted.
@@ -65,7 +65,7 @@ def agree(d: Path) -> None:
     (d / "to_settle.json").write_text(json.dumps(sorted(i for i in a if i not in same)))
 
 
-def score(d: Path, preds: list[str], without_verdict: str | None) -> None:
+def score(d: Path, preds: list[str]) -> None:
     sample = json.loads((d / "sample.json").read_text())
     stratum = {m["id"]: m["stratum"] for m in sample["items"]}
     pop = {s: n for s, n in sample["population"].items() if n}
@@ -76,6 +76,7 @@ def score(d: Path, preds: list[str], without_verdict: str | None) -> None:
     )
     for spec in preds:
         name, path = spec.split("=", 1)
+        path, _, without_verdict = path.partition("@")
         pred = {int(k): v for k, v in json.loads(Path(path).read_text()).items()}
         note = f" ({without_verdict} scored on the rules alone)" if without_verdict else ""
         print(f"\n{name}{note}")
@@ -108,25 +109,20 @@ def score(d: Path, preds: list[str], without_verdict: str | None) -> None:
 def main() -> None:
     cmd, data = sys.argv[1], Path(sys.argv[2])
     rest = sys.argv[3:]
-    without = rest[rest.index("--without-verdict") + 1] if "--without-verdict" in rest else None
-    if without:
-        del rest[rest.index("--without-verdict") :][:2]
     if cmd == "agree":
         agree(data / rest[0])
     elif cmd == "score":
         if rest[0] == "test":
             sys.exit("the test set is scored with `final`, once")
-        score(data / rest[0], rest[1:], without)
+        score(data / rest[0], rest[1:])
     elif cmd == "final":
         marker = data / "test" / "FINAL_SCORED"
-        key = " ".join(sorted(r.split("=", 1)[0] for r in rest)) + (
-            f" --without-verdict {without}" if without else ""
-        )
         done = marker.read_text().splitlines() if marker.exists() else []
-        if key in done:
-            sys.exit(f"already scored once: {key}")
-        marker.write_text("\n".join([*done, key]) + "\n")
-        score(data / "test", rest, without)
+        names = [r.split("=", 1)[0] for r in rest]
+        if again := sorted(set(names) & set(done)):
+            sys.exit(f"already scored once: {', '.join(again)}")
+        marker.write_text("\n".join([*done, *names]) + "\n")
+        score(data / "test", rest)
 
 
 if __name__ == "__main__":
