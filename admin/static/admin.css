@@ -154,3 +154,25 @@ textarea.json, pre.json { font-family: ui-monospace, SFMono-Regular, Menlo, mono
   width: 100%; min-height: 16rem; white-space: pre; overflow: auto; }
 dialog.sheet [data-confirm-body] p + p { margin-top: 8px; }
 pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
+/* Jobs on a phone: each run is a stacked row (when, the job, its status and message, then took, by and logs), with
+   Cancel at the row's end. Nothing is past the edge, so a failed or running job never reads as a finished one. */
+@media (max-width: 759px) {
+  table.dense.runs { min-width: 0; width: 100%; }
+  table.dense.runs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.dense.runs tbody { display: block; }
+  table.dense.runs tr { display: grid; grid-template-columns: max-content max-content minmax(0, 1fr) auto; gap: 4px 12px;
+    padding: 8px 0; border-bottom: 1px solid var(--rule); }
+  table.dense.runs th, table.dense.runs td { display: block; border: 0; padding: 0; position: static; min-width: 0;
+    max-width: none; white-space: normal; text-align: start; grid-column: 1 / 4; }
+  table.dense.runs tbody th { color: var(--ink-2); font-weight: 400; }
+  table.dense.runs td.c-job { color: var(--ink); overflow-wrap: anywhere; }
+  table.dense.runs td.c-took { grid-column: 1; }
+  table.dense.runs td.c-by { grid-column: 2; }
+  table.dense.runs td.c-logs { grid-column: 3; }
+  table.dense.runs td.c-took, table.dense.runs td.c-by { color: var(--ink-2); }
+  table.dense.runs td.c-took::before { content: "Took "; }
+  table.dense.runs td.c-by::before { content: "By "; }
+  table.dense.runs td.act { grid-column: 4; grid-row: 1 / span 3; align-self: start; text-align: end; }
+  table.dense.runs tr.bad { box-shadow: inset 3px 0 0 var(--danger); padding-left: 12px; }
+  table.dense.runs tr.bad th:first-child { box-shadow: none; }
+}
