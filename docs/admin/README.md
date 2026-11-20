@@ -170,6 +170,9 @@ Cloud SQL instance, its IAM database user, the snapshot bucket, the job grants a
 owner applies a reviewed plan. The admin account's two Cloud SQL project grants (`cloudsql.client` and
 `cloudsql.instanceUser`, conditioned on its instance) are in the bootstrap root (`src/terraform/bootstrap`), which
 the owner applies first: the GitHub pipeline never writes project IAM.
+The first apply runs Google's sample image with no command. `deploy-admin` in `.github/workflows/deploy.yml` then
+deploys the app's image with the admin's entrypoint (`sh -c "exec uvicorn --factory admin.main:create_app ..."`),
+and Terraform leaves the image, command and args to it.
 
 **Once, after the first apply:** the admin's IAM database user needs the right to create its schema in the `admin`
 database. As the `postgres` user (Cloud SQL Studio, or `gcloud sql connect registry-coffee-admin --user=postgres
