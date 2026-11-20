@@ -56,6 +56,49 @@ async function shoot(page, name, keep = false) {
   await page.emulateMedia({ colorScheme: "light" });
 }
 
+// Jobs on a phone (390 px): every run's status, and the menu at its row's end (with Cancel, while it runs), are on
+// screen with no sideways scroll, in the page or in the table's frame, and one landmark is named "Runs".
+async function runsOnAPhone(page, name, { running = 0 } = {}) {
+  await page.setViewportSize({ width: 390, height: 844 });
+  try {
+    await page.evaluate(() => scrollTo(0, 0));
+    const found = await page.evaluate((want) => {
+      const out = [];
+      const inside = (el) => { const r = el.getBoundingClientRect(); return r.width > 0 && r.left >= 0 && r.right <= innerWidth; };
+      const frame = document.querySelector("[data-runs] .frame");
+      if (!frame) return ["no runs table"];
+      if (frame.scrollWidth > frame.clientWidth) out.push(`the runs table scrolls sideways by ${frame.scrollWidth - frame.clientWidth}px`);
+      const rows = [...document.querySelectorAll("[data-runs] tbody tr")];
+      rows.forEach((tr, i) => {
+        const st = tr.querySelector(".st");
+        if (!st || !inside(st)) out.push(`row ${i}: the status is off screen`);
+      });
+      const live = rows.filter((tr) => /\b(running|pending)\b/.test(tr.querySelector(".st")?.textContent || ""));
+      if (live.length !== want) out.push(`${live.length} running rows, expected ${want}`);
+      for (const tr of live) {
+        const act = tr.querySelector("td.act summary");
+        if (!act || !inside(act)) out.push("a running row's menu (with Cancel) is off screen");
+      }
+      return out;
+    }, running);
+    assert.deepEqual(found, [], `${name} at 390 px`);
+    if (running) { // Cancel is in the run's menu: open it on the phone, and it is on screen too
+      const row = page.locator("[data-runs] tbody tr", { has: page.locator("form[data-write$='/cancel']") }).first();
+      await row.locator("summary").click();
+      const box = await row.locator("form[data-write$='/cancel'] button").boundingBox();
+      assert.ok(box && box.x >= 0 && box.x + box.width <= 390, `${name}: Cancel in the open menu is off screen at 390 px`);
+      assert.ok(await row.locator("form[data-write$='/cancel'] button").isVisible());
+      await page.keyboard.press("Escape");
+      if (await row.locator("details[open]").count()) await row.locator("summary").click();
+    }
+    await page.evaluate(AXE);
+    const twice = await page.evaluate(async () => (await window.axe.run(document, { runOnly: ["landmark-unique"] })).violations.length);
+    assert.equal(twice, 0, `${name}: two landmarks share a name (axe landmark-unique)`);
+  } finally {
+    await page.setViewportSize({ width: 1280, height: 900 });
+  }
+}
+
 async function settled(page) {
   await page.waitForSelector("section[data-part][aria-busy='false']", { timeout: 40000 });
 }
@@ -215,6 +258,7 @@ const errors = [];
       assert.ok(await page.isVisible("[data-poll]"));
       assert.match(await page.textContent("[data-answer]"), /1 running/);
       assert.ok(await page.isVisible("a.ev:text('logs')"));
+      await runsOnAPhone(page, "jobs-running", { running: 1 });
       await shoot(page, "jobs-running");
     });
 
@@ -238,6 +282,7 @@ const errors = [];
       await ctl("/finish?job=crawl-shopify");
       await page.waitForFunction(() => !document.querySelector("[data-runs]")?.textContent.includes("running"), null, { timeout: 15000 });
       assert.match(await page.textContent("[data-runs] tbody tr >> nth=0"), /succeeded[\s\S]*store: answered/);
+      await runsOnAPhone(page, "jobs-success");
       await shoot(page, "jobs-success");
     });
 
@@ -254,6 +299,7 @@ const errors = [];
       await page.reload();
       await settled(page);
       assert.match(await page.textContent("[data-runs] tbody tr >> nth=0"), /failed[\s\S]*Task failed: exit 1/);
+      await runsOnAPhone(page, "jobs-failed");
       await shoot(page, "jobs-failed");
     });
 
@@ -269,6 +315,7 @@ const errors = [];
       await shoot(page, "jobs-cancel-confirm", true);
       await page.click("[data-confirm-go]");
       await page.waitForFunction(() => document.querySelector("[data-runs]")?.textContent.includes("cancelled"), null, { timeout: 15000 });
+      await runsOnAPhone(page, "jobs-cancelled");
       await shoot(page, "jobs-cancelled");
     });
 
