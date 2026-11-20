@@ -663,6 +663,15 @@ class ControlPlane:
                 raise Conflict(
                     f"{len(stale)} of these were flagged since the page was loaded: reload and flag again"
                 )
+            # A place already flagged this way is left as it is (a bulk selection can mix them in). Flagging it again
+            # would revert its earlier batch's excludes and exclude only the coffees the served build still has:
+            # once those excludes are published, none, so its coffees would come back at the next publish.
+            skipped = [p for p in places if (now.get(p) or {}).get("flag", "unreviewed") == flag]
+            places = [p for p in places if p not in skipped]
+            if not places:
+                raise ValueError(f"already flagged {flag.replace('_', ' ')}: nothing to change")
+            # The decisions lock, after the flags' (as decide() and undo() take it), before any decision is written.
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
             batch = new_id("f").lower()
             for p in places:
                 cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, actor) values (%s, %s, %s, %s)",
@@ -677,8 +686,9 @@ class ControlPlane:
             # batch is their group, so Undo reverts both).
             excluded = []
             if flag == "not_roaster":
-                cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
-                by_id = {str(c["coffee_id"]): c for c in coffees or [] if c.get("coffee_id")}
+                kept = set(places)
+                by_id = {str(c["coffee_id"]): c for c in coffees or []
+                         if c.get("coffee_id") and c.get("roaster_id") in kept}  # fmt: skip
                 latest = self._latest(cur, "coffee_id", sorted(by_id))
                 for cid, c in sorted(by_id.items()):
                     if (latest.get(cid) or {}).get("event") == "approved" and latest[cid][
@@ -688,7 +698,7 @@ class ControlPlane:
                     excluded.append(self._approve(cur, "coffee_id", cid, "exclude",
                                                   f"not a roaster: {c.get('roaster_id')} (Sources)", actor, batch, c))  # fmt: skip
             out = {"ok": True, "batch_id": batch, "flag": flag, "count": len(places), "excluded": len(excluded),
-                   "restored": len(restored), "places": places[:20]}  # fmt: skip
+                   "restored": len(restored), "skipped": len(skipped), "places": places[:20]}  # fmt: skip
             self.audit(cur, actor, "source_flag", batch, "ok",
                        out | {"places": places[:50], "decisions": excluded[:200], "reverted": restored[:200]})  # fmt: skip
             self.remember(cur, key, out)
@@ -702,6 +712,7 @@ class ControlPlane:
             if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))  # the decisions', as in flag_sources
             cur.execute("select roaster_id from control.source_flags where batch_id = %s", (batch,))
             places = sorted({r[0] for r in cur.fetchall()})
             if not places:
@@ -709,7 +720,7 @@ class ControlPlane:
             now = self._source_flags(cur, places)
             undo = new_id("f").lower()
             undone: list[str] = []
-            reexcluded: list[str] = []
+            back: dict[str, str] = {}  # place -> the earlier Not a roaster batch it goes back to
             for p in places:
                 if (now.get(p) or {}).get("batch_id") != batch:
                     continue  # flagged again since: that later flag stands
@@ -721,10 +732,15 @@ class ControlPlane:
                             "values (%s, %s, %s, %s, %s)",
                             (undo, p, before[0] if before else "unreviewed", batch, actor))  # fmt: skip
                 undone.append(p)
-                if before and before[0] == "not_roaster":  # back to Not a roaster: its coffees leave again
-                    reexcluded += self._reexclude(cur, actor, before[1], p, undo)
-            # Undo of a Not a roaster batch puts its places' coffees back too.
+                if before and before[0] == "not_roaster":
+                    back[p] = before[1]
+            # Undo of a Not a roaster batch puts its places' coffees back too. First, so that a place going back to
+            # Not a roaster then has its coffees excluded again (_reexclude skips a coffee still excluded, and this
+            # batch's excludes are reverted here, not after).
             restored = self._revert(cur, actor, self._source_excludes(cur, batch, undone), "undo")
+            reexcluded: list[str] = []
+            for p, earlier in back.items():  # back to Not a roaster: its coffees leave again
+                reexcluded += self._reexclude(cur, actor, earlier, p, undo)
             out = {"ok": True, "reverted": undone, "count": len(undone), "restored": len(restored),
                    "excluded": len(reexcluded)}  # fmt: skip
             self.audit(

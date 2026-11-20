@@ -45,10 +45,11 @@ The admin starts them with the Cloud Run Admin API's run-with-overrides, as `gcl
 `job_manifests` rows say arm `test`, so it never counts as the week's crawl. *count* writes into week W's
 partition like the scheduled passes; it is refused once W's merge is done.
 
-**Guards.** A job with a running execution isn't started again. Starts are refused from Monday 09:00 UTC until the
-week's merge is done and on Tuesday 03:00-12:00 UTC, unless the owner gives a reason, which is recorded. One test
-crawl per roaster a day. The site isn't a job here: it deploys from the served release by the `site` workflow on
-GitHub, which the admin holds no token for (Jobs links to it).
+**Guards.** A job with a running execution isn't started again. Nor do the publish job (Publish, Roll back) and the
+build job run beside each other: the build serves its own release on top of the one served when it started. Starts
+are refused from Monday 09:00 UTC until the week's merge is done and on Tuesday 03:00-12:00 UTC, unless the owner
+gives a reason, which is recorded. One test crawl per roaster a day. The site isn't a job here: it deploys from the
+served release by the `site` workflow on GitHub, which the admin holds no token for (Jobs links to it).
 
 Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_jobs` (`src/terraform/admin_control.tf`);
 `tests/test_admin_terraform.py` fails if the two differ.
@@ -279,7 +280,12 @@ is version 2, which an older pipeline image refuses, so a draft never records fl
 Terraform: `src/terraform/admin.tf` (the service, its own service account, the three empty secrets, the state
 bucket, the domain mapping, and alerts on errors, passkey changes and the cold start) and `admin_control.tf` (the
 Cloud SQL instance, its IAM database user, the snapshot bucket, the job grants and an alert on every write). The
-owner applies a reviewed plan.
+owner applies a reviewed plan. The admin account's two Cloud SQL project grants (`cloudsql.client` and
+`cloudsql.instanceUser`, conditioned on its instance) are in the bootstrap root (`src/terraform/bootstrap`), which
+the owner applies first: the GitHub pipeline never writes project IAM.
+The first apply runs Google's sample image with no command. `deploy-admin` in `.github/workflows/deploy.yml` then
+deploys the app's image with the admin's entrypoint (`sh -c "exec uvicorn --factory admin.main:create_app ..."`),
+and Terraform leaves the image, command and args to it.
 
 **Once, after the first apply:** the admin's IAM database user needs the right to create its schema in the `admin`
 database. As the `postgres` user (Cloud SQL Studio, or `gcloud sql connect registry-coffee-admin --user=postgres
