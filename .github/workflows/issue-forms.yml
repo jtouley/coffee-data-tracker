@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
-      HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
@@ -26,6 +25,7 @@ jobs:
       - name: Process issue
         id: run
         env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # on the one step that runs coffeedata, not during checkout or uv sync
           BODY: ${{ github.event.issue.body }}
           KIND: ${{ contains(github.event.issue.labels.*.name, 'shot') && 'shot' || 'roaster' }}
         run: |

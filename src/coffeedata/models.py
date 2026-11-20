@@ -218,6 +218,12 @@ class Bag(BaseModel):
 
     _id = field_validator("bag_id")(_safe_id)
 
+    @field_validator("photo_id")
+    @classmethod
+    def _photo_id(cls, v: str | None) -> str | None:
+        # Names a file in the photos dataset, like the other ids: None (no photo) or a plain id.
+        return None if v is None else _safe_id(v)
+
 
 # The "Your next bag" recommendation test: a coffee-level rating, separate from shots, and answers to the picks.
 Interest = Literal["want", "maybe", "no"]  # Want to try / Maybe / Not for me
