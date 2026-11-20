@@ -293,3 +293,41 @@ def test_the_build_passes_the_snapshots_chain_flags_to_dbt(chains, monkeypatch, 
         cli._build(args, lake, tmp_path / "coffee.duckdb", "2026-10-19", "b1", None)
     assert seen.get("chain_flags") == chains
     assert ("chain_flags" in seen) == (chains is not None)
+
+
+def test_publish_asks_for_the_typed_count_when_a_chain_flag_takes_over_50_rows_out(tmp_path, lake, pg_url):
+    """The "type the number" confirmation counts every public row the draft build removes (release_changes), whatever
+    removes it: here 30 coffees a chain flag takes out and 25 a keyword filter does (release_changes reads those as
+    reclassified), neither over 50 alone."""
+    from coffeedata.lake import SCHEMAS, Lake
+
+    from .test_admin import W3
+    from .test_admin_actions import _draft_build
+
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    post(
+        c,
+        "/api/roasters/lacolombe.com/chain",
+        {"key": "k1", "chain": "chain", "seen": "none", "reason": "test"},
+    )
+    d = post(c, "/api/drafts", {"key": "k2"}).json()
+    doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
+    b3 = _draft_build(lake.root, d["draft_id"], doc)
+    rows = [{"build_id": b3, "table_name": "public_coffee", "item": f"lacolombe.com:{i}", "change": "removed",
+             "reason": "roaster_left"} for i in range(30)] + [
+            {"build_id": b3, "table_name": "public_coffee", "item": f"good.example:mug{i}", "change": "removed",
+             "reason": "reclassified"} for i in range(25)]  # fmt: skip
+    ops = (
+        Lake(str(lake.root)).root
+        / "releases"
+        / f"run_date={W3}"
+        / f"build={b3}"
+        / "ops"
+        / "release_changes.parquet"
+    )
+    pq.write_table(pa.Table.from_pylist(rows, SCHEMAS["release_changes"]), ops)
+    page = _text(c.get(f"/part/release?build={b3}").text)
+    assert "55 public rows leave against the release it was built on: more than 50" in page
+    r = post(c, f"/api/drafts/{d['draft_id']}/publish", {"key": "k3", "reason": "Lots of stores"})
+    assert r.status_code == 409 and "55 public rows leave: type that number to publish" in r.json()["reasons"]
+    assert not [x for x in fake.calls if x[0] == "run" and x[1] == "publish"]
