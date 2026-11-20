@@ -121,7 +121,7 @@ ACTIONS: dict[str, Action] = {
                "take out that it hasn't seen. It costs money.", (),
                lambda p: [Step("build", _sh(
                    f"rc=0; coffeedata classify --prefilter-build {p['build']} || rc=1; "
-                   f'coffeedata publish --message "classify for draft {p["draft_id"]}"; exit $rc'))],
+                   f'coffeedata publish --message "classify for draft {p["draft_id"]}" || rc=1; exit $rc'))],
                page="release"),
         # From the Release page: a draft build over a decisions snapshot, Publish, Roll back.
         Action("draft", "Draft build", "Build your decisions as a draft to review. It doesn't go live.", (),
