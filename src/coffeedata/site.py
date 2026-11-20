@@ -16,7 +16,7 @@ import logging
 import os
 import re
 import shutil
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from html import escape
 from pathlib import Path
 
@@ -338,6 +338,23 @@ def robots_txt(site: str) -> str:
     return f"User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n"
 
 
+SECURITY_TXT_DAYS = 180  # RFC 9116 §2.5.5: Expires under a year out; each weekly build moves it on
+
+
+def security_txt(site: str, built: datetime) -> str:
+    """/.well-known/security.txt (RFC 9116): SECURITY.md's private reporting route and policy, no email address.
+    Expires counts from the release's build time, so a rebuild of the same release gives the same file."""
+    expires = (built.astimezone(UTC) + timedelta(days=SECURITY_TXT_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return (
+        "# Report a vulnerability privately through GitHub's advisory form; see the policy for scope.\n"
+        f"Contact: {REPO}/security/advisories/new\n"
+        f"Expires: {expires}\n"
+        f"Policy: {REPO}/blob/main/SECURITY.md\n"
+        "Preferred-Languages: en\n"
+        f"Canonical: {site}/.well-known/security.txt\n"
+    )
+
+
 def sitemap_xml(site: str, lastmod: dict[str, str]) -> str:
     urls = "".join(
         f"  <url><loc>{escape(site + '/' + page)}</loc>"
@@ -598,6 +615,8 @@ def build(db: Path, out: Path) -> Path:
     (cat / "index.html").write_text(with_csp(html, collector))
     site = str(link["site"])
     (out / "robots.txt").write_text(robots_txt(site))
+    (out / ".well-known").mkdir(exist_ok=True)
+    (out / ".well-known" / "security.txt").write_text(security_txt(site, generated))
     day = f"{generated:%Y-%m-%d}"
     legal_day = f"{datetime.strptime(LEGAL_UPDATED, '%B %d, %Y'):%Y-%m-%d}"
     bot_day = f"{datetime.strptime(BOT_UPDATED, '%B %d, %Y'):%Y-%m-%d}"

@@ -10,6 +10,7 @@ import ipaddress
 import json
 import logging
 import re
+import subprocess
 import threading
 import time
 import tomllib
@@ -20,6 +21,7 @@ from typing import Literal, get_args, get_origin
 
 import pyarrow.parquet as pq
 import pytest
+import yaml
 from starlette.testclient import TestClient
 
 from app import logs, usage
@@ -916,7 +918,10 @@ def test_deploy_keeps_the_pinned_usage_image_and_never_deploys_it():
     wf = (ROOT / ".github/workflows/deploy.yml").read_text()
     step = wf[wf.index("- name: Keep the usage collector's pinned image") :]
     step = step[: step.index("\n\n")]
-    assert "src/terraform/ci.tfvars" in step and 'tags add "$usage" "$IMAGE:pinned-usage-' in step
+    assert "src/terraform/ci.tfvars" in step and 'tag="pinned-usage-' in step
+    assert 'tags add "$usage" "$IMAGE:$tag"' in step
+    # Idempotent: an existing tag on the same digest is left alone (re-adding needs tags.delete).
+    assert 'images describe "$IMAGE:$tag"' in step and '[ "$current" = "$digest" ]' in step
     assert "run deploy" not in step and "registry-coffee-usage" not in wf
     keep = (ROOT / "src/terraform/artifact_registry.tf").read_text()
     assert re.search(r'tag_prefixes = \["pinned"', keep)  # pinned-usage-* is kept
@@ -1032,3 +1037,49 @@ def test_a_request_without_a_user_agent_is_stored_as_a_bot_and_answered(collecto
     collector.receive(sent, None, body(search()))  # the header absent altogether
     assert [row["bot"] for row in collector.buffer] == [True, True]
     assert not collector.counts.get("error")
+
+
+def _keep_pinned_step_script() -> str:
+    wf = yaml.safe_load((ROOT / ".github/workflows/deploy.yml").read_text())
+    steps = wf["jobs"]["deploy"]["steps"]
+    (step,) = [s for s in steps if s.get("name") == "Keep the usage collector's pinned image"]
+    return step["run"]
+
+
+@pytest.mark.parametrize(
+    "describe, pin_ok, rc, added",
+    [
+        ("missing", True, 0, True),  # no tag yet: add it
+        ("same", True, 0, False),  # already on the pinned digest: nothing to do
+        ("other", True, 1, False),  # on another digest: a person moves it
+        ("denied", True, 1, False),  # any other describe error: stop, never tag blind
+        ("missing", False, 1, False),  # a bad pin stops before any gcloud call
+    ],
+)
+def test_keep_pinned_step_is_idempotent_and_never_tags_blind(tmp_path, describe, pin_ok, rc, added):
+    image = "us-central1-docker.pkg.dev/p/r/app"
+    digest = "a" * 64
+    pin = f"{image}@sha256:{digest}" if pin_ok else f"{image}:latest"
+    (tmp_path / "src/terraform").mkdir(parents=True)
+    (tmp_path / "src/terraform/ci.tfvars").write_text(f'usage_image = "{pin}"\n')
+    bindir = tmp_path / "bin"
+    bindir.mkdir()
+    log = tmp_path / "gcloud.log"
+    answers = {
+        "missing": 'echo "ERROR: (gcloud.artifacts.docker.images.describe) Image not found." >&2; exit 1',
+        "same": f"echo sha256:{digest}",
+        "other": "echo sha256:" + "b" * 64,
+        "denied": 'echo "ERROR: PERMISSION_DENIED: serviceusage.services.get" >&2; exit 1',
+    }
+    (bindir / "gcloud").write_text(
+        "#!/bin/bash\n"
+        f'echo "$*" >> "{log}"\n'
+        'case "$*" in *"images describe"*) ' + answers[describe] + ' ;; *"tags add"*) exit 0 ;; esac\n'
+    )
+    (bindir / "gcloud").chmod(0o755)
+    env = {"PATH": f"{bindir}:/usr/bin:/bin", "IMAGE": image}
+    proc = subprocess.run(["bash", "-e", "-c", _keep_pinned_step_script()], cwd=tmp_path, env=env,
+                          capture_output=True, text=True)  # fmt: skip
+    assert proc.returncode == rc, proc.stdout + proc.stderr
+    calls = log.read_text() if log.exists() else ""
+    assert ("tags add" in calls) is added
