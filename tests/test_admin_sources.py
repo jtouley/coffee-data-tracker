@@ -256,7 +256,11 @@ def test_flagging_a_place_not_a_roaster_again_never_brings_its_coffees_back(tmp_
     to exclude again (coffees=[] below, as the served build's catalog then answers). A repeated flag, alone or in a
     bulk selection with other places, leaves the place and its exclusions as they are."""
     app, c, fake = make(tmp_path, lake.root, pg_url)
-    r = post(c, "/api/sources/flags", {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]})
+    r = post(
+        c,
+        "/api/sources/flags",
+        {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]},
+    )
     b1 = r.json()["batch_id"]
     assert _excluded(tmp_path, c, fake, "k2") == {"c1", "c2"}
     cp = app.state.writes.control
@@ -280,7 +284,11 @@ def test_undo_of_a_repeated_not_a_roaster_flag_keeps_the_earlier_flags_coffees_o
     from admin.controlplane import new_id
 
     app, c, fake = make(tmp_path, lake.root, pg_url)
-    r = post(c, "/api/sources/flags", {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]})
+    r = post(
+        c,
+        "/api/sources/flags",
+        {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]},
+    )
     b1, b2 = r.json()["batch_id"], new_id("f").lower()
     cp = app.state.writes.control
     with cp.tx() as cur:  # what flag_sources wrote for a repeat, before this change
