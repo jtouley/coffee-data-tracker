@@ -105,11 +105,16 @@ def test_labels_cover_every_item_once(set_name, agreed, to_settle, third):
     assert {r["id"] for r in load(set_name, third)} == waiting
 
 
-def test_the_owner_settles_what_the_third_claude_labeler_settled():
+def test_the_new_settles_cover_exactly_what_was_waiting():
     # #130's third labeler's answers are kept under another name, for comparison only. The reference for a
-    # disagreement is the owner's settled_<set>.json, which must cover exactly the items waiting, once it exists.
+    # disagreement is settled_<set>.json (the README says who settles), which must cover exactly the items waiting,
+    # once it exists.
+    pinned = {line.split()[1] for line in (EVAL / "SHA256SUMS").read_text().splitlines()}
     for set_name in ("train", "validation"):
         owner = EVAL / f"settled_{set_name}.json"
         if owner.exists():
             waiting = {r["id"] for r in load(set_name, f"to_settle_{set_name}")}
-            assert {r["id"] for r in json.loads(owner.read_text())} == waiting
+            rows = json.loads(owner.read_text())
+            assert {r["id"] for r in rows} == waiting
+            assert {r["label"] for r in rows} <= LABELS and {r["kind"] for r in rows} <= KINDS
+            assert owner.name in pinned
