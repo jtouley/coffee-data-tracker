@@ -3,6 +3,9 @@ the upload route, and the Opus/Haiku comparison's scoring."""
 
 import io
 import json
+import linecache
+import sys
+import threading
 import time
 from datetime import date, timedelta
 from types import SimpleNamespace
@@ -860,3 +863,38 @@ def test_a_coffee_crowded_by_shared_words_is_still_matched(lake, uncached):
     # Text that names another roaster is matched across the catalog, as before.
     other = edited | {"coffee_freetext": "Onyx Geometry", "coffee_id": None, "match_score": None}
     assert c.post("/api/bags", json=other, headers=W).json()["coffee_id"] == "onyx:1"
+
+
+def test_a_read_evicted_while_a_bag_applies_it_still_saves_the_match(catalog, tmp_path):
+    """Another request can evict the photo's kept read between apply_read's get and its move_to_end (the map is
+    bounded, and post_bag runs in a worker thread). The bag saves with the read's match, not a 500 (#196)."""
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    reads = app.state.photo_maps["photo_reads"]
+    evicted = []
+
+    def tracer(frame, event, arg):
+        if frame.f_code.co_name != "apply_read":
+            return None
+
+        def line(f, ev, a):
+            src = linecache.getline(f.f_code.co_filename, f.f_lineno)
+            if ev == "line" and "photo_reads.move_to_end" in src and not evicted:
+                reads.pop("p1", None)  # what another request's bounded_put does
+                evicted.append(True)
+            return line
+
+        return line
+
+    c = TestClient(app, raise_server_exceptions=False)
+    upload(c)  # the photo first: its read is kept, no bag yet
+    sys.settrace(tracer)
+    threading.settrace(tracer)
+    try:
+        body = {"bag_id": "b1", "coffee_freetext": "x", "photo_id": "p1", "read_pending": True}
+        r = c.post("/api/bags", json=body, headers=W)
+    finally:
+        sys.settrace(None)
+        threading.settrace(None)
+    assert evicted, "the eviction never ran: apply_read changed shape"
+    assert r.status_code == 200, r.text
+    assert app.state.store.bag("owner", "b1").coffee_id == "larkspur.com:1"
