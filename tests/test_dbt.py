@@ -716,6 +716,15 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
         assert "data:image/svg+xml" not in html
     for f in ("favicon.svg", "favicon-64.png", "apple-touch-icon.png", "mark-1024.png"):
         assert (out / f).read_bytes() == (site.STATIC / f).read_bytes()
+    # RFC 9116's place for it, kept in the Pages artifact by include-hidden-files (tests/test_workflow_secrets.py).
+    assert "Contact: https://github.com/" in (out / ".well-known" / "security.txt").read_text()
+    # include-hidden-files ships every dot entry, so the only ones are security.txt and its folder.
+    dots = sorted(
+        str(p.relative_to(out))
+        for p in out.rglob("*")
+        if any(x.startswith(".") for x in p.relative_to(out).parts)
+    )
+    assert dots == [".well-known", ".well-known/security.txt"]
     # The app's beta: sign in and request an invite from the launch page and the catalog; requests are an email,
     # since the static site collects nothing.
     for html in (landing, (out / "catalog" / "index.html").read_text()):

@@ -9,6 +9,7 @@ signs that user out everywhere.
 from __future__ import annotations
 
 import base64
+import contextlib
 import hashlib
 import hmac
 import json
@@ -18,6 +19,7 @@ import threading
 import time
 import uuid
 from collections import defaultdict, deque
+from collections.abc import Iterator
 from dataclasses import dataclass, replace
 from datetime import UTC, datetime, timedelta
 
@@ -56,7 +58,71 @@ _hasher = PasswordHasher.from_parameters(RFC_9106_LOW_MEMORY)  # Argon2id, 64 Mi
 # Each hash or verify takes 64 MiB while it runs, and requests run in a thread pool of up to 40. A burst of sign-ins
 # could take more memory than the 1 GiB instance has, so at most this many run at once; the rest wait their turn.
 HASHES_AT_ONCE = 4
-_hashing = threading.BoundedSemaphore(HASHES_AT_ONCE)
+# Waiting threads are threads the rest of the app can't use: a spread-out burst of guesses could otherwise hold all
+# 40 while each waits its turn. So at most this many wait, each for at most HASH_WAIT_S; anyone past that is turned
+# away at once with a 503 and Retry-After, and nothing is counted against their username or address.
+HASH_WAITERS = 16
+HASH_WAIT_S = 10.0
+RETRY_AFTER_S = 5
+BUSY = "Lots of sign-ins are being checked right now. Wait a few seconds and try again."
+
+
+class Busy(Exception):
+    """Too many password checks are running or waiting: try again shortly (HTTP 503 with Retry-After). Not an
+    AccountError, so no handler that turns those into a form's reply can swallow it."""
+
+    def __init__(self) -> None:
+        super().__init__(BUSY)
+
+
+class HashGate:
+    """At most `slots` password hashes at once, at most `waiters` waiting for one, each for at most `wait` seconds.
+    Past either, `Busy` is raised instead of blocking. First come, first served: a freed slot goes straight to the
+    first in line, so a newcomer can't take it from someone already waiting."""
+
+    def __init__(self, slots: int, waiters: int, wait: float) -> None:
+        self.free, self.max_waiters, self.wait = slots, waiters, wait
+        self.line: deque[threading.Event] = deque()
+        self.lock = threading.Lock()
+
+    @property
+    def waiting(self) -> int:
+        return len(self.line)
+
+    def _acquire(self) -> None:
+        with self.lock:
+            if self.free and not self.line:
+                self.free -= 1
+                return
+            if len(self.line) >= self.max_waiters:
+                raise Busy
+            turn = threading.Event()
+            self.line.append(turn)
+        if turn.wait(self.wait):
+            return  # a slot was handed over
+        with self.lock:
+            if turn.is_set():
+                return  # handed over just as the wait ran out
+            self.line.remove(turn)
+        raise Busy
+
+    def _release(self) -> None:
+        with self.lock:
+            if self.line:
+                self.line.popleft().set()  # the slot passes to the first in line
+            else:
+                self.free += 1
+
+    @contextlib.contextmanager
+    def __call__(self) -> Iterator[None]:
+        self._acquire()
+        try:
+            yield
+        finally:
+            self._release()
+
+
+_hashing = HashGate(HASHES_AT_ONCE, HASH_WAITERS, HASH_WAIT_S)
 
 
 @dataclass(frozen=True)
@@ -393,19 +459,21 @@ class Accounts:
 
     def _hash(self, password: str) -> str:
         """Of the NFC form (NIST 800-63B §3.1.1.2), so a composed and a decomposed é are the same password."""
-        with _hashing:
+        with _hashing():
             return _hasher.hash(self._peppered(nfc(password)))
 
     def _verify(self, password_hash: str, password: str) -> bool:
         """NFC first, then the string as typed, so a hash made before passwords were normalised still matches."""
         tries = [nfc(password)] + ([password] if nfc(password) != password else [])
-        for pw in tries:
-            try:
-                with _hashing:
+        # One slot for both forms, so `Busy` can only come before any check runs: a guess that was checked is
+        # always counted by the caller, never refunded as "turned away".
+        with _hashing():
+            for pw in tries:
+                try:
                     if _hasher.verify(password_hash, self._peppered(pw)):
                         return True
-            except (VerificationError, InvalidHashError):
-                continue
+                except (VerificationError, InvalidHashError):
+                    continue
         return False
 
     # --- records -------------------------------------------------------------------------------------
@@ -664,15 +732,26 @@ class Accounts:
             self.limiter.release(ukey, now)
             raise AccountError("Too many tries. Wait 15 minutes and try again.")
         acct = self.by_name(name)
-        ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
+        try:
+            ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
+        except Busy:  # turned away before any check ran (_verify): not a guess, so it counts against nothing
+            for key in (pkey, ikey, ukey):
+                self.limiter.release(key, now)
+            raise
         if not ok or acct is None or acct.disabled:
             raise AccountError(MISMATCH)
         self.limiter.clear(pkey)
         self.limiter.release(ikey, now)
         self.limiter.release(ukey, now)
         if _hasher.check_needs_rehash(acct.password_hash):
-            with self.lock:
-                acct = self._write(replace(acct, password_hash=self._hash(password)))
+            try:
+                new_hash = self._hash(password)
+            except Busy:  # the password was right: keep the old hash, and a later sign-in upgrades it
+                return acct
+            with self.lock:  # hashed outside the lock, so write only if nothing changed the hash meanwhile
+                cur = self.get(acct.user_id)
+                if cur is not None and cur.password_hash == acct.password_hash:
+                    acct = self._write(replace(cur, password_hash=new_hash))
         return acct
 
     def change_password(self, user_id: str, current: str, new: str) -> Account:

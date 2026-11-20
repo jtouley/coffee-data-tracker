@@ -124,7 +124,7 @@ class Writes:
         target = current if params.get("week", current_week) == current_week else registry.WeekState(
             **await self.read(queries.week_state, params["week"]))  # fmt: skip
         try:
-            running = await asyncio.to_thread(self._running, {s.job for s in steps})
+            running = await asyncio.to_thread(self._running, registry.exclusive({s.job for s in steps}))
         except JobsError as e:  # every start, Draft, Publish and Roll back alike: a refusal, audited
             plan.refusals.append(f"Cloud Run can't say what is running: {e}")
             running = {}
@@ -188,12 +188,15 @@ class Writes:
             with self.control.once(key) as (cur, first):
                 if first is not None:
                     return first
-                jobs = sorted({s.job for s in plan.steps})
+                # Each job's lock, and the locks of the jobs it never runs beside (publish and build), in one order.
+                own = {s.job for s in plan.steps}
+                jobs = sorted(registry.exclusive(own))
                 for job in jobs:
                     cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("job:" + job,))
                 running = self._running(set(jobs))
                 if running:
                     raise registry.Refused([f"{j} is already running ({e}): wait for it, or cancel it first"
+                                            if j in own else f"{j} is running ({e}): wait for it, or cancel it first"
                                             for j, e in sorted(running.items())])  # fmt: skip
                 for s in plan.steps:
                     try:

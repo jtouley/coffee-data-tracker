@@ -40,10 +40,10 @@ jobs:
     # failed its checks builds no site, so the served one stays up.
     outputs:
       site: ${{ steps.site.outputs.built }}
+    # Secrets are set on the steps that run the coffeedata command needing them, never here: job-level env is in
+    # scope for every step, setup-uv and uv sync included (tests/test_workflow_secrets.py).
     env:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
-      HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      COFFEEDATA_ANTHROPIC_API_KEY: ${{ secrets.COFFEEDATA_ANTHROPIC_API_KEY }}
       # Claude's coffee-or-not verdicts are required: without VERDICT_MODEL and the Anthropic key the run fails at
       # its start (coffeedata weekly), before crawling. There is no rules-only opt-out here: this run publishes
       # to a remote lake, where coffeedata refuses it (docs/ingestion/RUNBOOK.md, verdicts).
@@ -55,13 +55,6 @@ jobs:
       APP_URL: ${{ vars.APP_URL }}                   # the app the site's Sign in links point to; unset = https://app.registry.coffee
       GOVERNING_STATE: ${{ vars.GOVERNING_STATE }}   # US state named in the Terms of Use; unset = Michigan
       SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}       # contact on the legal pages; unset = support@registry.coffee
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_REGION: ${{ vars.AWS_REGION }}
-      # Optional: load the public tables into Snowflake each week (marketplace/snowflake/README.md).
-      SNOWFLAKE_ACCOUNT: ${{ vars.SNOWFLAKE_ACCOUNT }}
-      SNOWFLAKE_USER: ${{ vars.SNOWFLAKE_USER }}
-      SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
@@ -72,6 +65,12 @@ jobs:
         run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
       - name: Weekly run
         env:
+          # The lake, the Claude verdicts and an s3:// public export (Snowflake has its own step below).
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          COFFEEDATA_ANTHROPIC_API_KEY: ${{ secrets.COFFEEDATA_ANTHROPIC_API_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
           RUN_DATE: ${{ inputs.run_date }}  # validated by the CLI's --run-date
           ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
@@ -99,13 +98,18 @@ jobs:
         id: site
         run: test -f build/site/index.html && echo "built=true" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
-        with: {path: build/site}
+        # include-hidden-files: v5 leaves out dot folders by default, and the site has /.well-known/security.txt.
+        with: {path: build/site, include-hidden-files: true}
       # Last, so a Snowflake problem (a contract change needing --migrate) turns the run red without holding back
       # the site. It loads the export of the served release that the weekly run just wrote to build/public.
       - name: Load Snowflake
-        if: env.SNOWFLAKE_ACCOUNT != ''
+        if: vars.SNOWFLAKE_ACCOUNT != ''
         timeout-minutes: 30  # the deploy job waits for this one, so a hung load mustn't hold the site for hours
         env:
+          # Optional: load the public tables into Snowflake each week (marketplace/snowflake/README.md).
+          SNOWFLAKE_ACCOUNT: ${{ vars.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ vars.SNOWFLAKE_USER }}
+          SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: uv run coffeedata load-snowflake ${MIGRATE:+--migrate}
   deploy:

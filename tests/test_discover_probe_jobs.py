@@ -416,6 +416,28 @@ def test_no_step_of_a_job_command_can_fail_without_failing_the_job(tmp_path):
     assert {where: h for where, script in scripts.items() if (h := _hidden_failures(script, tmp_path))} == {}
 
 
+def _admin_scripts() -> dict[str, str]:
+    """Every shell script the admin starts (admin/jobs.py ACTIONS: an override of a shell job's `sh -c` script), by
+    action, for a sample of every field."""
+    from admin import jobs as admin_jobs
+
+    shell = set(_shell_jobs())
+    return {
+        f"admin {key}: {step.job}": step.args[0]
+        for key, action in admin_jobs.ACTIONS.items()
+        for step in action.steps(admin_jobs._SAMPLE)
+        if step.job in shell and step.args
+    }
+
+
+def test_no_step_of_an_admin_job_script_can_fail_without_failing_the_job(tmp_path):
+    """The rule above (#83), for the scripts the admin's buttons start: a failed publish fails the execution, so the
+    page shows it failed and the lake is never left without what the run just did."""
+    scripts = _admin_scripts()
+    assert {"admin classify: build", "admin draft: build"} <= set(scripts)
+    assert {where: h for where, script in scripts.items() if (h := _hidden_failures(script, tmp_path))} == {}
+
+
 def test_the_build_job_runs_every_step_whichever_one_fails(tmp_path):
     script = _shell_jobs()["build"]
     steps = ["classify", "build", "publish", "egress-check"]

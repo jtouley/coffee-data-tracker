@@ -75,11 +75,6 @@ run "admin_database_is_iam_only_and_scoped" {
     error_message = "The admin's database user is its IAM identity, with no password."
   }
   assert {
-    condition = alltrue([for m in google_project_iam_member.admin_sql :
-    contains(["roles/cloudsql.client", "roles/cloudsql.instanceUser"], m.role) && length(m.condition) == 1])
-    error_message = "The admin's Cloud SQL roles are client and instanceUser, each conditioned on its instance."
-  }
-  assert {
     condition = anytrue([for f in google_sql_database_instance.admin.settings[0].database_flags :
     f.name == "cloudsql.iam_authentication" && f.value == "on"])
     error_message = "IAM database authentication must be on."

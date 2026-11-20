@@ -185,3 +185,80 @@ def test_a_draft_applies_its_snapshot_is_never_served_and_publish_serves_it(lake
     # Roll back to the first release through the publish job's other action.
     cli.main(["publish-release", "--build", base, "--action", "rollback", "--reason", "bad publish"])
     assert quality.served(lake)["build_id"] == base
+
+
+@pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+def test_a_version_include_never_breaks_a_build_over_an_aliass_copy(lake, monkeypatch, tmp_path):
+    """A version decision (input_hash) applies to every coffee with that hash, and the hash has no roaster in it, so
+    an alias's copy of the store's product is decided include too, while dim_coffee leaves aliases out (#137). Neither
+    a draft with such a decision nor an alias resolved after it was published fails decisions_applied: the
+    canonical roaster's copy is the one that is published."""
+    from datetime import UTC, datetime
+
+    from .lakehelp import probe
+
+    real = cli.dbt_build
+    monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real(
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
+    monkeypatch.setattr(
+        cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot"]
+    )
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    today = {"d": "2026-10-19"}
+    monkeypatch.setattr(cli, "_today", lambda: today["d"])
+    snaps = tmp_path / "snapshots"
+    monkeypatch.setenv("COFFEEDATA_SNAPSHOTS", str(snaps))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+
+    def args(run_date, **kw):
+        return argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date=run_date,
+                                  accept_volume_change=True, **kw)  # fmt: skip
+
+    def coffees(build_id):
+        f = quality.release_files(Lake(), build_id)["dim_coffee"]
+        return {r[0] for r in duckdb.connect().execute(f"select coffee_id from '{f}'").fetchall()}
+
+    main, alias = RID, "onyxbeans.example"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [{"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "overture", "roaster_id": alias,
+          "name": "Second Storefront"}],
+    )  # fmt: skip
+    probe(lake, "2026-10-18", alias)  # its own store, for now
+    for rid in (main, alias):
+        run(lake, "2026-10-19", rid, FULL)
+    assert cli.cmd_build(args("2026-10-19")) is True
+    (base,) = [b for b, _, _ in quality.builds(lake)]
+    assert {f"{main}:mug", f"{alias}:mug"}.isdisjoint(coffees(base))
+    mug_hash = duckdb.connect().execute(
+        f"select input_hash from '{quality.ops_files(lake, base)['product_decisions']}' where coffee_id = ?",
+        [f"{main}:mug"],
+    ).fetchone()[0]  # fmt: skip
+
+    # Published before the alias is known: both copies are included, as two stores' products.
+    sha = _write_snapshot(snaps, "s1", [_decision("input_hash", mug_hash, "include", 1, f"{main}:mug")])
+    assert cli.cmd_build(args("2026-10-19", draft="d1", snapshot="s1", snapshot_sha256=sha)) is True
+    d1 = next(b for b, d in quality.drafts(lake).items() if d == "d1")
+    assert {f"{main}:mug", f"{alias}:mug"} <= coffees(d1)
+    pub = ["publish-release", "--build", d1, "--action", "publish", "--baseline", base]
+    cli.main([*pub, "--reason", "a gift set"])
+
+    # The alias is resolved: the weekly build pins the served decisions, and the alias's copy is left out.
+    probe(lake, "2026-10-20", alias, final_host=f"www.{main}")
+    for rid in (main, alias):
+        run(lake, "2026-10-26", rid, FULL)
+    today["d"] = "2026-10-26"
+    assert cli.cmd_build(args("2026-10-26")) is True
+    weekly = quality.served(lake)["build_id"]
+    assert (
+        weekly != d1
+        and f"{main}:mug" in coffees(weekly)
+        and not any(c.startswith(alias) for c in coffees(weekly))
+    )
+
+    # A new draft with the same version include, after the alias is resolved, builds too.
+    sha = _write_snapshot(snaps, "s2", [_decision("input_hash", mug_hash, "include", 2, f"{main}:mug")])
+    assert cli.cmd_build(args("2026-10-26", draft="d2", snapshot="s2", snapshot_sha256=sha)) is True
+    d2 = next(b for b, d in quality.drafts(lake).items() if d == "d2")
+    assert f"{main}:mug" in coffees(d2) and f"{alias}:mug" not in coffees(d2)
