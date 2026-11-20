@@ -764,6 +764,106 @@ def test_a_robots_disallow_and_a_network_error_have_no_status_code(tmp_path, mon
     assert "ConnectError" in r["error"] and "shop.example" not in r["error"]
 
 
+def test_a_site_wide_robots_disallow_is_a_disallow_not_a_closed_store(tmp_path, monkeypatch):
+    """#195: a robots.txt that disallows the whole site is http.SiteDisallowed, both a Blocked and an Unavailable (the
+    roaster crawl counts it as a closed store). For an importer it is what robots.txt says: kind `disallowed`, which
+    the issue words "disallowed by robots.txt", never `unavailable` ("store closed or password-protected")."""
+    from coffeedata import triage
+    from coffeedata.http import SiteDisallowed, Unavailable
+
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    calls: list[httpx.Request] = []
+    with _store(_pages_of(250), calls, robots="User-agent: *\nDisallow: /\n") as client:
+        (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert [c.url.path for c in calls] == ["/robots.txt"]  # honored: the listing is never asked for
+    assert (r["status"], r["http_status"], r["phase"], r["kind"]) == (
+        "failed", None, "robots at listing page 1", "disallowed"
+    )  # fmt: skip
+    assert r["error"] == "FetchFailed: disallowed at robots at listing page 1 (SiteDisallowed)"
+    (pub,) = importers.public_results([r])
+    assert triage._fetch_failure(pub) == "disallowed by robots.txt at robots at listing page 1"
+    assert "closed" not in triage._fetch_failure(pub) and "closed" not in triage.FETCH_KINDS["disallowed"]
+
+    # the same for an importer read as a page (fetch), and for the error by itself
+    def site_closed_to_us(request: httpx.Request) -> httpx.Response:
+        assert request.url.path == "/robots.txt"
+        return httpx.Response(200, text="User-agent: *\nDisallow: /\n")
+
+    with (
+        PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(site_closed_to_us)) as client,
+        pytest.raises(importers.FetchFailed) as failed,
+    ):
+        importers.fetch(client, f"{FAKE}/offerings")
+    assert (failed.value.kind, failed.value.phase, failed.value.http_status) == (
+        "disallowed",
+        "robots at page",
+        None,
+    )
+    assert issubclass(SiteDisallowed, Unavailable)  # why the order in importers._kind matters
+    assert importers.fetch_failed(SiteDisallowed(f"{FAKE}/x"), "page").kind == "disallowed"
+    # a closed or password-protected store is still `unavailable`
+    assert importers.fetch_failed(Unavailable("password-protected"), "listing page 1").kind == "unavailable"
+    assert triage.FETCH_KINDS["unavailable"].startswith("store closed or password-protected")
+    # robots.txt answered 403 (a refusal, not rules): its status, as before
+    blocked = importers.Blocked(f"{FAKE}/x")
+    blocked.robots_status = 403
+    refused = importers.fetch_failed(blocked, "page")
+    assert (refused.kind, refused.http_status, refused.phase) == ("http_status", 403, "robots at page")
+
+
+def _caused_by(cause: BaseException, message: str = "wrapped") -> FetchError:
+    """A FetchError raised from `cause`, as the client wraps one (http.fetch_json_response)."""
+    try:
+        raise FetchError(message) from cause
+    except FetchError as e:
+        return e
+
+
+def test_only_a_json_decode_error_reads_as_not_json():
+    """#195: any ValueError in the chain read as `not_json`, ahead of the timeout and connection checks. Now only the
+    body's decode does: what json.loads raises for a body that isn't JSON, or isn't text."""
+    kind = lambda e: importers.fetch_failed(e, "listing page 1").kind  # noqa: E731
+    request = httpx.Request("GET", LISTING)
+    try:
+        json.loads("<html>not json</html>")
+    except json.JSONDecodeError as e:
+        not_json = e
+    assert kind(_caused_by(not_json)) == "not_json"
+    try:
+        json.loads(b"\xc3\x28")  # bytes that aren't text
+    except UnicodeDecodeError as e:
+        not_text = e
+    assert kind(_caused_by(not_text)) == "not_json"
+    assert kind(importers.NotCatalog("not JSON")) == "not_json"
+
+    # any other ValueError says nothing about the body
+    assert kind(_caused_by(ValueError("invalid literal for int()"))) == "network"
+    assert kind(_caused_by(UnicodeEncodeError("idna", "x", 0, 1, "label empty"))) == "network"
+    assert kind(FetchError("HTTP 500", status=500)) == "http_status"
+    # and it no longer hides a timeout or a failed connection further down the chain
+    timeout = httpx.ReadTimeout("no answer", request=request)
+    timeout.__cause__ = ValueError("bad header value")
+    assert kind(_caused_by(timeout)) == "timeout"
+    refused = httpx.ConnectError("refused", request=request)
+    refused.__cause__ = ValueError("bad port")
+    assert kind(_caused_by(refused)) == "connect"
+    for e in (_caused_by(ValueError("x")), _caused_by(timeout)):
+        assert "shop.example" not in str(importers.fetch_failed(e, "listing page 1"))
+
+
+def test_a_body_that_isnt_text_reads_as_not_json_end_to_end(tmp_path, monkeypatch):
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    page = _answer(
+        lambda r: httpx.Response(200, content=b"\xc3\x28", headers={"content-type": "application/json"})
+    )
+    with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(page)) as client:
+        (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert (r["kind"], r["http_status"], r["phase"]) == ("not_json", None, "listing page 1")
+    assert "shop.example" not in r["error"]
+
+
 def test_any_other_failure_has_its_urls_and_the_importers_host_taken_out():
     e = RuntimeError("upload of https://huggingface.co/x failed; shop.example said no; WWW.Shop.Example too")
     assert importers.public_error(e, "https://www.shop.example/products.json") == (

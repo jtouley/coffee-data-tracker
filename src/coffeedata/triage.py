@@ -3,8 +3,9 @@ alert key, updated in place, closed when the alert recovers (docs/TRIAGE.md).
 
     python -m coffeedata.triage evals <report.json> --workflow <name> [--dry-run]
     python -m coffeedata.triage prod <alerts.json> [--dry-run]
-    python -m coffeedata.triage importers <dir> [--dry-run]       (dir: importers-weeks' and the runs' JSON, and
-                                                                   results/<run id>/results.json when downloaded)
+    python -m coffeedata.triage importers <dir> [--dry-run]       (dir: weeks.json, runs.json, check.json, and
+                                                                   results/<run id>/<artifact>/results.json)
+    python -m coffeedata.triage importer-result-runs <runs.json> [--check-out <check.json>]
     python -m coffeedata.triage importers-weeks <hf://datasets/...> --out <weeks.json>
 
 An alert has a key (`eval:origin`, `prod:grams`, `importers:weekly`, `pipeline:eval-floors`). The issue for a key is found by the marker
@@ -20,9 +21,10 @@ close together would open two issues). The bot rewrites the body on every run: n
   skipped floor, a metric not in this release) leaves the issue as it is.
 
 It needs only GITHUB_TOKEN with `issues: write` and GITHUB_REPOSITORY; it reads nothing else and runs no tested code.
-`--dry-run` prints what it would do and calls nothing. The one exception is `importers-weeks`, which runs in the
-importers-alerts check job (never the alert job): with the Hub token, it lists the private importers dataset's file
-names and keeps only each importer's latest stored week, never a file's contents.
+`--dry-run` prints what it would do and calls nothing. Two commands run in the importers-alerts check job, never the
+alert job, and open no issue: `importers-weeks`, the one exception, which with the Hub token lists the private
+importers dataset's file names and keeps only each importer's latest stored week, never a file's contents; and
+`importer-result-runs`, which reads runs.json alone and prints the run ids whose results the job downloads.
 """
 
 from __future__ import annotations
@@ -95,8 +97,10 @@ FIRST_STEPS = {
         "The Failed fetch column gives the latest run's failure for that importer: its kind, its HTTP status and "
         "where it failed (page, listing page N, or robots at ...). HTTP 403 is a refusal (a block), 429 rate "
         "limiting, 5xx the site down or failing; an edge's challenge, a closed store, a robots.txt disallow, no "
-        "connection, a timeout or the run's deadline are named as such. Blank: the latest run left no results (open "
-        "it). For more, open the linked run and read the importer-snapshot step's line per importer. In comments "
+        "connection, a timeout or the run's deadline are named as such. A re-run's attempts are each read, so a "
+        "re-run that skipped the importer still shows its first attempt's failure. Blank: the latest run that "
+        "started left no results (open it). For more, open the linked run and read the importer-snapshot step's "
+        "line per importer. In comments "
         "here give the importer, its status and the failure only.",
         "cafe_imports or interamerican: fix the cause, then dispatch them the same week "
         "(`gh workflow run importers -f importer=<key>`); a real drop needs `-f accept_drop=true` after a check by "
@@ -597,9 +601,9 @@ FETCH_KINDS = {
     "http_status": "HTTP {code}",
     "challenge": "an edge's challenge{http}",
     "too_large": "a response over the size cap{http}",
-    "unavailable": "store closed or password-protected{http}",
+    "unavailable": "store closed or password-protected{http}",  # its closed page, or a redirect to /password
     "not_json": "not JSON{http}",
-    "disallowed": "disallowed by robots.txt",
+    "disallowed": "disallowed by robots.txt",  # the URL, or the whole site: robots.txt's rules, not a closed store
     "deadline": "the run's deadline passed",
     "connect": "no connection (DNS, refused, TLS)",
     "timeout": "timed out",
@@ -607,6 +611,14 @@ FETCH_KINDS = {
 }
 # The most runs read for one week's failures (the scheduled run is always read)
 MAX_RESULT_RUNS = 20
+# Conclusions of a run that ended before its snapshot job started (cancelled while queued, skipped by the job's `if`
+# on another ref, or never started): it tried no importer and left no results, so it says nothing about the week and
+# is never read. A run that started and left no results (`failure`, `timed_out`) is read: its outcome is unknown.
+NEVER_RAN = ("cancelled", "skipped", "startup_failure")
+# The snapshot job's artifact: importer-results-<run attempt> (importers.yml), one per attempt, so a re-run adds to
+# the first attempt's results and never replaces them. Plain importer-results is the name before attempts were kept.
+RESULTS_ARTIFACT = "importer-results"
+_RESULTS_DIR = re.compile(rf"{RESULTS_ARTIFACT}(?:-(\d{{1,4}}))?")
 
 
 def _fetch_failure(record: dict[str, Any]) -> str:
@@ -628,12 +640,13 @@ def _fetch_failure(record: dict[str, Any]) -> str:
 
 def importer_result_runs(runs: list[dict[str, Any]] | None, week: date) -> list[dict[str, Any]]:
     """The runs whose importer-results can say why `week` is missing: the completed runs created that week (Monday
-    to Sunday, UTC), newest first, at most MAX_RESULT_RUNS, and always its scheduled run (_scheduled_run), the only
-    one that fetches Royal."""
+    to Sunday, UTC) that ran (not NEVER_RAN: a cancelled, skipped or never-started run tried nothing), newest first,
+    at most MAX_RESULT_RUNS, and always its scheduled run (_scheduled_run) when that ran, the only one that fetches
+    Royal."""
     start = datetime.combine(week, dtime(), UTC)
     found = sorted(
         (r for r in runs or [] if isinstance(r, dict) and r.get("id") is not None and r.get("status") == "completed"
-         and isinstance(r.get("created_at"), str)
+         and r.get("conclusion") not in NEVER_RAN and isinstance(r.get("created_at"), str)
          and start <= _when(r["created_at"]) < start + timedelta(days=7)),
         key=lambda r: str(r["created_at"]), reverse=True,
     )  # fmt: skip
@@ -646,36 +659,51 @@ def importer_result_runs(runs: list[dict[str, Any]] | None, week: date) -> list[
 def importer_failures(
     results: dict[str, Any] | None, runs: list[dict[str, Any]] | None, week: date
 ) -> dict[str, str]:
-    """Each importer's failure in the latest run that tried it for `week`, as _fetch_failure gives it, from the
-    importers runs' importer-results artifacts (`results`: run id -> importers.public_results' list) over
-    importer_result_runs, newest first. A run whose results hold no line for an importer, or skipped it (Royal on a
-    dispatch), didn't try it: an older run is read. A run without readable results (an expired artifact, a job
-    killed before writing it) ends the search: its outcome is unknown, so an older run's code isn't shown as the
-    reason."""
+    """Each importer's failure in the latest attempt that tried it for `week`, as _fetch_failure gives it, from the
+    importers runs' importer-results artifacts (`results`, as read_results gives it: run id -> its attempts'
+    importers.public_results lists, the newest attempt first) over importer_result_runs, newest first. An attempt
+    whose results hold no line for an importer, or skipped it (Royal on a dispatch or a re-run), didn't try it: an
+    older attempt is read, then an older run. So "Re-run failed jobs" on the scheduled run, which skips Royal, still
+    shows the HTTP status its first attempt got. A run without results (an expired artifact, a job killed before
+    writing it), or an attempt whose file can't be read, ends the search: its outcome is unknown, so an older code
+    isn't shown as the reason."""
     out: dict[str, str] = {}
     decided: set[str] = set()
     for run in importer_result_runs(runs, week):
-        records = (results or {}).get(str(run["id"]))
-        if not isinstance(records, list):
+        attempts = (results or {}).get(str(run["id"]))
+        if not isinstance(attempts, list) or not attempts:
             break
-        for rec in records:
-            if not isinstance(rec, dict) or rec.get("week") != week.isoformat():
-                continue
-            name = rec.get("importer")
-            if not isinstance(name, str) or name in decided or rec.get("status") == "skipped":
-                continue
-            decided.add(name)
-            if rec.get("status") == "failed":
-                out[name] = _fetch_failure(rec)
+        for records in attempts:
+            if not isinstance(records, list):
+                return out
+            for rec in records:
+                if not isinstance(rec, dict) or rec.get("week") != week.isoformat():
+                    continue
+                name = rec.get("importer")
+                if not isinstance(name, str) or name in decided or rec.get("status") == "skipped":
+                    continue
+                decided.add(name)
+                if rec.get("status") == "failed":
+                    out[name] = _fetch_failure(rec)
     return out
 
 
-def read_results(folder: Path) -> dict[str, Any]:
-    """The downloaded importer-results artifacts, `<folder>/<run id>/results.json`, by run id. None for an unreadable
-    file (_read_json)."""
+def read_results(folder: Path) -> dict[str, list[Any]]:
+    """The downloaded importer-results artifacts by run id: each run's attempts, the newest first, each the file's
+    JSON, or None for an unreadable file (_read_json). `gh run download --pattern` leaves one folder per artifact,
+    `<folder>/<run id>/importer-results-<attempt>/results.json`. The name before attempts were kept is read as the
+    oldest attempt: `<run id>/importer-results/results.json`, or `<run id>/results.json` as `--name` left it. Any
+    other folder is ignored, and a run with no results file has no attempts."""
+    out: dict[str, list[Any]] = {}
     if not folder.is_dir():
-        return {}
-    return {d.name: _read_json(d / "results.json") for d in sorted(folder.iterdir()) if d.is_dir()}
+        return out
+    for run in sorted(d for d in folder.iterdir() if d.is_dir()):
+        attempts = {0: run / "results.json"} if (run / "results.json").is_file() else {}
+        for d in run.iterdir():
+            if d.is_dir() and (m := _RESULTS_DIR.fullmatch(d.name)) and (d / "results.json").is_file():
+                attempts[int(m.group(1) or 0)] = d / "results.json"
+        out[run.name] = [_read_json(attempts[n]) for n in sorted(attempts, reverse=True)]
+    return out
 
 
 def importer_alerts(
@@ -698,8 +726,11 @@ def importer_alerts(
     step failed), there was no token, or the Hub said "not found" once a week is due (a wrong IMPORTERS_URL, or a
     token that can't read the dataset; before then the dataset may simply not exist yet). Or the workflow's runs
     weren't listed (`runs` None). The issues carry importer keys, statuses, weeks (Mondays), run links and a missing
-    importer's failed fetch (`results`, importer_failures: its HTTP status and phase): nothing from a lot, no
-    address."""
+    importer's failed fetch (`results`, importer_failures: its kind, its HTTP status and its phase): nothing from a
+    lot, no address.
+
+    `now` is the time judged at. The alert job passes the check job's (check_time), so the due week here is the one
+    the check downloaded results for."""
     ctx = {"run": run_url, "commit": sha}
     weeks = weeks if isinstance(weeks, dict) and isinstance(weeks.get("latest"), dict) else None
     runs = runs if isinstance(runs, list) else None
@@ -794,6 +825,35 @@ def _now_arg(value: str | None) -> datetime:
     return t.replace(tzinfo=UTC) if t.tzinfo is None else t.astimezone(UTC)
 
 
+# The check job's record of the time it judged at and the due week that gave (importer-result-runs --check-out), in
+# the folder the alert job reads: a time and a Monday, nothing else.
+CHECK_FILE = "check.json"
+
+
+def check_record(now: datetime, runs: list[dict[str, Any]] | None) -> dict[str, str | None]:
+    """What importer-result-runs writes to CHECK_FILE: `now`, and the due week it gives with `runs`
+    (importers_due_week), which is the week whose results the check job downloads."""
+    due = importers_due_week(now, runs)
+    return {"now": now.astimezone(UTC).isoformat(timespec="seconds"), "due": due.isoformat() if due else None}
+
+
+def check_time(folder: Path) -> datetime | None:
+    """The time the check job judged at (CHECK_FILE's `now`), for the alert job to judge at too. Both jobs read the
+    same runs.json, so with the same time importers_due_week gives both the same week: the alert never asks for a
+    week whose results the check didn't download (near the grace boundary two clocks could disagree, and every
+    Failed fetch cell would be blank for that run). None when the file is missing or unreadable, or holds anything
+    but a time with an offset: the caller's own clock decides, as before."""
+    record = _read_json(folder / CHECK_FILE)
+    value = record.get("now") if isinstance(record, dict) else None
+    if not isinstance(value, str):
+        return None
+    try:
+        t = datetime.fromisoformat(value)
+    except ValueError:
+        return None
+    return t.astimezone(UTC) if t.tzinfo is not None else None
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="python -m coffeedata.triage", description=__doc__.split("\n")[0])
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -809,18 +869,30 @@ def main(argv: list[str] | None = None) -> int:
     pr = sub.add_parser("prod", help="issues from coffeedata.prod_health judge --out")
     pr.add_argument("alerts", type=Path)
     im = sub.add_parser(
-        "importers", help="issues from the importers check (weeks.json and runs.json in one folder)"
+        "importers", help="issues from the importers check (its weeks, runs, time and results in one folder)"
     )
     im.add_argument(
-        "dir", type=Path, help="holds weeks.json (importers-weeks) and runs.json (the workflow's runs)"
+        "dir",
+        type=Path,
+        help="holds weeks.json (importers-weeks), runs.json (the workflow's runs), check.json (the check's time) "
+        "and results/ (the runs' importer-results artifacts)",
     )
-    im.add_argument("--now", help="judge as of this ISO time, UTC unless it has an offset (default: now)")
+    im.add_argument(
+        "--now",
+        help="judge as of this ISO time, UTC unless it has an offset (default: the check's time in check.json, "
+        "else now)",
+    )
     rr = sub.add_parser(
         "importer-result-runs",
         help="the importers runs whose importer-results artifact to download for the due week, one id a line",
     )
     rr.add_argument("runs", type=Path, help="runs.json (the workflow's runs)")
     rr.add_argument("--now", help="as of this ISO time, UTC unless it has an offset (default: now)")
+    rr.add_argument(
+        "--check-out",
+        type=Path,
+        help="write the time judged at and its due week here (check.json), for `importers` to judge at the same time",
+    )
     wk = sub.add_parser(
         "importers-weeks", help="each importer's latest stored week, from file names (Hub token)"
     )
@@ -841,7 +913,11 @@ def main(argv: list[str] | None = None) -> int:
     if a.cmd == "importer-result-runs":
         runs = _read_json(a.runs)
         runs = runs if isinstance(runs, list) else None
-        due = importers_due_week(_now_arg(a.now), runs)
+        now = _now_arg(a.now)
+        if a.check_out:
+            a.check_out.parent.mkdir(parents=True, exist_ok=True)
+            a.check_out.write_text(json.dumps(check_record(now, runs), indent=1) + "\n")
+        due = importers_due_week(now, runs)
         for run in importer_result_runs(runs, due) if due else []:
             print(int(run["id"]))
         return 0
@@ -854,7 +930,7 @@ def main(argv: list[str] | None = None) -> int:
         report = json.loads(a.report.read_text()) if a.report.exists() else None
         alerts = eval_alerts(report, a.workflow, run_url, sha, a.alert_if_missing, a.scope)
     elif a.cmd == "importers":
-        now = _now_arg(a.now)
+        now = _now_arg(a.now) if a.now else check_time(a.dir) or _now_arg(None)
         weeks, runs = _read_json(a.dir / "weeks.json"), _read_json(a.dir / "runs.json")
         alerts = importer_alerts(weeks, runs, now, run_url, sha, read_results(a.dir / "results"))
     else:

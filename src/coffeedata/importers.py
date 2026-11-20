@@ -1,6 +1,6 @@
 """Weekly private snapshots of green-coffee importers' public offer lists (ELT: the snapshot is raw only).
 
-Two importers, two public pages, fetched in one pass a week, never logged in, with the crawler's client
+Three importers, fetched in one pass a week, never logged in, with the crawler's client
 (http.PoliteClient: our user agent, robots.txt honored, bounded retries with backoff and jitter, Retry-After
 respected):
 
@@ -48,6 +48,7 @@ feasibility check, recommendation 2. .github/workflows/importers.yml runs it eac
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 import re
@@ -1026,22 +1027,22 @@ def last_count(lake: Lake, importer: str, week: date) -> int | None:
 
 
 # What kind of failure a fetch was, from a closed set: the result, the importer-results artifact and the triage
-# issue name it (triage.FETCH_KINDS mirrors it), so a challenge on a 200 never reads as "HTTP 200" and a closed store
-# never reads as a network blip.
+# issue name it (triage.FETCH_KINDS mirrors it), so a challenge on a 200 never reads as "HTTP 200", a closed store
+# never reads as a network blip, and a robots.txt disallow never reads as a closed store.
 FETCH_KINDS = (
     "http_status",  # a refusal or an error status (403, 429, 5xx...): http_status says which
     "challenge",  # an edge's challenge (a 202, or a challenge header on any status)
     "too_large",  # a response over the client's size cap
-    "unavailable",  # a closed or password-protected store, or a robots.txt disallowing the whole site
+    "unavailable",  # a closed or password-protected store (its closed page, or a redirect to /password)
     "not_json",  # a 200 whose body isn't JSON
-    "disallowed",  # robots.txt disallows the URL
+    "disallowed",  # robots.txt disallows the URL, or the whole site
     "deadline",  # the run's deadline passed (DeadlineReached)
     "connect",  # no connection: DNS, refused, reset, TLS
     "timeout",  # connected, but no answer in time
     "network",  # any other failure without an HTTP answer
 )
-# A phase as FetchFailed names it (robots, page, fetch, listing page N, robots at listing page N); triage._PHASE is
-# the same pattern
+# A phase as FetchFailed names it (page, fetch, listing page N, and `robots at <phase>` for robots.txt: robots at
+# page, robots at listing page N); triage._PHASE is the same pattern
 PHASE = re.compile(r"[a-z]+(?: [a-z]+)*(?: \d{1,4})?")
 
 
@@ -1090,11 +1091,16 @@ def _kind(chain: list[BaseException], status: int | None) -> str:
         return "challenge"
     if has(ResponseTooLarge):
         return "too_large"
-    if has(Unavailable):
-        return "unavailable"
+    # robots.txt's own rules, before Unavailable: a robots.txt that disallows the whole site is both (SiteDisallowed),
+    # and what it says is "disallowed", not that the store is closed or behind a password
     if any(isinstance(c, Blocked) and c.robots_status is None for c in chain):
         return "disallowed"
-    if has((NotCatalog, ValueError)):
+    if has(Unavailable):
+        return "unavailable"
+    # the body's own decode, what json.loads raises for one that isn't JSON (JSONDecodeError) or isn't text
+    # (UnicodeDecodeError). Never any other ValueError: one elsewhere in the chain says nothing about the body, and
+    # would hide a timeout or a failed connection below
+    if has((NotCatalog, json.JSONDecodeError, UnicodeDecodeError)):
         return "not_json"
     if has(httpx.TimeoutException):
         return "timeout"
@@ -1134,8 +1140,9 @@ def public_error(e: BaseException, url: str | None) -> str:
 
 
 def fetch(client: PoliteClient, url: str) -> str:
-    """The page's HTML, or FetchFailed (phase `page`, or `robots`): a block, a robots.txt disallow, a challenge or
-    any status but 200."""
+    """The page's HTML, or FetchFailed with its kind (FETCH_KINDS), its HTTP status and its phase (`page`, or
+    `robots at page` when robots.txt didn't answer with rules or disallows the URL): a block, a robots.txt disallow,
+    a challenge or any status but 200."""
     try:
         r = client.get(url)
         if err := challenge_error(r, url):
@@ -1150,7 +1157,8 @@ def fetch(client: PoliteClient, url: str) -> str:
 
 
 # What a result may carry outside the private dataset (the importer-results artifact, which importers-alerts reads):
-# keys, weeks, statuses, counts, and a failed fetch's HTTP status and phase. Never an error's text, a note or a URL.
+# importer keys, weeks, statuses, and a failed fetch's HTTP status, phase and kind. Never a count, an error's text, a
+# note or a URL.
 PUBLIC_RESULT_KEYS = ("importer", "week", "status", "http_status", "phase", "kind")
 
 
@@ -1185,8 +1193,9 @@ def snapshot(
     is written.
 
     One result per importer: `stored` (with its row and null-cell counts), `skipped` (the week was already stored,
-    so the page isn't fetched again) or `failed`, with the error (public_error: never a URL), and `http_status` and
-    `phase` (a failed fetch's HTTP status and where it failed, FetchFailed; None for any other failure). Every
+    so the page isn't fetched again; or Royal anywhere but a scheduled run's first attempt, with its `reason`) or
+    `failed`, with the error (public_error: never a URL), and `http_status`, `phase` and `kind` (a failed fetch's
+    HTTP status, where it failed and what kind of failure it was, FetchFailed; None for any other failure). Every
     importer is tried; the caller fails the run when any failed. Nothing is written for a failed importer.
     """
     ensure_private(lake)
