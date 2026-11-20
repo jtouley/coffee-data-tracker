@@ -47,5 +47,6 @@ Suggesting a `cafe` or a `reseller` as a roaster is a confidently wrong suggesti
 One JSON file per labeler and set, `labels_<set>_<A|B>.json`: a list of `{"id": ..., "label": "in_scope" |
 "out_of_scope" | "unsure", "kind": "roaster" | "cafe" | "reseller" | "other", "note": "optional, short"}`, one entry
 per item in `items_<set>.json`. Two labels agree only when the label and the kind both agree, and neither is
-`unsure`. The owner settles every item in `to_settle_<set>.json` into `settled_<set>.json`, in the same format. Say
-who labeled (a person, or Claude and which model) in README.md.
+`unsure`. A third labeler, a Claude Sonnet model, settles every item in `to_settle_<set>.json` into
+`settled_<set>.json`, in the same format. It labels each item afresh from this guide and the item's own fields, and
+is never shown the two labels it settles. Say who labeled (a person, or Claude and which model) in README.md.

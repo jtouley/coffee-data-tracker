@@ -22,7 +22,7 @@ The guide is #130's (`3c8af60:eval/screen/GUIDE.md`). Its `label` and `kind` def
 labels still answer this guide's question. Four things differ:
 - the opening names the new population (`candidates`, which includes places tagged as roasteries);
 - "admission" reads "suggestion" in two sentences;
-- the owner settles disagreements, not a third Claude labeler;
+- the third labeler, who settles disagreements, is never shown the two labels it settles;
 - the rule that two `unsure` labels don't count as agreement is written down (#130's script applied it; its guide
   didn't say so).
 
@@ -63,7 +63,7 @@ scaffold test checks it.
 | `items_<set>.json` | 200 | 200 | The items to label: id, domain, website, name, city, state, Overture tag. 100 `coffee_shop` and 100 `cafe` per set. No stratum and no screen result |
 | `labels_<set>_A.json`, `labels_<set>_B.json` | 200 each | 200 each | The two independent labels: label, kind, and a short note |
 | `agreed_<set>.json` | 146 (27 in scope, 119 out) | 170 (36 in scope, 134 out) | Items where A and B gave the same label and kind |
-| `to_settle_<set>.json` | 54 | 30 | The disagreements, with both labels. **Waiting for the owner** |
+| `to_settle_<set>.json` | 54 | 30 | The disagreements, with both labels. **Waiting to be settled** (below) |
 | `settled_C_<set>.json` | 54 | 30 | #130's third labeler's answers (`settled_<set>.json` there). Kept for comparison only |
 
 Not imported:
@@ -77,13 +77,17 @@ Not imported:
   websites, blind to each other, to the screen and to the strata. #130 doesn't record which model.
 - **When.** 2026-11-07, on #130's branch.
 - **Agreement** (label and kind): train 146 of 200 (73.0%), validation 170 of 200 (85.0%).
-- **Settling.** In #130 a third Claude subagent, C, settled every disagreement, so no person did. Here the owner
-  settles them: 54 train and 30 validation items, into `settled_train.json` and `settled_validation.json`. Until
-  those files exist, only the agreed items have a reference label. C's answers are never used as the reference.
+- **Settling** (the owner's decision, 2026-11-20, in place of the design's D2 default that the owner settles).
+  A third labeler, a Claude Sonnet model, settles the 54 train and 30 validation disagreements into
+  `settled_train.json` and `settled_validation.json`. It labels each item independently against `GUIDE.md`, from
+  the item's own fields only (id, domain, website, name, city, state, Overture tag): it sees neither A's and B's
+  labels nor C's. **Not done yet:** until those two files exist, only the agreed items have a settled reference.
+- **#130's third labeler, C,** also a Claude subagent, settled the same items in #130. Its answers are kept as
+  `settled_C_<set>.json` for comparison, and its agreement with the new settles is reported when they arrive.
 - **Unsure** items are left out of the scores.
 - **Still to label**, after the shadow run and once the owner approves the cost (the design's section 5.2): about
   50 train and 75 validation items from the suggested tier, the 210 curated roasters, and a new test set of 300.
-  The owner also spot-checks 50 test items.
+  The owner also spot-checks 50 test items. No person has settled or checked any label here so far.
 
 ## #130's test set
 
