@@ -1598,11 +1598,12 @@ Then three parts:
   - `workload-identity`: no workload identity pool or provider changes, nor any IAM grant that names one or grants
     a workload identity role;
   - `guarded-accounts`, `app-image-pinned`: docs/app/RUNNING.md, "Changing the infrastructure";
-  - `project-iam-policy`: no `google_project_iam_policy` or `google_project_iam_audit_config` (the whole policy, or
-    whose data access is logged);
+  - `project-iam-policy`: no `google_project_iam_policy`, `_audit_config`, `_member`, `_binding` or `_member_remove`
+    (project IAM is the owner's, in the bootstrap root);
   - `cloud-sql-access`: a created or changed Cloud SQL instance has no authorized network, an `ssl_mode` of
-    `ENCRYPTED_ONLY` or stricter, `cloudsql.iam_authentication` on, and no `master_instance_name`, `clone` or
-    `restore_backup_context`; a `google_sql_user` is a `CLOUD_IAM_*` user with no password.
+    `ENCRYPTED_ONLY` or stricter, `cloudsql.iam_authentication` on, no root password, and no
+    `master_instance_name`, `clone` or `restore_backup_context`; a `google_sql_user` is a `CLOUD_IAM_*` user with no
+    `password`, `password_wo` or `password_wo_version`.
 - **Changes**: one line per resource, its action and its address, and where it moved from. `update` changes it in
   place, `create` adds it; `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard.
   Unchanged resources and data reads aren't listed.

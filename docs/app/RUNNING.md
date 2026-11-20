@@ -316,9 +316,9 @@ IAM on the secrets (and so reach their values), on the image repository, the Clo
 bucket (and so raw ingestion data) and the admin's two buckets (its sign-in state and drafts' snapshots), read the image
 repository's images, which Cloud Run checks as whoever deploys a job or service (its role holds no push or delete
 permission itself, though the repository's settings and IAM it can change reach both), run any image as the runtime,
-ingest, scheduler, usage or admin account, change the admin's Cloud SQL instance and create IAM users on it, create any
-new Cloud SQL instance (creation can't be limited by name), and create log-based alert policies and notification
-channels of any type. That last one means an approved apply could copy fields of matching log entries
+ingest, scheduler, usage or admin account, change the admin's Cloud SQL instance, create any new Cloud SQL instance, and
+databases and IAM users on any instance (Cloud SQL's IAM Conditions don't cover databases or users), and create
+log-based alert policies and notification channels of any type. That last one means an approved apply could copy fields of matching log entries
 (through a policy's `label_extractors` or its documentation) into a notification on a channel it creates, such as a
 webhook to an outside address: a narrow path for log content, not a sink, and the guard checks neither channel types nor
 extractors. That is what the approval is for: read the IAM section of the summary first, and for any new or changed
@@ -335,10 +335,12 @@ pool or provider, a custom role, the project's IAM, or IAM on any service accoun
 - on the ingest network or router, any type but subnets, NATs and the jobs (and Shopify's path, as before);
 - any delete or replace; a job image other than the pinned one; a service image Terraform sets that isn't the app's,
   pinned by digest;
-- the project's whole IAM policy or its audit settings (`project-iam-policy`);
+- any change to the project's IAM: its whole policy, its audit settings, or any grant on it (member, binding,
+  member_remove) (`project-iam-policy`);
 - a Cloud SQL instance with an authorized network, an `ssl_mode` weaker than `ENCRYPTED_ONLY`, IAM authentication
-  off, or made from another's data (a replica, clone or restore), and a database user that isn't an IAM one or has a
-  password (`cloud-sql-access`).
+  off, a root password, or made from another's data (a replica, clone or restore), and a database user that isn't an
+  IAM one or has a password (`cloud-sql-access`). Private networking and Private Service Connect aren't checked: they
+  change where a connection comes from, not how it signs in.
 
 Other grants, such as a secret's reader or the staging bucket's users (to an account created in the same plan too),
 are listed in the IAM section, not refused.
@@ -462,9 +464,14 @@ the same denial comes back at once, wait and run it again.
 - `tfApplyBucketCreate` (`storage.buckets.create`, on the project: creation is checked before the bucket exists), and
   `tfApplyBucketAdmin` through a project grant conditioned on the names `<project>-admin-state` and
   `<project>-admin-snapshots` (`tf_apply_admin_buckets`): those two buckets' settings and IAM;
-- `tfApplyCloudSqlCreate` (`cloudsql.instances.create`, on the project: creation can't be limited by name), and
-  `tfApplyCloudSql` through a project grant conditioned on the admin's instance (`tf_apply_cloud_sql`): read and
-  update that instance, create and read its database and IAM user; no delete, export, import, connect or login;
+- `tfApplyCloudSqlProject`, on the project: create an instance, and create and read databases and users. Cloud
+  SQL's IAM Conditions page says conditions don't support `cloudsql.databases.*` or `cloudsql.users.*`. It lists
+  creating instances with a name prefix or suffix as a use case but documents no condition for it, so the create is
+  unconditioned too. The guard's `cloud-sql-access` bounds what an approved plan can create: IAM users without
+  passwords, and no replica, clone, restore or root password. Logging in needs `cloudsql.instances.login`, which no
+  pipeline grant gives;
+- `tfApplyCloudSql` through a project grant conditioned on the admin's instance name (`tf_apply_cloud_sql`): read and
+  update that instance. Neither role can delete, export, import, connect or log in;
 - for the plan account: `roles/cloudsql.viewer`, and `tfPlanBucketReader` through the same two-bucket condition
   (`tf_plan_admin_buckets`);
 - not the apply account's: the admin account's two Cloud SQL project grants (`admin_sql`: `roles/cloudsql.client` and
@@ -472,7 +479,8 @@ the same denial comes back at once, wait and run it again.
   root, applied by you, holds them.
 
 **Order.** The grants on `registry-coffee-admin-run` need the account to exist:
-1. #199 (`google_service_account.admin` alone in the main root) merges and `terraform-apply` applies it (`1 to add`).
+1. #199 (`google_service_account.admin` alone in the main root) merges and `terraform-apply` applies it (`1 to add`,
+   plus anything already pending on main: today `google_monitoring_alert_policy.usage_dropped[0]`).
 2. Then re-apply the bootstrap once, by hand, from the repository's root in Cloud Shell.
 3. Then the admin (#125) merges, and its first apply goes through.
 
@@ -485,8 +493,8 @@ cd src/terraform/bootstrap && terraform init -input=false -lockfile=readonly -ba
 ```
 
 Read the plan before the yes: `12 to add, 0 to change, 0 to destroy`:
-- creates of `google_project_iam_custom_role.tf_bucket_create`, `.tf_cloud_sql_create` and `.tf_cloud_sql`;
-- `google_project_iam_member.tf_apply_custom["bucket_create"]`, `tf_apply_custom["cloud_sql_create"]`,
+- creates of `google_project_iam_custom_role.tf_bucket_create`, `.tf_cloud_sql_project` and `.tf_cloud_sql`;
+- `google_project_iam_member.tf_apply_custom["bucket_create"]`, `tf_apply_custom["cloud_sql"]`,
   `tf_apply_admin_buckets`, `tf_apply_cloud_sql`, `tf_plan_admin_buckets`, `tf_plan["roles/cloudsql.viewer"]`,
   `admin_sql["client"]` and `admin_sql["instance_user"]`;
 - `google_service_account_iam_member.tf_apply_acts_as["admin"]`.

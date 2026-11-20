@@ -246,6 +246,8 @@ def test_the_guarded_accounts_and_their_trust_are_refused(rtype, after, after_un
     d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
     got = results(d)
     assert got.pop("guarded-accounts") == [f"{rtype}.extra"]
+    if rtype in guard.PROJECT_POLICY_TYPES:  # any project grant is project-iam-policy's as well
+        assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
     assert not any(got.values())
 
 
@@ -447,6 +449,8 @@ def test_keys_numeric_ids_grants_and_impersonation_are_refused(rtype, after, aft
     d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
     got = results(d)
     assert got.pop("guarded-accounts") == [f"{rtype}.extra"]
+    if rtype in guard.PROJECT_POLICY_TYPES:  # any project grant is project-iam-policy's as well
+        assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
     assert not any(got.values())
 
 
@@ -1099,10 +1103,10 @@ def _create(address: str, rtype: str, after: dict, unknown: dict | None = None) 
 
 def admin_plan() -> dict:
     """The good plan plus the admin stack's resources as admin_control.tf (#128/#149) writes them: the instance with
-    IAM authentication, a public IP with no authorized network and client certificates required; its database; its
-    CLOUD_IAM_SERVICE_ACCOUNT user; and the two conditioned project grants to the account the same plan creates."""
+    IAM authentication, a public IP with no authorized network and client certificates required; its database; and
+    its CLOUD_IAM_SERVICE_ACCOUNT user (an empty password_policy block, as plan JSON shows an unset one). Not
+    admin_sql: the admin's project grants are the bootstrap root's, and project IAM fails project-iam-policy."""
     d = doc("good")
-    project = d["variables"]["project_id"]["value"]
     d["resource_changes"] += [
         _create(
             "google_service_account.admin",
@@ -1144,29 +1148,15 @@ def admin_plan() -> dict:
         _create(
             "google_sql_user.admin",
             "google_sql_user",
-            {"type": "CLOUD_IAM_SERVICE_ACCOUNT", "instance": "registry-coffee-admin", "password": None},
+            {
+                "type": "CLOUD_IAM_SERVICE_ACCOUNT",
+                "instance": "registry-coffee-admin",
+                "password": None,
+                "password_policy": [],
+            },
             {"name": True},
         ),
     ]
-    for key, role in (("client", "roles/cloudsql.client"), ("instance_user", "roles/cloudsql.instanceUser")):
-        d["resource_changes"].append(
-            _create(
-                f'google_project_iam_member.admin_sql["{key}"]',
-                "google_project_iam_member",
-                {
-                    "project": project,
-                    "role": role,
-                    "condition": [
-                        {
-                            "title": "only the admin's instance",
-                            "description": "The admin's control-plane database, nothing else.",
-                            "expression": f'resource.name == "projects/{project}/instances/registry-coffee-admin"',
-                        }
-                    ],
-                },
-                {"member": True, "etag": True, "id": True},
-            )
-        )
     d["configuration"] = {
         "root_module": {
             "resources": [
@@ -1192,19 +1182,46 @@ def test_the_admin_stacks_real_resources_pass_every_guard():
     assert guard.cloud_sql_access(plan(d)) == []
 
 
-@pytest.mark.parametrize("rtype", ["google_project_iam_audit_config", "google_project_iam_policy"])
-def test_the_projects_whole_policy_and_audit_settings_are_refused(rtype):
+@pytest.mark.parametrize("rtype", sorted(guard.PROJECT_POLICY_TYPES))
+def test_any_project_iam_change_is_refused(rtype):
+    """The pipeline holds no project setIamPolicy: the whole policy, its audit settings and every grant on it
+    (member, binding, member_remove) are refused at plan, the admin's admin_sql included."""
     d = admin_plan()
-    after = (
-        {"service": "allServices", "audit_log_config": [{"log_type": "DATA_READ", "exempted_members": []}]}
-        if rtype.endswith("audit_config")
-        else {"policy_data": "{}"}
-    )
+    after = {
+        "google_project_iam_audit_config": {
+            "service": "allServices",
+            "audit_log_config": [{"log_type": "DATA_READ", "exempted_members": []}],
+        },
+        "google_project_iam_policy": {"policy_data": "{}"},
+        "google_project_iam_member": {"role": "roles/cloudsql.client", "member": "user:a@example.com"},
+        "google_project_iam_binding": {"role": "roles/cloudsql.client", "members": ["user:a@example.com"]},
+        "google_project_iam_member_remove": {"role": "roles/cloudsql.client", "member": "user:a@example.com"},
+    }[rtype]
     d["resource_changes"].append(_create(f"{rtype}.extra", rtype, {"project": "p", **after}))
     got = results(d)
     assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
-    if rtype.endswith("audit_config"):  # no role, no member: nothing else catches it
-        assert not any(got.values()), got
+    assert not any(got.values()), got
+
+
+def test_the_admin_stacks_main_root_admin_sql_is_refused():
+    """#128/#149 carried google_project_iam_member.admin_sql in the main root; it is the bootstrap's now."""
+    d = admin_plan()
+    project = d["variables"]["project_id"]["value"]
+    d["resource_changes"].append(
+        _create(
+            'google_project_iam_member.admin_sql["client"]',
+            "google_project_iam_member",
+            {
+                "project": project,
+                "role": "roles/cloudsql.client",
+                "condition": [
+                    {"title": "t", "expression": f'resource.name == "projects/{project}/instances/x"'}
+                ],
+            },
+            {"member": True},
+        )
+    )
+    assert guard.project_iam_policy(plan(d)) == ['google_project_iam_member.admin_sql["client"]']
 
 
 def _set(path, value):
@@ -1234,6 +1251,8 @@ BAD_INSTANCE = {
     "restore": _set(
         ("restore_backup_context",), [{"backup_run_id": 1, "instance_id": "registry-coffee-admin"}]
     ),
+    "root_password": _set(("root_password",), "not-a-real-one"),
+    "root_password_unknown": lambda c: c["after_unknown"].update({"root_password": True}),
     "replica_type": lambda c: (
         c["after"].update({"instance_type": "READ_REPLICA_INSTANCE"}),
         c["after_unknown"].pop("instance_type"),
@@ -1276,6 +1295,16 @@ def test_a_database_user_that_isnt_iam_or_has_a_password_is_refused(case):
     got = results(d)
     assert got.pop("cloud-sql-access") == ["google_sql_user.admin"]
     assert not any(got.values()), got
+
+
+def test_an_empty_password_policy_is_not_a_password_and_a_set_password_still_is():
+    d = admin_plan()
+    user = find(d, "google_sql_user.admin")["change"]
+    assert user["after"]["password_policy"] == [] and guard.cloud_sql_access(plan(d)) == []
+    user["after"]["password_policy"] = [{"allowed_failed_attempts": 3}]  # not a password either
+    assert guard.cloud_sql_access(plan(d)) == []
+    user["after"]["password"] = "not-a-real-one"
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_user.admin"]
 
 
 def test_a_password_known_only_at_apply_is_refused():

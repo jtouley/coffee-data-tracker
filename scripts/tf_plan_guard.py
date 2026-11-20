@@ -485,14 +485,22 @@ def guarded_accounts(plan: Plan) -> list[str]:
     return bad
 
 
-# The whole project's IAM policy, or its audit settings (which principals' data access is logged): the owner's, by
-# hand or in the bootstrap root, never the pipeline's. Its project grants are members of specific roles, which
-# guarded-accounts checks.
-PROJECT_POLICY_TYPES = {"google_project_iam_policy", "google_project_iam_audit_config"}
+# The project's IAM: its whole policy, its audit settings (which principals' data access is logged) and every grant
+# on it. The owner's, in the bootstrap root or by hand, never the pipeline's: the apply account holds no
+# resourcemanager.projects.setIamPolicy, so any of these would fail with a 403 after the approval; refused at plan
+# instead. (Custom roles are guarded-accounts'.)
+PROJECT_POLICY_TYPES = {
+    "google_project_iam_policy",
+    "google_project_iam_audit_config",
+    "google_project_iam_member",
+    "google_project_iam_binding",
+    "google_project_iam_member_remove",
+}
 
 
 def project_iam_policy(plan: Plan) -> list[str]:
-    """No change to the project's whole IAM policy or its audit configuration (Data Access logs and who is exempt)."""
+    """No change to the project's IAM: its whole policy, its audit configuration (Data Access logs and who is
+    exempt), or any grant on it (member, binding, member_remove)."""
     return [
         rc["address"]
         for rc in plan.changes
@@ -507,6 +515,9 @@ SQL_SSL_MODES = {"ENCRYPTED_ONLY", "TRUSTED_CLIENT_CERTIFICATE_REQUIRED"}
 SQL_IAM_FLAGS = {"cloudsql.iam_authentication", "cloudsql_iam_authentication"}  # PostgreSQL's, MySQL's
 # A new instance that starts from another one's data: a read replica, a clone, or a backup restored into it.
 SQL_COPY_FIELDS = ("master_instance_name", "clone", "restore_backup_context")
+SQL_USER_PASSWORDS = ("password", "password_wo", "password_wo_version")
+# The built-in root user's password (MySQL and SQL Server; the admin's PostgreSQL instance sets none).
+SQL_ROOT_PASSWORDS = ("root_password", "root_password_wo", "root_password_wo_version")
 
 
 def _configured(plan: Plan, rc: dict, field: str) -> bool:
@@ -543,6 +554,8 @@ def _sql_instance_bad(plan: Plan, rc: dict) -> bool:
             return True
     if jq(after, "instance_type") not in (None, "CLOUD_SQL_INSTANCE") and not unknown(rc, "instance_type"):
         return True
+    if any(jq(after, k) not in (None, "", 0) or unknown(rc, k) for k in SQL_ROOT_PASSWORDS):
+        return True
     networks = jq(after, *ip, "authorized_networks")
     if networks not in (None, []) or unknown(rc, *ip, "authorized_networks"):
         return True
@@ -562,17 +575,17 @@ def _sql_user_bad(rc: dict) -> bool:
     kind = jq(after, "type")
     if not (isinstance(kind, str) and kind.startswith("CLOUD_IAM_")) or unknown(rc, "type"):
         return True
-    # A password in any form (password, a write-only password_wo and its version): an IAM user has none.
-    return any((k.startswith("password") and v not in (None, "", 0)) for k, v in after.items()) or any(
-        unknown(rc, k) for k in after if k.startswith("password")
-    )
+    # A password in any form: password, or a write-only password_wo and its version. An IAM user has none. Not
+    # password_policy, a block an IAM user carries empty ([]).
+    return any(jq(after, k) not in (None, "", 0) or unknown(rc, k) for k in SQL_USER_PASSWORDS)
 
 
 def cloud_sql_access(plan: Plan) -> list[str]:
-    """Cloud SQL stays reachable only through the connector as an IAM user: a created or changed instance has no
+    """Cloud SQL is signed in to as an IAM user, over encrypted connections: a created or changed instance has no
     authorized network, needs encrypted connections (ENCRYPTED_ONLY or stricter), keeps IAM database authentication
-    on, and isn't a replica, clone or restore of another instance's data; a database user is an IAM one (CLOUD_IAM_*)
-    with no password."""
+    on, sets no root password, and isn't a replica, clone or restore of another instance's data; a database user is
+    an IAM one (CLOUD_IAM_*) with no password. Private networking and Private Service Connect aren't checked: they
+    change where a connection can come from, not how it signs in."""
     bad = []
     for rc in plan.changes:
         if not (is_change(rc) or importing(rc)) or actions(rc) == ["delete"]:
@@ -602,7 +615,7 @@ GUARDS: list[tuple[str, str, Callable[[Plan], list[str]]]] = [
     ),
     (
         "project-iam-policy",
-        "the project's whole IAM policy and its audit settings: unchanged",
+        "the project's IAM (policy, audit settings, any grant): unchanged",
         project_iam_policy,
     ),
     (

@@ -20,9 +20,10 @@
 # What the apply account CAN do once an apply is approved, because the main root manages it: set IAM on the secrets (so
 # grant itself or anyone a secret's value), the image repository, the Cloud Run service and jobs, the staging bucket
 # (so reach raw ingestion data) and the admin's two buckets (its sign-in state, drafts' snapshots); change the admin's
-# Cloud SQL instance and create users on it, and create any new instance in the project (the guard refuses an
-# authorized network, an ssl_mode weaker than ENCRYPTED_ONLY, IAM authentication off, a replica, clone or restore, and
-# a database user that isn't an IAM one or carries a password: cloud-sql-access); read the image
+# Cloud SQL instance, create any new instance in the project, and create databases and users on any instance (Cloud
+# SQL's IAM Conditions don't cover databases or users; the guard refuses an authorized network, an ssl_mode weaker
+# than ENCRYPTED_ONLY, IAM authentication off, a root password, a replica, clone or restore, and a database user that
+# isn't an IAM one or carries a password: cloud-sql-access); never project IAM (project-iam-policy); read the image
 # repository's images, which Cloud Run needs from whoever deploys a job or service (its role holds no push or delete
 # permission itself, but its settings can set cleanup policies and its IAM can grant write); run any image as the
 # runtime, ingest, scheduler, usage or admin account, which hold secret access, the staging bucket and (the admin's)
@@ -191,33 +192,41 @@ resource "google_project_iam_custom_role" "tf_log_exclusions" {
   ]
 }
 
-# The admin's control plane (admin_control.tf), in two roles. tfApplyCloudSqlCreate: create an instance. It is
-# checked before the instance exists, so it can't be conditioned on the instance's name: it allows any new instance in
-# the project (a cost, and, as far as IAM goes, a replica, clone or restore from the admin's; the guard refuses
-# master_instance_name, clone and restore_backup_context, so an approved plan can't hold one).
-resource "google_project_iam_custom_role" "tf_cloud_sql_create" {
-  role_id     = "tfApplyCloudSqlCreate"
-  title       = "Terraform apply: create a Cloud SQL instance"
-  permissions = ["cloudsql.instances.create"]
-}
-
-# tfApplyCloudSql, granted on the admin's instance only (tf_apply_cloud_sql: a condition on its resource.name): read
-# and change the instance, create and read its database and its IAM database user (users.list as well: the provider
-# reads a user from the instance's list). Not roles/cloudsql.admin, which can also delete, export, import, connect and
-# log in: none of those here, and no update of a database or user (a change fails closed with a 403 that names the
-# permission). Operations are read through instances.get.
-resource "google_project_iam_custom_role" "tf_cloud_sql" {
-  role_id = "tfApplyCloudSql"
-  title   = "Terraform apply: the admin's Cloud SQL instance, database and IAM user"
+# The admin's control plane (admin_control.tf), in two roles, because Cloud SQL's IAM Conditions cover only some of
+# it. Google's "IAM Conditions" page for Cloud SQL, Limitations: "IAM Conditions don't support operations on the users
+# resource (cloudsql.users.* permissions) or the databases resource (cloudsql.databases.* permissions) in the Cloud SQL
+# Admin API", and resource-based conditions support only the Instance and BackupRun types.
+#
+# tfApplyCloudSqlProject, on the project, unconditioned: create an instance, and create and read databases and users
+# (users.list as well: the provider reads a user from the instance's list). The same page lists "Allowing users to
+# create instances with specific prefixes or suffixes" as a use case, but documents no condition or permission for it,
+# so the create isn't conditioned on a behaviour the docs don't state. So this allows any new instance in the
+# project, and a database or user on any instance. The guard bounds both (cloud-sql-access): no replica, clone or
+# restore, no root password, no authorized network, IAM sign-in on; a user only CLOUD_IAM_* with no password. Logging
+# in as such a user needs cloudsql.instances.login, which no pipeline grant gives (project IAM is the owner's), and
+# neither users.update nor users.delete is held.
+resource "google_project_iam_custom_role" "tf_cloud_sql_project" {
+  role_id = "tfApplyCloudSqlProject"
+  title   = "Terraform apply: create Cloud SQL instances, databases and users"
   permissions = [
     "cloudsql.databases.create",
     "cloudsql.databases.get",
-    "cloudsql.instances.get",
-    "cloudsql.instances.update",
+    "cloudsql.instances.create",
     "cloudsql.users.create",
     "cloudsql.users.get",
     "cloudsql.users.list",
   ]
+}
+
+# tfApplyCloudSql, on the admin's instance only (tf_apply_cloud_sql: a condition on its resource.name,
+# projects/PROJECT_ID/instances/INSTANCE_ID, which Instance conditions support): read and change that instance. Not
+# roles/cloudsql.admin, which can also delete, export, import, connect and log in: none of those in either role, and
+# no update of a database or user (a change fails closed with a 403 that names the permission). Operations are read
+# through instances.get (not on the page; if polling is refused, the 403 names the permission).
+resource "google_project_iam_custom_role" "tf_cloud_sql" {
+  role_id     = "tfApplyCloudSql"
+  title       = "Terraform apply: the admin's Cloud SQL instance"
+  permissions = ["cloudsql.instances.get", "cloudsql.instances.update"]
 }
 
 resource "google_project_iam_custom_role" "tf_log_exclusions_reader" {
@@ -341,7 +350,7 @@ resource "google_project_iam_member" "tf_apply_custom" {
     secrets          = google_project_iam_custom_role.tf_secrets.id
     log_exclusions   = google_project_iam_custom_role.tf_log_exclusions.id
     bucket_create    = google_project_iam_custom_role.tf_bucket_create.id
-    cloud_sql_create = google_project_iam_custom_role.tf_cloud_sql_create.id
+    cloud_sql        = google_project_iam_custom_role.tf_cloud_sql_project.id
   }
   project = var.project_id
   role    = each.value
@@ -360,7 +369,7 @@ resource "google_project_iam_member" "tf_apply_admin_buckets" {
   }
 }
 
-# The admin's instance, database and IAM user (tf_cloud_sql above), on that instance's name only.
+# The admin's instance itself (tf_cloud_sql above), on that instance's name only.
 resource "google_project_iam_member" "tf_apply_cloud_sql" {
   project = var.project_id
   role    = google_project_iam_custom_role.tf_cloud_sql.id
