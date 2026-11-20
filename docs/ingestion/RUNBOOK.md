@@ -1596,7 +1596,13 @@ Then three parts:
   - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by `@sha256:`
     digest, and every job's image is a digest known at plan time;
   - `workload-identity`: no workload identity pool or provider changes, nor any IAM grant that names one or grants
-    a workload identity role.
+    a workload identity role;
+  - `guarded-accounts`, `app-image-pinned`: docs/app/RUNNING.md, "Changing the infrastructure";
+  - `project-iam-policy`: no `google_project_iam_policy` or `google_project_iam_audit_config` (the whole policy, or
+    whose data access is logged);
+  - `cloud-sql-access`: a created or changed Cloud SQL instance has no authorized network, an `ssl_mode` of
+    `ENCRYPTED_ONLY` or stricter, `cloudsql.iam_authentication` on, and no `master_instance_name`, `clone` or
+    `restore_backup_context`; a `google_sql_user` is a `CLOUD_IAM_*` user with no password.
 - **Changes**: one line per resource, its action and its address, and where it moved from. `update` changes it in
   place, `create` adds it; `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard.
   Unchanged resources and data reads aren't listed.

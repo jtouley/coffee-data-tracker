@@ -206,8 +206,10 @@ BAD=$(jq -r '.resource_changes[]? | select(.change.actions | index("delete")) | 
 echo "-- changes (addresses only) --"
 jq -r '.resource_changes[]? | select(.change.actions != ["no-op"] and .change.actions != ["read"])
   | "\(.change.actions | join("+"))\t\(.address)"' "$WORK/boot.json" | sort
-echo "expect (first run): 66 creates: two pools and providers, two accounts and their workload identity bindings,"
-echo "        twelve custom roles, the plans bucket, and the two accounts' role bindings. Nothing else."
+echo "expect (first run): 68 creates: two pools and providers, two accounts and their workload identity bindings,"
+echo "        twelve custom roles, the plans bucket, the two accounts' role bindings, and the admin account's two Cloud"
+echo "        SQL grants. Nothing else. They grant on the main root's accounts, which step 3 made (registry-coffee-admin-run"
+echo "        included: tests/test_terraform_accounts.py keeps every account named here in the main root)."
 echo "        On a later run: only what src/terraform/bootstrap/ changed since its last apply. A bootstrap change alone"
 echo "        is applied by hand instead (docs/app/RUNNING.md, \"re-apply the bootstrap\")."
 ask "apply exactly this plan?"

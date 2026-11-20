@@ -1,27 +1,28 @@
 # What each account may do, read from what src/terraform/ manages:
-#   APIs (google_project_service); the deploy pool and provider; five service accounts and IAM on two of them; the
+#   APIs (google_project_service); the deploy pool and provider; six service accounts and IAM on two of them; the
 #   image repository and its IAM; eight empty secrets and their IAM; the Cloud Run service, its IAM and its domain
 #   mapping; the usage collector's service and its IAM, and one log exclusion (usage.tf); the ingestion network
 #   (network, two subnets, router, two NATs, two static addresses); the staging bucket and its IAM; the Cloud Run jobs
 #   and their IAM; Cloud Scheduler jobs; a notification channel, alert policies (the log-based ones with a Logging
 #   notification rule underneath) and an uptime check; the billing budget; `data.google_project`. With the admin
 #   (admin.tf, admin_control.tf): its service account, three secrets, two buckets (`-admin-state`, `-admin-snapshots`)
-#   and their IAM, a Cloud SQL instance, database and IAM user, two conditional project grants of Cloud SQL roles to
-#   the admin's account, IAM on the jobs it may start, and its service, domain mapping and alerts.
+#   and their IAM, a Cloud SQL instance, database and IAM user, IAM on the jobs it may start, and its service, domain
+#   mapping and alerts. The admin account's two Cloud SQL project grants are this root's (admin_sql, below): the
+#   pipeline never writes the project's IAM policy.
 # Specific roles throughout: no owner, editor, projectIamAdmin, workloadIdentityPoolAdmin, roleAdmin or
 # serviceAccountKeyAdmin. A missing permission fails closed, with a 403 that names it.
 #
-# What neither account can do: write a workload identity pool or provider, a custom role, the project's IAM policy
-# (except, for the apply account, grants of exactly roles/cloudsql.client and roles/cloudsql.instanceUser: the admin's
-# two, below), IAM on any service account (so who may act as the deploy, plan or apply account never changes through
-# the pipeline: the guard refuses those changes too), these two buckets' IAM or the billing account's; delete a
+# What neither account can do: write a workload identity pool or provider, a custom role, the project's IAM policy,
+# IAM on any service account (so who may act as the deploy, plan or apply account never changes through the
+# pipeline: the guard refuses those changes too), the state and plans buckets' IAM or the billing account's; delete a
 # service account.
 #
 # What the apply account CAN do once an apply is approved, because the main root manages it: set IAM on the secrets (so
 # grant itself or anyone a secret's value), the image repository, the Cloud Run service and jobs, the staging bucket
-# (so reach raw ingestion data) and the admin's two buckets (its sign-in state, drafts' snapshots); grant anyone
-# roles/cloudsql.client or roles/cloudsql.instanceUser on the project, and change the admin's Cloud SQL instance and
-# create users on it (an authorized network and a password user would reach the control plane's data); read the image
+# (so reach raw ingestion data) and the admin's two buckets (its sign-in state, drafts' snapshots); change the admin's
+# Cloud SQL instance and create users on it, and create any new instance in the project (the guard refuses an
+# authorized network, an ssl_mode weaker than ENCRYPTED_ONLY, IAM authentication off, a replica, clone or restore, and
+# a database user that isn't an IAM one or carries a password: cloud-sql-access); read the image
 # repository's images, which Cloud Run needs from whoever deploys a job or service (its role holds no push or delete
 # permission itself, but its settings can set cleanup policies and its IAM can grant write); run any image as the
 # runtime, ingest, scheduler, usage or admin account, which hold secret access, the staging bucket and (the admin's)
@@ -36,10 +37,10 @@ locals {
   plan_member  = "serviceAccount:${google_service_account.tf_plan.email}"
   apply_member = "serviceAccount:${google_service_account.tf_apply.email}"
 
-  # The main root's runtime accounts (secrets.tf, ingestion.tf, usage.tf, admin.tf), by the names it gives them. The
-  # usage collector's and the admin's accounts are made by the main root's first apply after usage.tf (admin.tf)
-  # merges: this root's grant on each can only be applied after that (RUNNING.md, "Usage" and "The apply account's
-  # grants for the admin").
+  # The main root's runtime accounts (secrets.tf, ingestion.tf, usage.tf, admin.tf), by the names it gives them. Each
+  # is made by the main root's apply before this root grants on it: the usage collector's by the first apply after
+  # usage.tf merged, the admin's by #199's (RUNNING.md, "Usage" and "The apply account's grants for the admin").
+  # tests/test_terraform_accounts.py checks that the main root creates every account named here.
   managed_account = {
     for k, id in {
       runtime          = "${var.service}-run"
@@ -64,9 +65,8 @@ locals {
     for b in ["admin-state", "admin-snapshots"] : "resource.name == 'projects/_/buckets/${var.project_id}-${b}'"
   ])
 
-  # The admin's two project grants (admin_control.tf, admin_sql), and no other role: what the apply account may add to
-  # or remove from the project's IAM policy (IAM's "Set limits on granting roles").
-  sql_grant_roles = ["roles/cloudsql.client", "roles/cloudsql.instanceUser"]
+  # The admin's Cloud SQL instance (admin_control.tf: "${var.service}-admin"), as IAM conditions name it.
+  admin_instance_condition = "resource.name == 'projects/${var.project_id}/instances/${var.service}-admin'"
 }
 
 # --- Custom roles: where a predefined role would give more than the root needs ---------------------------------------
@@ -191,38 +191,33 @@ resource "google_project_iam_custom_role" "tf_log_exclusions" {
   ]
 }
 
-# The admin's control plane (admin_control.tf): create and change its Cloud SQL instance, create its database and its
-# IAM database user, and read them back (users.list as well: the provider reads a user from the instance's list).
-# Not roles/cloudsql.admin, which can also delete, export and import (copy the data out, or in), connect and log in:
-# no delete (the guard refuses deletes; deletion protection is on as well), no export, import, clone, connect or
-# login, no update of a database or user (a change fails closed with a 403 that names the permission). Operations
-# are read through instances.get.
+# The admin's control plane (admin_control.tf), in two roles. tfApplyCloudSqlCreate: create an instance. It is
+# checked before the instance exists, so it can't be conditioned on the instance's name: it allows any new instance in
+# the project (a cost, and, as far as IAM goes, a replica, clone or restore from the admin's; the guard refuses
+# master_instance_name, clone and restore_backup_context, so an approved plan can't hold one).
+resource "google_project_iam_custom_role" "tf_cloud_sql_create" {
+  role_id     = "tfApplyCloudSqlCreate"
+  title       = "Terraform apply: create a Cloud SQL instance"
+  permissions = ["cloudsql.instances.create"]
+}
+
+# tfApplyCloudSql, granted on the admin's instance only (tf_apply_cloud_sql: a condition on its resource.name): read
+# and change the instance, create and read its database and its IAM database user (users.list as well: the provider
+# reads a user from the instance's list). Not roles/cloudsql.admin, which can also delete, export, import, connect and
+# log in: none of those here, and no update of a database or user (a change fails closed with a 403 that names the
+# permission). Operations are read through instances.get.
 resource "google_project_iam_custom_role" "tf_cloud_sql" {
   role_id = "tfApplyCloudSql"
-  title   = "Terraform apply: a Cloud SQL instance, database and IAM user"
+  title   = "Terraform apply: the admin's Cloud SQL instance, database and IAM user"
   permissions = [
     "cloudsql.databases.create",
     "cloudsql.databases.get",
-    "cloudsql.instances.create",
     "cloudsql.instances.get",
     "cloudsql.instances.update",
     "cloudsql.users.create",
     "cloudsql.users.get",
     "cloudsql.users.list",
   ]
-}
-
-# The admin's two project grants (google_project_iam_member.admin_sql: roles/cloudsql.client and
-# roles/cloudsql.instanceUser to its own account, conditioned on its instance). Setting them writes the project's IAM
-# policy, so this holds setIamPolicy alone (getIamPolicy is securityReviewer's), and its one grant
-# (tf_apply_sql_grants) carries a condition on the roles a change may add or remove: those two, nothing else. Not
-# roles/resourcemanager.projectIamAdmin, unconditioned: that would let an approved apply grant anyone any role,
-# itself owner included. The guard passes admin_sql (a predefined role, to an account the same plan creates) and
-# still refuses any grant naming the plan or apply account, or of a role that impersonates or administers roles.
-resource "google_project_iam_custom_role" "tf_project_sql_grants" {
-  role_id     = "tfApplySqlGrants"
-  title       = "Terraform apply: the project's Cloud SQL grants"
-  permissions = ["resourcemanager.projects.setIamPolicy"]
 }
 
 resource "google_project_iam_custom_role" "tf_log_exclusions_reader" {
@@ -346,7 +341,7 @@ resource "google_project_iam_member" "tf_apply_custom" {
     secrets          = google_project_iam_custom_role.tf_secrets.id
     log_exclusions   = google_project_iam_custom_role.tf_log_exclusions.id
     bucket_create    = google_project_iam_custom_role.tf_bucket_create.id
-    cloud_sql        = google_project_iam_custom_role.tf_cloud_sql.id
+    cloud_sql_create = google_project_iam_custom_role.tf_cloud_sql_create.id
   }
   project = var.project_id
   role    = each.value
@@ -365,16 +360,14 @@ resource "google_project_iam_member" "tf_apply_admin_buckets" {
   }
 }
 
-# Write the project's IAM policy only where the change adds or removes grants of the admin's two Cloud SQL roles
-# (tf_project_sql_grants above). Reads of the policy carry no modified grants, so they pass as well.
-resource "google_project_iam_member" "tf_apply_sql_grants" {
+# The admin's instance, database and IAM user (tf_cloud_sql above), on that instance's name only.
+resource "google_project_iam_member" "tf_apply_cloud_sql" {
   project = var.project_id
-  role    = google_project_iam_custom_role.tf_project_sql_grants.id
+  role    = google_project_iam_custom_role.tf_cloud_sql.id
   member  = local.apply_member
   condition {
-    title       = "cloudsql-grants-only"
-    description = "Add or remove grants of the admin's two Cloud SQL roles, nothing else."
-    expression  = "api.getAttribute('iam.googleapis.com/modifiedGrantsByRole', []).hasOnly(${jsonencode(local.sql_grant_roles)})"
+    title      = "admin-instance-only"
+    expression = local.admin_instance_condition
   }
 }
 
@@ -425,4 +418,22 @@ resource "google_storage_bucket_iam_member" "tf_apply_plans" {
   bucket = google_storage_bucket.tf_plans.name
   role   = google_project_iam_custom_role.tf_plan_object.id
   member = local.apply_member
+}
+
+# --- The admin's Cloud SQL grants: the owner's, here, not the pipeline's --------------------------------------------
+
+# Connect (cloudsql.client) and log in as its IAM database user (cloudsql.instanceUser), on the admin's instance only.
+# Cloud SQL has no instance-level IAM policy, so these are project grants narrowed by a condition, and project IAM is
+# never the pipeline's: they are applied by the owner with this root, after the main root has made the account (#199).
+# Same keys, member, roles and condition as the admin stack's google_project_iam_member.admin_sql had in the main root.
+resource "google_project_iam_member" "admin_sql" {
+  for_each = { client = "roles/cloudsql.client", instance_user = "roles/cloudsql.instanceUser" }
+  project  = var.project_id
+  role     = each.value
+  member   = "serviceAccount:${var.service}-admin-run@${var.project_id}.iam.gserviceaccount.com"
+  condition {
+    title       = "only the admin's instance"
+    description = "The admin's control-plane database, nothing else."
+    expression  = "resource.name == \"projects/${var.project_id}/instances/${var.service}-admin\""
+  }
 }

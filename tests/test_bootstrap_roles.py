@@ -89,10 +89,10 @@ def test_every_custom_role_holds_exactly_its_permissions():
         "tfPlanLogExclusions": ["logging.exclusions.get", "logging.exclusions.list"],
         "tfPlanBudgetReader": ["billing.resourcebudgets.read", "resourcemanager.projects.get"],
         "tfApplyBucketCreate": ["storage.buckets.create"],
-        "tfApplyCloudSql": ["cloudsql.databases.create", "cloudsql.databases.get", "cloudsql.instances.create",
-                            "cloudsql.instances.get", "cloudsql.instances.update", "cloudsql.users.create",
-                            "cloudsql.users.get", "cloudsql.users.list"],
-        "tfApplySqlGrants": ["resourcemanager.projects.setIamPolicy"],
+        "tfApplyCloudSqlCreate": ["cloudsql.instances.create"],
+        "tfApplyCloudSql": ["cloudsql.databases.create", "cloudsql.databases.get", "cloudsql.instances.get",
+                            "cloudsql.instances.update", "cloudsql.users.create", "cloudsql.users.get",
+                            "cloudsql.users.list"],
     }  # fmt: skip
 
 
@@ -158,9 +158,10 @@ def _resource(kind: str, name: str) -> str:
     return found[0]
 
 
-def test_no_custom_role_holds_a_cloud_sql_delete_export_import_or_login():
-    """tfApplyCloudSql creates and reads the admin's instance, database and IAM user and updates the instance; never
-    deletes, copies data out or in, connects or logs in (roles/cloudsql.admin would)."""
+def test_no_custom_role_holds_a_cloud_sql_delete_export_import_connect_or_login():
+    """The apply account creates Cloud SQL instances, and reads and updates the admin's instance and creates and reads
+    its database and IAM user; it never deletes, exports, imports, connects or logs in (roles/cloudsql.admin would).
+    Whether a replica, clone or restore needs more than instances.create isn't relied on: the guard refuses them."""
     held = {p for perms in _roles().values() for p in perms if p.startswith("cloudsql.")}
     for p in held:
         assert p.rsplit(".", 1)[1] in {"create", "get", "list", "update"}, p
@@ -169,14 +170,31 @@ def test_no_custom_role_holds_a_cloud_sql_delete_export_import_or_login():
     assert '"roles/cloudsql.admin"' not in code and '"roles/cloudsql.editor"' not in code
 
 
-def test_the_apply_account_writes_project_iam_only_for_the_admins_two_cloud_sql_roles():
-    """Setting google_project_iam_member.admin_sql writes the project's IAM policy. setIamPolicy is held in one role,
-    bound once, with a condition that the change adds or removes only roles/cloudsql.client and
-    roles/cloudsql.instanceUser. Never projectIamAdmin, owner or editor."""
-    holders = [rid for rid, perms in _roles().items() if "resourcemanager.projects.setIamPolicy" in perms]
-    assert holders == ["tfApplySqlGrants"]
+def test_the_admins_cloud_sql_role_is_granted_on_its_instance_only():
+    """Everything but instances.create (checked before the instance exists, so it can't be conditioned by name) is
+    granted on the admin's instance by its resource.name."""
+    assert _roles()["tfApplyCloudSqlCreate"] == ["cloudsql.instances.create"]
     code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
-    assert code.count("google_project_iam_custom_role.tf_project_sql_grants") == 1
+    assert (
+        "admin_instance_condition = \"resource.name == 'projects/${var.project_id}/instances/${var.service}-admin'\""
+        in code
+    )
+    body = _resource("google_project_iam_member", "tf_apply_cloud_sql")
+    assert "role    = google_project_iam_custom_role.tf_cloud_sql.id" in body
+    assert "member  = local.apply_member" in body
+    assert "expression = local.admin_instance_condition" in body
+    assert code.count("google_project_iam_custom_role.tf_cloud_sql.id") == 1  # bound nowhere else
+    apply = _resource("google_project_iam_member", "tf_apply_custom")
+    assert "cloud_sql_create = google_project_iam_custom_role.tf_cloud_sql_create.id" in apply
+
+
+def test_the_pipeline_never_writes_project_iam():
+    """No custom role holds the project's setIamPolicy, and no predefined role that does is granted: the admin
+    account's two Cloud SQL project grants are this root's, applied by the owner (admin_sql)."""
+    assert not [
+        rid for rid, perms in _roles().items() if any("setIamPolicy" in p and "projects" in p for p in perms)
+    ]
+    code = "".join(tf.read_text() for tf in ROOT.glob("*.tf"))
     for role in (
         "roles/resourcemanager.projectIamAdmin",
         "roles/owner",
@@ -184,13 +202,27 @@ def test_the_apply_account_writes_project_iam_only_for_the_admins_two_cloud_sql_
         "roles/iam.securityAdmin",
     ):
         assert f'"{role}"' not in code, role
-    body = _resource("google_project_iam_member", "tf_apply_sql_grants")
-    assert "member  = local.apply_member" in body
+    assert "modifiedGrantsByRole" not in code
+
+
+def test_the_admins_cloud_sql_grants_are_the_owners_with_the_admin_stacks_condition():
+    """admin_sql here: the same keys, roles, member and condition as admin_control.tf's (#128/#149) had in the main
+    root, written statically (the account and instance names are fixed)."""
+    body = _resource("google_project_iam_member", "admin_sql")
     assert (
-        "api.getAttribute('iam.googleapis.com/modifiedGrantsByRole', []).hasOnly(${jsonencode(local.sql_grant_roles)})"
+        'for_each = { client = "roles/cloudsql.client", instance_user = "roles/cloudsql.instanceUser" }'
         in body
     )
-    assert 'sql_grant_roles = ["roles/cloudsql.client", "roles/cloudsql.instanceUser"]' in code
+    assert (
+        'member   = "serviceAccount:${var.service}-admin-run@${var.project_id}.iam.gserviceaccount.com"'
+        in body
+    )
+    assert 'title       = "only the admin\'s instance"' in body
+    assert 'description = "The admin\'s control-plane database, nothing else."' in body
+    assert (
+        'expression  = "resource.name == \\"projects/${var.project_id}/instances/${var.service}-admin\\""'
+        in body
+    )
 
 
 def test_the_admins_buckets_are_reached_only_by_name():
@@ -215,7 +247,7 @@ def test_the_admins_buckets_are_reached_only_by_name():
             assert name in {"tf_apply_admin_buckets", "tf_plan_admin_buckets"}, name
     apply = _resource("google_project_iam_member", "tf_apply_custom")
     assert "bucket_create    = google_project_iam_custom_role.tf_bucket_create.id" in apply
-    assert "cloud_sql        = google_project_iam_custom_role.tf_cloud_sql.id" in apply
+    assert "cloud_sql_create = google_project_iam_custom_role.tf_cloud_sql_create.id" in apply
 
 
 def test_the_apply_account_acts_as_the_admins_account_and_no_new_other():

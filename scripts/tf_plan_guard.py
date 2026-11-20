@@ -485,6 +485,105 @@ def guarded_accounts(plan: Plan) -> list[str]:
     return bad
 
 
+# The whole project's IAM policy, or its audit settings (which principals' data access is logged): the owner's, by
+# hand or in the bootstrap root, never the pipeline's. Its project grants are members of specific roles, which
+# guarded-accounts checks.
+PROJECT_POLICY_TYPES = {"google_project_iam_policy", "google_project_iam_audit_config"}
+
+
+def project_iam_policy(plan: Plan) -> list[str]:
+    """No change to the project's whole IAM policy or its audit configuration (Data Access logs and who is exempt)."""
+    return [
+        rc["address"]
+        for rc in plan.changes
+        if rc["type"] in PROJECT_POLICY_TYPES and (is_change(rc) or importing(rc))
+    ]
+
+
+SQL_INSTANCE_TYPE = "google_sql_database_instance"
+SQL_USER_TYPE = "google_sql_user"
+# Connections that must be encrypted, at least; the admin's uses the strictest (TRUSTED_CLIENT_CERTIFICATE_REQUIRED).
+SQL_SSL_MODES = {"ENCRYPTED_ONLY", "TRUSTED_CLIENT_CERTIFICATE_REQUIRED"}
+SQL_IAM_FLAGS = {"cloudsql.iam_authentication", "cloudsql_iam_authentication"}  # PostgreSQL's, MySQL's
+# A new instance that starts from another one's data: a read replica, a clone, or a backup restored into it.
+SQL_COPY_FIELDS = ("master_instance_name", "clone", "restore_backup_context")
+
+
+def _configured(plan: Plan, rc: dict, field: str) -> bool:
+    """Whether the configuration sets `field` on this resource: fails closed (True) if its block can't be found."""
+    module = jq(plan.raw, "configuration", "root_module")
+    path = rc.get("module_address") or ""
+    if not isinstance(path, str):
+        return True
+    for name in re.findall(r"module\.([A-Za-z_][A-Za-z0-9_-]*)", path):
+        module = jq(module, "module_calls", name, "module") if isinstance(module, dict) else None
+    local = rc["address"][len(path) + 1 :] if path else rc["address"]
+    local = re.sub(r"\[[^\]]*\]$", "", local)
+    resources = jq(module, "resources") if isinstance(module, dict) else None
+    found = [r for r in resources or [] if isinstance(r, dict) and r.get("address") == local]
+    if len(found) != 1:
+        return True
+    expressions = found[0].get("expressions")
+    return not isinstance(expressions, dict) or field in expressions
+
+
+def _sql_instance_bad(plan: Plan, rc: dict) -> bool:
+    after = jq(rc, "change", "after")
+    if not isinstance(after, dict):
+        return True
+    settings = ("settings", 0)
+    ip = (*settings, "ip_configuration", 0)
+    # master_instance_name is optional and computed, so it is unknown at create when it isn't set: an unknown one
+    # fails only if the configuration sets it (to a value known only at apply). A set value, or a clone or restore
+    # block, fails; so does either block unknown at plan.
+    for f in SQL_COPY_FIELDS:
+        if jq(after, f) not in (None, "", []):
+            return True
+        if unknown(rc, f) and (f != "master_instance_name" or _configured(plan, rc, f)):
+            return True
+    if jq(after, "instance_type") not in (None, "CLOUD_SQL_INSTANCE") and not unknown(rc, "instance_type"):
+        return True
+    networks = jq(after, *ip, "authorized_networks")
+    if networks not in (None, []) or unknown(rc, *ip, "authorized_networks"):
+        return True
+    if jq(after, *ip, "ssl_mode") not in SQL_SSL_MODES:  # unset, weaker, or unknown at plan
+        return True
+    flags = jq(after, *settings, "database_flags")
+    if unknown(rc, *settings, "database_flags") or not isinstance(flags, list):
+        return True
+    iam = [jq(f, "value") for f in flags if isinstance(f, dict) and jq(f, "name") in SQL_IAM_FLAGS]
+    return iam != ["on"]
+
+
+def _sql_user_bad(rc: dict) -> bool:
+    after = jq(rc, "change", "after")
+    if not isinstance(after, dict):
+        return True
+    kind = jq(after, "type")
+    if not (isinstance(kind, str) and kind.startswith("CLOUD_IAM_")) or unknown(rc, "type"):
+        return True
+    # A password in any form (password, a write-only password_wo and its version): an IAM user has none.
+    return any((k.startswith("password") and v not in (None, "", 0)) for k, v in after.items()) or any(
+        unknown(rc, k) for k in after if k.startswith("password")
+    )
+
+
+def cloud_sql_access(plan: Plan) -> list[str]:
+    """Cloud SQL stays reachable only through the connector as an IAM user: a created or changed instance has no
+    authorized network, needs encrypted connections (ENCRYPTED_ONLY or stricter), keeps IAM database authentication
+    on, and isn't a replica, clone or restore of another instance's data; a database user is an IAM one (CLOUD_IAM_*)
+    with no password."""
+    bad = []
+    for rc in plan.changes:
+        if not (is_change(rc) or importing(rc)) or actions(rc) == ["delete"]:
+            continue
+        if (rc["type"] == SQL_INSTANCE_TYPE and _sql_instance_bad(plan, rc)) or (
+            rc["type"] == SQL_USER_TYPE and _sql_user_bad(rc)
+        ):
+            bad.append(rc["address"])
+    return bad
+
+
 GUARDS: list[tuple[str, str, Callable[[Plan], list[str]]]] = [
     ("no-delete-or-replace", "nothing is destroyed, replaced or forgotten", no_delete_or_replace),
     (
@@ -500,6 +599,16 @@ GUARDS: list[tuple[str, str, Callable[[Plan], list[str]]]] = [
         "guarded-accounts",
         "the deploy, plan and apply accounts, grants to them, keys and impersonation roles: unchanged",
         guarded_accounts,
+    ),
+    (
+        "project-iam-policy",
+        "the project's whole IAM policy and its audit settings: unchanged",
+        project_iam_policy,
+    ),
+    (
+        "cloud-sql-access",
+        "Cloud SQL: no authorized network, encrypted connections, IAM sign-in, no copy; IAM users without passwords",
+        cloud_sql_access,
     ),
 ]
 

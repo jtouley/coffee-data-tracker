@@ -1084,3 +1084,219 @@ def test_workflow_shape():
     assert "TF_LOG" not in json.dumps(wf["jobs"]["plan"].get("env", {}))
     assert os.path.exists(ROOT / "src" / "terraform" / "ci.tfvars")
     assert not list((ROOT / "src" / "terraform").glob("*.auto.tfvars"))
+
+
+# --- The admin stack's Cloud SQL and project IAM (project-iam-policy, cloud-sql-access) ----------------------------
+
+
+def _create(address: str, rtype: str, after: dict, unknown: dict | None = None) -> dict:
+    return {
+        "address": address,
+        "type": rtype,
+        "change": {"actions": ["create"], "before": None, "after": after, "after_unknown": unknown or {}},
+    }
+
+
+def admin_plan() -> dict:
+    """The good plan plus the admin stack's resources as admin_control.tf (#128/#149) writes them: the instance with
+    IAM authentication, a public IP with no authorized network and client certificates required; its database; its
+    CLOUD_IAM_SERVICE_ACCOUNT user; and the two conditioned project grants to the account the same plan creates."""
+    d = doc("good")
+    project = d["variables"]["project_id"]["value"]
+    d["resource_changes"] += [
+        _create(
+            "google_service_account.admin",
+            "google_service_account",
+            {"account_id": "registry-coffee-admin-run", "display_name": "admin.registry.coffee (runtime)"},
+            {"email": True, "name": True},
+        ),
+        _create(
+            "google_sql_database_instance.admin",
+            "google_sql_database_instance",
+            {
+                "name": "registry-coffee-admin",
+                "database_version": "POSTGRES_16",
+                "deletion_protection": True,
+                "clone": [],
+                "restore_backup_context": [],
+                "settings": [
+                    {
+                        "edition": "ENTERPRISE",
+                        "tier": "db-f1-micro",
+                        "database_flags": [{"name": "cloudsql.iam_authentication", "value": "on"}],
+                        "ip_configuration": [
+                            {
+                                "ipv4_enabled": True,
+                                "ssl_mode": "TRUSTED_CLIENT_CERTIFICATE_REQUIRED",
+                                "authorized_networks": [],
+                            }
+                        ],
+                    }
+                ],
+            },
+            {"master_instance_name": True, "instance_type": True, "connection_name": True},
+        ),
+        _create(
+            "google_sql_database.admin",
+            "google_sql_database",
+            {"name": "admin", "instance": "registry-coffee-admin"},
+        ),
+        _create(
+            "google_sql_user.admin",
+            "google_sql_user",
+            {"type": "CLOUD_IAM_SERVICE_ACCOUNT", "instance": "registry-coffee-admin", "password": None},
+            {"name": True},
+        ),
+    ]
+    for key, role in (("client", "roles/cloudsql.client"), ("instance_user", "roles/cloudsql.instanceUser")):
+        d["resource_changes"].append(
+            _create(
+                f'google_project_iam_member.admin_sql["{key}"]',
+                "google_project_iam_member",
+                {
+                    "project": project,
+                    "role": role,
+                    "condition": [
+                        {
+                            "title": "only the admin's instance",
+                            "description": "The admin's control-plane database, nothing else.",
+                            "expression": f'resource.name == "projects/{project}/instances/registry-coffee-admin"',
+                        }
+                    ],
+                },
+                {"member": True, "etag": True, "id": True},
+            )
+        )
+    d["configuration"] = {
+        "root_module": {
+            "resources": [
+                {
+                    "address": "google_sql_database_instance.admin",
+                    "type": "google_sql_database_instance",
+                    "expressions": {"name": {}, "database_version": {}, "settings": [{}]},
+                }
+            ]
+        }
+    }
+    return d
+
+
+def _instance(d: dict) -> dict:
+    return find(d, "google_sql_database_instance.admin")["change"]
+
+
+def test_the_admin_stacks_real_resources_pass_every_guard():
+    assert not any(results(admin_plan()).values()), results(admin_plan())
+    d = admin_plan()  # ENCRYPTED_ONLY is the weakest mode allowed
+    _instance(d)["after"]["settings"][0]["ip_configuration"][0]["ssl_mode"] = "ENCRYPTED_ONLY"
+    assert guard.cloud_sql_access(plan(d)) == []
+
+
+@pytest.mark.parametrize("rtype", ["google_project_iam_audit_config", "google_project_iam_policy"])
+def test_the_projects_whole_policy_and_audit_settings_are_refused(rtype):
+    d = admin_plan()
+    after = (
+        {"service": "allServices", "audit_log_config": [{"log_type": "DATA_READ", "exempted_members": []}]}
+        if rtype.endswith("audit_config")
+        else {"policy_data": "{}"}
+    )
+    d["resource_changes"].append(_create(f"{rtype}.extra", rtype, {"project": "p", **after}))
+    got = results(d)
+    assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
+    if rtype.endswith("audit_config"):  # no role, no member: nothing else catches it
+        assert not any(got.values()), got
+
+
+def _set(path, value):
+    def edit(change):
+        target = change["after"]
+        for step in path[:-1]:
+            target = target[step]
+        target[path[-1]] = value
+
+    return edit
+
+
+IP = ("settings", 0, "ip_configuration", 0)
+BAD_INSTANCE = {
+    "authorized_network": _set((*IP, "authorized_networks"), [{"name": "any", "value": "0.0.0.0/0"}]),
+    "authorized_network_unknown": lambda c: c["after_unknown"].update(
+        {"settings": [{"ip_configuration": [{"authorized_networks": True}]}]}
+    ),
+    "ssl_allows_plaintext": _set((*IP, "ssl_mode"), "ALLOW_UNENCRYPTED_AND_ENCRYPTED"),
+    "ssl_unset": _set((*IP, "ssl_mode"), None),
+    "iam_auth_off": _set(
+        ("settings", 0, "database_flags"), [{"name": "cloudsql.iam_authentication", "value": "off"}]
+    ),
+    "iam_auth_missing": _set(("settings", 0, "database_flags"), []),
+    "replica": _set(("master_instance_name",), "registry-coffee-admin"),
+    "clone": _set(("clone",), [{"source_instance_name": "registry-coffee-admin"}]),
+    "restore": _set(
+        ("restore_backup_context",), [{"backup_run_id": 1, "instance_id": "registry-coffee-admin"}]
+    ),
+    "replica_type": lambda c: (
+        c["after"].update({"instance_type": "READ_REPLICA_INSTANCE"}),
+        c["after_unknown"].pop("instance_type"),
+    ),
+}
+
+
+@pytest.mark.parametrize("case", sorted(BAD_INSTANCE))
+def test_a_cloud_sql_instance_that_opens_or_copies_the_data_is_refused(case):
+    d = admin_plan()
+    BAD_INSTANCE[case](_instance(d))
+    got = results(d)
+    assert got.pop("cloud-sql-access") == ["google_sql_database_instance.admin"]
+    assert not any(got.values()), got
+
+
+def test_a_replica_whose_source_is_known_only_at_apply_is_refused():
+    """master_instance_name is computed, so unknown at create either way: the configuration decides."""
+    d = admin_plan()
+    exprs = d["configuration"]["root_module"]["resources"][0]["expressions"]
+    assert guard.cloud_sql_access(plan(d)) == []
+    exprs["master_instance_name"] = {"references": ["google_sql_database_instance.other.name"]}
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_database_instance.admin"]
+    d["configuration"] = {"root_module": {"resources": []}}  # configuration not found: fails closed
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_database_instance.admin"]
+
+
+BAD_USER = {
+    "built_in": {"type": "BUILT_IN", "password": "x"},
+    "type_unset": {"type": None},
+    "iam_user_with_password": {"password": "not-a-real-one"},
+    "write_only_password": {"password_wo_version": 1},
+}
+
+
+@pytest.mark.parametrize("case", sorted(BAD_USER))
+def test_a_database_user_that_isnt_iam_or_has_a_password_is_refused(case):
+    d = admin_plan()
+    find(d, "google_sql_user.admin")["change"]["after"].update(BAD_USER[case])
+    got = results(d)
+    assert got.pop("cloud-sql-access") == ["google_sql_user.admin"]
+    assert not any(got.values()), got
+
+
+def test_a_password_known_only_at_apply_is_refused():
+    d = admin_plan()
+    find(d, "google_sql_user.admin")["change"]["after_unknown"]["password"] = True
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_user.admin"]
+
+
+def test_an_updated_instance_is_checked_and_a_deleted_one_left_to_no_delete_or_replace():
+    d = admin_plan()
+    change = _instance(d)
+    change["actions"], change["before"] = ["update"], copy.deepcopy(change["after"])
+    change["after_unknown"] = {}
+    change["after"]["master_instance_name"] = ""
+    assert guard.cloud_sql_access(plan(d)) == []
+    change["after"]["settings"][0]["ip_configuration"][0]["authorized_networks"] = [
+        {"value": "203.0.113.0/24"}
+    ]
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_database_instance.admin"]
+    change["actions"], change["after"] = ["delete"], None
+    got = results(d)
+    assert got["cloud-sql-access"] == [] and got["no-delete-or-replace"] == [
+        "google_sql_database_instance.admin"
+    ]
