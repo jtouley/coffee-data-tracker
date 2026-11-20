@@ -250,10 +250,10 @@ jobs:
   # **It deploys nothing.** The Cloud Run jobs run the digest Terraform pins (`ingest_image`), and the owner applies
   # that by hand (docs/ingestion/RUNBOOK.md §1 and §4, which read this image's digest by its commit tag). No moving
   # tag such as `latest` is pushed. A failure here fails the run but changes neither the app nor the admin.
-  # It signs the image's build provenance itself, as its last step: it already holds `id-token: write` to push, so
-  # a separate job for that would only be one more job able to sign in to Google Cloud (see `attest`, below). If
-  # that step fails the image is in the registry without provenance, and RUNBOOK.md §1's script refuses it:
-  # "Re-run failed jobs" builds, pushes and signs it again.
+  # It signs the image's build provenance itself, as its last step, after the push (so the signing action runs in a
+  # job already signed in to Google Cloud as the deploy account; RUNBOOK.md §1's check names this file as the
+  # signer). If that step fails the image is in the registry without provenance, and RUNBOOK.md §1's script refuses
+  # it: "Re-run failed jobs" builds, pushes and signs it again.
   ingest-image:
     needs: deploy
     if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}
@@ -315,39 +315,24 @@ jobs:
           subject-digest: ${{ steps.push.outputs.digest }}
 
   # Signed build provenance (SLSA) for the app's image: which workflow run and commit made the digest the deploy job
-  # pushed. It is stored with the repository's attestations, not in the registry; check an image with
-  #   gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker
+  # pushed. It is stored with the repository's attestations, not in the registry; check an image with the command in
+  # docs/app/RUNNING.md (its signer is attest.yml; images signed before that file existed name deploy.yml).
   # - A job of its own, beside deploy-admin, so it can't hold back the app's or the admin's deploy. It can turn the
   #   run red after production has been updated (Sigstore or GitHub's attestations API down): "Re-run failed jobs"
   #   signs the same digest again and deploys nothing (docs/app/RUNNING.md, "A red run after a deploy").
   # - It runs whenever the deploy job pushed an image, even if the deploy step then failed, so every pushed image
   #   has provenance (one may be deployed by hand later).
-  # - `id-token: write` is for the signing certificate. This job never signs in to Google Cloud, but nothing stops
-  #   it: the Workload Identity condition (src/terraform/deploy.tf) accepts a token from any job of this workflow
-  #   on main, so this job, and the action it runs, could act as the deploy account. Moving it to its own workflow
-  #   file would close that, but then the workflow that signs isn't the one that built the image. The fix that
-  #   keeps both is a Terraform change the owner applies (RUNNING.md, same section).
+  # - Its steps are in attest.yml, a reusable workflow, so once the owner has applied deploy.tf's provider change its
+  #   `id-token: write` (the signing certificate) can't sign in to Google Cloud: that condition accepts only jobs
+  #   written in this file, by the token's job_workflow_ref (until the apply, the old condition reads only
+  #   workflow_ref, which is this file for attest too). It is still this run, so the attestation names this run and
+  #   commit, and its build config is this file (RUNNING.md's check pins both).
   attest:
     needs: deploy
     if: ${{ !cancelled() && needs.deploy.outputs.image != '' }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
     permissions:
-      id-token: write  # the signing certificate (Sigstore)
+      id-token: write  # the signing certificate (Sigstore), in attest.yml
       attestations: write  # store the attestation
-    env:
-      IMAGE_REF: ${{ needs.deploy.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>
-    steps:
-      - name: Split the image reference
-        id: ref
-        run: |
-          if ! [[ "$IMAGE_REF" =~ ^[^@]+@sha256:[0-9a-f]{64}$ ]]; then
-            echo "::error::Not an image reference with a digest: $IMAGE_REF"
-            exit 1
-          fi
-          echo "name=${IMAGE_REF%@*}" >> "$GITHUB_OUTPUT"
-          echo "digest=${IMAGE_REF#*@}" >> "$GITHUB_OUTPUT"
-      - uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6  # v4.2.2
-        with:  # no predicate: SLSA build provenance
-          subject-name: ${{ steps.ref.outputs.name }}
-          subject-digest: ${{ steps.ref.outputs.digest }}
+    uses: ./.github/workflows/attest.yml
+    with:
+      image: ${{ needs.deploy.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>
