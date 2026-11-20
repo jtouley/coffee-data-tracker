@@ -232,3 +232,26 @@ def test_decide_takes_claudes_coffee_or_not_coffee_and_the_rules_otherwise():
     # unsure, or no verdict: the rules decide
     assert products.decide(kenya, "unsure") == (True, "rules")
     assert products.decide(kenya, None) == (True, "rules")
+
+
+def test_a_flavored_coffee_type_or_tag_keeps_flavor_only_titles():
+    # Issue #190: with no stored verdict the rules decide, and they read these titles as drinks, nuts or sweets.
+    # The cases are from the train set of eval/classifier_inputs (roasters named in the issue).
+    assert is_coffee(
+        item("Pumpkin Latte", product_type="Flavored Coffee", tags=["flavored", "wholesale"], grams=340)
+    )
+    assert is_coffee(item("Creamy Latte", product_type="Flavored Coffee", grams=340))
+    assert is_coffee(item("Toasted Almond", product_type="Flavored Coffee", tags=["wholesale"], grams=340))
+    assert is_coffee(item("Totally Nuts", product_type="Flavored Coffee", grams=907))
+    # A bare Flavored type or tag counts on a bag-sized product only.
+    assert is_coffee(item("Sticky Bun", product_type="variable", tags=["Flavored", "flavored"], grams=454))
+    assert is_coffee(item("Dubai Chocolate", product_type="variable", tags=["Flavored"], grams=454))
+    assert is_coffee(item("Danish Pastry", product_type="Flavored", tags=["Flavored"], grams=454))
+    assert not is_coffee(item("Dubai Chocolate", product_type="variable", tags=["Flavored"]))
+    assert not is_coffee(item("Danish Pastry", product_type="Flavored", grams=57))
+    # The outright exclusions still win, and other types and tags change nothing.
+    assert not is_coffee(item("Vanilla Syrup", product_type="Flavored Coffee", grams=750))
+    assert not is_coffee(item("French Vanilla K-Cups", product_type="Flavored Coffee", grams=340))
+    assert not is_coffee(item("Flavored Coffee Sampler", product_type="Flavored Coffee", grams=340))
+    assert not is_coffee(item("Pumpkin Latte", product_type="Lattes", tags=["Flavored Lattes"], grams=340))
+    assert not is_coffee(item("Oat Latte - 8oz - 12 count", product_type="Lattes + Cold Coffee", grams=265))
