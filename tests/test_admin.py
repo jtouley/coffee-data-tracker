@@ -1097,3 +1097,32 @@ def test_the_admin_image_runs_the_admin(tmp_path):
 
     docker = (Path(__file__).parents[1] / "app" / "Dockerfile").read_text()
     assert "COPY --chown=user admin ./admin" in docker
+
+
+def test_the_admin_service_starts_on_the_placeholder_and_the_deploy_sets_its_entrypoint():
+    """Terraform's first apply runs Google's sample image, which has no shell or uvicorn: no command beside it (as
+    for the app's service). deploy-admin sets the real image and the admin's entrypoint together, and Terraform
+    ignores all three, so an apply never reverts the deploy."""
+    import re
+    from pathlib import Path
+
+    import yaml
+
+    root = Path(__file__).resolve().parents[1]
+    tf = (root / "src/terraform/admin.tf").read_text()
+    service = tf.split('resource "google_cloud_run_v2_service" "admin"', 1)[1].split("\nresource ", 1)[0]
+    code = "\n".join(line.split("#", 1)[0] for line in service.splitlines())
+    assert "cloudrun/container/hello" in code
+    assert not re.search(r"^\s*(command|args)\s*=", code, re.M)
+    ignored = code.split("ignore_changes", 1)[1].split("\n    ]", 1)[0]
+    for attr in ("image", "command", "args"):
+        assert f"template[0].containers[0].{attr}" in ignored
+
+    wf = yaml.safe_load((root / ".github/workflows/deploy.yml").read_text())
+    (step,) = [s for s in wf["jobs"]["deploy-admin"]["steps"] if s.get("name") == "Deploy"]
+    assert '--image "$IMAGE_REF"' in step["run"]
+    assert '--command sh --args "$ADMIN_ARGS"' in step["run"]
+    args = step["env"]["ADMIN_ARGS"].split(",")
+    assert args[0] == "-c" and len(args) == 2  # gcloud splits --args on commas
+    assert args[1].startswith("exec uvicorn --factory admin.main:create_app ")
+    assert '--port "$PORT"' in args[1]

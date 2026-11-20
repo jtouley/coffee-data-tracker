@@ -81,9 +81,9 @@ resource "google_cloud_run_v2_service" "admin" {
       max_instance_count = 1
     }
     containers {
-      # The first apply runs Google's sample image; the owner then deploys the app's image (docs/admin/README.md).
-      image   = "us-docker.pkg.dev/cloudrun/container/hello"
-      command = ["sh", "-c", "exec uvicorn --factory admin.main:create_app --host 0.0.0.0 --port \"$PORT\" --no-proxy-headers"]
+      # The first apply runs Google's sample image, with no command: it has no shell and no uvicorn. deploy-admin
+      # (deploy.yml) then sets the app's image and the admin's entrypoint together (docs/admin/README.md).
+      image = "us-docker.pkg.dev/cloudrun/container/hello"
       resources {
         limits = {
           cpu    = "1"
@@ -133,7 +133,11 @@ resource "google_cloud_run_v2_service" "admin" {
   }
 
   lifecycle {
-    ignore_changes = [template[0].containers[0].image, client, client_version, scaling]
+    # image, command, args: set by each deploy (deploy-admin). The rest as for the app's service (cloud_run.tf).
+    ignore_changes = [
+      template[0].containers[0].image, template[0].containers[0].command, template[0].containers[0].args,
+      client, client_version, scaling,
+    ]
   }
   depends_on = [google_secret_manager_secret_iam_member.admin, google_storage_bucket_iam_member.admin_state]
 }

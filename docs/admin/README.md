@@ -87,3 +87,6 @@ codes. Delete `build/admin-state` to start over.
 Terraform: `src/terraform/admin.tf`, with the service, its own service account, the three empty secrets, the state
 bucket, the domain mapping, and three alerts (errors, passkeys changed, and the cold start that revisits the
 language, §7.1 of the design). The owner applies a reviewed plan. The owner's steps are in the PR that added this.
+The first apply runs Google's sample image with no command. `deploy-admin` in `.github/workflows/deploy.yml` then
+deploys the app's image with the admin's entrypoint (`sh -c "exec uvicorn --factory admin.main:create_app ..."`),
+and Terraform leaves the image, command and args to it.
