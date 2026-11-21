@@ -51,7 +51,7 @@ labels still answer this guide's question. Four things differ:
   `business.site`, `weebly.com`, `wordpress.com`, `webflow.io`, `bigcartel.com`, `company.site`, `mystrikingly.com`,
   `carrd.co`, `square.online`, `myspreadshop.com`), the group is the store's subdomain on it
   (`shop.made-up.myshopify.com` → `made-up.myshopify.com`).
-- **Why, and what moved (the owner's decision, 2026-11-21).** #130 grouped every store on a platform host as one
+- **Why, and what moved (decided 2026-11-21 by the coordinating Claude Code session, not the owner).** #130 grouped every store on a platform host as one
   business, so every `*.myshopify.com` store hashed to validation (70) and every `*.wixsite.com` store too (79): the
   new test set could never hold a Shopify-subdomain store, which are often small roasters. Grouping by store moved
   three labeled validation items, all on `myshopify.com`. Validation is only used for choosing, so moving them
