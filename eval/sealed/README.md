@@ -44,3 +44,11 @@ the 2026-10-28 sealed score of Claude's verdicts (`RESULTS.md`). Add each later 
   of the lake (runs 2026-10-26 to 11-02: 104,429 distinct versions, 1,895 roasters), on all 1,196 train and
   validation products, and on the public tables' hashes from the #113 fixture lake (built twice with each). 0 of
   them in this sealed set (compared as a count, without reading its products).
+- the owner's include/exclude decisions (`stg_decisions`, `stg_snapshots.decision`, macro `decided`; the admin's
+  Catalog, `admin-actions`) changed **0** products by themselves: with no decisions snapshot, `decided()` returns
+  `stg_products.is_coffee` unchanged, by construction (`stg_decisions` has no rows, so `stg_snapshots.decision` is
+  null for every row); every existing dbt and fixture-lake test passes unchanged, and `tests/test_drafts.py` checks a
+  draft applies only the decisions it was given. Each decision the
+  owner later publishes changes exactly its own products, listed in its draft's `release_changes`. The admin keeps
+  their running total (Release: the public coffees each published draft changed, since the last full evaluation
+  recorded there) and refuses a Publish that takes it over 50. 0 of them in this sealed set.

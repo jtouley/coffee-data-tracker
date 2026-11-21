@@ -90,6 +90,28 @@ METADATA_TOKEN = "http://metadata.google.internal/computeMetadata/v1/instance/se
 GCS = "https://storage.googleapis.com"
 
 
+class MetadataToken:
+    """The service account's own OAuth token from Cloud Run's metadata server (no key file), cached until a minute
+    before it expires. Raises `error` when the metadata server doesn't answer."""
+
+    def __init__(self, http: httpx.Client, error: type[Exception] = RuntimeError):
+        self.http, self.error = http, error
+        self._token: tuple[str, float] | None = None
+        self._lock = threading.Lock()
+
+    def header(self) -> dict[str, str]:
+        with self._lock:
+            if self._token is None or self._token[1] < time.time() + 60:
+                try:
+                    r = self.http.get(METADATA_TOKEN, headers={"Metadata-Flavor": "Google"})
+                    r.raise_for_status()
+                    body = r.json()
+                except (httpx.HTTPError, ValueError) as e:
+                    raise self.error(f"no token from the metadata server: {type(e).__name__}") from e
+                self._token = (body["access_token"], time.time() + int(body.get("expires_in", 300)))
+            return {"Authorization": f"Bearer {self._token[0]}"}
+
+
 class GcsStore:
     """Records as objects in a Cloud Storage bucket, through its JSON API with the service account's own token from
     the metadata server (no key file). A create sends ifGenerationMatch=0: Cloud Storage refuses it (412) if the
@@ -100,20 +122,10 @@ class GcsStore:
             raise ValueError("bad bucket name")
         self.bucket = bucket
         self.http = client or httpx.Client(timeout=timeout)
-        self._token: tuple[str, float] | None = None
-        self._lock = threading.Lock()
+        self.token = MetadataToken(self.http, StoreError)
 
     def _auth(self) -> dict[str, str]:
-        with self._lock:
-            if self._token is None or self._token[1] < time.time() + 60:
-                try:
-                    r = self.http.get(METADATA_TOKEN, headers={"Metadata-Flavor": "Google"})
-                    r.raise_for_status()
-                    body = r.json()
-                except (httpx.HTTPError, ValueError) as e:
-                    raise StoreError(f"no token from the metadata server: {type(e).__name__}") from e
-                self._token = (body["access_token"], time.time() + int(body.get("expires_in", 300)))
-            return {"Authorization": f"Bearer {self._token[0]}"}
+        return self.token.header()
 
     def _call(self, method: str, url: str, headers: dict | None = None, **kw) -> httpx.Response:
         """One request. A read (GET) is tried again once after a dropped connection, a 429 or a 5xx; a create is

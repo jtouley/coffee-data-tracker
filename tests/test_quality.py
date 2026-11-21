@@ -609,7 +609,7 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     for b in (b1, b2, b3):  # every build's release, passing or not, with every table customers read
         assert set(quality.release_files(Lake(), b)) == set(quality.RELEASE_TABLES)
     with pytest.raises(ValueError, match="failed its checks"):
-        quality.serve(Lake(), b3, "no")
+        quality.serve(Lake(), b3, "no", cli.SERVED_DB)
 
     failed = quality.build_diff(Lake())  # default: the latest build against the last passing one
     assert failed["new_passed"] is False and failed["failing"] == ["test.coffeedata.latest_run_is_fresh"]
@@ -629,7 +629,7 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     reads = []
     real_served = quality.served
     monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
-    assert quality.rollback(Lake(), reason="bad prices from one roaster") == b1
+    assert quality.rollback(Lake(), reason="bad prices from one roaster", db=cli.SERVED_DB) == b1
     assert len(reads) == 1  # serve logs the release rollback replaced, without reading it again
     monkeypatch.setattr(quality, "served", real_served)
     assert current.read_bytes() == first_release
@@ -667,10 +667,10 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     for *_, dbt_version, versions, took in env:
         assert dbt_version and json.loads(versions)["dbt-core"] == dbt_version and took > 0
     # 'served' serves the same release again (the Snowflake migration re-exports it without a crawl).
-    assert quality.rollback(Lake(), "served", "re-export for Snowflake migration") == b1
+    assert quality.rollback(Lake(), "served", "re-export for Snowflake migration", cli.SERVED_DB) == b1
     assert current.read_bytes() == first_release
     # It is logged as a re-export, not a rollback: the served release didn't change. So is --to the served build.
-    assert quality.rollback(Lake(), b1, "re-export by id") == b1
+    assert quality.rollback(Lake(), b1, "re-export by id", cli.SERVED_DB) == b1
     last = (
         Lake().connect()
         .execute(f"select action, build_id, previous_build_id, reason from {Lake().scan('serving_log')} "
@@ -682,7 +682,7 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
                                  ("reexport", b1, b1, "re-export for Snowflake migration")]  # fmt: skip
     assert quality.served(Lake())["build_id"] == b1  # the lookup the next build reconciles against: unchanged
     with pytest.raises(ValueError, match="action must be one of"):
-        quality.serve(Lake(), b1, "no", action="rolback")
+        quality.serve(Lake(), b1, "no", cli.SERVED_DB, action="rolback")
     # The next build is compared with what customers get now (b1), not the newest passing build (b2).
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
     cli.cmd_build(args("2026-10-26"))

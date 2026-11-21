@@ -158,9 +158,9 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await cdp.send("WebAuthn.removeVirtualAuthenticator", { authenticatorId: second.id });
       first.id = await authenticator(cdp);
       await cdp.send("WebAuthn.addCredential", { authenticatorId: first.id, credential: first.credential });
-      await page.goto(`${base}/signin?next=/failures`);
+      await page.goto(`${base}/signin?next=/release`);
       await page.click("form[data-flow=signin] button[type=submit]");
-      await page.waitForURL(/\/failures$/);
+      await page.waitForURL(/\/release$/);
       await settled(page);
     });
 
@@ -188,42 +188,47 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await shoot(page, "week");
     });
 
-    await check("Failures: counts by HTTP status, challenge, partial and quarantined, and the trend", async () => {
-      await page.goto(`${base}/failures?week=${w2}`);
+    await check("Week's failures: counts by HTTP status, challenge, partial and quarantined, the trend, a Test crawl link", async () => {
+      await page.goto(`${base}/week?week=${w2}`);
       await settled(page);
-      const a = await answer(page);
+      const a = (await page.textContent("#failures ~ .answer")).replace(/\s+/g, " ");
       assert.match(a, /6 stores need a look/);
       assert.match(a, /siteground 1 · cloudflare 1 · partial 1 · quarantined 1/);
       assert.match(await page.textContent("main"), /Across weeks/);
       const store = page.locator("a.ev", { hasText: "sg-challenge.example" });
       assert.equal(await store.getAttribute("href"), "https://sg-challenge.example/");
-      await shoot(page, "failures");
+      assert.ok((await page.getAttribute("a:text('Test crawl') >> nth=0", "href")).startsWith("/jobs?action=crawl-one"));
+      await page.locator("#failures").scrollIntoViewIfNeeded();
+      await shoot(page, "week-failures");
     });
 
-    await check("Gate: the served build passes; the failed build shows its failing test first", async () => {
-      await page.goto(`${base}/gate`);
+    await check("Release: the served build's gate passes; the failed build shows its failing test first", async () => {
+      await page.goto(`${base}/release?build=${b1}`);
       await settled(page);
-      assert.match(await answer(page), new RegExp(`Build ${b1} passed`));
-      await shoot(page, "gate");
-      await page.goto(`${base}/gate?build=${b2}`);
+      assert.match(await page.textContent("#gate ~ .answer"), new RegExp(`Build ${b1} passed`));
+      assert.match(await page.textContent("main"), /Actions are off/); // no database here: said once, reads work
+      await shoot(page, "release");
+      await page.goto(`${base}/release?build=${b2}`);
       await settled(page);
-      assert.match(await answer(page), new RegExp(`Build ${b2} failed: 1 failing`));
+      assert.match(await page.textContent("#gate ~ .answer"), new RegExp(`Build ${b2} failed: 1 failing`));
       assert.match(await page.textContent("tbody tr.bad"), /run_ok_rate/);
-      await shoot(page, "gate-failed");
+      await shoot(page, "release-failed");
     });
 
-    await check("Changes: counts by table, change and reason, and the rows behind a count", async () => {
-      await page.goto(`${base}/changes?build=${b2}`);
+    await check("Release: changes by table, change and reason, and the rows behind a count", async () => {
+      await page.goto(`${base}/release?build=${b2}`);
       await settled(page);
-      assert.match(await answer(page), /rows change/);
-      await shoot(page, "changes");
-      await page.click("table td.n a >> nth=0");
+      assert.match(await page.textContent("#changes ~ .answer"), /rows change/);
+      // 20 rows or fewer: the rows alone, no counts table above them
+      assert.ok(await page.isVisible(".frame[aria-label=Rows]"));
+      assert.equal(await page.locator(".frame[aria-label=Counts]").count(), 0);
+      await page.goto(`${base}/release?build=${b2}&table=public_coffee#changes`);
       await settled(page);
       assert.match(await page.textContent("main"), /show all/);
-      await shoot(page, "changes-filtered");
-      await page.goto(`${base}/changes?build=${b1}`);
+      await shoot(page, "release-changes-filtered");
+      await page.goto(`${base}/release?build=${b1}`);
       await settled(page);
-      assert.match(await page.textContent("main"), /No changes|rows change/);
+      assert.match(await page.textContent("main"), /No changes|rows change|Not recorded/);
     });
 
     await check("Catalog: search, facet filters with counts, removable chips, zero results", async () => {
@@ -270,9 +275,9 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       const c2 = await browser.newContext();
       await c2.addCookies([{ name: "admin_session", value: cfg.cookies.foreign, url: base }]);
       const p2 = await c2.newPage();
-      await p2.goto(`${base}/gate`);
+      await p2.goto(`${base}/release`);
       await p2.waitForURL(/\/signin/);
-      const r = await p2.request.get(`${base}/part/gate`);
+      const r = await p2.request.get(`${base}/part/release`);
       assert.equal(r.status(), 401);
       await c2.close();
     });
@@ -313,7 +318,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await c2.close();
     });
 
-    for (const name of ["week", "failures", "gate", "changes", "catalog"]) {
+    for (const name of ["week", "jobs", "release", "catalog", "log"]) {
       await check(`no data: ${name} on an empty lake`, async () => {
         const c2 = await browser.newContext();
         await c2.addCookies([{ name: "admin_session", value: cfg.cookies.empty, url: cfg.empty }]);
@@ -354,7 +359,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       const c2 = await browser.newContext();
       await c2.addCookies([{ name: "admin_session", value: cfg.cookies.broken, url: cfg.broken }]);
       const p2 = await c2.newPage();
-      await p2.goto(`${cfg.broken}/failures`);
+      await p2.goto(`${cfg.broken}/week`);
       await settled(p2);
       assert.match(await p2.textContent("[data-state=error]"), /Couldn’t read/);
       assert.match(await p2.textContent("[data-state=error]"), /HTTP 503/);
