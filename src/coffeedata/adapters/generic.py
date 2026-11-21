@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections.abc import Callable
 from urllib.parse import urlparse
 
 import httpx
@@ -151,13 +152,36 @@ def _partial_reason(failed: list[str], unread: list[str]) -> str:
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+    """A store's catalog from its sitemap's product pages (schema.org JSON-LD)."""
+    return read_pages(client, roaster)
+
+
+def page_item(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
+    """A product page's own product, from its first JSON-LD Product (later blocks are related products); None when it
+    has none."""
+    for p in jsonld_products(html)[:1]:
+        return parse_jsonld(p, url, roaster)
+    return None
+
+
+def read_pages(
+    client: PoliteClient,
+    roaster: Roaster,
+    declared: bool = False,
+    parse: Callable[[str, str, Roaster], CatalogItem | None] = page_item,
+) -> list[CatalogItem]:
+    """The catalog from the sitemap's product pages, each page's JSON-LD (also woocommerce.fetch's, for a store whose
+    robots.txt disallows the Store API). declared: also try the sitemaps robots.txt names when /sitemap.xml is a 404
+    (sitemap.sitemap_urls): only that fallback asks for it; every generic store reads /sitemap.xml alone. parse: what
+    a page's product is (html, url, roaster): page_item, or woocommerce.parse_page, which keeps the Store API's ids."""
     items: dict[str, CatalogItem] = {}
     failed: list[str] = []  # product pages that couldn't be read: "url (why)"
+    disallowed = 0  # of those, the ones robots.txt disallows us
     # The sitemap is the only list of product pages: one it can't read (a block, a 5xx, or a file over the protocol's
     # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog. A sub-sitemap it couldn't read
     # (`unread`) leaves the list incomplete: the products read are stored as partial, never as the whole catalog.
     unread: list[str] = []
-    urls = product_urls(sitemap_urls(client, roaster.host, unread))
+    urls = product_urls(sitemap_urls(client, roaster.host, unread, declared=declared))
     # Every product page is read: no cap, and no giving up after the first pages without Product markup (the old
     # GIVE_UP_AFTER = 10 stored the rest of the catalog as empty). Only the run's deadline stops it: partial.
     for n, url in enumerate(urls):
@@ -175,6 +199,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 f"HTTP {e.response.status_code}" if isinstance(e, httpx.HTTPStatusError) else type(e).__name__
             )
             failed.append(f"{url} ({why})")
+            disallowed += isinstance(e, Blocked)
             continue
         if err := challenge_error(r, url):
             # an edge's challenge (a 202, or a challenge header): a refusal, like a block, never a failed page
@@ -184,14 +209,16 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         if r.status_code != 200:
             failed.append(f"{url} (HTTP {r.status_code})")
             continue
-        for p in jsonld_products(r.text)[:1]:  # the page's own product; later blocks are related products
-            item = parse_jsonld(p, url, roaster)
+        if (item := parse(r.text, url, roaster)) is not None:
             items.setdefault(item.product_id, item)
     if failed or unread:
         # A product page or a sub-sitemap that couldn't be read: the products on it would look delisted, so the
         # products read are stored as partial (kept listed, never delisted), and the rest of the catalog isn't lost.
         # Nothing read at all is the fetch's error, never an empty catalog.
         msg = _partial_reason(failed, unread)
+        if not items and failed and disallowed == len(failed) and not unread:
+            # robots.txt disallows every product page it lists: the store is closed to us, as a robots block
+            raise Blocked(f"https://{roaster.host}/ (robots.txt disallows all {len(failed)} product pages)")
         if not items:
             raise FetchError(msg)
         raise PartialCatalog(msg, list(items.values()))
