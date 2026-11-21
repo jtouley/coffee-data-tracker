@@ -11,26 +11,33 @@ FROM python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb
 COPY --from=uv /uv /usr/local/bin/uv
 
 RUN useradd -m -u 1000 user
-USER user
 WORKDIR /home/user/ingest
 ENV HOME=/home/user \
     PATH=/home/user/ingest/.venv/bin:$PATH \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     PYTHONUNBUFFERED=1 \
+    PYTHONNOUSERSITE=1 \
     COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data
 
-COPY --chown=user pyproject.toml uv.lock README.md ./
-COPY --chown=user src ./src
+# The code, its environment, the dbt project and DuckDB's extension are copied and installed as root, so the job's
+# user can read but not change them (review 2026-11-21, F9). The user owns only what the jobs write: build/ (the
+# databases, the site, the exports), dbt/target and dbt/logs (dbt's artifacts), and .tmp (DuckDB's spill folder for
+# in-memory queries). The staging bucket is mounted at /mnt/staging.
+COPY pyproject.toml uv.lock README.md ./
+COPY src ./src
 RUN uv sync --locked --no-dev
 RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
-COPY --chown=user config ./config
-COPY --chown=user dbt ./dbt
-COPY --chown=user contracts ./contracts
+COPY config ./config
+COPY dbt ./dbt
+COPY contracts ./contracts
 # The listing copy whose coverage claims every build checks (quality.LISTING); without it the check is skipped.
-COPY --chown=user marketplace/LISTING.md ./marketplace/LISTING.md
+COPY marketplace/LISTING.md ./marketplace/LISTING.md
 # Fail the image build, not every weekly build, if the claims file can't be found (e.g. a non-editable install).
 RUN .venv/bin/python -c "from coffeedata import quality; assert quality.LISTING.is_file(), quality.LISTING"
+RUN python -m compileall -q src && mkdir -p build dbt/target dbt/logs .tmp \
+    && chown user:user build dbt/target dbt/logs .tmp
+USER user
 
 ENTRYPOINT ["coffeedata"]
 CMD ["--help"]

@@ -23,8 +23,11 @@ locals {
 
   # The plan account's runs, exactly these two: a pull request's terraform-plan.yml, and the plan job of
   # terraform-apply.yml on main (a push, or a run by hand).
+  # A pull request runs its own copy of terraform-plan.yml (and its own Terraform code), so its token also needs the
+  # plan environment, whose required reviewer approves the run before GitHub mints it (review 2026-11-21, F4). A
+  # pull request that drops `environment:` from the workflow gets a token without the claim, which this refuses.
   plan_runs = [
-    "(assertion.event_name == 'pull_request' && assertion.ref.startsWith('refs/pull/') && assertion.workflow_ref.startsWith('${local.workflows}/terraform-plan.yml@refs/pull/') && assertion.job_workflow_ref == assertion.workflow_ref)",
+    "(assertion.event_name == 'pull_request' && assertion.ref.startsWith('refs/pull/') && assertion.workflow_ref.startsWith('${local.workflows}/terraform-plan.yml@refs/pull/') && assertion.job_workflow_ref == assertion.workflow_ref && assertion.environment == '${var.plan_environment}')",
     "(${local.on_main} && ${local.apply_file})",
   ]
 }

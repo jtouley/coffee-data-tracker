@@ -22,6 +22,7 @@ import json
 import os
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 from .public import PUBLIC_TABLES
@@ -303,6 +304,16 @@ class _DryRun:
         self._cur.close()
 
 
+_RUN_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+
+def _check_run(value: object) -> None:
+    """The manifest's as_of_run is a run date (YYYY-MM-DD) and nothing else: ValueError before anything connects."""
+    if not (isinstance(value, str) and _RUN_DATE.fullmatch(value)):
+        raise ValueError(f"manifest as_of_run isn't a run date (YYYY-MM-DD): {str(value)[:40]!r}")
+    date.fromisoformat(value)  # a real date, too
+
+
 def load(export_dir: Path, con=None, migrate: bool = False, dry_run: bool = False) -> dict:
     """Load one export. If any table's or share view's columns differ from the export (a new public contract
     version), nothing is loaded unless `migrate`. Then the role must own the share views; the files are uploaded
@@ -315,6 +326,7 @@ def load(export_dir: Path, con=None, migrate: bool = False, dry_run: bool = Fals
     share. `dry_run` changes nothing: it runs only the checks' reads and returns them
     (tables, share views, owners, grants), any refusal, and the statements the load would run."""
     manifest = json.loads((export_dir / "manifest.json").read_text())
+    _check_run(manifest.get("as_of_run"))  # it goes into stage paths and SQL text (review 2026-11-21, F12)
     exported = re.sub(r"[^0-9T]", "", manifest["exported_at"].split("+")[0]) + "Z"  # 20261027T020148Z
     run_path = f"run={manifest['as_of_run']}/exported={exported}"
     share = os.environ.get("SNOWFLAKE_SHARE", "COFFEE_DATA_SHARE").upper()
