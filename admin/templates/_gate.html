@@ -20,7 +20,7 @@
   </table></div>
   {% set passing = data.tests | selectattr("status", "in", ["pass", "success"]) | list %}
   {% if passing %}
-  <details class="mt12"><summary class="btn text start">{{ passing | length }} passing tests</summary>
+  <details class="mt12"><summary class="btn text start">{{ passing | length }} passing test{{ "s" if passing | length != 1 }}</summary>
   <div class="frame" tabindex="0" role="region" aria-label="Passing tests"><table class="dense">
     <caption>Tests that passed</caption>
     <thead><tr><th scope="col">Test</th><th scope="col" class="n">Seconds</th></tr></thead>

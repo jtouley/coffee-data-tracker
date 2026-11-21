@@ -14,6 +14,16 @@ from pydantic import BaseModel, Field, field_validator
 Platform = Literal["shopify", "woocommerce", "squarespace", "square_online", "generic"]
 
 
+def adapter_of(platform: str) -> Platform:
+    """The connector that crawls a store on this platform (a probe's answer)."""
+    p = (platform or "").rstrip("?")
+    if platform in ("shopify", "woocommerce"):
+        return platform  # type: ignore[return-value]
+    if p in ("squarespace", "square_online"):
+        return p  # type: ignore[return-value]
+    return "generic"
+
+
 class Roaster(BaseModel):
     roaster_id: str  # normalized domain; stable and unique
     name: str
@@ -24,12 +34,7 @@ class Roaster(BaseModel):
 
     @property
     def adapter(self) -> Platform:
-        p = self.platform.rstrip("?")
-        if self.platform in ("shopify", "woocommerce"):
-            return self.platform  # type: ignore[return-value]
-        if p in ("squarespace", "square_online"):
-            return p  # type: ignore[return-value]
-        return "generic"
+        return adapter_of(self.platform)
 
 
 class Variant(BaseModel):

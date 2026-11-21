@@ -2,7 +2,8 @@
 {% macro lake(table) -%}
 {%- set globs = {
     'snapshots': 'snapshots/*/*.parquet', 'bodies': 'bodies/*/*.parquet', 'fetches': 'fetches/*/*.parquet',
-    'probes': 'probes/*/*.parquet', 'registry': 'registry/*/*.parquet', 'enrichments': 'enrichments/*/*/*.parquet',
+    'probes': 'probes/*/*.parquet', 'registry': 'registry/*/*.parquet', 'candidates': 'candidates/*/*.parquet',
+    'enrichments': 'enrichments/*/*/*.parquet',
     'llm_batches': 'llm_batches/*/*.parquet', 'verdicts': 'verdicts/*/*.parquet', 'shots': 'shots/*.parquet', 'equipment': 'equipment/*.parquet',
     'bags': 'bags/*.parquet', 'photos': 'photos/*.parquet',
     'run_overrides': 'run_overrides/*.parquet', 'builds': 'builds/*/*.parquet',

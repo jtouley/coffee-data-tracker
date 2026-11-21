@@ -11,7 +11,7 @@ locals {
   # The jobs the admin may start (admin/jobs.py JOB_NAMES; tests/test_admin_terraform.py checks the two agree).
   admin_jobs = toset([
     "crawl-shopify", "crawl-squarespace", "crawl-woocommerce", "crawl-square-online", "crawl-generic",
-    "crawl-retry", "fetch-health", "merge", "enrich-week", "build", "publish",
+    "crawl-retry", "fetch-health", "merge", "enrich-week", "build", "publish", "pull",
   ])
   # The two roles the admin gets on each of them, keyed by a plain word (the plan guard prints the keys).
   admin_job_roles = { executor = "roles/run.jobsExecutorWithOverrides", viewer = "roles/run.viewer" }

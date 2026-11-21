@@ -34,7 +34,7 @@ from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Resp
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from coffeedata import decisions, quality, rules
-from coffeedata.lake import Lake
+from coffeedata.lake import Lake, no_files
 
 from . import jobs, logs, queries
 from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
@@ -43,6 +43,7 @@ from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
 from .logs import emit
 from .runjobs import JobsError
+from .sources import COLUMNS, SORTS, SourceFilters, SourceList
 from .store import StoreError
 from .writes import StartedUnrecorded, Writes
 
@@ -50,7 +51,7 @@ HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
 COOKIE_SECURE = "__Host-admin"  # host-only, Secure, path=/
 COOKIE_LOCAL = "admin_session"  # http://localhost only
-PAGES = ("week", "queue", "jobs", "release", "catalog", "log")
+PAGES = ("week", "queue", "jobs", "release", "catalog", "sources", "log")
 # What each page's data region reads, named on its loading state.
 READS = {
     "week": "job_manifests, fetches, builds and serving_log",
@@ -58,9 +59,11 @@ READS = {
     "jobs": "job_runs and Cloud Run executions",
     "release": "builds, release_changes, serving_log and drafts",
     "catalog": "product_decisions, dim_coffee and decisions",
+    "sources": "candidates, the served release's dim_roaster and the source flags",
     "log": "the control plane's audit",
 }
-AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag")  # fmt: skip
+AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag",
+           "source_flag", "source_flag_undo")  # fmt: skip
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -221,6 +224,11 @@ def _fmt_n(v: Any) -> str:
 def _fmt_t(v: Any) -> str:
     if v is None:
         return "—"
+    if isinstance(v, str):  # an ISO time (the account's passkeys): shown like every other time
+        try:
+            v = datetime.fromisoformat(v.replace("Z", "+00:00"))
+        except ValueError:
+            return v
     if isinstance(v, datetime):
         return v.astimezone(UTC).strftime("%a %d %b %H:%M")
     return str(v)
@@ -259,6 +267,7 @@ def create_app(
     lake = Lake(settings.lake_url, read_only=True)
     reader = reader or Reader(lake, settings.lake_timeout_s)
     catalog = Catalog(reader.lake, settings.cache_dir)
+    sources = SourceList(reader.lake, settings.cache_dir)
     writes: Writes | None = None
     if not settings.writes_off:
         assert settings.control and settings.jobs and settings.snapshots
@@ -743,6 +752,7 @@ def create_app(
             off = list(settings.writes_off)
             runs = await plane(lambda: writes.runs(30), [], off) if writes else []
             return {"writes_off": off, "actions": [a for a in jobs.ACTIONS.values() if a.page == "jobs"], "fields": jobs.FIELDS,
+                    "labels": {k: a.label for k, a in jobs.ACTIONS.items()},
                     "runs": runs, "running": any(r["status"] in ("pending", "running") for r in runs),
                     "prefill": dict(request.query_params),
                     "today": datetime.now(UTC).date().isoformat()}  # fmt: skip
@@ -772,6 +782,38 @@ def create_app(
 
         return await part("catalog", make)
 
+    @app.get("/part/sources", response_class=HTMLResponse)
+    async def sources_part(request: Request):
+        """Discovery's source list, with the owner's flags (the control plane) and whether the served release lists
+        each place. Reads the lake's candidates once per discovery run (sources.SourceList)."""
+        f = SourceFilters.from_query(request.query_params)
+
+        async def make():
+            served = (await reader.run(queries.served)) or {}
+            off = list(settings.writes_off)
+
+            async def flags():
+                await on().ready()
+                return await asyncio.to_thread(on().control.source_flags)
+
+            marks = await plane(flags, None, off) if writes else None  # None: not read, statuses unknown
+            try:
+                data = await reader.run(lambda _lake, _con: sources.search(served.get("build_id"), f, marks))
+            except Exception as e:  # noqa: BLE001 - no discovery run has written the source list yet
+                if not (no_files(e) or "HTTP 404" in str(e)):
+                    raise
+                data = None
+            facets = (
+                SourceFilters.FACETS
+                if marks is not None
+                else tuple(x for x in SourceFilters.FACETS if x != "status")
+            )
+            return {"data": data, "f": f, "facets": facets, "writes_off": off, "flags_read": marks is not None,
+                    "sorts": SORTS, "columns": COLUMNS,
+                    "qs": _qs(request, f, None, "/sources")}  # fmt: skip
+
+        return await part("sources", make)
+
     @app.get("/part/log", response_class=HTMLResponse)
     async def log_part(action: str | None = None, offset: int = 0):
         async def make():
@@ -789,8 +831,9 @@ def create_app(
     # transaction (writes.py). Refusals say why; nothing is half done.
 
     def actor(request: Request) -> str:
-        s: Session = request.state.session
-        return f"owner (passkey {s.credential_id[:8]})"
+        """Who wrote: the owner (the only account; a write needs a session, which `write` checked)."""
+        assert request.state.session is not None
+        return "owner"
 
     def on() -> Writes:
         """The writes, inside `write` (which has answered 503 already when they are off)."""
@@ -860,6 +903,14 @@ def create_app(
     @app.post("/api/decisions/{target}/undo")
     async def undo(request: Request, target: str):
         return await write(request, lambda a, k, b: on().undo(a, k, target, b.get("reason")))
+
+    @app.post("/api/sources/flags")
+    async def source_flags(request: Request):
+        return await write(request, lambda a, k, b: on().flag_sources(a, k, b))
+
+    @app.post("/api/sources/flags/{batch}/undo")
+    async def source_flags_undo(request: Request, batch: str):
+        return await write(request, lambda a, k, b: on().undo_flags(a, k, batch))
 
     @app.post("/api/settings/check")
     async def settings_check(request: Request):
@@ -988,8 +1039,9 @@ def _reason(e: Exception) -> str:
     return f"{type(e).__name__}: {msg[:200]}" if msg else type(e).__name__
 
 
-def _qs(request: Request, f: Filters, build: str | None) -> Callable[..., str]:
-    """A link to this Catalog view with one filter changed or removed (None removes it), and the page reset."""
+def _qs(request: Request, f: Filters, build: str | None, page: str = "/catalog") -> Callable[..., str]:
+    """A link to this Catalog (or Sources) view with one filter changed or removed (None removes it), and the page
+    reset."""
     base = {k: v for k, v in request.query_params.items() if k != "page"}
     if build:
         base["build"] = build
@@ -1001,6 +1053,6 @@ def _qs(request: Request, f: Filters, build: str | None) -> Callable[..., str]:
                 q.pop(k, None)
             else:
                 q[k] = str(v)
-        return "/catalog?" + urlencode(q)
+        return f"{page}?" + urlencode(q)
 
     return link

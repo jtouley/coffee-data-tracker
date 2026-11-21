@@ -1,4 +1,8 @@
-{% from "_macros.html" import status, ev, write_off, write_button %}
+{% from "_macros.html" import status, ev, write_off, write_button, help %}
+<template data-title>{% call help("queue", "About the Queue") %}
+  <p class="body">The served build's open flags, one row per product, products with the same evidence together; a product's case shows each flag's evidence, the listing and the store. A removal is ready with supports from two families and no doubt.</p>
+  <p class="meta">From build {{ build }}’s <code>mart_flags</code> and <code>fetches</code>, and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+{% endcall %}</template>
 {% macro summary(r) -%}
 {{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
 {%- endmacro %}
@@ -27,7 +31,6 @@
   {% set pr, r = case.product, case.summary %}
   <h2 class="serif title-s">{{ ev(pr.url, pr.title or pr.coffee_id) }}</h2>
   <p class="answer" data-answer>{{ summary(r) or "no open flag" }} · {{ n(pr.public_rows) }} public row{{ "s" if pr.public_rows != 1 }}</p>
-  <p class="src">From build {{ build }}’s <code>mart_flags</code> and <code>fetches</code>, and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
 
   <h2 class="section">Decision</h2>
   {% if r.decided %}
@@ -93,7 +96,6 @@
   <div class="state empty mt16"><h2 class="section">Build {{ build }} has no flags</h2><p class="body">Its ops tables have no <code>mart_flags</code>: builds write it from this change on.</p></div>
   {% else %}
   <p class="answer" data-answer>{{ n(q.matching) }} product{{ "s" if q.matching != 1 }} with open flags · {{ n(q.ready) }} ready to remove · {{ n(q.public_rows) }} public rows</p>
-  <p class="src">From served build {{ build }}’s <code>mart_flags</code> and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
   <form class="picker" method="get" action="/queue">
     <label class="facet"><span class="label">Roaster</span><input class="input small" name="roaster" value="{{ f.roaster or '' }}" autocomplete="off" spellcheck="false"></label>
     <label class="facet"><span class="label">Rule</span><select name="rule" class="select" data-autosubmit><option value="">Any</option>{% for rid, pol, cnt in q.by_rule %}<option value="{{ rid }}"{% if f.rule == rid %} selected{% endif %}>{{ rid }} ({{ pol }}) {{ n(cnt) }}</option>{% endfor %}</select></label>

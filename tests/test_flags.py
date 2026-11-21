@@ -159,7 +159,7 @@ def test_scheduled_crawls_skip_a_crawl_off_roaster_and_a_live_check_doesnt(lake,
 
     states = [registry.RoasterState(Roaster(roaster_id=r, name=r, host=r, platform="shopify"), "active", None)
               for r in ("a.example", "b.example")]  # fmt: skip
-    monkeypatch.setattr(registry, "current", lambda _lake: states)
+    monkeypatch.setattr(registry, "current", lambda _lake, **k: states)
     assert ingest.crawl_off(lake) == set()  # nothing served: nothing off
     _serve_snapshot(
         lake, "b1", decisions.snapshot("s1", "t", [], None, [{"roaster_id": "b.example", "crawl": False}])
@@ -250,3 +250,20 @@ def test_review_fixes_retired_rules_and_wrong_shapes(monkeypatch):
     for bad in ({"schema": 1, "rules": [{"id": ["x"]}]}, _with(readiness__removal={"blocked_by": [{}]})):
         with pytest.raises(rules.SettingsError):
             rules.check(bad)
+
+
+def test_a_saved_document_with_a_retired_param_or_rule_key_still_reads():
+    """Reading a saved version or a served snapshot (strict=False) leaves out a param or a rule-level key the code no
+    longer has; an edit (strict) still refuses them."""
+    import copy
+
+    from coffeedata import rules as crules
+
+    old = copy.deepcopy(crules.DEFAULTS)
+    i = next(n for n, r in enumerate(old["rules"]) if r["id"] == "shared_body")  # a rule with params
+    old["rules"][i]["params"] = dict(old["rules"][i].get("params") or {}, retired_param=3)
+    old["rules"][i]["retired_key"] = True
+    got = next(r for r in crules.check(old, strict=False)["rules"] if r["id"] == "shared_body")
+    assert "retired_param" not in got["params"] and "retired_key" not in got
+    with pytest.raises(crules.SettingsError):
+        crules.check(old)

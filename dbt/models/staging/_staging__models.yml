@@ -79,7 +79,8 @@ models:
   - name: stg_registry_records
     description: >-
       One row per record of the lake's raw registry: a roaster added by discovery (overture-<release>, osm) or by
-      hand (manual), with is_open_source. stg_registry picks each roaster's values from these; the test
+      hand (manual), plus each place of the source list (candidates) the build's snapshot flags as a roaster that the
+      registry doesn't list (var source_roasters), with is_open_source. stg_registry picks each roaster's values from these; the test
       public_values_have_open_provenance checks every published registry value against them. A row without a
       roaster_id (the lake's zero-row schema file reads as none) is left out.
     data_tests:
