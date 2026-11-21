@@ -11,7 +11,9 @@ Production has no labels, so a rule's health is read from proxies (docs/TRIAGE.m
 - the build's own record (the lake's builds table): mart_build_profile's fetch shares and the dbt band tests that
   only warn (reused, not recomputed), and the served release's age;
 - the crawl success SLO (#96; dbt's mart_crawl_slo, read from the same record): whether the run fetched more than
-  99% of the known roasters, how fast it spent its error budget and what is left of it. Warnings only.
+  99% of the known roasters, how fast it spent its error budget and what is left of it. Warnings only;
+- Claude's verdicts as the served build found them (the lake's verdicts and verdict_batches tables): how old the
+  newest stored verdict was, and how long the oldest batch still open had been waiting.
 
     python -m coffeedata.prod_health fetch <lake-url> <dir>       # read-only download of what `measure` needs
     python -m coffeedata.prod_health measure <dir> <metrics.json> # the metrics of the served release
@@ -253,6 +255,60 @@ def build_metrics(builds: Iterable[Path], build_id: str) -> dict[str, float]:
     return out
 
 
+# Claude's verdicts as the served build found them (rule classifier). Both are days, measured at the build's own
+# time (builds.built_at), not at the check's: the weekly classify collects before it submits, so a healthy build
+# has verdicts stored minutes earlier and only its own batch open, whenever the check runs.
+VERDICT_METRICS = ("verdicts:stored_age_days", "verdicts:open_batch_age_days")
+
+
+def verdict_metrics(lake: Path, build_id: str) -> dict[str, float]:
+    """Were verdicts still arriving when the served release was built?
+    - verdicts:stored_age_days: the newest stored verdict's age at the build. High: classify stored nothing in
+      that run or the ones before it (it failed, its collect was refused, or the batches never ended).
+    - verdicts:open_batch_age_days: how long the oldest batch submitted and not yet collected had been open at the
+      build; 0 when none was. High: a batch an earlier classify submitted and no later one collected.
+    Neither is measured without the build's time or the table it reads (a copy made before they were fetched)."""
+    builds = [str(p) for p in sorted((lake / "builds").glob("*/*.parquet"))]
+    if not builds:
+        return {}
+    con = _connect()
+    opts = "hive_partitioning=false, union_by_name=true"
+    described = con.execute(f"describe select * from read_parquet({builds!r}, {opts})").fetchall()
+    if "built_at" not in {r[0] for r in described}:
+        con.close()
+        return {}
+    (built_at,) = con.execute(
+        f"select max(built_at) from read_parquet({builds!r}, {opts}) where kind = 'build' and build_id = ?",
+        [build_id],
+    ).fetchone()
+    out: dict[str, float] = {}
+    days = "epoch(cast(? as timestamptz) - {t}) / 86400.0"
+    verdicts = [str(p) for p in sorted((lake / "verdicts").glob("*/*.parquet"))]
+    if built_at is not None and verdicts:
+        (age,) = con.execute(
+            f"select {days.format(t='max(decided_at)')} from read_parquet({verdicts!r}, {opts}) "
+            "where decided_at <= cast(? as timestamptz)",
+            [built_at, built_at],
+        ).fetchone()
+        if age is not None:
+            out["verdicts:stored_age_days"] = round(float(age), 3)
+    batches = [str(p) for p in sorted((lake / "verdict_batches").glob("*/*.parquet"))]
+    if built_at is not None and batches:
+        submitted, age = con.execute(
+            f"""with b as (
+                select batch_id, state, "at" from read_parquet({batches!r}, {opts})
+                where batch_id is not null and "at" <= cast($at as timestamptz)
+            )
+            select count(*), {days.replace("?", "$at").format(t='min("at") filter (where batch_id not in (select batch_id from b where state = $done))')}
+            from b where state = 'submitted'""",
+            {"at": built_at, "done": "collected"},
+        ).fetchone()
+        if submitted:  # a lake where no batch was ever submitted says nothing about collecting them
+            out["verdicts:open_batch_age_days"] = round(float(age or 0.0), 3)
+    con.close()
+    return out
+
+
 # --- reading the lake (read-only) ----------------------------------------------------------------------------
 
 
@@ -291,13 +347,22 @@ def release_path(lake: Path, run_date: str, build_id: str) -> Path:
 
 
 def fetch(lake_url: str, into: Path, get=None) -> dict[str, Any]:
-    """Download, read-only, the served pointer, the serving log, the builds table and the two releases' dim_coffee.
-    Nothing is ever written to the lake."""
+    """Download, read-only, the served pointer, the serving log, the builds table, the verdicts and their batches
+    (verdict_metrics), and the two releases' dim_coffee. Nothing is ever written to the lake."""
     if get is None:
         from huggingface_hub import snapshot_download as get
     repo = _hf_repo(lake_url)
     kw = {"repo_id": repo, "repo_type": "dataset", "local_dir": str(into)}
-    get(allow_patterns=["marts/release.parquet", "serving_log/*", "builds/*"], **kw)
+    get(
+        allow_patterns=[
+            "marts/release.parquet",
+            "serving_log/*",
+            "builds/*",
+            "verdicts/*",
+            "verdict_batches/*",
+        ],
+        **kw,
+    )
     s = served(into)
     wanted = [s] + ([s["previous"]] if s["previous"] else [])
     get(allow_patterns=[str(release_path(Path(), w["run_date"], w["build_id"])) for w in wanted], **kw)
@@ -314,6 +379,7 @@ def measure(lake: Path, today: date | None = None) -> dict[str, Any]:
         if previous.exists():
             metrics |= shift_metrics(current, previous)
     metrics |= build_metrics(sorted((lake / "builds").glob("*/*.parquet")), s["build_id"])
+    metrics |= verdict_metrics(lake, s["build_id"])
     today = today or datetime.now(UTC).date()
     metrics["freshness:served_age_days"] = float((today - date.fromisoformat(s["run_date"])).days)
     return {"served": s, "metrics": metrics}
@@ -482,7 +548,9 @@ def _check_line(r: dict) -> dict[str, Any]:
         "threshold": r.get("bound"),
         "op": r.get("op"),
         "unit": "count"
-        if r["metric"].startswith(("rows:", "build:test:", "freshness:", "build:crawl_slo_burn_rate"))
+        if r["metric"].startswith(
+            ("rows:", "build:test:", "freshness:", "build:crawl_slo_burn_rate", "verdicts:")
+        )
         else "share",
         "pr": r.get("pr"),
     }
@@ -530,6 +598,14 @@ RATIO_MARGIN = {"warning": 0.10, "critical": 0.25}  # volume ratios
 MEDIAN_MARGIN = {"warning": 0.05, "critical": 0.15}  # median shifts
 CADENCE_DAYS = {"warning": 7.0, "critical": 14.0}  # served release older than a week: a missed weekly run
 MIN_VERDICT_SHARE = 0.85  # dbt_project.yml min_verdict_share: verdicts_cover_catalog's gate
+# How far above the gate's floor the classifier's coverage warns. The gate passed the 2026-11-16 run at 85.5%
+# without a word; dbt_project.yml measures about 95% as expected and about 92% at the upper bounds of both expected
+# shortfalls, so a served release under 90% is already 2 points past anything the measured lag explains.
+VERDICT_MARGIN = 0.05
+# Verdicts as the build found them, in days (verdict_metrics). The weekly classify collects, then submits, minutes
+# before the build: a newest verdict or an open batch older than 2 days at the build means that run's classify
+# stored or collected nothing; older than 9, the run before it didn't either.
+VERDICT_AGE_DAYS = {"warning": 2.0, "critical": 9.0}
 
 
 def _sigma(xs: list[float]) -> float:
@@ -550,6 +626,8 @@ def _rule_of(name: str) -> str:
         return "build-tests"
     if name.startswith("build:crawl_slo_"):
         return SLO_RULE
+    if kind == "verdicts":
+        return "classifier"
     if kind == "build":
         return "fetch"
     return kind
@@ -633,9 +711,11 @@ def baseline(
     fixed: dict[str, dict[str, Any]] = {f"build:test:{t}": {"warning_above": 0.0} for t in WARN_TESTS}
     fixed["freshness:served_age_days"] = {f"{k}_above": v for k, v in CADENCE_DAYS.items()}
     fixed["fill:classifier"] = {
-        "warning_below": MIN_VERDICT_SHARE,
+        "warning_below": round(MIN_VERDICT_SHARE + VERDICT_MARGIN, 4),
         "critical_below": MIN_VERDICT_SHARE - 0.15,
     }
+    for name in VERDICT_METRICS:
+        fixed[name] = {f"{k}_above": v for k, v in VERDICT_AGE_DAYS.items()}
     # The crawl success SLO (#96): fixed bounds, whatever the history says. dbt decides `met` against its target.
     fixed |= SLO_BOUNDS
     for platform in sorted(
@@ -656,9 +736,14 @@ def baseline(
         f"# volume ratios: 1 +/- {RATIO_MARGIN['warning']:g} / {RATIO_MARGIN['critical']:g} at least; median shifts: "
         f"0 +/- {MEDIAN_MARGIN['warning']:g} / {MEDIAN_MARGIN['critical']:g} at least.",
         "# Claude's coverage leaves out releases with no Claude row at all (from before the enrichment ran).",
-        "# Without history: a warn-only dbt band test warns on any failure, the classifier's coverage is judged",
-        f"# on the build's own gate (min_verdict_share {MIN_VERDICT_SHARE}), the served release's age on the weekly",
-        f"# cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; above {CADENCE_DAYS['critical']:g}: two).",
+        "# Without history: a warn-only dbt band test warns on any failure, the classifier's coverage warns",
+        f"# {VERDICT_MARGIN:g} above the build's own gate (min_verdict_share {MIN_VERDICT_SHARE}: a release that passed it narrowly),",
+        f"# the served release's age on the weekly cadence (above {CADENCE_DAYS['warning']:g} days: a missed week; "
+        f"above {CADENCE_DAYS['critical']:g}: two).",
+        "# Verdicts as the served build found them (verdicts:*, days at the build's time): the newest stored verdict",
+        f"# or the oldest open batch older than {VERDICT_AGE_DAYS['warning']:g} days: that run's classify stored or "
+        f"collected nothing; older than {VERDICT_AGE_DAYS['critical']:g}:",
+        "# the run before it didn't either.",
         "# `flagged`: history values outside their own warning band, possible regressions to look at.",
         "# The crawl success SLO (rule crawl-slo, #96; docs/TRIAGE.md): fixed bounds, warnings only. met is 1 when",
         "# the run fetched more than dbt's crawl_slo_target of the known roasters; burn_rate above "
