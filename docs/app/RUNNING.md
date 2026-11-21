@@ -821,6 +821,10 @@ What the log says about an empty dataset:
 - **`accepted` above zero, `published` zero:** the line is at WARNING and names the failure; `waiting` is what the next
   flush retries.
 
+The log says what one instance received. Whether events are arriving in the dataset at all is checked each Tuesday
+by `.github/workflows/usage-health.yml`, which opens a `prod:usage-events` triage issue when the dataset holds no
+event file or its newest is more than three days old (`docs/TRIAGE.md`, `docs/usage/README.md`).
+
 ### The apply account's grants for the collector
 
 The main root manages the collector's account (from the first apply after `usage.tf` merged, with `usage_enabled` off:
