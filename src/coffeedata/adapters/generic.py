@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlsplit
 
 import httpx
 
@@ -19,6 +19,7 @@ from ..http import (
     challenge_error,
 )
 from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
+from ..netguard import on_site
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, scrub_surrogates, to_float
 
@@ -133,6 +134,9 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     )
 
 
+# The most product pages one fetch reads: about 40 times the largest generic catalog read so far (533 products). A
+# store past it is stored as partial (its other products kept listed), never cut silently.
+MAX_PRODUCT_PAGES = 20_000
 # The most failed product page URLs a partial fetch's reason names; it always counts them all.
 MAX_FAILED_URLS_NAMED = 5
 
@@ -157,9 +161,18 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog. A sub-sitemap it couldn't read
     # (`unread`) leaves the list incomplete: the products read are stored as partial, never as the whole catalog.
     unread: list[str] = []
-    urls = product_urls(sitemap_urls(client, roaster.host, unread))
-    # Every product page is read: no cap, and no giving up after the first pages without Product markup (the old
-    # GIVE_UP_AFTER = 10 stored the rest of the catalog as empty). Only the run's deadline stops it: partial.
+    # Only pages on the store's own site (sitemap_urls keeps those: netguard.on_site), checked again here.
+    urls = [
+        u
+        for u in product_urls(sitemap_urls(client, roaster.host, unread))
+        if on_site(urlsplit(u).hostname, roaster.host)
+    ]
+    if len(urls) > MAX_PRODUCT_PAGES:
+        unread.append(f"{len(urls) - MAX_PRODUCT_PAGES} product pages past the cap of {MAX_PRODUCT_PAGES}")
+        urls = urls[:MAX_PRODUCT_PAGES]
+    # Every product page is read up to MAX_PRODUCT_PAGES, and no giving up after the first pages without Product
+    # markup (the old GIVE_UP_AFTER = 10 stored the rest of the catalog as empty). The run's deadline or the cap
+    # stops it: partial.
     for n, url in enumerate(urls):
         try:
             r = client.get(url)
