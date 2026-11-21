@@ -468,7 +468,10 @@ def open_batch_ids(lake: Lake) -> set[str]:
 
 
 def collect(lake: Lake, run_date: str | None = None) -> dict:
-    """Store the verdicts of finished batches, then mark each batch collected. Failed items stay pending."""
+    """Store the verdicts of finished batches, then mark each batch collected. Failed items stay pending.
+    A batch the API couldn't be asked about stays open and is named in `errors` (its id, the error's class and HTTP
+    status, never its message), so the caller can fail on it: logged and passed over, a batch once sat uncollected
+    while every later run reported `collected: 0`. `not_ended` counts the batches Claude is still working through."""
     import anthropic
 
     con = lake.connect()
@@ -482,13 +485,19 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
     run_date = run_date or date.today().isoformat()
     stored = 0
     usage: dict[str, int] = {}
+    errors: list[dict] = []
+    not_ended = 0
     for batch_id, model_id, definition in open_batches:
         try:
             if client.messages.batches.retrieve(batch_id).processing_status != "ended":
+                not_ended += 1
                 continue
             results = list(client.messages.batches.results(batch_id))
         except anthropic.APIError as e:
             log.warning("verdict batch %s: %s", batch_id, e)
+            errors.append({
+                "batch_id": batch_id, "error": type(e).__name__, "http_status": getattr(e, "status_code", None),
+            })  # fmt: skip
             continue
         now = datetime.now(UTC).replace(microsecond=0)
         for res in results:
@@ -515,7 +524,12 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
             ],
         )
         stored += len(rows)
-    return {"collected": stored} | ({"usage": usage} if any(usage.values()) else {})
+    return (
+        {"collected": stored}
+        | ({"usage": usage} if any(usage.values()) else {})
+        | ({"not_ended": not_ended} if not_ended else {})
+        | ({"errors": errors} if errors else {})
+    )
 
 
 def judge(

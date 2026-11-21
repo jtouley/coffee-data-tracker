@@ -8,7 +8,9 @@
   {% else %}
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
-  {% if ended == "ended" %}
+  {% if others %}
+  <p class="notice">You’re signed out on this phone, but your other devices may still be signed in. Sign in and sign out again to end them.</p>
+  {% elif ended == "ended" %}
   <p class="notice">You’ve been signed out. Sign in again to continue.</p>
   {% elif ended == "failed" %}
   <p class="notice">We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in.</p>

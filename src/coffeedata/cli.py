@@ -604,6 +604,9 @@ def cmd_classify(args: argparse.Namespace) -> None:
             only = verdict.review_rows(lake, verdict.model() or "", args.prefilter_build)
         out: dict = {"collect": verdict.collect(lake, args.run_date),
                "submit": verdict.submit(lake, args.limit, only=only, run_date=args.run_date)}  # fmt: skip
+        # The batches the latest collect couldn't read (each collect asks about every open batch again, so a later
+        # one that reads them clears this).
+        unread: list[dict] = out["collect"].get("errors", [])
         deadline = time.monotonic() + args.wait * 60
         # Wait for this run's batches only; whatever is still running is collected by the next run.
         waiting = set(out["submit"].get("batch_ids", []))
@@ -613,6 +616,7 @@ def cmd_classify(args: argparse.Namespace) -> None:
             # next minute tries again. At the deadline classify goes on with what it collected.
             try:
                 got = verdict.collect(lake, args.run_date)
+                unread = got.get("errors", [])
                 out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
                 waiting &= verdict.open_batch_ids(lake)
             except Exception as e:  # noqa: BLE001 - the lake's and the API's errors; the wait only retries
@@ -628,19 +632,43 @@ def cmd_classify(args: argparse.Namespace) -> None:
                 "stored verdicts and the rules for the versions awaiting one",
                 file=sys.stderr,
             )
+        if unread:
+            out["collect_failed"] = unread
     except BaseException as e:  # a crash, or an interrupt in the wait: the end row says the attempt failed
         control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
         raise
+    # The end row says failed whenever classify itself is about to fail: a refused submit, or (from main) a batch
+    # that couldn't be collected.
     err = out["submit"].get("error")
-    control.finish(lake, job, "failed" if err else "done", detail=control.detail_of(job) | out)
+    control.finish(lake, job, "failed" if err or unread else "done", detail=control.detail_of(job) | out)
     _print(out)
+    problems = []
     if err:
         # A rejected key or an API outage leaves this week's new versions without verdicts. Fail like a missing
         # model or key, so the build job's execution fails and emails; the build still runs on the stored verdicts.
-        raise SystemExit(
+        problems.append(
             f"Claude's verdict batch submit failed: {err}. This week's new product versions have no verdicts yet "
             "(docs/ingestion/RUNBOOK.md, verdicts)."
         )
+    if unread:
+        # The same for a batch that couldn't be read back: its verdicts aren't stored, and a collect that only
+        # logged this let a batch sit open for weeks. One structured line, so the execution's log names the batch
+        # and the reason at ERROR severity; then fail, so the build job's alert emails. The build still runs.
+        named = ", ".join(
+            f"{e['batch_id']} ({e['error']}"
+            + (f", HTTP {e['http_status']}" if e.get("http_status") else "")
+            + ")"
+            for e in unread
+        )
+        print(json.dumps({"severity": "ERROR", "message": "classify: verdict batches not collected",
+                          "batches": unread}))  # fmt: skip
+        problems.append(
+            f"Claude's verdict batch collect failed for {len(unread)} batch(es): {named}. Their verdicts are not "
+            "stored; the build uses the stored verdicts and the rules, and the next classify asks again "
+            "(docs/ingestion/RUNBOOK.md, verdicts)."
+        )
+    if problems:
+        raise SystemExit(" ".join(problems))
 
 
 def cmd_eval_classifier(args: argparse.Namespace) -> None:
@@ -1407,14 +1435,26 @@ def cmd_usage_build(args: argparse.Namespace) -> bool:
     database, build/usage.duckdb, after checking the geo files config/geo.lock pins. Exits 1 if a model or check
     failed (the search-text detector included). Prints counts only: dbt's output goes to --log-file (default
     build/usage-dbt.log, never the console), since a failing query's error could quote a search. With --alerts-out,
-    writes the detector's triage alert (counts and pattern names, never text; "not measured" when the models didn't
-    build) for `python -m coffeedata.triage prod`."""
+    writes the triage alerts for `python -m coffeedata.triage usage`: whether the dataset holds recent events
+    (usage_build.events_alert, from file names), and the detector's (counts and pattern names, never text; "not
+    measured" when the models didn't build). A dataset with no event at all is reported and not built: there is
+    nothing to build from. One that can't be listed writes no alerts and exits 1, saying why."""
     import tempfile
 
     import duckdb
 
     from . import usage_build
 
+    try:
+        stored = usage_build.events_state()
+    except usage_build.NotListed as e:
+        raise SystemExit(f"usage-build: the usage dataset's files couldn't be listed: {e}") from None
+    events = usage_build.events_alert(stored, _today())
+    if stored["newest"] is None:
+        if args.alerts_out:
+            args.alerts_out.write_text(json.dumps([events], indent=1))
+        _print({"build": "not attempted: no event is stored", "events": events["summary"]})
+        return True  # nothing failed here; the alert carries it
     catalog = None
     if args.catalog:
         catalog = {t: str((args.catalog / f"{t}.parquet").resolve()) for t in ("dim_roaster", "dim_coffee")}
@@ -1430,8 +1470,11 @@ def cmd_usage_build(args: argparse.Namespace) -> bool:
                 found = None
     alert = usage_build.detector_alert(found)
     if args.alerts_out:
-        args.alerts_out.write_text(json.dumps([alert], indent=1))
-    _print({"build": "passed" if ok else "failed", "dbt": counts, "detector": alert["summary"]})
+        args.alerts_out.write_text(json.dumps([events, alert], indent=1))
+    _print({
+        "build": "passed" if ok else "failed", "dbt": counts, "detector": alert["summary"],
+        "events": events["summary"] or f"newest stored day {stored['newest']}",
+    })  # fmt: skip
     return ok
 
 
@@ -1830,7 +1873,9 @@ def main(argv: list[str] | None = None) -> None:
     ub.add_argument(
         "--catalog", type=Path, help="a folder with the served release's dim_roaster/dim_coffee.parquet"
     )
-    ub.add_argument("--alerts-out", type=Path, help="write the detector's triage alert JSON here")
+    ub.add_argument(
+        "--alerts-out", type=Path, help="write the triage alerts JSON here (stored events, the detector)"
+    )
     gu = add("geo-update", cmd_geo_update, "prepare a new pinned IP-to-city database and its lock entries")
     gu.add_argument("--dbip", type=Path, required=True, help="DB-IP IP to City Lite CSV download (.csv.gz)")
     gu.add_argument("--dbip-release", required=True, help="its release date, YYYY-MM-DD")
