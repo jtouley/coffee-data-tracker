@@ -381,3 +381,77 @@ def test_square_online_tries_each_linked_store_and_links_products_to_it(mock):
     with PoliteClient(min_interval=0) as c:
         [item] = square_online.fetch(c, _r("sq.com", "square_online?"))
     assert item.url == "https://shop-x.square.site/product/kenya/7"  # the store's address, not the roaster's
+
+
+# --- WooCommerce: every shape a Store API price takes (eval/crawl/README.md, "2026-11-20") ----------
+
+
+@pytest.mark.parametrize(
+    ("prices", "expected"),
+    [
+        ({"price": "1800", "currency_minor_unit": 2}, 18.0),  # minor units, the exponent stated
+        ({"price": "1800"}, 18.0),  # no exponent stated: 2
+        ({"price": "1800", "currency_minor_unit": 0}, 1800.0),  # a currency with no minor unit
+        ({"price": "18500", "currency_minor_unit": 3}, 18.5),
+        ({"price": 1800, "currency_minor_unit": 2}, 18.0),  # a number, not a string
+        ({"price": "0", "currency_minor_unit": 2}, 0.0),  # a stated zero is kept as stated, never null
+        ({"price": "", "currency_minor_unit": 2}, None),  # the store has no price for it
+        ({"price": None}, None),
+        ({}, None),
+        (None, None),
+    ],
+)
+def test_woocommerce_price_shapes(prices, expected):
+    p = {"id": 1, "name": "Coffee 12 oz", "slug": "c", "is_in_stock": True, "prices": prices}
+    [v] = woocommerce.parse_product(p, _r(platform="woocommerce")).variants
+    assert v.price_usd == expected
+
+
+def _woo_variable(price_range):
+    return {
+        "id": 10,
+        "name": "Ethiopia",
+        "slug": "ethiopia",
+        "type": "variable",
+        "is_in_stock": True,
+        "prices": {"price": "1800", "currency_minor_unit": 2, "price_range": price_range},
+        "variations": [
+            {"id": 11, "attributes": [{"name": "Size", "value": "12 oz"}]},
+            {"id": 12, "attributes": [{"name": "Size", "value": "5 lb"}]},
+        ],
+    }
+
+
+@pytest.mark.parametrize("price_range", [None, {"min_amount": "1800", "max_amount": "1800"}])
+def test_woocommerce_sizes_that_share_one_price_take_the_listings_with_no_lookup(mock, price_range):
+    """A variable product with no range (or a range of one price) states its sizes' price itself."""
+    base = "https://x.com/wp-json/wc/store/v1/products"
+    listing = mock.get(base).mock(return_value=httpx.Response(200, json=[_woo_variable(price_range)]))
+    with PoliteClient(min_interval=0) as c:
+        [item] = woocommerce.fetch(c, _r(platform="woocommerce"))
+    assert [(v.variant_id, v.price_usd) for v in item.variants] == [("11", 18.0), ("12", 18.0)]
+    assert listing.call_count == 1  # the listing page only
+
+
+def test_woocommerce_sizes_in_a_price_range_are_never_stored_with_the_ranges_minimum_or_null(mock):
+    """A range of two prices: every size is asked for (in bulk), and takes its own price in minor units. Until #99
+    the sizes past the 150th such lookup of a store were stored with a null price: 18,139 sizes on 2026-11-09."""
+    base = "https://x.com/wp-json/wc/store/v1/products"
+    parent = _woo_variable({"min_amount": "1800", "max_amount": "7000"})
+
+    def handler(request):
+        if request.url.params.get("type") == "variation":
+            assert request.url.params["parent"] == "10"
+            return httpx.Response(
+                200,
+                json=[
+                    {"id": 11, "parent": 10, "prices": {"price": "1800", "currency_minor_unit": 2}},
+                    {"id": 12, "parent": 10, "prices": {"price": "7000", "currency_minor_unit": 2}},
+                ],
+            )
+        return httpx.Response(200, json=[parent])
+
+    mock.get(base).mock(side_effect=handler)
+    with PoliteClient(min_interval=0) as c:
+        [item] = woocommerce.fetch(c, _r(platform="woocommerce"))
+    assert [(v.variant_id, v.price_usd) for v in item.variants] == [("11", 18.0), ("12", 70.0)]
