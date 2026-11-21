@@ -6,6 +6,10 @@
 --   crawl_slo_roasters[:<platform>], crawl_slo_ok[:<platform>]: the counts; crawl_slo_share[:<platform>] and
 --   crawl_slo_met[:<platform>] (1: above the target): the share; crawl_slo_burn_rate, crawl_slo_budget_remaining
 --   and crawl_slo_window_runs: the error budget over the window that ends at this run.
+--   crawl_slo_not_fetched:<outcome>: the run's counted roasters that weren't fetched ok, by how the run left them
+--   (int_crawl_slo_roasters.outcome: unavailable, quarantined, challenged, failed, not_attempted). Each outcome has
+--   a row, 0 included, so a count that falls back to 0 is recorded too. They add up to roasters - ok: the why
+--   behind a missed target, which the share alone doesn't give.
 select 'crawl_slo_' || m.name || case when s.platform = 'all' then '' else ':' || s.platform end as metric,
        m.value
 from {{ ref('mart_crawl_slo') }} s
@@ -15,3 +19,9 @@ cross join lateral (values
     ('budget_remaining', s.budget_remaining, false), ('window_runs', s.window_runs::double, false)
 ) m(name, value, per_platform)
 where s.is_build_run and (m.per_platform or s.platform = 'all')
+union all
+select 'crawl_slo_not_fetched:' || o.outcome, count(r.roaster_id)::double
+from (values ('unavailable'), ('quarantined'), ('challenged'), ('failed'), ('not_attempted')) o(outcome)
+left join {{ ref('int_crawl_slo_roasters') }} r on r.outcome = o.outcome and r.counted and r.is_build_run
+where exists (select 1 from {{ ref('mart_crawl_slo') }} s where s.is_build_run)
+group by o.outcome
