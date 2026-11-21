@@ -1,7 +1,9 @@
 # Process extraction: results
 
-Lake revision `6ccb08b` (runs to 2026-11-16). Main `7251e1c` against the change `ba515d4`. Labels: labeller A only
-(README, Reference labels), so every row here is provisional until B and the third labeller have labelled.
+Lake revision `6ccb08b` (runs to 2026-11-16). Main `7251e1c` against the change `ba515d4`. **The train and validation
+scores below were measured against the withdrawn labels of the agent that wrote the rules (README, Reference
+labels) and are superseded;** they will be replaced by scores against the A2/B/third-labeller reference. The
+diagnosis was read by the same agent and is not a labelled reference.
 
 ## Why the chart's process is mostly "not stated"
 

@@ -33,7 +33,19 @@ says; never what is typical for the country or the roaster.
    product's own coffee. If you can't tell which coffee a statement is about, use `multiple`.
 7. **Variant names count** when every variant is the same product: variants "Washed / 12 oz" and "Natural / 12 oz"
    make the product `multiple`; a single "Natural" variant makes it `natural`.
-8. **Not sure between two labels?** Choose `none` if the listing never clearly says a process, `multiple` if it says
+8. **Tags.** A tag that names a process ("Washed", "process:Natural") counts when nothing in the listing contradicts
+   it, including when it is the only place a process is named. When a tag and the description's statement about
+   this coffee disagree, the description wins: stores tag whole collections ("Washed Process Coffee" on every bag)
+   and copy tags between products. Tags naming two processes on a blend make it `multiple` (rule 5).
+9. **Anaerobic needs the word.** Only "anaerobic" (in any form) or "carbonic maceration" makes `anaerobic`.
+   "Without oxygen", "oxygen-restricted", "sealed tanks", "nitrogen" or "CO2 injection" without the word don't:
+   label by the other rules (the method named, else `other` for a named fermentation, rule 1).
+10. **Thermal shock** is a named fermentation step: with a method it is that method ("Thermal Shock Washed" is
+    `washed`), with "anaerobic" anywhere in this coffee's process it is `anaerobic`, alone it is `other`.
+11. **Decaf components** (half-caf, a decaf in a blend): the decaffeination is not a process (rule 3). One process
+    stated for the whole product is the label; a process stated for some components only is `multiple` (rule 5);
+    no process at all is `none`.
+12. **Not sure between two labels?** Choose `none` if the listing never clearly says a process, `multiple` if it says
    two. Never guess from origin ("Ethiopian coffees are usually washed").
 
 ## Output
