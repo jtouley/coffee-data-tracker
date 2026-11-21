@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% set narrow = true %}
+{% block main %}
+<h1 class="serif title mt32">{{ "Sign-in is unavailable" if unavailable else "The admin is switched off" }}</h1>
+{% if unavailable %}
+<p class="body mt12">The sign-in state couldn’t be read, so no session is trusted and nothing is shown. Try again in a minute.</p>
+{% else %}
+<p class="body mt12">Its settings are incomplete, so it shows nothing and lets nobody in until they are fixed:</p>
+<ul class="body mt12">{% for p in problems %}<li>{{ p }}</li>{% endfor %}</ul>
+<p class="meta mt12">docs/admin/README.md lists every setting.</p>
+{% endif %}
+{% endblock %}

@@ -36,6 +36,7 @@ app = [
     "fastapi>=0.115",
     "pillow>=11",
     "uvicorn>=0.30",
+    "webauthn>=3.0.1",
 ]
 
 [dependency-groups]
@@ -54,6 +55,7 @@ dev = [
     "pillow>=11",
     "jsonschema>=4.20",
     "pytest-xdist>=3.8.0",
+    "webauthn>=3.0.1",
 ]
 
 [build-system]
@@ -71,7 +73,7 @@ ignore = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"
-files = ["src", "app"]
+files = ["src", "app", "admin"]
 warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
