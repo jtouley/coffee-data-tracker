@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "_macros.html" import cup %}
+{% block main %}
+<h1 class="serif title mt16">{{ on | capitalize }}</h1>
+<section class="part" data-part="{{ part }}" data-slow="{{ slow_s }}" aria-live="polite" aria-busy="true">
+  <div class="state loading" data-loading>
+    <div class="brewing">{{ cup("cup-page") }}<p class="body">Reading <code>{{ reading }}</code> from the lake…</p></div>
+    <p class="meta" data-slow-note hidden>The lake is slow. Still reading; this gives up after 25 seconds.</p>
+  </div>
+  <noscript><p class="body">This page loads its data with JavaScript. <a class="ev" href="{{ part }}">Open the data on its own</a>.</p></noscript>
+</section>
+{% endblock %}

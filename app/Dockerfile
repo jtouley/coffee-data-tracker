@@ -31,6 +31,8 @@ RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user app ./app
 # config/usage.toml: the usage collector's address, for the CSP and the page script (coffeedata.beacon).
 COPY --chown=user config ./config
+# The admin (admin.registry.coffee) runs from this same image: `uvicorn --factory admin.main:create_app` (docs/admin/README.md).
+COPY --chown=user admin ./admin
 
 # The commit this image is built from, recorded in every lake record it writes (lineage.git_sha: code_version, and
 # builds.git_sha): `--build-arg GIT_SHA=$(git rev-parse HEAD)`. Without it the records say "unknown". Last, so a
