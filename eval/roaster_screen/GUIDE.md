@@ -48,5 +48,6 @@ One JSON file per labeler and set, `labels_<set>_<A|B>.json`: a list of `{"id": 
 "out_of_scope" | "unsure", "kind": "roaster" | "cafe" | "reseller" | "other", "note": "optional, short"}`, one entry
 per item in `items_<set>.json`. Two labels agree only when the label and the kind both agree, and neither is
 `unsure`. A third labeler, a Claude Sonnet model, settles every item in `to_settle_<set>.json` into
-`settled_<set>.json`, in the same format. It labels each item afresh from this guide and the item's own fields, and
-is never shown the two labels it settles. Say who labeled (a person, or Claude and which model) in README.md.
+`settled_<set>.json`, in the same format. It labels each item afresh from this guide, the item's own fields and
+#130's stored page and catalog evidence for it (home-page text and up to 40 products; it visits no site), and is
+never shown the two labels it settles or any screen result. Say who labeled (a person, or Claude and which model) in README.md.

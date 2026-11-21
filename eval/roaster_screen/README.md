@@ -22,7 +22,8 @@ The guide is #130's (`3c8af60:eval/screen/GUIDE.md`). Its `label` and `kind` def
 labels still answer this guide's question. Four things differ:
 - the opening names the new population (`candidates`, which includes places tagged as roasteries);
 - "admission" reads "suggestion" in two sentences;
-- the third labeler, who settles disagreements, is never shown the two labels it settles;
+- the third labeler, who settles disagreements, is never shown the two labels it settles, and labels from #130's
+  stored evidence instead of visiting the site (Labels, below);
 - the rule that two `unsure` labels don't count as agreement is written down (#130's script applied it; its guide
   didn't say so).
 
@@ -79,9 +80,26 @@ Not imported:
 - **Agreement** (label and kind): train 146 of 200 (73.0%), validation 170 of 200 (85.0%).
 - **Settling** (the owner's decision, 2026-11-20, in place of the design's D2 default that the owner settles).
   A third labeler, a Claude Sonnet model, settles the 54 train and 30 validation disagreements into
-  `settled_train.json` and `settled_validation.json`. It labels each item independently against `GUIDE.md`, from
-  the item's own fields only (id, domain, website, name, city, state, Overture tag): it sees neither A's and B's
-  labels nor C's. **Not done yet:** until those two files exist, only the agreed items have a settled reference.
+  `settled_train.json` and `settled_validation.json`. It labels each item independently against `GUIDE.md` and
+  sees neither A's and B's labels nor C's, nor any screen result.
+  - **What it reads** (the owner's decision, 2026-11-21: no agent visits the sites). The item's own fields (id,
+    domain, website, name, city, state, Overture tag) and #130's stored screen evidence for it: the home page's
+    visible text cut to 2,000 characters, and up to 40 products from the first catalog page (title, vendor, type,
+    tags, and each option's title and grams). Nothing from the screen's result (status, platform, coffee count,
+    admission, reason) is shown. A first attempt from the item's fields alone was discarded: with no page to read,
+    the labeler answered `unsure` for about 65% of items and `in_scope` for none.
+  - **This reference shares the screen's evidence, and so its blind spots.** A and B read the live sites; the
+    settler reads only what #130's screen stored, which is close to what the rules score. Where that evidence
+    misleads the rules (a reseller's page that looks like a roaster's, a roaster whose catalog wasn't read), it can
+    mislead the settler the same way. So on the 54 train and 30 validation items it settles, agreement with the
+    rules may read high, and **the provisional precision may read high.** Items with no stored evidence (3 train
+    and 9 validation) are likely to come back `unsure` and drop out of the scores. A person settling, or a final
+    evaluation on the new screen's own evidence, removes this.
+  - **How the inputs are made**, from the repository root:
+    `python -I eval/roaster_screen/settle_inputs.py <evidence-dir> eval/roaster_screen <out-dir>`. #130's evidence is out of git: `evidence_train.jsonl.gz` sha256
+    `4ac7c7ee98c9c02dcc164d2a2b537b3175ed8fb845d4df72a9a2d0639160ab57`, `evidence_validation.jsonl.gz`
+    `24d056db0bdd3eaed5574b57bbca752e08e2fbcf3624961d54bbf9a18e55b2be`.
+  - **Not done yet:** until those two files exist, only the agreed items have a settled reference.
 - **#130's third labeler, C,** also a Claude subagent, settled the same items in #130. Its answers are kept as
   `settled_C_<set>.json` for comparison, and its agreement with the new settles is reported when they arrive.
 - **Unsure** items are left out of the scores.
