@@ -64,7 +64,8 @@ scaffold test checks it.
 | `items_<set>.json` | 200 | 200 | The items to label: id, domain, website, name, city, state, Overture tag. 100 `coffee_shop` and 100 `cafe` per set. No stratum and no screen result |
 | `labels_<set>_A.json`, `labels_<set>_B.json` | 200 each | 200 each | The two independent labels: label, kind, and a short note |
 | `agreed_<set>.json` | 146 (27 in scope, 119 out) | 170 (36 in scope, 134 out) | Items where A and B gave the same label and kind |
-| `to_settle_<set>.json` | 54 | 30 | The disagreements, with both labels. **Waiting to be settled** (below) |
+| `to_settle_<set>.json` | 54 | 30 | The disagreements, with both labels |
+| `settled_<set>.json` | 54 | 30 | The third labeler's settles of those disagreements (Labels, below): the reference for them |
 | `settled_C_<set>.json` | 54 | 30 | #130's third labeler's answers (`settled_<set>.json` there). Kept for comparison only |
 
 Not imported:
@@ -99,10 +100,16 @@ Not imported:
     `python -I eval/roaster_screen/settle_inputs.py <evidence-dir> eval/roaster_screen <out-dir>`. #130's evidence is out of git: `evidence_train.jsonl.gz` sha256
     `4ac7c7ee98c9c02dcc164d2a2b537b3175ed8fb845d4df72a9a2d0639160ab57`, `evidence_validation.jsonl.gz`
     `24d056db0bdd3eaed5574b57bbca752e08e2fbcf3624961d54bbf9a18e55b2be`.
-  - **Not done yet:** until those two files exist, only the agreed items have a settled reference.
+  - **Done 2026-11-21.** Train: 1 in scope, 29 out of scope, 24 `unsure`. Validation: 2 in scope, 6 out of scope,
+    22 `unsure`. Kinds, train: 37 cafe, 10 roaster, 5 other, 2 reseller; validation: 19 cafe, 9 roaster, 2 other.
+    The settler's own account of the `unsure` answers: 14 items had no stored evidence, and about 25 sell bags under
+    their own name with no stored claim that they roast.
 - **#130's third labeler, C,** also a Claude subagent, settled the same items in #130. Its answers are kept as
   `settled_C_<set>.json` for comparison, and its agreement with the new settles is reported when they arrive.
-- **Unsure** items are left out of the scores.
+- **Unsure** items are left out of the scores: an item whose reference is `unsure` counts as neither in scope nor out
+  of scope, so it is in no numerator or denominator. That leaves 46 of the 84 settled items without a reference
+  (24 train, 22 validation), which shrinks validation the most. Those items are not a random draw: many are places
+  selling their own bags, the hard cases, so leaving them out can flatter the scores as well as shrinking them.
 - **Still to label**, after the shadow run and once the owner approves the cost (the design's section 5.2): about
   50 train and 75 validation items from the suggested tier, the 210 curated roasters, and a new test set of 300.
   The owner also spot-checks 50 test items. No person has settled or checked any label here so far.
