@@ -62,7 +62,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: uv sync --locked --extra snowflake
       - name: Check lake config
-        run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
+        run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see docs/USAGE.md, Run it on GitHub)"; exit 1; }
       - name: Weekly run
         env:
           # The lake, the Claude verdicts and an s3:// public export (Snowflake has its own step below).
