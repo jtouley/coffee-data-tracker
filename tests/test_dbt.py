@@ -280,6 +280,7 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
         run(lake, d, c, None)
     probe(lake, "2026-11-03", a, status="unreachable")
+    probe(lake, "2026-11-04", b, status="http_430", platform="")  # a pause: not counted as probed, in either
     con = build(lake, tmp_path)
     dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
     py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}

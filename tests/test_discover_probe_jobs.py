@@ -802,15 +802,17 @@ def test_probe_tries_www_when_the_bare_host_does_not_answer():
     [
         (httpx.Response(429), "http_429", 429),
         (httpx.Response(430), "http_430", 430),
-        (httpx.Response(503), "http_503", 503),
         (httpx.Response(503, headers={"sg-captcha": "challenge"}), "blocked", 503),
         (httpx.Response(503, headers={"cf-mitigated": "challenge"}), "blocked", 503),
+        # challenges on statuses the client returns instead of raising: Cloudflare's usual 403, SiteGround's 202
+        (httpx.Response(403, headers={"cf-mitigated": "challenge"}), "blocked", 403),
+        (httpx.Response(202, headers={"sg-captcha": "challenge"}), "blocked", 202),
     ],
-    ids=["429", "430", "503", "503-siteground", "503-cloudflare"],
+    ids=["429", "430", "503-siteground", "503-cloudflare", "403-cloudflare", "202-siteground"],
 )
 def test_a_refusal_on_the_catalog_api_stops_the_probe(answer, status, code):
-    """A 429, 430 or 5xx the client's retries didn't get past, or an edge's challenge, on /products.json is the
-    site's answer to us. The probe used to swallow it, ask the WooCommerce Store API on the same host, and record
+    """A 429 or 430 the client's retries didn't get past, or an edge's challenge on any status, on /products.json is
+    the site's answer to us. The probe used to swallow it, ask the WooCommerce Store API on the same host, and record
     `ok` with the home page's platform: one more request after a pause or a challenge."""
     import respx
 
@@ -833,6 +835,25 @@ def test_a_refusal_on_the_catalog_api_stops_the_probe(answer, status, code):
             out = discover.probe_one(c, "a.com")
     assert out == {"status": status, "final_host": "a.com", "platform": "", "http_status": code}
     assert asked == ["/robots.txt", "/", "/products.json?limit=1"]  # never the Store API after it
+
+
+@pytest.mark.parametrize("code", [500, 502, 503, 504])
+def test_a_plain_5xx_on_the_catalog_api_still_asks_the_next_one(code):
+    # a server's trouble isn't an answer to us: the Store API is still asked, as before
+    out = _probe({HOME: httpx.Response(200, text="<html></html>"), r"/products\.json": httpx.Response(code),
+                  r"/wp-json/wc/store/v1/products": httpx.Response(200, json=[])})  # fmt: skip
+    assert (out["status"], out["platform"]) == ("ok", "woocommerce")
+
+
+@pytest.mark.parametrize("code", [500, 502, 503, 504])
+def test_a_plain_5xx_on_the_home_page_still_tries_www(code):
+    out = _probe({HOME: httpx.Response(code), r"https://www\.a\.com/$": httpx.Response(200, text="x")})
+    assert (out["status"], out["final_host"], out["platform"]) == ("ok", "www.a.com", "other")
+
+
+def test_a_challenge_on_the_home_page_is_blocked_on_any_status():
+    out = _probe({HOME: httpx.Response(403, headers={"cf-mitigated": "challenge"})})
+    assert out == {"status": "blocked", "final_host": "a.com", "platform": "", "http_status": 403}
 
 
 def test_a_pause_on_the_home_page_is_never_asked_again_at_www():

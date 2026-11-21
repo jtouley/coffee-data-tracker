@@ -279,9 +279,22 @@ HTML_MARKERS = [
 ]
 
 
+# A pause: the site, or its platform, asked us to slow down (Shopify's 430 is IP-wide). Recorded, never counted as
+# probed (registry.STATE_SQL and dbt's int_roaster_state leave http_429 and http_430 out), so the next probe run
+# asks again.
+PAUSES = (429, 430)
+
+
+def _refuses(r: httpx.Response) -> bool:
+    """Whether an answer refuses or pauses us: an edge's challenge on any status (a 202, a 403 with
+    `cf-mitigated: challenge`, a 503 with `sg-captcha`), or a 429 or 430. A plain 5xx doesn't: it is the server's
+    trouble, not an answer to us, so the probe's fallbacks (www, the next API) still apply."""
+    return is_challenge(r) or r.status_code in PAUSES
+
+
 def _refused(host: str, r: httpx.Response) -> dict:
-    """The probe's row for a site that refused or paused us: an edge's challenge is `blocked`, as on robots.txt; a
-    429, 430 or 5xx the client's retries didn't get past is its `http_<code>`. Either way nothing more is asked."""
+    """The probe's row for a site that refused or paused us (_refuses): an edge's challenge is `blocked`, as on
+    robots.txt; a pause is its `http_<code>`. Either way nothing more is asked of the site."""
     status = "blocked" if is_challenge(r) else f"http_{r.status_code}"
     return {"status": status, "final_host": host, "platform": "", "http_status": r.status_code}
 
@@ -290,9 +303,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
     """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
     an edge's challenge) | unreachable | http_<code> |
     robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again).
-    A 429, 430 or 5xx the client's retries didn't get past, or a challenge on a 503, is the site's answer: the probe
-    stops there and records it (_refused), on the home page and on the catalog API alike, and never asks www or the
-    next platform's API instead."""
+    A challenge on any status, or a 429 or 430, is the site's answer to us (_refuses): the probe stops there and
+    records it (_refused), on the home page and on the catalog API alike, and never asks www or the next platform's
+    API instead. A plain 5xx still falls back, as before."""
     home = None
     no_robots = False
     for host in (domain, f"www.{domain}"):
@@ -310,14 +323,18 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
-        # a pause, a 5xx or a 503 challenge: the site answered, so www isn't asked too
+        # a pause or a challenge (on a 503): the site answered us, so www isn't asked too; a plain 5xx falls back
         except httpx.HTTPStatusError as e:
-            return _refused(host, e.response)
+            if _refuses(e.response):
+                return _refused(host, e.response)
+            continue
         except httpx.HTTPError:
             continue
     if home is None:
         status = "robots_unavailable" if no_robots else "unreachable"
         return {"status": status, "final_host": "", "platform": "", "http_status": None}
+    if _refuses(home):  # a challenge on a status the client doesn't raise for (a 202, a 403)
+        return _refused(urlparse(str(home.url)).netloc, home)
     if home.status_code != 200:
         return {
             "status": f"http_{home.status_code}",
@@ -330,17 +347,27 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
         ("shopify", "/products.json", {"limit": 1}, dict),
         ("woocommerce", "/wp-json/wc/store/v1/products", {"per_page": 1}, list),
     ]:
+        data = None
         try:
-            data = client.get_json(f"https://{host}{path}", **params)
+            r = client.get(f"https://{host}{path}", **params)
         except RobotsUnavailable as e:  # the home page redirected to a host whose robots.txt didn't answer
             if e.challenge:  # refused, as above
                 return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
             return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
         # refused or paused on the catalog API: the next platform's API on this host is never asked
         except httpx.HTTPStatusError as e:
-            return _refused(host, e.response)
+            if _refuses(e.response):
+                return _refused(host, e.response)
         except (Blocked, httpx.HTTPError):
-            data = None
+            pass
+        else:
+            if _refuses(r):  # a challenge on any status (a 202, a 403): as on the home page
+                return _refused(host, r)
+            if r.status_code == 200:  # as client.get_json reads it
+                try:
+                    data = scrub_surrogates(r.json())
+                except ValueError:
+                    data = None
         if isinstance(data, kind) and (kind is list or "products" in data):
             return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
     html = home.text.lower()

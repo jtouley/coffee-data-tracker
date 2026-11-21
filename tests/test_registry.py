@@ -104,6 +104,18 @@ def test_a_probe_without_robots_txt_is_not_an_answer(lake):
     assert s.last_probed == "2026-11-01" and s.roaster.platform == "shopify"
 
 
+@pytest.mark.parametrize("pause", ["http_429", "http_430"])
+def test_a_probe_a_pause_stopped_is_not_an_answer(lake, pause):
+    # #255's review (M2): a 429 or 430 (Shopify's is IP-wide) is a pause, not an answer about the site. It doesn't
+    # count as probed, so the place is asked again at the normal cadence instead of waiting out the 7/14/28-day
+    # backoff of an unreachable one
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-11-01", rid)
+    probe(lake, "2026-11-08", rid, status=pause, platform="")
+    s = status(lake, rid)
+    assert s.last_probed == "2026-11-01" and s.roaster.platform == "shopify" and s.failed_probes == 0
+
+
 def add(lake, *rids):
     """Roasters discovery added to the lake registry (the fixture seed lists six)."""
     from datetime import UTC, datetime
