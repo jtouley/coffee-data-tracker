@@ -707,6 +707,8 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    # the process chart is single origins only, and says that blends are left out
+    assert "Blends are not in this chart" in (out / "catalog" / "index.html").read_text()
     # The favicon on every page, served from the site root; the old inline bean is gone.
     for page in ("", "catalog/", "privacy/", "terms/", "bot/"):
         root = "../" if page else ""

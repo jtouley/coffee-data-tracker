@@ -115,7 +115,7 @@ def render(out: Path, collector: str | None = None) -> None:
     html = site.environment().get_template("index.html").render(
         links=site.links(), jsonld="", totals={"coffees": 0, "in_stock": 0, "roasters": 0}, status_rows=[],
         charts=charts, new=[], coverage={"registry": {}}, origin_price=[{"origin_country": o, "n": 5, "med": v} for o, v in origins],
-        processes=[{"process": p, "n": n} for p, n in processes], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
+        processes=[{"process": p, "n": n} for p, n in processes], blends_in_stock=4210, generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
         state_words=site.STATE_WORDS, usage=site.usage("catalog", {"release_build_id": BUILD}, collector),
     )  # fmt: skip
     (out / "catalog").mkdir(parents=True)
