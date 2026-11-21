@@ -18,6 +18,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- A failed Terraform step in the apply workflow says why, as far as an allow-list can: for each error, a reason
+  from a fixed list (403 permission denied, 404 not found, 409 already exists, 400 invalid argument, quota, 5xx) and
+  the denied permission's name, with what to do about it (`scripts/tf_error_reasons.py`). Nothing else from
+  Terraform's messages is shown, as before.
 - Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
   `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
   the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a
