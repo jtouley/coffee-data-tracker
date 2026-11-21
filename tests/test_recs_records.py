@@ -504,7 +504,8 @@ def test_the_erasure_is_found_through_a_stale_folder_list(tmp_path, monkeypatch)
             self.fail = fail
 
         def execute(self, sql, *a):
-            if f"{url}/recs_erasures" not in sql:
+            # the files are a parameter (review 2026-11-21, F5), never part of the SQL text
+            if not any(f"{url}/recs_erasures" in str(f) for p in a for f in (p[0] if p else [])):
                 return types.SimpleNamespace(fetchall=lambda: [])
             if self.fail:
                 raise RuntimeError(self.fail)

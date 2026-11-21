@@ -90,10 +90,17 @@ def not_a_roaster_site(domain: str) -> bool:
 
 def is_storefront_host(domain: str) -> bool:
     """A domain that can be a roaster's own storefront: not a NOT_A_ROASTER_SITE host, and never a host only the
-    scheduled importers job may fetch (http.schedule_only_host: Royal Coffee), so discovery and add-roaster refuse it."""
+    scheduled importers job may fetch (http.schedule_only_host: Royal Coffee), so discovery and add-roaster refuse it.
+    Never an IP address either (netguard.ip_literal): a roaster has a name, and the crawler refuses addresses."""
     from .http import schedule_only_host
+    from .netguard import ip_literal
 
-    return "." in domain and not not_a_roaster_site(domain) and not schedule_only_host(domain)
+    return (
+        "." in domain
+        and not ip_literal(domain)
+        and not not_a_roaster_site(domain)
+        and not schedule_only_host(domain)
+    )
 
 
 def load_seed(path: Path = SEED) -> list[dict]:

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
+from urllib.parse import urlsplit
 
 import httpx
 
@@ -17,20 +18,57 @@ from .http import (
     challenged,
     is_challenge,
 )
+from .netguard import on_site
 
 log = logging.getLogger(__name__)
 
 # Matched on the body's bytes, lazily: a sitemap can be tens of MB, and decoding it whole (the old findall over r.text)
-# held several copies of it per worker. Every URL is kept: no count limit (the old 5,000 URLs and 5 sub-sitemaps cut
-# large catalogs), only the per-response byte cap below.
+# held several copies of it per worker. Every URL on the store's own site is kept (netguard.on_site: a sitemap is
+# the store's word about its own pages, never a list of other hosts to fetch). The old 5,000 URLs and 5 sub-sitemaps
+# cut large catalogs; the caps below are far above any store's (the largest generic catalog read so far had 533
+# products and 596 pages), and a sitemap past one is incomplete (`unread`: stored as partial), never cut silently.
 _LOC = re.compile(rb"<loc>\s*([^<\s]+)\s*</loc>", re.I)
 # The sitemap protocol allows 50 MB (52,428,800 bytes) uncompressed per file, above the client's usual response cap
 # (http.MAX_RESPONSE_BYTES); sitemap requests get this one instead. A larger file is out of spec: ResponseTooLarge.
 SITEMAP_MAX_BYTES = 64 * 2**20
+MAX_SUB_SITEMAPS = 1_000  # sub-sitemaps read from one index
+MAX_SITEMAP_URLS = 500_000  # URLs kept from one store's sitemaps (the protocol allows 50,000 per file)
 
 
 def _locs(body: bytes) -> list[str]:
     return [m.group(1).decode("utf-8", "replace") for m in _LOC.finditer(body)]
+
+
+def _on_site(url: str, host: str) -> bool:
+    try:
+        u = urlsplit(url)
+        return u.scheme in ("http", "https") and on_site(u.hostname, host)
+    except ValueError:  # a malformed <loc> (a bad IPv6 bracket, a bad port)
+        return False
+
+
+def _site_locs(body: bytes, host: str, what: str) -> tuple[list[str], int]:
+    """The <loc>s on the store's own site, and how many others were dropped (counted in the log)."""
+    locs = _locs(body)
+    kept = [u for u in locs if _on_site(u, host)]
+    if len(kept) < len(locs):
+        log.warning("%s: %d %s off the store's site, skipped", host, len(locs) - len(kept), what)
+    return kept, len(locs) - len(kept)
+
+
+def _all_off_site(host: str, dropped: int) -> FetchError:
+    # Nothing on the store's own site: never an empty catalog (that would delist every product), a failed fetch.
+    return FetchError(f"every sitemap URL ({dropped}) is off the store's site {host}")
+
+
+def _capped(urls: list[str], room: int, host: str, unread: list[str] | None, what: str) -> list[str]:
+    """urls cut to `room`; a cut is noted in `unread`, so the fetch is partial, never complete."""
+    if len(urls) <= room:
+        return urls
+    log.warning("%s: over %d sitemap URLs, %d not read", host, MAX_SITEMAP_URLS, len(urls) - room)
+    if unread is not None:
+        unread.append(f"{len(urls) - room} {what} past the cap of {MAX_SITEMAP_URLS} URLs")
+    return urls[:room]
 
 
 def _get(client: PoliteClient, url: str):
@@ -67,11 +105,35 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     if r.status_code != 200:
         raise FetchError(f"sitemap HTTP {r.status_code}", status=r.status_code, challenge=is_challenge(r))
     if b"<sitemapindex" not in r.content:
-        return _locs(r.content)
+        kept, dropped = _site_locs(r.content, host, "sitemap URLs")
+        if dropped and not kept:
+            raise _all_off_site(host, dropped)
+        return _capped(kept, MAX_SITEMAP_URLS, host, unread, "sitemap URLs")
     locs = _locs(r.content)
+    off = [u for u in locs if not _on_site(u, host)]
+    if off and len(off) == len(locs):
+        raise _all_off_site(host, len(off))
+    if off:  # a sub-sitemap elsewhere isn't read; nothing says it held no products, so the list is incomplete
+        log.warning("%s: %d sub-sitemaps off the store's site, not read", host, len(off))
+        if unread is not None:
+            unread.append(f"{len(off)} sub-sitemaps off the store's site")
+    locs = [u for u in locs if _on_site(u, host)]
+    if len(locs) > MAX_SUB_SITEMAPS:
+        log.warning("%s: %d sub-sitemaps, only the first %d read", host, len(locs), MAX_SUB_SITEMAPS)
     urls: list[str] = []
+    dropped_urls = 0
     # Product sitemaps first: Shopify/Woo/BigCommerce name them that way.
-    for sm in sorted(locs, key=lambda u: "product" not in u.lower()):
+    ordered = sorted(locs, key=lambda u: "product" not in u.lower())
+    if len(ordered) > MAX_SUB_SITEMAPS and unread is not None:
+        unread.append(f"{len(ordered) - MAX_SUB_SITEMAPS} sub-sitemaps past the cap of {MAX_SUB_SITEMAPS}")
+    for n, sm in enumerate(ordered[:MAX_SUB_SITEMAPS]):
+        if len(urls) >= MAX_SITEMAP_URLS:
+            log.warning("%s: over %d sitemap URLs, the rest not read", host, MAX_SITEMAP_URLS)
+            if unread is not None:
+                unread.append(
+                    f"{min(len(ordered), MAX_SUB_SITEMAPS) - n} sub-sitemaps past {MAX_SITEMAP_URLS} URLs"
+                )
+            break
         try:
             sub = _get(client, sm)
         except DeadlineReached:
@@ -87,7 +149,9 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
                 unread.append(f"{sm} (HTTP {e.status})" if e.status else f"{sm} ({e})")
             continue
         if sub.status_code == 200 and not is_challenge(sub):
-            urls.extend(_locs(sub.content))
+            kept, dropped = _site_locs(sub.content, host, "sitemap URLs")
+            dropped_urls += dropped
+            urls.extend(_capped(kept, MAX_SITEMAP_URLS - len(urls), host, unread, f"URLs of {sm}"))
         elif _refusal(None, sub):
             raise FetchError(
                 f"sub-sitemap HTTP {sub.status_code}: {sm}",
@@ -98,4 +162,6 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
             log.warning("%s: sub-sitemap HTTP %d, skipped: %s", host, sub.status_code, sm)
             if unread is not None:
                 unread.append(f"{sm} (HTTP {sub.status_code})")
+    if dropped_urls and not urls:
+        raise _all_off_site(host, dropped_urls)
     return urls
