@@ -84,7 +84,7 @@ from that commit and signed it; otherwise it says why and prints nothing:
 unset PINNED
 git checkout main && git pull
 gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet   # gh reads the image's digest from the registry
-PINNED=$(docs/ingestion/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
+PINNED=$(scripts/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
 echo "pin: ${PINNED:?not verified. STOP: pin nothing}"
 ```
 
@@ -599,7 +599,7 @@ scheduled job.
    unset PINNED
    git checkout main && git pull
    gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
-   PINNED=$(docs/ingestion/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
+   PINNED=$(scripts/verified-ingest-image.sh "${IMAGE%:*}") || unset PINNED
    echo "pin: ${PINNED:?not verified. STOP: pin nothing (§1)}"
    # Keep it: the registry deletes images over 30 days old unless among the 5 newest, or tagged pinned-* or latest.
    gcloud artifacts docker tags add "${PINNED:?}" "${IMAGE%:*}:pinned-$(git rev-parse --short=12 HEAD)"

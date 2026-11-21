@@ -1,5 +1,10 @@
 # Shot-logging app: plan
 
+> [!NOTE]
+> **Historical.** This is the plan as of 2026-10-27, kept for its decisions and reasoning. The app shipped as
+> milestones m1–m8; for how it runs now, see [RUNNING.md](RUNNING.md) and the [README](../../README.md). The status
+> line below is from that date.
+
 Status: draft, updated with the owner's answers of October 27 (see "Decisions" at the end). Nothing here is
 implemented. The design is in [DESIGN.md](DESIGN.md) and the mockups
 are in [mockups/](mockups/).
