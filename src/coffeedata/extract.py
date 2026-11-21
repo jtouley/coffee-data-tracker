@@ -380,6 +380,33 @@ def needs_llm(e: Enrichment) -> bool:
     return not (e.origin_country or e.is_blend) or not e.process or not e.tasting_notes
 
 
+# A word that suggests the listing says how the coffee was processed where the rules could not read it. Generous on
+# purpose (eval/process, #252: tuned for recall on labelled train listings): it only orders Claude's weekly queue.
+PROCESS_HINT = re.compile(
+    r"wash|natural|honey|anaerob|ferment|pulp|dried|drying|process|macerat|hull|giling|semi[- ]?wash|monsoon|"
+    r"carbonic|lavado|miel|mucilage|cherr(?:y|ies)\s+(?:were|are|is)|raised\s+bed|patio",
+    re.I,
+)
+# Decaffeination is not a process ("Swiss Water® Process", "natural decaf process", "Sugarcane EA process"): left out
+# of the title, tags and description before looking for a hint.
+_DECAF_TEXT = re.compile(
+    r"\b(?:(?:swiss|mountain|mtn\.?)\s+water(?:[®™\s]+(?:decaf\w*\s+)?process\w*)?|water[- ]process\w*|"
+    r"sugar[- ]?cane(?:\s+(?:e\.?a\.?|ethyl[- ]acetate|decaf\w*))?(?:\s+process\w*)?|co2(?:\s+process\w*)?|"
+    r"ethyl[- ]acetate(?:\s+process\w*)?|e\.?a\.?(?:\s+process\w*)\b|"
+    r"natural(?:ly)?\s+decaf\w*(?:\s+process\w*)?|decaf\w*\s+process\w*)",
+    re.I,
+)
+
+
+def process_first(item: CatalogItem, e: Enrichment) -> bool:
+    """Whether Claude should read this coffee ahead of the rest of the weekly queue: a single origin whose process
+    the rules left empty, and whose title, tags or description has a word that suggests it states one."""
+    if e.process or e.is_blend:
+        return False
+    text = _DECAF_TEXT.sub(" ", f"{item.title} {' '.join(item.tags)} {item.body_text[:4000]}")
+    return bool(PROCESS_HINT.search(text))
+
+
 # --- Claude Haiku -----------------------------------------------------------------------------------
 
 SYSTEM = (
