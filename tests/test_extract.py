@@ -595,3 +595,58 @@ def test_canonical_country_aliases(name, want):
     from coffeedata.origins import canonical_country
 
     assert canonical_country(name) == want
+
+
+# --- the 2026-11-21 review, F3: an answer is held to the schema ------------------------------------------------------
+
+
+def _msg(text: str):
+    return SimpleNamespace(stop_reason="end_turn", content=[SimpleNamespace(type="text", text=text)])
+
+
+@pytest.mark.parametrize("text", ["[]", '["origin_country"]', '"Kenya"', "3", "null", "true"])
+def test_parse_llm_message_turns_away_an_answer_that_isnt_an_object(text):
+    # `[]` used to raise AttributeError, which stopped a whole batch's collection
+    assert extract.parse_llm_message(_msg(text), Enrichment(origin_country="Kenya")) is None
+
+
+def test_parse_llm_message_keeps_only_the_schemas_keys_within_their_sizes():
+    import json
+
+    answer = {
+        "origin_country": "Kenya",
+        "origin_region": "x" * (extract.MAX_TEXT_CHARS + 1),  # over-long: left to the rules
+        "producer": "Kamavindi",
+        "varietals": ["SL28", "y" * (extract.MAX_ITEM_CHARS + 1)] + [f"v{i}" for i in range(30)],
+        "tasting_notes": ["plum"],
+        "is_blend": False,
+        "body_hash": "forged",
+        "method": "rules",
+        "roaster_id": "other.com",
+    }
+    base = Enrichment(origin_region="Nyeri", body_hash="real")
+    e = extract.parse_llm_message(_msg(json.dumps(answer)), base)
+    assert e.origin_region == "Nyeri" and e.producer == "Kamavindi"
+    assert e.body_hash == "real" and e.method == "llm"
+    assert e.varietals[0] == "SL28" and len(e.varietals) == extract.MAX_LIST_ITEMS
+    assert all(len(v) <= extract.MAX_ITEM_CHARS for v in e.varietals)
+
+
+@pytest.mark.parametrize(
+    "answer",
+    ['{"elevation_masl_min": "high"}', '{"origin_country": ["Kenya"]}', '{"origin_country": 5}',
+     '{"tasting_notes": 5}', '{"tasting_notes": "plum, cherry"}', '{"varietals": ["SL28", 7]}',
+     '{"is_blend": "yes"}', '{"elevation_masl_min": true}', '{"elevation_masl_max": 1.5}',
+     '{"elevation_masl_min": 3000000000}', '{"elevation_masl_max": -2147483649}', '{"process": "fermented"}'],
+)  # fmt: skip
+def test_parse_llm_message_turns_away_a_wrongly_typed_or_out_of_range_value(answer):
+    """Review of #213: None, never an exception (which stopped a batch's collection) or a value the int32 column
+    can't hold (which failed the batch's write on every run)."""
+    assert extract.parse_llm_message(_msg(answer), Enrichment(tasting_notes=["plum"])) is None
+
+
+def test_parse_llm_message_keeps_an_integer_the_column_holds():
+    e = extract.parse_llm_message(
+        _msg('{"elevation_masl_min": 1800, "elevation_masl_max": 2100}'), Enrichment()
+    )
+    assert (e.elevation_masl_min, e.elevation_masl_max) == (1800, 2100)

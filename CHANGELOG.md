@@ -309,6 +309,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   instead of tying up request threads (the hashing parameters are unchanged); and registry.coffee publishes
   `/.well-known/security.txt` (RFC 9116), pointing to SECURITY.md's private reporting route.
 
+- Model input (the 2026-11-21 review, F3): Claude's enrichment answer is held to its schema's keys and to size limits
+  above every value enriched so far, and an answer that isn't a JSON object is skipped instead of stopping the
+  batch. The MCP server's `search_coffees` returns roasters' text marked as data, its read tools are annotated
+  read-only, and `log_shot` writes only after the person confirms (or with `COFFEEDATA_MCP_WRITES=1`).
+
 - App: the sign-in, join, reset and change-password forms post, so a form app.js didn't wire never puts the
   password in the URL, and the sign-in screen's clearing of offline pages can no longer stop the forms being wired.
 
