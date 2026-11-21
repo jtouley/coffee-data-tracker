@@ -17,9 +17,9 @@ file under `dev/`: the three sets, `test_next`, `preds/`, `manifest/` and this f
   any tracked file outside `eval/` names it.
 - `score.py` takes it in place of a local folder, and refuses any remote dataset whose name doesn't end in `-dev`.
   It only ever downloads.
-- **Status on 2026-11-21: not uploaded yet.** The files are staged with their checksums verified, but the upload was
-  stopped by the session's permission check and waits for the owner. Until then `<data>` is the session's
-  scratchpad, which is not durable: see "Not verified".
+- **Status on 2026-11-21: uploaded.** The dataset is private and holds 36 data files and `SHA256SUMS` under `dev/`,
+  with a card marked DEV / EVALUATION ONLY and the tags `dev`, `evaluation` and `not-production`. Its `SHA256SUMS`
+  is this folder's, byte for byte. `<data>` can be that dataset or a local copy of its `dev/` folder.
 
 ## The data (step 1)
 
@@ -195,7 +195,6 @@ differs.
 - No person has checked a label.
 - The labelers' replies were typed into the label files by the coordinating session from each labeler's own reply
   (ids and letters); a typing slip in one labeler's file shows up as a disagreement, one made in both would not.
-- `<data>` is not durable. The label files (ids and labels only) and the frozen predictions need a private home
-  before the scratchpad is cleared; the samples can be rebuilt from the lake and the manifests while the lake keeps
-  these runs.
+- `score.py` reading straight from the dev dataset: its refusals and the local path are tested, the download path
+  was not run.
 - The classifier's output on the inputs #179 and #182 will store.
