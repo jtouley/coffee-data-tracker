@@ -1,9 +1,9 @@
 # Process extraction: results
 
-Lake revision `6ccb08b` (runs to 2026-11-16). Main `7251e1c` against the change `ba515d4`. **The train and validation
-scores below were measured against the withdrawn labels of the agent that wrote the rules (README, Reference
-labels) and are superseded;** they will be replaced by scores against the A2/B/third-labeller reference. The
-diagnosis was read by the same agent and is not a labelled reference.
+Lake revision `6ccb08b` (runs to 2026-11-16). Main `7251e1c` against the change, frozen at `ba515d4` (no change to
+`src/` or `tests/` since). Reference: labellers A (Opus) and B (Sonnet), disagreements settled by C (Haiku)
+(README, Reference labels). The diagnosis below was read by the agent that wrote the rules and is not a labelled
+reference.
 
 ## Why the chart's process is mostly "not stated"
 
@@ -33,25 +33,28 @@ replaces the whole row for the coffees it has read (`stg_enrichments`, `dim_coff
 - **What that leaves for rules:** at most about a quarter of the bar. Most of it is listings that never say, which
   only a better-written listing fixes, and the rest of the gap is the enrichment backlog.
 
-## Scores (listed catalog, stratified estimate ± 95%)
+## Scores (listed catalog, stratified estimate ± 95%, against the merged reference)
 
 | Set | Rules | Agree | Confidently wrong | Coverage |
 |---|---|---|---|---|
-| Train (100 labelled of 23,137) | main | 85.9% ± 7.6 | 2.8% ± 1.9 | 13.0% ± 1.9 |
-| | change | 95.5% ± 2.3 | 0.8% ± 1.4 | 21.3% ± 7.7 |
+| Train (100 labelled of 23,137) | main | 85.5% ± 7.5 | 2.8% ± 1.9 | 13.0% ± 1.9 |
+| | change | 95.1% ± 2.3 | 0.8% ± 1.4 | 21.3% ± 7.7 |
 | | paired | +9.6 ± 7.8 | −2.1 ± 1.4 | +8.3 ± 7.7 |
 | Validation (100 of 7,292) | main | 84.3% ± 7.5 | 5.1% ± 2.9 | 16.1% ± 2.9 |
 | | change | 90.0% ± 7.6 | 2.9% ± 2.9 | 20.2% ± 3.4 |
 | | paired | +5.6 ± 1.7 | −2.1 ± 0.1 | +4.2 ± 1.7 |
-| Test (100 of 7,663) | | sealed, not scored | | |
+| **Test, sealed, scored once** (100 of 7,663) | main | 86.4% ± 10.4 | 1.8% ± 0.2 | 14.6% ± 0.2 |
+| | change | 90.9% ± 10.4 | 1.0% ± 0.7 | 18.6% ± 0.7 |
+| | paired | +4.5 ± 1.2 | −0.8 ± 0.7 | +3.9 ± 0.7 |
 
-Train was tuned on, so its row is optimistic. Per-stratum counts with Wilson intervals are printed by `score`.
-On validation the stratum where main gave a process and the change gives none (108 products) was 20 of 20 right for
-the change (main 0 of 20: blends with "Natural & Washed", Indonesian semi-washed read as honey); the change's
-confidently wrong answers there and in `process_to_other` are 3 of 20 each.
+Train was tuned on, so its row is optimistic. Test: `score … test labels/reference_test.json main branch
+--strata main,branch --final`, run once after the labels were hashed (`SHA256SUMS`). The change meets CLAUDE.md's
+bar: at least main's agreement, and fewer confidently wrong answers.
 
-Validation choice: the same rules with the description's prose read scored agree 92.7%, confidently wrong 3.7%,
-coverage 23.7% (paired against the change: +2.7, +0.8, +3.5). Precision first: prose is not read.
+Validation choice, rechecked against the reference: reading the description's prose (`v10`) scores agree 92.7%,
+confidently wrong 3.7%, coverage 23.7%; paired against the change +2.7 ± 2.3, +0.8 ± 1.0, +3.5 ± 1.7. The same
+aggregates as against the withdrawn labels (validation's one changed label sits where both rules abstain), so the
+choice stands: prose is not read, precision first.
 
 ## Effect on the chart (this lake copy, rules only where Claude hasn't read the coffee)
 

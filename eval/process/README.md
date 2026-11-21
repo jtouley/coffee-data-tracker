@@ -4,14 +4,12 @@ This evaluates `extract.rules()`'s `process` (washed, natural, honey, anaerobic,
 against a local, read-only copy of the lake, following CLAUDE.md "Heuristics and models are measured, not argued".
 The results are in `RESULTS.md`, the labelling definition in `GUIDE.md`.
 
-**Running total (CLAUDE.md step 9):** this is the first full evaluation of `process`. The change it measures moved
-the rules' `process` of 2,215 products (1,938 of them in the listed catalog; 487 of those in the sealed test set,
-count only). Add each later change's count here.
+**Running total (CLAUDE.md step 9):** 0 since this full evaluation (scored 2026-11-21). The change it measured
+moved the rules' `process` of 2,215 products (1,938 listed; 487 of those in the sealed test set). Add each later
+change's count here. The scored test set can now join the regression fixtures, and the next change draws a new one.
 
-**Status:** two independent labellers (A2, B) have labelled all 300 sampled listings; they disagree on 1
-(validation), which waits for the third labeller. No set has been scored against these labels yet. The sealed test
-set's predictions, sample, key list and both labellers' test labels are hashed in `SHA256SUMS`; the test set is
-**not yet scored**.
+**Status:** scored. Train, validation and the sealed test (once) against the merged reference; results in
+`RESULTS.md`.
 
 ## Data
 
@@ -59,25 +57,19 @@ process that isn't the label; an empty process is never wrong, `needs_llm()` sen
 ## Reference labels
 
 - Definition: `GUIDE.md`, written before any labelling.
-- Labellers A2 and B: two Claude Opus subagents, run by the coordinating session, each labelling all 300 listings
-  independently and blind to predictions from the packets (`dev/process-eval/packet_{set}.txt`: the GUIDE.md of
-  commit `bc57855` plus the view `show` prints). `labels/A2_{set}.json`, `labels/B_{set}.json`. A2 and B agree on
-  299 of 300 (train 100, validation 99, test 100).
-- Third labeller: a Sonnet subagent settles the disagreements from `dev/process-eval/settle/` (GUIDE.md and the
-  disagreed listings only; no label, no prediction, no stratum). Then `merge` gives the reference.
-- **Withdrawn:** the first labels (labeller A, `labels/A_*.json` until `bc57855`) were made by the agent that wrote
-  the rules. The repo's rule (#254) is that no labeller may have written the change, so they are withdrawn and
-  nothing is scored against them any more; `RESULTS.md`'s train and validation rows, scored against them, are
-  superseded and will be rescored against the merged reference.
-- **Independence not verified:** A2 and B agree with each other on 299 of 300, and each agrees with the withdrawn
-  labels on 297 to 299 of 300, with 29 to 46 notes word for word the same per set. That is unusually high for a task
-  with this many judgement calls. The withdrawn labels were committed on the PR branch while A2 and B labelled; who
-  could read what was not checked by this eval.
-- GUIDE.md rules 8 to 11 (tags, the word "anaerobic", thermal shock, decaf components) were added after A2 and B
-  labelled, to write down how both had already decided those cases; each was checked against all 300 A2 and B
-  labels and changes none. Not added: whether a title's "Natural" and a field's "Pulped Natural" contradict each
-  other (`multiple`) or the field refines the title (`honey`). That is the one disagreement, and any rule would
-  decide it, so it is left to the third labeller under the existing rules 6 and 12.
+- Labellers: **A = Claude Opus, B = Claude Sonnet**, each a subagent run by the coordinating session in its own
+  isolated folder holding only the packets (`packet_{set}.txt`) and the current GUIDE.md, blind to predictions,
+  strata and each other. **C = Claude Haiku** settled the 4 items A and B disagreed on (validation 1, test 3), from
+  a packet holding only GUIDE.md and those listings. `labels/{A,B,C}_{set}.json`; `merge` wrote
+  `labels/reference_{set}.json` (A where A and B agree, else C). No labeller wrote the change (#254).
+- Why different models: a second isolated Opus run matched A on 300 of 300, so two runs of one model are not two
+  independent labellers; A and B are now different models.
+- **Superseded:** the rule author's labels (`labels/A_*.json` until `bc57855`, withdrawn under #254) and the
+  A2/B labels that replaced them (until `d17eb2a`: 299 of 300 agreement with each other and 297 to 299 with the
+  withdrawn labels; their isolation was not established). Nothing is scored against either.
+- GUIDE.md rules 8 to 11 (tags, the word "anaerobic", thermal shock, decaf components) were added in `d17eb2a`,
+  before A, B and C labelled, to write down how the A2/B labellers had decided those cases; A, B and C labelled
+  with them.
 - The listings are private lake data. The packets are prepared under a `dev/process-eval/` prefix
   (`packet_{set}.txt`: GUIDE.md plus the shuffled listings; `settle/`), for the private dev dataset. The sample
   files, which group keys by stratum, and `pred_v5.json` are kept apart in `dev/process-eval-private/`
