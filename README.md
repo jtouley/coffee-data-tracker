@@ -153,6 +153,11 @@ Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 1
 3/5". The server has `log_shot` (with an optional `grinder_name`), `search_coffees`, `shot_history`,
 `suggest_next` and `run_sql` (one read-only `SELECT` against the models in `build/coffee.duckdb`).
 
+`log_shot` asks you to confirm each shot before it is written (MCP elicitation), because the same conversation also
+reads roasters' own text through `search_coffees`, which returns it marked as data. A client that can't ask is
+refused. To allow writes from one anyway, leaving its own tool approval as the check, add
+`-e COFFEEDATA_MCP_WRITES=1` when you register the server.
+
 **From GitHub**, open an issue with the "Log a shot" form; its optional Grinder field takes a grinder name. The
 `issue-forms` workflow records the shot, replies with the match and advice, and closes the issue. It only acts on
 issues the repo owner opens.

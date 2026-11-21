@@ -93,12 +93,12 @@ class Erasures:
         if "recs_erasures" not in self.users.tables:
             return []
         try:
-            files = ", ".join(f"'{s}'" for s in self._sources())
             return (
                 self.users.connect()
                 .execute(
                     "select user_id, logged_at, rating_ids from "
-                    f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
+                    "read_parquet(?, union_by_name = true, hive_partitioning = false)",
+                    [self._sources()],
                 )
                 .fetchall()
             )
@@ -236,8 +236,7 @@ class Store:
         instead of one request per shot file. None (read every file) when there's no export yet."""
         con = self.lake.connect()
         try:
-            src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("fct_shot"))
-            cur = con.execute(f"select * from read_parquet([{src}])")
+            cur = con.execute("select * from read_parquet(?)", [self.lake.mart_sources("fct_shot")])
         except Exception as e:  # noqa: BLE001 - no export yet, or one from before logged_at was in it
             log.info("no fct_shot export to start from: %s", e)
             return None
@@ -264,10 +263,13 @@ class Store:
         try:
             newer = self.lake.files_after("shots", stamp - SEED_SLACK)
             if newer:
-                files = ", ".join(f"'{f}'" for f in newer)
-                cur = con.execute(f"""
-                    select * from read_parquet([{files}], union_by_name = true, hive_partitioning = false)
-                    qualify row_number() over (partition by shot_id order by logged_at desc) = 1""")
+                # file names come from the lake's listing: passed as a parameter, never spliced into the SQL
+                cur = con.execute(
+                    """
+                    select * from read_parquet(?, union_by_name = true, hive_partitioning = false)
+                    qualify row_number() over (partition by shot_id order by logged_at desc) = 1""",
+                    [list(newer)],
+                )
                 cols = [d[0] for d in cur.description]
                 for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall()):
                     if r["shot_id"] not in rows or r["logged_at"] >= rows[r["shot_id"]]["logged_at"]:
@@ -322,11 +324,10 @@ class Store:
         hit = self._coffees.get(coffee_id)
         if hit and (hit[0] is not None or time.monotonic() - hit[1] < MISS_TTL):
             return hit[0], True
-        src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
         try:
             cur = self.lake.connect().execute(
-                f"select * from read_parquet([{src}], union_by_name = true) where coffee_id = ?",
-                [coffee_id],
+                "select * from read_parquet(?, union_by_name = true) where coffee_id = ?",
+                [self.lake.mart_sources("dim_coffee"), coffee_id],
             )
             row = cur.fetchone()
             cols = [d[0] for d in cur.description]
@@ -708,11 +709,13 @@ class Store:
         """Every (slate_id, coffee_id) per person, from the picks export dbt writes (mart_rec_slate: user_id,
         slate_id, position, coffee_id); none before the first export exists. Unavailable if the read fails, and if
         the export goes missing after one was read (review S7): a missing file then is a failure, not "no picks"."""
-        src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("mart_rec_slate"))
         try:
             rows = (
                 self.lake.connect()
-                .execute(f"select user_id, slate_id, coffee_id from read_parquet([{src}])")
+                .execute(
+                    "select user_id, slate_id, coffee_id from read_parquet(?)",
+                    [self.lake.mart_sources("mart_rec_slate")],
+                )
                 .fetchall()
             )
         except Exception as e:  # noqa: BLE001 - duckdb's IOException: no export yet, or the network

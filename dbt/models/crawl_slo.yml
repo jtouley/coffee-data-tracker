@@ -164,7 +164,9 @@ models:
       - name: metric
         description: >-
           crawl_slo_roasters, crawl_slo_ok, crawl_slo_share and crawl_slo_met, each also per platform
-          (crawl_slo_met:shopify); crawl_slo_burn_rate, crawl_slo_budget_remaining and crawl_slo_window_runs overall.
+          (crawl_slo_met:shopify); crawl_slo_burn_rate, crawl_slo_budget_remaining and crawl_slo_window_runs overall;
+          crawl_slo_not_fetched:<outcome>, the counted roasters the run didn't fetch ok by
+          int_crawl_slo_roasters.outcome (unavailable, quarantined, challenged, failed, not_attempted; 0 included).
         data_tests: [{unique: *warn}, {not_null: *warn}]
       - name: value
         description: The metric's value.

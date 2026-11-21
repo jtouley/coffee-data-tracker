@@ -1330,8 +1330,8 @@ def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tm
     assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == f"{rid}:GUJI"
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
     search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
-    assert sorted(r["title"] for r in search()) == ["Colombia Supremo", "Ethiopia Guji"]
-    assert {r["title"]: r["is_wholesale"] for r in search(include_wholesale=True)} == {
+    assert sorted(r["title"] for r in search()["coffees"]) == ["Colombia Supremo", "Ethiopia Guji"]
+    assert {r["title"]: r["is_wholesale"] for r in search(include_wholesale=True)["coffees"]} == {
         "Colombia Supremo": False,
         "Ethiopia Guji": False,
         "Wholesale - 5LB Ethiopia Guji": True,
