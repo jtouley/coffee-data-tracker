@@ -132,7 +132,10 @@ resource "google_cloud_run_v2_job_iam_member" "admin" {
 
 # An email on every admin write: a job started or cancelled, a decision or undo, a draft, Publish, Roll back,
 # Discard (admin/writes.py logs event admin_write for each). None should surprise.
+# It names the service, so it waits for admin_enabled with it (admin.tf).
 resource "google_monitoring_alert_policy" "admin_writes" {
+  count = local.admin_count
+
   display_name = "admin.registry.coffee: a write"
   combiner     = "OR"
   conditions {
@@ -140,7 +143,7 @@ resource "google_monitoring_alert_policy" "admin_writes" {
     condition_matched_log {
       filter = join(" AND ", [
         "resource.type=\"cloud_run_revision\"",
-        "resource.labels.service_name=\"${google_cloud_run_v2_service.admin.name}\"",
+        "resource.labels.service_name=\"${local.admin_service}\"",
         "jsonPayload.event=\"admin_write\"",
       ])
     }

@@ -1121,8 +1121,205 @@ def test_the_admin_service_starts_on_the_placeholder_and_the_deploy_sets_its_ent
     wf = yaml.safe_load((root / ".github/workflows/deploy.yml").read_text())
     (step,) = [s for s in wf["jobs"]["deploy-admin"]["steps"] if s.get("name") == "Deploy"]
     assert '--image "$IMAGE_REF"' in step["run"]
-    assert '--command sh --args "$ADMIN_ARGS"' in step["run"]
+    # The = form: the value starts with "-c", which the two-word form could read as a flag of gcloud's own.
+    assert '--command sh --args="$ADMIN_ARGS"' in step["run"] and "--args " not in step["run"]
     args = step["env"]["ADMIN_ARGS"].split(",")
     assert args[0] == "-c" and len(args) == 2  # gcloud splits --args on commas
     assert args[1].startswith("exec uvicorn --factory admin.main:create_app ")
     assert '--port "$PORT"' in args[1]
+
+
+# --- admin_enabled: the service waits for its secrets' values (src/terraform/admin.tf) -----------------------------
+
+_TF = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src", "terraform")
+# What the switch gates: the service and everything that names it.
+ADMIN_GATED = {
+    ("google_cloud_run_v2_service", "admin"),
+    ("google_cloud_run_v2_service_iam_member", "admin_public"),
+    ("google_cloud_run_domain_mapping", "admin"),
+    ("google_monitoring_alert_policy", "admin_errors"),
+    ("google_monitoring_alert_policy", "admin_passkeys"),
+    ("google_monitoring_alert_policy", "admin_cold_start"),
+}
+
+
+def _tf_code(name: str) -> str:
+    with open(os.path.join(_TF, name)) as f:
+        return "\n".join(line.split("#", 1)[0] for line in f.read().splitlines())
+
+
+def test_the_admin_service_and_what_names_it_wait_for_admin_enabled():
+    """The first apply makes the three secrets empty, and Cloud Run refuses a service whose secret has no version.
+    So the service, its invoker, its domain mapping and its alerts exist only with admin_enabled (off by default,
+    set in ci.tfvars alone, as usage_enabled is); the account, the secrets, their grants and the bucket always."""
+    import re
+
+    code = _tf_code("admin.tf")
+    assert re.search(r"admin_count\s*=\s*var\.admin_enabled \? 1 : 0", code)
+    resources = set(re.findall(r'^resource "(\w+)" "(\w+)"', code, re.M))
+    gated = set(re.findall(r'^resource "(\w+)" "(\w+)" \{\n  count = local\.admin_count\n', code, re.M))
+    assert gated == ADMIN_GATED
+    assert resources - gated == {
+        ("google_project_service", "admin_storage"),
+        ("google_service_account", "admin"),
+        ("google_secret_manager_secret", "admin"),
+        ("google_secret_manager_secret_iam_member", "admin"),
+        ("google_storage_bucket", "admin_state"),
+        ("google_storage_bucket_iam_member", "admin_state"),
+    }
+    # Nothing outside the gate reads the service: with the switch off there is no instance to read.
+    assert not re.search(r"google_cloud_run_v2_service\.admin\.", code)
+    for block in re.split(r"^(?=resource |output )", code, flags=re.M):
+        head = re.match(r'resource "(\w+)" "(\w+)"', block)
+        if "google_cloud_run_v2_service.admin[" in block:
+            assert head and head.groups() in ADMIN_GATED or block.startswith('output "admin_url"'), block[:80]
+    assert "one(google_cloud_run_v2_service.admin[*].uri)" in code  # the output is null while it is off
+    # The secrets are still mounted at latest, which is why the switch exists.
+    service = code.split('resource "google_cloud_run_v2_service" "admin"', 1)[1].split("\nresource ", 1)[0]
+    assert re.search(r'version\s*=\s*"latest"', service)
+
+    assert re.search(r'variable "admin_enabled" \{[^}]*type\s*=\s*bool[^}]*default\s*=\s*false', _tf_code("variables.tf"), re.S)  # fmt: skip
+    with open(os.path.join(_TF, "ci.tfvars")) as f:
+        switches = re.findall(r"^\s*admin_enabled\s*=\s*(\S+)", f.read(), re.M)
+    assert len(switches) == 1 and switches[0] in ("true", "false")  # ci.tfvars holds the switch, once
+    for other in ("terraform.tfvars.example",):
+        assert "admin_enabled" not in _tf_code(other)
+
+
+def test_the_docs_give_the_owners_order_for_the_first_apply():
+    """Off, the values, on, the apply, the deploy account's two hand grants, then GCP_ADMIN_SERVICE: in that order,
+    in the admin's README, and RUNNING.md points there."""
+    root = os.path.dirname(os.path.dirname(_TF))
+    with open(os.path.join(root, "docs", "admin", "README.md")) as f:
+        readme = f.read()
+    steps = readme[readme.index("### The first apply, in order") :]
+    marks = [
+        "`admin_enabled = false`",
+        "gcloud secrets versions add ADMIN_SESSION_SECRET",
+        "`admin_enabled = true`",
+        "Cloud Run Developer",
+        "Service Account User",
+        "`GCP_ADMIN_SERVICE`",
+    ]
+    at = [steps.index(m) for m in marks]
+    assert at == sorted(at), dict(zip(marks, at, strict=True))
+    assert "registry-coffee-admin-run" in steps
+    with open(os.path.join(root, "docs", "app", "RUNNING.md")) as f:
+        running = f.read()
+    assert "`admin_enabled`" in running and "docs/admin/README.md" in running
+
+
+def _tf_create(address: str, rtype: str, after: dict, unknown: dict | None = None) -> dict:
+    return {
+        "address": address,
+        "type": rtype,
+        "name": address.split(".")[1].split("[")[0],
+        "mode": "managed",
+        "change": {"actions": ["create"], "before": None, "after": after, "after_unknown": unknown or {}},
+    }
+
+
+_ADMIN_SECRETS = ("ADMIN_ENROLL_TOKEN", "ADMIN_HF_TOKEN", "ADMIN_SESSION_SECRET")
+_ADMIN_LOG = 'resource.type="cloud_run_revision" AND resource.labels.service_name="registry-coffee-admin"'
+# What `terraform plan` shows for admin.tf on a project that has the rest already. With admin_enabled off: the
+# storage API, the account, the three empty secrets and their grants, the bucket and its two grants. With it on,
+# six more. Values Terraform learns only at apply (the account's email, the secrets' ids) are unknown, as in a real
+# plan. Invented values only.
+ADMIN_PLAN_OFF = [
+    _tf_create("google_project_service.admin_storage", "google_project_service",
+               {"service": "storage.googleapis.com", "disable_on_destroy": False}),
+    _tf_create("google_service_account.admin", "google_service_account",
+               {"account_id": "registry-coffee-admin-run", "display_name": "admin.registry.coffee (runtime)"},
+               {"email": True, "member": True, "name": True}),
+    *[_tf_create(f'google_secret_manager_secret.admin["{s}"]', "google_secret_manager_secret",
+                 {"secret_id": s, "replication": [{"auto": [{}]}]}, {"id": True, "name": True})
+      for s in _ADMIN_SECRETS],
+    *[_tf_create(f'google_secret_manager_secret_iam_member.admin["{s}"]', "google_secret_manager_secret_iam_member",
+                 {"role": "roles/secretmanager.secretAccessor"}, {"member": True, "secret_id": True})
+      for s in _ADMIN_SECRETS],
+    _tf_create("google_storage_bucket.admin_state", "google_storage_bucket",
+               {"name": "coffee-data-tracker-admin-state", "location": "US-CENTRAL1", "force_destroy": False,
+                "uniform_bucket_level_access": True, "public_access_prevention": "enforced"}),
+    *[_tf_create(f'google_storage_bucket_iam_member.admin_state["{k}"]', "google_storage_bucket_iam_member",
+                 {"bucket": "coffee-data-tracker-admin-state", "role": role}, {"member": True})
+      for k, role in (("creator", "roles/storage.objectCreator"), ("viewer", "roles/storage.objectViewer"))],
+]  # fmt: skip
+ADMIN_PLAN_SWITCH = [
+    _tf_create("google_cloud_run_v2_service.admin[0]", "google_cloud_run_v2_service",
+               {"name": "registry-coffee-admin", "location": "us-central1", "ingress": "INGRESS_TRAFFIC_ALL",
+                "template": [{"scaling": [{"min_instance_count": 0, "max_instance_count": 1}],
+                              "containers": [{"image": "us-docker.pkg.dev/cloudrun/container/hello",
+                                              "command": None, "args": None}]}]},
+               {"template": [{"service_account": True}], "uri": True}),
+    _tf_create("google_cloud_run_v2_service_iam_member.admin_public[0]", "google_cloud_run_v2_service_iam_member",
+               {"name": "registry-coffee-admin", "location": "us-central1", "role": "roles/run.invoker",
+                "member": "allUsers"}),
+    _tf_create("google_cloud_run_domain_mapping.admin[0]", "google_cloud_run_domain_mapping",
+               {"name": "admin.registry.coffee", "location": "us-central1",
+                "spec": [{"route_name": "registry-coffee-admin"}]}, {"status": True}),
+    _tf_create("google_monitoring_alert_policy.admin_errors[0]", "google_monitoring_alert_policy",
+               {"display_name": "admin.registry.coffee: errors", "combiner": "OR",
+                "conditions": [{"condition_matched_log": [
+                    {"filter": _ADMIN_LOG + " AND (severity>=ERROR OR httpRequest.status>=500)"}]}]},
+               {"notification_channels": True, "name": True}),
+    _tf_create("google_monitoring_alert_policy.admin_passkeys[0]", "google_monitoring_alert_policy",
+               {"display_name": "admin.registry.coffee: passkeys changed", "combiner": "OR",
+                "conditions": [{"condition_matched_log": [
+                    {"filter": _ADMIN_LOG + ' AND jsonPayload.event="admin_auth"'}]}]},
+               {"notification_channels": True, "name": True}),
+    _tf_create("google_monitoring_alert_policy.admin_cold_start[0]", "google_monitoring_alert_policy",
+               {"display_name": "admin.registry.coffee: cold start p95 > 2 s", "combiner": "OR"},
+               {"notification_channels": True, "name": True}),
+]  # fmt: skip
+
+
+def plan_guard_results(changes: list[dict], configuration: dict | None = None) -> dict[str, list[str]]:
+    """Each guard's failing addresses for the guard's own good plan plus these changes."""
+    import importlib.util
+    import sys
+
+    root = os.path.dirname(os.path.dirname(_TF))
+    path = os.path.join(root, "scripts", "tf_plan_guard.py")
+    spec = importlib.util.spec_from_file_location("tf_plan_guard_for_admin", path)
+    guard = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = guard
+    spec.loader.exec_module(guard)
+    with open(os.path.join(root, "tests", "fixtures", "tf_plan", "good.json")) as f:
+        doc = json.load(f)
+    doc["resource_changes"] += changes
+    if configuration is not None:
+        doc["configuration"] = configuration
+    return {name: bad for name, _, bad in guard.run_guards(guard.load(json.dumps(doc)))}
+
+
+@pytest.mark.parametrize(
+    "changes",
+    [
+        ADMIN_PLAN_OFF,  # the first apply, admin_enabled off
+        ADMIN_PLAN_SWITCH,  # the PR that turns it on, once the secrets have values
+        ADMIN_PLAN_OFF + ADMIN_PLAN_SWITCH,  # both at once: a project that starts with it on
+    ],
+    ids=["off", "switched-on", "on-from-the-start"],
+)
+def test_the_plan_guard_passes_the_admins_plan_with_the_switch_off_and_on(changes):
+    """scripts/tf_plan_guard.py over each plan admin.tf makes, added to the guard's own good plan: every guard
+    passes in both states (the service is created on Google's sample image, which the guard allows on a create; no
+    grant to a guarded account; no impersonation role)."""
+    import re
+
+    with open(os.path.join(_TF, "admin.tf")) as f:
+        declared = set(re.findall(r'^resource "(\w+)" "(\w+)"', f.read(), re.M))
+    assert declared == {(rc["type"], rc["name"]) for rc in ADMIN_PLAN_OFF + ADMIN_PLAN_SWITCH}
+    assert {(rc["type"], rc["name"]) for rc in ADMIN_PLAN_SWITCH} == ADMIN_GATED
+    results = plan_guard_results(changes)
+    assert results and all(bad == [] for bad in results.values()), results
+
+
+def test_the_plan_guard_still_refuses_an_admin_service_on_another_image():
+    """The guard is live on these plans: the same create with an image that isn't the placeholder fails it."""
+    import copy
+
+    bad = copy.deepcopy(ADMIN_PLAN_SWITCH)
+    bad[0]["change"]["after"]["template"][0]["containers"][0]["image"] = "docker.io/library/nginx:latest"
+    results = plan_guard_results(bad)
+    assert results["app-image-pinned"] == ["google_cloud_run_v2_service.admin[0]"]
