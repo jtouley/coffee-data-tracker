@@ -114,6 +114,12 @@ _COFFEE_WORDS = re.compile(
 _TEA = re.compile(r"\b(tea|teas|tisane|herbal)\b(?!.*\bcoffee\b)", re.I)
 _TEA_TYPE = re.compile(r"^\s*(loose[- ]leaf )?teas?\s*$", re.I)
 _COFFEE_TYPE = re.compile(r"^\s*(whole[- ]bean |roasted |specialty )?coffees?( beans?)?\s*$", re.I)
+# A store's own "Flavored Coffee" type says the flavor in the title is a coffee's: "Pumpkin Latte", "Creamy Latte"
+# and "Toasted Almond" typed Flavored Coffee are bags of beans, not drinks, nuts or sweets. A bare "Flavored" type
+# or tag says so only on a bag-sized product ("Sticky Bun", tagged Flavored, 454 g and 907 g). Issue #190;
+# eval/classifier_inputs/README.md.
+_FLAVORED_COFFEE = re.compile(r"^\s*flavou?red coffees?\s*$", re.I)
+_FLAVORED = re.compile(r"^\s*flavou?red( coffees?)?\s*$", re.I)
 _BAG = re.compile(r"\b(\d+(\.\d+)?\s*(oz|lb|lbs|g|kg)|bag)\b", re.I)
 _COUNTRY = re.compile(r"\b(" + "|".join(re.escape(c) for c in COUNTRIES) + r")\b", re.I)
 
@@ -158,6 +164,13 @@ def excluded(item: CatalogItem) -> bool:
     )
 
 
+def flavored_coffee(item: CatalogItem) -> bool:
+    """The store files the product under flavored coffee: by its type, or by a Flavored type or tag on a bag."""
+    return bool(_FLAVORED_COFFEE.search(item.product_type)) or (
+        _bag_sized(item) and any(_FLAVORED.search(t) for t in (item.product_type, *item.tags))
+    )
+
+
 def is_coffee(item: CatalogItem) -> bool:
     """The rules' answer: used where Claude has no verdict, and as the floor the labeled sets hold it to."""
     if excluded(item):
@@ -166,6 +179,8 @@ def is_coffee(item: CatalogItem) -> bool:
     head = f"{title} | {ptype}"
     tags = " ".join(item.tags)
     meta = f"{ptype} | {tags}"
+    if flavored_coffee(item):
+        return True
     if _SAUCE.search(title) and not (_COFFEE_WORDS.search(title) or _COUNTRY.search(title)):
         return False
     if _SWEETS.search(title) and not (
