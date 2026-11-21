@@ -422,11 +422,15 @@ def build(db: Path, out: Path) -> Path:
         select coalesce(process, 'not stated') as process, count(*) as n
         from site_coffee where {SINGLE_ORIGIN} and in_stock group by 1 order by n desc""",
     )
-    # Blends are left out of the process chart (a blend mixes coffees, often of different processes); the chart's
-    # note says how many there are, so the single-origin chart isn't read as the whole catalog.
-    blends_in_stock = _q(
-        con, f"select count(*) as n from site_coffee where {LISTED} and is_blend and in_stock"
-    )[0]["n"]
+    # The process chart counts single origins only (SINGLE_ORIGIN): its note says how many coffees in stock it leaves
+    # out, blends and coffees with no known origin, so the chart isn't read as the whole catalog.
+    left_out = _q(
+        con,
+        f"""
+        select count(*) filter (where is_blend) as blends,
+               count(*) filter (where not is_blend and origin_country is null) as no_origin
+        from site_coffee where {LISTED} and in_stock""",
+    )[0]
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
     # The filter doesn't keep the mart's order, so it is restated (the model's own order).
@@ -608,7 +612,7 @@ def build(db: Path, out: Path) -> Path:
         coverage=coverage,
         origin_price=origin_price,
         processes=processes,
-        blends_in_stock=blends_in_stock,
+        left_out=left_out,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
         # The page fetches catalog.json?b=<a hash of the file>: a new page never reads a cached older file, even
         # after a code-only redeploy of the same release. (Pages ignores the query, so a cached older page gets the
