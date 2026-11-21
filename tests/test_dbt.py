@@ -690,13 +690,19 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     probe(lake, "2026-10-11", "onyxcoffeelab.com")
     run(lake, "2026-10-12", "onyxcoffeelab.com", [product("A")])
     evil = product("E") | {"url": "javascript:alert(1)"}
-    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil])
+    blend = product("H", title="House Blend Coffee")
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil, blend])
     con = build(lake, tmp_path)
     # The unsafe link is dropped in the model, so the public tables, exports and MCP server never see it.
     assert con.execute("select url from dim_coffee where title = 'Coffee E Roast'").fetchone() == (None,)
     assert con.execute(
         "select count(*) from public_coffee where coffee_name = 'Coffee E Roast'"
     ).fetchone() == (0,)
+    # what the process chart's note counts as left out (single origins only)
+    left = con.execute(
+        f"select count(*) filter (where is_blend), count(*) filter (where not is_blend and origin_country is null) "
+        f"from dim_coffee where {site.LISTED} and in_stock"
+    ).fetchone()
     con.close()
 
     out = tmp_path / "site"
@@ -707,6 +713,12 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    # the process chart's note counts what it leaves out: here one blend and the coffees with no origin
+    assert left == (1, 3), left  # A, B and E have no origin
+    assert (
+        "leaves out 1 blend and 3 coffees with no known origin that are in stock"
+        in (out / "catalog" / "index.html").read_text()
+    )
     # The favicon on every page, served from the site root; the old inline bean is gone.
     for page in ("", "catalog/", "privacy/", "terms/", "bot/"):
         root = "../" if page else ""
