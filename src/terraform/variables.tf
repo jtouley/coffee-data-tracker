@@ -16,6 +16,20 @@ variable "github_repo" {
   default     = "jtouley/coffee-data-tracker"
 }
 
+# The numeric ids as well as the name, as in the bootstrap (src/terraform/bootstrap/variables.tf, the same values): a
+# name can be deleted and registered again by someone else, an id can't.
+variable "github_repository_id" {
+  description = "GitHub's numeric id of var.github_repo (the token's repository_id claim)."
+  type        = string
+  default     = "778310280"
+}
+
+variable "github_repository_owner_id" {
+  description = "GitHub's numeric id of the repository's owner (the token's repository_owner_id claim)."
+  type        = string
+  default     = "14210040"
+}
+
 variable "domain" {
   description = "The app's own hostname."
   type        = string
