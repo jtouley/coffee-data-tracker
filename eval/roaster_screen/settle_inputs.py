@@ -27,14 +27,18 @@ def size(v: dict) -> dict:
     return {"title": v.get("title"), "grams": v.get("grams")}
 
 
-for s in ("train", "validation"):
-    waiting = json.loads((eval_dir / f"to_settle_{s}.json").read_text())
-    items = {x["id"]: x for x in json.loads((eval_dir / f"items_{s}.json").read_text())}
-    ev = {}
-    with gzip.open(evidence_dir / f"evidence_{s}.jsonl.gz", "rt") as f:
+# #130's train and validation evidence, keyed by domain: an item that moved between the two (README, Split) keeps the
+# evidence #130 stored under its old set. Never the test set's.
+ev: dict = {}
+for old in ("train", "validation"):
+    with gzip.open(evidence_dir / f"evidence_{old}.jsonl.gz", "rt") as f:
         for line in f:
             r = json.loads(line)
             ev[r["roaster_id"]] = r
+
+for s in ("train", "validation"):
+    waiting = json.loads((eval_dir / f"to_settle_{s}.json").read_text())
+    items = {x["id"]: x for x in json.loads((eval_dir / f"items_{s}.json").read_text())}
     rows = []
     # in id order: no order signal from the files they came from
     for w in sorted(waiting, key=lambda x: x["id"]):

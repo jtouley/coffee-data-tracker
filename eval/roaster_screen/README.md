@@ -46,14 +46,22 @@ labels still answer this guide's question. Four things differ:
   `n < 80` is validation, and the rest is test.
 - **Salt:** `coffeedata-screen-eval-2026-11-07`. It is #130's, kept so that #130's train items stay in train.
 - **Group:** the domain's last two labels, or its last three when it ends in a two-letter country code under `co`,
-  `com`, `org` or `net`, so one business never sits on both sides.
-- **Known flaw, not yet fixed: shared platform hosts.** On a host where every subdomain is its own store, the rule
-  groups all of them as one: every `*.myshopify.com` store hashes to validation (70) and every `*.wixsite.com` store
-  too (79), while `square.site` (32), `squarespace.com` (3) and `godaddysites.com` (26) all go to train. The new
-  test set could never hold a Shopify-subdomain store. Grouping by the store's subdomain on those hosts would move 3
-  labeled validation items (all `*.myshopify.com`: 2 to train, 1 to test), so the rule is left as #130 had it until
-  the owner decides, before the new test set is drawn (the design's PR 5). No train or spent-test item is on such a
-  host.
+  `com`, `org` or `net`, so one business never sits on both sides. **On a platform host** where every subdomain is
+  its own store (`myshopify.com`, `wixsite.com`, `square.site`, `squarespace.com`, `godaddysites.com`,
+  `business.site`, `weebly.com`, `wordpress.com`, `webflow.io`, `bigcartel.com`, `company.site`, `mystrikingly.com`,
+  `carrd.co`, `square.online`, `myspreadshop.com`), the group is the store's subdomain on it
+  (`shop.made-up.myshopify.com` → `made-up.myshopify.com`).
+- **Why, and what moved (the owner's decision, 2026-11-21).** #130 grouped every store on a platform host as one
+  business, so every `*.myshopify.com` store hashed to validation (70) and every `*.wixsite.com` store too (79): the
+  new test set could never hold a Shopify-subdomain store, which are often small roasters. Grouping by store moved
+  three labeled validation items, all on `myshopify.com`. Validation is only used for choosing, so moving them
+  costs nothing that has been measured:
+  - `va-29875635` (`dobson-creek-coffee-company.myshopify.com`, hash 46) and `va-82960847`
+    (`trixiescoffee.myshopify.com`, 11) moved to train, with their labels, settles and strata. They keep their ids;
+  - `va-47515545` (`espresso-news.myshopify.com`, 97) is in the test partition now, so it left every file here. Its
+    #130 labels are not carried into a test set: if the new test set draws it, it is labeled afresh.
+
+  No train or spent-test item is on a platform host, so nothing else moved.
 - New items, the curated roasters and the new test set are assigned by the same rule.
 
 `tests/test_roaster_screen_scaffold.py` checks that every imported item sits in the set its domain hashes to, and
@@ -61,19 +69,20 @@ that no group is on two sides.
 
 ## What is here
 
-Every file below holds the same JSON as the file at `3c8af60:eval/screen/`, under the same name unless noted. The
-items, `agreed` and `to_settle` files are byte for byte. The four `labels` files and the two `settled_C` files gained
-a final newline, which this repo's hooks add. [`SHA256SUMS`](SHA256SUMS) pins every JSON file here, and the
+Every file below holds the same JSON as the file at `3c8af60:eval/screen/`, under the same name unless noted,
+except for the three moved items (Split, above): the two that moved to train are appended to each train file, and all
+three are taken out of each validation file. Otherwise the items, `agreed` and `to_settle` files are byte for byte,
+and the four `labels` files and the two `settled_C` files gained a final newline, which this repo's hooks add. [`SHA256SUMS`](SHA256SUMS) pins every JSON file here, and the
 scaffold test checks it.
 
 | File | Train | Validation | What it is |
 |---|---|---|---|
-| `items_<set>.json` | 200 | 200 | The items to label: id, domain, website, name, city, state, Overture tag. 100 `coffee_shop` and 100 `cafe` per set. No stratum and no screen result |
-| `labels_<set>_A.json`, `labels_<set>_B.json` | 200 each | 200 each | The two independent labels: label, kind, and a short note |
-| `agreed_<set>.json` | 146 (27 in scope, 119 out) | 170 (36 in scope, 134 out) | Items where A and B gave the same label and kind |
-| `to_settle_<set>.json` | 54 | 30 | The disagreements, with both labels |
-| `settled_<set>.json` | 54 | 30 | The third labeler's settles of those disagreements (Labels, below): the reference for them |
-| `settled_C_<set>.json` | 54 | 30 | #130's third labeler's answers (`settled_<set>.json` there). Kept for comparison only |
+| `items_<set>.json` | 202 | 197 | The items to label: id, domain, website, name, city, state, Overture tag. #130 drew 100 `coffee_shop` and 100 `cafe` per set (now 102 and 100 in train, 98 and 99 in validation). No stratum and no screen result |
+| `labels_<set>_A.json`, `labels_<set>_B.json` | 202 each | 197 each | The two independent labels: label, kind, and a short note |
+| `agreed_<set>.json` | 147 (28 in scope, 119 out) | 168 (34 in scope, 134 out) | Items where A and B gave the same label and kind |
+| `to_settle_<set>.json` | 55 | 29 | The disagreements, with both labels |
+| `settled_<set>.json` | 55 | 29 | The third labeler's settles of those disagreements (Labels, below): the reference for them |
+| `settled_C_<set>.json` | 55 | 29 | #130's third labeler's answers (`settled_<set>.json` there). Kept for comparison only |
 
 Not imported:
 - **`sample_<set>.json`.** Its strata are whether #130's screen found coffee, and #130's evidence isn't reused.
@@ -85,9 +94,10 @@ Not imported:
 - **Who labeled.** Claude subagents, not people. Two labelers per set, A and B, each read the businesses' own
   websites, blind to each other, to the screen and to the strata. #130 doesn't record which model.
 - **When.** 2026-11-07, on #130's branch.
-- **Agreement** (label and kind): train 146 of 200 (73.0%), validation 170 of 200 (85.0%).
+- **Agreement** (label and kind): train 147 of 202 (72.8%), validation 168 of 197 (85.3%); #130's own figures, before
+  the move, were 146 and 170 of 200 (73.0%, 85.0%).
 - **Settling** (the owner's decision, 2026-11-20, in place of the design's D2 default that the owner settles).
-  A third labeler, a Claude Sonnet model, settles the 54 train and 30 validation disagreements into
+  A third labeler, a Claude Sonnet model, settles the 55 train and 29 validation disagreements into
   `settled_train.json` and `settled_validation.json`. It labels each item independently against `GUIDE.md` and
   sees neither A's and B's labels nor C's, nor any screen result.
   - **What it reads** (the owner's decision, 2026-11-21: no agent visits the sites). The item's own fields (id,
@@ -99,7 +109,7 @@ Not imported:
   - **This reference shares the screen's evidence, and so its blind spots.** A and B read the live sites; the
     settler reads only what #130's screen stored, which is close to what the rules score. Where that evidence
     misleads the rules (a reseller's page that looks like a roaster's, a roaster whose catalog wasn't read), it can
-    mislead the settler the same way. So on the 54 train and 30 validation items it settles, agreement with the
+    mislead the settler the same way. So on the 55 train and 29 validation items it settles, agreement with the
     rules may read high, and **the provisional precision may read high.** Items with no stored evidence (12: 3 train
     and 9 validation, no home-page text and no product) are likely to come back `unsure` and drop out of the scores. A person settling, or a final
     evaluation on the new screen's own evidence, removes this.
@@ -108,16 +118,17 @@ Not imported:
     is out of git: `evidence_train.jsonl.gz` sha256
     `4ac7c7ee98c9c02dcc164d2a2b537b3175ed8fb845d4df72a9a2d0639160ab57`, `evidence_validation.jsonl.gz`
     `24d056db0bdd3eaed5574b57bbca752e08e2fbcf3624961d54bbf9a18e55b2be`.
-  - **Done 2026-11-21.** Train: 1 in scope, 29 out of scope, 24 `unsure`. Validation: 2 in scope, 6 out of scope,
-    22 `unsure`. Kinds, train: 37 cafe, 10 roaster, 5 other, 2 reseller; validation: 19 cafe, 9 roaster, 2 other.
+  - **Done 2026-11-21.** Train: 1 in scope, 29 out of scope, 25 `unsure`. Validation: 2 in scope, 6 out of scope,
+    21 `unsure` (after the move; before it, 24 and 22). Kinds, train: 38 cafe, 10 roaster, 5 other, 2 reseller;
+    validation: 18 cafe, 9 roaster, 2 other.
     Why so many `unsure`, in the settler's own account: the 12 items with no stored evidence, and about 25 that sell
     bags under their own name with no stored claim that they roast. The settler's exact model id wasn't recorded.
 - **#130's third labeler, C,** also a Claude subagent, settled the same items in #130. Its answers are kept as
-  `settled_C_<set>.json` for comparison. The new settles agree with C, label and kind, on 34 of 54 train items
-  (63.0%) and 11 of 30 validation items (36.7%).
+  `settled_C_<set>.json` for comparison. The new settles agree with C, label and kind, on 34 of 55 train items
+  (61.8%) and 11 of 29 validation items (37.9%).
 - **Unsure** items are left out of the scores: an item whose reference is `unsure` counts as neither in scope nor out
   of scope, so it is in no numerator or denominator. That leaves 46 of the 84 settled items without a reference
-  (24 train, 22 validation), which shrinks validation the most. Those items are not a random draw: many are places
+  (25 train, 21 validation), which shrinks validation the most. Those items are not a random draw: many are places
   selling their own bags, the hard cases, so leaving them out can flatter the scores as well as shrinking them.
 - **Still to label**, after the shadow run and once the owner approves the cost (the design's section 5.2): about
   50 train and 75 validation items from the suggested tier, the 210 curated roasters, and a new test set of 300.

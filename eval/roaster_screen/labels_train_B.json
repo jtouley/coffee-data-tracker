@@ -1198,5 +1198,17 @@
   "label": "unsure",
   "kind": "roaster",
   "note": "old site, 'Fine Roasted Coffees'; roasting and cart unclear"
+ },
+ {
+  "id": "va-29875635",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Dobson Creek store"
+ },
+ {
+  "id": "va-82960847",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "\"From Our Roaster\", \"Roasted For You\"; ambiguous"
  }
 ]

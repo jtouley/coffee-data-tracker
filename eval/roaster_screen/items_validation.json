@@ -585,15 +585,6 @@
   "overture_tag": "cafe"
  },
  {
-  "id": "va-29875635",
-  "domain": "dobson-creek-coffee-company.myshopify.com",
-  "website": "https://dobson-creek-coffee-company.myshopify.com/",
-  "name": "Virginia City Coffee Depot",
-  "city": "Virginia City",
-  "state": "MT",
-  "overture_tag": "coffee_shop"
- },
- {
   "id": "va-30142003",
   "domain": "frontiercoffee.com",
   "website": "https://frontiercoffee.com/",
@@ -853,15 +844,6 @@
   "city": "Hoboken",
   "state": "NJ",
   "overture_tag": "coffee_shop"
- },
- {
-  "id": "va-47515545",
-  "domain": "espresso-news.myshopify.com",
-  "website": "https://espresso-news.myshopify.com/",
-  "name": "Espresso News",
-  "city": "Boone",
-  "state": "NC",
-  "overture_tag": "cafe"
  },
  {
   "id": "va-47517477",
@@ -1581,15 +1563,6 @@
   "name": "Bloom Coffee House",
   "city": "Kewaunee",
   "state": "WI",
-  "overture_tag": "coffee_shop"
- },
- {
-  "id": "va-82960847",
-  "domain": "trixiescoffee.myshopify.com",
-  "website": "https://trixiescoffee.myshopify.com/",
-  "name": "Trixie's Coffee Shop",
-  "city": "Montgomery",
-  "state": "TX",
   "overture_tag": "coffee_shop"
  },
  {

@@ -1142,5 +1142,17 @@
   "label": "unsure",
   "kind": "roaster",
   "note": "\"Fine Roasted Coffees\"; store pages fail TLS"
+ },
+ {
+  "id": "va-29875635",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Dobson Creek store"
+ },
+ {
+  "id": "va-82960847",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "\"roasted to order\", \"our roaster\""
  }
 ]

@@ -368,12 +368,6 @@
   "kind": "cafe"
  },
  {
-  "id": "va-29875635",
-  "label": "in_scope",
-  "kind": "roaster",
-  "note": "Dobson Creek store"
- },
- {
   "id": "va-30142003",
   "label": "in_scope",
   "kind": "roaster"
@@ -538,11 +532,6 @@
   "label": "unsure",
   "kind": "reseller",
   "note": "title says roaster; about only says fresh roasted"
- },
- {
-  "id": "va-47515545",
-  "label": "in_scope",
-  "kind": "roaster"
  },
  {
   "id": "va-47517477",
@@ -998,12 +987,6 @@
   "id": "va-82899032",
   "label": "out_of_scope",
   "kind": "cafe"
- },
- {
-  "id": "va-82960847",
-  "label": "in_scope",
-  "kind": "roaster",
-  "note": "\"roasted to order\", \"our roaster\""
  },
  {
   "id": "va-83020209",

@@ -1798,5 +1798,23 @@
   "city": "Verona",
   "state": "PA",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-29875635",
+  "domain": "dobson-creek-coffee-company.myshopify.com",
+  "website": "https://dobson-creek-coffee-company.myshopify.com/",
+  "name": "Virginia City Coffee Depot",
+  "city": "Virginia City",
+  "state": "MT",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-82960847",
+  "domain": "trixiescoffee.myshopify.com",
+  "website": "https://trixiescoffee.myshopify.com/",
+  "name": "Trixie's Coffee Shop",
+  "city": "Montgomery",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
  }
 ]

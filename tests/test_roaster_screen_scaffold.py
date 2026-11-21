@@ -20,8 +20,22 @@ LABELS = {"in_scope", "out_of_scope", "unsure"}
 KINDS = {"roaster", "cafe", "reseller", "other"}
 
 
+# Hosts where every subdomain is its own store (the README's list): the group is the store's subdomain on the host.
+PLATFORM_HOSTS = ("myshopify.com", "wixsite.com", "square.site", "squarespace.com", "godaddysites.com",
+                  "business.site", "weebly.com", "wordpress.com", "webflow.io", "bigcartel.com", "company.site",
+                  "mystrikingly.com", "carrd.co", "square.online", "myspreadshop.com")  # fmt: skip
+# The items that moved when platform hosts began to group by store (2026-11-21): validation to train, and one to the
+# test partition, which takes it out of the eval files.
+MOVED_TO_TRAIN = {"va-29875635", "va-82960847"}
+MOVED_TO_TEST = {"va-47515545"}
+
+
 def group(domain: str) -> str:
-    """The split's group: the registrable domain, as the README defines it."""
+    """The split's group, as the README defines it: on a platform host, the store's subdomain on it; else the
+    registrable domain."""
+    for host in PLATFORM_HOSTS:
+        if domain.endswith("." + host):
+            return domain[: -len(host) - 1].rsplit(".", 1)[-1] + "." + host
     p = domain.split(".")
     if len(p) >= 3 and len(p[-1]) == 2 and p[-2] in ("co", "com", "org", "net"):
         return ".".join(p[-3:])
@@ -45,6 +59,16 @@ def test_the_split_rule_is_the_one_the_readme_states():
     assert group("shop.example.co.uk") == "example.co.uk"
     assert group("example.com.au") == "example.com.au"
     assert group("example.coffee") == "example.coffee"
+    assert group("shop.made-up.myshopify.com") == "made-up.myshopify.com"
+    assert group("a.myshopify.com") != group("b.myshopify.com")
+
+
+def test_the_moved_items_sit_where_their_store_hashes():
+    train = {i["id"]: i["domain"] for i in load("train", "items_train")}
+    validation = {i["id"] for i in load("validation", "items_validation")}
+    assert set(train) >= MOVED_TO_TRAIN and not (MOVED_TO_TRAIN | MOVED_TO_TEST) & validation
+    assert all(split_of(train[i]) == "train" for i in MOVED_TO_TRAIN)
+    assert split_of("espresso-news.myshopify.com") == "test"  # va-47515545, now in no eval file
 
 
 @pytest.mark.parametrize("directory", [EVAL, SPENT], ids=["eval", "spent-test"])
@@ -68,11 +92,11 @@ def test_every_file_of_the_spent_test_set_is_pinned():
     assert len(pinned) == 10
 
 
-@pytest.mark.parametrize("set_name", ["train", "validation", "test"])
-def test_each_item_is_in_the_set_its_domain_hashes_to(set_name):
+@pytest.mark.parametrize("set_name,count", [("train", 202), ("validation", 197), ("test", 200)])
+def test_each_item_is_in_the_set_its_domain_hashes_to(set_name, count):
     items = load(set_name, f"items_{set_name}")
-    assert len(items) == len({i["id"] for i in items}) == 200
-    assert sum(split_of(i["domain"]) == set_name for i in items) == 200
+    assert len(items) == len({i["id"] for i in items}) == count
+    assert sum(split_of(i["domain"]) == set_name for i in items) == count
 
 
 def test_no_business_is_on_two_sides():
@@ -86,8 +110,8 @@ def test_no_business_is_on_two_sides():
 @pytest.mark.parametrize(
     ("set_name", "agreed", "to_settle", "third"),
     [
-        ("train", 146, 54, "settled_C_train"),
-        ("validation", 170, 30, "settled_C_validation"),
+        ("train", 147, 55, "settled_C_train"),
+        ("validation", 168, 29, "settled_C_validation"),
         ("test", 163, 37, "settled_test"),
     ],
 )

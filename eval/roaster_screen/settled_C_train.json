@@ -322,5 +322,11 @@
   "label": "unsure",
   "kind": "roaster",
   "note": "\"Fine Roasted Coffees\" with online store, but site never says it roasts"
+ },
+ {
+  "id": "va-82960847",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "'we roast them ourselves'; 1 lb bags with add to cart"
  }
 ]

@@ -162,12 +162,6 @@
   "note": "cafe sells bags from family farm online; doesn't say who roasts"
  },
  {
-  "id": "va-82960847",
-  "label": "in_scope",
-  "kind": "roaster",
-  "note": "'we roast them ourselves'; 1 lb bags with add to cart"
- },
- {
   "id": "va-93661826",
   "label": "out_of_scope",
   "kind": "cafe",

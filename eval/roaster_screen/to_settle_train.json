@@ -1115,5 +1115,26 @@
 "kind": "roaster",
 "note": "old site, 'Fine Roasted Coffees'; roasting and cart unclear"
 }
+},
+{
+"id": "va-82960847",
+"domain": "trixiescoffee.myshopify.com",
+"website": "https://trixiescoffee.myshopify.com/",
+"name": "Trixie's Coffee Shop",
+"city": "Montgomery",
+"state": "TX",
+"overture_tag": "coffee_shop",
+"label_A": {
+"id": "va-82960847",
+"label": "in_scope",
+"kind": "roaster",
+"note": "\"roasted to order\", \"our roaster\""
+},
+"label_B": {
+"id": "va-82960847",
+"label": "unsure",
+"kind": "roaster",
+"note": "\"From Our Roaster\", \"Roasted For You\"; ambiguous"
+}
 }
 ]
