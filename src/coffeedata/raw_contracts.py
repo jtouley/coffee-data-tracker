@@ -5,6 +5,7 @@
     enrichment  enrichment job -> lake  enrichments (Claude's llm rows; older lakes also hold crawl-time rules rows)
     ops         build -> command center run_completeness, release_changes, product_decisions, mart_flags,
                 eval_prefilter and eval_prefilter_summary, beside each release
+    screen      screen job -> lake      screens and screen_products (the roaster screen's raw rows; private)
     usage       collector -> usage lake usage_events (anonymous search, filter and click-out events; private)
 
 Each is written to contracts/internal/<name>.odcs.yaml, from lake.SCHEMAS (columns and types) and contract_docs
@@ -35,7 +36,7 @@ import pyarrow as pa
 import yaml
 
 from . import contract_docs
-from .lake import FETCH_STATUSES, GLOBS, OPS_GLOBS, SCHEMAS, USAGE_VALUES
+from .lake import FETCH_STATUSES, GLOBS, OPS_GLOBS, SCHEMAS, SCREEN_EDGES, SCREEN_REFUSALS, USAGE_VALUES
 from .models import CatalogItem
 
 # The repo's contracts/internal/: this assumes a source or editable install, which is fine because only the
@@ -120,6 +121,16 @@ CONTRACTS: dict[str, dict[str, Any]] = {
         "producer": "post-load enrichment job (enrich-week)",
         "producer_code": ["src/coffeedata/enrich.py"],
         "consumers": ["dbt (stg_enrichments, dim_coffee)"],
+    },
+    "screen": {
+        "tables": ["screens", "screen_products"],
+        "producer": "the roaster screen job (coffeedata screen), one state per run",
+        "producer_code": ["src/coffeedata/screen.py", "src/coffeedata/discover.py"],
+        "consumers": [
+            "dbt (stg_screens, stg_screen_products)",
+            "the screen job's own selection (screen.select)",
+        ],
+        "values": {"screens.refusal": list(SCREEN_REFUSALS), "screens.edge": list(SCREEN_EDGES)},
     },
     "usage": {
         "tables": ["usage_events"],

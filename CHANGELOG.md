@@ -18,6 +18,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- The roaster screen's job, record-only (the design's PR 2, `docs/design/roaster-screen.md`): `coffeedata screen
+  --state <ST>` asks each due discovery candidate's robots.txt, home page and first page of products (Shopify or
+  WooCommerce), at most 6 requests a place, and writes two raw, append-only, private tables, `screens` and
+  `screen_products` (internal contract `screen` 1.0.0; dbt `stg_screens`, `stg_screen_products`). It decides nothing
+  and adds nothing to the registry. The probe's home and API steps moved into `discover._home` and `discover._api`
+  with its requests and rows unchanged. A run stops, and exits non-zero, when more than 8% of its places refuse it
+  (a provisional threshold). No job or schedule is defined yet: nothing runs.
 - Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
   `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
   the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a

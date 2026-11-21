@@ -349,6 +349,59 @@ def cmd_probe(args: argparse.Namespace) -> None:
         )
 
 
+def cmd_screen(args: argparse.Namespace) -> None:
+    """Screen one state's discovery candidates (screen.py; docs/design/roaster-screen.md): robots.txt, the home
+    page and the first page of products of each place that is due, recorded as raw rows. It decides nothing and adds
+    nothing to the registry. Rows are written as they finish, so a run that stops early keeps what it screened. When
+    too many sites refuse it, the run stops starting places, ends `stopped` and exits non-zero."""
+    from . import control, registry, screen
+
+    t0 = time.monotonic()
+    lake = Lake()
+    state = args.state.upper()
+    job = control.start(lake, "screen", args.run_date, detail=control.execution() | {"state": state})
+    todo: list[str] = []
+    try:
+        doc = registry.read_served(lake)
+        todo = screen.select(lake, state, args.run_date, cap=args.max_places, doc=doc)
+        if args.dry_run:
+            out: dict = {"screened": 0, "left": len(todo), "by_status": {}, "files": 0, "stopped": None,
+                         "breaker": screen.Breaker().report(), "products": 0}  # fmt: skip
+        else:
+            left = max(0.0, 60 * args.deadline_min - (time.monotonic() - t0))
+            out = screen.run(lake, todo, state, args.run_date, workers=args.workers, deadline_s=left)
+    except BaseException as e:  # what was written stays staged; the end row says the attempt failed
+        control.finish(lake, job, "failed", todo=len(todo),
+                       detail=control.detail_of(job) | {"error": _error(e)})  # fmt: skip
+        raise
+    ok = out["by_status"].get("ok", 0)
+    detail = control.detail_of(job) | {
+        "screened": out["screened"],
+        "products": out["products"],
+        "by_status": out["by_status"],
+        "refusals": out["breaker"],
+        "files": out["files"],
+        "dry_run": bool(args.dry_run),
+        "minutes": round((time.monotonic() - t0) / 60, 1),
+    }
+    if out["stopped"]:
+        detail["stopped"] = out["stopped"]
+    status = "stopped" if out["stopped"] else "deadline" if out["left"] and not args.dry_run else "done"
+    control.finish(lake, job, status, todo=len(todo), ok=ok, errors=out["screened"] - ok,
+                   skipped=out["left"], detail=detail)  # fmt: skip
+    if args.dry_run:
+        print(f"screen {state}: {len(todo)} places are due; nothing was requested (--dry-run)")
+        return
+    print(f"screen {state}: screened {out['screened']} of {len(todo)} places ({ok} answered)"
+          + (f"; {out['left']} left for the next run" if out["left"] else ""))  # fmt: skip
+    if out["stopped"]:
+        b = out["breaker"]
+        raise SystemExit(
+            f"screen stopped: {b['counted']} of {b['places']} places refused us, above {b['share']:.0%}. "
+            f"Challenges by edge: {json.dumps(b['by_edge'], sort_keys=True)}. Nothing was retried or worked around."
+        )
+
+
 def cmd_pull(args: argparse.Namespace) -> None:
     """The admin's Pull now, as one job: probe the places, then a counted crawl of each one that answered with a
     storefront, on its platform's connector, into the week `--run-date` names (the admin picks the next week when
@@ -1513,6 +1566,20 @@ def main(argv: list[str] | None = None) -> None:
         type=_positive_float,
         help="start no roaster after this many minutes; the rest wait for the next run",
     )
+
+    sc = add(
+        "screen",
+        cmd_screen,
+        "record what one state's discovery candidates' sites say (robots.txt, home page, first product page); "
+        "decides nothing",
+    )
+    sc.add_argument("--state", required=True, help="the US state to screen (two letters), one per run")
+    sc.add_argument("--max-places", type=int, default=3000, help="at most this many places in the run")
+    sc.add_argument("--workers", type=int, default=16)
+    sc.add_argument("--run-date", type=_run_date, default=_today())
+    sc.add_argument("--deadline-min", type=_positive_float, default=90.0,
+                    help="start no place after this many minutes; the rest wait for the next run")  # fmt: skip
+    sc.add_argument("--dry-run", action="store_true", help="list how many places are due and request nothing")
 
     pu = add(
         "pull", cmd_pull, "probe places, then a counted crawl of each storefront found (the admin's Pull now)"
