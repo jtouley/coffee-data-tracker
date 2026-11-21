@@ -25,7 +25,8 @@ latest as (
     left join {{ ref('stg_variant_grams') }} g using (grams_key)
     where l.is_coffee
 ),
--- Claude's extraction of a description, where there is one, replaces the rules' attributes for it.
+-- Claude's extraction of a description, where there is one, replaces the rules' attributes for it (but process,
+-- below).
 llm as (select * from {{ ref('stg_enrichments') }} where method = 'llm'),
 attrs as (
     select
@@ -33,7 +34,9 @@ attrs as (
         if(e.roaster_id is null, p.origin_country, e.origin_country) as origin_country,
         if(e.roaster_id is null, p.origin_region, e.origin_region) as origin_region,
         if(e.roaster_id is null, p.producer, e.producer) as producer,
-        if(e.roaster_id is null, p.process, e.process) as process,
+        -- Process: the current rules' answer where they give one (eval/process measures them), Claude's only where
+        -- the rules abstain; an older Claude row never overrides what today's rules read.
+        coalesce(p.process, e.process) as process,
         if(e.roaster_id is null, p.varietals, e.varietals) as varietals,
         if(e.roaster_id is null, p.elevation_masl_min, e.elevation_masl_min) as elevation_masl_min,
         if(e.roaster_id is null, p.elevation_masl_max, e.elevation_masl_max) as elevation_masl_max,

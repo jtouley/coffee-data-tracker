@@ -1200,6 +1200,29 @@ def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
     assert con.execute("select needs_llm from stg_products where is_coffee").fetchone() == (True,)
 
 
+def test_the_rules_process_stands_and_claude_fills_only_where_they_abstain(lake, tmp_path):
+    """dim_coffee.process: the current rules' answer where they give one, Claude's where they abstain (eval/process)."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    run(
+        lake, "2026-10-19", rid, [product("A", title="Kenya Washed Roast"), product("B", title="Kenya Roast")]
+    )
+    lake.write_partition(
+        "enrichments",
+        "2026-10-19",
+        "llm1",
+        [
+            {"extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC), "roaster_id": rid, "product_id": p,
+             "body_hash": f"b{p}", "method": "llm", "needs_llm": False, "origin_country": "Kenya",
+             "process": "natural", "is_blend": False}
+            for p in ("A", "B")
+        ],
+    )  # fmt: skip
+    con = build(lake, tmp_path)
+    got = dict(con.execute("select product_id, process from dim_coffee").fetchall())
+    assert got == {"A": "washed", "B": "natural"}
+
+
 def test_dim_coffee_maps_origins_to_iso(lake, tmp_path):
     """dim_coffee and the public tables carry the ISO 3166-1 short name and alpha-2 code (int_origin_country), the
     captured spelling stays in origin_country_raw, a list of several countries has no country (and leaves the market

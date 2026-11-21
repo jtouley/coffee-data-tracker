@@ -640,6 +640,24 @@ def needs_llm(e: Enrichment) -> bool:
     return not (e.origin_country or e.is_blend) or not e.process or not e.tasting_notes
 
 
+# A word that suggests the listing says how the coffee was processed, wherever the rules could not read it. Generous
+# on purpose (eval/process: tuned for recall on the labelled train listings): it only orders Claude's queue.
+PROCESS_HINT = re.compile(
+    r"wash|natural|honey|anaerob|ferment|pulp|dried|drying|process|macerat|hull|giling|semi[- ]?wash|monsoon|"
+    r"carbonic|lavado|miel|mucilage|cherr(?:y|ies)\s+(?:were|are|is)|raised\s+bed|patio",
+    re.I,
+)
+
+
+def process_first(item: CatalogItem, e: Enrichment) -> bool:
+    """Whether Claude should read this coffee ahead of the rest of the weekly queue: a single origin whose process
+    the rules left empty, and whose title, tags or description has a word that suggests it states one."""
+    if e.process or e.is_blend:
+        return False
+    text = f"{item.title} {' '.join(item.tags)} {_DECAF_METHOD.sub(' ', item.body_text[:4000])}"
+    return bool(PROCESS_HINT.search(text))
+
+
 # --- Claude Haiku -----------------------------------------------------------------------------------
 
 SYSTEM = (

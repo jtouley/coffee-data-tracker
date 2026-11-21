@@ -15,6 +15,10 @@
     python process_eval.py draw    <data-dir> <set> <a> <b> <tag> <alloc.json> <out.json> <used.json>...
                                                              a stratified sample (alloc: n per stratum of a vs b),
                                                              ordered by a salted hash with <tag>, leaving out used keys
+    python process_eval.py combined <data-dir> <lake-dir> <rules> <sample.json> <out-name>
+                                                             the shipped field, rules else Claude's stored row, for a
+                                                             sample's listed products; refuses while a sampled product
+                                                             the queue puts first has no Claude row for its description
     python process_eval.py packet  <data-dir> <set> <out.txt>   the blind labelling packet for a set's sample
     python process_eval.py settle  <A.json> <B.json> <out.json> the keys A and B disagree on, for the third labeller
     python process_eval.py merge   <A.json> <B.json> <C.json> <out.json>
@@ -382,6 +386,52 @@ def draw(
     print(out, {st: f"{len(v)}/{len(strata[st])}" for st, v in sample.items()}, "excluded", len(gone))
 
 
+def combined(data: Path, lake: str, rules_name: str, sample_file: Path, out_name: str) -> None:
+    """pred_<out_name>.json: for every product, the rules' process (pred_<rules_name>.json) where they give one,
+    else Claude's process from the lake's stored `llm` enrichment of the product's latest description, else None.
+    Refuses (exits non-zero) unless every sampled product that extract.process_first puts at the head of Claude's queue has
+    such a row: until a weekly enrichment run has read them, the combined field can't be scored."""
+    import duckdb
+
+    from coffeedata import extract
+
+    c = duckdb.connect()
+    latest = dict(
+        ((r + ":" + p), h)
+        for r, p, h in c.execute(f"""
+            select roaster_id, product_id, body_hash
+            from read_parquet('{lake}/snapshots/*/*.parquet', hive_partitioning=true, union_by_name=true)
+            where roaster_id is not null
+            qualify row_number() over (partition by roaster_id, product_id order by run_date desc, fetched_at desc) = 1
+        """).fetchall()
+    )
+    llm = {
+        (r + ":" + p, h): proc
+        for r, p, h, proc in c.execute(f"""
+            select roaster_id, product_id, body_hash, process
+            from read_parquet('{lake}/enrichments/**/*.parquet', hive_partitioning=true, union_by_name=true)
+            where method = 'llm'
+            qualify row_number() over (partition by roaster_id, product_id, body_hash order by extracted_at desc) = 1
+        """).fetchall()
+    }
+    rules = _load(data, f"pred_{rules_name}.json")
+    by = {r["coffee_id"]: r for r in rows(data)}
+    raw = json.loads(sample_file.read_text())
+    sample = [k for v in raw.get("sample", raw).values() for k in v]
+    first = [k for k in sample if extract.process_first(item(by[k]), extract.rules(item(by[k])))]
+    read = [k for k in first if (k, latest.get(k)) in llm]
+    print(f"sampled {len(sample)}; the queue puts {len(first)} first; Claude has read {len(read)} of them")
+    if len(read) < len(first):
+        sys.exit(
+            f"refused: {len(first) - len(read)} sampled products at the head of the queue have no Claude row yet"
+        )
+    out = {k: rules[k] if rules[k] is not None else llm.get((k, latest.get(k))) for k in rules}
+    (data / f"pred_{out_name}.json").write_text(json.dumps(out, sort_keys=True))
+    print(
+        f"pred_{out_name}.json written; score it with: score <data> <set> <labels> main {out_name} --strata ..."
+    )
+
+
 def packet(data: Path, set_name: str, out: Path) -> None:
     """GUIDE.md and the sample's listings, shuffled, with no prediction and no other labeller's answer."""
     import contextlib
@@ -447,6 +497,8 @@ if __name__ == "__main__":
             Path(args[6]),
             [Path(x) for x in args[7:]],
         )
+    elif cmd == "combined":
+        combined(Path(args[0]), args[1], args[2], Path(args[3]), args[4])
     elif cmd == "packet":
         packet(Path(args[0]), args[1], Path(args[2]))
     elif cmd == "settle":

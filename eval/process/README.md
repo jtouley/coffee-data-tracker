@@ -142,3 +142,30 @@ stratum by `sha256("coffeedata-process-eval-2026-11-21:round3-train:" + key)`, e
 same_none 200 of 17,868, none_to_process 25 of 1,617, process_to_other 25 of 226 (250). These are for tuning (train):
 their listings may be read once labelled. Packets: `proc-tr3-A`, `proc-tr3-S` (250 listings, GUIDE.md `9001240b…`,
 packet sha256 `01c26df9…`), empty `proc-tr3-H` for the settles. Sealed test 2 is untouched.
+
+## Rules, then Claude (the owner's choice, 2026-11-21)
+
+The shipped field is the rules' process where they give one, else Claude's enrichment, else none.
+
+- **How it worked before:** `stg_enrichments` keeps one row per (product, description), Claude's (`llm`) before the
+  rules'. `dim_coffee` took every attribute from Claude's row when there was one, and that row is the rules' answer
+  overwritten by any non-empty answer of Claude's (`extract.parse_llm_message`), so Claude overrode the rules'
+  process. The weekly job (`enrich.py`) sends up to 2,000 coffees whose rules leave origin, process or notes empty
+  and that Claude hasn't read, oldest snapshot first.
+- **Precedence now:** `dim_coffee.process = coalesce(rules, Claude)`. Today's rules stand where they answer; Claude
+  fills only where they abstain. Other attributes are unchanged.
+- **Queue:** Claude's weekly cap goes first to current products (the product's latest version, in its roaster's
+  latest run) that the rules read as a single origin with no process, and whose title, tags or description has a
+  process word (`extract.process_first`, `PROCESS_HINT`). The rest keep the old order. The rule is catalog-wide.
+- **The filter** (tuned on train only): of the labelled train listings that state a process the rules abstain on
+  (6, after round 3), it catches 4; the other 2 are blends, which it leaves out by design. On the validation
+  extension (aggregates only) it catches 6 of 7. Of 199 train listings labelled `none`, 30 pass it.
+- **Volume** (lake `6ccb08b`): 5,819 listed single origins pass, 5,309 not yet read by Claude: about 2.7 weekly runs
+  at 2,000. Reading them in one run would cost roughly $1.30 at the price `docs/app/PLAN.md` cites for the
+  enrichment model's tier ($0.10 / $0.50 per million tokens; about 1,500 tokens in and 200 out a coffee), less
+  through the Batches API. The batch size is the owner's call; unchanged here.
+- **Scoring the combined field** (not run): after a real weekly run, with a fresh read-only lake copy and its
+  predictions rebuilt, `python process_eval.py combined <data> <lake> r3 sample_test2.json combined` writes
+  `pred_combined.json`, refusing while any sampled product the queue puts first has no Claude row for its current
+  description (now: 44 put first, 4 read). Then, once: `score <data> test <reference_test2.json> main combined
+  --strata main,r2 --final`. The test labels are committed with their hashes before that score.
