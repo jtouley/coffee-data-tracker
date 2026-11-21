@@ -501,11 +501,19 @@ def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) ->
 # --- the importers' weekly snapshots ------------------------------------------------------------------------------
 
 # When importers.yml's schedule fires ("37 17 * * 3": Wednesdays 17:37 UTC; tests/test_triage.py ties the two), and
-# how long after it a week still counts as in progress: the job's 120-minute timeout plus room for a late scheduled
-# start. A completed scheduled run makes its week due at once, so the check that follows it (workflow_run) judges it
-# without waiting for this.
+# how long after it a week with no scheduled run yet still counts as not due: room for a late scheduled start.
+# GitHub starts this repository's scheduled runs hours late: the three so far began 5 h 56 min (importers,
+# 2026-11-18), 8 h 17 min and 9 h 02 min (importers-alerts, 2026-11-12 and 11-19) after their cron time. 12 hours
+# clears all three and still ends before Thursday's check (09:23 UTC, 15 h 46 min after the schedule), which is the
+# one that reports a run that never started. A completed scheduled run makes its week due at once, so the check that
+# follows it (workflow_run) judges it without waiting for this.
 IMPORTERS_SCHEDULE = (2, 17, 37)  # weekday (Monday 0), hour, minute, UTC
-IMPORTERS_GRACE = timedelta(hours=4)
+IMPORTERS_GRACE = timedelta(hours=12)
+# How long a scheduled run that has started and not completed keeps its week not due: the snapshot job's 120-minute
+# limit, the build job's after it, and queueing. Past it the run is taken as stuck and the week is judged.
+IMPORTERS_RUN_LIMIT = timedelta(hours=6)
+# A scheduled start this long after its cron time is said so in the issue.
+IMPORTERS_LATE = timedelta(hours=1)
 # The first week a scheduled run stores (Wednesday 2026-11-18's): earlier weeks are never due.
 IMPORTERS_FIRST_WEEK = date(2026, 11, 16)
 IMPORTERS_WORKFLOW = ".github/workflows/importers.yml"
@@ -562,16 +570,32 @@ def _when(s: str) -> datetime:
 
 def importers_due_week(now: datetime, runs: list[dict[str, Any]] | None = None) -> date | None:
     """The latest week every importer should have stored by `now`: this week once its scheduled run has completed
-    or IMPORTERS_GRACE has passed since the schedule, else the week before. None before IMPORTERS_FIRST_WEEK.
-    Without the runs (None), only the time decides."""
+    or IMPORTERS_GRACE has passed since the schedule, else the week before. A scheduled run that has started and
+    not completed keeps its week not due, however late it started, until IMPORTERS_RUN_LIMIT after its start: a
+    run that began six hours late was otherwise judged "missing" while it was still fetching. None before
+    IMPORTERS_FIRST_WEEK. Without the runs (None), only the time decides."""
     week = _monday(now)
     scheduled = [
-        r for r in runs or [] if r.get("event") == "schedule" and r.get("status") == "completed"
+        r for r in runs or [] if r.get("event") == "schedule" and isinstance(r.get("created_at"), str)
         and _monday(_when(r["created_at"])) == week
     ]  # fmt: skip
-    if not scheduled and now < _scheduled_at(week) + IMPORTERS_GRACE:
+    completed = [r for r in scheduled if r.get("status") == "completed"]
+    running = [r for r in scheduled if r.get("status") != "completed"
+               and now < _when(r["created_at"]) + IMPORTERS_RUN_LIMIT]  # fmt: skip
+    if not completed and (running or now < _scheduled_at(week) + IMPORTERS_GRACE):
         week -= timedelta(days=7)
     return week if week >= IMPORTERS_FIRST_WEEK else None
+
+
+def _started_late(run: dict[str, Any] | None, week: date) -> str | None:
+    """ "5 h 56 min" when the week's scheduled run began IMPORTERS_LATE or more after its cron time, else None."""
+    if not run or not isinstance(run.get("created_at"), str):
+        return None
+    late = _when(run["created_at"]) - _scheduled_at(week)
+    if late < IMPORTERS_LATE:
+        return None
+    minutes = int(late.total_seconds() // 60)
+    return f"{minutes // 60} h {minutes % 60:02d} min"
 
 
 def _scheduled_run(week: date, runs: list[dict[str, Any]] | None) -> dict[str, Any] | None:
@@ -791,21 +815,33 @@ def importer_alerts(
     if runs is None:
         how = "The workflow's runs couldn't be listed, so which run should have stored it is unknown."
     elif run is None:
-        how = f"No scheduled importers run started for the week of {due} (Wednesday {wed})."
+        waited = now - _scheduled_at(due)
+        how = (
+            f"No scheduled importers run started for the week of {due} (Wednesday {wed}), "
+            f"{int(waited.total_seconds() // 3600)} hours after its schedule."
+        )
     elif run.get("status") != "completed":
-        how = f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}."
+        how = (
+            f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}, more than "
+            f"{int(IMPORTERS_RUN_LIMIT.total_seconds() // 3600)} hours after it started."
+        )
     else:
         how = f"The scheduled run for the week of {due} ended `{run.get('conclusion')}`."
-        if run.get("conclusion") != "success":
-            # the run's conclusion covers its build job too, which never touches the stored weeks: the rows above,
-            # read from the dataset, are what is missing
-            how += (
-                " That conclusion covers both the snapshot and the build after it; a build failure alone stores "
-                "every week and has its own issue, `pipeline:importer-build`."
-            )
+    if late := _started_late(run, due):
+        how += f" It started {late} after its schedule ({at}): GitHub delayed it, which no setting here controls."
+    if run is not None and run.get("status") == "completed" and run.get("conclusion") != "success":
+        # the run's conclusion covers its build job too, which never touches the stored weeks: the rows above,
+        # read from the dataset, are what is missing
+        how += (
+            " That conclusion covers both the snapshot and the build after it; a build failure alone stores "
+            "every week and has its own issue, `pipeline:importer-build`."
+        )
     ctx = {
         "due week": f"{due} (scheduled Wednesday {wed} {at})",
-        "scheduled run": f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}" if run else None,
+        "scheduled run": (
+            f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}"
+            + (f", started {late} late" if late else "")
+        ) if run else None,
         **ctx,
     }  # fmt: skip
     out.append({

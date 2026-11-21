@@ -149,9 +149,17 @@ importer lacks the due week.
 scheduled first attempt may fetch it, so it is lost, and the next chance is the following Wednesday. That makes
 detection the gate that matters, and why the check also runs when no importers run happened.
 
-**The due week.** This week's Monday once its scheduled run has completed, or 4 hours after 17:37 UTC on Wednesday
-(the job's 2-hour timeout and room for a late start), whichever comes first; until then, last week's. Weeks before
-2026-11-16, the first scheduled run's, are never due.
+**The due week.** This week's Monday once its scheduled run has completed, or 12 hours after 17:37 UTC on Wednesday
+if no scheduled run has started by then, whichever comes first; until then, last week's. A scheduled run that has
+started and not completed keeps its week not due for up to 6 hours after it started, however late that was. Weeks
+before 2026-11-16, the first scheduled run's, are never due.
+
+**A late start.** GitHub starts this repository's scheduled runs hours after their cron time: the first three began
+5 h 56 min, 8 h 17 min and 9 h 02 min late. So a run that hasn't started is not yet a run that never will: only a
+check 12 hours after the schedule (in practice Thursday's, 09:23 UTC) reports "No scheduled importers run started",
+and it says how many hours it waited. When the week's scheduled run began an hour or more late, the issue says so
+("It started 5 h 56 min after its schedule") and the `scheduled run` line carries it. Nothing in this repository
+controls the delay; a run that starts late still fetches every importer, Royal included.
 
 **What the issue shows.** One row per importer: its key, `ok` or `missing <n> week(s)` (weeks missed in a row), its
 last stored week (a Monday) and, for a missing week, its failed fetch (the kind, the HTTP status and where it
