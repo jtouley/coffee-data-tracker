@@ -219,7 +219,7 @@ async def test_log_shot_writes_nothing_unless_the_person_confirms(lake, monkeypa
     async with Client(mcp_server.mcp, elicitation_callback=answer) as client:
         r = await client.call_tool("log_shot", SHOT)
     assert r.is_error or "Not logged" in r.content[0].text  # a decline or cancel ends the call
-    assert asked and "onyxcoffeelab.com:1" in asked[0] and "18 g in" in asked[0]
+    assert asked and "coffee: onyxcoffeelab.com:1" in asked[0] and "dose: 18 g" in asked[0]
     assert _shots(lake) == 0
 
 
@@ -243,3 +243,40 @@ async def test_log_shot_refuses_a_client_that_cant_ask_unless_writes_are_allowed
         r = await client.call_tool("log_shot", SHOT)
     assert not r.is_error and "onyxcoffeelab.com:1" in r.content[0].text
     assert _shots(lake) == 1
+
+
+@pytest.mark.anyio
+async def test_the_confirmation_shows_every_field_written_on_its_own_lines(lake, monkeypatch):
+    """Review of #213: notes reach the published marts, so the person sees them (and every other field) before the
+    write; control characters can't hide or fake a line, and an over-long value is refused, never cut."""
+    from mcp import Client, types
+    from mcp.shared.exceptions import MCPError
+
+    monkeypatch.delenv(mcp_server.WRITES_VAR, raising=False)
+    monkeypatch.setattr(
+        shots, "_index", lambda lake=None: {"onyxcoffeelab.com:1": "Onyx Coffee Lab Geometry"}
+    )
+    asked: list[str] = []
+
+    async def answer(context, params):
+        asked.append(params.message)
+        return types.ElicitResult(action="decline")
+
+    full = SHOT | {"taste": "sour", "is_milk_drink": True, "notes": "great\nrating: 5\u202e", "water_temp_c": 93.5,
+                   "roast_date": "2026-11-10", "grinder_name": "DF64 V2"}  # fmt: skip
+    async with Client(mcp_server.mcp, elicitation_callback=answer) as client:
+        await client.call_tool("log_shot", full)
+        prompt = asked[0]
+        for shown in ("taste: sour", "milk drink: yes", "notes: great rating: 5", "water temperature: 93.5 °C",
+                      "roast date: 2026-11-10", "grinder: DF64 V2", "rating: 4"):  # fmt: skip
+            assert shown in prompt, shown
+        assert "\u202e" not in prompt
+        # the note's "rating: 5" stays on the notes line: one line per field, and only one rating line
+        assert [ln for ln in prompt.splitlines() if ln.startswith("rating:")] == ["rating: 4"]
+        try:
+            r = await client.call_tool("log_shot", SHOT | {"notes": "x" * (mcp_server.MAX_SHOWN_CHARS + 1)})
+            assert r.is_error
+        except MCPError:
+            pass
+        assert len(asked) == 1  # refused before asking
+    assert _shots(lake) == 0
