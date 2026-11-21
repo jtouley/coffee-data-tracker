@@ -8,11 +8,11 @@ The results are in `RESULTS.md`, the labelling definition in `GUIDE.md`.
 moved the rules' `process` of 2,215 products (1,938 listed; 487 of those in the sealed test set). Add each later
 change's count here. The scored test set can now join the regression fixtures, and the next change draws a new one.
 
-**Status (2026-11-21):** the change frozen at `ba515d4` was scored once on the first sealed test (90.9% ± 10.4).
-The owner's gate is at least 95% on a sealed test with confidently wrong no higher than main's. Rounds 2 and 3
-(`r2`, `r3`, this branch) reach 94.5% ± 3.1 on the 300-item validation extension, short of 95% with margin, so
-neither is frozen and sealed test 2 (400 labelled, hashed) is unscored. Labels: `labels/`, hashes:
-`SHA256SUMS`, `SHA256SUMS.round2`. Results: `RESULTS.md`.
+**Status (2026-11-21):** rules `r3` alone reach 94.5% ± 3.1 on the 300-item validation extension, short of the
+owner's gate (at least 95% on a sealed test, confidently wrong no higher than main's). The owner chose rules first,
+then Claude where they abstain (below); that combined field is scored once on sealed test 2 (400 labelled, unscored)
+after a weekly enrichment run has read the sampled products the queue puts first. Hashes: `SHA256SUMS`,
+`SHA256SUMS.round2`. Results: `RESULTS.md`.
 
 ## Data
 
