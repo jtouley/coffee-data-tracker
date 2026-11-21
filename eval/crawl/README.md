@@ -22,6 +22,7 @@ so the next change to these fields needs the full process, or the owner's decisi
 | #99 fix round: no null price stored when a one-by-one price lookup fails (the fetch fails or is deferred) | in the ≤ 36 of the first row | — |
 | #99 fix round: vendor sites and `gmail.com` never crawled (`registry.current`); martincoffee, piccoffee, meanbean registry fixes | 0 | Hand-checked: none had products |
 | Each price's currency stored (raw 1.6.0); public tables USD prices and US roasters only; 7 non-US roasters corrected in the registry (2026-11-04) | 34 now; more at the first crawl with raw 1.6.0 (unknown) | Steps 2–7 waived by the owner (2026-11-04, #107); 21 hand-checked, 13 in other fields' sealed test sets (count only); below |
+| WooCommerce null size prices traced to the old lookup cap and measured at the first uncapped crawl (2026-11-20): tests and a measurement only | 0 | Measured below; no crawl or dbt code changes |
 
 ## 2026-11-02: every data cap removed
 
@@ -129,3 +130,84 @@ change, and the USD rule is a new rule for what is published (deterministic on w
 judgement). Steps 2-7 were not run: the owner waived them for #107 on 2026-11-04. #107's fix round (price events
 across a run in another currency, the WooCommerce fallback to the listing's currency, the lake's schema file) changes
 no product's output on the current lake, where no row states a currency yet.
+
+## 2026-11-20: the null WooCommerce size prices, traced and measured at the first uncapped crawl
+
+**The report.** martinhenrycoffee.com has 375 null prices of 650. The unit is a size (a variant), not a product:
+375 of its 650 sizes, in 56 of its 133 products, in each of its three stored weeks (10-28, 11-02, 11-09).
+
+**The cause, from the stored snapshots.** Not a price shape the parser misreads. Until #99 the adapter asked for at
+most 150 variation prices per store (`MAX_VARIATION_LOOKUPS`) and stored every later size of a multi-price product
+with a null price; a lookup that failed was stored as null too. #99 removed both on 2026-11-02, after that day's
+crawl; the 11-09 crawl still ran the capped code (martinhenrycoffee.com: 152 pages = 2 listing pages + 150 lookups),
+and 11-16 was the first without it.
+
+| Run | Stores | Sizes | Null sizes | Past the 150-lookup cap | A failed lookup stored as null |
+|---|---|---|---|---|---|
+| 2026-10-26 | 227 | 50,011 | 19,351 | 19,336 | 15 |
+| 2026-10-28 | 223 | 46,941 | 18,724 | 18,711 | 13 |
+| 2026-10-30 | 92 | 20,798 | 7,202 | 7,193 | 9 |
+| 2026-11-02 | 198 | 43,787 | 17,728 | 17,684 | 44 |
+| 2026-11-09 | 197 | 44,595 | 18,166 | 18,139 | 27 |
+| **2026-11-16** | 218 | 50,428 | **0** | 0 | 0 |
+
+- A size is "past the cap" when more than 150 sizes that needed their own lookup come before it in its fetch, in
+  the stored order (the listing's). In every capped run no size past the 150th has a price, and at most 150 per
+  store do; on 11-16, 19,502 sizes past the 150th are priced.
+- No product without sizes (a simple product) has a null price in any run. No other shape leaves a null: a price
+  range, minor units with their exponent and an empty price are pinned in `tests/test_adapters.py`
+  (`test_woocommerce_price_shapes` and the two tests after it), with the cap and the failed lookup in
+  `tests/test_crawl_caps.py` and `tests/test_crawl_fix_round.py`.
+- **The stored rows don't contain the missing prices.** The lake keeps the parsed product, not the Store API's
+  response, and those variations were never asked for. No derivation over the stored weeks can fill them, and the
+  stored files stay as they are.
+
+**Before and after, per store.** Before: each store's last snapshot before 11-16. After: its 11-16 snapshot.
+59 stores had 19,794 null sizes in 1,918 products.
+
+| What 11-16 says about a size that was null | Sizes | Products | Stores |
+|---|---|---|---|
+| Priced | 18,615 | 1,708 | 55 |
+| No longer listed (its product, or the size) | 69 | 9 | 6 |
+| Still null | 0 | 0 | 0 |
+| The store wasn't read on 11-16 | 1,110 | 203 | 4 |
+
+The four stores not read again, whose latest stored snapshot (11-09) still has the nulls:
+
+| Store | Null sizes of sizes | Products with one | Why it wasn't read on 11-16 |
+|---|---|---|---|
+| martinhenrycoffee.com | 375 of 650 | 56 of 133 | `Blocked`: its robots.txt disallows the Store API. #182 reads such a store from its sitemap and pages, with each size's price from the page; nothing on `/wp-json/` is asked for. |
+| meanbeanroasters.com | 471 of 842 | 119 of 387 | Not in the run's manifest (`dim_roaster.status` is `unreachable`). |
+| cartelroasting.co | 132 of 349 | 14 of 61 | robots.txt answered 429 twice; the listing answered 400 once. |
+| cartelcoffeelab.com | 132 of 349 | 14 of 61 | An alias of cartelroasting.co, no longer crawled. |
+
+**The measurement.** `woo_null_prices.py` over a read-only local copy of the lake (downloaded 2026-11-20: runs
+10-26 to 11-16, release build `20261117T061926-d7559f`). It prints totals only. No store was fetched and nothing was
+written to the lake.
+
+    uv run python eval/crawl/woo_null_prices.py <lake copy> [--per-roaster <a csv outside git>]
+
+- **Census.** The tables above count every stored size, so they have no sampling error.
+- **The two reads agree.** At the 59 stores, 15,038 sizes have a price both before (one lookup each) and on 11-16
+  (the bulk query): 15,027 are the same price; 11 differ, at 3 stores. 188 of the sizes null before had a price in
+  an earlier stored week: all 188 match their 11-16 price.
+- **Sample, read by hand.** Sizes null before, keyed `sha256("coffeedata-woo-prices-2026-11-20:" + roaster_id + "/"
+  + product_id + "/" + variant_id)`, the 2 lowest per store: 118 sizes at 59 stores. There is no train, validation
+  or test split: nothing was tuned, and the sample is read once. Each was read against its stored rows of both runs:
+  **110 of 118 have a price on 11-16** (Wilson 95%: 87.2% to 96.5%; the census says 94.0%, 18,615 of 19,794), and the
+  other 8 are the four unread stores' 2 each. Of the 110, 108 have a positive price that fits their product's other
+  sizes on 11-16 (a larger bag costs more); 2 (one product, a subscription) are a stated $0.00.
+- **Who judged:** Claude, from the stored rows. Not labeled twice, and no person checked. Whether a price equals
+  what the store shows today wasn't checked: that needs a read of the store.
+
+**Step 9.** This change is tests and this measurement: it changes no product's output, so the running total stays
+where it was. The 1,708 products priced on 11-16 are #99's change, already in the first row (an estimate of 1,628
+then, for 48 stores on 11-02).
+
+**Seen on the way, not changed here:**
+- The served release (11-16) has 11,806 WooCommerce `price` events with no previous price, at 49 stores: a size
+  going from an unread price to its first read one (`fct_price_event`; its unit test `price_event_types` expects
+  that event). #87 is the same event in the other direction. Earlier runs have 3 to 46.
+- 1,324 WooCommerce sizes at 79 stores have a stated price of 0 on 11-16 (661 on 11-09, when the cap hid others).
+  The marts leave them out (`price_usd > 0`). Whether the store means free, or prices them some other way, isn't
+  known from the lake.
