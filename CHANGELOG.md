@@ -216,6 +216,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- The probe stops at a refusal: a 429, 430 or 5xx its retries didn't get past, or an edge's challenge on a 503, on
+  `/products.json` or the home page is recorded (`http_<code>`, or `blocked` for a challenge) and nothing more is
+  asked of the site. It used to swallow it, ask the WooCommerce Store API on the same host (or the home page at
+  `www.`), and record `ok`.
 - **A release whose coffee-or-not verdicts weren't checked is never served (#181).** The 2026-11-09 weekly build ran an
   image without a verdict model, its gate never ran, and it was served for a week. Now a build with no verdict model,
   the gate off, or no passing `verdicts_cover_catalog` is recorded as failed. `serve`, `rollback` and `site --served`

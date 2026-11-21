@@ -797,6 +797,49 @@ def test_probe_tries_www_when_the_bare_host_does_not_answer():
     assert (out["status"], out["final_host"], out["platform"]) == ("ok", "www.a.com", "other")
 
 
+@pytest.mark.parametrize(
+    "answer,status,code",
+    [
+        (httpx.Response(429), "http_429", 429),
+        (httpx.Response(430), "http_430", 430),
+        (httpx.Response(503), "http_503", 503),
+        (httpx.Response(503, headers={"sg-captcha": "challenge"}), "blocked", 503),
+        (httpx.Response(503, headers={"cf-mitigated": "challenge"}), "blocked", 503),
+    ],
+    ids=["429", "430", "503", "503-siteground", "503-cloudflare"],
+)
+def test_a_refusal_on_the_catalog_api_stops_the_probe(answer, status, code):
+    """A 429, 430 or 5xx the client's retries didn't get past, or an edge's challenge, on /products.json is the
+    site's answer to us. The probe used to swallow it, ask the WooCommerce Store API on the same host, and record
+    `ok` with the home page's platform: one more request after a pause or a challenge."""
+    import respx
+
+    from coffeedata.http import PoliteClient
+
+    asked: list[str] = []
+
+    def answer_for(request):
+        path = request.url.raw_path.decode()
+        asked.append(path)
+        if path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\n")
+        if path == "/":
+            return httpx.Response(200, text="<html>plain</html>")
+        return answer if path.startswith("/products.json") else httpx.Response(200, json=[])
+
+    with respx.mock as m:
+        m.route().mock(side_effect=answer_for)
+        with PoliteClient(min_interval=0, retries=1) as c:
+            out = discover.probe_one(c, "a.com")
+    assert out == {"status": status, "final_host": "a.com", "platform": "", "http_status": code}
+    assert asked == ["/robots.txt", "/", "/products.json?limit=1"]  # never the Store API after it
+
+
+def test_a_pause_on_the_home_page_is_never_asked_again_at_www():
+    out = _probe({HOME: httpx.Response(430), r"https://www\.a\.com/$": httpx.Response(200, text="x")})
+    assert out == {"status": "http_430", "final_host": "a.com", "platform": "", "http_status": 430}
+
+
 def test_probe_with_no_host_answering_is_unreachable():
     out = _probe({r"https://(www\.)?a\.com/$": httpx.ConnectError("refused")})
     assert out == {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}

@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import USER_AGENT, Blocked, DeadlineReached, PoliteClient, RobotsUnavailable
+from .http import USER_AGENT, Blocked, DeadlineReached, PoliteClient, RobotsUnavailable, is_challenge
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
@@ -279,10 +279,20 @@ HTML_MARKERS = [
 ]
 
 
+def _refused(host: str, r: httpx.Response) -> dict:
+    """The probe's row for a site that refused or paused us: an edge's challenge is `blocked`, as on robots.txt; a
+    429, 430 or 5xx the client's retries didn't get past is its `http_<code>`. Either way nothing more is asked."""
+    status = "blocked" if is_challenge(r) else f"http_{r.status_code}"
+    return {"status": status, "final_host": host, "platform": "", "http_status": r.status_code}
+
+
 def probe_one(client: PoliteClient, domain: str) -> dict:
     """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
     an edge's challenge) | unreachable | http_<code> |
-    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again)."""
+    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again).
+    A 429, 430 or 5xx the client's retries didn't get past, or a challenge on a 503, is the site's answer: the probe
+    stops there and records it (_refused), on the home page and on the catalog API alike, and never asks www or the
+    next platform's API instead."""
     home = None
     no_robots = False
     for host in (domain, f"www.{domain}"):
@@ -300,6 +310,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
+        # a pause, a 5xx or a 503 challenge: the site answered, so www isn't asked too
+        except httpx.HTTPStatusError as e:
+            return _refused(host, e.response)
         except httpx.HTTPError:
             continue
     if home is None:
@@ -323,6 +336,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             if e.challenge:  # refused, as above
                 return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
             return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
+        # refused or paused on the catalog API: the next platform's API on this host is never asked
+        except httpx.HTTPStatusError as e:
+            return _refused(host, e.response)
         except (Blocked, httpx.HTTPError):
             data = None
         if isinstance(data, kind) and (kind is list or "products" in data):
