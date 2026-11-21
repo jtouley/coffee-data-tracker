@@ -526,6 +526,7 @@ def test_each_job_leaves_through_the_egress_the_owner_chose():
         "crawl-squarespace": "default", "crawl-woocommerce": "woo_generic", "crawl-square-online": "default",
         "crawl-generic": "woo_generic", "merge": "default", "enrich-week": "default", "build": "default",
         "fetch-health": "default",  # it reads the lake and crawls no store
+        "publish": "default",  # the admin's Publish and Roll back: serves a build, crawls no store
     }  # fmt: skip
     slots = re.findall(r'^\s+"([a-z-]+)"\s+= \{ job = "([a-z-]+)", cron = "[^"]+" \}', _tf(), re.M)
     woo_generic = {entry for entry, job in slots if _job_egress()[job] == "woo_generic"}

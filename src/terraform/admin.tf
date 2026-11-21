@@ -4,15 +4,18 @@
 #   - create and read, never overwrite or delete, on the bucket that keeps its sign-in state (passkeys, sessions,
 #     recovery codes, the spent enrollment record), so the one-shot records it writes can't be rewritten by it;
 #   - nothing on the lake in GCP: the lake is a Hugging Face dataset, read with ADMIN_HF_TOKEN, a fine-grained token
-#     the owner makes with read access to the lake dataset only.
+#     the owner makes with read access to the lake dataset only;
+#   - and, for its writes (admin_control.tf): its Cloud SQL database, the snapshot bucket, and starting the named
+#     pipeline jobs, which alone write the lake.
 # Sign-in is in code (passkeys), as for the app, so the service itself is public. Every route but /health and the
 # sign-in routes needs a session, and the service answers 503 to everything when its settings are incomplete.
 #
 # One switch, in ci.tfvars and off by default (docs/admin/README.md, "Deploying"):
 # - admin_enabled: the service, its public invoker, its domain mapping and its alerts. The service mounts each of
 #   its three secrets at version latest, and Cloud Run refuses a revision whose secret has no version: with the
-#   switch off, an apply makes only the account, the empty secrets and their grants, and the bucket, which need
-#   nothing from the owner. The owner adds the three values, then a PR turns the switch on.
+#   switch off, an apply makes only the account, the empty secrets and their grants, the bucket, and the control
+#   plane (admin_control.tf: the Cloud SQL instance, the snapshot bucket, the job grants), which need no secret
+#   value. The owner adds the three values, then a PR turns the switch on.
 
 locals {
   admin_service = "${var.service}-admin"
@@ -119,6 +122,28 @@ resource "google_cloud_run_v2_service" "admin" {
         name  = "GOOGLE_CLOUD_PROJECT"
         value = var.project_id
       }
+      # The writes (admin_control.tf): the control plane through the Cloud SQL connector as an IAM database user,
+      # the jobs it may start in this region, and the bucket drafts' snapshots go to. No password secret.
+      env {
+        name  = "ADMIN_DB_INSTANCE"
+        value = google_sql_database_instance.admin.connection_name
+      }
+      env {
+        name  = "ADMIN_DB_USER"
+        value = google_sql_user.admin.name
+      }
+      env {
+        name  = "ADMIN_DB_NAME"
+        value = google_sql_database.admin.name
+      }
+      env {
+        name  = "ADMIN_RUN_REGION"
+        value = var.region
+      }
+      env {
+        name  = "ADMIN_SNAPSHOT_BUCKET"
+        value = google_storage_bucket.admin_snapshots.name
+      }
       dynamic "env" {
         for_each = google_secret_manager_secret.admin
         content {
@@ -150,7 +175,12 @@ resource "google_cloud_run_v2_service" "admin" {
       client, client_version, scaling,
     ]
   }
-  depends_on = [google_secret_manager_secret_iam_member.admin, google_storage_bucket_iam_member.admin_state]
+  # The Cloud SQL grants it needs to connect (client, instanceUser) come from the bootstrap root, applied by the
+  # owner before this one (admin_control.tf), so they are not in this list.
+  depends_on = [
+    google_secret_manager_secret_iam_member.admin, google_storage_bucket_iam_member.admin_state,
+    google_storage_bucket_iam_member.admin_snapshots,
+  ]
 }
 
 resource "google_cloud_run_v2_service_iam_member" "admin_public" {

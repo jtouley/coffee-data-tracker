@@ -561,8 +561,9 @@ def test_rollback_to_a_release_without_verdicts_needs_a_named_reason(lake, monke
 
     _no_verdicts(monkeypatch)
     got = []
-    monkeypatch.setattr(quality, "rollback", lambda lk, to, reason, rules_only_override=None: got.append(
-        rules_only_override) or "b0")  # fmt: skip
+    dbs = []  # rollback serves into cli.SERVED_DB, never the cwd-relative default
+    monkeypatch.setattr(quality, "rollback", lambda lk, to, reason, db=None, rules_only_override=None: dbs.append(
+        db) or got.append(rules_only_override) or "b0")  # fmt: skip
     monkeypatch.setattr(cli, "cmd_publish", lambda a: None)
     monkeypatch.setattr(cli, "_export_and_site", lambda *a: None)
     with pytest.raises(SystemExit, match="needs --reason"):
@@ -570,6 +571,7 @@ def test_rollback_to_a_release_without_verdicts_needs_a_named_reason(lake, monke
     cli.main(["rollback", "--to", "b0", "--allow-rules-only", "--reason", "fork without a key"])
     cli.main(["rollback", "--to", "b0"])
     assert got == ["rollback --allow-rules-only (fork without a key)", None]
+    assert dbs == [cli.SERVED_DB, cli.SERVED_DB]
 
 
 def test_classify_waits_for_its_batch_then_says_what_is_still_open(lake, monkeypatch, capsys):

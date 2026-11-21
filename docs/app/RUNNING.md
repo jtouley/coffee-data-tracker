@@ -88,7 +88,8 @@ secrets at version `latest`, and Cloud Run refuses a service whose secret has no
 alerts. In order (the commands are in docs/admin/README.md, "The first apply, in order"):
 
 1. the first apply, with `admin_enabled = false`: the account, the three empty secrets and their grants, the state
-   bucket;
+   bucket, and the control plane (the Cloud SQL instance, its database and IAM user, the snapshot bucket, the job
+   grants);
 2. you add the three secret values (`ADMIN_SESSION_SECRET`, `ADMIN_ENROLL_TOKEN`, `ADMIN_HF_TOKEN`);
 3. a small PR sets `admin_enabled = true` in `ci.tfvars`;
 4. its apply makes the service (on Google's sample image), the invoker, the domain mapping and the alerts;

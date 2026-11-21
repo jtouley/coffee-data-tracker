@@ -4,6 +4,7 @@ from datetime import date
 
 import duckdb
 import pyarrow.parquet as pq
+import pytest
 
 from coffeedata import connectors, control, registry
 from coffeedata.lake import Lake
@@ -332,6 +333,81 @@ def test_a_confirmation_arm_crawls_its_slice_into_its_own_sub_partition(tmp_path
     out = connectors.merge(lk, WEEK)
     assert not out["written"].get("fetches") and "shopify" in out["missing"]
     assert (part / "slice=1-of-3" / "fetches.parquet").exists()  # the arm's rows stay for its results
+
+
+def test_a_test_crawl_writes_its_own_sub_partition_and_never_counts_as_the_week(tmp_path, monkeypatch):
+    """The admin's test crawl (crawl --only --test <id>): the roaster is fetched into test=<id>, its rows say arm
+    "test" (control.is_arm), so the connector hasn't landed, the merge never reads it, and the egress flags and
+    fetch-health leave it out. A bad id is refused before anything runs."""
+    import json
+
+    import httpx
+    import respx
+
+    from coffeedata import cli, http
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.delenv("COFFEEDATA_ARM", raising=False)
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    stores = [Roaster(roaster_id=h, name=h, host=h, platform="shopify") for h in ("a.com", "b.com")]
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(r, "active", None) for r in stores]
+    )
+    with pytest.raises(SystemExit):
+        cli.main(["crawl", "--connector", "shopify", "--run-date", WEEK, "--test", "../x"])
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+        m.get(url__regex=r"https://[^/]+/products.json").mock(
+            side_effect=lambda req: httpx.Response(200, json={"products": []})
+        )
+        cli.main(["crawl", "--connector", "shopify", "--run-date", WEEK, "--only", "b.com", "--test", "t-1"])
+    part = connectors.partition(lk, "shopify", WEEK)
+    assert [p.name for p in part.iterdir()] == ["test=t-1"]
+    got = pq.read_table(part / "test=t-1" / "fetches.parquet").column("roaster_id").to_pylist()
+    assert got == ["b.com"]
+    rows = control.rows(lk, WEEK)
+    assert rows and all(control.is_arm(r) for r in rows)
+    end = json.loads(next(r for r in rows if r["status"] != "running")["detail"])
+    assert (end["test"], end["arm"], end["only"]) == ("t-1", "test", "b.com")
+    assert control.landed(lk, WEEK) == set()
+    out = connectors.merge(lk, WEEK)
+    assert not out["written"].get("fetches") and "shopify" in out["missing"]
+
+
+def test_a_test_crawl_asks_every_roaster_even_after_the_week_is_done(tmp_path, monkeypatch):
+    """A whole-connector test crawl after the week's crawl and merge: every roaster is "done" for the week, but the
+    test asks them all again (into its own partition); a resume of the same test skips what it fetched."""
+    import httpx
+    import respx
+
+    from coffeedata import http
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    stores = [Roaster(roaster_id=h, name=h, host=h, platform="shopify") for h in ("a.com", "b.com")]
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(r, "active", None) for r in stores]
+    )
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+        m.get(url__regex=r"https://[^/]+/products.json").mock(
+            side_effect=lambda req: httpx.Response(200, json={"products": []})
+        )
+        connectors.crawl(lk, "shopify", WEEK)
+        connectors.merge(lk, WEEK)
+        assert connectors.crawl(lk, "shopify", WEEK)["todo"] == 0  # the week's own crawl: nothing left
+        assert connectors.crawl(lk, "shopify", WEEK, test="t-2")["todo"] == 2  # the test asks them all
+        assert connectors.crawl(lk, "shopify", WEEK, test="t-2")["todo"] == 0  # its resume: nothing left
+
+
+def test_a_partition_is_a_slice_or_a_test_never_both(tmp_path):
+    lk = Lake(str(tmp_path / "lake"))
+    with pytest.raises(ValueError):
+        connectors.PartitionLake(lk, "shopify", WEEK, slice="0/2", test="t-1")
+    with pytest.raises(ValueError):
+        connectors.PartitionLake(lk, "shopify", WEEK, test="Bad/Id")
+    assert connectors.PartitionLake(lk, "shopify", WEEK, test="t-2").part.name == "test=t-2"
 
 
 def _no_fuse_metadata_calls(monkeypatch) -> None:
