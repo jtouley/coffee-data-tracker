@@ -5,8 +5,8 @@ Notable changes to the code are recorded here. The format follows
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Each release is a `v`-prefixed git tag, such as
 `v0.1.0`, and the version in `pyproject.toml`.
 
-The weekly data releases are versioned separately, by `release_run_date` and `release_build_id` (see the README's
-[How it works](README.md#how-it-works)). They aren't code releases and aren't listed here.
+The weekly data releases are versioned separately, by `release_run_date` and `release_build_id` (see
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md#the-weekly-run)). They aren't code releases and aren't listed here.
 
 ## [Unreleased]
 
