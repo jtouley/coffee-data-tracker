@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-ops
-version: 1.1.0
+version: 1.2.0
 name: Coffee Data internal ops contract
 status: active
 domain: coffee
@@ -272,7 +272,20 @@ schema:
     required: false
     description: 'Why: verdict:<label> when Claude''s verdict decided, else the rule that did: excluded:<rule>, sauce, sweets,
       drinks, coffee_words, country, demonym, coffee_type or signals:<n>; decision:<action> when the owner''s decision overrides
-      them.'
+      them. excluded:keyword:<field>:<phrase> names an owner''s keyword filter.'
+  - name: tags
+    logicalType: array
+    physicalType: 'list<item: string>'
+    items:
+      logicalType: string
+      physicalType: string
+    required: false
+    description: 'The store''s tags on its latest record, decoded: what a keyword filter on tags matches.'
+  - name: unfiltered_is_coffee
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: The answer without the owner's keyword filters (Claude's verdict, else the rules).
   quality:
   - id: product_decisions_ops_columns
     description: each ops file has exactly the contract's columns and types, and none is a release table.
@@ -483,6 +496,135 @@ schema:
   customProperties:
   - property: lakeGlob
     value: releases/*/*/ops/mart_flags.parquet
+- name: eval_prefilter
+  physicalName: eval_prefilter
+  physicalType: table
+  description: 'Ops: each listed product the build''s keyword filter change moves (newly excluded, or given back by a removed
+    filter), with Claude''s call on it (dbt eval_prefilter; eval/prefilter/README.md).'
+  properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
+  - name: direction
+    logicalType: string
+    physicalType: string
+    required: false
+    description: excluded (a filter newly takes it out) or restored (a removed filter gives it back).
+  - name: coffee_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The product the change moves.
+  - name: roaster_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The roaster's normalized domain.
+  - name: title
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The title as the store sent it (latest record).
+  - name: url
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The product's page on the store, as sent.
+  - name: input_hash
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The product version the change moves.
+  - name: prefilter
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The filter that moves it: keyword:<field>:<phrase>.'
+  - name: verdict_label
+    logicalType: string
+    physicalType: string
+    required: false
+    description: Claude's stored label (coffee, not_coffee or unsure), or null.
+  - name: claude
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'Claude''s call: coffee, not_coffee or no_verdict (none yet, or unsure).'
+  - name: is_coffee_after
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: The build's answer with this change.
+  quality:
+  - id: eval_prefilter_ops_columns
+    description: each ops file has exactly the contract's columns and types, and none is a release table.
+    type: custom
+    engine: pytest
+    implementation: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+  customProperties:
+  - property: lakeGlob
+    value: releases/*/*/ops/eval_prefilter.parquet
+- name: eval_prefilter_summary
+  physicalName: eval_prefilter_summary
+  physicalType: table
+  description: 'Ops: eval_prefilter''s plain counts, one row per direction (dbt eval_prefilter_summary).'
+  properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
+  - name: direction
+    logicalType: string
+    physicalType: string
+    required: false
+    description: excluded or restored.
+  - name: products
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Listed products the change moves in this direction.
+  - name: claude_coffee
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, Claude calls coffee.
+  - name: claude_not_coffee
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, Claude calls not coffee.
+  - name: no_verdict
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, no verdict yet or an unsure one.
+  - name: back_in_catalog
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, coffee with this change (restored products coming back).
+  quality:
+  - id: eval_prefilter_summary_ops_columns
+    description: each ops file has exactly the contract's columns and types, and none is a release table.
+    type: custom
+    engine: pytest
+    implementation: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+  customProperties:
+  - property: lakeGlob
+    value: releases/*/*/ops/eval_prefilter_summary.parquet
 authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/lake.py
   type: implementation
@@ -508,6 +650,12 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/mart_flags.sql
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/eval_prefilter.sql
+  type: implementation
+  description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/eval_prefilter_summary.sql
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -520,6 +668,6 @@ customProperties:
   value:
   - the owner's command center (admin.registry.coffee)
 - property: interfaceFingerprint
-  value: 9ca0591bf60c4c5d
+  value: b9a96979c7125866
 - property: docsFingerprint
-  value: 8631cc37f7d18683
+  value: 5818f4ad77f3f611

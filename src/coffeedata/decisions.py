@@ -9,7 +9,10 @@ build applies the served build's decisions from the lake alone, with no bucket a
 
 A snapshot also carries the rule settings (coffeedata.rules) and the roasters whose crawl flag is off, when the
 admin set them: the build reads its rules from it (no `settings`: rules.DEFAULTS), and a scheduled crawl skips
-the served snapshot's crawl-off roasters (ingest.select_states).
+the served snapshot's crawl-off roasters (ingest.select_states). Its `prefilter` is the owner's keyword filters
+(classify.KeywordFilter): the build extends classify.excluded with them (dbt stg_prefilter, through var
+prefilter_path), and once the snapshot is published, classify and enrich skip what they exclude
+(served_prefilter).
 
 The same snapshot is the source of `coffeedata decide export-labels`: owner corrections as candidate labels for the
 classifier's train set only (CLAUDE.md: one labeler, never a sealed test example).
@@ -19,12 +22,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import os
 import re
 from collections.abc import Iterable
 from pathlib import Path
 
-from . import rules
+from . import classify, rules
+
+log = logging.getLogger(__name__)
 
 VERSION = 1
 SUBJECTS = ("coffee_id", "input_hash")
@@ -68,6 +74,10 @@ def check(doc: object) -> list[dict]:
         for r in roasters_
     ):
         raise SnapshotError("roasters must be a list of {roaster_id, crawl}")
+    try:
+        prefilter(doc)
+    except (ValueError, TypeError, KeyError) as e:
+        raise SnapshotError(f"its keyword filters can't be read: {e}") from e
     for k in ("sources", "not_roasters"):
         listed = doc.get(k, [])
         if not isinstance(listed, list) or not all(isinstance(r, str) and r for r in listed):
@@ -89,11 +99,12 @@ def check(doc: object) -> list[dict]:
 
 def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], settings: dict | None = None,
              roasters: Iterable[dict] = (), sources: Iterable[str] = (),
-             not_roasters: Iterable[str] = ()) -> dict:  # fmt: skip
+             not_roasters: Iterable[str] = (), keyword_filters: Iterable[dict] = ()) -> dict:  # fmt: skip
     """A snapshot document. `decisions` are effective decisions (one per subject); `settings` the rule settings
     version to build with (left out: the defaults); `roasters` each roaster's current crawl flag where it was set;
     `sources` the source-list places the owner flagged as roasters (the registry adds them: registry.current);
-    `not_roasters` the registry's roasters the owner flagged not a roaster (the registry drops them)."""
+    `not_roasters` the registry's roasters the owner flagged not a roaster (the registry drops them);
+    `keyword_filters` the owner's keyword filters ({phrase, field}; left out when there are none)."""
     if not SNAPSHOT_ID.fullmatch(snapshot_id):
         raise ValueError("bad snapshot id")
     doc = {"version": VERSION, "snapshot_id": snapshot_id, "created_at": created_at,
@@ -108,8 +119,46 @@ def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], setti
         doc["sources"] = sources
     if not_roasters := sorted(set(not_roasters)):
         doc["not_roasters"] = not_roasters
+    if kf := classify.keyword_filters(keyword_filters):
+        doc["prefilter"] = [f.as_dict() for f in kf]
     check(doc)
     return doc
+
+
+def prefilter(doc: dict | None) -> tuple[classify.KeywordFilter, ...]:
+    """The keyword filters a snapshot builds with (none: no `prefilter`). ValueError when one can't be read."""
+    rows = (doc or {}).get("prefilter", [])
+    if not isinstance(rows, list) or not all(
+        isinstance(r, dict) and set(r) == {"phrase", "field"} for r in rows
+    ):
+        raise ValueError("prefilter must be a list of {phrase, field}")
+    return classify.keyword_filters(rows)
+
+
+def served_prefilter(lake) -> tuple[classify.KeywordFilter, ...]:
+    """The published snapshot's keyword filters, for the jobs that ask Claude (classify, enrich): a draft's
+    filters reach them only once it is published. Fails open, with a warning: a snapshot that can't be read gives
+    no filters, so every product goes to Claude as before (a cost, never a wrong exclusion)."""
+    try:
+        return prefilter(served_doc(lake))
+    except Exception as e:  # noqa: BLE001 - a lake read or a malformed snapshot: Claude classifies as before
+        log.warning("the served snapshot's keyword filters weren't read (%s): none apply", type(e).__name__)
+        return ()
+
+
+def write_prefilter(doc: dict | None, baseline: dict | None, path: Path) -> Path:
+    """The keyword filters dbt reads (stg_prefilter): one row per filter of this build's snapshot (`applies`) or of
+    the served build's (`baseline`), so the build can tell what a change newly excludes (eval_prefilter)."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    now, was = set(prefilter(doc)), set(prefilter(baseline))
+    rows = [f.as_dict() | {"applies": f in now, "baseline": f in was} for f in sorted(now | was)]
+    schema = pa.schema([("phrase", pa.string()), ("field", pa.string()), ("applies", pa.bool_()),
+                        ("baseline", pa.bool_())])  # fmt: skip
+    path.parent.mkdir(parents=True, exist_ok=True)
+    pq.write_table(pa.Table.from_pylist(rows, schema=schema), path)
+    return path
 
 
 def settings_of(doc: dict | None) -> dict:

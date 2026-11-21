@@ -1,7 +1,7 @@
 {# Status is a word with a mark (filled dot done, ring running, square failed, triangle warn, dash missing): never colour alone. #}
 {% macro status(word) -%}
 {%- set w = (word or "missing") | string -%}
-{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
+{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled", "needs review") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
 <span class="st st-{{ kind }}"><i aria-hidden="true"></i>{{ w }}</span>
 {%- endmacro %}
 

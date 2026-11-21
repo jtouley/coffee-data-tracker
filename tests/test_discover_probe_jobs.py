@@ -434,7 +434,7 @@ def test_no_step_of_an_admin_job_script_can_fail_without_failing_the_job(tmp_pat
     """The rule above (#83), for the scripts the admin's buttons start: a failed publish fails the execution, so the
     page shows it failed and the lake is never left without what the run just did."""
     scripts = _admin_scripts()
-    assert {"admin classify: build", "admin draft: build"} <= set(scripts)
+    assert {"admin classify: build", "admin draft: build", "admin classify-review: build"} <= set(scripts)
     assert {where: h for where, script in scripts.items() if (h := _hidden_failures(script, tmp_path))} == {}
 
 

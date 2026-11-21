@@ -407,6 +407,87 @@ unit_tests:
         - {coffee_id: "r:B", title: Tote, first_seen: 2026-10-12, last_seen: 2026-10-12, is_listed: false,
            is_coffee: false, verdict_label: unsure, reason: "signals:0"}
 
+  - name: eval_prefilter_lists_what_a_change_moves_with_claudes_call
+    description: >-
+      Listed products a filter newly excludes (A to D) or a removed filter gives back (E) are rows, each with Claude's
+      call: unsure and none are both no_verdict (C, D). Left out: what an old filter already excluded (F), what an
+      owner's include (G) or exclude (H) settles, and what no store lists any more (I).
+    model: eval_prefilter
+    given:
+      - input: ref('product_decisions')
+        rows:
+          - {coffee_id: "r:A", input_hash: a, is_listed: true, verdict_label: not_coffee, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:B", input_hash: b, is_listed: true, verdict_label: coffee, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:C", input_hash: c, is_listed: true, verdict_label: unsure, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:D", input_hash: d, is_listed: true, verdict_label: null, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:E", input_hash: e, is_listed: true, verdict_label: null, is_coffee: true, reason: "country"}
+          - {coffee_id: "r:F", input_hash: f, is_listed: true, verdict_label: coffee, is_coffee: false, reason: "excluded:keyword:title:old"}
+          - {coffee_id: "r:G", input_hash: g, is_listed: true, verdict_label: coffee, is_coffee: true, reason: "decision:include"}
+          - {coffee_id: "r:H", input_hash: h, is_listed: true, verdict_label: coffee, is_coffee: false, reason: "decision:exclude"}
+          - {coffee_id: "r:I", input_hash: i, is_listed: false, verdict_label: coffee, is_coffee: false, reason: "excluded:keyword:title:apron"}
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: a, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: b, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: c, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: d, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: e, prefilter: null, prefilter_new: false, prefilter_restored: true, baseline_prefilter: "keyword:title:linen"}
+          - {input_hash: f, prefilter: "keyword:title:old", prefilter_new: false, prefilter_restored: false}
+          - {input_hash: g, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: h, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: i, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+    expect:
+      rows:
+        - {direction: excluded, coffee_id: "r:A", prefilter: "keyword:title:apron", claude: not_coffee, is_coffee_after: false}
+        - {direction: excluded, coffee_id: "r:B", prefilter: "keyword:title:apron", claude: coffee, is_coffee_after: false}
+        - {direction: excluded, coffee_id: "r:C", prefilter: "keyword:title:apron", claude: no_verdict, is_coffee_after: false}
+        - {direction: excluded, coffee_id: "r:D", prefilter: "keyword:title:apron", claude: no_verdict, is_coffee_after: false}
+        - {direction: restored, coffee_id: "r:E", prefilter: "keyword:title:linen", claude: no_verdict, is_coffee_after: true}
+
+  - name: eval_prefilter_summary_counts_each_direction
+    description: >-
+      Plain counts per direction, both directions always present: Claude's three calls add up to the products, and
+      back_in_catalog counts the restored products that come back as coffee.
+    model: eval_prefilter_summary
+    given:
+      - input: ref('eval_prefilter')
+        rows:
+          - {direction: excluded, coffee_id: A, claude: not_coffee, is_coffee_after: false}
+          - {direction: excluded, coffee_id: B, claude: coffee, is_coffee_after: false}
+          - {direction: excluded, coffee_id: C, claude: no_verdict, is_coffee_after: false}
+          - {direction: restored, coffee_id: E, claude: no_verdict, is_coffee_after: true}
+          - {direction: restored, coffee_id: F, claude: not_coffee, is_coffee_after: false}
+    expect:
+      rows:
+        - {direction: excluded, products: 3, claude_coffee: 1, claude_not_coffee: 1, no_verdict: 1, back_in_catalog: 0}
+        - {direction: restored, products: 2, claude_coffee: 0, claude_not_coffee: 1, no_verdict: 1, back_in_catalog: 1}
+
+  - name: eval_prefilter_summary_with_no_verdicts_only
+    description: >-
+      Every excluded product without a verdict: Claude calls none of them coffee, yet none is agreement either: all
+      are no_verdict (the owner reviews each before an over-50 Publish).
+    model: eval_prefilter_summary
+    given:
+      - input: ref('eval_prefilter')
+        rows:
+          - {direction: excluded, coffee_id: A, claude: no_verdict, is_coffee_after: false}
+          - {direction: excluded, coffee_id: B, claude: no_verdict, is_coffee_after: false}
+    expect:
+      rows:
+        - {direction: excluded, products: 2, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 2, back_in_catalog: 0}
+        - {direction: restored, products: 0, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 0, back_in_catalog: 0}
+
+  - name: eval_prefilter_summary_with_nothing_moved
+    description: A build whose filters move nothing still has both rows, all zero.
+    model: eval_prefilter_summary
+    given:
+      - input: ref('eval_prefilter')
+        rows: []
+    expect:
+      rows:
+        - {direction: excluded, products: 0, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 0, back_in_catalog: 0}
+        - {direction: restored, products: 0, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 0, back_in_catalog: 0}
+
   - name: readiness_needs_two_families_and_no_doubt
     description: >-
       int_catalog_decided: a removal is ready with supports from two families and no doubt (E); not with a coverage
