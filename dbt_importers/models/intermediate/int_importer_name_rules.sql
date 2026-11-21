@@ -4,7 +4,7 @@
 -- value abstains (null) when the name doesn't settle it.
 --   origin: the catalog's country (origins.COUNTRIES and its aliases) when the name leads with a country or alias and
 --     names no other one; null for a blend, or a name that doesn't start with one (a misspelling, "Guatemalal"). Of
---     the aliases, only those that mean one place in a name count (importer_rules.TITLE_PLACES_OK, as Royal's titles):
+--     the aliases, only those that mean one place in a name count (importer_rules.TITLE_PLACES_OK):
 --     "Java" is also a variety and "Flores" a farm name, so "Nicaragua Java Natural" is Nicaragua and "Java G1" none.
 --   region: as the name writes it, one of the catalog's one-country regions (origins.REGIONS) of the lot's country,
 --     else an alias of that country that isn't the name's leading word ("Indonesia Sumatra"); null when the name

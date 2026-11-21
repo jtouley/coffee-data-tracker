@@ -400,8 +400,10 @@ rules abstain when unsure and haven't been evaluated yet (CLAUDE.md; status and 
 Royal Coffee, a Shopify store, is the third importer: its public `/products.json` listing is read one page of 250
 after another, 15 s apart, and each product is kept word for word (its fields, tags, options, variants without
 prices, and `body_html`'s text; no prices or images; a field that mentions a price is left out of that product).
-Its values (lot number, warehouse, origin, region, process, varieties, altitude, harvest months, certifications) are
-derived by the same private dbt project (`int_royal_labels`, `int_royal_rules`), like the others. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
+Its values (lot ID, warehouse, status, arrival, bag weight, availability, origin, process, certifications) are
+derived from its titles, tags and variants by the same private dbt project (`int_royal_rules`), like the others; its
+bodies are prose, so region, varieties, altitude and harvest months are left for Claude. Every lot, offered or not,
+is a row of `dim_importer_lot` and of `importer_offers`, flagged `is_available` and `currently_offered`. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
 access Royal's site.** Its address is only in the importers workflow, passed to a scheduled run's first attempt
 alone (never a dispatch or a re-run). `importers.royal_listing_url` refuses it anywhere else; that check reads
 environment values, so it stops accidents, not a deliberate run. Every HTTP client but the importers job's, and the
