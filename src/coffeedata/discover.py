@@ -325,10 +325,17 @@ HTML_MARKERS = [
 ]
 
 
-def probe_one(client: PoliteClient, domain: str) -> dict:
-    """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
-    an edge's challenge) | unreachable | http_<code> |
-    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again)."""
+# The catalog APIs the probe and the screen ask: platform -> (path, the page-size parameter, the JSON's type).
+APIS: dict[str, tuple[str, str, type]] = {
+    "shopify": ("/products.json", "limit", dict),
+    "woocommerce": ("/wp-json/wc/store/v1/products", "per_page", list),
+}
+
+
+def _home(client: PoliteClient, domain: str) -> tuple[dict | None, httpx.Response | None]:
+    """robots.txt and the home page, at the domain and then at www. Returns (None, the page) when it answered 200,
+    else (the probe's row for the failure, the page if one answered). The probe and the screen (screen.screen_one)
+    both start here."""
     home = None
     no_robots = False
     for host in (domain, f"www.{domain}"):
@@ -336,13 +343,18 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             home = client.get(f"https://{host}/")
             break
         except Blocked:
-            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
+            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}, None
         except RobotsUnavailable as e:
             if e.challenge:
                 # an edge's challenge on robots.txt (a 202, or a 401/403 with a challenge header) answers every
                 # request the same way: the site refuses us, as a robots block does. A probe status of its own that
                 # counts as probed (`blocked`), so discovery doesn't ask again on every run (robots_unavailable does)
-                return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
+                return {
+                    "status": "blocked",
+                    "final_host": host,
+                    "platform": "",
+                    "http_status": e.status,
+                }, None
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
@@ -350,28 +362,65 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             continue
     if home is None:
         status = "robots_unavailable" if no_robots else "unreachable"
-        return {"status": status, "final_host": "", "platform": "", "http_status": None}
+        return {"status": status, "final_host": "", "platform": "", "http_status": None}, None
     if home.status_code != 200:
         return {
             "status": f"http_{home.status_code}",
             "final_host": urlparse(str(home.url)).netloc,
             "platform": "",
             "http_status": home.status_code,
-        }
+        }, home
+    return None, home
+
+
+def _api(
+    client: PoliteClient, host: str, platform: str, page_size: int, strict: bool = False
+) -> tuple[dict | list | None, httpx.Response | None]:
+    """The first page of one platform's catalog API, `page_size` products long: (the JSON, its response) when it is
+    that platform's product list, else (None, the response if one answered). A robots.txt that didn't answer on
+    `host` raises RobotsUnavailable. strict (the screen): a robots.txt rule against the path (Blocked) and a
+    timeout are raised too, so the caller can record them; the probe reads both as "not this platform"."""
+    path, size_param, kind = APIS[platform]
+    try:
+        r = client.get(f"https://{host}{path}", **{size_param: page_size})
+    except RobotsUnavailable:
+        raise
+    except (Blocked, httpx.TimeoutException):
+        if strict:
+            raise
+        return None, None
+    except httpx.HTTPError:
+        return None, None
+    if r.status_code != 200:
+        return None, r
+    try:
+        data = scrub_surrogates(r.json())
+    except ValueError:
+        return None, r
+    if isinstance(data, list) if kind is list else isinstance(data, dict) and "products" in data:
+        return data, r
+    return None, r
+
+
+def probe_one(client: PoliteClient, domain: str) -> dict:
+    """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
+    an edge's challenge) | unreachable | http_<code> |
+    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again)."""
+    failed, home = _home(client, domain)
+    if failed is not None:
+        return failed
+    assert home is not None
     host = urlparse(str(home.url)).netloc
-    for platform, path, params, kind in [
-        ("shopify", "/products.json", {"limit": 1}, dict),
-        ("woocommerce", "/wp-json/wc/store/v1/products", {"per_page": 1}, list),
-    ]:
+    for platform in (
+        APIS
+    ):  # always Shopify, then WooCommerce, one product each: the probe's order (the screen has its own)
         try:
-            data = client.get_json(f"https://{host}{path}", **params)
+            data, _ = _api(client, host, platform, 1)
         except RobotsUnavailable as e:  # the home page redirected to a host whose robots.txt didn't answer
             if e.challenge:  # refused, as above
                 return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
             return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
-        except (Blocked, httpx.HTTPError):
-            data = None
-        if isinstance(data, kind) and (kind is list or "products" in data):
+        if data is not None:
             return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
     html = home.text.lower()
     platform = next((p for p, pat in HTML_MARKERS if re.search(pat, html)), "other")

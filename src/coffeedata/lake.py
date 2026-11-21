@@ -8,6 +8,8 @@ Every pipeline step *adds* files and never rewrites another run's files:
     probes/run_date=YYYY-MM-DD/batch=<id>.parquet         storefront platform detection results
     registry/source=<s>/<key>.parquet                     roasters added by discovery or by hand
     candidates/source=<s>/<key>.parquet                   discovery's whole source list, one file per run
+    screens/run_date=YYYY-MM-DD/batch=<id>.parquet        one row per screen of a candidate's site (screen.py)
+    screen_products/run_date=YYYY-MM-DD/batch=<id>.parquet  the first page of products a screen read
     enrichments/method=<m>/run_date=.../batch=<id>.parquet extracted attributes, keyed by body_hash
     llm_batches/state=<submitted|collected>/<id>.parquet  Claude Message Batches bookkeeping
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
@@ -90,6 +92,10 @@ VARIANT = pa.struct(
 # for the week, not fetched, after it was in flight in two attempts of its crawl that died (crashguard: not retried
 # this run, and left out of the ok rates).
 FETCH_STATUSES = ("ok", "error", "unavailable", "crashed")
+# What a screened site, or its edge, said instead of answering (screens.refusal), and the edge that challenged us
+# (screens.edge, read from the challenge's own headers): screen.py, docs/design/roaster-screen.md section 3.4.
+SCREEN_REFUSALS = ("robots_disallow", "robots_401_403", "challenge", "http_429")
+SCREEN_EDGES = ("siteground", "cloudflare", "other")
 HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
 # A host whose robots.txt asked us a Crawl-delay: the value as written, the spacing its requests got, and whether
 # the 60 s cap applied (http.RequestStats.crawl_delays).
@@ -242,6 +248,65 @@ SCHEMAS: dict[str, pa.Schema] = {
             # Added with raw contract 1.7.0 (older files read back as null): the robots.txt the probe went by, as
             # fetches.robots (a probe leaves from Cloud Run's default egress, so its live copies count too).
             ("robots", pa.list_(ROBOTS_COPY)),
+        ]
+    ),
+    # The roaster screen's raw rows (screen.py; docs/design/roaster-screen.md, section 2.4): what a candidate's site
+    # said on the day it was screened. Append-only: a re-screen is a new row, and nothing derived is stored (no
+    # tier, no score, no coffee count: dbt derives those). They hold third-party listings of places that aren't in
+    # the registry, so they are never exported or released.
+    "screens": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("batch_id", pa.string()),
+            ("screen_id", pa.string()),
+            ("screened_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("state", pa.string()),
+            ("status", pa.string()),  # the probe's: ok, blocked, unreachable, robots_unavailable, http_<code>
+            ("refusal", pa.string()),  # SCREEN_REFUSALS, or null
+            ("http_status", pa.int32()),
+            ("final_host", pa.string()),
+            ("platform", pa.string()),
+            ("page_size", pa.int32()),
+            ("products_read", pa.int32()),
+            ("page_full", pa.bool_()),
+            ("page_timeout", pa.bool_()),
+            ("edge", pa.string()),  # SCREEN_EDGES, or null
+            ("home_title", pa.string()),
+            ("home_text", pa.string()),
+            ("requests", pa.int32()),
+            ("bytes", pa.int64()),
+            ("crawl_delay_s", pa.float64()),
+            ("duration_s", pa.float64()),
+            ("code_version", pa.string()),
+        ]
+    ),
+    "screen_products": pa.schema(
+        [
+            ("screen_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("product_id", pa.string()),
+            ("handle", pa.string()),
+            ("title", pa.string()),
+            ("vendor", pa.string()),
+            ("product_type", pa.string()),
+            ("tags", pa.list_(pa.string())),
+            (
+                "variants",
+                pa.list_(
+                    pa.struct(
+                        [
+                            ("title", pa.string()),
+                            ("grams", pa.int32()),
+                            ("price", pa.float64()),
+                            ("currency", pa.string()),
+                            ("available", pa.bool_()),
+                        ]
+                    )
+                ),
+            ),
+            ("body_hash", pa.string()),
+            ("body_text", pa.string()),
         ]
     ),
     "registry": pa.schema(
@@ -838,6 +903,8 @@ GLOBS = {
     "probes": "probes/*/*.parquet",
     "registry": "registry/*/*.parquet",
     "candidates": "candidates/*/*.parquet",
+    "screens": "screens/*/*.parquet",
+    "screen_products": "screen_products/*/*.parquet",
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
@@ -883,6 +950,8 @@ SCHEMA_FILES = {
     "probes": "probes/run_date=0000-00-00/batch=schema.parquet",
     "registry": "registry/source=schema/schema.parquet",
     "candidates": "candidates/source=schema/schema.parquet",
+    "screens": "screens/run_date=0000-00-00/batch=schema.parquet",
+    "screen_products": "screen_products/run_date=0000-00-00/batch=schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",
