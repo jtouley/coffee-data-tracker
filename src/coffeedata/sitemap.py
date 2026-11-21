@@ -47,13 +47,28 @@ def _on_site(url: str, host: str) -> bool:
         return False
 
 
-def _site_locs(body: bytes, host: str, what: str) -> list[str]:
-    """The <loc>s on the store's own site; the others are dropped, counted in the log."""
+def _site_locs(body: bytes, host: str, what: str) -> tuple[list[str], int]:
+    """The <loc>s on the store's own site, and how many others were dropped (counted in the log)."""
     locs = _locs(body)
     kept = [u for u in locs if _on_site(u, host)]
     if len(kept) < len(locs):
         log.warning("%s: %d %s off the store's site, skipped", host, len(locs) - len(kept), what)
-    return kept
+    return kept, len(locs) - len(kept)
+
+
+def _all_off_site(host: str, dropped: int) -> FetchError:
+    # Nothing on the store's own site: never an empty catalog (that would delist every product), a failed fetch.
+    return FetchError(f"every sitemap URL ({dropped}) is off the store's site {host}")
+
+
+def _capped(urls: list[str], room: int, host: str, unread: list[str] | None, what: str) -> list[str]:
+    """urls cut to `room`; a cut is noted in `unread`, so the fetch is partial, never complete."""
+    if len(urls) <= room:
+        return urls
+    log.warning("%s: over %d sitemap URLs, %d not read", host, MAX_SITEMAP_URLS, len(urls) - room)
+    if unread is not None:
+        unread.append(f"{len(urls) - room} {what} past the cap of {MAX_SITEMAP_URLS} URLs")
+    return urls[:room]
 
 
 def _get(client: PoliteClient, url: str):
@@ -90,9 +105,14 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     if r.status_code != 200:
         raise FetchError(f"sitemap HTTP {r.status_code}", status=r.status_code, challenge=is_challenge(r))
     if b"<sitemapindex" not in r.content:
-        return _site_locs(r.content, host, "sitemap URLs")[:MAX_SITEMAP_URLS]
+        kept, dropped = _site_locs(r.content, host, "sitemap URLs")
+        if dropped and not kept:
+            raise _all_off_site(host, dropped)
+        return _capped(kept, MAX_SITEMAP_URLS, host, unread, "sitemap URLs")
     locs = _locs(r.content)
     off = [u for u in locs if not _on_site(u, host)]
+    if off and len(off) == len(locs):
+        raise _all_off_site(host, len(off))
     if off:  # a sub-sitemap elsewhere isn't read; nothing says it held no products, so the list is incomplete
         log.warning("%s: %d sub-sitemaps off the store's site, not read", host, len(off))
         if unread is not None:
@@ -101,6 +121,7 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     if len(locs) > MAX_SUB_SITEMAPS:
         log.warning("%s: %d sub-sitemaps, only the first %d read", host, len(locs), MAX_SUB_SITEMAPS)
     urls: list[str] = []
+    dropped_urls = 0
     # Product sitemaps first: Shopify/Woo/BigCommerce name them that way.
     ordered = sorted(locs, key=lambda u: "product" not in u.lower())
     if len(ordered) > MAX_SUB_SITEMAPS and unread is not None:
@@ -128,7 +149,9 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
                 unread.append(f"{sm} (HTTP {e.status})" if e.status else f"{sm} ({e})")
             continue
         if sub.status_code == 200 and not is_challenge(sub):
-            urls.extend(_site_locs(sub.content, host, "sitemap URLs")[: MAX_SITEMAP_URLS - len(urls)])
+            kept, dropped = _site_locs(sub.content, host, "sitemap URLs")
+            dropped_urls += dropped
+            urls.extend(_capped(kept, MAX_SITEMAP_URLS - len(urls), host, unread, f"URLs of {sm}"))
         elif _refusal(None, sub):
             raise FetchError(
                 f"sub-sitemap HTTP {sub.status_code}: {sm}",
@@ -139,4 +162,6 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
             log.warning("%s: sub-sitemap HTTP %d, skipped: %s", host, sub.status_code, sm)
             if unread is not None:
                 unread.append(f"{sm} (HTTP {sub.status_code})")
+    if dropped_urls and not urls:
+        raise _all_off_site(host, dropped_urls)
     return urls

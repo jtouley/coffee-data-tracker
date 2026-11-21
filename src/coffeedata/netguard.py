@@ -96,14 +96,37 @@ def on_site(host: str | None, site_host: str) -> bool:
 # --- addresses -------------------------------------------------------------------------------------------------------
 
 
+# IPv6 prefixes whose last 32 bits are an IPv4 address that a translator or the host stack may reach: NAT64's
+# well-known and local-use prefixes (RFC 6052, RFC 8215), IPv4-translated (RFC 2765) and IPv4-compatible (deprecated).
+_EMBEDS_IPV4_LOW32 = tuple(
+    ipaddress.ip_network(n) for n in ("64:ff9b::/96", "64:ff9b:1::/48", "::ffff:0:0:0/96", "::/96")
+)
+_SIX_TO_FOUR = ipaddress.ip_network("2002::/16")  # 6to4: the IPv4 address is bits 16-47
+
+
+def _embedded_ipv4(a: ipaddress.IPv6Address) -> ipaddress.IPv4Address | None:
+    if a.ipv4_mapped is not None:
+        return a.ipv4_mapped
+    if a in _SIX_TO_FOUR:
+        return ipaddress.IPv4Address((int(a) >> 80) & 0xFFFFFFFF)
+    if any(a in n for n in _EMBEDS_IPV4_LOW32):
+        return ipaddress.IPv4Address(int(a) & 0xFFFFFFFF)
+    return None
+
+
 def address_allowed(address: str) -> bool:
-    """A globally routable address. An IPv4-mapped IPv6 address (::ffff:10.0.0.1) is judged as its IPv4 address."""
+    """A globally routable address. An IPv6 address that carries an IPv4 one (mapped, NAT64, translated, compatible,
+    6to4) needs that IPv4 address to be global too; site-local IPv6 (fec0::/10, deprecated) is refused."""
     try:
         a = ipaddress.ip_address(address.split("%", 1)[0])
     except ValueError:
         return False
-    if isinstance(a, ipaddress.IPv6Address) and a.ipv4_mapped is not None:
-        a = a.ipv4_mapped
+    if isinstance(a, ipaddress.IPv6Address):
+        if a.is_site_local or a.is_multicast:
+            return False
+        inner = _embedded_ipv4(a)
+        if inner is not None:  # (:: and ::1 too: their low 32 bits aren't a global IPv4 address)
+            return inner.is_global and not inner.is_multicast
     return a.is_global and not a.is_multicast
 
 
@@ -138,12 +161,13 @@ _deadline = threading.local()
 def request_deadline(seconds: float | None) -> Iterator[None]:
     """This thread's requests inside the block end by `seconds` from now (an httpx client is synchronous: every read
     and write of a request happens on the thread that sent it)."""
-    prev = getattr(_deadline, "at", None)
+    prev = getattr(_deadline, "at", None), getattr(_deadline, "seconds", None)
     _deadline.at = None if seconds is None else time.monotonic() + seconds
+    _deadline.seconds = seconds
     try:
         yield
     finally:
-        _deadline.at = prev
+        _deadline.at, _deadline.seconds = prev
 
 
 def remaining() -> float | None:
@@ -156,7 +180,8 @@ def _bounded(timeout: float | None, kind: type[Exception]) -> float | None:
     if left is None:
         return timeout
     if left <= 0:
-        raise kind(f"the request's total time limit ({MAX_REQUEST_S:.0f} s) passed")
+        seconds = getattr(_deadline, "seconds", None) or MAX_REQUEST_S
+        raise kind(f"the request's total time limit ({seconds:.0f} s) passed")
     return left if timeout is None else min(timeout, left)
 
 
@@ -168,12 +193,28 @@ class _TotalWriteTimeout(httpcore.WriteTimeout):
     pass
 
 
+class _TotalConnectTimeout(httpcore.ConnectTimeout):
+    """The total limit ran out while connecting: our own time (a wait for the pool, earlier tries), never a sign that
+    the host is down. Not retried, and never lets a stored robots.txt copy stand in (http._fetch_robots)."""
+
+
+def ran_out_connecting(e: BaseException | None) -> bool:
+    """The total limit ran out while connecting (_TotalConnectTimeout, behind httpx's ConnectTimeout)."""
+    seen: set[int] = set()
+    while e is not None and id(e) not in seen:
+        seen.add(id(e))
+        if isinstance(e, _TotalConnectTimeout):
+            return True
+        e = e.__cause__ or e.__context__
+    return False
+
+
 def too_slow(e: BaseException | None) -> bool:
     """The error is the total time limit's (RequestTooSlow, or the stream's, behind httpx's ReadTimeout)."""
     seen: set[int] = set()
     while e is not None and id(e) not in seen:
         seen.add(id(e))
-        if isinstance(e, RequestTooSlow | _TotalTimeout | _TotalWriteTimeout):
+        if isinstance(e, RequestTooSlow | _TotalTimeout | _TotalWriteTimeout | _TotalConnectTimeout):
             return True
         e = e.__cause__ or e.__context__
     return False
@@ -223,11 +264,18 @@ class GuardedBackend(httpcore.NetworkBackend):
     ) -> httpcore.NetworkStream:
         last: Exception | None = None
         for address in vetted_addresses(host, port):
+            bounded = _bounded(timeout, _TotalConnectTimeout)
             try:
-                stream = self._inner.connect_tcp(
-                    address, port, _bounded(timeout, httpcore.ConnectTimeout), local_address, socket_options
-                )
-            except (httpcore.ConnectError, httpcore.ConnectTimeout) as e:
+                stream = self._inner.connect_tcp(address, port, bounded, local_address, socket_options)
+            except httpcore.ConnectTimeout as e:
+                if bounded is not None and (timeout is None or bounded < timeout):
+                    # it waited only what was left of the total, not the connect timeout: the limit's, not the host's
+                    raise _TotalConnectTimeout(
+                        f"the request's total time limit passed while connecting: {e}"
+                    ) from e
+                last = e
+                continue
+            except httpcore.ConnectError as e:
                 last = e
                 continue
             return _DeadlineStream(stream)

@@ -239,8 +239,10 @@ def _lookup(client: PoliteClient, base: str, vid: str) -> dict | None:
     so ingest.run counts it as a refusal or defers the store; anything else as the fetch's error, asked again next
     pass."""
     if not (vid.isascii() and vid.isdigit()):
-        # a variation id is a WordPress post id: only digits ever go into the path (security review F7)
-        raise FetchError(f"variation id isn't a number: {vid[:40]!r}")
+        # A variation id is a WordPress post id: only digits ever go into the path (security review F7). Anything
+        # else is no size the Store API could answer for: dropped like a 404, the rest of the store read as usual.
+        log.warning("variation id isn't a number, size dropped: %r", vid[:40])
+        return None
     try:
         v = client.fetch_json(f"{base}/{vid}")
     except DeadlineReached:

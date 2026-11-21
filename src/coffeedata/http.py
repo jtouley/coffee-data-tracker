@@ -31,6 +31,7 @@ from .netguard import (
     guarded_transport,
     ip_literal,
     on_site,
+    ran_out_connecting,
     remaining,
     request_deadline,
     too_slow,
@@ -1112,14 +1113,25 @@ class PoliteClient:
                 failed_host: str | None = e.request.url.host
             except RuntimeError:  # raised without a request attached
                 failed_host = hostname
-            unreachable = isinstance(e, httpx.ConnectError | httpx.ConnectTimeout) and failed_host == hostname
+            # The total limit running out while connecting is our own time, not the host's: never "unreachable",
+            # and no stored copy stands in for it (no_answer below).
+            ours = ran_out_connecting(e)
+            unreachable = (
+                isinstance(e, httpx.ConnectError | httpx.ConnectTimeout)
+                and failed_host == hostname
+                and not ours
+            )
             err = RobotsUnavailable(
                 f"robots.txt for {host} failed ({type(e).__name__}: {e}; phase {transport_phase(e)})",
                 unreachable,
             )
             cause = e
             # no response at all (not our redirect handling: too many redirects, an unsupported scheme)
-            no_answer = isinstance(e, httpx.TransportError) and not isinstance(e, httpx.UnsupportedProtocol)
+            no_answer = (
+                isinstance(e, httpx.TransportError)
+                and not isinstance(e, httpx.UnsupportedProtocol)
+                and not ours
+            )
         else:
             no_answer = False
             challenged = is_challenge(r)

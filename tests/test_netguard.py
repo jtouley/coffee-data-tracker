@@ -408,7 +408,10 @@ def test_sitemap_urls_past_the_cap_leave_the_list_incomplete(monkeypatch):
     unread: list[str] = []
     with _client(handler) as c:
         assert len(sitemap.sitemap_urls(c, "roaster.example", unread)) == 4
-    assert unread == ["1 sub-sitemaps past 4 URLs"]
+    assert unread == [
+        "2 URLs of https://roaster.example/sitemap-1.xml past the cap of 4 URLs",
+        "1 sub-sitemaps past 4 URLs",
+    ]
 
 
 def _product_page(i: int) -> str:
@@ -462,8 +465,8 @@ def test_a_variation_id_that_isnt_digits_is_never_put_in_a_path(vid):
         seen.append(req.url.path)
         return httpx.Response(200, json={})
 
-    with _client(handler) as c, pytest.raises(FetchError, match="isn't a number"):
-        woocommerce._lookup(c, "https://roaster.example/wp-json/wc/store/v1/products", vid)
+    with _client(handler) as c:  # that size is dropped (as for a 404); the rest of the store is read
+        assert woocommerce._lookup(c, "https://roaster.example/wp-json/wc/store/v1/products", vid) is None
     assert seen == []
 
 
@@ -540,3 +543,102 @@ def test_the_guarded_stream_bounds_every_read_by_the_total_limit(monkeypatch):
     assert netguard.too_slow(e.value)
     stream.read(1, timeout=15)  # outside a request's block: no total limit
     assert asked[-1] == 15
+
+
+# --- the review round (#211) -----------------------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "address",
+    ["64:ff9b::a00:5", "64:ff9b::7f00:1", "64:ff9b:1::a9fe:a9fe", "::a00:5", "::ffff:0:a00:5", "2002:a00:5::1",
+     "fec0::1", "::", "::1"],
+)  # fmt: skip
+def test_ipv6_forms_that_carry_a_private_ipv4_address_are_refused(address):
+    assert not address_allowed(address)
+
+
+@pytest.mark.parametrize("address", ["64:ff9b::808:808", "2002:808:808::1"])
+def test_ipv6_forms_that_carry_a_global_ipv4_address_are_allowed(address):
+    assert address_allowed(address)
+
+
+def test_a_flat_sitemap_with_every_url_off_the_site_fails_instead_of_an_empty_catalog():
+    def handler(req):
+        if req.url.path == "/sitemap.xml":
+            return httpx.Response(
+                200,
+                text=_urlset(["https://newhome.example/products/a", "https://newhome.example/products/b"]),
+            )
+        return httpx.Response(200, text=_product_page(1))
+
+    with _client(handler) as c:
+        with pytest.raises(FetchError, match="off the store's site"):
+            sitemap.sitemap_urls(c, "roaster.example")
+        with pytest.raises(FetchError):  # generic: a failed fetch, never [] stored as the whole catalog
+            generic.fetch(c, _roaster())
+
+
+def test_a_sitemap_index_whose_urls_are_all_off_the_site_fails():
+    def handler(req):
+        if req.url.path == "/sitemap.xml":
+            return httpx.Response(200, text=_index(["https://roaster.example/product-sitemap.xml"]))
+        return httpx.Response(200, text=_urlset(["https://newhome.example/products/a"]))
+
+    with _client(handler) as c, pytest.raises(FetchError, match="off the store's site"):
+        sitemap.sitemap_urls(c, "roaster.example", [])
+
+
+def test_a_flat_sitemap_past_the_url_cap_is_partial(monkeypatch):
+    monkeypatch.setattr(sitemap, "MAX_SITEMAP_URLS", 2)
+
+    def handler(req):
+        if req.url.path == "/sitemap.xml":
+            return httpx.Response(
+                200, text=_urlset([f"https://roaster.example/products/c{i}" for i in range(3)])
+            )
+        return httpx.Response(200, text=_product_page(int(req.url.path.rsplit("c", 1)[1])))
+
+    unread: list[str] = []
+    with _client(handler) as c:
+        assert len(sitemap.sitemap_urls(c, "roaster.example", unread)) == 2
+        assert unread == ["1 sitemap URLs past the cap of 2 URLs"]
+        with pytest.raises(PartialCatalog):
+            generic.fetch(c, _roaster())
+
+
+def test_the_total_limit_running_out_while_connecting_is_ours_not_the_hosts(dns, monkeypatch):
+    """Not retried, recorded as total_timeout, and robots.txt is never "unreachable" for it: no stored copy."""
+    dns["roaster.example"] = [PUBLIC_V4]
+    clock = Clock()
+    monkeypatch.setattr(netguard.time, "monotonic", clock.monotonic)
+
+    class Slow(RecordingBackend):
+        def connect_tcp(self, host, port, timeout=None, local_address=None, socket_options=None):
+            self.connects.append((host, timeout))
+            clock.t += timeout or 0
+            raise httpcore.ConnectTimeout("timed out")
+
+    inner = Slow()
+    with netguard.request_deadline(5), pytest.raises(httpcore.ConnectTimeout) as e:
+        GuardedBackend(inner).connect_tcp("roaster.example", 443, timeout=15)
+    assert netguard.ran_out_connecting(e.value) and netguard.too_slow(e.value)
+    assert inner.connects == [(PUBLIC_V4, 5)]
+    # a plain connect timeout (within the total) is still the host's
+    with netguard.request_deadline(120), pytest.raises(httpcore.ConnectTimeout) as e:
+        GuardedBackend(Slow()).connect_tcp("roaster.example", 443, timeout=15)
+    assert not netguard.ran_out_connecting(e.value)
+
+    copies = {"roaster.example": {"fetched_at": NOW - timedelta(days=1), "status": 404, "body": None}}
+    transport = guarded_transport(httpx.Limits(), backend=Slow())
+    client = PoliteClient(
+        min_interval=0,
+        retries=3,
+        robots_copies=copies,
+        clock=lambda: NOW,
+        max_request_s=5,
+        transport=transport,
+    )
+    with client as c, c.track() as stats, pytest.raises(RobotsUnavailable) as r:
+        c.get("https://roaster.example/products.json")
+    assert not r.value.unreachable
+    assert len(stats.transport_errors) == 1 and stats.transport_errors[0]["phase"] == "total_timeout"
