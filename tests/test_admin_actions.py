@@ -46,6 +46,25 @@ def post(c, url, body):
     return c.post(url, json=body, headers=WRITE)
 
 
+def chains_published(lake_root, week: str = W1, build: str = B1) -> None:
+    """The served build's snapshot carries the seed's chain flags (control.chain_flags' first rows,
+    dbt/seeds/chain_overrides.csv), as after the first Publish with chain flags: a test about something else then has
+    no chain flag pending."""
+    import csv
+    from pathlib import Path
+
+    with (Path(__file__).resolve().parents[1] / "dbt" / "seeds" / "chain_overrides.csv").open(
+        newline=""
+    ) as f:
+        chains = [
+            {"roaster_id": r["roaster_id"], "chain": r["is_chain"] == "true"} for r in csv.DictReader(f)
+        ]
+    doc = decisions.snapshot("s0", "2026-10-19T00:00:00Z", [], chains=chains)
+    Lake(str(lake_root)).write("builds", f"builds/run_date={week}/build={build}-snapshot.parquet",
+                               [{"build_id": build, "kind": "snapshot", "unique_id": doc["snapshot_id"],
+                                 "checksum": decisions.digest(doc), "payload": json.dumps(doc, sort_keys=True)}])  # fmt: skip
+
+
 def audit(app):
     rows, _ = app.state.writes.control.audit_log(500)
     return rows
@@ -115,6 +134,7 @@ def test_migrations_apply_once_and_every_table_is_append_only(pg_url):
         "0003_rules.sql",
         "0004_sources.sql",
         "0005_prefilter.sql",
+        "0006_chains.sql",
     ]
     assert cp.migrate() == []  # every instance runs it at start: idempotent
     cp.audit_now("owner", "decide", "x", "ok")
@@ -150,8 +170,9 @@ def test_every_write_is_refused_signed_out_and_cross_site(tmp_path, lake, pg_url
         r for r in app.routes if "POST" in getattr(r, "methods", set()) and not r.path.startswith("/api/auth")
     ]
     # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save,
-    # crawl flag, source flags and their undo, keyword filters' preview, save, undo and review, and Classify these (plan, start)
-    assert len(writes) == 21
+    # crawl flag, chain flag, source flags and their undo, keyword filters' preview, save, undo and review, and Classify
+    # these (plan, start)
+    assert len(writes) == 22
     anon = TestClient(app, base_url=ORIGIN)
     for r in writes:
         url = r.path.replace("{action}", "merge").replace("{run_id}", "r").replace("{target}", "d")
@@ -364,6 +385,7 @@ def _draft_build(lake_root, draft_id, snapshot_doc, passed=True, built=None):
 
 
 def test_a_draft_snapshots_the_decisions_then_publish_waits_for_every_check(tmp_path, lake, pg_url):
+    chains_published(lake.root)  # the seed's chain flags are served: nothing pending
     app, c, fake = make(tmp_path, lake.root, pg_url)
     assert post(c, "/api/drafts", {"key": "k0"}).status_code == 400  # nothing to build yet
     post(c, "/api/decisions", {"key": "k1", "action": "exclude", "kind": "coffee_id", "reason": "a drink mix",

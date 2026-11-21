@@ -7,6 +7,35 @@
   <button class="btn {{ cls }} inline" type="submit" data-busy="Flagging…">{{ label }}</button>
 </form>
 {%- endmacro %}
+{# The chain flag of one registry roaster (its ⋯ menu): over its store count, either way, or cleared. A reason is
+   asked in the confirm sheet; `seen` is the flag this page showed, so another tab's change since is refused. #}
+{% macro chain_flag(r, name, value, label, title, confirm) -%}
+<form class="inline-form" data-write="/api/roasters/{{ r.roaster_id }}/chain" data-ask="reason" data-confirm-title="{{ title }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}">
+  <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="chain" value="{{ value }}"><input type="hidden" name="seen" value="{{ r.chain_flag or 'none' }}">
+  <button class="btn text inline" type="submit" data-busy="Recording…">{{ label }}…</button>
+</form>
+{%- endmacro %}
+{# A registry roaster's chain status (sources.CHAIN_CODES) in words: the row's word, the facet's value and the menu's
+   first line. The served release's status first (what customers get now), then what the next Publish changes. #}
+{# The row's word stays short (a desktop row is one line, and the name must stay readable): "pending" means "from the
+   next Publish", which the menu and the count line say in full. #}
+{% set chain_word = {"chain": "Chain", "to_chain": "Chain (pending)", "to_not_chain": "Not a chain (pending)", "not_chain": "Not a chain"} %}
+{% set chain_facet = {"chain": "a chain", "to_chain": "a chain from the next Publish", "to_not_chain": "not a chain from the next Publish", "not_chain": "flagged not a chain"} %}
+{% macro chain_now(r) -%}
+{%- if r.chain == "chain" -%}A chain: not public.
+{%- elif r.chain == "to_chain" -%}Public now. From the next Publish: a chain, so not public.
+{%- elif r.chain == "to_not_chain" -%}Not public now (a chain). From the next Publish: public again.
+{%- else -%}Not a chain.
+{%- endif -%}
+{%- endmacro %}
+{% macro chain_basis(r) -%}
+{%- set count = (many(r.stores, "store", "stores") | trim) ~ " counted" if r.stores is not none else "no store count" -%}
+{%- if r.chain_flag == "chain" -%}Flagged a chain by hand ({{ count }}).
+{%- elif r.chain_flag == "not_chain" -%}Flagged not a chain by hand ({{ count }}).
+{%- elif r.stores is not none and r.stores > chain_stores -%}{{ count | capitalize }}: more than {{ chain_stores }}.
+{%- else -%}{{ count | capitalize }}{{ (": " ~ chain_stores ~ " or fewer") if r.stores is not none }}.
+{%- endif -%}
+{%- endmacro %}
 {% macro many(n_, one, more) %}{{ n(n_) }} {{ one if n_ == 1 else more }}{% endmacro %}
 {% set label = {"roaster": "Roaster", "roaster (inherited)": "Roaster (inherited)", "not a roaster": "Not a roaster", "unreviewed": "Unreviewed"} %}
 <div class="sources-page" data-state="{{ 'data' if data and data.matching else 'empty' }}">
@@ -26,7 +55,7 @@
         <label class="facet"><span class="label">{{ name | capitalize }}</span>
           <select name="{{ name }}" class="select">
             <option value="">Any</option>
-            {% for value, count in data.facets[name] %}<option value="{{ value }}"{% if f.values.get(name) == value %} selected{% endif %}>{{ value }} ({{ n(count) }})</option>{% endfor %}
+            {% for value, count in data.facets[name] %}<option value="{{ value }}"{% if f.values.get(name) == value %} selected{% endif %}>{{ chain_facet.get(value, value) if name == "chain" else value }} ({{ n(count) }})</option>{% endfor %}
           </select></label>
         {% endfor %}
       </div>
@@ -39,16 +68,16 @@
     </dialog>
   </form>
   {% set chips = f.chips() %}
-  {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}</ul>{% endif %}
+  {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, raw in chips %}{% set text = ("chain: " ~ chain_facet.get(f.values.chain, f.values.chain)) if key == "chain" else raw %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}</ul>{% endif %}
   {% if flags_read %}
   <p class="answer" data-answer>{{ n(st.get("unreviewed", 0)) }} to review of {{ many(data.total, "place", "places") }}{% if data.meta.latest_run %} · {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone in the {{ data.meta.latest_run[:10] }} run{% endif %}</p>
-  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}</p>
+  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}{% if chains_read %}{% set cc = data.counts.chain %}{% set now_n = cc.get("chain", 0) + cc.get("to_not_chain", 0) %}{% set next_n = cc.get("to_chain", 0) + cc.get("to_not_chain", 0) %} · {{ many(now_n, "chain", "chains") }}, crawled but not public{% if next_n %} ({{ many(next_n, "chain flag changes", "chain flags change") | trim }} at the next Publish){% endif %}{% endif %}</p>
   {% else %}
   <p class="answer" data-answer>{{ many(data.total, "place", "places") }} · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}
   {% if chips and not (chips | length == 1 and chips[0][0] == "status") %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ many(data.total, "place", "places") }} {{ "matches" if data.matching == 1 else "match" }}</p>{% endif %}
   {% if not data.matching %}
-  <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
+  <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, raw in chips %}{{ ("chain: " ~ chain_facet.get(f.values.chain, f.values.chain)) if key == "chain" else raw }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
   {% else %}
   {% macro head(key, cls="") -%}
   {%- set on = f.sort == key -%}
@@ -59,8 +88,8 @@
     <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Select every place on this page"></th>{% endif %}{{ head("name", "c-name") }}{{ head("domain", "wide c-domain") }}{{ head("city", "wide c-city") }}{{ head("state", "wide c-state") }}{{ head("tag", "wide c-tag") }}{{ head("hint", "wide c-hint") }}{{ head("status", "wide c-status") }}{{ head("first_seen", "wide c-seen") }}<th scope="col" class="act"><span class="vh">Actions</span></th></tr></thead>
     <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}{% set name = r.name or r.roaster_id %}{% set where = [r.city, r.state] | select | join(", ") %}<tr data-row>
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Select {{ name }}"></td>{% endif %}
-      <th scope="row" class="c-name" title="{{ name }}"><span class="pname">{{ name }}</span>
-        <span class="meta narrow">{{ [r.roaster_id, where] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %} · <span class="status">{{ label[r.status] }}</span>{% endif %}</span></th>
+      <th scope="row" class="c-name" title="{{ name }}"><span class="nameline"><span class="pname">{{ name }}</span>{% if r.chain %}<span class="wide status chainword" title="{{ chain_now(r) }} {{ chain_basis(r) }}"> · {{ chain_word[r.chain] }}</span>{% endif %}</span>
+        <span class="meta narrow">{{ [r.roaster_id, where] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %} · <span class="status">{{ label[r.status] }}</span>{% endif %}{% if r.chain %} · <span class="status">{{ chain_word[r.chain] }}</span>{% endif %}</span></th>
       <td class="wide c-domain" title="{{ r.roaster_id }}">{% if r.url %}<a class="ev" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.roaster_id }}</a>{% else %}{{ r.roaster_id }}{% endif %}</td>
       <td class="wide c-city" title="{{ r.city or '' }}">{{ r.city or "—" }}</td>
       <td class="wide c-state">{{ r.state or "—" }}</td>
@@ -71,6 +100,33 @@
       <td class="act"><details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="Actions for {{ name }}">⋯</summary>
         <div class="menu">
           {% if r.status and not writes_off %}{% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Clear the flag", [item]) }}{% endif %}{% if r.status == "roaster" %}<button class="btn text inline" type="button" data-pull-one="{{ r.roaster_id }}">Pull now</button>{% endif %}{% endif %}
+          {% if r.in_registry and chains_read %}
+          {# The chain flag, a group of its own under a rule (the roaster flag above is another flag): where the roaster
+             stands and why, the owner's reason folded, then the one way to the other status. Clear when clearing
+             the flag gives it (the count decides the other way); else a flag, and Clear too when there is one. #}
+          <div class="menugroup" role="group" aria-label="Chain">
+            <p class="meta">{{ chain_now(r) }} {{ chain_basis(r) }}</p>
+            {% if r.chain_flag and r.chain_reason %}<details class="reason"><summary class="btn text inline">The reason</summary><p class="meta">{{ r.chain_reason }}</p></details>{% endif %}
+            {% if not writes_off %}
+            {% set coffees = r.coffees_listed or 0 %}
+            {% set listed = many(coffees, "listed coffee", "listed coffees") | trim %}
+            {% set by_count = r.stores is not none and r.stores > chain_stores %}
+            {% set next_chain = r.chain in ("chain", "to_chain") %}
+            {% set when = "when a draft with this flag is published." %}
+            {% set clear_text = "Its store count decides again: " ~ ((many(r.stores, "store", "stores") | trim) ~ ", so " if r.stores is not none else "") ~ ("a chain" if by_count else "not a chain") ~ ", " ~ when %}
+            {% if r.chain_flag and next_chain != by_count %}
+              {{ chain_flag(r, name, "clear", "Clear the chain flag", "Clear the chain flag on " ~ name ~ "?", clear_text) }}
+            {% else %}
+              {% if next_chain %}
+                {{ chain_flag(r, name, "not_chain", "Not a chain", "Mark " ~ name ~ " as not a chain?", (("Its " ~ listed ~ " can be public again " ~ when) if coffees else ("It lists no coffee now; its coffees can be public " ~ when)) ~ (" It counts " ~ (many(r.stores, "store", "stores") | trim) ~ "; the flag decides over the count." if by_count else "")) }}
+              {% else %}
+                {{ chain_flag(r, name, "chain", "Mark as a chain", "Mark " ~ name ~ " as a chain?", "It stays crawled. " ~ (("Its " ~ listed ~ " " ~ ("leaves" if coffees == 1 else "leave")) if coffees else "It lists no coffee now; from then on its coffees stay out of") ~ " the public data, the site and the shares " ~ when) }}
+              {% endif %}
+              {% if r.chain_flag %}{{ chain_flag(r, name, "clear", "Clear the chain flag", "Clear the chain flag on " ~ name ~ "?", clear_text) }}{% endif %}
+            {% endif %}
+            {% endif %}
+          </div>
+          {% endif %}
           {% if r.url %}<a class="btn text inline" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">Open site</a>{% endif %}
         </div></details></td>
     </tr>{% endfor %}</tbody>

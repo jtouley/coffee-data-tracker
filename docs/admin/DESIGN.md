@@ -410,3 +410,78 @@ An independent review of the four admin PRs, then the owner's "super cluttery" o
 - Skills invoked: `critique-information-density`, `hicks-law`, `form-design`, `better-layout`, `no-ai-design-slop`,
   `accessibility-audit`, `critique-affordance`, `critique-visual-hierarchy`, `python-resilience`,
   `dbt-transformation-patterns`, `/simplify`.
+
+## Chain flags (Sources)
+
+### Who and what
+
+The owner, after the decision "chains should still be scraped, but filtered from the public result; a chain is
+anything with over 20 stores": **is this roaster a chain, and why?** The store count can read low (it counts Overture's
+roastery places, not cafés), so a chain is sometimes flagged by hand, either way, with a reason.
+
+### Decisions on the design
+
+- **No new page, column or badge.** Chain is the quiet status text the app already uses (13 px `--ink-2`): " · Chain"
+  after the name on a desktop, and at the end of the phone's meta line. A long name ends in an ellipsis; the word
+  never does (the name cell is a flex row: the name shrinks, the word doesn't).
+- **The why, then the action, in the ⋯ menu.** Its first line says why: "A chain: 62 stores counted, more than 20.",
+  "Not a chain: 13 stores counted, 20 or fewer." or "A chain, flagged by hand (1 store counted): <the reason>". Then
+  the one way to the other status. Clear the chain flag when clearing it gives the other status (the count decides
+  again), else Mark as a chain or Not a chain; a flag the count agrees with can also be cleared. No two items lead to
+  the same result.
+- **A reason in the confirm sheet,** like the crawl flag's. The sheet says what changes and when: "It stays crawled.
+  Its 25 listed coffees leave the public data, the site and the shares when a draft with this flag is published."
+- **The reason wraps.** The confirm's reason is now a textarea that grows with what is typed (`field-sizing`, three
+  lines where unsupported), so a long reason can be read whole before it is recorded. It stays one line, as the
+  server requires: Enter adds no break and confirms nothing, and a pasted break becomes a space.
+- **One count and one filter.** The small count line gains "· N chains, crawled but not public"; the Filter / Sort
+  panel gains Chain (over 20 stores, flagged a chain, flagged not a chain). No bulk chain action: each flag has its
+  own reason.
+- **Release** counts "N chain flags not in it" beside the other flags, and Decisions names each: "Chain flags
+  (Sources): farmerbros.com becomes not a chain."
+
+### Skills used (this pass)
+
+Run on the real admin (the browser fixture's built lake, the realistic source list, a local Postgres) at 390 px and
+1,280 px, light and dark, with axe on every state: the list, the menu for each status (a chain by its count, flagged
+a chain, flagged a chain the count agrees with, flagged not a chain, not a chain), each confirm, a refused short
+reason, a stale tab's conflict, the Chain filter, the filtered list, the outcome and Release. axe: no violations; no
+state scrolls sideways at 390 px.
+- `critique-information-density`, `critique-affordance`: the menu offered both Not a chain and Clear
+  on a flagged chain whose count says not a chain, two ways to the same result. Only Clear is offered there now.
+- `critique-visual-hierarchy`, `no-ai-design-slop`: the status stays text, no chip, badge or colour; the answer line
+  is unchanged and the chain count joins the small line under it.
+- `critique-affordance` (again): the actions sit in the existing ⋯ menu with the accent for what can be tapped; the confirm
+  button names the action ("Mark as a chain", "Not a chain", "Clear the chain flag").
+- `better-layout`, `responsive-design`: on a desktop a long name truncated " · Chain" in the mockup; the name now
+  shrinks and the word stays. On a phone the word joins the meta line, which wraps.
+- `better-accessibility`: the reason textarea keeps its label; a refusal is announced in the sheet's `role=alert`
+  hint; the menu items are buttons with their action as their name.
+- `better-writing`, `ux-writing`: "its 1 listed coffee leave" read wrong (the verb follows the count now); a roaster
+  with no listed coffee says so instead of "its 0 listed coffees"; the conflict says what happened and what to do
+  ("The chain flag changed after this page loaded (another tab?). Reload the page to see it, then choose again.").
+- `better-interface`: the review ran in the order above; nothing left at HIGH.
+- Not changed, from before this pass: the confirm's label says "3 to 300 characters" while the control plane accepts
+  up to 500 (the field and the API both stop at 300, so it is never wrong for the owner).
+
+### The review round (#149's specialist review)
+
+- **Published, then pending.** The page claimed a recorded flag was already in effect. Now the row's word and the count
+  are the served release's (`dim_roaster.is_chain`); a flag that changes it at the next Publish reads " · Chain
+  (pending)" or " · Not a chain (pending)", the menu says it in full ("Public now. From the next Publish: a chain, so
+  not public."), and the count line adds "(N chain flags change at the next Publish)". The facet's values are codes
+  (`sources.CHAIN_CODES`), worded by the template, so a wording change never touches the logic.
+- **Two flags, two groups.** The chain flag is its own group in the ⋯ menu (`role=group`, a hairline above it),
+  after the roaster flag, so "Not a roaster" and "Not a chain…" never sit side by side.
+- **The reason folds.** The menu's first chain line is short ("A chain: not public. Flagged a chain by hand (1 store
+  counted)."); the stored reason is behind "The reason", so the action stays in view at 390 px.
+- **The row word stays short.** "Chain (pending)", not "Chain from the next Publish": the long form squeezed a desktop
+  name to one letter. The Name column is wider (26%, Domain 15%: a domain already ends in an ellipsis with its
+  full text in a title), so a name keeps room beside the longest word; the name ends in an ellipsis, the word never.
+- **Copy.** "1 store", not "1 stores"; "2 changes", not "2 change"; Release words a cleared flag "goes back to its
+  store count".
+- Skills applied again to the rendered build (72 states, 390 px and desktop, light and dark, axe clean):
+  `critique-information-density` (the folded reason), `critique-visual-hierarchy` (the group rule; status stays
+  text), `better-interface`, `better-layout` (the squeezed name, the group), `better-accessibility` (the group's
+  role and name; `details` is native and keyboard-reachable), `ux-writing` (pending wording, plurals),
+  `no-ai-design-slop` (no badge or colour added), `responsive-design` (phone meta line carries the same word).

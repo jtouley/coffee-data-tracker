@@ -659,6 +659,19 @@ def leaving(lake: Lake, con, build_id: str, coffees: list[str] | None = None) ->
     return {"recorded": True, "removed": removed, "changed": changed}
 
 
+def roasters_moved(lake: Lake, con, build_id: str, roasters: list[str]) -> int | None:
+    """How many public coffees of `roasters` (a draft's changed chain flags) a build adds or removes against the
+    release it was compared with (release_changes; a coffee_id is `<roaster>:<product>`). None: not recorded."""
+    src = ops_src(lake, build_id, "release_changes")
+    if src is None:
+        return None
+    return con.execute(
+        f"select count(distinct item) from {src} where table_name = 'public_coffee' and change <> 'changed' "
+        "and split_part(item, ':', 1) in (select unnest(?::varchar[]))",
+        [roasters],
+    ).fetchone()[0]
+
+
 def registry_ids(lake: Lake, con, build_id: str) -> set[str] | None:
     """The registry's roasters as a build saw them (its release's dim_roaster: the seed and the lake's additions);
     None when the release has no dim_roaster to read."""
