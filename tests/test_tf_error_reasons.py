@@ -1,6 +1,8 @@
 """scripts/tf_error_reasons.py: what the apply workflow may say about why a Terraform step failed. A denied
-permission's name and a reason from a fixed list are shown; nothing else from Terraform's message ever is. The two
-real cases are this week's (docs/app/RUNNING.md, "Changing the infrastructure"); every other value is invented."""
+permission's name and a reason from a fixed list are shown; nothing else from Terraform's message ever is. ALERT and
+IMAGE are this week's two denials, reconstructed: the permission and the sentence around it are from Cloud Audit
+Logs (docs/app/RUNNING.md, "Changing the infrastructure"); what Terraform printed around them was never seen, so
+that part is the provider's usual wording. Every other value is invented."""
 
 from __future__ import annotations
 
@@ -85,7 +87,7 @@ def assert_only_allowed(out: str, log: str) -> None:
         assert private not in out.replace(reasons_mod.HINT, "").replace(reasons_mod.UNNAMED, ""), private
 
 
-def test_the_two_real_denials_name_their_permissions():
+def test_this_weeks_two_denials_name_their_permissions():
     log = "google_cloud_run_v2_job.ingest: Modifying...\n" + ALERT + IMAGE
     assert text(log) == (
         f"{reasons_mod.HEADER}\n"
@@ -120,8 +122,17 @@ def test_the_two_real_denials_name_their_permissions():
          "403 permission denied: secretmanager.versions.access"),
         ("rpc error: code = PermissionDenied desc = Permission 'pubsub.topics.create' denied on resource",
          "403 permission denied: pubsub.topics.create"),
-        ("Error creating X: googleapi: Error 403: Permission 'a.b.c' denied and Permission 'a.b.d' denied",
-         "403 permission denied: a.b.c, a.b.d"),
+        ("Error creating X: googleapi: Error 403: Permission 'run.jobs.create' denied and Permission 'run.jobs.run' "
+         "denied", "403 permission denied: run.jobs.create, run.jobs.run"),
+        (f"googleapi: Error 403: Cloud Scheduler API has not been used in project {NUMBER} before or it is disabled. "
+         f"Enable it by visiting https://console.developers.google.com/apis/api/x/overview?project={NUMBER} then "
+         "retry., accessNotConfigured", "API not enabled"),
+        ("googleapi: Error 403: User Rate Limit Exceeded, userRateLimitExceeded", "quota"),
+        ("googleapi: Error 403: Rate Limit Exceeded, rateLimitExceeded", "quota"),
+        ("googleapi: Error 429: Quota exceeded; Permission 'run.jobs.run' denied",
+         "quota, 403 permission denied: run.jobs.run"),
+        ("googleapi: Error 409: Conflict, aborted", "409 already exists"),  # by status alone: a fixed phrase
+        ("googleapi: Error 400: Precondition check failed., failedPrecondition", "400 invalid argument"),
         (f"Error reading Budget: googleapi: Error 404: Requested entity was not found., notFound {NUMBER}",
          "404 not found"),
         (f"Error creating Role: googleapi: Error 409: A role named tfApplyX in projects/{PROJECT} already exists., "
@@ -143,8 +154,76 @@ def test_each_reason_in_the_vocabulary(message, expected):
     log = error(message)
     out = text(log)
     assert out.splitlines()[1] == f"  error 1, google_storage_bucket.plans: {expected}"
-    assert (f"  {HINT}" in out.splitlines()) == expected.startswith("403"), out
+    assert (f"  {HINT}" in out.splitlines()) == ("403 permission denied" in expected), out
     assert_only_allowed(out, log)
+
+
+def test_a_403_that_isnt_said_to_be_a_denial_gets_no_hint():
+    """The bootstrap line and the audit-log line are for denials: a named permission, or a permission-denied word."""
+    out = text(error("Error creating Thing: googleapi: Error 403: Something else was refused"))
+    assert out.splitlines()[1:] == ["  error 1, google_storage_bucket.plans: 403 permission denied"]
+    for message in (
+        "googleapi: Error 403: API disabled, accessNotConfigured",
+        "Error 403: x, userRateLimitExceeded",
+    ):
+        assert HINT not in text(error(message)) and reasons_mod.UNNAMED not in text(error(message))
+
+
+def test_a_piece_of_a_private_value_never_passes_as_a_permission():
+    """The review's repro: a dotted piece of an email, in the wordings that name a permission."""
+    env = {"TF_VAR_owner_email": "Owner.Person@mail.example.org"}
+    for wording in (
+        "user does not have mail.example.org access",
+        '"permission": "owner.person.mail"',
+        "Permission 'jane.q.public' denied on resource",
+    ):
+        out = text(error(f"googleapi: Error 403: {wording}, forbidden"), env)
+        assert out.splitlines()[1] == "  error 1, google_storage_bucket.plans: 403 permission denied", out
+        for piece in ("mail", "example", "owner", "person", "jane", "public"):
+            assert piece not in out.split("\n")[1]
+    # a piece of a private value that does start with a service's name is refused too
+    env = {"TF_VAR_note": "see storage.objects.get.now"}
+    out = text(error("googleapi: Error 403: Permission 'storage.objects.get' denied, forbidden"), env)
+    assert "storage.objects" not in out
+
+
+@pytest.mark.parametrize("service", sorted(reasons_mod.SERVICES))
+def test_a_name_under_each_known_service_is_shown(service):
+    out = text(error(f"googleapi: Error 403: Permission '{service}.things.create' denied on resource 'x'"))
+    assert out.splitlines()[1].endswith(f"403 permission denied: {service}.things.create")
+
+
+@pytest.mark.parametrize(
+    "name", ["mail.example.org", "a.b.c", "storagex.objects.get", "www.googleapis.com", "x.run.app"]
+)
+def test_a_name_under_any_other_first_word_is_not_shown(name):
+    out = text(error(f"googleapi: Error 403: Permission '{name}' denied on resource 'x'"), {})
+    assert out.splitlines()[1] == "  error 1, google_storage_bucket.plans: 403 permission denied"
+
+
+def test_the_known_services_cover_every_permission_the_roots_grant():
+    """Every permission in a custom role of either root (src/terraform, bootstrap included) starts with a known
+    service, so a denial of one the bootstrap grants is always named."""
+    tf = "".join(p.read_text() for p in (ROOT / "src" / "terraform").rglob("*.tf"))
+    names = re.findall(r'"([a-z][a-zA-Z]*(?:\.[a-zA-Z]+){2,3})"', tf)
+    granted = {n.split(".")[0] for n in names if not n.endswith((".com", ".coffee", ".app", ".org", ".io"))}
+    assert len(granted) >= 5 and granted <= reasons_mod.SERVICES, granted - reasons_mod.SERVICES
+
+
+def test_a_warning_after_an_error_lends_it_nothing():
+    """The review's repro: the error has no address of its own, and the warning's must not become its address."""
+    log = (
+        "╷\n│ Error: googleapi: Error 500: boom\n│\n╵\n"
+        "╷\n│ Warning: Deprecated attribute\n│\n│   with google_other.thing,\n"
+        "│   on main.tf line 9:\n│ Permission 'run.jobs.run' denied, forbidden\n╵\n"
+    )
+    assert text(log).splitlines()[1:] == ["  error 1: 5xx server error"]
+    plain = "Error: googleapi: Error 500: boom\n\nWarning: Deprecated\n\n  with google_other.thing,\n"
+    assert text(plain).splitlines()[1:] == ["  error 1: 5xx server error"]
+    boxed = (
+        "╷\n│ Error: googleapi: Error 404: gone, notFound\n│\n│   with google_x.y,\n│   on a.tf line 1:\n╵\n"
+    )
+    assert text(boxed).splitlines()[1:] == ["  error 1, google_x.y: 404 not found"]
 
 
 def test_a_denial_that_names_no_permission_points_at_the_audit_log():
@@ -240,9 +319,9 @@ def test_errors_that_match_nothing_are_skipped_but_keep_their_number():
 
 
 def test_at_most_five_permissions_an_error():
-    many = " ".join(f"Permission 'a.b.{chr(ord('c') + i) * 3}' denied" for i in range(9))
+    many = " ".join(f"Permission 'run.jobs.{chr(ord('c') + i) * 3}' denied" for i in range(9))
     out = text(error(f"googleapi: Error 403: {many}"))
-    assert out.splitlines()[1].count("a.b.") == reasons_mod.MAX_PERMISSIONS
+    assert out.splitlines()[1].count("run.jobs.") == reasons_mod.MAX_PERMISSIONS
 
 
 def test_the_command_line_never_fails_and_never_quotes(tmp_path):

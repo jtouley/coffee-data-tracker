@@ -8,7 +8,8 @@ workflow, so a missing IAM permission is named where the failure is, not only in
 The repository is public and Terraform's messages can quote values, so nothing is copied from the log except:
 
 - a permission's name: only where a message says it is the permission (PERMISSION_CONTEXTS), only if it has a
-  permission's shape (PERMISSION, at least MIN_PARTS parts), and only if it holds no TF_VAR_* value;
+  permission's shape (PERMISSION, at least MIN_PARTS parts), only if it starts with a Google service this project
+  uses (SERVICES), and only if it neither holds a TF_VAR_* value nor is a piece of one;
 - the error's resource address, by the guard's own rule (tf_plan_guard.Scrubber: Terraform's address syntax with
   plain keys, no TF_VAR_* value), the address the guard's summary already shows. Without the guard beside this
   file, no address is shown.
@@ -46,11 +47,39 @@ PERMISSION_CONTEXTS = tuple(
         rf"""\bdoes not have\s+(){_NAME}\s+access\b""",  # Cloud Storage: ... does not have storage.objects.get access
     )
 )
+# The first part of a name: the services whose permissions the two Terraform roots grant or whose APIs they enable
+# (src/terraform, src/terraform/bootstrap), and Cloud SQL for the admin. A name under any other first word is not
+# shown, so a dotted piece of a value (mail.example.org, jane.q.public) never passes for a permission. A denial for a
+# service missing here reads "403 permission denied" with no name: add the service when that happens.
+SERVICES = frozenset(
+    {
+        "artifactregistry",
+        "billing",
+        "billingbudgets",
+        "cloudfunctions",
+        "cloudscheduler",
+        "cloudsql",
+        "compute",
+        "iam",
+        "iamcredentials",
+        "logging",
+        "monitoring",
+        "pubsub",
+        "resourcemanager",
+        "run",
+        "secretmanager",
+        "serviceusage",
+        "storage",
+        "sts",
+        "vpcaccess",
+    }
+)
 MAX_PERMISSIONS = 5  # per error
 MIN_SCRUB_LEN = 6  # as the guard: a shorter value would match names by accident
 
 DENIED = "403 permission denied"
 QUOTA = "quota"
+API_OFF = "API not enabled"
 # The whole vocabulary of reasons, by HTTP status. Any other status prints nothing.
 REASONS = {
     400: "400 invalid argument",
@@ -62,22 +91,29 @@ REASONS = {
 SERVER = "5xx server error"
 STATUS = re.compile(r"\b(?:googleapi: )?Error ([1-5][0-9]{2})\b|\bHTTP response code ([1-5][0-9]{2})\b")
 # gRPC status names and googleapi reason words, as whole tokens.
+DENIED_WORD = re.compile(r"\b(?:PERMISSION_DENIED|permission_denied|IAM_PERMISSION_DENIED|forbidden)\b")
 WORDS = (
-    (re.compile(r"\b(?:RESOURCE_EXHAUSTED|quotaExceeded|rateLimitExceeded|[Qq]uota exceeded)\b"), QUOTA),
-    (re.compile(r"\b(?:PERMISSION_DENIED|permission_denied|IAM_PERMISSION_DENIED)\b"), DENIED),
+    (
+        re.compile(
+            r"\b(?:RESOURCE_EXHAUSTED|quotaExceeded|rateLimitExceeded|userRateLimitExceeded|[Qq]uota exceeded)\b"
+        ),
+        QUOTA,
+    ),
+    (re.compile(r"\b(?:accessNotConfigured|SERVICE_DISABLED)\b"), API_OFF),
+    (DENIED_WORD, DENIED),
     (re.compile(r"\b(?:NOT_FOUND|notFound)\b"), REASONS[404]),
     (re.compile(r"\b(?:ALREADY_EXISTS|alreadyExists)\b"), REASONS[409]),
     (re.compile(r"\b(?:INVALID_ARGUMENT|badRequest)\b"), REASONS[400]),
 )
-ORDER = (QUOTA, DENIED, REASONS[404], REASONS[409], REASONS[400], SERVER)
+ORDER = (QUOTA, API_OFF, DENIED, REASONS[404], REASONS[409], REASONS[400], SERVER)
 
 HINT = (
     "if the bootstrap on main grants this, run the by-hand bootstrap block (docs/app/RUNNING.md) and run this "
     "workflow again from main"
 )
 UNNAMED = (
-    "Terraform's message names no permission: Cloud Audit Logs do (the denied call's entry for the account this "
-    "job runs as)"
+    "no permission was recognised in Terraform's message: Cloud Audit Logs name it (the denied call's entry for the "
+    "account this job runs as)"
 )
 HEADER = "Why (permission names and a fixed list of reasons only; anything else in Terraform's message is not shown):"
 
@@ -86,29 +122,44 @@ def _normalize(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s.casefold())
 
 
+_GUARD: list = []  # the guard's module once loaded, or None once it couldn't be
+
+
 def _guard_scrubber(private: list[str]):
-    """The guard's Scrubber, loaded from the file beside this one (`python3 -I` puts no folder on the path); None
-    if it isn't there or can't be loaded, and then no address is shown."""
+    """The guard's Scrubber, loaded once from the file beside this one (`python3 -I` puts no folder on the path), under
+    a name of its own; None if it isn't there or can't be loaded, and then no address is shown."""
+    if not _GUARD:
+        module = None
+        name = "_tf_error_reasons_guard"
+        try:
+            path = Path(__file__).resolve().with_name("tf_plan_guard.py")
+            spec = importlib.util.spec_from_file_location(name, path)
+            if spec is not None and spec.loader is not None:
+                module = importlib.util.module_from_spec(spec)
+                sys.modules[name] = module  # dataclasses looks its module up while the guard is loading
+                spec.loader.exec_module(module)
+        except Exception:  # noqa: BLE001 - no guard, no address
+            sys.modules.pop(name, None)
+            module = None
+        _GUARD.append(module)
     try:
-        path = Path(__file__).resolve().with_name("tf_plan_guard.py")
-        spec = importlib.util.spec_from_file_location("tf_plan_guard", path)
-        if spec is None or spec.loader is None:
-            return None
-        module = importlib.util.module_from_spec(spec)
-        sys.modules[spec.name] = module  # dataclasses looks its module up while the guard is loading
-        spec.loader.exec_module(module)
-        return module.Scrubber(private)
-    except Exception:  # noqa: BLE001 - no guard, no address
+        return _GUARD[0].Scrubber(private) if _GUARD[0] is not None else None
+    except Exception:  # noqa: BLE001
         return None
 
 
 def blocks(log: str) -> list[list[str]]:
-    """One list of lines per error: from each `Error: ` line to the next."""
+    """One list of lines per error: from each `Error: ` line to the end of that diagnostic (its closing `╵`, a
+    `Warning: ` line or the next `Error: `), so nothing of a warning that follows is read as the error's."""
     out: list[list[str]] = []
+    inside = False
     for line in log.splitlines():
         if re.match(r"^\W*Error: ", line):
             out.append([line])
-        elif out:
+            inside = True
+        elif re.match(r"^\W*Warning: ", line) or line.strip() == "╵":
+            inside = False
+        elif inside:
             out[-1].append(line)
     return out
 
@@ -122,7 +173,10 @@ def permissions(text: str, private: set[str]) -> list[str]:
             name = m.group(2)
             if not PERMISSION.fullmatch(name) or name.count(".") < MIN_PARTS - 1 or name in found:
                 continue
-            if any(p in _normalize(name) for p in private):
+            if name.split(".", 1)[0] not in SERVICES:
+                continue
+            n = _normalize(name)
+            if any(p in n or n in p for p in private):  # holds a private value, or is a piece of one
                 continue
             found.append(name)
     return found[:MAX_PERMISSIONS]
@@ -140,7 +194,8 @@ def reasons(text: str) -> list[str]:
     for pattern, reason in WORDS:
         if pattern.search(text):
             seen.add(reason)
-    if QUOTA in seen:  # a quota refusal comes as a 403 or a 429: it isn't a missing permission
+    # A quota refusal or a disabled API comes as a 403 too: neither is a missing permission.
+    if (QUOTA in seen or API_OFF in seen) and not DENIED_WORD.search(text):
         seen.discard(DENIED)
     return [r for r in ORDER if r in seen]
 
@@ -158,8 +213,7 @@ def reasons_text(log: str, env: dict[str, str]) -> str:
         why = reasons(text)
         if names and DENIED not in why:
             why = [
-                DENIED,
-                *[r for r in why if r != QUOTA],
+                r for r in ORDER if r in {DENIED, *why}
             ]  # a named denied permission is a 403 by definition
         if not why:
             continue
@@ -177,7 +231,7 @@ def reasons_text(log: str, env: dict[str, str]) -> str:
         if names:
             item += ": " + ", ".join(names)
             denied = True
-        elif DENIED in why:
+        elif DENIED in why and DENIED_WORD.search(text):  # said to be a denial, not only a status
             unnamed = True
         out.append(item)
     if not out:

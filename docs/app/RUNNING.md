@@ -365,11 +365,14 @@ Why (permission names and a fixed list of reasons only; anything else in Terrafo
 ```
 
 - **The reason** is one of `403 permission denied`, `404 not found`, `409 already exists`, `400 invalid argument`,
-  `quota` and `5xx server error`, chosen by the HTTP status or status word in Terraform's message. An error that
+  `quota`, `API not enabled` and `5xx server error`, chosen by the HTTP status or status word in Terraform's message
+  (409 and 400 by the status alone, so a 409 from a concurrent change reads `already exists` too). An error that
   matches none of them has no line.
-- **The permission** is shown only where the message says which permission was denied, and only if it has a
-  permission's shape (letters and dots, three or four parts). `403 permission denied` with no name means Terraform's
-  message named none: find the denied call in Cloud Audit Logs, principal `registry-coffee-tf-apply@…`.
+- **The permission** is shown only where the message says which permission was denied, only if it has a
+  permission's shape (letters and dots, three or four parts), and only if it starts with a service this project uses
+  (`SERVICES` in the script: add a service there when a new one is first denied). `403 permission denied` with no
+  name means no permission was recognised in Terraform's message: find the denied call in Cloud Audit Logs,
+  principal `registry-coffee-tf-apply@…`.
 - **What to do with a denied permission:** look for it in `src/terraform/bootstrap/iam.tf` on main. If a role of the
   apply account already holds it, the bootstrap hasn't been applied since: run the by-hand bootstrap block (the
   `cd src/terraform/bootstrap && terraform init ...` block below, reading its plan before the yes), then run
