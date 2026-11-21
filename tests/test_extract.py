@@ -595,3 +595,42 @@ def test_canonical_country_aliases(name, want):
     from coffeedata.origins import canonical_country
 
     assert canonical_country(name) == want
+
+
+# --- the 2026-11-21 review, F3: an answer is held to the schema ------------------------------------------------------
+
+
+def _msg(text: str):
+    return SimpleNamespace(stop_reason="end_turn", content=[SimpleNamespace(type="text", text=text)])
+
+
+@pytest.mark.parametrize("text", ["[]", '["origin_country"]', '"Kenya"', "3", "null", "true"])
+def test_parse_llm_message_turns_away_an_answer_that_isnt_an_object(text):
+    # `[]` used to raise AttributeError, which stopped a whole batch's collection
+    assert extract.parse_llm_message(_msg(text), Enrichment(origin_country="Kenya")) is None
+
+
+def test_parse_llm_message_keeps_only_the_schemas_keys_within_their_sizes():
+    import json
+
+    answer = {
+        "origin_country": "Kenya",
+        "origin_region": "x" * (extract.MAX_TEXT_CHARS + 1),  # over-long: left to the rules
+        "producer": "Kamavindi",
+        "varietals": ["SL28", "y" * (extract.MAX_ITEM_CHARS + 1), 7] + [f"v{i}" for i in range(30)],
+        "tasting_notes": ["plum"],
+        "is_blend": False,
+        "body_hash": "forged",
+        "method": "rules",
+        "roaster_id": "other.com",
+    }
+    base = Enrichment(origin_region="Nyeri", body_hash="real")
+    e = extract.parse_llm_message(_msg(json.dumps(answer)), base)
+    assert e.origin_region == "Nyeri" and e.producer == "Kamavindi"
+    assert e.body_hash == "real" and e.method == "llm"
+    assert e.varietals[0] == "SL28" and len(e.varietals) == extract.MAX_LIST_ITEMS
+    assert all(len(v) <= extract.MAX_ITEM_CHARS for v in e.varietals)
+
+
+def test_parse_llm_message_turns_away_a_wrongly_typed_value():
+    assert extract.parse_llm_message(_msg('{"elevation_masl_min": "high"}'), Enrichment()) is None

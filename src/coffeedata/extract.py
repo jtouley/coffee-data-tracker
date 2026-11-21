@@ -436,7 +436,42 @@ def llm_request(title: str, tags: list[str], body_text: str) -> dict:
     }
 
 
+# The longest value kept from Claude's answer: a text field, a list, and one item of a list. A listing is the roaster's
+# own text, so its answer is held to the schema's keys and to these sizes (security review 2026-11-21, F3). The output
+# schema can't carry them (structured outputs don't accept maxLength or maxItems), so they are checked here. They are
+# above every value enriched so far (the longest: a producer of 128 characters, 8 notes or varietals, an item of 29).
+MAX_TEXT_CHARS = 200
+MAX_LIST_ITEMS = 20
+MAX_ITEM_CHARS = 80
+_ANSWER_KEYS: tuple[str, ...] = tuple(SCHEMA["properties"])  # type: ignore[arg-type]
+
+
+def _answer_fields(data: object) -> dict:
+    """The answer's fields that SCHEMA names, each within the size limits: an over-long text is dropped (left to the
+    rules' value), a list keeps its first MAX_LIST_ITEMS strings within MAX_ITEM_CHARS. Anything else (a key outside
+    the schema, such as body_hash or method; a non-object answer) is ignored."""
+    if not isinstance(data, dict):
+        return {}
+    out: dict = {}
+    for k in _ANSWER_KEYS:
+        v = data.get(k)
+        if v is None or v == []:
+            continue
+        if isinstance(v, list):
+            items = [x for x in v if isinstance(x, str) and len(x) <= MAX_ITEM_CHARS]
+            if items:
+                out[k] = items[:MAX_LIST_ITEMS]
+        elif isinstance(v, str):
+            if len(v) <= MAX_TEXT_CHARS:
+                out[k] = v
+        else:
+            out[k] = v  # numbers and booleans: Enrichment checks their types
+    return out
+
+
 def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
+    """Claude's answer merged over the rules' enrichment, or None when it gave none: a refusal, a cut-off answer, text
+    that isn't JSON, or JSON that isn't an object (`[]` used to raise here and stop the whole batch)."""
     if getattr(msg, "stop_reason", None) in ("refusal", "max_tokens"):
         return None
     text = next((b.text for b in msg.content if b.type == "text"), "")  # type: ignore[attr-defined]
@@ -444,7 +479,9 @@ def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
         data = json.loads(text)
     except ValueError:
         return None
-    merged = base.model_dump() | {k: v for k, v in data.items() if v not in (None, [])}
+    if not isinstance(data, dict):
+        return None
+    merged = base.model_dump() | _answer_fields(data)
     if merged.get("origin_country"):
         merged["origin_country"] = canonical_country(merged["origin_country"])
     merged["tasting_notes"] = split_notes(",".join(merged.get("tasting_notes") or []))
