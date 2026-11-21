@@ -246,7 +246,8 @@ models:
       - name: status
         description: >-
           What the site answered, in the probe's words: ok, blocked (robots.txt disallows us, or an edge challenged),
-          unreachable, robots_unavailable, or http_<code>.
+          unreachable, robots_unavailable, http_<code>, or pause_<code> (a 5xx that asked us to wait); or the screen's
+          own no-answer statuses: timeout, budget_spent, error.
         data_tests: [not_null]
       - name: refusal
         description: How the site, or its edge, refused us, if it did. Nothing more was fetched after it.

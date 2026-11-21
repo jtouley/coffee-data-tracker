@@ -338,9 +338,10 @@ APIS: dict[str, tuple[str, str, type]] = {
     "woocommerce": ("/wp-json/wc/store/v1/products", "per_page", list),
 }
 
-# A pause: the site, or its platform, asked us to slow down (Shopify's 430 is IP-wide). Recorded, never counted as
-# probed (registry.STATE_SQL and dbt's int_roaster_state leave http_429 and http_430 out), so the next probe run
-# asks again.
+# A pause: the site, or its platform, asked us to slow down (Shopify's 430 is IP-wide), or a server asked us to
+# wait (a 5xx with a Retry-After, recorded as `pause_<code>` so it never reads as a plain 5xx). Recorded, never
+# counted as probed (registry.STATE_SQL and dbt's int_roaster_state leave http_429, http_430 and pause_<code> out),
+# so the next probe run asks again.
 PAUSES = (429, 430)
 
 
@@ -354,10 +355,17 @@ def _refuses(r: httpx.Response) -> bool:
     return 500 <= r.status_code < 600 and asked_wait(r) is not None
 
 
+def pause_status(code: int) -> str:
+    """A pause's status: `http_429` or `http_430` as the site said it, `pause_<code>` for a 5xx that asked us to
+    wait, so a plain 5xx (`http_<code>`, a failure) is never mistaken for one."""
+    return f"http_{code}" if code in PAUSES else f"pause_{code}"
+
+
 def _refused(host: str, r: httpx.Response) -> dict:
     """The probe's row for a site that refused or paused us (_refuses): an edge's challenge is `blocked`, as on
-    robots.txt; a pause is its `http_<code>`. Either way nothing more is asked of the site."""
-    status = "blocked" if is_challenge(r) else f"http_{r.status_code}"
+    robots.txt; a 429 or 430 is its `http_<code>`; a 5xx with a Retry-After is `pause_<code>`. Either way nothing
+    more is asked of the site."""
+    status = "blocked" if is_challenge(r) else pause_status(r.status_code)
     return {"status": status, "final_host": host, "platform": "", "http_status": r.status_code}
 
 
@@ -464,7 +472,8 @@ def _api(
 def probe_one(client: PoliteClient, domain: str) -> dict:
     """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
     an edge's challenge) | unreachable | http_<code> |
-    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again).
+    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again) |
+    pause_<code> (a 5xx that asked us to wait: not counted as probed, as http_429 and http_430 aren't).
     A challenge on any status, a 429 or 430, or a 5xx with a Retry-After, is the site's answer to us (_refuses): the
     probe stops there and records it (_refused), on the home page and on the catalog API alike, and never asks www or
     the next platform's API instead. A plain 5xx still falls back, as before."""

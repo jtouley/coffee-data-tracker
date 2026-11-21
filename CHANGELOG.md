@@ -22,7 +22,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   or 430, or a 5xx with a `Retry-After`, on the catalog API or the home page is recorded (refusal `http_429`,
   `http_430` or `challenge`, counted by the breaker; a 5xx pause is its `http_<code>`) and nothing more is asked of
   the host. A plain 5xx is not a refusal: the screen still asks `www.` and the next API, and with nothing read the
-  row is the 5xx (retried after 28 days). The probe now also counts a 5xx with a `Retry-After` as a pause. A home page that timed out, a spent request cap or our own error is no answer (`timeout`,
+  row is the 5xx (retried after 28 days). The probe now also counts a 5xx with a `Retry-After` as a pause: recorded as its own status, `pause_<code>`, and,
+  like `http_429` and `http_430`, not counted as probed (registry, `int_roaster_state`), so the place is asked again
+  next run. A home page that timed out, a spent request cap or our own error is no answer (`timeout`,
   `budget_spent`, `error`: retried after 28 days), never a dead site. A robots.txt rule against a guessed API path no
   longer refuses the whole site. A flush that fails halfway retries only what wasn't written, and `stg_screens`
   keeps one row per `screen_id`.

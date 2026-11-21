@@ -125,7 +125,7 @@ CASES = {
     "a 5xx asking us to wait on the catalog API stops the probe": (
         {"a.com/robots.txt": ROBOTS_OK, "a.com/": httpx.Response(200, text=PLAIN_HOME),
          "a.com" + P: httpx.Response(503, headers={"retry-after": "120"})},
-        {"status": "http_503", "final_host": "a.com", "platform": "", "http_status": 503},
+        {"status": "pause_503", "final_host": "a.com", "platform": "", "http_status": 503},
         ["a.com/robots.txt", "a.com/", "a.com" + P],
     ),
     "a plain 5xx on the catalog API asks the next one": (

@@ -64,7 +64,8 @@ schema:
     physicalType: string
     required: false
     description: 'What the site answered, in the probe''s words: ok, blocked (robots.txt disallows us, or an edge challenged),
-      unreachable, robots_unavailable, or http_<code>.'
+      unreachable, robots_unavailable, http_<code>, or pause_<code> (a 5xx that asked us to wait); or the screen''s own
+      no-answer statuses: timeout, budget_spent, error.'
   - name: refusal
     logicalType: string
     physicalType: string
@@ -390,4 +391,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 2488fdad247d8cd6
 - property: docsFingerprint
-  value: d688cf8f2236ab1c
+  value: 7cb39e3bbe7d1110

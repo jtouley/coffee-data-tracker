@@ -49,7 +49,8 @@ COLUMNS: dict[str, dict[str, str]] = {
         "roaster_id": "The place's normalized domain, as in candidates.",
         "state": "The US state the run screened.",
         "status": "What the site answered, in the probe's words: ok, blocked (robots.txt disallows us, or an edge "
-        "challenged), unreachable, robots_unavailable, or http_<code>.",
+        "challenged), unreachable, robots_unavailable, http_<code>, or pause_<code> (a 5xx that asked us to wait); "
+        "or the screen's own no-answer statuses: timeout, budget_spent, error.",
         "refusal": "How the site, or its edge, refused us, if it did: robots_disallow, robots_401_403, challenge, "
         "http_429 or http_430. Nothing more was fetched from the host after it.",
         "http_status": "The home page's HTTP status, or a challenge's; null when nothing answered.",

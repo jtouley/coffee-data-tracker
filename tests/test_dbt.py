@@ -281,10 +281,17 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
         run(lake, d, c, None)
     probe(lake, "2026-11-03", a, status="unreachable")
     probe(lake, "2026-11-04", b, status="http_430", platform="")  # a pause: not counted as probed, in either
+    probe(lake, "2026-11-05", b, status="pause_503", platform="")  # a 5xx that asked us to wait: the same
     con = build(lake, tmp_path)
     dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
-    py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    current = registry.current(lake, FIX / "roasters.csv")
+    py_status = {s.roaster.roaster_id: s.status for s in current}
     assert dbt_status == py_status
+    # the pauses are skipped alike: the last probe is the one before them, in Python and in dbt
+    py_probed = {s.roaster.roaster_id: s.last_probed for s in current}
+    sql = "select roaster_id, cast(last_probed as varchar) from int_roaster_state"
+    dbt_probed = dict(con.execute(sql).fetchall())
+    assert dbt_probed[b] == py_probed[b] and py_probed[b] not in ("2026-11-04", "2026-11-05")
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
 
 

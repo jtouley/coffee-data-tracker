@@ -39,13 +39,14 @@ NO_ANSWER_STATUSES = ("timeout", "budget_spent", "error")
 
 def transient(status: str | None, refusal: str | None) -> bool:
     """A screen that got no answer about the site and may get one soon: its robots.txt didn't answer, the site
-    answered 429, 430 or a 5xx, or the screen itself got no answer (NO_ANSWER_STATUSES)."""
+    answered 429, 430 or a 5xx (pause_<code>: one that asked us to wait), or the screen itself got no answer
+    (NO_ANSWER_STATUSES)."""
     status = status or ""
     return (
         status == "robots_unavailable"
         or refusal in ("http_429", "http_430")
         or status in ("http_429", "http_430")
-        or status.startswith("http_5")
+        or status.startswith(("http_5", "pause_"))
         or status in NO_ANSWER_STATUSES
     )
 

@@ -204,7 +204,7 @@ def _stopped(out: dict) -> bool:
         out |= {"status": "blocked", "platform": ""}
         return True
     if code := out.get("paused"):
-        out |= {"status": f"http_{code}", "http_status": code}
+        out |= {"status": discover.pause_status(code), "http_status": code}
         return True
     return False
 

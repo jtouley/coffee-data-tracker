@@ -262,7 +262,9 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("screened_at", pa.timestamp("s", tz="UTC")),
             ("roaster_id", pa.string()),
             ("state", pa.string()),
-            ("status", pa.string()),  # the probe's: ok, blocked, unreachable, robots_unavailable, http_<code>
+            # the probe's: ok, blocked, unreachable, robots_unavailable, http_<code>, pause_<code>; and the screen's own
+            # no-answer statuses: timeout, budget_spent, error
+            ("status", pa.string()),
             ("refusal", pa.string()),  # SCREEN_REFUSALS, or null
             ("http_status", pa.int32()),
             ("final_host", pa.string()),

@@ -289,7 +289,7 @@ def test_a_429_is_recorded_as_what_the_site_said():
         (httpx.Response(503, headers={"cf-mitigated": "challenge"}), "blocked", "challenge", "cloudflare"),
         (httpx.Response(403, headers={"cf-mitigated": "challenge"}), "blocked", "challenge", "cloudflare"),
         (httpx.Response(202, headers={"sg-captcha": "challenge"}), "blocked", "challenge", "siteground"),
-        (httpx.Response(503, headers={"retry-after": "120"}), "http_503", None, None),
+        (httpx.Response(503, headers={"retry-after": "120"}), "pause_503", None, None),
     ],
     ids=[
         "429",
@@ -312,7 +312,7 @@ def test_a_refusal_on_the_catalog_api_stops_the_screen_and_is_recorded(answer, s
     b = screen.Breaker()
     b.note(row)
     # a known edge's challenge is reported, not counted; a 5xx pause is neither
-    assert b.counted == (0 if edge == "siteground" or status == "http_503" else 1)
+    assert b.counted == (0 if edge == "siteground" or status == "pause_503" else 1)
     assert b.by_edge == ({edge: 1} if edge else {})
 
 
@@ -349,7 +349,8 @@ def test_a_5xx_asking_us_to_wait_on_the_home_page_is_a_pause():
                "www.a.com/": httpx.Response(200, text=PLAIN_HOME)}  # fmt: skip
     (row, _), asked = one(routes)
     assert asked == ["a.com/robots.txt", "a.com/"]  # never www after it
-    assert (row["status"], row["http_status"]) == ("http_503", 503)
+    assert (row["status"], row["http_status"]) == ("pause_503", 503)
+    assert screen_rules.transient(row["status"], row["refusal"])  # asked again after 28 days
 
 
 def test_a_pause_on_the_home_page_is_never_asked_again_at_www():

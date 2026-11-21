@@ -808,8 +808,8 @@ def test_probe_tries_www_when_the_bare_host_does_not_answer():
         (httpx.Response(403, headers={"cf-mitigated": "challenge"}), "blocked", 403),
         (httpx.Response(202, headers={"sg-captcha": "challenge"}), "blocked", 202),
         # a 5xx that asks us to wait (Retry-After) is a pause too
-        (httpx.Response(503, headers={"retry-after": "120"}), "http_503", 503),
-        (httpx.Response(500, headers={"retry-after": "120"}), "http_500", 500),
+        (httpx.Response(503, headers={"retry-after": "120"}), "pause_503", 503),
+        (httpx.Response(500, headers={"retry-after": "120"}), "pause_500", 500),
     ],
     ids=[
         "429",
@@ -871,7 +871,8 @@ def test_a_challenge_on_the_home_page_is_blocked_on_any_status():
 def test_a_5xx_asking_us_to_wait_on_the_home_page_is_a_pause():
     out = _probe({HOME: httpx.Response(503, headers={"retry-after": "120"}),
                   r"https://www\.a\.com/$": httpx.Response(200, text="x")})  # fmt: skip
-    assert out == {"status": "http_503", "final_host": "a.com", "platform": "", "http_status": 503}
+    # its own status, so the bookkeeping never mistakes it for a plain 5xx (registry.STATE_SQL leaves it out)
+    assert out == {"status": "pause_503", "final_host": "a.com", "platform": "", "http_status": 503}
 
 
 def test_a_pause_on_the_home_page_is_never_asked_again_at_www():
