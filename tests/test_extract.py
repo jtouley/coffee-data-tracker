@@ -543,17 +543,26 @@ def test_roast_level(title, tags, body, want):
         ("X Decaf", (), "ABOUT THE PROCESS The sugarcane decaf process uses a natural compound", None),
         ("X Decaf", (), "This is a natural method to extract the caffeine from the bean.", None),
         ("X Decaf", (), "A very high-quality natural process decaffeinated coffee.", None),
-        # the description's prose isn't read (eval/process: about one in five wrong on validation); Claude reads it
+        # prose: only a sentence that says how this coffee was processed (round-2 candidate, not yet sealed-tested)
         ("X", (), "this natural coffee", None),
         ("X", (), "with natural sweetness and notes of honey", None),
         (
             "X",
             (),
             "Following harvest, the coffee is processed using Kenya's traditional washed method.",
-            None,
+            "washed",
         ),
-        ("X", (), "it has been processed using carbonic maceration.", None),
+        ("X", (), "it has been processed using carbonic maceration.", "anaerobic"),
         ("X", (), "Utilising natural and washed processed coffees", None),
+        ("X", (), "While the washed lot is gone, the natural lot just landed.", None),
+        ("X", (), "Our Guatemala is enhanced by the natural processed Ethiopia.", None),
+        ("X", (), "What does washed coffee taste like", None),
+        ("X Flavored", (), "This flavored coffee is sweetened with golden honey.", None),
+        ("X Blend", (), "This blend's base is a fully washed Colombia.", None),
+        ("X", (), "Region djimma Varietal heirloom Process natural Elevation 1900 m", "natural"),
+        ("X Decaf", (), "The sugarcane decaf process uses a natural compound.", None),
+        ("X", (), "Process washed & natural Elevation 1100", None),
+        ("X", ("process:White Honeyed and Sun Dried",), "", "honey"),
     ],
 )
 def test_process(title, tags, body, want):

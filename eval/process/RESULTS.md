@@ -72,3 +72,33 @@ choice stands: prose is not read, precision first.
 
 Honey and anaerobic fall where they were wrong (Sumatra "semi-washed"/wet-hulled is other; co-ferments and thermal
 shock without anaerobic are other; "Natural & Washed" blends have no single process).
+
+## Round 2 (branch `process-precision-r2`, not sealed-tested)
+
+Owner's gate: estimated agreement at least 95% on a sealed test, confidently wrong no higher than main's.
+
+**Train error analysis** (the frozen change `ba515d4` against the train reference, 12 of 100 wrong): the rules
+abstain where the listing states a process 10 (stated only in prose 8; a label format not parsed, "Process natural"
+and "Processing Method Alma Negra Natural" with no colon, 2); a wrong process 2 (a prose "anaerobic" lost to a
+"Process: Washed" field; a co-ferment then "thoroughly washed" read as other); a wrong reference label 0 found;
+a `none`/`multiple` boundary case 0.
+
+**Candidates** (tuned on train, compared on validation aggregates only; strata as before):
+
+| Candidate | Validation agree | Confidently wrong | Coverage |
+|---|---|---|---|
+| main | 84.3% ± 7.5 | 5.1% ± 2.9 | 16.1% ± 2.9 |
+| frozen change `ba515d4` | 90.0% ± 7.6 | 2.9% ± 2.9 | 20.2% ± 3.4 |
+| + colon-less labels | 91.5% ± 7.5 | 2.9% ± 2.9 | 21.8% ± 3.3 |
+| + strict prose (sentence about this coffee; guards for other coffees, blends, decaf, flavourings, general claims, questions, two countries) and anaerobic over a method | 93.5% ± 7.4 | 2.9% ± 2.9 | 23.7% ± 3.1 |
+| + a description that contradicts a title or field: no answer (a tag loses to it) | 92.6% ± 7.5 | 2.0% ± 2.5 | 22.8% ± 3.4 |
+
+Paired, the strict-prose candidate against the frozen change: agree +3.5 ± 1.7, confidently wrong +0.0, coverage
++3.5 ± 1.7. On train it scores 99.1% (tuned on).
+
+**Why validation can't show 95% with margin:** about 71% of the listed catalog is the `same_none` stratum (both
+rules abstain) and 19% `same_process`; each has 20 labelled listings. One `same_none` listing whose process is
+stated somewhere the rules don't read costs 3.6 points of the estimate, and 3 of 20 `same_process` listings are
+wrong for main and every candidate alike (2.8 points). Train shows no such errors left to learn from, and the
+listings behind validation's can't be read. With 100 labels a set, the interval is about ±7.5 points, so even a
+true 95% would not show a lower bound near 95%. The best validated figure is 93.5% (the strict-prose candidate).
