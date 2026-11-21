@@ -1,0 +1,332 @@
+[
+ {
+  "id": "tr-00957584",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Farm with a café whose store lists dairy, socks and farm goods, with no roasting or coffee bags."
+ },
+ {
+  "id": "tr-01022668",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Name says Roasting Company but the 40 catalog items shown are food and drinks, with no roasting statement or bag seen."
+ },
+ {
+  "id": "tr-01906697",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Nav has a ROASTERY page and bags are sold, but the home text never says the business roasts, and the coffees named (Café Femenino, Swiss Water decaf) look sourced."
+ },
+ {
+  "id": "tr-02829305",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog shows only drinks and food, with no roasting claim or bags."
+ },
+ {
+  "id": "tr-05696224",
+  "label": "unsure",
+  "kind": "other",
+  "note": "Home text is only 'Misty's Sweet Nation' with no products stored, so nothing shows what it sells."
+ },
+ {
+  "id": "tr-06429888",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Café with a 'Coffee Beans - Whole Bean' product but no statement that it roasts."
+ },
+ {
+  "id": "tr-06807588",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Luxury sweets and dates store with no coffee."
+ },
+ {
+  "id": "tr-07399102",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is food, books and café items, with no roasting or coffee bags."
+ },
+ {
+  "id": "tr-07752879",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Bookstore café whose catalog is books."
+ },
+ {
+  "id": "tr-10223751",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "Matcha and hojicha seller, not coffee."
+ },
+ {
+  "id": "tr-13944577",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Restaurant menu items only."
+ },
+ {
+  "id": "tr-14468979",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "Cookie and brownie company, not coffee."
+ },
+ {
+  "id": "tr-16814536",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "Sells 1 lb Peruvian coffee bags online, but the text says families in Peru handle roasting and bagging, so the business's own roasting is not shown."
+ },
+ {
+  "id": "tr-20347237",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "tr-21097177",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "Café selling Onyx-named bags (Onyx - Eclipse, Monarch), i.e. another roaster's coffee, among drinks and bagels."
+ },
+ {
+  "id": "tr-22133448",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "tr-23539235",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is pastries, records and drinks, with no roasting or bags."
+ },
+ {
+  "id": "tr-23711468",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café drink and food menu only."
+ },
+ {
+  "id": "tr-26519375",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Brooklyn café and creative space selling coffees (Mount Kenya, House Blend) but no text says who roasts them."
+ },
+ {
+  "id": "tr-32274389",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catering and banquet business with food menus, not coffee."
+ },
+ {
+  "id": "tr-36489080",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "tr-39150166",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Sells Maud's-brand whole bean and ground bags online, but nothing stored says the business roasts them (pods and Intelligent Blends are also sold)."
+ },
+ {
+  "id": "tr-39897745",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is drinks, food and ice cream, with no bags."
+ },
+ {
+  "id": "tr-41439543",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is drinks and food, with no roasting or bags."
+ },
+ {
+  "id": "tr-43713636",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Own-brand 12oz bags sold in cart with 'Roasted Small Batch' on the home page and a vendor name matching the brand."
+ },
+ {
+  "id": "tr-43940189",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is café food and drinks only."
+ },
+ {
+  "id": "tr-45375248",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is café food and drinks only."
+ },
+ {
+  "id": "tr-45945112",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Café with 1 lb and 1/2 lb coffee bags (Peru, Big Blue, etc.), but no text shows who roasts them."
+ },
+ {
+  "id": "tr-48247343",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Catalog lists 12 and 16 oz bagged coffee, but no home text says who roasts it."
+ },
+ {
+  "id": "tr-53656408",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Sells subscriptions and own-named 340 g blends, but the text only describes a neighborhood café and never says it roasts."
+ },
+ {
+  "id": "tr-55810131",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Text claims 60 years of roasting but says Conti Coffee is now a trademark coffee label of Five Star Breaktime Solutions, so who roasts the 1 lb bags is unclear."
+ },
+ {
+  "id": "tr-57033833",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café food and drink menu only."
+ },
+ {
+  "id": "tr-57755891",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Catalog includes a 'Whole Bean' item among café items, and the home text is only a title, so who roasts is not shown."
+ },
+ {
+  "id": "tr-61203706",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café food and drink menu only."
+ },
+ {
+  "id": "tr-62617597",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Own-brand Petrol Coffee 340 g bags sold online, but nothing stored says the business roasts them."
+ },
+ {
+  "id": "tr-65480752",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Own-brand bags and subscriptions with 'Expertly roasted, locally', which does not say the business does the roasting."
+ },
+ {
+  "id": "tr-67307756",
+  "label": "unsure",
+  "kind": "other",
+  "note": "Site reads as a coffee content and gear site with bean-tagged products, and gives no roasting evidence."
+ },
+ {
+  "id": "tr-68229898",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café drink menu only."
+ },
+ {
+  "id": "tr-72433093",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Sells own-brand African coffee bags and even unroasted beans, but the text never says the business roasts."
+ },
+ {
+  "id": "tr-72829837",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "Herb, tea and metaphysical goods shop, not coffee."
+ },
+ {
+  "id": "tr-73560811",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café food and drink menu only."
+ },
+ {
+  "id": "tr-74526242",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "No home text, and the catalog shows a 12 oz 'Wild Forest' item among café items, so roasting is unknown."
+ },
+ {
+  "id": "tr-79061098",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Home text says 'Freshly roasted coffee beans' served in cafés, but no store or roasting statement was stored."
+ },
+ {
+  "id": "tr-81863574",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Restaurant and café menu only."
+ },
+ {
+  "id": "tr-83363092",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café store with a 96 oz coffee box, syrups, puzzles and candles, with no roasting or bags."
+ },
+ {
+  "id": "tr-84117351",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Art gallery and shop with a Steeped & Stirred café, selling workshops and mail club items."
+ },
+ {
+  "id": "tr-90962867",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café meal menu only."
+ },
+ {
+  "id": "tr-92641726",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Home page sells 8 oz small-batch single-origin bags in a brand shop, but never says the business roasts."
+ },
+ {
+  "id": "tr-94651829",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Coffee trailer whose catalog shows drinks and food only."
+ },
+ {
+  "id": "tr-95661217",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Catalog includes a 'Rainbeau Roast' item among stickers and merchandise, with no text on who roasts."
+ },
+ {
+  "id": "tr-97036264",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "French-language art café and events venue with no store."
+ },
+ {
+  "id": "tr-97748512",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is café food, drinks and souvenirs."
+ },
+ {
+  "id": "tr-98352074",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Café and catering drink menu only."
+ },
+ {
+  "id": "tr-99803666",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Site (c. 2002) promotes Arbuckle's Fine Roasted Coffees by the bag and case, but no cart or online ordering is shown."
+ },
+ {
+  "id": "va-82960847",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Sells 16 oz single-origin bags online, but the text says 'From Our Roaster', which suggests an outside roaster."
+ }
+]

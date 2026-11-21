@@ -1,0 +1,176 @@
+[
+ {
+  "id": "va-00832075",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Café and candy shop sells 'Regular Coffee Beans' online, but nothing says who roasts them."
+ },
+ {
+  "id": "va-05861623",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Text says 'our local roasting process', but no store or products were stored to show bags sold online."
+ },
+ {
+  "id": "va-08922234",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is 14 café drinks."
+ },
+ {
+  "id": "va-16508489",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-18005324",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is salads, wraps and drinks."
+ },
+ {
+  "id": "va-18022624",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-20805083",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-21619865",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-26456373",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Only product is a sold-out Young Coffee 12oz bag, with no text on roasting."
+ },
+ {
+  "id": "va-26660766",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "GoDaddy site with menu, events and cake orders and no coffee store."
+ },
+ {
+  "id": "va-28491984",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-45605993",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Sells own-brand 340 g Kismet Roast, Burma Road Blend and Dunewood Roast bags, but the text never says it roasts."
+ },
+ {
+  "id": "va-47477657",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Title calls it 'Premier Coffee Roaster', with its own Empire Blends and roast categories sold in a cart."
+ },
+ {
+  "id": "va-47717164",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is quiches and salads."
+ },
+ {
+  "id": "va-55577712",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-58859344",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Lounge sells IMBing-brand coffee and single serves, but no text says it roasts."
+ },
+ {
+  "id": "va-60048692",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Sells a sold-out ground white coffee 12oz bag under its brand, but the text does not say it roasts."
+ },
+ {
+  "id": "va-60473311",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Calls itself 'Huff Coffee Roasters Chicago', has a 'Freshly-Roasted Beans' page, and lists HUFF-branded roast products."
+ },
+ {
+  "id": "va-61285355",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Coffeehouse sells 1# bags of Macy's Coffee online by Ecwid, but nothing stored says it roasts."
+ },
+ {
+  "id": "va-67392005",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Sells own-brand 12 oz whole bean and ground bags online, with producer stories and no statement on roasting."
+ },
+ {
+  "id": "va-67418073",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-67497673",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Nothing stored for the site (empty home text, no products)."
+ },
+ {
+  "id": "va-67568645",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Sells own-brand whole bean bags in sizes up to 5 lb, but nothing stored says it roasts."
+ },
+ {
+  "id": "va-68902041",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Bakery selling sourdough bread and pastries, not coffee."
+ },
+ {
+  "id": "va-71995476",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Home text says 'freshly roasted coffee' with four blends in a catalog, but does not say the business does the roasting."
+ },
+ {
+  "id": "va-76417882",
+  "label": "unsure",
+  "kind": "other",
+  "note": "Hawaiian farm gift shop selling coffee, nuts and candy, with no store read and no roasting statement."
+ },
+ {
+  "id": "va-79362009",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "Sells Magdalena-brand 340 g bags online, but text says only 'sourced directly from producers' and 'produced in Latin America'."
+ },
+ {
+  "id": "va-93661826",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Catalog is café drinks only."
+ },
+ {
+  "id": "va-97887396",
+  "label": "unsure",
+  "kind": "other",
+  "note": "Only the name (a tea business, local pickup warehouse) was stored."
+ }
+]

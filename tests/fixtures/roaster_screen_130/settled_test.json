@@ -1,0 +1,224 @@
+[
+ {
+  "id": "te-01968011",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "fine-dining restaurant site; no roasting or bags"
+ },
+ {
+  "id": "te-07323248",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "site behind Cloudflare bot check (403) in curl and browser; web search suggests cafe only"
+ },
+ {
+  "id": "te-11335850",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "drive-thru cafe/ice cream; no roasting claim, no bags online"
+ },
+ {
+  "id": "te-12331523",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-label bags sold online; no statement who roasts"
+ },
+ {
+  "id": "te-15481877",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "Cloudflare block (403) in curl and browser; Melitta roasts in Cherry Hill per search, online sale unverified"
+ },
+ {
+  "id": "te-25614485",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "coffee house selling own-label bags; no roasting, espresso imported from Italy"
+ },
+ {
+  "id": "te-30427905",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "brand; no roasting on site; press says partner roaster roasts for them"
+ },
+ {
+  "id": "te-30636713",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "head roaster, roasted Tue/Thu; bags in cart"
+ },
+ {
+  "id": "te-33378534",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "TLS error, does not load (retried, browser too)"
+ },
+ {
+  "id": "te-35198423",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Bastion Coffee Roasters roast on shared roaster; bag in online shop"
+ },
+ {
+  "id": "te-35529810",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "espresso tool company; own-label beans 'roasted fresh daily', no statement who roasts"
+ },
+ {
+  "id": "te-35735804",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "charity brand; own-label bags online, no statement who roasts"
+ },
+ {
+  "id": "te-36969220",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-label bags shippable; 'locally roasted', unclear by whom (Square site, browser)"
+ },
+ {
+  "id": "te-41873966",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "'we roast our own beans'; no online shop"
+ },
+ {
+  "id": "te-45658569",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "subdomain TLS handshake failure, does not load (retried, browser too)"
+ },
+ {
+  "id": "te-46228239",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "restaurant/coffee shop; no roasting or bag sales seen"
+ },
+ {
+  "id": "te-51504050",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "bags sold online; 'locally exclusive roasted beans', roaster not stated"
+ },
+ {
+  "id": "te-51825315",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "'Surje Coffee Co. roasts', small batch roasted in CA; bags online"
+ },
+ {
+  "id": "te-55519915",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "own-label bags online; unclear whether they roast or a partner roaster does"
+ },
+ {
+  "id": "te-61182183",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "bags online; 'locally roasted/packaged', no statement who roasts"
+ },
+ {
+  "id": "te-65883530",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "own-label single origins online + wholesale; site never says who roasts"
+ },
+ {
+  "id": "te-67049553",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "certificate hostname mismatch, does not load (retried, browser too)"
+ },
+ {
+  "id": "te-67480442",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "says they roast; 'order coffee' links to differently branded Shopify store (Better Beans Florida)"
+ },
+ {
+  "id": "te-68161490",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "coffee sourced from purveyors; sells 1lb bag + sneakers; no roasting"
+ },
+ {
+  "id": "te-71874889",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-label beans on Square order page; no roasting statement (browser)"
+ },
+ {
+  "id": "te-75657778",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cafe; flavored beans listed unavailable; no roasting"
+ },
+ {
+  "id": "te-76789649",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "cafe chain; bags online 'hand-roasted', no statement who roasts"
+ },
+ {
+  "id": "te-77347053",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "cafe selling own-label Jessy's Premium bags online; who roasts not stated"
+ },
+ {
+  "id": "te-77644054",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "foodservice coffee supplier selling bags online; roasting not stated"
+ },
+ {
+  "id": "te-77701285",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "bags orderable online, 'small batch roasted'; search says supplied by a local roaster (browser)"
+ },
+ {
+  "id": "te-84275776",
+  "label": "unsure",
+  "kind": "other",
+  "note": "robots.txt disallows all; not read"
+ },
+ {
+  "id": "te-88248099",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "roasts in Geneva NY; online ordering has drinks/food only, no bags (browser)"
+ },
+ {
+  "id": "te-91263731",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasted in San Diego; bags online (domain redirects to its Shopify store)"
+ },
+ {
+  "id": "te-93943276",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "roasts in-house per site+search; shippable-items view rendered empty (browser)"
+ },
+ {
+  "id": "te-95039129",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasted fresh, owns roaster per press; bag in cart"
+ },
+ {
+  "id": "te-96019681",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "hand roasted by their roaster; online shop ships"
+ },
+ {
+  "id": "te-98729223",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "herb-infused coffee online; founder is a roaster but site doesn't say they roast these"
+ }
+]
