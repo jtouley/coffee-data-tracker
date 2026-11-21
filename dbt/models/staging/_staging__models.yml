@@ -221,3 +221,117 @@ models:
         data_tests: [not_null]
       - name: updated_at
         description: When the latest record was written (raw logged_at, UTC).
+  - name: stg_screens
+    description: >-
+      One row per screen of a discovery candidate's site (raw screens, screen contract 1.0.0): what the site answered
+      to robots.txt, the home page and one product page on the day it was screened. A re-screen is another row.
+      Private: these places aren't in the registry, and nothing here is released. Nothing is judged in this model.
+    columns:
+      - name: run_date
+        description: The day the screen job ran.
+        data_tests: [not_null]
+      - name: batch_id
+        description: The write batch that holds the screen and its products.
+      - name: screen_id
+        description: The screen, one visit to one place.
+        data_tests: [not_null, unique]
+      - name: screened_at
+        description: When the screen finished (UTC).
+        data_tests: [not_null]
+      - name: roaster_id
+        description: The place's normalized domain, as in candidates.
+        data_tests: [not_null]
+      - name: state
+        description: The US state the run screened.
+      - name: status
+        description: >-
+          What the site answered, in the probe's words: ok, blocked (robots.txt disallows us, or an edge challenged),
+          unreachable, robots_unavailable, http_<code>, or pause_<code> (a 5xx that asked us to wait); or the screen's
+          own no-answer statuses: timeout, budget_spent, error.
+        data_tests: [not_null]
+      - name: refusal
+        description: How the site, or its edge, refused us, if it did. Nothing more was fetched after it.
+        data_tests:
+          - accepted_values: {arguments: {values: [robots_disallow, robots_401_403, challenge, http_429, http_430]}}
+      - name: http_status
+        description: The home page's HTTP status, or a challenge's; null when nothing answered.
+      - name: final_host
+        description: The host the home page was served from, after redirects.
+      - name: platform
+        description: >-
+          shopify or woocommerce when its catalog API answered; else the home page's marker with a question mark, or
+          other.
+      - name: page_size
+        description: The page size the product page was asked at; null when none was read.
+      - name: products_read
+        description: Products on the one page read (0 when none was).
+      - name: page_full
+        description: The page was full, so the catalog may hold more.
+      - name: page_timeout
+        description: The product page timed out at every size tried.
+      - name: edge
+        description: The edge that challenged us, read from the challenge's own headers.
+        data_tests:
+          - accepted_values: {arguments: {values: [siteground, cloudflare, other]}}
+      - name: home_title
+        description: The home page's title.
+      - name: home_text
+        description: The home page's visible text, its first 50,000 characters.
+      - name: requests
+        description: >-
+          HTTP requests the screen sent, robots.txt, redirects and retries included. At most 6
+          (tests/screen_request_cap.sql).
+      - name: bytes
+        description: Bytes of the home page and product page bodies read.
+      - name: crawl_delay_s
+        description: The longest spacing a robots.txt Crawl-delay gave this screen's requests, if any.
+      - name: duration_s
+        description: Seconds the screen took.
+      - name: code_version
+        description: The code that ran.
+  - name: stg_screen_products
+    description: >-
+      One row per product on the one catalog page a screen read (raw screen_products), as the store listed it.
+      Private, as stg_screens.
+    data_tests:
+      - grain:
+          arguments: {columns: [screen_id, product_id]}
+    columns:
+      - name: screen_id
+        description: The screen that read the product (stg_screens.screen_id).
+        data_tests: [not_null]
+      - name: roaster_id
+        description: The place's normalized domain.
+      - name: product_id
+        description: The store's product id.
+        data_tests: [not_null]
+      - name: handle
+        description: The store's product handle or slug.
+      - name: title
+        description: The product's title.
+      - name: vendor
+        description: The product's vendor, as the store states it.
+      - name: product_type
+        description: The product's type, as the store states it.
+      - name: tags
+        description: The product's tags (and categories, on WooCommerce).
+      - name: variants
+        description: Each size or option, with its title, grams, price and currency as stated, and availability.
+      - name: body_hash
+        description: A hash of the product's description text.
+      - name: body_text
+        description: The description's text, its first 1,500 characters.
+  - name: stg_screen_places
+    description: >-
+      One row per place of the discovery source list (raw candidates), with its newest name: the roaster screen tells
+      a product's vendor from the store's own name with it. Private, as stg_screens.
+    columns:
+      - name: roaster_id
+        description: The place's normalized domain.
+        data_tests: [not_null, unique]
+      - name: name
+        description: The place's name, from its newest source-list record.
+      - name: tags
+        description: The Overture tags its places carry (coffee_roastery, coffee_shop, cafe).
+      - name: locations
+        description: The most places any source-list record counted for the domain.

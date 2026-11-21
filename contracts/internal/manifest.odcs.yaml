@@ -102,7 +102,8 @@ schema:
     physicalType: string
     required: false
     description: 'discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich, fetch-health
-      (the fetch-health check), classify (Claude''s verdicts) or build (the dbt build, its release and serve).'
+      (the fetch-health check), classify (Claude''s verdicts), build (the dbt build, its release and serve) or screen (the
+      roaster screen of one state''s candidates; run_date is its day, not a week).'
   - name: connector
     logicalType: string
     physicalType: string
@@ -139,7 +140,8 @@ schema:
     physicalType: string
     required: false
     description: running (start row), done, deadline or failed. An attempt with only a running row died. A build is done
-      when it passed and was served, failed when its checks failed or it crashed (detail.passed, detail.error).
+      when it passed and was served, failed when its checks failed or it crashed (detail.passed, detail.error). A screen
+      is stopped when too many sites refused it (detail.stopped, detail.refusals).
   - name: todo
     logicalType: integer
     physicalType: int32
@@ -275,4 +277,4 @@ customProperties:
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: 912565a25a133297
+  value: a2d3b03545b16938

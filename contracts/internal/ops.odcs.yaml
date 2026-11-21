@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-ops
-version: 1.2.0
+version: 1.3.0
 name: Coffee Data internal ops contract
 status: active
 domain: coffee
@@ -625,6 +625,122 @@ schema:
   customProperties:
   - property: lakeGlob
     value: releases/*/*/ops/eval_prefilter_summary.parquet
+- name: screen_scores
+  physicalName: screen_scores
+  physicalType: table
+  description: 'Ops: each screened discovery candidate''s tier under the roaster screen''s rules, from its latest screen,
+    with the reasons and the day it is due again. Provisional until the rules are scored on a sealed test; never public.'
+  properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
+  - name: roaster_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The place's normalized domain, as in candidates.
+  - name: screen_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The place's latest screen, which the tier is from (screens.screen_id).
+  - name: tier
+    logicalType: string
+    physicalType: string
+    required: false
+    description: suggested, review, dropped or not_screened.
+  - name: decided_by
+    logicalType: string
+    physicalType: string
+    required: false
+    description: rules, or claude once its verdicts on the review tier exist.
+  - name: reasons
+    logicalType: array
+    physicalType: 'list<item: string>'
+    items:
+      logicalType: string
+      physicalType: string
+    required: false
+    description: Signal codes behind the tier, such as named 8/9, own_vendor 8/8, origins 4 or serves:<phrase>.
+  - name: rule_version
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The version of the rules that gave the tier (screen_rules.RULE_VERSION).
+  - name: verdict_model
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The model whose verdict decided, when decided_by is claude; else null.
+  - name: screened_at
+    logicalType: timestamp
+    logicalTypeOptions:
+      timezone: true
+      defaultTimezone: UTC
+    physicalType: timestamp[us, tz=UTC]
+    required: false
+    description: When the latest screen finished.
+  - name: next_due
+    logicalType: date
+    physicalType: date32[day]
+    required: false
+    description: The first day the place may be screened again, from screened_at and never the clock.
+  quality:
+  - id: screen_scores_ops_columns
+    description: each ops file has exactly the contract's columns and types, and none is a release table.
+    type: custom
+    engine: pytest
+    implementation: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+  - id: screen_scores_one_row_per_place
+    description: screen_scores.roaster_id is unique and not null.
+    type: custom
+    engine: dbt
+    implementation:
+      file: models/marts/_marts__models.yml
+      model: screen_scores
+      columns:
+      - roaster_id
+      test: unique
+    dimension: uniqueness
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: dbt screen_scores unique, not_null
+  - id: screen_scores_tier_values
+    description: screen_scores.tier is suggested, review, dropped or not_screened.
+    type: custom
+    engine: dbt
+    implementation:
+      file: models/marts/_marts__models.yml
+      model: screen_scores
+      columns:
+      - tier
+      test: accepted_values
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: dbt screen_scores accepted_values
+  - id: screen_scores_no_doubt_suggested
+    description: a suggested place carries no reseller doubt in its reasons.
+    type: custom
+    engine: dbt
+    implementation: tests/screen_scores_suggested_has_no_reseller_code.sql
+    dimension: consistency
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: dbt screen_scores_suggested_has_no_reseller_code
+  customProperties:
+  - property: lakeGlob
+    value: releases/*/*/ops/screen_scores.parquet
 authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/lake.py
   type: implementation
@@ -656,6 +772,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/eval_prefilter_summary.sql
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/screen_scores.py
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -668,6 +787,6 @@ customProperties:
   value:
   - the owner's command center (admin.registry.coffee)
 - property: interfaceFingerprint
-  value: b9a96979c7125866
+  value: b91f5ec87fa33472
 - property: docsFingerprint
-  value: 5818f4ad77f3f611
+  value: 979a0e2901488570

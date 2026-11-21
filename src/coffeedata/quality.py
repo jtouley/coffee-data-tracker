@@ -57,6 +57,7 @@ OPS_TABLES = (
     "mart_flags",
     "eval_prefilter",
     "eval_prefilter_summary",
+    "screen_scores",
 )
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
 # serving_log.action: a new release served (serve), an earlier one served by hand (rollback), the release served

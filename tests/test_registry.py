@@ -104,9 +104,10 @@ def test_a_probe_without_robots_txt_is_not_an_answer(lake):
     assert s.last_probed == "2026-11-01" and s.roaster.platform == "shopify"
 
 
-@pytest.mark.parametrize("pause", ["http_429", "http_430"])
+@pytest.mark.parametrize("pause", ["http_429", "http_430", "pause_503", "pause_500"])
 def test_a_probe_a_pause_stopped_is_not_an_answer(lake, pause):
-    # #255's review (M2): a 429 or 430 (Shopify's is IP-wide) is a pause, not an answer about the site. It doesn't
+    # #255's review (M2): a 429 or 430 (Shopify's is IP-wide), or a 5xx that asked us to wait (pause_<code>, #208), is
+    # a pause, not an answer about the site. It doesn't
     # count as probed, so the place is asked again at the normal cadence instead of waiting out the 7/14/28-day
     # backoff of an unreachable one
     rid = "onyxcoffeelab.com"

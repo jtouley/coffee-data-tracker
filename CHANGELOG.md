@@ -18,6 +18,28 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- The roaster screen stops at a refusal (#208's review), as the probe does (#255): a challenge on any status, a 429
+  or 430, or a 5xx with a `Retry-After`, on the catalog API or the home page is recorded (refusal `http_429`,
+  `http_430` or `challenge`, counted by the breaker; a 5xx pause is its `http_<code>`) and nothing more is asked of
+  the host. A plain 5xx is not a refusal: the screen still asks `www.` and the next API, and with nothing read the
+  row is the 5xx (retried after 28 days). The probe now also counts a 5xx with a `Retry-After` as a pause: recorded as its own status, `pause_<code>`, and,
+  like `http_429` and `http_430`, not counted as probed (registry, `int_roaster_state`), so the place is asked again
+  next run. A home page that timed out, a spent request cap or our own error is no answer (`timeout`,
+  `budget_spent`, `error`: retried after 28 days), never a dead site. A robots.txt rule against a guessed API path no
+  longer refuses the whole site. A flush that fails halfway retries only what wasn't written, and `stg_screens`
+  keeps one row per `screen_id`.
+- The roaster screen's rules, provisional (the design's PR 3): `screen_rules.py` turns a screen's first page and
+  home page into features and a tier (suggested, review, dropped, not_screened), and dbt derives them
+  (`int_screen_products`, `int_screen_home`, `int_screen_features`, and the ops table `screen_scores`, ops contract
+  1.3.0). Nothing shows the tier to anyone. Measured on train and validation only, against #130's stored evidence
+  (`eval/roaster_screen/README.md`): below the ship bar, with no sealed test yet.
+- The roaster screen's job, record-only (the design's PR 2, `docs/design/roaster-screen.md`): `coffeedata screen
+  --state <ST>` asks each due discovery candidate's robots.txt, home page and first page of products (Shopify or
+  WooCommerce), at most 6 requests a place, and writes two raw, append-only, private tables, `screens` and
+  `screen_products` (internal contract `screen` 1.0.0; dbt `stg_screens`, `stg_screen_products`). It decides nothing
+  and adds nothing to the registry. The probe's home and API steps moved into `discover._home` and `discover._api`
+  with its requests and rows unchanged. A run stops, and exits non-zero, when more than 8% of its places refuse it
+  (a provisional threshold). No job or schedule is defined yet: nothing runs.
 - A failed Terraform step in the apply workflow says why, as far as an allow-list can: for each error, a reason
   from a fixed list (403 permission denied, 404 not found, 409 already exists, 400 invalid argument, quota, 5xx) and
   the denied permission's name, with what to do about it (`scripts/tf_error_reasons.py`). Nothing else from
