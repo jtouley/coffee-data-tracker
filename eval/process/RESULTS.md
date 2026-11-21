@@ -102,3 +102,20 @@ stated somewhere the rules don't read costs 3.6 points of the estimate, and 3 of
 wrong for main and every candidate alike (2.8 points). Train shows no such errors left to learn from, and the
 listings behind validation's can't be read. With 100 labels a set, the interval is about ±7.5 points, so even a
 true 95% would not show a lower bound near 95%. The best validated figure is 93.5% (the strict-prose candidate).
+
+### Validation extension (300 labelled; A Opus, B Sonnet agreeing on 298, C Haiku settling 2)
+
+Strata `change(main, r2)`, scored on its own (`score … validation labels/reference_validation2.json main r2nc r2
+--strata main,r2`):
+
+| Rules | Agree | Confidently wrong | Coverage |
+|---|---|---|---|
+| main | 87.2% ± 3.1 | 2.7% ± 0.3 | 18.4% ± 0.3 |
+| `r2nc` (conflicts not handled) | 94.4% ± 3.1 | 1.4% ± 0.9 | 24.7% ± 0.8 |
+| `r2` (a contradiction gives no answer) | **94.5% ± 3.1** | **1.3% ± 0.8** | 24.7% ± 0.8 |
+
+Paired: `r2` − main +7.2 ± 1.5, −1.4 ± 0.9, +6.3 ± 0.9; `r2` − `r2nc` +0.1 ± 0.2, −0.1 ± 0.2, 0.0. Choice: `r2`.
+It does not clear 95% with margin (lower bound 91.4%), so it is not frozen and the sealed test is not scored. By
+stratum, the loss is mostly `same_none` (both rules abstain, 72% of the catalog): 113 of 120 right, the other 7
+listings state a process the rules don't read (about 4.2 points); then `process_to_other` 11 of 15 and
+`none_to_process` 26 of 30 (4 confidently wrong each).
