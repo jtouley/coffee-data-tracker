@@ -1596,7 +1596,18 @@ Then three parts:
   - `ingest-image-pinned`: `ingest_image` is this project's `registry-coffee/ingest` repository by `@sha256:`
     digest, and every job's image is a digest known at plan time;
   - `workload-identity`: no workload identity pool or provider changes, nor any IAM grant that names one or grants
-    a workload identity role.
+    a workload identity role;
+  - `guarded-accounts`, `app-image-pinned`: docs/app/RUNNING.md, "Changing the infrastructure";
+  - `project-iam-policy`: no `google_project_iam_policy`, `_audit_config`, `_member`, `_binding` or `_member_remove`
+    (project IAM is the owner's, in the bootstrap root);
+  - `cloud-sql-access`: a created or changed Cloud SQL instance has no authorized network, an `ssl_mode` of
+    `ENCRYPTED_ONLY` or stricter, `cloudsql.iam_authentication` on, no root password, and no
+    `master_instance_name`, `clone` or `restore_backup_context`, and no database flag but `cloudsql.iam_authentication`;
+    a `google_sql_user` is a `CLOUD_IAM_*` user with no `password`, `password_wo` or `password_wo_version`;
+  - `public-access`: no `allUsers` or `allAuthenticatedUsers` in any IAM grant or policy but a Cloud Run service's
+    `roles/run.invoker`; every bucket has `public_access_prevention = "enforced"`;
+  - `iam-members-known`: every IAM member, members list or policy is known at plan;
+  - `notification-channels`: notification channels are `email` only.
 - **Changes**: one line per resource, its action and its address, and where it moved from. `update` changes it in
   place, `create` adds it; `delete`, `delete+create` or `create+delete` (a replace) also fail the first guard.
   Unchanged resources and data reads aren't listed.

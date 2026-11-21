@@ -10,6 +10,7 @@ import copy
 import importlib.util
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -246,6 +247,10 @@ def test_the_guarded_accounts_and_their_trust_are_refused(rtype, after, after_un
     d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
     got = results(d)
     assert got.pop("guarded-accounts") == [f"{rtype}.extra"]
+    if rtype in guard.PROJECT_POLICY_TYPES:  # any project grant is project-iam-policy's as well
+        assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
+    if any(k in (after_unknown or {}) for k in guard.IAM_MEMBER_FIELDS):  # and a member unknown at plan
+        assert got.pop("iam-members-known") == [f"{rtype}.extra"]
     assert not any(got.values())
 
 
@@ -447,6 +452,10 @@ def test_keys_numeric_ids_grants_and_impersonation_are_refused(rtype, after, aft
     d = _sa_change(doc("good"), f"{rtype}.extra", rtype, after, after_unknown)
     got = results(d)
     assert got.pop("guarded-accounts") == [f"{rtype}.extra"]
+    if rtype in guard.PROJECT_POLICY_TYPES:  # any project grant is project-iam-policy's as well
+        assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
+    if any(k in (after_unknown or {}) for k in guard.IAM_MEMBER_FIELDS):  # and a member unknown at plan
+        assert got.pop("iam-members-known") == [f"{rtype}.extra"]
     assert not any(got.values())
 
 
@@ -1084,3 +1093,419 @@ def test_workflow_shape():
     assert "TF_LOG" not in json.dumps(wf["jobs"]["plan"].get("env", {}))
     assert os.path.exists(ROOT / "src" / "terraform" / "ci.tfvars")
     assert not list((ROOT / "src" / "terraform").glob("*.auto.tfvars"))
+
+
+# --- The admin stack's Cloud SQL and project IAM (project-iam-policy, cloud-sql-access) ----------------------------
+
+
+def _create(address: str, rtype: str, after: dict, unknown: dict | None = None) -> dict:
+    return {
+        "address": address,
+        "type": rtype,
+        "change": {"actions": ["create"], "before": None, "after": after, "after_unknown": unknown or {}},
+    }
+
+
+def admin_plan() -> dict:
+    """The good plan plus the admin stack's resources as admin_control.tf (#128/#149) writes them: the instance with
+    IAM authentication, a public IP with no authorized network and client certificates required; its database; and
+    its CLOUD_IAM_SERVICE_ACCOUNT user (an empty password_policy block, as plan JSON shows an unset one). Not
+    admin_sql: the admin's project grants are the bootstrap root's, and project IAM fails project-iam-policy."""
+    d = doc("good")
+    d["resource_changes"] += [
+        _create(
+            "google_service_account.admin",
+            "google_service_account",
+            {"account_id": "registry-coffee-admin-run", "display_name": "admin.registry.coffee (runtime)"},
+            {"email": True, "name": True},
+        ),
+        _create(
+            "google_sql_database_instance.admin",
+            "google_sql_database_instance",
+            {
+                "name": "registry-coffee-admin",
+                "database_version": "POSTGRES_16",
+                "deletion_protection": True,
+                "clone": [],
+                "restore_backup_context": [],
+                "settings": [
+                    {
+                        "edition": "ENTERPRISE",
+                        "tier": "db-f1-micro",
+                        "database_flags": [{"name": "cloudsql.iam_authentication", "value": "on"}],
+                        "ip_configuration": [
+                            {
+                                "ipv4_enabled": True,
+                                "ssl_mode": "TRUSTED_CLIENT_CERTIFICATE_REQUIRED",
+                                "authorized_networks": [],
+                            }
+                        ],
+                    }
+                ],
+            },
+            {"master_instance_name": True, "instance_type": True, "connection_name": True},
+        ),
+        _create(
+            "google_sql_database.admin",
+            "google_sql_database",
+            {"name": "admin", "instance": "registry-coffee-admin"},
+        ),
+        _create(
+            "google_sql_user.admin",
+            "google_sql_user",
+            {
+                "type": "CLOUD_IAM_SERVICE_ACCOUNT",
+                "instance": "registry-coffee-admin",
+                "password": None,
+                "password_policy": [],
+            },
+            {"name": True},
+        ),
+    ]
+    admin = "serviceAccount:registry-coffee-admin-run@coffee-data-tracker.iam.gserviceaccount.com"
+    d["resource_changes"] += [
+        _create(
+            f"google_storage_bucket.{name}",
+            "google_storage_bucket",
+            {
+                "name": f"coffee-data-tracker-{name.replace('_', '-')}",
+                "location": "US-CENTRAL1",
+                "uniform_bucket_level_access": True,
+                "public_access_prevention": "enforced",
+                "versioning": [{"enabled": True}],
+            },
+        )
+        for name in ("admin_state", "admin_snapshots")
+    ]
+    d["resource_changes"] += [
+        _create(
+            f'google_storage_bucket_iam_member.admin_state["{key}"]',
+            "google_storage_bucket_iam_member",
+            {"bucket": "coffee-data-tracker-admin-state", "role": role, "member": admin},
+        )
+        for key, role in (
+            ("creator", "roles/storage.objectCreator"),
+            ("viewer", "roles/storage.objectViewer"),
+        )
+    ]
+    d["resource_changes"] += [
+        _create(
+            'google_secret_manager_secret_iam_member.admin["ADMIN_SESSION_SECRET"]',
+            "google_secret_manager_secret_iam_member",
+            {"role": "roles/secretmanager.secretAccessor", "member": admin},
+            {"secret_id": True},
+        ),
+        _create(
+            "google_cloud_run_v2_service_iam_member.admin_public",
+            "google_cloud_run_v2_service_iam_member",
+            {
+                "name": "registry-coffee-admin",
+                "location": "us-central1",
+                "role": "roles/run.invoker",
+                "member": "allUsers",
+            },
+        ),
+        _create(
+            "google_monitoring_notification_channel.owner",
+            "google_monitoring_notification_channel",
+            {"type": "email", "display_name": "owner", "labels": {"email_address": "owner@example.com"}},
+            {"name": True},
+        ),
+    ]
+    d["configuration"] = {
+        "root_module": {
+            "resources": [
+                {
+                    "address": "google_sql_database_instance.admin",
+                    "type": "google_sql_database_instance",
+                    "expressions": {"name": {}, "database_version": {}, "settings": [{}]},
+                }
+            ]
+        }
+    }
+    return d
+
+
+def _instance(d: dict) -> dict:
+    return find(d, "google_sql_database_instance.admin")["change"]
+
+
+def test_the_admin_stacks_real_resources_pass_every_guard():
+    assert not any(results(admin_plan()).values()), results(admin_plan())
+    d = admin_plan()  # ENCRYPTED_ONLY is the weakest mode allowed
+    _instance(d)["after"]["settings"][0]["ip_configuration"][0]["ssl_mode"] = "ENCRYPTED_ONLY"
+    assert guard.cloud_sql_access(plan(d)) == []
+
+
+@pytest.mark.parametrize("rtype", sorted(guard.PROJECT_POLICY_TYPES))
+def test_any_project_iam_change_is_refused(rtype):
+    """The pipeline holds no project setIamPolicy: the whole policy, its audit settings and every grant on it
+    (member, binding, member_remove) are refused at plan, the admin's admin_sql included."""
+    d = admin_plan()
+    after = {
+        "google_project_iam_audit_config": {
+            "service": "allServices",
+            "audit_log_config": [{"log_type": "DATA_READ", "exempted_members": []}],
+        },
+        "google_project_iam_policy": {"policy_data": "{}"},
+        "google_project_iam_member": {"role": "roles/cloudsql.client", "member": "user:a@example.com"},
+        "google_project_iam_binding": {"role": "roles/cloudsql.client", "members": ["user:a@example.com"]},
+        "google_project_iam_member_remove": {"role": "roles/cloudsql.client", "member": "user:a@example.com"},
+    }[rtype]
+    d["resource_changes"].append(_create(f"{rtype}.extra", rtype, {"project": "p", **after}))
+    got = results(d)
+    assert got.pop("project-iam-policy") == [f"{rtype}.extra"]
+    assert not any(got.values()), got
+
+
+def test_the_admin_stacks_main_root_admin_sql_is_refused():
+    """#128/#149 carried google_project_iam_member.admin_sql in the main root; it is the bootstrap's now."""
+    d = admin_plan()
+    project = d["variables"]["project_id"]["value"]
+    d["resource_changes"].append(
+        _create(
+            'google_project_iam_member.admin_sql["client"]',
+            "google_project_iam_member",
+            {
+                "project": project,
+                "role": "roles/cloudsql.client",
+                "condition": [
+                    {"title": "t", "expression": f'resource.name == "projects/{project}/instances/x"'}
+                ],
+            },
+            {"member": True},
+        )
+    )
+    assert guard.project_iam_policy(plan(d)) == ['google_project_iam_member.admin_sql["client"]']
+
+
+def _set(path, value):
+    def edit(change):
+        target = change["after"]
+        for step in path[:-1]:
+            target = target[step]
+        target[path[-1]] = value
+
+    return edit
+
+
+IP = ("settings", 0, "ip_configuration", 0)
+BAD_INSTANCE = {
+    "authorized_network": _set((*IP, "authorized_networks"), [{"name": "any", "value": "0.0.0.0/0"}]),
+    "authorized_network_unknown": lambda c: c["after_unknown"].update(
+        {"settings": [{"ip_configuration": [{"authorized_networks": True}]}]}
+    ),
+    "ssl_allows_plaintext": _set((*IP, "ssl_mode"), "ALLOW_UNENCRYPTED_AND_ENCRYPTED"),
+    "ssl_unset": _set((*IP, "ssl_mode"), None),
+    "iam_auth_off": _set(
+        ("settings", 0, "database_flags"), [{"name": "cloudsql.iam_authentication", "value": "off"}]
+    ),
+    "iam_auth_missing": _set(("settings", 0, "database_flags"), []),
+    "flag_outside_allowlist": _set(
+        ("settings", 0, "database_flags"),
+        [{"name": "cloudsql.iam_authentication", "value": "on"}, {"name": "log_statement", "value": "all"}],
+    ),
+    "flag_name_unknown": _set(
+        ("settings", 0, "database_flags"),
+        [{"name": "cloudsql.iam_authentication", "value": "on"}, {"name": None, "value": "all"}],
+    ),
+    "replica": _set(("master_instance_name",), "registry-coffee-admin"),
+    "clone": _set(("clone",), [{"source_instance_name": "registry-coffee-admin"}]),
+    "restore": _set(
+        ("restore_backup_context",), [{"backup_run_id": 1, "instance_id": "registry-coffee-admin"}]
+    ),
+    "root_password": _set(("root_password",), "not-a-real-one"),
+    "root_password_unknown": lambda c: c["after_unknown"].update({"root_password": True}),
+    "replica_type": lambda c: (
+        c["after"].update({"instance_type": "READ_REPLICA_INSTANCE"}),
+        c["after_unknown"].pop("instance_type"),
+    ),
+}
+
+
+@pytest.mark.parametrize("case", sorted(BAD_INSTANCE))
+def test_a_cloud_sql_instance_that_opens_or_copies_the_data_is_refused(case):
+    d = admin_plan()
+    BAD_INSTANCE[case](_instance(d))
+    got = results(d)
+    assert got.pop("cloud-sql-access") == ["google_sql_database_instance.admin"]
+    assert not any(got.values()), got
+
+
+def test_a_replica_whose_source_is_known_only_at_apply_is_refused():
+    """master_instance_name is computed, so unknown at create either way: the configuration decides."""
+    d = admin_plan()
+    exprs = d["configuration"]["root_module"]["resources"][0]["expressions"]
+    assert guard.cloud_sql_access(plan(d)) == []
+    exprs["master_instance_name"] = {"references": ["google_sql_database_instance.other.name"]}
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_database_instance.admin"]
+    d["configuration"] = {"root_module": {"resources": []}}  # configuration not found: fails closed
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_database_instance.admin"]
+
+
+BAD_USER = {
+    "built_in": {"type": "BUILT_IN", "password": "x"},
+    "type_unset": {"type": None},
+    "iam_user_with_password": {"password": "not-a-real-one"},
+    "write_only_password": {"password_wo_version": 1},
+}
+
+
+@pytest.mark.parametrize("case", sorted(BAD_USER))
+def test_a_database_user_that_isnt_iam_or_has_a_password_is_refused(case):
+    d = admin_plan()
+    find(d, "google_sql_user.admin")["change"]["after"].update(BAD_USER[case])
+    got = results(d)
+    assert got.pop("cloud-sql-access") == ["google_sql_user.admin"]
+    assert not any(got.values()), got
+
+
+def test_an_empty_password_policy_is_not_a_password_and_a_set_password_still_is():
+    d = admin_plan()
+    user = find(d, "google_sql_user.admin")["change"]
+    assert user["after"]["password_policy"] == [] and guard.cloud_sql_access(plan(d)) == []
+    user["after"]["password_policy"] = [{"allowed_failed_attempts": 3}]  # not a password either
+    assert guard.cloud_sql_access(plan(d)) == []
+    user["after"]["password"] = "not-a-real-one"
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_user.admin"]
+
+
+def test_a_password_known_only_at_apply_is_refused():
+    d = admin_plan()
+    find(d, "google_sql_user.admin")["change"]["after_unknown"]["password"] = True
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_user.admin"]
+
+
+def test_an_updated_instance_is_checked_and_a_deleted_one_left_to_no_delete_or_replace():
+    d = admin_plan()
+    change = _instance(d)
+    change["actions"], change["before"] = ["update"], copy.deepcopy(change["after"])
+    change["after_unknown"] = {}
+    change["after"]["master_instance_name"] = ""
+    assert guard.cloud_sql_access(plan(d)) == []
+    change["after"]["settings"][0]["ip_configuration"][0]["authorized_networks"] = [
+        {"value": "203.0.113.0/24"}
+    ]
+    assert guard.cloud_sql_access(plan(d)) == ["google_sql_database_instance.admin"]
+    change["actions"], change["after"] = ["delete"], None
+    got = results(d)
+    assert got["cloud-sql-access"] == [] and got["no-delete-or-replace"] == [
+        "google_sql_database_instance.admin"
+    ]
+
+
+# --- public-access, iam-members-known, notification-channels ------------------------------------------------------
+
+
+def _only(d: dict, guard_name: str, address: str):
+    got = results(d)
+    assert got.pop(guard_name) == [address], got
+    assert not any(got.values()), got
+
+
+@pytest.mark.parametrize("who", ["allUsers", "allAuthenticatedUsers"])
+@pytest.mark.parametrize(
+    "rtype",
+    [
+        "google_storage_bucket_iam_member",
+        "google_secret_manager_secret_iam_member",
+        "google_artifact_registry_repository_iam_member",
+        "google_cloud_run_v2_job_iam_member",
+    ],
+)
+def test_a_public_grant_is_refused_but_a_cloud_run_service_invoker(rtype, who):
+    d = admin_plan()
+    d["resource_changes"].append(
+        _create(f"{rtype}.extra", rtype, {"role": "roles/storage.objectViewer", "member": who})
+    )
+    _only(d, "public-access", f"{rtype}.extra")
+
+
+def test_only_the_cloud_run_invoker_may_be_public():
+    d = admin_plan()  # holds the admin's public run.invoker, as cloud_run.tf and usage.tf do
+    assert guard.public_access(plan(d)) == []
+    find(d, "google_cloud_run_v2_service_iam_member.admin_public")["change"]["after"]["role"] = (
+        "roles/run.developer"
+    )
+    assert guard.public_access(plan(d)) == ["google_cloud_run_v2_service_iam_member.admin_public"]
+
+
+def test_a_public_bucket_policy_is_refused():
+    d = admin_plan()
+    policy = json.dumps({"bindings": [{"role": "roles/storage.objectViewer", "members": ["allUsers"]}]})
+    d["resource_changes"].append(
+        _create(
+            "google_storage_bucket_iam_policy.extra",
+            "google_storage_bucket_iam_policy",
+            {"bucket": "coffee-data-tracker-admin-state", "policy_data": policy},
+        )
+    )
+    _only(d, "public-access", "google_storage_bucket_iam_policy.extra")
+
+
+@pytest.mark.parametrize("value", ["inherited", None, "unknown"])
+def test_a_bucket_without_enforced_public_access_prevention_is_refused(value):
+    d = admin_plan()
+    change = find(d, "google_storage_bucket.admin_state")["change"]
+    if value == "unknown":
+        change["after"]["public_access_prevention"] = None
+        change["after_unknown"]["public_access_prevention"] = True
+    else:
+        change["after"]["public_access_prevention"] = value
+    _only(d, "public-access", "google_storage_bucket.admin_state")
+
+
+def test_mains_buckets_all_enforce_public_access_prevention():
+    """So no allowlist is needed: every google_storage_bucket in the main root (and the bootstrap's plans bucket)
+    sets public_access_prevention = "enforced"."""
+    root = ROOT / "src" / "terraform"
+    for tf in [*root.glob("*.tf"), *(root / "bootstrap").glob("*.tf")]:
+        for block in re.findall(
+            r'^resource "google_storage_bucket" "\w+" \{\n(.*?)^\}', tf.read_text(), re.M | re.S
+        ):
+            assert re.search(r'public_access_prevention\s*=\s*"enforced"', block), tf.name
+
+
+@pytest.mark.parametrize(
+    "rtype,field",
+    [
+        ("google_storage_bucket_iam_member", "member"),
+        ("google_secret_manager_secret_iam_member", "member"),
+        ("google_cloud_run_v2_job_iam_member", "member"),
+        ("google_storage_bucket_iam_binding", "members"),
+        ("google_storage_bucket_iam_policy", "policy_data"),
+    ],
+)
+def test_a_member_or_policy_known_only_at_apply_is_refused_on_any_iam_type(rtype, field):
+    d = admin_plan()
+    d["resource_changes"].append(
+        _create(f"{rtype}.extra", rtype, {"role": "roles/storage.objectViewer"}, {field: True})
+    )
+    _only(d, "iam-members-known", f"{rtype}.extra")
+
+
+@pytest.mark.parametrize("kind", ["webhook_tokenauth", "slack", "pubsub", "sms", None, "unknown"])
+def test_a_notification_channel_other_than_email_is_refused(kind):
+    d = admin_plan()
+    change = find(d, "google_monitoring_notification_channel.owner")["change"]
+    if kind == "unknown":
+        change["after"]["type"] = None
+        change["after_unknown"]["type"] = True
+    else:
+        change["after"]["type"] = kind
+    _only(d, "notification-channels", "google_monitoring_notification_channel.owner")
+
+
+def test_mains_notification_channels_are_email():
+    for tf in (ROOT / "src" / "terraform").glob("*.tf"):
+        for block in re.findall(
+            r'^resource "google_monitoring_notification_channel" "\w+" \{\n(.*?)^\}',
+            tf.read_text(),
+            re.M | re.S,
+        ):
+            assert re.search(r'^\s*type\s*=\s*"email"', block, re.M), tf.name
+
+
+def test_mains_database_flags_are_the_allowlist():
+    """The admin stack's instance sets cloudsql.iam_authentication only (admin_control.tf on #128/#149): SQL_FLAGS."""
+    assert {"cloudsql.iam_authentication"} == guard.SQL_FLAGS
