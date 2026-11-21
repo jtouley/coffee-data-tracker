@@ -130,3 +130,12 @@ Drawn on 2026-11-21, after round 2's two candidates were committed (`3d9e49a`; `
 - **Scoring, once labelled:** `score <data> validation labels/reference_validation2.json main r2nc r2 --strata
   main,r2` (choose by aggregates), then for the frozen choice, once: `score <data> test
   labels/reference_test2.json main <choice> --strata main,r2 --final`.
+
+## Round 3: train labels aimed at the abstentions
+
+Drawn 2026-11-21 from the train split only (`sample_train3.json`), strata `change(main, r2)`, ordered within a
+stratum by `sha256("coffeedata-process-eval-2026-11-21:round3-train:" + key)`, excluding every key used before
+(train, validation, spent test, diagnosis, the validation extension and sealed test 2; 1,100 keys):
+same_none 200 of 17,868, none_to_process 25 of 1,617, process_to_other 25 of 226 (250). These are for tuning (train):
+their listings may be read once labelled. Packets: `proc-tr3-A`, `proc-tr3-S` (250 listings, GUIDE.md `9001240b…`,
+packet sha256 `01c26df9…`), empty `proc-tr3-H` for the settles. Sealed test 2 is untouched.
