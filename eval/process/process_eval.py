@@ -12,6 +12,9 @@
                                                              up to n per stratum of the listed catalog, unread
     python process_eval.py show    <data-dir> <keys.json>    the labelling view, shuffled, no prediction shown
     python process_eval.py score   <data-dir> <set> <labels.json> <a> <b> [--strata a,b] [--final for test]
+    python process_eval.py draw    <data-dir> <set> <a> <b> <tag> <alloc.json> <out.json> <used.json>...
+                                                             a stratified sample (alloc: n per stratum of a vs b),
+                                                             ordered by a salted hash with <tag>, leaving out used keys
     python process_eval.py packet  <data-dir> <set> <out.txt>   the blind labelling packet for a set's sample
     python process_eval.py settle  <A.json> <B.json> <out.json> the keys A and B disagree on, for the third labeller
     python process_eval.py merge   <A.json> <B.json> <C.json> <out.json>
@@ -342,6 +345,34 @@ def score(
         print(f"  paired {names[-1]} - {names[0]}: {what} {est:+.1%} ± {1.96 * math.sqrt(var):.1%}")
 
 
+def draw(data: Path, set_name: str, a: str, b: str, tag: str, alloc: dict, out: Path, used: list[Path]) -> None:
+    """Up to alloc[stratum] listed products of the set per stratum (how a's and b's processes relate), first by
+    sha256(SALT:tag:key), none of the keys in the used files (dicts of stratum -> keys, or lists, or label dicts).
+    Writes {"rule", "strata": {stratum: size}, "sample": {stratum: [keys]}}."""
+    gone: set[str] = set()
+    for f in used:
+        raw = json.loads(f.read_text())
+        raw = raw.get("sample", raw) if isinstance(raw, dict) and "sample" in raw else raw
+        if isinstance(raw, dict) and all(isinstance(v, list) for v in raw.values()):
+            gone |= {k for v in raw.values() for k in v}
+        else:
+            gone |= set(raw)
+    sets, pa, pb = _load(data, "split.json"), _load(data, f"pred_{a}.json"), _load(data, f"pred_{b}.json")
+    listed = _listed(data)
+    strata: dict[str, list[str]] = {}
+    for k in sorted(k for k, s in sets.items() if s == set_name and k in listed):
+        strata.setdefault(change(pa[k], pb[k]), []).append(k)
+    sample = {
+        st: sorted((k for k in ks if k not in gone), key=lambda k: _order(k, tag))[: alloc.get(st, 0)]
+        for st, ks in sorted(strata.items())
+    }
+    rule = (f"set {set_name}, listed; strata change({a}, {b}); per stratum the first n by "
+            f"sha256('{SALT}:{tag}:' + key), excluding {len(gone)} used keys")
+    out.write_text(json.dumps({"rule": rule, "strata": {st: len(ks) for st, ks in sorted(strata.items())},
+                               "sample": sample}, indent=1) + "\n")
+    print(out, {st: f"{len(v)}/{len(strata[st])}" for st, v in sample.items()}, "excluded", len(gone))
+
+
 def packet(data: Path, set_name: str, out: Path) -> None:
     """GUIDE.md and the sample's listings, shuffled, with no prediction and no other labeller's answer."""
     import contextlib
@@ -396,6 +427,9 @@ if __name__ == "__main__":
         show(Path(args[0]), Path(args[1]))
     elif cmd == "score":
         score(Path(args[0]), args[1], Path(args[2]), args[3:], final, strata)
+    elif cmd == "draw":
+        draw(Path(args[0]), args[1], args[2], args[3], args[4], json.loads(args[5]), Path(args[6]),
+             [Path(x) for x in args[7:]])
     elif cmd == "packet":
         packet(Path(args[0]), args[1], Path(args[2]))
     elif cmd == "settle":
