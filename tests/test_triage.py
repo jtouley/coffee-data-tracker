@@ -532,7 +532,19 @@ def _isync(gh, weeks, runs, now):
             "2026-11-16",
         ),  # it completed: judged now
         ("2026-11-18T19:00", [_run("2026-11-18T17:41:00Z", status="in_progress")], None),  # still running
-        ("2026-11-18T21:38", [], "2026-11-16"),  # no run, and the grace after 17:37 has passed
+        (
+            "2026-11-18T21:38",
+            [],
+            None,
+        ),  # no run four hours on: GitHub starts these hours late, so not yet due
+        # the first scheduled run began 5 h 56 min late: in progress at 23:34, it is not a missing week
+        ("2026-11-18T23:34", [_run("2026-11-18T23:33:39Z", status="in_progress")], None),
+        ("2026-11-18T23:36", [_run("2026-11-18T23:33:39Z", "failure")], "2026-11-16"),  # it completed: judged
+        ("2026-11-19T05:36", [], None),  # a minute before the grace ends
+        ("2026-11-19T05:38", [], "2026-11-16"),  # no run twelve hours on
+        # a run that started and never completed is judged once it is past any run's length
+        ("2026-11-19T05:00", [_run("2026-11-18T23:33:39Z", status="queued")], None),
+        ("2026-11-19T05:38", [_run("2026-11-18T23:33:39Z", status="queued")], "2026-11-16"),
         ("2026-11-19T09:23", [], "2026-11-16"),  # Thursday's check
         ("2026-11-23T09:00", [], "2026-11-16"),  # the next Monday: still that week until its Wednesday
         ("2026-11-26T09:23", [], "2026-11-23"),
@@ -892,7 +904,7 @@ def test_a_scheduled_run_that_never_ran_shows_no_code_and_the_issue_says_how_it_
 
 def test_the_check_and_the_alert_judge_the_same_due_week(tmp_path):
     """#195: the check job works out the due week once and records the time it judged at (check.json); the alert job
-    judges at that time, not its own clock. Near the grace boundary (four hours after the schedule) two clocks gave
+    judges at that time, not its own clock. Near the grace boundary (twelve hours after the schedule) two clocks gave
     two weeks: the alert asked for a week whose results the check hadn't downloaded, and every cell was blank."""
     last = dict(_run("2026-11-18T17:52:10Z", "failure"), id=100)  # the week of 2026-11-16
     runs = [last]  # no scheduled run yet in the week of 2026-11-23
@@ -901,7 +913,7 @@ def test_the_check_and_the_alert_judge_the_same_due_week(tmp_path):
         json.dumps(_weeks(cafe_imports="2026-11-16", interamerican="2026-11-16"))
     )
     _attempt(tmp_path, 100, "importer-results-1", _results(ROYAL_403))
-    before, after = "2026-11-25T21:36:50", "2026-11-25T21:37:40"  # either side of 17:37 + 4 h
+    before, after = "2026-11-26T05:36:50", "2026-11-26T05:37:40"  # either side of 17:37 + 12 h
     assert triage.importers_due_week(_at(before), runs) == triage.date(2026, 11, 16)
     assert triage.importers_due_week(_at(after), runs) == triage.date(2026, 11, 23)
 
@@ -914,9 +926,9 @@ def test_the_check_and_the_alert_judge_the_same_due_week(tmp_path):
     )  # fmt: skip
     assert r.returncode == 0 and r.stdout.split() == ["100"], r.stderr
     # a time, nothing else
-    assert json.loads((tmp_path / "check.json").read_text()) == {"now": "2026-11-25T21:36:50+00:00"}
+    assert json.loads((tmp_path / "check.json").read_text()) == {"now": "2026-11-26T05:36:50+00:00"}
     assert triage.check_time(tmp_path) == _at(before)
-    assert triage.check_record(_at(after)) == {"now": "2026-11-25T21:37:40+00:00"}
+    assert triage.check_record(_at(after)) == {"now": "2026-11-26T05:37:40+00:00"}
 
     # the alert job, a minute later by its own clock: it judges at the check's time, so the same week
     importers_cmd = [*triage_cmd, "importers", str(tmp_path), "--dry-run"]
@@ -984,7 +996,10 @@ def test_a_run_that_never_happened_is_caught_by_thursdays_check_and_counted_week
     last_week = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16", royal_coffee="2026-11-16")
     assert _isync(gh, last_week, [], "2026-11-26T09:23") == [("opened", "importers:weekly", 1)]
     body = gh.store[0]["body"]
-    assert "No scheduled importers run started for the week of 2026-11-23 (Wednesday 2026-11-25)." in body
+    assert (
+        "No scheduled importers run started for the week of 2026-11-23 (Wednesday 2026-11-25), 15 hours after its "
+        "schedule." in body
+    )
     assert "| `interamerican` | missing 1 week | 2026-11-16 |" in body
 
     # the same state at the next check: no new comment
@@ -1082,9 +1097,9 @@ def test_an_unlisted_run_history_opens_the_pipeline_issue_and_still_judges_the_w
 @pytest.mark.parametrize(
     ("now", "fires"),
     [
-        ("2026-11-18T23:00+02:00", False),  # 21:00 UTC Wednesday: inside the grace, nothing due yet
-        ("2026-11-18T21:00-05:00", True),  # 02:00 UTC Thursday: the week is due
-        ("2026-11-19T02:00", True),  # no offset: UTC
+        ("2026-11-19T07:00+02:00", False),  # 05:00 UTC Thursday: inside the grace, nothing due yet
+        ("2026-11-19T01:00-05:00", True),  # 06:00 UTC Thursday: the week is due
+        ("2026-11-19T06:00", True),  # no offset: UTC
     ],
 )
 def test_now_converts_its_offset_to_utc(tmp_path, now, fires):
@@ -1323,3 +1338,33 @@ def test_the_due_week_follows_the_importers_cron():
     )
     assert thursday >= triage._scheduled_at(week) + triage.IMPORTERS_GRACE
     assert triage.importers_due_week(thursday) == week
+
+
+def test_a_scheduled_run_that_started_late_is_said_so_and_never_read_as_missing_while_it_runs():
+    """2026-11-18: the first scheduled run began at 23:33:39 UTC, 5 h 56 min after its cron time, past the 4-hour
+    grace the check had. A check in between would have opened "No scheduled importers run started"; one while it ran,
+    every importer "missing". Neither opens anything now, and the failed run's issue says the start was late."""
+    weeks = _weeks(cafe_imports="2026-11-16", interamerican="2026-11-16")
+    nothing = _weeks()
+    gh = FakeGitHub()
+    assert _isync(gh, nothing, [], "2026-11-18T22:00") == []  # not started yet: no week due, no issue
+    running = [_run("2026-11-18T23:33:39Z", status="in_progress")]
+    assert _isync(gh, nothing, running, "2026-11-18T23:34") == []  # fetching: not missing
+    done = [_run("2026-11-18T23:33:39Z", "failure")]
+    assert _isync(gh, weeks, done, "2026-11-18T23:36") == [("opened", "importers:weekly", 1)]
+    body = gh.store[0]["body"]
+    assert "ended `failure`. It started 5 h 56 min after its schedule (17:37 UTC): GitHub delayed it" in body
+    assert "- scheduled run: failure, https://github.com/o/r/actions/runs/7, started 5 h 56 min late" in body
+    # a run that started on time says nothing about its start
+    on_time = triage.importer_alerts(weeks, [_run("2026-11-18T17:41:00Z", "failure")], _at("2026-11-18T19:30"),
+                                     CHECK, "abc123")  # fmt: skip
+    assert "late" not in json.dumps(on_time) and "after its schedule" not in json.dumps(on_time)
+
+
+def test_the_grace_covers_the_late_starts_seen_and_ends_before_thursdays_check():
+    seen = [triage.timedelta(hours=5, minutes=56), triage.timedelta(hours=8, minutes=17),
+            triage.timedelta(hours=9, minutes=2)]  # fmt: skip
+    assert max(seen) < triage.IMPORTERS_GRACE
+    week = triage.IMPORTERS_FIRST_WEEK
+    thursday = triage.datetime.combine(week + triage.timedelta(days=3), triage.dtime(9, 23), UTC)
+    assert triage._scheduled_at(week) + triage.IMPORTERS_GRACE < thursday
