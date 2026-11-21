@@ -1136,6 +1136,14 @@ versions. To get a late batch in before a rebuild, run classify with a longer wa
 --format='value(spec.template.spec.template.spec.containers[0].env)'`; it lists names and secret references, not
 the key's value), and that `ANTHROPIC_API_KEY` has a version in Secret Manager. Fix, apply, then rebuild as in §5.2.
 
+**A batch that couldn't be collected** (the log says `Claude's verdict batch collect failed for N batch(es): <batch
+id> (<error class>, HTTP <status>)`, and an ERROR line `classify: verdict batches not collected`): Claude's API
+refused or failed the read of a batch an earlier run submitted, so its verdicts aren't stored. classify exits
+non-zero for it, as for a failed submit; the build still runs on the stored verdicts. HTTP 401 or 403: the key
+(above). 404: the batch is gone, and its product versions stay in flight until it is collected. 5xx or no status: an
+outage; the next classify asks again. The Tuesday check reports the same from the lake: `prod:classifier`,
+`verdicts:open_batch_age_days` and `verdicts:stored_age_days` (docs/TRIAGE.md).
+
 **The backfill**, after the first apply with `verdict_model` (and whenever the verdict model or
 `coffee_definition.md` changes, which makes every version pending again): about 62,000 product versions are
 pending, so the first build after the change fails `verdicts_cover_catalog` until their verdicts are collected,
