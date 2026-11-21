@@ -303,5 +303,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - App: the sign-in, join, reset and change-password forms post, so a form app.js didn't wire never puts the
   password in the URL, and the sign-in screen's clearing of offline pages can no longer stop the forms being wired.
 
+- App (the 2026-11-21 review, F5, F6, F10, F11): Sign out ends the account's sessions on every device (a copied
+  cookie no longer works afterwards), so Setup has one Sign out, which says so. Choosing a bag is a same-origin POST;
+  a GET of the old address changes nothing. The service worker clears the kept pages itself whenever it sees the
+  session is over (a 401, the sign-in screen, a photo sent to sign-in). The app's DuckDB reads pass file paths as
+  parameters, and `photos.load` checks the photo id itself.
+
 - App: queued writes are bound to the account that queued them. After an account switch, a queued save is held on
   the phone instead of being written under the other account (#56).
