@@ -8,6 +8,10 @@
   python score.py final <data dir> <name>=<predictions.json>[@<stratum>] ...
       the same on the sealed test set, once per name: it refuses a second run (it leaves test/FINAL_SCORED)
 
+<data dir> is a local folder, or the private dev dataset that keeps these files, as hf://datasets/<owner>/<name>:
+its name must end in -dev (anything else is refused, so the lake or the public export can never be scored from or
+written to by mistake), and its dev/ folder is copied to a local folder first. Nothing is ever uploaded from here.
+
 The reference label of a product is the one labelers A and B agree on, else the third labeler's (labels_C.json).
 Products whose reference is "unsure" are left out and counted.
 Confidently wrong: a wrong answer the classifier gave as certain, which is one decided by a stored verdict or by
@@ -17,6 +21,7 @@ the rules' outright exclusions (classify.excluded). The rest of the wrong answer
 import json
 import math
 import sys
+import tempfile
 from pathlib import Path
 
 Z = 1.96
@@ -106,8 +111,25 @@ def score(d: Path, preds: list[str]) -> None:
               f"accuracy weighted by stratum size {1 - err:.2%} (95% CI {max(0, 1 - err - half):.2%}-{min(1, 1 - err + half):.2%})")  # fmt: skip
 
 
+HF = "hf://datasets/"
+
+
+def data_dir(arg: str) -> Path:
+    """The folder holding the sets: a local path as it is, or a local copy of a -dev dataset's dev/ folder."""
+    if "://" not in arg:
+        return Path(arg)
+    repo = arg.removeprefix(HF).split("@")[0].strip("/")
+    if not arg.startswith(HF) or repo.count("/") != 1 or not repo.endswith("-dev"):
+        sys.exit(f"refused: {arg} is not a dev dataset (hf://datasets/<owner>/<name>-dev)")
+    from huggingface_hub import snapshot_download
+
+    local = Path(tempfile.gettempdir()) / "classifier-eval" / repo.replace("/", "__")
+    snapshot_download(repo, repo_type="dataset", local_dir=local, allow_patterns=["dev/*"])
+    return local / "dev"
+
+
 def main() -> None:
-    cmd, data = sys.argv[1], Path(sys.argv[2])
+    cmd, data = sys.argv[1], data_dir(sys.argv[2])
     rest = sys.argv[3:]
     if cmd == "agree":
         agree(data / rest[0])

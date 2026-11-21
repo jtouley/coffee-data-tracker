@@ -5,8 +5,21 @@ built by CLAUDE.md's steps 1 to 7. It gates #179 and #182, which change what the
 they move, and it is the base for issue #190. The earlier evaluation (`eval/sealed`) predates the split rule.
 
 No product data is in git. This folder holds the scripts, the manifests (ids and salted key hashes) and
-`SHA256SUMS`. The samples, the labelers' files and the labels live outside the repo, in a data folder
-(`<data>` below); on 2026-11-20 that was the session's scratchpad, which is not durable: see "Not verified".
+`SHA256SUMS`. The samples, the labelers' files, the labels and the frozen predictions live outside the repo, in a
+data folder (`<data>` below).
+
+## Where the labels live
+
+The owner's chosen home is a **private dev dataset**, `hf://datasets/jtouley/coffee-eval-labels-dev`, with every
+file under `dev/`: the three sets, `test_next`, `preds/`, `manifest/` and this folder's `SHA256SUMS`.
+
+- **It is dev and evaluation data only. Nothing in the pipeline reads it.** `tests/test_eval_labels_dev.py` fails if
+  any tracked file outside `eval/` names it.
+- `score.py` takes it in place of a local folder, and refuses any remote dataset whose name doesn't end in `-dev`.
+  It only ever downloads.
+- **Status on 2026-11-21: not uploaded yet.** The files are staged with their checksums verified, but the upload was
+  stopped by the session's permission check and waits for the owner. Until then `<data>` is the session's
+  scratchpad, which is not durable: see "Not verified".
 
 ## The data (step 1)
 
@@ -172,8 +185,9 @@ Products whose `is_coffee` changed since this evaluation (2026-11-20): **0**.
 
 ## SHA256SUMS
 
-Written as each file was made; paths are relative to `<data>`, except `preds/`. `sha256sum -c` from `<data>` checks
-the samples, the labelers' files and the test labels. `make_blind.py` refuses to rebuild a set whose `blind.json`
+Written as each file was made, for the test files before the test was scored; on 2026-11-21 it was extended to
+every file kept in the dev dataset (the train and validation labels, all predictions, the manifests). Paths are
+relative to `<data>` (the dataset's `dev/`). `sha256sum -c` from there checks them all. `make_blind.py` refuses to rebuild a set whose `blind.json`
 differs.
 
 ## Not verified
