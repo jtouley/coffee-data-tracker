@@ -4,7 +4,7 @@ from types import SimpleNamespace
 import anthropic
 import httpx
 
-from coffeedata import enrich
+from coffeedata import enrich, extract
 
 from .lakehelp import product, run
 
@@ -140,3 +140,41 @@ def test_the_dbt_and_python_product_version_hashes_are_the_same_expression():
         con.execute(f"select {dbt_sql} from {row}").fetchone()
         == con.execute(f"select {py_sql} from {row}").fetchone()
     )
+
+
+def test_the_weekly_cap_reads_listings_that_hint_at_a_process_first(lake):
+    """Current single origins whose process the rules left empty, and whose listing has a process word, go to Claude
+    ahead of the rest; an older version of a product does not, nor does a listing with no such word."""
+    rid = "x.com"
+    run(lake, "2026-10-19", rid, [product("2") | {"body_hash": "old2"}])
+    run(lake, "2026-10-26", rid, [product(str(i)) for i in range(3)])
+    texts = {
+        "b0": "Body 0",
+        "b1": "Body 1. The cherries were pulped and fermented overnight before drying.",
+        "b2": "Body 2",
+        "old2": "Body old2. Fermented in tanks.",
+    }
+    lake.write_partition(
+        "bodies",
+        "2026-10-26",
+        "b",
+        [{"body_hash": h, "body_text": t, "first_seen_run": date(2026, 10, 19)} for h, t in texts.items()],
+    )
+    order = [(p["product_id"], p["body_hash"]) for p in enrich.pending(lake, 10)]
+    assert order[0] == ("1", "b1")
+    assert set(order[1:]) == {("0", "b0"), ("2", "b2"), ("2", "old2")}
+    assert [p["product_id"] for p in enrich.pending(lake, 1)] == ["1"]
+
+
+def test_a_decaffeination_is_not_a_process_hint():
+    from coffeedata.models import CatalogItem, Enrichment
+
+    def first(body):
+        it = CatalogItem(roaster_id="r", product_id="p", handle="", url="", title="Colombia Decaf", platform="",
+                         body_text=body)  # fmt: skip
+        return extract.process_first(it, Enrichment())
+
+    assert not first("Decaffeinated by the Swiss Water Process.")
+    assert first("Washed, then Swiss Water decaffeinated.")
+    assert not extract.process_first(CatalogItem(roaster_id="r", product_id="p", handle="", url="", title="X Blend",
+                                                 platform="", body_text="washed"), Enrichment(is_blend=True))  # fmt: skip

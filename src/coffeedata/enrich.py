@@ -24,6 +24,8 @@ SYNC_LIMIT = 100
 
 # Every product version's latest snapshot with its description and Claude's coffee verdict, minus those already
 # enriched by Claude or in flight. products.needs_claude then picks the candidates, in Python, as stg_products would.
+# The weekly cap goes first to current single origins whose process the rules left empty and whose listing has a
+# process word (extract.process_first): Claude reads the prose the rules don't. The rest follow in this order.
 CANDIDATES_SQL = """
 with e as (select * from {enrichments}),
 llm as (select distinct roaster_id, product_id, body_hash from e where method = 'llm'),
@@ -37,11 +39,15 @@ verdicts as (
     qualify row_number() over (partition by input_hash order by decided_at desc) = 1
 ),
 latest as (
-    select s.*, {input_hash} as input_hash from {snapshots} s where s.roaster_id is not null
+    select s.*, {input_hash} as input_hash,
+           -- the product's current version, in its roaster's latest run: what the catalog lists now
+           fetched_at = max(fetched_at) over (partition by roaster_id, product_id)
+             and run_date = max(run_date) over (partition by roaster_id) as is_current
+    from {snapshots} s where s.roaster_id is not null
     qualify row_number() over (partition by roaster_id, product_id, body_hash order by fetched_at desc) = 1
 )
 select l.roaster_id, l.product_id, l.body_hash, l.title, l.product_type, l.tags,
-       list_transform(l.variants, lambda v: v.grams) as grams, bo.body_text, v.label, l.fetched_at
+       list_transform(l.variants, lambda v: v.grams) as grams, bo.body_text, v.label, l.fetched_at, l.is_current
 from latest l
 join (select body_hash, any_value(body_text) as body_text from {bodies} group by 1) bo using (body_hash)
 left join verdicts v using (input_hash)
@@ -79,11 +85,11 @@ def candidates(lake: Lake, limit: int | None = None, keys: set[tuple] | None = N
         base = products.rules(it, r["label"]) if keys is not None else products.needs_claude(it, r["label"])
         if base is None:
             continue
+        first = bool(r["is_current"]) and extract.process_first(it, base)
         out.append({k: r[k] for k in ("roaster_id", "product_id", "body_hash", "title", "tags", "body_text")}
-                   | {"base": base})  # fmt: skip
-        if limit is not None and len(out) >= limit:
-            break
-    return out
+                   | {"base": base, "first": first})  # fmt: skip
+    out.sort(key=lambda c: not c["first"])  # stable: the SQL order within each group
+    return out if limit is None else out[:limit]
 
 
 def pending(lake: Lake, limit: int) -> list[dict]:
