@@ -186,7 +186,7 @@ def test_overpass_down_still_records_overture_and_fails_the_execution(lake, monk
     """Before: `discover overture; discover osm; publish` in one shell. Overture runs first in one 4Gi process, so
     a kill there took OSM's rows with it, and an all-states Overpass outage recorded 0 rows and exited 0."""
     monkeypatch.setattr(discover, "overture_latest_release", lambda: "2026-10-21.0")
-    monkeypatch.setattr(discover, "overture", _overture_rows)
+    monkeypatch.setattr(discover, "overture_places", lambda release: (_overture_rows(release), []))
 
     def down(states, failed):
         failed.extend(states)
@@ -206,7 +206,7 @@ def test_overpass_down_still_records_overture_and_fails_the_execution(lake, monk
 
 
 def test_an_overture_scan_that_finds_nothing_fails(lake, monkeypatch):
-    monkeypatch.setattr(discover, "overture", lambda release: [])
+    monkeypatch.setattr(discover, "overture_places", lambda release: ([], []))
     with pytest.raises(RuntimeError, match="found no roasters"):
         cli.discover_source(lake, "overture", "2026-10-21.0")
     (end,) = _jobs(lake, "discover")
@@ -300,7 +300,7 @@ def test_discover_publishes_each_source_with_its_job_rows(tmp_path, monkeypatch)
     monkeypatch.setenv("COFFEEDATA_LAKE", "hf://datasets/someone/coffee")
     monkeypatch.setattr(Lake, "remote_has", lambda self, table: False)  # read staging alone (no network)
     monkeypatch.setattr(discover, "overture_latest_release", lambda: "2026-10-21.0")
-    monkeypatch.setattr(discover, "overture", _overture_rows)
+    monkeypatch.setattr(discover, "overture_places", lambda release: (_overture_rows(release), []))
     monkeypatch.setattr(discover, "osm", lambda states, failed: [_registry_row("osm.example")])
     cli.cmd_discover(argparse.Namespace(source=["osm", "overture"], release=None, states=None, publish=True))
     osm, overture = (
@@ -413,6 +413,28 @@ def test_no_step_of_a_job_command_can_fail_without_failing_the_job(tmp_path):
     )  # §5.5's backfill
     assert any(c.startswith("coffeedata publish") for c in chains)  # §5.1 f: send a staged release
     scripts = {f"job {name}": script for name, script in jobs.items()} | {f"runbook: {c}": c for c in chains}
+    assert {where: h for where, script in scripts.items() if (h := _hidden_failures(script, tmp_path))} == {}
+
+
+def _admin_scripts() -> dict[str, str]:
+    """Every shell script the admin starts (admin/jobs.py ACTIONS: an override of a shell job's `sh -c` script), by
+    action, for a sample of every field."""
+    from admin import jobs as admin_jobs
+
+    shell = set(_shell_jobs())
+    return {
+        f"admin {key}: {step.job}": step.args[0]
+        for key, action in admin_jobs.ACTIONS.items()
+        for step in action.steps(admin_jobs._SAMPLE)
+        if step.job in shell and step.args
+    }
+
+
+def test_no_step_of_an_admin_job_script_can_fail_without_failing_the_job(tmp_path):
+    """The rule above (#83), for the scripts the admin's buttons start: a failed publish fails the execution, so the
+    page shows it failed and the lake is never left without what the run just did."""
+    scripts = _admin_scripts()
+    assert {"admin classify: build", "admin draft: build", "admin classify-review: build"} <= set(scripts)
     assert {where: h for where, script in scripts.items() if (h := _hidden_failures(script, tmp_path))} == {}
 
 
@@ -775,6 +797,70 @@ def test_probe_tries_www_when_the_bare_host_does_not_answer():
     assert (out["status"], out["final_host"], out["platform"]) == ("ok", "www.a.com", "other")
 
 
+@pytest.mark.parametrize(
+    "answer,status,code",
+    [
+        (httpx.Response(429), "http_429", 429),
+        (httpx.Response(430), "http_430", 430),
+        (httpx.Response(503, headers={"sg-captcha": "challenge"}), "blocked", 503),
+        (httpx.Response(503, headers={"cf-mitigated": "challenge"}), "blocked", 503),
+        # challenges on statuses the client returns instead of raising: Cloudflare's usual 403, SiteGround's 202
+        (httpx.Response(403, headers={"cf-mitigated": "challenge"}), "blocked", 403),
+        (httpx.Response(202, headers={"sg-captcha": "challenge"}), "blocked", 202),
+    ],
+    ids=["429", "430", "503-siteground", "503-cloudflare", "403-cloudflare", "202-siteground"],
+)
+def test_a_refusal_on_the_catalog_api_stops_the_probe(answer, status, code):
+    """A 429 or 430 the client's retries didn't get past, or an edge's challenge on any status, on /products.json is
+    the site's answer to us. The probe used to swallow it, ask the WooCommerce Store API on the same host, and record
+    `ok` with the home page's platform: one more request after a pause or a challenge."""
+    import respx
+
+    from coffeedata.http import PoliteClient
+
+    asked: list[str] = []
+
+    def answer_for(request):
+        path = request.url.raw_path.decode()
+        asked.append(path)
+        if path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\n")
+        if path == "/":
+            return httpx.Response(200, text="<html>plain</html>")
+        return answer if path.startswith("/products.json") else httpx.Response(200, json=[])
+
+    with respx.mock as m:
+        m.route().mock(side_effect=answer_for)
+        with PoliteClient(min_interval=0, retries=1) as c:
+            out = discover.probe_one(c, "a.com")
+    assert out == {"status": status, "final_host": "a.com", "platform": "", "http_status": code}
+    assert asked == ["/robots.txt", "/", "/products.json?limit=1"]  # never the Store API after it
+
+
+@pytest.mark.parametrize("code", [500, 502, 503, 504])
+def test_a_plain_5xx_on_the_catalog_api_still_asks_the_next_one(code):
+    # a server's trouble isn't an answer to us: the Store API is still asked, as before
+    out = _probe({HOME: httpx.Response(200, text="<html></html>"), r"/products\.json": httpx.Response(code),
+                  r"/wp-json/wc/store/v1/products": httpx.Response(200, json=[])})  # fmt: skip
+    assert (out["status"], out["platform"]) == ("ok", "woocommerce")
+
+
+@pytest.mark.parametrize("code", [500, 502, 503, 504])
+def test_a_plain_5xx_on_the_home_page_still_tries_www(code):
+    out = _probe({HOME: httpx.Response(code), r"https://www\.a\.com/$": httpx.Response(200, text="x")})
+    assert (out["status"], out["final_host"], out["platform"]) == ("ok", "www.a.com", "other")
+
+
+def test_a_challenge_on_the_home_page_is_blocked_on_any_status():
+    out = _probe({HOME: httpx.Response(403, headers={"cf-mitigated": "challenge"})})
+    assert out == {"status": "blocked", "final_host": "a.com", "platform": "", "http_status": 403}
+
+
+def test_a_pause_on_the_home_page_is_never_asked_again_at_www():
+    out = _probe({HOME: httpx.Response(430), r"https://www\.a\.com/$": httpx.Response(200, text="x")})
+    assert out == {"status": "http_430", "final_host": "a.com", "platform": "", "http_status": 430}
+
+
 def test_probe_with_no_host_answering_is_unreachable():
     out = _probe({r"https://(www\.)?a\.com/$": httpx.ConnectError("refused")})
     assert out == {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}
@@ -788,7 +874,7 @@ def _overture_place(name, cat="coffee_roastery", alts=(), x=-122.6, y=45.5, coun
     return {"names": {"primary": name}, "taxonomy": {"primary": cat, "alternates": list(alts)},
             "basic_category": basic, "bbox": {"xmin": x, "ymin": y}, "confidence": conf,
             "addresses": [{"locality": city, "region": region, "country": country}],
-            "websites": [website] if website else None}  # fmt: skip
+            "websites": [website] if website else None, "operating_status": None}  # fmt: skip
 
 
 def test_overture_filter_keeps_us_roasteries_with_a_storefront(tmp_path, monkeypatch):

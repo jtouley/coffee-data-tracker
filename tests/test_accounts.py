@@ -212,6 +212,30 @@ def test_sign_out_clears_the_cookie(lake, users):
     assert c.get("/").status_code == 303
 
 
+def test_sign_out_ends_the_session_a_copied_cookie_carries(lake, users):
+    """Review 2026-11-21, F6: a cookie copied before sign-out (a shared computer, a proxy log) no longer signs anyone
+    in. Sessions are stateless tokens, so sign-out bumps the account's session_epoch: every device signs in again."""
+    a = accounts(users)
+    app = create_app(lake, Sessions(a))
+    phone, laptop = (TestClient(app, base_url="https://testserver", follow_redirects=False) for _ in "ab")
+    phone.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW},
+        headers=W,
+    )
+    laptop.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=W)
+    copied = phone.cookies.get(COOKIE)
+    assert phone.post("/api/signout", headers=W).status_code == 200
+    thief = TestClient(app, base_url="https://testserver", follow_redirects=False)
+    thief.cookies.set(COOKIE, copied)
+    assert thief.get("/setup").status_code == 303
+    assert laptop.get("/").status_code == 303  # the cost: the other devices sign in again
+    assert (
+        phone.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=W).status_code == 200
+    )
+    assert phone.get("/setup").status_code == 200
+
+
 def test_accounts_survive_a_restart(lake, users):
     owner(client(lake, users))
     c = client(lake, users)  # a new process: loaded from the users lake
@@ -604,3 +628,30 @@ def test_each_dataset_publishes_only_its_own_files(tmp_path):
     top = lambda lake: {p.relative_to(shared).parts[0] for p in lake.staged_files()}  # noqa: E731
     assert "users" not in top(main) and "shots" in top(main)
     assert top(users) <= {"users", "invites", "consents", "contacts", "recs_erasures"}
+
+
+def test_a_sign_out_whose_commit_fails_still_signs_this_phone_out(lake, users, monkeypatch):
+    """Review of #225: the cookie goes first; a failed users commit is reported, never a 500 that leaves this phone
+    signed in."""
+
+    def fail(self, user_id):
+        raise OSError("publish failed")
+
+    c = client(lake, users)
+    owner(c)
+    monkeypatch.setattr(Accounts, "sign_out_everywhere", fail)
+    r = c.post("/api/signout", headers=W)
+    assert r.status_code == 200 and r.json() == {"ok": True, "everywhere": False}
+    assert 'session=""' in r.headers["set-cookie"]
+    assert c.get("/setup").status_code == 303
+    page = c.get("/signin?others=kept").text
+    assert "your other devices may still be signed in" in page
+    assert "other devices may still" not in c.get("/signin").text
+
+
+def test_sign_out_says_it_ends_every_device_on_setup_and_the_terms_screen(lake, users):
+    c = client(lake, users)
+    owner(c)
+    assert "Signs you out on all your devices." in c.get("/setup").text
+    r = c.post("/api/signout", headers=W)
+    assert r.json() == {"ok": True, "everywhere": True}

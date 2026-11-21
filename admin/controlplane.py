@@ -1,0 +1,918 @@
+"""The admin's control plane: a Postgres database of who did what (docs/design/admin-registry.md §2).
+
+It holds the audit trail, the owner's include/exclude decisions (as events), the owner's keyword filters (as
+events) and review marks, the job runs the admin started, the decisions snapshots and the drafts built from them.
+Every table is append-only (a trigger refuses UPDATE, DELETE and TRUNCATE), so the trail can't be rewritten through
+the admin. The lake is never here: the admin reads the lake and
+only the pipeline's jobs write it.
+
+Two ways to connect, one interface (`ControlPlane(connect)`):
+- **hosted:** Cloud SQL for PostgreSQL through the Cloud SQL Python Connector with IAM database authentication: the
+  service account is the database user, so there is no password anywhere (ADMIN_DB_INSTANCE, ADMIN_DB_USER,
+  ADMIN_DB_NAME);
+- **a laptop and the tests:** a local Postgres URL (ADMIN_DATABASE_URL), refused when hosted.
+
+`migrate()` applies admin/migrations/*.sql in order, each once, under an advisory lock, so every instance can run
+it at start. It creates the `control` schema it owns; the owner grants the IAM user CREATE on the database once
+(docs/admin/README.md).
+"""
+
+from __future__ import annotations
+
+import contextlib
+import json
+import queue
+import re
+import secrets
+import threading
+import time
+from collections.abc import Callable, Iterator
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+from urllib.parse import unquote, urlsplit
+
+from coffeedata import classify, decisions, rules
+
+MIGRATIONS = Path(__file__).parent / "migrations"
+IDLE_S = 120  # a pooled connection idle longer than this is dropped, not reused
+LOCK = 0x61646D696E  # pg_advisory_xact_lock key for migrations ("admin")
+ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
+SOURCE_FLAGS = ("roaster", "not_roaster", "unreviewed")
+ID_ROASTER = re.compile(r"[a-z0-9][a-z0-9.-]{0,252}")  # a roaster id is its store's domain
+
+
+class ControlPlaneError(RuntimeError):
+    """The control plane couldn't be read or written. Every write fails closed on it (503): nothing is started,
+    decided or published without its audit row."""
+
+
+class Conflict(Exception):
+    """A write based on a stale view (another tab changed the subject first): 409, nothing written."""
+
+
+def new_id(prefix: str) -> str:
+    return f"{prefix}-{datetime.now(UTC):%Y%m%d%H%M%S}-{secrets.token_hex(3)}"
+
+
+def url_connect(url: str) -> Callable[[], Any]:
+    """A local Postgres, from postgresql://user[:password]@host[:port]/db (a laptop, the tests)."""
+    import pg8000.dbapi
+
+    u = urlsplit(url)
+    if u.scheme not in ("postgresql", "postgres") or not u.hostname or not u.path.strip("/"):
+        raise ValueError("ADMIN_DATABASE_URL must look like postgresql://user@host:port/db")
+
+    def connect():
+        return pg8000.dbapi.connect(user=unquote(u.username or ""), password=unquote(u.password or "") or None,
+                                    host=u.hostname, port=u.port or 5432, database=u.path.strip("/"),
+                                    timeout=10)  # fmt: skip
+
+    return connect
+
+
+def cloudsql_connect(instance: str, user: str, db: str) -> Callable[[], Any]:
+    """Cloud SQL with IAM database auth: the Connector fetches a short-lived certificate and an OAuth token for the
+    service account (no password), over the instance's public IP with TLS (no authorized networks). The Connector is
+    made on the first connection, not at start: it reads the service account's credentials, and a failure there is a
+    refused write (503), never a service that doesn't start."""
+    if not re.fullmatch(r"[a-z][a-z0-9-]+:[a-z]+-[a-z]+\d:[a-z][a-z0-9-]+", instance) or not user:
+        raise ValueError("ADMIN_DB_INSTANCE is project:region:instance, and ADMIN_DB_USER the IAM user")
+    made: list = []
+    lock = threading.Lock()
+
+    def connect():
+        from google.cloud.sql.connector import Connector, IPTypes
+
+        with lock:
+            if not made:
+                made.append(Connector(ip_type=IPTypes.PUBLIC, enable_iam_auth=True, refresh_strategy="lazy",
+                                      timeout=15))  # fmt: skip
+        return made[0].connect(instance, "pg8000", user=user, db=db)
+
+    return connect
+
+
+class ControlPlane:
+    """The control plane over a connection factory. A small pool (`size` connections); a connection that errors is
+    dropped. Every method is synchronous (the app calls them in a thread)."""
+
+    def __init__(self, connect: Callable[[], Any], size: int = 4):
+        self._connect = connect
+        self._pool: queue.LifoQueue = queue.LifoQueue(maxsize=size)
+
+    # --- connections and transactions ----------------------------------------------------------------------------
+
+    def _take(self):
+        """A pooled connection used in the last IDLE_S seconds, else a new one. An older one may have been closed by
+        the server or the connector while the instance idled, so it is dropped rather than tried."""
+        while True:
+            try:
+                con, used = self._pool.get_nowait()
+            except queue.Empty:
+                break
+            if time.monotonic() - used < IDLE_S:
+                return con
+            with contextlib.suppress(Exception):
+                con.close()
+        try:
+            return self._connect()
+        except Exception as e:  # noqa: BLE001 - the driver's and the connector's errors vary
+            raise ControlPlaneError(f"can't connect: {type(e).__name__}") from e
+
+    @contextlib.contextmanager
+    def tx(self) -> Iterator[Any]:
+        """One transaction: committed if the block finishes, rolled back otherwise. A database or connection error is
+        raised as ControlPlaneError (and the connection dropped); anything else the block raises (a Conflict, a
+        refusal, a Cloud Run error) passes through as it is, after the rollback."""
+        con = self._take()
+        ok = False
+        try:
+            cur = con.cursor()
+            yield cur
+            con.commit()
+            ok = True
+        except BaseException as e:
+            with contextlib.suppress(Exception):
+                con.rollback()
+            if isinstance(e, ControlPlaneError) or _from_database(e):
+                raise ControlPlaneError(
+                    f"{type(e).__name__}: {str(e).splitlines()[0][:200] if str(e) else ''}"
+                ) from e
+            ok = True  # the connection is fine: the block refused, not the database
+            raise
+        finally:
+            if ok:
+                try:
+                    self._pool.put_nowait((con, time.monotonic()))
+                except queue.Full:
+                    con.close()
+            else:
+                with contextlib.suppress(Exception):
+                    con.close()
+
+    @contextlib.contextmanager
+    def once(self, key: str) -> Iterator[tuple[Any, dict | None]]:
+        """An idempotent write's transaction: locked on its key, with the key's first answer if it has one (the
+        caller returns that, and otherwise remembers its own answer before the block ends)."""
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            yield cur, self.claim(cur, key)
+
+    def close(self) -> None:
+        """Close every pooled connection. The pool stays usable: the next transaction opens a new one."""
+        while True:
+            try:
+                con, _ = self._pool.get_nowait()
+            except queue.Empty:
+                return
+            with contextlib.suppress(Exception):
+                con.close()
+
+    def migrate(self) -> list[str]:
+        """Apply every migration not yet applied, in order, in one transaction under an advisory lock. Returns the
+        ones applied now."""
+        files = sorted(MIGRATIONS.glob("*.sql"))
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK,))
+            cur.execute("create schema if not exists control")
+            cur.execute("create table if not exists control.schema_migrations (name text primary key, "
+                        "applied_at timestamptz not null default now())")  # fmt: skip
+            cur.execute("select name from control.schema_migrations")
+            done = {r[0] for r in cur.fetchall()}
+            applied = []
+            for f in files:
+                if f.name in done:
+                    continue
+                cur.execute(f.read_text())
+                cur.execute("insert into control.schema_migrations (name) values (%s)", (f.name,))
+                applied.append(f.name)
+        return applied
+
+    # --- writes ----------------------------------------------------------------------------------------------------
+
+    @staticmethod
+    def claim(cur, key: str) -> dict | None:
+        """Claim an idempotency key in this transaction: None if it is new (go ahead), else the first answer."""
+        if not key or len(key) > 200:
+            raise ValueError("a write needs its idempotency key")
+        cur.execute("select response from control.idempotency where key = %s", (key,))
+        row = cur.fetchone()
+        if row:
+            return _json(row[0])
+        return None
+
+    def answered(self, key: str) -> dict | None:
+        """The first answer to this idempotency key, if a write already used it (a double submit, a retry)."""
+        with self.tx() as cur:
+            return self.claim(cur, key)
+
+    @staticmethod
+    def remember(cur, key: str, response: dict) -> None:
+        cur.execute("insert into control.idempotency (key, response) values (%s, %s::jsonb)",
+                    (key, json.dumps(response, default=str)))  # fmt: skip
+
+    @staticmethod
+    def audit(cur, actor: str, action: str, subject: str | None, outcome: str, detail: dict | None = None,
+              client: str = "ui") -> None:  # fmt: skip
+        cur.execute(
+            "insert into control.audit (actor, client, action, subject, outcome, detail) "
+            "values (%s, %s, %s, %s, %s, %s::jsonb)",
+            (actor, client, action, subject, outcome, json.dumps(detail or {}, default=str)),
+        )
+
+    def audit_now(
+        self, actor: str, action: str, subject: str | None, outcome: str, detail: dict | None = None
+    ) -> None:
+        with self.tx() as cur:
+            self.audit(cur, actor, action, subject, outcome, detail)
+
+    def decide(self, actor: str, key: str, action: str, kind: str, reason: str, items: list[dict],
+               seen: dict[str, str | None]) -> dict:  # fmt: skip
+        """Approve `action` (include or exclude) for each item's subject (its coffee_id or input_hash, by `kind`),
+        as one group when there are several. `seen` maps each subject to the decision_id the page showed as its
+        latest event (None: none): a subject decided since makes the whole write a Conflict. Idempotent on `key`."""
+        if action not in decisions.ACTIONS or kind not in decisions.SUBJECTS:
+            raise ValueError("bad decision")
+        reason = _reason(reason)
+        if not items or len(items) > 500:
+            raise ValueError("decide 1 to 500 products at a time")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            subjects = sorted({str(it[kind]) for it in items if it.get(kind)})
+            if not subjects:
+                raise ValueError(f"the products have no {kind}")
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
+            now = self._latest(cur, kind, subjects)
+            stale = [s for s in subjects if (now.get(s) or {}).get("decision_id") != seen.get(s)]
+            if stale:
+                raise Conflict(
+                    f"{len(stale)} of these changed since the page was loaded: reload and decide again"
+                )
+            group = new_id("g") if len(subjects) > 1 else None
+            ids = []
+            by_subject = {str(it[kind]): it for it in items if it.get(kind)}
+            for s in subjects:
+                ids.append(self._approve(cur, kind, s, action, reason, actor, group, by_subject[s]))
+            out = {"ok": True, "decisions": ids, "group": group, "count": len(ids)}
+            self.audit(cur, actor, "decide", group or f"{kind}:{subjects[0]}", "ok",
+                       {"action": action, "kind": kind, "subjects": subjects[:50], "count": len(subjects),
+                        "reason": reason, "decisions": ids})  # fmt: skip
+            self.remember(cur, key, out)
+            return out
+
+    def undo(self, actor: str, key: str, target: str, reason: str) -> dict:
+        """Revert a decision, or every decision of a group (`target` is a decision_id or a group_id): each subject
+        goes back to the classifier. Only a decision that is still the latest event for its subject is reverted;
+        any other is already superseded. Idempotent on `key`."""
+        reason = (reason or "").strip() or "undo"
+        if not ID.fullmatch(target):
+            raise ValueError("bad decision id")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
+            cur.execute(
+                "select decision_id, subject_kind, subject, action, max(seq) from control.decisions "
+                "where (decision_id = %s or group_id = %s) group by 1, 2, 3, 4",
+                (target, target),
+            )
+            rows = cur.fetchall()
+            if not rows:
+                raise ValueError("no such decision")
+            reverted = self._revert(cur, actor, rows, reason)
+            out = {"ok": True, "reverted": reverted, "count": len(reverted)}
+            self.audit(cur, actor, "undo", target, "ok", {"reverted": reverted, "reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _approve(cur, kind: str, subject: str, action: str, reason: str, actor: str, group: str | None,
+                 it: dict) -> str:  # fmt: skip
+        """Record one approved decision; returns its id."""
+        did = new_id("d")
+        cur.execute(
+            "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
+            "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
+            "values (%s, 1, 'approved', %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+            (did, kind, subject, action, reason, actor, group, it.get("coffee_id"), it.get("input_hash"),
+             it.get("roaster_id"), (it.get("title") or "")[:300], it.get("evidence_hash") or None),
+        )  # fmt: skip
+        return did
+
+    def _revert(self, cur, actor: str, rows: list[tuple], reason: str) -> list[str]:
+        """Revert each decision (decision_id, kind, subject, action, its last seq) that is still its subject's latest
+        approved event: the subject goes back to the classifier. Returns the decisions reverted."""
+        reverted = []
+        for did, kind, subject, _action, seq in rows:
+            latest = self._latest(cur, kind, [subject]).get(subject)
+            if not latest or latest["decision_id"] != did or latest["event"] != "approved":
+                continue
+            cur.execute(
+                "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
+                "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
+                "select decision_id, %s, 'reverted', subject_kind, subject, action, %s, %s, group_id, coffee_id, "
+                "input_hash, roaster_id, title, evidence_hash from control.decisions "
+                "where decision_id = %s and seq = 1",
+                (seq + 1, reason[:500] if len(reason) >= 3 else "undo", actor, did),
+            )  # fmt: skip
+            reverted.append(did)
+        return reverted
+
+    def _source_excludes(self, cur, batch: str, places: list[str] | None = None) -> list[tuple]:
+        """The exclude decisions a Not a roaster batch made (for these places), as _revert takes them."""
+        cur.execute(
+            "select decision_id, subject_kind, subject, action, max(seq) from control.decisions "
+            "where group_id = %s and (%s::text[] is null or roaster_id = any(%s)) group by 1, 2, 3, 4",
+            (batch, places, places),
+        )
+        return cur.fetchall()
+
+    def _reexclude(self, cur, actor: str, earlier: str, place: str, batch: str) -> list[str]:
+        """Exclude again the coffees an earlier Not a roaster batch excluded for `place`, now under `batch` (the
+        place's latest flag, so a later change finds them)."""
+        cur.execute(
+            "select distinct subject, coffee_id, input_hash, roaster_id, title from control.decisions "
+            "where group_id = %s and roaster_id = %s and subject_kind = 'coffee_id' and action = 'exclude'",
+            (earlier, place),
+        )
+        cols = ("subject", "coffee_id", "input_hash", "roaster_id", "title")
+        items = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+        latest = self._latest(cur, "coffee_id", [i["subject"] for i in items])
+        return [self._approve(cur, "coffee_id", i["subject"], "exclude", f"not a roaster: {place} (Sources)", actor,
+                              batch, i)  # fmt: skip
+                for i in items
+                if not ((latest.get(i["subject"]) or {}).get("event") == "approved"
+                        and latest[i["subject"]]["action"] == "exclude")]  # fmt: skip
+
+    def save_settings(self, actor: str, key: str, doc: object, based_on: str | None, reason: str) -> dict:
+        """A new rule settings version, checked against the deployed code (rules.check), based on the version the
+        page showed (`based_on`, None for the defaults): another edit since is a Conflict. Records what changed and
+        which changes decide (rules.decides). Idempotent on `key`; an edit that changes nothing is refused."""
+        reason = _reason(reason)
+        new = rules.check(doc)
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 2,))
+            now = self._settings(cur)
+            if now["version_id"] != (based_on or None):
+                raise Conflict("the rule settings changed since the page was loaded: reload and edit again")
+            changed = rules.changed(now["doc"], new)
+            if not changed:
+                raise ValueError("nothing changed")
+            decides = rules.decides(now["doc"], new)
+            vid = new_id("rs").lower()
+            cur.execute(
+                "insert into control.rule_settings (version_id, prev_id, schema, doc, changed, decides, reason, actor) "
+                "values (%s, %s, %s, %s::jsonb, %s::jsonb, %s::jsonb, %s, %s)",
+                (vid, now["version_id"], rules.SCHEMA_VERSION, json.dumps(new), json.dumps(changed),
+                 json.dumps(decides), reason, actor),
+            )  # fmt: skip
+            out = {"ok": True, "version_id": vid, "changed": changed, "decides": decides}
+            self.audit(cur, actor, "settings", vid, "ok", out | {"prev": now["version_id"], "reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _settings(cur) -> dict:
+        cur.execute("select version_id, doc, actor, at, reason from control.rule_settings order by at desc, "
+                    "version_id desc limit 1")  # fmt: skip
+        r = cur.fetchone()
+        if not r:
+            return {"version_id": None, "doc": rules.default(), "actor": None, "at": None, "reason": None}
+        return {"version_id": r[0], "doc": _json(r[1]), "actor": r[2], "at": r[3], "reason": r[4]}
+
+    def settings(self) -> dict:
+        """The current rule settings version (the defaults, version None, before the first edit)."""
+        with self.tx() as cur:
+            return self._settings(cur)
+
+    def settings_history(self, limit: int = 10) -> list[dict]:
+        with self.tx() as cur:
+            cur.execute("select version_id, prev_id, changed, decides, reason, actor, at from control.rule_settings "
+                        "order by at desc, version_id desc limit %s", (limit,))  # fmt: skip
+            cols = ("version_id", "prev_id", "changed", "decides", "reason", "actor", "at")
+            rows = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+        for r in rows:
+            r["changed"], r["decides"] = _json(r["changed"]), _json(r["decides"])
+        return rows
+
+    def set_crawl(
+        self, actor: str, key: str, roaster_id: str, crawl: bool, reason: str, seen: bool | None
+    ) -> dict:
+        """Turn a roaster's crawl flag on or off, from the state the page showed (`seen`: a change since is a
+        Conflict). Takes effect for scheduled crawls once a draft carrying it is published. Idempotent on `key`."""
+        reason = _reason(reason)
+        if not ID_ROASTER.fullmatch(roaster_id or ""):
+            raise ValueError("bad roaster id")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("crawl:" + roaster_id,))
+            now = self._crawl(cur, [roaster_id]).get(roaster_id, {}).get("crawl", True)
+            if seen is not None and now != seen:
+                raise Conflict("the crawl flag changed since the page was loaded: reload")
+            if now == crawl:
+                raise ValueError(f"the crawl flag is already {'on' if crawl else 'off'}")
+            cur.execute("insert into control.roaster_state (roaster_id, crawl, reason, actor) values (%s, %s, %s, %s)",
+                        (roaster_id, crawl, reason, actor))  # fmt: skip
+            out = {"ok": True, "roaster_id": roaster_id, "crawl": crawl}
+            self.audit(cur, actor, "crawl_flag", roaster_id, "ok", out | {"reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _crawl(cur, roaster_ids: list[str] | None = None) -> dict[str, dict]:
+        cur.execute(
+            "select distinct on (roaster_id) roaster_id, crawl, reason, actor, at from control.roaster_state "
+            + ("where roaster_id = any(%s) " if roaster_ids is not None else "")
+            + "order by roaster_id, id desc",
+            (roaster_ids,) if roaster_ids is not None else (),
+        )
+        return {r[0]: dict(zip(("roaster_id", "crawl", "reason", "actor", "at"), r, strict=True))
+                for r in cur.fetchall()}  # fmt: skip
+
+    def roaster_states(self, roaster_ids: list[str] | None = None) -> dict[str, dict]:
+        """Each roaster's latest crawl flag row (a roaster never changed has none: crawl on)."""
+        with self.tx() as cur:
+            return self._crawl(cur, roaster_ids)
+
+    # --- keyword filters (the Filters page) ---------------------------------------------------------------------
+
+    def change_filter(self, actor: str, key: str, event: str, phrase: str, field: str, reason: str,
+                      based_on: int | None) -> dict:  # fmt: skip
+        """Add a keyword filter, or remove one (`event` added or removed), from the version the page showed
+        (`based_on`: the latest change's id, None before the first): a change since is a Conflict. Adding a filter in
+        effect, or removing one that isn't, is refused. Idempotent on `key`; undone with undo_filter."""
+        if event not in ("added", "removed"):
+            raise ValueError("add or remove a filter")
+        f = classify.KeywordFilter(phrase, field)  # ValueError: not a filter
+        reason = _reason(reason)
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 4,))
+            if self._filters_version(cur) != based_on:
+                raise Conflict("the keyword filters changed since the page was loaded: reload and try again")
+            live = {(x["field"], x["phrase"]) for x in self._filters(cur)}
+            if event == "added" and (f.field, f.phrase) in live:
+                raise ValueError(f"“{f.phrase}” is already a filter on {f.field.replace('_', ' ')}")
+            if event == "added" and len(live) >= classify.KEYWORD_MAX:
+                raise ValueError(f"at most {classify.KEYWORD_MAX} keyword filters")
+            if event == "removed" and (f.field, f.phrase) not in live:
+                raise ValueError(f"“{f.phrase}” isn't a filter on {f.field.replace('_', ' ')}")
+            cur.execute("insert into control.keyword_filters (event, phrase, field, reason, actor) "
+                        "values (%s, %s, %s, %s, %s) returning id", (event, f.phrase, f.field, reason, actor))  # fmt: skip
+            fid = cur.fetchone()[0]
+            out = {"ok": True, "filter_change": fid, "event": event, "phrase": f.phrase, "field": f.field}
+            self.audit(cur, actor, "keyword_filter", f"{f.field}:{f.phrase}", "ok", out | {"reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    def undo_filter(self, actor: str, key: str, change: int, based_on: int | None) -> dict:
+        """Revert one change to the filters (an add becomes a removal, a removal an add), if it is still the latest
+        change to its filter, from the version the page showed (`based_on`: a change since is a Conflict) and within
+        KEYWORD_MAX filters, like any add. A filter changed again since keeps that later change. The admin previews
+        the revert first, as it does an add or a removal (Writes.prefilter_undo). Idempotent on `key`."""
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 4,))
+            if self._filters_version(cur) != based_on:
+                raise Conflict("the keyword filters changed since the page was loaded: reload and try again")
+            cur.execute("select event, phrase, field from control.keyword_filters where id = %s", (change,))
+            row = cur.fetchone()
+            if not row:
+                raise ValueError("no such filter change")
+            event, phrase, field = row
+            cur.execute(
+                "select max(id) from control.keyword_filters where field = %s and phrase = %s",
+                (field, phrase),
+            )
+            undone = cur.fetchone()[0] == change
+            if undone and event == "removed" and len(self._filters(cur)) >= classify.KEYWORD_MAX:
+                raise ValueError(f"at most {classify.KEYWORD_MAX} keyword filters: remove one first")
+            fid = None
+            if undone:
+                back = "removed" if event == "added" else "added"
+                cur.execute("insert into control.keyword_filters (event, phrase, field, reason, undoes, actor) "
+                            "values (%s, %s, %s, 'undo', %s, %s) returning id", (back, phrase, field, change, actor))  # fmt: skip
+                fid = cur.fetchone()[0]
+            out = {"ok": True, "undone": undone, "filter_change": fid, "phrase": phrase, "field": field,
+                   "event": event}  # fmt: skip
+            self.audit(cur, actor, "keyword_filter_undo", f"{field}:{phrase}", "ok", out | {"undoes": change})
+            self.remember(cur, key, out)
+            return out
+
+    def filter_change(self, change: int) -> dict | None:
+        """One change to the filters: its event, phrase and field (the undo's preview reverses it)."""
+        with self.tx() as cur:
+            cur.execute("select event, phrase, field from control.keyword_filters where id = %s", (change,))
+            r = cur.fetchone()
+            return dict(zip(("event", "phrase", "field"), r, strict=True)) if r else None
+
+    @staticmethod
+    def _filters_version(cur) -> int | None:
+        cur.execute("select max(id) from control.keyword_filters")
+        return cur.fetchone()[0]
+
+    @staticmethod
+    def _filters(cur) -> list[dict]:
+        cur.execute(
+            "select * from (select distinct on (field, phrase) id, event, phrase, field, reason, actor, at "
+            "from control.keyword_filters order by field, phrase, id desc) f where event = 'added' order by phrase, field"
+        )
+        cols = ("change", "event", "phrase", "field", "reason", "actor", "at")
+        return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    def keyword_filters(self) -> dict:
+        """The filters in effect (each with the change that added it) and the version (the latest change's id)."""
+        with self.tx() as cur:
+            return {"version": self._filters_version(cur), "filters": self._filters(cur)}
+
+    def filter_history(self, limit: int = 10) -> list[dict]:
+        """The latest changes to the filters, newest first, each saying whether it is still its filter's latest."""
+        with self.tx() as cur:
+            cur.execute(
+                "select k.id, k.event, k.phrase, k.field, k.reason, k.undoes, k.actor, k.at, "
+                "k.id = (select max(id) from control.keyword_filters j where j.field = k.field and j.phrase = k.phrase) "
+                "from control.keyword_filters k order by k.id desc limit %s",
+                (limit,),
+            )
+            cols = ("change", "event", "phrase", "field", "reason", "undoes", "actor", "at", "latest")
+            return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    def review(self, actor: str, key: str, filters: str, draft_id: str, item: dict, mark: str) -> dict:
+        """The owner's mark on a product a filter change newly excludes while Claude calls it coffee: keep_excluded or
+        drop_filter, for the filter set `filters` (its digest). Idempotent on `key`; marking again replaces it."""
+        if mark not in ("keep_excluded", "drop_filter"):
+            raise ValueError("mark it keep_excluded or drop_filter")
+        if not re.fullmatch(r"[0-9a-f]{64}", filters or "") or not ID.fullmatch(draft_id or ""):
+            raise ValueError("bad draft")
+        cid = str(item.get("coffee_id") or "")
+        if not cid or len(cid) > 300:
+            raise ValueError("no product")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("insert into control.prefilter_reviews (filters, coffee_id, input_hash, prefilter, mark, draft_id, "
+                        "actor) values (%s, %s, %s, %s, %s, %s, %s)",
+                        (filters, cid, item.get("input_hash"), item.get("prefilter"), mark, draft_id, actor))  # fmt: skip
+            out = {"ok": True, "reviewed": cid, "mark": mark}
+            self.audit(cur, actor, "prefilter_review", cid, "ok", out | {"draft": draft_id, "filters": filters,
+                                                                         "prefilter": item.get("prefilter")})  # fmt: skip
+            self.remember(cur, key, out)
+            return out
+
+    def reviews(self, filters: str) -> dict[tuple[str, str | None], dict]:
+        """Each product version's latest mark for this filter set: {(coffee_id, input_hash): {mark, actor, at}}. A
+        mark is about the version it was made on: a store that rewrites the listing needs a new one."""
+        with self.tx() as cur:
+            cur.execute("select distinct on (coffee_id, input_hash) coffee_id, input_hash, mark, actor, at "
+                        "from control.prefilter_reviews where filters = %s order by coffee_id, input_hash, id desc",
+                        (filters,))  # fmt: skip
+            return {(r[0], r[1]): {"mark": r[2], "actor": r[3], "at": r[4]} for r in cur.fetchall()}
+
+    # --- the source list's flags (the Sources page) --------------------------------------------------------------
+
+    def flag_sources(
+        self,
+        actor: str,
+        key: str,
+        flag: str,
+        places: list[str],
+        seen: dict[str, str | None],
+        coffees: list[dict] | None = None,
+    ) -> dict:
+        """Flag places of the source list `roaster` or `not_roaster` (or back to `unreviewed`), as one batch. `seen`
+        maps each place to the batch the page showed as its latest flag (None: none): a place flagged since makes the
+        write a Conflict. Idempotent on `key`; undone with undo_flags."""
+        if flag not in SOURCE_FLAGS:
+            raise ValueError("flag a place roaster, not_roaster or unreviewed")
+        places = sorted({p for p in places if ID_ROASTER.fullmatch(p or "")})
+        if not places or len(places) > 1000:
+            raise ValueError("flag 1 to 1,000 places at a time")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            now = self._source_flags(cur, places)
+            stale = [p for p in places if (now.get(p) or {}).get("batch_id") != seen.get(p)]
+            if stale:
+                raise Conflict(
+                    f"{len(stale)} of these were flagged since the page was loaded: reload and flag again"
+                )
+            # A place already flagged this way is left as it is (a bulk selection can mix them in). Flagging it again
+            # would revert its earlier batch's excludes and exclude only the coffees the served build still has:
+            # once those excludes are published, none, so its coffees would come back at the next publish.
+            skipped = [p for p in places if (now.get(p) or {}).get("flag", "unreviewed") == flag]
+            places = [p for p in places if p not in skipped]
+            if not places:
+                raise ValueError(f"already flagged {flag.replace('_', ' ')}: nothing to change")
+            # The decisions lock, after the flags' (as decide() and undo() take it), before any decision is written.
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
+            batch = new_id("f").lower()
+            for p in places:
+                cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, actor) values (%s, %s, %s, %s)",
+                            (batch, p, flag, actor))  # fmt: skip
+            # A place leaving Not a roaster gets its coffees back: its exclusions are reverted.
+            restored = []
+            for p in places:
+                if (now.get(p) or {}).get("flag") == "not_roaster":
+                    restored += self._revert(cur, actor, self._source_excludes(cur, now[p]["batch_id"], [p]),
+                                             f"{p} is no longer flagged not a roaster")  # fmt: skip
+            # Not a roaster takes the store's coffees out of the public catalog: an exclude decision for each (the
+            # batch is their group, so Undo reverts both).
+            excluded = []
+            if flag == "not_roaster":
+                kept = set(places)
+                by_id = {str(c["coffee_id"]): c for c in coffees or []
+                         if c.get("coffee_id") and c.get("roaster_id") in kept}  # fmt: skip
+                latest = self._latest(cur, "coffee_id", sorted(by_id))
+                for cid, c in sorted(by_id.items()):
+                    if (latest.get(cid) or {}).get("event") == "approved" and latest[cid][
+                        "action"
+                    ] == "exclude":
+                        continue  # already excluded
+                    excluded.append(self._approve(cur, "coffee_id", cid, "exclude",
+                                                  f"not a roaster: {c.get('roaster_id')} (Sources)", actor, batch, c))  # fmt: skip
+            out = {"ok": True, "batch_id": batch, "flag": flag, "count": len(places), "excluded": len(excluded),
+                   "restored": len(restored), "skipped": len(skipped), "places": places[:20]}  # fmt: skip
+            self.audit(cur, actor, "source_flag", batch, "ok",
+                       out | {"places": places[:50], "decisions": excluded[:200], "reverted": restored[:200]})  # fmt: skip
+            self.remember(cur, key, out)
+            return out
+
+    def undo_flags(self, actor: str, key: str, batch: str) -> dict:
+        """Put each place of a batch back to the flag it had before it, if the batch is still its latest flag."""
+        if not ID.fullmatch(batch):
+            raise ValueError("bad batch id")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))  # the decisions', as in flag_sources
+            cur.execute("select roaster_id from control.source_flags where batch_id = %s", (batch,))
+            places = sorted({r[0] for r in cur.fetchall()})
+            if not places:
+                raise ValueError("no such batch")
+            now = self._source_flags(cur, places)
+            undo = new_id("f").lower()
+            undone: list[str] = []
+            back: dict[str, str] = {}  # place -> the earlier Not a roaster batch it goes back to
+            for p in places:
+                if (now.get(p) or {}).get("batch_id") != batch:
+                    continue  # flagged again since: that later flag stands
+                cur.execute("select flag, batch_id from control.source_flags where roaster_id = %s and batch_id <> %s "
+                            "and id < (select max(id) from control.source_flags where batch_id = %s) "
+                            "order by id desc limit 1", (p, batch, batch))  # fmt: skip
+                before = cur.fetchone()
+                cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, undoes, actor) "
+                            "values (%s, %s, %s, %s, %s)",
+                            (undo, p, before[0] if before else "unreviewed", batch, actor))  # fmt: skip
+                undone.append(p)
+                if before and before[0] == "not_roaster":
+                    back[p] = before[1]
+            # Undo of a Not a roaster batch puts its places' coffees back too. First, so that a place going back to
+            # Not a roaster then has its coffees excluded again (_reexclude skips a coffee still excluded, and this
+            # batch's excludes are reverted here, not after).
+            restored = self._revert(cur, actor, self._source_excludes(cur, batch, undone), "undo")
+            reexcluded: list[str] = []
+            for p, earlier in back.items():  # back to Not a roaster: its coffees leave again
+                reexcluded += self._reexclude(cur, actor, earlier, p, undo)
+            out = {"ok": True, "reverted": undone, "count": len(undone), "restored": len(restored),
+                   "excluded": len(reexcluded)}  # fmt: skip
+            self.audit(
+                cur, actor, "source_flag_undo", batch, "ok", {"places": undone[:50], "count": len(undone)}
+            )
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _source_flags(cur, places: list[str] | None = None) -> dict[str, dict]:
+        cur.execute(
+            "select distinct on (roaster_id) roaster_id, flag, batch_id, actor, at from control.source_flags "
+            + ("where roaster_id = any(%s) " if places is not None else "")
+            + "order by roaster_id, id desc",
+            (places,) if places is not None else (),
+        )
+        return {r[0]: dict(zip(("roaster_id", "flag", "batch_id", "actor", "at"), r, strict=True))
+                for r in cur.fetchall()}  # fmt: skip
+
+    def source_flags(self, places: list[str] | None = None) -> dict[str, dict]:
+        """Each flagged place's latest flag (a place never flagged has none: unreviewed)."""
+        with self.tx() as cur:
+            return self._source_flags(cur, places)
+
+    def record_run(self, cur, run: dict) -> None:
+        cur.execute(
+            "insert into control.job_runs (run_id, action, job, args, mode, week, test_id, roaster_id, execution, "
+            "actor, override_reason) values (%s, %s, %s, %s::jsonb, %s, %s, %s, %s, %s, %s, %s)",
+            (run["run_id"], run["action"], run["job"], json.dumps(run.get("args")), run.get("mode"),
+             run.get("week"), run.get("test_id"), run.get("roaster_id"), run.get("execution"), run["actor"],
+             run.get("override_reason")),
+        )  # fmt: skip
+
+    def run_status(
+        self, run_id: str, status: str, duration_s: float | None = None, message: str | None = None
+    ) -> None:
+        """Record a run's outcome the first time the admin sees it (never changed after): the page then shows it
+        without asking Cloud Run again."""
+        with self.tx() as cur:
+            cur.execute(
+                "insert into control.job_run_status (run_id, status, duration_s, message) values (%s, %s, %s, %s) "
+                "on conflict (run_id) do nothing",
+                (run_id, status, duration_s, (message or "")[:500] or None),
+            )
+
+    def create_snapshot(self, cur, snapshot_id: str, sha256: str, n: int, actor: str) -> None:
+        cur.execute("insert into control.snapshots (snapshot_id, sha256, decisions, actor) values (%s, %s, %s, %s)",
+                    (snapshot_id, sha256, n, actor))  # fmt: skip
+
+    def create_draft(self, cur, draft_id: str, snapshot_id: str, baseline: str | None, run_id: str | None,
+                     actor: str) -> None:  # fmt: skip
+        cur.execute("insert into control.drafts (draft_id, snapshot_id, baseline, run_id, actor) "
+                    "values (%s, %s, %s, %s, %s)", (draft_id, snapshot_id, baseline, run_id, actor))  # fmt: skip
+
+    def draft_event(self, cur, draft_id: str, event: str, actor: str, detail: dict | None = None) -> None:
+        cur.execute("insert into control.draft_events (draft_id, event, actor, detail) values (%s, %s, %s, %s::jsonb)",
+                    (draft_id, event, actor, json.dumps(detail or {}, default=str)))  # fmt: skip
+
+    # --- reads -----------------------------------------------------------------------------------------------------
+
+    @staticmethod
+    def _latest(cur, kind: str, subjects: list[str]) -> dict[str, dict]:
+        if not subjects:
+            return {}
+        cur.execute(
+            "select distinct on (subject) subject, decision_id, event, action, group_id from control.decisions "
+            "where subject_kind = %s and subject = any(%s) order by subject, id desc",
+            (kind, subjects),
+        )
+        return {
+            r[0]: {"decision_id": r[1], "event": r[2], "action": r[3], "group_id": r[4]}
+            for r in cur.fetchall()
+        }
+
+    def latest(self, coffee_ids: list[str], input_hashes: list[str]) -> dict[str, dict[str, dict]]:
+        """The latest decision event for each coffee and each version: {"coffee_id": {...}, "input_hash": {...}}."""
+        with self.tx() as cur:
+            return {"coffee_id": self._latest(cur, "coffee_id", coffee_ids),
+                    "input_hash": self._latest(cur, "input_hash", input_hashes)}  # fmt: skip
+
+    def effective(self) -> list[dict]:
+        """One decision per subject: the latest event, when it is an approval (a reverted subject has none)."""
+        with self.tx() as cur:
+            cur.execute(
+                "select * from (select distinct on (subject_kind, subject) decision_id, event, subject_kind, subject, "
+                "action, reason, actor, to_char(at at time zone 'UTC', 'YYYY-MM-DD\"T\"HH24:MI:SS\"Z\"'), coffee_id, "
+                "input_hash, roaster_id, title, evidence_hash from control.decisions "
+                "order by subject_kind, subject, id desc) d "
+                "where event = 'approved' order by subject_kind, subject"
+            )
+            cols = ("decision_id", "event", "subject_kind", "subject", "action", "reason", "actor", "decided_at",
+                    "coffee_id", "input_hash", "roaster_id", "title", "evidence_hash")  # fmt: skip
+            return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    def audit_log(
+        self, limit: int = 100, offset: int = 0, action: str | None = None
+    ) -> tuple[list[dict], int]:
+        with self.tx() as cur:
+            where, params = ("where action = %s", [action]) if action else ("", [])
+            cur.execute(f"select count(*) from control.audit {where}", params)
+            total = cur.fetchone()[0]
+            cur.execute(
+                f"select id, at, actor, client, action, subject, outcome, detail from control.audit {where} "
+                "order by id desc limit %s offset %s",
+                [*params, limit, offset],
+            )
+            cols = ("id", "at", "actor", "client", "action", "subject", "outcome", "detail")
+            rows = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+            for r in rows:
+                r["detail"] = _json(r["detail"])
+            return rows, total
+
+    def runs(self, limit: int = 30) -> list[dict]:
+        with self.tx() as cur:
+            cur.execute(
+                "select r.run_id, r.action, r.job, r.args, r.mode, r.week, r.test_id, r.roaster_id, r.execution, "
+                "r.actor, r.override_reason, r.started_at, s.status, s.duration_s, s.message from control.job_runs r "
+                "left join control.job_run_status s using (run_id) order by r.started_at desc limit %s",
+                (limit,),
+            )
+            cols = ("run_id", "action", "job", "args", "mode", "week", "test_id", "roaster_id", "execution", "actor",
+                    "override_reason", "started_at", "final", "duration_s", "message")  # fmt: skip
+            rows = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+            for r in rows:
+                r["args"] = _json(r["args"])
+            return rows
+
+    def run(self, run_id: str) -> dict | None:
+        """One run the admin started, or None."""
+        with self.tx() as cur:
+            cur.execute("select run_id, job, execution from control.job_runs where run_id = %s", (run_id,))
+            r = cur.fetchone()
+            return dict(zip(("run_id", "job", "execution"), r, strict=True)) if r else None
+
+    def recent_test(self, roaster_id: str, hours: float = 24) -> dict | None:
+        """The latest test crawl of this roaster started in the last `hours`, if any."""
+        with self.tx() as cur:
+            cur.execute(
+                "select r.run_id, r.started_at, s.status, r.execution, r.test_id from control.job_runs r "
+                "left join control.job_run_status s using (run_id) "
+                "where r.roaster_id = %s and r.mode = 'test' and r.started_at > now() - make_interval(secs => %s) "
+                "order by r.started_at desc limit 1",
+                (roaster_id, hours * 3600),
+            )
+            r = cur.fetchone()
+            return (
+                dict(zip(("run_id", "started_at", "status", "execution", "test_id"), r, strict=True))
+                if r
+                else None
+            )
+
+    def tests_since(self, hours: float) -> list[dict]:
+        """Every test crawl started in the last `hours`: one roaster's (roaster_id) or a whole connector's (none)."""
+        with self.tx() as cur:
+            cur.execute(
+                "select run_id, test_id, roaster_id, args from control.job_runs where mode = 'test' "
+                "and started_at > now() - make_interval(secs => %s) order by started_at desc",
+                (hours * 3600,),
+            )
+            rows = [
+                dict(zip(("run_id", "test_id", "roaster_id", "args"), r, strict=True)) for r in cur.fetchall()
+            ]
+        for r in rows:
+            r["args"] = _json(r["args"]) or []
+            r["connector"] = (
+                r["args"][r["args"].index("--connector") + 1] if "--connector" in r["args"] else None
+            )
+        return rows
+
+    def step9_total(self, published: set[str]) -> tuple[int, dict | None]:
+        """CLAUDE.md step 9's running total: the public coffees changed by the drafts published (their build in
+        `published`, from serving_log) since the last recorded full evaluation, and that evaluation."""
+        with self.tx() as cur:
+            cur.execute("select at, path, actor from control.evaluations order by id desc limit 1")
+            ev = cur.fetchone()
+            last = dict(zip(("at", "path", "actor"), ev, strict=True)) if ev else None
+            cur.execute(
+                "select detail from control.draft_events where event = 'publish_started' and (%s::timestamptz is null "
+                "or at > %s::timestamptz)",
+                (last and last["at"], last and last["at"]),
+            )
+            total = 0
+            for (detail,) in cur.fetchall():
+                d = _json(detail) or {}
+                if d.get("build") in published:
+                    total += int(d.get("changed") or 0)
+        return total, last
+
+    def record_evaluation(self, actor: str, key: str, path: str, reason: str) -> dict:
+        """A full evaluation of the classifier's output, done: the running total starts again from here."""
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("insert into control.evaluations (actor, path, reason) values (%s, %s, %s)",
+                        (actor, path, reason))  # fmt: skip
+            self.audit(cur, actor, "evaluation", path, "ok", {"reason": reason})
+            out = {"ok": True, "evaluation": path}
+            self.remember(cur, key, out)
+            return out
+
+    def drafts(self, limit: int = 20) -> list[dict]:
+        with self.tx() as cur:
+            cur.execute(
+                "select d.draft_id, d.snapshot_id, s.sha256, s.decisions, d.baseline, d.run_id, d.actor, d.created_at, "
+                "(select event from control.draft_events e where e.draft_id = d.draft_id order by id desc limit 1) "
+                "from control.drafts d join control.snapshots s using (snapshot_id) order by d.created_at desc limit %s",
+                (limit,),
+            )
+            cols = ("draft_id", "snapshot_id", "sha256", "decisions", "baseline", "run_id", "actor", "created_at",
+                    "last_event")  # fmt: skip
+            return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+
+def _reason(raw: str | None) -> str:
+    """A write's recorded reason: 3 to 500 characters."""
+    reason = (raw or "").strip()
+    if not 3 <= len(reason) <= 500:
+        raise ValueError("give a reason (3 to 500 characters)")
+    return reason
+
+
+def _from_database(e: BaseException) -> bool:
+    """An error from the database, the driver or the connection (as opposed to the block's own refusal)."""
+    return isinstance(e, OSError | TimeoutError) or type(e).__module__.split(".")[0] in (
+        "pg8000", "google", "aiohttp", "ssl", "scramp", "asyncio")  # fmt: skip
+
+
+def _json(v: Any) -> Any:
+    if isinstance(v, str):
+        try:
+            return json.loads(v)
+        except ValueError:
+            return v
+    return v

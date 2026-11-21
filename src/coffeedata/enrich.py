@@ -14,7 +14,7 @@ import logging
 from datetime import UTC, date, datetime
 from typing import cast
 
-from . import extract, products
+from . import decisions, extract, products
 from .lake import Lake, new_batch_id
 from .models import Enrichment
 
@@ -25,7 +25,8 @@ SYNC_LIMIT = 100
 # Every product version's latest snapshot with its description and Claude's coffee verdict, minus those already
 # enriched by Claude or in flight. products.needs_claude then picks the candidates, in Python, as stg_products would.
 # The weekly cap goes first to current single origins whose process the rules left empty and whose listing has a
-# process word (extract.process_first): Claude reads the prose the rules don't. The rest follow in this order.
+# process word (extract.process_first): Claude reads the prose the rules don't. Within each group, coffees in stock
+# come first (the site's process chart counts single origins in stock); otherwise this order holds.
 CANDIDATES_SQL = """
 with e as (select * from {enrichments}),
 llm as (select distinct roaster_id, product_id, body_hash from e where method = 'llm'),
@@ -47,7 +48,9 @@ latest as (
     qualify row_number() over (partition by roaster_id, product_id, body_hash order by fetched_at desc) = 1
 )
 select l.roaster_id, l.product_id, l.body_hash, l.title, l.product_type, l.tags,
-       list_transform(l.variants, lambda v: v.grams) as grams, bo.body_text, v.label, l.fetched_at, l.is_current
+       list_transform(l.variants, lambda v: v.grams) as grams, bo.body_text, v.label, l.fetched_at, l.is_current,
+       -- in stock as dim_coffee counts it: a variant not marked unavailable
+       coalesce(list_bool_or(list_transform(l.variants, lambda v: coalesce(v.available, true))), false) as in_stock
 from latest l
 join (select body_hash, any_value(body_text) as body_text from {bodies} group by 1) bo using (body_hash)
 left join verdicts v using (input_hash)
@@ -74,6 +77,9 @@ def candidates(lake: Lake, limit: int | None = None, keys: set[tuple] | None = N
         sql = sql.replace("anti join in_flight using (roaster_id, product_id, body_hash)\n", "")
     cur = lake.connect().execute(sql, list(_verdict_config()))
     cols = [d[0] for d in cur.description]
+    # The published snapshot's keyword filters: a product they exclude is never a coffee, so it isn't enriched. A
+    # submitted batch's bases (keys) are rebuilt as they were sent.
+    filters = decisions.served_prefilter(lake) if keys is None else ()
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
@@ -82,13 +88,18 @@ def candidates(lake: Lake, limit: int | None = None, keys: set[tuple] | None = N
         it = products.item(
             r["title"], r["product_type"], r["tags"], r["grams"], r["body_hash"], r["body_text"]
         )
-        base = products.rules(it, r["label"]) if keys is not None else products.needs_claude(it, r["label"])
+        base = (
+            products.rules(it, r["label"])
+            if keys is not None
+            else products.needs_claude(it, r["label"], filters)
+        )
         if base is None:
             continue
-        first = bool(r["is_current"]) and extract.process_first(it, base)
         out.append({k: r[k] for k in ("roaster_id", "product_id", "body_hash", "title", "tags", "body_text")}
-                   | {"base": base, "first": first})  # fmt: skip
-    out.sort(key=lambda c: not c["first"])  # stable: the SQL order within each group
+                   | {"base": base, "first": keys is None and bool(r["is_current"]) and extract.process_first(it, base),
+                      "in_stock": bool(r["in_stock"])})  # fmt: skip
+    if keys is None:  # rebuilding a batch's bases needs no order
+        out.sort(key=lambda c: (not c["first"], not c["in_stock"]))  # stable: the SQL order within each group
     return out if limit is None else out[:limit]
 
 

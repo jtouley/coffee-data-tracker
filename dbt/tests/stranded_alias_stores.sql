@@ -7,7 +7,7 @@
 {{ config(severity='warn', store_failures=true) }}
 with last_probe as (
     select roaster_id, status, probed_at from {{ ref('stg_probes') }}
-    where status <> 'robots_unavailable'
+    where status not in ('robots_unavailable', 'http_429', 'http_430')
     qualify row_number() over (partition by roaster_id order by probed_at desc, status) = 1
 )
 select a.roaster_id as alias_id, c.roaster_id as canonical_id, c.last_fetch as canonical_last_fetch,

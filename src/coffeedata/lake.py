@@ -7,6 +7,7 @@ Every pipeline step *adds* files and never rewrites another run's files:
     fetches/run_date=YYYY-MM-DD/batch=<id>.parquet        one row per roaster fetch attempt (ok / error)
     probes/run_date=YYYY-MM-DD/batch=<id>.parquet         storefront platform detection results
     registry/source=<s>/<key>.parquet                     roasters added by discovery or by hand
+    candidates/source=<s>/<key>.parquet                   discovery's whole source list, one file per run
     enrichments/method=<m>/run_date=.../batch=<id>.parquet extracted attributes, keyed by body_hash
     llm_batches/state=<submitted|collected>/<id>.parquet  Claude Message Batches bookkeeping
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
@@ -16,7 +17,9 @@ Every pipeline step *adds* files and never rewrites another run's files:
     rec_responses/<user_id>__<slate_id>__<h>__<time>.parquet  one file per answer to a suggested coffee (h: the
                                                           coffee_id's hash, since a catalog id isn't a file name)
     run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
-    serving_log/serve_id=<id>.parquet                     one row per serve or rollback of a release
+    serving_log/serve_id=<id>.parquet                     one row per serve, rollback or re-export of a release
+    releases/run_date=.../build=<id>/<table>.parquet       every build's release (quality.RELEASE_TABLES)
+    releases/run_date=.../build=<id>/ops/<table>.parquet   its ops tables (quality.OPS_TABLES): never public
 
 Bag photos go to their own private dataset (`Lake.photos()`), one photo per file:
 
@@ -256,6 +259,24 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("opted_out", pa.bool_()),
         ]
     ),
+    # The source list (discover.overture_places): every place a discovery run read, roasters and cafés alike, one
+    # row per website domain and run. Recorded only: nothing is fetched from these sites, and a place is probed or
+    # crawled only once it is in the registry or the owner flags it a roaster in the admin (registry.current).
+    "candidates": pa.schema(
+        [
+            ("added_at", pa.timestamp("s", tz="UTC")),
+            ("source", pa.string()),
+            ("roaster_id", pa.string()),
+            ("name", pa.string()),
+            ("city", pa.string()),
+            ("state", pa.string()),
+            ("website", pa.string()),
+            ("locations", pa.int32()),
+            ("confidence", pa.float64()),
+            ("tags", pa.list_(pa.string())),  # coffee_roastery, coffee_shop, cafe
+            ("roast_in_name", pa.bool_()),
+        ]
+    ),
     "enrichments": pa.schema(
         [
             ("extracted_at", pa.timestamp("s", tz="UTC")),
@@ -314,7 +335,8 @@ SCHEMAS: dict[str, pa.Schema] = {
     # One file per dbt build: a row per dbt node (its manifest checksum and test result, so two builds' code
     # and test outcomes can be compared), a row per catalog metric (the baseline the next build's volume check
     # reads), a row per release table (kind table_hash: its row count in rows, its content hash in checksum and the
-    # hash method in payload, quality.table_hash), a row per release change count (kind release_change: rows of a
+    # hash method in payload, quality.table_hash), a row per ops table written (kind ops_table: its rows), a row per
+    # release change count (kind release_change: rows of a
     # public table added, removed or changed against the served release, per reason; the release's notes), and the
     # build's manifest.json and run_results.json as text, so `dbt --state` can use them later.
     "builds": pa.schema(
@@ -399,12 +421,12 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("code_version", pa.string()),
         ]
     ),
-    # One row per serve and rollback: which release customers got, when, why, from whom, and what it replaced.
-    # marts/release.parquet holds only the current one.
+    # One row per serve, rollback and re-export: which release customers got, when, why, from whom, and what it
+    # replaced. marts/release.parquet holds only the current one.
     "serving_log": pa.schema(
         [
             ("served_at", pa.timestamp("s", tz="UTC")),
-            ("action", pa.string()),  # serve or rollback
+            ("action", pa.string()),  # serve, rollback or reexport (the served release again)
             ("build_id", pa.string()),
             ("run_date", pa.date32()),
             ("reason", pa.string()),
@@ -412,6 +434,133 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("previous_build_id", pa.string()),
             ("ci_run_id", pa.string()),
             ("ci_run_url", pa.string()),
+        ]
+    ),
+    # The ops tables: what each build saw, written beside its release (releases/.../build=<id>/ops/<table>.parquet,
+    # quality.OPS_TABLES) for the owner's command center. Copied from the build's dbt models with the build's id
+    # first (every row says which build it is, however the files are read), cast to these schemas; never served,
+    # exported, published as public tables or read by dbt. Not Lake tables: no GLOBS entry or schema file, so
+    # Lake.scan never reads them; quality.ops_files(lake, build_id) finds one build's (OPS_GLOBS: all builds').
+    # contracts/internal/ops.odcs.yaml is their contract.
+    "run_completeness": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("run_date", pa.date32()),
+            ("roaster_id", pa.string()),
+            ("attempted", pa.bool_()),
+            ("ok", pa.bool_()),
+            ("expected_from", pa.string()),
+            ("adapter", pa.string()),
+            ("has_catalog", pa.bool_()),
+            ("catalog_ok", pa.bool_()),
+            ("unavailable", pa.bool_()),
+            ("quarantined", pa.bool_()),
+            ("partial", pa.bool_()),
+            ("partial_reason", pa.string()),
+            ("challenge", pa.string()),
+        ]
+    ),
+    "release_changes": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("table_name", pa.string()),
+            ("item", pa.string()),
+            ("change", pa.string()),
+            ("reason", pa.string()),
+        ]
+    ),
+    "product_decisions": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("product_id", pa.string()),
+            ("title", pa.string()),
+            ("product_type", pa.string()),
+            ("url", pa.string()),
+            ("first_seen", pa.date32()),
+            ("last_seen", pa.date32()),
+            ("is_listed", pa.bool_()),
+            ("input_hash", pa.string()),
+            ("is_coffee", pa.bool_()),
+            ("classified_by", pa.string()),
+            ("verdict_model", pa.string()),
+            ("verdict_label", pa.string()),
+            ("reason", pa.string()),
+            ("tags", pa.list_(pa.string())),
+            ("unfiltered_is_coffee", pa.bool_()),
+        ]
+    ),
+    "eval_prefilter": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("direction", pa.string()),
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("title", pa.string()),
+            ("url", pa.string()),
+            ("input_hash", pa.string()),
+            ("prefilter", pa.string()),
+            ("verdict_label", pa.string()),
+            ("claude", pa.string()),
+            ("is_coffee_after", pa.bool_()),
+        ]
+    ),
+    "eval_prefilter_summary": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("direction", pa.string()),
+            ("products", pa.int64()),
+            ("claude_coffee", pa.int64()),
+            ("claude_not_coffee", pa.int64()),
+            ("no_verdict", pa.int64()),
+            ("back_in_catalog", pa.int64()),
+        ]
+    ),
+    "prefilter_samples": pa.schema(
+        [
+            ("sampled_at", pa.timestamp("s", tz="UTC")),
+            ("run_date", pa.date32()),
+            ("input_hash", pa.string()),
+            ("roaster_id", pa.string()),
+            ("prefilter", pa.string()),
+            ("model", pa.string()),
+            ("definition", pa.string()),
+            ("stratum_size", pa.int64()),
+        ]
+    ),
+    "mart_flags": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("rule", pa.string()),
+            ("family", pa.string()),
+            ("polarity", pa.string()),
+            ("direction", pa.string()),
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("input_hash", pa.string()),
+            ("title", pa.string()),
+            ("product_type", pa.string()),
+            ("evidence", pa.string()),
+            ("evidence_key", pa.string()),
+            ("evidence_hash", pa.string()),
+            ("decision", pa.string()),
+            ("classifier_is_coffee", pa.bool_()),
+            ("was_public", pa.bool_()),
+            ("ready_flags", pa.bool_()),
+            ("coverage_problem", pa.bool_()),
+            ("supports_families", pa.int64()),
+            ("doubts", pa.int64()),
+            ("restores", pa.int64()),
+            ("public_rows", pa.int64()),
+            ("verdict_label", pa.string()),
+            ("classified_by", pa.string()),
+            ("reason", pa.string()),
+            ("url", pa.string()),
+            ("tags", pa.list_(pa.string())),
+            ("bag_sizes_g", pa.list_(pa.int32())),
+            ("prices_usd", pa.list_(pa.float64())),
+            ("description", pa.string()),
         ]
     ),
     "verdict_batches": pa.schema(
@@ -688,10 +837,12 @@ GLOBS = {
     "fetches": "fetches/*/*.parquet",
     "probes": "probes/*/*.parquet",
     "registry": "registry/*/*.parquet",
+    "candidates": "candidates/*/*.parquet",
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
     "verdict_batches": "verdict_batches/*/*.parquet",
+    "prefilter_samples": "prefilter_samples/*/*.parquet",
     "run_overrides": "run_overrides/*.parquet",
     "builds": "builds/*/*.parquet",
     "run_manifests": "run_manifests/*/*.parquet",
@@ -711,6 +862,19 @@ GLOBS = {
     "importer_raw": "raw/*/*.parquet",
     "usage_events": "events/*/*.parquet",
 }
+# The ops tables' files across every build (see SCHEMAS): for a reader that globs them itself, with
+# hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
+OPS_GLOBS = {
+    t: f"releases/*/*/ops/{t}.parquet"
+    for t in (
+        "run_completeness",
+        "release_changes",
+        "product_decisions",
+        "mart_flags",
+        "eval_prefilter",
+        "eval_prefilter_summary",
+    )
+}
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
     "snapshots": "snapshots/run_date=0000-00-00/batch=schema.parquet",
@@ -718,10 +882,12 @@ SCHEMA_FILES = {
     "fetches": "fetches/run_date=0000-00-00/batch=schema.parquet",
     "probes": "probes/run_date=0000-00-00/batch=schema.parquet",
     "registry": "registry/source=schema/schema.parquet",
+    "candidates": "candidates/source=schema/schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",
     "verdict_batches": "verdict_batches/state=schema/schema.parquet",
+    "prefilter_samples": "prefilter_samples/run_date=0000-00-00/batch=schema.parquet",
     "run_overrides": "run_overrides/override_id=schema.parquet",
     "builds": "builds/run_date=0000-00-00/build=schema.parquet",
     "run_manifests": "run_manifests/run_date=0000-00-00/batch=schema.parquet",
@@ -852,16 +1018,28 @@ def new_batch_id(now: datetime | None = None) -> str:
     return f"{now:%Y%m%dT%H%M%S}-{secrets.token_hex(3)}"
 
 
+class ReadOnlyLake(PermissionError):
+    """A write was asked of a Lake opened read-only (Lake(read_only=True)): the admin's lake, which only reads."""
+
+
 class Lake:
     def __init__(
-        self, url: str | None = None, staging: str | Path | None = None, tables: tuple[str, ...] | None = None
+        self,
+        url: str | None = None,
+        staging: str | Path | None = None,
+        tables: tuple[str, ...] | None = None,
+        read_only: bool = False,
     ):
+        """`read_only`: a reader's lake (the admin's). Nothing is created or written, not even the schema files
+        ensure_schemas would add, and every write method raises ReadOnlyLake. A remote one reads only the remote
+        lake, never a staging folder."""
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
         self.tables = tables or LAKE_TABLES
         # Called with the staged files before each upload, under the publish lock: it deletes any that mustn't be
         # sent any more (the app's erased test records, app/store.py). None: send them all.
         self.screen: Callable[[list[Path]], None] | None = None
         self.remote = self.url.startswith("hf://")
+        self.read_only = read_only
         self.root = (
             Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging"))
             if self.remote
@@ -869,7 +1047,12 @@ class Lake:
         )
         self._publishing = threading.Lock()
         self._schemas_checked = False
-        self.ensure_schemas()
+        if not read_only:
+            self.ensure_schemas()
+
+    def _writable(self) -> None:
+        if self.read_only:
+            raise ReadOnlyLake(f"{self.url} is open read-only")
 
     @classmethod
     def photos(cls) -> Lake:
@@ -900,6 +1083,7 @@ class Lake:
     # --- writing -------------------------------------------------------------------------------------
 
     def ensure_schemas(self) -> None:
+        self._writable()
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
             # A zero-row schema file from before a column was added is refreshed in place, so globs always see
@@ -922,6 +1106,7 @@ class Lake:
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
         """Write rows as a new Parquet file. Refuses to replace an existing file (immutability)."""
+        self._writable()
         if not rows:
             return None
         path = self.root / rel
@@ -947,6 +1132,8 @@ class Lake:
 
     def sources(self, table: str) -> list[str]:
         """Globs DuckDB should read for a table: local (staged) files, plus the remote lake if there is one."""
+        if self.read_only and self.remote:  # nothing is staged by a reader: the remote lake only
+            return [f"{self.url}/{GLOBS[table]}"]
         out = [str(self.root / GLOBS[table])]
         if self.remote and self.remote_has(table):
             out.append(f"{self.url}/{GLOBS[table]}")
@@ -986,7 +1173,7 @@ class Lake:
                 cur = self.connect().execute(sql.format(self.scan(table, filename=True)))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
-                if self.remote and no_files(e):
+                if self.remote and no_files(e) and not self.read_only:  # a reader stages nothing
                     local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false, filename = true)"
                     cur = self.connect().execute(sql.format(local))
                     break
@@ -1021,7 +1208,7 @@ class Lake:
     def mart_sources(self, name: str) -> list[str]:
         """The weekly derived export of a dbt mart (marts/<name>.parquet), local first."""
         local = self.root / "marts" / f"{name}.parquet"
-        if local.exists() or not self.remote:
+        if (local.exists() and not (self.read_only and self.remote)) or not self.remote:
             return [str(local)]
         return [f"{self.url}/marts/{name}.parquet"]
 
@@ -1053,6 +1240,7 @@ class Lake:
 
     def write_mart(self, name: str, con, sql: str) -> Path:
         """Export a derived table (replaced every run; the raw tables are the source of truth)."""
+        self._writable()
         path = self.root / "marts" / f"{name}.parquet"
         path.parent.mkdir(parents=True, exist_ok=True)
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
@@ -1060,11 +1248,26 @@ class Lake:
 
     def write_release(self, name: str, run_date: str, build_id: str, con, sql: str) -> Path:
         """One table of a build's release: immutable, so any release can be served again or diffed later."""
+        self._writable()
         path = self.root / "releases" / f"run_date={run_date}" / f"build={build_id}" / f"{name}.parquet"
         if path.exists():
             raise FileExistsError(f"lake files are immutable: {path.relative_to(self.root)}")
         path.parent.mkdir(parents=True, exist_ok=True)
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
+        return path
+
+    def write_ops(self, name: str, run_date: str, build_id: str, table: pa.Table) -> Path:
+        """One of a build's ops tables (quality.OPS_TABLES), beside its release under ops/: immutable like it."""
+        self._writable()
+        path = (
+            self.root / "releases" / f"run_date={run_date}" / f"build={build_id}" / "ops" / f"{name}.parquet"
+        )
+        if path.exists():
+            raise FileExistsError(f"lake files are immutable: {path.relative_to(self.root)}")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(".tmp")
+        pq.write_table(table, tmp, compression="zstd")
+        tmp.replace(path)
         return path
 
     def record_files(self, table: str, key: str | None = None) -> list[str]:
@@ -1117,6 +1320,7 @@ class Lake:
     def squash(self, message: str) -> None:
         """Drop the dataset's version history (one commit holding what's there now), so files deleted from it can't
         be read from an old revision. For the small private users dataset only."""
+        self._writable()
         if not self.remote:
             return
         from huggingface_hub import HfApi
@@ -1149,6 +1353,7 @@ class Lake:
         removed. For a remote lake they're kept in staging (PENDING_DELETES) until a commit has removed them, so a
         failed publish doesn't lose them: the next publish tries again (review M6).
         """
+        self._writable()
         for rel in delete:
             path = self.root / rel
             if not path.resolve().is_relative_to(self.root.resolve()):

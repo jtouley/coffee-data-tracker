@@ -1,8 +1,7 @@
 # Build the app's image and deploy it to Cloud Run once ci has passed on a push to main. Pull requests only build
 # the image and check the Terraform. Authentication is Workload Identity Federation (no keys); the variables come
 # from `terraform output` (docs/app/RUNNING.md). Until they're set, the deploy jobs are skipped.
-# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha), once app/Dockerfile reads
-# it (#124); until then Docker ignores the argument.
+# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha).
 #
 # - Main deploys start on workflow_run, when ci completes, and only if it succeeded on a push. That event has no path
 #   filter, so a docs-only merge deploys too: the same app, rebuilt and restarted. A filter on the one commit that
@@ -234,11 +233,15 @@ jobs:
             echo "::notice::Not deploying $IMAGE_REF to the admin: the app runs $app now, and its own run deploys that."
             echo "current=false" >> "$GITHUB_OUTPUT"
           fi
+      # The image's CMD starts the app; the admin's entrypoint is set here with the image (Terraform's first apply
+      # runs Google's sample image with no command, and leaves both to this step).
+      # --args="..." in one word: the value starts with "-c", and only the = form never reads it as another flag.
       - name: Deploy
         if: steps.tip.outputs.current == 'true'
         env:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
-        run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
+          ADMIN_ARGS: -c,exec uvicorn --factory admin.main:create_app --host 0.0.0.0 --port "$PORT" --no-proxy-headers
+        run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --command sh --args="$ADMIN_ARGS" --region "$REGION" --quiet
 
   # The ingestion jobs' image (ingest.Dockerfile), built from the same commit and under the same conditions as the
   # app's: it runs only when the deploy job pushed the app's image for this commit, so only for main's tip once ci

@@ -110,7 +110,8 @@ passed on the commit: a manual deploy with `force` builds and signs too.
 (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
 with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
 contracts/ in the image (the app's `.dockerignore` leaves them out). The upload follows `.gitignore`, so the local
-lake and build/ stay behind.
+lake and build/ stay behind. `_GIT_SHA` stamps the commit into the image (`COFFEEDATA_GIT_SHA`), so every record a
+job writes names it (`code_version`, `builds.git_sha`); an image built without it records `unknown`.
 
 The build's config is checked in: `ingest.cloudbuild.yaml`. It builds `ingest.Dockerfile`, lets Cloud Build push
 the image (`images:`), and asks for signed build provenance (`requestedVerifyOption: VERIFIED`): the build
@@ -899,9 +900,10 @@ rolled back to.
 checks that its run is this week's. If not, it fails red and exports nothing (no public export, no Snowflake load).
 A manual `gh workflow run site` only renders and deploys. To export after a late fix, run
 `gh workflow run weekly -f rollback_to=served`: it serves the current release again, exports, loads Snowflake and
-deploys. `serving_log` records that re-serve with the reason "re-export for Snowflake migration (<actor>)", because
-`weekly.yml` sets that reason for every `rollback_to=served`. Read it as a recovery export of the same release: no
-Snowflake migration ran, and the served release didn't change.
+deploys. `serving_log` records that re-serve as action `reexport` (not `rollback`), with the reason "re-export for
+Snowflake migration (<actor>)", because `weekly.yml` sets that reason for every `rollback_to=served`. Read it as a
+recovery export of the same release: no Snowflake migration ran, and the served release didn't change. Rows written
+before `reexport` existed show such a re-serve as `rollback` with `previous_build_id` equal to `build_id`.
 
 The promise is that served data comes from a run at most 8 days old (`max_run_age_days`). On Tuesday last week's run
 (the Monday before `$WEEK`) is exactly 8 days old, so the promise still holds. It breaks at 00:00 UTC Wednesday and
@@ -1136,6 +1138,14 @@ versions. To get a late batch in before a rebuild, run classify with a longer wa
 --format='value(spec.template.spec.template.spec.containers[0].env)'`; it lists names and secret references, not
 the key's value), and that `ANTHROPIC_API_KEY` has a version in Secret Manager. Fix, apply, then rebuild as in §5.2.
 
+**A batch that couldn't be collected** (the log says `Claude's verdict batch collect failed for N batch(es): <batch
+id> (<error class>, HTTP <status>)`, and an ERROR line `classify: verdict batches not collected`): Claude's API
+refused or failed the read of a batch an earlier run submitted, so its verdicts aren't stored. classify exits
+non-zero for it, as for a failed submit; the build still runs on the stored verdicts. HTTP 401 or 403: the key
+(above). 404: the batch is gone, and its product versions stay in flight until it is collected. 5xx or no status: an
+outage; the next classify asks again. The Tuesday check reports the same from the lake: `prod:classifier`,
+`verdicts:open_batch_age_days` and `verdicts:stored_age_days` (docs/TRIAGE.md).
+
 **The backfill**, after the first apply with `verdict_model` (and whenever the verdict model or
 `coffee_definition.md` changes, which makes every version pending again): about 62,000 product versions are
 pending, so the first build after the change fails `verdicts_cover_catalog` until their verdicts are collected,
@@ -1200,8 +1210,10 @@ uv run coffeedata build-hashes $BUILD --verify
 
 `tables` lists each release table's rows and hash. `--verify` re-hashes the release files in the dataset and fails
 (exit 1) if any no longer matches the record: the release was damaged or replaced after its build. `inputs` is what a
-rebuild has to match: `run_date`, `git_sha`, `package_versions` and `dbt_vars.verdict_model`. A Cloud Run build has
-no git checkout, so its `git_sha` is null. Its code is the image the build job ran: read it from the execution
+rebuild has to match: `run_date`, `git_sha`, `package_versions`, `ci_run_url` and `dbt_vars.verdict_model`. An
+Actions build has a `ci_run_url`; a Cloud Run build has none. A Cloud Run build's `git_sha` is the commit its image
+was built from (`--build-arg GIT_SHA`, §1), `unknown` for an image built without it, or null for a build recorded
+before images carried it. Either way its code is the image the build job ran, not a checkout: read it from the execution
 (`gcloud run jobs executions describe <execution> --region $REGION
 --format='value(spec.template.spec.containers[0].image)'`, with the execution found as in §5's log commands, on the
 build's day).
@@ -1240,12 +1252,12 @@ fails.
 
 **4. Rebuild with the build's code**, on the local copy only. Unset `HF_TOKEN` first, so nothing can reach the
 dataset. Don't run `classify`: the stored verdicts are part of the input, and asking Claude again would change them.
-- `git_sha` set (an Actions build): `git worktree add $V/code <git_sha> && cd $V/code && uv sync --frozen`, then
+- An Actions build (`ci_run_url` set): `git worktree add $V/code <git_sha> && cd $V/code && uv sync --frozen`, then
   ```sh
   env -u HF_TOKEN TZ=UTC COFFEEDATA_LAKE=$V/lake COFFEEDATA_VERDICT_MODEL=<inputs.dbt_vars.verdict_model> \
     uv run coffeedata build --run-date $RUN_DATE --db $V/coffee.duckdb
   ```
-- A Cloud Run build: run the same image, with the copy mounted:
+- A Cloud Run build (no `ci_run_url`, whatever its `git_sha`): run the same image, with the copy mounted:
   ```sh
   chmod -R a+rwX $V
   docker run --rm -v $V:/verify -e COFFEEDATA_LAKE=/verify/lake -e COFFEEDATA_VERDICT_MODEL=<verdict model> \
