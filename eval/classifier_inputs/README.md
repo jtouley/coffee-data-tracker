@@ -17,10 +17,10 @@ file under `dev/`: the three sets, `test_next`, `preds/`, `manifest/` and this f
   any tracked file outside `eval/` names it.
 - `score.py` takes it in place of a local folder, and refuses any remote dataset whose name doesn't end in `-dev`.
   It only ever downloads.
-- **Status on 2026-11-21: uploaded, with an update pending.** The dataset is private and holds 36 data files and
-  `SHA256SUMS` under `dev/`, with a card marked DEV / EVALUATION ONLY and the tags `dev`, `evaluation` and
-  `not-production`. The redrawn `test_next` (below) is not uploaded yet: until the owner uploads it, the dataset's
-  `test_next/` and `manifest/test_next.tsv` are the old draw and its `SHA256SUMS` differs from this folder's.
+- **Status on 2026-11-21: uploaded.** The dataset is private and holds 47 files: the 44 data files and `SHA256SUMS`
+  under `dev/` (the redrawn `test_next` and the labelers' raw replies included), the card, marked DEV / EVALUATION
+  ONLY with the tags `dev`, `evaluation` and `not-production`, and `.gitattributes`. Its `dev/SHA256SUMS` is this
+  folder's, byte for byte.
   `<data>` can be that dataset or a local copy of its `dev/` folder.
 
 ## The data (step 1)

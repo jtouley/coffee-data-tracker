@@ -26,10 +26,14 @@ def _sealed_set(data: Path, name: str, labels: bool = True) -> Path:
     d = data / name
     d.mkdir(parents=True)
     items = [{"id": 1, "stratum": "kept"}, {"id": 2, "stratum": "dropped_other"}]
-    (d / "sample.json").write_text(json.dumps({"set": name, "population": {"kept": 10, "dropped_other": 20}, "items": items}))
+    (d / "sample.json").write_text(
+        json.dumps({"set": name, "population": {"kept": 10, "dropped_other": 20}, "items": items})
+    )
     if labels:
         for who in "AB":
-            (d / f"labels_{who}.json").write_text(json.dumps([{"id": 1, "label": "coffee"}, {"id": 2, "label": "not_coffee"}]))
+            (d / f"labels_{who}.json").write_text(
+                json.dumps([{"id": 1, "label": "coffee"}, {"id": 2, "label": "not_coffee"}])
+            )
     return d
 
 
@@ -74,7 +78,14 @@ def test_final_scores_test_next_exactly_once(score, tmp_path, monkeypatch, capsy
     assert (d / "FINAL_SCORED").read_text() == "main\n"
 
     with pytest.raises(SystemExit, match="already scored once"):
-        _run(score, monkeypatch, "final", tmp_path / "data", "test_next", "other=" + _preds(tmp_path).split("=")[1])
+        _run(
+            score,
+            monkeypatch,
+            "final",
+            tmp_path / "data",
+            "test_next",
+            "other=" + _preds(tmp_path).split("=")[1],
+        )
     # A fresh copy without the marker (another machine, a new download) is refused by the tracked record.
     (d / "FINAL_SCORED").unlink()
     with pytest.raises(SystemExit, match="already scored once"):
@@ -100,7 +111,38 @@ def test_an_unlabeled_sealed_set_is_refused_and_stays_unspent(score, tmp_path, m
 
 def test_the_spent_test_set_is_recorded():
     """The test set scored on 2026-11-20 is in the tracked record, by the hash SHA256SUMS gives its sample."""
-    sums = {path: digest for digest, path in (line.split() for line in (HERE / "SHA256SUMS").read_text().splitlines())}
+    sums = {
+        path: digest
+        for digest, path in (line.split() for line in (HERE / "SHA256SUMS").read_text().splitlines())
+    }
     recorded = {line.split()[0]: line.split()[1] for line in (HERE / "FINAL_SCORED").read_text().splitlines()}
     assert recorded[sums["test/sample.json"]] == "test"
     assert sums["test_next/sample.json"] not in recorded
+
+
+@pytest.mark.parametrize(
+    "preds",
+    [
+        [],
+        ["main"],
+        ["=preds.json"],
+        ["main=preds.json@no_such_stratum"],
+        ["main=missing.json"],
+        ["main=preds.json", "main=preds.json"],
+    ],
+    ids=["none", "no-equals", "no-name", "unknown-stratum", "no-file", "same-name"],
+)
+def test_final_refuses_bad_predictions_before_scoring(preds, score, tmp_path, monkeypatch, capsys):
+    d = _sealed_set(tmp_path / "data", "test_next")
+    _preds(tmp_path)
+    monkeypatch.chdir(tmp_path)
+    with pytest.raises(SystemExit, match="refused"):
+        _run(score, monkeypatch, "final", tmp_path / "data", "test_next", *preds)
+    assert not score.RECORD.exists() and not (d / "FINAL_SCORED").exists()
+    assert "accuracy" not in capsys.readouterr().out
+
+
+def test_final_takes_a_known_stratum_after_at(score, tmp_path, monkeypatch, capsys):
+    _sealed_set(tmp_path / "data", "test_next")
+    _run(score, monkeypatch, "final", tmp_path / "data", "test_next", _preds(tmp_path) + "@kept")
+    assert "kept scored on the rules alone" in capsys.readouterr().out

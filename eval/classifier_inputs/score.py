@@ -153,9 +153,30 @@ def spent(d: Path) -> str | None:
     return f"{RECORD.name} records its sample.json" if digest in recorded else None
 
 
+def check_preds(d: Path, preds: list[str]) -> None:
+    """Refuse a run that couldn't score anything as asked, before any score is computed or any set marked spent."""
+    if not preds:
+        sys.exit("refused: no predictions given (<name>=<predictions.json>[@<stratum>] ...)")
+    strata = set(json.loads((d / "sample.json").read_text())["population"])
+    names = []
+    for spec in preds:
+        name, eq, path = spec.partition("=")
+        if not eq or not name or not path:
+            sys.exit(f"refused: {spec!r} is not <name>=<predictions.json>[@<stratum>]")
+        path, at, stratum = path.partition("@")
+        if at and stratum not in strata:
+            sys.exit(f"refused: {spec!r} names an unknown stratum; {d.name} has {', '.join(sorted(strata))}")
+        if not Path(path).is_file():
+            sys.exit(f"refused: {spec!r}: no predictions file there")
+        names.append(name)
+    if len(set(names)) != len(names):
+        sys.exit("refused: two predictions have the same name")
+
+
 def final(d: Path, preds: list[str]) -> None:
     if why := spent(d):
         sys.exit(f"refused: the sealed set {d.name} was already scored once ({why})")
+    check_preds(d, preds)
     names = [r.split("=", 1)[0] for r in preds]
     out = io.StringIO()
     with contextlib.redirect_stdout(out):
@@ -180,6 +201,7 @@ def main() -> None:
     elif cmd == "score":
         if rest[0] in SEALED:
             sys.exit(f"refused: {rest[0]} is a sealed set, scored once with `final`")
+        check_preds(data / rest[0], rest[1:])
         score(data / rest[0], rest[1:])
     elif cmd == "final":
         if not rest or rest[0] not in SEALED:
