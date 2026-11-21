@@ -238,6 +238,9 @@ def _lookup(client: PoliteClient, base: str, vid: str) -> dict | None:
     for a size the store prices): a challenge or a block (429, 430, 503 once the client's retries are spent) as such,
     so ingest.run counts it as a refusal or defers the store; anything else as the fetch's error, asked again next
     pass."""
+    if not (vid.isascii() and vid.isdigit()):
+        # a variation id is a WordPress post id: only digits ever go into the path (security review F7)
+        raise FetchError(f"variation id isn't a number: {vid[:40]!r}")
     try:
         v = client.fetch_json(f"{base}/{vid}")
     except DeadlineReached:

@@ -279,6 +279,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Security
 
+- Crawler (the 2026-11-21 review, F1, F2, F7, F8; `coffeedata/netguard.py`): it connects only to globally routable
+  addresses, every redirect hop checked and each connection made to the address it vetted, and never to an IP
+  literal (the registry refuses them too). A robots.txt that redirects off the host's own site is robots.txt
+  unavailable: nothing is fetched, and no stored copy stands in. Sitemaps and product pages are read only on the
+  store's own site, with caps far above any catalog (past one, the fetch is partial). WooCommerce variation ids are
+  digits only. Each request has a total time limit of 120 s, not retried when it passes.
+
 - From the 2026-11-18 self-assessment: the weekly and issue-form workflows set each secret only on the step whose
   `coffeedata` command reads it, and a test keeps workflow- and job-level `env` free of secrets; a bag's `photo_id`
   is checked like the other ids; the app's in-memory label reads, replies and daily read counts are capped, least
