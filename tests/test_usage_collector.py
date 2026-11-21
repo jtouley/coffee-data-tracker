@@ -970,6 +970,17 @@ USAGE_PLAN = [
             {"notification_channels": True, "name": True}),
 ]  # fmt: skip
 
+# The same, once the account exists (the guard's iam-members-known: a grant's member must be known at plan, so an
+# account and its grants land in two applies; usage.tf is applied on main already).
+USAGE_ACCOUNT = "serviceAccount:registry-coffee-usage@coffee-data-tracker.iam.gserviceaccount.com"
+USAGE_PLAN_ACCOUNT_EXISTS = [
+    {**rc, "change": {**rc["change"], "after": {**rc["change"]["after"], "member": USAGE_ACCOUNT},
+                      "after_unknown": {k: v for k, v in rc["change"]["after_unknown"].items() if k != "member"}}}
+    if rc["type"] == "google_secret_manager_secret_iam_member" else rc
+    for rc in USAGE_PLAN
+    if rc["type"] != "google_service_account"
+]  # fmt: skip
+
 PINNED = "us-central1-docker.pkg.dev/coffee-data-tracker/registry-coffee/app@sha256:" + "c" * 64
 
 
@@ -1006,8 +1017,8 @@ def guard_results(guard, changes: list[dict]) -> dict[str, list[str]]:
 @pytest.mark.parametrize(
     "changes",
     [
-        USAGE_PLAN[:3],  # usage_enabled off: the account and the secret
-        USAGE_PLAN,  # usage_enabled on
+        USAGE_PLAN_ACCOUNT_EXISTS[:2],  # usage_enabled off: the secret and its grant, the account made before
+        USAGE_PLAN_ACCOUNT_EXISTS,  # usage_enabled on
         [usage_bump("us-docker.pkg.dev/cloudrun/container/hello", PINNED)],  # the first pinned digest
         [usage_bump(PINNED, PINNED.replace("c" * 64, "d" * 64))],  # a later one
     ],
@@ -1021,6 +1032,13 @@ def test_the_plan_guard_passes_the_collectors_resources(changes):
     ) == {(rc["type"], rc["name"]) for rc in USAGE_PLAN}
     results = guard_results(load_guard(ROOT / "scripts" / "tf_plan_guard.py"), changes)
     assert results and all(bad == [] for bad in results.values()), results
+
+
+def test_a_grant_to_an_account_made_in_the_same_plan_is_refused_until_it_exists():
+    """iam-members-known: the secret's grant to an account the same plan creates names no member at plan."""
+    results = guard_results(load_guard(ROOT / "scripts" / "tf_plan_guard.py"), USAGE_PLAN)
+    assert results.pop("iam-members-known") == ["google_secret_manager_secret_iam_member.usage_token"]
+    assert all(bad == [] for bad in results.values()), results
 
 
 def test_flush_threads_never_outlive_the_test():

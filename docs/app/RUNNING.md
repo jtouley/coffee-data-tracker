@@ -366,23 +366,26 @@ services, SLOs, snoozes); Logging (exclusions, log-based metrics, notification r
 databases, users). The next resource of a kind already in use needs no bootstrap change. Once you approve, it can:
 - set IAM on the secrets (and so reach their values), on the image repository, the Cloud Run services and jobs, and on
   every bucket named `<project>-…` except the state and plans buckets: the staging bucket (raw ingestion data), the
-  admin's two (its sign-in state and drafts' snapshots), and any it creates next;
+  admin's two (its sign-in state and drafts' snapshots), and any it creates next. Never public: the guard
+  (`public-access`) refuses `allUsers` or `allAuthenticatedUsers` anywhere but a Cloud Run service's invoker, and a
+  bucket without public access prevention enforced; and every grant must name its members at plan
+  (`iam-members-known`);
 - create buckets and Artifact Registry repositories (a cost; a bucket named outside `<project>-…` can't be managed
-  afterwards);
+  afterwards). **Never make a bucket named `coffee-data-tracker-…` by hand:** it comes under the pipeline's bucket
+  IAM at once. A hand-made bucket gets another name (the state and plans buckets are the two exceptions, by name);
 - read any repository's images, which Cloud Run checks as whoever deploys. The guard still pins the images a job or
   service may run to this project's `<service>/ingest` and `<service>/app` by digest;
 - run any image as the runtime, ingest, scheduler, usage or admin account;
 - create and change any Cloud SQL instance, and its databases and users. The guard's `cloud-sql-access` refuses an
   authorized network, an `ssl_mode` weaker than `ENCRYPTED_ONLY`, IAM authentication off, a root password, a replica,
-  clone or restore, and a user that isn't an IAM one or has a password. Logging in needs a grant only you make;
-- create log-based metrics, dashboards, SLOs and snoozes, alert policies and notification channels of any type.
+  clone or restore, a database flag other than today's (`cloudsql.iam_authentication`), and a user that isn't an IAM
+  one or has a password. Logging in needs a grant only you make;
+- create log-based metrics, dashboards, SLOs and snoozes, alert policies, and email notification channels.
 
-That last one means an approved apply could copy fields of matching log entries (through a policy's
-`label_extractors`, a log-based metric's labels, or a policy's documentation) into a notification on a channel it
-creates, such as a webhook to an outside address. That is a narrow path for log content, not a sink, and the guard
-checks neither channel types nor extractors. That is what the approval is for: read the IAM section of the summary
-first, and for any new or changed notification channel its type and address, and any `label_extractors`. It cannot
-write a workload identity
+Log content can reach a notification: a policy's `label_extractors`, a log-based metric's labels or a policy's
+documentation can copy fields of matching entries into it. The guard (`notification-channels`) allows email channels
+only, so that goes to an address in the plan, not a webhook. Read the IAM section of the summary first, and for any new
+or changed channel its address, and any `label_extractors`. It cannot write a workload identity
 pool or provider, a custom role, a key, the project's IAM, IAM on any service account, the state or plans bucket's IAM,
 or anything on billing beyond the budget (`tests/test_bootstrap_roles.py`, `test_the_hard_line_holds`). The guard
 refuses:
@@ -401,11 +404,15 @@ refuses:
   member_remove) (`project-iam-policy`);
 - a Cloud SQL instance with an authorized network, an `ssl_mode` weaker than `ENCRYPTED_ONLY`, IAM authentication
   off, a root password, or made from another's data (a replica, clone or restore), and a database user that isn't an
-  IAM one or has a password (`cloud-sql-access`). Private networking and Private Service Connect aren't checked: they
-  change where a connection comes from, not how it signs in.
+  IAM one or has a password, or a database flag outside the allowlist (`cloud-sql-access`). Private networking and
+  Private Service Connect aren't checked: they change where a connection comes from, not how it signs in;
+- `allUsers` or `allAuthenticatedUsers` in any IAM grant or policy but a Cloud Run service's `roles/run.invoker`, and
+  a bucket whose public access prevention isn't `enforced` (`public-access`);
+- an IAM member, members list or policy unknown at plan, on any resource (`iam-members-known`): a new account and its
+  grants go in two applies;
+- a notification channel that isn't `email` (`notification-channels`).
 
-Other grants, such as a secret's reader or the staging bucket's users (to an account created in the same plan too),
-are listed in the IAM section, not refused.
+Other grants, such as a secret's reader or the staging bucket's users, are listed in the IAM section, not refused.
 
 **Not through GitHub, on purpose:** what the guard refuses, the bootstrap root `src/terraform/bootstrap/` (the plan
 and apply identities and the plans bucket: the gate is not managed by what it gates; and the admin's two Cloud SQL
@@ -545,6 +552,10 @@ approved apply do that it couldn't before.
   root, applied by you, holds them.
 
 **Order.** The grants on `registry-coffee-admin-run` need the account to exist:
+0. First, #191's identity change, by hand with the break-glass (`bash scripts/tf_break_glass.sh`, above). It updates
+   `google_iam_workload_identity_pool_provider.github` and replaces `google_service_account_iam_member.deploy_from_github`,
+   which the guard refuses in the pipeline (`workload-identity`, `guarded-accounts`, `no-delete-or-replace`). Until
+   then every `terraform-apply` plan is refused, #199's included.
 1. #199 (`google_service_account.admin` alone in the main root) merges and `terraform-apply` applies it (`1 to add`,
    plus anything already pending on main: today `google_monitoring_alert_policy.usage_dropped[0]`).
 2. Then re-apply the bootstrap once, by hand, from the repository's root in Cloud Shell. One tap opens it:

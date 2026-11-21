@@ -516,6 +516,10 @@ SQL_IAM_FLAGS = {"cloudsql.iam_authentication", "cloudsql_iam_authentication"}  
 # A new instance that starts from another one's data: a read replica, a clone, or a backup restored into it.
 SQL_COPY_FIELDS = ("master_instance_name", "clone", "restore_backup_context")
 SQL_USER_PASSWORDS = ("password", "password_wo", "password_wo_version")
+# The database flags an instance may set: today's only (admin_control.tf). Others, such as log_statement = all (every
+# statement, bound values included, into Cloud Logging), would change what leaves the database; add one here, in
+# review, when an instance needs it.
+SQL_FLAGS = {"cloudsql.iam_authentication"}
 # The built-in root user's password (MySQL and SQL Server; the admin's PostgreSQL instance sets none).
 SQL_ROOT_PASSWORDS = ("root_password", "root_password_wo", "root_password_wo_version")
 
@@ -564,6 +568,9 @@ def _sql_instance_bad(plan: Plan, rc: dict) -> bool:
     flags = jq(after, *settings, "database_flags")
     if unknown(rc, *settings, "database_flags") or not isinstance(flags, list):
         return True
+    names = [jq(f, "name") for f in flags if isinstance(f, dict)]
+    if len(names) != len(flags) or not set(names) <= SQL_FLAGS | SQL_IAM_FLAGS:
+        return True  # a flag outside the allowlist, or one whose name is unknown
     iam = [jq(f, "value") for f in flags if isinstance(f, dict) and jq(f, "name") in SQL_IAM_FLAGS]
     return iam != ["on"]
 
@@ -580,10 +587,75 @@ def _sql_user_bad(rc: dict) -> bool:
     return any(jq(after, k) not in (None, "", 0) or unknown(rc, k) for k in SQL_USER_PASSWORDS)
 
 
+PUBLIC_MEMBERS = ("allusers", "allauthenticatedusers")
+# The one public grant the main root makes on purpose: anyone may call a Cloud Run service (the app, the usage
+# collector, the admin, which sign people in themselves).
+PUBLIC_ALLOWED = {
+    ("google_cloud_run_v2_service_iam_member", "roles/run.invoker"),
+    ("google_cloud_run_v2_service_iam_binding", "roles/run.invoker"),
+}
+BUCKET_TYPE = "google_storage_bucket"
+
+
+def public_access(plan: Plan) -> list[str]:
+    """Nothing is made public but a Cloud Run service's invoker: no allUsers or allAuthenticatedUsers in any other IAM
+    grant or policy (a bucket's, a secret's, a repository's...), and every bucket keeps public access prevention
+    enforced (known at plan)."""
+    bad = []
+    for rc in plan.changes:
+        if not (is_change(rc) or importing(rc)) or actions(rc) == ["delete"]:
+            continue
+        after = jq(rc, "change", "after")
+        if rc["type"] == BUCKET_TYPE:
+            if not isinstance(after, dict) or jq(after, "public_access_prevention") != "enforced":
+                bad.append(rc["address"])
+        elif "_iam_" in rc["type"]:
+            text = [x.casefold() for x in _strings(after)]
+            if any(m in x for x in text for m in PUBLIC_MEMBERS) and (rc["type"], jq(after, "role")) not in (
+                PUBLIC_ALLOWED
+            ):
+                bad.append(rc["address"])
+    return bad
+
+
+IAM_MEMBER_FIELDS = ("member", "members", "policy_data")
+
+
+def iam_members_known(plan: Plan) -> list[str]:
+    """Every IAM grant or policy names its members at plan, on any resource: a member computed at apply could be any
+    account, the apply account included, and the approver couldn't see it. A new account and its grants therefore
+    land in two applies (the account first, as #199 did for the admin's)."""
+    return [
+        rc["address"]
+        for rc in plan.changes
+        if "_iam_" in rc["type"]
+        and (is_change(rc) or importing(rc))
+        and actions(rc) != ["delete"]
+        and any(unknown(rc, k) for k in IAM_MEMBER_FIELDS)
+    ]
+
+
+CHANNEL_TYPE = "google_monitoring_notification_channel"
+
+
+def notification_channels(plan: Plan) -> list[str]:
+    """Alerts go to email only: a webhook, Slack, Pub/Sub or other channel would carry an alert's documentation and
+    labels (which can hold log fields, log-based metrics' labels included) out of the project."""
+    return [
+        rc["address"]
+        for rc in plan.changes
+        if rc["type"] == CHANNEL_TYPE
+        and (is_change(rc) or importing(rc))
+        and actions(rc) != ["delete"]
+        and (jq(rc, "change", "after", "type") != "email" or unknown(rc, "type"))
+    ]
+
+
 def cloud_sql_access(plan: Plan) -> list[str]:
     """Cloud SQL is signed in to as an IAM user, over encrypted connections: a created or changed instance has no
     authorized network, needs encrypted connections (ENCRYPTED_ONLY or stricter), keeps IAM database authentication
-    on, sets no root password, and isn't a replica, clone or restore of another instance's data; a database user is
+    on, sets no database flag outside SQL_FLAGS, sets no root password, and isn't a replica, clone or restore of
+    another instance's data; a database user is
     an IAM one (CLOUD_IAM_*) with no password. Private networking and Private Service Connect aren't checked: they
     change where a connection can come from, not how it signs in."""
     bad = []
@@ -623,6 +695,13 @@ GUARDS: list[tuple[str, str, Callable[[Plan], list[str]]]] = [
         "Cloud SQL: no authorized network, encrypted connections, IAM sign-in, no copy; IAM users without passwords",
         cloud_sql_access,
     ),
+    (
+        "public-access",
+        "nothing public but a Cloud Run invoker; buckets enforce public access prevention",
+        public_access,
+    ),
+    ("iam-members-known", "every IAM grant or policy names its members at plan", iam_members_known),
+    ("notification-channels", "notification channels are email only", notification_channels),
 ]
 
 

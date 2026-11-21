@@ -299,8 +299,30 @@ def test_the_hard_line_holds():
         "iam.workloadIdentityPool",
         "iam.denypolicies.",
         "orgpolicy.",
+        # what reads or moves values: secrets' values, Cloud SQL's data, logs leaving the project, images in or out
+        "secretmanager.versions.",
+        "cloudsql.instances.login",
+        "cloudsql.instances.connect",
+        "cloudsql.instances.export",
+        "cloudsql.instances.import",
+        "cloudsql.instances.clone",
+        "cloudsql.instances.restoreBackup",
+        "cloudsql.backupRuns.",
+        "logging.sinks.",
+        "logging.buckets.",
+        "logging.views.",
+        "logging.logEntries.list",
+        "logging.privateLogEntries.",
+        "artifactregistry.repositories.uploadArtifacts",
+        "artifactregistry.repositories.exportArtifacts",
+        "artifactregistry.repositories.deleteArtifacts",
     )
     assert not [p for p in perms if p.startswith(forbidden_prefixes)]
+    # Objects' data: only the saved plan, read and deleted after the apply (tfApplyPlanObject).
+    objects = {rid: [p for p in ps if p.startswith("storage.objects.")] for rid, ps in roles.items()}
+    assert {rid: ps for rid, ps in objects.items() if ps} == {
+        "tfApplyPlanObject": ["storage.objects.delete", "storage.objects.get"]
+    }
     assert {p for p in perms if p.startswith("iam.serviceAccounts.")} <= TODAY_SERVICE_ACCOUNT_PERMS
     assert {p for p in perms if p.startswith("billing.")} == {"billing.resourcebudgets.read"}
     assert roles["tfPlanBudgetReader"] == ["billing.resourcebudgets.read", "resourcemanager.projects.get"]
@@ -358,3 +380,31 @@ def test_the_apply_account_acts_as_the_admins_account_and_no_new_other():
     body = _resource("google_service_account_iam_member", "tf_apply_acts_as")
     assert 'for_each           = toset(["runtime", "ingest", "ingest_scheduler", "usage", "admin"])' in body
     assert 'role               = "roles/iam.serviceAccountUser"' in body
+
+
+def test_the_state_and_plans_bucket_names_are_the_real_backends():
+    """The managed-bucket condition keeps the apply account off the state and plans buckets by name only (both start
+    with "<project>-"), so the names must be the real ones: var.state_bucket's default is the bucket both backends
+    init with (provider.tf, bootstrap/versions.tf, RUNNING.md's blocks) and terraform-apply.yml's default; the plans
+    bucket is "<project>-tf-plans", the name the workflows read from the bootstrap's output."""
+    repo = ROOT.parents[2]
+    variables = (ROOT / "variables.tf").read_text()
+    state = re.search(r'variable "state_bucket" \{.*?default\s*=\s*"([^"]+)"', variables, re.S).group(1)
+    project = re.search(r'variable "project_id" \{.*?default\s*=\s*"([^"]+)"', variables, re.S)
+    assert state == "coffee-data-tracker-tfstate"
+    for path in ("src/terraform/provider.tf", "src/terraform/bootstrap/versions.tf"):
+        assert f'-backend-config="bucket={state}"' in (repo / path).read_text(), path
+    running = (repo / "docs/app/RUNNING.md").read_text()
+    inits = re.findall(r'-backend-config="bucket=([^"]+)"', running)
+    assert inits and set(inits) == {state}, set(inits)
+    apply = (repo / ".github/workflows/terraform-apply.yml").read_text()
+    assert set(re.findall(r"vars\.TF_STATE_BUCKET \|\| '([^']+)'", apply)) == {state}
+    main = (ROOT / "main.tf").read_text()
+    assert re.search(
+        r'resource "google_storage_bucket" "tf_plans" \{\n  name\s*=\s*"\$\{var\.project_id\}-tf-plans"', main
+    )
+    # The project the state bucket is named for: the plans bucket is then "coffee-data-tracker-tf-plans".
+    assert project and state.startswith(project.group(1) + "-")
+    outputs = (ROOT / "outputs.tf").read_text()
+    assert "TF_STATE_BUCKET       = var.state_bucket" in outputs
+    assert "TF_PLANS_BUCKET       = google_storage_bucket.tf_plans.name" in outputs

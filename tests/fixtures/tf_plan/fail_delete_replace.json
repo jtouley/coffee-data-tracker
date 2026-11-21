@@ -611,13 +611,15 @@
     ],
     "after": {
      "location": "US",
-     "name": "coffee-data-tracker-ingest-staging"
+     "name": "coffee-data-tracker-ingest-staging",
+     "public_access_prevention": "enforced"
     },
     "after_sensitive": {},
     "after_unknown": {},
     "before": {
      "location": "US-CENTRAL1",
-     "name": "coffee-data-tracker-ingest-staging"
+     "name": "coffee-data-tracker-ingest-staging",
+     "public_access_prevention": "enforced"
     },
     "before_sensitive": {}
    },

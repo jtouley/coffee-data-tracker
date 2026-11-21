@@ -31,9 +31,10 @@
 # authentication off, a root password, a replica, clone or restore, and a database user that isn't an IAM one or
 # carries a password: cloud-sql-access); run any image as the runtime, ingest, scheduler, usage or admin account,
 # which hold secret access, the staging bucket and (the admin's) its database, buckets and the named jobs; and create
-# log-based metrics, alert policies and notification channels of any type, so a policy whose label extractors or
-# documentation copy log fields could send them to a channel it creates (a webhook to an outside address, say): a
-# narrow, reviewable path for log content, not a sink, and the guard doesn't check channel types or extractors.
+# log-based metrics, alert policies and notification channels, so a policy whose label extractors or documentation
+# copy log fields could send them to a channel: a narrow, reviewable path for log content, not a sink. The guard keeps
+# channels to email (notification-channels), nothing public but a Cloud Run invoker (public-access), every IAM member
+# known at plan (iam-members-known), and Cloud SQL's database flags to an allowlist (cloud-sql-access).
 #
 # The hard line (tests/test_bootstrap_roles.py, test_the_hard_line_holds): never the project's IAM
 # (project-iam-policy refuses it too), IAM on a service account, a custom role, a key, a workload identity pool or
@@ -225,8 +226,8 @@ resource "google_project_iam_custom_role" "tf_secrets" {
 # and notification rules only, and no delete of either (the guard refuses deletes; that is by hand). Residual risk,
 # which the approval covers: with alertPolicyEditor and notificationChannelEditor this does let an approved apply
 # create a log-based alert whose label extractors or documentation copy fields of matching log entries into a
-# notification, on a channel it creates (a webhook, say). The guard checks neither channel types nor extractors;
-# RUNNING.md, "What an approved apply can do", says what to read before approving. The role id stays (changing it
+# notification, on a channel it creates. The guard allows email channels only (notification-channels) and doesn't
+# check extractors; RUNNING.md, "What an approved apply can do", says what to read before approving. The role id stays (changing it
 # would replace the role and its grant); the title says what it covers now.
 # And log-based metrics (logging.logMetrics create, get, list, update; new): an approved apply can count matching log
 # entries into a metric, which the alert policies it can already write can then use. A metric holds counts and
