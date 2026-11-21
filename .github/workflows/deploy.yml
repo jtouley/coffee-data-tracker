@@ -1,8 +1,7 @@
 # Build the app's image and deploy it to Cloud Run once ci has passed on a push to main. Pull requests only build
 # the image and check the Terraform. Authentication is Workload Identity Federation (no keys); the variables come
 # from `terraform output` (docs/app/RUNNING.md). Until they're set, the deploy jobs are skipped.
-# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha), once app/Dockerfile reads
-# it (#124); until then Docker ignores the argument.
+# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha).
 #
 # - Main deploys start on workflow_run, when ci completes, and only if it succeeded on a push. That event has no path
 #   filter, so a docs-only merge deploys too: the same app, rebuilt and restarted. A filter on the one commit that
