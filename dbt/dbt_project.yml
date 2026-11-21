@@ -140,6 +140,15 @@ vars:
   # 3166-1 short name. Display only: origin_country and origin_country_code stay ISO's in every table. The owner's
   # one switch; `coffeedata build` (the weekly run) and the site, which reads the served release, both follow it.
   origin_names: common
+  # The rule settings (coffeedata.rules.dbt_var: the flag_* models and readiness in int_catalog_decided).
+  # `coffeedata build` always passes them, from the build's snapshot or rules.DEFAULTS; these are those defaults,
+  # for dbt run by hand and the unit tests (tests/test_flags.py checks they match).
+  rules:
+    rules:
+      verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
+      shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
+      non_coffee_type: {family: listing, params: {types: [drink mix, nuts, books, parts]}, polarity: {"": supports}}
+    readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
 
 models:
   coffeedata:

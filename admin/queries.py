@@ -47,6 +47,14 @@ def release_folder(lake: Lake, run_date: str, build_id: str) -> dict:
     return {"path": rel, "url": None}
 
 
+def ops_src(lake: Lake, build_id: str, table: str) -> str | None:
+    """A SQL read of one of a build's ops tables (quality.OPS_TABLES), or None when the build has none."""
+    path = quality.ops_files(lake, build_id).get(table)
+    return (
+        f"read_parquet('{path.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)" if path else None
+    )
+
+
 def _rows(cur) -> list[dict]:
     cols = [d[0] for d in cur.description]
     return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
@@ -473,10 +481,9 @@ def changes(
     offset: int = 0,
 ) -> dict:
     """The build's release_changes (ops): counts by table, change and reason, and the rows, filtered."""
-    ops = quality.ops_files(lake, build_id)
-    if "release_changes" not in ops:
+    src = ops_src(lake, build_id, "release_changes")
+    if src is None:
         return {"recorded": False, "build_id": build_id, "source": ["release_changes"]}
-    src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
     counts = _rows(
         con.execute(
             f"select table_name, change, reason, count(*) as n from {src} group by all order by table_name, change, n desc, reason"
@@ -506,6 +513,89 @@ def changes(
         "rows": rows,
         "source": ["release_changes"],
     }
+
+
+# --- Queue and Case: the build's flags (ops mart_flags) --------------------------------------------------------
+
+QUEUE_STATES = ("open", "ready", "doubted")
+QUEUE_PAGE = 100
+
+
+def _subjects(src: str, where: str) -> str:
+    """The build's flags summed up per product (one row each), filtered by `where`."""
+    return f"""
+        with f as (select * from {src}),
+        s as (
+            select coffee_id, any_value(roaster_id) as roaster_id, any_value(title) as title,
+                   any_value(input_hash) as input_hash, any_value(evidence_hash) as evidence_hash,
+                   any_value(decision) as decision, bool_or(ready_flags) as ready,
+                   bool_or(coverage_problem) as coverage, any_value(public_rows) as public_rows,
+                   count(*) filter (where polarity = 'supports') as supports,
+                   count(*) filter (where polarity = 'doubts') as doubts,
+                   count(*) filter (where polarity = 'restore') as restores,
+                   list(distinct rule order by rule) as rules
+            from f group by coffee_id
+        )
+        select * from s where {where}"""
+
+
+def queue(lake: Lake, con, build_id: str, roaster: str | None = None, rule: str | None = None,
+          state: str | None = None, offset: int = 0) -> dict:  # fmt: skip
+    """The build's open flags by product (no decision applied in the build), sorted by the public rows a removal
+    would touch, products with the same evidence together: one row per product, with its flags summed up, and the
+    totals over every matching product. state: open (every product), ready (its removal is ready as far as the
+    build can tell), doubted (a doubt is open)."""
+    src = ops_src(lake, build_id, "mart_flags")
+    if src is None:
+        return {"recorded": False, "build_id": build_id}
+    where, params = ["decision is null"], []
+    if roaster:
+        where.append("roaster_id = ?")
+        params.append(roaster)
+    if rule:
+        where.append("coffee_id in (select coffee_id from f where rule = ?)")
+        params.append(rule)
+    where.append({"ready": "ready", "doubted": "doubts > 0"}.get(state or "", "true"))
+    rows = _rows(con.execute(
+        f"""with m as ({_subjects(src, " and ".join(where))}),
+            g as (select *, count(*) over (partition by evidence_hash) as group_n,
+                         sum(public_rows) over (partition by evidence_hash) as group_rows,
+                         count(*) over () as matching_n, count(*) filter (where ready) over () as ready_n,
+                         sum(public_rows) over () as rows_n from m)
+            select * from g order by group_rows desc, evidence_hash, public_rows desc, coffee_id limit ? offset ?""",
+        [*params, QUEUE_PAGE, int(offset)]))  # fmt: skip
+    by_rule = con.execute(
+        f"select rule, polarity, count(distinct coffee_id) from {src} where decision is null group by all order by all"
+    ).fetchall()
+    first = rows[0] if rows else {}
+    return {"recorded": True, "build_id": build_id, "rows": rows, "matching": first.get("matching_n", 0),
+            "ready": first.get("ready_n", 0), "public_rows": first.get("rows_n", 0), "by_rule": by_rule,
+            "offset": int(offset), "page": QUEUE_PAGE}  # fmt: skip
+
+
+def case(lake: Lake, con, build_id: str, coffee_id: str, weeks: int = 8) -> dict | None:
+    """One product's flags and evidence (mart_flags), and its store's fetches over the last `weeks` runs."""
+    src = ops_src(lake, build_id, "mart_flags")
+    if src is None:
+        return None
+    flags = _rows(
+        con.execute(f"select * from {src} where coffee_id = ? order by polarity, rule", [coffee_id])
+    )
+    if not flags:
+        return None
+    for f in flags:
+        f["evidence"] = json.loads(f["evidence"]) if f["evidence"] else {}
+    roaster = flags[0]["roaster_id"]
+    fetches = _empty_ok(lambda: _rows(con.execute(
+        f"""select run_date, count(*) as attempts, bool_or(status = 'ok') as ok,
+                   max(products) filter (where status = 'ok') as products,
+                   arg_max(status, fetched_at) as last_status, arg_max(error, fetched_at) as last_error,
+                   arg_max(adapter, fetched_at) as adapter
+            from {lake.scan("fetches")} where roaster_id = ? group by run_date order by run_date desc limit ?""",
+        [roaster, weeks])), [])  # fmt: skip
+    adapter = next((r["adapter"] for r in fetches if r["adapter"]), None)
+    (summary,) = _rows(con.execute(_subjects(src, "coffee_id = ?"), [coffee_id]))  # the Queue's row for it
+    return {"flags": flags, "product": flags[0], "summary": summary, "fetches": fetches, "adapter": adapter}
 
 
 # --- Release and the guards: what the writes check against the lake ---------------------------------------------
@@ -557,10 +647,9 @@ def leaving(lake: Lake, con, build_id: str, coffees: list[str] | None = None) ->
     """How many public rows a build removes against the release it was compared with (release_changes): Publish
     asks the owner to type the count when it is over 50. `changed`: how many of `coffees` (a draft's decisions'
     coffees) change in public_coffee, whatever the reason (an undone include reads as reclassified)."""
-    ops = quality.ops_files(lake, build_id)
-    if "release_changes" not in ops:
+    src = ops_src(lake, build_id, "release_changes")
+    if src is None:
         return {"recorded": False, "removed": None, "changed": None}
-    src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
     removed = con.execute(f"select count(*) from {src} where change = 'removed'").fetchone()[0]
     changed = con.execute(
         f"select count(distinct item) from {src} where table_name = 'public_coffee' "

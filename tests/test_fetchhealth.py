@@ -442,6 +442,13 @@ def test_the_verdict_is_published_and_read_from_another_staging_root(tmp_path, m
     monkeypatch.setenv(fetchhealth.REFETCH_ENV, "1")
     part = connectors.PartitionLake(b, "shopify", WEEK)
     assert [s.roaster.roaster_id for s in fetchhealth.repull_states(part, "shopify", WEEK)] == ["a.com"]
+    from coffeedata import ingest
+
+    with (
+        monkeypatch.context() as m
+    ):  # a store whose crawl flag the published snapshot turns off: never re-fetched
+        m.setattr(ingest, "crawl_off", lambda _lake: {"a.com"})
+        assert fetchhealth.repull_states(part, "shopify", WEEK) == []
 
     # A publish that fails: a WARNING, and the same verdict and status (so the same exit code).
     def broken(self, *args, **kwargs):
