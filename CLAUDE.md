@@ -93,3 +93,28 @@ has a failure to reproduce).
    repo before it goes out.
 
 Each review's PR comment ends with **Premise checks**: what was checked, what was found, and what wasn't verified.
+
+## Keep the repo clean
+
+1. **No notes or scratch on any branch.** Working notes, plans, decision logs and agent state stay out of git (a
+   scratchpad or somewhere private). Decisions go on the issue or PR they decide. No `notes/`, `tmp/`, `.context/`
+   or diagnostic workflows, session branches included.
+2. **One branch per PR; delete your branch at merge.** Delete a closed PR's branch when you close it. Name branches
+   `<type>/<topic>` (`feat`, `fix`, `docs`, `eval`, `infra`, `deps`), and don't push a branch without opening its PR.
+3. **Squash merge.** The PR title becomes the commit: `Area: what changed`, under 72 characters, with no
+   instructions in it ("do not merge ..."); those go in the body and a label.
+4. **PR bodies under 40 lines, details in `<details>`.** The visible part says what and why, the effect on users or
+   data, how it was tested, and the owner's steps. Evidence tables, premise checks and review history go in
+   `<details>`. No local paths (`/home/...`, scratchpad, worktrees), internal tool headers or model names.
+5. **Reviews are one comment each, readable on a phone:** a summary of at most 20 lines, findings in `<details>`,
+   and no tooling boilerplate (`RUN_BY_COMMAND`, skipped-gate blocks).
+6. **One issue per problem.** Review follow-ups are separate issues, not a list in one; search before opening one.
+   A PR that fixes an issue says `Closes #n`.
+7. **Triage issues belong to the workflows** that open and close them: comment, don't close them by hand.
+8. **Drafts expire after 14 days.** A draft untouched for 14 days is closed, with an issue holding what's left.
+   Stacks stay at most 3 PRs deep.
+9. **Nothing generated or one-off in the tree.** Review screenshots go in PR comments, one-off shell runs in the PR
+   body, and scripts in `scripts/`, not `docs/`. Lake data stays out (the fixtures and eval sets CONTRIBUTING allows
+   are the exception).
+10. **One home per topic.** Architecture goes in `docs/ARCHITECTURE.md`. A change that makes a doc wrong fixes it in
+    the same PR.
