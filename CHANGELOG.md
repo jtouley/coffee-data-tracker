@@ -216,6 +216,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- The probe stops at a refusal: an edge's challenge on any status (a 202, a 403 with `cf-mitigated`, a 503), or a
+  429 or 430 its retries didn't get past, on `/products.json` or the home page is recorded (`blocked`, or
+  `http_429`/`http_430`) and nothing more is asked of the site. It used to swallow it, ask the WooCommerce Store API
+  on the same host (or the home page at `www.`), and record `ok`. A plain 5xx still falls back as before. A pause
+  doesn't count as probed (registry and `int_roaster_state`), so the place is asked again next run instead of
+  backing off as unreachable.
 - **A release whose coffee-or-not verdicts weren't checked is never served (#181).** The 2026-11-09 weekly build ran an
   image without a verdict model, its gate never ran, and it was served for a week. Now a build with no verdict model,
   the gate off, or no passing `verdicts_cover_catalog` is recorded as failed. `serve`, `rollback` and `site --served`

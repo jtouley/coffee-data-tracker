@@ -150,9 +150,13 @@ roasters as (
           and (coalesce(s.roaster_id, a.roaster_id) = sh.host or ends_with(coalesce(s.roaster_id, a.roaster_id), '.' || sh.host))
     ){dropped}
 ),
--- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed, so the next
--- probe run (stale-probe selection reads last_probed) tries the roaster again.
-probes as (select * from {probes} where roaster_id is not null and status <> 'robots_unavailable'),
+-- A probe whose robots.txt didn't answer, or that a pause stopped (a 429 or 430: discover._refused), is no answer
+-- about the site: it doesn't count as probed, so the next probe run (stale-probe selection reads last_probed) tries
+-- the roaster again.
+probes as (
+    select * from {probes}
+    where roaster_id is not null and status not in ('robots_unavailable', 'http_429', 'http_430')
+),
 last_probe as (
     select * from probes
     qualify row_number() over (partition by roaster_id order by probed_at desc, status, final_host, platform) = 1
