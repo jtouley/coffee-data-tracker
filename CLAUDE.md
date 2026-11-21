@@ -20,8 +20,9 @@ where a rule can break; they don't show how often it does.
    scoring command in the eval's README; it prints only totals and intervals. After the final score the set can
    join the regression fixtures, and a new test set is drawn for the next change.
 6. **The reference labels:** each item is labeled twice, independently, against a written definition, and a third
-   labeler settles disagreements. The third labeler is always a different model from the first two, and no labeler
-   wrote or tuned the change being measured. Say who labeled (people or Claude, and which model). An existing signal such as
+   labeler settles disagreements. The first two labelers are different models (the same model
+   gives the same answers), the third is a model different from both, and no labeler wrote or tuned the change being
+   measured. Labelers see only the items and the definition, each in its own folder. Say who labeled (people or Claude, and which model). An existing signal such as
    Claude's enrichment can serve as the reference only when the change being measured isn't that same model or
    prompt.
 7. **Report:** the current code against the change on every set, with Wilson 95% intervals and, for a stratified
