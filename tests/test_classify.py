@@ -211,6 +211,65 @@ def test_wholesale_patterns_found_on_the_real_catalog():
     assert says_wholesale("Wholesale - 5LB Ethiopia Guji") and not says_wholesale("Ethiopia Guji 5lb")
 
 
+def test_the_rules_name_what_decided():
+    """classify.decision names the rule behind is_coffee's answer (product_decisions.reason): only an explanation."""
+    from coffeedata.classify import decision, excluded, exclusion
+
+    cases = [
+        (item("Ceramic Mug"), (False, "excluded:not_coffee_words")),
+        (item("Ethiopia Guji - Unroasted Green Coffee"), (False, "excluded:green_coffee")),
+        (item("Monthly Subscription"), (False, "excluded:subscription")),
+        (item("Kenya AA", tags=["Brewing Equipment"]), (False, "excluded:tag")),
+        (item("Hot Sauce"), (False, "sauce")),
+        (item("Cold Brew Lemonade"), (False, "drinks")),
+        (item("House Blend"), (True, "coffee_words")),
+        (item("Guatemala Huehuetenango"), (True, "country")),
+        (item("Mystery Lot", "Coffee"), (True, "coffee_type")),
+        (item("Night Owl", grams=340, body="A sweet coffee."), (True, "signals:2")),
+        (item("Night Owl"), (False, "signals:0")),
+    ]
+    for it, want in cases:
+        assert decision(it) == want, it.title
+        assert is_coffee(it) == want[0] and excluded(it) == want[1].startswith("excluded:")
+        assert (exclusion(it) is None) == (not excluded(it))
+
+
+def test_decide_why_gives_decides_answer_and_says_who():
+    from coffeedata import products
+
+    coffee, green = item("House Blend"), item("Ethiopia Guji - Unroasted Green Coffee")
+    assert products.decide_why(coffee, "not_coffee") == (False, "claude", "verdict:not_coffee")
+    assert products.decide_why(coffee, "unsure") == (True, "rules", "coffee_words")  # an unsure is the rules'
+    assert products.decide_why(green, "coffee") == (
+        False,
+        "rules",
+        "excluded:green_coffee",
+    )  # exclusions hold
+    for it in (coffee, green):
+        for label in (None, "coffee", "not_coffee", "unsure"):
+            assert products.decide_why(it, label)[:2] == products.decide(it, label)
+
+
+def test_naming_the_rule_changes_no_decision_on_the_labeled_sets():
+    """is_coffee is decision()[0]: on every labeled product (train and validation), the answer is the same."""
+    import json
+    from pathlib import Path
+
+    from coffeedata.classify import decision
+
+    from .test_classifier_accuracy import _item
+
+    rows = [
+        json.loads(r)
+        for r in (Path(__file__).parent / "fixtures/classifier_labels.jsonl").read_text().splitlines()
+    ]
+    assert len(rows) > 1000
+    for r in rows:
+        it = _item(r)
+        ok, why = decision(it)
+        assert ok == is_coffee(it) and why
+
+
 @pytest.mark.parametrize(
     "title", ["Green Coffee Beans - Ethiopia Yirgacheffe", "Burr Grinder", "Coffee Subscription"]
 )

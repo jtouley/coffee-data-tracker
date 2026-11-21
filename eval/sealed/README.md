@@ -37,3 +37,10 @@ the 2026-10-28 sealed score of Claude's verdicts (`RESULTS.md`). Add each later 
   `claude-haiku-5-5`, definition `e45965cf2582`) every `input_hash` has one verdict, so there is no tie to break.
   Step 9's shortcut applies although the order changed: with the three labels (`verdict.LABELS`) `label` ascending
   already put `coffee` first, so every pick is `main`'s for any input. 0 of them in this sealed set.
+- naming the rule that decided (`classify.exclusion` and `classify.decision`, `products.decide_why`, for
+  `stg_products.reason` and the ops table `product_decisions`; `command-center-exports`, #124) changed **0**
+  products: `is_coffee` is now `decision()[0]` and `excluded` is `exclusion() is not None`, with the same rules in
+  the same order. `main`'s `classify.py` and the change's agreed on every product version of a local read-only copy
+  of the lake (runs 2026-10-26 to 11-02: 104,429 distinct versions, 1,895 roasters), on all 1,196 train and
+  validation products, and on the public tables' hashes from the #113 fixture lake (built twice with each). 0 of
+  them in this sealed set (compared as a count, without reading its products).
