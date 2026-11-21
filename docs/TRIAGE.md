@@ -173,7 +173,12 @@ Quick checklist:
      named as such.
      - Each attempt keeps its own artifact. "Re-run failed jobs" on the scheduled run skips Royal, so the cell still
        shows the code its first attempt got.
-     - A run that was cancelled, skipped or never started tried nothing, so it is passed over.
+     - A run is judged by the results it left, not by its conclusion, which is its latest attempt's alone. A
+       scheduled run whose re-run was cancelled still shows its first attempt's code, and a run cancelled part-way
+       through its snapshot shows what it recorded. Only a run that was cancelled, skipped or never started and
+       left no results at all is passed over.
+     - While a re-run is queued or in progress the run isn't completed, so none of its attempts is read and the
+       cell is blank until it finishes (the next check fills it).
      - A blank cell means the latest run that started left no results (its job was killed, or the artifact
        expired), so open it.
 

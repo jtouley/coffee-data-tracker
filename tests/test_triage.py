@@ -767,20 +767,22 @@ def test_attempts_are_read_newest_first_whatever_their_names_sort_as(tmp_path):
 @pytest.mark.parametrize("conclusion", ["cancelled", "skipped", "startup_failure"])
 def test_a_newer_run_that_never_ran_doesnt_blank_every_cell(tmp_path, conclusion):
     """#195: a dispatch cancelled while queued (or skipped, or one that failed to start) tried no importer and left
-    no results. It is left out of the runs read, so the scheduled run's failures are still shown; before, it was the
-    newest run without results and ended the search, blanking every importer's cell."""
+    no results. It is passed over, so the scheduled run's failures are still shown; before, it was the newest run
+    without results and ended the search, blanking every importer's cell. Its artifacts are still asked for: its
+    conclusion alone doesn't say it left none."""
     week = triage.date(2026, 11, 16)
     sched = dict(_run("2026-11-18T17:52:10Z", "failure"), id=100)
     never_ran = dict(_run("2026-11-19T10:00:00Z", conclusion, event="workflow_dispatch", n=8), id=200)
     runs = [never_ran, sched]
-    assert [r["id"] for r in triage.importer_result_runs(runs, week)] == [100]
+    assert [r["id"] for r in triage.importer_result_runs(runs, week)] == [200, 100]
     results = {
         "100": [_results(ROYAL_403, ("interamerican", "2026-11-16", "failed", 503, "page", "http_status"))]
     }
-    assert triage.importer_failures(results, runs, week) == {
-        "royal_coffee": "HTTP 403 at listing page 1",
-        "interamerican": "HTTP 503 at page",
-    }
+    expected = {"royal_coffee": "HTTP 403 at listing page 1", "interamerican": "HTTP 503 at page"}
+    assert triage.importer_failures(results, runs, week) == expected
+    assert (
+        triage.importer_failures(dict(results, **{"200": []}), runs, week) == expected
+    )  # as read_results gives it
     alerts = triage.importer_alerts(
         _weeks(cafe_imports="2026-11-16"), runs, _at("2026-11-19T10:30"), CHECK, "abc123", results
     )
@@ -790,20 +792,83 @@ def test_a_newer_run_that_never_ran_doesnt_blank_every_cell(tmp_path, conclusion
         "interamerican": "HTTP 503 at page",
         "royal_coffee": "HTTP 403 at listing page 1",
     }
-    # the check job doesn't ask for its artifact either
+    # the check job asks for both runs' artifacts
     (tmp_path / "runs.json").write_text(json.dumps(runs))
     r = subprocess.run(
         [sys.executable, "-m", "coffeedata.triage", "importer-result-runs", str(tmp_path / "runs.json"),
          "--now", "2026-11-19T10:30"],
         capture_output=True, text=True, cwd=ROOT,
     )  # fmt: skip
+    assert r.returncode == 0 and r.stdout.split() == ["200", "100"], r.stderr
+
+
+@pytest.mark.parametrize("conclusion", ["cancelled", "skipped", "startup_failure"])
+def test_a_cancelled_rerun_of_the_scheduled_run_still_shows_the_first_attempts_code(tmp_path, conclusion):
+    """Review of #203: a run's conclusion is its latest attempt's. Attempt 1 of the scheduled run failed at Royal with
+    a code and uploaded its results; a re-run was then cancelled before its snapshot, so the run reads `cancelled`
+    and attempt 2 left nothing. The run is judged by its artifacts: attempt 1's code is still shown."""
+    week = triage.date(2026, 11, 16)
+    sched = dict(_run("2026-11-18T17:52:10Z", conclusion), id=100)
+    assert [r["id"] for r in triage.importer_result_runs([sched], week)] == [100]
+    _attempt(tmp_path, 100, "importer-results-1", _results(ROYAL_403))  # attempt 2 left no artifact
+    results = triage.read_results(tmp_path / "results")
+    assert triage.importer_failures(results, [sched], week) == {"royal_coffee": "HTTP 403 at listing page 1"}
+    # a later dispatch that never ran doesn't change that
+    later = dict(_run("2026-11-19T10:00:00Z", "cancelled", event="workflow_dispatch", n=8), id=200)
+    assert triage.importer_failures(results, [later, sched], week) == {
+        "royal_coffee": "HTTP 403 at listing page 1"
+    }
+
+    # through the commands: the run's artifacts are asked for, and the issue shows the code
+    (tmp_path / "runs.json").write_text(json.dumps([sched]))
+    (tmp_path / "weeks.json").write_text(
+        json.dumps(_weeks(cafe_imports="2026-11-16", interamerican="2026-11-16"))
+    )
+    env = {k: v for k, v in os.environ.items() if k not in ("GITHUB_TOKEN", "GH_TOKEN")}
+    triage_cmd = [sys.executable, "-m", "coffeedata.triage"]
+    r = subprocess.run(
+        [*triage_cmd, "importer-result-runs", str(tmp_path / "runs.json"), "--now", "2026-11-19T09:23"],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
     assert r.returncode == 0 and r.stdout.split() == ["100"], r.stderr
+    r = subprocess.run(
+        [*triage_cmd, "importers", str(tmp_path), "--dry-run", "--now", "2026-11-19T09:23"],
+        capture_output=True, text=True, env=env, cwd=ROOT,
+    )  # fmt: skip
+    assert r.returncode == 0, r.stderr
+    assert "| `royal_coffee` | missing 1 week | none | HTTP 403 at listing page 1 |" in r.stdout
+    assert f"ended `{conclusion}`" in r.stdout
+
+
+def test_a_run_cancelled_part_way_through_its_snapshot_is_read_for_what_it_recorded(tmp_path):
+    """Review of #203: `cancelled` also covers a run stopped while its snapshot ran. Its upload step (`if: always()`)
+    left results, so it tried those importers: its results are used, and an older run's code isn't shown instead."""
+    week = triage.date(2026, 11, 16)
+    sched = dict(_run("2026-11-18T17:52:10Z", "failure"), id=100)
+    cancelled = dict(_run("2026-11-19T10:00:00Z", "cancelled", event="workflow_dispatch", n=8), id=200)
+    runs = [cancelled, sched]
+    _attempt(tmp_path, 100, "importer-results-1",
+             _results(ROYAL_403, ("interamerican", "2026-11-16", "failed", 503, "page", "http_status"),
+                      ("cafe_imports", "2026-11-16", "failed", 500, "page", "http_status")))  # fmt: skip
+    # the dispatch: interamerican failed differently, cafe_imports was stored, Royal skipped; then it was cancelled
+    _attempt(tmp_path, 200, "importer-results-1",
+             _results(ROYAL_SKIPPED, ("interamerican", "2026-11-16", "failed", 429, "page", "http_status"),
+                      ("cafe_imports", "2026-11-16", "stored", None, None, None)))  # fmt: skip
+    results = triage.read_results(tmp_path / "results")
+    assert triage.importer_failures(results, runs, week) == {
+        "royal_coffee": "HTTP 403 at listing page 1",  # skipped by the dispatch: the scheduled run's
+        "interamerican": "HTTP 429 at page",  # the cancelled run's own, not the older 503
+    }  # and cafe_imports, which the cancelled run stored, shows no failure
+    # a cancelled run whose results file was cut short: unknown, so nothing older is offered
+    (tmp_path / "results" / "200" / "importer-results-1" / "results.json").write_text('[{"importer": "inter')
+    assert triage.importer_failures(triage.read_results(tmp_path / "results"), runs, week) == {}
 
 
 @pytest.mark.parametrize("conclusion", ["failure", "timed_out", "success", None])
 def test_a_newer_run_that_started_and_left_no_results_still_ends_the_search(conclusion):
-    """Only the runs that never ran are left out. One that started and wrote nothing (killed at its timeout, stopped
-    at the token check, or its artifact expired) has an unknown outcome: an older run's code isn't shown."""
+    """Only a run that never ran (by its conclusion) and left nothing is passed over. One that ended any other way
+    and wrote nothing (killed at its timeout, stopped at the token check, or its artifact expired) has an unknown
+    outcome: an older run's code isn't shown."""
     week = triage.date(2026, 11, 16)
     sched = dict(_run("2026-11-18T17:52:10Z", "failure"), id=100)
     newer = dict(_run("2026-11-19T10:00:00Z", conclusion, event="workflow_dispatch", n=8), id=200)
@@ -812,11 +877,13 @@ def test_a_newer_run_that_started_and_left_no_results_still_ends_the_search(conc
     assert triage.importer_failures({"100": [_results(ROYAL_403)], "200": []}, [newer, sched], week) == {}
 
 
-def test_a_scheduled_run_that_never_ran_is_not_read_and_the_issue_says_how_it_ended():
-    """The week's scheduled run was cancelled: nothing to read from it, and the summary gives its conclusion."""
+def test_a_scheduled_run_that_never_ran_shows_no_code_and_the_issue_says_how_it_ended():
+    """The week's scheduled run was cancelled and left nothing: no code to show, and the summary gives its
+    conclusion."""
     week = triage.date(2026, 11, 16)
     sched = dict(_run("2026-11-18T17:52:10Z", "cancelled"), id=100)
-    assert triage.importer_result_runs([sched], week) == []
+    assert triage.importer_result_runs([sched], week) == [sched]  # its artifacts are still asked for
+    assert triage.importer_failures({"100": []}, [sched], week) == {}
     alerts = triage.importer_alerts(_weeks(), [sched], _at("2026-11-18T19:30"), CHECK, "abc123", {})
     (weekly,) = [a for a in alerts if a["key"] == "importers:weekly"]
     assert weekly["firing"] and "ended `cancelled`" in weekly["summary"]
@@ -846,13 +913,10 @@ def test_the_check_and_the_alert_judge_the_same_due_week(tmp_path):
         capture_output=True, text=True, env=env, cwd=ROOT,
     )  # fmt: skip
     assert r.returncode == 0 and r.stdout.split() == ["100"], r.stderr
-    # a time and a Monday, nothing else
-    assert json.loads((tmp_path / "check.json").read_text()) == {
-        "now": "2026-11-25T21:36:50+00:00",
-        "due": "2026-11-16",
-    }
+    # a time, nothing else
+    assert json.loads((tmp_path / "check.json").read_text()) == {"now": "2026-11-25T21:36:50+00:00"}
     assert triage.check_time(tmp_path) == _at(before)
-    assert triage.check_record(_at(after), runs) == {"now": "2026-11-25T21:37:40+00:00", "due": "2026-11-23"}
+    assert triage.check_record(_at(after)) == {"now": "2026-11-25T21:37:40+00:00"}
 
     # the alert job, a minute later by its own clock: it judges at the check's time, so the same week
     importers_cmd = [*triage_cmd, "importers", str(tmp_path), "--dry-run"]
@@ -889,8 +953,8 @@ def test_without_a_readable_check_time_the_alert_uses_its_own_clock(tmp_path, co
 
 def test_the_artifacts_read_are_the_due_weeks_runs_and_always_its_scheduled_run(tmp_path, monkeypatch):
     """The check job downloads each attempt's importer-results from the runs `importer-result-runs` prints: the due
-    week's completed runs that ran, newest first, at most MAX_RESULT_RUNS, and always its scheduled run, however
-    many dispatches followed."""
+    week's completed runs, newest first, at most MAX_RESULT_RUNS, and always its scheduled run, however many
+    dispatches followed."""
     monkeypatch.setattr(triage, "MAX_RESULT_RUNS", 3)
     sched = dict(_run("2026-11-18T17:52:10Z", "failure"), id=100)
     dispatches = [
@@ -1169,8 +1233,8 @@ for name, records in found.items():
 
 def test_the_check_jobs_download_step_feeds_the_alert_every_attempt(tmp_path):
     """The download step's own script (importers-alerts.yml), run with a stand-in `gh`: the scheduled run was re-run
-    (two artifacts, Royal skipped on the second), a later dispatch skipped Royal and another was cancelled. The
-    folder it fills gives the alert job Royal's first-attempt code, at the check's time. The step judges by the
+    (two artifacts, Royal skipped on the second), a later dispatch skipped Royal and another was cancelled before
+    it ran. The folder it fills gives the alert job Royal's first-attempt code, at the check's time. The step judges by the
     clock, so the runs here are dated in the week that is due now."""
     import yaml
 
@@ -1206,7 +1270,7 @@ def test_the_check_jobs_download_step_feeds_the_alert_every_attempt(tmp_path):
             "importers-health": [],  # another artifact's name: the pattern leaves it
         },
         "200": {"importer-results-1": rec("skipped")},
-        "300": {"importer-results-1": rec("failed", 500, "page", "http_status")},
+        "400": {"importer-results-1": rec("failed", 500, "page", "http_status")},  # not a listed run
     }
     env = {
         "PATH": f"{bin_dir}{os.pathsep}{os.environ['PATH']}", "RUNNER_TEMP": str(temp), "GITHUB_REPOSITORY": "o/r",
@@ -1223,9 +1287,10 @@ def test_the_check_jobs_download_step_feeds_the_alert_every_attempt(tmp_path):
         "results/100/importer-results-1/results.json",
         "results/100/importer-results-2/results.json",
         "results/200/importer-results-1/results.json",
-    ]  # the cancelled run (300) is never asked for
+    ]  # the cancelled run (300) is asked for and has none
+    assert "run 300: no importer-results artifact" in r.stdout
     check = json.loads((folder / "check.json").read_text())
-    assert set(check) == {"now", "due"} and check["due"] == week.isoformat()
+    assert set(check) == {"now"}
     assert triage.check_time(folder) is not None
 
     # the alert job's command over the same folder: it judges at the check's time

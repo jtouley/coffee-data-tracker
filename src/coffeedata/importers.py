@@ -48,7 +48,6 @@ feasibility check, recommendation 2. .github/workflows/importers.yml runs it eac
 
 from __future__ import annotations
 
-import json
 import logging
 import os
 import re
@@ -1097,10 +1096,16 @@ def _kind(chain: list[BaseException], status: int | None) -> str:
         return "disallowed"
     if has(Unavailable):
         return "unavailable"
-    # the body's own decode, what json.loads raises for one that isn't JSON (JSONDecodeError) or isn't text
-    # (UnicodeDecodeError). Never any other ValueError: one elsewhere in the chain says nothing about the body, and
-    # would hide a timeout or a failed connection below
-    if has((NotCatalog, json.JSONDecodeError, UnicodeDecodeError)):
+    # the body's own parse: NotCatalog, or the FetchError the client raises straight from the ValueError its JSON
+    # parse gave (http.fetch_json_response), whichever ValueError that was (JSONDecodeError for a body that isn't
+    # JSON, UnicodeDecodeError for one that isn't text, a plain ValueError for a number too long to read). A
+    # ValueError anywhere else in the chain (under a timeout or a failed connection) says nothing about the body
+    if has(NotCatalog) or any(
+        isinstance(c, FetchError)
+        and not isinstance(c, httpx.HTTPError)
+        and isinstance(c.__cause__, ValueError)
+        for c in chain
+    ):
         return "not_json"
     if has(httpx.TimeoutException):
         return "timeout"

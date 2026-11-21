@@ -820,9 +820,10 @@ def _caused_by(cause: BaseException, message: str = "wrapped") -> FetchError:
         return e
 
 
-def test_only_a_json_decode_error_reads_as_not_json():
+def test_only_the_bodys_own_parse_reads_as_not_json():
     """#195: any ValueError in the chain read as `not_json`, ahead of the timeout and connection checks. Now only the
-    body's decode does: what json.loads raises for a body that isn't JSON, or isn't text."""
+    body's parse does: NotCatalog, or the FetchError the client raises straight from the ValueError its JSON parse
+    gave, whatever json.loads raised (a body that isn't JSON, isn't text, or holds a number too long to read)."""
     kind = lambda e: importers.fetch_failed(e, "listing page 1").kind  # noqa: E731
     request = httpx.Request("GET", LISTING)
     try:
@@ -837,9 +838,17 @@ def test_only_a_json_decode_error_reads_as_not_json():
     assert kind(_caused_by(not_text)) == "not_json"
     assert kind(importers.NotCatalog("not JSON")) == "not_json"
 
-    # any other ValueError says nothing about the body
-    assert kind(_caused_by(ValueError("invalid literal for int()"))) == "network"
-    assert kind(_caused_by(UnicodeEncodeError("idna", "x", 0, 1, "label empty"))) == "network"
+    try:
+        json.loads("9" * 5000)  # over Python's digit limit: a plain ValueError, not a JSONDecodeError
+    except ValueError as e:
+        too_long = e
+    assert type(too_long) is ValueError and kind(_caused_by(too_long)) == "not_json"
+
+    # a ValueError that isn't the parse's (under a network error, not straight under the client's FetchError) says
+    # nothing about the body
+    odd = httpx.DecodingError("bad encoding", request=request)
+    odd.__cause__ = ValueError("invalid literal for int()")
+    assert kind(_caused_by(odd)) == "network"
     assert kind(FetchError("HTTP 500", status=500)) == "http_status"
     # and it no longer hides a timeout or a failed connection further down the chain
     timeout = httpx.ReadTimeout("no answer", request=request)
@@ -852,12 +861,15 @@ def test_only_a_json_decode_error_reads_as_not_json():
         assert "shop.example" not in str(importers.fetch_failed(e, "listing page 1"))
 
 
-def test_a_body_that_isnt_text_reads_as_not_json_end_to_end(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    "body", [b"\xc3\x28", b'{"products": [' + b"9" * 5000 + b"]}"], ids=["not text", "a number too long"]
+)
+def test_a_body_json_cant_read_is_not_json_end_to_end(tmp_path, monkeypatch, body):
+    """Through the client: bytes that aren't text (UnicodeDecodeError) and a number over Python's digit limit (a
+    plain ValueError) are both the body's parse failing."""
     _with_fake_store(monkeypatch)
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
-    page = _answer(
-        lambda r: httpx.Response(200, content=b"\xc3\x28", headers={"content-type": "application/json"})
-    )
+    page = _answer(lambda r: httpx.Response(200, content=body, headers={"content-type": "application/json"}))
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(page)) as client:
         (r,) = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
     assert (r["kind"], r["http_status"], r["phase"]) == ("not_json", None, "listing page 1")

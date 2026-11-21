@@ -98,8 +98,8 @@ FIRST_STEPS = {
         "where it failed (page, listing page N, or robots at ...). HTTP 403 is a refusal (a block), 429 rate "
         "limiting, 5xx the site down or failing; an edge's challenge, a closed store, a robots.txt disallow, no "
         "connection, a timeout or the run's deadline are named as such. A re-run's attempts are each read, so a "
-        "re-run that skipped the importer still shows its first attempt's failure. Blank: the latest run that "
-        "started left no results (open it). For more, open the linked run and read the importer-snapshot step's "
+        "re-run that skipped the importer, or was cancelled, still shows its first attempt's failure. Blank: the "
+        "latest run that started left no results, or a re-run is still in progress (open it). For more, open the linked run and read the importer-snapshot step's "
         "line per importer. In comments "
         "here give the importer, its status and the failure only.",
         "cafe_imports or interamerican: fix the cause, then dispatch them the same week "
@@ -611,9 +611,11 @@ FETCH_KINDS = {
 }
 # The most runs read for one week's failures (the scheduled run is always read)
 MAX_RESULT_RUNS = 20
-# Conclusions of a run that ended before its snapshot job started (cancelled while queued, skipped by the job's `if`
-# on another ref, or never started): it tried no importer and left no results, so it says nothing about the week and
-# is never read. A run that started and left no results (`failure`, `timed_out`) is read: its outcome is unknown.
+# Conclusions a run can end with before its snapshot job started (cancelled while queued, skipped by the job's `if`
+# on another ref, or never started). A run's conclusion is its latest attempt's, so it says nothing about the earlier
+# attempts, and a run cancelled part-way through its snapshot ends `cancelled` too: the artifacts decide. Only a run
+# with one of these conclusions and no results at all is passed over as having tried nothing (importer_failures).
+# A run that ended any other way and left no results (`failure`, `timed_out`) has an unknown outcome.
 NEVER_RAN = ("cancelled", "skipped", "startup_failure")
 # The snapshot job's artifact: importer-results-<run attempt> (importers.yml), one per attempt, so a re-run adds to
 # the first attempt's results and never replaces them. Plain importer-results is the name before attempts were kept.
@@ -640,13 +642,14 @@ def _fetch_failure(record: dict[str, Any]) -> str:
 
 def importer_result_runs(runs: list[dict[str, Any]] | None, week: date) -> list[dict[str, Any]]:
     """The runs whose importer-results can say why `week` is missing: the completed runs created that week (Monday
-    to Sunday, UTC) that ran (not NEVER_RAN: a cancelled, skipped or never-started run tried nothing), newest first,
-    at most MAX_RESULT_RUNS, and always its scheduled run (_scheduled_run) when that ran, the only one that fetches
-    Royal."""
+    to Sunday, UTC), newest first, at most MAX_RESULT_RUNS, and always its scheduled run (_scheduled_run), the only
+    one that fetches Royal. Whatever their conclusion: it is the latest attempt's alone, so a scheduled run whose
+    re-run was cancelled still holds its first attempt's results (importer_failures passes over the ones that
+    hold none)."""
     start = datetime.combine(week, dtime(), UTC)
     found = sorted(
         (r for r in runs or [] if isinstance(r, dict) and r.get("id") is not None and r.get("status") == "completed"
-         and r.get("conclusion") not in NEVER_RAN and isinstance(r.get("created_at"), str)
+         and isinstance(r.get("created_at"), str)
          and start <= _when(r["created_at"]) < start + timedelta(days=7)),
         key=lambda r: str(r["created_at"]), reverse=True,
     )  # fmt: skip
@@ -664,14 +667,21 @@ def importer_failures(
     importers.public_results lists, the newest attempt first) over importer_result_runs, newest first. An attempt
     whose results hold no line for an importer, or skipped it (Royal on a dispatch or a re-run), didn't try it: an
     older attempt is read, then an older run. So "Re-run failed jobs" on the scheduled run, which skips Royal, still
-    shows the HTTP status its first attempt got. A run without results (an expired artifact, a job killed before
-    writing it), or an attempt whose file can't be read, ends the search: its outcome is unknown, so an older code
-    isn't shown as the reason."""
+    shows the HTTP status its first attempt got.
+
+    Each attempt is judged by what it left, never by the run's conclusion (the latest attempt's alone):
+    - an attempt that left no results (a re-run cancelled before its snapshot) is simply not there, so the attempt
+      before it is read; one cancelled part-way that did leave results is read like any other;
+    - a run with no results at all whose conclusion is in NEVER_RAN tried nothing: an older run is read;
+    - any other run with no results (an expired artifact, a job killed before writing it), or an attempt whose file
+      can't be read, ends the search: its outcome is unknown, so an older code isn't shown as the reason."""
     out: dict[str, str] = {}
     decided: set[str] = set()
     for run in importer_result_runs(runs, week):
         attempts = (results or {}).get(str(run["id"]))
         if not isinstance(attempts, list) or not attempts:
+            if run.get("conclusion") in NEVER_RAN:
+                continue
             break
         for records in attempts:
             if not isinstance(records, list):
@@ -825,16 +835,14 @@ def _now_arg(value: str | None) -> datetime:
     return t.replace(tzinfo=UTC) if t.tzinfo is None else t.astimezone(UTC)
 
 
-# The check job's record of the time it judged at and the due week that gave (importer-result-runs --check-out), in
-# the folder the alert job reads: a time and a Monday, nothing else.
+# The check job's record of the time it judged at (importer-result-runs --check-out), in the folder the alert job
+# reads: a time, nothing else.
 CHECK_FILE = "check.json"
 
 
-def check_record(now: datetime, runs: list[dict[str, Any]] | None) -> dict[str, str | None]:
-    """What importer-result-runs writes to CHECK_FILE: `now`, and the due week it gives with `runs`
-    (importers_due_week), which is the week whose results the check job downloads."""
-    due = importers_due_week(now, runs)
-    return {"now": now.astimezone(UTC).isoformat(timespec="seconds"), "due": due.isoformat() if due else None}
+def check_record(now: datetime) -> dict[str, str]:
+    """What importer-result-runs writes to CHECK_FILE: the time it judged at, which check_time reads back."""
+    return {"now": now.astimezone(UTC).isoformat(timespec="seconds")}
 
 
 def check_time(folder: Path) -> datetime | None:
@@ -891,7 +899,7 @@ def main(argv: list[str] | None = None) -> int:
     rr.add_argument(
         "--check-out",
         type=Path,
-        help="write the time judged at and its due week here (check.json), for `importers` to judge at the same time",
+        help="write the time judged at here (check.json), for `importers` to judge at the same time",
     )
     wk = sub.add_parser(
         "importers-weeks", help="each importer's latest stored week, from file names (Hub token)"
@@ -916,7 +924,7 @@ def main(argv: list[str] | None = None) -> int:
         now = _now_arg(a.now)
         if a.check_out:
             a.check_out.parent.mkdir(parents=True, exist_ok=True)
-            a.check_out.write_text(json.dumps(check_record(now, runs), indent=1) + "\n")
+            a.check_out.write_text(json.dumps(check_record(now), indent=1) + "\n")
         due = importers_due_week(now, runs)
         for run in importer_result_runs(runs, due) if due else []:
             print(int(run["id"]))

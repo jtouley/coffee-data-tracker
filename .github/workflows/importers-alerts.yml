@@ -13,8 +13,8 @@
 # - This repository is public: the artifact, the log and the issue carry importer keys, statuses, weeks (Mondays),
 #   run links and the time the check judged at, and a failed fetch's kind, HTTP status code and phase (the importers
 #   runs' importer-results-<run attempt> artifacts, every attempt's), never a lot or a store's address.
-# - The check job works out the due week once and records the time it judged at (check.json); the alert job judges
-#   at that time, so both mean the same week.
+# - The check job records the time it judged at (check.json) and the alert job judges at that time, so both mean
+#   the same due week.
 # - A check that couldn't judge the week opens `pipeline:importers-health` instead of `importers:weekly`: no token,
 #   a failed listing (a Hub outage, a rejected token) or a failed runs listing, and, once a week is due, a dataset
 #   the Hub calls "not found" (a wrong IMPORTERS_URL, or a token that can't read it: the Hub answers both alike).
@@ -60,11 +60,13 @@ jobs:
           mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
       - name: The due week's runs' importer results (keys, statuses, failure kinds, HTTP status codes; no address)
         # importers.yml's importer-results-<run attempt> artifacts (importers.public_results), every attempt's, of
-        # the runs `triage importer-result-runs` prints: the due week's completed runs, Monday to Sunday, that ran
-        # (never one that was cancelled, skipped or failed to start), newest first, and always its scheduled run. So
-        # the issue can name a failed fetch's kind and status code, a first attempt's too after a re-run. The command
-        # also records the time it judged at (check.json), which the alert job judges at. Best effort: a run without
-        # an artifact (expired, or its snapshot wrote nothing) downloads nothing, and the issue's cells stay blank.
+        # the runs `triage importer-result-runs` prints: the due week's completed runs, Monday to Sunday, newest
+        # first, and always its scheduled run, whatever their conclusion (a run's conclusion is its latest attempt's:
+        # a scheduled run whose re-run was cancelled still holds its first attempt's results). So the issue can name
+        # a failed fetch's kind and status code, a first attempt's too after a re-run. The command also records the
+        # time it judged at (check.json), which the alert job judges at. Best effort: a run without an artifact
+        # downloads nothing; triage passes it over if it was cancelled, skipped or never started, and otherwise
+        # leaves the issue's cells blank (its outcome is unknown).
         if: ${{ !cancelled() }}
         continue-on-error: true
         env:
