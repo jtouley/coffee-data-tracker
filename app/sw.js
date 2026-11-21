@@ -5,7 +5,8 @@
 // Coffees, a coffee, History) is kept, so they still open offline, and so are the bag photos they show (up to
 // PHOTO_LIMIT, the oldest dropped first). Writes never go through here: they wait in the
 // page's IndexedDB outbox until the server acknowledges them. Signing out clears the kept pages, which hold that
-// person's data.
+// person's data, and so does any sign that the session is over, seen here whatever the page's script does: the
+// sign-in screen loaded (the app shows it only to someone not signed in), a 401, or a photo sent to sign-in.
 //
 // Hashed files never change, so they live in one cache that a new version adds to rather than replaces: a page
 // still open from the last version, or kept for offline use, keeps finding its own styles and script.
@@ -38,11 +39,21 @@ self.addEventListener("activate", (e) => {
 // Bumped by each sign-out: a photo fetched before it must not put the kept pages back afterwards.
 let generation = 0;
 
+function signedOut() {
+  generation += 1;
+  return caches.delete(PAGES);
+}
+
+// The session is over: a 401, or the sign-in screen itself, unless it says the sign-in couldn't be checked
+// (X-Session: unchecked), when the session may still be good and the kept pages stay for offline use.
+function sessionOver(response) {
+  if (response.status === 401) return true;
+  const url = new URL(response.url || location.origin);
+  return url.pathname === "/signin" && response.ok && response.headers.get("x-session") !== "unchecked";
+}
+
 self.addEventListener("message", (e) => {
-  if (e.data === "signed-out") {
-    generation += 1;
-    e.waitUntil(caches.delete(PAGES));
-  }
+  if (e.data === "signed-out") e.waitUntil(signedOut());
 });
 
 async function hashed(request) {
@@ -61,12 +72,7 @@ async function page(request) {
   const keep = !url.search && KEEP.some((re) => re.test(url.pathname));
   try {
     const response = await fetch(request);
-    // A selected bag changes both pages, so their kept copies go, but only once the switch succeeded (a redirect,
-    // opaque to a navigation): offline or refused (a bag finished on another phone), the old copies still open.
-    if (/^\/bag\/[\w-]+\/use$/.test(url.pathname) && (response.ok || response.type === "opaqueredirect")) {
-      const pages = await caches.open(PAGES);
-      await Promise.all([pages.delete("/"), pages.delete("/log")]);
-    }
+    if (sessionOver(response)) await signedOut().catch(() => { /* nothing kept */ });
     // Only a finished, signed-in page is kept: a redirect (to sign-in) or an error isn't.
     if (keep && response.ok && !response.redirected) {
       const copy = response.clone();
@@ -100,6 +106,7 @@ async function photo(e) {
   } catch {
     return (await caches.match(url.pathname, { cacheName: PAGES })) || Response.error();
   }
+  if (sessionOver(response)) e.waitUntil(signedOut().catch(() => { /* nothing kept */ }));
   const image = (response.headers.get("content-type") || "").startsWith("image/");
   if (response.ok && !response.redirected && image) {
     // Kept after answering, on its own: a full storage (QuotaExceededError) never costs the photo just fetched.

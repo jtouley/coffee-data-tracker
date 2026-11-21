@@ -46,7 +46,8 @@ username as typed, and nothing is done with what was sent.
   creates the owner, or later, typed on the reset screen, resets the owner's password. To use it again, put a new value
   in the secret. The owner keeps the id that shots from before accounts belong to.
 - **Sessions** are a signed cookie (`SESSION_SECRET`): HttpOnly, Secure, SameSite=Lax, 90 days, renewed after a
-  day of use. "Sign out on all devices" and a password change sign out every other phone.
+  day of use. Sign out and a password change sign out every other phone too: a session is a stateless token, so
+  sign-out ends it by bumping the account's `session_epoch` rather than only clearing this phone's cookie.
 - **Lockouts:** five failed sign-ins for a username from one address, or twenty from one address, lock that for 15
   minutes. Across addresses a username is never locked, only slowed: after ten failures each try waits up to 30 s.
   Usernames aren't shown to anyone signed out.

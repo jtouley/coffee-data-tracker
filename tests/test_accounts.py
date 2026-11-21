@@ -212,6 +212,30 @@ def test_sign_out_clears_the_cookie(lake, users):
     assert c.get("/").status_code == 303
 
 
+def test_sign_out_ends_the_session_a_copied_cookie_carries(lake, users):
+    """Review 2026-11-21, F6: a cookie copied before sign-out (a shared computer, a proxy log) no longer signs anyone
+    in. Sessions are stateless tokens, so sign-out bumps the account's session_epoch: every device signs in again."""
+    a = accounts(users)
+    app = create_app(lake, Sessions(a))
+    phone, laptop = (TestClient(app, base_url="https://testserver", follow_redirects=False) for _ in "ab")
+    phone.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW},
+        headers=W,
+    )
+    laptop.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=W)
+    copied = phone.cookies.get(COOKIE)
+    assert phone.post("/api/signout", headers=W).status_code == 200
+    thief = TestClient(app, base_url="https://testserver", follow_redirects=False)
+    thief.cookies.set(COOKIE, copied)
+    assert thief.get("/setup").status_code == 303
+    assert laptop.get("/").status_code == 303  # the cost: the other devices sign in again
+    assert (
+        phone.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=W).status_code == 200
+    )
+    assert phone.get("/setup").status_code == 200
+
+
 def test_accounts_survive_a_restart(lake, users):
     owner(client(lake, users))
     c = client(lake, users)  # a new process: loaded from the users lake

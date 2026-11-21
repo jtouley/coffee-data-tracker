@@ -87,8 +87,7 @@
         {{ status_line() }}
       </form>
     </details>
-    <button class="link" type="button" data-signout="/api/signout">Sign out</button>
-    <button class="link danger" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
+    <button class="link" type="button" data-signout="/api/signout"><span>Sign out<span class="meta" id="signout-note">Signs you out on all your devices.</span></span></button>
     {% endif %}
   </div>
   {{ legal() }}

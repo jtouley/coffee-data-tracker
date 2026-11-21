@@ -416,20 +416,20 @@ def test_switch_open_bag_uses_its_own_shots_and_stays_selected(client):
     client.post("/api/shots", json=shot(2, bag_id="bag2", grinder_setting=20), headers=W)
     assert "Switch coffee" in client.get("/").text
     assert "Onyx Geometry" in client.get("/bags/switch").text
-    assert client.get("/bag/bag1/use", follow_redirects=False).status_code == 303
+    assert client.post("/bag/bag1/use", headers=W, follow_redirects=False).status_code == 303
     assert "Onyx Geometry" in client.get("/").text
     p = prefill(client)
     assert p["bag_id"] == "bag1" and p["grinder_setting"] == 12
-    client.get("/bag/bag2/use")
+    client.post("/bag/bag2/use", headers=W)
     assert prefill(client)["bag_id"] == "bag2" and prefill(client)["grinder_setting"] == 20
-    assert client.get("/bag/bag1/use", headers={"x-test-user": "bob"}).status_code == 404
+    assert client.post("/bag/bag1/use", headers=W | {"x-test-user": "bob"}).status_code == 404
     client.post(
         "/api/bags",
         json={"bag_id": "bag2", "coffee_freetext": "Other coffee", "finished_on": "2026-10-28"},
         headers=W,
     )
     assert prefill(client)["bag_id"] == "bag1"
-    assert client.get("/bag/bag2/use").status_code == 404
+    assert client.post("/bag/bag2/use", headers=W).status_code == 404
 
 
 def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selected_one(client):
@@ -437,7 +437,7 @@ def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selecte
     client.post("/api/bags", json={"bag_id": "bagB", "coffee_freetext": "Other coffee"}, headers=W)
     for i in (1, 2):
         client.post("/api/shots", json=shot(i, bag_id="bagB", coffee_freetext="Other coffee"), headers=W)
-    client.get("/bag/bagB/use")
+    client.post("/bag/bagB/use", headers=W)
     store = client.app.state.store
     assert prefill(client)["bag_id"] == "bagB"
 
@@ -631,3 +631,19 @@ def test_a_failed_publish_doesnt_leave_the_record_marked(client, lake, monkeypat
     # The first upload failed: the resend waiting on it writes the record itself, and it's stored.
     assert errors and out == [True] and len(calls) == 2
     assert store.shot("owner", "s1").shot_id == "s1" and store._pending == {}
+
+
+def test_choosing_a_bag_is_a_same_origin_post_never_a_get(client):
+    """Review 2026-11-21, F10: a cross-site link could switch the selected bag. A GET changes nothing now; the POST
+    needs the same-origin check every write has."""
+    client.post("/api/bags", json={"bag_id": "bag2", "coffee_freetext": "Other coffee"}, headers=W)
+    before = client.cookies.get("selected_bag")
+    r = client.get("/bag/bag2/use", follow_redirects=False)
+    assert r.status_code == 303 and r.headers["location"] == "/bags/switch"
+    assert "selected_bag" not in r.headers.get("set-cookie", "")
+    assert client.cookies.get("selected_bag") == before
+    assert client.post("/bag/bag2/use", follow_redirects=False).status_code == 403  # no X-Requested-With
+    cross = W | {"sec-fetch-site": "cross-site"}
+    assert client.post("/bag/bag2/use", headers=cross, follow_redirects=False).status_code == 403
+    r = client.post("/bag/bag2/use", headers=W, follow_redirects=False)
+    assert r.status_code == 303 and "selected_bag=bag2" in r.headers["set-cookie"]

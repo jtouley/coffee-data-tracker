@@ -34,8 +34,8 @@ document.addEventListener("click", async (event) => {
   if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   let r = null;
-  try { r = await fetch(link.href, { headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
-  if (!r || !r.ok) return location.assign(link.href);
+  try { r = await fetch(link.href, { method: "POST", headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
+  if (!r || !r.ok) return location.assign(link.href); // offline: the offline page; refused: back to Switch coffee
   rememberBag(link.dataset.selectBag);
   await clearBagPages().catch(() => {});
   location.assign(r.url);
@@ -799,7 +799,8 @@ function newBag(root) {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       // Saved online: it's the bag on the grinder now. A bag saved offline is picked with Switch once it syncs.
       try {
-        if ((await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`)).ok) {
+        const use = await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`, { method: "POST", headers: { "X-Requested-With": "fetch" } });
+        if (use.ok) {
           rememberBag(body.bag_id);
           await clearBagPages();
         }
