@@ -628,3 +628,30 @@ def test_each_dataset_publishes_only_its_own_files(tmp_path):
     top = lambda lake: {p.relative_to(shared).parts[0] for p in lake.staged_files()}  # noqa: E731
     assert "users" not in top(main) and "shots" in top(main)
     assert top(users) <= {"users", "invites", "consents", "contacts", "recs_erasures"}
+
+
+def test_a_sign_out_whose_commit_fails_still_signs_this_phone_out(lake, users, monkeypatch):
+    """Review of #225: the cookie goes first; a failed users commit is reported, never a 500 that leaves this phone
+    signed in."""
+
+    def fail(self, user_id):
+        raise OSError("publish failed")
+
+    c = client(lake, users)
+    owner(c)
+    monkeypatch.setattr(Accounts, "sign_out_everywhere", fail)
+    r = c.post("/api/signout", headers=W)
+    assert r.status_code == 200 and r.json() == {"ok": True, "everywhere": False}
+    assert 'session=""' in r.headers["set-cookie"]
+    assert c.get("/setup").status_code == 303
+    page = c.get("/signin?others=kept").text
+    assert "your other devices may still be signed in" in page
+    assert "other devices may still" not in c.get("/signin").text
+
+
+def test_sign_out_says_it_ends_every_device_on_setup_and_the_terms_screen(lake, users):
+    c = client(lake, users)
+    owner(c)
+    assert "Signs you out on all your devices." in c.get("/setup").text
+    r = c.post("/api/signout", headers=W)
+    assert r.json() == {"ok": True, "everywhere": True}

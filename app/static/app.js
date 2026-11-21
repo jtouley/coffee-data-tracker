@@ -1789,27 +1789,29 @@ function account() {
     });
   }
   for (const b of document.querySelectorAll("[data-signout]")) {
-    // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
+    // Sign out ends every session of the account (review 2026-11-21, F6). Progress and errors go in the status line
+    // beside the button, so its name keeps starting with "Sign out".
+    const status = b.parentElement.querySelector("[data-signout-status]");
+    const say = (text) => { if (status) status.textContent = text; };
     b.addEventListener("click", () => confirmTap(b, async () => {
+      if (b.getAttribute("aria-busy") === "true") return;
+      b.setAttribute("aria-busy", "true");
+      say("Signing out…");
       try {
-        // 401: the session had already ended (signed out on another phone, or expired); for this phone's sign-out
-        // that is signed out too. Not for "Sign out on all devices": the other sessions are untouched, so say so.
+        // 401: the session had already ended (signed out on another phone, or expired): signed out here too.
         // A session the server couldn't check answers 503 instead, which stays an error here.
-        const everywhere = b.dataset.signout !== "/api/signout";
-        const ended = await post(b.dataset.signout, {}).then(() => false, (err) => {
+        const reply = await post(b.dataset.signout, {}).catch((err) => {
           if (err.status !== 401) throw err;
-          return true;
+          return {};
         });
-        if (ended && everywhere) {
-          b.textContent = "This phone was already signed out. Sign in, then sign out on all devices.";
-          return;
-        }
         // Kept pages hold this person's data: they go with the session, once the server has signed it out.
         try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
         navigator.serviceWorker?.controller?.postMessage("signed-out");
-        location.replace("/signin");
+        // everywhere false: this phone's cookie went, but the other sessions couldn't be ended; sign-in says so.
+        location.replace(reply.everywhere === false ? "/signin?others=kept" : "/signin");
       } catch {
-        b.textContent = "Couldn’t sign out. Check the connection and try again.";
+        b.removeAttribute("aria-busy");
+        say("Couldn’t sign out. Check the connection and try again.");
       }
     }));
   }
