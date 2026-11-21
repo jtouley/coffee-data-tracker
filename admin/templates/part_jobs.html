@@ -40,7 +40,7 @@
 <div data-state="{{ 'data' if runs else 'empty' }}">
 {{ write_off(writes_off) }}
 <p class="answer" data-answer>{{ active | length }} running · {{ runs | length }} started from here</p>
-<section aria-label="Runs" data-runs{% if active %} data-poll="5"{% endif %}>
+<section data-runs{% if active %} data-poll="5"{% endif %}>
 {% if not runs %}
   <div class="state empty"><p class="body">Nothing started from the admin yet. Run a job starts one; the scheduled runs are on Week.</p></div>
 {% else %}
@@ -49,10 +49,10 @@
   <thead><tr><th scope="col">Started (UTC)</th><th scope="col">Job</th><th scope="col">Status</th><th scope="col" class="n">Took</th><th scope="col">Logs</th><th scope="col" class="act"><span class="vh">More</span></th></tr></thead>
   <tbody>{% for r in runs %}{% set what = words(r) %}<tr>
     <th scope="row">{{ t(r.started_at) }}</th>
-    <td>{{ what }}{% if r.override_reason %} <span class="meta">· window overridden</span>{% endif %}</td>
-    <td>{{ status(r.status) }}{% if r.answer %}<br><span class="meta">store: {{ "answered" if r.answer.ok else "didn’t answer" }} ({{ r.answer.ok or 0 }} ok, {{ r.answer.errors or 0 }} failed)</span>{% endif %}{% if r.message %}<br><span class="meta">{{ r.message }}</span>{% endif %}</td>
-    <td class="n">{{ (r.duration_s | int ~ " s") if r.duration_s is not none else "—" }}</td>
-    <td>{{ ev(r.log_uri, "logs") if r.log_uri else "—" }}</td>
+    <td class="c-job">{{ what }}{% if r.override_reason %} <span class="meta">· window overridden</span>{% endif %}</td>
+    <td class="c-status">{{ status(r.status) }}{% if r.answer %}<br><span class="meta">store: {{ "answered" if r.answer.ok else "didn’t answer" }} ({{ r.answer.ok or 0 }} ok, {{ r.answer.errors or 0 }} failed)</span>{% endif %}{% if r.message %}<br><span class="meta">{{ r.message }}</span>{% endif %}</td>
+    <td class="n c-took">{{ (r.duration_s | int ~ " s") if r.duration_s is not none else "—" }}</td>
+    <td class="c-logs">{{ ev(r.log_uri, "logs") if r.log_uri else "—" }}</td>
     <td class="act"><details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="More for {{ what }}">⋯</summary>
       <div class="menu">
         {% if r.status in ("pending", "running") and not writes_off %}<form data-write="/api/jobs/runs/{{ r.run_id }}/cancel" data-confirm="Cancel {{ r.job }} ({{ r.execution.rsplit('/', 1)[-1] }})? Cloud Run stops it; what it already wrote stays." data-confirm-label="Cancel the run" data-danger><input type="hidden" name="key" value="{{ new_key() }}"><button class="btn text inline danger" type="submit" data-busy="Cancelling…" aria-label="Cancel {{ what }}">Cancel</button></form>{% endif %}
