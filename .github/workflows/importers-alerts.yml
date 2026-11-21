@@ -10,9 +10,11 @@
 # - main's code only, as prod-health: the Hub token (HF_READ_TOKEN, else HF_TOKEN) is given to the one listing step,
 #   in a job with contents: read and actions: read (the importers workflow's runs). The alert job has GITHUB_TOKEN
 #   with issues: write (and contents: read, for its checkout), never the Hub token.
-# - This repository is public: the artifact, the log and the issue carry importer keys, statuses, weeks (Mondays)
-#   and run links, and a failed fetch's HTTP status code and phase (the importers run's importer-results artifact),
-#   never a lot or a store's address.
+# - This repository is public: the artifact, the log and the issue carry importer keys, statuses, weeks (Mondays),
+#   run links and the time the check judged at, and a failed fetch's kind, HTTP status code and phase (the importers
+#   runs' importer-results-<run attempt> artifacts, every attempt's), never a lot or a store's address.
+# - The check job records the time it judged at (check.json) and the alert job judges at that time, so both mean
+#   the same due week.
 # - A check that couldn't judge the week opens `pipeline:importers-health` instead of `importers:weekly`: no token,
 #   a failed listing (a Hub outage, a rejected token) or a failed runs listing, and, once a week is due, a dataset
 #   the Hub calls "not found" (a wrong IMPORTERS_URL, or a token that can't read it: the Hub answers both alike).
@@ -57,18 +59,24 @@ jobs:
             > "$RUNNER_TEMP/runs.json.tmp"
           mv "$RUNNER_TEMP/runs.json.tmp" "$RUNNER_TEMP/importers/runs.json"
       - name: The due week's runs' importer results (keys, statuses, failure kinds, HTTP status codes; no address)
-        # importers.yml's importer-results artifact (importers.public_results) of the due week's scheduled run and
-        # each completed run after it (triage importer-result-runs), so the issue can name a failed fetch's kind and
-        # status code. Best effort: a run without one (expired, or its snapshot never ran) is passed over.
+        # importers.yml's importer-results-<run attempt> artifacts (importers.public_results), every attempt's, of
+        # the runs `triage importer-result-runs` prints: the due week's completed runs, Monday to Sunday, newest
+        # first, and always its scheduled run, whatever their conclusion (a run's conclusion is its latest attempt's:
+        # a scheduled run whose re-run was cancelled still holds its first attempt's results). So the issue can name
+        # a failed fetch's kind and status code, a first attempt's too after a re-run. The command also records the
+        # time it judged at (check.json), which the alert job judges at. Best effort: a run without an artifact
+        # downloads nothing; triage passes it over if it was cancelled, skipped or never started, and otherwise
+        # leaves the issue's cells blank (its outcome is unknown).
         if: ${{ !cancelled() }}
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
           PYTHONPATH: src
         run: |
-          python3 -m coffeedata.triage importer-result-runs "$RUNNER_TEMP/importers/runs.json" |
+          python3 -m coffeedata.triage importer-result-runs "$RUNNER_TEMP/importers/runs.json" \
+            --check-out "$RUNNER_TEMP/importers/check.json" |
             while read -r id; do
-              gh run download "$id" --repo "$GITHUB_REPOSITORY" --name importer-results \
+              gh run download "$id" --repo "$GITHUB_REPOSITORY" --pattern 'importer-results*' \
                 --dir "$RUNNER_TEMP/importers/results/$id" || echo "run $id: no importer-results artifact"
             done
       - name: Each importer's latest stored week (file names only, read-only)
@@ -85,7 +93,8 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: importers-health
-          path: ${{ runner.temp }}/importers/  # importer keys, Mondays, run conclusions and links
+          # importer keys, Mondays, run conclusions and links, the check's time, and the runs' importer results
+          path: ${{ runner.temp }}/importers/
           if-no-files-found: ignore
           retention-days: 90
 

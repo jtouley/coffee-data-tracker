@@ -153,9 +153,10 @@ detection the gate that matters, and why the check also runs when no importers r
 (the job's 2-hour timeout and room for a late start), whichever comes first; until then, last week's. Weeks before
 2026-11-16, the first scheduled run's, are never due.
 
-**What the issue shows.** One row per importer: its key, `ok` or `missing <n> week(s)` (weeks missed in a row) and
-its last stored week (a Monday), the due week, and the scheduled run that should have stored it (its conclusion and
-link, or that none started). Nothing from a lot, and no store address. A new week missed changes the statuses, so it
+**What the issue shows.** One row per importer: its key, `ok` or `missing <n> week(s)` (weeks missed in a row), its
+last stored week (a Monday) and, for a missing week, its failed fetch (the kind, the HTTP status and where it
+failed). Then the due week, and the scheduled run that should have stored it (its conclusion and link, or that none
+started). Nothing from a lot, and no store address. A new week missed changes the statuses, so it
 adds a comment; the same state at the next check doesn't.
 
 Quick checklist:
@@ -164,14 +165,26 @@ Quick checklist:
    - **No scheduled run started.** Check that `importers` is enabled in the Actions tab: someone may have disabled
      it by hand. GitHub can also drop or delay a scheduled event under load. Since `queue: max`, a dispatch no
      longer cancels a pending scheduled run.
-   - **The run failed.** The table's Failed fetch column gives the latest run's failure for that importer, from
-     its `importer-results` artifact: the kind, the HTTP status and where it failed (`page`, `listing page N`, or
-     `robots at ...`). HTTP 403 is a refusal (a block), 429 rate limiting, 5xx the site down or failing. An edge's
-     challenge, a closed store, a robots.txt disallow, no connection, a timeout and the run's deadline are named as
-     such. A blank cell means the latest run left no results, so open it. For more, open the linked run and read the `importer-snapshot` step's line per importer, its
-     status and error (never the address: `importers.FetchFailed`). In comments here, give the importer, its status
-     and the code only. A run
-     also ends `failure` when only its `build` job failed. That stores every week, so it opens
+   - **The run failed.** The table's Failed fetch column gives the failure of the latest attempt that tried that
+     importer, from the runs' `importer-results-<run attempt>` artifacts: the kind, the HTTP status and where it
+     failed (`page`, `listing page N`, or `robots at ...`). HTTP 403 is a refusal (a block), 429 rate limiting, 5xx
+     the site down or failing. An edge's challenge, a closed store (its closed page or a password page), a
+     robots.txt disallow (of the URL or of the whole site), no connection, a timeout and the run's deadline are
+     named as such.
+     - Each attempt keeps its own artifact. "Re-run failed jobs" on the scheduled run skips Royal, so the cell still
+       shows the code its first attempt got.
+     - A run is judged by the results it left, not by its conclusion, which is its latest attempt's alone. A
+       scheduled run whose re-run was cancelled still shows its first attempt's code, and a run cancelled part-way
+       through its snapshot shows what it recorded. Only a run that was cancelled, skipped or never started and
+       left no results at all is passed over.
+     - While a re-run is queued or in progress the run isn't completed, so none of its attempts is read and the
+       cell is blank until it finishes (the next check fills it).
+     - A blank cell means the latest run that started left no results (its job was killed, or the artifact
+       expired), so open it.
+
+     For more, open the linked run and read the `importer-snapshot` step's line per importer, its status and error
+     (never the address: `importers.FetchFailed`). In comments here, give the importer, its status and the code
+     only. A run also ends `failure` when only its `build` job failed. That stores every week, so it opens
      `pipeline:importer-build` instead of this issue; this issue lists only the weeks the dataset lacks.
    - **The run succeeded but a week is missing.** Royal was skipped (the address went only to a scheduled first
      attempt: a re-run, or a dispatch, skips it), or the run stored the week after this check ran (the next check
@@ -430,8 +443,9 @@ in-memory GitHub.
   prod-health's `measure`, importers-alerts' `check`), and those jobs have no `issues: write`. importers-alerts'
   check only lists the importers dataset's file names (`triage importers-weeks`); it never fetches an importer and
   never dispatches `importers`.
-- **Importers.** The issue, the log and the `importers-health` and `importer-results` artifacts carry importer keys,
-  statuses, Mondays, run links and a failed fetch's kind, HTTP status and phase, never a lot or a store's address.
+- **Importers.** The issue, the log and the `importers-health` and `importer-results-<run attempt>` artifacts carry
+  importer keys, statuses, Mondays, run links, the time the check judged at and a failed fetch's kind, HTTP status
+  and phase, never a lot or a store's address.
 - The Cloud Run jobs get no GitHub token, and no GCP resource was added. prod-health reads the lake read-only and
   never writes to it.
 - To test without touching GitHub: `python -m coffeedata.triage evals <report.json> --workflow ci --dry-run`
