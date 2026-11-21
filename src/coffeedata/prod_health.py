@@ -11,7 +11,10 @@ Production has no labels, so a rule's health is read from proxies (docs/TRIAGE.m
 - the build's own record (the lake's builds table): mart_build_profile's fetch shares and the dbt band tests that
   only warn (reused, not recomputed), and the served release's age;
 - the crawl success SLO (#96; dbt's mart_crawl_slo, read from the same record): whether the run fetched more than
-  99% of the known roasters, how fast it spent its error budget and what is left of it. Warnings only.
+  99% of the known roasters, how fast it spent its error budget and what is left of it, and how the run left the
+  roasters it didn't fetch (by outcome; report only). Warnings only;
+- the release notes (the same record's release_change rows): the share of the previous release's public coffees
+  this one removed, by reason.
 
     python -m coffeedata.prod_health fetch <lake-url> <dir>       # read-only download of what `measure` needs
     python -m coffeedata.prod_health measure <dir> <metrics.json> # the metrics of the served release
@@ -51,6 +54,9 @@ FILLED = {
     "roast_level": "roast_level is not null",
     "grams": "len(coalesce(bag_sizes_g, []::integer[])) > 0",
     "price_per_100g": "price_per_100g is not null",
+    # a listed coffee with a price on at least one size: unlike price_per_100g it needs no bag weight, so a
+    # connector storing sizes without prices shows as itself
+    "price": "min_price_usd is not null",
     "classifier": "coalesce(classified_by = 'claude', false)",
 }
 NEEDS = {
@@ -59,6 +65,7 @@ NEEDS = {
     "roast_level": "roast_level",
     "grams": "bag_sizes_g",
     "price_per_100g": "price_per_100g",
+    "price": "min_price_usd",
     "classifier": "classified_by",
 }
 # The extraction rules abstain: they leave the coffee incompletely described (extract.needs_llm), whether or not
@@ -111,6 +118,17 @@ SLO_PLATFORMS = tuple(
 SLO_FAST_BURN = 4.0
 SLO_RULE = "crawl-slo"
 SLO_REPORTED = "build:" + SLO_PLATFORM_PREFIX
+# How the run left the roasters it didn't fetch (int_crawl_slo_roasters.outcome, counted by mart_crawl_slo_profile;
+# tests/test_crawl_slo.py ties the two lists). Report only, like the per-platform met: an alert the SLO opened lists
+# the outcomes that have any roaster, so a miss says why (docs/TRIAGE.md has what each means).
+SLO_OUTCOME_PREFIX = "crawl_slo_not_fetched:"
+SLO_OUTCOMES = ("unavailable", "quarantined", "challenged", "failed", "not_attempted")
+SLO_OUTCOME_REPORTED = "build:" + SLO_OUTCOME_PREFIX
+# The release notes' removals (dbt's release_changes, recorded by the build as release_change rows): why a public
+# coffee of the previous release isn't in this one. `reclassified` is the classifier's doing (its rule); the others
+# are volume. Each is a share of the previous release's public coffees.
+REMOVED_PREFIX = "public_coffee:removed:"
+REMOVED_REASONS = ("reclassified", "roaster_left", "unexplained")
 SLO_BOUNDS: dict[str, dict[str, Any]] = {
     "build:crawl_slo_met": {"warning_below": 1.0},
     "build:crawl_slo_burn_rate": {"warning_above": SLO_FAST_BURN},
@@ -234,9 +252,11 @@ def build_metrics(builds: Iterable[Path], build_id: str) -> dict[str, float]:
         f"select unique_id, value from {src} where kind = 'metric' and build_id = ?", [build_id]
     ).fetchall():
         if value is not None and (
-            metric in BUILD_SHARES + SLO_METRICS or metric.startswith((*BUILD_PREFIXES, SLO_PLATFORM_PREFIX))
+            metric in BUILD_SHARES + SLO_METRICS
+            or metric.startswith((*BUILD_PREFIXES, SLO_PLATFORM_PREFIX, SLO_OUTCOME_PREFIX))
         ):
             out[f"build:{metric}"] = round(float(value), 6)
+    out |= _removed_shares(con, src, build_id)
     for uid, failures in con.execute(
         f"select unique_id, failures from {src} where kind = 'node' and resource_type = 'test' and build_id = ?",
         [build_id],
@@ -251,6 +271,41 @@ def build_metrics(builds: Iterable[Path], build_id: str) -> dict[str, float]:
     out["build:passed"] = 1.0 if status == "pass" else 0.0
     con.close()
     return out
+
+
+def _removed_shares(con, src: str, build_id: str) -> dict[str, float]:
+    """release:removed_share:<reason>: the public coffees this build removed for each reason, as a share of the
+    previous release's (this build's public_coffee rows, less what it added, plus what it removed). Every known
+    reason is measured, 0 included, once the build recorded its release notes; a build that didn't (an image from
+    before them, a first release, a comparison that couldn't be made) measures none."""
+    if "rows" not in {r[0] for r in con.execute(f"describe select * from {src}").fetchall()}:
+        return {}  # a record from before the builds table counted its models' rows
+    changes = dict(
+        con.execute(
+            f"select unique_id, value from {src} where kind = 'release_change' and build_id = ? "
+            "and unique_id like 'public_coffee:%'",
+            [build_id],
+        ).fetchall()
+    )
+    row = con.execute(
+        f"select max(rows) from {src} where kind = 'node' and build_id = ? "
+        "and unique_id = 'model.coffeedata.public_coffee'",
+        [build_id],
+    ).fetchone()
+    if not changes or row is None or row[0] is None:
+        return {}
+    moved = {c: sum(v or 0 for k, v in changes.items() if k.split(":")[1] == c) for c in ("added", "removed")}
+    previous = row[0] - moved["added"] + moved["removed"]
+    if previous <= 0:
+        return {}
+    reasons = {
+        *REMOVED_REASONS,
+        *(k.removeprefix(REMOVED_PREFIX) for k in changes if k.startswith(REMOVED_PREFIX)),
+    }
+    return {
+        f"release:removed_share:{r}": round(float(changes.get(REMOVED_PREFIX + r) or 0) / previous, 6)
+        for r in sorted(reasons)
+    }
 
 
 # --- reading the lake (read-only) ----------------------------------------------------------------------------
@@ -464,6 +519,8 @@ def _scope(metric: str) -> str:
     parts = metric.split(":")
     if parts[0] in ("fill", "abstain", "coverage", "rows") and len(parts) == 3:
         return parts[2]
+    if metric.startswith(SLO_OUTCOME_REPORTED):
+        return "all"
     if metric.startswith(
         ("shift:rows_ratio:listed:", "build:adapter_ok_share:", "build:" + SLO_PLATFORM_PREFIX)
     ):
@@ -482,7 +539,9 @@ def _check_line(r: dict) -> dict[str, Any]:
         "threshold": r.get("bound"),
         "op": r.get("op"),
         "unit": "count"
-        if r["metric"].startswith(("rows:", "build:test:", "freshness:", "build:crawl_slo_burn_rate"))
+        if r["metric"].startswith(
+            ("rows:", "build:test:", "freshness:", "build:crawl_slo_burn_rate", SLO_OUTCOME_REPORTED)
+        )
         else "share",
         "pr": r.get("pr"),
     }
@@ -530,6 +589,10 @@ RATIO_MARGIN = {"warning": 0.10, "critical": 0.25}  # volume ratios
 MEDIAN_MARGIN = {"warning": 0.05, "critical": 0.15}  # median shifts
 CADENCE_DAYS = {"warning": 7.0, "critical": 14.0}  # served release older than a week: a missed weekly run
 MIN_VERDICT_SHARE = 0.85  # dbt_project.yml min_verdict_share: verdicts_cover_catalog's gate
+# The share of the previous release's public coffees a release may remove for one reason before it is looked at:
+# the margins of the other shares where only a rise is bad (LOW_MARGIN), from 0. One build has recorded its release
+# notes so far (run 2026-11-16: reclassified 7.5%, roaster_left 2.9%), so there is no band to fit yet.
+REMOVED_SHARE = LOW_MARGIN
 
 
 def _sigma(xs: list[float]) -> float:
@@ -544,6 +607,8 @@ def _rule_of(name: str) -> str:
         return head
     if kind == "rows" or name.startswith(("shift:rows_ratio", "shift:retained")):
         return "volume"
+    if kind == "release":
+        return "classifier" if name.endswith(":reclassified") else "volume"
     if name.startswith(("shift:changed:", "shift:median:")):
         return rest.split(":")[1]
     if name.startswith("build:test:") or name == "build:passed":
@@ -642,6 +707,10 @@ def baseline(
         {*SLO_PLATFORMS, *(n.rpartition(":")[2] for n in hist if n.startswith(SLO_REPORTED))}
     ):
         fixed[SLO_REPORTED + platform] = {"report_only": True, "warning_below": 1.0}
+    for outcome in SLO_OUTCOMES:
+        fixed[SLO_OUTCOME_REPORTED + outcome] = {"report_only": True, "warning_above": 0.0}
+    for reason in REMOVED_REASONS:
+        fixed[f"release:removed_share:{reason}"] = {f"{k}_above": v for k, v in REMOVED_SHARE.items()}
     lines = [
         "# Production-run health thresholds (coffeedata.prod_health; what each alert means: docs/TRIAGE.md).",
         "# Generated by `python -m coffeedata.prod_health baseline` from the release history in the lake, then",
@@ -664,7 +733,12 @@ def baseline(
         "# the run fetched more than dbt's crawl_slo_target of the known roasters; burn_rate above "
         f"{SLO_FAST_BURN:g}: one run",
         "# spent about a whole window's budget; budget_remaining below 0: the window is overspent. `report_only`:",
-        "# listed in an alert another metric of its rule opened, never opening one itself (the per-platform met).",
+        "# listed in an alert another metric of its rule opened, never opening one itself (the per-platform met,",
+        "# and crawl_slo_not_fetched:<outcome>: how the run left the roasters it didn't fetch, any above 0).",
+        "# release:removed_share:<reason>: the share of the previous release's public coffees this one removed for",
+        f"# that reason (the build's release notes); above {REMOVED_SHARE['warning']:g}: look, above "
+        f"{REMOVED_SHARE['critical']:g}: critical. Fixed until more builds",
+        "# have recorded their notes.",
         "version = 2",
         f'revision = "{computed}"',
         f"releases = {json.dumps(labels)}",

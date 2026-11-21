@@ -168,6 +168,41 @@ report_only = true
 warning_below = 1.0
 
 [[metric]]
+name = "build:crawl_slo_not_fetched:challenged"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_above = 0.0
+
+[[metric]]
+name = "build:crawl_slo_not_fetched:failed"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_above = 0.0
+
+[[metric]]
+name = "build:crawl_slo_not_fetched:not_attempted"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_above = 0.0
+
+[[metric]]
+name = "build:crawl_slo_not_fetched:quarantined"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_above = 0.0
+
+[[metric]]
+name = "build:crawl_slo_not_fetched:unavailable"
+rule = "crawl-slo"
+basis = "no history yet: a fixed bound (see the comment above)"
+report_only = true
+warning_above = 0.0
+
+[[metric]]
 name = "build:passed"
 rule = "build-tests"
 baseline = 1.0
@@ -400,6 +435,69 @@ warning_below = 0.5061
 critical_below = 0.4777
 
 [[metric]]
+name = "fill:price"
+rule = "price"
+baseline = 0.9528
+basis = "history: release 20261117T061926-d7559f (run 2026-11-16); release 20261110T061836-971bfe (run 2026-11-09) is left out (WooCommerce sizes still stored without prices, #202)"
+history = [0.9528]
+n = 40393
+left_out = ["release 20261110T061836-971bfe (run 2026-11-09) (0.9309)"]
+required = true
+warning_below = 0.9242
+critical_below = 0.8575
+
+[[metric]]
+name = "fill:price:generic"
+rule = "price"
+baseline = 0.9699
+basis = "history: release 20261110T061836-971bfe (run 2026-11-09), release 20261117T061926-d7559f (run 2026-11-16)"
+history = [0.9688, 0.9709]
+n = 2426
+warning_below = 0.9408
+critical_below = 0.8729
+
+[[metric]]
+name = "fill:price:shopify"
+rule = "price"
+baseline = 0.9941
+basis = "history: release 20261110T061836-971bfe (run 2026-11-09), release 20261117T061926-d7559f (run 2026-11-16)"
+history = [0.9949, 0.9933]
+n = 26869
+warning_below = 0.9643
+critical_below = 0.8947
+
+[[metric]]
+name = "fill:price:square_online"
+rule = "price"
+baseline = 0.5524
+basis = "history: release 20261110T061836-971bfe (run 2026-11-09), release 20261117T061926-d7559f (run 2026-11-16)"
+history = [0.5642, 0.5406]
+n = 3054
+warning_below = 0.5
+critical_below = 0.4476
+
+[[metric]]
+name = "fill:price:squarespace"
+rule = "price"
+baseline = 0.9971
+basis = "history: release 20261110T061836-971bfe (run 2026-11-09), release 20261117T061926-d7559f (run 2026-11-16)"
+history = [0.9971, 0.997]
+n = 3062
+warning_below = 0.9671
+critical_below = 0.8974
+
+[[metric]]
+name = "fill:price:woocommerce"
+rule = "price"
+baseline = 0.9517
+basis = "history: release 20261117T061926-d7559f (run 2026-11-16); release 20261110T061836-971bfe (run 2026-11-09) is left out (WooCommerce sizes still stored without prices, #202)"
+history = [0.9517]
+n = 4982
+left_out = ["release 20261110T061836-971bfe (run 2026-11-09) (0.7511)"]
+warning_below = 0.9231
+critical_below = 0.8565
+
+[[metric]]
 name = "fill:price_per_100g"
 rule = "price_per_100g"
 baseline = 0.6031
@@ -570,6 +668,27 @@ rule = "freshness"
 basis = "no history yet: a fixed bound (see the comment above)"
 warning_above = 7.0
 critical_above = 14.0
+
+[[metric]]
+name = "release:removed_share:reclassified"
+rule = "classifier"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_above = 0.02
+critical_above = 0.05
+
+[[metric]]
+name = "release:removed_share:roaster_left"
+rule = "volume"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_above = 0.02
+critical_above = 0.05
+
+[[metric]]
+name = "release:removed_share:unexplained"
+rule = "volume"
+basis = "no history yet: a fixed bound (see the comment above)"
+warning_above = 0.02
+critical_above = 0.05
 
 [[metric]]
 name = "shift:changed:grams"
