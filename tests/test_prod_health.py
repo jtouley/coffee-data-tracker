@@ -292,8 +292,8 @@ def test_the_checked_in_thresholds():
             w, c = m.get(f"warning_{side}"), m.get(f"critical_{side}")
             if w is not None and c is not None:
                 assert (c <= w) if side == "below" else (c >= w), m["name"]
-    for rule in ("origin", "process", "roast_level", "grams", "price_per_100g", "classifier", "enrichment", "volume",
-                 "fetch", "build-tests", "freshness"):  # fmt: skip
+    for rule in ("origin", "process", "roast_level", "grams", "price_per_100g", "price", "classifier", "enrichment",
+                 "volume", "fetch", "build-tests", "freshness"):  # fmt: skip
         assert any(m["rule"] == rule for m in cfg["metric"]), rule
     for t in ph.WARN_TESTS:  # every warn-only band test is judged, whether or not a build has recorded it yet
         assert f"build:test:{t}" in names
@@ -544,6 +544,73 @@ def test_coverage_leaves_out_releases_from_before_the_enrichment_ran(tmp_path):
     assert hist["coverage:enrichment"] == [0.2, 0.4] and hist["abstain:enrichment"] == [0.5, 0.5, 0.5]
     cov = next(m for m in tomllib.loads(text)["metric"] if m["name"] == "coverage:enrichment")
     assert cov["baseline"] == 0.3 and cov["warning_below"] > 0.2 * 0.75
+
+
+# --- the release notes' removals, and the priced share -------------------------------------------------------------
+
+
+def _record(tmp_path, rows):
+    path = tmp_path / "builds" / "run_date=2026-11-16" / "build=b.parquet"
+    return _write(
+        path,
+        [("b", "build", "build", None, "pass", None, None, None), *rows],
+        "build_id varchar, kind varchar, unique_id varchar, resource_type varchar, status varchar, "
+        "failures bigint, value double, rows bigint",
+    )
+
+
+def test_removed_coffees_are_a_share_of_the_previous_release_by_reason(tmp_path):
+    """The 2026-11-16 build's own record: 43,220 public coffees, 2,111 added and 4,748 removed, so the release
+    before it had 45,857. The classifier removed 3,428 of them (7.5%), and nothing said so."""
+    path = _record(tmp_path, [
+        ("b", "node", "model.coffeedata.public_coffee", "model", "success", None, None, 43220),
+        ("b", "release_change", "public_coffee:added:new", None, None, None, 940.0, None),
+        ("b", "release_change", "public_coffee:added:reclassified", None, None, None, 1140.0, None),
+        ("b", "release_change", "public_coffee:added:roaster_joined", None, None, None, 31.0, None),
+        ("b", "release_change", "public_coffee:changed:delisted", None, None, None, 462.0, None),
+        ("b", "release_change", "public_coffee:removed:reclassified", None, None, None, 3428.0, None),
+        ("b", "release_change", "public_coffee:removed:roaster_left", None, None, None, 1320.0, None),
+        ("b", "release_change", "public_roaster:removed:alias", None, None, None, 36.0, None),
+    ])  # fmt: skip
+    x = ph.build_metrics([path], "b")
+    assert x["release:removed_share:reclassified"] == round(3428 / 45857, 6)
+    assert x["release:removed_share:roaster_left"] == round(1320 / 45857, 6)
+    assert x["release:removed_share:unexplained"] == 0.0  # measured at 0, so a breach can recover
+    by_metric = {r["metric"]: r for r in ph.judge(x, ph.load_config())}
+    assert by_metric["release:removed_share:reclassified"]["status"] == "critical"
+    assert by_metric["release:removed_share:reclassified"]["rule"] == "classifier"  # the why is in the rule
+    assert by_metric["release:removed_share:roaster_left"]["status"] == "warning"
+    assert by_metric["release:removed_share:roaster_left"]["rule"] == "volume"
+    assert by_metric["release:removed_share:unexplained"]["status"] == "ok"
+
+
+def test_a_build_without_release_notes_measures_no_removals(tmp_path):
+    no_notes = _record(tmp_path / "a", [
+        ("b", "node", "model.coffeedata.public_coffee", "model", "success", None, None, 43220)])  # fmt: skip
+    assert not [k for k in ph.build_metrics([no_notes], "b") if k.startswith("release:")]
+    not_reconciled = _record(tmp_path / "c", [
+        ("b", "node", "model.coffeedata.public_coffee", "model", "success", None, None, 43220),
+        ("b", "release_change", "release:not_reconciled:release_changes_missing", None, None, None, 1.0, None),
+    ])  # fmt: skip
+    assert not [k for k in ph.build_metrics([not_reconciled], "b") if k.startswith("release:")]
+
+
+def test_a_platform_storing_coffees_without_a_price_shows_as_itself(tmp_path):
+    """WooCommerce's sizes were stored without prices for weeks: fill:price_per_100g also needs a bag weight, so it
+    never said which was missing. fill:price needs only a price on one size."""
+    cols = (
+        "coffee_id varchar, platform varchar, is_listed boolean, min_price_usd double, price_per_100g double"
+    )
+    rows = [(f"s:{i}", "shopify", True, 18.0, 5.0) for i in range(4)]
+    rows += [(f"w:{i}", "woocommerce", True, 18.0 if i else None, None) for i in range(4)]
+    x = ph.release_metrics(_write(tmp_path / "d.parquet", rows, cols))
+    assert x["fill:price:shopify"] == 1.0 and x["fill:price:woocommerce"] == 0.75 and x["fill:price"] == 0.875
+    assert x["fill:price_per_100g:woocommerce"] == 0.0
+    cfg = ph.load_config()
+    woo = next(m for m in cfg["metric"] if m["name"] == "fill:price:woocommerce")
+    # the capped week is left out of the history, so its level is a breach, not the baseline
+    status = {r["metric"]: r["status"] for r in ph.judge({"fill:price:woocommerce": 0.7511}, cfg)}
+    assert status["fill:price:woocommerce"] == "critical" and woo["history"] == [0.9517] and woo["left_out"]
 
 
 # --- Claude's verdicts as the served build found them ------------------------------------------------------------
