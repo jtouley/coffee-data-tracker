@@ -315,6 +315,7 @@ table.kf-list th, table.kf-list td { vertical-align: middle; }
   table.kf-list td.c-in::before { content: "In "; color: var(--ink-2); }
   table.kf-list td.c-out:not(.draft)::before { content: "Takes out "; color: var(--ink-2); }
   table.kf-list td.c-in, table.kf-list td.c-out, table.kf-list td.c-check, table.kf-list td.c-why { font-size: 0.8125rem; }
+}
 /* Jobs on a phone: each run is a stacked row (when, the job, its status and message, then took and logs), with its
    menu (Cancel, while it runs) at the row's end. Nothing is past the edge, so a failed or running job never reads as
    a finished one. */
