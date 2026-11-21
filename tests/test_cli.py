@@ -118,8 +118,8 @@ def test_the_ingest_image_has_the_listing_where_the_package_looks_for_it():
     from coffeedata import quality
 
     dockerfile = (quality.ROOT / "ingest.Dockerfile").read_text().splitlines()
-    assert "COPY --chown=user src ./src" in dockerfile
-    assert "COPY --chown=user marketplace/LISTING.md ./marketplace/LISTING.md" in dockerfile
+    assert "COPY src ./src" in dockerfile
+    assert "COPY marketplace/LISTING.md ./marketplace/LISTING.md" in dockerfile
     assert quality.LISTING.relative_to(quality.ROOT).as_posix() == "marketplace/LISTING.md"
 
     def kept(path: str) -> bool:  # Docker's rule: the last matching pattern wins, and `!` re-includes

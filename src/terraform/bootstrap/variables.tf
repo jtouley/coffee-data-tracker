@@ -35,6 +35,12 @@ variable "github_repository_owner_id" {
   default     = "14210040"
 }
 
+variable "plan_environment" {
+  description = "The GitHub environment a pull request's plan job runs in. Its required reviewer approves each PR's plan before the plan identity's token is minted (docs/app/RUNNING.md)."
+  type        = string
+  default     = "terraform-plan"
+}
+
 variable "apply_environment" {
   description = "The GitHub environment the apply job runs in. Its required reviewer is the approval (docs/app/RUNNING.md)."
   type        = string

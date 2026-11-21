@@ -52,6 +52,11 @@ jobs:
   plan:
     needs: gate
     if: needs.gate.outputs.run == 'true'
+    # The plan identity's provider accepts a pull request's token only from a job in this environment (bootstrap
+    # plan_environment), and its required reviewer approves the run first: a pull request runs its own copy of this
+    # file and its own Terraform code. Copy TF_VAR_BILLING_ACCOUNT and TF_VAR_OWNER_EMAIL here as environment secrets;
+    # terraform-apply.yml still reads the repository's copies, so a pull request can read those until they are scoped.
+    environment: terraform-plan
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

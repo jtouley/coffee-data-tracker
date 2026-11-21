@@ -324,7 +324,10 @@ Since the last Cloud Shell run (`docs/ingestion/final-shell-run.sh`), a change t
 GitHub, and applies only after the owner's second account, `jtouleyrou`, approves it:
 
 1. **Open a PR.** `terraform-plan.yml` plans it and comments the guard's verdicts and the list of changes (actions
-   and addresses, never values). The PR plan is advisory.
+   and addresses, never values). The PR plan is advisory. Its plan job runs in the `terraform-plan` environment:
+   approve it there once you have read the PR's diff, because a PR runs its own copy of the workflow and its own
+   Terraform code as the read-only plan identity, which can read the state (review 2026-11-21, F4). Once the
+   bootstrap has `plan_environment`, a PR's token without that environment is refused.
 2. **Merge.** `terraform-apply.yml` plans main again as the read-only account, with `src/terraform/ci.tfvars` and
    the `TF_VAR_*` repository secrets and variables. It runs the guard (`scripts/tf_plan_guard.py`), saves the plan
    to the private bucket `coffee-data-tracker-tf-plans`, and writes the change list, with IAM changes first, and the

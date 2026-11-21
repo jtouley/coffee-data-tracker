@@ -1,9 +1,11 @@
 # Install once with `make hooks`. CI runs the same hooks on every file.
 # Recorded storefront responses stay byte-for-byte as captured.
+# Hook repositories are pinned by commit, the tag kept in the `# frozen:` comment (review 2026-11-21, F14): a tag can
+# be moved, a commit can't. `uv run pre-commit autoupdate --freeze` updates both.
 exclude: ^(tests/fixtures/|eval/(.+/)?sealed/|contracts/schemas/)
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -15,7 +17,7 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.13.5
+    rev: eeca16c54e09b4d9a848259e46bae14737944348  # frozen: 0.13.5
     hooks:
       - id: uv-lock  # keeps uv.lock in step with pyproject.toml
 

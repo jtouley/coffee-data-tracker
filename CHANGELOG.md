@@ -301,3 +301,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 - App: queued writes are bound to the account that queued them. After an account switch, a queued save is held on
   the phone instead of being written under the other account (#56).
+
+- Supply chain and pipeline (the 2026-11-21 review, F4, F9, F12, F14): the app and ingest images copy their code as
+  root, so the runtime user owns only its scratch folders; pre-commit hook repositories are pinned by commit;
+  Dependabot covers the browser tests' npm lockfile; a Snowflake load refuses a manifest whose `as_of_run` isn't a
+  run date; and a pull request's Terraform plan runs in the `terraform-plan` environment, which the bootstrap's plan
+  identity will require once it is applied.

@@ -748,3 +748,18 @@ def test_a_dry_run_warns_on_stderr_but_adds_no_annotation(tmp_path, capsys, monk
     assert "warning: SHARE.roaster is owned by" in err and "::warning" not in out + err
     snowflake_load._warn("after")  # and the next real load annotates again
     assert "::warning title=Snowflake load::after" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize(
+    "run", ["2026-10-26/../../x", "2026-10-26' or 1=1 --", "26-10-2026", "2026-13-01", "", None, 20261026]
+)
+def test_an_as_of_run_that_isnt_a_run_date_loads_nothing(tmp_path, run):
+    """Review 2026-11-21, F12: as_of_run goes into stage paths and SQL text, so it must be a date and nothing else."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    export_dir(tmp_path, counts)
+    m = json.loads((tmp_path / "manifest.json").read_text())
+    (tmp_path / "manifest.json").write_text(json.dumps(m | {"as_of_run": run}))
+    con = FakeConn(counts)
+    with pytest.raises(ValueError):
+        snowflake_load.load(tmp_path, con)
+    assert con.cur.sql == []
