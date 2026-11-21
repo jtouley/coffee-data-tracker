@@ -68,3 +68,27 @@ def test_a_pull_requests_plan_needs_the_plan_environment():
     for name, job in workflow["jobs"].items():
         if (job.get("permissions") or {}).get("id-token") == "write":
             assert job.get("environment") == default, name
+
+
+def test_the_code_lives_in_opt_and_the_users_home_stays_the_users():
+    """Review of #250: under /home/user the user could rename the code's folder and put its own in its place; and a
+    root `uv sync` there left ~/.cache root's, which broke Hugging Face's cache (hf_hub_download) at runtime. Docker
+    can't build here, so the Dockerfiles' paths and ownership are checked as text."""
+    for dockerfile, workdir in (("app/Dockerfile", "/opt/app"), ("ingest.Dockerfile", "/opt/ingest")):
+        text = (ROOT / dockerfile).read_text()
+        lines = _lines(dockerfile)
+        assert f"WORKDIR {workdir}" in lines, dockerfile
+        assert "/home/user/app" not in text and "/home/user/ingest" not in text, dockerfile
+        assert f"PATH={workdir}/.venv/bin:$PATH" in text, dockerfile
+        assert "HOME=/home/user" in text and "HF_HOME=/home/user/.cache/huggingface" in text, dockerfile
+        sync = [ln for ln in lines if ln.startswith("RUN uv sync")]
+        assert sync and all("--no-cache" in ln for ln in sync), dockerfile
+        # what root writes under the user's home at build time: only DuckDB's extensions, before USER user
+        user_at = lines.index("USER user")
+        root_runs = [ln for ln in lines[:user_at] if ln.startswith("RUN")]
+        assert not [ln for ln in root_runs if "/home/user" in ln], dockerfile
+        assert any("INSTALL httpfs" in ln for ln in root_runs), dockerfile
+    assert "COFFEEDATA_STAGING=/opt/app/build/lake-staging" in (ROOT / "app/Dockerfile").read_text()
+    # an s3:// export (public._configure_object_store) can't install `aws` at runtime into root's ~/.duckdb
+    assert "INSTALL aws" in (ROOT / "ingest.Dockerfile").read_text()
+    assert "INSTALL aws" in (ROOT / "src/coffeedata/public.py").read_text()
