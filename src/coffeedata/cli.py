@@ -1220,14 +1220,26 @@ def cmd_usage_build(args: argparse.Namespace) -> bool:
     database, build/usage.duckdb, after checking the geo files config/geo.lock pins. Exits 1 if a model or check
     failed (the search-text detector included). Prints counts only: dbt's output goes to --log-file (default
     build/usage-dbt.log, never the console), since a failing query's error could quote a search. With --alerts-out,
-    writes the detector's triage alert (counts and pattern names, never text; "not measured" when the models didn't
-    build) for `python -m coffeedata.triage prod`."""
+    writes the triage alerts for `python -m coffeedata.triage usage`: whether the dataset holds recent events
+    (usage_build.events_alert, from file names), and the detector's (counts and pattern names, never text; "not
+    measured" when the models didn't build). A dataset with no event at all is reported and not built: there is
+    nothing to build from. One that can't be listed writes no alerts and exits 1, saying why."""
     import tempfile
 
     import duckdb
 
     from . import usage_build
 
+    try:
+        stored = usage_build.events_state()
+    except usage_build.NotListed as e:
+        raise SystemExit(f"usage-build: the usage dataset's files couldn't be listed: {e}") from None
+    events = usage_build.events_alert(stored, _today())
+    if stored["newest"] is None:
+        if args.alerts_out:
+            args.alerts_out.write_text(json.dumps([events], indent=1))
+        _print({"build": "not attempted: no event is stored", "events": events["summary"]})
+        return True  # nothing failed here; the alert carries it
     catalog = None
     if args.catalog:
         catalog = {t: str((args.catalog / f"{t}.parquet").resolve()) for t in ("dim_roaster", "dim_coffee")}
@@ -1243,8 +1255,11 @@ def cmd_usage_build(args: argparse.Namespace) -> bool:
                 found = None
     alert = usage_build.detector_alert(found)
     if args.alerts_out:
-        args.alerts_out.write_text(json.dumps([alert], indent=1))
-    _print({"build": "passed" if ok else "failed", "dbt": counts, "detector": alert["summary"]})
+        args.alerts_out.write_text(json.dumps([events, alert], indent=1))
+    _print({
+        "build": "passed" if ok else "failed", "dbt": counts, "detector": alert["summary"],
+        "events": events["summary"] or f"newest stored day {stored['newest']}",
+    })  # fmt: skip
     return ok
 
 
@@ -1604,7 +1619,9 @@ def main(argv: list[str] | None = None) -> None:
     ub.add_argument(
         "--catalog", type=Path, help="a folder with the served release's dim_roaster/dim_coffee.parquet"
     )
-    ub.add_argument("--alerts-out", type=Path, help="write the detector's triage alert JSON here")
+    ub.add_argument(
+        "--alerts-out", type=Path, help="write the triage alerts JSON here (stored events, the detector)"
+    )
     gu = add("geo-update", cmd_geo_update, "prepare a new pinned IP-to-city database and its lock entries")
     gu.add_argument("--dbip", type=Path, required=True, help="DB-IP IP to City Lite CSV download (.csv.gz)")
     gu.add_argument("--dbip-release", required=True, help="its release date, YYYY-MM-DD")
