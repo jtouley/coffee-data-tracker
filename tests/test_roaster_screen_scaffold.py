@@ -61,6 +61,13 @@ def test_every_imported_json_file_is_pinned():
     assert pinned == {p.name for p in EVAL.glob("*.json")}
 
 
+def test_every_file_of_the_spent_test_set_is_pinned():
+    # #130's spent test set is a regression fixture: every file in it but SHA256SUMS itself, labels and README too
+    pinned = {line.split()[1] for line in (SPENT / "SHA256SUMS").read_text().splitlines()}
+    assert pinned == {p.name for p in SPENT.iterdir() if p.name != "SHA256SUMS"}
+    assert len(pinned) == 10
+
+
 @pytest.mark.parametrize("set_name", ["train", "validation", "test"])
 def test_each_item_is_in_the_set_its_domain_hashes_to(set_name):
     items = load(set_name, f"items_{set_name}")
@@ -107,14 +114,13 @@ def test_labels_cover_every_item_once(set_name, agreed, to_settle, third):
 
 def test_the_new_settles_cover_exactly_what_was_waiting():
     # #130's third labeler's answers are kept under another name, for comparison only. The reference for a
-    # disagreement is settled_<set>.json (the README says who settles), which must cover exactly the items waiting,
-    # once it exists.
+    # disagreement is settled_<set>.json (the README says who settled, and from what): it must exist, be pinned, and
+    # cover exactly the items waiting.
     pinned = {line.split()[1] for line in (EVAL / "SHA256SUMS").read_text().splitlines()}
     for set_name in ("train", "validation"):
-        owner = EVAL / f"settled_{set_name}.json"
-        if owner.exists():
-            waiting = {r["id"] for r in load(set_name, f"to_settle_{set_name}")}
-            rows = json.loads(owner.read_text())
-            assert {r["id"] for r in rows} == waiting
-            assert {r["label"] for r in rows} <= LABELS and {r["kind"] for r in rows} <= KINDS
-            assert owner.name in pinned
+        settles = EVAL / f"settled_{set_name}.json"
+        waiting = {r["id"] for r in load(set_name, f"to_settle_{set_name}")}
+        rows = json.loads(settles.read_text())
+        assert {r["id"] for r in rows} == waiting and len(rows) == len(waiting)
+        assert {r["label"] for r in rows} <= LABELS and {r["kind"] for r in rows} <= KINDS
+        assert settles.name in pinned

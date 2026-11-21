@@ -45,8 +45,15 @@ labels still answer this guide's question. Four things differ:
 - **Rule:** `n = int(sha256("coffeedata-screen-eval-2026-11-07:split:" + group)[:8], 16) % 100`. `n < 60` is train,
   `n < 80` is validation, and the rest is test.
 - **Salt:** `coffeedata-screen-eval-2026-11-07`. It is #130's, kept so that #130's train items stay in train.
-- **Group:** the registrable domain, so one business never sits on both sides. That is the domain's last two labels,
-  or its last three when it ends in a two-letter country code under `co`, `com`, `org` or `net`.
+- **Group:** the domain's last two labels, or its last three when it ends in a two-letter country code under `co`,
+  `com`, `org` or `net`, so one business never sits on both sides.
+- **Known flaw, not yet fixed: shared platform hosts.** On a host where every subdomain is its own store, the rule
+  groups all of them as one: every `*.myshopify.com` store hashes to validation (70) and every `*.wixsite.com` store
+  too (79), while `square.site` (32), `squarespace.com` (3) and `godaddysites.com` (26) all go to train. The new
+  test set could never hold a Shopify-subdomain store. Grouping by the store's subdomain on those hosts would move 3
+  labeled validation items (all `*.myshopify.com`: 2 to train, 1 to test), so the rule is left as #130 had it until
+  the owner decides, before the new test set is drawn (the design's PR 5). No train or spent-test item is on such a
+  host.
 - New items, the curated roasters and the new test set are assigned by the same rule.
 
 `tests/test_roaster_screen_scaffold.py` checks that every imported item sits in the set its domain hashes to, and
@@ -56,7 +63,7 @@ that no group is on two sides.
 
 Every file below holds the same JSON as the file at `3c8af60:eval/screen/`, under the same name unless noted. The
 items, `agreed` and `to_settle` files are byte for byte. The four `labels` files and the two `settled_C` files gained
-a final newline, which this repo's hooks add. [`SHA256SUMS`](SHA256SUMS) pins all twelve as they are here, and the
+a final newline, which this repo's hooks add. [`SHA256SUMS`](SHA256SUMS) pins every JSON file here, and the
 scaffold test checks it.
 
 | File | Train | Validation | What it is |
@@ -93,19 +100,21 @@ Not imported:
     settler reads only what #130's screen stored, which is close to what the rules score. Where that evidence
     misleads the rules (a reseller's page that looks like a roaster's, a roaster whose catalog wasn't read), it can
     mislead the settler the same way. So on the 54 train and 30 validation items it settles, agreement with the
-    rules may read high, and **the provisional precision may read high.** Items with no stored evidence (3 train
-    and 9 validation) are likely to come back `unsure` and drop out of the scores. A person settling, or a final
+    rules may read high, and **the provisional precision may read high.** Items with no stored evidence (12: 3 train
+    and 9 validation, no home-page text and no product) are likely to come back `unsure` and drop out of the scores. A person settling, or a final
     evaluation on the new screen's own evidence, removes this.
   - **How the inputs are made**, from the repository root:
-    `python -I eval/roaster_screen/settle_inputs.py <evidence-dir> eval/roaster_screen <out-dir>`. #130's evidence is out of git: `evidence_train.jsonl.gz` sha256
+    `python -I eval/roaster_screen/settle_inputs.py <evidence-dir> eval/roaster_screen <out-dir>`. #130's evidence
+    is out of git: `evidence_train.jsonl.gz` sha256
     `4ac7c7ee98c9c02dcc164d2a2b537b3175ed8fb845d4df72a9a2d0639160ab57`, `evidence_validation.jsonl.gz`
     `24d056db0bdd3eaed5574b57bbca752e08e2fbcf3624961d54bbf9a18e55b2be`.
   - **Done 2026-11-21.** Train: 1 in scope, 29 out of scope, 24 `unsure`. Validation: 2 in scope, 6 out of scope,
     22 `unsure`. Kinds, train: 37 cafe, 10 roaster, 5 other, 2 reseller; validation: 19 cafe, 9 roaster, 2 other.
-    The settler's own account of the `unsure` answers: 14 items had no stored evidence, and about 25 sell bags under
-    their own name with no stored claim that they roast.
+    Why so many `unsure`, in the settler's own account: the 12 items with no stored evidence, and about 25 that sell
+    bags under their own name with no stored claim that they roast. The settler's exact model id wasn't recorded.
 - **#130's third labeler, C,** also a Claude subagent, settled the same items in #130. Its answers are kept as
-  `settled_C_<set>.json` for comparison, and its agreement with the new settles is reported when they arrive.
+  `settled_C_<set>.json` for comparison. The new settles agree with C, label and kind, on 34 of 54 train items
+  (63.0%) and 11 of 30 validation items (36.7%).
 - **Unsure** items are left out of the scores: an item whose reference is `unsure` counts as neither in scope nor out
   of scope, so it is in no numerator or denominator. That leaves 46 of the 84 settled items without a reference
   (24 train, 22 validation), which shrinks validation the most. Those items are not a random draw: many are places
@@ -129,11 +138,14 @@ shadow run collects.
 |---|---|
 | 3 | `screen_rules.py`'s provisional tiers, and this rule's row in `docs/RULES.md` |
 | 4 | The shadow run. The frame hash and the strata, frozen under a named `rule_version` when the sample is drawn |
-| 5 | The top-up labels, the owner's `settled_<set>.json`, the sealed test set and its `SHA256SUMS` entries, `screen_eval.py` (its `final` prints only totals and intervals), `RESULTS.md`, and the floors in `tests/test_roaster_screen_accuracy.py` |
+| 5 | The top-up labels, a person's settles and spot-check, the sealed test set and its `SHA256SUMS` entries, `screen_eval.py` (its `final` prints only totals and intervals), `RESULTS.md`, and the floors in `tests/test_roaster_screen_accuracy.py` |
 
 The metrics and the ship bar are in the design's sections 5.4 and 5.5. In short: suggested precision at least 95%
-with a Wilson lower bound of at least 88%; at most 3% of suggestions a café or a reseller; at most 2% of dropped
-places in scope; recall at least 40% for suggested, and at least 75% with review.
+with a Wilson lower bound of at least 88%; at most 3% of suggestions a café or a reseller, with an upper bound of at
+most 8%; at most 2% of dropped places in scope; recall at least 40% for suggested, and at least 75% with review.
+CLAUDE.md on `main` adds a bar of its own: the change's estimated accuracy over the full population of current items
+is at least 95%, measured on a sealed set stratified and weighted over the whole population. PR 5 states how the
+screen meets it.
 
 ## Checks
 

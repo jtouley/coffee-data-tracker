@@ -15,7 +15,12 @@ out.mkdir(parents=True, exist_ok=False)
 
 
 def listish(v):
-    return ast.literal_eval(v) if isinstance(v, str) else (v or [])
+    """A stored list, or a list's repr; any other string (a comma-separated tag string) is split on commas."""
+    if isinstance(v, str):
+        if v.lstrip().startswith("["):
+            return ast.literal_eval(v)
+        return [t.strip() for t in v.split(",") if t.strip()]
+    return v or []
 
 
 def size(v: dict) -> dict:

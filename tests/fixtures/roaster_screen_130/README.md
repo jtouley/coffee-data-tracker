@@ -12,7 +12,7 @@ The sealed test set of #130's discovery screen (`3c8af60:eval/screen/`), byte fo
 | `agreed_test.json` | The 163 items where A and B gave the same label and kind |
 | `to_settle_test.json`, `settled_test.json` | The 37 disagreements, and a third Claude subagent's answers. No person settled them |
 | `pred_main_test.json`, `pred_branch_test.json` | #130's predictions: `main` admitted none; the `own_brand` rule with 5 coffees admitted 20 of the 200, 15 of them among the 181 items with a settled label |
-| `SHA256SUMS` | #130's own, over the items, the sample and both predictions |
+| `SHA256SUMS` | Every other file here: #130's own four lines (the items, the sample and both predictions), then this repo's pins of the five label files and this README |
 
 #130's score on it: precision 89.4% [62.1, 96.3], recall 37.5% [28.4, 62.5], and 2 of 15 admissions a café or a
 reseller (`3c8af60:eval/screen/RESULTS.md`).
