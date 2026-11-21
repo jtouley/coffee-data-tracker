@@ -860,7 +860,9 @@ def test_classify_passes_when_a_later_collect_reads_the_batch(lake, monkeypatch,
     _open_batch(lake)
     calls = []
     _refusing(monkeypatch, lambda: calls.append(1) or len(calls) == 1)
-    monkeypatch.setattr(verdict, "submit", lambda lk, limit=0, **_kw: {"pending": 0, "batch_ids": ["msgbatch_x"]})
+    monkeypatch.setattr(
+        verdict, "submit", lambda lk, limit=0, **_kw: {"pending": 0, "batch_ids": ["msgbatch_x"]}
+    )
     clock = [0.0]
     monkeypatch.setattr(time, "monotonic", lambda: clock[0])
     monkeypatch.setattr(time, "sleep", lambda s: clock.__setitem__(0, clock[0] + s))
