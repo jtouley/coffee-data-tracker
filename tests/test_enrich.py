@@ -3,6 +3,7 @@ from types import SimpleNamespace
 
 import anthropic
 import httpx
+import pytest
 
 from coffeedata import enrich, extract
 
@@ -162,19 +163,42 @@ def test_the_weekly_cap_reads_listings_that_hint_at_a_process_first(lake):
     )
     order = [(p["product_id"], p["body_hash"]) for p in enrich.pending(lake, 10)]
     assert order[0] == ("1", "b1")
+    # within the rest, coffees in stock before sold out (the site's process chart counts single origins in stock)
+    assert all(p["in_stock"] for p in enrich.pending(lake, 10)[:3])
     assert set(order[1:]) == {("0", "b0"), ("2", "b2"), ("2", "old2")}
     assert [p["product_id"] for p in enrich.pending(lake, 1)] == ["1"]
 
 
-def test_a_decaffeination_is_not_a_process_hint():
+@pytest.mark.parametrize(
+    "title,tags,body,want",
+    [
+        ("Colombia Decaf", (), "Decaffeinated by the Swiss Water Process.", False),
+        ("Colombia Decaf", (), "Washed, then Swiss Water decaffeinated.", True),
+        # review of #256: the decaf wording in the title and tags, and the spellings that leaked
+        ("Colombia Decaf – Swiss Water Process", (), "", False),
+        ("Colombia Decaf", ("Swiss Water Process",), "", False),
+        ("Colombia Decaf", (), "A natural decaf process.", False),
+        ("Colombia Decaf", (), "Sugarcane EA process.", False),
+        ("Colombia Decaf", (), "Sugarcane E.A. process.", False),
+        ("Colombia Decaf", (), "The ethyl acetate process.", False),
+        ("Colombia Decaf", (), "Swiss Water® Process.", False),
+        # "e.a." only as its own word: "area processed" and "Guinea processed" keep their process word
+        ("Colombia", (), "Huila area processed by hand", True),
+        ("PNG", (), "Papua New Guinea processed at the mill", True),
+    ],
+)
+def test_a_decaffeination_is_not_a_process_hint(title, tags, body, want):
     from coffeedata.models import CatalogItem, Enrichment
 
-    def first(body):
-        it = CatalogItem(roaster_id="r", product_id="p", handle="", url="", title="Colombia Decaf", platform="",
-                         body_text=body)  # fmt: skip
-        return extract.process_first(it, Enrichment())
+    it = CatalogItem(roaster_id="r", product_id="p", handle="", url="", title=title, platform="", tags=list(tags),
+                     body_text=body)  # fmt: skip
+    assert extract.process_first(it, Enrichment()) is want
 
-    assert not first("Decaffeinated by the Swiss Water Process.")
-    assert first("Washed, then Swiss Water decaffeinated.")
-    assert not extract.process_first(CatalogItem(roaster_id="r", product_id="p", handle="", url="", title="X Blend",
-                                                 platform="", body_text="washed"), Enrichment(is_blend=True))  # fmt: skip
+
+def test_a_blend_is_not_put_first():
+    from coffeedata.models import CatalogItem, Enrichment
+
+    it = CatalogItem(
+        roaster_id="r", product_id="p", handle="", url="", title="X Blend", platform="", body_text="washed"
+    )
+    assert not extract.process_first(it, Enrichment(is_blend=True))
