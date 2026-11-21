@@ -48,8 +48,15 @@ replaces the whole row for the coffees it has read (`stg_enrichments`, `dim_coff
 | | paired | +4.5 ± 1.2 | −0.8 ± 0.7 | +3.9 ± 0.7 |
 
 Train was tuned on, so its row is optimistic. Test: `score … test labels/reference_test.json main branch
---strata main,branch --final`, run once after the labels were hashed (`SHA256SUMS`). The change meets CLAUDE.md's
-bar: at least main's agreement, and fewer confidently wrong answers.
+--strata main,branch --final`, run once after the labels were hashed (`SHA256SUMS`). On CLAUDE.md's bar the
+change meets only the "at least as good as main" half (agreement up, confidently wrong down). The owner's gate for
+#252 is stricter: estimated agreement over the listed catalog of at least 95% on a sealed test, with confidently
+wrong no higher than main's. The test estimate, 90.9% ± 10.4, does not meet it.
+
+**Measurement caveat.** GUIDE.md rules 8 to 11 were written after the rule author had read this test set's listings
+(as labeller of the withdrawn labels), so the definition the A/B/C labels follow was shaped with test knowledge. The
+next sealed set is drawn only after GUIDE.md is frozen and hashed, and its listings are not opened by the rule
+author.
 
 Validation choice, rechecked against the reference: reading the description's prose (`v10`) scores agree 92.7%,
 confidently wrong 3.7%, coverage 23.7%; paired against the change +2.7 ± 2.3, +0.8 ± 1.0, +3.5 ± 1.7. The same
