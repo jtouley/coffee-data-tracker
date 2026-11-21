@@ -563,6 +563,23 @@ def test_roast_level(title, tags, body, want):
         ("X Decaf", (), "The sugarcane decaf process uses a natural compound.", None),
         ("X", (), "Process washed & natural Elevation 1100", None),
         ("X", ("process:White Honeyed and Sun Dried",), "", "honey"),
+        # round 3 (train3 labels)
+        ("X", (), "Process / Washed\nVariety / Field Blend", "washed"),
+        ("X", (), "PURE HEIRLOOM ARABICA\nWASHED & SUN DRIED\nTasting Notes: Molasses", "washed"),
+        ("X", (), "Walnut, Malt, Honey\nHoney\nMedium Roast", None),  # a bare "Honey" line is a note
+        ("X", (), "This Natural Process coffee is dried whole, while giving it time to develop.", "natural"),
+        ("X", (), "This lot is a fully washed field blend of SL28 and SL34.", "washed"),
+        ("X", (), "This Washed Guatemalan blend is a harmonious symphony.", "washed"),
+        ("X", (), "Process: Natural Carbonic (without added CO2)", "natural"),
+        ("Enigma | Extended Natural Carbonic Macerated Process", (), "", "anaerobic"),
+        ("X", (), "A very fruity colombian that could fool you as a bit of an anaerobic type.", None),
+        ("India Malabar", (), "Monsooned coffee is laid out in open-sided warehouses.", "other"),
+        (
+            "Grape Crush Co-Ferment (Experimental Blend)",
+            (),
+            "",
+            None,
+        ),  # a blend's fermentation is not "other"
     ],
 )
 def test_process(title, tags, body, want):

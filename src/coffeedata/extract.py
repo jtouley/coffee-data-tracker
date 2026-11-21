@@ -354,7 +354,9 @@ _BASE_TERMS = [
     ("natural", r"natural(?:ly|s)?|dry[- ]process(?:ed|ing)?|full[- ]natural"),
     ("washed", r"(?:fully[- ]|double[- ]|triple[- ])?washed|wet[- ]process(?:ed|ing)?|lavado"),
 ]
-_ANAEROBIC = r"anaerobic(?:ally)?|carbonic(?:\s+maceration)?"
+_ANAEROBIC = (
+    r"anaerobic(?:ally)?|carbonic\s+macerat\w*"  # "Natural Carbonic" alone is not anaerobic (round 3)
+)
 _WET_HULLED = r"wet[- ]?hull(?:ed|ing)?|giling[- ]basah"
 # A fermentation named with no base method ("Process: Lactic", "Thermal Shock") is "other".
 _EXPERIMENTAL = (
@@ -417,7 +419,7 @@ def _process(text: str, context: str = "", experimental: bool = False) -> str | 
 # "PROCESS Fully washed" (a label in capitals needs no colon). The value runs to the end of the line, the next
 # label, or 40 characters.
 _LABELLED_PROCESS = re.compile(
-    r"(?:(?:\b|(?<=[a-z])(?=Process|PROCESS))(?i:process(?:ed|ing)?(?:\s+method)?|proc\.?\s+method|proceso|processo|beneficio)\s*[:|\-–]+"
+    r"(?:(?:\b|(?<=[a-z])(?=Process|PROCESS))(?i:process(?:ed|ing)?(?:\s+method)?|proc\.?\s+method|proceso|processo|beneficio)\s*[:|\-–/]+"
     r"|(?<!THE )(?<!OUR )\bPROCESS(?:ED|ING)?(?:\s+METHOD)?\b:?)[ \t]*\n?[ \t]*([^\n|]{2,60})"
 )
 _NEXT_LABEL = re.compile(
@@ -446,8 +448,8 @@ _LOOSE_LABEL = re.compile(
 )
 # Prose: a sentence that says how THIS coffee was processed. Phrases, never a bare word ("natural sweetness").
 _PROSE = [
-    ("anaerobic", r"\banaerobic(?:ally)?\b|\bcarbonic\s+maceration\b"),
-    ("wet_hulled", r"\bwet[- ]?hull(?:ed|ing)?\b|\bgiling[- ]basah\b"),
+    ("anaerobic", r"\banaerobic(?:ally)?\b|\bcarbonic\s+macerat\w*"),
+    ("wet_hulled", r"\bwet[- ]?hull(?:ed|ing)?\b|\bgiling[- ]basah\b|\bmonsoon(?:ed|ing)\b"),  # both "other"
     (
         "honey",
         r"\b(?:black|red|yellow|white)[- ]honey\b|\bhoney[- ]process(?:ed|ing)?\b|\bpulped[- ]natural\b",
@@ -461,24 +463,41 @@ _PROSE = [
     (
         "washed",
         r"\bfully[- ]washed\b|\bwashed[- ](?:process(?:ed|ing)?|coffee|lot|method)\b|\bwet[- ]process(?:ed|ing)?\b|"
-        r"\bprocessed\s+(?:using|via|with|by)\s+(?:the\s+|a\s+)?(?:\S+\s+){0,3}?washed\b|\bthis\s+washed\b",
+        r"\bprocessed\s+(?:using|via|with|by)\s+(?:the\s+|a\s+)?(?:\S+\s+){0,3}?washed\b|\bthis\s+washed\b|"
+        r"\bprocessed\s+using\s+a\s+washing\s+method\b",
     ),
 ]
 # A sentence about other coffees, a general claim, a blend's components or decaffeination says nothing sure about
 # this coffee's process.
 _PROSE_GUARD = re.compile(
     r"\b(?:unlike|other|another|also|lots|blend\w*|components?|decaf\w*|caffein\w*|usually|typically|generally|"
-    r"tends?|most|many|often|compared|versus|than|whereas|while|refers?|means|known|such\s+as|either|if|"
+    r"tends?|most|many|often|compared|versus|than|whereas|refers?|means|known|such\s+as|either|if|fool|resembl\w*|"
     r"flavou?r(?:ed|ing)|sweetened|what|how|why|coffees|lots)\b|\?",
     re.I,
 )
 _SENTENCES = re.compile(r"[^.!?\n]+")
+_FIELD_BLEND = re.compile(r"\bfield\s+blend\b", re.I)
+_ONE_PROCESS_BLEND = re.compile(
+    r"\b(this\s+(?:fully\s+)?(?:washed|natural(?:ly\s+processed)?))\s+(?:\w+\s+){0,2}blend\b", re.I
+)
+# A line that is only a process, as stores list attributes: "WASHED & SUN DRIED", "Washed | Medium Roast".
+_PROCESS_LINE = re.compile(
+    r"^[ \t]*((?:fully\s+)?washed(?:\s+process(?:ed)?)?|(?:natural|honey)\s+process(?:ed)?|"
+    r"anaerobic(?:\s+(?:natural|washed|honey))?(?:\s+process(?:ed)?)?|wet[- ]?hulled(?:\s+process(?:ed)?)?)"
+    r"(?:\s*(?:&|and)\s*sun[- ]?dried)?[ \t]*(?:\|[^\n]*)?$",
+    re.I | re.M,
+)
 
 
 def _prose_process(body: str) -> str | None:
     """The one process the description's sentences state about this coffee, or None (none, or two)."""
     found: set[str] = set()
-    for sentence in _SENTENCES.findall(_DECAF_METHOD.sub(" ", body)):
+    # "a field blend of SL28 and SL34" is a blend of varieties; "this washed Guatemalan blend" states one process for
+    # the whole product. Neither is about a blend's components.
+    text = _FIELD_BLEND.sub("varieties", _DECAF_METHOD.sub(" ", body))
+    for sentence in _SENTENCES.findall(text):
+        if _ONE_PROCESS_BLEND.search(sentence):
+            sentence = _ONE_PROCESS_BLEND.sub(lambda m: m.group(1), sentence)
         names = {name for name, pat in _PROSE if re.search(pat, sentence, re.I)}
         # ... and a sentence naming two countries is about two coffees ("the natural processed Ethiopia")
         if (
@@ -505,6 +524,8 @@ PROSE = True  # eval/process candidates switch these
 LOOSE = True
 UPGRADE = True
 CONFLICT = True
+LINES = True
+BLEND_NO_OTHER = True
 
 
 def process_of(item: CatalogItem, kv: dict[str, list[str]]) -> str | None:
@@ -523,7 +544,9 @@ def process_of(item: CatalogItem, kv: dict[str, list[str]]) -> str | None:
         # The description says something else about this coffee. A tag loses to it (GUIDE rule 8: stores tag
         # whole collections); a title ("Honey Sky", a coffee's name) or a labelled field against it is no answer.
         p = prose if source == "tag" else TWO
-    if p is None:  # no source names a method: a named fermentation is "other"
+    if p is None and not (
+        blend and BLEND_NO_OTHER
+    ):  # no method named: a named fermentation is "other" (not a blend's)
         kv_title = f"{_first(kv, 'process', 'processing')} | {item.title}"
         p = _process(kv_title, experimental=True) or _process(
             " | ".join(_labelled(item.body_text[:4000])), experimental=True
@@ -560,6 +583,10 @@ def _process_of(item: CatalogItem, kv: dict[str, list[str]]) -> tuple[str | None
         }
         if loose:
             return (loose.pop() if len(loose) == 1 else TWO), "field"
+    if LINES:
+        lines = {p for m in _PROCESS_LINE.finditer(body) if (p := _process(m.group(1), context)) is not None}
+        if lines:
+            return (lines.pop() if len(lines) == 1 else TWO), "field"
     bare = [t for t in item.tags if _PROCESS_TAG.match(t.strip().replace("-", " ").replace("_", " "))]
     return (_process(" | ".join(bare), context) if bare else None), "tag"
 

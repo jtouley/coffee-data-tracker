@@ -119,3 +119,27 @@ It does not clear 95% with margin (lower bound 91.4%), so it is not frozen and t
 stratum, the loss is mostly `same_none` (both rules abstain, 72% of the catalog): 113 of 120 right, the other 7
 listings state a process the rules don't read (about 4.2 points); then `process_to_other` 11 of 15 and
 `none_to_process` 26 of 30 (4 confidently wrong each).
+
+## Round 3 (train3 labels: A Opus, B Sonnet agreeing on 249 of 250, C Haiku settling 1)
+
+**Train3 errors of `r2`** (250 train listings aimed at the abstentions, strata `change(main, r2)`): same_none 13
+of 200 wrong, all abstentions where a process is stated: a `Process / Washed` slash label 2; a line that is only a
+process ("WASHED & SUN DRIED", "Washed | Medium Roast") 2; prose the guards refused ("… while …" 2, "field blend"
+1, "This Washed Guatemalan blend" 1); monsooned Malabar (`other`) 1; "washing method" 1; prose that only describes
+the steps (sun-dried, pulped and soaked, a two-stage fermentation) 3. process_to_other 4 of 25 wrong: "Natural
+Carbonic" read as anaerobic 1, anaerobic named only for contrast 1, blends of co-ferments read as `other` 2.
+
+**`r3`** fixes those patterns except the step descriptions (precision first): slash labels, process-only lines
+(honey and natural only with "process", so a "Honey" tasting-note line is not read), "while" no longer a guard,
+field blends and "this washed … blend", monsooned → other, "carbonic" anaerobic only as maceration, "fool"/
+"resemble" guards, and no `other` from a blend's fermentation. Train3: same_none 196 of 200, process_to_other 23 of
+25 (confidently wrong 4 → 2). Original train unchanged (99.1%).
+
+**Validation extension, `r3`:** agree 94.5% ± 3.1, confidently wrong 1.3% ± 0.8, coverage 24.7% ± 0.8; identical
+to `r2` on every one of the 300 (and the original 100: 92.6% ± 7.5). The train3 patterns don't occur among
+validation's 7 same_none abstentions. **Not frozen; sealed test 2 not scored.**
+
+**Limit.** The remaining misses are a long tail: each listing states its process its own way, and a pattern fixed
+on train doesn't recur in a 300-item validation sample. At 94.5% ± 3.1 the lower bound is 91.4%; showing 95% with
+margin needs both a true rate near 97% and the sample to see it. Validation's own aggregates can't be pushed
+further without reading its listings, which would spend it.
