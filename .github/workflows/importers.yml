@@ -26,12 +26,14 @@
 # `importers:weekly` triage issue while any importer's week is missing, whether a run failed or never started
 # (docs/TRIAGE.md).
 #
-# A failed fetch is reported by its HTTP status and phase (robots, page, listing page N), never its address
-# (importers.FetchFailed): a 403 is a refusal, a 429 rate limiting, a 5xx the site failing. The snapshot job's one
-# artifact, importer-results, holds each importer's key, week, status, failure kind, HTTP status and phase and
-# nothing else
-# (importers.public_results: no error text, no URL), the same as its log line; importers-alerts reads it so the
-# triage issue can name the status code.
+# A failed fetch is reported by its kind, its HTTP status and its phase (page, listing page N, or `robots at ...`
+# when robots.txt was the failure), never its address (importers.FetchFailed): a 403 is a refusal, a 429 rate
+# limiting, a 5xx the site failing; a challenge, a closed store, a robots.txt disallow, a timeout and the run's
+# deadline are kinds of their own. The snapshot job's one artifact per attempt, importer-results-<run attempt>, holds
+# each importer's key, week, status, failure kind, HTTP status and phase and nothing else (importers.public_results:
+# no error text, no URL), less than its log line; importers-alerts reads every attempt's so the triage issue can
+# name the status code. A re-run adds an artifact and never replaces the first attempt's: only that attempt fetches
+# Royal, so only its results hold Royal's status code.
 #
 # Royal Coffee (royal_coffee) is fetched on the scheduled run only. Its terms restrict automated access and AI tools;
 # the owner chose to include it, and no AI agent may ever access the site. So its address appears nowhere but here,
@@ -51,10 +53,10 @@
 # model and test passed, replaces derived/importer_offers.parquet there (importers.publish_derived, after the same
 # privacy checks as the snapshot). This repository is public, so its log and artifacts are too: dbt's
 # own output goes to a file on the runner, never printed or uploaded (an error can quote a lot's value), the log shows
-# counts only, and the build uploads no artifact (the snapshot's one, importer-results, is above). A failed build fails only its own job: the raw weeks are already
-# stored and stay as they are, the derived copy stays the last one that passed, and the `alert` job keeps the
-# `pipeline:importer-build` triage issue open until a build passes (coffeedata.importer_build_alert, docs/TRIAGE.md;
-# GITHUB_TOKEN with issues: write, never the Hub token).
+# counts only, and the build uploads no artifact (the snapshot's, importer-results-<run attempt>, is above). A failed
+# build fails only its own job: the raw weeks are already stored and stay as they are, the derived copy stays the
+# last one that passed, and the `alert` job keeps the `pipeline:importer-build` triage issue open until a build
+# passes (coffeedata.importer_build_alert, docs/TRIAGE.md; GITHUB_TOKEN with issues: write, never the Hub token).
 name: importers
 on:
   schedule:
@@ -119,16 +121,16 @@ jobs:
           uv run coffeedata importer-snapshot --require-hub ${IMPORTER:+--importer "$IMPORTER"} ${ACCEPT_DROP:+--accept-drop} \
             --results "$RUNNER_TEMP/importer-results/results.json"
       # keys, weeks, statuses, failure kinds, HTTP status codes and phases only (importers.public_results), for
-      # importers-alerts. Best effort: a failed upload never fails the job (the weeks are stored, and `build` needs
-      # it to pass), and a re-run's upload replaces the first attempt's.
+      # importers-alerts. One artifact per attempt, never overwritten: "Re-run failed jobs" skips Royal, so replacing
+      # the first attempt's results would hide the status code Royal answered with. Best effort: a failed upload
+      # never fails the job (the weeks are stored, and `build` needs it to pass). No token on this step.
       - if: always()
         continue-on-error: true
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
-          name: importer-results
+          name: importer-results-${{ github.run_attempt }}
           path: ${{ runner.temp }}/importer-results/results.json
           if-no-files-found: ignore
-          overwrite: true
           retention-days: 90
 
   build:

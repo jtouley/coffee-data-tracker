@@ -91,7 +91,16 @@ def test_each_run_has_its_share_and_the_budget_of_the_window_that_ends_at_it(lak
         "crawl_slo_met:squarespace": 0.0,
         "crawl_slo_roasters:generic": 1.0, "crawl_slo_ok:generic": 1.0, "crawl_slo_share:generic": 1.0,
         "crawl_slo_met:generic": 1.0,
+        # how the run left the one it didn't fetch: every outcome has a row, and they add up to roasters - ok
+        "crawl_slo_not_fetched:unavailable": 1.0, "crawl_slo_not_fetched:failed": 0.0,
+        "crawl_slo_not_fetched:challenged": 0.0, "crawl_slo_not_fetched:quarantined": 0.0,
+        "crawl_slo_not_fetched:not_attempted": 0.0,
     }  # fmt: skip
+    # the outcomes the profile counts are the model's own, and the ones the health check reads
+    for name in ("int_crawl_slo_roasters", "mart_crawl_slo_profile"):
+        sql = (ph.ROOT / "dbt" / "models" / ("intermediate" if name.startswith("int_") else "marts")
+               / f"{name}.sql").read_text()  # fmt: skip
+        assert all(f"'{o}'" in sql for o in ph.SLO_OUTCOMES), name
     # One meaning of "crawled": every roaster run_completeness expects in the run is in the SLO's population for
     # it, with the same ok, the same connector and the same attempt.
     assert con.execute(
@@ -299,7 +308,11 @@ def test_report_only_is_refused_where_it_could_silence_an_alert(tmp_path):
 
 def test_the_slo_has_no_critical_bound_and_its_fast_burn_is_dbts_window():
     slo = [m for m in ph.load_config()["metric"] if m["rule"] == "crawl-slo"]
-    assert {m["name"] for m in slo} == set(ph.SLO_BOUNDS) | {ph.SLO_REPORTED + p for p in ph.SLO_PLATFORMS}
+    assert {m["name"] for m in slo} == (
+        set(ph.SLO_BOUNDS)
+        | {ph.SLO_REPORTED + p for p in ph.SLO_PLATFORMS}
+        | {ph.SLO_OUTCOME_REPORTED + o for o in ph.SLO_OUTCOMES}
+    )
     assert ph.SLO_PLATFORMS == ("generic", "shopify", "square_online", "squarespace", "woocommerce")
     assert not [k for m in slo for k in m if k.startswith("critical")]
     dbt_vars = yaml.safe_load((ROOT / "dbt/dbt_project.yml").read_text())["vars"]
@@ -375,5 +388,27 @@ def test_regenerating_the_thresholds_keeps_the_slos_fixed_bounds(tmp_path):
     _, text, _ = ph.baseline([release], [], [], "2026-11-13", ["w0"])
     made = {m["name"]: m for m in tomllib.loads(text)["metric"] if m["rule"] == "crawl-slo"}
     checked_in = {m["name"]: m for m in ph.load_config()["metric"] if m["rule"] == "crawl-slo"}
-    assert made == checked_in and len(made) == 8
+    assert made == checked_in and len(made) == 8 + len(ph.SLO_OUTCOMES)
+    assert all(made[ph.SLO_OUTCOME_REPORTED + o]["report_only"] is True for o in ph.SLO_OUTCOMES)
     assert made["build:crawl_slo_met:generic"]["report_only"] is True
+
+
+def test_a_miss_says_how_the_run_left_the_roasters_it_didnt_fetch_and_an_outcome_alone_opens_nothing():
+    """Four stores weren't read on 2026-11-16 (a robots.txt disallow, an unreachable store, a 429, an alias) and
+    that showed only by querying. The outcomes with any roaster are listed in the alert the SLO opened, as report
+    only; a week that met the target opens nothing for them."""
+    outcomes = {"build:crawl_slo_not_fetched:failed": 61.0, "build:crawl_slo_not_fetched:unavailable": 7.0,
+                "build:crawl_slo_not_fetched:not_attempted": 81.0, "build:crawl_slo_not_fetched:challenged": 0.0,
+                "build:crawl_slo_not_fetched:quarantined": 0.0}  # fmt: skip
+    measured = {"served": {"build_id": "b", "run_date": "2026-11-16", "previous": None}}
+    results = ph.judge(ISSUE_WEEK | outcomes, ph.load_config())
+    alert = next(a for a in ph.alerts(measured, results, None, None) if a["key"] == "prod:crawl-slo")
+    listed = {c["name"]: c["status"] for c in alert["checks"] if "not_fetched" in c["name"]}
+    assert listed == {
+        "build:crawl_slo_not_fetched:failed": "report only",
+        "build:crawl_slo_not_fetched:unavailable": "report only",
+        "build:crawl_slo_not_fetched:not_attempted": "report only",
+    }
+    assert "61" not in json.dumps(alert) and "81" not in json.dumps(alert)  # names and bounds, never a count
+    quiet = ph.alerts(measured, ph.judge(MET | outcomes, ph.load_config()), None, None)
+    assert not next(a for a in quiet if a["key"] == "prod:crawl-slo")["firing"]

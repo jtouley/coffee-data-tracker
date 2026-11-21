@@ -762,3 +762,106 @@ def test_no_job_workflow_or_terraform_sets_the_rules_only_override():
     assert files
     setting = [str(f.relative_to(root)) for f in files if "ALLOW_RULES_ONLY" in f.read_text(errors="ignore")]
     assert setting == []
+
+
+def _open_batch(lake, batch_id="msgbatch_x"):
+    at = datetime(2026, 11, 17, 6, 19, tzinfo=UTC)
+    lake.write("verdict_batches", f"verdict_batches/state=submitted/{batch_id}.parquet", [
+        {"batch_id": batch_id, "state": "submitted", "at": at, "custom_id": "h1", "model": "m",
+         "definition": verdict.DEFINITION_VERSION}])  # fmt: skip
+
+
+def _refusing(monkeypatch, refuse):
+    """Stand-in Batches: `retrieve` raises a 401 while refuse() is true, then the batch has ended with one verdict."""
+    import anthropic
+    import httpx
+
+    class Batches:
+        def create(self, requests):
+            raise AssertionError("nothing is pending in these tests")
+
+        def retrieve(self, batch_id):
+            if refuse():
+                req = httpx.Request("GET", "https://api.anthropic.com")
+                raise anthropic.APIStatusError(
+                    "invalid x-api-key", response=httpx.Response(401, request=req), body=None
+                )
+            return SimpleNamespace(processing_status="ended")
+
+        def results(self, batch_id):
+            yield SimpleNamespace(
+                custom_id="h1", result=SimpleNamespace(type="succeeded", message=_msg("coffee"))
+            )
+
+    monkeypatch.setattr(
+        anthropic, "Anthropic", lambda **_: SimpleNamespace(messages=SimpleNamespace(batches=Batches()))
+    )
+
+
+def test_collect_names_the_batches_it_could_not_read_and_why(lake, monkeypatch):
+    """The batch submitted on 2026-11-17 was never collected: collect logged the API's error, went on, and
+    reported `collected: 0`, the same as a week with nothing to collect."""
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    _open_batch(lake)
+    _refusing(monkeypatch, lambda: True)
+    out = verdict.collect(lake, "2026-11-24")
+    assert out == {
+        "collected": 0,
+        "errors": [{"batch_id": "msgbatch_x", "error": "APIStatusError", "http_status": 401}],
+    }
+    assert verdict.open_batch_ids(lake) == {"msgbatch_x"}  # still open: the next collect asks again
+
+
+def test_a_batch_claude_is_still_working_through_is_counted_not_an_error(lake, monkeypatch):
+    import anthropic
+
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    _open_batch(lake)
+    batches = SimpleNamespace(retrieve=lambda batch_id: SimpleNamespace(processing_status="in_progress"))
+    monkeypatch.setattr(
+        anthropic, "Anthropic", lambda **_: SimpleNamespace(messages=SimpleNamespace(batches=batches))
+    )
+    assert verdict.collect(lake, "2026-11-24") == {"collected": 0, "not_ended": 1}
+
+
+def test_classify_fails_when_a_batch_cannot_be_collected_and_says_which_and_why(lake, monkeypatch, capsys):
+    """Like a rejected submit: the summary is printed, one ERROR line names the batch and the reason, and the exit is
+    non-zero, so the build job's execution fails and emails. The build after it still runs (the job's `|| rc=1`)."""
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    _open_batch(lake)
+    _refusing(monkeypatch, lambda: True)
+    monkeypatch.setattr(verdict, "submit", lambda lk, limit=0: {"pending": 0})
+    with pytest.raises(
+        SystemExit, match=r"collect failed for 1 batch\(es\): msgbatch_x \(APIStatusError, HTTP 401\)"
+    ):
+        cli.main(["classify"])
+    printed = capsys.readouterr().out
+    assert '"collect_failed"' in printed
+    line = json.loads(printed.strip().splitlines()[-1])
+    assert line["severity"] == "ERROR" and line["batches"][0]["batch_id"] == "msgbatch_x"
+    assert "invalid x-api-key" not in line["message"]
+
+
+def test_classify_passes_when_a_later_collect_reads_the_batch(lake, monkeypatch, capsys):
+    """One refused read isn't a failure if the wait's next collect stores the batch."""
+    import time
+
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    _open_batch(lake)
+    calls = []
+    _refusing(monkeypatch, lambda: calls.append(1) or len(calls) == 1)
+    monkeypatch.setattr(verdict, "submit", lambda lk, limit=0: {"pending": 0, "batch_ids": ["msgbatch_x"]})
+    clock = [0.0]
+    monkeypatch.setattr(time, "monotonic", lambda: clock[0])
+    monkeypatch.setattr(time, "sleep", lambda s: clock.__setitem__(0, clock[0] + s))
+    cli.main(["classify", "--wait", "5"])  # returns: exit 0
+    out = json.loads(capsys.readouterr().out)
+    assert out["collect"]["errors"] and out["collect_after_wait"] == 1 and "collect_failed" not in out

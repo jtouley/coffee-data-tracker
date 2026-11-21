@@ -982,13 +982,18 @@ def test_the_cli_prints_counts_only_and_alerts_when_the_detector_could_not_run(t
         return False
 
     monkeypatch.setattr(usage_build, "build", failed)
+    stored = tmp_path / "usage" / "events" / f"day={date.today().isoformat()}"
+    stored.mkdir(parents=True)
+    (stored / "batch=a.parquet").write_bytes(b"")  # the stored-events check reads names only
+    monkeypatch.setenv("COFFEEDATA_USAGE", str(tmp_path / "usage"))
     alerts = tmp_path / "alerts.json"
     with pytest.raises(SystemExit):
         cli.main(["usage-build", "--alerts-out", str(alerts)])
     out = capsys.readouterr()
     assert '"failed"' in out.out and '"error": 1' in out.out and '"success": 1' in out.out
     assert "canary" not in out.out + out.err and "SECRET" not in out.out + out.err
-    (alert,) = json.loads(alerts.read_text())
+    events, alert = json.loads(alerts.read_text())
+    assert events["key"] == "prod:usage-events" and not events["firing"]
     assert alert["firing"] and alert["checks"] == [{"name": "detector ran", "status": "warning"}]
 
 
