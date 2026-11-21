@@ -14,7 +14,7 @@ import logging
 from datetime import UTC, date, datetime
 from typing import cast
 
-from . import extract, products
+from . import decisions, extract, products
 from .lake import Lake, new_batch_id
 from .models import Enrichment
 
@@ -68,6 +68,9 @@ def candidates(lake: Lake, limit: int | None = None, keys: set[tuple] | None = N
         sql = sql.replace("anti join in_flight using (roaster_id, product_id, body_hash)\n", "")
     cur = lake.connect().execute(sql, list(_verdict_config()))
     cols = [d[0] for d in cur.description]
+    # The published snapshot's keyword filters: a product they exclude is never a coffee, so it isn't enriched. A
+    # submitted batch's bases (keys) are rebuilt as they were sent.
+    filters = decisions.served_prefilter(lake) if keys is None else ()
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
@@ -76,7 +79,11 @@ def candidates(lake: Lake, limit: int | None = None, keys: set[tuple] | None = N
         it = products.item(
             r["title"], r["product_type"], r["tags"], r["grams"], r["body_hash"], r["body_text"]
         )
-        base = products.rules(it, r["label"]) if keys is not None else products.needs_claude(it, r["label"])
+        base = (
+            products.rules(it, r["label"])
+            if keys is not None
+            else products.needs_claude(it, r["label"], filters)
+        )
         if base is None:
             continue
         out.append({k: r[k] for k in ("roaster_id", "product_id", "body_hash", "title", "tags", "body_text")}

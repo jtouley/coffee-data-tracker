@@ -318,7 +318,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await c2.close();
     });
 
-    for (const name of ["week", "jobs", "release", "catalog", "log"]) {
+    for (const name of ["week", "filters", "jobs", "release", "catalog", "log"]) {
       await check(`no data: ${name} on an empty lake`, async () => {
         const c2 = await browser.newContext();
         await c2.addCookies([{ name: "admin_session", value: cfg.cookies.empty, url: cfg.empty }]);

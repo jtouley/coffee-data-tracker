@@ -228,7 +228,7 @@ def test_classify_runs_when_configured_even_if_rules_only_is_allowed(lake, monke
     monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
     seen = []
     monkeypatch.setattr(verdict, "collect", lambda lk, d=None: seen.append("collect") or {"collected": 0})
-    monkeypatch.setattr(verdict, "submit", lambda lk, n: seen.append("submit") or {"submitted": 0})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n, **_kw: seen.append("submit") or {"submitted": 0})
     cli.main(["classify", "--run-date", "2026-10-28"])
     assert seen == ["collect", "submit"]
     # The control plane's start and end rows (job classify), under the week's Monday.
@@ -586,7 +586,7 @@ def test_classify_waits_for_its_batch_then_says_what_is_still_open(lake, monkeyp
     monkeypatch.setattr("time.monotonic", lambda: clock[0])
     monkeypatch.setattr("time.sleep", lambda s: clock.__setitem__(0, clock[0] + s))
     monkeypatch.setattr(verdict, "collect", lambda lk, d=None: {"collected": 0})
-    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n, **_kw: {"submitted": 3, "batch_ids": ["mb1"]})
     monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: {"mb1"})
     cli.main(["classify", "--wait", "2"])
     out = capsys.readouterr()
@@ -617,7 +617,7 @@ def test_a_failed_read_during_the_wait_is_retried_not_fatal(lake, monkeypatch, c
         return {"collected": 3 if clock[0] == 120 else 0}
 
     monkeypatch.setattr(verdict, "collect", collect)
-    monkeypatch.setattr(verdict, "submit", lambda lk, n: {"submitted": 3, "batch_ids": ["mb1"]})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n, **_kw: {"submitted": 3, "batch_ids": ["mb1"]})
     monkeypatch.setattr(verdict, "open_batch_ids", lambda lk: set() if clock[0] >= 120 else {"mb1"})
     cli.main(["classify", "--wait", "5"])  # returns: exit 0
     out = capsys.readouterr()
@@ -836,7 +836,7 @@ def test_classify_fails_when_a_batch_cannot_be_collected_and_says_which_and_why(
     monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
     _open_batch(lake)
     _refusing(monkeypatch, lambda: True)
-    monkeypatch.setattr(verdict, "submit", lambda lk, limit=0: {"pending": 0})
+    monkeypatch.setattr(verdict, "submit", lambda lk, limit=0, **_kw: {"pending": 0})
     with pytest.raises(
         SystemExit, match=r"collect failed for 1 batch\(es\): msgbatch_x \(APIStatusError, HTTP 401\)"
     ):
@@ -860,7 +860,9 @@ def test_classify_passes_when_a_later_collect_reads_the_batch(lake, monkeypatch,
     _open_batch(lake)
     calls = []
     _refusing(monkeypatch, lambda: calls.append(1) or len(calls) == 1)
-    monkeypatch.setattr(verdict, "submit", lambda lk, limit=0: {"pending": 0, "batch_ids": ["msgbatch_x"]})
+    monkeypatch.setattr(
+        verdict, "submit", lambda lk, limit=0, **_kw: {"pending": 0, "batch_ids": ["msgbatch_x"]}
+    )
     clock = [0.0]
     monkeypatch.setattr(time, "monotonic", lambda: clock[0])
     monkeypatch.setattr(time, "sleep", lambda s: clock.__setitem__(0, clock[0] + s))

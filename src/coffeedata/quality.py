@@ -50,7 +50,14 @@ RELEASE_TABLES = (
 # roaster, release_changes' rows, and every product with the build's coffee decision and its reason. Not release
 # tables: release_files() never lists them, so they are never served, materialized for the site or the public
 # export, hashed or reconciled. Only a record: writing them never changes a build's verdict.
-OPS_TABLES = ("run_completeness", "release_changes", "product_decisions", "mart_flags")
+OPS_TABLES = (
+    "run_completeness",
+    "release_changes",
+    "product_decisions",
+    "mart_flags",
+    "eval_prefilter",
+    "eval_prefilter_summary",
+)
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
 # serving_log.action: a new release served (serve), an earlier one served by hand (rollback), the release served
 # now served again to re-export it (reexport: `rollback --to served`, or --to the served build), or a draft build the
