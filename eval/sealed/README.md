@@ -17,7 +17,7 @@ Rules for using it:
 
 `pred_rules.json` holds the rules' predictions as of commit c021723, frozen before any score was taken.
 
-**Running total (CLAUDE.md step 9):** 0 products whose `is_coffee` changed since the last full evaluation, which is
+**Running total (CLAUDE.md step 9):** 7 products whose `is_coffee` changed since the last full evaluation, which is
 the 2026-10-28 sealed score of Claude's verdicts (`RESULTS.md`). Add each later change's count here.
 - decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
   versions, 51 roasters) and the output of `is_coffee` of none: built from main and from the change on a local copy of
@@ -37,3 +37,12 @@ the 2026-10-28 sealed score of Claude's verdicts (`RESULTS.md`). Add each later 
   `claude-haiku-5-5`, definition `e45965cf2582`) every `input_hash` has one verdict, so there is no tie to break.
   Step 9's shortcut applies although the order changed: with the three labels (`verdict.LABELS`) `label` ascending
   already put `coffee` first, so every pick is `main`'s for any input. 0 of them in this sealed set.
+- a store's own `Flavored Coffee` product type letting a title that only names the flavor through the drinks guard
+  (`classify._FLAVOR_WORDS`: latte, cappuccino, nuts, almond; issue #190, `classifier-flavored-type`) changed **7**
+  products, all from not coffee to coffee, all of one roaster (javamania.com): "Creamy Latte", "Pumpkin Latte",
+  "Toasted Almond", "Vanilla Almond", "Chocolate Almond", "Almond Amaretto", "Totally Nuts". Counted on a read-only
+  copy of the lake (2026-11-20: 109,751 products at their latest version, runs 2026-10-26 to 11-16) by running
+  `products.decide` with the stored verdicts on `main` and on the change. Each was read by hand: typed
+  `Flavored Coffee`, sold in 340 g, 907 g and 2,268 g bags, described as a medium-roast coffee with that flavor;
+  none has a stored verdict. 0 of them in this sealed set or in `tests/fixtures/classifier_labels.jsonl`. A full
+  build on a copy of that lake adds the same 7 to `public_coffee`. Total: 0 + 7 = **7**.

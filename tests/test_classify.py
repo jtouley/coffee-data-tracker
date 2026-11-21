@@ -234,24 +234,31 @@ def test_decide_takes_claudes_coffee_or_not_coffee_and_the_rules_otherwise():
     assert products.decide(kenya, None) == (True, "rules")
 
 
-def test_a_flavored_coffee_type_or_tag_keeps_flavor_only_titles():
-    # Issue #190: with no stored verdict the rules decide, and they read these titles as drinks, nuts or sweets.
-    # The cases are from the train set of eval/classifier_inputs (roasters named in the issue).
-    assert is_coffee(
-        item("Pumpkin Latte", product_type="Flavored Coffee", tags=["flavored", "wholesale"], grams=340)
-    )
+def test_a_flavored_coffee_type_keeps_titles_that_only_name_the_flavor():
+    # Issue #190: with no stored verdict the rules decide, and they read these titles as drinks or nuts.
+    assert is_coffee(item("Pumpkin Latte", product_type="Flavored Coffee", tags=["flavored"], grams=340))
     assert is_coffee(item("Creamy Latte", product_type="Flavored Coffee", grams=340))
     assert is_coffee(item("Toasted Almond", product_type="Flavored Coffee", tags=["wholesale"], grams=340))
+    assert is_coffee(item("Chocolate Almond", product_type="Flavored Coffee", grams=340))
     assert is_coffee(item("Totally Nuts", product_type="Flavored Coffee", grams=907))
-    # A bare Flavored type or tag counts on a bag-sized product only.
-    assert is_coffee(item("Sticky Bun", product_type="variable", tags=["Flavored", "flavored"], grams=454))
-    assert is_coffee(item("Dubai Chocolate", product_type="variable", tags=["Flavored"], grams=454))
-    assert is_coffee(item("Danish Pastry", product_type="Flavored", tags=["Flavored"], grams=454))
-    assert not is_coffee(item("Dubai Chocolate", product_type="variable", tags=["Flavored"]))
-    assert not is_coffee(item("Danish Pastry", product_type="Flavored", grams=57))
-    # The outright exclusions still win, and other types and tags change nothing.
+    assert is_coffee(item("Almond Amaretto", product_type="Flavoured Coffee"))
+    # Only that type, and only those flavor words: the same titles under another type stay as they were.
+    assert not is_coffee(item("Pumpkin Latte", product_type="Lattes", tags=["Flavored Lattes"], grams=340))
+    assert not is_coffee(item("Toasted Almond", product_type="variable", tags=["Flavored"], grams=454))
+    assert not is_coffee(item("Pumpkin Latte", product_type="Flavored", tags=["Flavored"], grams=454))
+
+
+def test_a_flavored_type_or_tag_does_not_make_drinks_sauces_or_snacks_coffee():
+    # Made-up cases from the review of #206: none is a bag of beans, whatever its type or tags say.
+    assert not is_coffee(item("Cinnamon Almonds", product_type="Snacks", tags=["Flavored"], grams=227))
+    assert not is_coffee(item("Hazelnut Creamer", tags=["Flavored"], grams=400))
+    assert not is_coffee(item("Caramel Sauce", tags=["Flavored"], grams=450))
+    assert not is_coffee(item("Hot Cocoa Mix", product_type="Flavored", grams=340))
+    assert not is_coffee(item("French Vanilla Creamer", product_type="Flavored Coffee"))
+    assert not is_coffee(item("Vanilla Cold Brew Gallon", product_type="Flavored Coffee"))
+    assert not is_coffee(item("Coffee Traveler", product_type="Flavored Coffee"))
+    # A drink word next to a flavor word still makes it a drink, and the outright exclusions still win.
+    assert not is_coffee(item("Almond Latte Creamer", product_type="Flavored Coffee", grams=340))
+    assert not is_coffee(item("Vanilla Latte Kit", product_type="Flavored Coffee", grams=340))
     assert not is_coffee(item("Vanilla Syrup", product_type="Flavored Coffee", grams=750))
     assert not is_coffee(item("French Vanilla K-Cups", product_type="Flavored Coffee", grams=340))
-    assert not is_coffee(item("Flavored Coffee Sampler", product_type="Flavored Coffee", grams=340))
-    assert not is_coffee(item("Pumpkin Latte", product_type="Lattes", tags=["Flavored Lattes"], grams=340))
-    assert not is_coffee(item("Oat Latte - 8oz - 12 count", product_type="Lattes + Cold Coffee", grams=265))
