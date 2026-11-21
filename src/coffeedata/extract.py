@@ -380,6 +380,33 @@ def needs_llm(e: Enrichment) -> bool:
     return not (e.origin_country or e.is_blend) or not e.process or not e.tasting_notes
 
 
+# A word that suggests the listing says how the coffee was processed where the rules could not read it. Generous on
+# purpose (eval/process, #252: tuned for recall on labelled train listings): it only orders Claude's weekly queue.
+PROCESS_HINT = re.compile(
+    r"wash|natural|honey|anaerob|ferment|pulp|dried|drying|process|macerat|hull|giling|semi[- ]?wash|monsoon|"
+    r"carbonic|lavado|miel|mucilage|cherr(?:y|ies)\s+(?:were|are|is)|raised\s+bed|patio",
+    re.I,
+)
+# Decaffeination is not a process ("Swiss Water® Process", "natural decaf process", "Sugarcane EA process"): left out
+# of the title, tags and description before looking for a hint.
+_DECAF_TEXT = re.compile(
+    r"\b(?:(?:swiss|mountain|mtn\.?)\s+water(?:[®™\s]+(?:decaf\w*\s+)?process\w*)?|water[- ]process\w*|"
+    r"sugar[- ]?cane(?:\s+(?:e\.?a\.?|ethyl[- ]acetate|decaf\w*))?(?:\s+process\w*)?|co2(?:\s+process\w*)?|"
+    r"ethyl[- ]acetate(?:\s+process\w*)?|e\.?a\.?(?:\s+process\w*)\b|"
+    r"natural(?:ly)?\s+decaf\w*(?:\s+process\w*)?|decaf\w*\s+process\w*)",
+    re.I,
+)
+
+
+def process_first(item: CatalogItem, e: Enrichment) -> bool:
+    """Whether Claude should read this coffee ahead of the rest of the weekly queue: a single origin whose process
+    the rules left empty, and whose title, tags or description has a word that suggests it states one."""
+    if e.process or e.is_blend:
+        return False
+    text = _DECAF_TEXT.sub(" ", f"{item.title} {' '.join(item.tags)} {item.body_text[:4000]}")
+    return bool(PROCESS_HINT.search(text))
+
+
 # --- Claude Haiku -----------------------------------------------------------------------------------
 
 SYSTEM = (
@@ -436,7 +463,77 @@ def llm_request(title: str, tags: list[str], body_text: str) -> dict:
     }
 
 
+# The longest value kept from Claude's answer: a text field, a list, and one item of a list. A listing is the roaster's
+# own text, so its answer is held to the schema's keys and to these sizes (security review 2026-11-21, F3). The output
+# schema can't carry them (structured outputs don't accept maxLength or maxItems), so they are checked here. They are
+# above every value enriched so far (the longest: a producer of 128 characters, 8 notes or varietals, an item of 29).
+MAX_TEXT_CHARS = 200
+MAX_LIST_ITEMS = 20
+MAX_ITEM_CHARS = 80
+_ANSWER_KEYS: tuple[str, ...] = tuple(SCHEMA["properties"])  # type: ignore[arg-type]
+
+
+# The enrichments table's integer columns are int32: a value outside it would fail the batch's write (Lake.write).
+_INT32 = (-(2**31), 2**31 - 1)
+
+
+class _WrongType(ValueError):
+    """A value of a type the schema doesn't allow (or out of an int32 column's range): the answer is not used."""
+
+
+def _schema_types(spec: dict) -> set[str]:
+    """The JSON types a SCHEMA property allows ("anyOf" of an enum and null included)."""
+    types: set[str] = set()
+    for part in spec.get("anyOf", [spec]):
+        t = part.get("type")
+        types |= set(t) if isinstance(t, list) else {t}
+    return types
+
+
+def _check_type(key: str, v: object) -> None:
+    spec = SCHEMA["properties"][key]  # type: ignore[index]
+    allowed = _schema_types(spec)
+    if isinstance(v, bool):
+        ok = "boolean" in allowed
+    elif isinstance(v, int):
+        ok = "integer" in allowed and _INT32[0] <= v <= _INT32[1]
+    elif isinstance(v, str):
+        ok = "string" in allowed
+    elif isinstance(v, list):
+        ok = "array" in allowed and all(isinstance(x, str) for x in v)
+    else:
+        ok = False  # a float, an object: no field takes one
+    if not ok:
+        raise _WrongType(key)
+
+
+def _answer_fields(data: dict) -> dict:
+    """The answer's fields that SCHEMA names, each of its schema's type (else _WrongType) and within the size limits:
+    an over-long text is dropped (left to the rules' value), a list keeps its first MAX_LIST_ITEMS strings within
+    MAX_ITEM_CHARS, and an integer must fit the int32 column. A key outside the schema (body_hash, method) is
+    ignored."""
+    out: dict = {}
+    for k in _ANSWER_KEYS:
+        v = data.get(k)
+        if v is None or v == []:
+            continue
+        _check_type(k, v)
+        if isinstance(v, list):
+            items = [x for x in v if len(x) <= MAX_ITEM_CHARS]
+            if items:
+                out[k] = items[:MAX_LIST_ITEMS]
+        elif isinstance(v, str):
+            if len(v) <= MAX_TEXT_CHARS:
+                out[k] = v
+        else:
+            out[k] = v
+    return out
+
+
 def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
+    """Claude's answer merged over the rules' enrichment, or None when it gave none: a refusal, a cut-off answer, text
+    that isn't JSON, JSON that isn't an object (`[]` used to raise here and stop the whole batch), or a value of the
+    wrong type or out of its column's range."""
     if getattr(msg, "stop_reason", None) in ("refusal", "max_tokens"):
         return None
     text = next((b.text for b in msg.content if b.type == "text"), "")  # type: ignore[attr-defined]
@@ -444,7 +541,15 @@ def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
         data = json.loads(text)
     except ValueError:
         return None
-    merged = base.model_dump() | {k: v for k, v in data.items() if v not in (None, [])}
+    if not isinstance(data, dict):
+        return None
+    try:
+        fields = _answer_fields(data)
+    except (
+        _WrongType
+    ):  # a wrongly typed or out-of-range value: the whole answer is left out, the rules' value stays
+        return None
+    merged = base.model_dump() | fields
     if merged.get("origin_country"):
         merged["origin_country"] = canonical_country(merged["origin_country"])
     merged["tasting_notes"] = split_notes(",".join(merged.get("tasting_notes") or []))

@@ -29,6 +29,8 @@ PUBLIC_COPY = sorted(
         *ROOT.glob("app/*.js"),
         *ROOT.glob("marketplace/**/*.md"),
         ROOT / "README.md",
+        ROOT / "docs" / "USAGE.md",  # the README's usage and architecture sections, moved
+        ROOT / "docs" / "ARCHITECTURE.md",
         ROOT / "docs" / "DATASET_CARD.md",
         ROOT / "docs" / "PUBLIC_DATASET_CARD.md",
     }

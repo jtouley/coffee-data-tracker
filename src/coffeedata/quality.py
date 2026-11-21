@@ -9,8 +9,10 @@ marts/release.parquet. A failed build leaves the served release as it was, which
 `rollback` serves an earlier release by hand. `build-diff` compares any two builds down to individual coffees.
 Every build also records each release table's row count and content hash (`table_hash`), so two builds of the same
 lake and code can be shown to have produced the same release (`build-hashes`, docs/ingestion/RUNBOOK.md §5.6).
-Every serve and rollback also appends a row to serving_log (which release, when, why, who, and the one it
-replaced), so the history of what customers got survives marts/release.parquet being replaced.
+Every serve, rollback and re-export also appends a row to serving_log (which release, when, why, who, and the one
+it replaced), so the history of what customers got survives marts/release.parquet being replaced. Beside each
+release, under ops/, every build also writes its ops tables (OPS_TABLES): what it saw, for the owner's command
+center. They are not release tables: never served, materialized, exported, hashed or reconciled.
 Raw lake files are never touched here, and no release is ever edited.
 """
 
@@ -43,7 +45,24 @@ RELEASE_TABLES = (
     "public_price_event",
     "public_market_weekly",
 )
+# The build's ops tables, written beside each release under ops/ (releases/run_date=.../build=<id>/ops/<table>.parquet)
+# for the owner's command center, cast to lake.SCHEMAS (contracts/internal/ops.odcs.yaml): the run's completeness per
+# roaster, release_changes' rows, and every product with the build's coffee decision and its reason. Not release
+# tables: release_files() never lists them, so they are never served, materialized for the site or the public
+# export, hashed or reconciled. Only a record: writing them never changes a build's verdict.
+OPS_TABLES = (
+    "run_completeness",
+    "release_changes",
+    "product_decisions",
+    "mart_flags",
+    "eval_prefilter",
+    "eval_prefilter_summary",
+)
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
+# serving_log.action: a new release served (serve), an earlier one served by hand (rollback), the release served
+# now served again to re-export it (reexport: `rollback --to served`, or --to the served build), or a draft build the
+# owner published from the admin (publish: `publish-release`, the publish job).
+SERVING_ACTIONS = ("serve", "rollback", "reexport", "publish")
 # The release columns that differ between two builds of the same lake by design: which build a row came from. The
 # content hash leaves them out, and so does tests/test_reproducible.py's row-for-row comparison.
 PER_BUILD_COLUMNS = ("release_build_id",)
@@ -78,10 +97,12 @@ def record_build(
     passed: bool,
     build_id: str | None = None,
     duration_s: float | None = None,
+    extra_rows: tuple[dict, ...] = (),
     verdicts: dict | None = None,
 ) -> bool:
     """Append this build's release and record to the lake: passing or not, nothing is lost. `results` holds one
-    run_results.json per dbt step (models, then tests); `duration_s` is how long they took. Every row carries the
+    run_results.json per dbt step (models, then tests); `duration_s` is how long they took; `extra_rows` (kind, unique_id
+    and their fields) are recorded with them: a draft's id, the decisions snapshot it applied. Every row carries the
     build's environment: the CI run, dbt's and the key packages' versions, and what decided its verdicts
     (`verdicts`: verdict_model, verdict_definition, configured_image, rules_only_override, verdicts_in_flight). Returns
     the recorded verdict: `passed`, and only if every release table was written, since a release missing a table
@@ -113,7 +134,8 @@ def record_build(
         "build_id": build_id,
         "built_at": datetime.now(UTC).replace(microsecond=0),
         "run_date": date.fromisoformat(run_date),
-        "git_sha": lineage.git_sha(),
+        "git_sha": lineage.git_sha()
+        or lineage.UNKNOWN,  # the image's commit (COFFEEDATA_GIT_SHA) on Cloud Run
         "invocation_id": ",".join(
             i for r in results if (i := (r.get("metadata") or {}).get("invocation_id"))
         ),
@@ -139,6 +161,7 @@ def record_build(
         ) as e:  # a model that failed to build, or a failed write: the release is incomplete
             log.warning("release %s has no %s: %s", build_id, t, e)
     passed = passed and written == set(RELEASE_TABLES)
+    ops = write_ops(lake, con, run_date, build_id) if con else {}
     hashes = []  # each release table's content, for build-hashes: what a rebuild of this release must reproduce
     for t in sorted(written):
         try:
@@ -187,6 +210,9 @@ def record_build(
         log.warning("build %s: no crawl success SLO recorded: %s", build_id, e)
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
     rows += [base | h for h in hashes]
+    rows += [base | r for r in extra_rows]
+    # Each ops table written beside the release, and its row count (a missing one is in the build's log).
+    rows += [base | {"kind": "ops_table", "unique_id": t, "rows": n} for t, n in sorted(ops.items())]
     # The release notes: how many rows of each public table this build adds, removes or changes against the
     # served release, per reason (release_changes); unique_id is <table>:<change>:<reason>.
     rows += [
@@ -206,6 +232,30 @@ def record_build(
     if con:
         con.close()
     return passed
+
+
+def write_ops(lake: Lake, con, run_date: str, build_id: str) -> dict[str, int]:
+    """Write this build's ops tables (OPS_TABLES) beside its release, each exactly its contract's columns cast to
+    lake.SCHEMAS, the build's id first; returns {table: rows} for those written. One that can't be (a model that didn't build, a column
+    the contract doesn't match) is logged and left out: only a record, so it never changes the verdict."""
+    import pyarrow as pa
+
+    from .lake import SCHEMAS
+
+    out = {}
+    for t in OPS_TABLES:
+        schema = SCHEMAS[t]
+        try:
+            cols = ", ".join(f'"{c}"' for c in schema.names[1:])  # build_id is this build's, not the model's
+            table = con.sql(f"select {cols} from {t}").to_arrow_table()
+            table = table.add_column(0, "build_id", pa.array([build_id] * table.num_rows, pa.string()))
+            table = table.cast(schema)
+            lake.write_ops(t, run_date, build_id, table)
+        except Exception as e:  # noqa: BLE001 - duckdb.Error (no model), pyarrow's cast errors, an existing file
+            log.warning("release %s: ops table %s not written: %s", build_id, t, e)
+            continue
+        out[t] = table.num_rows
+    return out
 
 
 def _dbt_vars(results: list[dict]) -> dict:
@@ -406,8 +456,9 @@ def build_hashes(lake: Lake, build_id: str) -> dict[str, tuple[int, str, str]]:
 
 
 def build_inputs(lake: Lake, build_id: str) -> dict:
-    """What a rebuild of this build needs to match: its run date, code (git_sha; null for a build in the ingest
-    image, which has no git checkout: use the image the build job ran), package versions and dbt vars that decide
+    """What a rebuild of this build needs to match: its run date, code (git_sha: the image's commit for a build in the
+    ingest image; "unknown" for one whose image was built without it, and null for one recorded before the image
+    carried it: use the image the build job ran), package versions and dbt vars that decide
     the output (verdict model and definition, max_failures), from its build record and run_results."""
     con = lake.connect()
     b = f"(select * from {lake.scan('builds')} where build_id = ?)"
@@ -681,11 +732,45 @@ def add_override(
 
 
 def release_files(lake: Lake, build_id: str) -> dict[str, str]:
-    """A release's tables: staged locally until published, then read from the remote lake."""
-    local = {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/*.parquet")}
+    """A release's tables: staged locally until published, then read from the remote lake. Only the files directly
+    in the build's folder: its ops tables (ops/, OPS_TABLES) are never release tables."""
+    staged = not (lake.read_only and lake.remote)  # a remote reader stages nothing: read the remote lake only
+    local = (
+        {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/*.parquet")} if staged else {}
+    )
     if local or not lake.remote:
         return local
-    return {Path(f).stem: f"{lake.url}/{f}" for f in _remote_releases(lake.url) if f"/build={build_id}/" in f}
+    return {
+        Path(f).stem: f"{lake.url}/{f}"
+        for f in _remote_releases(lake.url)
+        if Path(f).parent.name == f"build={build_id}"
+    }
+
+
+def ops_files(lake: Lake, build_id: str) -> dict[str, str]:
+    """A build's ops tables (OPS_TABLES), staged locally until published, then read from the remote lake."""
+    staged = not (lake.read_only and lake.remote)
+    local = (
+        {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/ops/*.parquet")}
+        if staged
+        else {}
+    )
+    if local or not lake.remote:
+        return local
+    return {
+        Path(f).stem: f"{lake.url}/{f}"
+        for f in _remote_releases(lake.url)
+        if Path(f).parent.name == "ops" and Path(f).parent.parent.name == f"build={build_id}"
+    }
+
+
+def forget_listings() -> None:
+    """Drop the remote listings kept for the life of the process (the releases/ tree, the top-level folders), so a
+    long-running reader (the admin) sees releases written since. A job reads once and never needs this."""
+    from .lake import _REMOTE_FOLDERS
+
+    _remote_releases.cache_clear()
+    _REMOTE_FOLDERS.clear()
 
 
 @functools.lru_cache(maxsize=8)
@@ -736,6 +821,47 @@ def builds(lake: Lake) -> list[tuple[str, str, bool]]:
         .fetchall()
     )
     return [(b, d, bool(ok)) for b, d, ok in rows]
+
+
+def drafts(lake: Lake) -> dict[str, str]:
+    """build_id -> draft_id for every draft build (`build --draft`): recorded, never served by the build itself."""
+    rows = lake.connect().execute(
+        f"select build_id, any_value(unique_id) from {lake.scan('builds')} where kind = 'draft' group by build_id"
+    )
+    return dict(rows.fetchall())
+
+
+def ever_served(lake: Lake) -> set[str]:
+    """Every build serving_log has served, by any action: a draft in it was published."""
+    try:
+        rows = lake.connect().execute(f"select distinct build_id from {lake.scan('serving_log')}").fetchall()
+    except Exception as e:  # noqa: BLE001 - a lake from before serving_log
+        if no_files(e):
+            return set()
+        raise
+    return {b for (b,) in rows if b}
+
+
+def unpublished_drafts(lake: Lake) -> set[str]:
+    """Draft builds never served: kept out of rollback's default, build-diff's default `new`, and (stg_builds) the
+    anomaly bands and the volume baseline, and rollback refuses them. Only Publish serves one."""
+    return set(drafts(lake)) - ever_served(lake)
+
+
+def build_snapshot(lake: Lake, build_id: str) -> dict | None:
+    """The decisions snapshot a build applied (its builds row kind snapshot): id, digest and the document, or None."""
+    row = (
+        lake.connect()
+        .execute(
+            f"select unique_id, checksum, payload from {lake.scan('builds')} "
+            "where build_id = ? and kind = 'snapshot' limit 1",
+            [build_id],
+        )
+        .fetchone()
+    )
+    if not row:
+        return None
+    return {"snapshot_id": row[0], "sha256": row[1], "doc": json.loads(row[2]) if row[2] else None}
 
 
 def served(lake: Lake) -> dict | None:
@@ -790,7 +916,7 @@ def serve(
     rules_only_override: str | None = None,
 ) -> Path:
     """Make a release the one customers get: its catalog marts replace marts/, marts/release.parquet records it,
-    serving_log gets a row for it (`action`: serve or rollback; `previous`: the release it replaces, read from
+    serving_log gets a row for it (`action`: SERVING_ACTIONS; `previous`: the release it replaces, read from
     marts/release.parquet when not given; None: nothing was served), and `db` gets every release table, for the public export and the site.
     A release whose verdicts weren't checked (servable) is refused unless rules only is allowed by a named override:
     its build record's, `rules_only_override` (rollback --allow-rules-only) or COFFEEDATA_ALLOW_RULES_ONLY=1; the
@@ -799,6 +925,8 @@ def serve(
     import pyarrow as pa
     import pyarrow.parquet as pq
 
+    if action not in SERVING_ACTIONS:
+        raise ValueError(f"action must be one of {', '.join(SERVING_ACTIONS)}")
     passed = {b: (d, ok) for b, d, ok in builds(lake)}
     if build_id not in passed:
         raise ValueError(f"no build {build_id}")
@@ -857,14 +985,24 @@ def servable(lake: Lake, build_id: str, rules_only_override: str | None = None) 
 
 
 def rollback(
-    lake: Lake, to: str | None = None, reason: str = "", rules_only_override: str | None = None
+    lake: Lake,
+    to: str | None = None,
+    reason: str = "",
+    db: Path = Path("build/served.duckdb"),
+    rules_only_override: str | None = None,
 ) -> str:
     """Serve an earlier passing release: `to` ('served': the one served now), or the newest passing release before
     the one served now that can be served (servable: its verdicts were checked, or `rules_only_override` allows it);
     earlier releases that can't be are skipped and logged. `rules_only_override` names why a release without checked
-    verdicts may be served (serve)."""
+    verdicts may be served (serve). Serving the release served now again (to 'served', or its build id) is a
+    re-export, logged as action reexport, not rollback: the served release doesn't change. `db` gets the release's tables, as in `serve`."""
     now = (served(lake) or {}).get("build_id")
-    passing = [b for b, _, ok in builds(lake) if ok]
+    hidden = unpublished_drafts(lake)
+    if to in hidden:
+        raise ValueError(
+            f"build {to} is a draft that was never published: Publish serves a draft, not rollback"
+        )
+    passing = [b for b, _, ok in builds(lake) if ok and b not in hidden]
     if to == "served":  # the same release again: re-export it and rebuild the site, with no crawl
         if not now:
             raise ValueError("no release is served yet")
@@ -891,8 +1029,9 @@ def rollback(
             log.warning(
                 "rollback skipped %d newer release(s) that can't be served: %s", len(refused), refused
             )
+    action = "reexport" if to == now else "rollback"
     serve(
-        lake, to, reason or f"rollback from {now}", action="rollback", previous=now,
+        lake, to, reason or f"{action} from {now}", db=db, action=action, previous=now,
         rules_only_override=rules_only_override,
     )  # fmt: skip
     return to
@@ -903,13 +1042,16 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
     build before it, i.e. after a failed weekly run, what the held-back build would have published."""
     con = lake.connect()
     b = f"(select * from {lake.scan('builds')} where build_id is not null)"
+    hidden = unpublished_drafts(lake)
     history = [(bid, ok) for bid, _, ok in builds(lake)]  # the one definition of a passing build
+    if new is None:  # the latest build that isn't an unpublished draft
+        new = next((bid for bid, _ in reversed(history) if bid not in hidden), None)
     if new is None:
         new = history[-1][0] if history else None
     if old is None:  # the last passing build before `new`, never a later one
         order = [bid for bid, _ in history]
         cut = order.index(new) if new in order else len(order)
-        before = [bid for bid, ok in history[:cut] if ok]
+        before = [bid for bid, ok in history[:cut] if ok and bid not in hidden]
         old = before[-1] if before else None
     if not (old and new):
         return {"error": "need two builds to compare", "builds": [bid for bid, _ in history]}

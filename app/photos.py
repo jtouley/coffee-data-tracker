@@ -17,6 +17,7 @@ from datetime import UTC, datetime
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 from coffeedata.lake import Lake
+from coffeedata.models import SAFE_ID
 
 MAX_UPLOAD = 12 * 1024 * 1024  # a full-size phone photo, before the phone shrinks it
 MAX_PIXELS = 50_000_000  # anything larger is refused before it's decoded (decompression bombs)
@@ -96,12 +97,15 @@ def _write(lake: Lake, photo_id: str, user_id: str, photo: Photo, now: datetime)
 
 
 def load(lake: Lake, photo_id: str) -> tuple[str, bytes] | None:
-    """A photo's owner and JPEG, from staging or the dataset (one file read), or None."""
+    """A photo's owner and JPEG, from staging or the dataset (one file read), or None. The id is checked here too
+    (SAFE_ID), whatever the caller checked, and the path is a parameter, never part of the SQL."""
+    if not SAFE_ID.fullmatch(photo_id):
+        return None
     con = lake.connect()
     for src in lake.sources("photos"):
         path = f"{src.rsplit('/', 1)[0]}/{photo_id}.parquet"
         try:
-            row = con.execute(f"select user_id, image.bytes from read_parquet('{path}')").fetchone()
+            row = con.execute("select user_id, image.bytes from read_parquet(?)", [path]).fetchone()
         except Exception:  # noqa: BLE001 - duckdb.IOException: not in this source
             continue
         if row:

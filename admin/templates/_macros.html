@@ -1,0 +1,107 @@
+{# Status is a word with a mark (filled dot done, ring running, square failed, triangle warn, dash missing): never colour alone. #}
+{% macro status(word) -%}
+{%- set w = (word or "missing") | string -%}
+{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled", "needs review") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
+<span class="st st-{{ kind }}"><i aria-hidden="true"></i>{{ w }}</span>
+{%- endmacro %}
+
+{% macro cup(id="cup-inside") -%}
+<svg class="cup" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+  <clipPath id="{{ id }}"><path d="M11 19h24v12a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9z"/></clipPath>
+  <g class="stream"><rect x="22" y="1" width="2.5" height="5" rx="1.25"/><rect x="22" y="10" width="2.5" height="5" rx="1.25"/></g>
+  <g clip-path="url(#{{ id }})"><rect class="pour" x="10" y="19" width="26" height="22"/></g>
+  <path class="rim" d="M11 19h24v12a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9zM35 23h2.5a4 4 0 0 1 0 8H35M8 44h30"/>
+</svg>
+{%- endmacro %}
+
+{% macro ev(url, text) -%}
+{%- if url %}<a class="ev" href="{{ url }}" rel="noreferrer noopener" target="_blank">{{ text }}</a>{% else %}{{ text }}{% endif -%}
+{%- endmacro %}
+
+{% macro source(files, read_at) -%}
+<p class="src">From {% for f in files %}<code>{{ f }}</code>{{ ", " if not loop.last }}{% endfor %} · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+{%- endmacro %}
+
+{% macro served_line(served) -%}
+{%- if served %}
+<dl class="facts">
+  <dt>Serving</dt><dd><code>{{ served.build_id }}</code>, week {{ served.run_date[:10] }}</dd>
+  {% if served.log %}<dt>Served</dt><dd>{{ t(served.log.served_at) }} UTC by {{ served.log.actor or "unknown" }} ({{ served.log.action }}){% if served.log.reason %}: {{ served.log.reason }}{% endif %}</dd>
+  <dt>CI run</dt><dd>{{ ev(served.log.ci_run_url, "the run that served it") if served.log.ci_run_url else "none recorded" }}</dd>{% endif %}
+  <dt>Release folder</dt><dd>{{ ev(served.folder.url, served.folder.path) }}</dd>
+</dl>
+{%- else %}
+<p class="body">Nothing is served yet: <code>marts/release.parquet</code> doesn’t exist.</p>
+{%- endif %}
+{%- endmacro %}
+
+{% macro week_picker(weeks, week, action) -%}
+<form class="picker" method="get" action="{{ action }}">
+  <label class="label" for="week">Week</label>
+  <select id="week" name="week" class="select">{% for w in weeks %}<option value="{{ w }}"{% if w == week %} selected{% endif %}>{{ w }}</option>{% endfor %}</select>
+  <button class="btn secondary inline" type="submit">Show</button>
+</form>
+{%- endmacro %}
+
+{% macro build_picker(builds, build, action, extra={}) -%}
+<form class="picker" method="get" action="{{ action }}">
+  <label class="label" for="build">Build</label>
+  <select id="build" name="build" class="select">{% for b in builds %}<option value="{{ b.build_id }}"{% if b.build_id == build %} selected{% endif %}>{{ b.build_id }} · week {{ b.run_date }} · {{ "passed" if b.passed else "failed" }}</option>{% endfor %}</select>
+  {% for k, v in extra.items() %}<input type="hidden" name="{{ k }}" value="{{ v }}">{% endfor %}
+  <button class="btn secondary inline" type="submit">Show</button>
+</form>
+{%- endmacro %}
+
+{# Writes are off (no database, Cloud Run or snapshot store): say so once, where the actions would be. #}
+{% macro write_off(reasons) -%}
+{%- if reasons %}<p class="notice mt12" role="status">Actions are off: {{ reasons | join("; ") }}. The pages still read the lake.</p>{% endif -%}
+{%- endmacro %}
+
+{# A one-button write: its confirm text, then POST with the form's idempotency key (admin.js). #}
+{% macro write_button(url, label, confirm, busy="Working…", cls="secondary", danger=false, disabled=none, ask="") -%}
+<form class="inline-form" data-write="{{ url }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}"{% if danger %} data-danger{% endif %}{% if ask %} data-ask="{{ ask }}"{% endif %}>
+  <input type="hidden" name="key" value="{{ new_key() }}">
+  <button class="btn {{ cls }} inline" type="submit" data-busy="{{ busy }}"{% if disabled %} aria-disabled="true" aria-describedby="{{ disabled }}"{% endif %}>{{ label }}</button>
+</form>
+{%- endmacro %}
+
+{# A search box, facet selects with counts (and the caller's extra fields), and the removable filter chips: the
+   Catalog's. #}
+{% macro search(f, facets, data, qs, action, label, hidden={}) -%}
+<form class="search" method="get" action="{{ action }}" role="search">
+  {% for k, v in hidden.items() %}<input type="hidden" name="{{ k }}" value="{{ v }}">{% endfor %}
+  <label class="label" for="q">{{ label }}</label>
+  <div class="searchrow"><input class="input" id="q" name="q" type="search" value="{{ f.q }}" autocomplete="off" spellcheck="false"><button class="btn primary inline" type="submit">Search</button></div>
+  <details class="filters" data-filters{% if f.values or f.price_min is not none or f.price_max is not none %} open data-applied{% endif %}>
+  <summary class="btn text start">Filters{% if f.values %} ({{ f.values | length }} applied){% endif %}</summary>
+  <div class="facets">
+    {% for name in facets %}
+    <label class="facet"><span class="label">{{ name.replace("_", " ") | capitalize }}</span>
+      <select name="{{ name }}" class="select" data-autosubmit>
+        <option value="">Any</option>
+        {% for value, count in data.facets[name] %}<option value="{{ value }}"{% if f.values.get(name) == value %} selected{% endif %}>{{ value }} ({{ n(count) }})</option>{% endfor %}
+      </select></label>
+    {% endfor %}
+    {{ caller() if caller else "" }}
+  </div>
+  </details>
+  <noscript><button class="btn secondary inline" type="submit">Apply filters</button></noscript>
+</form>
+{% set chips = f.chips() %}
+{% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}<li><a class="btn text inline" href="{{ action }}{% if hidden %}?{{ hidden | urlencode }}{% endif %}">Clear all</a></li></ul>{% endif %}
+{%- endmacro %}
+
+{% macro pager(data, qs) -%}
+{% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
+{%- endmacro %}
+
+{# The page's "?" beside its title (shell.html's title actions): what the page reads and how it works, in a panel
+   (a sheet on a phone, a popover on a desktop), so the page itself starts with its answer. #}
+{% macro help(id, title) -%}
+<button class="btn secondary inline help" type="button" data-panel aria-controls="help-{{ id }}" aria-haspopup="dialog" aria-label="About {{ id }}: {{ title | lower }}">?</button>
+<dialog class="sheet panel" id="help-{{ id }}" aria-labelledby="help-{{ id }}-h">
+  <h2 class="serif title-s" id="help-{{ id }}-h">{{ title }}</h2>
+  {{ caller() }}
+  <div class="actions"><button class="btn text inline" type="button" data-panel-close>Close</button></div>
+</dialog>
+{%- endmacro %}

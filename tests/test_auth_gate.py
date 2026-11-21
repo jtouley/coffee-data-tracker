@@ -186,8 +186,13 @@ def test_a_failing_session_lookup_fails_closed(lake, users, photo_lake, caplog):
     assert "set-cookie" not in r.headers  # kept: it may be fine once the check works again
     assert c.get("/health").json() == {"ok": True}
     assert "lake read failed" in caplog.text and "Traceback" in caplog.text  # logged, not shown
-    # The sign-in screen tells app.js not to clear the offline pages: the session may still be good.
+    # The sign-in screen tells app.js not to clear the offline pages: the session may still be good. The service
+    # worker reads the same from a header (it clears on any other sign-in screen: review 2026-11-21, F11).
     assert 'data-ended="failed"' in r.text
+    assert r.headers["x-session"] == "unchecked"
+    auth.broken = False
+    c.cookies.clear()
+    assert "x-session" not in c.get("/signin").headers
 
 
 def test_forms_that_carry_a_password_post_even_unwired(lake, users, photo_lake):

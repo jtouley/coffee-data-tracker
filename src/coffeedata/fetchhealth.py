@@ -408,8 +408,9 @@ def repull_states(lake: Lake, connector: str, week: str) -> list[registry.Roaste
     what a later crawl pass of the week (crawl, crawl-retry) fetches again although it has an ok fetch, when
     refetch_enabled (the passes check it before calling this). Only roasters
     select_states would still crawl (ingest.crawlable: a platform, not opted out, ...) whose adapter is still
-    `connector`. Its lake reads are retried on a transient error (retry_transient), as every first read of a crawl."""
-    from .ingest import crawlable
+    `connector`, and never one whose crawl flag the published snapshot turns off (ingest.crawl_off). Its lake reads
+    are retried on a transient error (retry_transient), as every first read of a crawl."""
+    from .ingest import crawl_off, crawlable
 
     rows = retry_transient(control.rows, lake, week)
     checks = [r for r in rows if r["job"] == JOB and r["status"] == "done"]
@@ -432,7 +433,7 @@ def repull_states(lake: Lake, connector: str, week: str) -> list[registry.Roaste
         return []
     q = f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and fetched_at > ?"
     fetched = retry_transient(lambda: lake.connect().execute(q, [date.fromisoformat(week), since]).fetchall())
-    todo = listed - {r[0] for r in fetched}
+    todo = listed - {r[0] for r in fetched} - crawl_off(lake)
     # Every listed roaster was fetched this run (that's how the check saw it): `tried`, as select_states has it.
     states = [
         s

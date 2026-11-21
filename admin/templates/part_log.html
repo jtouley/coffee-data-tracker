@@ -1,0 +1,25 @@
+{% from "_macros.html" import write_off %}
+<div data-state="{{ 'data' if rows else 'empty' }}">
+{{ write_off(writes_off) }}
+<form class="picker" method="get" action="/log">
+  <label class="label" for="action">Action</label>
+  <select id="action" name="action" class="select" data-autosubmit><option value="">All</option>{% for a in actions %}<option value="{{ a }}"{% if a == action %} selected{% endif %}>{{ a.replace("_", " ") }}</option>{% endfor %}</select>
+  <noscript><button class="btn secondary inline" type="submit">Show</button></noscript>
+</form>
+<p class="answer" data-answer>{{ n(total) }} {{ (action or "write").replace("_", " ") }}{{ "s" if total != 1 }} recorded</p>
+<p class="src">From the control plane's <code>audit</code>: append-only, every write with who, when and the outcome · read {{ read_at.strftime("%H:%M:%S") }} UTC · <a class="ev" href="/api/decisions/export" download>Download the decisions</a> (for <code>coffeedata decide export-labels</code>)</p>
+{% if not rows %}
+  <div class="state empty mt16"><h2 class="section">Nothing recorded{% if action %} for {{ action.replace("_", " ") }}{% endif %}</h2><p class="body">Every job start, cancel, decision, undo, draft, Publish and Roll back is recorded here when it happens.</p></div>
+{% else %}
+<div class="frame" tabindex="0" role="region" aria-label="Log"><table class="dense">
+  <caption>Newest first{% if total > rows | length %}: {{ offset + 1 }}–{{ offset + rows | length }} of {{ n(total) }}{% endif %}</caption>
+  <thead><tr><th scope="col">When (UTC)</th><th scope="col">Action</th><th scope="col">Subject</th><th scope="col">Outcome</th><th scope="col">By</th><th scope="col">Detail</th></tr></thead>
+  <tbody>{% for r in rows %}<tr{% if r.outcome != "ok" %} class="bad"{% endif %}>
+    <th scope="row">{{ t(r.at) }}</th><td>{{ r.action.replace("_", " ") }}</td><td><code>{{ r.subject or "—" }}</code></td>
+    <td>{{ r.outcome }}</td><td>{{ r.actor }}</td>
+    <td class="err">{% set d = r.detail %}{% if d.reason %}“{{ d.reason }}” {% endif %}{% if d.count %}{{ d.count }} {{ d.kind or "" }} {{ d.action or "" }} {% endif %}{% if d.reasons %}{{ d.reasons | join("; ") }}{% endif %}{% if d.runs %}{% for x in d.runs %}<code>{{ x.job }}</code> {{ x.execution.rsplit("/", 1)[-1] if x.execution }}{{ ", " if not loop.last }}{% endfor %}{% endif %}{% if d.override %} · window overridden: “{{ d.override }}”{% endif %}{% if d.errors %} · {{ d.errors | join("; ") }}{% endif %}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+{% if total > offset + rows | length %}<p class="mt12"><a class="ev" href="/log?{{ {"action": action or "", "offset": offset + 100} | urlencode }}">Next 100</a></p>{% endif %}
+{% endif %}
+</div>

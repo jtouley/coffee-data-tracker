@@ -208,6 +208,44 @@ def test_control_rows_follow_the_manifest_contract(tmp_path):
     ) == set(_cols("manifest", "run_manifests"))
 
 
+def test_ops_tables_follow_the_ops_contract(tmp_path, caplog):
+    """The build's ops tables (quality.OPS_TABLES) are written beside the release under ops/, with exactly their
+    contract's columns, in its order and types, whatever else the model has; they are never release tables (so
+    never served, materialized, exported or hashed), and one that can't be written is only logged.
+    tests/test_smoke_dbt.py checks the same against the real dbt models."""
+    import duckdb
+    import pyarrow.parquet as pq
+
+    from coffeedata import public, quality
+
+    assert set(quality.OPS_TABLES) == set(raw_contracts.CONTRACTS["ops"]["tables"])
+    assert not set(quality.OPS_TABLES) & (set(quality.RELEASE_TABLES) | set(public.PUBLIC_TABLES))
+    lake = Lake(str(tmp_path / "lake"))
+    con = duckdb.connect()
+    for t in ("run_completeness", "product_decisions"):  # release_changes didn't build
+        con.register("src", pa.Table.from_pylist([{}], schema=SCHEMAS[t]))
+        # columns in another order and an extra one: the file still has the contract's, in its order
+        con.execute(
+            f"create table {t} as select 'x' as extra, * exclude (build_id, roaster_id), roaster_id from src"
+        )
+        con.unregister("src")
+    written = quality.write_ops(lake, con, "2026-11-02", "b1")
+    assert written == {"run_completeness": 1, "product_decisions": 1}
+    assert "ops table release_changes not written" in caplog.text
+    files = quality.ops_files(lake, "b1")
+    assert set(files) == set(written) and quality.release_files(lake, "b1") == {}
+    for t, f in files.items():
+        assert (
+            Path(f).relative_to(lake.root).as_posix()
+            == f"releases/run_date=2026-11-02/build=b1/ops/{t}.parquet"
+        )
+        assert pq.read_schema(f).remove_metadata() == SCHEMAS[t], t
+        assert pq.read_schema(f).names == _cols("ops", t)
+        assert pq.read_table(f).column("build_id").to_pylist() == ["b1"]  # every row names its build
+    # immutable, like the release: a second write of the same build's table is refused (and logged)
+    assert quality.write_ops(lake, con, "2026-11-02", "b1") == {}
+
+
 def test_enrichment_rows_follow_the_enrichment_contract():
     row = enrich._row({"roaster_id": "x.com", "product_id": "1", "body_hash": "b"}, Enrichment(method="llm"),
                       datetime(2026, 11, 2, tzinfo=UTC))  # fmt: skip

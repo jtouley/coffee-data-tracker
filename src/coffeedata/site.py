@@ -16,7 +16,7 @@ import logging
 import os
 import re
 import shutil
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from html import escape
 from pathlib import Path
 
@@ -338,6 +338,23 @@ def robots_txt(site: str) -> str:
     return f"User-agent: *\nAllow: /\n\nSitemap: {site}/sitemap.xml\n"
 
 
+SECURITY_TXT_DAYS = 180  # RFC 9116 §2.5.5: Expires under a year out; each weekly build moves it on
+
+
+def security_txt(site: str, built: datetime) -> str:
+    """/.well-known/security.txt (RFC 9116): SECURITY.md's private reporting route and policy, no email address.
+    Expires counts from the release's build time, so a rebuild of the same release gives the same file."""
+    expires = (built.astimezone(UTC) + timedelta(days=SECURITY_TXT_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return (
+        "# Report a vulnerability privately through GitHub's advisory form; see the policy for scope.\n"
+        f"Contact: {REPO}/security/advisories/new\n"
+        f"Expires: {expires}\n"
+        f"Policy: {REPO}/blob/main/SECURITY.md\n"
+        "Preferred-Languages: en\n"
+        f"Canonical: {site}/.well-known/security.txt\n"
+    )
+
+
 def sitemap_xml(site: str, lastmod: dict[str, str]) -> str:
     urls = "".join(
         f"  <url><loc>{escape(site + '/' + page)}</loc>"
@@ -405,6 +422,15 @@ def build(db: Path, out: Path) -> Path:
         select coalesce(process, 'not stated') as process, count(*) as n
         from site_coffee where {SINGLE_ORIGIN} and in_stock group by 1 order by n desc""",
     )
+    # The process chart counts single origins only (SINGLE_ORIGIN): its note says how many coffees in stock it leaves
+    # out, blends and coffees with no known origin, so the chart isn't read as the whole catalog.
+    left_out = _q(
+        con,
+        f"""
+        select count(*) filter (where is_blend) as blends,
+               count(*) filter (where not is_blend and origin_country is null) as no_origin
+        from site_coffee where {LISTED} and in_stock""",
+    )[0]
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
     # The filter doesn't keep the mart's order, so it is restated (the model's own order).
@@ -586,6 +612,7 @@ def build(db: Path, out: Path) -> Path:
         coverage=coverage,
         origin_price=origin_price,
         processes=processes,
+        left_out=left_out,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
         # The page fetches catalog.json?b=<a hash of the file>: a new page never reads a cached older file, even
         # after a code-only redeploy of the same release. (Pages ignores the query, so a cached older page gets the
@@ -598,6 +625,8 @@ def build(db: Path, out: Path) -> Path:
     (cat / "index.html").write_text(with_csp(html, collector))
     site = str(link["site"])
     (out / "robots.txt").write_text(robots_txt(site))
+    (out / ".well-known").mkdir(exist_ok=True)
+    (out / ".well-known" / "security.txt").write_text(security_txt(site, generated))
     day = f"{generated:%Y-%m-%d}"
     legal_day = f"{datetime.strptime(LEGAL_UPDATED, '%B %d, %Y'):%Y-%m-%d}"
     bot_day = f"{datetime.strptime(BOT_UPDATED, '%B %d, %Y'):%Y-%m-%d}"

@@ -14,6 +14,16 @@ from pydantic import BaseModel, Field, field_validator
 Platform = Literal["shopify", "woocommerce", "squarespace", "square_online", "generic"]
 
 
+def adapter_of(platform: str) -> Platform:
+    """The connector that crawls a store on this platform (a probe's answer)."""
+    p = (platform or "").rstrip("?")
+    if platform in ("shopify", "woocommerce"):
+        return platform  # type: ignore[return-value]
+    if p in ("squarespace", "square_online"):
+        return p  # type: ignore[return-value]
+    return "generic"
+
+
 class Roaster(BaseModel):
     roaster_id: str  # normalized domain; stable and unique
     name: str
@@ -24,12 +34,7 @@ class Roaster(BaseModel):
 
     @property
     def adapter(self) -> Platform:
-        p = self.platform.rstrip("?")
-        if self.platform in ("shopify", "woocommerce"):
-            return self.platform  # type: ignore[return-value]
-        if p in ("squarespace", "square_online"):
-            return p  # type: ignore[return-value]
-        return "generic"
+        return adapter_of(self.platform)
 
 
 class Variant(BaseModel):
@@ -217,6 +222,12 @@ class Bag(BaseModel):
     model_config = {"extra": "forbid"}
 
     _id = field_validator("bag_id")(_safe_id)
+
+    @field_validator("photo_id")
+    @classmethod
+    def _photo_id(cls, v: str | None) -> str | None:
+        # Names a file in the photos dataset, like the other ids: None (no photo) or a plain id.
+        return None if v is None else _safe_id(v)
 
 
 # The "Your next bag" recommendation test: a coffee-level rating, separate from shots, and answers to the picks.

@@ -48,11 +48,21 @@ The owner labels issues and pull requests at triage. An item can carry several.
 make install   # uv sync
 make hooks     # once: install the pre-commit hooks
 make test      # make lint, then pytest
+make smoke     # the fast smoke suite CI requires on every PR
 make fmt       # ruff fix and format over src, app and tests
 ```
 
-`make lint` runs the pre-commit hooks in `.pre-commit-config.yaml`. The README's
-[Development](README.md#development) section covers what they check, the browser test and what CI runs.
+- The tests run offline, with recorded store responses (`tests/fixtures/`), mocked HTTP (`respx`), synthetic lakes
+  and FastAPI's test client.
+- One browser test (`tests/test_app_browser.py`) drives owner setup, sign-in and Log shot → Saved → Undo at phone
+  width and runs axe on each screen; it needs Node with Playwright and axe-core (`npm ci` in `tests/browser`) and is
+  skipped without them, except in CI.
+- `make lint` runs the pre-commit hooks in `.pre-commit-config.yaml` on every file except `tests/fixtures/`, `eval/sealed/` and
+  `contracts/schemas/`: whitespace, YAML/TOML, merge-conflict, large-file and private-key checks, `uv.lock` in step
+  with `pyproject.toml`, ruff and ruff format on the Python files, and mypy over `src` and `app`. The first run
+  downloads the hook repos, so it needs network once.
+- CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, installs Playwright and Chromium, and runs `make test`
+  with `REQUIRE_BROWSER=1` on every pull request and push to `main`.
 
 ## Requirements for a change
 

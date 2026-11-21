@@ -16,6 +16,20 @@ variable "github_repo" {
   default     = "jtouley/coffee-data-tracker"
 }
 
+# The numeric ids as well as the name, as in the bootstrap (src/terraform/bootstrap/variables.tf, the same values): a
+# name can be deleted and registered again by someone else, an id can't.
+variable "github_repository_id" {
+  description = "GitHub's numeric id of var.github_repo (the token's repository_id claim)."
+  type        = string
+  default     = "778310280"
+}
+
+variable "github_repository_owner_id" {
+  description = "GitHub's numeric id of the repository's owner (the token's repository_owner_id claim)."
+  type        = string
+  default     = "14210040"
+}
+
 variable "domain" {
   description = "The app's own hostname."
   type        = string
@@ -56,6 +70,24 @@ variable "service" {
   description = "Name of the Cloud Run service and its Artifact Registry repository."
   type        = string
   default     = "registry-coffee"
+}
+
+variable "admin_domain" {
+  description = "The admin's own hostname (admin.tf): its sign-in origin and passkeys' relying party."
+  type        = string
+  default     = "admin.registry.coffee"
+}
+
+variable "admin_enabled" {
+  description = "Creates the admin's service, its public invoker, its domain mapping and its alerts (admin.tf). Turn on in ci.tfvars once ADMIN_SESSION_SECRET, ADMIN_ENROLL_TOKEN and ADMIN_HF_TOKEN each have an enabled version (docs/admin/README.md, \"Deploying\"): the service reads them at version latest, and Cloud Run refuses to create it before that."
+  type        = bool
+  default     = false
+}
+
+variable "admin_cold_start_min_samples" {
+  description = "Container starts an hour needs before the admin's cold-start alert can fire, so one slow start never pages (docs/design/admin-registry.md §7.1)."
+  type        = number
+  default     = 3
 }
 
 variable "email" {

@@ -34,8 +34,8 @@ document.addEventListener("click", async (event) => {
   if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   let r = null;
-  try { r = await fetch(link.href, { headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
-  if (!r || !r.ok) return location.assign(link.href);
+  try { r = await fetch(link.href, { method: "POST", headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
+  if (!r || !r.ok) return location.assign(link.href); // offline: the offline page; refused: back to Switch coffee
   rememberBag(link.dataset.selectBag);
   await clearBagPages().catch(() => {});
   location.assign(r.url);
@@ -799,7 +799,8 @@ function newBag(root) {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       // Saved online: it's the bag on the grinder now. A bag saved offline is picked with Switch once it syncs.
       try {
-        if ((await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`)).ok) {
+        const use = await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`, { method: "POST", headers: { "X-Requested-With": "fetch" } });
+        if (use.ok) {
           rememberBag(body.bag_id);
           await clearBagPages();
         }
@@ -1311,7 +1312,8 @@ async function postRetrying(url, body) {
     try {
       return await post(url, body);
     } catch (err) {
-      if (!(err instanceof Unreachable) || i >= RETRY_WAITS.length) throw err;
+      // Busy (the app turning password checks away) isn't retried here: sending again adds to the load it reports.
+      if (!(err instanceof Unreachable) || err instanceof Busy || i >= RETRY_WAITS.length) throw err;
       await sleep(RETRY_WAITS[i]);
     }
   }
@@ -1397,7 +1399,7 @@ function accountForm(form, done = null) {
     } catch (err) {
       if (err instanceof Unreachable) {
         busy.stop("Try again");
-        return say(form, UNREACHABLE);
+        return say(form, err instanceof Busy ? err.message : UNREACHABLE);
       }
       busy.stop();
       if (err.status >= 500) return say(form, OUR_SIDE);
@@ -1726,6 +1728,7 @@ function preference(group, name, plain) {
 // --- Signing in and the account -----------------------------------------------------------------------
 
 class Unreachable extends Error {} // no reply: offline, timed out, or a gateway error while the app wakes up
+class Busy extends Unreachable {} // the app turned a password check away for a moment (503 with Retry-After): its words
 
 // A JSON POST with a deadline: past it (130 s, just over Cloud Run's 120 s request limit) the request is given up.
 // A refusal carries the server's words: a plain string, or a list of {field, rule, message} for errors that belong
@@ -1747,7 +1750,11 @@ async function post(url, body, { timeout = 130000 } = {}) {
     clearTimeout(timer);
   }
   if (r.ok) return r.json();
-  if ([502, 503, 504].includes(r.status)) throw new Unreachable(UNREACHABLE);
+  if ([502, 503, 504].includes(r.status)) {
+    // The app's own "too busy, try again" has a Retry-After and words for the person; a gateway's 503 has neither.
+    const busy = r.status === 503 && r.headers.get("Retry-After") ? (await r.json().catch(() => ({}))).detail : null;
+    throw typeof busy === "string" && busy ? new Busy(busy) : new Unreachable(UNREACHABLE);
+  }
   const detail = (await r.json().catch(() => ({}))).detail;
   const list = Array.isArray(detail) ? detail : [];
   const words = typeof detail === "string" ? detail : list.map((d) => (typeof d === "string" ? d : d?.message)).filter(Boolean).join(" ");
@@ -1782,27 +1789,29 @@ function account() {
     });
   }
   for (const b of document.querySelectorAll("[data-signout]")) {
-    // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
+    // Sign out ends every session of the account (review 2026-11-21, F6). Progress and errors go in the status line
+    // beside the button, so its name keeps starting with "Sign out".
+    const status = b.parentElement.querySelector("[data-signout-status]");
+    const say = (text) => { if (status) status.textContent = text; };
     b.addEventListener("click", () => confirmTap(b, async () => {
+      if (b.getAttribute("aria-busy") === "true") return;
+      b.setAttribute("aria-busy", "true");
+      say("Signing out…");
       try {
-        // 401: the session had already ended (signed out on another phone, or expired); for this phone's sign-out
-        // that is signed out too. Not for "Sign out on all devices": the other sessions are untouched, so say so.
+        // 401: the session had already ended (signed out on another phone, or expired): signed out here too.
         // A session the server couldn't check answers 503 instead, which stays an error here.
-        const everywhere = b.dataset.signout !== "/api/signout";
-        const ended = await post(b.dataset.signout, {}).then(() => false, (err) => {
+        const reply = await post(b.dataset.signout, {}).catch((err) => {
           if (err.status !== 401) throw err;
-          return true;
+          return {};
         });
-        if (ended && everywhere) {
-          b.textContent = "This phone was already signed out. Sign in, then sign out on all devices.";
-          return;
-        }
         // Kept pages hold this person's data: they go with the session, once the server has signed it out.
         try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
         navigator.serviceWorker?.controller?.postMessage("signed-out");
-        location.replace("/signin");
+        // everywhere false: this phone's cookie went, but the other sessions couldn't be ended; sign-in says so.
+        location.replace(reply.everywhere === false ? "/signin?others=kept" : "/signin");
       } catch {
-        b.textContent = "Couldn’t sign out. Check the connection and try again.";
+        b.removeAttribute("aria-busy");
+        say("Couldn’t sign out. Check the connection and try again.");
       }
     }));
   }

@@ -28,7 +28,7 @@ sizes, prices and stock. Built by [coffee-data-tracker](https://github.com/jtoul
   - `fct_price_event`: new / price / availability / removed / relisted events between consecutive successful weekly fetches.
   - `mart_market`: the current retail catalog (listed, not archived, not wholesale) by origin × process, with price-per-100g distribution and the most common tasting notes.
   - `dim_roaster`: the roaster registry, with platform and status. `coffees_listed` counts its current retail catalog (listed, not archived, not wholesale); `coffees_archived` counts its archived back catalog, also leaving wholesale out.
-- The raw weekly records (`snapshots/`, `fetches/`, `probes/`, `enrichments/` and so on). Files are only ever added, never changed. The repo README describes the layout.
+- The raw weekly records (`snapshots/`, `fetches/`, `probes/`, `enrichments/` and so on). Files are only ever added, never changed. The repo's docs/ARCHITECTURE.md describes the layout.
 
 ```sql
 -- DuckDB

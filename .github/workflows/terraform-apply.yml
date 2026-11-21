@@ -17,8 +17,10 @@
 # merging. The environment's required reviewer is the gate GitHub enforces; see RUNNING.md for what keeps it so.
 #
 # The repository is public. Nothing Terraform prints reaches the log: every Terraform command's output goes to a file,
-# and a failure shows only the guard's fixed, scrubbed summary (`tf_plan_guard.py errors`). The TF_VAR_* repository
-# variables are not masked by GitHub, so this matters.
+# and a failure shows only the guard's fixed, scrubbed summary (`tf_plan_guard.py errors`) and, in the apply job, why
+# each error happened as far as an allow-list can say (`tf_error_reasons.py`: a denied permission's name and a reason
+# from a fixed list, nothing else from Terraform's message). The TF_VAR_* repository variables are not masked by
+# GitHub, so this matters.
 name: terraform-apply
 on:
   push:
@@ -48,6 +50,7 @@ env:
   ENVIRONMENT: terraform-apply
   APPROVER: jtouleyrou
   GUARD: scripts/tf_plan_guard.py
+  REASONS: scripts/tf_error_reasons.py
 jobs:
   plan:
     if: github.repository == 'jtouley/coffee-data-tracker' && github.ref == 'refs/heads/main'
@@ -291,10 +294,16 @@ jobs:
         run: |
           unset TF_LOG TF_LOG_CORE TF_LOG_PROVIDER TF_LOG_PATH
           logs="$RUNNER_TEMP/tf-logs"; mkdir -p "$logs"
+          why() {  # for each error: the denied permission's name and a reason from a fixed list, or nothing
+            TF_VAR_billing_account="$S_BILLING_ACCOUNT" TF_VAR_owner_email="$S_OWNER_EMAIL" \
+              TF_VAR_ingest_image="$S_INGEST_IMAGE" TF_VAR_ingest_job_memory="$S_INGEST_JOB_MEMORY" \
+              python3 -I "$REASONS" "$logs/$1.log" || true
+          }
           scrubbed() {  # the guard's fixed summary of a failed step, with every private value known to its scrubber
             TF_VAR_billing_account="$S_BILLING_ACCOUNT" TF_VAR_owner_email="$S_OWNER_EMAIL" \
               TF_VAR_ingest_image="$S_INGEST_IMAGE" TF_VAR_ingest_job_memory="$S_INGEST_JOB_MEMORY" \
               python3 -I "$GUARD" errors "$1" "$logs/$1.log"
+            why "$1"
           }
           stop() { echo "::error::$*"; rm -rf "$logs" "$RUNNER_TEMP/tfplan" "$RUNNER_TEMP"/*.json; exit 1; }
           terraform -chdir="$TF_ROOT" init -input=false -lockfile=readonly -no-color -backend-config="bucket=$TF_STATE_BUCKET" \
@@ -354,7 +363,12 @@ jobs:
           if ! terraform -chdir="$TF_ROOT" apply -input=false -no-color "$RUNNER_TEMP/tfplan" >"$logs/apply.log" 2>&1; then
             scrubbed apply
             msg="The apply failed. Terraform kept what it finished in the state and nothing else runs. Don't re-run: fix the cause, then run the workflow again from main; its new plan shows what is left and waits for a new approval. A lock left behind is cleared by the owner (docs/app/RUNNING.md, \"Changing the infrastructure\")."
-            echo "**Apply failed.** $msg" >> "$GITHUB_STEP_SUMMARY"
+            denied=$(why apply)
+            {
+              echo "**Apply failed.** $msg"
+              # shellcheck disable=SC2016  # literal backticks: a Markdown code block
+              [ -z "$denied" ] || printf '\n```\n%s\n```\n' "$denied"
+            } >> "$GITHUB_STEP_SUMMARY"
             stop "$msg"
           fi
           grep -E '^Apply complete! Resources: [0-9]+ added, [0-9]+ changed, [0-9]+ destroyed\.$' "$logs/apply.log" | tee -a "$GITHUB_STEP_SUMMARY" || true

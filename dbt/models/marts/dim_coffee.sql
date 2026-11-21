@@ -1,9 +1,9 @@
 -- Every coffee ever seen, with its most recent listing. Delisted coffees stay (is_listed = false), so price
 -- history and shots that reference them keep resolving. Whether a product is coffee, and its attributes, come
 -- from stg_products (the current rules over the raw snapshots), so rebuilding from the same lake gives the same
--- table.
+-- table. The owner's include or exclude (stg_snapshots.decision) overrides the classifier (macro decided).
 with s as (
-    select s.*, p.is_coffee, p.classified_by, p.verdict_model
+    select s.*, {{ decided('s.decision', 'p.is_coffee') }} as is_coffee, p.classified_by, p.verdict_model
     from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
 seen as (
@@ -42,7 +42,8 @@ attrs as (
         if(e.roaster_id is null, p.is_blend, e.is_blend) as is_blend,
         if(e.roaster_id is null, p.is_decaf, e.is_decaf) as is_decaf,
         if(e.roaster_id is null, 'rules', 'llm') as enrichment_method,
-        not p.needs_llm as rules_complete
+        -- false, not null, for one the owner included that the rules call not coffee: they extracted nothing
+        coalesce(not p.needs_llm, false) as rules_complete
     from latest l
     join {{ ref('stg_products') }} p using (input_hash)
     left join llm e using (roaster_id, product_id, body_hash)

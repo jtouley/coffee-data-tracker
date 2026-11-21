@@ -79,7 +79,7 @@ def test_an_unavailable_store_is_done_for_the_run(lake, mock, monkeypatch):
     monkeypatch.setattr(
         ingest.registry,
         "current",
-        lambda lake: [ingest.registry.RoasterState(_r("closed.com"), "active", None)],
+        lambda lake, **k: [ingest.registry.RoasterState(_r("closed.com"), "active", None)],
     )
     todo, _ = ingest.select_states(lake, "2026-11-02")
     assert todo == []

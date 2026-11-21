@@ -46,7 +46,8 @@ username as typed, and nothing is done with what was sent.
   creates the owner, or later, typed on the reset screen, resets the owner's password. To use it again, put a new value
   in the secret. The owner keeps the id that shots from before accounts belong to.
 - **Sessions** are a signed cookie (`SESSION_SECRET`): HttpOnly, Secure, SameSite=Lax, 90 days, renewed after a
-  day of use. "Sign out on all devices" and a password change sign out every other phone.
+  day of use. Sign out and a password change sign out every other phone too: a session is a stateless token, so
+  sign-out ends it by bumping the account's `session_epoch` rather than only clearing this phone's cookie.
 - **Lockouts:** five failed sign-ins for a username from one address, or twenty from one address, lock that for 15
   minutes. Across addresses a username is never locked, only slowed: after ten failures each try waits up to 30 s.
   Usernames aren't shown to anyone signed out.
@@ -81,6 +82,21 @@ be added in the repository's settings, as long as the app still runs that image 
 from there), so the app and the admin never stay on different images. A deploy while traffic is pinned (Rolling
 back, below) ends with a warning on the run, and leaves the admin where it is.
 
+**The admin's first apply** takes two applies, like the app's secrets (Owner's steps, 5): its service reads three
+secrets at version `latest`, and Cloud Run refuses a service whose secret has no version. `admin_enabled` in
+`src/terraform/ci.tfvars` (off by default) holds back the service, its public invoker, its domain mapping and its
+alerts. In order (the commands are in docs/admin/README.md, "The first apply, in order"):
+
+1. the first apply, with `admin_enabled = false`: the account, the three empty secrets and their grants, the state
+   bucket, and the control plane (the Cloud SQL instance, its database and IAM user, the snapshot bucket, the job
+   grants);
+2. you add the three secret values (`ADMIN_SESSION_SECRET`, `ADMIN_ENROLL_TOKEN`, `ADMIN_HF_TOKEN`);
+3. a small PR sets `admin_enabled = true` in `ci.tfvars`;
+4. its apply makes the service (on Google's sample image), the invoker, the domain mapping and the alerts;
+5. by hand, the deploy account's two grants: Cloud Run Developer on the admin service only, and Service Account User
+   on `registry-coffee-admin-run` only;
+6. set `GCP_ADMIN_SERVICE`; the next deploy puts the app's image on the admin.
+
 Once the deploy job has pushed the app's image, the same run does two more things, neither of which deploys
 anything, and both whether or not the rollout then succeeded:
 - `attest` signs build provenance for the app's image (which workflow run and commit made that digest);
@@ -94,11 +110,20 @@ Check an image's provenance (it needs `gh` signed in, and read access to the reg
 
 ```bash
 gh attestation verify oci://<image>@sha256:<digest> --repo jtouley/coffee-data-tracker \
-  --signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml --source-ref refs/heads/main
+  --signer-workflow jtouley/coffee-data-tracker/.github/workflows/attest.yml --source-ref refs/heads/main \
+  --format json | jq -e 'length > 0 and all(.[]; .verificationResult.signature.certificate.buildConfigURI ==
+    "https://github.com/jtouley/coffee-data-tracker/.github/workflows/deploy.yml@refs/heads/main")'
 ```
 
-It proves the digest was built by `deploy.yml` on main, and from which commit. It doesn't prove ci passed on that
-commit: a manual deploy with `force` builds and signs too.
+It proves the digest was signed by `attest.yml` on main (`--signer-workflow`, `--source-ref`), in a run of
+`deploy.yml` on main (the certificate's build config, which `gh` has no flag for, hence the `jq`), from which commit.
+`--repo` is load-bearing: `attest.yml` is public, so another repository could call it, and `--repo` refuses its
+attestations. Only `deploy.yml` calls `attest.yml` here (`tests/test_deploy_identity.py`). It doesn't prove ci passed
+on that commit: a manual deploy with `force` builds and signs too.
+An app image signed before `attest.yml` existed names `deploy.yml` as its signer (and build config): check it with
+`--signer-workflow jtouley/coffee-data-tracker/.github/workflows/deploy.yml --source-ref refs/heads/main` and no `jq`.
+The ingest image is signed by `deploy.yml`'s `ingest-image` job, a job written in `deploy.yml`, so signer and build
+config are the same file and its check (RUNBOOK §1, `verified-ingest-image.sh`) pins both with `--signer-workflow`.
 
 **A red run after a deploy.** If `deploy` (and `deploy-admin`) are green and only `attest` or `ingest-image` is
 red, production was updated and is fine; what is missing is a signature or the ingest image.
@@ -111,14 +136,52 @@ red, production was updated and is fine; what is missing is a signature or the i
   An ingest image whose signing failed stays in the registry unsigned; RUNBOOK §1's script refuses it until the
   job is re-run.
 
-**Which jobs can act as the deploy account.** The Workload Identity condition (`src/terraform/deploy.tf`) accepts
-a token from any job of `deploy.yml` running on `main` that has `id-token: write`. `deploy`, `deploy-admin` and
-`ingest-image` need that: they push or deploy. `attest` has `id-token: write` only to get a signing certificate
-and never signs in to Google Cloud, but the condition would let it. To close that, give the three jobs that need
-the cloud a GitHub environment each (`deploy-admin` has `admin`), map `attribute.environment` to
-`assertion.environment` in the provider, and add `assertion.environment in ['<those names>']` to its condition.
-Apply that and merge the workflow change together: a job with no environment is refused once the condition is
-applied, and that includes the deploy itself.
+**Which jobs can act as the deploy account.** The Workload Identity provider (`src/terraform/deploy.tf`) accepts a
+token only when all of these hold, the same claims the bootstrap's plan and apply providers pin:
+- `repository_id`, `repository_owner_id` and `repository` are this repository's (the ids can't be re-registered by
+  someone else, a name can), and the runner is GitHub-hosted;
+- `ref` is `refs/heads/main` and the event is `workflow_run` or `workflow_dispatch`, the two `deploy.yml` deploys on;
+- both `workflow_ref` and `job_workflow_ref` are `.github/workflows/deploy.yml@refs/heads/main`.
+
+The deploy account's grant names the repository by id (`attribute.repository_id`), not by name.
+
+GitHub's token names the workflow file a job is written in, never the job: every job written in `deploy.yml` has the
+same claims, so the condition can't tell them apart. Inside `deploy.yml` the line is `id-token: write`: only
+`deploy`, `deploy-admin` and `ingest-image` hold it, the three that push or deploy. `attest` needs a token for its
+signing certificate, so its steps live in `attest.yml`, a reusable workflow `deploy.yml` calls in the same run; its
+token's `job_workflow_ref` is `attest.yml`, which the condition refuses once the provider change below is applied
+(until then the old condition, which reads only `workflow_ref`, still accepts it). `tests/test_deploy_identity.py`
+pins the condition's terms and checks that no other job holds `id-token: write` or Google sign-in. A GitHub
+environment per deploying job would also separate them, but needs repository settings and an apply in the same
+moment as the merge.
+
+`ingest-image` signs its own image as its last step, so GitHub's signing action runs in a job already signed in as
+the deploy account; moving that signature to `attest.yml` too would change RUNBOOK §1's signer check (#193).
+
+**Changing this provider or its grant.** These changes never go through GitHub: the guard refuses them, and the
+owner applies them from Cloud Shell with `scripts/tf_break_glass.sh` and a typed `override` (Break-glass, below).
+- **First, nothing else pending.** Before merging, main's own Terraform must be applied (no `terraform-apply` run
+  waiting). After the merge every GitHub apply stops at the guard, and a waiting run refuses once a newer Terraform
+  commit is on main, so a change still pending would end up in the break-glass plan.
+- **Merge, then apply.** The script plans only main's tip. Between the two, deploys keep working (the workflow side
+  works under the old and the new condition), and `terraform-apply.yml` runs on main stop at the guard: apply
+  promptly, at a moment no `deploy` run is in progress.
+- **The plan.** For the change that added the ids and `job_workflow_ref` (#191), exactly 1 to add, 1 to change, 1 to
+  destroy:
+  - `google_iam_workload_identity_pool_provider.github` updated in place (the condition, and
+    `attribute.repository_id` added to the mapping; neither forces a replace);
+  - `google_service_account_iam_member.deploy_from_github` replaced, the new grant created before the old one is
+    removed.
+
+  The guard prints three `FAIL` lines, all expected: `no-delete-or-replace` (the grant's replace),
+  `workload-identity` (the provider and the grant) and `guarded-accounts` (the grant names the deploy account).
+  Anything else in the list, or any other guard failing, such as a `usage_dropped` alert policy main hadn't applied
+  yet: stop, type nothing. Then revert the `deploy.tf` part on main, let GitHub's apply (with its approval) land the
+  pending change, and merge the provider change again.
+- **The override**: `override M-1: deploy WIF condition and grant by repository id (#191)`. It is logged to
+  `~/break-glass.log`.
+- **After the apply.** The provider's mapping and the IAM grant are eventually consistent: a deploy in the next few
+  minutes can fail to sign in with a 403. Re-run failed jobs. Then run `deploy` by hand from main once to check.
 
 ### Owner's steps
 
@@ -303,9 +366,36 @@ GitHub, and applies only after the owner's second account, `jtouleyrou`, approve
    plan. After a refusal, run the workflow again from `main` once its cause is gone (a re-run of the same run never
    applies); the new plan waits for a new approval.
 
-**If an apply fails partway**, Terraform keeps what it finished in the state and nothing else runs. Only a fixed
-message and the affected addresses are shown: Terraform's own messages can quote private values, and the
-`TF_VAR_*` repository variables aren't masked. For the details, plan in Cloud Shell. Fix the cause in a PR, or run
+**If an apply fails partway**, Terraform keeps what it finished in the state and nothing else runs. Terraform's own
+messages are never shown: they can quote private values, and the `TF_VAR_*` repository variables aren't masked. The
+log and the run's summary show a fixed message, the affected addresses and, under "Why", what an allow-list can say
+about each error (`scripts/tf_error_reasons.py`):
+
+```
+::error::terraform apply failed (1 error). Terraform's own messages are not shown here: ...
+  resource google_monitoring_alert_policy.usage_dropped[0]
+  at usage.tf:163
+Why (permission names and a fixed list of reasons only; anything else in Terraform's message is not shown):
+  error 1, google_monitoring_alert_policy.usage_dropped[0]: 403 permission denied: logging.notificationRules.create
+  if the bootstrap on main grants this, run the by-hand bootstrap block (docs/app/RUNNING.md) and run this workflow again from main
+```
+
+- **The reason** is one of `403 permission denied`, `404 not found`, `409 already exists`, `400 invalid argument`,
+  `quota`, `API not enabled` and `5xx server error`, chosen by the HTTP status or status word in Terraform's message
+  (409 and 400 by the status alone, so a 409 from a concurrent change reads `already exists` too). An error that
+  matches none of them has no line.
+- **The permission** is shown only where the message says which permission was denied, only if it has a
+  permission's shape (letters and dots, three or four parts), and only if it starts with a service this project uses
+  (`SERVICES` in the script: add a service there when a new one is first denied). `403 permission denied` with no
+  name means no permission was recognised in Terraform's message: find the denied call in Cloud Audit Logs,
+  principal `registry-coffee-tf-apply@…`.
+- **What to do with a denied permission:** look for it in `src/terraform/bootstrap/iam.tf` on main. If a role of the
+  apply account already holds it, the bootstrap hasn't been applied since: run the by-hand bootstrap block (the
+  `cd src/terraform/bootstrap && terraform init ...` block below, reading its plan before the yes), then run
+  `terraform-apply` again from main. If no role holds it, add it in a PR first (and to
+  `tests/test_bootstrap_roles.py`), then the same two steps.
+
+For anything else, plan in Cloud Shell. Fix the cause in a PR, or run
 the workflow again; the new plan shows what is left. A lock left by a dead runner is cleared from Cloud Shell:
 `terraform force-unlock <lock id>`, once you're sure no apply is running. If the first plan fails on the budget
 (`google_billing_budget.monthly`), the plan account's project-scoped budget role isn't enough: give it
@@ -708,10 +798,10 @@ custom domain, DNS record or domain verification; the page scripts read it from 
 empty until the service exists, and then the pages send nothing). The collector answers every `POST /e` with an empty
 204, masks the caller's IP (IPv4 /24, IPv6 /40) before anything is kept, and appends events to the private dataset
 `jtouley/coffee-usage` (`events/day=YYYY-MM-DD/batch=<id>.parquet`): at most once a minute, inside the request that
-finds 200 events waiting or the oldest 15 minutes old, and at shutdown. It logs counts per flush and nothing else;
-Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from the `_Default` sink. The
-alert "usage events dropped or lost" emails the owner when a flush logs at WARNING (a limit dropped events, a publish
-failed) or ERROR (events lost).
+finds 200 events waiting or the oldest 15 minutes old, and at shutdown. It logs counts and nothing else ("Reading the
+collector's log" below); Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from
+the `_Default` sink. The alert "usage events dropped or lost" emails the owner when a line logs at WARNING (a limit
+dropped events, a write or publish failed) or ERROR (events lost).
 
 | What | Where | Value |
 |---|---|---|
@@ -725,6 +815,58 @@ failed) or ERROR (events lost).
 **Limits** (`app/usage.py`), counted in the flush line when they drop anything: 600 events a minute and 10,000 a
 day per masked prefix (a /24 or /40 can be a whole carrier's NAT pool or a Private Relay egress); 6,000 a minute and
 200,000 a UTC day per instance (at most two); 20,000 events in memory and 50,000 written but unpublished.
+
+### Reading the collector's log
+
+Logs Explorer: resource "Cloud Run Revision", service `registry-coffee-usage`, `jsonPayload.logger="app.usage"`. Three
+lines, counts only (never an event, an address, a prefix or a header); the same numbers are in `jsonPayload` under
+the names in brackets.
+
+| Line | When | The question it answers |
+|---|---|---|
+| `usage start: nothing waiting (an instance starts empty); 3 origins allowed, 1 proxy hops, publishes to a remote dataset, token set` | Once per instance (a cold start) | Did an instance start, and can it publish? `NO token: nothing can be published` means `usage_token` is off or the secret has no version |
+| `usage flush: 4 requests, 1 refused (foreign_origin 1); 5 events accepted, 1 rejected (invalid 1), 5 published, 0 waiting` | One per flush window in which any request to `/e` arrived, all-zero windows included | Is it receiving anything, and what became of it? |
+| `usage shutdown: 5 events published by the last flush, 0 lost; since start: 4 requests, 5 events accepted, 5 published` | Once per instance, when Cloud Run stops it (SIGTERM) | What did the last flush publish, what was lost and why, and what did this instance do in all? |
+
+A fourth line, `usage receive failed: <error type> (1 request dropped by the collector itself)`, is logged at ERROR
+the moment the collector itself fails on a request, without waiting for a flush; the window's flush line then counts
+it as `error`.
+
+In the shutdown line, **lost** is every accepted event that was not published and not already reported lost by a flush
+line, wherever it was: in memory, written but not committed, or in the hands of a last flush that ran out of time
+(`lost_in_flight`). Any loss is at ERROR. A flush that finishes its commit in the last two seconds after that line is
+still counted lost: the line errs towards alerting.
+
+In a flush line: **requests** (`requests`) is every request to `/e`; **refused** (`refused`) is requests dropped whole,
+whose events were never read: `foreign_origin` (an Origin that isn't ours, a missing one too: a curl, a scanner, the
+check below), `opted_out` (Global Privacy Control or Do Not Track), `too_large`, `bad_body`, `aborted` (the client went
+away), `not_post`, `error` (the collector itself failed: the line is at ERROR, and the `usage receive failed` line before
+it names the exception's type);
+**accepted** (`accepted`) is events kept; **rejected** (`rejected`) is single events dropped: `invalid` (the schema
+refused it: a page and a collector that disagree, so check `usage_image` is as new as the site), `no_address` (no
+public client address in `X-Forwarded-For`), and the limits `rate_limited`, `ceiling`, `daily_cap`, `overflow`,
+`staged_full`; **published** (`published`) is events committed to the dataset by this flush; **waiting** (`waiting`)
+is events still in memory or written but not yet committed. A failed write or publish ends the line with `write
+failed (<error type>)` or `publish failed (<error type>)`, and lost events with `N lost`.
+
+What the log says about an empty dataset:
+
+- **No line at all:** no instance started, so no request of any kind reached the service. The pages aren't sending
+  (an empty `collector_url`, a site built before it was set, a CSP that doesn't name it) or nobody visited.
+- **A start line, then nothing yet:** something started an instance: a beacon, or any other request (a scanner's
+  `GET /` does too). Only the flush line says whether a request reached `/e`. A lone visit is published when the
+  instance stops (Cloud Run stops an idle instance within about 15 minutes), or by the next request that comes 15
+  minutes after it.
+- **A start line and never a shutdown line:** the instance was killed without SIGTERM (out of memory, a crash);
+  whatever it held is gone and nothing could say so.
+- **Flush lines with requests but `0 events accepted`:** everything is being refused or rejected, and the line names
+  the reason.
+- **`accepted` above zero, `published` zero:** the line is at WARNING and names the failure; `waiting` is what the next
+  flush retries.
+
+The log says what one instance received. Whether events are arriving in the dataset at all is checked each Tuesday
+by `.github/workflows/usage-health.yml`, which opens a `prod:usage-events` triage issue when the dataset holds no
+event file or its newest is more than three days old (`docs/TRIAGE.md`, `docs/usage/README.md`).
 
 ### The apply account's grants for the collector
 
@@ -757,9 +899,10 @@ them **after** that first apply has made `registry-coffee-usage`, in one of two 
 of `deploy.yml` on main builds the app's image, pushes it by digest and attests it (the `attest` job); the collector
 is the same image with `COFFEEDATA_APP=app.usage`. To deploy a version, open a PR that sets `usage_image` in
 `src/terraform/ci.tfvars` to that run's `<GCP_IMAGE>@sha256:<digest>` (the "Build and push" step names it; check it
-with `gh attestation verify oci://<image> --repo jtouley/coffee-data-tracker`). Merge it, then apply through GitHub
-("Changing the infrastructure"). The variable refuses anything but the app's repository by digest, and the plan
-guard's image check covers the service. `deploy.yml` tags the digest `ci.tfvars` pins `pinned-usage-<12 hex>`, so the
+with the provenance command in "On Cloud Run" above, which pins the signer, the build config and main, or its
+`deploy.yml` form for an image signed before `attest.yml`). Merge it, then apply through GitHub ("Changing the
+infrastructure"). The variable refuses anything but the app's repository by digest, and the plan guard's image check
+covers the service. `deploy.yml` tags the digest `ci.tfvars` pins `pinned-usage-<12 hex>`, so the
 registry's cleanup keeps it.
 
 ### Turning usage on
@@ -778,8 +921,10 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
    Run page), in a PR: from then on the pages send events.
 5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does any other method on `/e`
    (`GET <collector_url>/health` answers 200, and any other path 404; `/healthz` is for the startup probe only,
-   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage flush` line counting
-   it as `foreign_origin` at its next flush.
+   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage start` line at once
+   if the POST started a new instance (a warm one logged it earlier) and, at its next flush or when the instance
+   stops, `usage flush: 1 requests, 1 refused (foreign_origin 1); 0 events accepted, ...` ("Reading the collector's
+   log").
 
 ## Using it on the phone
 

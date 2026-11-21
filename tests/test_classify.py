@@ -211,6 +211,65 @@ def test_wholesale_patterns_found_on_the_real_catalog():
     assert says_wholesale("Wholesale - 5LB Ethiopia Guji") and not says_wholesale("Ethiopia Guji 5lb")
 
 
+def test_the_rules_name_what_decided():
+    """classify.decision names the rule behind is_coffee's answer (product_decisions.reason): only an explanation."""
+    from coffeedata.classify import decision, excluded, exclusion
+
+    cases = [
+        (item("Ceramic Mug"), (False, "excluded:not_coffee_words")),
+        (item("Ethiopia Guji - Unroasted Green Coffee"), (False, "excluded:green_coffee")),
+        (item("Monthly Subscription"), (False, "excluded:subscription")),
+        (item("Kenya AA", tags=["Brewing Equipment"]), (False, "excluded:tag")),
+        (item("Hot Sauce"), (False, "sauce")),
+        (item("Cold Brew Lemonade"), (False, "drinks")),
+        (item("House Blend"), (True, "coffee_words")),
+        (item("Guatemala Huehuetenango"), (True, "country")),
+        (item("Mystery Lot", "Coffee"), (True, "coffee_type")),
+        (item("Night Owl", grams=340, body="A sweet coffee."), (True, "signals:2")),
+        (item("Night Owl"), (False, "signals:0")),
+    ]
+    for it, want in cases:
+        assert decision(it) == want, it.title
+        assert is_coffee(it) == want[0] and excluded(it) == want[1].startswith("excluded:")
+        assert (exclusion(it) is None) == (not excluded(it))
+
+
+def test_decide_why_gives_decides_answer_and_says_who():
+    from coffeedata import products
+
+    coffee, green = item("House Blend"), item("Ethiopia Guji - Unroasted Green Coffee")
+    assert products.decide_why(coffee, "not_coffee") == (False, "claude", "verdict:not_coffee")
+    assert products.decide_why(coffee, "unsure") == (True, "rules", "coffee_words")  # an unsure is the rules'
+    assert products.decide_why(green, "coffee") == (
+        False,
+        "rules",
+        "excluded:green_coffee",
+    )  # exclusions hold
+    for it in (coffee, green):
+        for label in (None, "coffee", "not_coffee", "unsure"):
+            assert products.decide_why(it, label)[:2] == products.decide(it, label)
+
+
+def test_naming_the_rule_changes_no_decision_on_the_labeled_sets():
+    """is_coffee is decision()[0]: on every labeled product (train and validation), the answer is the same."""
+    import json
+    from pathlib import Path
+
+    from coffeedata.classify import decision
+
+    from .test_classifier_accuracy import _item
+
+    rows = [
+        json.loads(r)
+        for r in (Path(__file__).parent / "fixtures/classifier_labels.jsonl").read_text().splitlines()
+    ]
+    assert len(rows) > 1000
+    for r in rows:
+        it = _item(r)
+        ok, why = decision(it)
+        assert ok == is_coffee(it) and why
+
+
 @pytest.mark.parametrize(
     "title", ["Green Coffee Beans - Ethiopia Yirgacheffe", "Burr Grinder", "Coffee Subscription"]
 )
@@ -232,3 +291,33 @@ def test_decide_takes_claudes_coffee_or_not_coffee_and_the_rules_otherwise():
     # unsure, or no verdict: the rules decide
     assert products.decide(kenya, "unsure") == (True, "rules")
     assert products.decide(kenya, None) == (True, "rules")
+
+
+def test_a_flavored_coffee_type_keeps_titles_that_only_name_the_flavor():
+    # Issue #190: with no stored verdict the rules decide, and they read these titles as drinks or nuts.
+    assert is_coffee(item("Pumpkin Latte", product_type="Flavored Coffee", tags=["flavored"], grams=340))
+    assert is_coffee(item("Creamy Latte", product_type="Flavored Coffee", grams=340))
+    assert is_coffee(item("Toasted Almond", product_type="Flavored Coffee", tags=["wholesale"], grams=340))
+    assert is_coffee(item("Chocolate Almond", product_type="Flavored Coffee", grams=340))
+    assert is_coffee(item("Totally Nuts", product_type="Flavored Coffee", grams=907))
+    assert is_coffee(item("Almond Amaretto", product_type="Flavoured Coffee"))
+    # Only that type, and only those flavor words: the same titles under another type stay as they were.
+    assert not is_coffee(item("Pumpkin Latte", product_type="Lattes", tags=["Flavored Lattes"], grams=340))
+    assert not is_coffee(item("Toasted Almond", product_type="variable", tags=["Flavored"], grams=454))
+    assert not is_coffee(item("Pumpkin Latte", product_type="Flavored", tags=["Flavored"], grams=454))
+
+
+def test_a_flavored_type_or_tag_does_not_make_drinks_sauces_or_snacks_coffee():
+    # Made-up cases from the review of #206: none is a bag of beans, whatever its type or tags say.
+    assert not is_coffee(item("Cinnamon Almonds", product_type="Snacks", tags=["Flavored"], grams=227))
+    assert not is_coffee(item("Hazelnut Creamer", tags=["Flavored"], grams=400))
+    assert not is_coffee(item("Caramel Sauce", tags=["Flavored"], grams=450))
+    assert not is_coffee(item("Hot Cocoa Mix", product_type="Flavored", grams=340))
+    assert not is_coffee(item("French Vanilla Creamer", product_type="Flavored Coffee"))
+    assert not is_coffee(item("Vanilla Cold Brew Gallon", product_type="Flavored Coffee"))
+    assert not is_coffee(item("Coffee Traveler", product_type="Flavored Coffee"))
+    # A drink word next to a flavor word still makes it a drink, and the outright exclusions still win.
+    assert not is_coffee(item("Almond Latte Creamer", product_type="Flavored Coffee", grams=340))
+    assert not is_coffee(item("Vanilla Latte Kit", product_type="Flavored Coffee", grams=340))
+    assert not is_coffee(item("Vanilla Syrup", product_type="Flavored Coffee", grams=750))
+    assert not is_coffee(item("French Vanilla K-Cups", product_type="Flavored Coffee", grams=340))

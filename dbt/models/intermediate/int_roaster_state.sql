@@ -2,9 +2,10 @@
 -- Mirrors registry.STATE_SQL in Python, which picks what to fetch; tests/test_dbt.py checks the two agree on every
 -- roaster's status and canonical id. Upstream of dim_coffee (which leaves aliases out), so it reads no coffee table:
 -- dim_roaster adds the coffee counts.
--- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed (as in Python).
+-- A probe whose robots.txt didn't answer, or that a pause stopped (http_429, http_430), is no answer about the site:
+-- it doesn't count as probed (as in Python).
 -- Each "latest" pick breaks a tie in time by the values it reads, so the same lake always builds the same table.
-with probes as (select * from {{ ref('stg_probes') }} where status <> 'robots_unavailable'),
+with probes as (select * from {{ ref('stg_probes') }} where status not in ('robots_unavailable', 'http_429', 'http_430')),
 last_probe as (
     select * from probes
     qualify row_number() over (partition by roaster_id order by probed_at desc, status, final_host, platform) = 1
