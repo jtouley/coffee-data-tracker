@@ -677,7 +677,7 @@ def registry_of_three(monkeypatch):
         registry.RoasterState(Roaster(roaster_id=r, name=r, host=r, platform=p), "active", None)
         for r, p in (("s.com", "shopify"), ("s2.com", "shopify"), ("w.com", "woocommerce"), ("g.com", "wix"))
     ]
-    monkeypatch.setattr(registry, "current", lambda lake, seed=None: states)
+    monkeypatch.setattr(registry, "current", lambda lake, seed=None, **_: states)  # also doc, also (Sources)
 
 
 DATA = (
@@ -998,7 +998,7 @@ def test_a_re_merge_adds_not_attempted_rows_for_roasters_registered_since(
             Roaster(roaster_id="g2.com", name="g2", host="g2.com", platform="wix"), "active", None
         )
     ]
-    monkeypatch.setattr(registry, "current", lambda lake, seed=None: states)
+    monkeypatch.setattr(registry, "current", lambda lake, seed=None, **_: states)  # also doc, also (Sources)
     out = connectors.merge(lk, WEEK)
     assert out["written"] == {"run_manifests": 1}
     assert [r[1] for r in _lake_rows(lk)[0]["expected"]] == ["g.com", "g2.com"] and _lake_rows(lk)[1] == 2

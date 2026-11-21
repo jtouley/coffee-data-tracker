@@ -55,10 +55,12 @@ function loadPart(section, quiet) {
       const html = await r.text(); // server-rendered and escaped by the template engine
       if (quiet && !r.ok) return; // keep what is shown; the next poll tries again
       section.innerHTML = html;
+      if (!quiet) titleActions(section); // a poll leaves the title's buttons (and any panel open there) alone
       const poll = section.querySelector("[data-poll]");
       if (poll) section.pollTimer = setTimeout(() => loadPart(section, true), Number(poll.dataset.poll) * 1000);
       // Filters start open where there's room for them beside the results; on a phone they fold away.
       if (matchMedia("(min-width: 760px)").matches) section.querySelectorAll("[data-filters]").forEach((d) => { d.open = true; });
+      modes(section);
     })
     .catch(() => {
       if (quiet) return;
@@ -239,8 +241,77 @@ document.addEventListener("click", async (e) => {
   }
 });
 
+// Controls for one width only: a phone sorts with the sheet's options, a desktop by the table's headers. The other
+// set is disabled, so a form sends one order.
+function modes(root = document) {
+  const wide = matchMedia("(min-width: 760px)").matches;
+  root.querySelectorAll("[data-wide-only]").forEach((el) => { el.disabled = !wide; });
+  root.querySelectorAll("[data-narrow-only]").forEach((el) => { el.disabled = wide; });
+}
+
+// A part's <template data-title> goes beside the page title: its Run a job, its "?" help, and their panels.
+function titleActions(section) {
+  const slot = document.querySelector("[data-title-actions]");
+  if (!slot) return;
+  slot.replaceChildren();
+  const tpl = section.querySelector("template[data-title]");
+  if (tpl) slot.append(tpl.content.cloneNode(true));
+  const run = slot.querySelector("[data-run-form]");
+  if (run) {
+    runForm(run);
+    if ("open" in run.dataset) run.closest("dialog").showModal(); // a link here asked for a job (Week, Release)
+  }
+}
+
+// Run a job: the Job picks which fields show (the others are disabled, so they aren't sent) and where Run posts;
+// Run opens the usual confirm with the plan, the guards and the window's override.
+function runForm(form) {
+  const pick = form.querySelector("[data-job]");
+  const opt = pick.selectedOptions[0];
+  const fields = (opt.dataset.fields || "").split(" ").filter(Boolean);
+  form.querySelectorAll("[data-field]").forEach((l) => {
+    const on = fields.includes(l.dataset.field);
+    l.hidden = !on;
+    l.querySelectorAll("input, select").forEach((i) => { i.disabled = !on; });
+  });
+  form.querySelector("[data-job-hint]").textContent = opt.dataset.hint || "";
+  const site = pick.value === "site";
+  form.querySelector("[data-site]").hidden = !site;
+  form.querySelector('button[type="submit"]').hidden = site;
+  form.dataset.write = `/api/jobs/${pick.value}/runs`;
+  form.dataset.preview = `/api/jobs/${pick.value}/plan`;
+  form.dataset.confirmTitle = `Start ${opt.textContent.trim()}?`;
+}
+
+document.addEventListener("change", (e) => {
+  if (e.target.matches("[data-job]")) runForm(e.target.form);
+});
+
+function edges(tabs) {
+  tabs.classList.toggle("more-start", tabs.scrollLeft > 1);
+  tabs.classList.toggle("more-end", tabs.scrollLeft + tabs.clientWidth < tabs.scrollWidth - 1);
+}
+document.addEventListener("scroll", (e) => { if (e.target.matches && e.target.matches(".tabs")) edges(e.target); }, true);
+
+// A phone shows the page's own tab (the tabs scroll sideways), and folds the filters unless some are applied.
+function fit() {
+  const on = document.querySelector(".tabs a.on");
+  if (on) { // only as far as it takes to show the page's own tab, then mark the edges that hide more tabs
+    const tabs = on.parentElement;
+    const need = on.offsetLeft - tabs.offsetLeft + on.offsetWidth - tabs.clientWidth + 24;
+    const first = [...tabs.children].find((a) => a.offsetLeft - tabs.offsetLeft >= need); // start on a whole tab
+    tabs.scrollLeft = need > 0 && first ? first.offsetLeft - tabs.offsetLeft - 12 : 0;
+    edges(tabs);
+  }
+  if (!matchMedia("(min-width: 760px)").matches) {
+    document.querySelectorAll("details[data-filters]:not([data-applied])").forEach((d) => { d.open = false; });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("section[data-part]").forEach(loadPart);
+  fit();
+  matchMedia("(min-width: 760px)").addEventListener("change", () => { fit(); modes(); });
 });
 
 // --- writes ------------------------------------------------------------------------------------------------------
@@ -258,6 +329,7 @@ function reloadParts() {
   document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
 }
 
+// The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo.
 function showResult(text, undo) {
   const box = document.querySelector("[data-result]");
   if (!box) return;
@@ -266,8 +338,18 @@ function showResult(text, undo) {
   b.hidden = !undo;
   b.dataset.target = undo || "";
   box.hidden = false;
-  clearTimeout(showResult.timer);
-  showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
+  clearTimeout(showResult.timer); // a message offering an action stays until dismissed (WCAG 2.2.1); others fade
+  if (!undo) showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
+}
+
+function undoUrl(out) {
+  if (out.decisions) return `/api/decisions/${encodeURIComponent(out.group || out.decisions[0])}/undo`;
+  if (out.batch_id) return `/api/sources/flags/${encodeURIComponent(out.batch_id)}/undo`;
+  return undefined;
+}
+
+function plural(n, one, many = `${one}s`) {
+  return `${n.toLocaleString("en-US")} ${n === 1 ? one : many}`;
 }
 
 function describe(out) {
@@ -277,7 +359,14 @@ function describe(out) {
     return (started ? `Started ${started}.` : "Nothing started.") + (failed ? ` Not started: ${failed}` : "");
   }
   if (out.decisions) return `Recorded ${out.count} decision${out.count === 1 ? "" : "s"}. Build a draft on Release to see the change.`;
-  if (out.reverted) return out.count ? `Undone (${out.count}). The classifier decides again in the next draft.` : "Already superseded: nothing to undo.";
+  if (out.batch_id) {
+    const n = plural(out.count, "place");
+    if (out.flag === "roaster") return `Marked ${n} as ${out.count === 1 ? "a roaster" : "roasters"}.`;
+    if (out.flag === "not_roaster") return `Marked ${n} as not ${out.count === 1 ? "a roaster" : "roasters"}.` + (out.excluded ? ` ${plural(out.excluded, "coffee")} ${out.excluded === 1 ? "leaves" : "leave"} the catalog.` : "");
+    return `Cleared the flag on ${n}.`;
+  }
+  if (out.restored !== undefined && out.reverted) return `Undone (${out.count}).` + (out.restored ? ` ${plural(out.restored, "coffee")} back in the catalog.` : "");
+  if (out.reverted) return out.count ? `Undone (${out.count}): as it was before, from the next draft.` : "Already superseded: nothing to undo.";
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
   return "Done.";
@@ -371,6 +460,10 @@ async function confirmWrite(form) {
   overWrap.hidden = true;
   go.removeAttribute("aria-disabled");
   body.textContent = [form.dataset.confirmText, form.dataset.confirm].filter(Boolean).join(" ");
+  const result = document.querySelector("[data-result]");
+  if (result) result.hidden = true; // the confirm stands alone; its outcome replaces the last one
+  document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { m.open = false; });
+  document.querySelectorAll("dialog.panel[open]").forEach((p) => p.close()); // the confirm stands alone
   if (!d.open) d.showModal();
   if (form.dataset.preview) {
     body.textContent = "Checking what this starts…";
@@ -378,6 +471,16 @@ async function confirmWrite(form) {
     try {
       const plan = await post(form.dataset.preview, fields(form));
       renderPlan(body, plan);
+      if ("planDetails" in form.dataset) { // the summary in words; the jobs and their exact commands under Details
+        const more = document.createElement("details");
+        more.className = "plan-details";
+        more.innerHTML = "<summary class=\"btn text start\">Details</summary>";
+        more.append(...[...body.childNodes].filter((n) => !(n.classList && (n.classList.contains("refused") || n.classList.contains("notice")))));
+        const say = document.createElement("p");
+        say.className = "body";
+        say.textContent = form.dataset.confirmText || "";
+        body.prepend(say, more);
+      }
       if (!(plan.refusals || []).length) go.removeAttribute("aria-disabled");
       overWrap.hidden = !plan.window;
     } catch (err) {
@@ -400,7 +503,7 @@ async function confirmWrite(form) {
       if (ask.includes("kind")) extra.kind = d.querySelector("input[name=confirm-kind]:checked").value;
       const out = await post(form.dataset.write, { ...fields(form), ...extra });
       d.close();
-      showResult(describe(out), out.decisions ? out.group || out.decisions[0] : undefined);
+      showResult(describe(out), undoUrl(out));
       reloadParts();
     } catch (err) {
       hint.textContent = refusal(err);
@@ -414,13 +517,47 @@ async function confirmWrite(form) {
   };
 }
 
+// A one-click write (data-now: the Sources page's flags) posts at once, with Undo in its outcome line; any other
+// write goes through the confirm sheet.
+async function writeNow(form, button) {
+  if ("picks" in form.dataset) form.querySelector("input[name=items]").value = JSON.stringify(picks());
+  busy(button, true);
+  try {
+    const out = await post(form.dataset.write, fields(form));
+    showResult(describe(out), undoUrl(out));
+    reloadParts();
+  } catch (err) {
+    showResult(refusal(err));
+  } finally {
+    busy(button, false);
+  }
+}
+
+// Pull now (the toast, or the action bar for the selected places): the Jobs page's confirm, with the plan and the
+// window's override, through the Sources page's pull form.
+function pullNow(places) {
+  const form = document.getElementById("pull-form");
+  if (!form || !places.length) return;
+  form.querySelector("input[name=roasters]").value = places.join(",");
+  form.dataset.confirmTitle = `Probe and crawl ${plural(places.length, "place")}?`;
+  form.dataset.confirmText = `${places.join(", ")}. One job probes them, then crawls each storefront it finds, counted for the week; no Publish needed.`;
+  confirmWrite(form);
+}
+
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-pull-picks], [data-pull-one]");
+  if (!t) return;
+  pullNow(t.matches("[data-pull-one]") ? [t.dataset.pullOne] : picks().map((p) => p.roaster_id));
+});
+
 document.addEventListener("submit", (e) => {
   const form = e.target.closest("form[data-write]");
   if (!form) return;
   e.preventDefault();
   const button = form.querySelector('button[type="submit"]');
   if (button && button.getAttribute("aria-disabled") === "true") return;
-  confirmWrite(form);
+  if ("now" in form.dataset) writeNow(form, button);
+  else confirmWrite(form);
 });
 
 document.addEventListener("click", (e) => {
@@ -439,7 +576,7 @@ function updateBulk() {
   if (!bar) return;
   const n = picks().length;
   bar.hidden = n === 0;
-  $(bar, "[data-bulk-count]").textContent = `${n} chosen`;
+  $(bar, "[data-bulk-count]").textContent = `${n} ${bar.dataset.word || "chosen"}`;
 }
 
 document.addEventListener("change", (e) => {
@@ -460,7 +597,7 @@ document.addEventListener("click", async (e) => {
   if (!b || !b.dataset.target) return;
   busy(b, true);
   try {
-    const out = await post(`/api/decisions/${encodeURIComponent(b.dataset.target)}/undo`, { key: crypto.randomUUID(), reason: "undo right after deciding" });
+    const out = await post(b.dataset.target, { key: crypto.randomUUID(), reason: "undo right after deciding" });
     showResult(describe(out));
     reloadParts();
   } catch (err) {
@@ -468,4 +605,46 @@ document.addEventListener("click", async (e) => {
   } finally {
     busy(b, false);
   }
+});
+
+// --- Sources: the Filter / Sort panel, tapping a row to select it, and each row's ⋯ menu ----------------------------
+
+document.addEventListener("click", (e) => {
+  const open = e.target.closest("[data-panel]");
+  if (open) {
+    const d = document.getElementById(open.getAttribute("aria-controls"));
+    const r = open.getBoundingClientRect(); // a desktop shows it as a popover under the button
+    d.style.setProperty("--panel-top", `${Math.round(r.bottom + 8)}px`);
+    d.style.setProperty("--panel-left", `${Math.round(Math.max(16, Math.min(r.right - 512, innerWidth - 528)))}px`);
+    d.showModal();
+    return;
+  }
+  const d = e.target.closest("dialog.panel");
+  if (d && (e.target === d || e.target.closest("[data-panel-close]"))) { // the backdrop, or Close
+    d.close();
+    return;
+  }
+  // One ⋯ menu open at a time; a click elsewhere closes it.
+  document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { if (!m.contains(e.target)) m.open = false; });
+  const row = e.target.closest("tr[data-row]");
+  if (row && !e.target.closest("a, button, input, summary, details, label")) {
+    const box = row.querySelector("input[data-pick]");
+    if (box) {
+      box.checked = !box.checked;
+      updateBulk();
+    }
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  const m = e.target.closest && e.target.closest("details[data-rowmenu][open]");
+  if (m) {
+    m.open = false;
+    m.querySelector("summary").focus();
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest("[data-result-close]")) e.target.closest("[data-result]").hidden = true;
 });

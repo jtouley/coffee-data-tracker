@@ -356,6 +356,7 @@ current state is computed:
 | `enrichments/method=rules\|llm/…` | ingest, enrich | extracted attributes, keyed by product and description hash |
 | `probes/…` | probe | store platform checks |
 | `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
+| `candidates/source=…/…` | discover | every place a discovery run read (roasteries, and cafés with a storefront website), never fetched: the admin's Sources list. Only places the owner flags as roasters join the registry |
 | `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
 | `shots/<id>__<time>-<random>.parquet` | app, CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
 | `equipment/<id>__<time>.parquet` | app | a grinder, machine or basket; changes are new files |

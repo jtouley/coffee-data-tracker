@@ -88,7 +88,7 @@ def test_the_cli_records_each_roasters_status_and_the_mode(lake, monkeypatch):
 
     from coffeedata import cli, registry
 
-    monkeypatch.setattr(registry, "current", lambda lake: [RoasterState(ONYX, "pending", None)])
+    monkeypatch.setattr(registry, "current", lambda lake, **k: [RoasterState(ONYX, "pending", None)])
     got = {}
     monkeypatch.setattr(
         ingest, "run", lambda lk, r, d, workers, mode, shopify_rps: got.update(r=r, m=mode) or {}

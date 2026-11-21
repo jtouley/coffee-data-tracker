@@ -5,7 +5,7 @@
 <div class="frame mt16" tabindex="0" role="region" aria-label="Passkeys"><table>
   <caption>Passkeys ({{ creds | length }})</caption>
   <thead><tr><th scope="col">Passkey</th><th scope="col">Registered (UTC)</th><th scope="col">How</th><th scope="col" class="n">Counter</th></tr></thead>
-  <tbody>{% for c in creds %}<tr><th scope="row"><code>{{ c.credential_id[:12] }}…</code>{% if c.credential_id == session.credential_id %} (this session){% endif %}</th><td>{{ c.created_at }}</td><td>{{ c.via }}</td><td class="n">{{ n(c.sign_count) }}</td></tr>{% endfor %}</tbody>
+  <tbody>{% for c in creds %}<tr><th scope="row"><code>{{ c.credential_id[:12] }}…</code>{% if c.credential_id == session.credential_id %} (this session){% endif %}</th><td>{{ t(c.created_at) }} UTC</td><td>{{ c.via }}</td><td class="n">{{ n(c.sign_count) }}</td></tr>{% endfor %}</tbody>
 </table></div>
 <form class="auth" data-flow="add" novalidate>
   <h2 class="section">Add a passkey</h2>
