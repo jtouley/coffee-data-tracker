@@ -28,6 +28,7 @@ What it logs, so that "nobody came" and "everything was refused or lost" never l
   requests came, how many were refused whole and why (REFUSED), how many events were accepted, how many were
   rejected and why (REJECTED), how many were published and how many still wait. A failed write or publish names its
   error's type in the same line.
+- `usage receive failed`, at once and at ERROR, when the collector itself fails on a request: the error's type.
 - `usage shutdown`, once per instance that is told to stop: what the last flush published, what was lost and why,
   and the instance's totals. A start line with no shutdown line after it is an instance that was killed without
   SIGTERM (out of memory, a crash): whatever it held is gone and nothing could say so.
@@ -124,9 +125,11 @@ class Collector:
         self.oldest: float | None = None
         self.counts: Counter[str] = Counter()  # this flush window's
         self.totals: Counter[str] = Counter()  # every flushed window's, for the shutdown line
-        self.error_type: str | None = (
-            None  # the type's name of the last exception `receive` caught this window
-        )
+        # Every accepted event is in exactly one place until it is published or reported lost: in memory, in a
+        # flush's hands, or staged. These three, since start, say how many are still somewhere (`outstanding`).
+        self.kept = 0  # accepted
+        self.sent = 0  # published
+        self.gone = 0  # reported lost by a flush line (a failed write with no room to put them back)
         self.started = clock()
         self.staged = 0  # events written to staging since the last successful publish
         self.last_flush = clock()
@@ -138,14 +141,35 @@ class Collector:
     def receive(
         self, headers: Mapping[str, str], peer: str | None, body: bytes, oversize: bool = False
     ) -> None:
-        """Take one request's events (headers lower-cased). Never raises: the reply is 204 whatever happens."""
-        self.count("requests")
+        """Take one request's events (headers lower-cased). Never raises: the reply is 204 whatever happens. The
+        request and everything that became of it are counted in one step, so no flush line holds half a request."""
+        seen: Counter[str] = Counter(requests=1)
+        rows: list[dict[str, Any]] = []
+        now = self.clock()
         try:
-            self._receive(headers, peer, body, oversize)
-        except Exception as e:  # noqa: BLE001 - never fail a page; the type only (a message could quote the body)
-            with self._lock:
-                self.counts["error"] += 1
-                self.error_type = type(e).__name__  # in the window's line, which is at ERROR for it
+            rows = self._read(headers, peer, body, oversize, now, seen)
+        except Exception as e:  # noqa: BLE001 - never fail a page
+            seen, rows = Counter(requests=1, error=1), []
+            # At once, not with the window's line: an instance killed before its next flush would never say so. The
+            # type only (a message could quote the body); counts and the type are all the line holds.
+            log.error(
+                "usage receive failed: %s (1 request dropped by the collector itself)",
+                type(e).__name__,
+                extra={"fields": {"error": 1, "receive_error": type(e).__name__}},
+            )
+        with self._lock:
+            memory = BUFFER_MAX - len(self.buffer)
+            staging = STAGED_MAX - self.staged - len(self.buffer)
+            room = max(0, min(memory, staging))
+            if len(rows) > room:
+                seen["overflow" if memory <= staging else "staged_full"] += len(rows) - room
+                rows = rows[:room]
+            if rows and not self.buffer:
+                self.oldest = now
+            self.buffer += rows
+            seen["accepted"] += len(rows)
+            self.kept += len(rows)
+            self.counts.update(+seen)
 
     def refuse(self, reason: str) -> None:
         """A request to /e that never reaches `receive` (the client went away, or it wasn't a POST): counted as a
@@ -154,51 +178,53 @@ class Collector:
             self.counts["requests"] += 1
             self.counts[reason] += 1
 
-    def _receive(self, headers: Mapping[str, str], peer: str | None, body: bytes, oversize: bool) -> None:
+    def _read(
+        self,
+        headers: Mapping[str, str],
+        peer: str | None,
+        body: bytes,
+        oversize: bool,
+        now: float,
+        seen: Counter[str],
+    ) -> list[dict[str, Any]]:
+        """The rows of one request's accepted events; why the request or any event was dropped goes in `seen`."""
+
+        def refused(reason: str, n: int = 1) -> list[dict[str, Any]]:
+            seen[reason] += n
+            return []
+
         if headers.get("sec-gpc", "").strip() == "1" or headers.get("dnt", "").strip() == "1":
-            return self.count("opted_out")
+            return refused("opted_out")
         if headers.get("origin") not in self.origins:
-            return self.count("foreign_origin")
+            return refused("foreign_origin")
         if oversize or len(body) > MAX_BODY:
-            return self.count("too_large")
+            return refused("too_large")
         try:
             doc = json.loads(body)
         except ValueError:
-            return self.count("bad_body")
+            return refused("bad_body")
         events = doc.get("events") if isinstance(doc, dict) and set(doc) == {"events"} else None
         if not isinstance(events, list) or not events or len(events) > MAX_EVENTS:
-            return self.count("bad_body")
+            return refused("bad_body")
         # The only place the full address exists: masked here and dropped with this frame.
         prefix = mask_ip(client_address(headers, peer, self.hops))
         if prefix is None:
-            return self.count("no_address", len(events))
+            return refused("no_address", len(events))
         user_agent = headers.get("user-agent")
-        now = self.clock()
         at = datetime.fromtimestamp(now, UTC)
         rows = []
         for raw in events:
             try:
                 e = Event.model_validate(raw)
             except ValidationError:
-                self.count("invalid")
+                seen["invalid"] += 1
                 continue
             reason = self._limited(prefix, now)
             if reason:
-                self.count(reason)
+                seen[reason] += 1
                 continue
             rows.append(row(e, prefix, is_bot(user_agent, e.webdriver), at))
-        with self._lock:
-            memory = BUFFER_MAX - len(self.buffer)
-            staging = STAGED_MAX - self.staged - len(self.buffer)
-            room = max(0, min(memory, staging))
-            if len(rows) > room:
-                self.counts["overflow" if memory <= staging else "staged_full"] += len(rows) - room
-                rows = rows[:room]
-            if rows and not self.buffer:
-                self.oldest = now
-            self.buffer += rows
-            if rows:
-                self.counts["accepted"] += len(rows)
+        return rows
 
     def _limited(self, prefix: str, now: float) -> str | None:
         """Why this event is over a limit, or None. An event is counted against every limit only when it passes them
@@ -256,12 +282,10 @@ class Collector:
             rows, self.buffer, self.oldest = self.buffer, [], None
             counts, self.counts = self.counts, Counter()
             self.totals.update(counts)
-            error_type, self.error_type = self.error_type, None
             self.last_flush = self.clock()
         written = files = 0
         published = None
-        # receive_error, write_error, publish_error: the exception's type, never its message
-        failed: dict[str, str] = {"receive_error": error_type} if error_type else {}
+        failed: dict[str, str] = {}  # write_error, publish_error: the exception's type, never its message
 
         def tally(key: str, n: int = 1) -> None:  # what the flush itself adds to the window's counts
             if not n:
@@ -269,6 +293,10 @@ class Collector:
             counts[key] += n
             with self._lock:
                 self.totals[key] += n
+                if key == "published":
+                    self.sent += n
+                elif key == "lost":
+                    self.gone += n
 
         lake = None
         by_day: dict[str, list[dict[str, Any]]] = {}
@@ -328,13 +356,14 @@ class Collector:
         failed = failed or {}
         with self._lock:
             staged = self.staged
-            waiting = len(self.buffer) + staged
+            waiting = max(
+                0, self.kept - self.sent - self.gone
+            )  # in memory or staged: accepted, not yet published
         refused = sum(counts.get(k, 0) for k in REFUSED)
         rejected = sum(counts.get(k, 0) for k in REJECTED)
         trouble = [
             f"{label} ({failed[key]})"
             for key, label in (
-                ("receive_error", "a request failed in the collector"),
                 ("write_error", "write failed"),
                 ("publish_error", "publish failed"),
             )
@@ -396,10 +425,14 @@ class Collector:
 
     def shutdown(self, budget: float = SHUTDOWN_BUDGET) -> None:
         """The last flush, within `budget` seconds: whatever isn't published by then dies with the instance. Always
-        logs one line: what the last flush published, what was lost and why (at ERROR, as `lost`: the events in memory
-        and those staged but not published), and the instance's totals."""
+        logs one line: what the last flush published, what was lost and why, and the instance's totals.
+
+        Lost is every accepted event not published and not already reported lost (kept - sent - gone), wherever it
+        is: in memory, staged, or in the hands of a flush that stalled opening the lake or writing. So an unfinished
+        flush can never read as "0 lost". Any loss is at ERROR."""
         done = threading.Event()
-        before = self.totals.get("published", 0)
+        with self._lock:
+            before = self.sent
 
         def last() -> None:
             if self.flush(wait=budget / 2) >= 0:
@@ -409,11 +442,15 @@ class Collector:
         worker.start()
         worker.join(budget)
         with self._lock:
-            lost = len(self.buffer) + self.staged
+            lost = max(0, self.kept - self.sent - self.gone)
+            in_flight = max(
+                0, lost - len(self.buffer) - self.staged
+            )  # taken by a flush, neither staged nor back
+            flushed = self.sent - before
+            accepted, published = self.kept, self.sent
             totals = Counter(self.totals)
             if not done.is_set():  # a window no flush took: its counts still belong to the totals
                 totals.update(self.counts)
-        flushed = totals.get("published", 0) - before
         reason = "it ran out of time" if not done.is_set() else "the last publish or write failed"
         log.log(
             logging.ERROR if lost else logging.INFO,
@@ -423,16 +460,17 @@ class Collector:
             lost,
             f" ({reason})" if lost else "",
             totals.get("requests", 0),
-            totals.get("accepted", 0),
-            totals.get("published", 0),
+            accepted,
+            published,
             extra={
                 "fields": {
                     "flushed": flushed,
                     "lost": lost,
+                    "lost_in_flight": in_flight,
                     "finished": done.is_set(),
                     "total_requests": totals.get("requests", 0),
-                    "total_accepted": totals.get("accepted", 0),
-                    "total_published": totals.get("published", 0),
+                    "total_accepted": accepted,
+                    "total_published": published,
                     "uptime_s": round(self.clock() - self.started),
                 }
             },

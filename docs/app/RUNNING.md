@@ -785,10 +785,20 @@ the names in brackets.
 | `usage flush: 4 requests, 1 refused (foreign_origin 1); 5 events accepted, 1 rejected (invalid 1), 5 published, 0 waiting` | One per flush window in which any request to `/e` arrived, all-zero windows included | Is it receiving anything, and what became of it? |
 | `usage shutdown: 5 events published by the last flush, 0 lost; since start: 4 requests, 5 events accepted, 5 published` | Once per instance, when Cloud Run stops it (SIGTERM) | What did the last flush publish, what was lost and why, and what did this instance do in all? |
 
+A fourth line, `usage receive failed: <error type> (1 request dropped by the collector itself)`, is logged at ERROR
+the moment the collector itself fails on a request, without waiting for a flush; the window's flush line then counts
+it as `error`.
+
+In the shutdown line, **lost** is every accepted event that was not published and not already reported lost by a flush
+line, wherever it was: in memory, written but not committed, or in the hands of a last flush that ran out of time
+(`lost_in_flight`). Any loss is at ERROR. A flush that finishes its commit in the last two seconds after that line is
+still counted lost: the line errs towards alerting.
+
 In a flush line: **requests** (`requests`) is every request to `/e`; **refused** (`refused`) is requests dropped whole,
 whose events were never read: `foreign_origin` (an Origin that isn't ours, a missing one too: a curl, a scanner, the
 check below), `opted_out` (Global Privacy Control or Do Not Track), `too_large`, `bad_body`, `aborted` (the client went
-away), `not_post`, `error` (the collector itself failed: the line names the exception's type and is at ERROR);
+away), `not_post`, `error` (the collector itself failed: the line is at ERROR, and the `usage receive failed` line before
+it names the exception's type);
 **accepted** (`accepted`) is events kept; **rejected** (`rejected`) is single events dropped: `invalid` (the schema
 refused it: a page and a collector that disagree, so check `usage_image` is as new as the site), `no_address` (no
 public client address in `X-Forwarded-For`), and the limits `rate_limited`, `ceiling`, `daily_cap`, `overflow`,
@@ -798,9 +808,10 @@ failed (<error type>)` or `publish failed (<error type>)`, and lost events with 
 
 What the log says about an empty dataset:
 
-- **No line at all:** no instance started, so no request reached the service. The pages aren't sending (an empty
-  `collector_url`, a site built before it was set, a CSP that doesn't name it) or nobody visited.
-- **A start line, then nothing yet:** a request arrived and its events are waiting. A lone visit is published when the
+- **No line at all:** no instance started, so no request of any kind reached the service. The pages aren't sending
+  (an empty `collector_url`, a site built before it was set, a CSP that doesn't name it) or nobody visited.
+- **A start line, then nothing yet:** something started an instance: a beacon, or any other request (a scanner's
+  `GET /` does too). Only the flush line says whether a request reached `/e`. A lone visit is published when the
   instance stops (Cloud Run stops an idle instance within about 15 minutes), or by the next request that comes 15
   minutes after it.
 - **A start line and never a shutdown line:** the instance was killed without SIGTERM (out of memory, a crash);
@@ -863,9 +874,10 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
    Run page), in a PR: from then on the pages send events.
 5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does any other method on `/e`
    (`GET <collector_url>/health` answers 200, and any other path 404; `/healthz` is for the startup probe only,
-   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage start` line at once and,
-   at its next flush or when the instance stops, `usage flush: 1 requests, 1 refused (foreign_origin 1); 0 events
-   accepted, ...` ("Reading the collector's log").
+   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage start` line at once
+   if the POST started a new instance (a warm one logged it earlier) and, at its next flush or when the instance
+   stops, `usage flush: 1 requests, 1 refused (foreign_origin 1); 0 events accepted, ...` ("Reading the collector's
+   log").
 
 ## Using it on the phone
 

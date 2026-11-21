@@ -21,7 +21,8 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - The usage collector's log says whether it is receiving anything: one `usage flush` line per window in which any
   request arrived (requests, refused by reason, events accepted, rejected by reason, published, waiting, and the
   error's type when a write or publish failed), a `usage start` line per instance (whether it can publish) and a
-  `usage shutdown` line (what the last flush published, what was lost and why, the instance's totals). "Nobody came"
+  `usage shutdown` line (what the last flush published, what was lost and why, the instance's totals; every accepted
+  event not published counts as lost, a flush that ran out of time included). "Nobody came"
   and "everything was refused or lost" no longer read the same; `docs/app/RUNNING.md`, "Reading the collector's log".
 - Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
   `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
