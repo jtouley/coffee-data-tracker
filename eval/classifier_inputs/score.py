@@ -2,11 +2,14 @@
 
   python score.py agree <data dir> <set>
       agreement between labels_A.json and labels_B.json; writes to_settle.json (ids only) for the third labeler
-  python score.py score <data dir> <set> <name>=<predictions.json>[@<stratum>] ...
+  python score.py score <data dir> train|validation <name>=<predictions.json>[@<stratum>] ...
       each classifier's errors per stratum, with Wilson 95% intervals, the confidently wrong ones, and accuracy
       weighted by stratum size. @<stratum> scores that stratum on the rules alone (predict.py's rules_only)
-  python score.py final <data dir> <name>=<predictions.json>[@<stratum>] ...
-      the same on the sealed test set, once per name: it refuses a second run (it leaves test/FINAL_SCORED)
+  python score.py final <data dir> test|test_next <name>=<predictions.json>[@<stratum>] ...
+      the same on a sealed set, exactly once: every candidate is scored in that one run. A sealed set is spent once
+      its <set>/FINAL_SCORED marker exists or the sha256 of its sample.json is in this folder's FINAL_SCORED record
+      (tracked in git, so a fresh download or another machine sees it too). Both are written only after the scores
+      are computed and before they are printed; commit the record and copy the marker to the dataset.
 
 <data dir> is a local folder, or the private dev dataset that keeps these files, as hf://datasets/<owner>/<name>:
 its name must end in -dev (anything else is refused, so the lake or the public export can never be scored from or
@@ -18,6 +21,10 @@ Confidently wrong: a wrong answer the classifier gave as certain, which is one d
 the rules' outright exclusions (classify.excluded). The rest of the wrong answers are the rules' fallback.
 """
 
+import contextlib
+import datetime
+import hashlib
+import io
 import json
 import math
 import sys
@@ -25,6 +32,9 @@ import tempfile
 from pathlib import Path
 
 Z = 1.96
+SEALED = ("test", "test_next")
+# One line per sealed set scored: "<sha256 of its sample.json>  <set>  <date>  <names>".
+RECORD = Path(__file__).parent / "FINAL_SCORED"
 
 
 def wilson(k: int, n: int) -> tuple[float, float, float]:
@@ -43,6 +53,8 @@ def labels(path: Path) -> dict[int, str]:
 
 def reference(d: Path) -> dict[int, str]:
     a, b, c = labels(d / "labels_A.json"), labels(d / "labels_B.json"), labels(d / "labels_C.json")
+    if not a or not b:
+        sys.exit(f"{d.name} has no labels from both labelers yet: nothing to score")
     if set(a) != set(b):
         sys.exit("labels_A.json and labels_B.json cover different products")
     ref = {}
@@ -128,23 +140,51 @@ def data_dir(arg: str) -> Path:
     return local / "dev"
 
 
+def spent(d: Path) -> str | None:
+    """Why the sealed set in d can't be scored again, or None if it never was."""
+    if (d / "FINAL_SCORED").exists():
+        return f"{d.name}/FINAL_SCORED exists"
+    digest = hashlib.sha256((d / "sample.json").read_bytes()).hexdigest()
+    recorded = (
+        {line.split()[0] for line in RECORD.read_text().splitlines() if line.strip()}
+        if RECORD.exists()
+        else set()
+    )
+    return f"{RECORD.name} records its sample.json" if digest in recorded else None
+
+
+def final(d: Path, preds: list[str]) -> None:
+    if why := spent(d):
+        sys.exit(f"refused: the sealed set {d.name} was already scored once ({why})")
+    names = [r.split("=", 1)[0] for r in preds]
+    out = io.StringIO()
+    with contextlib.redirect_stdout(out):
+        score(d, preds)  # a failure here (a missing label or prediction) leaves the set unspent
+    digest = hashlib.sha256((d / "sample.json").read_bytes()).hexdigest()
+    today = datetime.date.today().isoformat()
+    with RECORD.open("a") as f:
+        f.write(f"{digest}  {d.name}  {today}  {','.join(names)}\n")
+    try:
+        (d / "FINAL_SCORED").write_text("\n".join(names) + "\n")
+    except OSError as e:  # a read-only copy: the tracked record still holds
+        print(f"note: could not write {d.name}/FINAL_SCORED ({type(e).__name__}); {RECORD.name} has it")
+    print(out.getvalue(), end="")
+    print(f"\n{d.name} is now spent: commit {RECORD.name} and copy {d.name}/FINAL_SCORED to the dataset")
+
+
 def main() -> None:
     cmd, data = sys.argv[1], data_dir(sys.argv[2])
     rest = sys.argv[3:]
     if cmd == "agree":
         agree(data / rest[0])
     elif cmd == "score":
-        if rest[0] == "test":
-            sys.exit("the test set is scored with `final`, once")
+        if rest[0] in SEALED:
+            sys.exit(f"refused: {rest[0]} is a sealed set, scored once with `final`")
         score(data / rest[0], rest[1:])
     elif cmd == "final":
-        marker = data / "test" / "FINAL_SCORED"
-        done = marker.read_text().splitlines() if marker.exists() else []
-        names = [r.split("=", 1)[0] for r in rest]
-        if again := sorted(set(names) & set(done)):
-            sys.exit(f"already scored once: {', '.join(again)}")
-        marker.write_text("\n".join([*done, *names]) + "\n")
-        score(data / "test", rest)
+        if not rest or rest[0] not in SEALED:
+            sys.exit(f"refused: `final` scores a sealed set ({' or '.join(SEALED)}), named first")
+        final(data / rest[0], rest[1:])
 
 
 if __name__ == "__main__":

@@ -17,9 +17,11 @@ file under `dev/`: the three sets, `test_next`, `preds/`, `manifest/` and this f
   any tracked file outside `eval/` names it.
 - `score.py` takes it in place of a local folder, and refuses any remote dataset whose name doesn't end in `-dev`.
   It only ever downloads.
-- **Status on 2026-11-21: uploaded.** The dataset is private and holds 36 data files and `SHA256SUMS` under `dev/`,
-  with a card marked DEV / EVALUATION ONLY and the tags `dev`, `evaluation` and `not-production`. Its `SHA256SUMS`
-  is this folder's, byte for byte. `<data>` can be that dataset or a local copy of its `dev/` folder.
+- **Status on 2026-11-21: uploaded, with an update pending.** The dataset is private and holds 36 data files and
+  `SHA256SUMS` under `dev/`, with a card marked DEV / EVALUATION ONLY and the tags `dev`, `evaluation` and
+  `not-production`. The redrawn `test_next` (below) is not uploaded yet: until the owner uploads it, the dataset's
+  `test_next/` and `manifest/test_next.tsv` are the old draw and its `SHA256SUMS` differs from this folder's.
+  `<data>` can be that dataset or a local copy of its `dev/` folder.
 
 ## The data (step 1)
 
@@ -70,12 +72,17 @@ One store is all of `moved_182`, and the split puts a store in one set, so that 
 ## The reference labels (step 6)
 
 - **Definition:** `eval/sealed/GUIDE.md`, unchanged.
-- **Labelers A and B:** Claude subagents, one separate session per labeler and set (six sessions), each given only
+- **Labelers A and B:** two independent Claude labelers, both Claude Fable 5.2 sessions: one separate session per
+  labeler and set (six sessions), each given only
   the guide and the products (`make_blind.py`: roaster name, title, type, tags, bag sizes, the first 1,500 characters
   of the description), B in a different order. Neither saw a prediction, a stored verdict, a stratum or the other's
   labels.
-- **Labeler C:** a Claude Sonnet labeler settles the products A and B disagree on, labeling them afresh without
+- **Labeler C:** a Claude Sonnet 5.5 labeler settles the products A and B disagree on, labeling them afresh without
   seeing either label.
+- **The labelers' own replies** are kept in the dev dataset, `raw/<set>_<A|B>.txt` and `raw/settle_C.txt`, as each
+  session returned them. Each label file equals its labeler's reply, checked on 2026-11-21.
+- **Step 6's condition:** the change measured here is the code around the classifier, not a model or prompt. The
+  stored verdicts being scored come from a different model than any labeler: all 62,235 are Claude Haiku 5.5's.
 - **No person labeled anything.** A spot-check by a person is still to come, as for `eval/sealed`.
 
 | Set | A and B agree | Cohen's kappa | Settled by C | Reference "unsure", left out |
@@ -87,13 +94,21 @@ One store is all of `moved_182`, and the split puts a store in one set, so that 
 A and B are the same model reading the same guide, so their agreement is an upper bound on what two people would
 reach, and a shared blind spot would not show as a disagreement.
 
+**The test set's two label files are byte-identical because the two labelers agreed on every product, not because
+one was copied.** The files are lists sorted by id, so full agreement gives the same bytes. Checked on 2026-11-21
+from the sessions' records: test labeler B ran in its own session, read only the guide and its own blind files (in
+its own order), and returned 430 labels; its reply equals `test/labels_B.json`, and A's reply equals
+`test/labels_A.json`. The two replies are different texts (their notes on the five "unsure" products differ in
+wording). What this can't rule out is the shared blind spot above: 430 of 430 is what one model reading the same
+guide twice gives, so the test reference is closer to one labeler's than train's or validation's.
+
 ## Scoring (steps 3 to 5 and 7)
 
 ```
 python predict.py <data>/<set>/sample.json <lake copy> <predictions.json>   # in the checkout being scored
 python score.py agree <data> <set>
 python score.py score <data> train|validation <name>=<predictions.json>[@<stratum>] ...
-python score.py final <data> <name>=<predictions.json>[@<stratum>] ...      # the sealed test, once per name
+python score.py final <data> test|test_next <name>=<predictions.json>[@<stratum>] ...  # a sealed set, once
 ```
 
 `score.py` prints totals and Wilson 95% intervals only. Per stratum: products kept that aren't coffee, coffees
@@ -173,9 +188,35 @@ Read on train only; validation as totals.
   titles read as drinks, nuts or sweets ("Pumpkin Latte", "Toasted Almond", "Sticky Bun"). The change in the
   `classifier-flavored-type` branch keeps them.
 - **The next test set is drawn.** After this run the test set above is spent for #179 and #182. `draw_next_test.py`
-  drew `test_next` from the test roasters, leaving out the 430 products scored here: 450 products (100 kept, 100
-  dropped_reclassified, 150 dropped with no verdict, 100 dropped_other), sealed (`SHA256SUMS`) and **not yet
-  labeled**. #190's change is scored on it once, after it is frozen.
+  draws `test_next` from the test roasters: 450 products (100 kept, 100 dropped_reclassified, 150 dropped with no
+  verdict, 100 dropped_other), sealed (`SHA256SUMS`) and **not yet labeled**. #190's change is scored on it once,
+  after it is frozen, with `score.py final <data> test_next ...`.
+
+## The next sealed set: `test_next`
+
+```
+python draw_next_test.py <lake copy> <main's predictions.json> <data> --exclude <earlier.json>
+```
+
+- **Rule:** the test roasters of the split above; within them, every product used in an earlier evaluation is left
+  out of the draw and of the population it weights by. That is the 1,796 products of `eval/sealed`
+  (`<earlier.json>`: the `coffee_id`s of `tests/fixtures/classifier_labels.jsonl` and `eval/sealed/sample.json`) and
+  the 1,206 products of this evaluation's train, validation and test samples (`manifest/<set>.tsv`), 3,002 in all.
+  Each stratum is ordered by `sha256("classifier-inputs-2026-11-20:next-test-1:" + item_key)` and its first products
+  drawn; ids follow `sha256("...:next-test-1:order:" + item_key)`.
+- **The exclusion list** is `test_next/exclude.json` in the dev dataset, the sorted item keys as JSON, sha256
+  `bb1d23a6b5b95207205200d6e8b2d0a33ba148e0929446c2f95484d2fadf21b2`.
+- **Redrawn 2026-11-21**, before any label: the first draw left out only the 430 test products, and 2 of its 450 were
+  among the 1,796. The redraw keeps the other 448 and replaces those 2. Population: kept 9,898,
+  dropped_reclassified 595, dropped_no_verdict 170, dropped_other 11,190.
+
+## Scored once
+
+`score.py` refuses `score` on either sealed set (`test`, `test_next`) and runs `final` on a sealed set once: every
+candidate is scored in that one run. A set is spent when its `<set>/FINAL_SCORED` marker exists or the sha256 of its
+`sample.json` is in this folder's `FINAL_SCORED`, which is tracked in git so a fresh download or another machine sees
+it. Both are written after the scores are computed and before they are printed; a run that fails spends nothing.
+`FINAL_SCORED` lists the test set scored on 2026-11-20.
 
 ## Running total (CLAUDE.md step 9)
 
@@ -193,8 +234,8 @@ differs.
 ## Not verified
 
 - No person has checked a label.
-- The labelers' replies were typed into the label files by the coordinating session from each labeler's own reply
-  (ids and letters); a typing slip in one labeler's file shows up as a disagreement, one made in both would not.
+- The label files were typed by the coordinating session from each labeler's reply; on 2026-11-21 every one was
+  checked against the reply kept in `raw/` and matches.
 - `score.py` reading straight from the dev dataset: its refusals and the local path are tested, the download path
   was not run.
 - The classifier's output on the inputs #179 and #182 will store.
