@@ -23,6 +23,18 @@ from urllib.parse import quote, unquote, urljoin, urlparse, urlsplit
 
 import httpx
 
+from .netguard import (
+    MAX_REQUEST_S,
+    OffSiteRedirect,
+    RefusedAddress,
+    RequestTooSlow,
+    guarded_transport,
+    ip_literal,
+    on_site,
+    remaining,
+    request_deadline,
+    too_slow,
+)
 from .text import scrub_surrogates
 
 if TYPE_CHECKING:
@@ -264,6 +276,12 @@ def transport_phase(e: BaseException) -> str:
     import ssl
 
     chain = list(_chain(e))
+    if any(isinstance(c, RefusedAddress) for c in chain):
+        return "refused_address"  # netguard: an address the crawler never connects to
+    if any(isinstance(c, OffSiteRedirect) for c in chain):
+        return "off_site_redirect"
+    if too_slow(e):
+        return "total_timeout"  # netguard.MAX_REQUEST_S
     for kind, phase in (
         (httpx.ConnectTimeout, "connect_timeout"),
         (httpx.ReadTimeout, "read_timeout"),
@@ -758,6 +776,14 @@ class _Unreachable(Exception):
         self.error = error
 
 
+def _hostname(url: str) -> str | None:
+    """The URL's host, or None for a URL too malformed to parse (httpx refuses it when it is sent)."""
+    try:
+        return urlsplit(url).hostname
+    except ValueError:
+        return None
+
+
 class PoliteClient:
     def __init__(
         self,
@@ -772,8 +798,11 @@ class PoliteClient:
         robots_copies: dict[str, dict] | None = None,
         clock: Callable[[], datetime] | None = None,
         redact_hosts: bool | None = None,
+        max_request_s: float | None = MAX_REQUEST_S,
     ):
         self.min_interval = min_interval
+        # The longest one request may take in total (netguard.MAX_REQUEST_S), on top of the per-read timeout.
+        self.max_request_s = max_request_s
         # redact_hosts: this client's own log lines never name a host or URL (`<host>` instead, and a failure by its
         # class and HTTP status, not its message). Always on for a client allowed a schedule-only host (the importers
         # job's, whose log is a public repository's run and must never carry Royal's address:
@@ -797,12 +826,16 @@ class PoliteClient:
         self.limiters = limiters or {}
         self._limiter: PlatformLimiter | None = None
         self.retries = retries
+        limits = httpx.Limits(max_connections=256, max_keepalive_connections=64)
         self._client = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
             timeout=httpx.Timeout(timeout, pool=120.0),
             follow_redirects=False,
-            transport=transport,
-            limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
+            # Every connection goes through netguard's address check, pinned to the address it vetted. No proxy
+            # from the environment: a proxy would resolve names itself, out of the check's reach.
+            transport=transport if transport is not None else guarded_transport(limits),
+            limits=limits,
+            trust_env=False,
         )
         self._robots: dict[str, RobotsRules | None] = {}
         # host -> (when to ask its robots.txt again, why it didn't answer)
@@ -895,16 +928,20 @@ class PoliteClient:
 
     def _send(self, url: str, params: dict | None = None) -> httpx.Response:
         if self._limiter is None:
-            return self._read(
-                self._client.send(self._client.build_request("GET", url, params=params), stream=True)
-            )
+            with request_deadline(self.max_request_s):  # connect to last byte (netguard.MAX_REQUEST_S)
+                return self._read(
+                    self._client.send(self._client.build_request("GET", url, params=params), stream=True)
+                )
         with self._limiter.slot(urlparse(url).hostname, patient=self.is_last_try):
             # a platform's cooldown or a store's pause (at most MAX_STORE_WAIT) may have passed the deadline
             if self.deadline is not None and time.monotonic() >= self.deadline:
                 raise DeadlineReached(f"the run's deadline passed before {url}")
-            r = self._client.send(self._client.build_request("GET", url, params=params), stream=True)
-            self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
-            return self._read(r)
+            with request_deadline(self.max_request_s):
+                r = self._client.send(self._client.build_request("GET", url, params=params), stream=True)
+                self._limiter.record(
+                    r
+                )  # inside the slot: a 429's cooldown is set before the next request starts
+                return self._read(r)
 
     def _read(self, r: httpx.Response) -> httpx.Response:
         """The streamed response's body, read up to max_response_bytes (ResponseTooLarge past it), and the response
@@ -923,6 +960,10 @@ class PoliteClient:
                 n += len(chunk)
                 if n > cap:
                     raise ResponseTooLarge(f"response over {cap >> 20} MiB: {r.url}", status=r.status_code)
+                if (left := remaining()) is not None and left <= 0:  # any transport, not only the guarded one
+                    raise RequestTooSlow(
+                        f"over {self.max_request_s:.0f} s in total: {r.url}", request=r.request
+                    )
                 chunks.append(chunk)
             r._content = b"".join(chunks)
         finally:
@@ -1163,7 +1204,9 @@ class PoliteClient:
             except httpx.HTTPError as e:
                 self._note(None, retry=attempt > 0, page=page)
                 self._note_transport(url, e, robots_request=not page)
-                if last:
+                # a refused address won't change on a retry, and a server past the total limit would hold the
+                # worker as long again (netguard)
+                if last or isinstance(e, RefusedAddress) or too_slow(e):
                     raise
             else:
                 self._note(r.status_code, retry=attempt > 0, page=page, response=r)
@@ -1190,10 +1233,16 @@ class PoliteClient:
         bare = lambda u: urlparse(u)._replace(query="", fragment="").geturl()  # noqa: E731
         # URLs (without query) that redirected us away while carrying our params.
         sent_params: set[str] = set()
+        robots_host = _hostname(url) or ""  # robots.txt's rules come only from this host's site
         for hop in range(MAX_REDIRECTS + 1):
             if not self.schedule_only_ok and schedule_only_host(url):
                 # the message never parses the URL again: a malformed one is refused as cleanly as any other
                 raise ScheduleOnlyHost("refused: a host only the scheduled importers job may fetch")
+            if ip_literal(_hostname(url)):  # every hop: a roaster has a name (netguard)
+                raise RefusedAddress("refused: an IP address, not a host name")
+            if robots and hop and not on_site(_hostname(url), robots_host):
+                # a redirect off the host's site is no answer about its rules: robots.txt unavailable (_fetch_robots)
+                raise OffSiteRedirect("refused: robots.txt redirected off the host's site")
             if not robots and not self._allowed(url):
                 blocked = SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
                 if (rules := self._robots.get(urlparse(url).netloc)) is not None:
