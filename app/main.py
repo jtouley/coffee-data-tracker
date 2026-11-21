@@ -409,7 +409,15 @@ def create_app(
         ended = None
         if request.cookies.get(COOKIE):
             ended = "failed" if getattr(request.state, "auth_failed", False) else "ended"
-        return page(request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended)
+        # After a sign-out that couldn't end the other sessions (post_signout), the screen says so.
+        others = request.query_params.get("others") == "kept"
+        response = page(
+            request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended, others=others
+        )
+        if ended == "failed":
+            # the service worker clears the kept pages on this screen, except here: the session may still be good
+            response.headers["X-Session"] = "unchecked"
+        return response
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:
@@ -453,8 +461,19 @@ def create_app(
 
     @app.post("/api/signout")
     def post_signout(me: Writer) -> Response:
-        response = JSONResponse({"ok": True})
-        accounts_only().clear_cookie(response)
+        """Ends every session of this account, not just this phone's: sessions are stateless signed tokens, so
+        clearing the cookie alone left a copy of it valid for up to 90 days (review 2026-11-21, F6). Costs the
+        person's other devices their sessions: they sign in again. This phone is signed out whatever happens: if
+        ending the other sessions fails (the users dataset's commit), the cookie still goes and the reply says so."""
+        s = accounts_only()
+        try:
+            s.accounts.sign_out_everywhere(me.user_id)
+            everywhere = True
+        except Exception as e:  # noqa: BLE001 - Lake.publish's error, whatever it is: reported, never a 500
+            log.warning("sign-out: ending the other sessions failed (%s)", type(e).__name__)
+            everywhere = False
+        response = JSONResponse({"ok": True, "everywhere": everywhere})
+        s.clear_cookie(response)
         return response
 
     @app.post("/api/signout-everywhere")
@@ -874,7 +893,15 @@ def create_app(
         return page(request, "switch_bag.html", me=me, lines=lines, selected=selected)
 
     @app.get("/bag/{bag_id}/use")
-    def use_bag(request: Request, bag_id: str, me: Me, next: str = "today") -> RedirectResponse:
+    def use_bag_page(bag_id: str, me: Me) -> RedirectResponse:
+        """No longer selects anything (a GET mustn't change state: review 2026-11-21, F10): a link followed without
+        the app's script, or after its POST failed, lands on Switch coffee."""
+        return RedirectResponse("/bags/switch", status_code=303)
+
+    @app.post("/bag/{bag_id}/use")
+    def use_bag(request: Request, bag_id: str, me: Writer, next: str = "today") -> RedirectResponse:
+        """Selects an open bag for this phone (the selected_bag cookie), through the same-origin check of every
+        write."""
         bag = store.bag(me.user_id, bag_id)
         if not bag or bag.finished_on:
             raise HTTPException(404, "no such open bag")

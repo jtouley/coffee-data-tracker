@@ -20,8 +20,10 @@ where a rule can break; they don't show how often it does.
    scoring command in the eval's README; it prints only totals and intervals. After the final score the set can
    join the regression fixtures, and a new test set is drawn for the next change.
 6. **The reference labels:** each item is labeled twice, independently, against a written definition, and a third
-   labeler settles disagreements. Say who labeled (people or Claude, and which model). An existing signal such as
-   Claude's enrichment can serve as the reference only when the change being measured isn't that same model or
+   labeler settles disagreements. The first two labelers are different models (the same model gives the same
+   answers), the third is a model different from both, and no labeler wrote or tuned the change being measured.
+   Labelers see only the items and the definition, each in its own folder. Say who labeled (people or Claude, and
+   which model). An existing signal such as Claude's enrichment can serve as the reference only when the change being measured isn't that same model or
    prompt.
 7. **Report:** the current code against the change on every set, with Wilson 95% intervals and, for a stratified
    sample, weights by stratum size. A change ships only if its test score is at least as good as `main`'s, with no
@@ -93,3 +95,29 @@ has a failure to reproduce).
    repo before it goes out.
 
 Each review's PR comment ends with **Premise checks**: what was checked, what was found, and what wasn't verified.
+
+## Keep the repo clean
+
+1. **No notes or scratch on any branch.** Working notes, plans, decision logs and agent state stay out of git (a
+   scratchpad or somewhere private). Decisions go on the issue or PR they decide. No `notes/`, `tmp/`, `.context/`
+   or diagnostic workflows, session branches included.
+2. **One PR per independent change, off `main`.** Bundle tiny related changes into one PR. Stack only when a
+   change truly depends on another, and at most 2 deep. Keep at most about 10 PRs open at once.
+3. **Every PR is squash-merged and its branch deleted at merge,** the same hour it's approved with CI green. Delete
+   a closed PR's branch when you close it. Name branches `<type>/<topic>` (`feat`, `fix`, `docs`, `eval`, `infra`,
+   `deps`), and don't push a branch without opening its PR. The PR title becomes the commit: `Area: what changed`,
+   under 72 characters, with no instructions in it ("do not merge ..."); those go in the body and a label.
+4. **PR bodies under 40 lines, details in `<details>`.** The visible part says what and why, the effect on users or
+   data, how it was tested, and the owner's steps. Evidence tables, premise checks and review history go in
+   `<details>`. No local paths (`/home/...`, scratchpad, worktrees), internal tool headers or model names.
+5. **Reviews are one comment each, readable on a phone:** a summary of at most 20 lines, findings in `<details>`,
+   and no tooling boilerplate (`RUN_BY_COMMAND`, skipped-gate blocks).
+6. **One issue per problem.** Review follow-ups are separate issues, not a list in one; search before opening one.
+   A PR that fixes an issue says `Closes #n`.
+7. **Triage issues belong to the workflows** that open and close them: comment, don't close them by hand.
+8. **Drafts expire after 14 days.** A draft untouched for 14 days is closed, with an issue holding what's left.
+9. **Nothing generated or one-off in the tree.** Review screenshots go in PR comments, one-off shell runs in the PR
+   body, and scripts in `scripts/`, not `docs/`. Lake data stays out (the fixtures and eval sets CONTRIBUTING allows
+   are the exception).
+10. **One home per topic.** Architecture goes in `docs/ARCHITECTURE.md`. A change that makes a doc wrong fixes it in
+    the same PR.

@@ -272,6 +272,7 @@ def test_new_terms_are_accepted_on_the_next_sign_in(lake, tmp_path):
     page = c.get("/agree")
     assert page.status_code == 200 and "We’ve updated our Terms and Privacy Policy" in page.text
     assert "December 1, 2026" in page.text and 'data-signout="/api/signout"' in page.text
+    assert "Sign out signs you out on all your devices." in page.text  # review of #225
     r = c.post(
         "/api/bags", json={"bag_id": "b1"}, headers={**W, "X-Expected-User": accounts.by_name("maya").user_id}
     )

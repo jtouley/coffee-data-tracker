@@ -12,7 +12,9 @@
     <div class="dock">
       <button class="btn primary" type="submit">Accept</button>
       {{ status_line() }}
-      <button class="btn text" type="button" data-signout="/api/signout">Sign out</button>
+      <button class="btn text" type="button" data-signout="/api/signout" aria-describedby="agree-signout-note">Sign out</button>
+      <p class="meta" id="agree-signout-note">Sign out signs you out on all your devices.</p>
+      <p class="hint" data-signout-status role="status"></p>
     </div>
   </form>
   {{ rules_json() }}
