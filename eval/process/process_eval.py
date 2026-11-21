@@ -87,8 +87,12 @@ def build(lake: str, data: Path) -> None:
             order by d.coffee_id
         ) to '{data}/eval_set.parquet' (format parquet)
     """)
-    print(c.execute(f"select count(*), count(distinct roaster_id), count(*) filter (where listed) "
-                    f"from '{data}/eval_set.parquet'").fetchone())
+    print(
+        c.execute(
+            f"select count(*), count(distinct roaster_id), count(*) filter (where listed) "
+            f"from '{data}/eval_set.parquet'"
+        ).fetchone()
+    )
 
 
 def rows(data: Path) -> list[dict]:
@@ -105,7 +109,8 @@ def split(data: Path) -> None:
     print("products", dict(Counter(sets.values())), "roasters", dict(roasters))
     print("listed", dict(Counter(sets[r["coffee_id"]] for r in rs if r["listed"])))
     test = sorted(k for k, s in sets.items() if s == "test")
-    (HERE / "test_keys.txt").write_text("\n".join(test) + "\n")
+    # JSON, not one key a line: a few keys end in a space, which a whitespace hook would strip.
+    (HERE / "test_keys.json").write_text(json.dumps(test, indent=0) + "\n")
 
 
 def item(r: dict):
@@ -188,8 +193,14 @@ def diag(data: Path, n: int) -> None:
     sets = _load(data, "split.json")
     pool: dict[str, list[str]] = {}
     for r in rows(data):
-        if (r["listed"] and r["in_stock"] and not r["is_blend"] and r["origin_country"] and not r["dim_process"]
-                and sets[r["coffee_id"]] == "train"):
+        if (
+            r["listed"]
+            and r["in_stock"]
+            and not r["is_blend"]
+            and r["origin_country"]
+            and not r["dim_process"]
+            and sets[r["coffee_id"]] == "train"
+        ):
             pool.setdefault(r["platform"], []).append(r["coffee_id"])
     out = {p: sorted(ks, key=lambda k: _order(k, "diag"))[:n] for p, ks in sorted(pool.items())}
     (data / "diag_keys.json").write_text(json.dumps(out, indent=1))
@@ -221,8 +232,12 @@ def view(r: dict, width: int = 160) -> str:
         s, e = max(0, m.start() - width), min(len(body), m.end() + width)
         hits.append(body[s:e])
         last = e
-    lines = [f"TITLE: {r['title']}", f"TAGS: {tags}", f"VARIANTS: {' | '.join(variants)[:300]}",
-             f"BODY[:500]: {body[:500]}"]
+    lines = [
+        f"TITLE: {r['title']}",
+        f"TAGS: {tags}",
+        f"VARIANTS: {' | '.join(variants)[:300]}",
+        f"BODY[:500]: {body[:500]}",
+    ]
     lines += [f"  ...{h}..." for h in hits[:8]]
     return "\n".join(lines)
 
@@ -261,7 +276,9 @@ def found(p: str | None, label: str) -> bool:
     return label not in ("none", "multiple") and p == label
 
 
-def score(data: Path, set_name: str, labels_file: Path, names: list[str], final: bool, strata: list[str]) -> None:
+def score(
+    data: Path, set_name: str, labels_file: Path, names: list[str], final: bool, strata: list[str]
+) -> None:
     """Agreement, confidently wrong and coverage per stratum (Wilson 95%), then over the set weighted by stratum
     size, then the paired difference (last prediction minus first). The strata are those the labelled sample was
     drawn by (`strata`: the two predictions given to `sample`). With --final (test) only the totals are printed."""
@@ -277,8 +294,10 @@ def score(data: Path, set_name: str, labels_file: Path, names: list[str], final:
     st_of = {k: change(sa[k], sb[k]) for k in keys}
     size = Counter(st_of.values())
     lab = [k for k in labels if sets.get(k) == set_name and k in listed]
-    print(f"{set_name}: {len(keys)} listed products, {len(lab)} labelled; label mix",
-          dict(Counter(labels[k] for k in lab)))
+    print(
+        f"{set_name}: {len(keys)} listed products, {len(lab)} labelled; label mix",
+        dict(Counter(labels[k] for k in lab)),
+    )
     metrics = (("agree", right), ("confidently wrong", wrong), ("coverage", found))
     if not final:
         for st in sorted(size):

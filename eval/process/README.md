@@ -29,7 +29,7 @@ because its reference needs labeller B and the third labeller first (Reference l
   roaster's products never sit on both sides.
 - Made right after the shape inspection, before any prediction or example was read.
 - Result: train 25,966 products (1,066 roasters; 23,137 listed), validation 8,689 (372; 7,292), test 8,735
-  (370; 7,663). `test_keys.txt` lists the test product keys.
+  (370; 7,663). `test_keys.json` lists the test product keys.
 
 ## Protocol
 
@@ -91,3 +91,7 @@ python process_eval.py score   <data-dir> test labels/reference_test.json main b
 first rules and the freeze); its predictions are kept with the private data as `dev/process-eval/pred_v5.json`, so
 the strata can be recomputed, and the samples are `dev/process-eval/to_label_*.json`. Check
 the sealed files with `sha256sum -c SHA256SUMS`, run from this directory.
+
+The test key list was first committed as `test_keys.txt` (hashed in `4e7e0a5`, before any test label) and moved to
+`test_keys.json` the same day because the whitespace hook stripped the trailing space of one key; the keys are the
+same 8,735, and `SHA256SUMS` now hashes the JSON file.
