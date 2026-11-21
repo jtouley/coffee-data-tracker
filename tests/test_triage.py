@@ -471,7 +471,7 @@ def test_the_alert_jobs_hold_only_issues_write_and_never_a_hub_token():
     ci = yaml.safe_load((workflows / "ci.yml").read_text())
     assert "alert" not in ci["jobs"] and "issues" not in (workflows / "ci.yml").read_text()
     for name in ("ci.yml", "eval-floors.yml", "prod-health.yml", "eval-alerts.yml", "importers.yml",
-                 "importers-alerts.yml"):  # fmt: skip
+                 "importers-alerts.yml", "usage-health.yml"):  # fmt: skip
         wf = yaml.safe_load((workflows / name).read_text())
         assert wf["permissions"] == {"contents": "read"}, name
         for job_name, job in wf["jobs"].items():

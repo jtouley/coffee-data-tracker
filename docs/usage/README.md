@@ -16,6 +16,11 @@ private usage dataset and in `build/usage.duckdb`, which no public job opens.
 3. Prints counts only. With `--alerts-out`, writes the search-text detector's triage alert for
    `python -m coffeedata.triage prod`: "N searches in week W matched the email pattern", never the text.
 
+With `--alerts-out` it first reads the dataset's event file names for the newest stored day and writes the
+`prod:usage-events` alert (is the collector storing anything?); with no event stored it stops there, since there is
+nothing to build from. `.github/workflows/usage-health.yml` runs it each Tuesday and opens the triage issues
+(docs/TRIAGE.md): until then nothing ran this command on a schedule.
+
 `--catalog` names a folder with the served release's `dim_roaster.parquet` and `dim_coffee.parquet`: the ids clicks
 are checked against (`usage_click_ids_known`, warn) and the vocabulary a query's words are checked against.
 Without it every word counts as unknown, so every query needs 5 days.

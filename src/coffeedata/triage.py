@@ -3,6 +3,7 @@ alert key, updated in place, closed when the alert recovers (docs/TRIAGE.md).
 
     python -m coffeedata.triage evals <report.json> --workflow <name> [--dry-run]
     python -m coffeedata.triage prod <alerts.json> [--dry-run]
+    python -m coffeedata.triage usage <alerts.json> [--dry-run]   (coffeedata usage-build --alerts-out)
     python -m coffeedata.triage importers <dir> [--dry-run]       (dir: weeks.json, runs.json, check.json, and
                                                                    results/<run id>/<artifact>/results.json)
     python -m coffeedata.triage importer-result-runs <runs.json> [--check-out <check.json>]
@@ -498,6 +499,28 @@ def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) ->
     }]  # fmt: skip
 
 
+def usage_pipeline_alert(judged: bool, run_url: str | None, sha: str | None) -> list[dict]:
+    """The usage check itself (usage-health.yml): firing when it produced no alerts file, so neither the stored
+    events nor the reports were judged."""
+    return [{
+        "key": "pipeline:usage-health", "kind": "pipeline", "label": "prod-health",
+        "title": "usage-health: the check didn't run",
+        "severity": "warning", "firing": not judged, "source": ".github/workflows/usage-health.yml",
+        "summary": "The usage check couldn't list the private usage dataset, so neither its stored events nor the "
+        "usage reports were judged.",
+        "checks": [{"name": "usage dataset listed", "status": "ok" if judged else "warning"}],
+        "context": {"commit": sha, "run": run_url},
+        "steps": [
+            "Open the run and read the build job's failing step: its last line says why the dataset wasn't listed "
+            "(no Hub token, or the Hub answered \"not found\").",
+            "Not found, or no token: check that the check's token (HF_READ_TOKEN, else HF_TOKEN) can read the "
+            "private usage dataset, and the USAGE_URL variable if the dataset isn't `<owner>/coffee-usage`.",
+            "Re-run by hand once fixed (`gh workflow run usage-health`); this issue closes on the next run that "
+            "lists the dataset.",
+        ],
+    }]  # fmt: skip
+
+
 # --- the importers' weekly snapshots ------------------------------------------------------------------------------
 
 # When importers.yml's schedule fires ("37 17 * * 3": Wednesdays 17:37 UTC; tests/test_triage.py ties the two), and
@@ -876,6 +899,8 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--scope", choices=("in-git", "private"), help="the evals this workflow owns")
     pr = sub.add_parser("prod", help="issues from coffeedata.prod_health judge --out")
     pr.add_argument("alerts", type=Path)
+    us = sub.add_parser("usage", help="issues from coffeedata usage-build --alerts-out (usage-health.yml)")
+    us.add_argument("alerts", type=Path)
     im = sub.add_parser(
         "importers", help="issues from the importers check (its weeks, runs, time and results in one folder)"
     )
@@ -906,7 +931,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     wk.add_argument("url", help="the private importers dataset, hf://datasets/<owner>/<name>")
     wk.add_argument("--out", type=Path, required=True)
-    for s in (e, pr, im):
+    for s in (e, pr, us, im):
         s.add_argument("--dry-run", action="store_true")
         s.add_argument("--run-url", help="the run the alert is about (default: this run)")
         s.add_argument("--sha", help="the commit it ran on (default: GITHUB_SHA)")
@@ -941,6 +966,14 @@ def main(argv: list[str] | None = None) -> int:
         now = _now_arg(a.now) if a.now else check_time(a.dir) or _now_arg(None)
         weeks, runs = _read_json(a.dir / "weeks.json"), _read_json(a.dir / "runs.json")
         alerts = importer_alerts(weeks, runs, now, run_url, sha, read_results(a.dir / "results"))
+    elif a.cmd == "usage":
+        found = _read_json(a.alerts)
+        found = found if isinstance(found, list) else None
+        alerts = usage_pipeline_alert(found is not None, run_url, sha)
+        # the usage alerts carry no run of their own: this run is where their numbers came from
+        alerts += [
+            x | {"context": {**(x.get("context") or {}), "run": run_url, "commit": sha}} for x in found or []
+        ]
     else:
         alerts = prod_pipeline_alert(a.alerts.exists(), run_url, sha)
         alerts += json.loads(a.alerts.read_text()) if a.alerts.exists() else []

@@ -37,6 +37,9 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 | `importers:weekly` | `importers-alerts.yml`, after every `importers` run on main and Thursdays 09:23 UTC (by hand too) | an importer has no stored week for the due week: its run failed, the scheduled run never started, or the week is stale | warning |
 | `pipeline:importer-build` | `importers.yml` job `alert`, after the `build` job that follows each snapshot on main | the private importer build (`coffeedata importer-build --publish`) failed, or its copy couldn't be sent; the stored weeks aren't affected | warning |
 | `pipeline:importers-health` | `importers-alerts.yml` | the check couldn't judge the week: no Hub token, a failed dataset or runs listing, or (once a week is due) a dataset the Hub calls "not found" | warning |
+| `prod:usage-events` | `usage-health.yml` (Tuesdays 12:13 UTC, by hand) | the private usage dataset holds no event file, or its newest stored day is more than 3 days before the check (from file names; the same window as dbt's `usage_events_are_fresh`) | warning |
+| `prod:usage-search-text` | `usage-health.yml`, from `coffeedata usage-build` | a stored search matches the email, phone or card pattern (counts per week and pattern, never the text); or the usage reports failed to build, so the detector couldn't run | critical; warning when it couldn't run |
+| `pipeline:usage-health` | `usage-health.yml` | the check couldn't list the usage dataset (no Hub token, or the Hub answered "not found"), so nothing was judged | warning |
 
 Each workflow judges only the evals it owns: ci never touches a private eval's issue (its private floors skip), and
 eval-floors never touches an in-git one. Only the floor files (`tests/test_<eval>_accuracy.py`) are reported, so a
@@ -230,6 +233,31 @@ importers-alerts`.
 To try it without touching GitHub, put the check's two files in a folder and run
 `PYTHONPATH=src python3 -m coffeedata.triage importers <folder> --dry-run --now 2026-11-19T09:23`. The files are the
 `importers-health` artifact of an importers-alerts run (`weeks.json`, `runs.json`).
+
+## usage: the collector isn't storing events
+
+`usage-health.yml` runs `coffeedata usage-build` each Tuesday (12:13 UTC) against the private usage dataset, read
+only. Before it, nothing ran that command: the usage reports existed only when built by hand, and a collector that
+had stored nothing since it was switched on showed only as a log line.
+
+- **`prod:usage-events`** asks one question: is the collector storing anything? It reads the dataset's event file
+  names (`events/day=<day>/...`), never a file. No event file at all, or a newest day more than 3 days old, fires a
+  warning that says which and gives the newest stored day. It never carries a count of events or visits.
+  - Read the collector's log first (docs/app/RUNNING.md, Usage): its flush lines say whether requests arrived and
+    why any were refused or lost.
+  - No request at all: compare `config/usage.toml`'s `collector_url` with the service's address, and check the
+    pages' CSP allows it.
+  - A quiet few days on a small site is possible, which is why this is a warning. It closes at the next check that
+    finds an event stored within 3 days.
+- **With no event stored, the reports are not built** (there is nothing to build from) and the detector's issue is
+  left as it is.
+- **`prod:usage-search-text`** is the build's detector, as before; only its schedule is new.
+- **`pipeline:usage-health`**: the check couldn't list the dataset. The build job's last line says why (no Hub
+  token, or "not found": a wrong `USAGE_URL`, or a token that can't read the private dataset).
+
+The private database (`build/usage.duckdb`) and dbt's log stay on the runner and are never uploaded: the run prints
+counts by status only. So this run answers whether the reports build and pass their checks, not what they say:
+their values are for the admin's planned Usage view (not built yet).
 
 ## When to roll back
 
