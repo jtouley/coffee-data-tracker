@@ -33,3 +33,14 @@ select {{ columns | join(', ') }} from {{ ref(table) }} where false
 {% macro row_hash(alias, columns) -%}
 md5(concat_ws('|', {% for c in columns %}coalesce(cast({{ alias }}.{{ c }} as varchar), '<null>'){{ ', ' if not loop.last }}{% endfor %}))
 {%- endmacro %}
+
+{#- The local copy of one of the served release's public tables, when it is there to read, else none. The rules
+    (int_catalog_candidates, flag_verdict_flip, mart_flags) run in the gate, unlike release_changes: a served copy
+    that is missing must never fail a build, so they read none and raise no flag that needs it (the guard then
+    holds nothing, and the build is the classifier's alone). -#}
+{% macro served_file(table) -%}
+{%- set spec = (var('previous_release', {}) or {}).get(table) -%}
+{%- if not spec or not execute -%}{{ return(spec.path if spec else none) }}{%- endif -%}
+{%- set found = run_query("select count(*) from glob('" ~ spec.path | replace("'", "''") ~ "')") -%}
+{{ return(spec.path if found.columns[0].values()[0] > 0 else none) }}
+{%- endmacro %}
