@@ -49,6 +49,11 @@ _DRINKS = re.compile(
     r"traveler|pour ?overs?|gal(lon)?s?|canned|cappuccino|frappe|kits?)\b",
     re.I,
 )
+# In a product the store itself types "Flavored Coffee", these drink and nut words name the flavor of a bag of beans
+# ("Pumpkin Latte", "Toasted Almond", "Totally Nuts"), so they alone don't make it a drink. Every other word of
+# _DRINKS still does ("French Vanilla Creamer", "Vanilla Cold Brew Gallon", "Coffee Traveler"). Issue #190.
+_FLAVOR_WORDS = re.compile(r"latte|cappuccino|nuts|almonds?", re.I)
+_FLAVORED_COFFEE_TYPE = re.compile(r"^\s*flavou?red coffees?\s*$", re.I)
 _BEANS = re.compile(
     r"\b(blend|roast|whole bean|ground|beans|decaf|single[- ]origin|filter packs?|coarse|flavou?red)\b", re.I
 )
@@ -172,7 +177,9 @@ def is_coffee(item: CatalogItem) -> bool:
         _SWEET_COFFEE.search(title) or re.search(r"\bflavou?red\b", meta, re.I) or _COUNTRY.search(title)
     ):
         return False
-    if _DRINKS.search(title) and not _BEANS.search(title):
+    drinks = [m.group(0) for m in _DRINKS.finditer(title)]
+    only_a_flavor = _FLAVORED_COFFEE_TYPE.search(ptype) and all(_FLAVOR_WORDS.fullmatch(d) for d in drinks)
+    if drinks and not _BEANS.search(title) and not only_a_flavor:
         return False
     if (
         _COFFEE_WORDS.search(head)

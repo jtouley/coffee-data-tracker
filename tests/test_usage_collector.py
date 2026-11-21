@@ -81,6 +81,13 @@ class Clock:
         return self.t
 
 
+@pytest.fixture(autouse=True)
+def _no_ambient_usage_settings(monkeypatch):
+    """The start line reads COFFEEDATA_USAGE and HF_TOKEN: never the developer's or the runner's own."""
+    monkeypatch.delenv("COFFEEDATA_USAGE", raising=False)
+    monkeypatch.delenv("HF_TOKEN", raising=False)
+
+
 @pytest.fixture
 def lake(tmp_path) -> FakeLake:
     return FakeLake(tmp_path / "usage")
@@ -627,7 +634,10 @@ def test_shutdown_publishes_within_its_budget_and_counts_what_is_lost(tmp_path, 
     with caplog.at_level(logging.DEBUG):
         c.shutdown(budget=2.0)
     lost = next(r for r in caplog.records if r.getMessage().startswith("usage shutdown"))
-    assert lost.levelno == logging.ERROR and lost.fields == {"lost": 3, "finished": True}
+    assert lost.levelno == logging.ERROR
+    assert lost.fields == {"flushed": 0, "lost": 3, "lost_in_flight": 0, "finished": True, "total_requests": 1,
+                           "total_accepted": 3, "total_published": 0, "uptime_s": 0}  # fmt: skip
+    assert "3 lost (the last publish or write failed)" in lost.getMessage()
     assert lake.publishes == 1  # one attempt: no backoff inside the 10 seconds
 
 
@@ -642,7 +652,100 @@ def test_shutdown_never_waits_past_its_budget_for_a_stuck_flush(collector, caplo
     finally:
         collector._flushing.release()
     lost = next(r for r in caplog.records if r.getMessage().startswith("usage shutdown"))
-    assert lost.fields == {"lost": 2, "finished": False}
+    assert lost.levelno == logging.ERROR and "2 lost (it ran out of time)" in lost.getMessage()
+    assert (lost.fields["lost"], lost.fields["finished"]) == (2, False)
+    # the window no flush took is still in the instance's totals
+    assert (lost.fields["total_requests"], lost.fields["total_accepted"]) == (1, 2)
+
+
+def _join_shutdown_threads() -> None:
+    for t in threading.enumerate():
+        if t.name == "usage-shutdown":
+            t.join(5)
+
+
+def test_a_flush_that_stalls_before_staging_is_lost_at_error_not_zero_lost(tmp_path, clock, caplog):
+    """The review's repro: the last flush has taken 5 events out of memory and is still inside a 3-second write when
+    the 0.5-second budget ends. They are in neither the buffer nor staging, and they are lost, at ERROR."""
+    lake = FakeLake(tmp_path / "usage")
+    release = threading.Event()
+    real = lake.write
+
+    def slow_write(table, rel, rows):
+        release.wait(3.0)
+        return real(table, rel, rows)
+
+    lake.write = slow_write
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    for i in range(5):
+        c.receive(headers(ip=prefix_ip(i)), None, body(search()))
+    try:
+        started = time.perf_counter()
+        with caplog.at_level(logging.DEBUG):
+            c.shutdown(budget=0.5)
+        assert time.perf_counter() - started < 1.5
+        assert c.buffer == [] and c.staged == 0  # the old sum, buffer + staged, was 0 here
+        [line] = [r for r in caplog.records if r.getMessage().startswith("usage shutdown")]
+        assert line.levelno == logging.ERROR
+        assert line.getMessage() == (
+            "usage shutdown: 0 events published by the last flush, 5 lost (it ran out of time); since start: "
+            "5 requests, 5 events accepted, 0 published"
+        )
+        assert (line.fields["lost"], line.fields["lost_in_flight"], line.fields["finished"]) == (5, 5, False)
+    finally:
+        release.set()
+        _join_shutdown_threads()
+
+
+def test_a_stall_opening_the_lake_is_lost_at_error_too(clock, caplog):
+    """A cold instance's first contact with the dataset happens in the shutdown flush."""
+    release = threading.Event()
+
+    def never_opens():
+        release.wait(3.0)
+        raise OSError("no lake")
+
+    c = usage.Collector(never_opens, origins=frozenset({SITE}), hops=1, clock=clock)
+    c.receive(headers(), None, body(search(), search()))
+    try:
+        with caplog.at_level(logging.DEBUG):
+            c.shutdown(budget=0.4)
+        [line] = [r for r in caplog.records if r.getMessage().startswith("usage shutdown")]
+        assert line.levelno == logging.ERROR and (line.fields["lost"], line.fields["lost_in_flight"]) == (
+            2,
+            2,
+        )
+    finally:
+        release.set()
+        _join_shutdown_threads()
+
+
+def test_every_accepted_event_is_published_or_lost_or_waiting(tmp_path, clock, caplog, monkeypatch):
+    """kept = sent + gone + what the flush line calls waiting, through a failed publish, a failed write with no room
+    to put all its rows back, and a clean flush."""
+    lake = FakeLake(tmp_path / "usage", fail=1)
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    with caplog.at_level(logging.DEBUG):
+        c.receive(headers(), None, body(search(), search()))
+        c.flush()  # written, the publish fails: 2 staged
+        c.receive(headers(), None, body(search(), search(), search()))
+        lake.fail_writes = 1
+        monkeypatch.setattr(usage, "BUFFER_MAX", 1)  # the failed write can put back only 1 of its 3
+        c.flush()
+        monkeypatch.setattr(usage, "BUFFER_MAX", 1000)
+        c.flush()
+        c.shutdown(budget=2.0)
+    flushes = [r for r in caplog.records if r.getMessage().startswith("usage flush")]
+    assert [(r.fields["waiting"], r.fields.get("lost", 0), r.fields["published"]) for r in flushes] == [
+        (2, 0, 0),
+        (1, 2, 2),
+        (0, 0, 1),
+    ]
+    assert (c.kept, c.sent, c.gone) == (5, 3, 2)
+    [stop] = [r for r in caplog.records if r.getMessage().startswith("usage shutdown")]
+    assert (
+        stop.levelno == logging.INFO and stop.fields["lost"] == 0
+    )  # the 2 were reported by their flush line
 
 
 def test_a_clean_shutdown_logs_no_loss(collector, lake, caplog):
@@ -650,7 +753,13 @@ def test_a_clean_shutdown_logs_no_loss(collector, lake, caplog):
     with caplog.at_level(logging.DEBUG):
         collector.shutdown(budget=2.0)
     assert len(written(lake)) == 1 and lake.publishes == 1
-    assert not any(r.getMessage().startswith("usage shutdown") for r in caplog.records)
+    [line] = [r for r in caplog.records if r.getMessage().startswith("usage shutdown")]
+    assert line.levelno == logging.INFO  # the alert reads WARNING and above as dropped or lost
+    assert line.getMessage() == (
+        "usage shutdown: 1 events published by the last flush, 0 lost; since start: 1 requests, "
+        "1 events accepted, 1 published"
+    )
+    assert (line.fields["flushed"], line.fields["lost"], line.fields["finished"]) == (1, 0, True)
 
 
 def test_flush_lines_log_at_warning_when_dropped_and_error_when_lost(collector, clock, caplog, monkeypatch):
@@ -709,7 +818,10 @@ def test_canary_leaves_no_ip_or_cookie_in_the_lake_or_logs(lake, collector, capl
         assert s.encode() not in files
     assert "203.0.113.0" not in raw_text.replace('"ip_prefix": "203.0.113.0/24"', "")
     assert EMAIL in raw_text and EMAIL not in log_text
-    assert re.search(r"usage flush: 3 events in 1 files", log_text)
+    assert (
+        "usage flush: 2 requests, 1 refused (foreign_origin 1); 3 events accepted, 0 rejected, 3 published, 0 waiting"
+        in log_text
+    )
     flush = next(r for r in caplog.records if r.getMessage().startswith("usage flush"))
     assert (
         flush.fields["accepted"] == 3
@@ -729,10 +841,184 @@ def test_the_logs_never_hold_more_than_counts(collector, caplog):
         collector.flush()
     lines = [r for r in caplog.records if r.name.startswith("app.usage")]
     assert len(lines) == 1
-    allowed = {"written", "files", "published_ok", "staged", "published", "accepted", "invalid", "aborted",
-               "opted_out", "foreign_origin", "too_large", "bad_body", "no_address", "error", *usage.WARN, *usage.LOSS}  # fmt: skip
-    assert set(lines[0].fields) <= allowed
+    assert set(lines[0].fields) <= FLUSH_FIELDS
     assert "kenya" not in caplog.text
+
+
+# Everything a flush line may hold: counts under fixed names, and the type's name of an exception.
+FLUSH_FIELDS = {"requests", "refused", "accepted", "rejected", "published", "waiting", "written", "files",
+                "published_ok", "staged", "receive_error", "write_error", "publish_error",
+                *usage.REFUSED, *usage.REJECTED, *usage.WARN, *usage.LOSS}  # fmt: skip
+START_FIELDS = {"origins", "hops", "remote", "token"}
+SHUTDOWN_FIELDS = {
+    "flushed",
+    "lost",
+    "lost_in_flight",
+    "finished",
+    "total_requests",
+    "total_accepted",
+    "total_published",
+    "uptime_s",
+}
+
+
+def _lines(caplog, kind: str) -> list[logging.LogRecord]:
+    return [r for r in caplog.records if r.name == "app.usage" and r.getMessage().startswith(f"usage {kind}")]
+
+
+def _site_beacon() -> dict:
+    """What the landing page sends (templates/_usage.js): a no-cors fetch, so the content type is text/plain."""
+    event = {"event_id": EVENT_ID, "surface": "landing", "release": "20261117T061926-d7559f", "device": "desktop",
+             "webdriver": False, "event": "page_view", "entry": True}  # fmt: skip
+    return {
+        "headers": headers() | {"content-type": "text/plain;charset=UTF-8"},
+        "content": json.dumps({"events": [event]}),
+    }
+
+
+def test_the_sites_own_beacon_is_accepted_and_one_visit_is_published_at_shutdown(collector, lake, caplog):
+    """One request and then silence: nothing flushes until the instance is told to stop, and then the three lines
+    say what came, what was published and that nothing was lost."""
+    with caplog.at_level(logging.DEBUG), TestClient(usage.create_app(collector)) as client:
+        assert client.post("/e", **_site_beacon()).status_code == 204
+        assert collector.counts == {"requests": 1, "accepted": 1} and not collector.due()
+        assert _lines(caplog, "flush") == []  # only a later request or the shutdown flushes
+    [row] = written(lake)
+    assert (row["event"], row["surface"], row["source"], row["bot"]) == (
+        "page_view",
+        "landing",
+        "direct",
+        False,
+    )
+    assert [r.getMessage() for r in caplog.records if r.name == "app.usage"] == [
+        "usage start: nothing waiting (an instance starts empty); 1 origins allowed, 1 proxy hops, publishes to a "
+        "local folder",
+        "usage flush: 1 requests, 0 refused; 1 events accepted, 0 rejected, 1 published, 0 waiting",
+        "usage shutdown: 1 events published by the last flush, 0 lost; since start: 1 requests, 1 events accepted, "
+        "1 published",
+    ]
+    assert all(r.levelno == logging.INFO for r in caplog.records if r.name == "app.usage")
+
+
+def test_a_window_where_everything_was_refused_says_why_in_its_message(collector, lake, caplog):
+    """The line that used to read "usage flush: 0 events in 0 files": refused requests and rejected events are named
+    in the message itself, and nobody coming at all is a different log (a start and a shutdown, no flush line)."""
+    beacon = _site_beacon()
+    with caplog.at_level(logging.DEBUG), TestClient(usage.create_app(collector)) as client:
+        client.post("/e", **beacon | {"headers": beacon["headers"] | {"origin": "https://evil.example"}})
+        client.post("/e", **beacon | {"headers": beacon["headers"] | {"sec-gpc": "1"}})
+        client.post("/e", **beacon | {"headers": beacon["headers"] | {"x-forwarded-for": "10.0.0.7"}})
+        client.post(
+            "/e", headers=headers(), content=body(search(), {"event": "search", "surface": "nowhere"})
+        )
+        client.get("/e", headers=headers())
+    [line] = _lines(caplog, "flush")
+    assert line.levelno == logging.INFO  # refusals aren't the alert's "dropped or lost"
+    assert line.getMessage() == (
+        "usage flush: 5 requests, 3 refused (not_post 1, opted_out 1, foreign_origin 1); 1 events accepted, "
+        "2 rejected (no_address 1, invalid 1), 1 published, 0 waiting"
+    )
+    assert line.fields | {"refused": 3, "rejected": 2, "requests": 5, "waiting": 0} == line.fields
+    caplog.clear()
+    quiet = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1)
+    with caplog.at_level(logging.DEBUG), TestClient(usage.create_app(quiet)) as client:
+        assert client.get("/healthz").status_code == 200  # the startup probe is not a request to /e
+    assert _lines(caplog, "flush") == []
+    assert [r.getMessage().split(";")[0] for r in caplog.records if r.name == "app.usage"] == [
+        "usage start: nothing waiting (an instance starts empty)",
+        "usage shutdown: 0 events published by the last flush, 0 lost",
+    ]
+
+
+def test_a_window_of_requests_that_all_came_to_nothing_still_logs_with_zeros(collector, clock, caplog):
+    collector.refuse("aborted")
+    clock.t += usage.FLUSH_EVERY
+    assert collector.due()  # counts alone make a flush due, once a later request asks
+    with caplog.at_level(logging.DEBUG):
+        collector.flush()
+    [line] = _lines(caplog, "flush")
+    assert line.getMessage() == (
+        "usage flush: 1 requests, 1 refused (aborted 1); 0 events accepted, 0 rejected, 0 published, 0 waiting"
+    )
+    assert (line.fields["accepted"], line.fields["published"], line.fields["waiting"]) == (0, 0, 0)
+    caplog.clear()
+    with caplog.at_level(logging.DEBUG):
+        collector.flush()  # no request since: nothing to say
+    assert _lines(caplog, "flush") == []
+
+
+def test_a_failure_says_why_in_the_flush_line_itself(tmp_path, clock, caplog, monkeypatch):
+    """A failed publish, a failed write and a request the collector itself failed on: one line each window, at the
+    alert's levels, naming the error's type and never its message."""
+    lake = FakeLake(tmp_path / "usage", fail=1, fail_writes=0)
+    c = usage.Collector(lambda: lake, origins=frozenset({SITE}), hops=1, clock=clock)
+    with caplog.at_level(logging.DEBUG):
+        c.receive(headers(), None, body(search()))
+        c.flush()
+        lake.fail_writes = 1
+        c.receive(headers(), None, body(search()))
+        c.flush()
+        monkeypatch.setattr(usage, "mask_ip", lambda *_: 1 / 0)
+        c.receive(headers(), None, body(search()))
+        c.flush()
+    lines = [r for r in caplog.records if r.name == "app.usage"]
+    assert [(r.levelno, r.getMessage()) for r in lines] == [
+        (logging.WARNING, "usage flush: 1 requests, 0 refused; 1 events accepted, 0 rejected, 0 published, "
+                          "1 waiting; publish failed (ConnectionError)"),
+        (logging.WARNING, "usage flush: 1 requests, 0 refused; 1 events accepted, 0 rejected, 1 published, "
+                          "1 waiting; write failed (OSError)"),
+        (logging.ERROR, "usage receive failed: ZeroDivisionError (1 request dropped by the collector itself)"),
+        (logging.ERROR, "usage flush: 1 requests, 1 refused (error 1); 0 events accepted, 0 rejected, 1 published, "
+                        "0 waiting"),
+    ]  # fmt: skip
+    assert all(set(r.fields) <= FLUSH_FIELDS for r in lines)
+    assert lines[2].fields == {"error": 1, "receive_error": "ZeroDivisionError"}
+    assert IP not in caplog.text and "disk full" not in caplog.text and "hub unreachable" not in caplog.text
+    # logged when it happens, each failure with its own type, with no flush due: an instance killed before its
+    # next flush has still said so
+    caplog.clear()
+    with caplog.at_level(logging.DEBUG):
+        monkeypatch.setattr(usage, "mask_ip", lambda *_: [][0])
+        c.receive(headers(), None, body(search()))
+        monkeypatch.setattr(usage, "mask_ip", lambda *_: {}["x"])
+        c.receive(headers(), None, body(search()))
+    assert [(r.levelno, r.getMessage().split(" (")[0]) for r in caplog.records] == [
+        (logging.ERROR, "usage receive failed: IndexError"),
+        (logging.ERROR, "usage receive failed: KeyError"),
+    ]
+    assert not c.due() and c.counts == {"requests": 2, "error": 2}
+
+
+def test_the_start_line_says_whether_the_instance_can_publish(collector, caplog, monkeypatch):
+    token = "hf_c4n4ryT0k3n"
+    for target, has_token, tail in [
+        ("hf://datasets/someone/private-usage", True, "publishes to a remote dataset, token set"),
+        ("hf://datasets/someone/private-usage", False,
+         "publishes to a remote dataset, NO token: nothing can be published"),
+        ("", False, "publishes to a local folder"),
+    ]:  # fmt: skip
+        monkeypatch.setenv("COFFEEDATA_USAGE", target)
+        monkeypatch.setenv("HF_TOKEN", token if has_token else "")
+        caplog.clear()
+        with caplog.at_level(logging.DEBUG):
+            collector.start()
+        [line] = _lines(caplog, "start")
+        assert line.levelno == logging.INFO and line.getMessage().endswith(tail)
+        assert line.fields == {"origins": 1, "hops": 1, "remote": bool(target), "token": has_token}
+        text = logs.JsonFormatter().format(line)
+        assert token not in text and "someone" not in text and SITE not in text
+
+
+def test_start_and_shutdown_lines_hold_only_counts_and_flags(collector, caplog):
+    with caplog.at_level(logging.DEBUG), TestClient(usage.create_app(collector)) as client:
+        client.post("/e", headers=headers(cookie=COOKIE), content=body(search(query=f"near {EMAIL}")))
+    [start], [stop] = _lines(caplog, "start"), _lines(caplog, "shutdown")
+    assert set(start.fields) == START_FIELDS and set(stop.fields) == SHUTDOWN_FIELDS
+    for r in caplog.records:
+        values = (getattr(r, "fields", None) or {}).values()
+        assert all(v is None or isinstance(v, bool | int) or str(v).isidentifier() for v in values), r.fields
+    for secret in (IP, SPOOF, COOKIE, EMAIL, UA, "203.0.113"):
+        assert secret not in caplog.text
 
 
 # --- deployment ----------------------------------------------------------------------------------------------------

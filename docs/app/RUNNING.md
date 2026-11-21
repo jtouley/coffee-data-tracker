@@ -782,10 +782,10 @@ custom domain, DNS record or domain verification; the page scripts read it from 
 empty until the service exists, and then the pages send nothing). The collector answers every `POST /e` with an empty
 204, masks the caller's IP (IPv4 /24, IPv6 /40) before anything is kept, and appends events to the private dataset
 `jtouley/coffee-usage` (`events/day=YYYY-MM-DD/batch=<id>.parquet`): at most once a minute, inside the request that
-finds 200 events waiting or the oldest 15 minutes old, and at shutdown. It logs counts per flush and nothing else;
-Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from the `_Default` sink. The
-alert "usage events dropped or lost" emails the owner when a flush logs at WARNING (a limit dropped events, a publish
-failed) or ERROR (events lost).
+finds 200 events waiting or the oldest 15 minutes old, and at shutdown. It logs counts and nothing else ("Reading the
+collector's log" below); Cloud Run's own request log for it, which holds full IPs and user agents, is excluded from
+the `_Default` sink. The alert "usage events dropped or lost" emails the owner when a line logs at WARNING (a limit
+dropped events, a write or publish failed) or ERROR (events lost).
 
 | What | Where | Value |
 |---|---|---|
@@ -799,6 +799,58 @@ failed) or ERROR (events lost).
 **Limits** (`app/usage.py`), counted in the flush line when they drop anything: 600 events a minute and 10,000 a
 day per masked prefix (a /24 or /40 can be a whole carrier's NAT pool or a Private Relay egress); 6,000 a minute and
 200,000 a UTC day per instance (at most two); 20,000 events in memory and 50,000 written but unpublished.
+
+### Reading the collector's log
+
+Logs Explorer: resource "Cloud Run Revision", service `registry-coffee-usage`, `jsonPayload.logger="app.usage"`. Three
+lines, counts only (never an event, an address, a prefix or a header); the same numbers are in `jsonPayload` under
+the names in brackets.
+
+| Line | When | The question it answers |
+|---|---|---|
+| `usage start: nothing waiting (an instance starts empty); 3 origins allowed, 1 proxy hops, publishes to a remote dataset, token set` | Once per instance (a cold start) | Did an instance start, and can it publish? `NO token: nothing can be published` means `usage_token` is off or the secret has no version |
+| `usage flush: 4 requests, 1 refused (foreign_origin 1); 5 events accepted, 1 rejected (invalid 1), 5 published, 0 waiting` | One per flush window in which any request to `/e` arrived, all-zero windows included | Is it receiving anything, and what became of it? |
+| `usage shutdown: 5 events published by the last flush, 0 lost; since start: 4 requests, 5 events accepted, 5 published` | Once per instance, when Cloud Run stops it (SIGTERM) | What did the last flush publish, what was lost and why, and what did this instance do in all? |
+
+A fourth line, `usage receive failed: <error type> (1 request dropped by the collector itself)`, is logged at ERROR
+the moment the collector itself fails on a request, without waiting for a flush; the window's flush line then counts
+it as `error`.
+
+In the shutdown line, **lost** is every accepted event that was not published and not already reported lost by a flush
+line, wherever it was: in memory, written but not committed, or in the hands of a last flush that ran out of time
+(`lost_in_flight`). Any loss is at ERROR. A flush that finishes its commit in the last two seconds after that line is
+still counted lost: the line errs towards alerting.
+
+In a flush line: **requests** (`requests`) is every request to `/e`; **refused** (`refused`) is requests dropped whole,
+whose events were never read: `foreign_origin` (an Origin that isn't ours, a missing one too: a curl, a scanner, the
+check below), `opted_out` (Global Privacy Control or Do Not Track), `too_large`, `bad_body`, `aborted` (the client went
+away), `not_post`, `error` (the collector itself failed: the line is at ERROR, and the `usage receive failed` line before
+it names the exception's type);
+**accepted** (`accepted`) is events kept; **rejected** (`rejected`) is single events dropped: `invalid` (the schema
+refused it: a page and a collector that disagree, so check `usage_image` is as new as the site), `no_address` (no
+public client address in `X-Forwarded-For`), and the limits `rate_limited`, `ceiling`, `daily_cap`, `overflow`,
+`staged_full`; **published** (`published`) is events committed to the dataset by this flush; **waiting** (`waiting`)
+is events still in memory or written but not yet committed. A failed write or publish ends the line with `write
+failed (<error type>)` or `publish failed (<error type>)`, and lost events with `N lost`.
+
+What the log says about an empty dataset:
+
+- **No line at all:** no instance started, so no request of any kind reached the service. The pages aren't sending
+  (an empty `collector_url`, a site built before it was set, a CSP that doesn't name it) or nobody visited.
+- **A start line, then nothing yet:** something started an instance: a beacon, or any other request (a scanner's
+  `GET /` does too). Only the flush line says whether a request reached `/e`. A lone visit is published when the
+  instance stops (Cloud Run stops an idle instance within about 15 minutes), or by the next request that comes 15
+  minutes after it.
+- **A start line and never a shutdown line:** the instance was killed without SIGTERM (out of memory, a crash);
+  whatever it held is gone and nothing could say so.
+- **Flush lines with requests but `0 events accepted`:** everything is being refused or rejected, and the line names
+  the reason.
+- **`accepted` above zero, `published` zero:** the line is at WARNING and names the failure; `waiting` is what the next
+  flush retries.
+
+The log says what one instance received. Whether events are arriving in the dataset at all is checked each Tuesday
+by `.github/workflows/usage-health.yml`, which opens a `prod:usage-events` triage issue when the dataset holds no
+event file or its newest is more than three days old (`docs/TRIAGE.md`, `docs/usage/README.md`).
 
 ### The apply account's grants for the collector
 
@@ -853,8 +905,10 @@ Through GitHub, except where marked. Each `ci.tfvars` change is a PR, then the G
    Run page), in a PR: from then on the pages send events.
 5. **Check it.** A POST to `<collector_url>/e` with any body gets `204`, as does any other method on `/e`
    (`GET <collector_url>/health` answers 200, and any other path 404; `/healthz` is for the startup probe only,
-   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage flush` line counting
-   it as `foreign_origin` at its next flush.
+   since Google's front end answers paths ending in `z` itself); the service's log shows a `usage start` line at once
+   if the POST started a new instance (a warm one logged it earlier) and, at its next flush or when the instance
+   stops, `usage flush: 1 requests, 1 refused (foreign_origin 1); 0 events accepted, ...` ("Reading the collector's
+   log").
 
 ## Using it on the phone
 

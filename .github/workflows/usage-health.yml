@@ -1,0 +1,73 @@
+# Usage health (docs/TRIAGE.md): each Tuesday, is the usage collector storing events, and do the usage reports
+# still build and pass their checks? Nothing else ran `coffeedata usage-build`: the reports existed only when built
+# by hand, and a collector that had stored nothing since it was switched on showed nowhere.
+#
+# - It only reads the private usage dataset (file names first; then, if any event is stored, the events and the
+#   pinned geo files for the build) and only alerts. The private database (build/usage.duckdb) and dbt's log stay on
+#   the runner: neither is uploaded, and the job prints counts only (usage_build.py).
+# - main's code only, as prod-health: the Hub token (HF_READ_TOKEN, else HF_TOKEN) is given to the one step that
+#   reads, in a job with contents: read. The alert job has GITHUB_TOKEN with issues: write, never the Hub token.
+# - This repository is public: the `usage-health` artifact, the log and the issues carry statuses, a day and counts
+#   of searches matching a pattern, never a search's text, a place or a count of visits.
+# - A run that couldn't list the dataset (no token, a dataset the Hub calls "not found") opens
+#   `pipeline:usage-health` instead.
+name: usage-health
+on:
+  schedule:
+    - cron: "13 12 * * 2"  # Tuesdays, after prod-health (11:43)
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: usage-health
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - name: Check the stored events, then build the usage reports (read-only; counts only)
+        env:
+          HF_TOKEN: ${{ secrets.HF_READ_TOKEN || secrets.HF_TOKEN }}
+          # the dataset the collector writes (src/terraform/usage.tf)
+          COFFEEDATA_USAGE: ${{ vars.USAGE_URL || format('hf://datasets/{0}/coffee-usage', github.repository_owner) }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/usage"
+          uv run coffeedata usage-build --alerts-out "$RUNNER_TEMP/usage/alerts.json"
+      - if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: usage-health
+          path: ${{ runner.temp }}/usage/alerts.json  # statuses, a day, pattern counts; the database stays here
+          if-no-files-found: ignore
+          retention-days: 90
+
+  alert:
+    needs: build
+    if: always() && github.ref == 'refs/heads/main' && needs.build.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # One at a time, so two runs never both find no issue and open two.
+    concurrency: {group: triage-usage-health, cancel-in-progress: false}
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        continue-on-error: true  # nothing judged: the pipeline issue opens
+        with:
+          name: usage-health
+          path: ${{ runner.temp }}/usage
+      - name: Open, update or close the triage issues
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: python3 -m coffeedata.triage usage "$RUNNER_TEMP/usage/alerts.json"

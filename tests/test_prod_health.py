@@ -246,6 +246,7 @@ def test_fetch_only_downloads_the_served_and_previous_release(tmp_path):
     s = ph.fetch("hf://datasets/someone/lake", tmp_path / "copy", get=get)
     assert s["build_id"] == "20261110T000000-bbbbbb"
     assert [c[:2] for c in calls] == [("someone/lake", "dataset")] * 2
+    assert {"verdicts/*", "verdict_batches/*"} <= set(calls[0][2])  # what verdict_metrics reads
     assert calls[1][2] == [
         "releases/run_date=2026-11-09/build=20261110T000000-bbbbbb/dim_coffee.parquet",
         "releases/run_date=2026-11-02/build=20261103T000000-aaaaaa/dim_coffee.parquet",
@@ -543,3 +544,92 @@ def test_coverage_leaves_out_releases_from_before_the_enrichment_ran(tmp_path):
     assert hist["coverage:enrichment"] == [0.2, 0.4] and hist["abstain:enrichment"] == [0.5, 0.5, 0.5]
     cov = next(m for m in tomllib.loads(text)["metric"] if m["name"] == "coverage:enrichment")
     assert cov["baseline"] == 0.3 and cov["warning_below"] > 0.2 * 0.75
+
+
+# --- Claude's verdicts as the served build found them ------------------------------------------------------------
+
+
+def _verdict_lake(root: Path, built_at: str, decided: list[str], batches: list[tuple[str, str, str]]) -> Path:
+    """A lake copy with one build record (its time), verdicts decided at `decided`, and verdict_batches rows
+    (batch_id, state, at)."""
+    _write(
+        root / "builds" / "run_date=2026-11-16" / "build=b.parquet",
+        [("b", "build", "build", "pass", built_at)],
+        "build_id varchar, kind varchar, unique_id varchar, status varchar, built_at timestamptz",
+    )
+    _write(
+        root / "verdicts" / "run_date=2026-11-04" / "batch=x.parquet",
+        [(d, f"h{i}") for i, d in enumerate(decided)],
+        "decided_at timestamptz, input_hash varchar",
+    )
+    _write(root / "verdicts" / "run_date=0000-00-00" / "batch=schema.parquet", [],
+           "decided_at timestamptz, input_hash varchar")  # fmt: skip
+    for i, (batch_id, state, at) in enumerate(batches):
+        _write(
+            root / "verdict_batches" / f"state={state}" / f"{batch_id}-{i}.parquet",
+            [(batch_id, state, at)],
+            'batch_id varchar, state varchar, "at" timestamptz',
+        )
+    return root
+
+
+def test_verdict_ages_are_measured_at_the_served_builds_time(tmp_path):
+    """The lake as it stood on 2026-11-17: the newest verdict stored on 11-04, the build's own batch submitted four
+    minutes before it. A check run days later reads the same numbers."""
+    lake = _verdict_lake(
+        tmp_path, "2026-11-17 06:23:05+00", ["2026-11-04 00:58:38+00", "2026-11-04 00:48:54+00"],
+        [("old", "submitted", "2026-11-04 00:44:10+00"), ("old", "collected", "2026-11-04 00:58:38+00"),
+         ("new", "submitted", "2026-11-17 06:19:10+00")],
+    )  # fmt: skip
+    x = ph.verdict_metrics(lake, "b")
+    assert x == {"verdicts:stored_age_days": 13.225, "verdicts:open_batch_age_days": 0.003}
+    results = {r["metric"]: r for r in ph.judge(x, ph.load_config())}
+    assert results["verdicts:stored_age_days"]["status"] == "critical"  # two weekly runs stored nothing
+    assert results["verdicts:open_batch_age_days"]["status"] == "ok"  # only the build's own batch was open
+    assert results["verdicts:stored_age_days"]["rule"] == "classifier"
+
+
+def test_a_batch_no_later_run_collected_breaches_and_a_collected_one_recovers(tmp_path):
+    left_open = _verdict_lake(
+        tmp_path / "a", "2026-11-24 06:23:00+00", ["2026-11-24 06:19:00+00"],
+        [("w47", "submitted", "2026-11-17 06:19:10+00"), ("w48", "submitted", "2026-11-24 06:20:00+00")],
+    )  # fmt: skip
+    x = ph.verdict_metrics(left_open, "b")
+    assert x["verdicts:open_batch_age_days"] == 7.003 and x["verdicts:stored_age_days"] == 0.003
+    assert {r["metric"]: r["status"] for r in ph.judge(x, ph.load_config())}[
+        "verdicts:open_batch_age_days"
+    ] == "warning"
+    collected = _verdict_lake(
+        tmp_path / "b", "2026-11-24 06:23:00+00", ["2026-11-24 06:19:00+00"],
+        [("w47", "submitted", "2026-11-17 06:19:10+00"), ("w47", "collected", "2026-11-24 06:19:00+00")],
+    )  # fmt: skip
+    assert (
+        ph.verdict_metrics(collected, "b")["verdicts:open_batch_age_days"] == 0.0
+    )  # measured, so it can recover
+    # a batch collected only after the build was still open when the build ran
+    late = _verdict_lake(
+        tmp_path / "c", "2026-11-24 06:23:00+00", ["2026-11-24 06:19:00+00"],
+        [("w47", "submitted", "2026-11-17 06:19:10+00"), ("w47", "collected", "2026-11-25 09:00:00+00")],
+    )  # fmt: skip
+    assert ph.verdict_metrics(late, "b")["verdicts:open_batch_age_days"] == 7.003
+
+
+def test_verdict_ages_are_not_measured_without_their_tables_or_the_builds_time(tmp_path):
+    lake = _lake(tmp_path, _healthy(), _healthy())  # a build record without built_at, no verdict tables
+    assert ph.verdict_metrics(lake, "20261110T000000-bbbbbb") == {}
+    assert not any(k.startswith("verdicts:") for k in ph.measure(lake, today=date(2026, 11, 10))["metrics"])
+    only_build = _verdict_lake(tmp_path / "v", "2026-11-17 06:23:05+00", [], [])
+    assert ph.verdict_metrics(only_build, "b") == {}  # nothing ever stored or submitted: nothing to judge
+    assert ph.verdict_metrics(only_build, "another-build") == {}
+
+
+def test_the_classifier_warns_before_the_gate_fails():
+    """verdicts_cover_catalog passed the 2026-11-16 run at 85.5% against a floor of 85% without a word."""
+    cfg = ph.load_config()
+    status = {v: next(r for r in ph.judge({"fill:classifier": v}, cfg) if r["metric"] == "fill:classifier")["status"]
+              for v in (0.95, 0.92, 0.855, 0.69)}  # fmt: skip
+    assert status == {0.95: "ok", 0.92: "ok", 0.855: "warning", 0.69: "critical"}
+    bound = next(m for m in cfg["metric"] if m["name"] == "fill:classifier")["warning_below"]
+    assert bound == round(ph.MIN_VERDICT_SHARE + ph.VERDICT_MARGIN, 4)
+    project = (ph.ROOT / "dbt" / "dbt_project.yml").read_text()
+    assert f"min_verdict_share: {ph.MIN_VERDICT_SHARE}" in project  # the gate's floor the margin sits above
