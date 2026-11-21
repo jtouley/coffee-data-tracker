@@ -364,9 +364,36 @@ GitHub, and applies only after the owner's second account, `jtouleyrou`, approve
    plan. After a refusal, run the workflow again from `main` once its cause is gone (a re-run of the same run never
    applies); the new plan waits for a new approval.
 
-**If an apply fails partway**, Terraform keeps what it finished in the state and nothing else runs. Only a fixed
-message and the affected addresses are shown: Terraform's own messages can quote private values, and the
-`TF_VAR_*` repository variables aren't masked. For the details, plan in Cloud Shell. Fix the cause in a PR, or run
+**If an apply fails partway**, Terraform keeps what it finished in the state and nothing else runs. Terraform's own
+messages are never shown: they can quote private values, and the `TF_VAR_*` repository variables aren't masked. The
+log and the run's summary show a fixed message, the affected addresses and, under "Why", what an allow-list can say
+about each error (`scripts/tf_error_reasons.py`):
+
+```
+::error::terraform apply failed (1 error). Terraform's own messages are not shown here: ...
+  resource google_monitoring_alert_policy.usage_dropped[0]
+  at usage.tf:163
+Why (permission names and a fixed list of reasons only; anything else in Terraform's message is not shown):
+  error 1, google_monitoring_alert_policy.usage_dropped[0]: 403 permission denied: logging.notificationRules.create
+  if the bootstrap on main grants this, run the by-hand bootstrap block (docs/app/RUNNING.md) and run this workflow again from main
+```
+
+- **The reason** is one of `403 permission denied`, `404 not found`, `409 already exists`, `400 invalid argument`,
+  `quota`, `API not enabled` and `5xx server error`, chosen by the HTTP status or status word in Terraform's message
+  (409 and 400 by the status alone, so a 409 from a concurrent change reads `already exists` too). An error that
+  matches none of them has no line.
+- **The permission** is shown only where the message says which permission was denied, only if it has a
+  permission's shape (letters and dots, three or four parts), and only if it starts with a service this project uses
+  (`SERVICES` in the script: add a service there when a new one is first denied). `403 permission denied` with no
+  name means no permission was recognised in Terraform's message: find the denied call in Cloud Audit Logs,
+  principal `registry-coffee-tf-apply@…`.
+- **What to do with a denied permission:** look for it in `src/terraform/bootstrap/iam.tf` on main. If a role of the
+  apply account already holds it, the bootstrap hasn't been applied since: run the by-hand bootstrap block (the
+  `cd src/terraform/bootstrap && terraform init ...` block below, reading its plan before the yes), then run
+  `terraform-apply` again from main. If no role holds it, add it in a PR first (and to
+  `tests/test_bootstrap_roles.py`), then the same two steps.
+
+For anything else, plan in Cloud Shell. Fix the cause in a PR, or run
 the workflow again; the new plan shows what is left. A lock left by a dead runner is cleared from Cloud Shell:
 `terraform force-unlock <lock id>`, once you're sure no apply is running. If the first plan fails on the budget
 (`google_billing_budget.monthly`), the plan account's project-scoped budget role isn't enough: give it

@@ -18,6 +18,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- A failed Terraform step in the apply workflow says why, as far as an allow-list can: for each error, a reason
+  from a fixed list (403 permission denied, 404 not found, 409 already exists, 400 invalid argument, quota, 5xx) and
+  the denied permission's name, with what to do about it (`scripts/tf_error_reasons.py`). Nothing else from
+  Terraform's messages is shown, as before.
 - A weekly check that usage events arrive (`.github/workflows/usage-health.yml`, Tuesdays): `coffeedata usage-build
   --alerts-out` reads the private usage dataset's event file names and builds the usage reports, and `coffeedata
   triage usage` opens `prod:usage-events` (nothing stored, or nothing for three days), `prod:usage-search-text` or
