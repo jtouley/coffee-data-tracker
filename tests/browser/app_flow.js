@@ -509,7 +509,7 @@ async function newPage(browser, errors) {
     const switcher = await page.context().newPage();
     const signInAs = async (username, password) => {
       await switcher.goto(`${base}/setup`);
-      await switcher.getByRole("button", { name: "Sign out", exact: true }).click();
+      await switcher.getByRole("button", { name: /^Sign out/ }).click();
       await switcher.waitForURL(`${base}/signin`);
       await switcher.fill("#username", username);
       await switcher.fill("#password", password);
@@ -660,17 +660,14 @@ async function newPage(browser, errors) {
     // Sign out after the session already ended elsewhere (here: its cookie is gone) is signed out, not an error.
     await page.goto(`${base}/setup`);
     await page.context().clearCookies();
-    // Signed out, the photo's URL redirects to sign-in: that page must not replace the kept photo.
+    // Signed out, the photo's URL redirects to sign-in: the sign-in page never replaces the kept photo, and the
+    // service worker takes the redirect as the session's end, so the kept pages and photos go (review F11).
     assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.redirected), thumb), true);
-    await page.waitForTimeout(300); // the worker keeps a photo after answering
-    assert.match(await page.evaluate((u) => caches.open("pages").then(async (c) => (await c.match(u))?.headers.get("content-type") ?? ""), thumb), /^image\//);
-    // "Sign out on all devices" with this phone's session gone ended nothing: it says so, and stays.
-    const everywhere = page.getByRole("button", { name: "Sign out on all devices" });
-    await everywhere.click();
-    await page.getByRole("button", { name: /Tap again/ }).click();
-    await page.getByText("This phone was already signed out").waitFor();
-    assert.equal(new URL(page.url()).pathname, "/setup");
-    await page.getByRole("button", { name: "Sign out", exact: true }).click();
+    await page.waitForTimeout(300); // the worker clears after answering
+    assert.equal(await page.evaluate((u) => caches.open("pages").then(async (c) => (await c.match(u))?.headers.get("content-type") ?? null), thumb), null);
+    // Sign out says it ends every device's session (review 2026-11-21, F6).
+    assert.equal(await page.textContent("#signout-note"), "Signs you out on all your devices.");
+    await page.getByRole("button", { name: /^Sign out/ }).click();
     await page.waitForURL(`${base}/signin`);
     assert.equal(await page.evaluate(() => caches.has("pages")), false); // the photo went with the pages
 

@@ -1,0 +1,353 @@
+/* The admin's additions to Bench Scale (app/static/app.css, docs/admin/DESIGN.md): the same tokens, type scale
+   (12 13 15 17 20 24 34), spacing (4 8 12 16 24 32 48) and radii; wider pages and dense tables for reading at a
+   desk. No new colours: status is a word with a mark, and --danger marks only failures and unexplained rows. */
+body.admin { max-width: 1200px; }
+body.admin.narrow { max-width: 480px; }
+.admin .screen { padding: 8px 16px 48px; min-width: 0; }
+.skip { position: absolute; inset-inline-start: -9999px; top: 8px; }
+.skip:focus { inset-inline-start: 16px; z-index: 2; background: var(--sheet); padding: 8px 12px; border-radius: 8px; }
+main:focus { outline: none; }
+
+/* Header: the wordmark, then the page tabs on their own line on a phone (they scroll sideways if they must) */
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; padding: 8px 16px 0; border-bottom: 1px solid var(--rule); }
+.bar .mark { font-size: 1.25rem; min-height: 48px; display: flex; align-items: center; }
+.bar .acct { margin-inline-start: auto; font-size: 0.9375rem; color: var(--ink-2); font-weight: 500; min-height: 48px; display: flex; align-items: center; }
+.bar .acct.on { color: var(--ink); font-weight: 600; }
+/* On a phone: the wordmark and Account on one row, the tabs below. On a desktop: one row, Account at the end. */
+.tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 12px; flex: 1 1 100%;
+  order: 3; }
+@media (min-width: 760px) { .tabs { order: 2; } .bar .acct { order: 3; } }
+.tabs a { display: flex; align-items: center; min-height: 44px; padding: 0 8px; font-size: 0.9375rem; color: var(--ink-2);
+  font-weight: 500; white-space: nowrap; border-bottom: 2px solid transparent; }
+.tabs a.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+@media (min-width: 760px) { .tabs { flex: 0 1 auto; margin: 0; padding: 0; } }
+
+/* The answer, its source, facts */
+.answer { font-size: 1.0625rem; line-height: 1.4; margin: 16px 0 4px; color: var(--ink); }
+.src { font-size: 0.8125rem; color: var(--ink-2); margin: 0 0 8px; }
+.stale, .notice { font-size: 0.9375rem; color: var(--ink); background: var(--panel); border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.875em; overflow-wrap: anywhere; }
+dl.facts { display: grid; grid-template-columns: minmax(96px, max-content) minmax(0, 1fr); gap: 0 16px; margin: 8px 0 0;
+  font-size: 0.8125rem; }
+dl.facts dt { color: var(--ink-2); padding: 8px 0; border-bottom: 1px solid var(--rule); }
+dl.facts dd { margin: 0; padding: 8px 0; border-bottom: 1px solid var(--rule); min-width: 0; overflow-wrap: anywhere; }
+a.ev { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a.ev.small { font-size: 0.8125rem; font-weight: 500; }
+
+/* Tables: dense, hairlines, tabular numerals right-aligned. Each sits in a frame that scrolls sideways on its own,
+   with the first column pinned, so the page never scrolls sideways. */
+.frame { overflow-x: auto; max-width: 100%; margin-top: 8px; border-top: 1px solid var(--rule); }
+.frame:focus-visible { outline-offset: 0; }
+table { border-collapse: separate; border-spacing: 0; width: auto; min-width: min(100%, 40rem); font-size: 0.8125rem; line-height: 1.35; }
+caption { text-align: start; font-size: 0.8125rem; color: var(--ink-2); padding: 8px 0; caption-side: top; }
+th, td { text-align: start; padding-block: 8px; padding-inline: 0 16px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th { color: var(--ink-2); font-weight: 600; white-space: nowrap; position: sticky; top: 0; background: var(--paper); }
+tbody th { font-weight: 500; white-space: nowrap; }
+table.dense td, table.dense th { padding-top: 6px; padding-bottom: 6px; white-space: nowrap; }
+table.dense td.err { white-space: normal; min-width: 16rem; max-width: 32rem; color: var(--ink-2); }
+th:first-child, td:first-child { position: sticky; inset-inline-start: 0; background: var(--paper); z-index: 1; padding-inline-start: 0; }
+.n { text-align: right; font-variant-numeric: tabular-nums; }
+tr.sel th, tr.sel td { background: var(--panel); }
+td a.ev, th a.ev { display: inline-block; min-height: 24px; }
+.cols { display: grid; gap: 0 32px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Status: a word with a mark */
+.st { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.st i { width: 8px; height: 8px; flex: none; }
+.st-ok i { background: var(--ink); border-radius: 50%; }
+.st-run i { border: 1.5px solid var(--ink); border-radius: 50%; width: 6px; height: 6px; }
+.st-warn i { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 9px solid var(--ink-2); }
+.st-bad { color: var(--danger); font-weight: 600; }
+.st-bad i { background: var(--danger); }
+.st-none { color: var(--ink-2); }
+.st-none i { height: 2px; background: var(--ink-2); }
+.unexplained { color: var(--danger); font-weight: 600; }
+
+/* States */
+.state { padding: 16px 0; }
+.state .group-title, .state.empty .section { font-size: 1.0625rem; color: var(--ink); margin-top: 8px; }
+.state.loading .brewing p { margin: 0; }
+.state.error .body, .state.empty .body { max-width: 65ch; }
+.btn.inline { width: auto; min-height: 44px; padding: 0 16px; display: inline-flex; font-size: 0.9375rem; }
+.btn.text.inline { padding: 0 4px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Pickers, search and facets */
+.picker { display: flex; flex-wrap: wrap; align-items: end; gap: 8px 12px; margin-top: 8px; }
+.select { min-height: 44px; max-width: 100%; border: 1px solid var(--control); border-radius: 8px; background: var(--sheet);
+  color: var(--ink); font: inherit; font-size: 0.9375rem; padding: 0 12px; }
+.search { margin-top: 16px; }
+.searchrow { display: flex; gap: 8px; margin-top: 8px; }
+.searchrow .input { min-height: 44px; flex: 1; min-width: 0; font-size: 1rem; }
+.facets { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); margin-top: 16px; }
+.facet { display: grid; gap: 4px; min-width: 0; }
+.facet .select { width: 100%; }
+.input.small { min-height: 44px; font-size: 1rem; }
+.chips { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chips .chip { font-size: 0.8125rem; min-height: 36px; gap: 8px; }
+.chips .chip .x { font-size: 1rem; line-height: 1; }
+.filters { margin-top: 8px; }
+.filters > summary { width: auto; min-height: 44px; display: inline-flex; cursor: pointer; }
+.pager { display: flex; gap: 16px; align-items: center; margin-top: 16px; }
+
+/* Signed out */
+.auth { margin-top: 8px; }
+.codes-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5em, 1fr)); gap: 8px 16px;
+  font-size: 1.0625rem; margin: 12px 0 0; }
+.codes-list li { white-space: nowrap; }
+
+/* Writes: the confirm sheet, the outcome with Undo, the Catalog's chosen products, the Jobs list. The same tokens:
+   --danger only on a destructive confirm (Cancel a run, Roll back, a Publish where more than 50 rows leave). */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+dialog.sheet { border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); color: var(--ink); padding: 16px 24px 24px;
+  width: min(36rem, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; }
+dialog.sheet::backdrop { background: rgb(20 17 15 / 0.45); }
+dialog.sheet { overscroll-behavior: contain; }
+@media (max-width: 759px) { /* on a phone every sheet rises from the bottom, as the app's does */
+  dialog.sheet { margin: auto 0 0; width: 100%; max-width: 100%; border-radius: 14px 14px 0 0; }
+}
+dialog.sheet .steps { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 4px; }
+dialog.sheet .steps strong { display: block; font-size: 0.8125rem; font-weight: 600; margin: 4px 0; }
+dialog.sheet .steps code { display: block; background: var(--panel); border-radius: 8px; padding: 8px 12px; overflow-wrap: anywhere; }
+.refused { color: var(--danger); font-weight: 600; font-size: 0.9375rem; }
+dialog .btn.danger { background: var(--danger); color: var(--paper); border-color: var(--danger); }
+.btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+/* The outcome line is the app's undo strip (docs/app/DESIGN.md): --panel, radius 8, ink text, an accent action. */
+.toast { position: fixed; left: 16px; right: 16px; bottom: 16px; margin: 0 auto; max-width: 40rem; z-index: 3;
+  background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 16px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; font-size: 0.9375rem; }
+.toast[hidden] { display: none; }
+.toast .btn.text { color: var(--accent); min-height: 44px; }
+.bulk { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+  background: var(--panel); border-radius: 8px; padding: 8px 12px; margin-top: 12px; font-size: 0.9375rem; }
+.bulk[hidden] { display: none; }
+th.pick, td.pick { width: 44px; min-width: 44px; box-sizing: border-box; padding-right: 8px; }
+td.pick input, th.pick input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); }
+/* With the checkbox column, the product name stays pinned beside it when the table scrolls sideways. */
+th.pick + th, td.pick + th { position: sticky; left: 44px; background: var(--paper); z-index: 1; }
+/* The product wraps (within a bound) so the owner's decision beside it stays on screen on a phone. */
+table.dense td.pick + th { white-space: normal; min-width: 9rem; max-width: 13rem; }
+@media (min-width: 760px) { table.dense td.pick + th { max-width: 22rem; } }
+.inline-form { display: inline; }
+.choice { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; font-size: 0.9375rem; }
+.choice label { display: block; padding-left: 28px; text-indent: -28px; min-height: 24px; }
+.choice input { width: 18px; height: 18px; margin: 0 10px 0 0; vertical-align: -3px; accent-color: var(--accent); }
+.title-s { font-size: 1.5rem; line-height: 1.25; margin: 8px 0 8px; color: var(--ink); font-weight: 500; }
+.jobform { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); padding: 0 0 16px; align-items: end; }
+.jobform .actions { grid-column: 1 / -1; }
+.runform { display: grid; gap: 12px; margin-top: 12px; }
+.runform [hidden] { display: none; }
+.titlebar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.title-actions { display: flex; gap: 8px; align-items: center; margin-top: 16px; }
+.title-actions .help { min-width: 44px; padding: 0; justify-content: center; font-weight: 600; }
+.btn.text.danger { color: var(--danger); }
+.rowmenu .menu .meta, .rowmenu .menu code.args { display: block; padding: 4px 12px; white-space: normal; overflow-wrap: anywhere; }
+table.runs { width: 100%; }
+table.runs th, table.runs td { vertical-align: middle; }
+table.runs td.act, table.runs th.act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
+.checks { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; font-size: 0.9375rem; }
+.checks li { display: flex; gap: 8px; align-items: baseline; }
+
+/* Queue and Case: a group of products with the same evidence reads as a band above its rows; a flag's evidence and a
+   description are text to read, so they wrap; the settings are code-like JSON. No new colours. */
+table.flagged tbody th { white-space: normal; min-width: 9rem; max-width: 22rem; }
+table.flagged td .btn.text { min-height: 24px; padding-block: 0; vertical-align: baseline; line-height: inherit; }
+tr.grp th, tr.grp td { background: var(--panel); font-weight: 500; white-space: normal; }
+ul.flags { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 16px; font-size: 0.9375rem; }
+p.desc { white-space: pre-line; overflow-wrap: anywhere; max-width: 72ch; font-size: 0.9375rem; line-height: 1.5; margin: 8px 0 0; }
+details.settings > summary { cursor: pointer; min-height: 44px; padding-top: 12px; }
+textarea.json, pre.json { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8125rem; line-height: 1.45;
+  width: 100%; min-height: 16rem; white-space: pre; overflow: auto; }
+dialog.sheet [data-confirm-body] p + p { margin-top: 8px; }
+pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
+
+/* Sources: one Filter / Sort panel (a sheet on a phone, a popover on a desktop); compact rows, each with a quiet
+   status and a ⋯ menu; selecting rows (the box, or a tap on the row) shows the action bar at the bottom. */
+dialog.panel { margin: auto 0 0; width: 100%; max-width: 100%; max-height: 85dvh; border-radius: 14px 14px 0 0;
+  overscroll-behavior: contain; }
+@media (min-width: 760px) {
+  dialog.panel { margin: 0; top: var(--panel-top, 120px); left: var(--panel-left, 16px); width: 32rem; border-radius: 8px;
+    border-color: var(--control); }
+  dialog.panel::backdrop { background: transparent; }
+}
+dialog.panel .facets { margin-top: 12px; gap: 8px 12px; }
+.sorts { border: 0; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+.sorts .radio { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 0.9375rem; }
+.sorts .radio input { width: 20px; height: 20px; accent-color: var(--accent); }
+dialog.panel .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.sources-page { padding-bottom: 128px; }
+/* Sources' table: on a desktop one dense row per place with sortable columns and a sticky header; on a phone the
+   same table shows the name, a line of metadata and the status, stacked (the .wide cells hide, .narrow shows). */
+table.sources { width: 100%; border-collapse: collapse; margin-top: 8px; table-layout: fixed; }
+table.sources th, table.sources td { padding-block: 0; padding-inline: 0 12px; height: 44px; vertical-align: middle;
+  text-align: start; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+table.sources thead th { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--control);
+  position: sticky; top: 0; z-index: 2; background: var(--paper); }
+table.sources thead a.sort { color: inherit; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; }
+@media (hover: hover) { table.sources thead a.sort:hover { color: var(--accent); } }
+table.sources thead [aria-sort] { color: var(--ink); }
+table.sources tbody tr { border-bottom: 1px solid var(--rule); }
+table.sources tbody tr:has(input[data-pick]) { cursor: pointer; } /* selectable only while writes are on */
+table.sources tbody tr:has(input[data-pick]:checked) > * { background: var(--panel); } /* the whole row, box included */
+@media (hover: hover) { table.sources tbody tr:hover > * { background: var(--panel); } } /* a row is selectable */
+table.sources tbody th { font-weight: 500; }
+table.sources td.pick + th { position: static; } /* no pinned column here */
+table.sources thead th.pick + th { left: auto; } /* the header row stays sticky to the top only */
+table.sources .status { font-size: 0.8125rem; color: var(--ink-2); }
+/* A long name ends in an ellipsis; its "· Chain" never does (the word is the status, the name can be read in full in
+   the narrow layout and the title). */
+table.sources .nameline { display: flex; min-width: 0; align-items: baseline; }
+table.sources .chainword { flex: none; white-space: pre; font-weight: 400; }
+table.sources td.c-seen { font-variant-numeric: tabular-nums; }
+table.sources td a.ev { display: inline; } /* so a long domain ends in an ellipsis, not under the next column */
+table.sources td.c-tag, table.sources td.c-hint, table.sources td.c-city, table.sources td.c-state { color: var(--ink-2); font-size: 0.8125rem; }
+table.sources th.pick { width: 44px; }
+table.sources th.act { width: 44px; }
+table.sources th.act, table.sources td.act { padding-inline-end: 4px; text-align: end; overflow: visible; position: relative; }
+table.sources .narrow { display: none; }
+@media (min-width: 760px) {
+  table.sources .c-name { width: 26%; } table.sources .c-domain { width: 15%; } table.sources .c-city { width: 11%; }
+  table.sources .c-state { width: 4.5rem; } table.sources .c-tag { width: 7.5rem; } table.sources .c-hint { width: 13%; }
+  table.sources .c-status { width: 9.5rem; } table.sources .c-seen { width: 6.5rem; }
+  table.sources .nameline .pname { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+}
+html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row never sits under the sticky header */
+@media (max-width: 759px) {
+  table.sources .wide { display: none; }
+  table.sources tbody th { white-space: normal; height: auto; padding-block: 8px; }
+  table.sources .pname, table.sources .narrow { display: block; overflow-wrap: anywhere; }
+  table.sources .narrow { font-size: 0.8125rem; font-weight: 400; color: var(--ink-2); }
+  table.sources thead th { position: static; }
+}
+.rowmenu > summary { list-style: none; min-width: 44px; justify-content: center; font-size: 1.25rem; }
+.rowmenu > summary::-webkit-details-marker { display: none; }
+.rowmenu .menu { position: absolute; inset-inline-end: 0; top: calc(100% - 4px); z-index: 4; display: grid; min-width: 12rem; padding: 4px;
+  background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; text-align: start; }
+.rowmenu .menu .inline-form { display: block; }
+.rowmenu .menu .btn { width: 100%; justify-content: flex-start; padding: 0 12px; }
+/* A second flag in the same menu (the chain flag under the roaster flag): its own group under a hairline, so two
+   near-identical labels for different flags never sit side by side. Its reason folds (details), so the action stays
+   in view on a phone. */
+.rowmenu .menugroup { border-top: 1px solid var(--rule); margin-top: 4px; padding-top: 4px; }
+.rowmenu .menugroup + .btn, .rowmenu .menugroup + a.btn { border-top: 1px solid var(--rule); margin-top: 4px; border-radius: 0; }
+.rowmenu .menugroup details.reason > summary { min-height: 44px; font-size: 0.8125rem; color: var(--ink-2); }
+.rowmenu .menugroup details.reason > p { padding-top: 0; }
+dialog.panel h2 { margin-top: 0; }
+@media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sorts[data-narrow-only] { display: none; } }
+dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
+@media (max-width: 759px) { .searchrow .btn.wide-only { display: none; } } /* Enter searches */
+html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 136px; }
+.bulk.bar-bottom { position: fixed; top: auto; left: 8px; right: 8px; bottom: 8px; margin: 0 auto; max-width: 40rem; z-index: 3;
+  gap: 8px; padding: 8px; flex-wrap: nowrap; border: 1px solid var(--control); }
+.bulk.bar-bottom [data-bulk-count] { flex: 1; min-width: 0; padding-left: 4px; }
+.bulk.bar-bottom .btn.secondary.inline { padding: 0 12px; }
+@media (max-width: 759px) { /* the count on its own line, the actions under it */
+  .bulk.bar-bottom { flex-wrap: wrap; }
+  .bulk.bar-bottom [data-bulk-count] { flex-basis: 100%; }
+}
+/* Phone tabs scroll sideways: a fade at an edge with tabs past it (admin.js fit), so a cut tab reads as more. */
+@media (max-width: 759px) {
+  .tabs.more-start { mask-image: linear-gradient(to right, transparent, #000 24px); }
+  .tabs.more-end { mask-image: linear-gradient(to left, transparent, #000 24px); }
+  .tabs.more-start.more-end { mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+}
+dialog .plan-details { margin-top: 8px; }
+
+/* Every fold shows that it opens: a chevron after its summary, down while closed and up while open; a summary is
+   15 px ink, under the section headings (17 px), and the accent stays for what is tapped. */
+.admin details:not(.rowmenu) > summary::after { content: ""; display: inline-block; width: 7px; height: 7px;
+  margin-inline-start: 8px; border-inline-end: 1.75px solid currentColor; border-bottom: 1.75px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); }
+.admin details[open]:not(.rowmenu) > summary::after { transform: translateY(2px) rotate(-135deg); }
+@media (prefers-reduced-motion: no-preference) { .admin details > summary::after { transition: transform 120ms ease-out; } }
+.admin details:not(.rowmenu) > summary.btn.text { font-size: 0.9375rem; font-weight: 500; color: var(--ink); }
+.admin h2.section { font-size: 1.0625rem; color: var(--ink); }
+
+/* Keyword filters (the Filters page) and their review (Release): one column, labels above their fields, helper text in
+   --ink-2 under the label; the filter list is a dense table like the others; the preview's product lists read as a
+   plain list with the store after each name. No new colours. */
+.prose { max-width: 72ch; }
+.kf-add { display: grid; gap: 16px; margin-top: 12px; }
+.fld { display: grid; gap: 4px; min-width: 0; }
+.fld > .flabel, .fld > legend.flabel { margin: 0; }
+.fld > .meta { margin: 0 0 4px; }
+.kf-add .input { min-height: 44px; font-size: 1rem; }
+.kf-add .choice { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.kf-add .choice legend { margin-bottom: 4px; }
+.kf-add .choice label { min-height: 44px; display: inline-flex; align-items: center; padding: 0; text-indent: 0; }
+table.kf-list tbody th { white-space: normal; min-width: 8rem; max-width: 20rem; }
+table.kf-list { width: 100%; }
+table.kf-list td:nth-child(4) { white-space: normal; min-width: 12rem; max-width: 28rem; }
+table.kf-list td.act, table.kf-list th.act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
+.rule-params { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
+.rule-params legend { grid-column: 1 / -1; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+.rule-params .num { max-width: 10rem; }
+ul.plist { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 4px; font-size: 0.9375rem; }
+ul.plist li { overflow-wrap: anywhere; }
+.pf-review { margin-top: 16px; }
+table.review tbody th { white-space: normal; min-width: 10rem; max-width: 22rem; }
+table.review td.call { white-space: normal; min-width: 12rem; }
+table.review td.call .mark { display: block; font-weight: 600; margin-bottom: 4px; }
+table.review td.call .inline-form + .inline-form .btn { margin-inline-start: 8px; }
+.pf-review h3.section { font-size: 0.9375rem; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
+/* On a phone each product to review is a stacked row: the name, its store and filter, then the two calls, all on
+   screen (no sideways scroll to reach the buttons). */
+@media (max-width: 759px) {
+  table.review { min-width: 0; width: 100%; }
+  table.review thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.review tr { display: block; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+  table.review tbody { display: block; }
+  table.review th, table.review td { display: block; border: 0; padding: 0; position: static; max-width: none; }
+  table.review td:nth-child(2), table.review td:nth-child(3) { display: inline; color: var(--ink-2); font-size: 0.8125rem; }
+  table.review td:nth-child(3)::before { content: " · "; }
+  table.review td.call { display: block; margin-top: 8px; min-width: 0; }
+}
+/* A disabled Publish reads as off, not as a faded primary: the panel fill, ink-2 text and the control border, with
+   the reason beside it. */
+.btn.primary[aria-disabled="true"] { opacity: 1; background: var(--panel); color: var(--ink-2); border: 1px solid var(--control); }
+form.actions .why-not { flex: 1 1 16rem; align-self: center; margin: 0; }
+/* The Queue's decision column: a text button sits on its row's baseline, with a 24 px target. */
+table.flagged td .btn.text.inline { display: inline; padding: 4px 0; margin: -4px 0;
+  min-height: 0; font-size: inherit; line-height: inherit; }
+table.kf-list th, table.kf-list td { vertical-align: middle; }
+.field-error { color: var(--danger); font-size: 0.8125rem; margin: 4px 0 0; min-height: 0; }
+.field-error:empty { display: none; }
+.input[aria-invalid="true"] { border-color: var(--danger); }
+/* Filters on a phone: each filter is a stacked row, its ⋯ menu (Remove) always on screen at the row's end. */
+@media (max-width: 759px) {
+  table.kf-list { min-width: 0; width: 100%; }
+  table.kf-list thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.kf-list tbody { display: block; }
+  table.kf-list tr { display: grid; grid-template-columns: minmax(0, 1fr) 44px; column-gap: 8px; padding: 8px 0;
+    border-bottom: 1px solid var(--rule); }
+  table.kf-list th, table.kf-list td { display: block; border: 0; padding: 0; position: static; max-width: none;
+    min-width: 0; white-space: normal; text-align: start; grid-column: 1; }
+  table.kf-list td.act { grid-column: 2; grid-row: 1; }
+  table.kf-list td.c-in::before { content: "In "; color: var(--ink-2); }
+  table.kf-list td.c-out:not(.draft)::before { content: "Takes out "; color: var(--ink-2); }
+  table.kf-list td.c-in, table.kf-list td.c-out, table.kf-list td.c-check, table.kf-list td.c-why { font-size: 0.8125rem; }
+}
+/* The confirm sheet's reason wraps and grows with what is typed, so a long reason can be read whole before it is
+   recorded (field-sizing where the browser has it; else three lines, and it scrolls). */
+textarea.input.reason { display: block; min-height: 56px; height: auto; padding-block: 14px; line-height: 1.4; resize: vertical;
+  field-sizing: content; max-height: 12rem; overflow-wrap: anywhere; }
+@supports not (field-sizing: content) { textarea.input.reason { min-height: calc(3lh + 28px); } }
+/* Jobs on a phone: each run is a stacked row (when, the job, its status and message, then took and logs), with its
+   menu (Cancel, while it runs) at the row's end. Nothing is past the edge, so a failed or running job never reads as
+   a finished one. */
+@media (max-width: 759px) {
+  table.dense.runs { min-width: 0; }
+  table.dense.runs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.dense.runs tbody { display: block; }
+  table.dense.runs tr { display: grid; grid-template-columns: max-content minmax(0, 1fr) 44px; gap: 4px 12px;
+    padding: 8px 0; border-bottom: 1px solid var(--rule); }
+  table.dense.runs th, table.dense.runs td { display: block; border: 0; padding: 0; position: static; min-width: 0;
+    max-width: none; white-space: normal; text-align: start; grid-column: 1 / 3; }
+  table.dense.runs tbody th { color: var(--ink-2); font-weight: 400; }
+  table.dense.runs td.c-job { overflow-wrap: anywhere; }
+  table.dense.runs td.c-took { grid-column: 1; color: var(--ink-2); }
+  table.dense.runs td.c-logs { grid-column: 2; }
+  table.dense.runs td.c-took::before { content: "Took "; }
+  table.dense.runs td.act { grid-column: 3; grid-row: 1 / span 3; align-self: start; text-align: end; position: relative; }
+}

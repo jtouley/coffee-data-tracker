@@ -65,7 +65,7 @@ def test_rerun_skips_done_and_does_not_reenrich(lake, monkeypatch):
     from coffeedata.registry import RoasterState
 
     states = [RoasterState(r, "pending", None) for r in _roasters()]
-    monkeypatch.setattr(registry, "current", lambda lake: states)
+    monkeypatch.setattr(registry, "current", lambda lake, **k: states)
     with respx.mock(assert_all_called=False) as m:
         m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
         m.get("https://onyxcoffeelab.com/products.json").mock(

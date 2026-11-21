@@ -48,7 +48,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true, 'is_usd': true}]),
               ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false, 'is_usd': true}]),
@@ -95,7 +95,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
@@ -302,6 +302,12 @@ unit_tests:
               [{'variant_id': 'v', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true,
                 'currency': 'USD'}] as variants))
     given:
+      - input: ref('stg_decisions')
+        format: sql
+        rows: |
+          select null::varchar as decision_id, null::varchar as subject_kind, null::varchar as subject,
+                 null::varchar as action, null::varchar as subject_key
+          where false
       - input: ref('stg_runs')
         rows:
           - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}
@@ -370,6 +376,203 @@ unit_tests:
         - {input_hash: S, label: coffee, model: m}
         - {input_hash: U, label: not_coffee, model: m}
 
+  - name: product_decisions_keeps_every_product_at_its_latest_record
+    description: >-
+      One row per product, coffee or not: the decision is its latest record's (a product that stopped being coffee
+      is kept, as not coffee), first_seen is its first record, and a stored unsure verdict shows beside a decision the
+      rules made.
+    model: product_decisions
+    given:
+      - input: ref('stg_snapshots')
+        rows:
+          - {coffee_id: "r:A", roaster_id: r, product_id: A, title: Kenya, run_date: 2026-10-12, input_hash: a1}
+          - {coffee_id: "r:A", roaster_id: r, product_id: A, title: Kenya Mug, run_date: 2026-10-19, input_hash: a2}
+          - {coffee_id: "r:B", roaster_id: r, product_id: B, title: Tote, run_date: 2026-10-12, input_hash: b1}
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: a1, is_coffee: true, classified_by: rules, reason: country}
+          - {input_hash: a2, is_coffee: false, classified_by: rules, reason: "excluded:not_coffee_words"}
+          - {input_hash: b1, is_coffee: false, classified_by: rules, reason: "signals:0"}
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-12, is_current: false}
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_verdicts')
+        rows:
+          - {input_hash: b1, label: unsure, model: m}
+    expect:
+      rows:
+        - {coffee_id: "r:A", title: Kenya Mug, first_seen: 2026-10-12, last_seen: 2026-10-19, is_listed: true,
+           is_coffee: false, verdict_label: null, reason: "excluded:not_coffee_words"}
+        - {coffee_id: "r:B", title: Tote, first_seen: 2026-10-12, last_seen: 2026-10-12, is_listed: false,
+           is_coffee: false, verdict_label: unsure, reason: "signals:0"}
+
+  - name: eval_prefilter_lists_what_a_change_moves_with_claudes_call
+    description: >-
+      Listed products a filter newly excludes (A to D) or a removed filter gives back (E) are rows, each with Claude's
+      call: unsure and none are both no_verdict (C, D). Left out: what an old filter already excluded (F), what an
+      owner's include (G) or exclude (H) settles, and what no store lists any more (I).
+    model: eval_prefilter
+    given:
+      - input: ref('product_decisions')
+        rows:
+          - {coffee_id: "r:A", input_hash: a, is_listed: true, verdict_label: not_coffee, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:B", input_hash: b, is_listed: true, verdict_label: coffee, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:C", input_hash: c, is_listed: true, verdict_label: unsure, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:D", input_hash: d, is_listed: true, verdict_label: null, is_coffee: false, reason: "excluded:keyword:title:apron"}
+          - {coffee_id: "r:E", input_hash: e, is_listed: true, verdict_label: null, is_coffee: true, reason: "country"}
+          - {coffee_id: "r:F", input_hash: f, is_listed: true, verdict_label: coffee, is_coffee: false, reason: "excluded:keyword:title:old"}
+          - {coffee_id: "r:G", input_hash: g, is_listed: true, verdict_label: coffee, is_coffee: true, reason: "decision:include"}
+          - {coffee_id: "r:H", input_hash: h, is_listed: true, verdict_label: coffee, is_coffee: false, reason: "decision:exclude"}
+          - {coffee_id: "r:I", input_hash: i, is_listed: false, verdict_label: coffee, is_coffee: false, reason: "excluded:keyword:title:apron"}
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: a, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: b, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: c, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: d, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: e, prefilter: null, prefilter_new: false, prefilter_restored: true, baseline_prefilter: "keyword:title:linen"}
+          - {input_hash: f, prefilter: "keyword:title:old", prefilter_new: false, prefilter_restored: false}
+          - {input_hash: g, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: h, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+          - {input_hash: i, prefilter: "keyword:title:apron", prefilter_new: true, prefilter_restored: false}
+    expect:
+      rows:
+        - {direction: excluded, coffee_id: "r:A", prefilter: "keyword:title:apron", claude: not_coffee, is_coffee_after: false}
+        - {direction: excluded, coffee_id: "r:B", prefilter: "keyword:title:apron", claude: coffee, is_coffee_after: false}
+        - {direction: excluded, coffee_id: "r:C", prefilter: "keyword:title:apron", claude: no_verdict, is_coffee_after: false}
+        - {direction: excluded, coffee_id: "r:D", prefilter: "keyword:title:apron", claude: no_verdict, is_coffee_after: false}
+        - {direction: restored, coffee_id: "r:E", prefilter: "keyword:title:linen", claude: no_verdict, is_coffee_after: true}
+
+  - name: eval_prefilter_summary_counts_each_direction
+    description: >-
+      Plain counts per direction, both directions always present: Claude's three calls add up to the products, and
+      back_in_catalog counts the restored products that come back as coffee.
+    model: eval_prefilter_summary
+    given:
+      - input: ref('eval_prefilter')
+        rows:
+          - {direction: excluded, coffee_id: A, claude: not_coffee, is_coffee_after: false}
+          - {direction: excluded, coffee_id: B, claude: coffee, is_coffee_after: false}
+          - {direction: excluded, coffee_id: C, claude: no_verdict, is_coffee_after: false}
+          - {direction: restored, coffee_id: E, claude: no_verdict, is_coffee_after: true}
+          - {direction: restored, coffee_id: F, claude: not_coffee, is_coffee_after: false}
+    expect:
+      rows:
+        - {direction: excluded, products: 3, claude_coffee: 1, claude_not_coffee: 1, no_verdict: 1, back_in_catalog: 0}
+        - {direction: restored, products: 2, claude_coffee: 0, claude_not_coffee: 1, no_verdict: 1, back_in_catalog: 1}
+
+  - name: eval_prefilter_summary_with_no_verdicts_only
+    description: >-
+      Every excluded product without a verdict: Claude calls none of them coffee, yet none is agreement either: all
+      are no_verdict (the owner reviews each before an over-50 Publish).
+    model: eval_prefilter_summary
+    given:
+      - input: ref('eval_prefilter')
+        rows:
+          - {direction: excluded, coffee_id: A, claude: no_verdict, is_coffee_after: false}
+          - {direction: excluded, coffee_id: B, claude: no_verdict, is_coffee_after: false}
+    expect:
+      rows:
+        - {direction: excluded, products: 2, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 2, back_in_catalog: 0}
+        - {direction: restored, products: 0, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 0, back_in_catalog: 0}
+
+  - name: eval_prefilter_summary_with_nothing_moved
+    description: A build whose filters move nothing still has both rows, all zero.
+    model: eval_prefilter_summary
+    given:
+      - input: ref('eval_prefilter')
+        rows: []
+    expect:
+      rows:
+        - {direction: excluded, products: 0, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 0, back_in_catalog: 0}
+        - {direction: restored, products: 0, claude_coffee: 0, claude_not_coffee: 0, no_verdict: 0, back_in_catalog: 0}
+
+  - name: readiness_needs_two_families_and_no_doubt
+    description: >-
+      int_catalog_decided: a removal is ready with supports from two families and no doubt (E); not with a coverage
+      problem at the store (F) or with an open doubt (G), and never from a doubt or a restore alone (A, B).
+    model: int_catalog_decided
+    overrides:
+      vars:
+        rules:
+          rules:
+            verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
+            shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
+            non_coffee_type: {family: listing, params: {types: [drink mix]}, polarity: {"": supports}}
+          readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
+    given:
+      - input: ref('int_catalog_candidates')
+        rows:
+          - {coffee_id: A, roaster_id: r, decision: null, is_coffee: false, was_public: true}
+          - {coffee_id: B, roaster_id: r, decision: null, is_coffee: false, was_public: true}
+          - {coffee_id: E, roaster_id: r, decision: null, is_coffee: true, was_public: false}
+          - {coffee_id: F, roaster_id: bad, decision: null, is_coffee: true, was_public: false}
+          - {coffee_id: G, roaster_id: r, decision: null, is_coffee: true, was_public: false}
+      - input: ref('flag_verdict_flip')
+        rows:
+          - {coffee_id: A, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
+          - {coffee_id: B, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
+          - {coffee_id: E, roaster_id: r, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
+          - {coffee_id: F, roaster_id: bad, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
+          - {coffee_id: G, roaster_id: r, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
+      - input: ref('flag_shared_body')
+        rows:
+          - {coffee_id: A, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
+          - {coffee_id: G, roaster_id: r, direction: "", evidence: "{}", evidence_key: p2}
+      - input: ref('flag_non_coffee_type')
+        rows:
+          - {coffee_id: E, roaster_id: r, direction: "", evidence: "{}", evidence_key: drink mix}
+          - {coffee_id: F, roaster_id: bad, direction: "", evidence: "{}", evidence_key: drink mix}
+          - {coffee_id: G, roaster_id: r, direction: "", evidence: "{}", evidence_key: drink mix}
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: r, run_date: "2026-11-02", ok: true, partial: false}
+          - {roaster_id: bad, run_date: "2026-10-26", ok: true, partial: false}
+          - {roaster_id: bad, run_date: "2026-11-02", ok: false, partial: false}
+    expect:
+      rows:
+        - {coffee_id: A, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
+        - {coffee_id: B, ready_flags: false, supports_families: 0, doubts: 0, restores: 1}
+        - {coffee_id: E, ready_flags: true, supports_families: 2, doubts: 0, restores: 0}
+        - {coffee_id: F, ready_flags: false, supports_families: 2, doubts: 0, restores: 0}
+        - {coffee_id: G, ready_flags: false, supports_families: 2, doubts: 1, restores: 0}
+
+  - name: non_coffee_type_matches_whole_words_singular_or_plural
+    description: >-
+      flag_non_coffee_type: a listed type matches the store's product type as a whole word or phrase, singular or
+      plural, in any case ("Drink Mixes", "Nut", and "Glass" or "Box" for an -es plural), but not inside another word ("Peanuts", "Partners") or with no type;
+      a product that is neither public nor coffee is no one's concern (not relevant).
+    model: flag_non_coffee_type
+    overrides:
+      vars:
+        rules:
+          rules:
+            verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
+            shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
+            non_coffee_type: {family: listing, params: {types: [drink mix, nuts, books, parts, glasses, boxes]}, polarity: {"": supports}}
+          readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
+    given:
+      - input: ref('int_catalog_candidates')
+        rows:
+          - {coffee_id: A, roaster_id: r, product_type: "Drink Mixes", relevant: true}
+          - {coffee_id: B, roaster_id: r, product_type: "Nut", relevant: true}
+          - {coffee_id: C, roaster_id: r, product_type: "PEANUTS", relevant: true}
+          - {coffee_id: D, roaster_id: r, product_type: "Partners - Hebrew", relevant: true}
+          - {coffee_id: E, roaster_id: r, product_type: "Gear | Books", relevant: true}
+          - {coffee_id: F, roaster_id: r, product_type: "Books", relevant: false}
+          - {coffee_id: G, roaster_id: r, product_type: null, relevant: true}
+          - {coffee_id: H, roaster_id: r, product_type: "Glass", relevant: true}
+          - {coffee_id: I, roaster_id: r, product_type: "Gift Box", relevant: true}
+          - {coffee_id: J, roaster_id: r, product_type: "Glasses", relevant: true}
+    expect:
+      rows:
+        - {coffee_id: A, evidence_key: drink mix}
+        - {coffee_id: B, evidence_key: nuts}
+        - {coffee_id: E, evidence_key: books}
+        - {coffee_id: H, evidence_key: glasses}
+        - {coffee_id: I, evidence_key: boxes}
+        - {coffee_id: J, evidence_key: glasses}
   - name: one_store_one_canonical_roaster
     description: >-
       int_roaster_state.canonical_roaster_id (eval/roaster_dedup, macros/roaster_alias.sql): ids whose resolved hosts
@@ -569,7 +772,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:A', 'A', 'kA', [{'variant_id': 'a1', 'title': '1/2 lb', 'price_usd': 10.0, 'grams': 907, 'available': true},
                                   {'variant_id': 'a2', 'title': '5-lb-bag', 'price_usd': 70.0, 'grams': null, 'available': true}]),
               ('r:B', 'B', 'kB', [{'variant_id': 'b1', 'title': '12 oz', 'price_usd': 17.0, 'grams': 340, 'available': true}])
@@ -606,6 +809,54 @@ unit_tests:
         - {coffee_id: "r:A", price_per_100g: 3.09, bag_sizes_g: "[227, 2268]"}
         - {coffee_id: "r:B", price_per_100g: 5.0, bag_sizes_g: "[340]"}
 
+  - name: rules_complete_is_false_for_an_owner_included_non_coffee
+    description: >-
+      dim_coffee.rules_complete is never null. O1: the owner included a product the rules call not coffee
+      (stg_products.needs_llm is null: the rules extracted nothing), so it is false, with enrichment_method rules.
+      R1: a rules coffee they describe fully (needs_llm false) is true; R2: one they don't (needs_llm true) is false.
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select decision, coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+                 date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
+                 'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
+                 coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+          from (values ('r:O1', 'include'), ('r:R1', null), ('r:R2', null)) t(coffee_id, decision)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:O1", is_coffee: false, needs_llm: null, classified_by: rules, is_wholesale: false}
+          - {input_hash: "r:R1", is_coffee: true, needs_llm: false, classified_by: rules, is_wholesale: false}
+          - {input_hash: "r:R2", is_coffee: true, needs_llm: true, classified_by: rules, is_wholesale: false}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id, null::boolean as is_chain where false
+      - input: ref('stg_variant_grams')
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('int_origin_country')
+        format: sql
+        rows: >-
+          select null::varchar as raw_value, null::varchar as kind, null::varchar as alpha2, null::varchar as alpha3,
+                 null::varchar as iso_short_name, null::varchar as region, null::varchar as display_name where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:O1", rules_complete: false, enrichment_method: rules}
+        - {coffee_id: "r:R1", rules_complete: true, enrichment_method: rules}
+        - {coffee_id: "r:R2", rules_complete: false, enrichment_method: rules}
+
   # --- Rules pinned by the rules audit (docs/RULES.md) ---------------------------------------------------------------
 
   - name: price_per_100g_band_size_window_and_availability
@@ -621,7 +872,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
+          select null::varchar as decision, coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, coffee_id as input_hash, 'b' as body_hash,
                  coffee_id as grams_key,
@@ -703,7 +954,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+          select null::varchar as decision, coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
                  date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
                  'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
                  coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
@@ -860,7 +1111,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
+          select null::varchar as decision, 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
                  'r:F1' as grams_key,

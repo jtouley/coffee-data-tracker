@@ -3,6 +3,7 @@ alert key, updated in place, closed when the alert recovers (docs/TRIAGE.md).
 
     python -m coffeedata.triage evals <report.json> --workflow <name> [--dry-run]
     python -m coffeedata.triage prod <alerts.json> [--dry-run]
+    python -m coffeedata.triage usage <alerts.json> [--dry-run]   (coffeedata usage-build --alerts-out)
     python -m coffeedata.triage importers <dir> [--dry-run]       (dir: weeks.json, runs.json, check.json, and
                                                                    results/<run id>/<artifact>/results.json)
     python -m coffeedata.triage importer-result-runs <runs.json> [--check-out <check.json>]
@@ -498,14 +499,44 @@ def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) ->
     }]  # fmt: skip
 
 
+def usage_pipeline_alert(judged: bool, run_url: str | None, sha: str | None) -> list[dict]:
+    """The usage check itself (usage-health.yml): firing when it produced no alerts file, so neither the stored
+    events nor the reports were judged."""
+    return [{
+        "key": "pipeline:usage-health", "kind": "pipeline", "label": "prod-health",
+        "title": "usage-health: the check didn't run",
+        "severity": "warning", "firing": not judged, "source": ".github/workflows/usage-health.yml",
+        "summary": "The usage check couldn't list the private usage dataset, so neither its stored events nor the "
+        "usage reports were judged.",
+        "checks": [{"name": "usage dataset listed", "status": "ok" if judged else "warning"}],
+        "context": {"commit": sha, "run": run_url},
+        "steps": [
+            "Open the run and read the build job's failing step: its last line says why the dataset wasn't listed "
+            "(no Hub token, or the Hub answered \"not found\").",
+            "Not found, or no token: check that the check's token (HF_READ_TOKEN, else HF_TOKEN) can read the "
+            "private usage dataset, and the USAGE_URL variable if the dataset isn't `<owner>/coffee-usage`.",
+            "Re-run by hand once fixed (`gh workflow run usage-health`); this issue closes on the next run that "
+            "lists the dataset.",
+        ],
+    }]  # fmt: skip
+
+
 # --- the importers' weekly snapshots ------------------------------------------------------------------------------
 
 # When importers.yml's schedule fires ("37 17 * * 3": Wednesdays 17:37 UTC; tests/test_triage.py ties the two), and
-# how long after it a week still counts as in progress: the job's 120-minute timeout plus room for a late scheduled
-# start. A completed scheduled run makes its week due at once, so the check that follows it (workflow_run) judges it
-# without waiting for this.
+# how long after it a week with no scheduled run yet still counts as not due: room for a late scheduled start.
+# GitHub starts this repository's scheduled runs hours late: the three so far began 5 h 56 min (importers,
+# 2026-11-18), 8 h 17 min and 9 h 02 min (importers-alerts, 2026-11-12 and 11-19) after their cron time. 12 hours
+# clears all three and still ends before Thursday's check (09:23 UTC, 15 h 46 min after the schedule), which is the
+# one that reports a run that never started. A completed scheduled run makes its week due at once, so the check that
+# follows it (workflow_run) judges it without waiting for this.
 IMPORTERS_SCHEDULE = (2, 17, 37)  # weekday (Monday 0), hour, minute, UTC
-IMPORTERS_GRACE = timedelta(hours=4)
+IMPORTERS_GRACE = timedelta(hours=12)
+# How long a scheduled run that has started and not completed keeps its week not due: the snapshot job's 120-minute
+# limit, the build job's after it, and queueing. Past it the run is taken as stuck and the week is judged.
+IMPORTERS_RUN_LIMIT = timedelta(hours=6)
+# A scheduled start this long after its cron time is said so in the issue.
+IMPORTERS_LATE = timedelta(hours=1)
 # The first week a scheduled run stores (Wednesday 2026-11-18's): earlier weeks are never due.
 IMPORTERS_FIRST_WEEK = date(2026, 11, 16)
 IMPORTERS_WORKFLOW = ".github/workflows/importers.yml"
@@ -562,16 +593,32 @@ def _when(s: str) -> datetime:
 
 def importers_due_week(now: datetime, runs: list[dict[str, Any]] | None = None) -> date | None:
     """The latest week every importer should have stored by `now`: this week once its scheduled run has completed
-    or IMPORTERS_GRACE has passed since the schedule, else the week before. None before IMPORTERS_FIRST_WEEK.
-    Without the runs (None), only the time decides."""
+    or IMPORTERS_GRACE has passed since the schedule, else the week before. A scheduled run that has started and
+    not completed keeps its week not due, however late it started, until IMPORTERS_RUN_LIMIT after its start: a
+    run that began six hours late was otherwise judged "missing" while it was still fetching. None before
+    IMPORTERS_FIRST_WEEK. Without the runs (None), only the time decides."""
     week = _monday(now)
     scheduled = [
-        r for r in runs or [] if r.get("event") == "schedule" and r.get("status") == "completed"
+        r for r in runs or [] if r.get("event") == "schedule" and isinstance(r.get("created_at"), str)
         and _monday(_when(r["created_at"])) == week
     ]  # fmt: skip
-    if not scheduled and now < _scheduled_at(week) + IMPORTERS_GRACE:
+    completed = [r for r in scheduled if r.get("status") == "completed"]
+    running = [r for r in scheduled if r.get("status") != "completed"
+               and now < _when(r["created_at"]) + IMPORTERS_RUN_LIMIT]  # fmt: skip
+    if not completed and (running or now < _scheduled_at(week) + IMPORTERS_GRACE):
         week -= timedelta(days=7)
     return week if week >= IMPORTERS_FIRST_WEEK else None
+
+
+def _started_late(run: dict[str, Any] | None, week: date) -> str | None:
+    """ "5 h 56 min" when the week's scheduled run began IMPORTERS_LATE or more after its cron time, else None."""
+    if not run or not isinstance(run.get("created_at"), str):
+        return None
+    late = _when(run["created_at"]) - _scheduled_at(week)
+    if late < IMPORTERS_LATE:
+        return None
+    minutes = int(late.total_seconds() // 60)
+    return f"{minutes // 60} h {minutes % 60:02d} min"
 
 
 def _scheduled_run(week: date, runs: list[dict[str, Any]] | None) -> dict[str, Any] | None:
@@ -791,21 +838,33 @@ def importer_alerts(
     if runs is None:
         how = "The workflow's runs couldn't be listed, so which run should have stored it is unknown."
     elif run is None:
-        how = f"No scheduled importers run started for the week of {due} (Wednesday {wed})."
+        waited = now - _scheduled_at(due)
+        how = (
+            f"No scheduled importers run started for the week of {due} (Wednesday {wed}), "
+            f"{int(waited.total_seconds() // 3600)} hours after its schedule."
+        )
     elif run.get("status") != "completed":
-        how = f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}."
+        how = (
+            f"The scheduled run for the week of {due} is still {run.get('status') or 'queued'}, more than "
+            f"{int(IMPORTERS_RUN_LIMIT.total_seconds() // 3600)} hours after it started."
+        )
     else:
         how = f"The scheduled run for the week of {due} ended `{run.get('conclusion')}`."
-        if run.get("conclusion") != "success":
-            # the run's conclusion covers its build job too, which never touches the stored weeks: the rows above,
-            # read from the dataset, are what is missing
-            how += (
-                " That conclusion covers both the snapshot and the build after it; a build failure alone stores "
-                "every week and has its own issue, `pipeline:importer-build`."
-            )
+    if late := _started_late(run, due):
+        how += f" It started {late} after its schedule ({at}): GitHub delayed it, which no setting here controls."
+    if run is not None and run.get("status") == "completed" and run.get("conclusion") != "success":
+        # the run's conclusion covers its build job too, which never touches the stored weeks: the rows above,
+        # read from the dataset, are what is missing
+        how += (
+            " That conclusion covers both the snapshot and the build after it; a build failure alone stores "
+            "every week and has its own issue, `pipeline:importer-build`."
+        )
     ctx = {
         "due week": f"{due} (scheduled Wednesday {wed} {at})",
-        "scheduled run": f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}" if run else None,
+        "scheduled run": (
+            f"{run.get('conclusion') or run.get('status')}, {run.get('html_url')}"
+            + (f", started {late} late" if late else "")
+        ) if run else None,
         **ctx,
     }  # fmt: skip
     out.append({
@@ -876,6 +935,8 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--scope", choices=("in-git", "private"), help="the evals this workflow owns")
     pr = sub.add_parser("prod", help="issues from coffeedata.prod_health judge --out")
     pr.add_argument("alerts", type=Path)
+    us = sub.add_parser("usage", help="issues from coffeedata usage-build --alerts-out (usage-health.yml)")
+    us.add_argument("alerts", type=Path)
     im = sub.add_parser(
         "importers", help="issues from the importers check (its weeks, runs, time and results in one folder)"
     )
@@ -906,7 +967,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     wk.add_argument("url", help="the private importers dataset, hf://datasets/<owner>/<name>")
     wk.add_argument("--out", type=Path, required=True)
-    for s in (e, pr, im):
+    for s in (e, pr, us, im):
         s.add_argument("--dry-run", action="store_true")
         s.add_argument("--run-url", help="the run the alert is about (default: this run)")
         s.add_argument("--sha", help="the commit it ran on (default: GITHUB_SHA)")
@@ -941,6 +1002,14 @@ def main(argv: list[str] | None = None) -> int:
         now = _now_arg(a.now) if a.now else check_time(a.dir) or _now_arg(None)
         weeks, runs = _read_json(a.dir / "weeks.json"), _read_json(a.dir / "runs.json")
         alerts = importer_alerts(weeks, runs, now, run_url, sha, read_results(a.dir / "results"))
+    elif a.cmd == "usage":
+        found = _read_json(a.alerts)
+        found = found if isinstance(found, list) else None
+        alerts = usage_pipeline_alert(found is not None, run_url, sha)
+        # the usage alerts carry no run of their own: this run is where their numbers came from
+        alerts += [
+            x | {"context": {**(x.get("context") or {}), "run": run_url, "commit": sha}} for x in found or []
+        ]
     else:
         alerts = prod_pipeline_alert(a.alerts.exists(), run_url, sha)
         alerts += json.loads(a.alerts.read_text()) if a.alerts.exists() else []

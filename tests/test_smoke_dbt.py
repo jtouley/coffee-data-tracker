@@ -73,6 +73,39 @@ def test_the_fixture_lake_builds_passes_the_gate_and_is_served(lake, tmp_path, m
         f = written["files"][f"{t}.parquet"]
         assert f["rows"] > 0 and f["sha256"] == public._sha256(tmp_path / "public" / f"{t}.parquet")
 
+    # The ops tables, beside the release under ops/: exactly their contract's columns and types (lake.SCHEMAS) from
+    # the real models, recorded in the build's record, and in nothing customers get (served db, public export).
+    import pyarrow.parquet as pq
+
+    from coffeedata import control
+    from coffeedata.lake import SCHEMAS
+
+    ops = quality.ops_files(lake, build_id)
+    assert set(ops) == set(quality.OPS_TABLES)
+    for t, f in ops.items():
+        assert pq.read_schema(f).remove_metadata() == SCHEMAS[t], t
+    recorded = dict(con.execute(
+        f"select unique_id, rows from {lake.scan('builds')} where build_id = ? and kind = 'ops_table'", [build_id]
+    ).fetchall())  # fmt: skip
+    assert recorded == {t: pq.read_metadata(f).num_rows for t, f in ops.items()}
+    assert recorded["run_completeness"] == 5 and recorded["product_decisions"] > recorded["run_completeness"]
+    decisions = duckdb.sql(
+        f"select is_coffee, classified_by, reason from read_parquet('{ops['product_decisions']}')"
+    )
+    rows = decisions.fetchall()
+    assert {c for c, _, _ in rows} == {True, False} and all(
+        r for _, _, r in rows
+    )  # the non-coffees are there
+    served = duckdb.connect(str(cli.SERVED_DB), read_only=True)
+    names = {t for (t,) in served.execute("select table_name from information_schema.tables").fetchall()}
+    served.close()
+    assert names == set(quality.RELEASE_TABLES)
+    assert not {p.stem for p in (tmp_path / "public").rglob("*.parquet")} & set(quality.OPS_TABLES)
+    # The build's start and end rows in the control plane, with the commit that ran.
+    [job] = [r for r in control.rows(lake, week) if r["job"] == "build"]
+    assert job["status"] == "done" and job["code_version"]
+    assert control.detail_of(job)["build_id"] == build_id and control.detail_of(job)["passed"] is True
+
 
 def test_the_contracts_are_what_make_contracts_writes_and_valid():
     for name in sorted(raw_contracts.CONTRACTS):

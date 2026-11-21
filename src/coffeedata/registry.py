@@ -8,6 +8,7 @@ built; any probe recorded in the lake supersedes them. Nothing here is mutated b
 from __future__ import annotations
 
 import csv
+import logging
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -16,6 +17,7 @@ from . import classify, products
 from .lake import Lake, retry_transient
 from .models import Roaster
 
+log = logging.getLogger(__name__)
 SEED = Path("config/roasters.csv")
 SEED_FIELDS = [
     "roaster_id",
@@ -88,10 +90,17 @@ def not_a_roaster_site(domain: str) -> bool:
 
 def is_storefront_host(domain: str) -> bool:
     """A domain that can be a roaster's own storefront: not a NOT_A_ROASTER_SITE host, and never a host only the
-    scheduled importers job may fetch (http.schedule_only_host: Royal Coffee), so discovery and add-roaster refuse it."""
+    scheduled importers job may fetch (http.schedule_only_host: Royal Coffee), so discovery and add-roaster refuse it.
+    Never an IP address either (netguard.ip_literal): a roaster has a name, and the crawler refuses addresses."""
     from .http import schedule_only_host
+    from .netguard import ip_literal
 
-    return "." in domain and not not_a_roaster_site(domain) and not schedule_only_host(domain)
+    return (
+        "." in domain
+        and not ip_literal(domain)
+        and not not_a_roaster_site(domain)
+        and not schedule_only_host(domain)
+    )
 
 
 def load_seed(path: Path = SEED) -> list[dict]:
@@ -141,9 +150,13 @@ roasters as (
           and (coalesce(s.roaster_id, a.roaster_id) = sh.host or ends_with(coalesce(s.roaster_id, a.roaster_id), '.' || sh.host))
     ){dropped}
 ),
--- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed, so the next
--- probe run (stale-probe selection reads last_probed) tries the roaster again.
-probes as (select * from {probes} where roaster_id is not null and status <> 'robots_unavailable'),
+-- A probe whose robots.txt didn't answer, or that a pause stopped (a 429 or 430: discover._refused), is no answer
+-- about the site: it doesn't count as probed, so the next probe run (stale-probe selection reads last_probed) tries
+-- the roaster again.
+probes as (
+    select * from {probes}
+    where roaster_id is not null and status not in ('robots_unavailable', 'http_429', 'http_430')
+),
 last_probe as (
     select * from probes
     qualify row_number() over (partition by roaster_id order by probed_at desc, status, final_host, platform) = 1
@@ -238,9 +251,24 @@ join canonical c using (roaster_id)
 """
 
 
-def state_sql(lake: Lake, dropped: frozenset[str] | set[str] = frozenset()) -> str:
+def state_sql(
+    lake: Lake, sources: list[str] | None = None, dropped: frozenset[str] | set[str] = frozenset()
+) -> str:
+    """STATE_SQL over the lake. `sources`: places of the source list (`candidates`) the published snapshot flags as
+    roasters (flagged_sources): the registry includes them, as if discovery had added them, so the probe and the
+    crawl pick them up. Any other place of the source list is never probed or crawled. `dropped`: roaster_ids the
+    snapshot flags not a roaster, left out before the stores are decided."""
+    registry = lake.scan("registry")
+    if sources:
+        listed = ", ".join(f"'{_sql_str(d)}'" for d in sources)
+        cols = "added_at, source, roaster_id, name, city, state, locations"
+        registry = (f"(select {cols}, opted_out from {registry} "
+                    f"union all select {cols}, false as opted_out "
+                    f"from {lake.scan('candidates')} c where roaster_id in ({listed}) "
+                    f"and not exists (select 1 from {registry} r where r.roaster_id = c.roaster_id "
+                    f"and r.source is not distinct from c.source))")  # fmt: skip
     return STATE_SQL.format(
-        registry=lake.scan("registry"),
+        registry=registry,
         probes=lake.scan("probes"),
         fetches=lake.scan("fetches"),
         k=MAX_FAILURES,
@@ -331,18 +359,51 @@ class RoasterState:
     failed_runs: int = 0
 
 
-def current(
-    lake: Lake, seed: Path = SEED, dropped: frozenset[str] | set[str] = frozenset()
-) -> list[RoasterState]:
+UNREAD = object()  # a served snapshot not read yet (read_served reads it)
+
+
+def read_served(lake: Lake) -> dict | None | bool:
+    """The served build's snapshot (None: nothing served), or False when it can't be read (logged): the crawl
+    then runs as before the owner's flags. Read once per job and passed down (current, ingest.crawl_off)."""
+    from . import decisions
+
+    try:
+        return retry_transient(decisions.served_doc, lake)
+    except Exception as e:  # noqa: BLE001 - logged; the registry and the crawl stay as they were without the flags
+        log.warning("the served snapshot wasn't read (%s): no flags apply", type(e).__name__)
+        return False
+
+
+def current(lake: Lake, seed: Path | None = None, also: list[str] | tuple[str, ...] = (),
+            doc: object = UNREAD, dropped: frozenset[str] | set[str] = frozenset()) -> list[RoasterState]:  # fmt: skip
     """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
-    it is each crawl job's first read of the hf:// lake. `dropped`: roaster_ids that are not roasters (the admin's
-    flags), left out before the stores are decided, as NOT_A_ROASTER_SITE hosts are."""
-    return retry_transient(_current, lake, seed, dropped)
+    it is each crawl job's first read of the hf:// lake. `also`: places of the source list to include as if flagged
+    (the admin's Pull now crawls a place the owner flagged before a draft of it is published). `dropped`: more
+    roaster_ids to leave out as not roasters, beside the snapshot's flags."""
+    added, flagged = source_flags(lake, doc)
+    added = added + [d for d in also if d not in added]
+    return retry_transient(_current, lake, seed or SEED, added, flagged | set(dropped))
 
 
-def _current(lake: Lake, seed: Path, dropped: frozenset[str] | set[str] = frozenset()) -> list[RoasterState]:
+def source_flags(lake: Lake, doc: object = UNREAD) -> tuple[list[str], set[str]]:
+    """The owner's flags from the published snapshot (the admin's Sources page): the source-list places flagged
+    roaster, which the registry adds, and the registry roasters flagged not a roaster, which it drops. Every other
+    registry roaster inherits the roaster flag, so with no flags the registry is exactly what it was. A snapshot
+    that can't be read applies none: the registry as it was before the flags."""
+    from . import decisions
+
+    doc = read_served(lake) if doc is UNREAD else doc
+    if doc is False:
+        return [], set()
+    return decisions.source_roasters(doc), set(decisions.not_roasters(doc))  # type: ignore[arg-type]
+
+
+def _current(
+    lake: Lake, seed: Path, added: list[str] | None = None, dropped: frozenset[str] | set[str] = frozenset()
+) -> list[RoasterState]:
     con = connect_for_state(lake)
-    cur = con.execute(state_sql(lake, dropped) + " order by roaster_id", [str(seed)])
+    # the owner's not-a-roaster flags are dropped in the SQL, before the stores are decided (never probed or crawled)
+    cur = con.execute(state_sql(lake, added, dropped) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []
     from .http import schedule_only_host

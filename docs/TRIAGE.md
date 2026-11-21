@@ -37,6 +37,9 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 | `importers:weekly` | `importers-alerts.yml`, after every `importers` run on main and Thursdays 09:23 UTC (by hand too) | an importer has no stored week for the due week: its run failed, the scheduled run never started, or the week is stale | warning |
 | `pipeline:importer-build` | `importers.yml` job `alert`, after the `build` job that follows each snapshot on main | the private importer build (`coffeedata importer-build --publish`) failed, or its copy couldn't be sent; the stored weeks aren't affected | warning |
 | `pipeline:importers-health` | `importers-alerts.yml` | the check couldn't judge the week: no Hub token, a failed dataset or runs listing, or (once a week is due) a dataset the Hub calls "not found" | warning |
+| `prod:usage-events` | `usage-health.yml` (Tuesdays 12:13 UTC, by hand) | the private usage dataset holds no event file, or its newest stored day is more than 3 days before the check (from file names; the same window as dbt's `usage_events_are_fresh`) | warning |
+| `prod:usage-search-text` | `usage-health.yml`, from `coffeedata usage-build` | a stored search matches the email, phone or card pattern (counts per week and pattern, never the text); or the usage reports failed to build, so the detector couldn't run | critical; warning when it couldn't run |
+| `pipeline:usage-health` | `usage-health.yml` | the check couldn't list the usage dataset (no Hub token, or the Hub answered "not found"), so nothing was judged | warning |
 
 Each workflow judges only the evals it owns: ci never touches a private eval's issue (its private floors skip), and
 eval-floors never touches an in-git one. Only the floor files (`tests/test_<eval>_accuracy.py`) are reported, so a
@@ -87,9 +90,10 @@ value. The lake is private and this repository is public. Get the values locally
 | `origin`, `process`, `roast_level` | `fill:<rule>[:<platform>]`: the share filled in; `shift:changed:<rule>`: the share of coffees in both releases whose value changed | an extraction rules regression, enrichment not run or capped, or a platform's descriptions no longer read |
 | `grams` | `fill:grams[:<platform>]` (a bag weight read); `shift:changed:grams`; `shift:median:grams` | a bag_weight change (#136, #139), or a platform's variant titles changed shape |
 | `price_per_100g` | `fill:price_per_100g[:<platform>]`; `shift:changed:price_per_100g`; `shift:median:price_per_100g` | a lost weight or price, a currency or unit error, or a price wipe on one platform |
-| `classifier` | `fill:classifier`: the share decided by Claude's verdict, judged on the build's own `min_verdict_share` 0.85 | verdicts missing or late, or no verdict model. Starts once a release carries `classified_by` |
+| `price` | `fill:price[:<platform>]`: the share of listed coffees with a price on at least one size (`min_price_usd`). Unlike `price_per_100g` it needs no bag weight, so it says which of the two is missing | a connector storing sizes without prices: WooCommerce's 150-lookup cap left a quarter of its listed coffees unpriced until the 2026-11-16 crawl (that week is left out of the history). Square Online sits near 0.55: its listing gives a price range, and the adapter stores a price only when the range's ends agree (`adapters/square_online.py`), which is the likely reason (not measured) |
+| `classifier` | `fill:classifier`: the share decided by Claude's verdict. Warns below 0.90, five points above the build's own `min_verdict_share` 0.85, so a release that passed the gate narrowly says so (the 2026-11-16 run passed at 85.5%). `verdicts:stored_age_days`: the newest stored verdict's age when the served release was built. `verdicts:open_batch_age_days`: how long the oldest batch submitted and not collected had been open at that build (0: none). Both warn above 2 days and are critical above 9 | `fill:classifier`: verdicts missing or late, or no verdict model. Starts once a release carries `classified_by`. `verdicts:stored_age_days`: the build's classify stored nothing (warning), nor did the run before it (critical): it failed, ran an image without a verdict model, or its collect was refused. `verdicts:open_batch_age_days`: an earlier run's batch was never collected. Read the `build` job's classify output: `collect_failed` names each batch, the error's class and its HTTP status (RUNBOOK, verdicts). `release:removed_share:reclassified`: the classifier (a verdict or the rules) now calls not-coffee that share of the previous release's public coffees; the 2026-11-16 release removed 3,428 (7.5%) this way and it took an investigation to learn it. Above 0.02, read the release notes (`coffeedata build`'s `release notes:` lines, or the build record's `release_change` rows) and sample the removed coffees before the next run |
 | `enrichment` | `abstain:enrichment[:<platform>]`: the share of listed coffees the rules leave incompletely described (`dim_coffee.rules_complete` false: no origin and not a blend, no process, or no tasting notes), whether or not Claude has reached them (high is bad). `coverage:enrichment[:<platform>]`: the share of those that have a Claude row, i.e. how far the 2,000-a-week enrichment backlog has got (low is bad; only a drop alerts) | abstain up: the extraction rules abstaining more, so Claude's spend and backlog grow. Coverage down: Claude's rows lost or not joined (a wiped enrichments table, a key change). A stalled enrichment job keeps its rows, so coverage stays flat or sinks slowly and may not alert |
-| `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing |
+| `volume` | `rows:listed[:<platform>]`; `shift:rows_ratio:listed[:<platform>]`: listed coffees against the previous run; `shift:retained`: the previous run's coffees still listed; `release:removed_share:roaster_left` and `release:removed_share:unexplained`: the share of the previous release's public coffees this one removed because their roaster left the public tables, or for no reason the build can show (the build's release notes; warning above 0.02, critical above 0.05) | a partial crawl, a platform outage, a classifier swing, or a store's archive appearing. `roaster_left`: roasters dropped as aliases, chains, outside the US or with no coffee left: `coffeedata build-diff` and the release notes' `public_roaster:removed:<reason>` lines say which |
 | `fetch` | `build:run_ok_share`, `build:run_catalog_ok_share`, `build:adapter_ok_share:<platform>` (mart_build_profile, reused) | fetches failing. fetch-health (RUNBOOK.md §8) should have said so too |
 | `crawl-slo` | `build:crawl_slo_met` (1: the run fetched more than 99% of the known roasters), `build:crawl_slo_burn_rate`, `build:crawl_slo_budget_remaining`; `build:crawl_slo_met:<platform>` only reports (mart_crawl_slo_profile, recorded by the build) | the crawl missed its SLO. Warnings only, and never a reason to roll back: see [The crawl success SLO](#the-crawl-success-slo) |
 | `build-tests` | `build:test:<test>`: failures of the dbt band tests that only warn (`fill_and_freshness_in_band`, `build_metrics_in_band`, `adapter_volume_in_band`, `coverage_claims_match_build`, `verdicts_cover_catalog`, `origin_countries_are_mapped`: an origin spelling the ISO seed doesn't have, published with no country until it is labelled and added, eval/origin_iso); `build:passed` | the build's own warnings fired. Read them in `coffeedata build-diff`. The served builds so far (to run 2026-11-09) record only `build_metrics_in_band`: their build image predates the other four, which show as "not measured" in the summary until a build runs them |
@@ -149,9 +153,17 @@ importer lacks the due week.
 scheduled first attempt may fetch it, so it is lost, and the next chance is the following Wednesday. That makes
 detection the gate that matters, and why the check also runs when no importers run happened.
 
-**The due week.** This week's Monday once its scheduled run has completed, or 4 hours after 17:37 UTC on Wednesday
-(the job's 2-hour timeout and room for a late start), whichever comes first; until then, last week's. Weeks before
-2026-11-16, the first scheduled run's, are never due.
+**The due week.** This week's Monday once its scheduled run has completed, or 12 hours after 17:37 UTC on Wednesday
+if no scheduled run has started by then, whichever comes first; until then, last week's. A scheduled run that has
+started and not completed keeps its week not due for up to 6 hours after it started, however late that was. Weeks
+before 2026-11-16, the first scheduled run's, are never due.
+
+**A late start.** GitHub starts this repository's scheduled runs hours after their cron time: the first three began
+5 h 56 min, 8 h 17 min and 9 h 02 min late. So a run that hasn't started is not yet a run that never will: only a
+check 12 hours after the schedule (in practice Thursday's, 09:23 UTC) reports "No scheduled importers run started",
+and it says how many hours it waited. When the week's scheduled run began an hour or more late, the issue says so
+("It started 5 h 56 min after its schedule") and the `scheduled run` line carries it. Nothing in this repository
+controls the delay; a run that starts late still fetches every importer, Royal included.
 
 **What the issue shows.** One row per importer: its key, `ok` or `missing <n> week(s)` (weeks missed in a row), its
 last stored week (a Monday) and, for a missing week, its failed fetch (the kind, the HTTP status and where it
@@ -230,6 +242,31 @@ importers-alerts`.
 To try it without touching GitHub, put the check's two files in a folder and run
 `PYTHONPATH=src python3 -m coffeedata.triage importers <folder> --dry-run --now 2026-11-19T09:23`. The files are the
 `importers-health` artifact of an importers-alerts run (`weeks.json`, `runs.json`).
+
+## usage: the collector isn't storing events
+
+`usage-health.yml` runs `coffeedata usage-build` each Tuesday (12:13 UTC) against the private usage dataset, read
+only. Before it, nothing ran that command: the usage reports existed only when built by hand, and a collector that
+had stored nothing since it was switched on showed only as a log line.
+
+- **`prod:usage-events`** asks one question: is the collector storing anything? It reads the dataset's event file
+  names (`events/day=<day>/...`), never a file. No event file at all, or a newest day more than 3 days old, fires a
+  warning that says which and gives the newest stored day. It never carries a count of events or visits.
+  - Read the collector's log first (docs/app/RUNNING.md, Usage): its flush lines say whether requests arrived and
+    why any were refused or lost.
+  - No request at all: compare `config/usage.toml`'s `collector_url` with the service's address, and check the
+    pages' CSP allows it.
+  - A quiet few days on a small site is possible, which is why this is a warning. It closes at the next check that
+    finds an event stored within 3 days.
+- **With no event stored, the reports are not built** (there is nothing to build from) and the detector's issue is
+  left as it is.
+- **`prod:usage-search-text`** is the build's detector, as before; only its schedule is new.
+- **`pipeline:usage-health`**: the check couldn't list the dataset. The build job's last line says why (no Hub
+  token, or "not found": a wrong `USAGE_URL`, or a token that can't read the private dataset).
+
+The private database (`build/usage.duckdb`) and dbt's log stay on the runner and are never uploaded: the run prints
+counts by status only. So this run answers whether the reports build and pass their checks, not what they say:
+their values are for the admin's planned Usage view (not built yet).
 
 ## When to roll back
 
@@ -328,6 +365,7 @@ checks the gate still passes.
 | `build:crawl_slo_burn_rate` | above 4 | that run alone spent about a window's budget or more |
 | `build:crawl_slo_budget_remaining` | below 0 | the window is overspent, even if this run met the target |
 | `build:crawl_slo_met:<platform>` | never by itself | `report only` in the issue's table: the platforms below 99%, so a miss points at its connector |
+| `build:crawl_slo_not_fetched:<outcome>` | never by itself | `report only` in the issue's table: how the run left the roasters it didn't fetch (any above 0), so a miss says why. `unavailable`: the store was found closed or password-protected, or its robots.txt disallows the crawl. `challenged`: an edge's challenge page. `failed`: tried and failed (an HTTP error such as 429, an unreadable robots.txt, product pages that failed); fetch-health's list names each store. `quarantined`: it crashed its crawl twice. `not_attempted`: the crawl has stopped trying it (unreachable after `max_failures` failed runs) or never reached it. The five add up to roasters less ok |
 
 When it fires: read which platforms are marked `report only`, then the outcomes for the run, on a local copy of
 the build's database (`select platform, outcome, count(*) from int_crawl_slo_roasters where counted and run_date

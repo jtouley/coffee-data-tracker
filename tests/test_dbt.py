@@ -280,6 +280,7 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
         run(lake, d, c, None)
     probe(lake, "2026-11-03", a, status="unreachable")
+    probe(lake, "2026-11-04", b, status="http_430", platform="")  # a pause: not counted as probed, in either
     con = build(lake, tmp_path)
     dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
     py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
@@ -690,13 +691,19 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     probe(lake, "2026-10-11", "onyxcoffeelab.com")
     run(lake, "2026-10-12", "onyxcoffeelab.com", [product("A")])
     evil = product("E") | {"url": "javascript:alert(1)"}
-    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil])
+    blend = product("H", title="House Blend Coffee")
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil, blend])
     con = build(lake, tmp_path)
     # The unsafe link is dropped in the model, so the public tables, exports and MCP server never see it.
     assert con.execute("select url from dim_coffee where title = 'Coffee E Roast'").fetchone() == (None,)
     assert con.execute(
         "select count(*) from public_coffee where coffee_name = 'Coffee E Roast'"
     ).fetchone() == (0,)
+    # what the process chart's note counts as left out (single origins only)
+    left = con.execute(
+        f"select count(*) filter (where is_blend), count(*) filter (where not is_blend and origin_country is null) "
+        f"from dim_coffee where {site.LISTED} and in_stock"
+    ).fetchone()
     con.close()
 
     out = tmp_path / "site"
@@ -707,6 +714,12 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    # the process chart's note counts what it leaves out: here one blend and the coffees with no origin
+    assert left == (1, 3), left  # A, B and E have no origin
+    assert (
+        "leaves out 1 blend and 3 coffees with no known origin that are in stock"
+        in (out / "catalog" / "index.html").read_text()
+    )
     # The favicon on every page, served from the site root; the old inline bean is gone.
     for page in ("", "catalog/", "privacy/", "terms/", "bot/"):
         root = "../" if page else ""
@@ -1089,13 +1102,64 @@ def test_states_are_the_fifty():
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
     partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
-    per store. They read hand-written rows, but dbt reads the column types of their inputs from built tables, so a
-    small lake is built first."""
+    per store, product_decisions' latest record, and the guard and readiness (int_catalog_decided). They read
+    hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
+    first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=35 " in r.stdout
+    assert "PASS=43 " in r.stdout
+
+
+def test_keyword_filters_reach_the_build_through_its_snapshot_only(lake, tmp_path, monkeypatch):
+    """A snapshot's keyword filter (var prefilter_path, written by decisions.write_prefilter) excludes a product the
+    rules call coffee, names itself in the reason, and eval_prefilter counts it as newly excluded; a filter the
+    served build already had is not new. The build reads no database: an admin database URL that can't be reached
+    changes nothing."""
+    from coffeedata import decisions
+
+    monkeypatch.setenv("ADMIN_DATABASE_URL", "postgresql://nobody@127.0.0.1:1/none")
+    run(lake, "2026-10-19", "onyxcoffeelab.com",
+        [product("A", title="Ethiopia Apron Roast"), product("B", title="Kenya Roast"),
+         product("C", title="Linen Bag Roast")])  # fmt: skip
+    now = {"prefilter": [{"phrase": "apron", "field": "title"}, {"phrase": "linen", "field": "title"}]}
+    was = {"prefilter": [{"phrase": "linen", "field": "title"}]}
+    path = decisions.write_prefilter(now, was, tmp_path / "prefilter.parquet")
+    con = build(lake, tmp_path, prefilter_path=str(path))
+    got = dict(con.execute("select title, reason from product_decisions").fetchall())
+    assert got["Ethiopia Apron Roast"] == "excluded:keyword:title:apron"
+    assert (
+        got["Linen Bag Roast"] == "excluded:keyword:title:linen"
+        and got["Kenya Roast"] != got["Linen Bag Roast"]
+    )
+    assert {r[0] for r in con.execute("select title from dim_coffee").fetchall()} == {"Kenya Roast"}
+    summary = con.execute("select products, claude_coffee, claude_not_coffee, no_verdict from eval_prefilter_summary "
+                          "where direction = 'excluded'").fetchone()  # fmt: skip
+    assert summary == (
+        1,
+        0,
+        0,
+        1,
+    )  # only the new filter's product; no verdicts in this lake: not seen by Claude
+    assert con.execute("select direction, title, prefilter, claude from eval_prefilter").fetchall() == [
+        ("excluded", "Ethiopia Apron Roast", "keyword:title:apron", "no_verdict")]  # fmt: skip
+    # removing the served "linen" gives "Linen Bag Roast" back, as coffee by the rules
+    path = decisions.write_prefilter({"prefilter": []}, was, tmp_path / "prefilter.parquet")
+    con.close()
+    con = build(lake, tmp_path, prefilter_path=str(path))
+    assert con.execute("select direction, title, is_coffee_after from eval_prefilter").fetchall() == [
+        ("restored", "Linen Bag Roast", True)]  # fmt: skip
+    assert con.execute("select products, back_in_catalog from eval_prefilter_summary where direction = 'restored'"
+                       ).fetchone() == (1, 1)  # fmt: skip
+    con.close()
+    # no file: no filters, and the summary still says so
+    con = build(lake, tmp_path)
+    assert con.execute(
+        "select count(*) from product_decisions where reason like 'excluded:keyword:%'"
+    ).fetchone() == (0,)
+    assert con.execute("select direction, products from eval_prefilter_summary order by 1").fetchall() == [
+        ("excluded", 0), ("restored", 0)]  # fmt: skip
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1329,8 +1393,8 @@ def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tm
     assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == f"{rid}:GUJI"
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
     search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
-    assert sorted(r["title"] for r in search()) == ["Colombia Supremo", "Ethiopia Guji"]
-    assert {r["title"]: r["is_wholesale"] for r in search(include_wholesale=True)} == {
+    assert sorted(r["title"] for r in search()["coffees"]) == ["Colombia Supremo", "Ethiopia Guji"]
+    assert {r["title"]: r["is_wholesale"] for r in search(include_wholesale=True)["coffees"]} == {
         "Colombia Supremo": False,
         "Ethiopia Guji": False,
         "Wholesale - 5LB Ethiopia Guji": True,

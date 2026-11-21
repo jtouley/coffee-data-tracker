@@ -9,6 +9,10 @@ Before dbt runs, the geo files config/geo.lock names are found in the cache (bui
 dataset, and each one's sha256 is checked: a file that isn't the locked one stops the build. dbt then reads exactly
 those files, and ops_usage_build records the lock. Same raw plus same lock gives the same rows.
 
+Before any of that, `events_state` reads the dataset's event file names (never a file) for the newest stored day,
+and `events_alert` turns it into the `prod:usage-events` triage alert: is the collector storing anything? A dataset
+with no event at all is reported there, and the build is not attempted (there is nothing to build from).
+
 The detector (dbt_usage/tests/search_text_looks_personal.sql) fails the build when any search looks like an email,
 phone or card number. `detector_alert` turns its counts into a triage alert that says "N searches in week W matched
 the email pattern" and nothing more: the issue is in a public repository, so it never holds the text.
@@ -18,9 +22,12 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 from collections.abc import Callable
+from datetime import date
 from pathlib import Path
+from typing import Any
 
 from . import geo
 from .importers import MAIN_DB, PUBLIC_FOLDERS, SERVED_DB
@@ -56,6 +63,95 @@ def sources(root: str) -> list[str]:
         return [f"{root.rstrip('/')}/{EVENTS_GLOB}"]
     base = Path(root)
     return [str(base.resolve() / EVENTS_GLOB)] if any(base.glob(EVENTS_GLOB)) else []
+
+
+EVENTS_KEY = "prod:usage-events"
+# The newest stored event may be this many days old before the alert fires: dbt's own freshness warning
+# (dbt_usage/tests/usage_events_are_fresh.sql; tests/test_usage_health.py ties the two). A warning only: a quiet
+# few days on a small site is possible, and the quietest week isn't known until the collector has run for 8.
+EVENTS_FRESH_DAYS = 3
+_EVENT_FILE = re.compile(r"events/day=(\d{4}-\d{2}-\d{2})/[^/]+\.parquet")
+
+
+class NotListed(Exception):
+    """The usage dataset's files couldn't be listed, so nothing can be said about its events; the message says why
+    and holds no token and no dataset name."""
+
+
+def events_state(root: str | None = None) -> dict[str, Any]:
+    """The usage dataset's stored event days, from its file names alone (events/day=<YYYY-MM-DD>/<file>.parquet;
+    no file is opened): {"days": how many days have a file, "newest": the latest such day or None}. A local folder is
+    globbed; an hf:// dataset is listed with HF_TOKEN. Raises NotListed when it can't be listed: no token, or a
+    dataset the Hub calls "not found" (which it answers alike for a wrong name and a token that can't read it)."""
+    root = root or dataset()
+    if "://" not in root:
+        base = Path(root)
+        names = [p.relative_to(base).as_posix() for p in base.glob(EVENTS_GLOB)]
+    else:
+        token = os.environ.get("HF_TOKEN") or None
+        if token is None:
+            raise NotListed("no Hub token (HF_TOKEN): the usage dataset is private")
+        from huggingface_hub import HfApi
+        from huggingface_hub.errors import RepositoryNotFoundError
+
+        from .importers import _hub
+
+        repo = root.removeprefix("hf://datasets/").split("@")[0].strip("/")
+        try:
+            names = list(_hub(HfApi(token=token).list_repo_files, repo, repo_type="dataset"))
+        except RepositoryNotFoundError:
+            raise NotListed(
+                'the Hub answered "not found": COFFEEDATA_USAGE names the wrong dataset, or the token can\'t read it'
+            ) from None
+    days = set()
+    for name in names:
+        if m := _EVENT_FILE.fullmatch(name):
+            try:
+                days.add(date.fromisoformat(m.group(1)))
+            except ValueError:
+                continue  # not a real date (a schema file's 0000-00-00): not a stored day
+    return {"days": len(days), "newest": max(days).isoformat() if days else None}
+
+
+def events_alert(state: dict[str, Any], today: str) -> dict:
+    """The triage alert for the stored events: firing when the dataset holds no event at all, or its newest stored
+    day is more than EVENTS_FRESH_DAYS before `today`. It says which, and carries a day and statuses only: never a
+    count of events or visits (the repository is public)."""
+    newest = state.get("newest")
+    age = (date.fromisoformat(today) - date.fromisoformat(newest)).days if newest else None
+    stale = age is not None and age > EVENTS_FRESH_DAYS
+    if newest is None:
+        summary = (
+            "The usage dataset holds no event file: the collector has stored nothing. Either no page has sent it an "
+            "event, or it refused or lost every one; its own log says which."
+        )
+    elif stale:
+        summary = (
+            f"The newest stored usage event is from {newest}, {age} days before this check (more than "
+            f"{EVENTS_FRESH_DAYS}): the collector has stopped storing, or nobody has visited since."
+        )
+    else:
+        summary = ""
+    return {
+        "key": EVENTS_KEY, "kind": "prod", "title": "usage: the collector isn't storing events",
+        "severity": "warning", "firing": newest is None or stale, "summary": summary,
+        "source": "src/coffeedata/usage_build.py",
+        "checks": [
+            {"name": "an event is stored", "status": "ok" if newest else "warning"},
+            {"name": f"newest stored day within {EVENTS_FRESH_DAYS} days",
+             "status": "warning" if newest is None or stale else "ok"},
+        ],
+        "context": {"newest stored day": newest or "none"},
+        "steps": [
+            "Read the collector's log in Cloud Logging (the `registry-coffee-usage` service; docs/app/RUNNING.md, "
+            "Usage): its flush lines say whether requests arrived and why any were refused or lost. No request at "
+            "all: check config/usage.toml's collector_url against the service's address, and the pages' CSP.",
+            "Requests refused: the reason is in the line's fields (a foreign origin, no address). Events lost: the "
+            "`usage_dropped` alert has emailed too; check the collector's Hub token.",
+            "A quiet week needs nothing. This issue closes at the next check that finds an event stored within "
+            f"{EVENTS_FRESH_DAYS} days (`gh workflow run usage-health` checks now).",
+        ],
+    }  # fmt: skip
 
 
 def fetcher(root: str) -> Callable[[str, Path], None]:

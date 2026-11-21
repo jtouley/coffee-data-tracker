@@ -18,6 +18,20 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- A failed Terraform step in the apply workflow says why, as far as an allow-list can: for each error, a reason
+  from a fixed list (403 permission denied, 404 not found, 409 already exists, 400 invalid argument, quota, 5xx) and
+  the denied permission's name, with what to do about it (`scripts/tf_error_reasons.py`). Nothing else from
+  Terraform's messages is shown, as before.
+- A weekly check that usage events arrive (`.github/workflows/usage-health.yml`, Tuesdays): `coffeedata usage-build
+  --alerts-out` reads the private usage dataset's event file names and builds the usage reports, and `coffeedata
+  triage usage` opens `prod:usage-events` (nothing stored, or nothing for three days), `prod:usage-search-text` or
+  `pipeline:usage-health` (the check couldn't judge) triage issues. Statuses, one date and pattern counts only.
+- The usage collector's log says whether it is receiving anything: one `usage flush` line per window in which any
+  request arrived (requests, refused by reason, events accepted, rejected by reason, published, waiting, and the
+  error's type when a write or publish failed), a `usage start` line per instance (whether it can publish) and a
+  `usage shutdown` line (what the last flush published, what was lost and why, the instance's totals; every accepted
+  event not published counts as lost, a flush that ran out of time included). "Nobody came"
+  and "everything was refused or lost" no longer read the same; `docs/app/RUNNING.md`, "Reading the collector's log".
 - Anonymous usage counting, page side (the analytics design's PRs 4 and 5): registry.coffee's pages send a
   `page_view`, the catalog its settled `search` and `filter_state`, and every link out to a roaster a `click_out`;
   the app sends its bag-screen catalog search and the coffee page's Shop click. Events wait in memory and leave on a
@@ -202,6 +216,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- The probe stops at a refusal: an edge's challenge on any status (a 202, a 403 with `cf-mitigated`, a 503), or a
+  429 or 430 its retries didn't get past, on `/products.json` or the home page is recorded (`blocked`, or
+  `http_429`/`http_430`) and nothing more is asked of the site. It used to swallow it, ask the WooCommerce Store API
+  on the same host (or the home page at `www.`), and record `ok`. A plain 5xx still falls back as before. A pause
+  doesn't count as probed (registry and `int_roaster_state`), so the place is asked again next run instead of
+  backing off as unreachable.
 - **A release whose coffee-or-not verdicts weren't checked is never served (#181).** The 2026-11-09 weekly build ran an
   image without a verdict model, its gate never ran, and it was served for a week. Now a build with no verdict model,
   the gate off, or no passing `verdicts_cover_catalog` is recorded as failed. `serve`, `rollback` and `site --served`
@@ -279,6 +299,15 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Security
 
+- Crawler (the 2026-11-21 review, F1, F2, F7, F8; `coffeedata/netguard.py`): it connects only to globally routable
+  addresses, every redirect hop checked and each connection made to the address it vetted, and never to an IP
+  literal (the registry refuses them too). A robots.txt that redirects off the host's own site is robots.txt
+  unavailable: nothing is fetched, and no stored copy stands in. Only sitemap and product URLs on the store's own
+  site are read (a redirect from one is still followed, address-checked and under that host's robots.txt); a sitemap
+  with none is a failed fetch, never an empty catalog, and caps far above any catalog make the fetch partial when
+  reached. A WooCommerce variation id that isn't digits is dropped like a gone size. Each request has a total time
+  limit of 120 s, not retried, and never read as the host being down.
+
 - From the 2026-11-18 self-assessment: the weekly and issue-form workflows set each secret only on the step whose
   `coffeedata` command reads it, and a test keeps workflow- and job-level `env` free of secrets; a bag's `photo_id`
   is checked like the other ids; the app's in-memory label reads, replies and daily read counts are capped, least
@@ -286,8 +315,19 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   instead of tying up request threads (the hashing parameters are unchanged); and registry.coffee publishes
   `/.well-known/security.txt` (RFC 9116), pointing to SECURITY.md's private reporting route.
 
+- Model input (the 2026-11-21 review, F3): Claude's enrichment answer is held to its schema's keys and to size limits
+  above every value enriched so far, and an answer that isn't a JSON object is skipped instead of stopping the
+  batch. The MCP server's `search_coffees` returns roasters' text marked as data, its read tools are annotated
+  read-only, and `log_shot` writes only after the person confirms (or with `COFFEEDATA_MCP_WRITES=1`).
+
 - App: the sign-in, join, reset and change-password forms post, so a form app.js didn't wire never puts the
   password in the URL, and the sign-in screen's clearing of offline pages can no longer stop the forms being wired.
+
+- App (the 2026-11-21 review, F5, F6, F10, F11): Sign out ends the account's sessions on every device (a copied
+  cookie no longer works afterwards), so Setup has one Sign out, which says so. Choosing a bag is a same-origin POST;
+  a GET of the old address changes nothing. The service worker clears the kept pages itself whenever it sees the
+  session is over (a 401, the sign-in screen, a photo sent to sign-in). The app's DuckDB reads pass file paths as
+  parameters, and `photos.load` checks the photo id itself.
 
 - App: queued writes are bound to the account that queued them. After an account switch, a queued save is held on
   the phone instead of being written under the other account (#56).
