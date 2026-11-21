@@ -42,7 +42,7 @@ change's count here. The scored test set can now join the regression fixtures, a
    first: the candidate without prose is the change (commit `ba515d4`).
 4. **Test (sealed):** sampled after the freeze; `pred_main_test.json` (main `7251e1c`) and `pred_branch_test.json`
    (`ba515d4`) and `sample_test.json` were hashed before any test label existed, then the test labels were hashed
-   before any score (first the withdrawn `labels/A_test.json`, in commit `2751a76`; now A2's and B's).
+   before any score (first the withdrawn `labels/A_test.json`, in commit `2751a76`; then A2's and B's; finally A, B, C and the merged reference, hashed in `d4f6fd9` before the one test score).
 
 Samples: per set, up to 20 listed products per stratum of how main's and the change's processes relate
 (`same_none`, `same_process`, `none_to_process`, `process_to_none`, `process_to_other`), first by a salted hash.
@@ -90,8 +90,8 @@ python process_eval.py packet  <data-dir> <set> dev/process-eval/packet_<set>.tx
 python process_eval.py score   <data-dir> train      labels/reference_train.json      main branch --strata main,v5
 python process_eval.py score   <data-dir> validation labels/reference_validation.json main branch --strata main,v5
 # per set: settle, the third labeller, merge; then score train and validation, and the test set once (totals only)
-python process_eval.py settle  labels/A2_<set>.json labels/B_<set>.json disagreements_<set>.json
-python process_eval.py merge   labels/A2_<set>.json labels/B_<set>.json labels/C_<set>.json labels/reference_<set>.json
+python process_eval.py settle  labels/A_<set>.json labels/B_<set>.json disagreements_<set>.json
+python process_eval.py merge   labels/A_<set>.json labels/B_<set>.json labels/C_<set>.json labels/reference_<set>.json
 python process_eval.py score   <data-dir> test labels/reference_test.json main branch --strata main,branch --final
 ```
 
