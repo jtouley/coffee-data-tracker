@@ -103,3 +103,30 @@ the sealed files with `sha256sum -c SHA256SUMS`, run from this directory.
 The test key list was first committed as `test_keys.txt` (hashed in `4e7e0a5`, before any test label) and moved to
 `test_keys.json` the same day because the whitespace hook stripped the trailing space of one key; the keys are the
 same 8,735, and `SHA256SUMS` now hashes the JSON file.
+
+## Round 2: validation extension and the next sealed test
+
+Drawn on 2026-11-21, after round 2's two candidates were committed (`3d9e49a`; `r2` is the committed rules,
+`r2nc` the same with `extract.CONFLICT` off) and before any of their listings was opened.
+
+- **Strata:** how main's and `r2`'s processes relate (`change(main, r2)`), over the listed catalog.
+- **Order:** within a stratum, by `sha256("coffeedata-process-eval-2026-11-21:<tag>:" + key)`, tags
+  `round2-validation` and `round2-test` (`process_eval.py draw`).
+- **Excluded:** every key used before: the 100 train, 100 validation and 100 spent test listings, the 100
+  diagnosis listings, and, for the test, the validation extension.
+- **Validation extension** (`sample_validation2.json`, validation roasters only): same_none 120 of 5,280,
+  same_process 120 of 1,343, none_to_process 30 of 472, process_to_none 15 of 117, process_to_other 15 of 80 (300).
+  It is scored on its own, by its own strata, to choose between `r2` and `r2nc` on aggregates only.
+- **Sealed test 2** (`sample_test2.json`, test-split roasters, the spent 100 left out): same_none 200 of 5,783,
+  same_process 100 of 1,065, none_to_process 60 of 620, process_to_none 20 of 100, process_to_other 20 of 95
+  (400). The rule author read the spent test listings as a (withdrawn) labeller; the new set shares their roasters
+  but none of their listings, and the rule author has not opened any of the 400.
+- **Hashed before any packet was built** (`SHA256SUMS.round2`): GUIDE.md (frozen; `9001240b…`), the test sample
+  with its strata sizes, and main's, `r2`'s and `r2nc`'s predictions over the whole test split.
+- **Packets:** one folder per labeller holding only `packet.txt` (the listings, shuffled, no prediction, label or
+  stratum) and GUIDE.md: `proc-v2-A`, `proc-v2-S` (300 listings), `proc-t2-A`, `proc-t2-S` (400), and empty
+  `proc-v2-H`, `proc-t2-H` for the settles. The test packet's sha256 is
+  `fdc2424a34a50c87…` (both copies identical).
+- **Scoring, once labelled:** `score <data> validation labels/reference_validation2.json main r2nc r2 --strata
+  main,r2` (choose by aggregates), then for the frozen choice, once: `score <data> test
+  labels/reference_test2.json main <choice> --strata main,r2 --final`.

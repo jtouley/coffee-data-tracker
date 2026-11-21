@@ -345,7 +345,9 @@ def score(
         print(f"  paired {names[-1]} - {names[0]}: {what} {est:+.1%} ± {1.96 * math.sqrt(var):.1%}")
 
 
-def draw(data: Path, set_name: str, a: str, b: str, tag: str, alloc: dict, out: Path, used: list[Path]) -> None:
+def draw(
+    data: Path, set_name: str, a: str, b: str, tag: str, alloc: dict, out: Path, used: list[Path]
+) -> None:
     """Up to alloc[stratum] listed products of the set per stratum (how a's and b's processes relate), first by
     sha256(SALT:tag:key), none of the keys in the used files (dicts of stratum -> keys, or lists, or label dicts).
     Writes {"rule", "strata": {stratum: size}, "sample": {stratum: [keys]}}."""
@@ -366,10 +368,17 @@ def draw(data: Path, set_name: str, a: str, b: str, tag: str, alloc: dict, out: 
         st: sorted((k for k in ks if k not in gone), key=lambda k: _order(k, tag))[: alloc.get(st, 0)]
         for st, ks in sorted(strata.items())
     }
-    rule = (f"set {set_name}, listed; strata change({a}, {b}); per stratum the first n by "
-            f"sha256('{SALT}:{tag}:' + key), excluding {len(gone)} used keys")
-    out.write_text(json.dumps({"rule": rule, "strata": {st: len(ks) for st, ks in sorted(strata.items())},
-                               "sample": sample}, indent=1) + "\n")
+    rule = (
+        f"set {set_name}, listed; strata change({a}, {b}); per stratum the first n by "
+        f"sha256('{SALT}:{tag}:' + key), excluding {len(gone)} used keys"
+    )
+    out.write_text(
+        json.dumps(
+            {"rule": rule, "strata": {st: len(ks) for st, ks in sorted(strata.items())}, "sample": sample},
+            indent=1,
+        )
+        + "\n"
+    )
     print(out, {st: f"{len(v)}/{len(strata[st])}" for st, v in sample.items()}, "excluded", len(gone))
 
 
@@ -428,8 +437,16 @@ if __name__ == "__main__":
     elif cmd == "score":
         score(Path(args[0]), args[1], Path(args[2]), args[3:], final, strata)
     elif cmd == "draw":
-        draw(Path(args[0]), args[1], args[2], args[3], args[4], json.loads(args[5]), Path(args[6]),
-             [Path(x) for x in args[7:]])
+        draw(
+            Path(args[0]),
+            args[1],
+            args[2],
+            args[3],
+            args[4],
+            json.loads(args[5]),
+            Path(args[6]),
+            [Path(x) for x in args[7:]],
+        )
     elif cmd == "packet":
         packet(Path(args[0]), args[1], Path(args[2]))
     elif cmd == "settle":
