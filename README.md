@@ -87,8 +87,8 @@ graph LR
     D --> H[public tables]
 ```
 
-Each Monday, Cloud Run jobs check each roaster's store platform and read its catalog into an append-only lake of
-Parquet files. On Tuesday, dbt and DuckDB build the models, release checks decide whether the build is served, and
+Each Monday, Cloud Run jobs read every roaster's store catalog (re-checking its platform every 28 days) into an
+append-only lake of Parquet files. On Tuesday, dbt and DuckDB build the models, release checks decide whether the build is served, and
 the `site` workflow publishes the site and the public tables. [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) covers
 each step, the lake's layout, the data-quality gates, the contracts and the crawler's etiquette.
 
