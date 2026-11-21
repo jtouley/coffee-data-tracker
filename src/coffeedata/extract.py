@@ -319,11 +319,158 @@ def origin_country(title: str, in_title: list[str], body: str, tag_region: str =
     return _one(regions)
 
 
-def _process(text: str) -> str | None:
-    for name, pat in _PROCESS:
-        if re.search(pat, text, re.I):
-            return name
+# --- Process ----------------------------------------------------------------------------------------
+# What happened to the cherry: washed, natural, honey, anaerobic or other (eval/process/GUIDE.md defines each). The
+# rules answer only when the listing states one process; a listing that states two ("Natural / Washed", "unlike our
+# washed lot, this natural ..."), or none, gets no answer and needs_llm() sends it to Claude. _PROCESS above stays
+# the importers' list (importer_rules.py); the catalog reads the terms below.
+
+# A decaffeination method is not how the cherry was processed: "Swiss Water Process", "sugarcane process", "a natural
+# decaf process", "naturally decaffeinated". Blanked before any process is read.
+_DECAF_METHOD = re.compile(
+    r"\b(?:(?:swiss|mountain|mtn\.?|royal\s+select)\s+water(?:\s+process(?:ed|ing)?)?|water[- ]process(?:ed|ing)?|"
+    r"sugar[- ]?cane(?:\s+(?:process(?:ed|ing)?|decaf\w*|e\.?a\.?))?|co2(?:\s+process(?:ed)?)?|"
+    r"ethyl[- ]acetate(?:\s+process(?:ed)?)?|e\.?a\.?\s+process(?:ed)?|european\s+process|"
+    r"natural(?:ly)?\s+(?:decaf\w*|caffeine)[\w ]{0,20}?process(?:ed|ing)?|natural(?:ly)?\s+decaf\w*|"
+    r"decaf\w*\s+(?:process(?:ed|ing)?|method))\b"
+    # "natural fermentation" is a spontaneous fermentation (most washed coffees have one), not the natural process.
+    r"|\bnatural(?:ly)?\s+ferment\w*",
+    re.I,
+)
+# Indonesia calls wet-hulling "semi-washed"; elsewhere semi-washed is pulped natural (honey).
+_INDONESIA = re.compile(
+    r"\b(?:indonesia\w*|sumatra\w*|sulawesi|toraja|java|bali|flores|aceh|gayo|mandh?eling|lintong|papua|timor)\b",
+    re.I,
+)
+# The terms, in a value that names the process ("Process: Fully Washed", a "process:" tag, a title). The base methods
+# first; terms that contain another's words ("pulped natural", "semi-washed") are read and blanked before it.
+_BASE_TERMS = [
+    (
+        "honey",
+        r"pulped[- ]natural|(?:black|red|yellow|white|golden)[- ]honey|honey(?:[- ]process(?:ed|ing)?)?|miel",
+    ),
+    ("semi", r"semi[- ]?washed"),
+    ("natural", r"natural(?:ly|s)?|dry[- ]process(?:ed|ing)?|full[- ]natural"),
+    ("washed", r"(?:fully[- ]|double[- ]|triple[- ])?washed|wet[- ]process(?:ed|ing)?|lavado"),
+]
+_ANAEROBIC = r"anaerobic(?:ally)?|carbonic(?:\s+maceration)?"
+_WET_HULLED = r"wet[- ]?hull(?:ed|ing)?|giling[- ]basah"
+# A fermentation named with no base method ("Process: Lactic", "Thermal Shock") is "other".
+_EXPERIMENTAL = (
+    r"co-?ferment\w*|lactic|yeast|koji|thermal[- ]shock|double[- ]ferment\w*|extended[- ]ferment\w*|"
+    r"infused|experimental|mossto|cold[- ]ferment\w*"
+)
+
+
+# A source that names two processes: no answer, and the sources after it aren't read.
+TWO = "two"
+
+
+def _resolve(text: str, base: set[str], experimental: bool = False) -> str | None:
+    """One process from the categories found in `text`: anaerobic over any one base method, wet-hulled is other,
+    else the one base method; two base methods are TWO."""
+    if len(base) > 1:
+        return TWO
+    if re.search(rf"\b(?:{_ANAEROBIC})\b", text, re.I):
+        return "anaerobic"
+    if re.search(rf"\b(?:{_WET_HULLED})\b", text, re.I):
+        return TWO if base - {"semi"} else "other"
+    if base == {"semi"}:
+        return "other" if _INDONESIA.search(text) else "honey"
+    if base:
+        return next(iter(base))
+    if experimental and re.search(rf"\b(?:{_EXPERIMENTAL})\b", text, re.I):
+        return "other"
     return None
+
+
+def _process(text: str, context: str = "", experimental: bool = False) -> str | None:
+    """The process a short value names (a tag, a title, a labelled field): None when it names none, TWO for two.
+    `context` is the rest of the listing, read only to tell an Indonesian semi-washed (wet-hulled) from honey.
+    experimental: a fermentation named without a method ("Lactic") is "other"; otherwise it is no answer, so that
+    a later source can still name the method ("Double Fermentation" in the title, "Process: Natural" below)."""
+    text = _DECAF_METHOD.sub(" ", text)
+    base: set[str] = set()
+    for name, pat in _BASE_TERMS:
+        # Words glued by a lost line break ("Natural & WashedRecipes:") still end at the capital.
+        rx = re.compile(rf"(?<![a-z])(?:{pat})(?-i:(?![a-z]))", re.I)
+        if rx.search(text):
+            base.add(name)
+            text = rx.sub(" ", text)
+    # "Sun-dried" alone is a natural; beside a method ("Fully washed, sun-dried on raised beds", "Wet-hulled,
+    # sun-dried") it is the drying.
+    if (
+        not base
+        and re.search(r"\bsun[- ]?dried\b", text, re.I)
+        and not re.search(rf"\b(?:{_WET_HULLED})\b", text, re.I)
+    ):
+        base.add("natural")
+    if base >= {"semi", "honey"}:  # "Honey (semi-washed)"
+        base.discard("semi")
+    return _resolve(
+        f"{text} {_DECAF_METHOD.sub(' ', context)}" if base == {"semi"} else text, base, experimental
+    )
+
+
+# A labelled field in the description: "Process: Washed", "PROCESSING METHOD: Natural", "Processed | Honey",
+# "PROCESS Fully washed" (a label in capitals needs no colon). The value runs to the end of the line, the next
+# label, or 40 characters.
+_LABELLED_PROCESS = re.compile(
+    r"(?:(?:\b|(?<=[a-z])(?=Process|PROCESS))(?i:process(?:ed|ing)?(?:\s+method)?|proc\.?\s+method|proceso|processo|beneficio)\s*[:|\-–]+"
+    r"|(?<!THE )(?<!OUR )\bPROCESS(?:ED|ING)?(?:\s+METHOD)?\b:?)[ \t]*\n?[ \t]*([^\n|]{2,60})"
+)
+_NEXT_LABEL = re.compile(
+    r"(?:\s|(?<=[a-z])(?=[A-Z]))(?:altitude|elevation|region|variet(?:y|al|ies)|cultivars?|roast|notes|tasting|farm|"
+    r"producer|farmer|origin|harvest|grade|certifi\w*|country|body|acidity|drying|dried|recipes?|flavou?rs?|aroma|"
+    r"importer|cup|washing station|station|mill|location|grower|coop|co-op|description|weight|size)\b",
+    re.I,
+)
+# A tag that is nothing but a process ("Washed", "Natural Process", "Anaerobic Natural", "wet-hulled"): the store's
+# own facet, as clear as a "process:" tag.
+_PROCESS_TAG = re.compile(
+    r"^(?:(?:fully|double)\s+)?(?:washed|natural(?:ly)?|honey(?=\s+process)|anaerobic(?:\s+(?:natural|washed|honey))?|"
+    r"wet[- ]?hulled|semi[- ]?washed|pulped\s+natural|carbonic\s+maceration|(?:black|red|yellow|white)\s+honey)"
+    r"(?:\s+(?:process(?:ed)?|processing))?(?:\s+coffees?)?$",
+    re.I,
+)
+
+
+def process_of(item: CatalogItem, kv: dict[str, list[str]]) -> str | None:
+    """The process the listing states: its "process:" tag, the title, a labelled "Process:" field in the
+    description, then a tag that is only a process. The first source that names a process decides; a source that
+    names two gives no answer, and neither do the sources after it."""
+    p = _process_of(item, kv)
+    if p is None:  # no source names a method: a named fermentation is "other"
+        kv_title = f"{_first(kv, 'process', 'processing')} | {item.title}"
+        p = _process(kv_title, experimental=True) or _process(
+            " | ".join(_labelled(item.body_text[:4000])), experimental=True
+        )
+    return None if p == TWO else p
+
+
+def _labelled(body: str) -> list[str]:
+    return [_NEXT_LABEL.split(m.group(1), maxsplit=1)[0] for m in _LABELLED_PROCESS.finditer(body)]
+
+
+def _process_of(item: CatalogItem, kv: dict[str, list[str]]) -> str | None:
+    body = item.body_text[:4000]
+    context = f"{item.title} {' '.join(item.tags)} {body}"
+    if p := _process(_first(kv, "process", "processing"), context):
+        return p
+    if p := _process(item.title, context):
+        return p
+    values = {p for v in _labelled(body) if (p := _process(v, context)) is not None}
+    if (
+        "anaerobic" in values and len(values - {"anaerobic", "other"}) <= 1
+    ):  # "anaerobic fermentation" + "Washed"
+        return "anaerobic"
+    if values:
+        return values.pop() if len(values) == 1 else TWO
+    bare = [t for t in item.tags if _PROCESS_TAG.match(t.strip().replace("-", " ").replace("_", " "))]
+    # The description's running prose ("processed using the washed method") is not read: on eval/process's validation
+    # set reading it added coverage but was wrong about one time in five (blends, coffees named for contrast), so
+    # those listings are left to Claude.
+    return _process(" | ".join(bare), context) if bare else None
 
 
 def rules(item: CatalogItem) -> Enrichment:
@@ -340,12 +487,7 @@ def rules(item: CatalogItem) -> Enrichment:
     e.origin_country = _country(origin_tag) or (
         None if no_origin else origin_country(item.title, in_title, body, tag_region=origin_tag)
     )
-    labelled = re.search(r"process(?:ing)?\s*[:\-–]\s*([^\n]{2,40})", body, re.I)
-    e.process = (
-        _process(_first(kv, "process", "processing"))
-        or _process(item.title)  # type: ignore[assignment]
-        or (_process(labelled.group(1)) if labelled else None)
-    )
+    e.process = process_of(item, kv)  # type: ignore[assignment]
     roast_text = _first(kv, "roast", "roastlevel", "roastprofile")
     for name, pat in _ROAST:
         if re.search(rf"\b{name}\b", roast_text, re.I) or re.search(
