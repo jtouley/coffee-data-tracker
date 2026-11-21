@@ -13,7 +13,15 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import USER_AGENT, Blocked, DeadlineReached, PoliteClient, RobotsUnavailable, is_challenge
+from .http import (
+    USER_AGENT,
+    Blocked,
+    DeadlineReached,
+    PoliteClient,
+    RobotsUnavailable,
+    asked_wait,
+    is_challenge,
+)
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
@@ -324,6 +332,11 @@ HTML_MARKERS = [
     ("webflow?", r"webflow"),
 ]
 
+# The catalog APIs the probe and the screen ask: platform -> (path, the page-size parameter, the JSON's type).
+APIS: dict[str, tuple[str, str, type]] = {
+    "shopify": ("/products.json", "limit", dict),
+    "woocommerce": ("/wp-json/wc/store/v1/products", "per_page", list),
+}
 
 # A pause: the site, or its platform, asked us to slow down (Shopify's 430 is IP-wide). Recorded, never counted as
 # probed (registry.STATE_SQL and dbt's int_roaster_state leave http_429 and http_430 out), so the next probe run
@@ -333,9 +346,12 @@ PAUSES = (429, 430)
 
 def _refuses(r: httpx.Response) -> bool:
     """Whether an answer refuses or pauses us: an edge's challenge on any status (a 202, a 403 with
-    `cf-mitigated: challenge`, a 503 with `sg-captcha`), or a 429 or 430. A plain 5xx doesn't: it is the server's
-    trouble, not an answer to us, so the probe's fallbacks (www, the next API) still apply."""
-    return is_challenge(r) or r.status_code in PAUSES
+    `cf-mitigated: challenge`, a 503 with `sg-captcha`), a 429 or 430, or a 5xx that asks us to wait (Retry-After,
+    http.asked_wait). A plain 5xx doesn't: it is the server's trouble, not an answer to us, so the fallbacks (www,
+    the next API) still apply."""
+    if is_challenge(r) or r.status_code in PAUSES:
+        return True
+    return 500 <= r.status_code < 600 and asked_wait(r) is not None
 
 
 def _refused(host: str, r: httpx.Response) -> dict:
@@ -345,76 +361,130 @@ def _refused(host: str, r: httpx.Response) -> dict:
     return {"status": status, "final_host": host, "platform": "", "http_status": r.status_code}
 
 
-def probe_one(client: PoliteClient, domain: str) -> dict:
-    """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
-    an edge's challenge) | unreachable | http_<code> |
-    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again).
-    A challenge on any status, or a 429 or 430, is the site's answer to us (_refuses): the probe stops there and
-    records it (_refused), on the home page and on the catalog API alike, and never asks www or the next platform's
-    API instead. A plain 5xx still falls back, as before."""
+def _home(
+    client: PoliteClient, domain: str, strict: bool = False
+) -> tuple[dict | None, httpx.Response | None]:
+    """robots.txt and the home page, at the domain and then at www. Returns (None, the page) when it answered 200,
+    else (the probe's row for the failure, the page if one answered). The probe and the screen (screen.screen_one)
+    both start here.
+
+    A refusal or a pause (_refuses) is the site's answer to us, so www is never asked: the probe's row says so
+    (_refused); strict (the screen) raises its HTTPStatusError instead, so the screen records it. A plain 5xx falls
+    back to www. strict also keeps what a host that never answered 200 said: `timeout` when the home page timed out,
+    `http_<code>` when a plain 5xx was the last answer (a slow or failing site isn't a dead one); the probe calls
+    both `unreachable`, as it always has."""
     home = None
     no_robots = False
+    timed_out = False
+    server_error: int | None = None
     for host in (domain, f"www.{domain}"):
         try:
             home = client.get(f"https://{host}/")
             break
         except Blocked:
-            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
+            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}, None
         except RobotsUnavailable as e:
             if e.challenge:
                 # an edge's challenge on robots.txt (a 202, or a 401/403 with a challenge header) answers every
                 # request the same way: the site refuses us, as a robots block does. A probe status of its own that
                 # counts as probed (`blocked`), so discovery doesn't ask again on every run (robots_unavailable does)
-                return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
+                return {
+                    "status": "blocked",
+                    "final_host": host,
+                    "platform": "",
+                    "http_status": e.status,
+                }, None
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
-        # a pause or a challenge (on a 503): the site answered us, so www isn't asked too; a plain 5xx falls back
-        except httpx.HTTPStatusError as e:
+        except httpx.HTTPStatusError as e:  # a 429, 430 or 5xx the client's retries didn't get past
             if _refuses(e.response):
-                return _refused(host, e.response)
+                if strict:
+                    raise
+                return _refused(host, e.response), None
+            server_error = e.response.status_code  # a plain 5xx: www is still asked
+            continue
+        except httpx.TimeoutException:
+            timed_out = True
             continue
         except httpx.HTTPError:
             continue
     if home is None:
         status = "robots_unavailable" if no_robots else "unreachable"
-        return {"status": status, "final_host": "", "platform": "", "http_status": None}
+        if strict and status == "unreachable":
+            status = f"http_{server_error}" if server_error else "timeout" if timed_out else status
+        http_status = server_error if strict and status.startswith("http_") else None
+        return {"status": status, "final_host": "", "platform": "", "http_status": http_status}, None
     if _refuses(home):  # a challenge on a status the client doesn't raise for (a 202, a 403)
-        return _refused(urlparse(str(home.url)).netloc, home)
+        return _refused(urlparse(str(home.url)).netloc, home), home
     if home.status_code != 200:
         return {
             "status": f"http_{home.status_code}",
             "final_host": urlparse(str(home.url)).netloc,
             "platform": "",
             "http_status": home.status_code,
-        }
+        }, home
+    return None, home
+
+
+def _api(
+    client: PoliteClient, host: str, platform: str, page_size: int, strict: bool = False
+) -> tuple[dict | list | None, httpx.Response | None]:
+    """The first page of one platform's catalog API, `page_size` products long: (the JSON, its response) when it is
+    that platform's product list, else (None, the response if one answered). A robots.txt that didn't answer on
+    `host` raises RobotsUnavailable. A 429, 430 or 5xx the client's retries didn't get past comes back as (None, its
+    response), like any other answer, so the caller sees what the site said: _refuses tells a refusal or a pause,
+    after which nothing more is asked of the host, from a plain 5xx. strict (the screen): a robots.txt rule against
+    the path (Blocked) and a timeout are raised too, so the caller can record them; the probe reads both as "not
+    this platform"."""
+    path, size_param, kind = APIS[platform]
+    try:
+        r = client.get(f"https://{host}{path}", **{size_param: page_size})
+    except RobotsUnavailable:
+        raise
+    except (Blocked, httpx.TimeoutException):
+        if strict:
+            raise
+        return None, None
+    except httpx.HTTPStatusError as e:
+        return None, e.response
+    except httpx.HTTPError:
+        return None, None
+    if r.status_code != 200:
+        return None, r
+    try:
+        data = scrub_surrogates(r.json())
+    except ValueError:
+        return None, r
+    if isinstance(data, list) if kind is list else isinstance(data, dict) and "products" in data:
+        return data, r
+    return None, r
+
+
+def probe_one(client: PoliteClient, domain: str) -> dict:
+    """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
+    an edge's challenge) | unreachable | http_<code> |
+    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again).
+    A challenge on any status, a 429 or 430, or a 5xx with a Retry-After, is the site's answer to us (_refuses): the
+    probe stops there and records it (_refused), on the home page and on the catalog API alike, and never asks www or
+    the next platform's API instead. A plain 5xx still falls back, as before."""
+    failed, home = _home(client, domain)
+    if failed is not None:
+        return failed
+    assert home is not None
     host = urlparse(str(home.url)).netloc
-    for platform, path, params, kind in [
-        ("shopify", "/products.json", {"limit": 1}, dict),
-        ("woocommerce", "/wp-json/wc/store/v1/products", {"per_page": 1}, list),
-    ]:
-        data = None
+    # always Shopify, then WooCommerce, one product each: the probe's order (the screen has its own)
+    for platform in APIS:
         try:
-            r = client.get(f"https://{host}{path}", **params)
+            data, r = _api(client, host, platform, 1)
         except RobotsUnavailable as e:  # the home page redirected to a host whose robots.txt didn't answer
             if e.challenge:  # refused, as above
                 return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
             return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
-        # refused or paused on the catalog API: the next platform's API on this host is never asked
-        except httpx.HTTPStatusError as e:
-            if _refuses(e.response):
-                return _refused(host, e.response)
-        except (Blocked, httpx.HTTPError):
-            pass
-        else:
-            if _refuses(r):  # a challenge on any status (a 202, a 403): as on the home page
-                return _refused(host, r)
-            if r.status_code == 200:  # as client.get_json reads it
-                try:
-                    data = scrub_surrogates(r.json())
-                except ValueError:
-                    data = None
-        if isinstance(data, kind) and (kind is list or "products" in data):
+        # refused or paused: the next platform's API on this host is never asked
+        if r is not None and _refuses(r):
+            return _refused(host, r)
+        if data is not None:
             return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
     html = home.text.lower()
     platform = next((p for p, pat in HTML_MARKERS if re.search(pat, html)), "other")

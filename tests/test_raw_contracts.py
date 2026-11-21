@@ -288,11 +288,12 @@ def test_every_contracted_table_and_column_is_described_and_has_quality_rules(na
 
 
 _ROOT = Path(__file__).parent.parent
-_DBT_MODELS = {m["name"]: m for m in yaml.safe_load((_ROOT / "dbt/models/schema.yml").read_text())["models"]}
 
 
-def _dbt_tests(model: str, column: str) -> list[str]:
-    col = next(c for c in _DBT_MODELS[model]["columns"] if c["name"] == column)
+def _dbt_tests(model: str, column: str, file: str = "models/schema.yml") -> list[str]:
+    """The tests a model's column carries in the properties file the rule names."""
+    models = {m["name"]: m for m in yaml.safe_load((_ROOT / "dbt" / file).read_text())["models"]}
+    col = next(c for c in models[model]["columns"] if c["name"] == column)
     return [t if isinstance(t, str) else next(iter(t)) for t in col.get("data_tests") or []]
 
 
@@ -304,7 +305,9 @@ def test_each_quality_rule_names_an_enforcer_that_exists(name):
             assert (_ROOT / "dbt" / impl).is_file(), impl
         elif q.get("engine") == "dbt":
             assert (_ROOT / "dbt" / impl["file"]).is_file()
-            assert all(impl["test"] in _dbt_tests(impl["model"], c) for c in impl["columns"]), impl
+            assert all(impl["test"] in _dbt_tests(impl["model"], c, impl["file"]) for c in impl["columns"]), (
+                impl
+            )
         elif q.get("engine") == "pytest":
             file, test = impl.split("::")
             assert re.search(rf"^def {test}\(", (_ROOT / file).read_text(), re.M), impl

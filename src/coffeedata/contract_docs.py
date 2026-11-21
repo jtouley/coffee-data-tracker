@@ -5,6 +5,11 @@ description here, or a description names a column the lake doesn't have."""
 from __future__ import annotations
 
 TABLES: dict[str, str] = {
+    "screens": "One screen of one discovery candidate's site: what it answered to robots.txt, the home page and one "
+    "product page. Raw and append-only: nothing derived is stored, and a re-screen is a new row. Private: these "
+    "places aren't in the registry, and the table is never exported or released.",
+    "screen_products": "The products on the one catalog page a screen read, as the store listed them. Raw, "
+    "append-only and private, as screens.",
     "snapshots": "Every product a store listed at one fetch, coffee or not: one row per (fetch batch, product).",
     "bodies": "Product descriptions as text, once per distinct description (body_hash).",
     "fetches": "One row per fetch attempt of a roaster's catalog, ok or not, with what it asked of the store.",
@@ -17,6 +22,9 @@ TABLES: dict[str, str] = {
     "before it, with the reason (dbt release_changes); empty when nothing was served.",
     "product_decisions": "Ops: every product a store lists, coffee or not, as of its latest record, with the "
     "build's coffee decision, what decided it and why (dbt product_decisions).",
+    "screen_scores": "Ops: each screened discovery candidate's tier under the roaster screen's rules, from its "
+    "latest screen, with the reasons and the day it is due again. Provisional until the rules are scored on a sealed "
+    "test; never public.",
     "mart_flags": "Ops: every flag a rule raised in the build, one row per rule and product, with its polarity, "
     "evidence and the product's summary: ready to remove, and its evidence group (dbt mart_flags).",
     "eval_prefilter": "Ops: each listed product the build's keyword filter change moves (newly excluded, or given "
@@ -28,10 +36,53 @@ TABLES: dict[str, str] = {
 }
 
 _RUN = "The weekly run (the Monday of its ISO week)."
+_SCREEN = "The screen these rows belong to (screens.screen_id)."
 _BATCH = "The write batch: one per checkpoint of a job, shared by a fetch's row and its snapshots."
 _ROASTER = "The roaster's normalized domain."
 
 COLUMNS: dict[str, dict[str, str]] = {
+    "screens": {
+        "run_date": "The day the screen job ran.",
+        "batch_id": "The write batch: one per checkpoint of the job, shared with its screen_products file.",
+        "screen_id": "The screen: one visit to one place (a uuid). A re-screen is a new row with a new id.",
+        "screened_at": "When the screen finished.",
+        "roaster_id": "The place's normalized domain, as in candidates.",
+        "state": "The US state the run screened.",
+        "status": "What the site answered, in the probe's words: ok, blocked (robots.txt disallows us, or an edge "
+        "challenged), unreachable, robots_unavailable, or http_<code>.",
+        "refusal": "How the site, or its edge, refused us, if it did: robots_disallow, robots_401_403, challenge, "
+        "http_429 or http_430. Nothing more was fetched from the host after it.",
+        "http_status": "The home page's HTTP status, or a challenge's; null when nothing answered.",
+        "final_host": "The host the home page was served from, after redirects.",
+        "platform": "shopify or woocommerce when its catalog API answered; else the home page's marker with a "
+        "question mark (wix?), or other.",
+        "page_size": "The page size the product page was asked at; null when none was read.",
+        "products_read": "Products on the one page read.",
+        "page_full": "The page was full, so the catalog may hold more.",
+        "page_timeout": "The product page timed out at every size tried.",
+        "edge": "The edge that challenged us, from the challenge's headers: siteground, cloudflare or other.",
+        "home_title": "The home page's title.",
+        "home_text": "The home page's visible text, its first 50,000 characters.",
+        "requests": "HTTP requests the screen sent, robots.txt, redirects and retries included (at most 6).",
+        "bytes": "Bytes of the home page and product page bodies read.",
+        "crawl_delay_s": "The longest spacing a host's robots.txt Crawl-delay gave this screen's requests, if any.",
+        "duration_s": "Seconds the screen took.",
+        "code_version": "The code that ran.",
+    },
+    "screen_products": {
+        "screen_id": _SCREEN,
+        "roaster_id": "The place's normalized domain.",
+        "product_id": "The store's product id.",
+        "handle": "The store's product handle or slug.",
+        "title": "The product's title.",
+        "vendor": "The product's vendor, as the store states it (Shopify).",
+        "product_type": "The product's type, as the store states it.",
+        "tags": "The product's tags (and categories, on WooCommerce).",
+        "variants": "Each size or option: its title, grams, price and currency as stated, and whether it is "
+        "available.",
+        "body_hash": "A hash of the product's description text.",
+        "body_text": "The description's text, its first 1,500 characters.",
+    },
     "snapshots": {
         "run_date": _RUN,
         "batch_id": _BATCH,
@@ -98,8 +149,8 @@ COLUMNS: dict[str, dict[str, str]] = {
     "job_manifests": {
         "run_date": _RUN,
         "job": "discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich, "
-        "fetch-health (the fetch-health check), classify (Claude's verdicts) or build (the dbt build, its release and "
-        "serve).",
+        "fetch-health (the fetch-health check), classify (Claude's verdicts), build (the dbt build, its release and "
+        "serve) or screen (the roaster screen of one state's candidates; run_date is its day, not a week).",
         "connector": "The connector (adapter) the job served, if any.",
         "shard": "The shard, if the job was sharded.",
         "attempt_id": "One execution of the job; its start and end rows share it.",
@@ -107,7 +158,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "ended_at": "When it ended (null on the start row).",
         "status": "running (start row), done, deadline or failed. An attempt with only a running row died. A "
         "build is done when it passed and was served, failed when its checks failed or it crashed (detail.passed, "
-        "detail.error).",
+        "detail.error). A screen is stopped when too many sites refused it (detail.stopped, detail.refusals).",
         "todo": "Roasters it set out to fetch.",
         "ok": "Roasters fetched.",
         "errors": "Roasters that failed.",
@@ -256,6 +307,18 @@ COLUMNS |= {
         "no_verdict": "Of them, no verdict yet or an unsure one.",
         "back_in_catalog": "Of them, coffee with this change (restored products coming back).",
     },
+    "screen_scores": {
+        "build_id": _OPS_BUILD,
+        "roaster_id": "The place's normalized domain, as in candidates.",
+        "screen_id": "The place's latest screen, which the tier is from (screens.screen_id).",
+        "tier": "suggested, review, dropped or not_screened.",
+        "decided_by": "rules, or claude once its verdicts on the review tier exist.",
+        "reasons": "Signal codes behind the tier, such as named 8/9, own_vendor 8/8, origins 4 or serves:<phrase>.",
+        "rule_version": "The version of the rules that gave the tier (screen_rules.RULE_VERSION).",
+        "verdict_model": "The model whose verdict decided, when decided_by is claude; else null.",
+        "screened_at": "When the latest screen finished.",
+        "next_due": "The first day the place may be screened again, from screened_at and never the clock.",
+    },
     "mart_flags": {
         "build_id": _OPS_BUILD,
         "rule": "The rule that raised the flag (coffeedata.rules.RULE_TYPES).",
@@ -297,12 +360,40 @@ COLUMNS |= {
 REQUIRED: dict[str, list[str]] = {"fetches": ["run_date", "batch_id", "roaster_id"]}
 
 _SCHEMA_YML = "models/schema.yml"
+_STAGING_YML = "models/staging/_staging__models.yml"
 
 # Quality rules on each contract's tables, and what enforces each one. engine dbt names a file under dbt/ (a
 # singular test) or a schema.yml test on model columns; engine pytest names a test; no engine means the writers
 # hold the rule and it is stated as text. enforced_by names what enforces a dbt or text rule (a pytest rule's is its
 # implementation). raw_contracts.py emits each as an ODCS quality rule on its tables.
 QUALITY: dict[str, list[dict]] = {
+    "screen": [
+        {"id": "writer_columns", "tables": ["screens", "screen_products"], "dimension": "conformity",
+         "severity": "error", "rule": "the screen job writes exactly the contract's columns",
+         "engine": "pytest", "implementation": "tests/test_screen.py::test_a_run_writes_exactly_the_contracts_columns"},
+        {"id": "append_only", "tables": ["screens", "screen_products"], "dimension": "consistency",
+         "severity": "error", "rule": "a run only adds files: no earlier file is rewritten, and a re-screen is a new row",
+         "engine": "pytest", "implementation": "tests/test_screen.py::test_a_second_run_adds_files_and_rewrites_none"},
+        {"id": "screen_keys", "tables": ["screens"], "dimension": "completeness", "severity": "error",
+         "rule": "screens.screen_id is unique and not null, and roaster_id is not null",
+         "engine": "dbt", "implementation": {"file": _STAGING_YML, "model": "stg_screens",
+                                              "columns": ["screen_id"], "test": "unique"},
+         "enforced_by": "dbt stg_screens unique, not_null"},
+        {"id": "screen_values", "tables": ["screens"], "dimension": "conformity", "severity": "error",
+         "rule": "screens.refusal and screens.edge are null or one of the contract's values",
+         "engine": "dbt", "implementation": {"file": _STAGING_YML, "model": "stg_screens",
+                                              "columns": ["refusal", "edge"], "test": "accepted_values"},
+         "enforced_by": "dbt stg_screens accepted_values"},
+        {"id": "request_cap", "tables": ["screens"], "dimension": "conformity", "severity": "error",
+         "rule": "a screen sends at most 6 requests, robots.txt and redirects included",
+         "engine": "pytest", "implementation": "tests/test_screen.py::test_a_screen_never_sends_a_seventh_request"},
+        {"id": "request_cap_recorded", "tables": ["screens"], "dimension": "conformity", "severity": "error",
+         "rule": "no recorded screen shows more than 6 requests",
+         "engine": "dbt", "implementation": "tests/screen_request_cap.sql", "enforced_by": "dbt screen_request_cap"},
+        {"id": "private", "tables": ["screens", "screen_products"], "dimension": "conformity",
+         "severity": "error", "rule": "the tables are never part of a release or an export",
+         "engine": "pytest", "implementation": "tests/test_screen.py::test_screen_tables_are_never_released"},
+    ],
     "raw": [
         {"id": "fetch_status_values", "tables": ["fetches"], "dimension": "conformity", "severity": "error",
          "rule": "fetches.status is one of the contract's values",
@@ -344,11 +435,25 @@ QUALITY: dict[str, list[dict]] = {
     ],
     "ops": [
         {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions", "mart_flags",
-                                          "eval_prefilter", "eval_prefilter_summary"],
+                                          "eval_prefilter", "eval_prefilter_summary", "screen_scores"],
          "dimension": "conformity", "severity": "error",
          "rule": "each ops file has exactly the contract's columns and types, and none is a release table",
          "engine": "pytest",
          "implementation": "tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract"},
+        {"id": "screen_scores_one_row_per_place", "tables": ["screen_scores"], "dimension": "uniqueness",
+         "severity": "error", "rule": "screen_scores.roaster_id is unique and not null",
+         "engine": "dbt", "implementation": {"file": "models/marts/_marts__models.yml", "model": "screen_scores",
+                                              "columns": ["roaster_id"], "test": "unique"},
+         "enforced_by": "dbt screen_scores unique, not_null"},
+        {"id": "screen_scores_tier_values", "tables": ["screen_scores"], "dimension": "conformity",
+         "severity": "error", "rule": "screen_scores.tier is suggested, review, dropped or not_screened",
+         "engine": "dbt", "implementation": {"file": "models/marts/_marts__models.yml", "model": "screen_scores",
+                                              "columns": ["tier"], "test": "accepted_values"},
+         "enforced_by": "dbt screen_scores accepted_values"},
+        {"id": "screen_scores_no_doubt_suggested", "tables": ["screen_scores"], "dimension": "consistency",
+         "severity": "error", "rule": "a suggested place carries no reseller doubt in its reasons",
+         "engine": "dbt", "implementation": "tests/screen_scores_suggested_has_no_reseller_code.sql",
+         "enforced_by": "dbt screen_scores_suggested_has_no_reseller_code"},
         {"id": "one_row_per_roaster", "tables": ["run_completeness"], "dimension": "uniqueness",
          "severity": "error", "rule": "run_completeness.roaster_id is unique and not null",
          "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "run_completeness",

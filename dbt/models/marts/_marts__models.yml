@@ -69,3 +69,40 @@ models:
         description: Shots in the group.
       - name: best_rating
         description: The highest rating in the group; the best_* columns are that shot's.
+  - name: screen_scores
+    description: >-
+      One row per screened discovery candidate: the roaster screen's tier for its latest screen, the reasons, the rule
+      version, and the first day it may be screened again (docs/design/roaster-screen.md, section 4.4). An ops table,
+      never public. PROVISIONAL: the rules aren't scored on a sealed test yet (eval/roaster_screen/README.md), and
+      nothing shows the tier to the owner.
+    columns:
+      - name: roaster_id
+        description: The place's normalized domain, as in candidates.
+        data_tests: [not_null, unique]
+      - name: screen_id
+        description: The place's latest screen, which the tier is from.
+        data_tests: [not_null]
+      - name: tier
+        description: >-
+          suggested (confidently a roaster selling its own coffee online), review (a person decides), dropped
+          (confidently not: a dead site, a whole catalog with no coffee, or not priced in US dollars) or not_screened
+          (the site refused, didn't answer, or is on a platform the screen doesn't read).
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [suggested, review, dropped, not_screened]}}
+      - name: decided_by
+        description: rules. Claude's verdicts on the review tier come later.
+        data_tests:
+          - accepted_values: {arguments: {values: [rules, claude]}}
+      - name: reasons
+        description: Signal codes behind the tier, such as named 8/9, own_vendor 8/8, origins 4 or serves:<phrase>.
+      - name: rule_version
+        description: The version of the rules that gave the tier.
+        data_tests: [not_null]
+      - name: verdict_model
+        description: The model whose verdict decided, when decided_by is claude; else null.
+      - name: screened_at
+        description: When the latest screen finished (UTC).
+      - name: next_due
+        description: The first day the place may be screened again, computed from screened_at and never the clock.
+        data_tests: [not_null]

@@ -148,3 +148,37 @@ def test_the_new_settles_cover_exactly_what_was_waiting():
         assert {r["id"] for r in rows} == waiting and len(rows) == len(waiting)
         assert {r["label"] for r in rows} <= LABELS and {r["kind"] for r in rows} <= KINDS
         assert settles.name in pinned
+
+
+def _scorer():
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("roaster_screen_eval", EVAL / "screen_eval.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_the_scorer_scores_train_and_validation_only():
+    ev = _scorer()
+    # no test set is drawn or scored yet
+    assert ev.SETS == ("train", "validation") and not hasattr(ev, "final")
+    with pytest.raises(SystemExit, match="only the train set"):
+        ev.show(EVAL, "validation", None)  # validation is read in aggregate, never item by item
+
+
+def test_the_scorer_says_which_settles_its_reference_uses():
+    ev = _scorer()
+    for set_name, scored in (("train", 177), ("validation", 176)):
+        labels, source = ev.truth(set_name)
+        # the new settles, never #130's third labeler's (settled_C), which are kept for comparison only
+        assert source == "settled"
+        assert {v["label"] for v in labels.values()} <= {"in_scope", "out_of_scope"}  # unsure is left out
+        assert len(labels) == scored
+
+
+def test_the_scorers_wilson_interval():
+    lo, hi = _scorer().wilson(96, 100)
+    # the design's "96 of 100 has a lower bound near 90%"
+    assert (round(lo, 3), round(hi, 3)) == (0.902, 0.984)
+    assert _scorer().wilson(0, 0) == (0.0, 1.0)

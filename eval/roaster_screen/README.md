@@ -5,13 +5,16 @@ describes: of the discovery candidates it marks "Suggested roaster", how many ar
 by the bag online; how many of those roasters it finds; and how often it suggests a café or a reseller. It follows
 CLAUDE.md in full, because the screen decides what the owner is asked to include. `main` suggests nothing.
 
-**Status: scaffold (the design's PR 1 of 7). Nothing is scored.** There is no screen code, no scorer, no floor and
-no test set yet. This folder holds the labeling definition, the split rule, and #130's train and validation labels.
+**Status: provisional rules, measured on train and validation only (the design's PR 3 of 7).** The rules
+(`src/coffeedata/screen_rules.py`, version `provisional-1`) are below the ship bar on validation, on very few items.
+No test set is drawn and none is scored, there is no floor, and nothing shows a tier to the owner. This folder holds
+the labeling definition, the split rule, #130's train and validation labels, and the scorer for those two sets.
 #130's spent test set is a regression fixture in
 [`tests/fixtures/roaster_screen_130/`](../../tests/fixtures/roaster_screen_130/README.md).
 
-**Running total (CLAUDE.md step 9):** 0 places whose tier changed since the last full evaluation. There is no tier
-yet, and the first full evaluation is the design's PR 5. Add each later change's count here.
+**Running total (CLAUDE.md step 9):** 0 places whose tier changed since the last full evaluation. No real place
+has a tier yet: no screen has run. The first full evaluation is the design's PR 5. Add each later change's count
+here.
 
 ## Definition
 
@@ -84,10 +87,11 @@ scaffold test checks it.
 | `settled_<set>.json` | 55 | 29 | The third labeler's settles of those disagreements (Labels, below): the reference for them |
 | `settled_C_<set>.json` | 55 | 29 | #130's third labeler's answers (`settled_<set>.json` there). Kept for comparison only |
 
-Not imported:
-- **`sample_<set>.json`.** Its strata are whether #130's screen found coffee, and #130's evidence isn't reused.
-  Every reused item is screened again in the shadow run, and gets its stratum when the new sample is drawn.
-- **`screen_eval.py`.** The scorer comes with the evaluation, in the design's PR 5.
+`sample_train.json` and `sample_validation.json` are #130's too, byte for byte: each item's stratum (tag × whether
+#130's screen found coffee) and the stratum sizes. The provisional scores below are weighted by them. Labelers never
+see them. The final evaluation draws new strata from the shadow run and doesn't use these.
+
+[`screen_eval.py`](screen_eval.py) scores train and validation. It has no `final` command.
 
 ## Labels
 
@@ -143,13 +147,93 @@ is drawn from the test partition and leaves those 200 domains out.
 No test reads the fixture's labels yet: scoring it needs the new screen's evidence for those items, which the
 shadow run collects.
 
+## Provisional results (2026-11-21)
+
+**What was measured.** The rules in `screen_rules.py`, on the 202 train and 197 validation items (after the split's
+platform-host fix, above), against the evidence #130's screen stored on 2026-11-07 (out of git).
+
+**Three things make every number here provisional.**
+1. **The evidence is #130's, not the new screen's.** No site was asked for this PR, so the new job has screened
+   nothing. #130's evidence is cut to what the new screen would read: the first 250 products of a Shopify store, the
+   first 25 of a WooCommerce store, and no products on any other platform. The design says the final evaluation
+   screens every item again in the shadow run and doesn't reuse this evidence.
+2. **The reference for the disagreements shares the screen's evidence.** It is `settled_<set>.json` (Labels, above):
+   a third labeler that read #130's stored evidence, close to what the rules score. Where that evidence misleads the
+   rules it can mislead the settler too, so **precision may read high.** It left 25 train and 21 validation
+   disagreements `unsure`, and those are in no score: 177 train and 176 validation items are scored.
+3. **The counts are small.** Validation holds 13 suggested items under the rule in the code, against the 100 the
+   design asks for. The intervals say so.
+
+**Evidence files:** `evidence_train.jsonl.gz` sha256 `4ac7c7ee98c9c02dcc164d2a2b537b3175ed8fb845d4df72a9a2d0639160ab57`,
+`evidence_validation.jsonl.gz` `24d056db0bdd3eaed5574b57bbca752e08e2fbcf3624961d54bbf9a18e55b2be`. The known roasters
+are the 3,203 names in `config/roasters.csv`.
+
+**Tuned on train, and only there.** One threshold moved: the share of the page that must be named coffee went from
+0.3 to 0.2. That added one in-scope train item to suggested and no out-of-scope item. The other thresholds are the
+design's starting values: N = 5, half the coffees in bag sizes, its own name on half or roastery wording, and 2
+origins or roast levels on half. The reseller doubts are the design's, unchanged. Train examples were read; no
+validation example was.
+
+**Metrics.** Stratum-weighted, with Wilson 95% intervals on the labeled counts (an approximation for a weighted
+ratio, as #130 stated). The two items that moved to train keep their #130 stratum and are weighted with train's;
+the strata's population estimates are #130's, made under the old grouping (a handful of platform-host domains out of
+about 26,000 and 9,000 per partition). Unsure labels are left out. `main` suggests nothing: precision is undefined, recall is 0, and
+it has no confidently wrong answer.
+
+### Train (the rule in the code, `full,N=5`)
+
+| Rule | Labeled | Suggested | Precision of suggested | Suggested a café or reseller | Recall, suggested | Recall, suggested + review | Dropped in scope | Review per 1,000 |
+|---|---|---|---|---|---|---|---|---|
+| full,N=5 | 177 | 8 | 100.0% [67.6%, 100.0%] (8/8) | 0.0% [0.0%, 32.4%] (0/8) | 24.1% [14.7%, 45.7%] (8/29) | 85.8% [65.5%, 92.4%] (24/29) | 0.0% [0.0%, 21.5%] (0/14) | 58 |
+
+### Validation (aggregates only; every candidate of the design's section 4.2)
+
+| Rule | Labeled | Suggested | Precision of suggested | Suggested a café or reseller | Recall, suggested | Recall, suggested + review | Dropped in scope | Review per 1,000 |
+|---|---|---|---|---|---|---|---|---|
+| full,N=2 | 176 | 14 | 100.0% [78.5%, 100.0%] (14/14) | 0.0% [0.0%, 21.5%] (0/14) | 38.4% [24.8%, 55.1%] (14/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 63 |
+| full,N=3 | 176 | 14 | 100.0% [78.5%, 100.0%] (14/14) | 0.0% [0.0%, 21.5%] (0/14) | 38.4% [24.8%, 55.1%] (14/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 63 |
+| full,N=5 | 176 | 13 | 100.0% [77.2%, 100.0%] (13/13) | 0.0% [0.0%, 22.8%] (0/13) | 35.5% [22.5%, 52.4%] (13/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 66 |
+| no_depth,N=2 | 176 | 15 | 100.0% [79.6%, 100.0%] (15/15) | 0.0% [0.0%, 20.4%] (0/15) | 41.3% [27.1%, 57.8%] (15/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 61 |
+| no_depth,N=3 | 176 | 15 | 100.0% [79.6%, 100.0%] (15/15) | 0.0% [0.0%, 20.4%] (0/15) | 41.3% [27.1%, 57.8%] (15/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 61 |
+| no_depth,N=5 | 176 | 14 | 100.0% [78.5%, 100.0%] (14/14) | 0.0% [0.0%, 21.5%] (0/14) | 38.4% [24.8%, 55.1%] (14/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 63 |
+| no_own_vendor,N=2 | 176 | 7 | 100.0% [64.6%, 100.0%] (7/7) | 0.0% [0.0%, 35.4%] (0/7) | 18.1% [9.8%, 35.0%] (7/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 81 |
+| no_own_vendor,N=3 | 176 | 7 | 100.0% [64.6%, 100.0%] (7/7) | 0.0% [0.0%, 35.4%] (0/7) | 18.1% [9.8%, 35.0%] (7/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 81 |
+| no_own_vendor,N=5 | 176 | 7 | 100.0% [64.6%, 100.0%] (7/7) | 0.0% [0.0%, 35.4%] (0/7) | 18.1% [9.8%, 35.0%] (7/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 81 |
+| own_brand,N=2 | 176 | 19 | 93.0% [68.6%, 97.1%] (17/19) | 0.0% [0.0%, 16.8%] (0/19) | 47.1% [32.0%, 63.0%] (17/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 52 |
+| own_brand,N=3 | 176 | 19 | 93.0% [68.6%, 97.1%] (17/19) | 0.0% [0.0%, 16.8%] (0/19) | 47.1% [32.0%, 63.0%] (17/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 52 |
+| own_brand,N=5 | 176 | 17 | 98.6% [73.0%, 99.0%] (16/17) | 0.0% [0.0%, 18.4%] (0/17) | 44.2% [29.5%, 60.4%] (16/36) | 80.4% [68.1%, 92.1%] (30/36) | 0.0% [0.0%, 29.9%] (0/9) | 57 |
+
+**Reading it.**
+- **The rule in the code (`full,N=5`) is still below the ship bar on validation.** All 13 labeled suggestions are in
+  scope, but the Wilson lower bound is 77.2% against a bar of 88%. No suggestion is a café or a reseller (0 of 13,
+  upper bound 22.8% against 8%). Recall is 35.5% suggested against 40%; with review it is 80.4%, above the 75% bar.
+- **What the split fix changed** (2026-11-21, the same settles): validation lost three items, and the rule in the
+  code went from 15 of 15 suggestions [79.6%, 100%] and recall 37.6% to 13 of 13 [77.2%, 100%] and 35.5%.
+- **What the new settles changed.** Under #130's third labeler (C), before the move, the same rule read 93.1% [71.7%,
+  98.9%] (15 of 16), with one café or reseller among the suggestions; that item's new settle is `unsure`, so it is in
+  no score. The new settler agrees with C on 34 of 55 train items (61.8%) and 11 of 29 validation items (37.9%),
+  label and kind. Precision rising as items drop out to `unsure` is the caveat in item 2, not evidence that the rules
+  improved.
+- **No candidate clears the bar**: every lower bound is under 88%. Only `no_depth` at N = 2 or 3 reaches 40% recall
+  (41.3%). `own_brand` finds the most (44.2% at N = 5) and is the only rule with an out-of-scope suggestion (one at
+  N = 5, two at N = 2 or 3), none of them a café or a reseller.
+- **Nothing dropped was in scope** in either set (0 of 14 train, 0 of 9 validation).
+- **No rule is chosen here.** The code keeps the design's default, `full,N=5`. The choice on validation, the freeze
+  and the sealed test are the design's PR 5, on the new screen's own evidence and at least 100 suggested items a set.
+- **Most of the missed roasters weren't read at all.** Of the 197 validation items, 134 are `not_screened`: the site
+  didn't answer #130's screen (which ran behind a proxy), refused, or is on a platform the first phase doesn't read.
+- **The tuning predates the settles and the move.** The one threshold moved on train was chosen with C's train
+  settles as the reference. Under the new settles, every train suggestion is still in scope (8 of 8, one of them a
+  moved item).
+
+Under the design's section 5.5, below the precision bar nothing is labeled "Suggested": everything goes to review.
+
 ## What comes later
 
 | The design's PR | Adds here |
 |---|---|
-| 3 | `screen_rules.py`'s provisional tiers, and this rule's row in `docs/RULES.md` |
 | 4 | The shadow run. The frame hash and the strata, frozen under a named `rule_version` when the sample is drawn |
-| 5 | The top-up labels, a person's settles and spot-check, the sealed test set and its `SHA256SUMS` entries, `screen_eval.py` (its `final` prints only totals and intervals), `RESULTS.md`, and the floors in `tests/test_roaster_screen_accuracy.py` |
+| 5 | The top-up labels, a person's settles and spot-check, the sealed test set and its `SHA256SUMS` entries, the choice on validation, `screen_eval.py final` (totals and intervals only), `RESULTS.md`, and the floors in `tests/test_roaster_screen_accuracy.py` |
 
 The metrics and the ship bar are in the design's sections 5.4 and 5.5. In short: suggested precision at least 95%
 with a Wilson lower bound of at least 88%; at most 3% of suggestions a café or a reseller, with an upper bound of at
@@ -164,4 +248,10 @@ screen meets it.
 sha256sum -c SHA256SUMS                                   # from this directory
 (cd ../../tests/fixtures/roaster_screen_130 && sha256sum -c SHA256SUMS)
 uv run pytest -q tests/test_roaster_screen_scaffold.py    # from the repository root
+
+# The provisional scores. <evidence-dir> holds #130's evidence_<set>.jsonl.gz, which is out of git.
+uv run python eval/roaster_screen/screen_eval.py score <evidence-dir> train full,N=5
+uv run python eval/roaster_screen/screen_eval.py score <evidence-dir> validation
+uv run python eval/roaster_screen/screen_eval.py show  <evidence-dir> train     # train only: each item
+uv run python eval/roaster_screen/screen_eval.py agree                          # the two settles compared
 ```

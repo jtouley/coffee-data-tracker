@@ -1099,17 +1099,34 @@ def test_states_are_the_fifty():
     assert len(site.STATES) == 50 and "DC" not in site.STATES and "PR" not in site.STATES
 
 
+def test_a_screen_written_twice_keeps_one_row_and_the_build_passes(lake, tmp_path):
+    """#208's review (H1): a flush retried after a partial write wrote one screen twice, under two batches, and the
+    build then failed three unique tests (stg_screens, int_screen_features, int_screen_home), so the release wasn't
+    served. Raw can't be rewritten, so stg_screens keeps the first copy."""
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    at = datetime(2026, 12, 2, 7, tzinfo=UTC)
+    row = {"run_date": at.date(), "screen_id": "s1", "screened_at": at, "roaster_id": "made-up.test", "state": "MI",
+           "status": "ok", "platform": "other", "page_full": False, "page_timeout": False, "home_text": "Hello"}  # fmt: skip
+    for batch in ("20261202T070000-aaaaaa", "20261202T071000-bbbbbb"):
+        lake.write_partition("screens", "2026-12-02", batch, [row | {"batch_id": batch}])
+    con = build(lake, tmp_path)
+    kept = con.execute("select count(*), min(batch_id) from stg_screens").fetchone()
+    assert kept == (1, "20261202T070000-aaaaaa")
+    assert con.execute("select count(*) from screen_scores").fetchone() == (1,)
+
+
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
     partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
-    per store, product_decisions' latest record, and the guard and readiness (int_catalog_decided). They read
+    per store, product_decisions' latest record, the guard and readiness (int_catalog_decided), and the roaster
+    screen's features and latest screen. They read
     hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
     first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=43 " in r.stdout
+    assert "PASS=45 " in r.stdout
 
 
 def test_keyword_filters_reach_the_build_through_its_snapshot_only(lake, tmp_path, monkeypatch):

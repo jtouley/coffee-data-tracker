@@ -12,3 +12,119 @@ models:
       - name: coffee_id
         description: "<roaster domain>:<store product id> (dim_coffee.coffee_id)."
         data_tests: [unique, not_null]
+  - name: int_screen_products
+    description: >-
+      One row per product a screen read (stg_screen_products), with what the current rules say of it
+      (coffeedata.screen_rules.product_signals): coffee or not, named as coffee, wholesale, roast level, origin, bag
+      sizes, and whose name its vendor is. Rules only: no verdict is read. Private, as stg_screens.
+    data_tests:
+      - grain:
+          arguments: {columns: [screen_id, product_id]}
+    columns:
+      - name: screen_id
+        description: The screen that read the product.
+        data_tests: [not_null]
+      - name: roaster_id
+        description: The place's normalized domain.
+      - name: product_id
+        description: The store's product id.
+        data_tests: [not_null]
+      - name: is_coffee
+        description: The rules call it coffee (products.decide with no verdict).
+      - name: named
+        description: A coffee that is also named as one in its title, type or tags (screen_rules.named_coffee).
+      - name: is_wholesale
+        description: A coffee listed as wholesale (classify.is_wholesale).
+      - name: roast_level
+        description: The roast level the rules read, for a named coffee.
+      - name: origin_country
+        description: The origin country the rules read, for a named coffee.
+      - name: is_blend
+        description: Whether the rules read it as a blend, for a named coffee.
+      - name: bag_grams
+        description: Its distinct option weights between 150 and 2,500 g, for a named coffee.
+      - name: vendor_key
+        description: Its vendor's distinctive words, for a named coffee ('' when it states none).
+      - name: own_vendor
+        description: A named coffee whose vendor is the store's own name or domain, exactly.
+      - name: other_roaster
+        description: A named coffee whose vendor or title names another roaster the registry knows.
+      - name: currencies
+        description: The currencies its options are priced in, as stated.
+  - name: int_screen_home
+    description: >-
+      One row per screen that read a home page: the first roastery wording and the first wording that the place serves
+      another roaster's coffee (coffeedata.screen_rules.home_signals). Read from the home page's own text only.
+    columns:
+      - name: screen_id
+        description: The screen.
+        data_tests: [not_null, unique]
+      - name: roast_phrase
+        description: The first wording that the store roasts its own coffee; null without one.
+      - name: serves_phrase
+        description: The first wording that it serves or sells another roaster's coffee; null without one.
+  - name: int_screen_features
+    description: >-
+      One row per screen with its features (docs/design/roaster-screen.md, section 4.1), and is_latest on each place's
+      latest screen. screen_scores reads the latest. Shares are over the named coffees, 0 when there are none.
+    columns:
+      - name: screen_id
+        description: The screen.
+        data_tests: [not_null, unique]
+      - name: roaster_id
+        description: The place's normalized domain.
+        data_tests: [not_null]
+      - name: screened_at
+        description: When the screen finished (UTC).
+      - name: batch_id
+        description: The write batch that holds the screen.
+      - name: status
+        description: What the site answered (stg_screens.status).
+      - name: refusal
+        description: How the site, or its edge, refused us, if it did.
+      - name: platform
+        description: The platform found (stg_screens.platform).
+      - name: page_full
+        description: The page read was full, so the catalog may hold more.
+      - name: page_timeout
+        description: The product page timed out at every size tried.
+      - name: products
+        description: Products on the page read.
+      - name: coffees
+        description: Of those, the ones the rules call coffee.
+      - name: named
+        description: Of those, the ones also named as coffee.
+      - name: coffee_share
+        description: named over products.
+      - name: bag_share
+        description: The share of named coffees sold in a bag-sized option (150 to 2,500 g).
+      - name: bag_sizes
+        description: The distinct bag sizes among the named coffees, in grams.
+      - name: roast_share
+        description: The share of named coffees whose roast level the rules read.
+      - name: origins
+        description: Distinct origin countries among the named coffees.
+      - name: origin_repeat
+        description: Origin countries on two or more named coffees.
+      - name: own_vendor
+        description: Named coffees under the store's own name.
+      - name: own_vendor_share
+        description: own_vendor over named.
+      - name: other_roaster
+        description: Named coffees whose vendor or title names another roaster the registry knows.
+      - name: vendors
+        description: Distinct vendors among the named coffees.
+      - name: wholesale_share
+        description: The share of named coffees listed as wholesale.
+      - name: currencies
+        description: The currencies the page's products are priced in.
+      - name: roast_phrase
+        description: Roastery wording on the home page, if any (int_screen_home).
+      - name: serves_phrase
+        description: Wording that it serves another roaster's coffee, if any (int_screen_home).
+      - name: place_tags
+        description: The place's Overture tags. Context only; no rule reads it.
+      - name: locations
+        description: The place's store count. Context only; a chain can be a roaster.
+      - name: is_latest
+        description: The place's latest screen (newest screened_at, then batch_id, then screen_id).

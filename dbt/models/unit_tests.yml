@@ -1479,3 +1479,63 @@ unit_tests:
         - {roaster_id: twice.coffee, roaster_name: Twice New, city: Salem, state: OR, sources: osm+overture-2026-08-20.0+overture-2026-09-17.0}
         - {roaster_id: mixed.coffee, roaster_name: Mixed Overture, city: null, state: ID, sources: overture+overture+osm}
         - {roaster_id: prefixed.coffee, roaster_name: Prefixed Import, city: Bangor, state: ME, sources: manual-osm-import}
+
+  - name: screen_features_and_the_latest_screen
+    description: >-
+      A screen's features are counts and shares over its named coffees, and each place's latest screen is the newest
+      screened_at, then batch_id, then screen_id: two screens written in the same second always give the same answer.
+      tests/test_screen_rules.py holds coffeedata.screen_rules.features to the same numbers for screen s1.
+    model: int_screen_features
+    given:
+      - input: ref('stg_screens')
+        rows:
+          - {screen_id: s1, roaster_id: a.com, screened_at: "2026-12-02 07:30:00+00", batch_id: b1, status: ok, platform: shopify, page_full: false, page_timeout: false}
+          - {screen_id: s2, roaster_id: a.com, screened_at: "2027-06-02 07:30:00+00", batch_id: b2, status: ok, platform: shopify, page_full: false, page_timeout: false}
+          - {screen_id: s3, roaster_id: a.com, screened_at: "2027-06-02 07:30:00+00", batch_id: b3, status: blocked, refusal: challenge, platform: "", page_full: false, page_timeout: false}
+          - {screen_id: s5, roaster_id: b.com, screened_at: "2026-12-02 07:30:00+00", batch_id: b1, status: ok, platform: "wix?", page_full: false, page_timeout: false}
+          - {screen_id: s4, roaster_id: b.com, screened_at: "2026-12-02 07:30:00+00", batch_id: b1, status: ok, platform: "wix?", page_full: false, page_timeout: false}
+      - input: ref('int_screen_products')
+        rows:
+          - {screen_id: s1, product_id: p1, is_coffee: true, named: true, is_wholesale: false, roast_level: light, origin_country: Ethiopia, bag_grams: [340, 907], vendor_key: made up, own_vendor: true, other_roaster: false, currencies: [USD]}
+          - {screen_id: s1, product_id: p2, is_coffee: true, named: true, is_wholesale: true, roast_level: null, origin_country: Ethiopia, bag_grams: [340], vendor_key: made up, own_vendor: true, other_roaster: false, currencies: [USD]}
+          - {screen_id: s1, product_id: p3, is_coffee: true, named: true, is_wholesale: false, roast_level: dark, origin_country: Peru, bag_grams: [], vendor_key: other co, own_vendor: false, other_roaster: true, currencies: [USD]}
+          - {screen_id: s1, product_id: p4, is_coffee: true, named: false, is_wholesale: false, roast_level: null, origin_country: null, bag_grams: [], vendor_key: "", own_vendor: false, other_roaster: false, currencies: [USD]}
+          - {screen_id: s1, product_id: p5, is_coffee: false, named: false, is_wholesale: false, roast_level: null, origin_country: null, bag_grams: [], vendor_key: "", own_vendor: false, other_roaster: false, currencies: [USD, CAD]}
+      - input: ref('int_screen_home')
+        rows:
+          - {screen_id: s1, roast_phrase: we roast, serves_phrase: null}
+      - input: ref('stg_screen_places')
+        rows:
+          - {roaster_id: a.com, name: Made Up, locations: 2}
+    expect:
+      rows:
+        - {screen_id: s1, products: 5, coffees: 4, named: 3, coffee_share: 0.6, bag_sizes: [340, 907], origins: 2, origin_repeat: 1, own_vendor: 2, other_roaster: 1, vendors: 2, currencies: [CAD, USD], roast_phrase: we roast, locations: 2, is_latest: false}
+        - {screen_id: s2, products: 0, coffees: 0, named: 0, coffee_share: 0.0, bag_sizes: [], origins: 0, origin_repeat: 0, own_vendor: 0, other_roaster: 0, vendors: 0, currencies: [], roast_phrase: null, locations: 2, is_latest: false}
+        - {screen_id: s3, products: 0, coffees: 0, named: 0, coffee_share: 0.0, bag_sizes: [], origins: 0, origin_repeat: 0, own_vendor: 0, other_roaster: 0, vendors: 0, currencies: [], roast_phrase: null, locations: 2, is_latest: true}
+        - {screen_id: s4, products: 0, coffees: 0, named: 0, coffee_share: 0.0, bag_sizes: [], origins: 0, origin_repeat: 0, own_vendor: 0, other_roaster: 0, vendors: 0, currencies: [], roast_phrase: null, locations: null, is_latest: false}
+        - {screen_id: s5, products: 0, coffees: 0, named: 0, coffee_share: 0.0, bag_sizes: [], origins: 0, origin_repeat: 0, own_vendor: 0, other_roaster: 0, vendors: 0, currencies: [], roast_phrase: null, locations: null, is_latest: true}
+
+  - name: screen_feature_shares
+    description: >-
+      The shares of int_screen_features are over the named coffees: of three, two in bags, two with a roast level, two
+      under the store's own name and one wholesale.
+    model: int_screen_features
+    given:
+      - input: ref('stg_screens')
+        rows:
+          - {screen_id: s1, roaster_id: a.com, screened_at: "2026-12-02 07:30:00+00", batch_id: b1, status: ok, platform: shopify, page_full: false, page_timeout: false}
+      - input: ref('int_screen_products')
+        rows:
+          - {screen_id: s1, product_id: p1, is_coffee: true, named: true, is_wholesale: false, roast_level: light, bag_grams: [340, 907], own_vendor: true}
+          - {screen_id: s1, product_id: p2, is_coffee: true, named: true, is_wholesale: true, roast_level: null, bag_grams: [340], own_vendor: true}
+          - {screen_id: s1, product_id: p3, is_coffee: true, named: true, is_wholesale: false, roast_level: dark, bag_grams: [], own_vendor: false}
+          - {screen_id: s1, product_id: p4, is_coffee: true, named: false, is_wholesale: false, roast_level: null, bag_grams: [], own_vendor: false}
+      - input: ref('int_screen_home')
+        rows:
+          - {screen_id: another, roast_phrase: null, serves_phrase: null}
+      - input: ref('stg_screen_places')
+        rows:
+          - {roaster_id: another.com, name: Another}
+    expect:
+      rows:
+        - {screen_id: s1, named: 3, bag_share: 0.6666666666666666, roast_share: 0.6666666666666666, own_vendor_share: 0.6666666666666666, wholesale_share: 0.3333333333333333}
