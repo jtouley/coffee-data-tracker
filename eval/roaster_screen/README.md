@@ -228,6 +228,42 @@ it has no confidently wrong answer.
 
 Under the design's section 5.5, below the precision bar nothing is labeled "Suggested": everything goes to review.
 
+## The Claude stage's evaluation (planned, not run)
+
+`src/coffeedata/screen_verdict.py` asks Claude about the places the rules leave undecided (review without a reseller
+doubt), from the stored evidence only, and records `roaster_online`, `not_roaster` or `unsure` with one sentence of
+reason. Its decisions are shown in `screen_scores` and **change no tier**. Promoting a place to Suggested on Claude's
+word waits for this evaluation, and it must clear the ship bar below. Nothing here has been run, and no model has
+been asked.
+
+- **A new sealed set, drawn after a production run.** The population is every place whose latest screen the
+  production rules left undecided and that `screen-verdicts` has decided, under one frozen model and prompt version
+  (`screen_verdict.model()` and `DEFINITION_VERSION`, recorded here when the set is drawn). Places come from the test
+  partition only (the Split rule above), leaving out #130's 200 and every item already labelled here. Strata are
+  Claude's label × Overture tag, with sizes frozen at the draw. The target is 300 places, with at least 100 that
+  Claude called `roaster_online` so the precision bound is useful. `SHA256SUMS` covers the items, the strata and the
+  decisions' file when they are drawn, and nobody reads their examples while developing.
+- **The labels.** Two independent labelers, Claude Opus and Claude Sonnet, each blind to the other, to Claude's
+  decision and to the strata, label every item against `GUIDE.md`. A third model settles their disagreements, blind to
+  both answers. That model is neither of the two labelers and never Claude Haiku, which makes the decisions being
+  scored (CLAUDE.md, #254: the tie-breaker is a different model, and the reference never comes from the model under
+  test). The labelers read the same stored evidence as the stage, because no agent visits the sites. That shared
+  evidence is the same caveat as the settles above, and the results will say so. A person spot-checks 50 items.
+- **Scored once.** The scorer refuses until coverage is complete: every sealed item has a stored decision under the
+  frozen model and version, with none pending or in flight, and both labels plus a settle where needed. Only then
+  does it print totals and Wilson 95% intervals, never an item, as #252's scorer does. After that the set joins the
+  regression fixtures.
+- **The metrics.** These are stratum-weighted, with `unsure` reported as its own share and left out of precision:
+  - precision of `roaster_online`;
+  - confidently wrong, meaning `roaster_online` on a place labelled café or reseller;
+  - `not_roaster` on a place in scope;
+  - the share of undecided places that stay `unsure`.
+
+  Each is compared with the rules alone, where every one of these places is in review.
+- **The bar** is the design's section 5.5, applied to the places Claude would promote. Precision is at least 95%
+  with a Wilson lower bound of at least 88%, and confidently wrong is at most 3% with an upper bound of at most 8%.
+  Below it, the decisions stay shown and unapplied.
+
 ## What comes later
 
 | The design's PR | Adds here |

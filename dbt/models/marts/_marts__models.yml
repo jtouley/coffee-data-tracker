@@ -91,7 +91,9 @@ models:
           - not_null
           - accepted_values: {arguments: {values: [suggested, review, dropped, not_screened]}}
       - name: decided_by
-        description: rules. Claude's verdicts on the review tier come later.
+        description: >-
+          rules. Claude's decision on an undecided place is shown in verdict and never changes the tier until the
+          design's sealed evaluation.
         data_tests:
           - accepted_values: {arguments: {values: [rules, claude]}}
       - name: reasons
@@ -100,7 +102,15 @@ models:
         description: The version of the rules that gave the tier.
         data_tests: [not_null]
       - name: verdict_model
-        description: The model whose verdict decided, when decided_by is claude; else null.
+        description: The model whose decision is in verdict, when the latest screen has one; else null.
+      - name: verdict
+        description: >-
+          Claude's decision on the latest screen, when the rules left it undecided and it was asked: roaster_online,
+          not_roaster or unsure (screen_verdict.py). Shown, never applied: the tier is the rules'.
+        data_tests:
+          - accepted_values: {arguments: {values: [roaster_online, not_roaster, unsure]}}
+      - name: verdict_reason
+        description: Claude's one sentence of reason for verdict.
       - name: screened_at
         description: When the latest screen finished (UTC).
       - name: next_due

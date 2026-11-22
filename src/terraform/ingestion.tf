@@ -116,6 +116,16 @@ locals {
       args    = ["rc=0; coffeedata probe --stale-days 28 --deadline-min 100 || rc=1; coffeedata publish --message \"probe\" || rc=1; exit $rc"]
       egress  = "default", claude = false, memory = "2Gi", retries = 1
     }
+    # Claude's decisions on the roaster screen's undecided places (screen_verdict.py): collect what finished, then send
+    # what is pending, at most COFFEEDATA_SCREEN_VERDICT_WEEKLY_CAP places a week (default 1,000), and publish the
+    # rows. Unscheduled: it has nothing to decide until the screen job runs (the design's section 9), and its schedule
+    # comes with the screen's. A batch it can't read back is named and fails the execution, which emails the owner;
+    # nothing it writes reaches the build's release.
+    "screen-verdicts" = {
+      command = ["sh", "-c"]
+      args    = ["rc=0; coffeedata screen-verdicts || rc=1; coffeedata publish --message \"screen-verdicts\" || rc=1; exit $rc"]
+      egress  = "default", claude = true, memory = "2Gi", retries = 0
+    }
     "crawl-shopify"                = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], egress = "shopify", claude = false, memory = "2Gi", retries = 0 }
     "crawl-shopify-default-egress" = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], egress = "default", claude = false, memory = "2Gi", retries = 0 }
     "crawl-retry"                  = { command = ["coffeedata"], args = ["crawl-retry", "--connector", "shopify"], egress = "shopify", claude = false, memory = "2Gi", retries = 0 }

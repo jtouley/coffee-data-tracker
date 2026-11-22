@@ -402,6 +402,57 @@ def cmd_screen(args: argparse.Namespace) -> None:
         )
 
 
+def cmd_screen_verdicts(args: argparse.Namespace) -> None:
+    """Claude's decisions on the places the roaster screen's rules left undecided (screen_verdict.py): collect the
+    finished batches, then send what is pending, up to the week's cap. Collect first, as classify does, so a batch is
+    stored before anything new is sent. A batch that couldn't be read back, or a refused submit, is named on one ERROR
+    line and fails the command (exit non-zero) after everything else is stored, as classify does since #209. Nothing
+    here touches the build or the release: decisions reach only the ops table screen_scores."""
+    from . import control, extract, screen_verdict
+
+    lake = Lake()
+    if args.dry_run:
+        todo = screen_verdict.pending(lake, screen_verdict.model())
+        today = datetime.now(UTC).date()
+        room = max(0, screen_verdict.weekly_cap() - screen_verdict.sent_this_week(lake, today))
+        print(f"screen-verdicts: {len(todo)} places pending, {room} left in this week's cap; nothing was sent "
+              "(--dry-run)")  # fmt: skip
+        return
+    if not extract.llm_enabled():
+        raise SystemExit(
+            "screen-verdicts needs Anthropic credentials (COFFEEDATA_ANTHROPIC_API_KEY, ANTHROPIC_API_KEY or "
+            "ANTHROPIC_AUTH_TOKEN), the same key as classify's verdicts; nothing was sent"
+        )
+    job = control.start(lake, "screen-verdicts", args.run_date, detail=control.execution()
+                        | {"model": screen_verdict.model(), "definition": screen_verdict.DEFINITION_VERSION})  # fmt: skip
+    try:
+        out: dict = {"collect": screen_verdict.collect(lake, args.run_date)}
+        out["submit"] = screen_verdict.submit(lake, cap=args.cap)
+    except BaseException as e:
+        control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
+        raise
+    unread: list[dict] = out["collect"].get("errors", [])
+    err = out["submit"].get("error")
+    control.finish(lake, job, "failed" if err or unread else "done", detail=control.detail_of(job) | out)
+    _print(out)
+    problems = []
+    if unread:
+        named = ", ".join(
+            f"{e['batch_id']} ({e['error']}"
+            + (f", HTTP {e['http_status']}" if e.get("http_status") else "")
+            + ")"
+            for e in unread
+        )
+        print(json.dumps({"severity": "ERROR", "message": "screen-verdicts: batches not collected",
+                          "batches": unread}))  # fmt: skip
+        problems.append(f"Claude's screen decisions weren't collected for {len(unread)} batch(es): {named}. The next "
+                        "run asks again; the build is not affected.")  # fmt: skip
+    if err:
+        problems.append(f"Claude's screen decision batch submit failed: {err}. The places stay pending.")
+    if problems:
+        raise SystemExit(" ".join(problems))
+
+
 def cmd_pull(args: argparse.Namespace) -> None:
     """The admin's Pull now, as one job: probe the places, then a counted crawl of each one that answered with a
     storefront, on its platform's connector, into the week `--run-date` names (the admin picks the next week when
@@ -763,7 +814,7 @@ def dbt_build(
     select, target, extra_roots and flags are for `fetch-health`: only the nodes it names, its own target folder (the
     weekly build's artifacts are left alone), more lake roots to read (its copy of the unmerged crawl output) and
     more dbt flags."""
-    from . import quality, registry, rules, shots, verdict
+    from . import quality, registry, rules, screen_verdict, shots, verdict
 
     roots = [str(lake.root), *extra_roots] + ([lake.url] if lake.remote else [])
     folders = remote_folders(lake.url) if lake.remote else None
@@ -778,6 +829,8 @@ def dbt_build(
             "owner_user_id": shots.owner_user_id(),
             "verdict_model": verdict.model() or "",
             "verdict_definition": verdict.DEFINITION_VERSION,
+            "screen_verdict_model": screen_verdict.model(),
+            "screen_verdict_definition": screen_verdict.DEFINITION_VERSION,
             # verdicts_cover_catalog: fails a build with no verdict model, or too few listed coffees decided by
             # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
             "require_verdicts": not verdict.rules_only_allowed(lake.url),
@@ -1623,6 +1676,17 @@ def main(argv: list[str] | None = None) -> None:
     sc.add_argument("--deadline-min", type=_positive_float, default=90.0,
                     help="start no place after this many minutes; the rest wait for the next run")  # fmt: skip
     sc.add_argument("--dry-run", action="store_true", help="list how many places are due and request nothing")
+
+    sv = add(
+        "screen-verdicts",
+        cmd_screen_verdicts,
+        "Claude's decisions on the places the roaster screen's rules left undecided (collects finished batches first)",
+    )
+    sv.add_argument("--run-date", type=_run_date, default=_today())
+    sv.add_argument("--cap", type=int, default=None,
+                    help="at most this many places sent this ISO week (default: COFFEEDATA_SCREEN_VERDICT_WEEKLY_CAP, "
+                    "else 1,000)")  # fmt: skip
+    sv.add_argument("--dry-run", action="store_true", help="count what is pending and send nothing")
 
     pu = add(
         "pull", cmd_pull, "probe places, then a counted crawl of each storefront found (the admin's Pull now)"

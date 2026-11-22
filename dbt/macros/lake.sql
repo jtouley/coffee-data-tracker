@@ -4,6 +4,7 @@
     'snapshots': 'snapshots/*/*.parquet', 'bodies': 'bodies/*/*.parquet', 'fetches': 'fetches/*/*.parquet',
     'probes': 'probes/*/*.parquet', 'registry': 'registry/*/*.parquet', 'candidates': 'candidates/*/*.parquet',
     'screens': 'screens/*/*.parquet', 'screen_products': 'screen_products/*/*.parquet',
+    'screen_verdicts': 'screen_verdicts/*/*.parquet',
     'enrichments': 'enrichments/*/*/*.parquet',
     'llm_batches': 'llm_batches/*/*.parquet', 'verdicts': 'verdicts/*/*.parquet', 'shots': 'shots/*.parquet', 'equipment': 'equipment/*.parquet',
     'bags': 'bags/*.parquet', 'photos': 'photos/*.parquet',

@@ -6,8 +6,9 @@ the reason codes, the rule version, and next_due, the first day it may be screen
 An ops table: written beside each release for the owner's command center, never public.
 
 PROVISIONAL: the rules are not yet scored on a sealed test (eval/roaster_screen/README.md), and nothing shows this
-tier to the owner. Claude's verdicts on the review tier come with the design's PR 5; until then every row is decided
-by the rules, and verdict_model is null.
+tier to the owner. Claude's decision on an undecided place (stg_screen_verdicts, screen_verdict.py) is shown beside
+the tier (verdict, verdict_reason, verdict_model) and never changes it: Suggested stays the rules' alone until the
+design's sealed evaluation, so every row is decided by the rules.
 """
 
 import pyarrow as pa
@@ -23,6 +24,8 @@ SCHEMA = pa.schema(
         ("reasons", pa.list_(pa.string())),
         ("rule_version", pa.string()),
         ("verdict_model", pa.string()),
+        ("verdict", pa.string()),
+        ("verdict_reason", pa.string()),
         ("screened_at", pa.timestamp("us", tz="UTC")),  # as lake.SCHEMAS: a unit Parquet keeps
         ("next_due", pa.date32()),
     ]
@@ -32,6 +35,7 @@ SCHEMA = pa.schema(
 def model(dbt, session):
     dbt.config(materialized="table")
     rows = dbt.ref("int_screen_features").to_arrow_table().to_pylist()
+    verdicts = {v["screen_id"]: v for v in dbt.ref("stg_screen_verdicts").to_arrow_table().to_pylist()}
     rows.sort(key=lambda r: (r["roaster_id"], r["screened_at"], r["batch_id"] or "", r["screen_id"]))
     # transient screens in a row, ending at the place's latest (next_due's `tries`)
     tries: dict[str, int] = {}
@@ -45,6 +49,7 @@ def model(dbt, session):
         if not r["is_latest"]:
             continue
         tier, reasons = screen_rules.tier(r)
+        v = verdicts.get(r["screen_id"]) or {}
         out.append(
             {
                 "roaster_id": rid,
@@ -53,7 +58,9 @@ def model(dbt, session):
                 "decided_by": "rules",
                 "reasons": reasons,
                 "rule_version": screen_rules.RULE_VERSION,
-                "verdict_model": None,
+                "verdict_model": v.get("model"),
+                "verdict": v.get("label"),
+                "verdict_reason": v.get("reason"),
                 "screened_at": r["screened_at"],
                 "next_due": screen_rules.next_due(
                     r["screened_at"], r["status"], r["refusal"], tier, tries[rid]

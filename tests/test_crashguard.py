@@ -521,7 +521,7 @@ def test_each_job_leaves_through_the_egress_the_owner_chose():
     import re
 
     assert _job_egress() == {
-        "discover": "default", "probe": "default",
+        "discover": "default", "probe": "default", "screen-verdicts": "default",
         "crawl-shopify": "shopify", "crawl-shopify-default-egress": "default", "crawl-retry": "shopify",
         "crawl-squarespace": "default", "crawl-woocommerce": "woo_generic", "crawl-square-online": "default",
         "crawl-generic": "woo_generic", "merge": "default", "enrich-week": "default", "build": "default",

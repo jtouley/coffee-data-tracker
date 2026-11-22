@@ -1122,6 +1122,35 @@ def test_a_screen_written_twice_keeps_one_row_and_the_build_passes(lake, tmp_pat
     assert con.execute("select count(*) from screen_scores").fetchone() == (1,)
 
 
+def test_screen_scores_shows_claudes_decision_and_never_applies_it(lake, tmp_path):
+    """screen_verdict.py: Claude's decision on an undecided place reaches screen_scores (verdict, verdict_reason,
+    verdict_model) for the configured model and prompt version only, and the tier stays the rules' (Suggested stays
+    off until the design's sealed evaluation)."""
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    at = datetime(2026, 12, 2, 7, tzinfo=UTC)
+    lake.write_partition("screens", "2026-12-02", "20261202T070000-aaaaaa", [
+        {"run_date": at.date(), "batch_id": "20261202T070000-aaaaaa", "screen_id": "s1", "screened_at": at,
+         "roaster_id": "made-up.test", "state": "MI", "status": "ok", "platform": "shopify", "page_full": False,
+         "page_timeout": False, "home_text": "Hello"}])  # fmt: skip
+    lake.write_partition("screen_products", "2026-12-02", "20261202T070000-aaaaaa", [
+        {"screen_id": "s1", "roaster_id": "made-up.test", "product_id": "1", "title": "House Blend Coffee",
+         "vendor": "made-up", "product_type": "Coffee", "tags": [], "variants": [{"title": "12 oz", "grams": 340,
+         "price": 18.0, "currency": "USD", "available": True}]}])  # fmt: skip
+    verdict = {"decided_at": at, "screen_id": "s1", "roaster_id": "made-up.test", "evidence_hash": "e",
+               "label": "roaster_online", "reason": "Its own bags."}  # fmt: skip
+    lake.write_partition("screen_verdicts", "2026-12-02", "v1", [
+        verdict | {"model": "m", "definition": "d1"},
+        verdict | {"model": "m", "definition": "d0", "label": "not_roaster", "reason": "An older prompt."}])  # fmt: skip
+    con = build(lake, tmp_path, screen_verdict_model="m", screen_verdict_definition="d1")
+    row = con.execute(
+        "select tier, decided_by, verdict_model, verdict, verdict_reason from screen_scores"
+    ).fetchone()
+    assert row == ("review", "rules", "m", "roaster_online", "Its own bags.")
+    con.close()
+    con = build(lake, tmp_path)  # no model configured: no decision shown
+    assert con.execute("select verdict, verdict_model from screen_scores").fetchone() == (None, None)
+
+
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
     partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
