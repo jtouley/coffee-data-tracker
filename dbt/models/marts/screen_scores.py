@@ -6,14 +6,14 @@ the reason codes, the rule version, and next_due, the first day it may be screen
 An ops table: written beside each release for the owner's command center, never public.
 
 PROVISIONAL: the rules are not yet scored on a sealed test (eval/roaster_screen/README.md), and nothing shows this
-tier to the owner. Claude's decision on an undecided place (stg_screen_verdicts, screen_verdict.py) is shown beside
+tier to the owner. Claude's decision on a place the rules still leave undecided (stg_screen_verdicts, screen_verdict.py) is shown beside
 the tier (verdict, verdict_reason, verdict_model) and never changes it: Suggested stays the rules' alone until the
 design's sealed evaluation, so every row is decided by the rules.
 """
 
 import pyarrow as pa
 
-from coffeedata import screen_rules
+from coffeedata import screen_rules, screen_verdict
 
 SCHEMA = pa.schema(
     [
@@ -49,7 +49,9 @@ def model(dbt, session):
         if not r["is_latest"]:
             continue
         tier, reasons = screen_rules.tier(r)
-        v = verdicts.get(r["screen_id"]) or {}
+        # a decision is shown only while the rules still leave the place undecided: after a rule change decides it,
+        # an older decision would sit beside a tier it was never about
+        v = (verdicts.get(r["screen_id"]) or {}) if screen_verdict.undecided(tier, reasons) else {}
         out.append(
             {
                 "roaster_id": rid,

@@ -240,15 +240,32 @@ been asked.
   production rules left undecided and that `screen-verdicts` has decided, under one frozen model and prompt version
   (`screen_verdict.model()` and `DEFINITION_VERSION`, recorded here when the set is drawn). Places come from the test
   partition only (the Split rule above), leaving out #130's 200 and every item already labelled here. Strata are
-  Claude's label × Overture tag, with sizes frozen at the draw. The target is 300 places, with at least 100 that
-  Claude called `roaster_online` so the precision bound is useful. `SHA256SUMS` covers the items, the strata and the
-  decisions' file when they are drawn, and nobody reads their examples while developing.
-- **The labels.** Two independent labelers, Claude Opus and Claude Sonnet, each blind to the other, to Claude's
-  decision and to the strata, label every item against `GUIDE.md`. A third model settles their disagreements, blind to
-  both answers. That model is neither of the two labelers and never Claude Haiku, which makes the decisions being
-  scored (CLAUDE.md, #254: the tie-breaker is a different model, and the reference never comes from the model under
-  test). The labelers read the same stored evidence as the stage, because no agent visits the sites. That shared
-  evidence is the same caveat as the settles above, and the results will say so. A person spot-checks 50 items.
+  Claude's label × Overture tag, with sizes frozen at the draw (not the design's tag × tier: every place here has the
+  same tier, review, undecided). The evidence also carries each product's tags, which the design's 4.3 doesn't list.
+  The target is 300 places, with at least 100 that Claude called `roaster_online` so the precision bound is useful.
+  `SHA256SUMS` covers the items, the strata and the decisions' file when they are drawn, and nobody reads their
+  examples while developing.
+- **The labels, and how this departs from the design's D2.** D2 says two labelers read the businesses' own sites
+  and **the owner settles every disagreement**, so that a person breaks the blind spots the labelers and the stage
+  might share. This plan does not do that. The owner's later instructions replace D2 here, and they are its source:
+  the owner told us to use a model as the tie-breaker, CLAUDE.md step 6 (#254) now requires the two labelers to be
+  different models with a third model settling, and no agent may fetch a roaster's site. So:
+  - **Who labels is chosen when the set is drawn, not fixed here** (`screen_eval.pick_labellers`). From the models
+    available then, in a stated order of preference (most capable first), it takes three distinct models: two
+    labelers, A and B, and a third, C, that settles their disagreements. It leaves out whichever model
+    `COFFEEDATA_SCREEN_VERDICT_MODEL` resolves to at that moment (`screen_verdict.model()`, the model whose decisions
+    are scored), whatever it is. For example, with the decider `claude-haiku-5-5` and the preference order
+    `claude-opus-5-5`, `claude-sonnet-5-5`, `claude-fable-5-2`, A is Opus, B is Sonnet and C is Fable. If the decider
+    later becomes Sonnet, B becomes Fable, and C the next model in the order. The three ids and the decider's are
+    recorded here when the set is drawn.
+  - A and B label every item against `GUIDE.md`, each blind to the other, to the stage's decision and to the strata.
+    C labels only the disagreements, blind to A's and B's answers.
+  - **A person still spot-checks 50 items** (D2's spot-check is kept), and the results report how often the person
+    and the reference agree.
+  - **The limitation.** The labelers see only the stored evidence, the same text the stage saw, never the live
+    sites. A decision that was wrong because the stored evidence was thin, or because the site changed since it was
+    screened, can't be caught by labels made from that same evidence. The results say so beside every number, and
+    the bar below is read with it.
 - **Scored once.** The scorer refuses until coverage is complete: every sealed item has a stored decision under the
   frozen model and version, with none pending or in flight, and both labels plus a settle where needed. Only then
   does it print totals and Wilson 95% intervals, never an item, as #252's scorer does. After that the set joins the

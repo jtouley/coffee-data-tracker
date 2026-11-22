@@ -50,6 +50,20 @@ def wilson(k: float, n: float, z: float = 1.96) -> tuple[float, float]:
     return max(0.0, mid - half), min(1.0, mid + half)
 
 
+def pick_labellers(preference: list[str], decider: str | None = None) -> tuple[str, str, str]:
+    """The Claude stage's reference labelers (README, "The Claude stage's evaluation"): from the models available at
+    draw time, in their order of preference, the first three distinct ones that aren't the model whose decisions are
+    scored (screen_verdict.model() unless `decider` is given): A and B label, C settles. Fewer than three left is an
+    error, never a reference made by the model under test."""
+    from coffeedata import screen_verdict
+
+    decider = decider or screen_verdict.model()
+    left = list(dict.fromkeys(m for m in preference if m != decider))
+    if len(left) < 3:
+        raise SystemExit(f"need three models other than the decider ({decider}); got {left}")
+    return left[0], left[1], left[2]
+
+
 def known() -> sr.KnownRoasters:
     with (ROOT / "config" / "roasters.csv").open(newline="") as f:
         return sr.KnownRoasters(r["name"] for r in csv.DictReader(f))

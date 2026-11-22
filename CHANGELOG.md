@@ -23,9 +23,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   the coffee verdicts' key, and Claude answers `roaster_online`, `not_roaster` or `unsure` with one sentence. The
   decisions are raw, private rows (`screen_verdict_batches`, `screen_verdicts`; screen contract 1.1.0), keyed by the
   model and the prompt's version, and shown in the ops table `screen_scores` (ops contract 1.4.0) without changing a
-  tier: Suggested stays the rules' until the sealed evaluation (`eval/roaster_screen/README.md`). At most 1,000 places
-  a week (`COFFEEDATA_SCREEN_VERDICT_WEEKLY_CAP`). A batch that can't be read back is named and fails the command.
-  The job is defined in Terraform, unscheduled.
+  tier: Suggested stays the rules' until the sealed evaluation (`eval/roaster_screen/README.md`). The scraped text is
+  fenced as untrusted data. At most 1,000 requests a week, retries included (`COFFEEDATA_SCREEN_VERDICT_WEEKLY_CAP`),
+  and a place that failed three times is asked no more. A batch that can't be read back, or errored, expired or
+  canceled results, are named and fail the command. The job is defined in Terraform, unscheduled, and one variable
+  (`screen_verdict_model`) sets its model and the build's.
 - The roaster screen stops at a refusal (#208's review), as the probe does (#255): a challenge on any status, a 429
   or 430, or a 5xx with a `Retry-After`, on the catalog API or the home page is recorded (refusal `http_429`,
   `http_430` or `challenge`, counted by the breaker; a 5xx pause is its `http_<code>`) and nothing more is asked of

@@ -405,8 +405,9 @@ def cmd_screen(args: argparse.Namespace) -> None:
 def cmd_screen_verdicts(args: argparse.Namespace) -> None:
     """Claude's decisions on the places the roaster screen's rules left undecided (screen_verdict.py): collect the
     finished batches, then send what is pending, up to the week's cap. Collect first, as classify does, so a batch is
-    stored before anything new is sent. A batch that couldn't be read back, or a refused submit, is named on one ERROR
-    line and fails the command (exit non-zero) after everything else is stored, as classify does since #209. Nothing
+    stored before anything new is sent. A batch that couldn't be read back, results that came back errored, expired or
+    canceled, or a refused submit, are named on one ERROR line each and fail the command (exit non-zero) after
+    everything else is stored, as classify does since #209. Nothing
     here touches the build or the release: decisions reach only the ops table screen_scores."""
     from . import control, extract, screen_verdict
 
@@ -414,7 +415,8 @@ def cmd_screen_verdicts(args: argparse.Namespace) -> None:
     if args.dry_run:
         todo = screen_verdict.pending(lake, screen_verdict.model())
         today = datetime.now(UTC).date()
-        room = max(0, screen_verdict.weekly_cap() - screen_verdict.sent_this_week(lake, today))
+        cap = screen_verdict.weekly_cap() if args.cap is None else args.cap
+        room = max(0, cap - screen_verdict.sent_this_week(lake, today))
         print(f"screen-verdicts: {len(todo)} places pending, {room} left in this week's cap; nothing was sent "
               "(--dry-run)")  # fmt: skip
         return
@@ -432,8 +434,11 @@ def cmd_screen_verdicts(args: argparse.Namespace) -> None:
         control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
         raise
     unread: list[dict] = out["collect"].get("errors", [])
+    failed: list[dict] = out["collect"].get("failed_results", [])
     err = out["submit"].get("error")
-    control.finish(lake, job, "failed" if err or unread else "done", detail=control.detail_of(job) | out)
+    control.finish(
+        lake, job, "failed" if err or unread or failed else "done", detail=control.detail_of(job) | out
+    )
     _print(out)
     problems = []
     if unread:
@@ -447,6 +452,18 @@ def cmd_screen_verdicts(args: argparse.Namespace) -> None:
                           "batches": unread}))  # fmt: skip
         problems.append(f"Claude's screen decisions weren't collected for {len(unread)} batch(es): {named}. The next "
                         "run asks again; the build is not affected.")  # fmt: skip
+    if failed:
+        print(
+            json.dumps({"severity": "ERROR", "message": "screen-verdicts: results failed", "batches": failed})
+        )
+        named = ", ".join(
+            f"{f['batch_id']} ("
+            + ", ".join(f"{f[k]} {k}" for k in screen_verdict.FAILED_RESULTS if f[k])
+            + ")"
+            for f in failed
+        )
+        problems.append(f"Claude's screen decisions failed in {len(failed)} batch(es): {named}. Those places are "
+                        f"asked again, at most {screen_verdict.MAX_TRIES} times in all.")  # fmt: skip
     if err:
         problems.append(f"Claude's screen decision batch submit failed: {err}. The places stay pending.")
     if problems:
