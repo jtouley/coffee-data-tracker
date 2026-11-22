@@ -29,6 +29,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 from datetime import UTC, date, datetime, timedelta
 from importlib import resources
 from typing import Any, cast
@@ -94,8 +95,20 @@ def model() -> str:
 
 
 def weekly_cap() -> int:
+    """COFFEEDATA_SCREEN_VERDICT_WEEKLY_CAP, written as 1000, 1,000 or 1_000; WEEKLY_CAP when unset. Anything
+    else, or a negative number, is a SystemExit naming the variable."""
     raw = os.environ.get(CAP_ENV, "").strip()
-    return int(raw) if raw else WEEKLY_CAP
+    if not raw:
+        return WEEKLY_CAP
+    try:
+        cap = int(raw.replace(",", "").replace("_", ""))
+    except ValueError:
+        raise SystemExit(
+            f"{CAP_ENV} must be a whole number of requests, such as 1000 or 1,000; got {raw!r}"
+        ) from None
+    if cap < 0:
+        raise SystemExit(f"{CAP_ENV} can't be negative; got {raw!r}")
+    return cap
 
 
 def undecided(tier: str | None, reasons: list[str] | None) -> bool:
@@ -117,11 +130,13 @@ def _sizes(variants: list[dict] | None) -> str:
     return "; ".join(s for s in out if s) or "not stated"
 
 
+_TAG = re.compile(r"<(\s*/?\s*)(evidence)", re.I)
+
+
 def _fence(text: str) -> str:
-    """Scraped text can't close the evidence block early: an evidence tag inside it is broken up."""
-    for tag in ("<evidence", "</evidence", "<EVIDENCE", "</EVIDENCE"):
-        text = text.replace(tag, tag.replace("<", "< "))
-    return text
+    """Scraped text can't close the evidence block early: an evidence tag inside it, in any case and spacing
+    (</Evidence >, < /EVIDENCE), is broken up so it no longer reads as a tag."""
+    return _TAG.sub(lambda m: "< " + "".join(m.group(1).split()) + m.group(2), text)
 
 
 def evidence(screen: dict, products: list[dict], place: dict | None) -> str:
@@ -220,11 +235,20 @@ def pending(lake: Lake, model_id: str, scores: list[dict] | None = None) -> list
     if not want:
         return []
     ids = sorted(want, key=lambda k: (failed.get(k, 0), k))
-    screens = {r["screen_id"]: r for r in _rows(lake,
-        f"select * from {lake.scan('screens')} where list_contains($ids, screen_id)", {"ids": ids})}  # fmt: skip
+    # Raw rows deduplicated exactly as staging does (stg_screens: a screen written twice keeps its first copy by
+    # batch_id, run_date; stg_screen_products: one row per screen and product), so a retried flush can't show a
+    # product twice; products keep the order they were stored in (their first copy's).
+    screens = {r["screen_id"]: r for r in _rows(lake, f"""select * from {lake.scan('screens')}
+        where list_contains($ids, screen_id)
+        qualify row_number() over (partition by screen_id order by batch_id, run_date) = 1""", {"ids": ids})}  # fmt: skip
     products: dict[str, list[dict]] = {}
-    for p in _rows(lake, f"select * from {lake.scan('screen_products')} where list_contains($ids, screen_id)",
-                   {"ids": ids}):  # fmt: skip
+    for p in _rows(lake, f"""with raw as (
+            select *, row_number() over () as stored_at from {lake.scan('screen_products')}
+            where list_contains($ids, screen_id) and product_id is not null)
+        select * exclude (stored_at) from raw
+        qualify row_number() over (partition by screen_id, product_id
+            order by handle, title, vendor, product_type, body_hash, body_text, stored_at) = 1
+        order by screen_id, stored_at""", {"ids": ids}):  # fmt: skip
         products.setdefault(p["screen_id"], []).append(p)
     places = {r["roaster_id"]: r for r in _rows(lake, f"""select roaster_id, arg_max(name, (added_at, name)) as name,
         arg_max(tags, (added_at, tags)) as tags from {lake.scan('candidates')} where roaster_id is not null
