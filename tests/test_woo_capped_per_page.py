@@ -6,6 +6,7 @@ robots.txt and the run's deadline apply to every page. Synthetic stores only (`*
 
 from __future__ import annotations
 
+import random
 import time
 
 import httpx
@@ -175,15 +176,18 @@ def test_a_count_above_the_catalog_reads_it_and_stays_partial(mock):
     assert len(e.value.items) == 44 and len(store.asked) == 5
 
 
-def test_a_count_above_a_short_uncapped_first_page_costs_one_empty_page(mock):
-    """A store with 30 products that says 45: its first page looks capped at 30, and page 2 at 30 is empty."""
-    store = _serve(mock, Store(_products(30), total="45"))
-    with (
-        PoliteClient(min_interval=0) as c,
-        pytest.raises(PartialCatalog, match="30 products read, X-WP-Total says 45"),
-    ):
-        woocommerce.fetch(c, _r())
-    assert store.asked == [(100, 1), (30, 2)]
+@pytest.mark.parametrize(("total", "pages"), [("45", "1"), ("30", "5")])
+def test_count_headers_that_disagree_ask_for_nothing_more(mock, total, pages):
+    """Every count header present must say there is more. A store that honours per_page with 30 products, an
+    X-WP-Total of 45 and an X-WP-TotalPages of 1; or an X-WP-Total the first page reaches with a stale X-WP-TotalPages
+    of 5: no second request."""
+    store = _serve(mock, Store(_products(30), total=total, pages=pages))
+    with PoliteClient(min_interval=0) as c:
+        try:
+            assert len(woocommerce.fetch(c, _r())) == 30
+        except PartialCatalog as e:
+            assert "30 products read, X-WP-Total says 45" in str(e)
+    assert store.asked == [(100, 1)]
 
 
 def test_a_count_below_the_first_page_asks_for_nothing_more(mock):
@@ -263,6 +267,101 @@ def test_a_timeout_after_the_cap_asks_for_pages_that_still_divide_it(mock):
     with PoliteClient(min_interval=0, retries=1) as c:
         assert _ids(woocommerce.fetch(c, _r())) == list(range(1, 45))
     assert store.asked[:3] == [(100, 1), (10, 2), (5, 5)]  # offset 20 at 5 a page is page 5
+
+
+def _timing_out(store: Store, slow) -> callable:
+    """`store`, except that a request for which `slow(per_page, page)` is true times out."""
+
+    def route(request: httpx.Request) -> httpx.Response:
+        if slow(int(request.url.params["per_page"]), int(request.url.params["page"])):
+            store.asked.append((int(request.url.params["per_page"]), int(request.url.params["page"])))
+            raise httpx.ReadTimeout("slow", request=request)
+        return store(request)
+
+    return route
+
+
+def test_a_timeout_at_a_cap_no_timeout_size_divides_falls_back_to_a_divisor_of_the_offset(mock):
+    """Capped at 48, 130 products, page 2 times out once: asked again 24 a page (the largest size up to 25 that
+    divides the 48 read), and read whole."""
+    store = Store(_products(130), cap=48)
+    once: list[int] = []
+
+    def slow(per_page: int, page: int) -> bool:
+        if (per_page, page) == (48, 2) and not once:
+            once.append(1)
+            return True
+        return False
+
+    mock.get(url__regex=rf"^{BASE}(\?.*)?$").mock(side_effect=_timing_out(store, slow))
+    with PoliteClient(min_interval=0, retries=1) as c:
+        assert _ids(woocommerce.fetch(c, _r())) == list(range(1, 131))
+    assert store.asked == [(100, 1), (48, 2), (24, 3), (24, 4), (24, 5), (24, 6)]
+
+
+def test_a_capped_store_that_times_out_at_every_size_is_stored_partial_with_what_was_read(mock):
+    """Never an error with nothing stored: the 48 products of page 1 are a partial fetch, with the reason, and it
+    isn't counted as a deadline stop."""
+    store = Store(_products(130), cap=48)
+    mock.get(url__regex=rf"^{BASE}(\?.*)?$").mock(
+        side_effect=_timing_out(store, lambda per_page, page: page > 1)
+    )
+    with (
+        PoliteClient(min_interval=0, retries=1) as c,
+        pytest.raises(PartialCatalog, match="timed out at page") as e,
+    ):
+        woocommerce.fetch(c, _r())
+    assert _ids(e.value.items) == list(range(1, 49))
+    # its cause is the timeout, not the clock (respx chains a raised exception to itself, so the chain is looked at
+    # one step, not walked as ingest.stopped_by_deadline does)
+    assert isinstance(e.value.__cause__, woocommerce.PagingTimedOut) and "deadline" not in str(e.value)
+    assert store.asked == [(100, 1), (48, 2), (24, 3), (4, 13)]  # 48, 24 and 4 a page, all from offset 48
+
+
+def test_a_timeout_before_any_cap_still_fails_as_before(mock):
+    store = Store(_products(130))
+    mock.get(url__regex=rf"^{BASE}(\?.*)?$").mock(side_effect=_timing_out(store, lambda per_page, page: True))
+    with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(http.FetchError) as e:
+        woocommerce.fetch(c, _r())
+    assert not isinstance(e.value, PartialCatalog)
+    assert store.asked == [(100, 1), (25, 1), (5, 1)]
+
+
+def test_a_capped_store_that_answers_random_samples_is_bounded_by_its_own_count(mock):
+    """A store that ignores `page` and answers a different random 10 each time (orderby=rand behind a cache): never
+    a whole repeated page, so only the store's own count bounds it, 200 products plus one page: 21 requests at most.
+    Its products are each kept once."""
+    products = _products(200)
+    rng = random.Random(262)
+    asked: list[tuple[int, int]] = []
+
+    def route(request: httpx.Request) -> httpx.Response:
+        asked.append((int(request.url.params["per_page"]), int(request.url.params["page"])))
+        return httpx.Response(200, json=rng.sample(products, 10), headers={"X-WP-Total": "200"})
+
+    mock.get(url__regex=rf"^{BASE}(\?.*)?$").mock(side_effect=route)
+    with PoliteClient(min_interval=0) as c:
+        try:
+            items = woocommerce.fetch(c, _r())
+        except PartialCatalog as e:
+            items = e.items
+    assert 2 <= len(asked) <= 21
+    ids = [i.product_id for i in items]
+    assert len(ids) == len(set(ids))
+
+
+def test_a_page_that_overlaps_an_earlier_one_keeps_each_product_once(mock):
+    """A catalog shifting during the read: page 2 repeats 5 of page 1's products. Each product is one item."""
+    products = _products(20)
+    pages = {1: products[0:10], 2: products[5:15], 3: products[15:20]}
+
+    def route(request: httpx.Request) -> httpx.Response:
+        rows = pages.get(int(request.url.params["page"]), [])
+        return httpx.Response(200, json=rows, headers={"X-WP-Total": "20"})
+
+    mock.get(url__regex=rf"^{BASE}(\?.*)?$").mock(side_effect=route)
+    with PoliteClient(min_interval=0) as c:
+        assert _ids(woocommerce.fetch(c, _r())) == list(range(1, 21))
 
 
 # --- the safeguards: the deadline, pacing, robots.txt ---------------------------------------------------------------
