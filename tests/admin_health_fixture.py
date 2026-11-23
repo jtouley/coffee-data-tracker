@@ -10,7 +10,8 @@ Four weeks:
 - W3: this week, on Monday night (NOW): generic's resume crawl died (only its running row, and its retry has
   started since), woocommerce hit its deadline twice (as last week) and its retry never started, generic hit its
   deadline and its errors and 429s jumped, the shared IP was refused by over 8% of stores, a fetch-health poll
-  failed, and square_online's retry is still running; Tuesday hasn't come yet.
+  failed, square_online's retry is still running, and squarespace read 2 catalogs only in part (one of them partial
+  every week); Tuesday hasn't come yet.
 """
 
 from __future__ import annotations
@@ -100,16 +101,24 @@ def _at(week: str, days: int, hour: int, minute: int = 17, second: int = 0) -> d
     )
 
 
+# Catalogs read only in part, in an attempt's end row (detail.partial, partial_every_week): a calm line on Week. A
+# partial store isn't done, so each later pass asks it again and ends partial again.
+PARTIAL = {(W3, "squarespace", p): {"partial": 2, "partial_every_week": ["big-catalog.example"]}
+           for p in ("morning", "resume", "retry")}  # fmt: skip
+
+
 def _attempt(lake: Lake, week: str, job: str, connector: str | None, start: datetime, end: datetime | None,
-             status: str, n: int, **counts) -> None:  # fmt: skip
-    """The attempt's running row, then (unless it is still running) its end row."""
+             status: str, n: int, extra: dict | None = None, **counts) -> None:  # fmt: skip
+    """The attempt's running row, then (unless it is still running) its end row, with `extra` in its detail."""
     aid = f"{start:%Y%m%dT%H%M%S}-{n:06x}"
     detail = {"execution": f"{job}-{(connector or 'all').replace('_', '-')}-{n:05x}", "task_attempt": 0}
     base = {"run_date": week, "job": job, "connector": connector, "attempt_id": aid, "started_at": start,
             "code_version": "test", "egress_ips": [IPS[connector]] if connector else []}  # fmt: skip
     control.write(lake, base | {"status": "running", "todo": counts.get("todo"), "detail": detail})
     if status != "running":
-        control.write(lake, base | counts | {"status": status, "ended_at": end, "detail": detail})
+        control.write(
+            lake, base | counts | {"status": status, "ended_at": end, "detail": detail | (extra or {})}
+        )
 
 
 def _crawls(lake: Lake, week: str) -> None:
@@ -125,7 +134,10 @@ def _crawls(lake: Lake, week: str) -> None:
         job = (
             "crawl-retry" if conn == "shopify" and slot == "retry" else "crawl"
         )  # Shopify's 21:47 is its own job
-        _attempt(lake, week, job, conn, start, end, status, n, **counts)
+        extra = PARTIAL.get((week, conn, slot), {}) | (
+            {"stopped_deadline": 1} if status == "deadline" else {}
+        )
+        _attempt(lake, week, job, conn, start, end, status, n, extra, **counts)
     _attempt(
         lake, week, "probe", None, _at(week, 0, 7, 17, 38), _at(week, 0, 7, 23), "done", 900, todo=732, ok=167
     )

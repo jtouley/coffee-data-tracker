@@ -1027,20 +1027,30 @@ data as a new release: use the `--run-date $WEEK` form above as well, so it fail
 
 After 11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
 
-### 5.3 A crawl that ends `deadline`: skipped or partial
+### 5.3 A crawl that ends `deadline`, and partial catalogs: skipped or partial
 
-A crawl that reaches its deadline exits 0 and sends no email. Its end row in `job_manifests` says `deadline` for one
-of two reasons, which need different handling:
+A crawl that reaches its deadline exits 0 and sends no email. Its end row in `job_manifests` says `deadline` only when
+the deadline stopped work (`connectors.end_status`):
 
 - **Skipped**: `skipped` > 0 roasters were never started. They have no `fetches` row this week, so
   `run_is_complete` fails Tuesday's gate until something fetches them.
-- **Partial**: `skipped` = 0, and `detail.partial` > 0 catalogs were read only in part (the deadline stopped them
-  mid-catalog, a WooCommerce store's count differed from its `X-WP-Total`, a sub-sitemap couldn't be read or
-  answered 404, or some of a generic store's product pages failed: `fetches.error` counts them). Each
-  one is an **ok** fetch with `fetches.partial = true`, and `fetches.error` says why (for example
-  `partial: … (page 55)`). `run_completeness` counts it as ok, so the gate passes, and dbt keeps its unread products
-  listed. A partial Shopify catalog is parked at the page it reached: the resume slot and crawl-retry continue from
-  there.
+- **Stopped**: `detail.stopped_deadline` > 0 fetches were cut off mid-catalog by the deadline (an `http.DeadlineReached`
+  behind the fetch: read in part, or with nothing read yet an error). A partial Shopify catalog is parked at the page it
+  reached: the resume slot and crawl-retry continue from there.
+- **Parked or not retried**: `detail.parked_at_deadline` > 0 blocked stores were parked mid-catalog because the
+  window closed during a page backoff, or their next backoff would end past it; `detail.not_retried_at_deadline` > 0
+  stores weren't asked again because their wait (a block's Retry-After or a backoff) ends past it. Each keeps its
+  error row; crawl-retry resumes the parked ones, and the next pass asks the rest.
+
+**Partial** catalogs are counted apart, in `detail.partial`, whatever stopped them: the deadline (those are in
+`stopped_deadline` too), a WooCommerce store's count that differs from its `X-WP-Total`, a sub-sitemap that couldn't
+be read or answered 404, or some of a generic store's product pages that failed (`fetches.error` counts them). A crawl
+whose only partials are of those other kinds ends **`done`**, with `detail.partial` > 0: it didn't run out of time.
+Each partial is an **ok** fetch with `fetches.partial = true`, and `fetches.error` says why (for example
+`partial: … (page 55)`). `run_completeness` counts it as ok, so the gate passes, and dbt keeps its unread products
+listed. The admin's Week lists a `deadline` row as "hit its time limit" and partial catalogs as a calm line of their
+own. Rows written before this rule (2026-11-23 and earlier) said `deadline` for any partial, with none of those counts
+in `detail`: Week reads one with `skipped` = 0 as a finished pass, not a time limit.
 
 An attempt whose latest row is `running` died. Check the week's rows per connector (each connector has one attempt
 per slot):
@@ -1055,21 +1065,23 @@ for r in control.rows(Lake(), os.environ["WEEK"]):  # the latest row per attempt
     d = json.loads(r["detail"] or "{}")
     print(r["job"], r["connector"], r["started_at"], r["status"],
           *(f"{k}={r[k]}" for k in ("todo", "ok", "errors", "parked", "skipped")),
-          f"partial={d.get('partial')}", f"partial_every_week={d.get('partial_every_week')}")
+          *(f"{k}={d.get(k)}" for k in ("partial", "stopped_deadline", "parked_at_deadline",
+                                         "not_retried_at_deadline", "partial_every_week")))
 EOF
 ```
 
 - **`skipped` > 0** on a connector's **latest** crawl row after its 15:17 resume: re-run its crawl before Tuesday's
   03:17 merge (§5.1 c, step 2). Otherwise `run_is_complete` fails Tuesday's gate.
-- **Only partial** (`skipped` = 0): the gate passes. No re-run is needed, and none should be made every week for it.
+- **Only partial or stopped** (`skipped` = 0, whether the row says `done` or `deadline`): the gate passes.
+  No re-run is needed, and none should be made every week for it.
 - **`partial_every_week`** lists the stores that ended partial in each of their last two runs
   (`ingest.PARTIAL_WEEKS`); the crawl's log and stderr warn about them too. Such a store is never read whole inside
   one window. Read its `fetches.error` rows: a deadline stop at a later page each week means the catalog is too big
   for the window, and a count that never matches `X-WP-Total` means the store's listing and its count disagree.
   Raise it with the owner rather than re-running crawls.
 - `crawl-retry` (Shopify, 21:47) writes `job_manifests` rows of its own (job `crawl-retry`, which never counts as a
-  landed crawl). Its end row says `deadline` when it left stores unstarted or a resumed store stopped partial again,
-  with `partial` and `partial_every_week` in its `detail`, as a crawl's. The query above prints it.
+  landed crawl). Its end row says `deadline` when the deadline left stores unstarted, parked or not retried, or
+  stopped a resumed store again, else `done`, with the same `detail` counts as a crawl's. The query above prints it.
 - After the merge, its row's `detail` lists `missing` connectors. That list should be empty.
 
 ### 5.4 Raising a job's memory by hand

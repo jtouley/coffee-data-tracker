@@ -482,7 +482,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("attempt_id", pa.string()),
             ("started_at", pa.timestamp("s", tz="UTC")),
             ("ended_at", pa.timestamp("s", tz="UTC")),
-            ("status", pa.string()),  # running, done, deadline, failed
+            ("status", pa.string()),  # running, done, deadline (connectors.end_status), failed
             ("todo", pa.int32()),
             ("ok", pa.int32()),
             ("errors", pa.int32()),

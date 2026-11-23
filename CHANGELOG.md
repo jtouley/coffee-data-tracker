@@ -261,6 +261,14 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
 
 ### Fixed
 
+- **A crawl ends `deadline` only when its deadline stopped work.** `crawl` and `crawl-retry` said `deadline` for any
+  partial catalog, so WooCommerce and generic reported it on every pass while using about a fifth of their window
+  with no store skipped: their partials were a count that differs from `X-WP-Total`, or a failed product page or
+  sub-sitemap. Now the end status (`connectors.end_status`) is `deadline` for stores never started (`skipped`),
+  fetches the deadline cut off mid-catalog (`detail.stopped_deadline`: an `http.DeadlineReached` behind the fetch),
+  blocked stores parked at it (`parked_at_deadline`) or not retried past it (`not_retried_at_deadline`), else `done`, with `detail.partial` and `partial_every_week` kept. The admin's Week says "hit its time limit" only
+  for those (older partial-only `deadline` rows read as done), and lists partial catalogs as a calm line of their own. Manifest contract 1.3.0 (descriptions only);
+  RUNBOOK ยง5.3.
 - The probe stops at a refusal: an edge's challenge on any status (a 202, a 403 with `cf-mitigated`, a 503), or a
   429 or 430 its retries didn't get past, on `/products.json` or the home page is recorded (`blocked`, or
   `http_429`/`http_430`) and nothing more is asked of the site. It used to swallow it, ask the WooCommerce Store API

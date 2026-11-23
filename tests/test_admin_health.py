@@ -35,7 +35,7 @@ def row(job="crawl", connector="generic", start=None, status="done", aid=None, w
     return {"attempt_id": aid or f"{job}-{connector}-{start:%d%H%M%S}", "job": job, "connector": connector,
             "started_at": start, "ended_at": None if status == "running" else end or start + timedelta(minutes=20),
             "status": status, "arm": arm, "detail": detail or {}, "refusals": counts.pop("refusals", []),
-            **{k: counts.get(k) for k in ("todo", "ok", "errors", "http_429", "http_430")}}  # fmt: skip
+            **{k: counts.get(k) for k in ("todo", "ok", "errors", "skipped", "http_429", "http_430")}}  # fmt: skip
 
 
 def week_of(rows, week=WEEK, builds=()):
@@ -80,6 +80,8 @@ def real(spec, week, cut=None):
             continue
         st = "running" if cut and end > cut else ("deadline" if (conn, (h, m)) in DEADLINE else "done")
         counts = {} if st == "running" else {"ok": ok, "errors": errors, "http_429": h429, "http_430": 0}
+        if st == "deadline":  # the deadline left stores unstarted: a time limit under the truthful rule
+            counts["skipped"] = 3
         out.append(row(connector=conn, start=start, end=end, status=st, week=week, todo=todo, **counts))
     return out
 
@@ -124,7 +126,7 @@ def test_a_running_attempt_dies_past_the_time_limit_or_once_a_later_one_starts()
 def test_passes_say_what_each_tried_and_recovered_and_count_attempts_not_connectors():
     rows = [row(todo=765, ok=641, errors=131), row(connector="shopify", todo=1062, ok=1059, errors=3),
             row(start=at(15, 20), todo=124, ok=9, errors=115), row(start=at(15, 21), connector="woocommerce",
-            status="deadline", todo=12, ok=4, errors=10),
+            status="deadline", todo=12, ok=4, errors=10, skipped=2),
             row(start=at(10, 0), todo=1, ok=1, errors=0, detail={"test": "t1"}),
             # a live attempt and, for woocommerce, Cloud Run's retry of one that died
             row(start=at(15, 30), connector="square_online", status="running", todo=50),
@@ -307,8 +309,8 @@ def test_refusals_over_the_egress_check_share_are_flagged_and_twice_is_said():
 
 
 def test_flags_a_failed_or_died_attempt_a_deadline_and_a_jump_but_not_a_test_crawl():
-    rows = [row(todo=765, ok=641, errors=131, http_429=140), row(connector="woocommerce", status="deadline", todo=9),
-            row(connector="woocommerce", start=at(15, 20), status="deadline", todo=9),
+    rows = [row(todo=765, ok=641, errors=131, http_429=140), row(connector="woocommerce", status="deadline", todo=9, skipped=2),
+            row(connector="woocommerce", start=at(15, 20), status="deadline", todo=9, skipped=2),
             row(start=at(15, 20), status="running", aid="dead"), row(start=at(21, 48), todo=60, ok=2, errors=58),
             row("fetch-health", None, start=at(15, 47), status="failed"),
             row(start=at(11, 0), status="failed", detail={"test": "t1"})]  # fmt: skip
@@ -331,7 +333,8 @@ def test_flags_a_failed_or_died_attempt_a_deadline_and_a_jump_but_not_a_test_cra
 def test_a_deadline_as_last_week_is_usual_and_the_last_pass_says_its_stores_went_uncrawled():
     def woo(week, *slots):
         days = 0 if week == WEEK else -7
-        return [row(connector="woocommerce", week=week, status="deadline", start=at(h, m, days), todo=9)
+        return [row(connector="woocommerce", week=week, status="deadline", start=at(h, m, days), todo=9,
+                    detail={"stopped_deadline": 1})
                 for h, m in slots]  # fmt: skip
 
     every = ((9, 19), (15, 20), (21, 48))
@@ -394,7 +397,8 @@ def test_the_synthetic_weeks_flag_what_they_were_made_to(hlake):
     ]
     assert sorted(codes(f, skip=())) == [
         ("deadline", "generic"), ("deadline", "woocommerce"), ("died", "generic"), ("failed", "fetch-health"),
-        ("jump", "generic"), ("jump", "squarespace"), ("missed", "retry"), ("refusals", None)]  # fmt: skip
+        ("jump", "generic"), ("jump", "squarespace"), ("missed", "retry"), ("partial", "squarespace"),
+        ("refusals", None)]  # fmt: skip
     assert (
         next(x for x in f["flags"] if x["code"] == "deadline" and x["connector"] == "woocommerce")["kind"]
         == "usual"
@@ -440,7 +444,8 @@ def test_week_answers_first_then_says_what_needs_a_look(tmp_path, hlake):
     assert "5 of 5 connectors landed" in answer and "7 things to look at" in answer
     assert "Tuesday’s merge hasn’t run yet" in answer
     for words in ("generic’s resume crawl died.", "never reported finishing", "No retry crawl for woocommerce.",
-                  "woocommerce hit its time limit</strong> in the morning and resume passes, as last week. The stores it didn’t reach weren’t crawled this week.",
+                  "woocommerce hit its time limit</strong> in the morning and resume passes, as last week. The stores it didn’t reach or finish weren’t read whole this week.",
+                  "squarespace read 2 catalogs only in part</strong> in its retry pass. The products it didn’t read stay listed as they were. big-catalog.example was partial in each of its last 2 runs, so not read whole in either.",
                   "egress check flags an IP that is over on two runs in a row", "up more than usual:",
                   "(1 still running)", "(1 died)"):  # fmt: skip
         assert words in text, words
@@ -511,15 +516,43 @@ def test_a_pass_whose_attempts_all_died_shows_no_numbers_and_no_change():
 
 def test_a_shopify_deadline_before_its_retry_says_its_stores_went_uncrawled():
     """Shopify's 21:47 pass is crawl-retry, which takes only parked stores: it never picks up the rest."""
-    rows = [r | {"status": "deadline"} if (r["connector"], health.slot(r, WEEK)) == ("shopify", "resume") else r
+    rows = [r | {"status": "deadline", "skipped": 2}
+            if (r["connector"], health.slot(r, WEEK)) == ("shopify", "resume") else r
             for r in _full_week()]  # fmt: skip
     for now in (at(16, 0), at(23, 30)):  # before the retry, and after it ran
         (d,) = [x for x in health.flags(week_of(rows), None, None, now)["flags"] if x["code"] == "deadline"]
         assert (d["connector"], d["final"]) == ("shopify", True)
-    woo = [r | {"status": "deadline"} if (r["connector"], health.slot(r, WEEK)) == ("woocommerce", "resume") else r
+    woo = [r | {"status": "deadline", "skipped": 2}
+           if (r["connector"], health.slot(r, WEEK)) == ("woocommerce", "resume") else r
            for r in _full_week()]  # fmt: skip
     (d,) = [x for x in health.flags(week_of(woo), None, None, at(16, 0))["flags"] if x["code"] == "deadline"]
     assert not d["final"]  # woocommerce's own 21:47 crawl takes them
+
+
+def test_a_shopify_resume_that_only_parked_stores_says_its_retry_resumes_them():
+    """A Shopify pass that ends `deadline` only for stores it parked (or a catalog parked at its page) lost none for
+    the week: crawl-retry resumes them at 21:47. Not retried or unstarted stores are lost."""
+
+    def shop(**stops):
+        return [r | {"status": "deadline", "skipped": stops.pop("skipped", 0), "detail": stops}
+                if (r["connector"], health.slot(r, WEEK)) == ("shopify", "resume") else r
+                for r in _full_week()]  # fmt: skip
+
+    for stop in ({"parked_at_deadline": 2}, {"stopped_deadline": 1}):
+        for now in (at(16, 0), at(23, 30)):
+            (d,) = [
+                x
+                for x in health.flags(week_of(shop(**stop)), None, None, now)["flags"]
+                if x["code"] == "deadline"
+            ]
+            assert (d["final"], d["parked"]) == (False, True), stop
+    for stop in ({"not_retried_at_deadline": 1, "parked_at_deadline": 2}, {"skipped": 3}):
+        (d,) = [
+            x
+            for x in health.flags(week_of(shop(**stop)), None, None, at(23, 30))["flags"]
+            if x["code"] == "deadline"
+        ]
+        assert (d["final"], d["parked"]) == (True, False), stop
 
 
 def test_a_test_crawl_is_never_marked_died_because_a_pass_started_after_it():
@@ -554,3 +587,121 @@ def test_last_week_or_the_streaks_failing_costs_only_their_own_block(tmp_path, h
     assert "Couldn’t read last week (OSError: HTTP 503 from the lake)" in r.text
     assert "Couldn’t read the stores that keep failing: OSError: HTTP 503 from the lake" in r.text
     assert "No retry crawl for woocommerce." in r.text and "Every job attempt" in r.text
+
+
+def test_partial_catalogs_are_a_calm_line_of_their_own_never_a_time_limit():
+    """Since the crawl's end status is truthful, a pass whose catalogs were read in part for another reason (a count
+    that disagrees, a failed page) ends `done`: Week lists its partials calmly, from its latest ended pass (each pass
+    asks a partial store again, so passes aren't summed), and says "hit its time limit" only for a `deadline` row."""
+    part = {"partial": 3, "partial_every_week": ["b.example", "c.example"]}
+    rows = [row(connector="woocommerce", todo=245, ok=236, errors=13, detail=part),
+            row(connector="woocommerce", start=at(15, 20), todo=12, ok=4, errors=10,
+                detail={"partial": 2, "partial_every_week": ["b.example"]}),
+            row(connector="generic", start=at(9, 20), status="deadline", todo=765,
+                detail={"partial": 2, "stopped_deadline": 2}),
+            row(connector="squarespace", start=at(9, 21), detail={"partial": 0, "partial_every_week": []}),
+            row(connector="shopify", start=at(9, 22), status="running", detail=part)]  # fmt: skip
+    f = health.flags(week_of(rows), None, None, at(16, 0))
+    got = [(x["code"], x["connector"], x["kind"]) for x in f["flags"] if x["code"] in ("deadline", "partial")]
+    assert got == [("deadline", "generic", "warn"), ("partial", "woocommerce", "usual"),
+                   ("partial", "generic", "usual")]  # fmt: skip
+    woo = next(x for x in f["flags"] if x["code"] == "partial" and x["connector"] == "woocommerce")
+    assert (woo["pass"], woo["partial"], woo["every_week"], woo["weeks"]) == ("resume", 2, ["b.example"], 2)
+    # a later pass that didn't ask the partial stores again (detail.partial 0) doesn't hide them
+    later = rows + [
+        row(connector="woocommerce", start=at(21, 48), todo=8, ok=0, errors=8, detail={"partial": 0})
+    ]
+    f2 = health.flags(week_of(later), None, None, at(23, 0))
+    woo = next(x for x in f2["flags"] if x["code"] == "partial" and x["connector"] == "woocommerce")
+    assert (woo["pass"], woo["partial"]) == ("resume", 2)
+    assert f["new"] == sum(x["kind"] != "usual" for x in f["flags"])  # partials are never counted as new
+    assert not any(x["code"] == "deadline" and x["connector"] == "woocommerce" for x in f["flags"])
+
+
+def test_week_words_a_time_limit_and_partial_catalogs(tmp_path):
+    from jinja2 import Environment, FileSystemLoader
+
+    env = Environment(loader=FileSystemLoader(str(Path(__file__).resolve().parents[1] / "admin/templates")))
+    src = env.loader.get_source(env, "part_week.html")[0]
+    start = src.index("{% macro listed")
+    macros = src[start : src.index("{% macro cell")]
+    tpl = env.from_string(macros + "{{ flag(f) }}")
+
+    def say(f):
+        return re.sub(r"<[^>]+>", "", tpl.render(f=f, n=lambda v: f"{v:,}", t=str, health={})).strip()
+
+    parked = {"code": "deadline", "kind": "warn", "connector": "shopify", "passes": ["resume"], "last_passes": [],
+              "final": False, "parked": True}  # fmt: skip
+    assert (
+        say(parked)
+        == "shopify hit its time limit in the resume pass. Its 21:47 retry resumes the stores it parked."
+    )
+    assert say(
+        {
+            "code": "deadline",
+            "kind": "warn",
+            "connector": "generic",
+            "passes": ["morning"],
+            "last_passes": [],
+            "final": False,
+        }
+    ) == (  # fmt: skip
+        "generic hit its time limit in the morning pass. The next pass picks up the stores it didn’t reach or finish."
+    )
+    assert say(
+        {
+            "code": "partial",
+            "kind": "usual",
+            "connector": "woocommerce",
+            "pass": "morning",
+            "partial": 1,
+            "every_week": [],
+            "weeks": 2,
+        }
+    ) == (  # fmt: skip
+        "woocommerce read 1 catalog only in part in its morning pass. The products it didn’t read stay listed as they "
+        "were."
+    )
+    many = [f"s{i}.example" for i in range(7)]
+    assert say(
+        {
+            "code": "partial",
+            "kind": "usual",
+            "connector": "generic",
+            "pass": "retry",
+            "partial": 9,
+            "every_week": many,
+            "weeks": 2,
+        }
+    ).endswith(  # fmt: skip
+        "s0.example, s1.example, s2.example, s3.example, s4.example and 2 more were partial in each of their last 2 "
+        "runs, so not read whole in either."
+    )
+
+
+def test_an_old_partial_only_deadline_row_is_no_time_limit_this_week_or_as_last_week():
+    """Rows written under the old rule said `deadline` for any partial catalog, with `skipped` 0 and none of the
+    deadline's counts in detail. They read as finished passes: no "hit its time limit" line, a `done` pass, and no
+    "as last week" that would make this week's real time limit read as usual."""
+
+    def woo(week, status="deadline", **kw):
+        days = 0 if week == WEEK else -7
+        return [row(connector="woocommerce", week=week, status=status, start=at(h, m, days), todo=9, skipped=0, **kw)
+                for h, m in ((9, 19), (15, 20), (21, 48))]  # fmt: skip
+
+    old = woo(LAST, detail={"partial": 3, "partial_every_week": ["b.example"]})
+    assert not any(health.timed_out(r) for r in old)
+    f = health.flags(week_of(old, LAST), None, None, at(23, 30, -7))
+    assert not [x for x in f["flags"] if x["code"] == "deadline"]
+    assert [p["status"] for p in f["passes"]] == ["done", "done", "done"]
+    assert [(x["code"], x["kind"]) for x in f["flags"] if x["code"] == "partial"] == [("partial", "usual")]
+    # this week the deadline really stopped a catalog: new, not "as last week"
+    real_stop = woo(WEEK, detail={"partial": 3, "stopped_deadline": 1})
+    f = health.flags(week_of(real_stop), week_of(old, LAST), None, at(23, 30))
+    (d,) = [x for x in f["flags"] if x["code"] == "deadline"]
+    assert (d["kind"], d["last_passes"]) == ("warn", [])
+    # an old row with stores skipped was a time limit, and still reads as one
+    assert health.timed_out(row(connector="woocommerce", status="deadline", skipped=4))
+    for k in ("stopped_deadline", "parked_at_deadline", "not_retried_at_deadline"):
+        assert health.timed_out(row(connector="woocommerce", status="deadline", skipped=0, detail={k: 1}))
+    assert not health.timed_out(row(connector="woocommerce", status="done", skipped=0, detail={"partial": 2}))

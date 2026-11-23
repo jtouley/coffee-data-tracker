@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-manifest
-version: 1.2.0
+version: 1.3.0
 name: Coffee Data internal manifest contract
 status: active
 domain: coffee
@@ -140,9 +140,13 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: running (start row), done, deadline or failed. An attempt with only a running row died. A build is done
-      when it passed and was served, failed when its checks failed or it crashed (detail.passed, detail.error). A screen
-      is stopped when too many sites refused it (detail.stopped, detail.refusals).
+    description: 'running (start row), done, deadline or failed. An attempt with only a running row died. A crawl or crawl-retry
+      ends deadline only when its deadline stopped work: roasters it never started (skipped), catalogs it cut off mid-way
+      (detail.stopped_deadline), blocked stores it parked (detail.parked_at_deadline) or stores not retried because their
+      wait ends past it (detail.not_retried_at_deadline); one whose catalogs were read in part for another reason (a count
+      that differs, a failed page) ends done, with detail.partial. Before manifest 1.3.0 a crawl said deadline for any partial
+      catalog. A build is done when it passed and was served, failed when its checks failed or it crashed (detail.passed,
+      detail.error). A screen is stopped when too many sites refused it (detail.stopped, detail.refusals).'
   - name: todo
     logicalType: integer
     physicalType: int32
@@ -219,10 +223,11 @@ schema:
     physicalType: string
     required: false
     description: 'JSON: the job''s own summary (arm, egress, rps, slice and salt for the confirmation run; only for a manual
-      crawl --only; for fetch-health, its verdict on the week''s fetches: systemic fetch failures, and the list of roasters
-      whose fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, plus
-      the partial and quarantined fetches; for classify, its model and what it collected and submitted; for build, its build_id
-      and whether it passed).'
+      crawl --only; for a crawl, partial, partial_every_week, stopped_deadline, parked_at_deadline and not_retried_at_deadline;
+      for fetch-health, its verdict on the week''s fetches: systemic fetch failures, and the list of roasters whose fetch
+      failed, came back empty or came back short, each with its reasons and the gate rules that gave them, plus the partial
+      and quarantined fetches; for classify, its model and what it collected and submitted; for build, its build_id and
+      whether it passed).'
   quality:
   - id: job_start_and_end_rows
     description: a job writes a running row at its start and one end row (done, deadline or failed).
@@ -278,4 +283,4 @@ customProperties:
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: c24949393f333f05
+  value: c7a12d027e4782c8
