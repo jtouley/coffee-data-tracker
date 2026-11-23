@@ -40,6 +40,7 @@ jobs:
     # failed its checks builds no site, so the served one stays up.
     outputs:
       site: ${{ steps.site.outputs.built }}
+      smoke: ${{ steps.expect.outputs.site }}
     # Secrets are set on the steps that run the coffeedata command needing them, never here: job-level env is in
     # scope for every step, setup-uv and uv sync included (tests/test_workflow_secrets.py).
     env:
@@ -100,6 +101,18 @@ jobs:
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         # include-hidden-files: v5 leaves out dot folders by default, and the site has /.well-known/security.txt.
         with: {path: build/site, include-hidden-files: true}
+      # What the live site must serve once this build is deployed (the smoke job checks it). After the upload, and
+      # continue-on-error, so a failure here holds back neither the deploy nor the steps below; the output is then
+      # empty, and the smoke job fails on it (a build that can't be read is the broken site it looks for).
+      - name: Note what the smoke test expects
+        id: expect
+        if: steps.site.outputs.built == 'true'
+        env:
+          PYTHONPATH: src
+        continue-on-error: true
+        run: |
+          expect=$(python3 -m coffeedata.live_smoke expect-site build/site)
+          echo "site=$expect" >> "$GITHUB_OUTPUT"
       # Last, so a Snowflake problem (a contract change needing --migrate) turns the run red without holding back
       # the site. It loads the export of the served release that the weekly run just wrote to build/public.
       - name: Load Snowflake
@@ -123,3 +136,26 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
+
+  # The live site, once Pages has it (src/coffeedata/live_smoke.py): the home, catalog and privacy pages, the
+  # catalog download and the 404, each by its status and content. The catalog page and download must match this
+  # build (its data key, release and one coffee, from the built folder). Pages has no traffic to move, so a failure fails the run and the
+  # summary says how to put the previous site back (runbook/github-pages.md, "When the smoke test fails"). Its own
+  # job: it reads public pages only, so it holds no Pages or id token.
+  smoke:
+    needs: [run, deploy]
+    if: ${{ !cancelled() && needs.deploy.result == 'success' && needs.run.outputs.site == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - name: Smoke-test the live site
+        env:
+          SITE: ${{ vars.SITE_URL || 'https://registry.coffee' }}
+          EXPECT: ${{ needs.run.outputs.smoke }}
+          NONCE: ${{ github.run_id }}-${{ github.run_attempt }}
+          PYTHONPATH: src
+        run: python3 -m coffeedata.live_smoke check site "$SITE" --expect "$EXPECT" --nonce "$NONCE"
