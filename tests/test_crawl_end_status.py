@@ -62,7 +62,9 @@ def test_only_a_deadline_among_the_causes_is_a_deadline_stop():
         assert ingest.stopped_by_deadline(outer)
     assert ingest.stopped_by_deadline(DeadlineReached("before the sitemap"))  # nothing read: an error
     # WooCommerce's X-WP-Total mismatch and generic's failed pages are raised on their own, with no cause
-    assert not ingest.stopped_by_deadline(PartialCatalog("w.com: 10 products read, X-WP-Total says 44", [_item(r)]))
+    assert not ingest.stopped_by_deadline(
+        PartialCatalog("w.com: 10 products read, X-WP-Total says 44", [_item(r)])
+    )
     assert not ingest.stopped_by_deadline(http.FetchError("HTTP 500 https://w.com/sitemap.xml", status=500))
 
 
@@ -125,13 +127,17 @@ def test_a_catalog_the_deadline_stopped_ends_the_crawl_deadline(woo, kind):
     connectors.crawl(lake, "woocommerce", WEEK)
     row, detail = _end(lake)
     assert (row["status"], row["skipped"], detail["stopped_deadline"]) == ("deadline", 0, 1)
-    assert detail["partial"] == (2 if kind == "deadline_partial" else 1)  # a fetch with nothing read is an error
+    assert detail["partial"] == (
+        2 if kind == "deadline_partial" else 1
+    )  # a fetch with nothing read is an error
     assert control.landed(lake, WEEK) == {"woocommerce"}  # a deadline still lands, as before
 
 
 def test_stores_left_unstarted_end_the_crawl_deadline(woo):
     lake, _ = woo
-    out = connectors.crawl(lake, "woocommerce", WEEK, deadline_min=1e-9)  # the window is over before any start
+    out = connectors.crawl(
+        lake, "woocommerce", WEEK, deadline_min=1e-9
+    )  # the window is over before any start
     row, detail = _end(lake)
     assert (row["status"], row["skipped"], out["skipped_deadline"]) == ("deadline", 4, 4)
     assert detail["partial"] == detail["stopped_deadline"] == 0
@@ -140,8 +146,12 @@ def test_stores_left_unstarted_end_the_crawl_deadline(woo):
 def test_crawl_retry_ends_done_when_a_resumed_store_stops_partial_for_another_reason(tmp_path, monkeypatch):
     lake = Lake(str(tmp_path / "lake"))
     shop = Roaster(roaster_id="shop.com", name="s", host="shop.com", platform="shopify")
-    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [registry.RoasterState(shop, "active", None)])
-    ingest.save_parked(connectors.PartitionLake(lake, "shopify", WEEK), WEEK, "shop.com", {"page": 2, "items": []})
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(shop, "active", None)]
+    )
+    ingest.save_parked(
+        connectors.PartitionLake(lake, "shopify", WEEK), WEEK, "shop.com", {"page": 2, "items": []}
+    )
 
     def fetch(client, roaster, resume=None, known=None):
         raise PartialCatalog("1 product page failed", [_item(roaster)])
@@ -154,7 +164,13 @@ def test_crawl_retry_ends_done_when_a_resumed_store_stops_partial_for_another_re
 
 def test_the_cli_says_how_many_partials_the_deadline_stopped(tmp_path, monkeypatch, capsys):
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
-    out = {"status": "done", "skipped_deadline": 0, "partial": 3, "stopped_deadline": 0, "partial_every_week": []}
+    out = {
+        "status": "done",
+        "skipped_deadline": 0,
+        "partial": 3,
+        "stopped_deadline": 0,
+        "partial_every_week": [],
+    }
     monkeypatch.setattr(connectors, "crawl", lambda *a, **k: out)
     cli.main(["crawl", "--connector", "woocommerce", "--run-date", WEEK])
     err = capsys.readouterr().err
