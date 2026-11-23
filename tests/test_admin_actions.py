@@ -162,6 +162,22 @@ def test_writes_are_off_without_their_settings_and_reads_still_work(tmp_path, la
     assert c.get("/part/week").status_code == 200
     jobs_page = c.get("/part/jobs").text
     assert "Actions are off" in jobs_page
+    # The notice names the parts, not the settings (they're in the runbook and the log), and the counts only the
+    # control plane knows are unknown, never 0; Jobs points to no button it hides.
+    assert "the control plane, Cloud Run and the snapshot store aren’t set up" in jobs_page
+    assert (
+        "ADMIN_" not in jobs_page
+        and "GOOGLE_CLOUD" not in jobs_page
+        and "runbook/troubleshooting.md" in jobs_page
+    )
+    assert (
+        "Running: unknown" in jobs_page
+        and "0 running" not in jobs_page
+        and "Run a job starts one" not in jobs_page
+    )
+    log_page = c.get("/part/log").text
+    assert "Writes recorded: unknown" in log_page and "0 writes" not in log_page
+    assert "/api/decisions/export" not in log_page
 
 
 def test_every_write_is_refused_signed_out_and_cross_site(tmp_path, lake, pg_url):
@@ -902,7 +918,7 @@ def test_step_9s_running_total_spans_drafts_until_an_evaluation_is_recorded(
     app, c, fake = make(tmp_path, lake.root, pg_url)
     cp = app.state.writes.control
     did, b3 = _draft_with(c, tmp_path, lake, fake, [_item("c1")])
-    assert "1 in all" in c.get(f"/part/release?build={b3}").text
+    assert "1 in the running total" in c.get(f"/part/release?build={b3}").text
     # a draft of the same total, published before: its count joins the running total
     monkeypatch.setattr(cp, "step9_total", lambda served: (1, None))
     no = post(c, f"/api/drafts/{did}/publish", {"key": "p1", "reason": "go ahead"})

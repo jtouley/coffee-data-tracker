@@ -39,7 +39,7 @@ came from. No tiles, no charts in this pass.
 | Page | First line (the answer) | Then | Source files named on the page |
 |---|---|---|---|
 | Week | "5 of 5 connectors done · merge done · enrich done · classify done · build passed · serving 2026-11-02" | the served release (build, week, when, why, CI run, release folder); one row per job attempt: job, connector, pass, start, end, status, todo/ok/errors/parked/skipped, 429s, execution | `job_manifests`, `serving_log`, `marts/release.parquet` |
-| Failures | "212 of 2,984 fetches failed: 202 × 140 · 429 × 62 · siteground 31 · cloudflare 9 · partial 4 · quarantined 2" | counts by HTTP status; by challenge, partial and quarantined; the trend across weeks when there are several; then every failed store with its status, error and store link | `fetches`, ops `run_completeness` |
+| Failures | "214 stores need a look · 140 saw HTTP 202, 62 saw 429 · 31 SiteGround · 9 Cloudflare · 4 partial · 2 quarantined" (every count is of stores; the fetch count is on the line under it) | counts by HTTP status; by challenge, partial and quarantined; the trend across weeks when there are several; then every failed store with its status, error and store link | `fetches`, ops `run_completeness` |
 | Gate | "build 2026-11-04 passed: 0 failing tests of 214" | failing and warning tests first; then metrics against the previous passing build, with the change | `builds` (kind node and metric) |
 | Changes | "public_coffee +12 −3 · 2 unexplained" | counts by table, change and reason, `unexplained` marked; then the rows, filterable by table, change and reason | ops `release_changes` |
 | Catalog | "2,431 of 9,876 products" (after filters) | search, facet filters with counts, removable filter chips; one row per product | ops `product_decisions`, release `dim_coffee` |
@@ -160,7 +160,7 @@ From `state-machine` and `error-handling-ux`: every write is in one state, with 
 | Working | the bag page's filling cup in the Confirm button, which ignores further clicks (and the server acts once per key) |
 | Done | the outcome line; the region reloads; Jobs polls every 5 s while anything runs |
 | Failed | the reason in the sheet (Cloud Run refused, the database down: "nothing was done"); the form keeps its key, so a retry acts once |
-| Writes off | "Actions are off: <why>", once per page; no action buttons; the pages still read |
+| Writes off | "Actions are off: the control plane, Cloud Run and the snapshot store aren’t set up", once per page, with a link to the runbook (the settings behind each are there and in the log, never on the page); no action buttons; the pages still read. Counts only the control plane knows (Jobs' runs, Log's writes) read "unknown", never 0 |
 | Signed out | a write sends you to sign in, saying the session ended |
 
 Drafts have their own states, all derived (nothing is a status anyone sets): building, failed, built, stale (the
@@ -279,9 +279,8 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
   (`white-space: pre-line`) at a readable measure; a store link is shown only when it is `https:`.
 - **One live check, one Test crawl.** The design names both on the Case; they are the same job (a test crawl of the
   store), so the Case has one button, "Live check (test crawl)…", whose confirm shows the exact arguments.
-- **Settings are JSON in a textarea,** checked against the code's schema in the confirm step, which says what
-  changes, which changes decide, and what Publish will need. A form per field would have to change with every rule
-  type; this one doesn't (adding a rule is its entry and its model).
+- **Settings are plain controls for each rule's params** (above), checked against the code's schema in the confirm
+  step, which says what changes (in the form's own labels), which changes decide, and what Publish will need.
 
 ### Skills used (this pass)
 
@@ -485,3 +484,25 @@ state scrolls sideways at 390 px.
   text), `better-interface`, `better-layout` (the squeezed name, the group), `better-accessibility` (the group's
   role and name; `details` is native and keyboard-reachable), `ux-writing` (pending wording, plurals),
   `no-ai-design-slop` (no badge or colour added), `responsive-design` (phone meta line carries the same word).
+
+## The whole-admin design review's round
+
+A review of every page at 390 px and desktop, light and dark (one High, eleven Mediums). What changed:
+
+- **Tables on a phone.** A pinned first column wraps within about 60% of its frame (`min(13rem, 60vw)`) on every
+  table, not only after a checkbox column, so the columns beside it can be scrolled to. Tables whose status would sit
+  past the edge (Week's job attempts, Release's change rows and review list, Jobs, Filters) share one stacked layout,
+  `table.stack`: the row's header on its own line, its status (`.lead`) next, then the other cells, each with its
+  column's name in `--ink-2` (`data-label`), and the ⋯ at the row's end.
+- **Failures are marked.** A row with `class="bad"` (a failed attempt, draft, test or write, an unexplained change)
+  has a 3 px `--danger` rule at its start, beside its status word. Log's Outcome is the status word and mark: failed
+  is the failure mark, refused the warn mark.
+- **Unknown is not zero.** Without the control plane, Jobs says "Running: unknown" and Log "Writes recorded: unknown".
+- **Radios** in the confirm sheet and Filters are `.radios` (each radio on its label's first line); the app's
+  `.choice` is a 64 px row and stays the app's.
+- **The outcome line** reserves scroll room while it shows, as the Sources action bar does.
+- **Copy.** Publish's checklist is a noun and its state ("Draft build: passed"), and the count of rows that leave says
+  how it differs from Change size. Week's Failures line counts stores only. Account says new recovery codes can't be
+  made yet.
+- **Code.** One pager macro (offset-based, Previous and Next) for Queue, Log, Changes, Catalog and Sources; one
+  no-builds state; the JSON editor's CSS and the repeated rule blocks are gone.

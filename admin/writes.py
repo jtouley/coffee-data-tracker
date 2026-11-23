@@ -72,6 +72,16 @@ def reason_of(raw: object, what: str = "a reason") -> str:
     return r
 
 
+def _setting_label(path: str) -> str:
+    """A rule setting's dotted path as the form labels it: rules.shared_body.params.min_products -> "Shared body: min
+    products"."""
+    parts = [p for p in path.split(".") if p not in ("rules", "params")]
+    if not parts:
+        return path
+    rule, rest = parts[0].replace("_", " ").capitalize(), " ".join(parts[1:]).replace("_", " ")
+    return f"{rule}: {rest}" if rest else rule
+
+
 @dataclass
 class Readiness:
     """Publish's four conditions and the live check (design §3), each with the reason it holds or doesn't."""
@@ -376,7 +386,9 @@ class Writes:
         new = rules.check(_settings_doc(body, now["doc"]))
         changed, deciding = rules.changed(now["doc"], new), rules.decides(now["doc"], new)
         needed = rules.evaluation_needed(now["doc"], new)
-        lines = [f"Changes: {', '.join(changed)}." if changed else "Nothing changes."]
+        lines = [
+            f"Changes: {'; '.join(_setting_label(k) for k in changed)}." if changed else "Nothing changes."
+        ]
         if needed:
             lines.append(f"{', '.join(deciding)} changes how a rule decides. Publish will need its full evaluation "
                          f"first (CLAUDE.md; eval/{needed[0]}/), whatever it counts.")  # fmt: skip
@@ -816,10 +828,11 @@ class Writes:
         info = next((b for b in rel["builds"] if b["build_id"] == build), None)
         now_id = (served or {}).get("build_id")
         checks = [
-            {"name": "The draft build passed", "ok": bool(info and info["passed"]),
-             "why": "not built yet" if not info else ("passed" if info["passed"] else "it failed its checks: see Gate")},
-            {"name": "The served release is still its baseline", "ok": now_id == draft["baseline"] or now_id == build,
-             "why": f"built against {draft['baseline'] or 'nothing served'}; serving {now_id or 'nothing'}"},
+            {"name": "Draft build", "ok": bool(info and info["passed"]),
+             "why": "not built yet" if not info else ("passed" if info["passed"] else "failed its checks: see Gate")},
+            {"name": "Baseline", "ok": now_id == draft["baseline"] or now_id == build,
+             "why": f"built against {draft['baseline'] or 'nothing served'}; serving {now_id or 'nothing'}"
+                    + ("" if now_id in (draft["baseline"], build) else ": the baseline moved, so build a new draft")},
         ]  # fmt: skip
         effect = await self.effect(draft)
         # Step 9 counts the public coffees the draft's decisions and keyword filters change: rule settings change no
@@ -864,15 +877,15 @@ class Writes:
                        "ok": changed is None or total + changed <= STEP9_LIMIT or decided_ok,
                        "why": ("not built yet" if changed is None else
                                f"small: this draft changes {_n(changed, 'public coffee')}{by_filters}, "
-                               f"{total + changed:,} in all {since} (50 or fewer, CLAUDE.md step 9)"
+                               f"{total + changed:,} in the running total {since} (50 or fewer, CLAUDE.md step 9)"
                                if total + changed <= STEP9_LIMIT else
                                f"this draft changes {_n(changed, 'public coffee')}{by_filters}, {total + changed:,} in "
-                               f"all {since}: over 50 (CLAUDE.md step 9). The keyword filters’ part is checked above. "
-                               "All of it counts in the running total: once this is published, the next draft needs a "
-                               "full evaluation first, until one is recorded" if decided_ok else
+                               f"the running total {since}: over 50 (CLAUDE.md step 9). The keyword filters’ part is "
+                               "checked above. All of it counts in the running total: once this is published, the next "
+                               "draft needs a full evaluation first, until one is recorded" if decided_ok else
                                f"this draft changes {_n(changed, 'public coffee')}{by_filters}, {total + changed:,} in "
-                               f"all {since}: over 50 (CLAUDE.md step 9), so the full evaluation comes first, then "
-                               "record it below"),
+                               f"the running total {since}: over 50 (CLAUDE.md step 9), so the full evaluation comes "
+                               "first, then record it below"),
                        "needs_evaluation": not decided_ok})  # fmt: skip
         # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts.
         deciding, needed = effect["deciding"], effect["needs_evaluation"]

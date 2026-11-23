@@ -1,5 +1,6 @@
 {% from "_macros.html" import status, ev, write_off, help %}
-{% set active = runs | selectattr("status", "in", ["pending", "running"]) | list %}
+{# runs is none when the control plane isn't there or can't be read: the counts are unknown, never 0. #}
+{% set active = (runs or []) | selectattr("status", "in", ["pending", "running"]) | list %}
 {% set names = {"all": "All connectors", "shopify": "Shopify", "woocommerce": "WooCommerce", "squarespace": "Squarespace", "square_online": "Square Online", "generic": "Generic", "test": "Test", "count": "Count for the week"} %}
 {# A run in plain words: "Test crawl · Shopify · onyxcoffeelab.com"; the exact arguments are in its ⋯ menu. #}
 {% macro words(r) -%}
@@ -39,19 +40,23 @@
 </template>
 <div data-state="{{ 'data' if runs else 'empty' }}">
 {{ write_off(writes_off) }}
+{% if runs is none %}
+<p class="answer" data-answer>Running: unknown · started from here: unknown</p>
+<p class="body">The runs started from here are kept in the control plane. The scheduled runs are on Week.</p>
+{% else %}
 <p class="answer" data-answer>{{ active | length }} running · {{ runs | length }} started from here</p>
 <section data-runs{% if active %} data-poll="5"{% endif %}>
 {% if not runs %}
-  <div class="state empty"><p class="body">Nothing started from the admin yet. Run a job starts one; the scheduled runs are on Week.</p></div>
+  <div class="state empty"><p class="body">Nothing started from the admin yet.{% if not writes_off %} Run a job starts one.{% endif %} The scheduled runs are on Week.</p></div>
 {% else %}
-<div class="frame" tabindex="0" role="region" aria-label="Runs"><table class="dense runs">
+<div class="frame" tabindex="0" role="region" aria-label="Runs"><table class="dense runs stack">
   <caption class="vh">Every job started from the admin, newest first, with its live status</caption>
   <thead><tr><th scope="col">Started (UTC)</th><th scope="col">Job</th><th scope="col">Status</th><th scope="col" class="n">Took</th><th scope="col">Logs</th><th scope="col" class="act"><span class="vh">More</span></th></tr></thead>
   <tbody>{% for r in runs %}{% set what = words(r) %}<tr>
     <th scope="row">{{ t(r.started_at) }}</th>
-    <td class="c-job">{{ what }}{% if r.override_reason %} <span class="meta">· window overridden</span>{% endif %}</td>
-    <td class="c-status">{{ status(r.status) }}{% if r.answer %}<br><span class="meta">store: {{ "answered" if r.answer.ok else "didn’t answer" }} ({{ r.answer.ok or 0 }} ok, {{ r.answer.errors or 0 }} failed)</span>{% endif %}{% if r.message %}<br><span class="meta">{{ r.message }}</span>{% endif %}</td>
-    <td class="n c-took">{{ (r.duration_s | int ~ " s") if r.duration_s is not none else "—" }}</td>
+    <td class="c-job full">{{ what }}{% if r.override_reason %} <span class="meta">· window overridden</span>{% endif %}</td>
+    <td class="c-status full">{{ status(r.status) }}{% if r.answer %}<br><span class="meta">store: {{ "answered" if r.answer.ok else "didn’t answer" }} ({{ r.answer.ok or 0 }} ok, {{ r.answer.errors or 0 }} failed)</span>{% endif %}{% if r.message %}<br><span class="meta">{{ r.message }}</span>{% endif %}</td>
+    <td class="n c-took" data-label="Took">{{ (r.duration_s | int ~ " s") if r.duration_s is not none else "—" }}</td>
     <td class="c-logs">{{ ev(r.log_uri, "logs") if r.log_uri else "—" }}</td>
     <td class="act"><details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="More for {{ what }}">⋯</summary>
       <div class="menu">
@@ -63,4 +68,5 @@
 </table></div>
 {% endif %}
 </section>
+{% endif %}
 </div>

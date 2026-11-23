@@ -1,6 +1,10 @@
-{% from "_macros.html" import write_off %}
+{% from "_macros.html" import write_off, status, pager %}
 <div data-state="{{ 'data' if rows else 'empty' }}">
 {{ write_off(writes_off) }}
+{% if total is none %}
+<p class="answer" data-answer>Writes recorded: unknown</p>
+<p class="body">The log is the control plane’s audit, and there is no control plane here to read it from.</p>
+{% else %}
 <form class="picker" method="get" action="/log">
   <label class="label" for="action">Action</label>
   <select id="action" name="action" class="select" data-autosubmit><option value="">All</option>{% for a in actions %}<option value="{{ a }}"{% if a == action %} selected{% endif %}>{{ a.replace("_", " ") }}</option>{% endfor %}</select>
@@ -14,12 +18,19 @@
 <div class="frame" tabindex="0" role="region" aria-label="Log"><table class="dense">
   <caption>Newest first{% if total > rows | length %}: {{ offset + 1 }}–{{ offset + rows | length }} of {{ n(total) }}{% endif %}</caption>
   <thead><tr><th scope="col">When (UTC)</th><th scope="col">Action</th><th scope="col">Subject</th><th scope="col">Outcome</th><th scope="col">By</th><th scope="col">Detail</th></tr></thead>
-  <tbody>{% for r in rows %}<tr{% if r.outcome != "ok" %} class="bad"{% endif %}>
+  <tbody>{% for r in rows %}<tr{% if r.outcome == "failed" %} class="bad"{% endif %}>
     <th scope="row">{{ t(r.at) }}</th><td>{{ r.action.replace("_", " ") }}</td><td><code>{{ r.subject or "—" }}</code></td>
-    <td>{{ r.outcome }}</td><td>{{ r.actor }}</td>
-    <td class="err">{% set d = r.detail %}{% if d.reason %}“{{ d.reason }}” {% endif %}{% if d.count %}{{ d.count }} {{ d.kind or "" }} {{ d.action or "" }} {% endif %}{% if d.reasons %}{{ d.reasons | join("; ") }}{% endif %}{% if d.runs %}{% for x in d.runs %}<code>{{ x.job }}</code> {{ x.execution.rsplit("/", 1)[-1] if x.execution }}{{ ", " if not loop.last }}{% endfor %}{% endif %}{% if d.override %} · window overridden: “{{ d.override }}”{% endif %}{% if d.errors %} · {{ d.errors | join("; ") }}{% endif %}</td>
+    <td>{{ status(r.outcome) }}</td><td>{{ r.actor }}</td>
+    {% set d = r.detail %}{% set parts = [] %}
+    {%- if d.reason %}{% set _ = parts.append("“" ~ d.reason ~ "”") %}{% endif %}
+    {%- if d.count %}{% set _ = parts.append([d.count, d.kind, d.action] | select | join(" ")) %}{% endif %}
+    {%- if d.reasons %}{% set _ = parts.append(d.reasons | join("; ")) %}{% endif %}
+    {%- if d.override %}{% set _ = parts.append("window overridden: “" ~ d.override ~ "”") %}{% endif %}
+    {%- if d.errors %}{% set _ = parts.append(d.errors | join("; ")) %}{% endif %}
+    <td class="err">{{ parts | join(" · ") }}{% if d.runs %}{{ " · " if parts }}{% for x in d.runs %}<code>{{ x.job }}</code> {{ x.execution.rsplit("/", 1)[-1] if x.execution }}{{ ", " if not loop.last }}{% endfor %}{% endif %}{% if not parts and not d.runs %}—{% endif %}</td>
   </tr>{% endfor %}</tbody>
 </table></div>
-{% if total > offset + rows | length %}<p class="mt12"><a class="ev" href="/log?{{ {"action": action or "", "offset": offset + 100} | urlencode }}">Next 100</a></p>{% endif %}
+{% call(o) pager(offset, 100, total) %}/log?{{ {"action": action or "", "offset": o} | urlencode }}{% endcall %}
+{% endif %}
 {% endif %}
 </div>

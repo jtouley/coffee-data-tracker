@@ -213,7 +213,7 @@ class Auth:
         return self._enroll_hash is not None and self.enrollment() is None
 
     def _recovery_hashes(self) -> set[str]:
-        """The recovery codes made at enrollment (hashes). Issuing a new set comes with the write API."""
+        """The recovery codes made at enrollment (hashes). Nothing issues a new set yet."""
         spent = self.enrollment()
         return set(spent["recovery"]["hashes"]) if spent else set()
 

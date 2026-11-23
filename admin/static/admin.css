@@ -25,7 +25,7 @@ main:focus { outline: none; }
 /* The answer, its source, facts */
 .answer { font-size: 1.0625rem; line-height: 1.4; margin: 16px 0 4px; color: var(--ink); }
 .src { font-size: 0.8125rem; color: var(--ink-2); margin: 0 0 8px; }
-.stale, .notice { font-size: 0.9375rem; color: var(--ink); background: var(--panel); border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; }
+.stale, .notice { display: block; font-size: 0.9375rem; color: var(--ink); background: var(--panel); border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; }
 code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.875em; overflow-wrap: anywhere; }
 dl.facts { display: grid; grid-template-columns: minmax(96px, max-content) minmax(0, 1fr); gap: 0 16px; margin: 8px 0 0;
   font-size: 0.8125rem; }
@@ -46,6 +46,14 @@ tbody th { font-weight: 500; white-space: nowrap; }
 table.dense td, table.dense th { padding-top: 6px; padding-bottom: 6px; white-space: nowrap; }
 table.dense td.err { white-space: normal; min-width: 16rem; max-width: 32rem; color: var(--ink-2); }
 th:first-child, td:first-child { position: sticky; inset-inline-start: 0; background: var(--paper); z-index: 1; padding-inline-start: 0; }
+/* On a phone the pinned column wraps within about 60% of the frame, so the columns beside it can be scrolled to. */
+@media (max-width: 759px) {
+  table:not(.sources, .stack) :is(th, td):first-child { white-space: normal; min-width: min(8rem, 35vw); max-width: min(13rem, 60vw);
+    overflow-wrap: break-word; }
+}
+/* A failed attempt, draft or test, an unexplained change, a write that failed: a --danger rule at the row's start,
+   beside its status word (never colour alone). */
+tr.bad > :first-child { box-shadow: inset 3px 0 0 var(--danger); padding-inline-start: 8px; }
 .n { text-align: right; font-variant-numeric: tabular-nums; }
 tr.sel th, tr.sel td { background: var(--panel); }
 td a.ev, th a.ev { display: inline-block; min-height: 24px; }
@@ -74,7 +82,7 @@ td a.ev, th a.ev { display: inline-block; min-height: 24px; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Pickers, search and facets */
-.picker { display: flex; flex-wrap: wrap; align-items: end; gap: 8px 12px; margin-top: 8px; }
+.picker { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
 .select { min-height: 44px; max-width: 100%; border: 1px solid var(--control); border-radius: 8px; background: var(--sheet);
   color: var(--ink); font: inherit; font-size: 0.9375rem; padding: 0 12px; }
 .search { margin-top: 16px; }
@@ -101,9 +109,8 @@ td a.ev, th a.ev { display: inline-block; min-height: 24px; }
    --danger only on a destructive confirm (Cancel a run, Roll back, a Publish where more than 50 rows leave). */
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 dialog.sheet { border: 1px solid var(--rule); border-radius: 8px; background: var(--sheet); color: var(--ink); padding: 16px 24px 24px;
-  width: min(36rem, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; }
+  width: min(36rem, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; overscroll-behavior: contain; }
 dialog.sheet::backdrop { background: rgb(20 17 15 / 0.45); }
-dialog.sheet { overscroll-behavior: contain; }
 @media (max-width: 759px) { /* on a phone every sheet rises from the bottom, as the app's does */
   dialog.sheet { margin: auto 0 0; width: 100%; max-width: 100%; border-radius: 14px 14px 0 0; }
 }
@@ -118,6 +125,9 @@ dialog .btn.danger { background: var(--danger); color: var(--paper); border-colo
   background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px; padding: 8px 16px;
   display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; font-size: 0.9375rem; }
 .toast[hidden] { display: none; }
+/* While the outcome line shows, a focused row never sits under it, and the page's end can scroll clear of it. */
+html:has(.toast:not([hidden])) { scroll-padding-bottom: 120px; }
+.admin:has(.toast:not([hidden])) .screen { padding-bottom: 120px; }
 .toast .btn.text { color: var(--accent); min-height: 44px; }
 .bulk { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
   background: var(--panel); border-radius: 8px; padding: 8px 12px; margin-top: 12px; font-size: 0.9375rem; }
@@ -130,9 +140,11 @@ th.pick + th, td.pick + th { position: sticky; left: 44px; background: var(--pap
 table.dense td.pick + th { white-space: normal; min-width: 9rem; max-width: 13rem; }
 @media (min-width: 760px) { table.dense td.pick + th { max-width: 22rem; } }
 .inline-form { display: inline; }
-.choice { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; font-size: 0.9375rem; }
-.choice label { display: block; padding-left: 28px; text-indent: -28px; min-height: 24px; }
-.choice input { width: 18px; height: 18px; margin: 0 10px 0 0; vertical-align: -3px; accent-color: var(--accent); }
+/* A radio group (the confirm sheet's Apply to, Filters' Look in): each radio level with its label's first line, and a
+   long label wraps beside it. Its own class: the app's .choice is a 64 px row. */
+.radios { border: 0; padding: 0; margin: 16px 0 0; min-width: 0; display: grid; gap: 8px; font-size: 0.9375rem; }
+.radios label { display: flex; align-items: flex-start; gap: 10px; min-height: 24px; }
+.radios input { flex: none; width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--accent); }
 .title-s { font-size: 1.5rem; line-height: 1.25; margin: 8px 0 8px; color: var(--ink); font-weight: 500; }
 .jobform { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); padding: 0 0 16px; align-items: end; }
 .jobform .actions { grid-column: 1 / -1; }
@@ -143,24 +155,24 @@ table.dense td.pick + th { white-space: normal; min-width: 9rem; max-width: 13re
 .title-actions .help { min-width: 44px; padding: 0; justify-content: center; font-weight: 600; }
 .btn.text.danger { color: var(--danger); }
 .rowmenu .menu .meta, .rowmenu .menu code.args { display: block; padding: 4px 12px; white-space: normal; overflow-wrap: anywhere; }
-table.runs { width: 100%; }
-table.runs th, table.runs td { vertical-align: middle; }
-table.runs td.act, table.runs th.act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
+/* Jobs' runs and Filters' list: full width, rows centred, a 44 px ⋯ column at the end. */
+table.runs, table.kf-list { width: 100%; }
+:is(table.runs, table.kf-list) :is(th, td) { vertical-align: middle; }
+:is(table.runs, table.kf-list) .act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
 .checks { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; font-size: 0.9375rem; }
 .checks li { display: flex; gap: 8px; align-items: baseline; }
 
 /* Queue and Case: a group of products with the same evidence reads as a band above its rows; a flag's evidence and a
-   description are text to read, so they wrap; the settings are code-like JSON. No new colours. */
+   description are text to read, so they wrap. No new colours. */
 table.flagged tbody th { white-space: normal; min-width: 9rem; max-width: 22rem; }
-table.flagged td .btn.text { min-height: 24px; padding-block: 0; vertical-align: baseline; line-height: inherit; }
+/* The Queue's decision column: a text button sits on its row's baseline, with a 24 px target. */
+table.flagged td .btn.text { display: inline; padding: 4px 0; margin: -4px 0; min-height: 0; font-size: inherit;
+  line-height: inherit; vertical-align: baseline; }
 tr.grp th, tr.grp td { background: var(--panel); font-weight: 500; white-space: normal; }
 ul.flags { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 16px; font-size: 0.9375rem; }
 p.desc { white-space: pre-line; overflow-wrap: anywhere; max-width: 72ch; font-size: 0.9375rem; line-height: 1.5; margin: 8px 0 0; }
 details.settings > summary { cursor: pointer; min-height: 44px; padding-top: 12px; }
-textarea.json, pre.json { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8125rem; line-height: 1.45;
-  width: 100%; min-height: 16rem; white-space: pre; overflow: auto; }
 dialog.sheet [data-confirm-body] p + p { margin-top: 8px; }
-pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
 
 /* Sources: one Filter / Sort panel (a sheet on a phone, a popover on a desktop); compact rows, each with a quiet
    status and a ⋯ menu; selecting rows (the box, or a tap on the row) shows the action bar at the bottom. */
@@ -175,7 +187,8 @@ dialog.panel .facets { margin-top: 12px; gap: 8px 12px; }
 .sorts { border: 0; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
 .sorts .radio { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 0.9375rem; }
 .sorts .radio input { width: 20px; height: 20px; accent-color: var(--accent); }
-dialog.panel .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+dialog.panel .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; position: sticky; bottom: -24px;
+  background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
 .sources-page { padding-bottom: 128px; }
 /* Sources' table: on a desktop one dense row per place with sortable columns and a sticky header; on a phone the
    same table shows the name, a line of metadata and the status, stacked (the .wide cells hide, .narrow shows). */
@@ -235,16 +248,15 @@ html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row n
 .rowmenu .menugroup details.reason > p { padding-top: 0; }
 dialog.panel h2 { margin-top: 0; }
 @media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sorts[data-narrow-only] { display: none; } }
-dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
 @media (max-width: 759px) { .searchrow .btn.wide-only { display: none; } } /* Enter searches */
 html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 136px; }
 .bulk.bar-bottom { position: fixed; top: auto; left: 8px; right: 8px; bottom: 8px; margin: 0 auto; max-width: 40rem; z-index: 3;
   gap: 8px; padding: 8px; flex-wrap: nowrap; border: 1px solid var(--control); }
 .bulk.bar-bottom [data-bulk-count] { flex: 1; min-width: 0; padding-left: 4px; }
 .bulk.bar-bottom .btn.secondary.inline { padding: 0 12px; }
-@media (max-width: 759px) { /* the count on its own line, the actions under it */
+@media (max-width: 759px) { /* both bars: the count on its own line, the actions under it on one line */
   .bulk.bar-bottom { flex-wrap: wrap; }
-  .bulk.bar-bottom [data-bulk-count] { flex-basis: 100%; }
+  .bulk [data-bulk-count] { flex-basis: 100%; }
 }
 /* Phone tabs scroll sideways: a fade at an edge with tabs past it (admin.js fit), so a cut tab reads as more. */
 @media (max-width: 759px) {
@@ -261,7 +273,8 @@ dialog .plan-details { margin-top: 8px; }
   transform: translateY(-2px) rotate(45deg); }
 .admin details[open]:not(.rowmenu) > summary::after { transform: translateY(2px) rotate(-135deg); }
 @media (prefers-reduced-motion: no-preference) { .admin details > summary::after { transition: transform 120ms ease-out; } }
-.admin details:not(.rowmenu) > summary.btn.text { font-size: 0.9375rem; font-weight: 500; color: var(--ink); }
+.admin details:not(.rowmenu) > summary.btn.text, .admin details > summary.section { font-size: 0.9375rem; font-weight: 500;
+  color: var(--ink); }
 .admin h2.section { font-size: 1.0625rem; color: var(--ink); }
 
 /* Keyword filters (the Filters page) and their review (Release): one column, labels above their fields, helper text in
@@ -273,13 +286,11 @@ dialog .plan-details { margin-top: 8px; }
 .fld > .flabel, .fld > legend.flabel { margin: 0; }
 .fld > .meta { margin: 0 0 4px; }
 .kf-add .input { min-height: 44px; font-size: 1rem; }
-.kf-add .choice { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
-.kf-add .choice legend { margin-bottom: 4px; }
-.kf-add .choice label { min-height: 44px; display: inline-flex; align-items: center; padding: 0; text-indent: 0; }
+.kf-add .radios { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.kf-add .radios legend { margin-bottom: 4px; }
+.kf-add .radios label { min-height: 44px; align-items: center; }
 table.kf-list tbody th { white-space: normal; min-width: 8rem; max-width: 20rem; }
-table.kf-list { width: 100%; }
 table.kf-list td:nth-child(4) { white-space: normal; min-width: 12rem; max-width: 28rem; }
-table.kf-list td.act, table.kf-list th.act { width: 44px; text-align: end; position: relative; padding-inline-end: 4px; }
 .rule-params { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
 .rule-params legend { grid-column: 1 / -1; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
 .rule-params .num { max-width: 10rem; }
@@ -291,63 +302,35 @@ table.review td.call { white-space: normal; min-width: 12rem; }
 table.review td.call .mark { display: block; font-weight: 600; margin-bottom: 4px; }
 table.review td.call .inline-form + .inline-form .btn { margin-inline-start: 8px; }
 .pf-review h3.section { font-size: 0.9375rem; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
-/* On a phone each product to review is a stacked row: the name, its store and filter, then the two calls, all on
-   screen (no sideways scroll to reach the buttons). */
-@media (max-width: 759px) {
-  table.review { min-width: 0; width: 100%; }
-  table.review thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  table.review tr { display: block; padding: 8px 0; border-bottom: 1px solid var(--rule); }
-  table.review tbody { display: block; }
-  table.review th, table.review td { display: block; border: 0; padding: 0; position: static; max-width: none; }
-  table.review td:nth-child(2), table.review td:nth-child(3) { display: inline; color: var(--ink-2); font-size: 0.8125rem; }
-  table.review td:nth-child(3)::before { content: " · "; }
-  table.review td.call { display: block; margin-top: 8px; min-width: 0; }
-}
 /* A disabled Publish reads as off, not as a faded primary: the panel fill, ink-2 text and the control border, with
    the reason beside it. */
 .btn.primary[aria-disabled="true"] { opacity: 1; background: var(--panel); color: var(--ink-2); border: 1px solid var(--control); }
 form.actions .why-not { flex: 1 1 16rem; align-self: center; margin: 0; }
-/* The Queue's decision column: a text button sits on its row's baseline, with a 24 px target. */
-table.flagged td .btn.text.inline { display: inline; padding: 4px 0; margin: -4px 0;
-  min-height: 0; font-size: inherit; line-height: inherit; }
-table.kf-list th, table.kf-list td { vertical-align: middle; }
 .field-error { color: var(--danger); font-size: 0.8125rem; margin: 4px 0 0; min-height: 0; }
 .field-error:empty { display: none; }
 .input[aria-invalid="true"] { border-color: var(--danger); }
-/* Filters on a phone: each filter is a stacked row, its ⋯ menu (Remove) always on screen at the row's end. */
-@media (max-width: 759px) {
-  table.kf-list { min-width: 0; width: 100%; }
-  table.kf-list thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  table.kf-list tbody { display: block; }
-  table.kf-list tr { display: grid; grid-template-columns: minmax(0, 1fr) 44px; column-gap: 8px; padding: 8px 0;
-    border-bottom: 1px solid var(--rule); }
-  table.kf-list th, table.kf-list td { display: block; border: 0; padding: 0; position: static; max-width: none;
-    min-width: 0; white-space: normal; text-align: start; grid-column: 1; }
-  table.kf-list td.act { grid-column: 2; grid-row: 1; }
-  table.kf-list td.c-in::before { content: "In "; color: var(--ink-2); }
-  table.kf-list td.c-out:not(.draft)::before { content: "Takes out "; color: var(--ink-2); }
-  table.kf-list td.c-in, table.kf-list td.c-out, table.kf-list td.c-check, table.kf-list td.c-why { font-size: 0.8125rem; }
-}
 /* The confirm sheet's reason wraps and grows with what is typed, so a long reason can be read whole before it is
    recorded (field-sizing where the browser has it; else three lines, and it scrolls). */
 textarea.input.reason { display: block; min-height: 56px; height: auto; padding-block: 14px; line-height: 1.4; resize: vertical;
   field-sizing: content; max-height: 12rem; overflow-wrap: anywhere; }
 @supports not (field-sizing: content) { textarea.input.reason { min-height: calc(3lh + 28px); } }
-/* Jobs on a phone: each run is a stacked row (when, the job, its status and message, then took and logs), with its
-   menu (Cancel, while it runs) at the row's end. Nothing is past the edge, so a failed or running job never reads as
-   a finished one. */
+/* A stacked table (Week's job attempts, Release's change rows and review list, Jobs, Filters): on a phone each row is
+   a block, so nothing that says how it went is past the edge. The row's header leads on its own line; a .lead cell
+   (the status) follows it; the other cells flow after, each with its column's name in --ink-2 (data-label); a .full
+   cell takes a line of its own; the ⋯ menu stays at the row's top end. */
 @media (max-width: 759px) {
-  table.dense.runs { min-width: 0; }
-  table.dense.runs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  table.dense.runs tbody { display: block; }
-  table.dense.runs tr { display: grid; grid-template-columns: max-content minmax(0, 1fr) 44px; gap: 4px 12px;
-    padding: 8px 0; border-bottom: 1px solid var(--rule); }
-  table.dense.runs th, table.dense.runs td { display: block; border: 0; padding: 0; position: static; min-width: 0;
-    max-width: none; white-space: normal; text-align: start; grid-column: 1 / 3; }
-  table.dense.runs tbody th { color: var(--ink-2); font-weight: 400; }
-  table.dense.runs td.c-job { overflow-wrap: anywhere; }
-  table.dense.runs td.c-took { grid-column: 1; color: var(--ink-2); }
-  table.dense.runs td.c-logs { grid-column: 2; }
-  table.dense.runs td.c-took::before { content: "Took "; }
-  table.dense.runs td.act { grid-column: 3; grid-row: 1 / span 3; align-self: start; text-align: end; position: relative; }
+  table.stack { min-width: 0; width: 100%; }
+  table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  table.stack tbody { display: block; }
+  table.stack tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; position: relative; padding: 8px 0;
+    border-bottom: 1px solid var(--rule); line-height: 1.4; }
+  table.stack tr:has(> td.act) { padding-inline-end: 52px; }
+  table.stack tr > :is(th, td) { display: block; order: 1; border: 0; padding: 0; position: static; min-width: 0; max-width: none;
+    white-space: normal; text-align: start; overflow-wrap: anywhere; }
+  table.stack tbody th, table.stack td.lead, table.stack td.full { flex: 1 1 100%; }
+  table.stack tbody th, table.stack td.lead { order: 0; }
+  table.stack td[data-label]::before { content: attr(data-label) " "; color: var(--ink-2); }
+  table.stack td.act { position: absolute; top: 4px; inset-inline-end: 0; width: 44px; text-align: end; }
+  table.stack tr.bad { box-shadow: inset 3px 0 0 var(--danger); padding-inline-start: 12px; }
+  table.stack tr.bad > :first-child { box-shadow: none; padding-inline-start: 0; }
 }

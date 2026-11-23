@@ -21,9 +21,9 @@
         <input class="input" id="kf-phrase" name="phrase" required minlength="3" maxlength="60" autocomplete="off" spellcheck="false" aria-describedby="kf-phrase-hint kf-phrase-error">
         <p class="field-error" id="kf-phrase-error" data-field-error="phrase" aria-live="polite"></p>
       </div>
-      <fieldset class="choice fld">
+      <fieldset class="radios fld">
         <legend class="flabel">Look in</legend>
-        {% for v in ("title", "product_type", "tags") %}<label><input type="radio" name="field" value="{{ v }}"{% if loop.first %} checked{% endif %}>{{ field_name[v] }}</label>{% endfor %}
+        {% for v in ("title", "product_type", "tags") %}<label><input type="radio" name="field" value="{{ v }}"{% if loop.first %} checked{% endif %}><span>{{ field_name[v] }}</span></label>{% endfor %}
       </fieldset>
       <div class="fld">
         <label class="flabel" for="kf-reason">Why</label>
@@ -47,13 +47,13 @@
   {% if not kf.filters %}
   <div class="state empty"><p class="body">No keyword filters yet. Add a word that only ever names something that isn’t coffee, such as “tea towel” or “grinder brush”.</p></div>
   {% else %}
-  <div class="frame" tabindex="0" role="region" aria-label="Keyword filters"><table class="dense kf-list">
+  <div class="frame" tabindex="0" role="region" aria-label="Keyword filters"><table class="dense kf-list stack">
     <caption class="vh">The keyword filters: what each takes out of build {{ build }}, and the weekly check of a sample against Claude</caption>
     <thead><tr><th scope="col">Word or phrase</th><th scope="col">In</th><th scope="col" class="n">Takes out</th><th scope="col">Checked by Claude, 4 weeks</th><th scope="col">Why</th><th scope="col" class="act"><span class="vh">More</span></th></tr></thead>
     <tbody>{% for x in kf.filters %}<tr>
-      <th scope="row">“{{ x.phrase }}”{% if x.published is false %} <span class="meta">in draft</span>{% endif %}</th><td class="c-in">{{ field_name[x.field] }}</td><td class="n c-out{{ ' draft' if x.published is false }}">{% if x.matches is none %}—{% elif x.published is false %}would take out {{ n(x.matches) }}{% else %}{{ n(x.matches) }}{% endif %}</td>
-      <td class="c-check">{% set c = x.check %}{% if c and c.answered %}{{ "%.0f" | format(c.share * 100) }}% called coffee <span class="meta">({{ "%.0f" | format(c.low * 100) }}–{{ "%.0f" | format(c.high * 100) }}%, {{ c.answered }} answered, weighted by store)</span>{% elif c %}<span class="meta">{{ c.sampled }} sent, no answer yet</span>{% else %}<span class="meta">none sampled yet</span>{% endif %}</td>
-      <td class="c-why">{{ x.reason }} <span class="meta">· {{ t(x.at) }}</span></td>
+      <th scope="row">“{{ x.phrase }}”{% if x.published is false %} <span class="meta">in draft</span>{% endif %}</th><td class="c-in" data-label="In">{{ field_name[x.field] }}</td><td class="n c-out"{% if x.published is not false %} data-label="Takes out"{% endif %}>{% if x.matches is none %}—{% elif x.published is false %}would take out {{ n(x.matches) }}{% else %}{{ n(x.matches) }}{% endif %}</td>
+      <td class="c-check full">{% set c = x.check %}{% if c and c.answered %}{{ "%.0f" | format(c.share * 100) }}% called coffee <span class="meta">({{ "%.0f" | format(c.low * 100) }}–{{ "%.0f" | format(c.high * 100) }}%, {{ c.answered }} answered, weighted by store)</span>{% elif c %}<span class="meta">{{ c.sampled }} sent, no answer yet</span>{% else %}<span class="meta">none sampled yet</span>{% endif %}</td>
+      <td class="c-why full">{{ x.reason }} <span class="meta">· {{ t(x.at) }}</span></td>
       <td class="act">{% if not writes_off %}<details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="More for “{{ x.phrase }}”">⋯</summary>
         <div class="menu"><form data-write="/api/prefilter" data-preview="/api/prefilter/check" data-ask="reason" data-confirm-title="Remove “{{ x.phrase }}”?" data-confirm-label="Remove">
           <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="event" value="remove"><input type="hidden" name="phrase" value="{{ x.phrase }}"><input type="hidden" name="field" value="{{ x.field }}"><input type="hidden" name="based_on" value="{{ kf.version or '' }}">

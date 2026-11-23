@@ -1,4 +1,4 @@
-{% from "_macros.html" import ev, write_off, write_button, search, pager, help %}
+{% from "_macros.html" import ev, write_off, write_button, search, page_pager, no_builds, help %}
 {% if data %}<template data-title>{% call help("catalog", "About the Catalog") %}
   <p class="body">Every product of the build, coffee or not, with the owner's decision. Tick products, then Include or Exclude them, by coffee or by version; Undo is in the outcome line.</p>
   <p class="meta">From build {{ build }}’s {{ data.meta.made_from }} · cached locally per build · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
@@ -6,7 +6,7 @@
 <div data-state="{{ 'data' if data and data.matching else 'empty' }}">
 {{ write_off(writes_off) }}
 {% if not data %}
-  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
+  {{ no_builds() }}
 {% else %}
   {% call search(f, facets, data, qs, "/catalog", "Search title, roaster, product id or URL", {"build": build}) %}
       <label class="facet"><span class="label">Lowest price from ($)</span><input class="input small" name="price_min" inputmode="decimal" value="{{ f.price_min if f.price_min is not none else '' }}"></label>
@@ -35,14 +35,14 @@
     <tbody>{% for r in data.rows %}{% set item = {"coffee_id": r.coffee_id, "input_hash": r.input_hash, "roaster_id": r.roaster_id, "title": r.title, "coffee": r.coffee, "seen_coffee_id": r.dc.decision_id if r.dc else none, "seen_input_hash": r.dh.decision_id if r.dh else none} %}<tr>
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Choose {{ r.title or r.coffee_id }}"></td>{% endif %}
       <th scope="row">{{ ev(r.url, r.title or r.coffee_id) }}</th>
-      <td>{% if r.decision %}<span class="st st-ok"><i aria-hidden="true"></i>{{ r.decision.action }}d</span>{% if r.decision.group_id %} <span class="meta">(group)</span>{% endif %}
+      <td>{% if r.decision %}{{ r.decision.action | capitalize }}d{% if r.decision.group_id %} <span class="meta">(group)</span>{% endif %}
           {% if not writes_off %}{{ write_button("/api/decisions/" ~ r.decision.decision_id ~ "/undo", "Undo", "Undo the owner’s " ~ r.decision.action ~ " of " ~ (r.title or r.coffee_id) ~ "? The classifier decides it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
         {% else %}—{% endif %}</td><td><a class="ev" href="{{ qs(roaster=r.roaster_id) }}">{{ r.roaster_id }}</a></td>
       <td class="err">{{ r.coffee }} · {{ r.classified_by or "—" }}{% if r.reason %}: {{ r.reason }}{% endif %}</td><td>{{ r.listed }}{% if r.stock %} · {{ r.stock }}{% endif %}</td>
       <td>{{ [r.origin_country, r.process] | select | join(" · ") or "—" }}</td><td class="n">{{ n(r.min_price_usd) }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
-  {{ pager(data, qs) }}
+  {{ page_pager(data, qs) }}
   {% endif %}
 {% endif %}
 </div>
