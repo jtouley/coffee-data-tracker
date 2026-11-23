@@ -539,12 +539,13 @@ after week**.
   to the same pass. A connector with an attempt still running reads "running": its finished passes show, but no
   change and no rise check. The All row's change counts only connectors with both weeks. Errors are the stores still
   failing after the latest crawl pass, plus Shopify's evening retry; OK sums the passes.
-- **Deadlines:** a pass whose end row says `deadline`, which since `connectors.end_status` means stores left
-  unstarted or catalogs the deadline stopped mid-way. In no more passes than last week, the line says "as last week"
+- **Deadlines:** a pass whose end row says `deadline` and counts what the deadline stopped (`health.timed_out`:
+  `skipped`, or detail's `stopped_deadline`, `parked_at_deadline` or `not_retried_at_deadline`). An older row that
+  said `deadline` only for partial catalogs counts none, so it reads as done, this week and as last week. In no more passes than last week, the line says "as last week"
   and is listed last, not counted as something new; after the last pass that ran or is still to come, it says the
   stores it didn't reach or finish weren't read whole.
-- **Partial catalogs:** the connector's latest finished pass's `detail.partial` (catalogs read only in part, for any
-  reason), with the stores partial in each of their last runs (`detail.partial_every_week`). Always listed last and
+- **Partial catalogs:** `detail.partial` of the connector's latest finished pass that had any (catalogs read only in
+  part, for any reason, the deadline included), with the stores partial in each of their last runs (`detail.partial_every_week`). Always listed last and
   never counted as new: the gate passes and dbt keeps the unread products listed. Not a sum over passes, since each
   pass asks a partial store again.
 - **Tuesday** is "not yet" until its window ends (Tuesday 12:00 UTC); after it, the first stage that never ran is

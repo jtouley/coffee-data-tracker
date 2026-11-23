@@ -183,8 +183,11 @@ COLUMNS: dict[str, dict[str, str]] = {
         "ended_at": "When it ended (null on the start row).",
         "status": "running (start row), done, deadline or failed. An attempt with only a running row died. A "
         "crawl or crawl-retry ends deadline only when its deadline stopped work: roasters it never started "
-        "(skipped) or catalogs it cut off mid-way (detail.stopped_deadline); one whose catalogs were read in part "
-        "for another reason (a count that differs, a failed page) ends done, with detail.partial. A "
+        "(skipped), catalogs it cut off mid-way (detail.stopped_deadline), blocked stores it parked "
+        "(detail.parked_at_deadline) or stores not retried because their wait ends past it "
+        "(detail.not_retried_at_deadline); one whose catalogs were read in part for another reason (a count that "
+        "differs, a failed page) ends done, with detail.partial. Before manifest 1.3.0 a crawl said deadline for any "
+        "partial catalog. A "
         "build is done when it passed and was served, failed when its checks failed or it crashed (detail.passed, "
         "detail.error). A screen is stopped when too many sites refused it (detail.stopped, detail.refusals).",
         "todo": "Roasters it set out to fetch.",
@@ -199,7 +202,8 @@ COLUMNS: dict[str, dict[str, str]] = {
         "refusals": "Per egress IP: stores contacted, and those that refused their first catalog request.",
         "code_version": "The code that ran.",
         "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run; only for a "
-        "manual crawl --only; for a crawl, partial, stopped_deadline and partial_every_week; for "
+        "manual crawl --only; for a crawl, partial, partial_every_week, stopped_deadline, parked_at_deadline and "
+        "not_retried_at_deadline; for "
         "fetch-health, its verdict on the week's fetches: systemic fetch failures, and the list of roasters whose "
         "fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, "
         "plus the partial and quarantined fetches; for classify, its model and what it collected and submitted; "

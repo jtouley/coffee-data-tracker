@@ -267,6 +267,8 @@ def test_a_deferred_retry_is_never_scheduled_past_the_deadline(lake, clock):
         out = ingest.run(lake, [_woo_store()], WEEK, workers=2, deadline_s=120)
     assert sum(clock.sleeps) == 0
     assert out["deferred"] == {"past_deadline": 1} and out["skipped_deadline"] == 0
+    # the deadline stopped it: the pass ends `deadline` (connectors.end_status), counted apart from skipped
+    assert out["not_retried_at_deadline"] == 1 and connectors.end_status(out) == "deadline"
     assert "past the run's deadline" in out["failures"][0]
     assert catalog.call_count == 1
 

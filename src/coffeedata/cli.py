@@ -533,14 +533,22 @@ def cmd_crawl(args: argparse.Namespace) -> None:
             f"crawl {args.connector}: deadline reached, {out['skipped_deadline']} roasters left",
             file=sys.stderr,
         )
+    # the deadline's other stops (connectors.end_status), whether or not they left a partial catalog
+    stops = [
+        (out.get("stopped_deadline") or 0, "fetches stopped mid-catalog"),
+        (out.get("parked_at_deadline") or 0, "blocked stores parked for crawl-retry"),
+        (out.get("not_retried_at_deadline") or 0, "stores not retried: their wait ends past it"),
+    ]
+    if any(n for n, _ in stops):
+        print(
+            f"crawl {args.connector}: deadline reached, "
+            + ", ".join(f"{n} {what}" for n, what in stops if n),
+            file=sys.stderr,
+        )
     if out.get("partial"):  # ok fetches that read only part of a catalog (fetches.partial; RUNBOOK §5.3)
         every = out.get("partial_every_week") or []
-        stopped = (
-            out.get("stopped_deadline") or 0
-        )  # the deadline stopped them; the rest ended partial on their own
         print(
             f"crawl {args.connector}: {out['partial']} catalogs read in part"
-            + (f"; the deadline stopped {stopped} fetch{'es' if stopped != 1 else ''}" if stopped else "")
             + (f"; partial every week: {', '.join(every)}" if every else ""),
             file=sys.stderr,
         )

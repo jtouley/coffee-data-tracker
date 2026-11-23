@@ -172,7 +172,8 @@ class Result:
     resume_at: dict | None = None
     # the run's deadline stopped it (http.DeadlineReached among its causes): read in part, or with nothing read an
     # error. A partial for another reason (a WooCommerce count that differs from X-WP-Total, a failed product page
-    # or sub-sitemap) isn't: only these, and stores never started, end a crawl `deadline` (connectors.end_status)
+    # or sub-sitemap) isn't. These, and the stores the deadline left unstarted, parked or not retried, end a crawl
+    # `deadline` (connectors.end_status)
     deadline: bool = False
 
     @property
@@ -920,6 +921,11 @@ def run(
         # fetches the deadline stopped mid-catalog (read in part, or before a product: an error); with
         # skipped_deadline, what ends a crawl `deadline` (connectors.end_status)
         "stopped_deadline": stats["stopped_deadline"],
+        # stores the deadline parked mid-catalog while blocked: one waiting out a page backoff when the window closed,
+        # or one whose next backoff would end past it (crawl-retry resumes both)
+        "parked_at_deadline": deferred.get("page_parked_at_deadline", 0),
+        # stores not retried because their wait (a block's Retry-After or a backoff) ends past the deadline
+        "not_retried_at_deadline": deferred.get("past_deadline", 0),
         "requests": stats["requests"],
         "http_429": stats["http_429"],
         "http_430": stats["http_430"],

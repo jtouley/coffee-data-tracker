@@ -12,9 +12,12 @@ Nothing here is a new threshold, except the grace before a pass that hasn't star
 - a scheduled pass (ingestion.tf's crons, checked by a test) is missed when a connector has no attempt in it
   MISSED_AFTER after its slot: Cloud Scheduler starts a job within seconds, and its first act is the running row.
 
-A pass that hit its time limit is one whose end row says `deadline`: since the crawl's end status became truthful
-(connectors.end_status), that means stores left unstarted or catalogs the deadline stopped mid-way. Catalogs read only
-in part for any reason (detail.partial) are a calm line of their own, never called a time limit.
+A pass hit its time limit when its end row says `deadline` and counts something the deadline stopped (timed_out):
+stores left unstarted (`skipped`) or, in its detail, catalogs stopped mid-way, stores parked or not retried
+(connectors.DEADLINE_STOPS). Rows written before that rule said `deadline` for any partial catalog and have none of
+those detail counts: one with `skipped` = 0 is read as a pass that finished (its status `done`), never as a time limit,
+on this week and as last week. Catalogs read only in part, for any reason (detail.partial), are a calm line of their
+own.
 """
 
 from __future__ import annotations
@@ -23,7 +26,7 @@ import math
 from datetime import UTC, date, datetime, time, timedelta
 from typing import Any
 
-from coffeedata.connectors import CONNECTORS
+from coffeedata.connectors import CONNECTORS, DEADLINE_STOPS
 from coffeedata.control import REFUSAL_FLAG
 from coffeedata.fetchhealth import CHECK_LIMIT, JOB_LIMIT
 from coffeedata.ingest import PARTIAL_WEEKS
@@ -114,8 +117,24 @@ def died(rows: list[dict], now: datetime) -> set[str]:
     return out
 
 
+def timed_out(r: dict) -> bool:
+    """A crawl pass the deadline stopped: a `deadline` end row with stores skipped or another of the deadline's stops
+    in its detail. A `deadline` row with none (written under the old rule, which said `deadline` for any partial) is
+    not: its partials are detail.partial's line."""
+    d = r.get("detail") or {}
+    return r["status"] == "deadline" and bool(
+        r.get("skipped") or any(d.get(k) for k in DEADLINE_STOPS if k != "skipped_deadline")
+    )
+
+
 def state(r: dict, dead: set[str]) -> str:
-    return "died" if r["attempt_id"] in dead else r["status"]
+    """An attempt's status as Week shows it: `died` for a dead one, and `done` for a crawl's `deadline` row that
+    counts nothing the deadline stopped (timed_out). The attempts table still shows each row's stored status."""
+    if r["attempt_id"] in dead:
+        return "died"
+    if r["job"] in CRAWL_JOBS and r["status"] == "deadline" and not timed_out(r):
+        return "done"
+    return r["status"]
 
 
 def _sum(rows: list[dict], key: str) -> int:
@@ -305,23 +324,26 @@ def chain(week: dict, served: dict | None, now: datetime, dead: set[str]) -> lis
 def _deadlines(rows: list[dict], week: str) -> dict[str, list[str]]:
     out: dict[str, list[str]] = {}
     for r in rows:
-        if is_pass(r) and r["status"] == "deadline":
+        if is_pass(r) and timed_out(
+            r
+        ):  # this week's and last week's alike: an old partial-only row isn't one
             out.setdefault(r["connector"], []).append(slot(r, week))
     return out
 
 
 def _partials(rows: list[dict], week: str) -> dict[str, dict]:
-    """Per connector, its latest ended pass's catalogs read only in part (detail.partial: ok fetches marked partial,
-    whatever stopped them) and, of those, the stores partial in each of their last PARTIAL_WEEKS runs
-    (detail.partial_every_week). The latest pass, not a sum: each pass asks a partial store again (it isn't done),
-    so a sum would count one store once per pass. Connectors with none are left out."""
+    """Per connector, the catalogs read only in part (detail.partial: ok fetches marked partial, whatever stopped them)
+    in its latest ended pass that had any and, of those, the stores partial in each of their last PARTIAL_WEEKS runs
+    (detail.partial_every_week). One pass, not a sum: each pass asks a partial store again (it isn't done), so a sum
+    would count one store once per pass. The latest pass with any, so a later pass that didn't ask those stores
+    again (it skipped them, or they failed) doesn't hide them. Connectors with none are left out."""
     out: dict[str, dict] = {}
-    for r in rows:  # in start order (queries.week): the latest ended pass wins
-        if is_pass(r) and r["status"] not in ("running", "failed"):
-            d = r.get("detail") or {}
-            out[r["connector"]] = {"pass": slot(r, week), "partial": d.get("partial") or 0,
+    for r in rows:  # in start order (queries.week): the latest ended pass with partials wins
+        d = r.get("detail") or {}
+        if is_pass(r) and r["status"] not in ("running", "failed") and d.get("partial"):
+            out[r["connector"]] = {"pass": slot(r, week), "partial": d["partial"],
                                    "every_week": list(d.get("partial_every_week") or [])}  # fmt: skip
-    return {c: v for c, v in out.items() if v["partial"]}
+    return out
 
 
 def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> dict:

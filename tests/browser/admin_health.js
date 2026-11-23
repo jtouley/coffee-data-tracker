@@ -87,7 +87,7 @@ const text = async (page, sel) => (await page.innerText(sel)).replace(/\s+/g, " 
       assert.match(look, /generic’s resume crawl died\. It started Mon 23 Nov 15:20 UTC, 8\.2 hours ago, and never reported finishing\./);
       assert.match(look, /A fetch-health check failed/);
       assert.match(look, /woocommerce hit its time limit in the morning and resume passes, as last week\. The stores it didn’t reach or finish weren’t read whole this week\./);
-      assert.match(look, /squarespace read 2 catalogs only in part in its retry pass\. The products it didn’t read stay listed as they were\. big-catalog\.example was partial in each of its last 2 runs, so never read whole\./);
+      assert.match(look, /squarespace read 2 catalogs only in part in its retry pass\. The products it didn’t read stay listed as they were\. big-catalog\.example was partial in each of its last 2 runs, so not read whole in either\./);
       assert.equal(await page.locator("ul.flags.health li.usual").count(), 2);  // the usual time limit and the partial catalogs: calm, listed last
       assert.equal(await page.locator("ul.flags.health li").last().getAttribute("class"), "usual");
       assert.match(look, /generic: errors up from 71 to 120 and 429s up from 83 to 152/);

@@ -1037,6 +1037,10 @@ the deadline stopped work (`connectors.end_status`):
 - **Stopped**: `detail.stopped_deadline` > 0 fetches were cut off mid-catalog by the deadline (an `http.DeadlineReached`
   behind the fetch: read in part, or with nothing read yet an error). A partial Shopify catalog is parked at the page it
   reached: the resume slot and crawl-retry continue from there.
+- **Parked or not retried**: `detail.parked_at_deadline` > 0 blocked stores were parked mid-catalog because the
+  window closed during a page backoff, or their next backoff would end past it; `detail.not_retried_at_deadline` > 0
+  stores weren't asked again because their wait (a block's Retry-After or a backoff) ends past it. Each keeps its
+  error row; crawl-retry resumes the parked ones, and the next pass asks the rest.
 
 **Partial** catalogs are counted apart, in `detail.partial`, whatever stopped them: the deadline (those are in
 `stopped_deadline` too), a WooCommerce store's count that differs from its `X-WP-Total`, a sub-sitemap that couldn't
@@ -1045,8 +1049,8 @@ whose only partials are of those other kinds ends **`done`**, with `detail.parti
 Each partial is an **ok** fetch with `fetches.partial = true`, and `fetches.error` says why (for example
 `partial: … (page 55)`). `run_completeness` counts it as ok, so the gate passes, and dbt keeps its unread products
 listed. The admin's Week lists a `deadline` row as "hit its time limit" and partial catalogs as a calm line of their
-own. Rows written before this rule (2026-11-23 and earlier) said `deadline` for any partial, with no
-`stopped_deadline` in `detail`.
+own. Rows written before this rule (2026-11-23 and earlier) said `deadline` for any partial, with none of those counts
+in `detail`: Week reads one with `skipped` = 0 as a finished pass, not a time limit.
 
 An attempt whose latest row is `running` died. Check the week's rows per connector (each connector has one attempt
 per slot):
@@ -1061,8 +1065,8 @@ for r in control.rows(Lake(), os.environ["WEEK"]):  # the latest row per attempt
     d = json.loads(r["detail"] or "{}")
     print(r["job"], r["connector"], r["started_at"], r["status"],
           *(f"{k}={r[k]}" for k in ("todo", "ok", "errors", "parked", "skipped")),
-          f"partial={d.get('partial')}", f"stopped_deadline={d.get('stopped_deadline')}",
-          f"partial_every_week={d.get('partial_every_week')}")
+          *(f"{k}={d.get(k)}" for k in ("partial", "stopped_deadline", "parked_at_deadline",
+                                         "not_retried_at_deadline", "partial_every_week")))
 EOF
 ```
 
@@ -1076,9 +1080,8 @@ EOF
   for the window, and a count that never matches `X-WP-Total` means the store's listing and its count disagree.
   Raise it with the owner rather than re-running crawls.
 - `crawl-retry` (Shopify, 21:47) writes `job_manifests` rows of its own (job `crawl-retry`, which never counts as a
-  landed crawl). Its end row says `deadline` when it left stores unstarted or the deadline stopped a resumed store
-  again, else `done`, with `partial`, `stopped_deadline` and `partial_every_week` in its `detail`, as a crawl's. The
-  query above prints it.
+  landed crawl). Its end row says `deadline` when the deadline left stores unstarted, parked or not retried, or
+  stopped a resumed store again, else `done`, with the same `detail` counts as a crawl's. The query above prints it.
 - After the merge, its row's `detail` lists `missing` connectors. That list should be empty.
 
 ### 5.4 Raising a job's memory by hand

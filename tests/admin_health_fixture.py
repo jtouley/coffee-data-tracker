@@ -134,7 +134,10 @@ def _crawls(lake: Lake, week: str) -> None:
         job = (
             "crawl-retry" if conn == "shopify" and slot == "retry" else "crawl"
         )  # Shopify's 21:47 is its own job
-        _attempt(lake, week, job, conn, start, end, status, n, PARTIAL.get((week, conn, slot)), **counts)
+        extra = PARTIAL.get((week, conn, slot), {}) | (
+            {"stopped_deadline": 1} if status == "deadline" else {}
+        )
+        _attempt(lake, week, job, conn, start, end, status, n, extra, **counts)
     _attempt(
         lake, week, "probe", None, _at(week, 0, 7, 17, 38), _at(week, 0, 7, 23), "done", 900, todo=732, ok=167
     )

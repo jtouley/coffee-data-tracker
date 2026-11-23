@@ -44,6 +44,8 @@ def _at_deadline(msg: str, items: list) -> PartialCatalog:
         ({"skipped_deadline": 0, "stopped_deadline": 0, "partial": 3}, "done"),  # partials for other reasons
         ({"skipped_deadline": 2, "stopped_deadline": 1, "partial": 4}, "deadline"),  # both
         ({"skipped_deadline": 0, "stopped_deadline": 0, "partial": 0}, "done"),
+        ({"parked_at_deadline": 1, "partial": 2}, "deadline"),  # a blocked store parked at the deadline
+        ({"not_retried_at_deadline": 1}, "deadline"),  # a store whose wait ends past the deadline
         ({"roasters": 0, "by_adapter": {}, "skipped_deadline": 0, "deferred": {}}, "done"),  # nothing to do
     ],
 )
@@ -110,6 +112,7 @@ def test_a_crawl_whose_only_partial_is_an_x_wp_total_mismatch_ends_done_and_land
     row, detail = _end(lake)
     assert (row["status"], row["skipped"], out["status"]) == ("done", 0, "done")
     assert (detail["partial"], detail["stopped_deadline"], detail["partial_every_week"]) == (1, 0, [])
+    assert detail["parked_at_deadline"] == detail["not_retried_at_deadline"] == 0
     # the readers of the status: the merge's landed set, the crash guard's finished attempts, the admin's landed
     assert control.landed(lake, WEEK) == {"woocommerce"}
     assert row["attempt_id"] in connectors._finished(lake, WEEK)
@@ -162,7 +165,7 @@ def test_crawl_retry_ends_done_when_a_resumed_store_stops_partial_for_another_re
     assert (row["status"], detail["partial"], detail["stopped_deadline"]) == ("done", 1, 0)
 
 
-def test_the_cli_says_how_many_partials_the_deadline_stopped(tmp_path, monkeypatch, capsys):
+def test_the_cli_says_what_the_deadline_stopped_apart_from_partials(tmp_path, monkeypatch, capsys):
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     out = {
         "status": "done",
@@ -177,4 +180,11 @@ def test_the_cli_says_how_many_partials_the_deadline_stopped(tmp_path, monkeypat
     assert "3 catalogs read in part" in err and "deadline" not in err
     out |= {"status": "deadline", "stopped_deadline": 1}
     cli.main(["crawl", "--connector", "woocommerce", "--run-date", WEEK])
-    assert "3 catalogs read in part; the deadline stopped 1 fetch" in capsys.readouterr().err
+    err = capsys.readouterr().err
+    assert "deadline reached, 1 fetches stopped mid-catalog" in err and "3 catalogs read in part" in err
+    # a deadline stop with nothing read is an error, not a partial: the deadline line still says why
+    out |= {"partial": 0, "stopped_deadline": 0, "parked_at_deadline": 2, "not_retried_at_deadline": 1}
+    cli.main(["crawl", "--connector", "woocommerce", "--run-date", WEEK])
+    err = capsys.readouterr().err
+    assert "deadline reached, 2 blocked stores parked for crawl-retry, 1 stores not retried" in err
+    assert "read in part" not in err

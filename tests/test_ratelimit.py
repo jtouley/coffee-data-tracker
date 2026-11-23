@@ -11,6 +11,7 @@ import respx
 
 from coffeedata import discover, http, ingest
 from coffeedata.adapters import fetch_catalog
+from coffeedata.connectors import end_status
 from coffeedata.http import FetchError, PoliteClient
 from coffeedata.models import Roaster
 from coffeedata.ratelimit import PlatformLimiter, RateLimited, retry_after_seconds
@@ -991,6 +992,8 @@ def test_a_store_in_page_backoff_at_the_deadline_is_parked_not_dropped(lake, moc
     assert clock.sleeps == [60]
     assert out["skipped_deadline"] == 0
     assert out["deferred"] == {"page_backoffs": 1, "page_parked": 1, "page_parked_at_deadline": 1}
+    # a deadline stop: the pass ends `deadline`, though no store was left unstarted (connectors.end_status)
+    assert out["parked_at_deadline"] == 1 and end_status(out) == "deadline"
     parked = ingest.load_parked(lake, "2026-10-26")
     assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
 
@@ -1038,6 +1041,7 @@ def test_a_suspect_held_for_the_lane_in_page_backoff_at_the_deadline_is_parked(
     parked = ingest.load_parked(lake, "2026-10-26")
     assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
     assert out["deferred"]["page_parked_at_deadline"] == 1 + others_pending
+    assert out["parked_at_deadline"] == 1 + others_pending and end_status(out) == "deadline"
     assert sorted(parked) == sorted({"wall.example"} | ({"late.example"} if others_pending else set()))
 
 
