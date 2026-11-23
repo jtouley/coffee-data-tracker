@@ -182,13 +182,33 @@ class _Listing:
         self.total: int | None = None
 
 
+def _header_int(r: httpx.Response, name: str) -> int | None:
+    value = r.headers.get(name, "").strip()
+    return int(value) if value.isdigit() else None
+
+
+def _store_says_more(r: httpx.Response, read: int) -> bool:
+    """Whether the store's own headers count more items than the `read` so far, on the query's first page: X-WP-Total
+    (the query's items) or X-WP-TotalPages (its pages; more than this first one). Neither header, or neither above
+    what was read: no."""
+    total, pages = _header_int(r, "x-wp-total"), _header_int(r, "x-wp-totalpages")
+    return (total is not None and total > read) or (pages is not None and pages > 1)
+
+
 def _pages(
     client: PoliteClient, url: str, host: str, listing: _Listing | None = None, **params: str | int
 ) -> Iterator[list[dict]]:
     """Every page of a Store API products query, until a short page. A store that ignores `page` and repeats a page
-    ends it too (nothing new would come). A page that times out is asked for again at the next smaller size
-    (TIMEOUT_PER_PAGE), from the same offset. listing.total: the first page's X-WP-Total (never `Link`, which real
-    stores send HTML-escaped: `page=2#038;per_page=1`)."""
+    ends it too (nothing new would come), and so does an empty page. A page that times out is asked for again at the
+    next smaller size (TIMEOUT_PER_PAGE), from the same offset. listing.total: the first page's X-WP-Total (never
+    `Link`, which real stores send HTML-escaped: `page=2#038;per_page=1`).
+
+    A store that caps `per_page` below what was asked (WooCommerce's default page is 10) answers the first page short
+    while its X-WP-Total, or X-WP-TotalPages, counts more: that first page's length is taken as the store's page size
+    and the rest is read at it (the offsets stay whole pages: the first page starts at 0). Only the first page can
+    show a cap; a short page after it ends the query as before, and the X-WP-Total check in `fetch` marks a count
+    that still differs as partial. A store with neither header, or whose count the first page already reaches, is
+    asked for nothing more."""
     seen: set[str] = set()
     offset = 0
     per_page = PER_PAGE
@@ -205,15 +225,24 @@ def _pages(
         if not isinstance(data, list):
             raise FetchError(f"unexpected Store API payload from {host}")
         if listing is not None and listing.total is None:
-            total = r.headers.get("x-wp-total", "").strip()
-            listing.total = int(total) if total.isdigit() else None
+            listing.total = _header_int(r, "x-wp-total")
         ids = {str(p.get("id")) for p in data if isinstance(p, dict)}
         if data and ids <= seen:
             return
         seen |= ids
         yield data
         if len(data) < per_page:
-            return
+            if not (data and offset == 0 and _store_says_more(r, len(data))):
+                return
+            log.info(
+                "%s: the store caps per_page at %d (asked for %d): read at its size",
+                host,
+                len(data),
+                per_page,
+            )
+            per_page = len(data)
+            # a later timeout asks for smaller pages that still divide the store's size, so offsets stay whole pages
+            smaller = iter([s for s in TIMEOUT_PER_PAGE if s < per_page and per_page % s == 0])
         offset += len(data)
 
 

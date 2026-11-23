@@ -8,8 +8,8 @@ for, so the next change to these fields knows how far it is from the last full l
 ## Running total (CLAUDE.md step 9)
 
 Products whose crawl output changed since the last full evaluation of these fields (there has been none): **at
-least 13,266**: 11,750 from the caps' removal, 37 from Lone Oak's registry move (#98), 1,445 from #99's fix round,
-and 34 from the currency change (below). Add each later change's count here. This total is far over step 9's 50,
+least 13,300**: 11,750 from the caps' removal, 37 from Lone Oak's registry move (#98), 1,445 from #99's fix round,
+34 from the currency change and 34 from the capped `per_page` rule (below). Add each later change's count here. This total is far over step 9's 50,
 so the next change to these fields needs the full process, or the owner's decision to waive it.
 
 | Change | Products changed (estimate) | Evaluation |
@@ -23,6 +23,7 @@ so the next change to these fields needs the full process, or the owner's decisi
 | #99 fix round: vendor sites and `gmail.com` never crawled (`registry.current`); martincoffee, piccoffee, meanbean registry fixes | 0 | Hand-checked: none had products |
 | Each price's currency stored (raw 1.6.0); public tables USD prices and US roasters only; 7 non-US roasters corrected in the registry (2026-11-04) | 34 now; more at the first crawl with raw 1.6.0 (unknown) | Steps 2–7 waived by the owner (2026-11-04, #107); 21 hand-checked, 13 in other fields' sealed test sets (count only); below |
 | WooCommerce null size prices traced to the old lookup cap and measured at the first uncapped crawl (2026-11-20): tests and a measurement only | 0 | Measured below; no crawl or dbt code changes |
+| A WooCommerce store that caps `per_page` (a short first page while X-WP-Total or X-WP-TotalPages counts more) is read at its own page size (2026-11-23) | 34 (estimate: one store, 10 of 44 read each week) | A fetch fix, not a rule; unit tests (`tests/test_woo_capped_per_page.py`); confirmed by the owner's one-store Test crawl after deploy (below) |
 
 ## 2026-11-02: every data cap removed
 
@@ -211,3 +212,22 @@ then, for 48 stores on 11-02).
 - 1,324 WooCommerce sizes at 79 stores have a stated price of 0 on 11-16 (661 on 11-09, when the cap hid others).
   The marts leave them out (`price_usd > 0`). Whether the store means free, or prices them some other way, isn't
   known from the lake.
+
+## 2026-11-23: stores that cap `per_page`
+
+**The case.** One WooCommerce store answered exactly 10 products (the Store API's default page) to `per_page=100`,
+while its X-WP-Total said 44. `_pages` stopped at that short first page, so 34 products were never refreshed and the
+fetch was stored as partial every week. This is inferred from the stored counts; no request was sent to the store.
+
+**The change.** When the query's first page is shorter than asked and the store's X-WP-Total (or X-WP-TotalPages)
+counts more, its length is taken as the store's page size and the rest is read at it. A short page after the first
+ends the query as before, and the X-WP-Total check still marks a count that differs as partial. Per-host pacing,
+robots.txt and the deadline apply to every page; there is no page cap (removed 2026-11-02), as before.
+
+**Step 9.** Only a store whose first page is short while its own count is higher can change, and every such store is
+an X-WP-Total partial today. Of the 11-16 WooCommerce partials, one fits (34 products); the other two read a full first
+page or have a count below what was read. 11-23's third WooCommerce partial isn't identified yet. A store that
+honours `per_page` and sends a count above its catalog costs one extra, empty page and stays partial. 34 is under 50
+on its own; the running total above was already over 50, so whether steps 2–7 apply is the owner's call, as for the
+volunteercoffee.com fetch fix (a fetch fix, not a rule). The confirmation is the owner's one-store Test crawl from the
+admin after deploy.
