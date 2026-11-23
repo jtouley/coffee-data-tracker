@@ -10,6 +10,10 @@ TABLES: dict[str, str] = {
     "places aren't in the registry, and the table is never exported or released.",
     "screen_products": "The products on the one catalog page a screen read, as the store listed them. Raw, "
     "append-only and private, as screens.",
+    "screen_verdict_batches": "Claude's batches of undecided screens (screen_verdict.py): one row per screen sent, "
+    "then one row when the batch is collected. Raw, append-only and private, as screens.",
+    "screen_verdicts": "Claude's decision on one screen the rules left undecided, from that screen's stored evidence "
+    "only: per model and prompt version (definition). Raw, append-only and private; never public.",
     "snapshots": "Every product a store listed at one fetch, coffee or not: one row per (fetch batch, product).",
     "bodies": "Product descriptions as text, once per distinct description (body_hash).",
     "fetches": "One row per fetch attempt of a roaster's catalog, ok or not, with what it asked of the store.",
@@ -84,6 +88,25 @@ COLUMNS: dict[str, dict[str, str]] = {
         "body_hash": "A hash of the product's description text.",
         "body_text": "The description's text, its first 1,500 characters.",
     },
+    "screen_verdict_batches": {
+        "batch_id": "The Message Batch's id.",
+        "state": "submitted (one row per screen sent) or collected (one row when its answers were stored).",
+        "at": "When the batch was sent or collected (UTC).",
+        "custom_id": "The screen sent (screens.screen_id); null on the collected row.",
+        "model": "The model asked.",
+        "definition": "The prompt's version: a hash of the prompt, the definition and the answer's schema.",
+        "evidence_hash": "A hash of the evidence text sent; null on the collected row.",
+    },
+    "screen_verdicts": {
+        "decided_at": "When the answer was stored (UTC).",
+        "screen_id": _SCREEN,
+        "roaster_id": "The place's normalized domain.",
+        "evidence_hash": "A hash of the evidence text the answer is about.",
+        "model": "The model that answered.",
+        "definition": "The prompt's version the answer is under (screen_verdict.DEFINITION_VERSION).",
+        "label": "roaster_online, not_roaster or unsure.",
+        "reason": "Claude's one sentence of reason, at most 300 characters.",
+    },
     "snapshots": {
         "run_date": _RUN,
         "batch_id": _BATCH,
@@ -151,7 +174,8 @@ COLUMNS: dict[str, dict[str, str]] = {
         "run_date": _RUN,
         "job": "discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich, "
         "fetch-health (the fetch-health check), classify (Claude's verdicts), build (the dbt build, its release and "
-        "serve) or screen (the roaster screen of one state's candidates; run_date is its day, not a week).",
+        "serve), screen (the roaster screen of one state's candidates; run_date is its day, not a week) or "
+        "screen-verdicts (Claude's decisions on the screen's undecided places; run_date is its day).",
         "connector": "The connector (adapter) the job served, if any.",
         "shard": "The shard, if the job was sharded.",
         "attempt_id": "One execution of the job; its start and end rows share it.",
@@ -313,10 +337,14 @@ COLUMNS |= {
         "roaster_id": "The place's normalized domain, as in candidates.",
         "screen_id": "The place's latest screen, which the tier is from (screens.screen_id).",
         "tier": "suggested, review, dropped or not_screened.",
-        "decided_by": "rules, or claude once its verdicts on the review tier exist.",
+        "decided_by": "rules. Claude's decision (verdict) is shown, and never changes the tier until the sealed "
+        "evaluation.",
         "reasons": "Signal codes behind the tier, such as named 8/9, own_vendor 8/8, origins 4 or serves:<phrase>.",
         "rule_version": "The version of the rules that gave the tier (screen_rules.RULE_VERSION).",
-        "verdict_model": "The model whose verdict decided, when decided_by is claude; else null.",
+        "verdict_model": "The model whose decision is in verdict, when the latest screen has one; else null.",
+        "verdict": "Claude's decision on the latest screen, if the rules left it undecided and it was asked: "
+        "roaster_online, not_roaster or unsure. Shown, never applied.",
+        "verdict_reason": "Claude's one sentence of reason for verdict.",
         "screened_at": "When the latest screen finished.",
         "next_due": "The first day the place may be screened again, from screened_at and never the clock.",
     },
@@ -391,9 +419,18 @@ QUALITY: dict[str, list[dict]] = {
         {"id": "request_cap_recorded", "tables": ["screens"], "dimension": "conformity", "severity": "error",
          "rule": "no recorded screen shows more than 6 requests",
          "engine": "dbt", "implementation": "tests/screen_request_cap.sql", "enforced_by": "dbt screen_request_cap"},
-        {"id": "private", "tables": ["screens", "screen_products"], "dimension": "conformity",
-         "severity": "error", "rule": "the tables are never part of a release or an export",
+        {"id": "private", "tables": ["screens", "screen_products", "screen_verdict_batches", "screen_verdicts"],
+         "dimension": "conformity", "severity": "error", "rule": "the tables are never part of a release or an export",
          "engine": "pytest", "implementation": "tests/test_screen.py::test_screen_tables_are_never_released"},
+        {"id": "verdict_writer_columns", "tables": ["screen_verdict_batches", "screen_verdicts"],
+         "dimension": "conformity", "severity": "error",
+         "rule": "submit and collect write exactly the contract's columns, and every label is one of its values",
+         "engine": "pytest",
+         "implementation": "tests/test_screen_verdict.py::test_submit_and_collect_write_exactly_the_contracts_columns"},
+        {"id": "verdict_append_only", "tables": ["screen_verdict_batches", "screen_verdicts"],
+         "dimension": "consistency", "severity": "error",
+         "rule": "a run only adds files; a decision is never rewritten, and a new prompt version is new rows",
+         "engine": "pytest", "implementation": "tests/test_screen_verdict.py::test_a_second_run_adds_files_and_rewrites_none"},
     ],
     "raw": [
         {"id": "fetch_status_values", "tables": ["fetches"], "dimension": "conformity", "severity": "error",

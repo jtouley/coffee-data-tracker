@@ -5,15 +5,16 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-screen
-version: 1.0.0
+version: 1.1.0
 name: Coffee Data internal screen contract
 status: active
 domain: coffee
 tags:
 - internal
 description:
-  purpose: 'Internal contract between services: the roaster screen job (coffeedata screen), one state per run -> dbt (stg_screens,
-    stg_screen_products), the screen job''s own selection (screen.select).'
+  purpose: 'Internal contract between services: the roaster screen job (coffeedata screen), one state per run; Claude''s
+    decisions on the undecided places (coffeedata screen-verdicts) -> dbt (stg_screens, stg_screen_products, stg_screen_verdicts),
+    the screen job''s own selection (screen.select), the screen-verdicts job''s pending set (screen_verdict.pending).'
   usage: Internal to the pipeline; not published, and not a public interface. Readers outside the pipeline use the public
     catalog contract (contracts/public-catalog.odcs.yaml).
   limitations: Every lake column is nullable in the Arrow schema so that older files read back; required marks the columns
@@ -360,6 +361,171 @@ schema:
   customProperties:
   - property: lakeGlob
     value: screen_products/*/*.parquet
+- name: screen_verdict_batches
+  physicalName: screen_verdict_batches
+  physicalType: table
+  description: 'Claude''s batches of undecided screens (screen_verdict.py): one row per screen sent, then one row when the
+    batch is collected. Raw, append-only and private, as screens.'
+  properties:
+  - name: batch_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The Message Batch's id.
+  - name: state
+    logicalType: string
+    physicalType: string
+    required: false
+    description: submitted (one row per screen sent) or collected (one row when its answers were stored).
+  - name: at
+    logicalType: timestamp
+    logicalTypeOptions:
+      timezone: true
+      defaultTimezone: UTC
+    physicalType: timestamp[s, tz=UTC]
+    required: false
+    description: When the batch was sent or collected (UTC).
+  - name: custom_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The screen sent (screens.screen_id); null on the collected row.
+  - name: model
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The model asked.
+  - name: definition
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The prompt''s version: a hash of the prompt, the definition and the answer''s schema.'
+  - name: evidence_hash
+    logicalType: string
+    physicalType: string
+    required: false
+    description: A hash of the evidence text sent; null on the collected row.
+  quality:
+  - id: screen_verdict_batches_private
+    description: the tables are never part of a release or an export.
+    type: custom
+    engine: pytest
+    implementation: tests/test_screen.py::test_screen_tables_are_never_released
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_screen.py::test_screen_tables_are_never_released
+  - id: screen_verdict_batches_verdict_writer_columns
+    description: submit and collect write exactly the contract's columns, and every label is one of its values.
+    type: custom
+    engine: pytest
+    implementation: tests/test_screen_verdict.py::test_submit_and_collect_write_exactly_the_contracts_columns
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_screen_verdict.py::test_submit_and_collect_write_exactly_the_contracts_columns
+  - id: screen_verdict_batches_verdict_append_only
+    description: a run only adds files; a decision is never rewritten, and a new prompt version is new rows.
+    type: custom
+    engine: pytest
+    implementation: tests/test_screen_verdict.py::test_a_second_run_adds_files_and_rewrites_none
+    dimension: consistency
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_screen_verdict.py::test_a_second_run_adds_files_and_rewrites_none
+  customProperties:
+  - property: lakeGlob
+    value: screen_verdict_batches/*/*.parquet
+- name: screen_verdicts
+  physicalName: screen_verdicts
+  physicalType: table
+  description: 'Claude''s decision on one screen the rules left undecided, from that screen''s stored evidence only: per
+    model and prompt version (definition). Raw, append-only and private; never public.'
+  properties:
+  - name: decided_at
+    logicalType: timestamp
+    logicalTypeOptions:
+      timezone: true
+      defaultTimezone: UTC
+    physicalType: timestamp[s, tz=UTC]
+    required: false
+    description: When the answer was stored (UTC).
+  - name: screen_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The screen these rows belong to (screens.screen_id).
+  - name: roaster_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The place's normalized domain.
+  - name: evidence_hash
+    logicalType: string
+    physicalType: string
+    required: false
+    description: A hash of the evidence text the answer is about.
+  - name: model
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The model that answered.
+  - name: definition
+    logicalType: string
+    physicalType: string
+    required: false
+    description: The prompt's version the answer is under (screen_verdict.DEFINITION_VERSION).
+  - name: label
+    logicalType: string
+    physicalType: string
+    required: false
+    description: roaster_online, not_roaster or unsure.
+    enum:
+    - value: roaster_online
+    - value: not_roaster
+    - value: unsure
+  - name: reason
+    logicalType: string
+    physicalType: string
+    required: false
+    description: Claude's one sentence of reason, at most 300 characters.
+  quality:
+  - id: screen_verdicts_private
+    description: the tables are never part of a release or an export.
+    type: custom
+    engine: pytest
+    implementation: tests/test_screen.py::test_screen_tables_are_never_released
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_screen.py::test_screen_tables_are_never_released
+  - id: screen_verdicts_verdict_writer_columns
+    description: submit and collect write exactly the contract's columns, and every label is one of its values.
+    type: custom
+    engine: pytest
+    implementation: tests/test_screen_verdict.py::test_submit_and_collect_write_exactly_the_contracts_columns
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_screen_verdict.py::test_submit_and_collect_write_exactly_the_contracts_columns
+  - id: screen_verdicts_verdict_append_only
+    description: a run only adds files; a decision is never rewritten, and a new prompt version is new rows.
+    type: custom
+    engine: pytest
+    implementation: tests/test_screen_verdict.py::test_a_second_run_adds_files_and_rewrites_none
+    dimension: consistency
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_screen_verdict.py::test_a_second_run_adds_files_and_rewrites_none
+  customProperties:
+  - property: lakeGlob
+    value: screen_verdicts/*/*.parquet
 authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/lake.py
   type: implementation
@@ -376,6 +542,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/discover.py
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/screen_verdict.py
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -383,12 +552,14 @@ customProperties:
 - property: audience
   value: internal
 - property: producer
-  value: the roaster screen job (coffeedata screen), one state per run
+  value: the roaster screen job (coffeedata screen), one state per run; Claude's decisions on the undecided places (coffeedata
+    screen-verdicts)
 - property: consumers
   value:
-  - dbt (stg_screens, stg_screen_products)
+  - dbt (stg_screens, stg_screen_products, stg_screen_verdicts)
   - the screen job's own selection (screen.select)
+  - the screen-verdicts job's pending set (screen_verdict.pending)
 - property: interfaceFingerprint
-  value: 2488fdad247d8cd6
+  value: ef80105954edf0f8
 - property: docsFingerprint
-  value: 7cb39e3bbe7d1110
+  value: e9f20cfed6be524b

@@ -102,8 +102,9 @@ schema:
     physicalType: string
     required: false
     description: 'discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich, fetch-health
-      (the fetch-health check), classify (Claude''s verdicts), build (the dbt build, its release and serve) or screen (the
-      roaster screen of one state''s candidates; run_date is its day, not a week).'
+      (the fetch-health check), classify (Claude''s verdicts), build (the dbt build, its release and serve), screen (the
+      roaster screen of one state''s candidates; run_date is its day, not a week) or screen-verdicts (Claude''s decisions
+      on the screen''s undecided places; run_date is its day).'
   - name: connector
     logicalType: string
     physicalType: string
@@ -277,4 +278,4 @@ customProperties:
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: a2d3b03545b16938
+  value: c24949393f333f05

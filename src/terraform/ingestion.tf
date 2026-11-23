@@ -43,6 +43,20 @@ variable "verdict_model" {
   }
 }
 
+# One value for every job that calls Claude: the screen-verdicts job asks with it and the build job shows the decisions
+# stored under it (screen_scores), so the two can never drift apart. Its default is the code's (screen_verdict.py
+# DEFAULT_MODEL; tests/test_screen_verdict.py holds them equal).
+variable "screen_verdict_model" {
+  description = "COFFEEDATA_SCREEN_VERDICT_MODEL for the jobs that call Claude: the model the screen-verdicts job asks about the roaster screen's undecided places, and whose decisions the build shows in screen_scores."
+  type        = string
+  nullable    = false
+  default     = "claude-haiku-5-5"
+  validation {
+    condition     = trimspace(var.screen_verdict_model) != ""
+    error_message = "screen_verdict_model can't be empty: the job and the build must name the same model."
+  }
+}
+
 variable "ingest_job_memory" {
   description = "Per-job memory overrides, e.g. { \"crawl-woocommerce\" = \"4Gi\" }: a job named here gets this limit instead of its default in local.ingest_jobs. With 2 vCPU, Cloud Run allows 1Gi to 8Gi."
   type        = map(string)
@@ -115,6 +129,17 @@ locals {
       command = ["sh", "-c"]
       args    = ["rc=0; coffeedata probe --stale-days 28 --deadline-min 100 || rc=1; coffeedata publish --message \"probe\" || rc=1; exit $rc"]
       egress  = "default", claude = false, memory = "2Gi", retries = 1
+    }
+    # Claude's decisions on the roaster screen's undecided places (screen_verdict.py): collect what finished, then send
+    # what is pending, at most COFFEEDATA_SCREEN_VERDICT_WEEKLY_CAP requests a week (default 1,000), and publish the
+    # rows. Its model is var.screen_verdict_model, set on the build job too (claude = true). Unscheduled: it has nothing
+    # to decide until the screen job runs (the design's PR 4), and its schedule comes with the screen's. A batch it
+    # can't read back, or failed results, are named and fail the execution, which emails the owner; nothing it writes
+    # reaches the build's release.
+    "screen-verdicts" = {
+      command = ["sh", "-c"]
+      args    = ["rc=0; coffeedata screen-verdicts || rc=1; coffeedata publish --message \"screen-verdicts\" || rc=1; exit $rc"]
+      egress  = "default", claude = true, memory = "2Gi", retries = 0
     }
     "crawl-shopify"                = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], egress = "shopify", claude = false, memory = "2Gi", retries = 0 }
     "crawl-shopify-default-egress" = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], egress = "default", claude = false, memory = "2Gi", retries = 0 }
@@ -515,6 +540,13 @@ resource "google_cloud_run_v2_job" "ingest" {
           for_each = each.value.claude ? [var.verdict_model] : []
           content {
             name  = "COFFEEDATA_VERDICT_MODEL"
+            value = env.value
+          }
+        }
+        dynamic "env" {
+          for_each = each.value.claude ? [var.screen_verdict_model] : []
+          content {
+            name  = "COFFEEDATA_SCREEN_VERDICT_MODEL"
             value = env.value
           }
         }

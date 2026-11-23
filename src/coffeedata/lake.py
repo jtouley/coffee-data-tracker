@@ -96,6 +96,7 @@ FETCH_STATUSES = ("ok", "error", "unavailable", "crashed")
 # (screens.edge, read from the challenge's own headers): screen.py, docs/design/roaster-screen.md section 3.4.
 SCREEN_REFUSALS = ("robots_disallow", "robots_401_403", "challenge", "http_429", "http_430")
 SCREEN_EDGES = ("siteground", "cloudflare", "other")
+SCREEN_VERDICT_LABELS = ("roaster_online", "not_roaster", "unsure")
 HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
 # A host whose robots.txt asked us a Crawl-delay: the value as written, the spacing its requests got, and whether
 # the 60 s cap applied (http.RequestStats.crawl_delays).
@@ -309,6 +310,31 @@ SCHEMAS: dict[str, pa.Schema] = {
             ),
             ("body_hash", pa.string()),
             ("body_text", pa.string()),
+        ]
+    ),
+    # Claude's decision on a screen the rules left undecided (screen_verdict.py): its batches, then its answers.
+    # Raw, append-only and private, as screens; keyed by the screen and by the model and the prompt's version.
+    "screen_verdict_batches": pa.schema(
+        [
+            ("batch_id", pa.string()),
+            ("state", pa.string()),
+            ("at", pa.timestamp("s", tz="UTC")),
+            ("custom_id", pa.string()),
+            ("model", pa.string()),
+            ("definition", pa.string()),
+            ("evidence_hash", pa.string()),
+        ]
+    ),
+    "screen_verdicts": pa.schema(
+        [
+            ("decided_at", pa.timestamp("s", tz="UTC")),
+            ("screen_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("evidence_hash", pa.string()),
+            ("model", pa.string()),
+            ("definition", pa.string()),
+            ("label", pa.string()),
+            ("reason", pa.string()),
         ]
     ),
     "registry": pa.schema(
@@ -608,6 +634,8 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("reasons", pa.list_(pa.string())),
             ("rule_version", pa.string()),
             ("verdict_model", pa.string()),
+            ("verdict", pa.string()),
+            ("verdict_reason", pa.string()),
             # microseconds, not the lake's usual seconds: Parquet has no seconds unit, so a seconds column reads back
             # as milliseconds and would not match this schema; microseconds round-trip exactly
             ("screened_at", pa.timestamp("us", tz="UTC")),
@@ -925,6 +953,8 @@ GLOBS = {
     "candidates": "candidates/*/*.parquet",
     "screens": "screens/*/*.parquet",
     "screen_products": "screen_products/*/*.parquet",
+    "screen_verdict_batches": "screen_verdict_batches/*/*.parquet",
+    "screen_verdicts": "screen_verdicts/*/*.parquet",
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
@@ -973,6 +1003,8 @@ SCHEMA_FILES = {
     "candidates": "candidates/source=schema/schema.parquet",
     "screens": "screens/run_date=0000-00-00/batch=schema.parquet",
     "screen_products": "screen_products/run_date=0000-00-00/batch=schema.parquet",
+    "screen_verdict_batches": "screen_verdict_batches/state=schema/schema.parquet",
+    "screen_verdicts": "screen_verdicts/run_date=0000-00-00/batch=schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",

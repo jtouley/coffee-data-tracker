@@ -36,7 +36,16 @@ import pyarrow as pa
 import yaml
 
 from . import contract_docs
-from .lake import FETCH_STATUSES, GLOBS, OPS_GLOBS, SCHEMAS, SCREEN_EDGES, SCREEN_REFUSALS, USAGE_VALUES
+from .lake import (
+    FETCH_STATUSES,
+    GLOBS,
+    OPS_GLOBS,
+    SCHEMAS,
+    SCREEN_EDGES,
+    SCREEN_REFUSALS,
+    SCREEN_VERDICT_LABELS,
+    USAGE_VALUES,
+)
 from .models import CatalogItem
 
 # The repo's contracts/internal/: this assumes a source or editable install, which is fine because only the
@@ -125,14 +134,24 @@ CONTRACTS: dict[str, dict[str, Any]] = {
         "consumers": ["dbt (stg_enrichments, dim_coffee)"],
     },
     "screen": {
-        "tables": ["screens", "screen_products"],
-        "producer": "the roaster screen job (coffeedata screen), one state per run",
-        "producer_code": ["src/coffeedata/screen.py", "src/coffeedata/discover.py"],
-        "consumers": [
-            "dbt (stg_screens, stg_screen_products)",
-            "the screen job's own selection (screen.select)",
+        "tables": ["screens", "screen_products", "screen_verdict_batches", "screen_verdicts"],
+        "producer": "the roaster screen job (coffeedata screen), one state per run; Claude's decisions on the "
+        "undecided places (coffeedata screen-verdicts)",
+        "producer_code": [
+            "src/coffeedata/screen.py",
+            "src/coffeedata/discover.py",
+            "src/coffeedata/screen_verdict.py",
         ],
-        "values": {"screens.refusal": list(SCREEN_REFUSALS), "screens.edge": list(SCREEN_EDGES)},
+        "consumers": [
+            "dbt (stg_screens, stg_screen_products, stg_screen_verdicts)",
+            "the screen job's own selection (screen.select)",
+            "the screen-verdicts job's pending set (screen_verdict.pending)",
+        ],
+        "values": {
+            "screens.refusal": list(SCREEN_REFUSALS),
+            "screens.edge": list(SCREEN_EDGES),
+            "screen_verdicts.label": list(SCREEN_VERDICT_LABELS),
+        },  # fmt: skip
     },
     "usage": {
         "tables": ["usage_events"],

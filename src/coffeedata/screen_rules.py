@@ -308,6 +308,22 @@ def features(screen: dict, product_rows: Iterable[dict], home: dict) -> dict:
     }
 
 
+# Rule 3's reseller doubts, by the code each reason starts with (reason_code). A place with any of them goes to a
+# person and is never sent to Claude (screen_verdict.undecided reads these, never the reason's text).
+OTHER_ROASTER, MANY_VENDORS, SERVES, WHOLESALE = "other_roaster", "vendors", "serves", "wholesale"
+DOUBT_CODES = frozenset({OTHER_ROASTER, MANY_VENDORS, SERVES, WHOLESALE})
+
+
+def reason_code(reason: str) -> str:
+    """A reason's stable code: the word before its first space or colon ("serves:Proudly serving X" -> serves)."""
+    return re.split(r"[ :]", reason, maxsplit=1)[0]
+
+
+def is_doubt(reasons: Iterable[str]) -> bool:
+    """Whether a tier's reasons hold one of rule 3's reseller doubts (DOUBT_CODES)."""
+    return any(reason_code(r) in DOUBT_CODES for r in reasons)
+
+
 def tier(f: dict, rule: Rule = RULE) -> tuple[str, list[str]]:
     """(tier, reasons) for one screen's features: section 4.2's rules, first match wins. The rules abstain rather
     than guess: a refusal or an unread platform is not_screened, a doubt always goes to a person (review), and
@@ -340,13 +356,13 @@ def tier(f: dict, rule: Rule = RULE) -> tuple[str, list[str]]:
     # 3: reseller doubt
     doubt = []
     if f["other_roaster"] >= 1:
-        doubt.append(f"other_roaster {f['other_roaster']}/{f['named']}")
+        doubt.append(f"{OTHER_ROASTER} {f['other_roaster']}/{f['named']}")
     if f["vendors"] >= MAX_VENDORS:
-        doubt.append(f"vendors {f['vendors']}")
+        doubt.append(f"{MANY_VENDORS} {f['vendors']}")
     if serves and not roast:
-        doubt.append(f"serves:{serves}")
+        doubt.append(f"{SERVES}:{serves}")
     if f["wholesale_share"] >= MAX_WHOLESALE_SHARE:
-        doubt.append(f"wholesale {f['wholesale_share']:.0%}")
+        doubt.append(f"{WHOLESALE} {f['wholesale_share']:.0%}")
     evidence = [f"named {f['named']}/{f['products']}"]
     if f["own_vendor"]:
         evidence.append(f"own_vendor {f['own_vendor']}/{f['named']}")

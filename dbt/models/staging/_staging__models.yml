@@ -321,6 +321,31 @@ models:
         description: A hash of the product's description text.
       - name: body_text
         description: The description's text, its first 1,500 characters.
+  - name: stg_screen_verdicts
+    description: >-
+      Claude's decision on each screen the roaster screen's rules left undecided (raw screen_verdicts), for the
+      configured model and prompt version only, one per screen. Private, as stg_screens.
+    columns:
+      - name: screen_id
+        description: The screen the decision is about (stg_screens.screen_id).
+        data_tests: [not_null, unique]
+      - name: roaster_id
+        description: The place's normalized domain.
+      - name: evidence_hash
+        description: A hash of the evidence text the decision is about.
+      - name: model
+        description: The model that answered.
+      - name: definition
+        description: The prompt's version (screen_verdict.DEFINITION_VERSION).
+      - name: label
+        description: roaster_online, not_roaster or unsure.
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [roaster_online, not_roaster, unsure]}}
+      - name: reason
+        description: Claude's one sentence of reason.
+      - name: decided_at
+        description: When the answer was stored (UTC).
   - name: stg_screen_places
     description: >-
       One row per place of the discovery source list (raw candidates), with its newest name: the roaster screen tells

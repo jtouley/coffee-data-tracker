@@ -27,6 +27,10 @@ vars:
   # Claude's verdicts to use (verdict.py); empty means the rules alone. The build passes the configured ones.
   verdict_model: ""
   verdict_definition: ""
+  # Claude's decisions on the roaster screen's undecided places (screen_verdict.py) to show in screen_scores; empty
+  # shows none. The build passes the configured model and the prompt's version.
+  screen_verdict_model: ""
+  screen_verdict_definition: ""
   # verdicts_cover_catalog: with require_verdicts (what `coffeedata build` passes, unless rules only is explicitly
   # allowed: --allow-rules-only or COFFEEDATA_ALLOW_RULES_ONLY=1), the build fails without a verdict model, or when
   # fewer than min_verdict_share of listed coffees are classified_by claude. Off here, for dbt run by hand and the

@@ -627,7 +627,8 @@ def test_a_second_run_adds_files_and_rewrites_none(lake):
 
 def test_screen_tables_are_never_released():
     released = set(quality.RELEASE_TABLES) | set(quality.OPS_TABLES)
-    assert not {"screens", "screen_products", "stg_screens", "stg_screen_products"} & released
+    assert not {"screens", "screen_products", "stg_screens", "stg_screen_products", "screen_verdict_batches",
+                "screen_verdicts", "stg_screen_verdicts"} & released  # fmt: skip
 
 
 def test_no_place_is_started_after_the_deadline(lake):
