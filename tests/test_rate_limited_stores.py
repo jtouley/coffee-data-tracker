@@ -6,6 +6,7 @@ ok on every connector, through `crawl` with the connector's real config."""
 
 import functools
 import json
+import threading
 
 import httpx
 import pytest
@@ -388,3 +389,34 @@ def test_a_squarespace_sitemap_asking_for_more_than_120s_still_falls_back_on_the
     assert fetches(lake, "squarespace", "q.com")[-1] == "ok"
     assert shop.call_count == 1
     assert max(clock.sleeps) <= http.MAX_STORE_WAIT + 1
+
+
+def test_a_store_still_deferred_when_a_round_ends_past_the_deadline_counts_as_its_stop(lake, clock):
+    """a.com is deferred with a wait that ends well before the deadline, but the round runs past it (b.com is slow):
+    the next round never starts, so a.com isn't retried. It keeps its error row for the next pass and counts as not
+    retried at the deadline, so the pass ends `deadline` (connectors.end_status)."""
+
+    order: list[str] = []
+
+    def slow(req):
+        order.append("b")
+        # a real pause (the fixture stubs time.sleep): the main loop meanwhile takes a.com's result, deferred and
+        # due before the deadline
+        threading.Event().wait(0.3)
+        clock.t += 700  # past the 600 s deadline before the round ends
+        return httpx.Response(404)
+
+    def busy_a(req):
+        order.append("a")
+        return httpx.Response(429, headers={"retry-after": "60"})
+
+    with respx.mock(assert_all_called=False) as m:
+        for host in ("a.com", "b.com"):
+            m.get(f"https://{host}/robots.txt").mock(return_value=httpx.Response(404))
+        m.get("https://a.com/wp-json/wc/store/v1/products").mock(side_effect=busy_a)
+        m.get("https://b.com/wp-json/wc/store/v1/products").mock(side_effect=slow)
+        out = ingest.run(lake, [_woo_store("a.com"), _woo_store("b.com")], WEEK, workers=1, deadline_s=600)
+    assert order == ["a", "b"]
+    assert out["skipped_deadline"] == 0 and "round_1" not in out["deferred"]
+    assert out["not_retried_at_deadline"] == 1 and connectors.end_status(out) == "deadline"
+    assert _statuses(lake, "a.com") == ["error"]

@@ -389,10 +389,25 @@ def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> 
         ):  # its 21:47 pass is crawl-retry, which takes only parked stores (connectors.crawl_retry)
             later = tuple(k for k in later if k != "retry")
         final = all((name, key) in gone for key in later)
+        # Shopify's crawl-retry resumes the stores a crawl parked, so a crawl that only parked stores (or stopped a
+        # paged catalog, which is parked at its page) lost none for the week: only one that left stores unstarted or
+        # not retried did. The retry's own deadline is final: nothing resumes after it.
+        parked = False
+        if (
+            name == "shopify"
+            and final
+            and "retry" not in slots
+            and not any(
+                r.get("skipped") or (r.get("detail") or {}).get("not_retried_at_deadline")
+                for r in rows
+                if is_pass(r) and r["connector"] == name and timed_out(r)
+            )
+        ):
+            final, parked = False, True
         prev = before.get(name, [])
         usual = bool(prev) and set(slots) <= set(prev)  # no worse than last week: the same line, calmly
         found.append({"code": "deadline", "kind": "usual" if usual else "warn", "connector": name, "passes": slots,
-                      "last_passes": prev, "final": final})  # fmt: skip
+                      "last_passes": prev, "final": final, "parked": parked})  # fmt: skip
     # partial catalogs: calm, since the gate passes and dbt keeps the unread products listed
     for name, part in _partials(rows, wk).items():
         found.append({"code": "partial", "kind": "usual", "connector": name, **part, "weeks": PARTIAL_WEEKS})

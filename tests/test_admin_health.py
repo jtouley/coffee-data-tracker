@@ -529,6 +529,32 @@ def test_a_shopify_deadline_before_its_retry_says_its_stores_went_uncrawled():
     assert not d["final"]  # woocommerce's own 21:47 crawl takes them
 
 
+def test_a_shopify_resume_that_only_parked_stores_says_its_retry_resumes_them():
+    """A Shopify pass that ends `deadline` only for stores it parked (or a catalog parked at its page) lost none for
+    the week: crawl-retry resumes them at 21:47. Not retried or unstarted stores are lost."""
+
+    def shop(**stops):
+        return [r | {"status": "deadline", "skipped": stops.pop("skipped", 0), "detail": stops}
+                if (r["connector"], health.slot(r, WEEK)) == ("shopify", "resume") else r
+                for r in _full_week()]  # fmt: skip
+
+    for stop in ({"parked_at_deadline": 2}, {"stopped_deadline": 1}):
+        for now in (at(16, 0), at(23, 30)):
+            (d,) = [
+                x
+                for x in health.flags(week_of(shop(**stop)), None, None, now)["flags"]
+                if x["code"] == "deadline"
+            ]
+            assert (d["final"], d["parked"]) == (False, True), stop
+    for stop in ({"not_retried_at_deadline": 1, "parked_at_deadline": 2}, {"skipped": 3}):
+        (d,) = [
+            x
+            for x in health.flags(week_of(shop(**stop)), None, None, at(23, 30))["flags"]
+            if x["code"] == "deadline"
+        ]
+        assert (d["final"], d["parked"]) == (True, False), stop
+
+
 def test_a_test_crawl_is_never_marked_died_because_a_pass_started_after_it():
     rows = [row(start=at(9, 10), status="running", aid="t", detail={"test": "t1"}), row(start=at(9, 19))]
     assert health.died(rows, at(10, 0)) == set()
@@ -604,6 +630,12 @@ def test_week_words_a_time_limit_and_partial_catalogs(tmp_path):
     def say(f):
         return re.sub(r"<[^>]+>", "", tpl.render(f=f, n=lambda v: f"{v:,}", t=str, health={})).strip()
 
+    parked = {"code": "deadline", "kind": "warn", "connector": "shopify", "passes": ["resume"], "last_passes": [],
+              "final": False, "parked": True}  # fmt: skip
+    assert (
+        say(parked)
+        == "shopify hit its time limit in the resume pass. Its 21:47 retry resumes the stores it parked."
+    )
     assert say(
         {
             "code": "deadline",

@@ -884,7 +884,12 @@ def run(
             if done:
                 flush(done)
             queue = parked
-            if not queue or (deadline is not None and time.monotonic() >= deadline):
+            if queue and deadline is not None and time.monotonic() >= deadline:
+                # deferred with a wait that ended before the deadline, but the round ran past it: not retried, each
+                # keeping its error row for the next pass, and counted as the deadline's stop (connectors.end_status)
+                deferred["past_deadline"] = deferred.get("past_deadline", 0) + len(queue)
+                break
+            if not queue:
                 break
         if retried_ok:
             deferred["still_failing"] = sum(not ok for ok in retried_ok.values())
