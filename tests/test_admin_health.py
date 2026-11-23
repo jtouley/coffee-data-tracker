@@ -394,7 +394,8 @@ def test_the_synthetic_weeks_flag_what_they_were_made_to(hlake):
     ]
     assert sorted(codes(f, skip=())) == [
         ("deadline", "generic"), ("deadline", "woocommerce"), ("died", "generic"), ("failed", "fetch-health"),
-        ("jump", "generic"), ("jump", "squarespace"), ("missed", "retry"), ("refusals", None)]  # fmt: skip
+        ("jump", "generic"), ("jump", "squarespace"), ("missed", "retry"), ("partial", "squarespace"),
+        ("refusals", None)]  # fmt: skip
     assert (
         next(x for x in f["flags"] if x["code"] == "deadline" and x["connector"] == "woocommerce")["kind"]
         == "usual"
@@ -440,7 +441,8 @@ def test_week_answers_first_then_says_what_needs_a_look(tmp_path, hlake):
     assert "5 of 5 connectors landed" in answer and "7 things to look at" in answer
     assert "Tuesday’s merge hasn’t run yet" in answer
     for words in ("generic’s resume crawl died.", "never reported finishing", "No retry crawl for woocommerce.",
-                  "woocommerce hit its time limit</strong> in the morning and resume passes, as last week. The stores it didn’t reach weren’t crawled this week.",
+                  "woocommerce hit its time limit</strong> in the morning and resume passes, as last week. The stores it didn’t reach or finish weren’t read whole this week.",
+                  "squarespace read 2 catalogs only in part</strong> in its retry pass. The products it didn’t read stay listed as they were. big-catalog.example was partial in each of its last 2 runs, so never read whole.",
                   "egress check flags an IP that is over on two runs in a row", "up more than usual:",
                   "(1 still running)", "(1 died)"):  # fmt: skip
         assert words in text, words
@@ -554,3 +556,79 @@ def test_last_week_or_the_streaks_failing_costs_only_their_own_block(tmp_path, h
     assert "Couldn’t read last week (OSError: HTTP 503 from the lake)" in r.text
     assert "Couldn’t read the stores that keep failing: OSError: HTTP 503 from the lake" in r.text
     assert "No retry crawl for woocommerce." in r.text and "Every job attempt" in r.text
+
+
+def test_partial_catalogs_are_a_calm_line_of_their_own_never_a_time_limit():
+    """Since the crawl's end status is truthful, a pass whose catalogs were read in part for another reason (a count
+    that disagrees, a failed page) ends `done`: Week lists its partials calmly, from its latest ended pass (each pass
+    asks a partial store again, so passes aren't summed), and says "hit its time limit" only for a `deadline` row."""
+    part = {"partial": 3, "partial_every_week": ["b.example", "c.example"]}
+    rows = [row(connector="woocommerce", todo=245, ok=236, errors=13, detail=part),
+            row(connector="woocommerce", start=at(15, 20), todo=12, ok=4, errors=10,
+                detail={"partial": 2, "partial_every_week": ["b.example"]}),
+            row(connector="generic", start=at(9, 20), status="deadline", todo=765, detail={"partial": 2}),
+            row(connector="squarespace", start=at(9, 21), detail={"partial": 0, "partial_every_week": []}),
+            row(connector="shopify", start=at(9, 22), status="running", detail=part)]  # fmt: skip
+    f = health.flags(week_of(rows), None, None, at(16, 0))
+    got = [(x["code"], x["connector"], x["kind"]) for x in f["flags"] if x["code"] in ("deadline", "partial")]
+    assert got == [("deadline", "generic", "warn"), ("partial", "woocommerce", "usual"),
+                   ("partial", "generic", "usual")]  # fmt: skip
+    woo = next(x for x in f["flags"] if x["code"] == "partial" and x["connector"] == "woocommerce")
+    assert (woo["pass"], woo["partial"], woo["every_week"], woo["weeks"]) == ("resume", 2, ["b.example"], 2)
+    assert f["new"] == sum(x["kind"] != "usual" for x in f["flags"])  # partials are never counted as new
+    assert not any(x["code"] == "deadline" and x["connector"] == "woocommerce" for x in f["flags"])
+
+
+def test_week_words_a_time_limit_and_partial_catalogs(tmp_path):
+    from jinja2 import Environment, FileSystemLoader
+
+    env = Environment(loader=FileSystemLoader(str(Path(__file__).resolve().parents[1] / "admin/templates")))
+    src = env.loader.get_source(env, "part_week.html")[0]
+    start = src.index("{% macro listed")
+    macros = src[start : src.index("{% macro cell")]
+    tpl = env.from_string(macros + "{{ flag(f) }}")
+
+    def say(f):
+        return re.sub(r"<[^>]+>", "", tpl.render(f=f, n=lambda v: f"{v:,}", t=str, health={})).strip()
+
+    assert say(
+        {
+            "code": "deadline",
+            "kind": "warn",
+            "connector": "generic",
+            "passes": ["morning"],
+            "last_passes": [],
+            "final": False,
+        }
+    ) == (  # fmt: skip
+        "generic hit its time limit in the morning pass. The next pass picks up the stores it didn’t reach or finish."
+    )
+    assert say(
+        {
+            "code": "partial",
+            "kind": "usual",
+            "connector": "woocommerce",
+            "pass": "morning",
+            "partial": 1,
+            "every_week": [],
+            "weeks": 2,
+        }
+    ) == (  # fmt: skip
+        "woocommerce read 1 catalog only in part in its morning pass. The products it didn’t read stay listed as they "
+        "were."
+    )
+    many = [f"s{i}.example" for i in range(7)]
+    assert say(
+        {
+            "code": "partial",
+            "kind": "usual",
+            "connector": "generic",
+            "pass": "retry",
+            "partial": 9,
+            "every_week": many,
+            "weeks": 2,
+        }
+    ).endswith(  # fmt: skip
+        "s0.example, s1.example, s2.example, s3.example, s4.example and 2 more were partial in each of their last 2 "
+        "runs, so never read whole."
+    )

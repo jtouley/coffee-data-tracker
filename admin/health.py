@@ -11,6 +11,10 @@ Nothing here is a new threshold, except the grace before a pass that hasn't star
   (K_SE["warning"], 4), reading last week's count as a Poisson count;
 - a scheduled pass (ingestion.tf's crons, checked by a test) is missed when a connector has no attempt in it
   MISSED_AFTER after its slot: Cloud Scheduler starts a job within seconds, and its first act is the running row.
+
+A pass that hit its time limit is one whose end row says `deadline`: since the crawl's end status became truthful
+(connectors.end_status), that means stores left unstarted or catalogs the deadline stopped mid-way. Catalogs read only
+in part for any reason (detail.partial) are a calm line of their own, never called a time limit.
 """
 
 from __future__ import annotations
@@ -22,6 +26,7 @@ from typing import Any
 from coffeedata.connectors import CONNECTORS
 from coffeedata.control import REFUSAL_FLAG
 from coffeedata.fetchhealth import CHECK_LIMIT, JOB_LIMIT
+from coffeedata.ingest import PARTIAL_WEEKS
 from coffeedata.prod_health import K_SE
 
 CRAWL_JOBS = ("crawl", "crawl-retry")
@@ -305,10 +310,24 @@ def _deadlines(rows: list[dict], week: str) -> dict[str, list[str]]:
     return out
 
 
+def _partials(rows: list[dict], week: str) -> dict[str, dict]:
+    """Per connector, its latest ended pass's catalogs read only in part (detail.partial: ok fetches marked partial,
+    whatever stopped them) and, of those, the stores partial in each of their last PARTIAL_WEEKS runs
+    (detail.partial_every_week). The latest pass, not a sum: each pass asks a partial store again (it isn't done),
+    so a sum would count one store once per pass. Connectors with none are left out."""
+    out: dict[str, dict] = {}
+    for r in rows:  # in start order (queries.week): the latest ended pass wins
+        if is_pass(r) and r["status"] not in ("running", "failed"):
+            d = r.get("detail") or {}
+            out[r["connector"]] = {"pass": slot(r, week), "partial": d.get("partial") or 0,
+                                   "every_week": list(d.get("partial_every_week") or [])}  # fmt: skip
+    return {c: v for c, v in out.items() if v["partial"]}
+
+
 def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> dict:
     """Everything Week shows about the crawl's health, with the abnormal things first. Each flag is a code with its
     facts (part_week.html words them); `bad` ones are failures, `warn` ones need a look, and `usual` ones (a deadline
-    in no more passes than last week's) are listed after them without counting as new."""
+    in no more passes than last week's, catalogs read only in part) are listed after them without counting as new."""
     rows, wk = week["rows"], week["week"]
     last_rows = last["rows"] if last else []
     last_wk = last["week"] if last else wk
@@ -352,6 +371,9 @@ def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> 
         usual = bool(prev) and set(slots) <= set(prev)  # no worse than last week: the same line, calmly
         found.append({"code": "deadline", "kind": "usual" if usual else "warn", "connector": name, "passes": slots,
                       "last_passes": prev, "final": final})  # fmt: skip
+    # partial catalogs: calm, since the gate passes and dbt keeps the unread products listed
+    for name, part in _partials(rows, wk).items():
+        found.append({"code": "partial", "kind": "usual", "connector": name, **part, "weeks": PARTIAL_WEEKS})
     cmp = compare(rows, last_rows, wk, last_wk, dead)
     for r in cmp["rows"]:
         if r["delta"]["ok"] is None:

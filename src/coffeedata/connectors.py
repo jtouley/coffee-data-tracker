@@ -239,6 +239,14 @@ def _window_left(lake: Lake, job: str, connector: str | None, week: str, deadlin
     return max(0.0, deadline_min - (control.now() - first).total_seconds() / 60)
 
 
+def end_status(out: dict) -> str:
+    """A crawl pass's end status: `deadline` when its deadline stopped work, i.e. roasters it never started
+    (skipped_deadline) or catalogs it stopped mid-way (stopped_deadline: a DeadlineReached among the fetch's causes),
+    else `done`. A catalog read in part for another reason (a WooCommerce count that differs from X-WP-Total, a
+    failed product page or sub-sitemap) ends `done`, counted in detail.partial (RUNBOOK §5.3)."""
+    return "deadline" if out.get("skipped_deadline") or out.get("stopped_deadline") else "done"
+
+
 def _ok_errors(out: dict) -> tuple[int, int]:
     """job_manifests' ok and errors for an ingest.run: a quarantined roaster is neither (never fetched; its own
     count in by_adapter, as the dbt ok rates leave its `crashed` row out)."""
@@ -335,6 +343,8 @@ def crawl(
               "partial": out.get("partial", 0),
               # stores partial in each of their last runs (ingest.PARTIAL_WEEKS): RUNBOOK §5.3
               "partial_every_week": out.get("partial_every_week") or [],
+              # fetches the deadline stopped mid-catalog (end_status)
+              "stopped_deadline": out.get("stopped_deadline", 0),
               # the job's own limiter (requests, 429s, pauses), as shopify_limiter, squarespace_limiter...
               **({f"{connector}_limiter": (out.get("limiters") or {}).get(connector)} if c.rps else {}),
               # the network the job actually ran on (set by the deploy), else the connector's config
@@ -345,8 +355,8 @@ def crawl(
               # the Cloud Run execution and task attempt, and the poison-pill guard's view at the start
               **started, "window_min": round(window, 1)}  # fmt: skip
     end = control.finish(
-        # deadline: roasters left unstarted, or catalogs it stopped mid-way (partial): the resume slot reads them
-        lake, job, "deadline" if out.get("skipped_deadline") or out.get("partial") else "done",
+        # deadline: roasters left unstarted, or catalogs the deadline stopped mid-way: the resume slot reads them
+        lake, job, end_status(out),
         ok=ok, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
         skipped=out.get("skipped_deadline", 0), requests=out.get("requests"), http_429=out.get("http_429"),
         http_430=out.get("http_430"), first_contact=out.get("first_contact"),
@@ -435,8 +445,8 @@ def crawl_retry(
         raise
     ok, errors = _ok_errors(out)
     control.finish(
-        # deadline, as crawl's: roasters left unstarted, or catalogs it stopped mid-way again (partial)
-        lake, job, "deadline" if out.get("skipped_deadline") or out.get("partial") else "done", ok=ok,
+        # as crawl's: deadline when roasters were left unstarted or the deadline stopped a resumed catalog again
+        lake, job, end_status(out), ok=ok,
         errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
         http_429=out.get("http_429"), http_430=out.get("http_430"), first_contact=out.get("first_contact"),
         skipped=out.get("skipped_deadline", 0),
@@ -444,6 +454,7 @@ def crawl_retry(
                           "partial": out.get("partial", 0),
                           # stores partial in each of their last runs (ingest.PARTIAL_WEEKS): RUNBOOK §5.3
                           "partial_every_week": out.get("partial_every_week") or [],
+                          "stopped_deadline": out.get("stopped_deadline", 0),
                           "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or CONNECTORS[connector].egress},
     )  # fmt: skip
     guard.close()

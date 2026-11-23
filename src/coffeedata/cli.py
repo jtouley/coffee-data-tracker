@@ -535,8 +535,12 @@ def cmd_crawl(args: argparse.Namespace) -> None:
         )
     if out.get("partial"):  # ok fetches that read only part of a catalog (fetches.partial; RUNBOOK §5.3)
         every = out.get("partial_every_week") or []
+        stopped = (
+            out.get("stopped_deadline") or 0
+        )  # the deadline stopped them; the rest ended partial on their own
         print(
             f"crawl {args.connector}: {out['partial']} catalogs read in part"
+            + (f"; the deadline stopped {stopped} fetch{'es' if stopped != 1 else ''}" if stopped else "")
             + (f"; partial every week: {', '.join(every)}" if every else ""),
             file=sys.stderr,
         )

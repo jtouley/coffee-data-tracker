@@ -32,6 +32,7 @@ from .http import (
     BLOCK_STATUSES,
     MAX_STORE_WAIT,
     SERVER_RETRY_STATUSES,
+    DeadlineReached,
     FetchError,
     PartialCatalog,
     PoliteClient,
@@ -169,6 +170,10 @@ class Result:
     partial_reason: str | None = None
     # a partial paged catalog's place (PartialCatalog.page): {"page", "items"}, parked so a resume continues there
     resume_at: dict | None = None
+    # the run's deadline stopped it (http.DeadlineReached among its causes): read in part, or with nothing read an
+    # error. A partial for another reason (a WooCommerce count that differs from X-WP-Total, a failed product page
+    # or sub-sitemap) isn't: only these, and stores never started, end a crawl `deadline` (connectors.end_status)
+    deadline: bool = False
 
     @property
     def status(self) -> str:
@@ -176,6 +181,13 @@ class Result:
         if self.quarantined:
             return crashguard.CRASHED
         return "unavailable" if self.unavailable else "error" if self.error else "ok"
+
+
+def stopped_by_deadline(e: BaseException) -> bool:
+    """The run's deadline stopped this fetch: a DeadlineReached in its chain of causes. Every adapter raises
+    PartialCatalog `from` the DeadlineReached (Squarespace through a second PartialCatalog), and one that reached it
+    before reading a product lets it propagate as is."""
+    return any(isinstance(c, DeadlineReached) for c in causes(e))
 
 
 def ingest_one(
@@ -189,6 +201,7 @@ def ingest_one(
                 {i.product_id: i for i in fetch_catalog(client, roaster, resume, known_products)}.values()
             )  # feeds repeat items
         except PartialCatalog as e:
+            res.deadline = stopped_by_deadline(e)
             if e.items:  # what it read, marked partial: dbt keeps the rest listed instead of delisting it
                 res.items = list({i.product_id: i for i in e.items}.values())
                 res.partial = True
@@ -209,6 +222,7 @@ def ingest_one(
             res.wait = block_wait(e) if res.deferrable else None
             res.blocked = blocked(e)
             res.unavailable = any(isinstance(c, Unavailable) for c in causes(e))
+            res.deadline = stopped_by_deadline(e)
     res.duration_s = round(time.monotonic() - start, 3)
     return res
 
@@ -625,6 +639,7 @@ def run(
                 continue
             stats["products"] += len(res.items)
             stats["partial"] += res.partial
+            stats["stopped_deadline"] += res.deadline
             stats["requests"] += res.stats.requests
             stats["http_429"] += res.stats.statuses.get(429, 0)
             stats["http_430"] += res.stats.statuses.get(430, 0)
@@ -902,6 +917,9 @@ def run(
         "skipped_deadline": skipped,  # not started: the deadline passed first
         "partial": stats["partial"],  # ok fetches that read only part of the catalog (fetches.partial)
         "partial_every_week": stuck,  # of them, the stores partial in each of their last PARTIAL_WEEKS runs
+        # fetches the deadline stopped mid-catalog (read in part, or before a product: an error); with
+        # skipped_deadline, what ends a crawl `deadline` (connectors.end_status)
+        "stopped_deadline": stats["stopped_deadline"],
         "requests": stats["requests"],
         "http_429": stats["http_429"],
         "http_430": stats["http_430"],

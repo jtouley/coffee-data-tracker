@@ -223,6 +223,8 @@ def test_6_runbook_tells_skipped_from_partial():
     section = text[text.index("### 5.3") : text.index("### 5.4")]
     assert "skipped or partial" in section and "partial_every_week" in section
     assert "No re-run is needed" in section
+    # the end status says deadline only for stores skipped or catalogs the deadline stopped (connectors.end_status)
+    assert "stopped_deadline" in section and "ends **`done`**" in section
 
 
 # --- 7. Each connector's documented page size ---------------------------------------------------------------------
@@ -729,7 +731,10 @@ def test_r9_crawl_retry_end_row_counts_a_store_that_stopped_partial_again(tmp_pa
     )
 
     def fetch(client, roaster, resume=None, known=None):
-        raise PartialCatalog("deadline reached (page 7)", [_item(roaster)], page=7)
+        try:
+            raise http.DeadlineReached("the run's deadline passed")
+        except http.DeadlineReached as e:  # as the Shopify adapter raises it: from the DeadlineReached
+            raise PartialCatalog(f"{e} (page 7)", [_item(roaster)], page=7) from e
 
     monkeypatch.setattr(ingest, "fetch_catalog", fetch)
     connectors.crawl_retry(lake, "shopify", week)
@@ -737,3 +742,4 @@ def test_r9_crawl_retry_end_row_counts_a_store_that_stopped_partial_again(tmp_pa
     detail = __import__("json").loads(row["detail"])
     assert (row["job"], row["status"]) == ("crawl-retry", "deadline")
     assert detail["partial"] == 1 and detail["partial_every_week"] == []
+    assert detail["stopped_deadline"] == 1

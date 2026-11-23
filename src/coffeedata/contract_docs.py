@@ -182,6 +182,9 @@ COLUMNS: dict[str, dict[str, str]] = {
         "started_at": "When the attempt started.",
         "ended_at": "When it ended (null on the start row).",
         "status": "running (start row), done, deadline or failed. An attempt with only a running row died. A "
+        "crawl or crawl-retry ends deadline only when its deadline stopped work: roasters it never started "
+        "(skipped) or catalogs it cut off mid-way (detail.stopped_deadline); one whose catalogs were read in part "
+        "for another reason (a count that differs, a failed page) ends done, with detail.partial. A "
         "build is done when it passed and was served, failed when its checks failed or it crashed (detail.passed, "
         "detail.error). A screen is stopped when too many sites refused it (detail.stopped, detail.refusals).",
         "todo": "Roasters it set out to fetch.",
@@ -196,7 +199,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "refusals": "Per egress IP: stores contacted, and those that refused their first catalog request.",
         "code_version": "The code that ran.",
         "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run; only for a "
-        "manual crawl --only; for "
+        "manual crawl --only; for a crawl, partial, stopped_deadline and partial_every_week; for "
         "fetch-health, its verdict on the week's fetches: systemic fetch failures, and the list of roasters whose "
         "fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, "
         "plus the partial and quarantined fetches; for classify, its model and what it collected and submitted; "
