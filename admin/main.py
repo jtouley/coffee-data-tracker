@@ -23,7 +23,7 @@ import secrets
 import time
 from collections.abc import Awaitable, Callable
 from concurrent.futures import ThreadPoolExecutor
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode, urlsplit
@@ -41,6 +41,7 @@ from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
 from .catalog import FACETS, Catalog, Filters, PrefilterReader
 from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
+from .health import flags as crawl_health
 from .logs import emit
 from .runjobs import JobsError
 from .sources import CHAIN_STORES, COLUMNS, SORTS, SourceFilters, SourceList
@@ -198,13 +199,45 @@ class Reader:
                 with contextlib.suppress(Exception):
                     con.close()
 
-        future = asyncio.get_running_loop().run_in_executor(self.pool, call)
+        work = self.pool.submit(call)
+        future = asyncio.wrap_future(work)
         try:
             return await asyncio.wait_for(future, left)
         except TimeoutError as e:
             with contextlib.suppress(Exception):
                 con.interrupt()  # the thread closes the connection when the query stops
             raise LakeTimeout(f"the lake didn't answer in {self.timeout_s:g} s") from e
+        except asyncio.CancelledError:  # a sibling read failed (`together`): free the pool's thread now
+            with contextlib.suppress(Exception):
+                if work.cancel() or work.cancelled():  # never started: `call` won't close it
+                    con.close()
+                else:
+                    con.interrupt()
+            raise
+
+
+async def softly(read: Awaitable[Any], default: Any) -> tuple[Any, str | None]:
+    """A read whose failure costs only its own block of the page: (its value, None), or (default, the reason). A
+    timeout still fails the part: the deadline is the whole part's."""
+    try:
+        return await read, None
+    except LakeTimeout:
+        raise
+    except Exception as e:  # noqa: BLE001 - shown in its block as the error's class and message
+        emit("ERROR", event="admin_read_failed", page="week", error=type(e).__name__)
+        return default, _reason(e)
+
+
+async def together(*reads: Awaitable[Any]) -> list[Any]:
+    """Reads at once, as asyncio.gather, but the first failure cancels the others, so they don't hold the lake's
+    four threads until the part's deadline."""
+    tasks = [asyncio.ensure_future(r) for r in reads]
+    try:
+        return await asyncio.gather(*tasks)
+    except BaseException:
+        for task in tasks:
+            task.cancel()
+        raise
 
 
 def _client_ip(request: Request, hops: int) -> str:
@@ -223,6 +256,13 @@ def _fmt_n(v: Any) -> str:
     if isinstance(v, int):
         return f"{v:,}"
     return str(v)
+
+
+def _fmt_delta(v: int | None) -> str:
+    """A change on last week, signed: +12, −3 (a minus sign), ±0."""
+    if v is None:
+        return ""
+    return f"+{v:,}" if v > 0 else f"\u2212{-v:,}" if v < 0 else "\u00b10"
 
 
 def _fmt_t(v: Any) -> str:
@@ -265,6 +305,7 @@ def create_app(
         "pages": PAGES,
         "n": _fmt_n,
         "t": _fmt_t,
+        "delta": _fmt_delta,
         "slow_s": slow_s,
         "new_key": new_key,
         "off_parts": settings.off_parts,
@@ -622,25 +663,41 @@ def create_app(
             return default
 
     async def common(week: str | None) -> dict:
-        weeks = await reader.run(queries.weeks)
-        served = await reader.run(queries.served)
+        weeks, served = await together(reader.run(queries.weeks), reader.run(queries.served))
         chosen = week if week in weeks else (weeks[0] if weeks else week)
         stale = None
         if served and weeks and str(served.get("run_date"))[:10] < weeks[0]:
             stale = {"served": str(served.get("run_date"))[:10], "latest": weeks[0]}
         return {"weeks": weeks, "week": chosen, "served": served, "stale": stale}
 
+    KEEP = 10  # stores that keep failing, a page at a time (each is several lines on a phone)
+
     @app.get("/part/week", response_class=HTMLResponse)
-    async def week_part(week: str | None = None):
+    async def week_part(week: str | None = None, keep: int = 0):
         async def build():
             c = await common(_week_arg(week))
-            data = await reader.run(queries.week, c["week"]) if c["week"] else None
-            fails = await reader.run(queries.failures, c["week"]) if c["week"] else None
-            trend = await reader.run(queries.failure_trend)
+            w = c["week"]
+            if not w:
+                return c | {"data": None, "failures": None, "trend": await reader.run(queries.failure_trend)}
+            last_week = (date.fromisoformat(w) - timedelta(days=7)).isoformat()
+            # independent reads at once (the lake's pool has four threads): a slow lake costs two waits, not five
+            # last week and the streaks are extras: either failing leaves its own block empty, with the reason
+            data, (last, last_error), fails, trend, (streaks, streaks_error) = await together(
+                reader.run(queries.week, w), softly(reader.run(queries.week, last_week), None),
+                reader.run(queries.failures, w), reader.run(queries.failure_trend),
+                softly(reader.run(queries.failing_streaks, w), []))  # fmt: skip
+            at = _page_at(keep, KEEP, len(streaks))
             return c | {
                 "data": data,
+                "health": crawl_health(data, last if last and last["rows"] else None, c["served"], clock()),
+                "last_error": last_error,
+                "streaks_error": streaks_error,
                 "failures": fails,
                 "trend": trend,
+                "streaks": streaks[at : at + KEEP],
+                "streaks_total": len(streaks),
+                "keep_at": at,
+                "keep_size": KEEP,
                 "connectors": jobs.FIELDS["connector"].choices,
             }
 

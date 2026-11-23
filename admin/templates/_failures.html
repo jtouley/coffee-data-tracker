@@ -1,4 +1,5 @@
-{% from "_macros.html" import status, source, ev %}
+{% from "_macros.html" import status, source, ev, pager %}
+{% set can_test = not writes_off %}
 {% set data = failures %}
 <h2 class="section group-title" id="failures">Failures</h2>
 {% if not data or not data.fetches %}
@@ -25,14 +26,29 @@
   </table></div>
   {% endif %}
 
+  {% if streaks_error %}<p class="meta" role="status">Couldn’t read the stores that keep failing: {{ streaks_error }}. The rest of Week is unaffected; reload to try again.</p>{% endif %}
+  {% if streaks_total %}
+  <h3 class="section" id="keep-failing">Failing week after week ({{ n(streaks_total) }})</h3>
+  <div class="frame" tabindex="0" role="region" aria-label="Failing week after week"><table class="dense stack">
+    <caption>Stores without a complete ok fetch this week and the week before it, or longer, longest first (counted over the last 8 weeks with fetches: 8+ is all of them)</caption>
+    <thead><tr><th scope="col">Store</th><th scope="col">Weeks in a row</th><th scope="col">Latest</th><th scope="col">Adapter</th>{% if can_test %}<th scope="col">Check</th>{% endif %}<th scope="col">Error</th></tr></thead>
+    <tbody>{% for s in streaks %}<tr>
+      <th scope="row">{{ ev(s.url, s.roaster_id) }}</th><td class="lead">{{ s.weeks }}{{ "+" if s.capped }} weeks</td><td data-label="Latest">{{ status(s.status) }}</td><td data-label="Adapter">{{ s.adapter or "—" }}</td>
+      {% if can_test %}<td>{% if s.adapter in connectors %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "connector": s.adapter, "roaster": s.roaster_id} | urlencode }}#crawl-one">Test crawl</a>{% else %}—{% endif %}</td>{% endif %}
+      <td class="err full">{{ s.error or "" }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+  {% call(o) pager(keep_at, keep_size, streaks_total) %}/week?{{ {"week": week, "keep": o} | urlencode }}#keep-failing{% endcall %}
+  {% endif %}
+
   <h3 class="section">Stores ({{ n(data.stores | length) }})</h3>
   {% if data.stores %}
   <div class="frame" tabindex="0" role="region" aria-label="Stores"><table class="dense">
     <caption>Every store this week without a complete ok fetch: its latest attempt, and every HTTP status it saw</caption>
-    <thead><tr><th scope="col">Store</th><th scope="col">Check</th><th scope="col">Adapter</th><th scope="col">Latest</th><th scope="col">HTTP seen</th><th scope="col">Challenge</th><th scope="col">Flags</th><th scope="col" class="n">Attempts</th><th scope="col">Last (UTC)</th><th scope="col">Error</th></tr></thead>
+    <thead><tr><th scope="col">Store</th>{% if can_test %}<th scope="col">Check</th>{% endif %}<th scope="col">Adapter</th><th scope="col">Latest</th><th scope="col">HTTP seen</th><th scope="col">Challenge</th><th scope="col">Flags</th><th scope="col" class="n">Attempts</th><th scope="col">Last (UTC)</th><th scope="col">Error</th></tr></thead>
     <tbody>{% for s in data.stores %}<tr>
       <th scope="row">{{ ev(s.url, s.roaster_id) }}</th>
-      <td>{% if s.adapter in connectors %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "connector": s.adapter, "roaster": s.roaster_id} | urlencode }}#crawl-one">Test crawl</a>{% else %}—{% endif %}</td>
+      {% if can_test %}<td>{% if s.adapter in connectors %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "connector": s.adapter, "roaster": s.roaster_id} | urlencode }}#crawl-one">Test crawl</a>{% else %}—{% endif %}</td>{% endif %}
       <td>{{ s.adapter or "—" }}</td><td>{{ status("partial" if s.any_ok else s.status) }}</td>
       <td>{{ s.http_statuses | join(", ") or "—" }}</td><td>{{ s.challenge or "—" }}</td>
       <td>{{ (["quarantined"] if s.quarantined else []) | join }}{% if s.partial %}{{ " · " if s.quarantined }}partial{% if s.partial_reason %} ({{ s.partial_reason }}){% endif %}{% endif %}</td>

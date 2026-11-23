@@ -2,7 +2,7 @@
    A refused write is a warn (the guards stopped it, nothing ran); a failed one is a failure. #}
 {% macro status(word) -%}
 {%- set w = (word or "missing") | string -%}
-{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled", "needs review", "refused") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
+{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled", "needs review", "refused", "not published") else "bad" if w in ("failed", "fail", "error", "crashed", "died", "didn't run") else "none" -%}
 <span class="st st-{{ kind }}"><i aria-hidden="true"></i>{{ w }}</span>
 {%- endmacro %}
 
