@@ -2,8 +2,10 @@
 app and admin and catch a broken one; a new revision gets traffic only after it passes; pinned traffic stays pinned;
 a failed live check moves the traffic back; and the workflow runs it for both services."""
 
+import http.client
 import json
 import re
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -113,22 +115,24 @@ def test_the_whole_run_has_one_deadline():
 
 class FakeGcloud:
     """The calls rollout makes, on a service whose traffic follows Cloud Run's rules as gcloud applies them:
-    `--no-traffic` pins what the newest revision had to that revision by name, and `--to-latest` sends all of it
-    to the newest one."""
+    `--no-traffic` pins what the newest revision had to the newest *ready* revision by name, in the same update that
+    creates the new revision (so even when it never starts), and `--to-latest` sends all of it to the newest ready
+    one. `deploy_fails`: "after-pin" makes a revision that never starts, "before" fails before any update."""
 
-    def __init__(self, pinned_to: str | None = None, held: bool = False):
-        self.revisions = ["svc-00001", "svc-00002"]
+    def __init__(self, pinned_to: str | None = None, held: bool = False, deploy_fails: str | None = None):
+        self.revisions, self.ready = ["svc-00001", "svc-00002"], ["svc-00001", "svc-00002"]
         self.spec = (
             [{"revisionName": pinned_to, "percent": 100}]
             if pinned_to
             else [{"latestRevision": True, "percent": 100}]
         )
         self.tags = {HELD: pinned_to} if held else {}
+        self.deploy_fails = deploy_fails
         self.calls: list[tuple[str, ...]] = []
 
     def describe(self) -> Traffic:
         status = [
-            {"revisionName": t.get("revisionName") or self.revisions[-1], "percent": t["percent"],
+            {"revisionName": t.get("revisionName") or self.ready[-1], "percent": t["percent"],
              **({"latestRevision": True} if t.get("latestRevision") else {})}
             for t in self.spec
         ] + [{"revisionName": r, "tag": t, "url": f"https://{t}---svc.run.app"} for t, r in self.tags.items()]  # fmt: skip
@@ -137,12 +141,17 @@ class FakeGcloud:
     def __call__(self, *args):
         self.calls.append(args)
         assert args[0] == "deploy"
+        if self.deploy_fails == "before":
+            raise subprocess.CalledProcessError(1, "gcloud")
         if "--no-traffic" in args:
-            self.spec = [t if not t.get("latestRevision") else {"revisionName": self.revisions[-1], "percent": t["percent"]}
+            self.spec = [t if not t.get("latestRevision") else {"revisionName": self.ready[-1], "percent": t["percent"]}
                          for t in self.spec]  # fmt: skip
         self.revisions.append(f"svc-{len(self.revisions) + 1:05d}")
         if "--tag" in args:
             self.tags[args[args.index("--tag") + 1]] = self.revisions[-1]
+        if self.deploy_fails == "after-pin":
+            raise subprocess.CalledProcessError(1, "gcloud")  # the revision never became ready
+        self.ready.append(self.revisions[-1])
 
     def traffic(self, *args):
         self.calls.append(("update-traffic", *args))
@@ -164,65 +173,100 @@ class FakeGcloud:
 
 
 def go(g, results, tmp_path, monkeypatch, live="https://app.example"):
-    """rollout with the smoke test answering `results` in turn (a list of failures per call)."""
+    """rollout with the smoke test answering `results` in turn (a list of failures, or an exception, per call)."""
     monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(tmp_path / "summary.md"))
+    monkeypatch.setenv("GITHUB_OUTPUT", str(tmp_path / "output"))
+    for f in ("summary.md", "output"):
+        (tmp_path / f).unlink(missing_ok=True)
     seen = []
 
     def check(kind, url):
         seen.append(url)
-        return results.pop(0)
+        r = results.pop(0)
+        if isinstance(r, Exception):
+            raise r
+        return r
 
     code = rollout(
         "app", "svc", "r", "deploy-7-1", live, ["--image", "img@sha256:" + "a" * 64], gcloud=g, check=check
     )
-    return code, seen, (tmp_path / "summary.md").read_text()
+    out = (tmp_path / "output").read_text() if (tmp_path / "output").exists() else ""
+    return code, seen, (tmp_path / "summary.md").read_text(), out
 
 
 def test_a_passing_revision_gets_the_traffic_only_after_its_smoke_test(tmp_path, monkeypatch):
     g = FakeGcloud()
-    code, seen, summary = go(g, [[], []], tmp_path, monkeypatch)
+    code, seen, summary, out = go(g, [[], []], tmp_path, monkeypatch)
     assert code == 0 and seen == ["https://deploy-7-1---svc.run.app", "https://app.example"]
-    deploy, hold, move, untag = g.calls
+    hold, deploy, move, untag = g.calls
+    assert hold == ("update-traffic", "--update-tags", f"{HELD}=svc-00002")  # before the deploy
     assert deploy[:4] == ("deploy", "svc", "--image", "img@sha256:" + "a" * 64)
     assert deploy[-3:] == ("--no-traffic", "--tag", "deploy-7-1")
-    assert hold == ("update-traffic", "--update-tags", f"{HELD}=svc-00002")  # before the smoke test
     assert move == ("update-traffic", "--to-latest")
     assert untag == ("update-traffic", "--remove-tags", f"{HELD},deploy-7-1")
     assert g.serving() == {"svc-00003": 100} and g.tags == {}
     assert "smoke test passed on `svc-00003`, which now has all the traffic" in summary
+    assert out == "revision=svc-00003\n"  # for the admin's job
 
 
-def test_a_failing_revision_gets_no_traffic_and_the_next_good_deploy_lifts_the_hold(tmp_path, monkeypatch):
+@pytest.mark.parametrize("when", ["after-pin", "before"])
+def test_a_failed_deploy_leaves_the_workflows_own_hold_and_the_next_deploy_lifts_it(
+    when, tmp_path, monkeypatch
+):
+    g = FakeGcloud(deploy_fails=when)
+    code, seen, summary, out = go(g, [], tmp_path, monkeypatch)
+    assert code == 1 and seen == [] and out == ""
+    assert (
+        "the deploy failed (CalledProcessError); the new revision gets no traffic.** Production stays on `svc-00002`"
+        in summary
+    )
+    assert g.serving() == {"svc-00002": 100} and g.tags == {
+        HELD: "svc-00002"
+    }  # its tag dropped, the hold kept
+    t = g.describe()
+    assert t.held and not t.pinned  # never read as a person's pin
+    assert t.latest_percent == (0 if when == "after-pin" else 100)
+
+    g.deploy_fails = None
+    code, _, summary, _ = go(g, [[], []], tmp_path, monkeypatch)
+    assert code == 0 and ("update-traffic", "--to-latest") in g.calls
+    assert g.describe().latest_percent == 100 and g.describe().sole == g.ready[-1] and g.tags == {}
+
+
+def test_a_failing_revision_gets_no_traffic_no_url_and_the_next_good_deploy_lifts_the_hold(
+    tmp_path, monkeypatch
+):
     g = FakeGcloud()
-    code, _, summary = go(g, [["join page: status 500, expected 200"]], tmp_path, monkeypatch)
+    code, _, summary, _ = go(g, [["join page: status 500, expected 200"]], tmp_path, monkeypatch)
     assert code == 1 and not any("--to-latest" in c for c in g.calls)
-    assert g.serving() == {"svc-00002": 100} and g.tags[HELD] == "svc-00002"
+    assert g.serving() == {"svc-00002": 100} and g.tags == {
+        HELD: "svc-00002"
+    }  # no public URL left on svc-00003
     assert (
         "smoke test failed on `svc-00003`, so it gets no traffic.** Production stays on `svc-00002`"
         in summary
     )
     assert "join page: status 500" in summary
-    assert g.describe().held and not g.describe().pinned  # the workflow's own hold, not a person's pin
+    assert g.describe().held and not g.describe().pinned
 
     g.calls.clear()
-    (tmp_path / "summary.md").unlink()
-    code, _, summary = go(g, [[], []], tmp_path, monkeypatch)
+    code, _, _, _ = go(g, [[], []], tmp_path, monkeypatch)
     assert code == 0 and ("update-traffic", "--to-latest") in g.calls
     assert not any("--update-tags" in c for c in g.calls)  # already held
-    assert g.serving() == {"svc-00004": 100} and HELD not in g.tags
+    assert g.serving() == {"svc-00004": 100} and g.tags == {}
 
 
-def test_pinned_traffic_stays_pinned_and_gets_no_hold(tmp_path, monkeypatch, capsys):
+def test_pinned_traffic_stays_pinned_gets_no_hold_and_keeps_no_tag(tmp_path, monkeypatch, capsys):
     g = FakeGcloud(pinned_to="svc-00001")  # a person's rollback (RUNNING.md)
-    code, seen, summary = go(g, [[]], tmp_path, monkeypatch)
-    assert code == 0 and len(seen) == 1  # the new revision is still smoke-tested
-    assert [c[0] for c in g.calls] == ["deploy"]  # nothing else: no tag, no traffic moved
-    assert g.serving() == {"svc-00001": 100}
+    code, seen, summary, out = go(g, [[]], tmp_path, monkeypatch)
+    assert code == 0 and len(seen) == 1 and out == ""  # still smoke-tested; nothing made live
+    assert [c[:2] for c in g.calls] == [("deploy", "svc"), ("update-traffic", "--remove-tags")]
+    assert g.serving() == {"svc-00001": 100} and g.tags == {}
     assert "::warning::svc's traffic is pinned (0% to the newest revision)" in capsys.readouterr().out
     assert "but it serves no one" in summary
 
-    code, _, summary = go(g, [["health: status 503, expected 200"]], tmp_path, monkeypatch)
-    assert code == 1 and HELD not in g.tags and g.serving() == {"svc-00001": 100}
+    code, _, summary, _ = go(g, [["health: status 503, expected 200"]], tmp_path, monkeypatch)
+    assert code == 1 and g.tags == {} and g.serving() == {"svc-00001": 100}
     assert "Traffic was pinned before this deploy, and stays pinned." in summary
 
 
@@ -233,13 +277,39 @@ def test_a_person_who_pins_elsewhere_during_a_hold_keeps_the_pin():
     assert g.describe().pinned
 
 
-def test_a_failed_live_check_moves_the_traffic_back(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    "live", [["health: no answer (TimeoutError)"], http.client.IncompleteRead(b""), RuntimeError("bug")]
+)
+def test_anything_failing_after_the_move_moves_the_traffic_back(live, tmp_path, monkeypatch):
     g = FakeGcloud()
-    code, _, summary = go(g, [[], ["health: no answer (TimeoutError)"]], tmp_path, monkeypatch)
-    assert code == 1
-    assert g.calls[-1] == ("update-traffic", "--to-revisions=svc-00002=100")
-    assert g.serving() == {"svc-00002": 100} and g.tags[HELD] == "svc-00002"
+    code, _, summary, out = go(g, [[], live], tmp_path, monkeypatch)
+    assert code == 1 and out == ""
+    assert ("update-traffic", "--to-revisions=svc-00002=100") in g.calls
+    assert g.serving() == {"svc-00002": 100} and g.tags == {HELD: "svc-00002"}
     assert "rolled back.** `svc-00003` passed its smoke test, but https://app.example then failed" in summary
+
+
+def test_a_failed_move_keeps_production_and_says_so(tmp_path, monkeypatch):
+    class MoveFails(FakeGcloud):
+        def traffic(self, *args):
+            if "--to-latest" in args:
+                raise subprocess.CalledProcessError(1, "gcloud")
+            super().traffic(*args)
+
+    g = MoveFails()
+    code, seen, summary, _ = go(g, [[]], tmp_path, monkeypatch)
+    assert code == 1 and len(seen) == 1
+    assert g.serving() == {"svc-00002": 100} and g.describe().held
+    assert "not moved.** `svc-00003` passed its smoke test, but moving the traffic to it failed" in summary
+
+
+def test_the_checks_count_a_garbled_answer_as_a_failure_not_a_crash():
+    def get(url, follow):
+        raise http.client.IncompleteRead(b"")
+
+    clock = Clock()
+    failures = run_checks("admin", "https://x", get=get, sleep=clock.sleep, clock=clock)
+    assert failures == ["sign-in page: no answer (IncompleteRead)"]
 
 
 def test_no_tag_url_fails_before_any_check(tmp_path, monkeypatch):
@@ -249,8 +319,22 @@ def test_no_tag_url_fails_before_any_check(tmp_path, monkeypatch):
             self.tags.pop("deploy-7-1")
 
     g = NoTagURL()
-    code, seen, summary = go(g, [], tmp_path, monkeypatch)
-    assert code == 1 and seen == [] and "not checked" in summary and g.tags[HELD] == "svc-00002"
+    code, seen, summary, _ = go(g, [], tmp_path, monkeypatch)
+    assert code == 1 and seen == [] and "not checked" in summary and g.tags == {HELD: "svc-00002"}
+
+
+def test_the_admin_follows_the_app_revision_this_run_made_live():
+    def t(**kw):
+        g = FakeGcloud(**kw)
+        return g.describe()
+
+    assert live_smoke.app_serves(t(), "svc-00002") == (True, "")
+    # A later run failed its smoke test and left the app held here: still this run's, so the admin catches up.
+    assert live_smoke.app_serves(t(pinned_to="svc-00002", held=True), "svc-00002")[0]
+    ok, why = live_smoke.app_serves(t(), "svc-00001")  # a later run made svc-00002 live
+    assert not ok and why.startswith("::notice::") and "svc-00002" in why
+    ok, why = live_smoke.app_serves(t(pinned_to="svc-00001"), "svc-00002")  # a person's rollback
+    assert not ok and why.startswith("::warning::") and "pinned" in why
 
 
 def test_traffic_reads_a_split_and_tags_from_gclouds_json():
@@ -286,6 +370,28 @@ def test_both_services_deploy_through_the_smoke_test(job, kind, live):
     assert not any("gcloud run deploy" in s.get("run", "") for s in steps)
 
 
+def test_the_admin_checks_out_before_signing_in_and_follows_the_apps_revision():
+    steps = _steps("deploy-admin")
+    uses = [s.get("uses", "").split("@")[0] for s in steps]
+    assert uses.index("actions/checkout") < uses.index("google-github-actions/auth")
+    (tip,) = [s for s in steps if s.get("id") == "tip"]
+    assert (
+        "live_smoke app-serves" in tip["run"]
+        and tip["env"]["REVISION"] == "${{ needs.deploy.outputs.revision }}"
+    )
+    jobs = yaml.safe_load((ROOT / ".github/workflows/deploy.yml").read_text())["jobs"]
+    assert jobs["deploy"]["outputs"]["revision"] == "${{ steps.rollout.outputs.revision }}"
+
+
+def test_a_site_check_with_nothing_to_check_against_fails(tmp_path, monkeypatch, capsys):
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(tmp_path / "summary.md"))
+    assert (
+        live_smoke.main(["check", "site", "https://registry.coffee", "--expect", "", "--nonce", "1-1"]) == 1
+    )
+    assert "Site: not checked.**" in (tmp_path / "summary.md").read_text()
+    assert "::error::" in capsys.readouterr().out
+
+
 def test_every_action_in_the_deploy_workflow_is_pinned_by_commit():
     text = (ROOT / ".github/workflows/deploy.yml").read_text()
     uses = re.findall(r"uses:\s*(\S+)", text)
@@ -296,7 +402,7 @@ def test_runs_on_the_runners_python_without_the_projects_dependencies():
     code = (ROOT / "src/coffeedata/live_smoke.py").read_text()
     imports = set(re.findall(r"^(?:from|import) (\w+)", code, re.M))
     assert imports <= {"__future__", "argparse", "json", "os", "re", "subprocess", "sys", "time", "urllib",
-                       "collections", "dataclasses", "pathlib"}, imports  # fmt: skip
+                       "collections", "dataclasses", "pathlib", "http"}, imports  # fmt: skip
 
 
 def test_fetch_reports_a_redirect_instead_of_following_it_unless_asked(monkeypatch):
@@ -428,7 +534,18 @@ def test_every_site_request_skips_the_cdns_cached_copy():
         "privacy page",
         "404 page",
     }
-    assert all(c.path.endswith("?smoke=42-1") for c in checks)
+    assert all(c.bust == "42-1" for c in checks)
+    seen = []
+
+    def get(url, follow):
+        seen.append(url)
+        return 500, {}, b""
+
+    clock = Clock()
+    run_checks(
+        "site", "https://site", get=get, sleep=clock.sleep, clock=clock, checks=checks[:1], backoff=(1.0, 1.0)
+    )
+    assert seen == ["https://site/?smoke=42-1-1", "https://site/?smoke=42-1-2", "https://site/?smoke=42-1-3"]
     assert all(c.contains for c in checks)  # a status and a content assertion each
     (missing,) = [c for c in checks if c.name == "404 page"]
     assert missing.status == 404
@@ -442,11 +559,31 @@ def test_each_pages_deploy_is_followed_by_the_site_smoke_test(workflow, build_jo
     (upload,) = [i for i, n in enumerate(names) if n.startswith("actions/upload-pages-artifact@")]
     (expect,) = [i for i, s in enumerate(steps) if "live_smoke expect-site build/site" in s.get("run", "")]
     assert expect > upload  # a failure there never holds back the deploy
+    assert steps[expect]["continue-on-error"] is True
+    # Its own line, so errexit fails the step (an `echo "x=$(…)"` would hide the failure behind echo's 0).
+    assert "expect=$(python3 -m coffeedata.live_smoke expect-site build/site)\n" in steps[expect]["run"]
     assert jobs[build_job]["outputs"]["smoke"] == "${{ steps.expect.outputs.site }}"
     smoke = jobs["smoke"]
     assert smoke["needs"] == [build_job, "deploy"] and "needs.deploy.result == 'success'" in smoke["if"]
+    assert "outputs.smoke" not in smoke["if"]  # an empty expectation fails the job, never skips it
     assert smoke["permissions"] == {"contents": "read"}  # no Pages or id token
     (step,) = [s for s in smoke["steps"] if "live_smoke check site" in s.get("run", "")]
     assert step["env"]["EXPECT"] == f"${{{{ needs.{build_job}.outputs.smoke }}}}"
     assert "github.run_id" in step["env"]["NONCE"] and step["env"]["PYTHONPATH"] == "src"
     assert "registry.coffee" in step["env"]["SITE"]
+
+
+def test_a_crashing_smoke_test_or_a_failed_hold_changes_nothing(tmp_path, monkeypatch):
+    g = FakeGcloud()
+    code, _, summary, _ = go(g, [RuntimeError("bug")], tmp_path, monkeypatch)
+    assert code == 1 and g.serving() == {"svc-00002": 100} and g.tags == {HELD: "svc-00002"}
+    assert "the smoke test failed (RuntimeError)" in summary
+
+    class TagFails(FakeGcloud):
+        def traffic(self, *args):
+            raise subprocess.CalledProcessError(1, "gcloud")
+
+    g = TagFails()
+    code, seen, summary, _ = go(g, [], tmp_path, monkeypatch)
+    assert code == 1 and seen == [] and not any(c[0] == "deploy" for c in g.calls)
+    assert "not deployed.**" in summary

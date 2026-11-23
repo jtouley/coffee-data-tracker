@@ -140,13 +140,19 @@ red, production was updated and is fine; what is missing is a signature or the i
 (`src/coffeedata/live_smoke.py`). The revision is deployed with `--no-traffic` and the tag `deploy-<run id>-<attempt>`,
 and that tag's run.app URL is checked signed out: on the app `/health`, the sign-in and join pages, the sign-in
 redirect from `/`, from an unknown path and the 401 from the API, and the stylesheet; on the admin its sign-in page.
-Only then does the revision get the traffic, and then the live domain is checked the same way; a failure there moves
-the traffic back. The job summary has one line for the outcome: passed, failed (production unchanged), or rolled back.
-- A red `deploy` or `deploy-admin` with "smoke test failed" or "rolled back" means production is still on the revision
-  named in the summary. Nothing to undo: fix `main`, and the fix's deploy goes live once it passes.
-- While that's so, the serving revision carries the tag `held`. That's how the next deploy knows the pin is the
-  workflow's own and lifts it; a passing deploy removes the tag. The failed revision keeps its `deploy-…` tag, so its
-  URL (in `gcloud run services describe`) stays up for debugging; remove it with `--remove-tags` when done.
+Only then does the revision get the traffic, and then the live domain is checked the same way; anything that fails
+after the move (the check, or an error) moves the traffic back. The job summary has one line for the outcome: passed,
+deploy failed or smoke test failed (production unchanged), or rolled back.
+- A red `deploy` or `deploy-admin` with one of those lines means production is still on the revision named in the
+  summary. Nothing to undo: fix `main`, and the fix's deploy goes live once it passes.
+- Before each deploy, the serving revision is tagged `held`, and a passing deploy removes the tag. While a failed or
+  stopped run leaves it on the revision that has the traffic, the next deploy knows the pin is the workflow's own and
+  lifts it.
+- A revision that failed (or that serves no one because traffic is pinned) loses its `deploy-…` tag, so it has no
+  public URL. To debug one, tag it by hand (`update-traffic … --update-tags debug=<revision>`) and remove the tag
+  when done: every revision runs with production's secrets and is public to anyone with the URL.
+- If only the admin's smoke test fails, the app has the new image and the admin keeps the old one until a later
+  deploy passes for both (see "App and admin together" for shared-code changes).
 - To check a URL by hand: `PYTHONPATH=src python3 -m coffeedata.live_smoke check app <url>` (or `admin`).
 
 **Which jobs can act as the deploy account.** The Workload Identity provider (`src/terraform/deploy.tf`) accepts a
@@ -325,8 +331,11 @@ To go back to the last good revision while the fix is made:
 
 ```bash
 gcloud run revisions list --service registry-coffee --region us-central1    # newest first: pick the last good one
-gcloud run services update-traffic registry-coffee --region us-central1 --to-revisions=<previous>=100
+gcloud run services update-traffic registry-coffee --region us-central1 --to-revisions=<previous>=100 --remove-tags held
 ```
+
+`--remove-tags held` makes the pin yours. Without it, a `held` tag a deploy left on that same revision (see "A failed
+smoke test") would let the next passing deploy move the traffic back to the newest revision.
 
 **Check it worked.** `curl -fsS https://app.registry.coffee/health` answers 200, `gcloud run services describe
 registry-coffee --region us-central1` shows 100% on `<previous>`, and the "registry.coffee: errors" alert stops
@@ -337,10 +346,6 @@ firing (Monitoring, Alerting; it closes on its own once the errors stop).
 > subsequent deployments use that traffic split pattern going forward", in Cloud Run's
 > [rollouts and rollbacks](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration)). So the fix's own
 > deploy changes nothing until traffic is moved back.
-
-After a failed smoke test the serving revision carries the tag `held` (see "A failed smoke test"), and the next
-deploy that passes takes the traffic anyway. To keep a pin you set by hand while it's there, remove that tag too:
-`gcloud run services update-traffic registry-coffee --region us-central1 --remove-tags held`.
 
 Once the fix is on `main` and its deploy has finished, send traffic back to the newest revision, and check it the
 same way:

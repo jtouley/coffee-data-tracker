@@ -101,14 +101,18 @@ jobs:
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         # include-hidden-files: v5 leaves out dot folders by default, and the site has /.well-known/security.txt.
         with: {path: build/site, include-hidden-files: true}
-      # What the live site must serve once this build is deployed (the smoke job checks it). After the upload, so
-      # a failure here never holds back the deploy.
+      # What the live site must serve once this build is deployed (the smoke job checks it). After the upload, and
+      # continue-on-error, so a failure here holds back neither the deploy nor the steps below; the output is then
+      # empty, and the smoke job fails on it (a build that can't be read is the broken site it looks for).
       - name: Note what the smoke test expects
         id: expect
         if: steps.site.outputs.built == 'true'
         env:
           PYTHONPATH: src
-        run: echo "site=$(python3 -m coffeedata.live_smoke expect-site build/site)" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+        run: |
+          expect=$(python3 -m coffeedata.live_smoke expect-site build/site)
+          echo "site=$expect" >> "$GITHUB_OUTPUT"
       # Last, so a Snowflake problem (a contract change needing --migrate) turns the run red without holding back
       # the site. It loads the export of the served release that the weekly run just wrote to build/public.
       - name: Load Snowflake
@@ -140,7 +144,7 @@ jobs:
   # job: it reads public pages only, so it holds no Pages or id token.
   smoke:
     needs: [run, deploy]
-    if: ${{ !cancelled() && needs.deploy.result == 'success' && needs.run.outputs.smoke != '' }}
+    if: ${{ !cancelled() && needs.deploy.result == 'success' && needs.run.outputs.site == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:

@@ -47,13 +47,15 @@ After each Pages deploy, the `smoke` job of `site.yml` (and of `weekly.yml`) run
 `python3 -m coffeedata.live_smoke check site`. It asks the live site for the home, catalog and privacy pages,
 `/catalog/catalog.json` and a missing page (a 404). Each answer must have the right status and something only the
 build just deployed has: its titles, the catalog page's data key, the release's build id and one of its coffees. Every
-request carries a `?smoke=<run>` query, so the CDN's ten-minute cache doesn't answer with the old site. A red `smoke`
+request carries a new `?smoke=<run>-<try>` query, so the CDN's ten-minute cache doesn't answer with the old site.
+If the build job couldn't record what it built (its "Note what the smoke test expects" step is marked failed), the
+`smoke` job fails with "not checked": the built site is likely broken, so treat it as a failure. A red `smoke`
 job names the check that failed in the run's summary.
 
 Pages has no traffic to move back, so putting the previous site back means deploying it again:
 - **The code broke it** (a template, `site.py`): revert the PR on `main`. Its push runs `site.yml`, which deploys the
-  reverted site and smoke-tests it. To restore the site sooner, open the last green `site` run and use **Re-run all
-  jobs**. It renders the served release with that run's commit and deploys it (the `github-pages` environment allows
+  reverted site and smoke-tests it. To restore the site sooner, open the last green `site` run that a push started
+  (not a Tuesday scheduled run: re-running one redoes its export and Snowflake load) and use **Re-run all jobs**. It renders the served release with that run's commit and deploys it (the `github-pages` environment allows
   it, because that run was on `main`). The next push to `main` deploys `main` again, so revert as well.
 - **The release broke it** (the data): serve the previous release, which redeploys the site from it:
   `gh workflow run weekly -f rollback_to=previous` (docs/ingestion/RUNBOOK.md, §5).

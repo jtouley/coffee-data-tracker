@@ -12,8 +12,10 @@
 # - workflow_dispatch from main deploys main's tip (a redeploy, or the first deploy once the variables are set), but
 #   only if ci passed on it: a manual redeploy is most wanted when the tip is red. `force` deploys it anyway.
 # - The image goes out by digest: to the app, then to the admin service once GCP_ADMIN_SERVICE is set, only while
-#   the app still runs that image (so the two never stay on different ones). A required reviewer for the admin can
-#   be added to the `admin` environment in the repository's settings.
+#   the app still serves the revision this run made live. The two run the same image except when the admin's own
+#   smoke test fails: then the app has the new image and the admin keeps the old one until a later deploy passes
+#   (RUNNING.md, "A failed smoke test"). A required reviewer for the admin can be added to the `admin` environment
+#   in the repository's settings.
 # - Each service's new revision is deployed with no traffic, smoke-tested signed out at its own tagged URL, and given
 #   the traffic only if that passes; then the live domain is checked, and moved back on a failure
 #   (src/coffeedata/live_smoke.py). A failed check fails the run; the job summary says what failed and what serves.
@@ -79,6 +81,7 @@ jobs:
       id-token: write  # for Workload Identity Federation
     outputs:
       image: ${{ steps.push.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>; empty when the run skipped
+      revision: ${{ steps.rollout.outputs.revision }}  # the app revision this run made live; empty if none
     env:
       REGION: ${{ vars.GCP_REGION || 'us-central1' }}
       SERVICE: ${{ vars.GCP_SERVICE || 'registry-coffee' }}
@@ -145,6 +148,7 @@ jobs:
       # the run, and the job summary says which check failed and where production is. Pinned traffic stays pinned
       # (RUNNING.md, Rolling back): the new revision is still smoke-tested, gets 0%, and the run warns.
       - name: Deploy, smoke-test, then move the traffic
+        id: rollout
         if: steps.tip.outputs.current == 'true'
         env:
           IMAGE_REF: ${{ steps.push.outputs.image }}
@@ -210,37 +214,27 @@ jobs:
       IMAGE_REF: ${{ needs.deploy.outputs.image }}
       HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}  # the commit the deploy job built
     steps:
+      # Before auth, whose credentials file a later checkout would delete (the auth action's README).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ env.HEAD_SHA }}
+          persist-credentials: false
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
           workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
           service_account: ${{ vars.GCP_DEPLOY_SA }}
       - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
-      # The admin follows the app, not main's tip: if the app has a newer image now (a later run deployed it), that
-      # run's admin job deploys it, and an older image never replaces it, however approvals for the `admin`
-      # environment come in. While the app still runs this image (main moved on, but its ci failed), the admin
-      # gets it too, so the two never stay on different images. While the app's traffic is pinned to an older
-      # revision (a rollback), the newest revision serves no one, so the admin is left where it is too.
-      - name: Does the app still run this image?
+      # The admin follows the app, not main's tip: it deploys only while the app's traffic is all on the revision
+      # this run made live. If a later run has made a newer one live, that run's admin job deploys it, and an older
+      # image never replaces it, however approvals for the `admin` environment come in. A hold counts as still
+      # serving it (a later deploy failed its smoke test and left the app here), so the admin catches up; a person's
+      # pin (a rollback) doesn't, and the admin is left where it is too (live_smoke.app_serves).
+      - name: Does the app still serve this run's revision?
         id: tip
-        run: |
-          set -o pipefail
-          svc=$(gcloud run services describe "$APP" --region "$REGION" --format=json)
-          app=$(jq -r '.spec.template.spec.containers[0].image' <<< "$svc")
-          latest=$(jq '[.spec.traffic[]? | select(.latestRevision == true) | .percent // 0] | add // 0' <<< "$svc")
-          if [ "$latest" != "100" ]; then
-            echo "::warning::Not deploying $IMAGE_REF to the admin: the app's traffic is pinned (${latest}% to its newest revision). Roll the admin back or forward with the app: RUNNING.md, Rolling back."
-            echo "current=false" >> "$GITHUB_OUTPUT"
-          elif [ "$app" = "$IMAGE_REF" ]; then
-            echo "current=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "::notice::Not deploying $IMAGE_REF to the admin: the app runs $app now, and its own run deploys that."
-            echo "current=false" >> "$GITHUB_OUTPUT"
-          fi
-      - if: steps.tip.outputs.current == 'true'
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-        with:
-          ref: ${{ env.HEAD_SHA }}
-          persist-credentials: false
+        env:
+          REVISION: ${{ needs.deploy.outputs.revision }}
+          PYTHONPATH: src
+        run: python3 -m coffeedata.live_smoke app-serves "$APP" --region "$REGION" --revision "$REVISION"
       # The image's CMD starts the app; the admin's entrypoint is set here with the image (Terraform's first apply
       # runs Google's sample image with no command, and leaves both to this step).
       # --args="..." in one word: the value starts with "-c", and only the = form never reads it as another flag.
