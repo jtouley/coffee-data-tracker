@@ -24,6 +24,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   admin's sign-in page), and only then given the traffic. The live domain is checked next, and a failure moves the
   traffic back. Pinned traffic stays pinned; a failed run leaves the tag `held` on the revision still serving, so the
   next deploy that passes goes live (RUNNING.md, "A failed smoke test"). No new permission.
+- A smoke test after each GitHub Pages deploy (`site.yml`, `weekly.yml`: the `smoke` job). registry.coffee's home,
+  catalog and privacy pages, `catalog/catalog.json` and the 404 must answer with their status and with what the build
+  just deployed (its titles, the catalog page's data key, the release's build id and one of its coffees), past the
+  CDN's cache. Pages has no traffic to move: a failure fails the run, and runbook/github-pages.md ("When the smoke
+  test fails") says how to put the previous site back.
 - The roaster screen's Claude stage (`coffeedata screen-verdicts`, `screen_verdict.py`): places the rules leave
   undecided (review without a reseller doubt) are sent, from their stored evidence only, through Message Batches with
   the coffee verdicts' key, and Claude answers `roaster_online`, `not_roaster` or `unsure` with one sentence. The

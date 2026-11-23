@@ -1,7 +1,10 @@
-"""The deploy's smoke test and traffic move (deploy.yml): a new Cloud Run revision gets traffic only after it answers.
+"""The deploys' smoke tests: a new Cloud Run revision gets traffic only after it answers (deploy.yml), and the
+public site is checked once GitHub Pages has it (site.yml, weekly.yml).
 
     python3 -m coffeedata.live_smoke rollout app|admin <service> --region R --tag T --live URL -- <gcloud run deploy args>
     python3 -m coffeedata.live_smoke check app|admin <base url>
+    python3 -m coffeedata.live_smoke expect-site <built site folder>        (prints one line of JSON)
+    python3 -m coffeedata.live_smoke check site <base url> --expect <that JSON> --nonce <run id>
 
 `rollout` deploys the revision with no traffic and a tag of its own (`--no-traffic --tag`), smoke-tests the tag's
 run.app URL, and only if that passes moves the traffic to it (`update-traffic --to-latest`). Then it checks the
@@ -16,6 +19,12 @@ still serving is tagged `held`, and the tag comes off only once the new revision
 answers. While `held` is on the revision with all the traffic (a smoke test or live check failed, or the run was
 cancelled halfway), the next deploy that passes moves the traffic as usual. A person who pins by hand while a hold is
 on removes the tag (`--remove-tags held`; RUNNING.md says so), and then the pin is theirs again.
+
+**The site** (registry.coffee) is static, on GitHub Pages: there is no traffic to move. `expect-site` reads what was
+just built (the landing and privacy pages' titles, the catalog page's data key, the release's build id and one
+coffee's id in catalog.json), and `check site` asks the live site for each, plus the 404, after the deploy. Every
+request carries `?smoke=<nonce>`, so Pages' CDN answers from the new deploy, not a copy cached up to ten minutes. A
+failure fails the run, and the summary says how to put the previous site back (runbook/github-pages.md).
 
 `check` runs one service's checks against a base URL and exits 1 if any fails. Each check retries with backoff
 (transient 5xx from a revision that is still warming up), within one deadline for the whole run. A failure prints the
@@ -37,12 +46,14 @@ import urllib.error
 import urllib.request
 from collections.abc import Callable
 from dataclasses import dataclass
+from pathlib import Path
 from urllib.parse import urlsplit
 
 HELD = "held"  # the tag a failed rollout leaves on the revision still serving
 DEADLINE = 180.0  # seconds for one service's checks, retries included
 REQUEST_TIMEOUT = 30.0  # one request: the first can wake an idle instance
 BACKOFF = (2.0, 5.0, 10.0)  # waits between a check's attempts: four tries in all
+SITE_BACKOFF = (5.0, 15.0, 30.0, 60.0)  # a Pages deploy can take a minute to reach every edge
 
 # (status, headers with lowercase names, body) for a GET; `follow` follows redirects.
 Fetch = Callable[[str, bool], tuple[int, dict[str, str], bytes]]
@@ -53,7 +64,7 @@ class Check:
     name: str
     path: str
     status: int
-    contains: str | None = None  # a regular expression the body must match
+    contains: str | tuple[str, ...] | None = None  # regular expressions the body must match, each
     location: str | None = None  # the path a redirect must point at
     follow: bool = False  # follow redirects, then check the final answer
 
@@ -101,9 +112,70 @@ def problem(check: Check, status: int, headers: dict[str, str], body: bytes) -> 
         where = urlsplit(headers.get("location", "")).path
         if where != check.location:
             return f"redirects to {where or 'nowhere'!r}, expected {check.location!r}"
-    if check.contains is not None and not re.search(check.contains, body.decode("utf-8", "replace").strip()):
-        return f"the body doesn't match {check.contains!r}"
+    patterns = (check.contains,) if isinstance(check.contains, str) else check.contains or ()
+    text = body.decode("utf-8", "replace").strip() if patterns else ""
+    for pattern in patterns:
+        if not re.search(pattern, text):
+            return f"the body doesn't match {pattern!r}"
     return None
+
+
+# --- the site --------------------------------------------------------------------------------------------------------
+
+TITLE = re.compile(r"<title>([^<]*)</title>")
+DATA_KEY = re.compile(r"catalog\.json\?b=([0-9a-f]+)")
+
+
+def _title(page: Path) -> str:
+    m = TITLE.search(page.read_text(encoding="utf-8"))
+    if m is None:
+        raise ValueError(f"{page} has no <title>")
+    return m.group(1)
+
+
+def expect_site(out: str | Path) -> dict[str, str | None]:
+    """What the live site must serve once this build is deployed, read from the build (`coffeedata site`'s folder)."""
+    out = Path(out)
+    key = DATA_KEY.search((out / "catalog" / "index.html").read_text(encoding="utf-8"))
+    data = json.loads((out / "catalog" / "catalog.json").read_text(encoding="utf-8"))
+    rows, cols = data.get("rows") or [], data.get("columns") or []
+    coffee = rows[0][cols.index("coffee_id")] if rows and "coffee_id" in cols else None
+    return {
+        "home_title": _title(out / "index.html"),
+        "privacy_title": _title(out / "privacy" / "index.html"),
+        "data_key": key.group(1) if key else None,
+        "build_id": data["release"]["release_build_id"],
+        "coffee_id": coffee,
+        "not_found_title": _title(out / "404.html") if (out / "404.html").exists() else None,
+    }
+
+
+def site_checks(expect: dict, nonce: str) -> tuple[Check, ...]:
+    """The live site against `expect` (expect_site's): each page by its status and something only this build has."""
+    q = f"?smoke={nonce}"
+
+    def title(t: str) -> str:
+        return f"<title>{re.escape(t)}</title>"
+
+    catalog: tuple[str, ...] = (
+        r'^\{"release":\{',
+        '"release_build_id":' + re.escape(json.dumps(expect["build_id"])),
+    )
+    if expect.get("coffee_id"):
+        catalog += (re.escape(json.dumps(expect["coffee_id"])),)  # one coffee this build lists
+    page = (
+        (r"<title>[^<]*</title>", rf"catalog\.json\?b={expect['data_key']}")
+        if expect.get("data_key")
+        else None
+    )
+    return (
+        Check("home page", "/" + q, 200, contains=title(expect["home_title"])),
+        Check("catalog page", "/catalog/" + q, 200, contains=page or r"<h1 class=\"serif\">The catalog"),
+        Check("catalog download", "/catalog/catalog.json" + q, 200, contains=catalog),
+        Check("privacy page", "/privacy/" + q, 200, contains=title(expect["privacy_title"])),
+        Check("404 page", "/smoke-test-no-such-page" + q, 404,
+              contains=title(expect["not_found_title"]) if expect.get("not_found_title") else r"Page not found"),
+    )  # fmt: skip
 
 
 def run_checks(
@@ -113,17 +185,22 @@ def run_checks(
     sleep: Callable[[float], None] = time.sleep,
     clock: Callable[[], float] = time.monotonic,
     deadline: float = DEADLINE,
+    checks: tuple[Check, ...] | None = None,
+    backoff: tuple[float, ...] = BACKOFF,
 ) -> list[str]:
-    """Run `kind`'s checks against `base`; print one line each; return the failures (empty: all passed)."""
+    """Run `kind`'s checks (or `checks`) against `base`; print one line each; return the failures (empty: passed)."""
     base = base.rstrip("/")
     end = clock() + deadline
     failures: list[str] = []
-    checks = list(CHECKS[kind])
+    pending = list(CHECKS[kind] if checks is None else checks)
     found_css = False
-    while checks:
-        check = checks.pop(0)
+    while pending:
+        check = pending.pop(0)
         why: str | None = "not tried: out of time"
-        for attempt in range(len(BACKOFF) + 1):
+        # Once one check has used up its retries, the rest get one try each: the warm-up time is spent, and one
+        # stale or broken page mustn't use the whole deadline before the others are asked.
+        waits = backoff if not failures else ()
+        for attempt in range(len(waits) + 1):
             if clock() >= end:
                 break
             try:
@@ -133,8 +210,8 @@ def run_checks(
                 why, body = f"no answer ({type(e).__name__})", b""
             if why is None:
                 break
-            if attempt < len(BACKOFF):
-                sleep(min(BACKOFF[attempt], max(0.0, end - clock())))
+            if attempt < len(waits):
+                sleep(min(waits[attempt], max(0.0, end - clock())))
         print(
             f"{'ok  ' if why is None else 'FAIL'} {check.name} ({check.path}){'' if why is None else ': ' + why}"
         )
@@ -148,7 +225,7 @@ def run_checks(
                 print("FAIL stylesheet: the sign-in page links none")
                 failures.append("stylesheet: the sign-in page links none")
             else:
-                checks.insert(0, Check("stylesheet", m.group(1), 200))
+                pending.insert(0, Check("stylesheet", m.group(1), 200))
     return failures
 
 
@@ -292,6 +369,26 @@ def rollout(
     return 0
 
 
+REDEPLOY = ("Pages has no traffic to move: put the previous site back as runbook/github-pages.md says "
+            "(\"When the smoke test fails\").")  # fmt: skip
+
+
+def check_site(base: str, expect: dict, nonce: str, **kw) -> int:
+    """The live site after a Pages deploy; one summary line either way."""
+    failures = run_checks("site", base, checks=site_checks(expect, nonce), backoff=SITE_BACKOFF, **kw)
+    host = urlsplit(base).netloc or base
+    if failures:
+        summary(
+            f"**{host}: smoke test failed after the Pages deploy.** Failed: {'; '.join(failures)}. {REDEPLOY}"
+        )
+        print(f"::error::{host} failed its smoke test after the deploy; see the job summary.")
+        return 1
+    summary(
+        f"**{host}: smoke test passed**: release `{expect['build_id']}` is live (home, catalog, download, privacy, 404)."
+    )
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     deploy_args: list[str] = []
@@ -301,8 +398,12 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="python3 -m coffeedata.live_smoke")
     sub = p.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("check")
-    c.add_argument("kind", choices=CHECKS)
+    c.add_argument("kind", choices=[*CHECKS, "site"])
     c.add_argument("url")
+    c.add_argument("--expect", help="site: expect-site's JSON")
+    c.add_argument("--nonce", default=str(int(time.time())), help="site: the cache-busting query's value")
+    e = sub.add_parser("expect-site")
+    e.add_argument("folder")
     r = sub.add_parser("rollout")
     r.add_argument("kind", choices=CHECKS)
     r.add_argument("service")
@@ -312,6 +413,15 @@ def main(argv: list[str] | None = None) -> int:
     )
     r.add_argument("--live", help="the live domain, checked after the traffic moves")
     a = p.parse_args(argv)
+    if a.cmd == "expect-site":
+        print(json.dumps(expect_site(a.folder), separators=(",", ":")))
+        return 0
+    if a.cmd == "check" and a.kind == "site":
+        if not a.expect:
+            p.error("check site: --expect is required (expect-site's output)")
+        if not re.fullmatch(r"[A-Za-z0-9-]{1,64}", a.nonce):
+            p.error("--nonce: letters, digits and dashes")
+        return check_site(a.url, json.loads(a.expect), a.nonce)
     if a.cmd == "check":
         return 1 if run_checks(a.kind, a.url) else 0
     if not re.fullmatch(r"[a-z][a-z0-9-]{0,24}", a.tag):

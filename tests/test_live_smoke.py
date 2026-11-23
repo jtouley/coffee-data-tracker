@@ -13,6 +13,8 @@ from fastapi.testclient import TestClient
 from coffeedata import live_smoke
 from coffeedata.live_smoke import HELD, Traffic, rollout, run_checks, traffic
 
+from .lakehelp import needs_dbt, product
+from .lakehelp import run as crawl
 from .test_admin import _app as admin_app
 from .test_admin import build_lake as admin_lake
 from .test_invites import accounts, app  # noqa: F401 - fixtures
@@ -294,7 +296,7 @@ def test_runs_on_the_runners_python_without_the_projects_dependencies():
     code = (ROOT / "src/coffeedata/live_smoke.py").read_text()
     imports = set(re.findall(r"^(?:from|import) (\w+)", code, re.M))
     assert imports <= {"__future__", "argparse", "json", "os", "re", "subprocess", "sys", "time", "urllib",
-                       "collections", "dataclasses"}, imports  # fmt: skip
+                       "collections", "dataclasses", "pathlib"}, imports  # fmt: skip
 
 
 def test_fetch_reports_a_redirect_instead_of_following_it_unless_asked(monkeypatch):
@@ -326,3 +328,125 @@ def test_fetch_reports_a_redirect_instead_of_following_it_unless_asked(monkeypat
     finally:
         server.shutdown()
         server.server_close()
+
+
+# --- the site (registry.coffee, GitHub Pages) ----------------------------------------------------------------------
+
+
+def pages(folder: Path):
+    """A static server like GitHub Pages: the folder's files, a query ignored, and Pages' own 404 page."""
+    import threading
+    from functools import partial
+    from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+
+    class Handler(SimpleHTTPRequestHandler):
+        def send_error(self, code, message=None, explain=None):
+            body = b"<title>Page not found &middot; GitHub Pages</title>" if code == 404 else b""
+            self.send_response(code)
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, *a):
+            pass
+
+    server = ThreadingHTTPServer(("127.0.0.1", 0), partial(Handler, directory=str(folder)))
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    return server, f"http://127.0.0.1:{server.server_address[1]}"
+
+
+@pytest.fixture
+def built_site(lake, tmp_path):
+    from coffeedata import site
+
+    from .test_dbt import build
+
+    crawl(lake, "2026-10-12", "onyxcoffeelab.com", [product("A"), product("B")])
+    build(lake, tmp_path).close()
+    return site.build(tmp_path / "coffee.duckdb", tmp_path / "site").parent
+
+
+@needs_dbt
+def test_the_site_checks_pass_on_the_deployed_build_and_catch_an_old_or_broken_one(
+    built_site, tmp_path, monkeypatch
+):
+    import shutil
+
+    for var in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy", "ALL_PROXY", "all_proxy"):
+        monkeypatch.delenv(var, raising=False)
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(tmp_path / "summary.md"))
+    expect = live_smoke.expect_site(built_site)
+    # (A local build has no release build id; the served one the workflows render always does.)
+    assert (
+        expect["data_key"]
+        and expect["coffee_id"]
+        and "build_id" in expect
+        and expect["not_found_title"] is None
+    )
+    assert json.loads(json.dumps(expect)) == expect  # what the build job passes the smoke job, as one line
+    live = tmp_path / "live"
+    shutil.copytree(built_site, live)
+    server, base = pages(live)
+    try:
+        assert live_smoke.check_site(base, expect, "7-1", sleep=pytest.fail) == 0
+        assert (
+            f"smoke test passed**: release `{expect['build_id']}` is live"
+            in (tmp_path / "summary.md").read_text()
+        )
+
+        # Still the previous deploy: another release, another catalog page.
+        data = (live / "catalog" / "catalog.json").read_text()
+        built_id = '"release_build_id":' + json.dumps(expect["build_id"])
+        assert built_id in data
+        (live / "catalog" / "catalog.json").write_text(
+            data.replace(built_id, '"release_build_id":"20261019T000000-0"')
+        )
+        page = (live / "catalog" / "index.html").read_text()
+        (live / "catalog" / "index.html").write_text(page.replace(expect["data_key"], "0" * 12))
+        shutil.rmtree(live / "privacy")  # and a page gone
+        clock = Clock()
+        assert live_smoke.check_site(base, expect, "7-1", sleep=clock.sleep, clock=clock) == 1
+    finally:
+        server.shutdown()
+        server.server_close()
+    summary = (tmp_path / "summary.md").read_text()
+    assert "smoke test failed after the Pages deploy.** Failed: catalog page:" in summary
+    assert "catalog download: the body doesn't match" in summary and "privacy page: status 404" in summary
+    assert "home page" not in summary.split("Failed:")[-1] and "404 page" not in summary.split("Failed:")[-1]
+    assert 'runbook/github-pages.md says ("When the smoke test fails")' in summary
+    assert clock.slept[: len(live_smoke.SITE_BACKOFF)] == list(live_smoke.SITE_BACKOFF)
+
+
+def test_every_site_request_skips_the_cdns_cached_copy():
+    expect = {"home_title": "registry.coffee", "privacy_title": "Privacy", "data_key": "ab12", "build_id": "b1",
+              "coffee_id": "c1", "not_found_title": None}  # fmt: skip
+    checks = live_smoke.site_checks(expect, "42-1")
+    assert {c.name for c in checks} == {
+        "home page",
+        "catalog page",
+        "catalog download",
+        "privacy page",
+        "404 page",
+    }
+    assert all(c.path.endswith("?smoke=42-1") for c in checks)
+    assert all(c.contains for c in checks)  # a status and a content assertion each
+    (missing,) = [c for c in checks if c.name == "404 page"]
+    assert missing.status == 404
+
+
+@pytest.mark.parametrize(("workflow", "build_job"), [("site.yml", "build"), ("weekly.yml", "run")])
+def test_each_pages_deploy_is_followed_by_the_site_smoke_test(workflow, build_job):
+    jobs = yaml.safe_load((ROOT / ".github/workflows" / workflow).read_text())["jobs"]
+    steps = jobs[build_job]["steps"]
+    names = [s.get("uses", "") or s.get("name", "") for s in steps]
+    (upload,) = [i for i, n in enumerate(names) if n.startswith("actions/upload-pages-artifact@")]
+    (expect,) = [i for i, s in enumerate(steps) if "live_smoke expect-site build/site" in s.get("run", "")]
+    assert expect > upload  # a failure there never holds back the deploy
+    assert jobs[build_job]["outputs"]["smoke"] == "${{ steps.expect.outputs.site }}"
+    smoke = jobs["smoke"]
+    assert smoke["needs"] == [build_job, "deploy"] and "needs.deploy.result == 'success'" in smoke["if"]
+    assert smoke["permissions"] == {"contents": "read"}  # no Pages or id token
+    (step,) = [s for s in smoke["steps"] if "live_smoke check site" in s.get("run", "")]
+    assert step["env"]["EXPECT"] == f"${{{{ needs.{build_job}.outputs.smoke }}}}"
+    assert "github.run_id" in step["env"]["NONCE"] and step["env"]["PYTHONPATH"] == "src"
+    assert "registry.coffee" in step["env"]["SITE"]
