@@ -199,7 +199,8 @@ class Reader:
                 with contextlib.suppress(Exception):
                     con.close()
 
-        future = asyncio.get_running_loop().run_in_executor(self.pool, call)
+        work = self.pool.submit(call)
+        future = asyncio.wrap_future(work)
         try:
             return await asyncio.wait_for(future, left)
         except TimeoutError as e:
@@ -208,8 +209,23 @@ class Reader:
             raise LakeTimeout(f"the lake didn't answer in {self.timeout_s:g} s") from e
         except asyncio.CancelledError:  # a sibling read failed (`together`): free the pool's thread now
             with contextlib.suppress(Exception):
-                con.interrupt()
+                if work.cancel() or work.cancelled():  # never started: `call` won't close it
+                    con.close()
+                else:
+                    con.interrupt()
             raise
+
+
+async def softly(read: Awaitable[Any], default: Any) -> tuple[Any, str | None]:
+    """A read whose failure costs only its own block of the page: (its value, None), or (default, the reason). A
+    timeout still fails the part: the deadline is the whole part's."""
+    try:
+        return await read, None
+    except LakeTimeout:
+        raise
+    except Exception as e:  # noqa: BLE001 - shown in its block as the error's class and message
+        emit("ERROR", event="admin_read_failed", page="week", error=type(e).__name__)
+        return default, _reason(e)
 
 
 async def together(*reads: Awaitable[Any]) -> list[Any]:
@@ -665,13 +681,17 @@ def create_app(
                 return c | {"data": None, "failures": None, "trend": await reader.run(queries.failure_trend)}
             last_week = (date.fromisoformat(w) - timedelta(days=7)).isoformat()
             # independent reads at once (the lake's pool has four threads): a slow lake costs two waits, not five
-            data, last, fails, trend, streaks = await together(
-                reader.run(queries.week, w), reader.run(queries.week, last_week), reader.run(queries.failures, w),
-                reader.run(queries.failure_trend), reader.run(queries.failing_streaks, w))  # fmt: skip
+            # last week and the streaks are extras: either failing leaves its own block empty, with the reason
+            data, (last, last_error), fails, trend, (streaks, streaks_error) = await together(
+                reader.run(queries.week, w), softly(reader.run(queries.week, last_week), None),
+                reader.run(queries.failures, w), reader.run(queries.failure_trend),
+                softly(reader.run(queries.failing_streaks, w), []))  # fmt: skip
             at = _page_at(keep, KEEP, len(streaks))
             return c | {
                 "data": data,
-                "health": crawl_health(data, last if last["rows"] else None, c["served"], clock()),
+                "health": crawl_health(data, last if last and last["rows"] else None, c["served"], clock()),
+                "last_error": last_error,
+                "streaks_error": streaks_error,
                 "failures": fails,
                 "trend": trend,
                 "streaks": streaks[at : at + KEEP],

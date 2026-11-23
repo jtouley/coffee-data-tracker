@@ -52,7 +52,7 @@
   {% set title = "This week and last" if h.last_week else "This week" %}
   <h2 class="section" id="vs-last">{{ title }}</h2>
   <div class="frame" tabindex="0" role="region" aria-label="{{ title }}"><table class="dense stack vs">
-    <caption>Each connector up to its latest finished pass{% if h.last_week %}, then its change on week {{ h.last_week }} up to the same pass{% endif %}. Errors: stores still failing. Refused: stores that refused our first request.{% if c.total.partial %} The All row’s change counts only the connectors with both weeks finished.{% endif %}</caption>
+    <caption>Each connector up to its latest finished pass{% if h.last_week %}, then its change on week {{ h.last_week }} up to the same pass{% endif %}. Errors: stores still failing. Refused: stores that refused our first request.{% if c.total.partial %} The All row’s change counts only the connectors with both weeks finished.{% endif %}{% if last_error %} Couldn’t read last week ({{ last_error }}), so there is no change to show.{% endif %}</caption>
     <thead><tr><th scope="col">Connector</th><th scope="col" class="n">OK</th><th scope="col" class="n">Errors</th><th scope="col" class="n">429</th><th scope="col" class="n">430</th><th scope="col" class="n">Refused</th></tr></thead>
     <tbody>{% for r in c.rows %}{% set d = r.delta %}<tr{% if r.status == "didn't run" %} class="bad"{% endif %}>
       <th scope="row">{{ r.connector }}{% if r.status %} {{ status(r.status) }}{% endif %}</th>

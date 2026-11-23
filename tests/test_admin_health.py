@@ -482,3 +482,75 @@ def test_the_passes_are_the_crawl_schedules_in_terraform():
         assert health.slot(row(start=at(t.hour, t.minute)), WEEK) == key
         expect = every - {"crawl-shopify"} | {"crawl-retry"} if key == "retry" else every
         assert jobs[(str(t.minute), str(t.hour))] == expect
+
+
+# --- the final review's fixes ----------------------------------------------------------------------------------------
+
+
+def test_a_pass_whose_attempts_all_died_shows_no_numbers_and_no_change():
+    """generic's real morning, replayed as died only (Cloud Run killed it, no end row), seen at 14:00."""
+    last = real(LAST_ROWS, LAST)
+    this = [r if r["connector"] != "generic" else r | {"status": "running", "ok": None, "errors": None}
+            for r in real(THIS_ROWS, WEEK, at(9, 59))]  # fmt: skip
+    f = health.flags(week_of(this), week_of(last, LAST), None, at(14, 0))
+    g = next(r for r in f["compare"]["rows"] if r["connector"] == "generic")
+    assert (g["status"], g["this"], g["delta"]["errors"]) == ("died", None, None)
+    assert "generic" not in {x.get("connector") for x in f["flags"] if x["code"] == "jump"}
+    assert ("died", "generic") in codes(f)
+    # its morning ended, its resume only died: counted to the morning, with no change while that's the latest
+    this = real(THIS_ROWS, WEEK, at(15, 21)) + [row(start=at(15, 22), status="running", aid="r")]
+    f = health.flags(week_of(this), week_of(last, LAST), None, at(15, 22) + JOB_LIMIT)
+    g = next(r for r in f["compare"]["rows"] if r["connector"] == "generic")
+    assert (g["status"], g["upto"], g["this"]["errors"], g["delta"]["errors"]) == (
+        "died",
+        "morning",
+        83,
+        None,
+    )
+
+
+def test_a_shopify_deadline_before_its_retry_says_its_stores_went_uncrawled():
+    """Shopify's 21:47 pass is crawl-retry, which takes only parked stores: it never picks up the rest."""
+    rows = [r | {"status": "deadline"} if (r["connector"], health.slot(r, WEEK)) == ("shopify", "resume") else r
+            for r in _full_week()]  # fmt: skip
+    for now in (at(16, 0), at(23, 30)):  # before the retry, and after it ran
+        (d,) = [x for x in health.flags(week_of(rows), None, None, now)["flags"] if x["code"] == "deadline"]
+        assert (d["connector"], d["final"]) == ("shopify", True)
+    woo = [r | {"status": "deadline"} if (r["connector"], health.slot(r, WEEK)) == ("woocommerce", "resume") else r
+           for r in _full_week()]  # fmt: skip
+    (d,) = [x for x in health.flags(week_of(woo), None, None, at(16, 0))["flags"] if x["code"] == "deadline"]
+    assert not d["final"]  # woocommerce's own 21:47 crawl takes them
+
+
+def test_a_test_crawl_is_never_marked_died_because_a_pass_started_after_it():
+    rows = [row(start=at(9, 10), status="running", aid="t", detail={"test": "t1"}), row(start=at(9, 19))]
+    assert health.died(rows, at(10, 0)) == set()
+
+
+def test_weeks_in_a_row_says_when_it_is_the_whole_window(hlake):
+    s = {r["roaster_id"]: r for r in _read(hlake, queries.failing_streaks, W3, 4)}
+    assert (s["always-down.example"]["weeks"], s["always-down.example"]["capped"]) == (4, True)
+    assert not s["half-catalog.example"]["capped"]
+    assert not any(
+        r["capped"] for r in _read(hlake, queries.failing_streaks, W3)
+    )  # 4 weeks of fetches, under 8
+
+
+def test_last_week_or_the_streaks_failing_costs_only_their_own_block(tmp_path, hlake, monkeypatch):
+    real_week = queries.week
+
+    def broken_last_week(lake, con, run_date):
+        if run_date == W2:
+            raise OSError("HTTP 503 from the lake")
+        return real_week(lake, con, run_date)
+
+    def broken_streaks(*a):
+        raise OSError("HTTP 503 from the lake")
+
+    monkeypatch.setattr(queries, "week", broken_last_week)
+    monkeypatch.setattr(queries, "failing_streaks", broken_streaks)
+    r = _client(tmp_path, hlake).get(f"/part/week?week={W3}")
+    assert r.status_code == 200
+    assert "Couldn’t read last week (OSError: HTTP 503 from the lake)" in r.text
+    assert "Couldn’t read the stores that keep failing: OSError: HTTP 503 from the lake" in r.text
+    assert "No retry crawl for woocommerce." in r.text and "Every job attempt" in r.text

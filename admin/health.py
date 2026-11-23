@@ -95,7 +95,9 @@ def died(rows: list[dict], now: datetime) -> set[str]:
             continue
         limit = CHECK_LIMIT if r["job"] == "fetch-health" else JOB_LIMIT
         start = _utc(r["started_at"])
-        later = any(
+        later = (
+            r["job"] not in CRAWL_JOBS or is_pass(r)
+        ) and any(  # a test crawl or an arm is no pass's attempt
             o["job"] == r["job"]
             and o["connector"] == r["connector"]
             and _utc(o["started_at"]) > start
@@ -152,8 +154,8 @@ def compare(
     """This week against last, per connector and in total. Each connector is counted to its latest pass that has
     ended (a died attempt has ended), and last week to the same pass, so a Monday-morning look is never compared with
     a whole week, nor a pass in flight with a finished one. A connector with an attempt still running is `running`
-    (its finished passes still count, but it gets no change and no rise check); one with no attempt this week `didn't
-    run` (never zeros that read as an improvement)."""
+    (its finished passes still count, but it gets no change and no rise check), as is one whose latest pass only
+    died (`died`); one with no attempt this week `didn't run` (never zeros that read as an improvement)."""
     dead = dead or set()
     rows: list[dict[str, Any]] = []
     for name in CONNECTORS:
@@ -165,18 +167,25 @@ def compare(
                              "delta": dict.fromkeys(FIELDS)})  # fmt: skip
             continue
         live = [slot(r, week) for r in mine if r["status"] == "running" and r["attempt_id"] not in dead]
+        first_live = min(map(ORDER.index, live)) if live else len(ORDER)
+        # counted to the latest pass with an end row before any running one: a pass whose attempts all died has
+        # no counts, so it never reads as zeros (it is `died`, like `running`, while no later pass has ended)
         ended = [
-            s
-            for s in (slot(r, week) for r in mine)
-            if not live or ORDER.index(s) < min(map(ORDER.index, live))
+            slot(r, week)
+            for r in mine
+            if r["status"] != "running" and ORDER.index(slot(r, week)) < first_live
         ]
         upto = max(ended, key=ORDER.index) if ended else None
+        after = [
+            slot(r, week) for r in mine if upto is None or ORDER.index(slot(r, week)) > ORDER.index(upto)
+        ]
+        status = "running" if live else "died" if after else None
         a = totals(this, name, week, upto) if upto else None
         b = totals(last, name, last_week, upto) if upto and had_last else None
         if b is not None and not b["attempts"]:
             b = None
-        delta = {k: a[k] - b[k] for k in FIELDS} if a and b and not live else dict.fromkeys(FIELDS)
-        rows.append({"connector": name, "status": "running" if live else None, "this": a, "last": b, "upto": upto,
+        delta = {k: a[k] - b[k] for k in FIELDS} if a and b and not status else dict.fromkeys(FIELDS)
+        rows.append({"connector": name, "status": status, "this": a, "last": b, "upto": upto,
                      "delta": delta})  # fmt: skip
     counted = [r for r in rows if r["this"]]
     both = [r for r in counted if r["delta"]["ok"] is not None]  # the All row's change: like for like only
@@ -334,6 +343,10 @@ def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> 
     for name, slots in _deadlines(rows, wk).items():
         # its stores wait for a later pass only if one ran, or is still to come (not missed)
         later = ORDER[max(map(ORDER.index, slots)) + 1 :]
+        if (
+            name == "shopify"
+        ):  # its 21:47 pass is crawl-retry, which takes only parked stores (connectors.crawl_retry)
+            later = tuple(k for k in later if k != "retry")
         final = all((name, key) in gone for key in later)
         prev = before.get(name, [])
         usual = bool(prev) and set(slots) <= set(prev)  # no worse than last week: the same line, calmly

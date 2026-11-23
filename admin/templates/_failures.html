@@ -26,13 +26,14 @@
   </table></div>
   {% endif %}
 
+  {% if streaks_error %}<p class="meta" role="status">Couldn’t read the stores that keep failing: {{ streaks_error }}. The rest of Week is unaffected; reload to try again.</p>{% endif %}
   {% if streaks_total %}
   <h3 class="section" id="keep-failing">Failing week after week ({{ n(streaks_total) }})</h3>
   <div class="frame" tabindex="0" role="region" aria-label="Failing week after week"><table class="dense stack">
-    <caption>Stores without a complete ok fetch this week and the week before it, or longer, longest first</caption>
+    <caption>Stores without a complete ok fetch this week and the week before it, or longer, longest first (counted over the last 8 weeks with fetches: 8+ is all of them)</caption>
     <thead><tr><th scope="col">Store</th><th scope="col">Weeks in a row</th><th scope="col">Latest</th><th scope="col">Adapter</th>{% if can_test %}<th scope="col">Check</th>{% endif %}<th scope="col">Error</th></tr></thead>
     <tbody>{% for s in streaks %}<tr>
-      <th scope="row">{{ ev(s.url, s.roaster_id) }}</th><td class="lead">{{ s.weeks }} weeks</td><td data-label="Latest">{{ status(s.status) }}</td><td data-label="Adapter">{{ s.adapter or "—" }}</td>
+      <th scope="row">{{ ev(s.url, s.roaster_id) }}</th><td class="lead">{{ s.weeks }}{{ "+" if s.capped }} weeks</td><td data-label="Latest">{{ status(s.status) }}</td><td data-label="Adapter">{{ s.adapter or "—" }}</td>
       {% if can_test %}<td>{% if s.adapter in connectors %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "connector": s.adapter, "roaster": s.roaster_id} | urlencode }}#crawl-one">Test crawl</a>{% else %}—{% endif %}</td>{% endif %}
       <td class="err full">{{ s.error or "" }}</td>
     </tr>{% endfor %}</tbody>

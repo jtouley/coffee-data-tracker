@@ -435,7 +435,8 @@ def failing_streaks(lake: Lake, con, run_date: str, weeks: int = 8) -> list[dict
                 break
         if streak >= 2:
             cur = seen[run_date]
-            out.append({"roaster_id": rid, "weeks": streak, "adapter": cur["adapter"],
+            out.append({"roaster_id": rid, "weeks": streak, "capped": streak == len(all_weeks) == weeks,
+                        "adapter": cur["adapter"],
                         "status": "partial" if cur["any_ok"] else cur["status"],
                         "error": (cur["error"] or "")[:300] or None, "url": store_url(rid)})  # fmt: skip
     out.sort(key=lambda r: (-r["weeks"], r["roaster_id"]))
