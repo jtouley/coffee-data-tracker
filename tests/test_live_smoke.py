@@ -90,12 +90,12 @@ def test_wrong_content_and_a_wrong_redirect_fail():
     assert live_smoke.problem(page, 200, {}, b"<title>Oops</title>")
     assert live_smoke.problem(page, 200, {}, "<title>Sign in · registry.coffee</title>".encode()) is None
     gate = live_smoke.APP[3]
-    assert (
-        gate.path == "/"
-        and live_smoke.problem(gate, 303, {"location": "https://x.run.app/signin"}, b"") is None
-    )
+    assert gate.path == "/" and live_smoke.problem(gate, 303, {"location": "/signin"}, b"") is None
     assert live_smoke.problem(gate, 303, {"location": "/"}, b"")  # a loop, not the gate
     assert live_smoke.problem(gate, 200, {}, b"")  # the gate is off
+    # The right path on another host is still the wrong redirect.
+    assert live_smoke.problem(gate, 303, {"location": "https://evil.example/signin"}, b"", "x.run.app")
+    assert live_smoke.problem(gate, 303, {"location": "https://x.run.app/signin"}, b"", "x.run.app") is None
 
 
 def test_the_whole_run_has_one_deadline():
@@ -289,18 +289,64 @@ def test_anything_failing_after_the_move_moves_the_traffic_back(live, tmp_path, 
     assert "rolled back.** `svc-00003` passed its smoke test, but https://app.example then failed" in summary
 
 
-def test_a_failed_move_keeps_production_and_says_so(tmp_path, monkeypatch):
+@pytest.mark.parametrize("applied", [False, True])
+def test_a_failed_move_always_moves_the_traffic_back_and_says_so(applied, tmp_path, monkeypatch):
     class MoveFails(FakeGcloud):
         def traffic(self, *args):
             if "--to-latest" in args:
-                raise subprocess.CalledProcessError(1, "gcloud")
+                if applied:  # Cloud Run took it, then gcloud timed out waiting
+                    super().traffic(*args)
+                raise subprocess.TimeoutExpired("gcloud", 900)
             super().traffic(*args)
 
     g = MoveFails()
     code, seen, summary, _ = go(g, [[]], tmp_path, monkeypatch)
-    assert code == 1 and len(seen) == 1
-    assert g.serving() == {"svc-00002": 100} and g.describe().held
-    assert "not moved.** `svc-00003` passed its smoke test, but moving the traffic to it failed" in summary
+    assert code == 1 and len(seen) == 1  # the live check never ran
+    assert g.calls[-2:] == [
+        ("update-traffic", "--to-revisions=svc-00002=100"),
+        ("update-traffic", "--remove-tags", "deploy-7-1"),
+    ]
+    assert g.serving() == {"svc-00002": 100} and g.describe().held and "deploy-7-1" not in g.tags
+    assert "rolled back.** `svc-00003` passed its smoke test, but moving the traffic to it failed" in summary
+    assert (
+        "moving the traffic failed (TimeoutExpired)" in summary
+        and "traffic is back on `svc-00002`" in summary
+    )
+
+
+def test_when_nothing_moves_the_traffic_back_the_summary_says_it_may_be_live(tmp_path, monkeypatch):
+    class Stuck(FakeGcloud):
+        def traffic(self, *args):
+            if any(a.startswith("--to-revisions=") for a in args):
+                raise subprocess.CalledProcessError(1, "gcloud")
+            super().traffic(*args)
+
+    g = Stuck()
+    code, _, summary, _ = go(g, [[], ["health: status 500, expected 200"]], tmp_path, monkeypatch)
+    assert code == 1 and g.serving() == {"svc-00003": 100}
+    assert "`svc-00003` may have the traffic.**" in summary and "Roll back by hand" in summary
+
+
+def test_a_failed_read_changes_nothing_and_says_so(tmp_path, monkeypatch, capsys):
+    class Unreadable(FakeGcloud):
+        def describe(self):
+            raise subprocess.CalledProcessError(1, "gcloud")
+
+    g = Unreadable()
+    code, seen, summary, _ = go(g, [], tmp_path, monkeypatch)
+    assert (
+        code == 1 and seen == [] and g.calls == [] and "not deployed.** Reading its traffic failed" in summary
+    )
+
+    monkeypatch.setattr(live_smoke.Gcloud, "describe", Unreadable.describe)
+    assert live_smoke.main(["app-serves", "svc", "--region", "r", "--revision", "svc-00002"]) == 1
+    assert "the admin wasn't deployed" in capsys.readouterr().out
+
+
+def test_a_tag_that_isnt_there_isnt_removed(tmp_path, monkeypatch):
+    g = FakeGcloud(deploy_fails="before")  # no revision, so no tag
+    go(g, [], tmp_path, monkeypatch)
+    assert not any("--remove-tags" in c for c in g.calls)
 
 
 def test_the_checks_count_a_garbled_answer_as_a_failure_not_a_crash():
@@ -587,3 +633,8 @@ def test_a_crashing_smoke_test_or_a_failed_hold_changes_nothing(tmp_path, monkey
     code, seen, summary, _ = go(g, [], tmp_path, monkeypatch)
     assert code == 1 and seen == [] and not any(c[0] == "deploy" for c in g.calls)
     assert "not deployed.**" in summary
+
+
+def test_the_usage_collectors_image_is_kept_whatever_the_apps_smoke_test_found():
+    (step,) = [s for s in _steps("deploy") if s.get("name") == "Keep the usage collector's pinned image"]
+    assert "!cancelled()" in step["if"] and "steps.push.outcome == 'success'" in step["if"]

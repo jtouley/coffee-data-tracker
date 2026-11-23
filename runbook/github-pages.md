@@ -45,8 +45,10 @@ curl -s https://registry.coffee | grep -o 'Content-Security-Policy' | head -1
 
 After each Pages deploy, the `smoke` job of `site.yml` (and of `weekly.yml`) runs
 `python3 -m coffeedata.live_smoke check site`. It asks the live site for the home, catalog and privacy pages,
-`/catalog/catalog.json` and a missing page (a 404). Each answer must have the right status and something only the
-build just deployed has: its titles, the catalog page's data key, the release's build id and one of its coffees. Every
+`/catalog/catalog.json` and a missing page (a 404). Each answer must have the right status and content (the pages'
+titles, Pages' 404 page). The catalog page and download must also match the build just deployed: the catalog page's
+data key, the release's build id and one of its coffees. The home and privacy pages look the same from build to
+build, so they show the site answers, not which build it serves. Every
 request carries a new `?smoke=<run>-<try>` query, so the CDN's ten-minute cache doesn't answer with the old site.
 If the build job couldn't record what it built (its "Note what the smoke test expects" step is marked failed), the
 `smoke` job fails with "not checked": the built site is likely broken, so treat it as a failure. A red `smoke`

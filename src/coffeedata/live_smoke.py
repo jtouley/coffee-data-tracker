@@ -28,7 +28,8 @@ outcome, failures included, is one line in the job summary.
 
 **The site** (registry.coffee) is static, on GitHub Pages: there is no traffic to move. `expect-site` reads what was
 just built (the landing and privacy pages' titles, the catalog page's data key, the release's build id and one
-coffee's id in catalog.json), and `check site` asks the live site for each, plus the 404, after the deploy. Every try
+coffee's id in catalog.json), and `check site` asks the live site for each, plus the 404, after the deploy. Only the
+catalog page and catalog.json tell this build from the one before; the other pages show the site answers. Every try
 asks with a new `?smoke=<nonce>-<try>`, so Pages' CDN can't answer from a copy it cached (for up to ten minutes),
 even one cached by an earlier try. A failure fails the run, and the summary says how to put the previous site back
 (runbook/github-pages.md).
@@ -113,12 +114,15 @@ def fetch(url: str, follow: bool) -> tuple[int, dict[str, str], bytes]:
         return e.code, {k.lower(): v for k, v in e.headers.items()}, e.read()
 
 
-def problem(check: Check, status: int, headers: dict[str, str], body: bytes) -> str | None:
-    """What's wrong with this answer, or None."""
+def problem(check: Check, status: int, headers: dict[str, str], body: bytes, host: str = "") -> str | None:
+    """What's wrong with this answer, or None. A redirect must stay on `host` (a relative Location does)."""
     if status != check.status:
         return f"status {status}, expected {check.status}"
     if check.location is not None:
-        where = urlsplit(headers.get("location", "")).path
+        loc = urlsplit(headers.get("location", ""))
+        if loc.netloc and loc.netloc != host:
+            return f"redirects to another host, {loc.netloc!r}"
+        where = loc.path
         if where != check.location:
             return f"redirects to {where or 'nowhere'!r}, expected {check.location!r}"
     patterns = (check.contains,) if isinstance(check.contains, str) else check.contains or ()
@@ -160,7 +164,9 @@ def expect_site(out: str | Path) -> dict[str, str | None]:
 
 
 def site_checks(expect: dict, nonce: str) -> tuple[Check, ...]:
-    """The live site against `expect` (expect_site's): each page by its status and something only this build has."""
+    """The live site against `expect` (expect_site's): each page by its status and content. Only the catalog page
+    (its data key) and the download (its release and one coffee) tell this build from the one before; the home and
+    privacy titles show the site answers."""
 
     def title(t: str) -> str:
         return f"<title>{re.escape(t)}</title>"
@@ -198,6 +204,7 @@ def run_checks(
 ) -> list[str]:
     """Run `kind`'s checks (or `checks`) against `base`; print one line each; return the failures (empty: passed)."""
     base = base.rstrip("/")
+    host = urlsplit(base).netloc
     end = clock() + deadline
     failures: list[str] = []
     pending = list(CHECKS[kind] if checks is None else checks)
@@ -214,7 +221,7 @@ def run_checks(
             url = base + check.path + (f"?smoke={check.bust}-{attempt + 1}" if check.bust else "")
             try:
                 status, headers, body = get(url, check.follow)
-                why = problem(check, status, headers, body)
+                why = problem(check, status, headers, body, host)
             # refused, reset, timed out, bad TLS (OSError); a cut-off or garbled answer (HTTPException)
             except (OSError, ValueError, http.client.HTTPException) as e:
                 why, body = f"no answer ({type(e).__name__})", b""
@@ -338,7 +345,14 @@ def rollout(
     """Deploy, smoke-test, move the traffic (see the module's docstring). On success, writes `revision=<name>` to
     $GITHUB_OUTPUT: the revision this run made live."""
     g = gcloud or Gcloud(service, region)
-    before = g.describe()
+    try:
+        before = g.describe()
+    except Exception as e:  # noqa: BLE001 - nothing changed yet
+        summary(
+            f"**{service}: not deployed.** Reading its traffic failed ({type(e).__name__}); nothing was changed."
+        )
+        print(f"::error::{service}: gcloud run services describe failed; nothing was deployed.")
+        return 1
     print(
         f"Before: {before.latest_percent}% follows the newest revision; serving {before.serving or 'nothing'}."
     )
@@ -355,7 +369,16 @@ def rollout(
                     f"({type(e).__name__}), so nothing was deployed. Production stays on {stays}.")  # fmt: skip
             print(f"::error::{service}: couldn't tag {previous} {HELD}; nothing was deployed.")
             return 1
-    drop_tag = lambda: _quietly(f"remove the tag {tag}", g.traffic, "--remove-tags", tag)  # noqa: E731
+
+    def drop_tag(known: Traffic | None = None) -> None:
+        """Remove this run's tag, if the service has it (`known`, or a fresh read; unreadable: try anyway)."""
+        if known is None:
+            try:
+                known = g.describe()
+            except Exception:  # noqa: BLE001 - can't tell: try the removal
+                known = None
+        if known is None or tag in known.tags:
+            _quietly(f"remove the tag {tag}", g.traffic, "--remove-tags", tag)
 
     try:
         g("deploy", service, *deploy_args, "--no-traffic", "--tag", tag)
@@ -367,7 +390,7 @@ def rollout(
         print(f"::error::{service}: gcloud run deploy failed; production is unchanged.")
         return 1
     if tag not in after.tags or not after.tags[tag][1]:
-        drop_tag()
+        drop_tag(after)
         summary(f"**{service}: not checked.** Cloud Run gave the new revision no URL for the tag `{tag}`; it serves "
                 f"no one. Production stays on {stays}.")  # fmt: skip
         print(f"::error::{service}: Cloud Run gave the new revision no URL for the tag {tag}.")
@@ -380,7 +403,7 @@ def rollout(
         failures = [f"the smoke test failed ({type(e).__name__})"]
     # A revision that failed, or that won't serve (pinned), keeps no public URL of its own.
     if failures or before.pinned:
-        drop_tag()
+        drop_tag(after)
     if failures:
         then = (
             "Traffic was pinned before this deploy, and stays pinned."
@@ -401,8 +424,11 @@ def rollout(
         return 0
 
     # From here the new revision may have the traffic: whatever goes wrong, the traffic goes back to `previous`.
-    moved = False
+    # `--to-latest` can apply and still fail (gcloud timing out while it waits), so once it was sent, the move back
+    # always runs; it's idempotent.
+    sent = moved = False
     try:
+        sent = True
         g.traffic("--to-latest")
         moved = True
         live_failures = check(kind, live) if live else []
@@ -410,16 +436,18 @@ def rollout(
         live_failures = [f"{'the live check' if moved else 'moving the traffic'} failed ({type(e).__name__})"]
     if live_failures:
         failed = "; ".join(live_failures)
-        back = not moved or (previous is not None and _quietly(f"move the traffic back to {previous}", g.traffic,
-                                                               f"--to-revisions={previous}=100"))  # fmt: skip
-        drop_tag()
-        if back and previous:  # the hold set above stays on `previous`: the next good deploy lifts it
+        back = bool(sent and previous) and _quietly(
+            f"move the traffic back to {previous}", g.traffic, f"--to-revisions={previous}=100"
+        )
+        drop_tag(after)
+        if back:  # the hold set above stays on `previous`: the next good deploy lifts it
             what = f"{live} then failed" if moved else "moving the traffic to it failed"
-            summary(f"**{service}: {'rolled back' if moved else 'not moved'}.** `{revision}` passed its smoke test, but "
-                    f"{what} ({failed}), so the traffic is on `{previous}`. The next deploy that passes goes live.")  # fmt: skip
+            summary(f"**{service}: rolled back.** `{revision}` passed its smoke test, but {what} ({failed}), so the "
+                    f"traffic is back on `{previous}`. The next deploy that passes goes live.")  # fmt: skip
         else:
-            summary(f"**{service}: `{revision}` may have the traffic, and {live} failed ({failed}).** Roll back by "
-                    "hand: RUNNING.md, Rolling back.")  # fmt: skip
+            summary(f"**{service}: `{revision}` may have the traffic.** {'Moving it' if not moved else live} failed "
+                    f"({failed}), and moving the traffic back didn't work. Roll back by hand: RUNNING.md, Rolling "
+                    "back.")  # fmt: skip
         print(f"::error::{service}: {failed} on {revision}; see the job summary.")
         return 1
     _quietly("remove the tags", g.traffic, "--remove-tags", f"{HELD},{tag}" if previous else tag)
@@ -493,8 +521,15 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(expect_site(a.folder), separators=(",", ":")))
         return 0
     if a.cmd == "app-serves":
-        ok, why = app_serves(Gcloud(a.service, a.region).describe(), a.revision) if a.revision else (
-            False, "::warning::Not deploying to the admin: this run made no app revision live (its traffic is pinned).")  # fmt: skip
+        try:
+            ok, why = app_serves(Gcloud(a.service, a.region).describe(), a.revision) if a.revision else (
+                False, "::warning::Not deploying to the admin: this run made no app revision live (its traffic is pinned).")  # fmt: skip
+        except Exception as e:  # noqa: BLE001 - the admin isn't touched
+            summary(
+                f"**{a.service}: couldn't read the app's traffic ({type(e).__name__}), so the admin wasn't deployed.**"
+            )
+            print(f"::error::Reading {a.service}'s traffic failed; the admin wasn't deployed.")
+            return 1
         if why:
             print(why)
         _output("current", "true" if ok else "false")

@@ -161,9 +161,10 @@ jobs:
       # deploys it, not this workflow. Tag that digest `pinned-usage-<12 hex>` so the registry's cleanup (keep the
       # pinned* tags, artifact_registry.tf) never deletes the image the collector's next cold start needs. Creating
       # the tag is within the deploy account's registry writer role (moving one isn't: that needs tags.delete); it
-      # changes no service.
+      # changes no service. It runs once the push (and so the sign-in) worked, whatever this deploy's smoke test found:
+      # the collector's image isn't this one.
       - name: Keep the usage collector's pinned image
-        if: steps.tip.outputs.current == 'true'
+        if: ${{ !cancelled() && steps.tip.outputs.current == 'true' && steps.push.outcome == 'success' }}
         env:
           IMAGE: ${{ vars.GCP_IMAGE }}
         run: |
