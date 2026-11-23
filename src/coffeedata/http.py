@@ -206,8 +206,11 @@ def block_status(e: BaseException | None) -> int | None:
 
 
 def causes(e: BaseException | None) -> Iterator[BaseException]:
-    """e, then each __cause__ in turn."""
-    while e is not None:
+    """e, then each __cause__ in turn, each once: a cycle (an exception that is its own cause, as some mocks make)
+    ends the walk instead of hanging the worker."""
+    seen: set[int] = set()
+    while e is not None and id(e) not in seen:
+        seen.add(id(e))
         yield e
         e = e.__cause__
 
