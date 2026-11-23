@@ -178,6 +178,7 @@ def week(lake: Lake, con, run_date: str) -> dict:
             pass_no = None
         rows.append(
             {
+                "attempt_id": r["attempt_id"],
                 "job": r["job"],
                 "connector": r["connector"],
                 "pass": pass_no,
@@ -193,6 +194,8 @@ def week(lake: Lake, con, run_date: str) -> dict:
                 "http_429": r["http_429"],
                 "http_430": r["http_430"],
                 "egress_ips": list(r["egress_ips"] or []),
+                "refusals": [dict(x) for x in r.get("refusals") or []],
+                "detail": d,
                 "execution": d.get("execution"),
                 "build_id": d.get("build_id"),
                 "code_version": r["code_version"],
@@ -217,6 +220,20 @@ def week(lake: Lake, con, run_date: str) -> dict:
     built = builds(lake, con, run_date)
     if built:  # the build's verdict, not just whether its job ended
         stages["build"] = "passed" if built[0]["passed"] else "failed"
+        # when each was first served (serving_log): a week's release stays published once a later week replaces it
+        ids = [b["build_id"] for b in built]
+        first = dict(
+            _empty_ok(
+                lambda: con.execute(
+                    f"""select build_id, min(served_at) from {lake.scan("serving_log")}
+                        where build_id in (select unnest(?)) group by 1""",
+                    [ids],
+                ).fetchall(),
+                [],
+            )
+        )
+        for b in built:
+            b["served_at"] = first.get(b["build_id"])
     return {
         "week": run_date,
         "rows": rows,
@@ -376,6 +393,53 @@ def failures(lake: Lake, con, run_date: str) -> dict:
         "stores": failed,
         "source": ["fetches", *(["run_completeness"] if source == "run_completeness" else [])],
     }
+
+
+def failing_streaks(lake: Lake, con, run_date: str, weeks: int = 8) -> list[dict]:
+    """Stores that keep failing: each store without a complete ok fetch this week (no ok fetch, or only a partial
+    one: the Failures list's rule on `fetches`), with how many weeks in a row, back from this one, it has been so
+    (of the last `weeks` weeks with fetches). Two or more, longest first."""
+    scan = lake.scan("fetches")
+    rows = _empty_ok(
+        lambda: _rows(
+            con.execute(
+                f"""with w as (select distinct run_date from {scan} where run_date <= ? order by run_date desc
+                               limit {int(weeks)}),
+                    s as (select run_date, roaster_id,
+                                 not bool_or(status = 'ok') or bool_or(status = 'ok' and coalesce(partial, false)) as bad,
+                                 arg_max(status, fetched_at) as status, arg_max(error, fetched_at) as error,
+                                 arg_max(adapter, fetched_at) as adapter, bool_or(status = 'ok') as any_ok
+                          from {scan} where roaster_id is not null and run_date in (select run_date from w)
+                          group by all)
+                    select run_date::varchar as week, roaster_id, bad, status, error, adapter, any_ok
+                    from s order by roaster_id, run_date desc""",
+                [date.fromisoformat(run_date)],
+            )
+        ),
+        [],
+    )
+    by: dict[str, list[dict]] = {}
+    for r in rows:
+        by.setdefault(r["roaster_id"], []).append(r)
+    all_weeks = sorted({r["week"] for r in rows}, reverse=True)
+    out = []
+    for rid, mine in by.items():
+        seen = {r["week"]: r for r in mine}
+        if run_date not in seen or not seen[run_date]["bad"]:
+            continue
+        streak = 0
+        for w in all_weeks:  # a week it wasn't fetched, or fetched ok, ends the run
+            if w in seen and seen[w]["bad"]:
+                streak += 1
+            else:
+                break
+        if streak >= 2:
+            cur = seen[run_date]
+            out.append({"roaster_id": rid, "weeks": streak, "adapter": cur["adapter"],
+                        "status": "partial" if cur["any_ok"] else cur["status"],
+                        "error": (cur["error"] or "")[:300] or None, "url": store_url(rid)})  # fmt: skip
+    out.sort(key=lambda r: (-r["weeks"], r["roaster_id"]))
+    return out
 
 
 def failure_trend(lake: Lake, con, limit: int = 12) -> list[dict]:

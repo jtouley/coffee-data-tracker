@@ -23,7 +23,7 @@ import secrets
 import time
 from collections.abc import Awaitable, Callable
 from concurrent.futures import ThreadPoolExecutor
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode, urlsplit
@@ -41,6 +41,7 @@ from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
 from .catalog import FACETS, Catalog, Filters, PrefilterReader
 from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
+from .health import flags as crawl_health
 from .logs import emit
 from .runjobs import JobsError
 from .sources import CHAIN_STORES, COLUMNS, SORTS, SourceFilters, SourceList
@@ -225,6 +226,13 @@ def _fmt_n(v: Any) -> str:
     return str(v)
 
 
+def _fmt_delta(v: int | None) -> str:
+    """A change on last week, signed: +12, −3 (a minus sign), ±0."""
+    if v is None:
+        return ""
+    return f"+{v:,}" if v > 0 else f"\u2212{-v:,}" if v < 0 else "\u00b10"
+
+
 def _fmt_t(v: Any) -> str:
     if v is None:
         return "—"
@@ -265,6 +273,7 @@ def create_app(
         "pages": PAGES,
         "n": _fmt_n,
         "t": _fmt_t,
+        "delta": _fmt_delta,
         "slow_s": slow_s,
         "new_key": new_key,
         "off_parts": settings.off_parts,
@@ -622,25 +631,37 @@ def create_app(
             return default
 
     async def common(week: str | None) -> dict:
-        weeks = await reader.run(queries.weeks)
-        served = await reader.run(queries.served)
+        weeks, served = await asyncio.gather(reader.run(queries.weeks), reader.run(queries.served))
         chosen = week if week in weeks else (weeks[0] if weeks else week)
         stale = None
         if served and weeks and str(served.get("run_date"))[:10] < weeks[0]:
             stale = {"served": str(served.get("run_date"))[:10], "latest": weeks[0]}
         return {"weeks": weeks, "week": chosen, "served": served, "stale": stale}
 
+    KEEP = 10  # stores that keep failing, a page at a time (each is several lines on a phone)
+
     @app.get("/part/week", response_class=HTMLResponse)
-    async def week_part(week: str | None = None):
+    async def week_part(week: str | None = None, keep: int = 0):
         async def build():
             c = await common(_week_arg(week))
-            data = await reader.run(queries.week, c["week"]) if c["week"] else None
-            fails = await reader.run(queries.failures, c["week"]) if c["week"] else None
-            trend = await reader.run(queries.failure_trend)
+            w = c["week"]
+            if not w:
+                return c | {"data": None, "failures": None, "trend": await reader.run(queries.failure_trend)}
+            last_week = (date.fromisoformat(w) - timedelta(days=7)).isoformat()
+            # independent reads at once (the lake's pool has four threads): a slow lake costs two waits, not five
+            data, last, fails, trend, streaks = await asyncio.gather(
+                reader.run(queries.week, w), reader.run(queries.week, last_week), reader.run(queries.failures, w),
+                reader.run(queries.failure_trend), reader.run(queries.failing_streaks, w))  # fmt: skip
+            at = _page_at(keep, KEEP, len(streaks))
             return c | {
                 "data": data,
+                "health": crawl_health(data, last if last["rows"] else None, c["served"], clock()),
                 "failures": fails,
                 "trend": trend,
+                "streaks": streaks[at : at + KEEP],
+                "streaks_total": len(streaks),
+                "keep_at": at,
+                "keep_size": KEEP,
                 "connectors": jobs.FIELDS["connector"].choices,
             }
 

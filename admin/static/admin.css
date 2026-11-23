@@ -341,3 +341,16 @@ textarea.input.reason { display: block; min-height: 56px; height: auto; padding-
   table.stack tr.sel { background: var(--panel); } /* the shown row's tint, whole, not cell by cell */
   table.stack tr.sel > * { background: transparent; }
 }
+
+/* Week's crawl health: what needs a look, as the Queue's flag list, each with its mark (a failure's in --danger);
+   the comparison's change on last week is a small --ink-2 figure after each number; the All row is its sum. */
+ul.flags.health { gap: 8px; margin-top: 8px; }
+ul.flags.health li { display: flex; gap: 10px; align-items: baseline; line-height: 1.45; max-width: 72ch; }
+ul.flags.health li .st { flex: none; transform: translateY(-1px); }
+ul.flags.health li.bad strong { color: var(--danger); }
+.d { color: var(--ink-2); font-size: 0.75rem; margin-inline-start: 2px; white-space: nowrap; }
+table.vs td.n { white-space: nowrap; }
+tr.total > :is(th, td) { font-weight: 600; border-top: 1px solid var(--control); }
+@media (max-width: 759px) { table.stack tr.total { border-top: 1px solid var(--control); } table.stack tr.total > * { border-top: 0; } }
+details.attempts > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+@media (max-width: 759px) { table.stack td.full:empty { display: none; } }

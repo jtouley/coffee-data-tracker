@@ -184,7 +184,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       const a = await answer(page);
       assert.match(a, /5 of 5 connectors landed/);
       assert.match(a, /build failed/);
-      assert.ok(await page.isVisible("text=crawl-retry"));
+      assert.match(await page.textContent("details.attempts"), /crawl-retry/); // the attempts fold under the summary
       await shoot(page, "week");
     });
 
@@ -197,7 +197,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       assert.match(await page.textContent("main"), /Across weeks/);
       const store = page.locator("a.ev", { hasText: "sg-challenge.example" });
       assert.equal(await store.getAttribute("href"), "https://sg-challenge.example/");
-      assert.ok((await page.getAttribute("a:text('Test crawl') >> nth=0", "href")).startsWith("/jobs?action=crawl-one"));
+      assert.equal(await page.locator("a", { hasText: "Test crawl" }).count(), 0); // writes are off here: no Test crawl
       await page.locator("#failures").scrollIntoViewIfNeeded();
       await shoot(page, "week-failures");
     });

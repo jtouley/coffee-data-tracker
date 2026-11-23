@@ -506,3 +506,42 @@ A review of every page at 390 px and desktop, light and dark (one High, eleven M
   made yet.
 - **Code.** One pager macro (offset-based, Previous and Next) for Queue, Log, Changes, Catalog and Sources; one
   no-builds state; the JSON editor's CSS and the repeated rule blocks are gone.
+
+## Crawl health (Week)
+
+### Who and what
+
+The owner, on a phone on Monday evening or Tuesday morning: **how did the crawl go?** without Grafana or asking.
+Each connector this week against last, what each pass tried and recovered, what is abnormal, the stores that keep
+failing, and Tuesday's merge, enrich, build and publish.
+
+### Week, not a new page
+
+Week already listed every job attempt and the week's failures (the whole-admin review's finding), and its question is
+the same one. A Health page would repeat its picker, its attempts and its failures. So Week is restructured: the
+answer line, then **Needs a look** (only when something does), **This week and last**, **Passes**, **Tuesday** and
+the release, then the job attempts folded (the evidence behind the sections above), then Failures with **Failing week
+after week**.
+
+### Rules, all from the code (admin/health.py)
+
+- **Died:** only a running row past the job's time limit (`fetchhealth.JOB_LIMIT`, 240 min, ingestion.tf's task
+  timeout; `CHECK_LIMIT` for fetch-health), or a later attempt of the same job and connector has started:
+  fetch-health's own rule.
+- **Refusals:** an egress IP's first-contact refusals over `control.REFUSAL_FLAG` (8%) this week; over last week too
+  is what the egress check fails on, and the line says which.
+- **A rise:** errors or 429s up by more than `prod_health.K_SE["warning"]` (4) standard errors of last week's count,
+  read as a Poisson count.
+- **Same pass:** last week is counted to the pass this week has reached, so a Monday-morning look isn't compared
+  with a whole week. Errors are the stores still failing after the latest pass; OK sums the passes (each tries only
+  what is still failing).
+- **Tuesday** is "not yet" until its window ends (Tuesday 12:00 UTC); after it, the first stage that never ran is
+  flagged once. A week's release is published once `serving_log` has served its build.
+- Test crawls, arms and one-store runs are never the week's: they are on Jobs.
+
+### Design
+
+No new colours or components: the flags reuse `ul.flags` with the status marks (the square in `--danger` for a
+failure, the triangle for a warning), the tables are `table.stack`, the change on last week is a small `--ink-2`
+figure, the stores list uses the shared pager (ten a page: each is several lines on a phone), and Test crawl shows
+only while writes are on.
