@@ -188,3 +188,11 @@ def test_the_cli_says_what_the_deadline_stopped_apart_from_partials(tmp_path, mo
     err = capsys.readouterr().err
     assert "deadline reached, 2 blocked stores parked for crawl-retry, 1 stores not retried" in err
     assert "read in part" not in err
+
+
+def test_a_cause_chain_that_loops_ends_instead_of_hanging():
+    """An exception that is its own cause (some mocks make one) is walked once, so a crawl worker can't hang on it."""
+    e = RuntimeError("loop")
+    e.__cause__ = e
+    assert list(http.causes(e)) == [e]
+    assert ingest.stopped_by_deadline(e) is False

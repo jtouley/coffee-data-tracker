@@ -182,38 +182,98 @@ class _Listing:
         self.total: int | None = None
 
 
+def _header_int(r: httpx.Response, name: str) -> int | None:
+    value = r.headers.get(name, "").strip()
+    return int(value) if value.isdigit() else None
+
+
+def _store_count(r: httpx.Response, read: int) -> int | None:
+    """On a query's first page of `read` items, shorter than the `per_page` asked: how many items the store's own
+    headers say the query has, when every count header present says there are more than were read, and at least one
+    is present. X-WP-Total counts the items; X-WP-TotalPages the pages, at the page size the store used (`read`).
+    None: no header, or one that the first page already reaches (a store that honours `per_page` with a count above
+    its catalog is never asked for more when its X-WP-TotalPages says 1)."""
+    total, pages = _header_int(r, "x-wp-total"), _header_int(r, "x-wp-totalpages")
+    if total is None and pages is None:
+        return None
+    if (total is not None and total <= read) or (pages is not None and pages <= 1):
+        return None
+    return total if total is not None else (pages or 0) * read
+
+
+def _smaller(per_page: int, offset: int) -> int:
+    """The page size to ask for after a page at `per_page` timed out at `offset`: the first TIMEOUT_PER_PAGE size
+    below `per_page`, brought down to the largest size at most that which divides `offset`, so the products already
+    read stay whole pages (a store capped at 48, timing out at offset 48, is asked for 24). 0: none is left."""
+    for target in TIMEOUT_PER_PAGE:
+        if target < per_page:
+            return max(s for s in range(1, target + 1) if offset % s == 0)
+    return 0
+
+
+class PagingTimedOut(FetchError):
+    """A store read at its own capped page size whose next page timed out at every smaller size: the query ends
+    here, and `fetch` stores what was read whole as partial (never an error with nothing stored)."""
+
+
 def _pages(
     client: PoliteClient, url: str, host: str, listing: _Listing | None = None, **params: str | int
 ) -> Iterator[list[dict]]:
     """Every page of a Store API products query, until a short page. A store that ignores `page` and repeats a page
-    ends it too (nothing new would come). A page that times out is asked for again at the next smaller size
-    (TIMEOUT_PER_PAGE), from the same offset. listing.total: the first page's X-WP-Total (never `Link`, which real
-    stores send HTML-escaped: `page=2#038;per_page=1`)."""
+    ends it too (nothing new would come), and so does an empty page. A page that times out is asked for again at the
+    next smaller size (TIMEOUT_PER_PAGE, see `_smaller`), from the same offset. listing.total: the first page's
+    X-WP-Total (never `Link`, which real stores send HTML-escaped: `page=2#038;per_page=1`).
+
+    A store that caps `per_page` below what was asked (WooCommerce's default page is 10) answers the first page short
+    while its count headers say there is more (`_store_count`: every one present agrees): that first page's length is
+    taken as the store's page size and the rest is read at it (the first page starts at 0, so offsets stay whole
+    pages). Only the first page can show a cap; a short page after it ends the query as before, and the X-WP-Total
+    check in `fetch` marks a count that still differs as partial. A capped query reads at most the store's own count
+    plus one page (a store that ignores `page` and answers a different sample each time can't page on for ever). A
+    capped query whose page times out at every smaller size ends there (PagingTimedOut), keeping what was read."""
     seen: set[str] = set()
     offset = 0
     per_page = PER_PAGE
-    smaller = iter(TIMEOUT_PER_PAGE)
+    bound: int | None = None  # once capped: the store's own count plus one page
     while True:
+        if bound is not None and offset >= bound:
+            log.info("%s: read past the store's own count (%d): stopped", host, bound)
+            return
+        page = offset // per_page + 1
         try:
-            data, r = client.fetch_json_response(
-                url, per_page=per_page, page=offset // per_page + 1, **params
-            )
+            data, r = client.fetch_json_response(url, per_page=per_page, page=page, **params)
         except FetchError as e:
-            if not _timed_out(e) or (per_page := next(smaller, 0)) == 0:
+            if not _timed_out(e):
                 raise
+            if (size := _smaller(per_page, offset)) == 0:
+                if bound is not None and offset > 0:
+                    raise PagingTimedOut(
+                        f"timed out at page {page} ({per_page} a page, {offset} read)"
+                    ) from e
+                raise
+            per_page = size
             continue
         if not isinstance(data, list):
             raise FetchError(f"unexpected Store API payload from {host}")
         if listing is not None and listing.total is None:
-            total = r.headers.get("x-wp-total", "").strip()
-            listing.total = int(total) if total.isdigit() else None
+            listing.total = _header_int(r, "x-wp-total")
         ids = {str(p.get("id")) for p in data if isinstance(p, dict)}
         if data and ids <= seen:
             return
         seen |= ids
         yield data
         if len(data) < per_page:
-            return
+            count = _store_count(r, len(data)) if data and offset == 0 else None
+            if count is None:
+                return
+            log.info(
+                "%s: the store caps per_page at %d (asked for %d): read at its size",
+                host,
+                len(data),
+                per_page,
+            )
+            per_page = len(data)
+            bound = count + per_page
         offset += len(data)
 
 
@@ -342,15 +402,19 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     gone: set[str] = set()  # sizes whose own lookup answered 404: they no longer exist, and are left out
     currencies: dict[str, str | None] = {}
     listing = _Listing()
+    listed: set[str] = set()
     try:
         for data in _pages(client, base, roaster.host, listing):
             for p in (p for p in data if isinstance(p, dict)):
+                if (pid := str(p.get("id"))) in listed:  # a page that overlaps an earlier one: read once
+                    continue
+                listed.add(pid)
                 raw.append(p)
                 if not _needs_variation_prices(p):  # one price for every size: the listing's
                     prices |= dict.fromkeys(_variation_ids(p), _price(p.get("prices")))
         needs = [p for p in raw if _needs_variation_prices(p)]
         variation_prices(client, base, roaster.host, needs, prices, stock, gone, currencies)
-    except DeadlineReached as e:
+    except (DeadlineReached, PagingTimedOut) as e:
         # Only products read whole: listed, with every size priced or known gone. The rest stay as they were.
         done = [
             parse_product(p, roaster, prices, stock, gone, currencies)
