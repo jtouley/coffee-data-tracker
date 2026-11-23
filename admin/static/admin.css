@@ -354,3 +354,4 @@ tr.total > :is(th, td) { font-weight: 600; border-top: 1px solid var(--control);
 @media (max-width: 759px) { table.stack tr.total { border-top: 1px solid var(--control); } table.stack tr.total > * { border-top: 0; } }
 details.attempts > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
 @media (max-width: 759px) { table.stack td.full:empty { display: none; } }
+table.vs tbody th .st { margin-inline-start: 6px; }

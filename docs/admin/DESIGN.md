@@ -532,9 +532,15 @@ after week**.
   is what the egress check fails on, and the line says which.
 - **A rise:** errors or 429s up by more than `prod_health.K_SE["warning"]` (4) standard errors of last week's count,
   read as a Poisson count.
-- **Same pass:** last week is counted to the pass this week has reached, so a Monday-morning look isn't compared
-  with a whole week. Errors are the stores still failing after the latest pass; OK sums the passes (each tries only
-  what is still failing).
+- **Missed:** a scheduled pass (ingestion.tf's crons; a test checks them) with no attempt 30 minutes after its slot,
+  for all connectors or some; a connector missing from every pass so far is one line for its week. In the comparison
+  it reads "didn't run", never zeros with a minus.
+- **Same pass:** each connector is counted to its latest finished pass (a died attempt has finished), and last week
+  to the same pass. A connector with an attempt still running reads "running": its finished passes show, but no
+  change and no rise check. The All row's change counts only connectors with both weeks. Errors are the stores still
+  failing after the latest crawl pass, plus Shopify's evening retry; OK sums the passes.
+- **Deadlines:** in no more passes than last week, the line says "as last week" and is listed last, not counted as
+  something new; after the last pass that ran or is still to come, it says the stores it didn't reach weren't crawled.
 - **Tuesday** is "not yet" until its window ends (Tuesday 12:00 UTC); after it, the first stage that never ran is
   flagged once. A week's release is published once `serving_log` has served its build.
 - Test crawls, arms and one-store runs are never the week's: they are on Jobs.

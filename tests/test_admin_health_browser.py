@@ -8,6 +8,7 @@ where they aren't installed, except in CI (REQUIRE_BROWSER=1). ADMIN_SCREENSHOTS
 
 import json
 import os
+import shutil
 import subprocess
 import time
 from pathlib import Path
@@ -19,7 +20,7 @@ from admin.main import Reader, create_app
 from admin.store import FileStore
 from coffeedata.lake import Lake
 
-from .admin_health_fixture import NOW, W0, W1, W2, W3, build_health_lake
+from .admin_health_fixture import NOW, W0, W1, W2, W3, build_health_lake, drop_connector
 from .test_admin_browser import BROWSER, _port, _serve, _settings
 from .test_app_browser import _playwright
 
@@ -38,7 +39,10 @@ def test_week_health_in_a_browser(tmp_path, pg_server):
     before = sorted((p.relative_to(lake).as_posix(), p.stat().st_mtime_ns) for p in lake.rglob("*"))
     empty_lake = tmp_path / "empty-lake"
     empty_lake.mkdir()
-    ports = {k: _port() for k in ("main", "act", "empty", "slow", "broken")}
+    gone = tmp_path / "gone-lake"  # woocommerce never ran this week
+    shutil.copytree(lake, gone)
+    drop_connector(gone, W3, "woocommerce")
+    ports = {k: _port() for k in ("main", "act", "empty", "slow", "broken", "gone")}
 
     def app(name, lake_dir=lake, **kw):
         return create_app(_settings(tmp_path / name, f"http://127.0.0.1:{ports[name]}", lake_dir),
@@ -55,6 +59,7 @@ def test_week_health_in_a_browser(tmp_path, pg_server):
         "main": app("main"),
         "act": create_app(act_settings, now=lambda: NOW),
         "empty": app("empty", empty_lake),
+        "gone": app("gone", gone),
         "slow": app(
             "slow", reader=Reader(Lake(str(lake), read_only=True), 30, before=lambda: time.sleep(3)), slow_s=1
         ),

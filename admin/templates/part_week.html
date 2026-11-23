@@ -1,25 +1,31 @@
 {% from "_macros.html" import status, served_line, week_picker, ev, help %}
 <template data-title>{% call help("week", "About Week") %}
-  <p class="body">How the week’s crawl went, then Tuesday’s merge, enrichment, build and release. Needs a look lists what went wrong: an attempt that failed or died, a crawl stopped by its time limit, errors or 429s up on last week by more than chance, and an IP refused by over {{ "%g" | format(health.refusal_flag * 100) if health else 8 }}% of stores on first contact (the egress check’s limit). Then what failed, by store, with a Test crawl for each.</p>
-  <p class="body">An attempt has died when it never reported finishing within its job’s 4-hour limit, or a later attempt of the same job has started since. A rise counts when it is more than the usual week-to-week swing (over 4 standard errors of last week’s count).</p>
+  <p class="body">How the week’s crawl went, then Tuesday’s merge, enrichment, build and release. Needs a look lists what went wrong: an attempt that failed or died, a scheduled pass that didn’t start within 30 minutes, a crawl stopped by its time limit, errors or 429s up on last week by more than the usual swing, and an IP refused by over {{ "%g" | format(health.refusal_flag * 100) if health else 8 }}% of stores on first contact (the egress check’s limit). A time limit hit in no more passes than last week is listed last, as usual. Then what failed, by store, with a Test crawl for each.</p>
+  <p class="body">An attempt has died when it never reported finishing within its job’s time limit (4 hours for a crawl, 30 minutes for a fetch-health check), or a later attempt of the same job has started since. A rise counts when it is over 4 standard errors of last week’s count. Each connector is compared up to its latest finished pass.</p>
   <p class="meta">From <code>job_manifests</code>, <code>fetches</code>, <code>builds</code> and <code>serving_log</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
 {% endcall %}</template>
 {% macro who(f) -%}
 {%- set names = {"merge": "The merge", "enrich": "Enrichment", "classify": "Classify", "build": "The build", "fetch-health": "A fetch-health check", "probe": "The probe", "discover": "Discovery", "publish": "Publish"} -%}
 {%- if f.job == "crawl-retry" %}The Shopify retry{% elif f.job == "crawl" %}{{ f.connector }}’s {{ f.pass or "" }} crawl{% else %}{{ names.get(f.job, f.job) }}{% endif -%}
 {%- endmacro %}
+{% macro listed(xs) %}{{ xs[:-1] | join(", ") }}{{ " and " if xs | length > 1 }}{{ xs[-1] }}{% endmacro %}
 {% macro flag(f) -%}
-{%- if f.code == "died" -%}<strong>{{ who(f) }} died.</strong> It started {{ t(f.started_at) }} UTC and never reported finishing ({{ f.hours }} hours ago).
+{%- if f.code == "died" -%}<strong>{{ who(f) }} died.</strong> It started {{ t(f.started_at) }} UTC, {{ f.hours }} hours ago, and never reported finishing.
 {%- elif f.code == "failed" -%}<strong>{{ who(f) }} failed.</strong> It started {{ t(f.started_at) }} UTC.
-{%- elif f.code == "deadline" -%}<strong>{{ f.connector }} hit its time limit</strong> in the {{ f.passes[:-1] | join(", ") }}{{ " and " if f.passes | length > 1 }}{{ f.passes[-1] }} {{ "pass" if f.passes | length == 1 else "passes" }}. The next pass picks up the stores it didn’t reach.
+{%- elif f.code == "missed" -%}{% set due = (health.passes | selectattr("key", "equalto", f.pass) | first).at %}{% if f.whole %}<strong>The {{ f.pass }} pass didn’t start.</strong> It was due at {{ due }} UTC, and no connector has an attempt.{% else %}<strong>No {{ f.pass }} crawl for {{ listed(f.connectors) }}.</strong> It was due at {{ due }} UTC, and the other connectors ran theirs.{% endif %}
+{%- elif f.code == "absent" -%}<strong>No crawl for {{ listed(f.connectors) }} this week.</strong> None of {{ "its" if f.connectors | length == 1 else "their" }} {{ listed(f.passes) }} passes started.
+{%- elif f.code == "deadline" -%}<strong>{{ f.connector }} hit its time limit</strong> in the {{ listed(f.passes) }} {{ "pass" if f.passes | length == 1 else "passes" }}{% if f.kind == "usual" %}, as last week{% elif f.last_passes %} (last week: {{ listed(f.last_passes) }}){% endif %}. {% if f.final %}The stores it didn’t reach weren’t crawled this week.{% else %}The next pass picks up the stores it didn’t reach.{% endif %}
 {%- elif f.code == "jump" -%}<strong>{{ f.connector }}: {% for u in f.ups %}{{ "errors" if u.field == "errors" else "429s" }} up from {{ n(u.last) }} to {{ n(u.this) }}{{ " and " if not loop.last }}{% endfor %}</strong> on last week, more than the usual week-to-week swing.
-{%- elif f.code == "refusals" -%}<strong>{{ "%.0f" | format(f.share * 100) }}% of stores refused our first request</strong> from {{ f.ip }} ({{ n(f.refused) }} of {{ n(f.stores) }}, {{ f.connectors | join(", ") }}), over the egress check’s {{ "%g" | format(health.refusal_flag * 100) }}%.{% if f.twice %} It was over last week too, so the egress check fails on it.{% else %} Over again next week and the egress check fails on it.{% endif %}
+{%- elif f.code == "refusals" -%}<strong>{{ "%.0f" | format(f.share * 100) }}% of stores refused our first request</strong> from {{ f.ip }} ({{ n(f.refused) }} of {{ n(f.stores) }}, {{ f.connectors | join(", ") }}), over the egress check’s {{ "%g" | format(health.refusal_flag * 100) }}%.{% if f.twice %} It was over last week too; the egress check flags an IP that is over on two runs in a row.{% else %} The egress check flags an IP that is over on two runs in a row.{% endif %}
 {%- elif f.code == "build_failed" -%}<strong>The build failed its checks</strong>, so it wasn’t published.{% if f.build_id %} <a class="ev" href="/release?build={{ f.build_id }}">See why on Release</a>.{% endif %}
 {%- elif f.code == "chain_missing" -%}<strong>Tuesday’s {{ f.job }} didn’t run</strong>{% if f.job != "build" %}, so the steps after it didn’t either{% endif %}.
 {%- endif -%}
 {%- endmacro %}
 {% macro cell(v, d, label, up=false) -%}
-<td class="n" data-label="{{ label }}">{% if up %}<span class="st st-warn"><i aria-hidden="true"></i></span> {% endif %}{{ n(v) }}{% if d is not none and (v or d) %} <span class="d">{{ delta(d) }}</span>{% endif %}</td>
+<td class="n" data-label="{{ label }}">{% if up %}<span class="st st-warn"><i aria-hidden="true"></i></span> <span class="vh">up more than usual:</span> {% endif %}{{ n(v) }}{% if d is not none and (v or d) %} <span class="d">{{ delta(d) }}</span>{% endif %}</td>
+{%- endmacro %}
+{% macro refused(x, d) -%}
+<td class="n" data-label="Refused">{{ n(x.refused) }} of {{ n(x.stores) }}{% if d is not none and (x.refused or d) %} <span class="d">{{ delta(d) }}</span>{% endif %}</td>
 {%- endmacro %}
 <div data-state="{{ 'data' if data and data.rows else 'empty' }}">
 {% if weeks %}{{ week_picker(weeks, week, "/week") }}{% endif %}
@@ -31,28 +37,29 @@
   </div>
 {% else %}
   {% set h = health %}
-  {% set k = h.flags | length %}
+  {% set k = h.new %}
   {% set next_step = h.chain | rejectattr("status", "in", ["done", "passed", "published"]) | first %}
-  <p class="answer" data-answer>{{ data.landed }} of {{ data.connectors | length }} connectors landed · {% if k %}<a class="ev" href="#look">{{ k }} thing{{ "s" if k != 1 }} to look at</a>{% else %}nothing unusual{% endif %} · {% if not next_step %}published{% elif next_step.status == "not yet" %}Tuesday’s {{ next_step.job }} hasn’t run yet{% elif next_step.job == "build" and data.builds %}<a class="ev" href="/release?build={{ data.builds[0].build_id }}">build</a> {{ status(next_step.status) }}{% else %}{{ next_step.job }} {{ status(next_step.status) }}{% endif %}</p>
+  <p class="answer" data-answer>{{ data.landed }} of {{ data.connectors | length }} connectors landed · {% if k %}<a class="ev" href="#look">{{ k }} thing{{ "s" if k != 1 }} to look at</a>{% elif h.flags %}<a class="ev" href="#look">nothing new to look at</a>{% else %}nothing unusual{% endif %} · {% if not next_step %}published{% elif next_step.status == "not yet" %}Tuesday’s {{ next_step.job }} hasn’t run yet{% elif next_step.job == "build" and data.builds %}<a class="ev" href="/release?build={{ data.builds[0].build_id }}">build</a> {{ status(next_step.status) }}{% else %}{{ next_step.job }} {{ status(next_step.status) }}{% endif %}</p>
 
-  {% if k %}
+  {% if h.flags %}
   <h2 class="section" id="look">Needs a look</h2>
-  <ul class="flags health">{% for f in h.flags %}<li class="{{ f.kind }}"><span class="st st-{{ f.kind }}"><i aria-hidden="true"></i></span><span>{{ flag(f) }}</span></li>{% endfor %}</ul>
+  <ul class="flags health">{% for f in h.flags %}<li class="{{ f.kind }}"><span class="st st-{{ 'none' if f.kind == 'usual' else f.kind }}"><i aria-hidden="true"></i></span><span>{{ flag(f) }}</span></li>{% endfor %}</ul>
   {% endif %}
 
   {% set c = h.compare %}
-  {% if c.upto %}
+  {% if c.rows %}
   {% set ups = [] %}{% for f in h.flags if f.code == "jump" %}{% for u in f.ups %}{% set _ = ups.append(f.connector ~ ":" ~ u.field) %}{% endfor %}{% endfor %}
-  <h2 class="section" id="vs-last">{{ "This week and last" if h.last_week else "This week" }}</h2>
-  <div class="frame" tabindex="0" role="region" aria-label="{{ "This week and last" if h.last_week else "This week" }}"><table class="dense stack vs">
-    <caption>{% if h.last_week %}Each number, then its change on week {{ h.last_week }}, counted to the same pass ({{ c.upto }}).{% else %}No crawl last week to compare with.{% endif %} Errors: stores still failing after the latest pass. Refused: stores that refused our first request.</caption>
+  {% set title = "This week and last" if h.last_week else "This week" %}
+  <h2 class="section" id="vs-last">{{ title }}</h2>
+  <div class="frame" tabindex="0" role="region" aria-label="{{ title }}"><table class="dense stack vs">
+    <caption>Each connector up to its latest finished pass{% if h.last_week %}, then its change on week {{ h.last_week }} up to the same pass{% endif %}. Errors: stores still failing. Refused: stores that refused our first request.{% if c.total.partial %} The All row’s change counts only the connectors with both weeks finished.{% endif %}</caption>
     <thead><tr><th scope="col">Connector</th><th scope="col" class="n">OK</th><th scope="col" class="n">Errors</th><th scope="col" class="n">429</th><th scope="col" class="n">430</th><th scope="col" class="n">Refused</th></tr></thead>
-    <tbody>{% for r in c.rows %}{% set d = r.delta %}<tr>
-      <th scope="row">{{ r.connector }}</th>
-      {{ cell(r.this.ok, d.ok, "OK") }}{{ cell(r.this.errors, d.errors, "Errors", r.connector ~ ":errors" in ups) }}{{ cell(r.this.http_429, d.http_429, "429", r.connector ~ ":http_429" in ups) }}{{ cell(r.this.http_430, d.http_430, "430") }}
-      <td class="n" data-label="Refused">{{ n(r.this.refused) }} of {{ n(r.this.stores) }}{% if d.refused is not none and (r.this.refused or d.refused) %} <span class="d">{{ delta(d.refused) }}</span>{% endif %}</td>
+    <tbody>{% for r in c.rows %}{% set d = r.delta %}<tr{% if r.status == "didn't run" %} class="bad"{% endif %}>
+      <th scope="row">{{ r.connector }}{% if r.status %} {{ status(r.status) }}{% endif %}</th>
+      {% if r.this %}{{ cell(r.this.ok, d.ok, "OK") }}{{ cell(r.this.errors, d.errors, "Errors", r.connector ~ ":errors" in ups) }}{{ cell(r.this.http_429, d.http_429, "429", r.connector ~ ":http_429" in ups) }}{{ cell(r.this.http_430, d.http_430, "430") }}{{ refused(r.this, d.refused) }}
+      {% else %}<td class="full" colspan="5"><span class="meta">{{ "No crawl attempt this week." if r.status == "didn't run" else "Its first pass is still running." }}</span></td>{% endif %}
     </tr>{% endfor %}
-    {% set d = c.total.delta %}<tr class="total"><th scope="row">All</th>{{ cell(c.total.this.ok, d.ok, "OK") }}{{ cell(c.total.this.errors, d.errors, "Errors") }}{{ cell(c.total.this.http_429, d.http_429, "429") }}{{ cell(c.total.this.http_430, d.http_430, "430") }}<td class="n" data-label="Refused">{{ n(c.total.this.refused) }} of {{ n(c.total.this.stores) }}{% if d.refused is not none %} <span class="d">{{ delta(d.refused) }}</span>{% endif %}</td></tr></tbody>
+    {% if c.total.this %}{% set d = c.total.delta %}<tr class="total"><th scope="row">All</th>{{ cell(c.total.this.ok, d.ok, "OK") }}{{ cell(c.total.this.errors, d.errors, "Errors") }}{{ cell(c.total.this.http_429, d.http_429, "429") }}{{ cell(c.total.this.http_430, d.http_430, "430") }}{{ refused(c.total.this, d.refused) }}</tr>{% endif %}</tbody>
   </table></div>
   {% endif %}
 
@@ -60,10 +67,10 @@
   <div class="frame" tabindex="0" role="region" aria-label="Passes"><table class="dense stack">
     <caption>The crawl’s three passes on Monday (UTC), counted over the attempts that ended. After the morning a pass tries only the stores still failing, so its OK is what it recovered.</caption>
     <thead><tr><th scope="col">Pass</th><th scope="col">Status</th><th scope="col">Started</th><th scope="col" class="n">Tried</th><th scope="col" class="n">OK</th><th scope="col" class="n">Still failing</th><th scope="col">Connectors</th></tr></thead>
-    <tbody>{% for p in h.passes %}<tr{% if p.status in ("failed", "died") %} class="bad"{% endif %}>
+    <tbody>{% for p in h.passes %}<tr{% if p.status in ("failed", "died", "didn't run") %} class="bad"{% endif %}>
       <th scope="row">{{ p.label }} · {{ p.at }}</th><td class="lead">{{ status(p.status) }}</td>
-      {% if p.tried is not none %}<td data-label="Started">{{ t(p.started_at) }}</td><td class="n" data-label="Tried">{{ n(p.tried) }}</td><td class="n" data-label="{{ 'OK' if p.key == 'morning' else 'Recovered' }}">{{ n(p.ok) }}</td><td class="n" data-label="Still failing">{{ n(p.errors) }}</td><td data-label="Connectors">{{ p.connectors | length }} of {{ data.connectors | length }}{% if p.ended < p.connectors | length %} ({{ p.connectors | length - p.ended }} never finished){% endif %}</td>
-      {% else %}<td class="full" colspan="5"><span class="meta">{{ "Scheduled for " ~ p.at ~ " UTC." if p.status == "not yet" else "No attempt this week." }}</span></td>{% endif %}
+      {% if p.tried is not none %}<td data-label="Started">{{ t(p.started_at) }}</td><td class="n" data-label="Tried">{{ n(p.tried) }}</td><td class="n" data-label="OK">{{ n(p.ok) }}</td><td class="n" data-label="Still failing">{{ n(p.errors) }}</td><td data-label="Connectors">{{ p.connectors | length }} of {{ data.connectors | length }}{% if p.running %} ({{ p.running }} still running){% endif %}{% if p.died %} ({{ p.died }} died){% endif %}</td>
+      {% else %}<td class="full" colspan="5"><span class="meta">{{ "Due at " ~ p.at ~ " UTC." if p.status == "not yet" else "No attempt: it was due at " ~ p.at ~ " UTC." }}</span></td>{% endif %}
     </tr>{% endfor %}</tbody>
   </table></div>
 

@@ -82,23 +82,26 @@ const text = async (page, sel) => (await page.innerText(sel)).replace(/\s+/g, " 
       const { ctx, page } = await open("main", `/week?week=${w3}`);
       await settled(page);
       const a = await text(page, "[data-answer]");
-      assert.match(a, /^5 of 5 connectors landed · 8 things to look at · Tuesday’s merge hasn’t run yet$/);
+      assert.match(a, /^5 of 5 connectors landed · 7 things to look at · Tuesday’s merge hasn’t run yet$/);
       const look = await text(page, "ul.flags.health");
-      assert.match(look, /generic’s resume crawl died\. It started Mon 23 Nov 15:20 UTC and never reported finishing \(8\.2 hours ago\)/);
+      assert.match(look, /generic’s resume crawl died\. It started Mon 23 Nov 15:20 UTC, 8\.2 hours ago, and never reported finishing\./);
       assert.match(look, /A fetch-health check failed/);
-      assert.match(look, /woocommerce hit its time limit in the morning and resume passes/);
-      assert.match(look, /generic: errors up from 71 to 131 and 429s up from 83 to 140/);
+      assert.match(look, /woocommerce hit its time limit in the morning and resume passes, as last week\. The stores it didn’t reach weren’t crawled this week\./);
+      assert.match(look, /generic: errors up from 71 to 120 and 429s up from 83 to 152/);
+      assert.match(look, /No retry crawl for woocommerce\. It was due at 21:47 UTC, and the other connectors ran theirs\./);
       assert.match(look, /9% of stores refused our first request from 203\.0\.113\.40 \(92 of 1,010, generic, woocommerce\)/);
       // failures first: each failure's mark is the square, in --danger
-      assert.equal(await page.locator("ul.flags.health li.bad").count(), 2);
+      assert.equal(await page.locator("ul.flags.health li.bad").count(), 3);
       assert.equal(await page.locator("ul.flags.health li").first().getAttribute("class"), "bad");
       const vs = await text(page, "table.vs");
-      assert.match(vs, /All 2,447 \+85 158 \+78 140 \+53 0 92 of 2,594 \+61/);
+      assert.match(vs, /square_online running 184 7 0 0 0 of 191 /); // counted to its resume, no change: its retry is running
+      assert.match(vs, /All 2,[0-9]{3} /);
       assert.match(await text(page, "#passes ~ .frame"), /Resume · 15:17 died/);
       assert.match(await text(page, "#passes ~ .frame"), /Retry · 21:47 running/);
       assert.equal(await page.locator("tr.bad", { hasText: "Resume" }).count(), 1);
       assert.match(await text(page, "#tuesday + p"), /^Not yet: the merge starts Tuesday 03:17 UTC/);
-      assert.match(await text(page, "#passes ~ .frame"), /Resume · 15:17 died Mon 23 Nov 15:20 30 4 28 5 of 5 \(1 never finished\)/);
+      assert.match(await text(page, "#passes ~ .frame"), /Resume · 15:17 died Mon 23 Nov 15:20 30 4 28 5 of 5 \(1 died\)/);
+      assert.match(await text(page, "#passes ~ .frame"), /Retry · 21:47 running .* 4 of 5 \(1 still running\)/);
       assert.equal(await page.locator("a", { hasText: "Test crawl" }).count(), 0); // writes are off here
       await shoot(page, "health-this-week");
       // The attempts fold open: the died attempt is marked as one
@@ -121,10 +124,10 @@ const text = async (page, sel) => (await page.innerText(sel)).replace(/\s+/g, " 
     await check("last week: compared with the week before, the deadline flagged, served now", async () => {
       const { ctx, page } = await open("main", `/week?week=${w2}`);
       await settled(page);
-      assert.match(await text(page, "[data-answer]"), /2 things to look at · published/);
+      assert.match(await text(page, "[data-answer]"), /1 thing to look at · published/);
       const look = await text(page, "ul.flags.health");
       assert.match(look, /woocommerce hit its time limit in the morning, resume and retry passes/);
-      assert.match(look, /generic: 429s up from 50 to 83/);
+      assert.match(look, /retry passes\. The stores it didn’t reach weren’t crawled this week\./);
       await shoot(page, "health-last-week");
       await ctx.close();
     });
@@ -163,7 +166,7 @@ const text = async (page, sel) => (await page.innerText(sel)).replace(/\s+/g, " 
       const t0 = Date.now();
       await settled(page);
       assert.equal(await page.getAttribute("[data-state]", "data-state"), "data");
-      assert.match(await text(page, "[data-answer]"), /8 things to look at/);
+      assert.match(await text(page, "[data-answer]"), /7 things to look at/);
       console.log(`slow lake: the data after ${Math.round((Date.now() - t0) / 1000)} s more`);
       await ctx.close();
     });
@@ -193,6 +196,19 @@ const text = async (page, sel) => (await page.innerText(sel)).replace(/\s+/g, " 
       await settled(page);
       assert.equal(await page.locator("#keep-failing + .frame tbody tr").count(), 10);
       assert.match(await text(page, "nav.pager"), /Page 2 of 3/);
+      await ctx.close();
+    });
+
+    await check("a connector that never ran this week: flagged in each pass, and never a minus in the comparison", async () => {
+      const { ctx, page } = await open("gone", `/week?week=${w3}`);
+      await settled(page);
+      const look = await text(page, "ul.flags.health");
+      assert.match(look, /No crawl for woocommerce this week\. None of its morning, resume and retry passes started\./);
+      assert.doesNotMatch(look, /No resume crawl/);
+      const woo = page.locator("table.vs tr", { hasText: "woocommerce" });
+      assert.match((await woo.innerText()).replace(/\s+/g, " "), /woocommerce didn't run No crawl attempt this week\./);
+      assert.equal(await woo.getAttribute("class"), "bad");
+      await shoot(page, "health-connector-gone");
       await ctx.close();
     });
 

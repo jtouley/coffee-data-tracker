@@ -397,7 +397,7 @@ def failures(lake: Lake, con, run_date: str) -> dict:
 
 def failing_streaks(lake: Lake, con, run_date: str, weeks: int = 8) -> list[dict]:
     """Stores that keep failing: each store without a complete ok fetch this week (no ok fetch, or only a partial
-    one: the Failures list's rule on `fetches`), with how many weeks in a row, back from this one, it has been so
+    one: the Failures list's rule on `fetches`, bool_or(partial)), with how many weeks in a row, back from this one, it has been so
     (of the last `weeks` weeks with fetches). Two or more, longest first."""
     scan = lake.scan("fetches")
     rows = _empty_ok(
@@ -406,7 +406,7 @@ def failing_streaks(lake: Lake, con, run_date: str, weeks: int = 8) -> list[dict
                 f"""with w as (select distinct run_date from {scan} where run_date <= ? order by run_date desc
                                limit {int(weeks)}),
                     s as (select run_date, roaster_id,
-                                 not bool_or(status = 'ok') or bool_or(status = 'ok' and coalesce(partial, false)) as bad,
+                                 not bool_or(status = 'ok') or bool_or(coalesce(partial, false)) as bad,
                                  arg_max(status, fetched_at) as status, arg_max(error, fetched_at) as error,
                                  arg_max(adapter, fetched_at) as adapter, bool_or(status = 'ok') as any_ok
                           from {scan} where roaster_id is not null and run_date in (select run_date from w)

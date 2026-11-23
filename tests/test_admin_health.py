@@ -1,8 +1,11 @@
-"""Week's crawl health (admin/health.py): the pass an attempt belongs to, a died attempt, this week against last
-counted to the same pass, a jump in errors or 429s, the egress check's refusal share, Tuesday's chain, and the page
-over the synthetic lake (tests/admin_health_fixture.py)."""
+"""Week's crawl health (admin/health.py): the pass an attempt belongs to, a died attempt, a scheduled pass or connector
+that never started, this week against last counted to each connector's latest finished pass, a rise in errors or
+429s, the egress check's refusal share, deadlines (new or as last week), Tuesday's chain, and the page over the
+synthetic lake (tests/admin_health_fixture.py)."""
 
+import re
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
@@ -11,6 +14,7 @@ from admin import health, queries
 from admin.config import Settings
 from admin.main import create_app
 from admin.store import FileStore
+from coffeedata.connectors import CONNECTORS
 from coffeedata.control import REFUSAL_FLAG
 from coffeedata.fetchhealth import JOB_LIMIT
 from coffeedata.lake import Lake
@@ -18,7 +22,7 @@ from coffeedata.lake import Lake
 from .admin_health_fixture import NOW, W1, W2, W3, build_health_lake
 from .test_admin import ORIGIN, SECRET, TOKEN
 
-WEEK = "2026-11-23"
+WEEK, LAST = "2026-11-23", "2026-11-16"
 
 
 def at(h: int, m: int = 0, day: int = 0) -> datetime:
@@ -26,16 +30,58 @@ def at(h: int, m: int = 0, day: int = 0) -> datetime:
 
 
 def row(job="crawl", connector="generic", start=None, status="done", aid=None, week=WEEK, detail=None, arm=False,
-        **counts):  # fmt: skip
+        end=None, **counts):  # fmt: skip
     start = start or at(9, 19)
-    return {"attempt_id": aid or f"{job}-{connector}-{start:%d%H%M}", "job": job, "connector": connector,
-            "started_at": start, "ended_at": None if status == "running" else start + timedelta(minutes=20),
+    return {"attempt_id": aid or f"{job}-{connector}-{start:%d%H%M%S}", "job": job, "connector": connector,
+            "started_at": start, "ended_at": None if status == "running" else end or start + timedelta(minutes=20),
             "status": status, "arm": arm, "detail": detail or {}, "refusals": counts.pop("refusals", []),
             **{k: counts.get(k) for k in ("todo", "ok", "errors", "http_429", "http_430")}}  # fmt: skip
 
 
 def week_of(rows, week=WEEK, builds=()):
     return {"week": week, "rows": rows, "builds": list(builds)}
+
+
+def codes(f, skip=("missed",)):
+    """The flags' codes and subjects, leaving out (by default) the missed passes a hand-made week of one connector
+    is bound to have."""
+    return [
+        (x["code"], x.get("connector") or x.get("job") or x.get("pass"))
+        for x in f["flags"]
+        if x["code"] not in skip
+    ]
+
+
+# Real-shaped weeks: the production 2026-11-16 and 2026-11-23 attempts' slots, statuses and counts (status, start,
+# end, todo, ok, errors, 429), with made-up ids. `upto` cuts this week at a moment: attempts not started yet are
+# left out, and those not ended yet are still running.
+LAST_ROWS = [("shopify", 0, (9, 19), (9, 33), 1044, 1041, 3, 0), ("squarespace", 0, (9, 18), (9, 31), 323, 321, 2, 0),
+             ("square_online", 0, (9, 18), (9, 24), 183, 182, 1, 0), ("woocommerce", 0, (9, 19), (10, 2), 228, 222, 7, 2),
+             ("generic", 0, (9, 19), (9, 50), 661, 583, 84, 32), ("squarespace", 0, (15, 19), (15, 20), 1, 0, 1, 0),
+             ("square_online", 0, (15, 19), (15, 20), 1, 0, 1, 0), ("generic", 0, (15, 20), (15, 34), 74, 6, 71, 26),
+             ("woocommerce", 0, (15, 20), (15, 23), 9, 3, 6, 0), ("shopify", 0, (15, 20), (15, 22), 1, 0, 1, 0),
+             ("square_online", 0, (21, 48), (21, 49), 1, 0, 1, 0), ("squarespace", 0, (21, 49), (21, 50), 1, 0, 1, 0),
+             ("generic", 0, (21, 49), (22, 3), 68, 1, 71, 25), ("woocommerce", 0, (21, 49), (21, 52), 9, 3, 6, 2)]  # fmt: skip
+THIS_ROWS = [("square_online", 0, (9, 19), (9, 25), 191, 184, 8, 0), ("squarespace", 0, (9, 19), (9, 33), 331, 322, 9, 0),
+             ("woocommerce", 0, (9, 19), (9, 54), 245, 236, 13, 0), ("shopify", 0, (9, 19), (9, 34), 1062, 1059, 3, 0),
+             ("generic", 0, (9, 20), (9, 50), 765, 689, 83, 10), ("square_online", 0, (15, 20), (15, 21), 7, 0, 7, 0),
+             ("shopify", 0, (15, 20), (15, 22), 2, 0, 2, 0), ("squarespace", 0, (15, 20), (15, 22), 9, 0, 9, 0),
+             ("woocommerce", 0, (15, 21), (15, 33), 12, 4, 10, 0), ("generic", 0, (15, 22), (15, 38), 75, 5, 74, 9)]  # fmt: skip
+DEADLINE = {("woocommerce", (9, 19)), ("woocommerce", (15, 20)), ("woocommerce", (21, 49)),
+            ("woocommerce", (15, 21)), ("generic", (9, 20)), ("generic", (15, 22))}  # fmt: skip
+
+
+def real(spec, week, cut=None):
+    days = 0 if week == WEEK else -7
+    out = []
+    for conn, _, (h, m), (eh, em), todo, ok, errors, h429 in spec:
+        start, end = at(h, m, days), at(eh, em, days)
+        if cut and start > cut:
+            continue
+        st = "running" if cut and end > cut else ("deadline" if (conn, (h, m)) in DEADLINE else "done")
+        counts = {} if st == "running" else {"ok": ok, "errors": errors, "http_429": h429, "http_430": 0}
+        out.append(row(connector=conn, start=start, end=end, status=st, week=week, todo=todo, **counts))
+    return out
 
 
 # --- passes and died attempts ----------------------------------------------------------------------------------
@@ -75,40 +121,94 @@ def test_a_running_attempt_dies_past_the_time_limit_or_once_a_later_one_starts()
     assert health.died(beside, at(11, 0)) == set()
 
 
-def test_passes_say_what_each_tried_and_recovered():
+def test_passes_say_what_each_tried_and_recovered_and_count_attempts_not_connectors():
     rows = [row(todo=765, ok=641, errors=131), row(connector="shopify", todo=1062, ok=1059, errors=3),
             row(start=at(15, 20), todo=124, ok=9, errors=115), row(start=at(15, 21), connector="woocommerce",
             status="deadline", todo=12, ok=4, errors=10),
             row(start=at(10, 0), todo=1, ok=1, errors=0, detail={"test": "t1"}),
-            row(start=at(15, 30), connector="square_online", status="running", todo=50)]  # fmt: skip
-    p = {x["key"]: x for x in health.passes(rows, WEEK, at(20, 0), set())}
+            # a live attempt and, for woocommerce, Cloud Run's retry of one that died
+            row(start=at(15, 30), connector="square_online", status="running", todo=50),
+            row(start=at(15, 25), connector="woocommerce", status="running", todo=12, aid="dead"),
+            row(start=at(15, 40), connector="woocommerce", status="running", todo=12, aid="again")]  # fmt: skip
+    p = {x["key"]: x for x in health.passes(rows, WEEK, at(20, 0), {"dead"})}
     assert (p["morning"]["tried"], p["morning"]["ok"], p["morning"]["status"]) == (
         1827,
         1700,
         "done",
     )  # no test
-    # the running attempt's 50 aren't counted until its end row says how they went
-    assert (p["resume"]["tried"], p["resume"]["ok"], p["resume"]["status"]) == (136, 13, "deadline")
-    assert (p["resume"]["ended"], len(p["resume"]["connectors"])) == (2, 3)
+    # the running attempts' stores aren't counted until their end rows say how they went
+    assert (p["resume"]["tried"], p["resume"]["ok"], p["resume"]["status"]) == (136, 13, "died")
+    assert (p["resume"]["running"], p["resume"]["died"], len(p["resume"]["connectors"])) == (2, 1, 3)
     assert p["retry"]["status"] == "not yet" and p["retry"]["tried"] is None
-    assert {x["key"]: x for x in health.passes(rows, WEEK, at(22, 0), set())}["retry"][
+    assert {x["key"]: x for x in health.passes(rows, WEEK, at(22, 30), set())}["retry"][
         "status"
     ] == "didn't run"
 
 
-# --- this week against last --------------------------------------------------------------------------------------
+# --- missed runs (the review's removed-row cases) -------------------------------------------------------------------
+
+
+def _full_week():
+    """Every connector in every pass, done (Shopify's retry as the crawl-retry job)."""
+    out = []
+    for i, (key, _, t) in enumerate(health.PASSES):
+        for name in CONNECTORS:
+            job = "crawl-retry" if (name, key) == ("shopify", "retry") else "crawl"
+            out.append(row(job, name, start=at(t.hour, t.minute + 2), todo=10 - i, ok=1, errors=9 - i))
+    return out
+
+
+def test_a_full_week_misses_nothing_and_a_pass_is_due_only_after_its_grace():
+    assert health.missed(_full_week(), WEEK, at(23, 30)) == []
+    morning = [r for r in _full_week() if health.slot(r, WEEK) == "morning"]
+    assert health.missed(morning, WEEK, at(15, 17) + health.MISSED_AFTER - timedelta(minutes=1)) == []
+    assert [m["pass"] for m in health.missed(morning, WEEK, at(15, 17) + health.MISSED_AFTER)] == ["resume"]
+
+
+def test_a_whole_pass_that_never_started_is_flagged():
+    rows = [r for r in _full_week() if health.slot(r, WEEK) != "resume"]
+    f = health.flags(week_of(rows), None, None, at(23, 30))
+    (m,) = [x for x in f["flags"] if x["code"] == "missed"]
+    assert (m["pass"], m["whole"], m["kind"], m["connectors"]) == ("resume", True, "bad", list(CONNECTORS))
+    assert {p["key"]: p["status"] for p in f["passes"]}["resume"] == "didn't run"
+
+
+def test_one_connectors_missing_pass_is_flagged():
+    rows = [
+        r for r in _full_week() if not (r["connector"] == "woocommerce" and health.slot(r, WEEK) == "resume")
+    ]
+    f = health.flags(week_of(rows), None, None, at(23, 30))
+    assert [(x["pass"], x["connectors"], x["whole"]) for x in f["flags"] if x["code"] == "missed"] == [
+        ("resume", ["woocommerce"], False)
+    ]
+
+
+def test_a_connector_absent_all_week_is_flagged_and_never_reads_as_an_improvement():
+    last = [r | {"week": LAST, "started_at": r["started_at"] - timedelta(days=7)} for r in _full_week()]
+    rows = [r for r in _full_week() if r["connector"] != "woocommerce"]
+    f = health.flags(week_of(rows), week_of(last, LAST), None, at(23, 30))
+    # one line for its week, not one per pass
+    assert [(x["code"], x["connectors"]) for x in f["flags"]] == [("absent", ["woocommerce"])]
+    assert next(x for x in f["flags"])["passes"] == ["morning", "resume", "retry"]
+    woo = next(r for r in f["compare"]["rows"] if r["connector"] == "woocommerce")
+    assert (woo["status"], woo["this"]) == ("didn't run", None) and set(woo["delta"].values()) == {None}
+    # the All row compares only connectors with both weeks: no −9 from woocommerce's missing week
+    assert f["compare"]["total"]["delta"]["errors"] == 0
+
+
+# --- this week against last ----------------------------------------------------------------------------------------
 
 
 def test_this_week_is_compared_with_last_week_counted_to_the_same_pass():
-    last = [row(week="2026-11-16", start=at(9, 19, -7), todo=661, ok=583, errors=84, http_429=32,
+    last = [row(week=LAST, start=at(9, 19, -7), todo=661, ok=583, errors=84, http_429=32,
                 refusals=[{"ip": "203.0.113.40", "stores": 661, "refused": 28}]),
-            row(week="2026-11-16", start=at(15, 20, -7), todo=74, ok=6, errors=71, http_429=26),
-            row(week="2026-11-16", start=at(21, 48, -7), todo=68, ok=1, errors=71, http_429=25)]  # fmt: skip
+            row(week=LAST, start=at(15, 20, -7), todo=74, ok=6, errors=71, http_429=26),
+            row(week=LAST, start=at(21, 48, -7), todo=68, ok=1, errors=71, http_429=25)]  # fmt: skip
     this = [row(todo=765, ok=641, errors=131, http_429=140,
                 refusals=[{"ip": "203.0.113.40", "stores": 765, "refused": 91}])]  # fmt: skip
-    c = health.compare(this, last, WEEK, "2026-11-16")
+    c = health.compare(this, last, WEEK, LAST)
     assert c["upto"] == "morning"
-    g = next(r for r in c["rows"] if r["connector"] == "generic")
+    (g,) = c["rows"]
     assert (
         g["last"]["errors"] == 84 and g["last"]["http_429"] == 32 and g["last"]["ok"] == 583
     )  # morning only
@@ -122,16 +222,52 @@ def test_this_week_is_compared_with_last_week_counted_to_the_same_pass():
     }
     assert c["total"]["this"]["ok"] == 641 and c["total"]["delta"]["errors"] == 47
     this.append(row(start=at(15, 20), todo=124, ok=9, errors=115, http_429=3))
-    c = health.compare(this, last, WEEK, "2026-11-16")
-    g = next(r for r in c["rows"] if r["connector"] == "generic")
+    (g,) = health.compare(this, last, WEEK, LAST)["rows"]
     # ok is summed over passes (each tries only what's still failing); errors are the latest pass's
-    assert (c["upto"], g["this"]["ok"], g["this"]["errors"], g["last"]["errors"]) == ("resume", 650, 115, 71)
+    assert (g["upto"], g["this"]["ok"], g["this"]["errors"], g["last"]["errors"]) == ("resume", 650, 115, 71)
+
+
+def test_shopifys_errors_include_its_evening_retry():
+    rows = [row(connector="shopify", todo=1062, ok=1059, errors=3),
+            row("crawl-retry", "shopify", start=at(21, 52), todo=5, ok=2, errors=3)]  # fmt: skip
+    (s,) = health.compare(rows, [], WEEK, LAST)["rows"]
+    assert (s["upto"], s["this"]["ok"], s["this"]["errors"]) == ("retry", 1061, 6)
+
+
+def test_mid_morning_a_running_connector_is_running_not_zeros_minus_last_week():
+    """The real week at 09:40 UTC: generic and woocommerce still crawling, squarespace too."""
+    this, last = real(THIS_ROWS, WEEK, at(9, 40)), real(LAST_ROWS, LAST)
+    f = health.flags(week_of(this), week_of(last, LAST), None, at(9, 40))
+    by = {r["connector"]: r for r in f["compare"]["rows"]}
+    for name in ("generic", "woocommerce"):
+        assert (by[name]["status"], by[name]["this"], by[name]["delta"]["errors"]) == ("running", None, None)
+    assert by["shopify"]["delta"]["errors"] == 0 and by["square_online"]["delta"]["errors"] == 7
+    assert f["compare"]["total"]["partial"]
+    # the finished connectors' real rise (1 or 2 errors to 8 or 9) shows; the running ones get no rise check
+    assert codes(f, skip=()) == [("jump", "squarespace"), ("jump", "square_online")]
+
+
+def test_mid_resume_compares_finished_connectors_like_for_like_and_skips_running_ones():
+    """The real week at 15:25 UTC: the resume pass running for generic and woocommerce."""
+    this, last = real(THIS_ROWS, WEEK, at(15, 25)), real(LAST_ROWS, LAST)
+    f = health.flags(week_of(this), week_of(last, LAST), None, at(15, 25))
+    by = {r["connector"]: r for r in f["compare"]["rows"]}
+    woo = by["woocommerce"]  # counted to its morning, both weeks, but running: no change and no rise
+    assert (woo["status"], woo["upto"], woo["this"]["errors"], woo["delta"]["errors"]) == (
+        "running",
+        "morning",
+        13,
+        None,
+    )
+    sq = by["squarespace"]  # its resume ended: compared with last week's resume
+    assert (sq["status"], sq["upto"], sq["this"]["errors"], sq["last"]["errors"]) == (None, "resume", 9, 1)
+    assert {x["connector"] for x in f["flags"] if x["code"] == "jump"} == {"squarespace", "square_online"}
 
 
 def test_a_connector_with_no_crawl_last_week_has_no_change():
-    c = health.compare([row(connector="shopify", todo=5, ok=5, errors=0)], [], WEEK, "2026-11-16")
+    c = health.compare([row(connector="shopify", todo=5, ok=5, errors=0)], [], WEEK, LAST)
     assert c["rows"][0]["delta"] == dict.fromkeys(health.FIELDS)
-    assert c["total"]["last"] is None and c["total"]["delta"]["ok"] is None
+    assert c["total"]["delta"]["ok"] is None
 
 
 @pytest.mark.parametrize(
@@ -153,66 +289,77 @@ def test_a_jump_is_more_than_four_standard_errors_of_last_week(this, last, up):
 # --- flags -----------------------------------------------------------------------------------------------------------
 
 
-def test_refusals_over_the_egress_check_share_are_flagged_and_twice_is_what_fails_it():
+def test_refusals_over_the_egress_check_share_are_flagged_and_twice_is_said():
     def crawl(week, start, stores, refused):
         return row(week=week, start=start, todo=stores, ok=stores, errors=0,
                    refusals=[{"ip": "203.0.113.40", "stores": stores, "refused": refused}])  # fmt: skip
 
     over = crawl(WEEK, at(9, 19), 1000, 91)
-    under = crawl("2026-11-16", at(9, 19, -7), 1000, 80)  # exactly 8%: not over
-    f = health.flags(week_of([over]), week_of([under], "2026-11-16"), None, at(20, 0))
+    under = crawl(LAST, at(9, 19, -7), 1000, 80)  # exactly 8%: not over
+    f = health.flags(week_of([over]), week_of([under], LAST), None, at(10, 0))
     (r,) = [x for x in f["flags"] if x["code"] == "refusals"]
     assert r["share"] == pytest.approx(0.091) and not r["twice"] and REFUSAL_FLAG == 0.08
-    f = health.flags(week_of([over]), week_of([crawl("2026-11-16", at(9, 19, -7), 1000, 81)], "2026-11-16"), None,
-                     at(20, 0))  # fmt: skip
+    f = health.flags(week_of([over]), week_of([crawl(LAST, at(9, 19, -7), 1000, 81)], LAST), None, at(10, 0))
     assert [x["twice"] for x in f["flags"] if x["code"] == "refusals"] == [True]
     assert not [
-        x for x in health.flags(week_of([under]), None, None, at(20, 0))["flags"] if x["code"] == "refusals"
+        x for x in health.flags(week_of([under]), None, None, at(10, 0))["flags"] if x["code"] == "refusals"
     ]
 
 
 def test_flags_a_failed_or_died_attempt_a_deadline_and_a_jump_but_not_a_test_crawl():
     rows = [row(todo=765, ok=641, errors=131, http_429=140), row(connector="woocommerce", status="deadline", todo=9),
             row(connector="woocommerce", start=at(15, 20), status="deadline", todo=9),
-            row(start=at(15, 20), status="running", aid="dead"), row(start=at(21, 48), status="running"),
+            row(start=at(15, 20), status="running", aid="dead"), row(start=at(21, 48), todo=60, ok=2, errors=58),
             row("fetch-health", None, start=at(15, 47), status="failed"),
             row(start=at(11, 0), status="failed", detail={"test": "t1"})]  # fmt: skip
-    last = [row(week="2026-11-16", start=at(9, 19, -7), todo=661, ok=583, errors=84, http_429=32)]
-    f = health.flags(week_of(rows), week_of(last, "2026-11-16"), None, at(23, 30))
-    codes = [(x["code"], x.get("connector") or x.get("job")) for x in f["flags"]]
-    assert codes[:2] == [("died", "generic"), ("failed", "fetch-health")]  # failures first
-    assert ("deadline", "woocommerce") in codes
+    last = [row(week=LAST, start=at(9, 19, -7), todo=661, ok=583, errors=30, http_429=32)]
+    f = health.flags(week_of(rows), week_of(last, LAST), None, at(23, 30))
+    got = codes(f)
+    assert got[:2] == [("died", "generic"), ("failed", "fetch-health")]  # failures first
+    assert ("deadline", "woocommerce") in got
     (jump,) = [x for x in f["flags"] if x["code"] == "jump"]  # one line per connector
     assert [(u["field"], u["last"], u["this"]) for u in jump["ups"]] == [
-        ("errors", 84, 131),
+        ("errors", 30, 58),
         ("http_429", 32, 140),
     ]
-    assert next(x for x in f["flags"] if x["code"] == "deadline")["passes"] == ["morning", "resume"]
     assert next(x for x in f["flags"] if x["code"] == "died")["pass"] == "resume"
     assert (
-        f["died"] == {"dead"} and len([c for c in codes if c[0] == "failed"]) == 1
+        f["died"] == {"dead"} and len([c for c in got if c[0] == "failed"]) == 1
     )  # the test crawl's isn't here
 
 
+def test_a_deadline_as_last_week_is_usual_and_the_last_pass_says_its_stores_went_uncrawled():
+    def woo(week, *slots):
+        days = 0 if week == WEEK else -7
+        return [row(connector="woocommerce", week=week, status="deadline", start=at(h, m, days), todo=9)
+                for h, m in slots]  # fmt: skip
+
+    every = ((9, 19), (15, 20), (21, 48))
+    f = health.flags(week_of(woo(WEEK, *every)), week_of(woo(LAST, *every), LAST), None, at(23, 30))
+    (d,) = [x for x in f["flags"] if x["code"] == "deadline"]
+    assert (d["kind"], d["final"], d["last_passes"]) == ("usual", True, ["morning", "resume", "retry"])
+    assert f["new"] == len(f["flags"]) - 1  # a usual line isn't counted as something new to look at
+    worse = health.flags(week_of(woo(WEEK, *every)), week_of(woo(LAST, (9, 19)), LAST), None, at(23, 30))
+    assert [x["kind"] for x in worse["flags"] if x["code"] == "deadline"] == ["warn"]
+    first = health.flags(week_of(woo(WEEK, (9, 19))), None, None, at(12, 0))
+    assert [(x["kind"], x["final"]) for x in first["flags"] if x["code"] == "deadline"] == [("warn", False)]
+
+
 def test_tuesday_is_not_missing_until_its_window_ends_and_only_the_first_gap_is_flagged():
-    crawl = [row(todo=10, ok=10, errors=0)]
+    crawl = _full_week()
     monday_night = health.flags(week_of(crawl), None, None, at(23, 0))
     assert [c["status"] for c in monday_night["chain"]] == ["not yet"] * 4
     assert not monday_night["flags"]
     rows = crawl + [row("merge", None, start=at(3, 18, 1))]
     later = health.flags(week_of(rows), None, None, at(13, 0, 1))
     assert [(c["job"], c["status"]) for c in later["chain"]] == [
-        ("merge", "done"),
-        ("enrich", "missing"),
-        ("build", "missing"),
-        ("publish", "missing"),
-    ]
-    assert [(x["code"], x["job"]) for x in later["flags"]] == [("chain_missing", "enrich")]
+        ("merge", "done"), ("enrich", "missing"), ("build", "missing"), ("publish", "missing")]  # fmt: skip
+    assert codes(later) == [("chain_missing", "enrich")]
 
 
 def test_a_failed_build_is_one_flag_and_a_served_build_is_published():
-    rows = [row(todo=1, ok=1, errors=0), row("merge", None, start=at(3, 18, 1)),
-            row("enrich", None, start=at(4, 18, 1)), row("build", None, start=at(6, 18, 1), status="failed")]  # fmt: skip
+    rows = [*_full_week(), row("merge", None, start=at(3, 18, 1)), row("enrich", None, start=at(4, 18, 1)),
+            row("build", None, start=at(6, 18, 1), status="failed")]  # fmt: skip
     b = {"build_id": "B", "passed": False, "built_at": at(6, 40, 1), "served_at": None}
     f = health.flags(week_of(rows, builds=[b]), None, None, at(13, 0, 1))
     assert [x["code"] for x in f["flags"]] == ["build_failed"]
@@ -240,13 +387,25 @@ def test_the_synthetic_weeks_flag_what_they_were_made_to(hlake):
     this, last = _read(hlake, queries.week, W3), _read(hlake, queries.week, W2)
     served = _read(hlake, queries.served)
     f = health.flags(this, last, served, NOW)
-    codes = sorted({(x["code"], x.get("connector") or x.get("job") or x.get("ip")) for x in f["flags"]})
-    assert codes == [("deadline", "generic"), ("deadline", "woocommerce"), ("died", "generic"),
-                     ("failed", "fetch-health"), ("jump", "generic"), ("jump", "square_online"),
-                     ("jump", "squarespace"), ("refusals", "203.0.113.40")]  # fmt: skip
+    assert [(x["code"], x["kind"]) for x in f["flags"]][:3] == [
+        ("died", "bad"),
+        ("failed", "bad"),
+        ("missed", "bad"),
+    ]
+    assert sorted(codes(f, skip=())) == [
+        ("deadline", "generic"), ("deadline", "woocommerce"), ("died", "generic"), ("failed", "fetch-health"),
+        ("jump", "generic"), ("jump", "squarespace"), ("missed", "retry"), ("refusals", None)]  # fmt: skip
+    assert (
+        next(x for x in f["flags"] if x["code"] == "deadline" and x["connector"] == "woocommerce")["kind"]
+        == "usual"
+    )
+    assert next(x for x in f["flags"] if x["code"] == "missed")["connectors"] == ["woocommerce"]
+    assert f["new"] == 7
     ups = {x["connector"]: [u["field"] for u in x["ups"]] for x in f["flags"] if x["code"] == "jump"}
-    # 1 store failing last week, 7 or 8 this week: more than chance, as on the production week it is shaped like
-    assert ups == {"generic": ["errors", "http_429"], "square_online": ["errors"], "squarespace": ["errors"]}
+    assert ups == {
+        "generic": ["errors", "http_429"],
+        "squarespace": ["errors"],
+    }  # square_online: still running
     assert [p["status"] for p in f["passes"]] == ["deadline", "died", "running"]
     clean = health.flags(_read(hlake, queries.week, W1), None, served, NOW)
     assert clean["flags"] == [] and [c["status"] for c in clean["chain"]] == [
@@ -278,13 +437,14 @@ def _client(tmp_path, lake, now=NOW):
 def test_week_answers_first_then_says_what_needs_a_look(tmp_path, hlake):
     text = _client(tmp_path, hlake).get(f"/part/week?week={W3}").text
     answer = text[text.index("data-answer") : text.index("</p>", text.index("data-answer"))]
-    assert "5 of 5 connectors landed" in answer and "8 things to look at" in answer
+    assert "5 of 5 connectors landed" in answer and "7 things to look at" in answer
     assert "Tuesday’s merge hasn’t run yet" in answer
-    assert (
-        "generic’s resume crawl died." in text
-        and "Over again next week and the egress check fails on it" in text
-        and "never reported finishing" in text
-    )
+    for words in ("generic’s resume crawl died.", "never reported finishing", "No retry crawl for woocommerce.",
+                  "woocommerce hit its time limit</strong> in the morning and resume passes, as last week. The stores it didn’t reach weren’t crawled this week.",
+                  "egress check flags an IP that is over on two runs in a row", "up more than usual:",
+                  "(1 still running)", "(1 died)"):  # fmt: skip
+        assert words in text, words
+    assert "never finished" not in text
     assert "Failing week after week (27)" in text and "Page 1 of 3" in text
     assert "action=crawl-one" not in text  # writes are off: no action that would only say so
     clean = _client(tmp_path / "w1", hlake).get(f"/part/week?week={W1}").text
@@ -310,13 +470,15 @@ def test_with_writes_on_each_store_that_keeps_failing_has_its_test_crawl(tmp_pat
 
 
 def test_the_passes_are_the_crawl_schedules_in_terraform():
-    """Every crawl schedule in ingestion.tf is one of PASSES' times, each inside its own slot."""
-    import re
-    from pathlib import Path
-
+    """Every crawl schedule in ingestion.tf is one of PASSES' times, and each pass schedules every connector's job
+    (Shopify's 21:47 as crawl-retry): what `missed` expects."""
     tf = (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
-    crons = set(re.findall(r'job = "crawl-[a-z-]+", cron = "(\d+) (\d+) \* \* 1"', tf))
-    times = {(str(t.minute), str(t.hour)) for _, _, t in health.PASSES}
-    assert crons == times
+    jobs: dict[tuple[str, str], set[str]] = {}
+    for job, m, h in re.findall(r'job = "(crawl-[a-z-]+)", cron = "(\d+) (\d+) \* \* 1"', tf):
+        jobs.setdefault((m, h), set()).add(job)
+    assert set(jobs) == {(str(t.minute), str(t.hour)) for _, _, t in health.PASSES}
+    every = {"crawl-" + c.replace("_", "-") for c in CONNECTORS}
     for key, _, t in health.PASSES:
         assert health.slot(row(start=at(t.hour, t.minute)), WEEK) == key
+        expect = every - {"crawl-shopify"} | {"crawl-retry"} if key == "retry" else every
+        assert jobs[(str(t.minute), str(t.hour))] == expect

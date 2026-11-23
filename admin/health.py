@@ -2,14 +2,15 @@
 abnormal. Pure functions over the attempt rows queries.week returns (job_manifests, the latest row per attempt), so
 the comparison and the flags are tested without a lake.
 
-Nothing here is a new threshold:
+Nothing here is a new threshold, except the grace before a pass that hasn't started counts as missed:
 - an attempt has died when it has only its running row past its job's time limit (fetchhealth.JOB_LIMIT, the
   crawl jobs' Cloud Run task timeout; CHECK_LIMIT for fetch-health's own polls), or once a later attempt of the same
   job and connector has started: fetch-health's rule;
-- an IP's refusals are flagged above the egress check's share (control.REFUSAL_FLAG, 8% of first contacts); two
-  weeks in a row is what the egress-check job itself fails on;
+- an IP's refusals are flagged above the egress check's share (control.REFUSAL_FLAG, 8% of first contacts);
 - a rise in errors or 429s is flagged when it is more than prod_health's warning margin of standard errors
-  (K_SE["warning"], 4), reading last week's count as a Poisson count (its standard error is its square root).
+  (K_SE["warning"], 4), reading last week's count as a Poisson count;
+- a scheduled pass (ingestion.tf's crons, checked by a test) is missed when a connector has no attempt in it
+  MISSED_AFTER after its slot: Cloud Scheduler starts a job within seconds, and its first act is the running row.
 """
 
 from __future__ import annotations
@@ -24,14 +25,17 @@ from coffeedata.fetchhealth import CHECK_LIMIT, JOB_LIMIT
 from coffeedata.prod_health import K_SE
 
 CRAWL_JOBS = ("crawl", "crawl-retry")
-# The crawl's three scheduled passes on the week's Monday (ingestion.tf's schedules), and where one ends: an attempt
-# belongs to the pass whose slot it started in (a Cloud Run retry of the 09:17 crawl at 09:50 is still the morning).
+# The crawl's three scheduled passes on the week's Monday (ingestion.tf's schedules: every connector's job at each,
+# Shopify's 21:47 as the crawl-retry job), and where one ends: an attempt belongs to the pass whose slot it started
+# in (a Cloud Run retry of the 09:17 crawl at 09:50 is still the morning).
 PASSES = (
     ("morning", "Morning", time(9, 17)),
     ("resume", "Resume", time(15, 17)),
     ("retry", "Retry", time(21, 47)),
 )
+ORDER = tuple(p[0] for p in PASSES)
 RESUME_FROM, RETRY_FROM = time(15, 0), time(21, 30)
+MISSED_AFTER = timedelta(minutes=30)
 CHAIN = (
     "merge",
     "enrich",
@@ -40,7 +44,7 @@ CHAIN = (
 )  # Tuesday: merge 03:17, enrich 04:17, build 06:17 (classify: by hand)
 TUESDAY_DONE = time(
     12, 0
-)  # the end of the Tuesday release window (jobs.in_window): a stage missing after it didn't run
+)  # the Tuesday release window's end (jobs.in_window): a stage missing after it didn't run
 JUMP_SE = K_SE["warning"]
 WORST = ("failed", "died", "deadline", "running", "done")  # a pass's status: the worst of its attempts'
 
@@ -51,6 +55,11 @@ def _utc(v: datetime) -> datetime:
 
 def monday(week: str) -> datetime:
     return datetime.combine(date.fromisoformat(week), time(0), UTC)
+
+
+def slot_start(week: str, key: str) -> datetime:
+    at = dict((k, t) for k, _, t in PASSES)[key]
+    return monday(week) + timedelta(hours=at.hour, minutes=at.minute)
 
 
 def is_pass(r: dict) -> bool:
@@ -106,55 +115,79 @@ def _sum(rows: list[dict], key: str) -> int:
     return sum(r.get(key) or 0 for r in rows)
 
 
-def totals(rows: list[dict], week: str, upto: str | None = None) -> dict[str, dict]:
-    """Each connector's week from its passes (up to and including pass `upto`): stores that came back ok (each pass
-    tries only the stores still failing, so the sum counts a store once), errors (the stores still failing after the
-    latest crawl pass with an end row), 429 and 430 responses, and first-contact refusals (stores and refused)."""
-    order = [p[0] for p in PASSES]
-    keep = order[: order.index(upto) + 1] if upto else order
-    out = {}
-    for name in CONNECTORS:
-        mine = [r for r in rows if r["connector"] == name and is_pass(r) and slot(r, week) in keep]
-        ended = [r for r in mine if r["job"] == "crawl" and r["status"] != "running"]
-        refusals = [x for r in mine for x in r.get("refusals") or []]
-        out[name] = {
-            "attempts": len(mine),
-            "ok": _sum(mine, "ok"),
-            "errors": (ended[-1]["errors"] or 0) if ended else 0,
-            "http_429": _sum(mine, "http_429"),
-            "http_430": _sum(mine, "http_430"),
-            "stores": sum(x["stores"] or 0 for x in refusals),
-            "refused": sum(x["refused"] or 0 for x in refusals),
-        }
+def _errors(rows: list[dict]) -> int:
+    """Stores still failing: the latest ended crawl pass's errors, plus the latest ended Shopify retry's (it retries
+    the stores parked for blocking us, which the crawl's errors don't count)."""
+    out = 0
+    for job in CRAWL_JOBS:
+        ended = [r for r in rows if r["job"] == job and r["status"] != "running"]
+        out += (ended[-1]["errors"] or 0) if ended else 0
     return out
+
+
+def totals(rows: list[dict], connector: str, week: str, upto: str) -> dict:
+    """One connector's week from its passes up to and including pass `upto`: stores that came back ok (each pass
+    tries only the stores still failing, so the sum counts a store once), errors (still failing, _errors), 429 and 430
+    responses, and first-contact refusals (stores and refused)."""
+    keep = ORDER[: ORDER.index(upto) + 1]
+    mine = [r for r in rows if r["connector"] == connector and is_pass(r) and slot(r, week) in keep]
+    refusals = [x for r in mine for x in r.get("refusals") or []]
+    return {
+        "attempts": len(mine),
+        "ok": _sum(mine, "ok"),
+        "errors": _errors(mine),
+        "http_429": _sum(mine, "http_429"),
+        "http_430": _sum(mine, "http_430"),
+        "stores": sum(x["stores"] or 0 for x in refusals),
+        "refused": sum(x["refused"] or 0 for x in refusals),
+    }
 
 
 FIELDS = ("ok", "errors", "http_429", "http_430", "refused", "stores")
 
 
-def compare(this: list[dict], last: list[dict], week: str, last_week: str) -> dict:
-    """This week against last, per connector and in total. Last week is counted to the same pass this week has
-    reached, so a Monday-morning look isn't compared with a whole week."""
-    reached = [slot(r, week) for r in this if is_pass(r)]
-    order = [p[0] for p in PASSES]
-    upto = max(reached, key=order.index) if reached else None
-    now_t, then_t = totals(this, week), totals(last, last_week, upto)
+def compare(
+    this: list[dict], last: list[dict], week: str, last_week: str, dead: set[str] | None = None
+) -> dict:
+    """This week against last, per connector and in total. Each connector is counted to its latest pass that has
+    ended (a died attempt has ended), and last week to the same pass, so a Monday-morning look is never compared with
+    a whole week, nor a pass in flight with a finished one. A connector with an attempt still running is `running`
+    (its finished passes still count, but it gets no change and no rise check); one with no attempt this week `didn't
+    run` (never zeros that read as an improvement)."""
+    dead = dead or set()
     rows: list[dict[str, Any]] = []
     for name in CONNECTORS:
-        a, b = now_t[name], then_t[name]
-        rows.append({"connector": name, "this": a, "last": b if b["attempts"] else None,
-                     "delta": {k: a[k] - b[k] if b["attempts"] else None for k in FIELDS}})  # fmt: skip
-    total_a = {k: sum(r["this"][k] for r in rows) for k in FIELDS}
-    had = [r for r in rows if r["last"]]
-    total_b = {k: sum(r["last"][k] for r in had) for k in FIELDS} if had else None
+        mine = [r for r in this if r["connector"] == name and is_pass(r)]
+        had_last = any(r["connector"] == name and is_pass(r) for r in last)
+        if not mine:
+            if had_last:
+                rows.append({"connector": name, "status": "didn't run", "this": None, "last": None, "upto": None,
+                             "delta": dict.fromkeys(FIELDS)})  # fmt: skip
+            continue
+        live = [slot(r, week) for r in mine if r["status"] == "running" and r["attempt_id"] not in dead]
+        ended = [
+            s
+            for s in (slot(r, week) for r in mine)
+            if not live or ORDER.index(s) < min(map(ORDER.index, live))
+        ]
+        upto = max(ended, key=ORDER.index) if ended else None
+        a = totals(this, name, week, upto) if upto else None
+        b = totals(last, name, last_week, upto) if upto and had_last else None
+        if b is not None and not b["attempts"]:
+            b = None
+        delta = {k: a[k] - b[k] for k in FIELDS} if a and b and not live else dict.fromkeys(FIELDS)
+        rows.append({"connector": name, "status": "running" if live else None, "this": a, "last": b, "upto": upto,
+                     "delta": delta})  # fmt: skip
+    counted = [r for r in rows if r["this"]]
+    both = [r for r in counted if r["delta"]["ok"] is not None]  # the All row's change: like for like only
     return {
-        "rows": [r for r in rows if r["this"]["attempts"] or r["last"]],
+        "rows": rows,
         "total": {
-            "this": total_a,
-            "last": total_b,
-            "delta": {k: total_a[k] - total_b[k] if total_b else None for k in FIELDS},
-        },  # fmt: skip
-        "upto": upto,
+            "this": {k: sum(r["this"][k] for r in counted) for k in FIELDS} if counted else None,
+            "delta": {k: sum(r["delta"][k] for r in both) if both else None for k in FIELDS},
+            "partial": bool(both) and len(both) < len(rows),  # some connectors left out of the change
+        },
+        "upto": max((r["upto"] for r in counted), key=ORDER.index) if counted else None,
     }
 
 
@@ -166,7 +199,8 @@ def jumped(this: int, last: int) -> bool:
 def passes(rows: list[dict], week: str, now: datetime, dead: set[str]) -> list[dict]:
     """Each scheduled pass: when it started, how it went (the worst of its attempts), and over its attempts that
     ended: the stores they tried, those that came back ok (after the morning: what it recovered) and those still
-    failing. A pass with no attempt hasn't come yet, or didn't run."""
+    failing, with how many attempts are still running or died. A pass with no attempt hasn't come yet, or didn't
+    run."""
     out = []
     for key, label, at in PASSES:
         mine = [r for r in rows if is_pass(r) and slot(r, week) == key]
@@ -177,18 +211,30 @@ def passes(rows: list[dict], week: str, now: datetime, dead: set[str]) -> list[d
         if mine:
             st = next((s for s in WORST if s in statuses), sorted(statuses)[0])
         else:
-            st = (
-                "not yet"
-                if now < monday(week) + timedelta(hours=at.hour, minutes=at.minute)
-                else "didn't run"
-            )
+            st = "not yet" if now < slot_start(week, key) + MISSED_AFTER else "didn't run"
         out.append({
             "key": key, "label": label, "at": at.strftime("%H:%M"), "status": st,
             "started_at": min((r["started_at"] for r in mine), default=None),
             "connectors": sorted({r["connector"] for r in mine}),
-            "ended": len(ended), "tried": _sum(ended, "todo") if mine else None,
+            "running": sum(r["status"] == "running" and r["attempt_id"] not in dead for r in mine),
+            "died": sum(r["attempt_id"] in dead for r in mine),
+            "tried": _sum(ended, "todo") if mine else None,
             "ok": _sum(ended, "ok") if mine else None, "errors": _sum(ended, "errors") if mine else None,
         })  # fmt: skip
+    return out
+
+
+def missed(rows: list[dict], week: str, now: datetime) -> list[dict]:
+    """Each scheduled pass past its slot and MISSED_AFTER, with the connectors that have no attempt in it: all of
+    them (the pass never started) or some (the others ran)."""
+    out = []
+    for key, _, _ in PASSES:
+        if now < slot_start(week, key) + MISSED_AFTER:
+            continue
+        ran = {r["connector"] for r in rows if is_pass(r) and slot(r, week) == key}
+        gone = [c for c in CONNECTORS if c not in ran]
+        if gone:
+            out.append({"pass": key, "connectors": gone, "whole": not ran})
     return out
 
 
@@ -210,21 +256,21 @@ def refusal_shares(rows: list[dict]) -> dict[str, dict]:
 
 
 def chain(week: dict, served: dict | None, now: datetime, dead: set[str]) -> list[dict]:
-    """Tuesday: merge, enrich, (classify, only when it ran), the build's verdict, and whether this week's release is
-    the one served. Each with its status and when."""
+    """Tuesday: merge, enrich, (classify, only when it ran), the build's verdict, and whether this week's release
+    was served. Each with its status and when."""
     out = []
     for job in CHAIN:
         mine = [r for r in week["rows"] if r["job"] == job]
         if job == "classify" and not mine:
             continue
         last = mine[-1] if mine else None
-        st = state(last, dead) if last else "missing"
         if job == "build" and week["builds"]:
             b = week["builds"][0]
             out.append({"job": job, "status": "passed" if b["passed"] else "failed", "at": b["built_at"],
                         "build_id": b["build_id"]})  # fmt: skip
             continue
-        out.append({"job": job, "status": st, "at": last["ended_at"] or last["started_at"] if last else None})
+        out.append({"job": job, "status": state(last, dead) if last else "missing",
+                    "at": (last["ended_at"] or last["started_at"]) if last else None})  # fmt: skip
     served_week = str(served.get("run_date"))[:10] if served else None
     published = [b for b in week["builds"] if b.get("served_at")]
     if published:  # served once, even if a later week's release has replaced it since
@@ -242,11 +288,21 @@ def chain(week: dict, served: dict | None, now: datetime, dead: set[str]) -> lis
     return out
 
 
+def _deadlines(rows: list[dict], week: str) -> dict[str, list[str]]:
+    out: dict[str, list[str]] = {}
+    for r in rows:
+        if is_pass(r) and r["status"] == "deadline":
+            out.setdefault(r["connector"], []).append(slot(r, week))
+    return out
+
+
 def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> dict:
     """Everything Week shows about the crawl's health, with the abnormal things first. Each flag is a code with its
-    facts (part_week.html words them); `bad` ones are failures, `warn` ones need a look."""
+    facts (part_week.html words them); `bad` ones are failures, `warn` ones need a look, and `usual` ones (a deadline
+    in no more passes than last week's) are listed after them without counting as new."""
     rows, wk = week["rows"], week["week"]
     last_rows = last["rows"] if last else []
+    last_wk = last["week"] if last else wk
     dead = died(rows, now)
     found: list[dict] = []
     for r in rows:
@@ -261,26 +317,42 @@ def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> 
             r["job"] == "build" and week["builds"]
         ):  # the verdict says it, below
             found.append({"code": "failed", "kind": "bad", **where})
-    deadlines: dict[str, list[str]] = {}
-    for r in rows:
-        if is_pass(r) and r["status"] == "deadline":
-            deadlines.setdefault(r["connector"], []).append(slot(r, wk))
-    for name, slots in deadlines.items():
-        found.append({"code": "deadline", "kind": "warn", "connector": name, "passes": slots})
-    cmp = compare(rows, last_rows, wk, last["week"] if last else wk)
+    due = missed(rows, wk, now)
+    # a connector missing from every pass due so far (more than one): one line for its week, not one per pass
+    absent = [c for c in CONNECTORS if len(due) > 1 and all(c in m["connectors"] for m in due)
+              and not any(r["connector"] == c and is_pass(r) for r in rows)]  # fmt: skip
+    if absent:
+        found.append(
+            {"code": "absent", "kind": "bad", "connectors": absent, "passes": [m["pass"] for m in due]}
+        )
+    for m in due:
+        rest = [c for c in m["connectors"] if c not in absent]
+        if rest:
+            found.append({"code": "missed", "kind": "bad", **m, "connectors": rest})
+    before = _deadlines(last_rows, last_wk)
+    gone = {(c, m["pass"]) for m in missed(rows, wk, now) for c in m["connectors"]}
+    for name, slots in _deadlines(rows, wk).items():
+        # its stores wait for a later pass only if one ran, or is still to come (not missed)
+        later = ORDER[max(map(ORDER.index, slots)) + 1 :]
+        final = all((name, key) in gone for key in later)
+        prev = before.get(name, [])
+        usual = bool(prev) and set(slots) <= set(prev)  # no worse than last week: the same line, calmly
+        found.append({"code": "deadline", "kind": "usual" if usual else "warn", "connector": name, "passes": slots,
+                      "last_passes": prev, "final": final})  # fmt: skip
+    cmp = compare(rows, last_rows, wk, last_wk, dead)
     for r in cmp["rows"]:
-        if not r["last"]:
-            continue
+        if r["delta"]["ok"] is None:
+            continue  # no like-for-like week to rise from, or a pass still running
         ups = [{"field": key, "this": r["this"][key], "last": r["last"][key]}
                for key in ("errors", "http_429") if jumped(r["this"][key], r["last"][key])]  # fmt: skip
         if ups:  # one line per connector
             found.append({"code": "jump", "kind": "warn", "connector": r["connector"], "ups": ups})
-    shares, before = refusal_shares(rows), refusal_shares(last_rows)
+    shares, prev_shares = refusal_shares(rows), refusal_shares(last_rows)
     for ip, c in sorted(shares.items()):
         if c["stores"] and c["share"] > REFUSAL_FLAG:
-            prev = before.get(ip)
+            p = prev_shares.get(ip)
             found.append({"code": "refusals", "kind": "warn", "ip": ip, **c,
-                          "twice": bool(prev and prev["stores"] and prev["share"] > REFUSAL_FLAG)})  # fmt: skip
+                          "twice": bool(p and p["stores"] and p["share"] > REFUSAL_FLAG)})  # fmt: skip
     steps = chain(week, served, now, dead)
     for c in steps:
         if c["job"] == "build" and c["status"] == "failed":
@@ -288,9 +360,11 @@ def flags(week: dict, last: dict | None, served: dict | None, now: datetime) -> 
     gap = next((c for c in steps if c["status"] == "missing" and c["job"] != "publish"), None)
     if gap:  # the first stage that never ran: the ones after it wait on it
         found.append({"code": "chain_missing", "kind": "warn", "job": gap["job"]})
-    found.sort(key=lambda f: f["kind"] != "bad")  # failures first, then the rest in the page's order
+    rank = {"bad": 0, "warn": 1, "usual": 2}
+    found.sort(key=lambda f: rank[f["kind"]])  # failures first, then the rest in the page's order
     return {
         "flags": found,
+        "new": sum(f["kind"] != "usual" for f in found),
         "compare": cmp,
         "passes": passes(rows, wk, now, dead),
         "chain": steps,

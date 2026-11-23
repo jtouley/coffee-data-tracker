@@ -206,6 +206,22 @@ class Reader:
             with contextlib.suppress(Exception):
                 con.interrupt()  # the thread closes the connection when the query stops
             raise LakeTimeout(f"the lake didn't answer in {self.timeout_s:g} s") from e
+        except asyncio.CancelledError:  # a sibling read failed (`together`): free the pool's thread now
+            with contextlib.suppress(Exception):
+                con.interrupt()
+            raise
+
+
+async def together(*reads: Awaitable[Any]) -> list[Any]:
+    """Reads at once, as asyncio.gather, but the first failure cancels the others, so they don't hold the lake's
+    four threads until the part's deadline."""
+    tasks = [asyncio.ensure_future(r) for r in reads]
+    try:
+        return await asyncio.gather(*tasks)
+    except BaseException:
+        for task in tasks:
+            task.cancel()
+        raise
 
 
 def _client_ip(request: Request, hops: int) -> str:
@@ -631,7 +647,7 @@ def create_app(
             return default
 
     async def common(week: str | None) -> dict:
-        weeks, served = await asyncio.gather(reader.run(queries.weeks), reader.run(queries.served))
+        weeks, served = await together(reader.run(queries.weeks), reader.run(queries.served))
         chosen = week if week in weeks else (weeks[0] if weeks else week)
         stale = None
         if served and weeks and str(served.get("run_date"))[:10] < weeks[0]:
@@ -649,7 +665,7 @@ def create_app(
                 return c | {"data": None, "failures": None, "trend": await reader.run(queries.failure_trend)}
             last_week = (date.fromisoformat(w) - timedelta(days=7)).isoformat()
             # independent reads at once (the lake's pool has four threads): a slow lake costs two waits, not five
-            data, last, fails, trend, streaks = await asyncio.gather(
+            data, last, fails, trend, streaks = await together(
                 reader.run(queries.week, w), reader.run(queries.week, last_week), reader.run(queries.failures, w),
                 reader.run(queries.failure_trend), reader.run(queries.failing_streaks, w))  # fmt: skip
             at = _page_at(keep, KEEP, len(streaks))

@@ -7,9 +7,10 @@ Four weeks:
 - W0: fetches only (the history the "failing week after week" streaks count back through);
 - W1: a clean week: every pass done, Tuesday's chain done, its build passed and was served;
 - W2: last week: woocommerce stops at its deadline, Tuesday done, its build passed and is served now;
-- W3: this week, on Monday night (NOW): generic's resume crawl died (only its running row, and the retry has
-  started since), woocommerce hit its deadline twice, generic's errors and 429s jumped, the shared IP was refused by
-  over 8% of stores, a failed fetch-health poll, and the retry still running; Tuesday hasn't come yet.
+- W3: this week, on Monday night (NOW): generic's resume crawl died (only its running row, and its retry has
+  started since), woocommerce hit its deadline twice (as last week) and its retry never started, generic hit its
+  deadline and its errors and 429s jumped, the shared IP was refused by over 8% of stores, a fetch-health poll
+  failed, and square_online's retry is still running; Tuesday hasn't come yet.
 """
 
 from __future__ import annotations
@@ -38,8 +39,16 @@ WEEKS = {
         ("square_online", "morning"): ("done", 180, 179, 1, 0, 0),
         ("woocommerce", "morning"): ("done", 221, 214, 7, 1, 2),
         ("generic", "morning"): ("done", 640, 566, 81, 28, 25),
+        ("shopify", "resume"): ("done", 3, 0, 3, 0, 0),
+        ("squarespace", "resume"): ("done", 2, 0, 2, 0, 0),
+        ("square_online", "resume"): ("done", 1, 0, 1, 0, 0),
         ("generic", "resume"): ("done", 78, 7, 71, 22, 0),
         ("woocommerce", "resume"): ("done", 7, 2, 5, 0, 0),
+        ("shopify", "retry"): ("done", 0, 0, 0, 0, 0),  # the crawl-retry job
+        ("squarespace", "retry"): ("done", 2, 0, 2, 0, 0),
+        ("square_online", "retry"): ("done", 1, 0, 1, 0, 0),
+        ("woocommerce", "retry"): ("done", 5, 1, 4, 0, 0),
+        ("generic", "retry"): ("done", 71, 2, 69, 20, 0),
     },
     W2: {
         ("shopify", "morning"): ("done", 1044, 1041, 3, 0, 0),
@@ -56,6 +65,7 @@ WEEKS = {
         ("squarespace", "retry"): ("done", 1, 0, 1, 0, 0),
         ("woocommerce", "retry"): ("deadline", 9, 3, 6, 2, 0),
         ("generic", "retry"): ("done", 68, 1, 71, 25, 0),
+        ("shopify", "retry"): ("done", 0, 0, 0, 0, 0),
     },
     W3: {
         ("shopify", "morning"): ("done", 1062, 1059, 3, 0, 0),
@@ -68,9 +78,18 @@ WEEKS = {
         ("square_online", "resume"): ("done", 7, 0, 7, 0, 0),
         ("woocommerce", "resume"): ("deadline", 12, 4, 10, 0, 0),
         ("generic", "resume"): ("running", 124, None, None, None, None),  # died: the retry has started since
-        ("generic", "retry"): ("running", 124, None, None, None, None),  # still going, well inside 4 hours
+        ("generic", "retry"): ("done", 124, 4, 120, 12, 0),
         ("squarespace", "retry"): ("done", 9, 1, 8, 0, 0),
-        ("square_online", "retry"): ("done", 7, 0, 7, 0, 0),
+        ("square_online", "retry"): (
+            "running",
+            7,
+            None,
+            None,
+            None,
+            None,
+        ),  # still going, well inside 4 hours
+        ("shopify", "retry"): ("done", 2, 0, 2, 0, 0),
+        # no woocommerce retry: it never started
     },
 }
 
@@ -103,16 +122,16 @@ def _crawls(lake: Lake, week: str) -> None:
             counts |= {"ok": ok, "errors": errors, "parked": 0, "skipped": 0, "requests": todo * 4,
                        "http_429": h429, "http_430": 0,
                        "refusals": [{"ip": IPS[conn], "stores": todo if slot == "morning" else 0, "refused": refused}]}  # fmt: skip
-        _attempt(lake, week, "crawl", conn, start, end, status, n, **counts)
+        job = (
+            "crawl-retry" if conn == "shopify" and slot == "retry" else "crawl"
+        )  # Shopify's 21:47 is its own job
+        _attempt(lake, week, job, conn, start, end, status, n, **counts)
     _attempt(
         lake, week, "probe", None, _at(week, 0, 7, 17, 38), _at(week, 0, 7, 23), "done", 900, todo=732, ok=167
     )
     for i, (h, m) in enumerate(((10, 9), (15, 28), (15, 47))):
         st = "failed" if week == W3 and i == 2 else "done"
         _attempt(lake, week, "fetch-health", None, _at(week, 0, h, m), _at(week, 0, h, m + 4), st, 910 + i)
-    if week == W2:
-        _attempt(lake, week, "crawl-retry", "shopify", _at(week, 0, 21, 52), _at(week, 0, 21, 53), "done", 920,
-                 todo=0, ok=0, errors=0, http_429=0, http_430=0)  # fmt: skip
     if week in (W1, W2):  # Tuesday
         for job, h in (("merge", 3), ("enrich", 4), ("build", 6)):
             detail_build = {"build_id": BUILD1 if week == W1 else BUILD2}
@@ -190,3 +209,10 @@ def build_health_lake(root) -> Lake:
         _fetches(lake, week)
     _builds(lake)
     return lake
+
+
+def drop_connector(root, week: str, connector: str) -> None:
+    """Remove one connector's every attempt from a week (a copy of the lake): the week it never ran."""
+    for f in (root / "job_manifests" / f"run_date={week}").glob("*.parquet"):
+        if pq.read_table(f).column("connector").to_pylist() == [connector]:
+            f.unlink()
