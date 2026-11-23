@@ -1000,3 +1000,24 @@ def test_every_internal_link_on_every_page_leads_somewhere(tmp_path, lake, pg_ur
             r = c.get(href)
             assert r.status_code == 200 and "There is no such page" not in r.text, href
     assert seen and not any(h.startswith("/gate") for h in seen)
+
+
+def test_a_hand_edited_log_offset_reads_the_page_its_label_names(tmp_path, lake, pg_url):
+    """?offset=50 reads rows 1-100 under "Page 1 of 2", not rows 51-150; an offset past the end reads the last page."""
+    import asyncio
+
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    asyncio.run(app.state.writes.ready())
+    for i in range(150):
+        app.state.writes.control.audit_now("owner", "undo", f"d-{i:03d}", "ok")
+    mid = c.get("/part/log?offset=50").text
+    assert (
+        "Newest first: 1–100 of 150" in mid and "Page 1 of 2" in mid and "d-149" in mid and "d-049" not in mid
+    )
+    end = c.get("/part/log?offset=999").text
+    assert (
+        "Newest first: 101–150 of 150" in end
+        and "Page 2 of 2" in end
+        and "d-049" in end
+        and "d-050" not in end
+    )

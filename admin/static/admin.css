@@ -47,9 +47,8 @@ table.dense td, table.dense th { padding-top: 6px; padding-bottom: 6px; white-sp
 table.dense td.err { white-space: normal; min-width: 16rem; max-width: 32rem; color: var(--ink-2); }
 th:first-child, td:first-child { position: sticky; inset-inline-start: 0; background: var(--paper); z-index: 1; padding-inline-start: 0; }
 /* The first cell and the pinned column after a checkbox draw two optional rules: --bar at the row's start (a failure,
-   below) and --edge at the pinned column's end, so a column scrolled under it reads as passing behind an edge. */
+   below) and, on a phone, where tables scroll under the pinned column, --edge at its end. */
 th:first-child, td:first-child, .pick + th { box-shadow: var(--bar, 0 0 #0000), var(--edge, 0 0 #0000); }
-@media (min-width: 760px) { table:not(.sources) :is(:is(th, td):first-child:not(.pick), .pick + th) { --edge: inset -1px 0 0 var(--rule); } }
 /* On a phone the pinned column wraps within about 60% of the frame, so the columns beside it can be scrolled to. The
    checkbox cell keeps its 44 px (the product pinned beside it has its own bounds, below). */
 @media (max-width: 759px) {

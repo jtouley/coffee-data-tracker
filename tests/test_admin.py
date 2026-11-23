@@ -1347,3 +1347,9 @@ def test_the_shared_pager_snaps_and_clamps_a_hand_edited_offset():
             '{% from "_macros.html" import pager %}{% call(o) pager(0, 100, 100) %}x{% endcall %}'
         ).render()
     )
+    # The rows read come from the same page as the label (admin.main._page_at, used before every paged read).
+    from admin.main import _page_at
+
+    assert [_page_at(o, 100) for o in (0, 50, 99, 100, 150, -5)] == [0, 0, 0, 100, 100, 0]
+    assert _page_at(999, 100, 250) == 200 and _page_at(250, 100, 250) == 200 and _page_at(50, 100, 250) == 0
+    assert _page_at(999, 200, 0) == 800  # nothing to clamp against: the page reads empty, and says so

@@ -238,6 +238,13 @@ def _fmt_t(v: Any) -> str:
     return str(v)
 
 
+def _page_at(offset: int, size: int, total: int | None = None) -> int:
+    """The first row of the page a (hand-edited) offset falls in: snapped down to its page, never negative, and with
+    `total` known, no later than the last page's. The rows read and the pager's label both use it."""
+    at = max(0, offset) // size * size
+    return min(at, (total - 1) // size * size) if total else at
+
+
 def create_app(
     settings: Settings | None = None,
     reader: Reader | None = None,
@@ -670,12 +677,20 @@ def create_app(
                 else None
             )
             try:
-                offset = max(0, int(p.get("offset") or 0))
+                offset = _page_at(int(p.get("offset") or 0), 200)
             except ValueError:
                 offset = 0
             gate = await reader.run(queries.gate, chosen) if chosen else None
-            changes = await reader.run(queries.changes, chosen, p.get("table") or None, p.get("change") or None,
-                                       p.get("reason") or None, 200, offset) if chosen else None  # fmt: skip
+
+            async def read_changes(at: int):
+                return await reader.run(queries.changes, chosen, p.get("table") or None, p.get("change") or None,
+                                        p.get("reason") or None, 200, at)  # fmt: skip
+
+            changes = await read_changes(offset) if chosen else None
+            # an offset past the end reads the last page
+            if changes and changes.get("matching") and offset >= changes["matching"]:
+                offset = _page_at(offset, 200, changes["matching"])
+                changes = await read_changes(offset)
             for d in drafts:
                 b = rel["by_draft"].get(d["draft_id"])
                 bi = next((x for x in all_builds if x["build_id"] == b), None)
@@ -695,7 +710,7 @@ def create_app(
         f["rule"] = f["rule"] if f["rule"] in rules.RULE_TYPES else None
         f["state"] = f["state"] if f["state"] in queries.QUEUE_STATES else None
         try:
-            offset = max(0, int(p.get("offset") or 0))
+            offset = _page_at(int(p.get("offset") or 0), queries.QUEUE_PAGE)
         except ValueError:
             offset = 0
 
@@ -735,6 +750,9 @@ def create_app(
                             test["test_id"], [])  # fmt: skip
                 return ctx
             q = await reader.run(queries.queue, build, f["roaster"], f["rule"], f["state"], offset)
+            if q.get("matching") and offset >= q["matching"]:  # past the end: the last page
+                last = _page_at(offset, queries.QUEUE_PAGE, q["matching"])
+                q = await reader.run(queries.queue, build, f["roaster"], f["rule"], f["state"], last)
             ctx["q"], ctx["paging"] = q, [(k, f[k]) for k in ("roaster", "rule", "state") if f[k]]
             if (
                 q.get("rows") and writes
@@ -881,9 +899,12 @@ def create_app(
         async def make():
             if not writes:  # no control plane: what it recorded is unknown, never 0
                 return {"rows": [], "total": None, "action": None, "offset": 0, "actions": AUDITED}
-            a = action if action in AUDITED else None
-            rows, total = await asyncio.to_thread(writes.control.audit_log, 100, max(0, offset), a)
-            return {"rows": rows, "total": total, "action": a, "offset": max(0, offset), "actions": AUDITED}
+            a, at = action if action in AUDITED else None, _page_at(offset, 100)
+            rows, total = await asyncio.to_thread(writes.control.audit_log, 100, at, a)
+            if total and at >= total:  # past the end: the last page
+                at = _page_at(at, 100, total)
+                rows, total = await asyncio.to_thread(writes.control.audit_log, 100, at, a)
+            return {"rows": rows, "total": total, "action": a, "offset": at, "actions": AUDITED}
 
         return await part("log", make, "the control plane's audit")
 
