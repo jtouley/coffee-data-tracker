@@ -14,6 +14,9 @@
 # - The image goes out by digest: to the app, then to the admin service once GCP_ADMIN_SERVICE is set, only while
 #   the app still runs that image (so the two never stay on different ones). A required reviewer for the admin can
 #   be added to the `admin` environment in the repository's settings.
+# - Each service's new revision is deployed with no traffic, smoke-tested signed out at its own tagged URL, and given
+#   the traffic only if that passes; then the live domain is checked, and moved back on a failure
+#   (src/coffeedata/live_smoke.py). A failed check fails the run; the job summary says what failed and what serves.
 # - A deploy while the app's traffic is pinned to an older revision (RUNNING.md, Rolling back) gets 0% of the
 #   traffic: the run says so with a warning.
 name: deploy
@@ -136,21 +139,20 @@ jobs:
             exit 1
           fi
           echo "image=$ref" >> "$GITHUB_OUTPUT"
-      - name: Deploy
+      # The new revision gets no traffic until it answers (src/coffeedata/live_smoke.py): it's deployed with
+      # --no-traffic and this run's tag, smoke-tested signed out at the tag's run.app URL, and only then given the
+      # traffic; then app.registry.coffee is checked, and a failure there moves the traffic back. A failure fails
+      # the run, and the job summary says which check failed and where production is. Pinned traffic stays pinned
+      # (RUNNING.md, Rolling back): the new revision is still smoke-tested, gets 0%, and the run warns.
+      - name: Deploy, smoke-test, then move the traffic
         if: steps.tip.outputs.current == 'true'
         env:
           IMAGE_REF: ${{ steps.push.outputs.image }}
+          TAG: deploy-${{ github.run_id }}-${{ github.run_attempt }}
+          PYTHONPATH: src
         run: |
-          set -o pipefail
-          gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
-          # Pinned traffic stays pinned: this revision then gets 0%, and nothing else would say so.
-          latest=$(gcloud run services describe "$SERVICE" --region "$REGION" --format=json |
-            jq '[.spec.traffic[]? | select(.latestRevision == true) | .percent // 0] | add // 0') || latest=""
-          if ! [[ "$latest" =~ ^[0-9]+$ ]]; then
-            echo "::warning::Couldn't read $SERVICE's traffic split after the deploy; check it with gcloud run services describe."
-          elif [ "$latest" != "100" ]; then
-            echo "::warning::$SERVICE's traffic is pinned (${latest}% to the newest revision), so this deploy serves no one. After a rollback, move it back: RUNNING.md, Rolling back."
-          fi
+          python3 -m coffeedata.live_smoke rollout app "$SERVICE" --region "$REGION" --tag "$TAG" \
+            --live https://app.registry.coffee -- --image "$IMAGE_REF"
       # The usage collector runs the app image ci.tfvars pins (usage_image, src/terraform/usage.tf); Terraform
       # deploys it, not this workflow. Tag that digest `pinned-usage-<12 hex>` so the registry's cleanup (keep the
       # pinned* tags, artifact_registry.tf) never deletes the image the collector's next cold start needs. Creating
@@ -206,6 +208,7 @@ jobs:
       REGION: ${{ vars.GCP_REGION || 'us-central1' }}
       APP: ${{ vars.GCP_SERVICE || 'registry-coffee' }}
       IMAGE_REF: ${{ needs.deploy.outputs.image }}
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}  # the commit the deploy job built
     steps:
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
@@ -233,15 +236,25 @@ jobs:
             echo "::notice::Not deploying $IMAGE_REF to the admin: the app runs $app now, and its own run deploys that."
             echo "current=false" >> "$GITHUB_OUTPUT"
           fi
+      - if: steps.tip.outputs.current == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ env.HEAD_SHA }}
+          persist-credentials: false
       # The image's CMD starts the app; the admin's entrypoint is set here with the image (Terraform's first apply
       # runs Google's sample image with no command, and leaves both to this step).
       # --args="..." in one word: the value starts with "-c", and only the = form never reads it as another flag.
+      # As for the app: no traffic until its sign-in page answers at this run's tag, then admin.registry.coffee's.
       - name: Deploy
         if: steps.tip.outputs.current == 'true'
         env:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
           ADMIN_ARGS: -c,exec uvicorn --factory admin.main:create_app --host 0.0.0.0 --port "$PORT" --no-proxy-headers
-        run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --command sh --args="$ADMIN_ARGS" --region "$REGION" --quiet
+          TAG: deploy-${{ github.run_id }}-${{ github.run_attempt }}
+          PYTHONPATH: src
+        run: |
+          python3 -m coffeedata.live_smoke rollout admin "$SERVICE" --region "$REGION" --tag "$TAG" \
+            --live https://admin.registry.coffee -- --image "$IMAGE_REF" --command sh --args="$ADMIN_ARGS"
 
   # The ingestion jobs' image (ingest.Dockerfile), built from the same commit and under the same conditions as the
   # app's: it runs only when the deploy job pushed the app's image for this commit, so only for main's tip once ci
