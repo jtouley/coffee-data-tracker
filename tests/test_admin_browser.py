@@ -211,7 +211,7 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
     job state (confirm, running, success, failure, cancel, a refusal, a double submit, the window override, Cloud Run
     refusing), Catalog decisions with Undo and a group, a draft built, Publish and Roll back, Discard, and writes off,
     a control plane that's down, a slow Cloud Run, CSRF and a signed-out write. Postgres is the local test server."""
-    from datetime import UTC, datetime
+    from datetime import UTC, datetime, timedelta
 
     from admin.controlplane import ControlPlane, url_connect
 
@@ -234,8 +234,12 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
     ports = {k: _port() for k in ("act", "window", "off", "down", "slow")}
 
     pools: list[ControlPlane] = []  # closed at the end, so their connections don't outlive the test
+    # A fixed clock for every app: this week's Wednesday at noon, outside both scheduled windows, so no start needs
+    # an override whatever day the test runs on; the window app's clock is this week's Monday, inside the crawl window.
+    monday = datetime.fromisoformat(w3).replace(hour=10, tzinfo=UTC)
+    wednesday = monday + timedelta(days=2, hours=2)
 
-    def app(name, fake=None, control=None, now=None):
+    def app(name, fake=None, control=None, now=lambda: wednesday):
         st = _settings(tmp_path / name, f"http://127.0.0.1:{ports[name]}", lake)
         if fake is not None:
             st.control = control or ControlPlane(url_connect(pg_server.database()))
@@ -243,7 +247,6 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
             st.jobs, st.snapshots, st.writes_off = fake, FileStore(tmp_path / name / "snapshots"), []
         return create_app(st, now=now)
 
-    monday = datetime.fromisoformat(w3).replace(hour=10, tzinfo=UTC)
     apps = {
         "act": app("act", fakes["act"]),
         "window": app("window", fakes["window"], now=lambda: monday),

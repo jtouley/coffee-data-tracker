@@ -67,6 +67,9 @@ AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "e
            "source_flag", "source_flag_undo", "keyword_filter", "keyword_filter_undo", "prefilter_review")  # fmt: skip
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
+# What to set when the page says "Actions are off" (runbook/troubleshooting.md).
+RUNBOOK_OFF = ("https://github.com/jtouley/coffee-data-tracker/blob/main/runbook/troubleshooting.md"
+               "#the-admin-says-actions-are-off")  # fmt: skip
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 BUILD_RE = re.compile(r"^[0-9A-Za-z-]{1,64}$")
 
@@ -235,6 +238,13 @@ def _fmt_t(v: Any) -> str:
     return str(v)
 
 
+def _page_at(offset: int, size: int, total: int | None = None) -> int:
+    """The first row of the page a (hand-edited) offset falls in: snapped down to its page, never negative, and with
+    `total` known, no later than the last page's. The rows read and the pager's label both use it."""
+    at = max(0, offset) // size * size
+    return min(at, (total - 1) // size * size) if total else at
+
+
 def create_app(
     settings: Settings | None = None,
     reader: Reader | None = None,
@@ -242,8 +252,10 @@ def create_app(
     now: Callable[[], datetime] | None = None,
 ) -> FastAPI:
     """The admin app. `reader`, `slow_s` and `now` are for tests (a slow or broken lake, a fixed clock); the service
-    uses the defaults."""
+    uses the defaults. `now` is the one clock for what depends on the date: the scheduled windows, the week a job
+    defaults to, and the times a snapshot records."""
     settings = settings or from_env()
+    clock = now or (lambda: datetime.now(UTC))
     logs.setup()
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     assets = Assets()
@@ -255,6 +267,8 @@ def create_app(
         "t": _fmt_t,
         "slow_s": slow_s,
         "new_key": new_key,
+        "off_parts": settings.off_parts,
+        "RUNBOOK_OFF": RUNBOOK_OFF,
     }
     cookie = COOKIE_SECURE if settings.secure_cookies else COOKIE_LOCAL
     auth: Auth | None = None
@@ -273,7 +287,7 @@ def create_app(
     if not settings.writes_off:
         assert settings.control and settings.jobs and settings.snapshots
         writes = Writes(settings.control, settings.jobs, settings.snapshots, reader.run, catalog=catalog,
-                        secret=settings.session_secret, **({"now": now} if now else {}))  # fmt: skip
+                        secret=settings.session_secret, now=clock)  # fmt: skip
     else:
         emit("WARNING", event="admin_writes_off", reasons=settings.writes_off)
     limiter = Limiter()
@@ -594,7 +608,7 @@ def create_app(
             f"part_{name}.html", read_at=started, files=files, **({"writes_off": settings.writes_off} | ctx)
         )
 
-    DOWN = "the control plane can't be read right now, so decisions, drafts and runs aren't shown"
+    DOWN = "the control plane can’t be read right now, so decisions, drafts and runs aren’t shown"
 
     async def plane(read: Callable[[], Awaitable[Any]], default: Any, down: list[str]) -> Any:
         """A control-plane read for a page that also reads the lake: on an outage the page keeps the lake's part,
@@ -663,12 +677,20 @@ def create_app(
                 else None
             )
             try:
-                offset = max(0, int(p.get("offset") or 0))
+                offset = _page_at(int(p.get("offset") or 0), 200)
             except ValueError:
                 offset = 0
             gate = await reader.run(queries.gate, chosen) if chosen else None
-            changes = await reader.run(queries.changes, chosen, p.get("table") or None, p.get("change") or None,
-                                       p.get("reason") or None, 200, offset) if chosen else None  # fmt: skip
+
+            async def read_changes(at: int):
+                return await reader.run(queries.changes, chosen, p.get("table") or None, p.get("change") or None,
+                                        p.get("reason") or None, 200, at)  # fmt: skip
+
+            changes = await read_changes(offset) if chosen else None
+            # an offset past the end reads the last page
+            if changes and changes.get("matching") and offset >= changes["matching"]:
+                offset = _page_at(offset, 200, changes["matching"])
+                changes = await read_changes(offset)
             for d in drafts:
                 b = rel["by_draft"].get(d["draft_id"])
                 bi = next((x for x in all_builds if x["build_id"] == b), None)
@@ -688,7 +710,7 @@ def create_app(
         f["rule"] = f["rule"] if f["rule"] in rules.RULE_TYPES else None
         f["state"] = f["state"] if f["state"] in queries.QUEUE_STATES else None
         try:
-            offset = max(0, int(p.get("offset") or 0))
+            offset = _page_at(int(p.get("offset") or 0), queries.QUEUE_PAGE)
         except ValueError:
             offset = 0
 
@@ -728,7 +750,10 @@ def create_app(
                             test["test_id"], [])  # fmt: skip
                 return ctx
             q = await reader.run(queries.queue, build, f["roaster"], f["rule"], f["state"], offset)
-            ctx["q"], ctx["pager"] = q, [(k, f[k]) for k in ("roaster", "rule", "state") if f[k]]
+            if q.get("matching") and offset >= q["matching"]:  # past the end: the last page
+                last = _page_at(offset, queries.QUEUE_PAGE, q["matching"])
+                q = await reader.run(queries.queue, build, f["roaster"], f["rule"], f["state"], last)
+            ctx["q"], ctx["paging"] = q, [(k, f[k]) for k in ("roaster", "rule", "state") if f[k]]
             if (
                 q.get("rows") and writes
             ):  # decided in the control plane since the build: say so, offer no decision
@@ -800,12 +825,12 @@ def create_app(
     async def jobs_part(request: Request):
         async def make():
             off = list(settings.writes_off)
-            runs = await plane(lambda: writes.runs(30), [], off) if writes else []
+            runs = await plane(lambda: writes.runs(30), None, off) if writes else None  # None: unknown
             return {"writes_off": off, "actions": [a for a in jobs.ACTIONS.values() if a.page == "jobs"], "fields": jobs.FIELDS,
                     "labels": {k: a.label for k, a in jobs.ACTIONS.items()},
-                    "runs": runs, "running": any(r["status"] in ("pending", "running") for r in runs),
+                    "runs": runs, "running": any(r["status"] in ("pending", "running") for r in runs or []),
                     "prefill": dict(request.query_params),
-                    "today": datetime.now(UTC).date().isoformat()}  # fmt: skip
+                    "today": clock().date().isoformat()}  # fmt: skip
 
         return await part("jobs", make, "job_runs and Cloud Run executions")
 
@@ -872,11 +897,14 @@ def create_app(
     @app.get("/part/log", response_class=HTMLResponse)
     async def log_part(action: str | None = None, offset: int = 0):
         async def make():
-            if not writes:
-                return {"rows": [], "total": 0, "action": None, "offset": 0, "actions": AUDITED}
-            a = action if action in AUDITED else None
-            rows, total = await asyncio.to_thread(writes.control.audit_log, 100, max(0, offset), a)
-            return {"rows": rows, "total": total, "action": a, "offset": max(0, offset), "actions": AUDITED}
+            if not writes:  # no control plane: what it recorded is unknown, never 0
+                return {"rows": [], "total": None, "action": None, "offset": 0, "actions": AUDITED}
+            a, at = action if action in AUDITED else None, _page_at(offset, 100)
+            rows, total = await asyncio.to_thread(writes.control.audit_log, 100, at, a)
+            if total and at >= total:  # past the end: the last page
+                at = _page_at(at, 100, total)
+                rows, total = await asyncio.to_thread(writes.control.audit_log, 100, at, a)
+            return {"rows": rows, "total": total, "action": a, "offset": at, "actions": AUDITED}
 
         return await part("log", make, "the control plane's audit")
 
@@ -1073,7 +1101,7 @@ def create_app(
                         )
         except ControlPlaneError:
             return JSONResponse({"detail": "The control plane can't be read right now."}, 503)
-        doc = decisions.snapshot("export", datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), effective)
+        doc = decisions.snapshot("export", clock().strftime("%Y-%m-%dT%H:%M:%SZ"), effective)
         return JSONResponse(doc, headers={"Content-Disposition": 'attachment; filename="decisions.json"'})
 
     @app.exception_handler(404)

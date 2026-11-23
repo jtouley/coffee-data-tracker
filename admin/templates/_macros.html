@@ -1,7 +1,8 @@
-{# Status is a word with a mark (filled dot done, ring running, square failed, triangle warn, dash missing): never colour alone. #}
+{# Status is a word with a mark (filled dot done, ring running, square failed, triangle warn, dash missing): never colour alone.
+   A refused write is a warn (the guards stopped it, nothing ran); a failed one is a failure. #}
 {% macro status(word) -%}
 {%- set w = (word or "missing") | string -%}
-{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled", "needs review") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
+{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled", "needs review", "refused") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
 <span class="st st-{{ kind }}"><i aria-hidden="true"></i>{{ w }}</span>
 {%- endmacro %}
 
@@ -52,9 +53,11 @@
 </form>
 {%- endmacro %}
 
-{# Writes are off (no database, Cloud Run or snapshot store): say so once, where the actions would be. #}
+{# Writes are off: say so once, where the actions would be. A service that isn't set up for writes names the parts
+   it lacks (off_parts; the settings behind each are in the log and the runbook, not on the page); a control plane
+   that is down says so in its own words. #}
 {% macro write_off(reasons) -%}
-{%- if reasons %}<p class="notice mt12" role="status">Actions are off: {{ reasons | join("; ") }}. The pages still read the lake.</p>{% endif -%}
+{%- if reasons %}<p class="notice mt12" role="status">Actions are off: {% if off_parts %}{{ off_parts[:-1] | join(", ") }}{{ " and " if off_parts | length > 1 }}{{ off_parts[-1] }} {{ "isn’t" if off_parts | length == 1 else "aren’t" }} set up. The pages still read the lake. {{ ev(RUNBOOK_OFF, "What to set") }}.{% else %}{{ reasons | join("; ") }}. The pages still read the lake.{% endif %}</p>{% endif -%}
 {%- endmacro %}
 
 {# A one-button write: its confirm text, then POST with the form's idempotency key (admin.js). #}
@@ -91,14 +94,30 @@
 {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}<li><a class="btn text inline" href="{{ action }}{% if hidden %}?{{ hidden | urlencode }}{% endif %}">Clear all</a></li></ul>{% endif %}
 {%- endmacro %}
 
-{% macro pager(data, qs) -%}
-{% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
+{# Previous and Next through `total` rows, `size` at a time, from row `at` (0-based). The caller's body is the URL
+   for a page's first row: {% call(o) pager(offset, 100, total) %}/log?offset={{ o }}{% endcall %}. #}
+{% macro pager(at, size, total) -%}
+{%- set pages = (total + size - 1) // size -%}
+{#- a hand-edited offset snaps to its page's first row, and one past the end to the last page -#}
+{%- set page = [[at, 0] | max // size, [pages - 1, 0] | max] | min -%}
+{%- set at = page * size -%}
+{% if total > size %}<nav class="pager" aria-label="Pages of results">{% if at > 0 %}<a class="ev" href="{{ caller(at - size) | trim }}">Previous {{ size }}</a>{% endif %}<span class="meta">Page {{ page + 1 }} of {{ pages }}</span>{% if at + size < total %}<a class="ev" href="{{ caller(at + size) | trim }}">Next {{ size }}</a>{% endif %}</nav>{% endif %}
+{%- endmacro %}
+
+{# The Catalog's and Sources' pages of 100, by page number. #}
+{% macro page_pager(data, qs) -%}
+{% call(o) pager((data.page - 1) * 100, 100, data.matching) %}{{ qs(page=o // 100 + 1) }}{% endcall %}
+{%- endmacro %}
+
+{# Release and Catalog before any build has recorded itself. #}
+{% macro no_builds() -%}
+<div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
 {%- endmacro %}
 
 {# The page's "?" beside its title (shell.html's title actions): what the page reads and how it works, in a panel
    (a sheet on a phone, a popover on a desktop), so the page itself starts with its answer. #}
 {% macro help(id, title) -%}
-<button class="btn secondary inline help" type="button" data-panel aria-controls="help-{{ id }}" aria-haspopup="dialog" aria-label="About {{ id }}: {{ title | lower }}">?</button>
+<button class="btn secondary inline help" type="button" data-panel aria-controls="help-{{ id }}" aria-haspopup="dialog" aria-label="{{ title }}">?</button>
 <dialog class="sheet panel" id="help-{{ id }}" aria-labelledby="help-{{ id }}-h">
   <h2 class="serif title-s" id="help-{{ id }}-h">{{ title }}</h2>
   {{ caller() }}

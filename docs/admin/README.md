@@ -212,7 +212,8 @@ Passkeys only (WebAuthn, the `webauthn` package), no password:
 - **Recovery:** a recovery code registers a new passkey, retires every earlier passkey (recovery means they are
   lost) and signs out every session. Each code works once. Then add the second passkey again from Account within 10
   minutes. Lost only one passkey? Recover from a device you control: it retires both, then add the other again.
-  New recovery codes come with the write API; Account shows how many are left.
+  There is no way to make new recovery codes yet: the ten from enrollment are all there are. Account shows how many
+  are left.
 - **Sessions** last 12 hours from sign-in and never renew. Sign out revokes the session on the server; "Sign out
   everywhere" revokes them all.
 - **Limits:** failed tokens, codes and passkeys are counted per address and overall, and once over the limit

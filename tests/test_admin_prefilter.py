@@ -364,7 +364,7 @@ def test_a_draft_carries_the_filters_and_publish_takes_the_short_path_at_50_or_f
     assert doc["prefilter"] == [{"phrase": "apron", "field": "title"}]  # the build gets it from the snapshot
     _eval(lake.root, b3)
     page = c.get(f"/part/release?build={b3}").text
-    assert "Keyword filters checked against Claude." in page and "a small change (1 coffee leaves" in page
+    assert "Keyword filters checked against Claude:" in page and "a small change (1 coffee leaves" in page
     assert (
         "3 products taken out by keyword filters · Claude calls 1 coffee and 1 not coffee, hasn’t decided 1"
         in page

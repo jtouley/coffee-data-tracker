@@ -134,6 +134,9 @@ def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, p
     check = post(c, "/api/settings/check", {"key": "p", "doc": json.dumps(on)}).json()
     assert check["decides"] == ["verdict_flip.polarity"] and check["needs_evaluation"] == ["verdict_flip"]
     assert any("full evaluation" in x for x in check["lines"])
+    assert (
+        check["lines"][0] == "Changes: Verdict flip: polarity added."
+    )  # the form's words, not the dotted path
     bad = post(
         c,
         "/api/settings",
@@ -175,7 +178,7 @@ def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, p
     assert "Rule changes" in page and "eval/verdict_flip/" in page
     no = post(c, f"/api/drafts/{d['draft_id']}/publish", {"key": "k5", "reason": "go"})
     assert no.status_code == 409 and any(
-        "verdict_flip.polarity changes how a rule decides" in x for x in no.json()["reasons"]
+        "Verdict flip: polarity changes how a rule decides" in x for x in no.json()["reasons"]
     )
 
 

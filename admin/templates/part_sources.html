@@ -1,4 +1,4 @@
-{% from "_macros.html" import write_off, pager %}
+{% from "_macros.html" import write_off, page_pager %}
 {# A flag write, posted at once with Undo in the outcome line (admin.js data-now): for the selected rows (the action
    bar, `data-picks`) or for one place (its ⋯ menu). #}
 {% macro flag(value, label, items=none, cls="text") -%}
@@ -131,7 +131,7 @@
         </div></details></td>
     </tr>{% endfor %}</tbody>
   </table>
-  {{ pager(data, qs) }}
+  {{ page_pager(data, qs) }}
   {% if not writes_off %}
   <div class="bulk bar-bottom" data-bulk data-word="selected" hidden role="region" aria-label="Selected places">
     <span data-bulk-count aria-live="polite">0 selected</span>

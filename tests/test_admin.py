@@ -1323,3 +1323,33 @@ def test_the_plan_guard_still_refuses_an_admin_service_on_another_image():
     bad[0]["change"]["after"]["template"][0]["containers"][0]["image"] = "docker.io/library/nginx:latest"
     results = plan_guard_results(bad)
     assert results["app-image-pinned"] == ["google_cloud_run_v2_service.admin[0]"]
+
+
+def test_the_shared_pager_snaps_and_clamps_a_hand_edited_offset():
+    """The pager reads a page from any offset: one mid-page snaps to that page's first row, one past the end to the
+    last page, a negative one to the first."""
+    from pathlib import Path
+
+    from jinja2 import Environment, FileSystemLoader
+
+    env = Environment(loader=FileSystemLoader(Path(__file__).parents[1] / "admin" / "templates"))
+    page = env.from_string(
+        '{% from "_macros.html" import pager %}{% call(o) pager(at, 100, 250) %}?offset={{ o }}{% endcall %}'
+    )
+    assert "Page 1 of 3" in page.render(at=50) and "Previous" not in page.render(at=50)
+    assert "Page 3 of 3" in page.render(at=999) and "?offset=100" in page.render(at=999)
+    assert "Next" not in page.render(at=999)
+    assert "Page 1 of 3" in page.render(at=-5) and "?offset=100" in page.render(at=-5)
+    assert "Page 2 of 3" in page.render(at=150) and "?offset=0" in page.render(at=150)
+    assert (
+        "<nav"
+        not in env.from_string(
+            '{% from "_macros.html" import pager %}{% call(o) pager(0, 100, 100) %}x{% endcall %}'
+        ).render()
+    )
+    # The rows read come from the same page as the label (admin.main._page_at, used before every paged read).
+    from admin.main import _page_at
+
+    assert [_page_at(o, 100) for o in (0, 50, 99, 100, 150, -5)] == [0, 0, 0, 100, 100, 0]
+    assert _page_at(999, 100, 250) == 200 and _page_at(250, 100, 250) == 200 and _page_at(50, 100, 250) == 0
+    assert _page_at(999, 200, 0) == 800  # nothing to clamp against: the page reads empty, and says so

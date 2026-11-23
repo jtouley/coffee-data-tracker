@@ -618,7 +618,8 @@ function pullNow(places) {
   if (!form || !places.length) return;
   form.querySelector("input[name=roasters]").value = places.join(",");
   form.dataset.confirmTitle = `Probe and crawl ${plural(places.length, "place")}?`;
-  form.dataset.confirmText = `${places.join(", ")}. One job probes them, then crawls each storefront it finds, counted for the week; no Publish needed.`;
+  const them = places.length === 1 ? "it" : "them";
+  form.dataset.confirmText = `${places.join(", ")}. One job probes ${them}, then crawls each storefront it finds, counted for the week; no Publish needed.`;
   confirmWrite(form);
 }
 
@@ -630,13 +631,14 @@ document.addEventListener("click", (e) => {
 
 // A form with data-validate checks its fields before the confirm opens, and says what to fix under each one (the
 // browser's own bubbles vanish and aren't read out reliably).
+const EMPTY = { phrase: "Enter a word or phrase, 3 to 60 characters.", reason: "Say why, in 3 to 300 characters." };
 function invalid(form) {
   let first = null;
   for (const el of form.querySelectorAll("input[required]")) {
     const out = form.querySelector(`[data-field-error="${el.name}"]`);
     const v = el.value.trim();
     let msg = "";
-    if (!v) msg = "Fill this in.";
+    if (!v) msg = EMPTY[el.name] || "Fill this in.";
     else if (el.minLength > 0 && v.length < el.minLength) msg = `At least ${el.minLength} characters.`;
     else if (el.name === "phrase" && !/\p{L}/u.test(v)) msg = "Use at least one letter.";
     else if (el.name === "phrase" && /[^\p{L}\p{N} &'.-]/u.test(v)) msg = "Only letters, digits, spaces, & ' . and -.";

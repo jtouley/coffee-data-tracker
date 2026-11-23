@@ -193,7 +193,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await settled(page);
       const a = (await page.textContent("#failures ~ .answer")).replace(/\s+/g, " ");
       assert.match(a, /6 stores need a look/);
-      assert.match(a, /siteground 1 · cloudflare 1 · partial 1 · quarantined 1/);
+      assert.match(a, /1 SiteGround · 1 Cloudflare · 1 partial · 1 quarantined/);
       assert.match(await page.textContent("main"), /Across weeks/);
       const store = page.locator("a.ev", { hasText: "sg-challenge.example" });
       assert.equal(await store.getAttribute("href"), "https://sg-challenge.example/");
@@ -258,6 +258,43 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await settled(page);
       assert.match(await page.textContent("main"), /No products match/);
       await shoot(page, "catalog-zero");
+    });
+
+    await check("Phone: a pinned first column leaves room for the rest; every attempt's and change's status is on screen", async () => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      try {
+        // The Catalog with writes off (no checkbox column): the product column is the pinned one (review H1).
+        await page.goto(`${base}/catalog`);
+        await settled(page);
+        const pinned = await page.evaluate(() => {
+          const frame = document.querySelector(".frame[aria-label=Products]");
+          const widths = [...frame.querySelectorAll("tbody th")].map((th) => th.getBoundingClientRect().width);
+          frame.scrollLeft = 400;
+          return { widest: Math.max(...widths), narrowest: Math.min(...widths), frame: frame.clientWidth };
+        });
+        assert.ok(pinned.widest <= 0.62 * pinned.frame, `the pinned column is ${pinned.widest}px of a ${pinned.frame}px frame`);
+        assert.ok(pinned.narrowest >= 120, `the pinned column shrank to ${pinned.narrowest}px`); // a name, not a letter a line
+        await page.waitForTimeout(100);
+        for (const scheme of ["light", "dark"]) {
+          await page.emulateMedia({ colorScheme: scheme });
+          await page.screenshot({ path: `${out}/catalog-scrolled-390-${scheme}.png` });
+        }
+        await page.emulateMedia({ colorScheme: "light" });
+        // Week's job attempts and Release's change rows stack (review M1): each row's status is inside the screen.
+        for (const [path, sel] of [[`/week?week=${w1}`, ".frame[aria-label='Job attempts'] tbody tr .st"],
+                                   [`/release?build=${b1}`, ".frame[aria-label=Rows] tbody tr td:last-child"],
+                                   [`/release?build=${b2}`, ".frame[aria-label=Rows] tbody tr td:last-child"]]) {
+          await page.goto(`${base}${path}`);
+          await settled(page);
+          const off = await page.evaluate((sel) => [...document.querySelectorAll(sel)].filter((el) => {
+            const r = el.getBoundingClientRect();
+            return !(r.width > 0 && r.left >= 0 && r.right <= innerWidth);
+          }).length, sel);
+          assert.equal(off, 0, `${path}: ${off} statuses past the screen's edge`);
+        }
+      } finally {
+        await page.setViewportSize({ width: 1280, height: 900 });
+      }
     });
 
     await check("an expired session sends you to sign in, saying so", async () => {

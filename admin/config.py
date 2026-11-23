@@ -48,6 +48,19 @@ class Settings:
         return urlsplit(self.origin).hostname or ""
 
     @property
+    def off_parts(self) -> list[str]:
+        """The parts writes need that this service lacks, in the page's words. `writes_off` keeps the settings
+        behind each (logged at start, and in the runbook), which the page doesn't show."""
+        if not self.writes_off:
+            return []
+        hosted_folder = (
+            self.hosted and self.snapshots is not None and not isinstance(self.snapshots, GcsStore)
+        )
+        named = (("the control plane", self.control is None), ("Cloud Run", self.jobs is None),
+                 ("the snapshot store", self.snapshots is None or hosted_folder))  # fmt: skip
+        return [name for name, missing in named if missing]
+
+    @property
     def secure_cookies(self) -> bool:
         """Secure cookies on any https origin, and always when hosted (an http origin is refused there)."""
         return self.hosted or self.origin.startswith("https://")

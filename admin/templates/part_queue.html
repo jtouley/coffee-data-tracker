@@ -1,4 +1,4 @@
-{% from "_macros.html" import status, ev, write_off, write_button, help %}
+{% from "_macros.html" import status, ev, write_off, write_button, help, pager %}
 <template data-title>{% call help("queue", "About the Queue") %}
   <p class="body">The served build's open flags, one row per product, products with the same evidence together; a product's case shows each flag's evidence, the listing and the store. A removal is ready with supports from two families and no doubt.</p>
   <p class="meta">From build {{ build }}’s <code>mart_flags</code> and <code>fetches</code>, and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
@@ -34,7 +34,7 @@
 
   <h2 class="section">Decision</h2>
   {% if r.decided %}
-    <p class="body">{{ status("ok") }} {{ r.decided.action | capitalize }}d{% if r.decided.group_id %} with its group{% endif %}: in the next draft (Release).</p>
+    <p class="body">{{ r.decided.action | capitalize }}d{% if r.decided.group_id %} with its group{% endif %}: in the next draft (Release).</p>
     {% if not writes_off %}{{ write_button("/api/decisions/" ~ r.decided.decision_id ~ "/undo", "Undo", "Undo the " ~ r.decided.action ~ " of " ~ (pr.title or pr.coffee_id) ~ "? The rules and the classifier decide it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
   {% elif writes_off %}<p class="body">—</p>
   {% else %}
@@ -119,7 +119,7 @@
       </tr>{% endfor %}
     {% endfor %}</tbody>
   </table></div>
-  {% if q.matching > q.page %}<nav class="pager" aria-label="Pages of results">{% if q.offset %}<a class="ev" href="/queue?{{ (pager + [("offset", q.offset - q.page)]) | urlencode }}">Previous {{ q.page }}</a>{% endif %}<span class="meta">{{ q.offset // q.page + 1 }} of {{ (q.matching + q.page - 1) // q.page }}</span>{% if q.offset + q.page < q.matching %}<a class="ev" href="/queue?{{ (pager + [("offset", q.offset + q.page)]) | urlencode }}">Next {{ q.page }}</a>{% endif %}</nav>{% endif %}
+  {% call(o) pager(q.offset, q.page, q.matching) %}/queue?{{ (paging + [("offset", o)]) | urlencode }}{% endcall %}
   {% endif %}
   {% endif %}
 

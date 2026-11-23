@@ -15,3 +15,18 @@
 | `deploy` job fails: "branch is not allowed to deploy" | run from a branch other than `main` | run it from `main` |
 | Launch page "Get the dataset" goes to GitHub | `PUBLIC_EXPORT_URL` isn't an `hf://datasets/...` URL | set it; the next run picks it up |
 | The catalog says "Couldn't load the catalog" | `catalog/catalog.json` missing from the deploy | check the `run` job's site step |
+
+## The admin says "Actions are off"
+
+The pages still read the lake; every action is off until the parts it names are set up. The admin's start-up log
+(`admin_writes_off`) gives the exact setting behind each. The variables are in
+[docs/admin/README.md](../docs/admin/README.md#settings).
+
+| The page says | Hosted (set by Terraform) | On a laptop |
+|---|---|---|
+| the control plane | `ADMIN_DB_INSTANCE` (and `ADMIN_DB_USER`, `ADMIN_DB_NAME`); `ADMIN_DATABASE_URL` is refused | `ADMIN_DATABASE_URL` |
+| Cloud Run | `GOOGLE_CLOUD_PROJECT` and `ADMIN_RUN_REGION` | the same |
+| the snapshot store | `ADMIN_SNAPSHOT_BUCKET` (a local folder is refused) | `ADMIN_SNAPSHOT_DIR` |
+
+"The control plane can't be read right now" is an outage, not a setting: the database didn't answer. The page keeps
+the lake's part and offers no action until it answers again.

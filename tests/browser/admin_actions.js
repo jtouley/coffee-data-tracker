@@ -187,6 +187,16 @@ const errors = [];
       await page.click("[data-bulk] form[data-picks] button >> nth=0");
       await page.waitForSelector("dialog#confirm[open] [data-ask-reason]:not([hidden])");
       assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /Exclude this product\?/);
+      // Each Apply to radio sits on its label's first line, before it (review M6).
+      for (const w of [390, 1280]) {
+        await page.setViewportSize({ width: w, height: w === 390 ? 844 : 900 });
+        const off = await page.$$eval("dialog#confirm [data-ask-kind] label", (ls) => ls.map((l) => {
+          const i = l.querySelector("input").getBoundingClientRect(), t = l.querySelector("span").getBoundingClientRect();
+          return Math.abs(i.top - t.top) <= 6 && i.right <= t.left ? null : `${l.textContent.trim().slice(0, 20)}: radio ${i.top},${i.left} text ${t.top},${t.left}`;
+        }).filter(Boolean));
+        assert.deepEqual(off, [], `at ${w}px`);
+      }
+      await page.setViewportSize({ width: 1280, height: 900 });
       await shoot(page, "catalog-decide-dialog", true);
       await page.click("[data-confirm-go]");
       await page.waitForFunction(() => /reason/i.test(document.querySelector("[data-confirm-hint]").textContent)); // a reason is required
@@ -195,11 +205,42 @@ const errors = [];
       await toast(page, /Recorded 1 decision/);
       await settled(page);
       assert.ok(await page.locator("table form[data-write$='/undo']").count());
+      // While the outcome line shows, the page keeps room under it, so a focused row isn't hidden (review M5).
+      assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollPaddingBottom), "120px");
       await shoot(page, "catalog-decided");
       await page.click("[data-result] [data-undo]");
       await toast(page, /Undone \(1\)/);
       await page.waitForFunction(() => !document.querySelector("table form[data-write$='/undo']"));
       await shoot(page, "catalog-undone");
+    });
+
+    await check("Catalog on a phone, writes on: the checkbox column stays 44 px and the product is pinned beside it", async () => {
+      const { ctx, page: p } = await open(browser, "act", "/catalog", { width: 390, height: 844 });
+      const measure = () => p.evaluate(() => {
+        const frame = document.querySelector(".frame[aria-label=Products]");
+        const pick = frame.querySelector("tbody td.pick"), name = frame.querySelector("tbody td.pick + th");
+        const a = pick.getBoundingClientRect(), b = name.getBoundingClientRect();
+        return { pick: a.width, gap: Math.round(b.left - a.right), name: b.width, frame: frame.clientWidth };
+      });
+      const flat = await measure();
+      assert.ok(flat.pick <= 48, `the checkbox column is ${flat.pick}px`);
+      assert.ok(Math.abs(flat.gap) <= 1, `the product sits ${flat.gap}px from the checkbox`);
+      assert.ok(flat.pick + flat.name <= 0.7 * flat.frame, `the pinned columns take ${flat.pick + flat.name}px of ${flat.frame}px`);
+      for (const scheme of ["light", "dark"]) {
+        await p.emulateMedia({ colorScheme: scheme });
+        await p.waitForTimeout(100);
+        await axe(p, `catalog-on 390 ${scheme}`);
+        await p.screenshot({ path: `${out}/catalog-on-390-${scheme}.png` });
+      }
+      await p.evaluate(() => { document.querySelector(".frame[aria-label=Products]").scrollLeft = 300; });
+      const scrolled = await measure();
+      assert.ok(Math.abs(scrolled.gap) <= 1, `scrolled, the product sits ${scrolled.gap}px from the checkbox`);
+      for (const scheme of ["light", "dark"]) {
+        await p.emulateMedia({ colorScheme: scheme });
+        await p.waitForTimeout(100);
+        await p.screenshot({ path: `${out}/catalog-on-scrolled-390-${scheme}.png` });
+      }
+      await ctx.close();
     });
 
     await check("Catalog: choose a group, exclude it by version hash, then undo one of it from its row", async () => {
@@ -386,6 +427,9 @@ const errors = [];
       const all = await page.textContent("[data-answer]");
       assert.match(all, /\d+ writes recorded/);
       for (const a of ["job start", "job cancel", "decide", "undo", "discard"]) assert.match(await page.textContent("table"), new RegExp(a));
+      // A failed write is marked, with its outcome's word and mark (review M2).
+      assert.ok(await page.locator("tbody tr.bad .st-bad", { hasText: "failed" }).count() > 0, "a failed write is marked");
+      assert.equal(await page.evaluate(() => getComputedStyle(document.querySelector("tbody tr.bad > th")).boxShadow.includes("inset")), true);
       await shoot(page, "log");
       await page.selectOption("#action", "decide");
       await page.waitForURL(/action=decide/);
@@ -455,7 +499,7 @@ const errors = [];
       await page.click("[data-title-actions] button:text-is('Add filter')");
       await page.waitForSelector("dialog#add-filter[open]");
       await page.click("form.kf-add button[type=submit]");
-      await page.waitForFunction(() => document.querySelector("#kf-phrase-error")?.textContent === "Fill this in.");
+      await page.waitForFunction(() => document.querySelector("#kf-phrase-error")?.textContent === "Enter a word or phrase, 3 to 60 characters.");
       assert.equal(await page.getAttribute("#kf-phrase", "aria-invalid"), "true");
       assert.equal(await page.evaluate(() => document.activeElement.id), "kf-phrase");
       await shoot(page, "kf-add-errors", true);
@@ -514,7 +558,7 @@ const errors = [];
       await page.click("details.settings summary.section");
       await page.fill("#p-shared_body-min_products", "4");
       await page.click("form.settings-form button[type=submit]");
-      await page.waitForFunction(() => /min_products/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
+      await page.waitForFunction(() => /Shared body: min products/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
       await shoot(page, "settings-check", true);
       await page.fill("#confirm-reason", "pasted text needs four products");
       await page.click("[data-confirm-go]");
@@ -608,7 +652,7 @@ const errors = [];
       await page.waitForSelector("dialog#confirm[open] .plan-details");
       assert.ok(await page.isHidden("[data-result]"), "the outcome line steps aside for the confirm");
       assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /^Probe and crawl 1 place\?$/);
-      assert.match(await page.textContent("dialog#confirm [data-confirm-body]"), /^ember-roastworks\.example\. One job probes them, then crawls/);
+      assert.match(await page.textContent("dialog#confirm [data-confirm-body]"), /^ember-roastworks\.example\. One job probes it, then crawls/);
       assert.ok(!(await page.isVisible("dialog#confirm .steps")), "the command waits behind Details");
       await shoot(page, "sources-pull-confirm", true);
       await page.click("dialog#confirm .plan-details summary");
@@ -706,19 +750,44 @@ const errors = [];
 
     await check("Writes off: the pages read, the actions say why", async () => {
       const { ctx, page: p } = await open(browser, "off", "/catalog");
-      assert.match(await p.textContent("main"), /Actions are off: no control-plane database/);
+      const main = await p.textContent("main");
+      assert.match(main, /Actions are off: the control plane, Cloud Run and the snapshot store aren’t set up/);
+      assert.doesNotMatch(main, /ADMIN_|GOOGLE_CLOUD/); // the settings are in the runbook, not on the page (review M9)
+      assert.match(await p.getAttribute(".notice a.ev", "href"), /runbook\/troubleshooting\.md/);
       assert.equal(await p.locator("[data-bulk], input[data-pick]").count(), 0);
       await shoot(p, "writes-off");
+      // Without a control plane, Jobs and Log don't know their counts, and say so; Jobs points to no hidden button.
+      await p.goto(`${cfg.off}/jobs`);
+      await p.waitForSelector("section[data-part][aria-busy='false']");
+      assert.match(await p.textContent("[data-answer]"), /Running: unknown/);
+      assert.doesNotMatch(await p.textContent("main"), /\b0 running|Run a job starts one/);
+      await shoot(p, "off-jobs");
+      await p.goto(`${cfg.off}/log`);
+      await p.waitForSelector("section[data-part][aria-busy='false']");
+      assert.match(await p.textContent("[data-answer]"), /Writes recorded: unknown/);
+      assert.equal(await p.locator("a[href='/api/decisions/export']").count(), 0);
+      await shoot(p, "off-log");
       await ctx.close();
     });
 
     await check("The control plane is down: the page degrades (no actions, says why), and a write is refused with nothing started", async () => {
       const { ctx, page: p } = await open(browser, "down", "/jobs");
       assert.match(await p.textContent("main"), /control plane can.t be read right now/); // degraded, not blank
+      assert.match(await p.textContent("[data-answer]"), /Running: unknown/); // not "0 running" (review M3)
       assert.equal(await p.locator("form[data-write]").count(), 0);
       await shoot(p, "control-plane-down");
       const r = await p.evaluate(async () => (await fetch("/api/jobs/merge/runs", { method: "POST", headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" }, body: JSON.stringify({ key: "k" }) })).status);
       assert.equal(r, 503);
+      await ctx.close();
+    });
+
+    await check("Log: a refused write has the warn mark, not the failure's", async () => {
+      // the Monday window's refusal, above, is in the window service's log
+      const { ctx, page: p } = await open(browser, "window", "/log?action=job_start");
+      const refused = p.locator("tbody tr", { has: p.locator(".st-warn", { hasText: "refused" }) });
+      assert.ok(await refused.count() > 0, "a refused start is in the log");
+      assert.equal(await p.locator("tbody tr.bad .st-warn").count(), 0, "a refusal isn't marked as a failure");
+      await shoot(p, "log-refused");
       await ctx.close();
     });
 
