@@ -97,7 +97,11 @@
 {# Previous and Next through `total` rows, `size` at a time, from row `at` (0-based). The caller's body is the URL
    for a page's first row: {% call(o) pager(offset, 100, total) %}/log?offset={{ o }}{% endcall %}. #}
 {% macro pager(at, size, total) -%}
-{% if total > size %}<nav class="pager" aria-label="Pages of results">{% if at > 0 %}<a class="ev" href="{{ caller([at - size, 0] | max) | trim }}">Previous {{ size }}</a>{% endif %}<span class="meta">Page {{ at // size + 1 }} of {{ (total + size - 1) // size }}</span>{% if at + size < total %}<a class="ev" href="{{ caller(at + size) | trim }}">Next {{ size }}</a>{% endif %}</nav>{% endif %}
+{%- set pages = (total + size - 1) // size -%}
+{#- a hand-edited offset snaps to its page's first row, and one past the end to the last page -#}
+{%- set page = [[at, 0] | max // size, [pages - 1, 0] | max] | min -%}
+{%- set at = page * size -%}
+{% if total > size %}<nav class="pager" aria-label="Pages of results">{% if at > 0 %}<a class="ev" href="{{ caller(at - size) | trim }}">Previous {{ size }}</a>{% endif %}<span class="meta">Page {{ page + 1 }} of {{ pages }}</span>{% if at + size < total %}<a class="ev" href="{{ caller(at + size) | trim }}">Next {{ size }}</a>{% endif %}</nav>{% endif %}
 {%- endmacro %}
 
 {# The Catalog's and Sources' pages of 100, by page number. #}

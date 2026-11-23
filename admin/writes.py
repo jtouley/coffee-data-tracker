@@ -390,8 +390,8 @@ class Writes:
             f"Changes: {'; '.join(_setting_label(k) for k in changed)}." if changed else "Nothing changes."
         ]
         if needed:
-            lines.append(f"{', '.join(deciding)} changes how a rule decides. Publish will need its full evaluation "
-                         f"first (CLAUDE.md; eval/{needed[0]}/), whatever it counts.")  # fmt: skip
+            lines.append(f"{'; '.join(_setting_label(k) for k in deciding)} changes how a rule decides. Publish will "
+                         f"need its full evaluation first (CLAUDE.md; eval/{needed[0]}/), whatever it counts.")  # fmt: skip
         elif changed:
             lines.append("The draft build counts the public products this changes. Over 50 on top of the running "
                          "total, Publish needs the full evaluation (CLAUDE.md step 9).")  # fmt: skip
@@ -891,8 +891,9 @@ class Writes:
         deciding, needed = effect["deciding"], effect["needs_evaluation"]
         checks.append({"name": "Rule changes", "ok": not needed,
                        "why": ("no rule settings change how a rule decides" if not deciding else
-                               f"evaluated: {', '.join(deciding)}" if not needed else
-                               f"{', '.join(deciding)} changes how a rule decides: CLAUDE.md asks for its full "
+                               f"evaluated: {'; '.join(_setting_label(k) for k in deciding)}" if not needed else
+                               f"{'; '.join(_setting_label(k) for k in deciding)} changes how a rule decides: "
+                               "CLAUDE.md asks for its full "
                                f"evaluation first (eval/{needed[0]}/, merged with its entry in "
                                "coffeedata.rules.EVALUATED)")})  # fmt: skip
         tests = await asyncio.to_thread(self.control.tests_since, LIVE_CHECK_DAYS * 24)

@@ -46,14 +46,20 @@ tbody th { font-weight: 500; white-space: nowrap; }
 table.dense td, table.dense th { padding-top: 6px; padding-bottom: 6px; white-space: nowrap; }
 table.dense td.err { white-space: normal; min-width: 16rem; max-width: 32rem; color: var(--ink-2); }
 th:first-child, td:first-child { position: sticky; inset-inline-start: 0; background: var(--paper); z-index: 1; padding-inline-start: 0; }
-/* On a phone the pinned column wraps within about 60% of the frame, so the columns beside it can be scrolled to. */
+/* The first cell and the pinned column after a checkbox draw two optional rules: --bar at the row's start (a failure,
+   below) and --edge at the pinned column's end, so a column scrolled under it reads as passing behind an edge. */
+th:first-child, td:first-child, .pick + th { box-shadow: var(--bar, 0 0 #0000), var(--edge, 0 0 #0000); }
+@media (min-width: 760px) { table:not(.sources) :is(:is(th, td):first-child:not(.pick), .pick + th) { --edge: inset -1px 0 0 var(--rule); } }
+/* On a phone the pinned column wraps within about 60% of the frame, so the columns beside it can be scrolled to. The
+   checkbox cell keeps its 44 px (the product pinned beside it has its own bounds, below). */
 @media (max-width: 759px) {
-  table:not(.sources, .stack) :is(th, td):first-child { white-space: normal; min-width: min(8rem, 35vw); max-width: min(13rem, 60vw);
-    overflow-wrap: break-word; }
+  table:not(.sources, .stack) :is(th, td):first-child:not(.pick) { white-space: normal; min-width: min(8rem, 35vw);
+    max-width: min(13rem, 60vw); overflow-wrap: break-word; }
+  table:not(.sources, .stack) :is(:is(th, td):first-child:not(.pick), .pick + th) { --edge: inset -1px 0 0 var(--rule); }
 }
 /* A failed attempt, draft or test, an unexplained change, a write that failed: a --danger rule at the row's start,
    beside its status word (never colour alone). */
-tr.bad > :first-child { box-shadow: inset 3px 0 0 var(--danger); padding-inline-start: 8px; }
+tr.bad > :first-child { --bar: inset 3px 0 0 var(--danger); padding-inline-start: 8px; }
 .n { text-align: right; font-variant-numeric: tabular-nums; }
 tr.sel th, tr.sel td { background: var(--panel); }
 td a.ev, th a.ev { display: inline-block; min-height: 24px; }
@@ -325,12 +331,14 @@ textarea.input.reason { display: block; min-height: 56px; height: auto; padding-
   table.stack tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; position: relative; padding: 8px 0;
     border-bottom: 1px solid var(--rule); line-height: 1.4; }
   table.stack tr:has(> td.act) { padding-inline-end: 52px; }
-  table.stack tr > :is(th, td) { display: block; order: 1; border: 0; padding: 0; position: static; min-width: 0; max-width: none;
+  table.stack tr > :is(th, td) { box-shadow: none; display: block; order: 1; border: 0; padding: 0; position: static; min-width: 0; max-width: none;
     white-space: normal; text-align: start; overflow-wrap: anywhere; }
   table.stack tbody th, table.stack td.lead, table.stack td.full { flex: 1 1 100%; }
   table.stack tbody th, table.stack td.lead { order: 0; }
   table.stack td[data-label]::before { content: attr(data-label) " "; color: var(--ink-2); }
   table.stack td.act { position: absolute; top: 4px; inset-inline-end: 0; width: 44px; text-align: end; }
   table.stack tr.bad { box-shadow: inset 3px 0 0 var(--danger); padding-inline-start: 12px; }
-  table.stack tr.bad > :first-child { box-shadow: none; padding-inline-start: 0; }
+  table.stack tr.bad > :first-child { padding-inline-start: 0; }
+  table.stack tr.sel { background: var(--panel); } /* the shown row's tint, whole, not cell by cell */
+  table.stack tr.sel > * { background: transparent; }
 }

@@ -214,6 +214,35 @@ const errors = [];
       await shoot(page, "catalog-undone");
     });
 
+    await check("Catalog on a phone, writes on: the checkbox column stays 44 px and the product is pinned beside it", async () => {
+      const { ctx, page: p } = await open(browser, "act", "/catalog", { width: 390, height: 844 });
+      const measure = () => p.evaluate(() => {
+        const frame = document.querySelector(".frame[aria-label=Products]");
+        const pick = frame.querySelector("tbody td.pick"), name = frame.querySelector("tbody td.pick + th");
+        const a = pick.getBoundingClientRect(), b = name.getBoundingClientRect();
+        return { pick: a.width, gap: Math.round(b.left - a.right), name: b.width, frame: frame.clientWidth };
+      });
+      const flat = await measure();
+      assert.ok(flat.pick <= 48, `the checkbox column is ${flat.pick}px`);
+      assert.ok(Math.abs(flat.gap) <= 1, `the product sits ${flat.gap}px from the checkbox`);
+      assert.ok(flat.pick + flat.name <= 0.7 * flat.frame, `the pinned columns take ${flat.pick + flat.name}px of ${flat.frame}px`);
+      for (const scheme of ["light", "dark"]) {
+        await p.emulateMedia({ colorScheme: scheme });
+        await p.waitForTimeout(100);
+        await axe(p, `catalog-on 390 ${scheme}`);
+        await p.screenshot({ path: `${out}/catalog-on-390-${scheme}.png` });
+      }
+      await p.evaluate(() => { document.querySelector(".frame[aria-label=Products]").scrollLeft = 300; });
+      const scrolled = await measure();
+      assert.ok(Math.abs(scrolled.gap) <= 1, `scrolled, the product sits ${scrolled.gap}px from the checkbox`);
+      for (const scheme of ["light", "dark"]) {
+        await p.emulateMedia({ colorScheme: scheme });
+        await p.waitForTimeout(100);
+        await p.screenshot({ path: `${out}/catalog-on-scrolled-390-${scheme}.png` });
+      }
+      await ctx.close();
+    });
+
     await check("Catalog: choose a group, exclude it by version hash, then undo one of it from its row", async () => {
       await page.check("input[data-pick] >> nth=0");
       await page.check("input[data-pick] >> nth=1");
