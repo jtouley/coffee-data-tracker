@@ -265,12 +265,6 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   2026-11-16 (each store's robots.txt and home page, read once under robots.txt, through the probe's own markers)
   found it now serves Shopify's robots.txt and theme. `shopify?` still maps to the generic connector, so no product's
   output changes; the other 70 seed rows already matched what the probe's markers say.
-- **34 domains that no longer serve a roaster are `not_a_roaster` rows** of `dbt/seeds/shared_hosts.csv`, each with
-  its reason, as galvestoncoffeeroasters.com is: 29 parked (26 redirect to a `/lander` page, 3 disallow `/` on a
-  parking host), 3 with no DNS record, and 2 now unrelated sites (a gambling redirect, a content site).
-  `registry.current` drops them, so they're never crawled or probed, and discovery never adds them back. dbt keeps them
-  in the internal `dim_roaster`; with no coffee they're never in the public tables (none had one in the 2026-11-16
-  release).
 - **A failed fetch says why it failed.** On 2026-11-16 about 30 stores were stored as only
   `FetchError: RobotsUnavailable <url>`: the catalog call wrapped robots.txt's own message ("robots.txt for X failed
   (ConnectError: ...)") down to its class. `fetches.error` now keeps the wrapped message and starts with the failure's
