@@ -1305,7 +1305,10 @@ seeds:
   - name: shared_hosts
     description: >-
       Hosts many unrelated domains resolve to, so sharing one is no evidence of one store (macros/roaster_alias.sql):
-      not_a_roaster (registry.NOT_A_ROASTER_SITE: social, listing and ordering sites, never a roaster's storefront),
+      not_a_roaster (registry.NOT_A_ROASTER_SITE: social, listing and ordering sites, never a roaster's storefront, or
+      a roaster's former domain that no longer serves it: parked, no DNS, an unrelated site; its note says why. Such a
+      row is permanent until edited and a lapsed name can be re-registered, so re-check them (DNS and home page) before
+      a release review, the no-DNS ones first; the admin's not-a-roaster flag is the reversible alternative),
       platform (a platform's own home page, where a closed store can redirect), parked (domains for sale),
       shortener and directory. A host covers its subdomains. registry.py reads the same file.
     columns:
