@@ -271,6 +271,16 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   `registry.current` drops them, so they're never crawled or probed, and discovery never adds them back. dbt keeps them
   in the internal `dim_roaster`; with no coffee they're never in the public tables (none had one in the 2026-11-16
   release).
+- **A failed fetch says why it failed.** On 2026-11-16 about 30 stores were stored as only
+  `FetchError: RobotsUnavailable <url>`: the catalog call wrapped robots.txt's own message ("robots.txt for X failed
+  (ConnectError: ...)") down to its class. `fetches.error` now keeps the wrapped message and starts with the failure's
+  kind, `[kind] ` (`http.failure_kind`): dns, connection_refused, connection_reset, tls, connect_timeout,
+  read_timeout, local_address, deadline, disallowed, too_large, challenge_<status>, block_<status> or
+  http_<status>; no prefix when no kind fits.
+  A host remembered as down keeps its kind for the fetches that fail fast on it. `transport_errors` phases gain
+  local_address ("Cannot assign requested address": no local address or port, which is not necessarily the NAT).
+  Recording only: retries, pacing, robots.txt handling and when to stop are unchanged. Raw contract 1.8.0: the same
+  columns as 1.7.0 (interface unchanged); what `fetches.error` holds changed.
 - **A crawl ends `deadline` only when its deadline stopped work.** `crawl` and `crawl-retry` said `deadline` for any
   partial catalog, so WooCommerce and generic reported it on every pass while using about a fifth of their window
   with no store skipped: their partials were a count that differs from `X-WP-Total`, or a failed product page or

@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.7.0
+version: 1.8.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -245,7 +245,12 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.
+    description: 'The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog. From
+      raw 1.8.0 (same columns as 1.7.0; rows written before it never have the prefix: see code_version), a failed fetch''s
+      error starts with why, as `[kind] `: dns, connection_refused, connection_reset, tls, connect_timeout, read_timeout,
+      local_address or another transport_errors phase; deadline; disallowed (robots.txt); too_large; challenge_<status>;
+      block_<status> (429, 430, 503); http_<status>. No prefix when no kind fits (never a `[none]` token). Count with regexp_extract(error,
+      ''^\[([a-z0-9_]+)\] '', 1).'
   - name: products
     logicalType: integer
     physicalType: int32
@@ -430,9 +435,9 @@ schema:
         physicalType: string
     required: false
     description: 'Each request that got no HTTP response (the first 20): host, path, whether it was robots.txt, the phase
-      it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, connect, read_timeout, read, protocol...),
-      the exception''s class and its innermost cause''s, its message (200 characters) and the egress IP; null when none,
-      and before raw 1.7.0.'
+      it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, local_address (no local address or
+      port for the connection), connect, read_timeout, read, protocol...), the exception''s class and its innermost cause''s,
+      its message (200 characters) and the egress IP; null when none, and before raw 1.7.0.'
   - name: robots
     logicalType: array
     physicalType: 'list<item: struct<host: string, source: string, fetched_at: timestamp[s, tz=UTC], age_s: double, status:
@@ -632,4 +637,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 3437ab2505ea2ba8
 - property: docsFingerprint
-  value: feb9c37dd6c3b540
+  value: 630969b56ada1b47

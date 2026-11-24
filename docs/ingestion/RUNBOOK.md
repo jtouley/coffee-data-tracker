@@ -333,8 +333,21 @@ On 2026-11-16, 36 generic stores' robots.txt got no HTTP response from this IP o
 failing in about 0.15 s, while the same stores answered 200 in 0.2 s from default egress on 11-09. Two causes fit:
 the NAT dropping connections (port allocation `DROPPED`, which the gateway logs with `filter = "ERRORS_ONLY"`), or
 the stores' hosts refusing this IP. From raw 1.7.0 each such request is in `fetches.transport_errors` with its phase
-(dns, connect_timeout, connection_refused, connection_reset, tls, read_timeout...). To confirm or rule out the NAT,
-run this in Cloud Shell (it only reads logs; set `PROJECT_ID` to the project's id first):
+(dns, connect_timeout, connection_refused, connection_reset, tls, local_address, read_timeout...), and a failed fetch's
+`fetches.error` starts with its kind (`[dns] FetchError: RobotsUnavailable ...`; `http.failure_kind`). Count a week's
+failures by kind (read only, over a local copy of `fetches`):
+
+```sql
+select regexp_extract(error, '^\[([a-z0-9_]+)\] ', 1) as kind, count(distinct roaster_id) as stores
+from fetches where run_date = (select max(run_date) from fetches) and status = 'error' group by all order by stores desc;
+```
+
+An empty `kind` is a failure no kind fits (the message says what happened). `local_address` alone doesn't point at
+the NAT: the crawler tries each address a host resolves to and keeps the last error, so a store whose IPv4 address
+failed and whose IPv6 one can't be tried (no IPv6 here) ends as `local_address` too. A burst of `connect_timeout`, or
+of `local_address` on hosts with only IPv4 addresses, from one job points at the NAT; `connection_refused` and
+`connection_reset` at the stores' side. To confirm or
+rule out the NAT, run this in Cloud Shell (it only reads logs; set `PROJECT_ID` to the project's id first):
 
 ```sh
 gcloud logging read '
