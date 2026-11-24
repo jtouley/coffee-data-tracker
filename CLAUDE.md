@@ -96,6 +96,20 @@ has a failure to reproduce).
 
 Each review's PR comment ends with **Premise checks**: what was checked, what was found, and what wasn't verified.
 
+## Owner-controlled state changes only through the admin API
+
+Crawl on/off, chain and not-a-roaster flags, decisions, rule settings, approvals, publishes and rollbacks are the
+owner's switches. They live in the admin's control plane (`admin/controlplane.py`; `docs/admin/DESIGN.md`), where
+every change is an audited, reversible row.
+- Change them only through the admin's API routes (for example `POST /api/roasters/{roaster_id}/crawl`), whether by
+  hand or by script. A script calls the same authenticated route a person would.
+- Never change them by editing a CSV, a dbt seed, the control-plane database or the lake, and never by a code list.
+  A PR that removes, hides or reclassifies a roaster or coffee that way is wrong, whatever its evidence.
+- If no route does what's needed, build one that follows the control plane and services model: a service function
+  with its guards, one audit row per change, a way to reverse it, and the API route on top. It's reviewed at high.
+- Until the admin is live, record what should change (ids, evidence, the reason to send) for the owner to apply;
+  don't work around the missing API.
+
 ## Keep the repo clean
 
 1. **No notes or scratch on any branch.** Working notes, plans, decision logs and agent state stay out of git (a
