@@ -56,9 +56,9 @@ truebeans.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt is
 tugboatjoecoffee.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt is the 4-line parking file and its home page only redirects to /lander; seed final host is this domain, 0 coffees in the 2026-10-26 release"
 ggroastery.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt is the 4-line parking file and its home page only redirects to /lander; seed final host is this domain, 0 coffees in the 2026-10-26 release"
 zorrocoffee.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt is the 4-line parking file and its home page only redirects to /lander; seed final host is this domain, 0 coffees in the 2026-10-26 release"
-laslilascoffee.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt disallows / with ad-network paths, on a parking host (208.91.197.x); 0 coffees in the 2026-10-26 release"
-theranch.net,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt disallows / with ad-network paths, on a parking host (208.91.197.x); 0 coffees in the 2026-10-26 release"
-kfcoffee.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt disallows / with ad-network paths, on a parking host (208.91.197.x); 0 coffees in the 2026-10-26 release"
+laslilascoffee.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt disallows / for every other crawler, after ad-network groups, on a parking host (208.91.197.x); 0 coffees in the 2026-10-26 release"
+theranch.net,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt disallows / for every other crawler, after ad-network groups, on a parking host (208.91.197.x); 0 coffees in the 2026-10-26 release"
+kfcoffee.com,not_a_roaster,"parked domain (2026-11-24 audit): its robots.txt disallows / for every other crawler, after ad-network groups, on a parking host (208.91.197.x); 0 coffees in the 2026-10-26 release"
 abracoffee.com,not_a_roaster,no DNS record (2026-11-24 audit: the name is not found); 0 coffees in the 2026-10-26 release
 queenanneroasters.com,not_a_roaster,no DNS record (2026-11-24 audit: the name is not found); 0 coffees in the 2026-10-26 release
 xeniaroastery.com,not_a_roaster,no DNS record (2026-11-24 audit: the name is not found); 0 coffees in the 2026-10-26 release

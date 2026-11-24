@@ -55,7 +55,7 @@ def test_unrivaled_coffee_has_the_probes_answer_for_its_shopify_storefront():
     assert (row["final_host"], row["platform"], row["last_probed"]) == (
         "unrivaledcoffee.com",
         "shopify?",
-        "2026-11-24",
+        "2026-10-26",  # the last real probe; the audit changed only the platform
     )
     roaster = Roaster(
         roaster_id="unrivaledcoffee.com", name=row["name"], host=row["final_host"], platform="shopify?"
@@ -97,7 +97,8 @@ def test_the_probe_reads_a_shopify_theme_whose_catalog_api_did_not_answer_as_sho
     assert (out["status"], out["platform"]) == ("ok", "shopify?")
 
 
-# Retired: not_a_roaster rows (registry.NOT_A_ROASTER_SITE), dropped by registry.current and dbt's stg_registry.
+# Retired: not_a_roaster rows (registry.NOT_A_ROASTER_SITE), dropped by registry.current (never crawled or probed, never
+# re-added by discovery). dbt keeps them in the internal dim_roaster; with no coffee they're never in the public tables.
 RETIRED = [
     "asadocoffee.com",
     "aspirecoffeeroasters.com",
