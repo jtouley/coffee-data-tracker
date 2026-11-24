@@ -273,9 +273,12 @@ _DNS_TEXT = ("name or service not known", "temporary failure in name resolution"
 
 def transport_phase(e: BaseException) -> str:
     """Where a request that got no HTTP response failed: dns, connect_timeout, connection_refused, connection_reset,
-    tls, connect (another connect failure), read_timeout, write_timeout, pool_timeout (our own pool), read, write,
-    protocol (the server broke HTTP), or other. Read from the exception and the ones behind it (_chain); the text of
-    the message decides only when no exception type does."""
+    tls, local_address (no local address or port for the connection: EADDRNOTAVAIL, which netguard's last address
+    tried can give, an IPv6 one from a container without IPv6, as well as a NAT out of ports), connect (another
+    connect failure), read_timeout, write_timeout, pool_timeout (our own pool), read, write, protocol (the server
+    broke HTTP), or other. Read from the exception and the ones behind it (_chain); the text of the message decides
+    only when no exception type does."""
+    import errno
     import socket
     import ssl
 
@@ -297,6 +300,8 @@ def transport_phase(e: BaseException) -> str:
     for c in chain:
         if isinstance(c, socket.gaierror):
             return "dns"
+        if isinstance(c, OSError) and c.errno == errno.EADDRNOTAVAIL:
+            return "local_address"  # "Cannot assign requested address": not necessarily the NAT
         if isinstance(c, ssl.SSLError | ssl.CertificateError):
             return "tls"
         if isinstance(c, ConnectionRefusedError):
@@ -312,6 +317,8 @@ def transport_phase(e: BaseException) -> str:
         return "connection_refused"
     if "reset by peer" in text or "errno 104" in text or "connection reset" in text:
         return "connection_reset"
+    if "cannot assign requested address" in text or "errno 99" in text:
+        return "local_address"
     for other, phase in (
         (httpx.ConnectError, "connect"),
         (httpx.ReadError, "read"),
@@ -340,6 +347,52 @@ def transport_record(url: str, e: BaseException, robots_request: bool) -> dict:
         "detail": str(e)[:TRANSPORT_DETAIL_CHARS] or None,
         "egress_ip": egress_ip(),
     }
+
+
+def failure_kind(e: BaseException) -> str | None:
+    """Why a fetch failed, as one short token for fetches.error (ingest.stored_error writes it as `[kind] ` in front),
+    the first that fits: robots.txt's own kind (RobotsUnavailable.kind) when robots.txt didn't answer; deadline (the
+    run's deadline stopped it: DeadlineReached); too_large (a body over the cap, whatever its status: checked before
+    the status, as on robots.txt); challenge_<status> (an edge's challenge); block_<status> (429, 430, 503);
+    disallowed (robots.txt disallows the URL: Blocked); a transport phase (transport_phase: dns, connection_refused,
+    connection_reset, tls, connect_timeout, read_timeout, local_address...); or http_<status> (any other non-200).
+    None when the chain says none of these (abstain: no prefix, and the message still says what happened). A
+    diagnostic for people reading fetches, never read by the crawler. Its words differ from importers.FETCH_KINDS on
+    purpose: the transport phases are finer than the importers' connect/timeout/network."""
+    chain = list(causes(e))
+    for c in chain:
+        if isinstance(c, RobotsUnavailable) and c.kind:
+            return c.kind
+    if any(isinstance(c, DeadlineReached) for c in chain):
+        return "deadline"
+    if any(isinstance(c, ResponseTooLarge) for c in chain):
+        return "too_large"
+    if challenged(e):
+        code = next((s for c in chain if (s := _status_of(c)) is not None), None)
+        return f"challenge_{code}" if code is not None else "challenge"
+    if (code := block_status(e)) is not None:
+        return f"block_{code}"
+    if any(isinstance(c, Blocked) and not isinstance(c, ScheduleOnlyHost) for c in chain):
+        return "disallowed"
+    for c in chain:
+        if isinstance(c, httpx.TransportError):
+            phase = transport_phase(c)
+            return None if phase == "other" else phase
+    code = next((s for c in chain if (s := _status_of(c)) is not None), None)
+    return f"http_{code}" if code is not None else None
+
+
+def _status_of(e: BaseException) -> int | None:
+    """The HTTP status one exception carries: a FetchError's own, or a wrapped HTTPStatusError's response's."""
+    if isinstance(e, httpx.HTTPStatusError):
+        return e.response.status_code
+    return e.status if isinstance(e, FetchError) else None
+
+
+def wrapped_message(e: BaseException, url: str) -> str:
+    """The message of the FetchError a catalog call raises from an httpx error: its class and the URL, then the
+    error's own message (robots.txt's reason, the socket's error), which the stored fetches.error keeps."""
+    return f"{type(e).__name__} {url}" + (f": {e}" if str(e) else "")
 
 
 class FetchError(Exception):
@@ -466,7 +519,9 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
     robots.txt was answered with an edge's challenge (is_challenge: a 202, or a challenge header on any status),
     which ingest counts as a refusal and never defers. http_status: the HTTP status robots.txt answered with,
     whatever it was (None: no answer), for a caller that reports it without the message, which names the host
-    (importers.fetch_failed); `status` keeps its narrower meaning above."""
+    (importers.fetch_failed); `status` keeps its narrower meaning above. kind: why, as failure_kind's token
+    (a transport phase, challenge_<status>, block_<status>, http_<status>, too_large), kept with the host's remembered
+    failure so a later fetch that fails fast on it says the same; recorded only, never decides anything."""
 
     def __init__(
         self,
@@ -476,11 +531,13 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
         challenge: bool = False,
         wait: float | None = None,
         http_status: int | None = None,
+        kind: str | None = None,
     ) -> None:
         super().__init__(message, status=status, challenge=challenge)
         self.unreachable = unreachable
         self.wait = wait
         self.http_status = http_status
+        self.kind = kind
 
 
 class DeadlineReached(FetchError):
@@ -994,6 +1051,7 @@ class PoliteClient:
                             down[1].challenge,
                             max(0.0, down[0] - time.monotonic()),
                             http_status=down[1].http_status,
+                            kind=down[1].kind,
                         )
                     # raises RobotsUnavailable: nothing is fetched. body: the live file, stored with this fetch
                     rules, body = self._robots_for(host)
@@ -1102,11 +1160,15 @@ class PoliteClient:
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
-            raise RobotsUnavailable(f"robots.txt for {host} not sent ({type(e).__name__}: {e})") from e
+            raise RobotsUnavailable(
+                f"robots.txt for {host} not sent ({type(e).__name__}: {e})", kind="pool_timeout"
+            ) from e
         except ResponseTooLarge as e:
             # Not a robots.txt (a catch-all page, or a runaway one): remembered like a 5xx, so the host's later
             # fetches don't each download it again up to the cap.
-            err = RobotsUnavailable(f"robots.txt for {host} too large ({e})", http_status=e.status)
+            err = RobotsUnavailable(
+                f"robots.txt for {host} too large ({e})", http_status=e.status, kind="too_large"
+            )
             cause: Exception | None = e
             no_answer = False  # an answer, just not a robots.txt: never stands in for a copy
         except httpx.HTTPError as e:
@@ -1124,9 +1186,11 @@ class PoliteClient:
                 and failed_host == hostname
                 and not ours
             )
+            phase = transport_phase(e)
             err = RobotsUnavailable(
-                f"robots.txt for {host} failed ({type(e).__name__}: {e}; phase {transport_phase(e)})",
+                f"robots.txt for {host} failed ({type(e).__name__}: {e}; phase {phase})",
                 unreachable,
+                kind=None if phase == "other" else phase,
             )
             cause = e
             # no response at all (not our redirect handling: too many redirects, an unsupported scheme)
@@ -1155,12 +1219,14 @@ class PoliteClient:
             if block:  # a pause: asked again once it has passed (at most MAX_STORE_WAIT), the store deferred till then
                 wait = asked_wait(r)
                 wait = ROBOTS_BLOCK_RETRY_AFTER if wait is None else store_wait(wait)
+            kind = "challenge" if challenged else "block" if block else "http"
             err = RobotsUnavailable(
                 f"robots.txt for {host} {why}",
                 status=status,
                 challenge=challenged,
                 wait=wait,
                 http_status=r.status_code,
+                kind=f"{kind}_{r.status_code}",
             )
             cause = None
         # This fetch fails (the deferred rounds and the retry pass try again) and the host stays unknown, asked again
@@ -1172,6 +1238,7 @@ class PoliteClient:
             err.challenge,
             err.wait,
             http_status=err.http_status,
+            kind=err.kind,
         )
         if no_answer and self._usable_copy(host) is not None:
             raise _Unreachable(final) from cause  # _robots_for uses the copy: not remembered as down
@@ -1306,7 +1373,7 @@ class PoliteClient:
         try:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
-            raise FetchError(f"{type(e).__name__} {url}") from e
+            raise FetchError(wrapped_message(e, url)) from e
         if err := challenge_error(r, url):
             raise err
         if why := unavailable_reason(r):
@@ -1331,7 +1398,7 @@ class PoliteClient:
         try:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
-            raise FetchError(f"{type(e).__name__} {url}") from e
+            raise FetchError(wrapped_message(e, url)) from e
         if err := challenge_error(r, url):
             raise err
         if why := unavailable_reason(r):

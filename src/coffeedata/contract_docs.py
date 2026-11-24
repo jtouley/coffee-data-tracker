@@ -143,7 +143,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "status": "ok; error (any failure or block, retried in later passes); unavailable (closed store); "
         "crashed (not fetched: quarantined for the week after it was in flight in two attempts of its crawl that "
         "died).",
-        "error": "The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.",
+        "error": "The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog. From raw 1.8.0 (same columns as 1.7.0; rows written before it never have the prefix: see code_version), a failed fetch's error starts with why, as `[kind] `: dns, connection_refused, connection_reset, tls, connect_timeout, read_timeout, local_address or another transport_errors phase; deadline; disallowed (robots.txt); too_large; challenge_<status>; block_<status> (429, 430, 503); http_<status>. No prefix when no kind fits (never a `[none]` token). Count with regexp_extract(error, '^\\[([a-z0-9_]+)\\] ', 1).",
         "products": "Products the attempt read.",
         "coffees": "Coffees among them as the crawl counted them; null from an ELT crawl.",
         "pages": "Catalog pages (200 responses other than robots.txt) read.",
@@ -156,7 +156,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0), egress IP, and the robots.txt copy it was sent under (robots: live or cached, robots_age_s; from raw 1.7.0).",
         "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
         "crawl_delays": "Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied; null when none asked, and before raw 1.5.0.",
-        "transport_errors": "Each request that got no HTTP response (the first 20): host, path, whether it was robots.txt, the phase it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, connect, read_timeout, read, protocol...), the exception's class and its innermost cause's, its message (200 characters) and the egress IP; null when none, and before raw 1.7.0.",
+        "transport_errors": "Each request that got no HTTP response (the first 20): host, path, whether it was robots.txt, the phase it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, local_address (no local address or port for the connection), connect, read_timeout, read, protocol...), the exception's class and its innermost cause's, its message (200 characters) and the egress IP; null when none, and before raw 1.7.0.",
         "robots": "The robots.txt each host's requests went by: live (fetched in this job; its time, HTTP status and, on the fetch that fetched it, a 2xx's body up to 500 KiB) or cached (a stored live copy at most 30 days old, used because the live file was unreachable: its time, status and age in seconds); null before raw 1.7.0.",
     },
     "run_manifests": {
