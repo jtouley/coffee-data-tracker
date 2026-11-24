@@ -52,9 +52,7 @@ def _shared_hosts() -> list[dict]:
 
 
 # Hosts that are never a roaster's own storefront (full suffixes): the seed's not_a_roaster rows (social, listing and
-# ordering sites, or a roaster's former domain that no longer serves it: parked, no DNS, an unrelated site; its note
-# column says why an entry is there). A former domain can be re-registered, so its row is re-checked by hand (DNS and
-# home page), the no-DNS ones first; the admin's not-a-roaster flag is the reversible alternative.
+# ordering sites; its note column says why an entry is there).
 NOT_A_ROASTER_SITE = tuple(r["host"] for r in _shared_hosts() if r["kind"] == "not_a_roaster")
 
 MAX_FAILURES = 3
