@@ -265,6 +265,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   2026-11-16 (each store's robots.txt and home page, read once under robots.txt, through the probe's own markers)
   found it now serves Shopify's robots.txt and theme. `shopify?` still maps to the generic connector, so no product's
   output changes; the other 70 seed rows already matched what the probe's markers say.
+- **34 domains that no longer serve a roaster are `not_a_roaster` rows** of `dbt/seeds/shared_hosts.csv`, each with
+  its reason, as galvestoncoffeeroasters.com is: 29 parked (26 redirect to a `/lander` page, 3 disallow `/` on a
+  parking host), 3 with no DNS record, and 2 now unrelated sites (a gambling redirect, a content site). They are no
+  longer crawled, probed or published; none had a coffee in the 2026-10-26 release.
 
 - **A crawl ends `deadline` only when its deadline stopped work.** `crawl` and `crawl-retry` said `deadline` for any
   partial catalog, so WooCommerce and generic reported it on every pass while using about a fifth of their window

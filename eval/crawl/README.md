@@ -26,6 +26,7 @@ decision to waive it.
 | WooCommerce null size prices traced to the old lookup cap and measured at the first uncapped crawl (2026-11-20): tests and a measurement only | 0 | Measured below; no crawl or dbt code changes |
 | A WooCommerce store that caps `per_page` (a short first page while every count header it sends says there is more) is read at its own page size (2026-11-23) | 34 (estimate: one store, 10 of 44 read each week) | A fetch fix, not a rule; unit tests (`tests/test_woo_capped_per_page.py`); confirmed by the owner's one-store Test crawl after deploy (below) |
 | unrivaledcoffee.com's seed platform `other` -> `shopify?` (2026-11-24): the probe's marker answer for its Shopify storefront; its connector stays generic | 0 | Hand-checked (the PR lists the 71 audited stores); no product's output changes |
+| 34 domains that no longer serve a roaster retired as `not_a_roaster` rows of the seed shared_hosts (2026-11-24): 29 parked, 3 with no DNS record, 2 unrelated sites | 0 in the 2026-10-26 release (the latest one readable offline); releases 11-02 to 11-23 not checked | Hand-checked from the audit's robots.txt and home page reads (the PR lists them); the owner's `build-diff` after merge confirms the count |
 
 ## 2026-11-02: every data cap removed
 

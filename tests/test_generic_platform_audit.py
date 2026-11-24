@@ -3,7 +3,11 @@ once each under robots.txt, through the probe's own detector (discover.HTML_MARK
 
 Only unrivaledcoffee.com's seed row was wrong: the probe on 2026-10-26 found no platform marker (`other`), and the
 store now serves Shopify's robots.txt and theme. Its seed platform is the probe's answer for that page, `shopify?`,
-which keeps it on the generic connector on main (models.adapter_of) until a change for `shopify?` stores moves them."""
+which keeps it on the generic connector on main (models.adapter_of) until a change for `shopify?` stores moves them.
+
+34 domains no longer serve a roaster (parked, no DNS record, or an unrelated site): each is a not_a_roaster row of
+dbt's seed shared_hosts, with its reason, as galvestoncoffeeroasters.com is. Stores whose failure could be temporary
+stay in the registry."""
 
 from __future__ import annotations
 
@@ -91,3 +95,72 @@ def test_the_probe_reads_a_shopify_theme_whose_catalog_api_did_not_answer_as_sho
         with PoliteClient(min_interval=0, retries=1) as c:
             out = discover.probe_one(c, "a.com")
     assert (out["status"], out["platform"]) == ("ok", "shopify?")
+
+
+# Retired: not_a_roaster rows (registry.NOT_A_ROASTER_SITE), dropped by registry.current and dbt's stg_registry.
+RETIRED = [
+    "asadocoffee.com",
+    "aspirecoffeeroasters.com",
+    "batdorf.com",
+    "baysidebeans.com",
+    "blueoakcoffee.com",
+    "caminocoffeeroasters.com",
+    "columbiarivercoffeeroaster.com",
+    "ethiopiancoffeedistributor.com",
+    "fusionroasters.com",
+    "hazelnutcoffeecompany.com",
+    "justbeanscoffee.com",
+    "localroasting.com",
+    "lordwindsor.com",
+    "miamicoffeeroasting.com",
+    "obxroco.com",
+    "papertigercoffee.com",
+    "pascalcoffee.com",
+    "rebelroasterscoffee.com",
+    "sogcoffee.com",
+    "storymakerscoffee.com",
+    "talegacoffeeco.com",
+    "thecoffeepeddlers.com",
+    "truebeans.com",
+    "tugboatjoecoffee.com",
+    "ggroastery.com",
+    "zorrocoffee.com",
+    "laslilascoffee.com",
+    "theranch.net",
+    "kfcoffee.com",
+    "abracoffee.com",
+    "queenanneroasters.com",
+    "xeniaroastery.com",
+    "roastedinthevillage.com",
+    "thirdwavecoffeechicago.com",
+]
+# Kept: a failure that could be temporary (TLS, a 404, a reset, a Cloudflare block, a DNS timeout), a redirect to a
+# site not clearly another business (heart2heartcoffee.com), and a lead only (sharedroasting.com's shop on Shopify).
+KEPT = [
+    "picachocoffee.com",
+    "jackiesjava.com",
+    "hickorygrovecoffee.com",
+    "greenmountaincoffee.com",
+    "nobletreecoffee.com",
+    "spottedcowcoffeecompany.com",
+    "heart2heartcoffee.com",
+    "sharedroasting.com",
+]
+
+
+def test_the_retired_domains_are_not_roasters_with_a_reason():
+    rows = {r["host"]: r for r in registry._shared_hosts()}
+    assert len(RETIRED) == len(set(RETIRED)) == 34
+    for host in RETIRED:
+        assert registry.not_a_roaster_site(host), host
+        assert rows[host]["kind"] == "not_a_roaster" and "2026-11-24 audit" in rows[host]["note"], host
+        assert not registry.is_storefront_host(host), host  # discovery never adds it back
+    assert not any(registry.not_a_roaster_site(h) for h in KEPT)
+
+
+def test_the_registry_drops_the_retired_domains_and_keeps_the_rest(lake):
+    seed = _seed()
+    assert set(RETIRED) <= set(seed)  # the seed rows stay, as galvestoncoffeeroasters.com's does
+    ids = {s.roaster.roaster_id for s in registry.current(lake)}
+    assert not ids & set(RETIRED)
+    assert set(KEPT) | set(SHOPIFY) | set(WOOCOMMERCE) <= ids
