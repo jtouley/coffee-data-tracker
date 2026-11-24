@@ -1,11 +1,12 @@
 # Cost and security
 
-It runs on free tiers. The only fixed cost is the domain.
+GitHub and Hugging Face are free for this project; the weekly pipeline on Google Cloud and the domain are not.
 
 | Piece | Cost |
 |---|---|
 | GitHub Actions and Pages | free for a public repo |
 | Hugging Face datasets (lake and public export) | free |
+| Cloud Run jobs, Cloud NAT and its static IPs, staging bucket | about $9–14 a month in all, the app included; see [`docs/ingestion/RUNBOOK.md`](../docs/ingestion/RUNBOOK.md#cost). A monthly budget (`budget_usd`, $20) emails the owner |
 | registry.coffee | $6.98 the first year; .coffee renewals are much higher (about $48 a year at Namecheap), so compare registrars before it renews |
 | Claude enrichment (optional) | pay as you go; capped by `--enrich-limit`, and new coffees only after the first run |
 | Snowflake, S3 (optional) | only if you turn them on |

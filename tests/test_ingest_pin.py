@@ -1,4 +1,4 @@
-"""RUNBOOK §4's pinning block and docs/ingestion/verified-ingest-image.sh fail closed: with stand-in `gcloud`, `gh`
+"""RUNBOOK §4's pinning block and scripts/verified-ingest-image.sh fail closed: with stand-in `gcloud`, `gh`
 and `git`, anything short of a found, well-formed, verified digest pins nothing, even when the lines are pasted
 into an interactive shell that carries on after an error and already holds an older $PINNED."""
 
@@ -109,7 +109,7 @@ def test_any_failure_pins_nothing(tmp_path, failure, interactive):
 
 @pytest.mark.parametrize("failure", FAILURES)
 def test_the_script_exits_nonzero_and_prints_nothing(tmp_path, failure):
-    script = f'docs/ingestion/verified-ingest-image.sh "{REPO}"\n'
+    script = f'scripts/verified-ingest-image.sh "{REPO}"\n'
     done, _ = run(tmp_path, script, False, **FAILURES[failure])
     assert "STOP" in done.stderr
     assert not [line for line in done.stdout.splitlines() if not line.startswith("after:")]
@@ -119,5 +119,5 @@ def test_the_script_exits_nonzero_and_prints_nothing(tmp_path, failure):
 
 def test_the_script_refuses_a_tagged_image_name_and_a_short_commit(tmp_path):
     for args in (f'"{REPO}:latest"', f'"{REPO}" abc123'):
-        done, calls = run(tmp_path, f"docs/ingestion/verified-ingest-image.sh {args}; exit $?\n", False)
+        done, calls = run(tmp_path, f"scripts/verified-ingest-image.sh {args}; exit $?\n", False)
         assert done.returncode != 0 and "sha256:" not in done.stdout and "gh " not in calls

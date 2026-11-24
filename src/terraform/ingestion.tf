@@ -20,7 +20,7 @@ variable "ingest_image" {
   default     = ""
   validation {
     condition     = can(regex("^[a-z0-9.-]+/[a-z0-9._/-]+@sha256:[0-9a-f]{64}$", var.ingest_image))
-    error_message = "ingest_image must be pinned by digest: <region>-docker.pkg.dev/<project>/<repository>/ingest@sha256:<64 hex>, in terraform.tfvars or with -var. Get the digest for main's commit with docs/ingestion/verified-ingest-image.sh (docs/ingestion/RUNBOOK.md section 1). A tag such as :latest is refused."
+    error_message = "ingest_image must be pinned by digest: <region>-docker.pkg.dev/<project>/<repository>/ingest@sha256:<64 hex>, in terraform.tfvars or with -var. Get the digest for main's commit with scripts/verified-ingest-image.sh (docs/ingestion/RUNBOOK.md section 1). A tag such as :latest is refused."
   }
 }
 

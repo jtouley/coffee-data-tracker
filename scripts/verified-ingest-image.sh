@@ -4,7 +4,7 @@
 # Anything else prints why on stderr, prints nothing on stdout and exits non-zero, so a caller that pins what this
 # prints can't pin an image that wasn't checked (docs/ingestion/RUNBOOK.md §1 and §4).
 #
-#   docs/ingestion/verified-ingest-image.sh <repository>/ingest [commit]     # commit: default HEAD
+#   scripts/verified-ingest-image.sh <repository>/ingest [commit]     # commit: default HEAD
 #
 # It needs gcloud (read access to the registry, and `gcloud auth configure-docker <region>-docker.pkg.dev` done, so
 # gh can read the image) and gh, signed in. It changes nothing.

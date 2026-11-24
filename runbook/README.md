@@ -20,13 +20,18 @@ runbook/check-dns.sh example.coffee  # another domain
 ## How it fits together
 
 ```
-registry.coffee (Namecheap BasicDNS) ──A / CNAME──▶ GitHub Pages ◀──deploy── weekly.yml (Mondays)
-                                                         │                       │
-                                         /  launch page  │                       ├── reads/writes the lake (private HF dataset)
-                                     /catalog/ catalog   │                       └── exports the public HF dataset
+Cloud Run jobs (Cloud Scheduler, UTC) ── crawl Mondays, build Tuesdays 06:17 ──▶ the lake (private HF dataset)
+                                                                                     │ served release (read only)
+registry.coffee (Namecheap BasicDNS) ──A / CNAME──▶ GitHub Pages ◀──deploy── site.yml (Tuesdays 11:17)
+                                                         │                       └── exports the public HF dataset
+                                    / launch page, /catalog/ catalog
 ```
 
-Everything is on free tiers except the domain ([cost-and-security.md](cost-and-security.md)).
+`weekly.yml` has no schedule: it is the manual fallback, run by hand to crawl, build and deploy, or to roll back.
+The Cloud Run pipeline is in [`docs/ingestion/RUNBOOK.md`](../docs/ingestion/RUNBOOK.md).
+
+GitHub and Hugging Face are free here; the Cloud Run jobs, NAT and the domain are not
+([cost-and-security.md](cost-and-security.md)).
 
 The launch page (`/`) has this week's numbers, new arrivals and links to the catalog (`/catalog/`), the public Hugging
 Face dataset, the warehouse setup, the MCP server and the "Add a roaster" form. The dataset link and the DuckDB

@@ -81,7 +81,7 @@ loaded=$(git status --porcelain --ignored -- src/terraform \
 for f in "$BOOT/main.tf" scripts/tf_plan_guard.py .github/workflows/terraform-apply.yml "$TF/ci.tfvars"; do
   [ -f "$f" ] || die "main has no $f: merge the Terraform-in-GitHub PRs first"
 done
-[ -x docs/ingestion/verified-ingest-image.sh ] || die "main has no verified-ingest-image.sh: is #153 merged?"
+[ -x scripts/verified-ingest-image.sh ] || die "main has no verified-ingest-image.sh: is #153 merged?"
 [ -f "$TF/terraform.tfvars" ] || die "no $TF/terraform.tfvars (your private values): copy it into this checkout first"
 for v in billing_account owner_email; do [ -n "$(tfvar $v)" ] || die "$TF/terraform.tfvars has no $v"; done
 grep -q 'resource "google_compute_address" "woo_generic_egress"' "$TF/ingestion.tf" \
@@ -100,7 +100,7 @@ versioning=$(gcloud storage buckets describe "gs://$P-tfstate" --project $P --fo
 say "2. the image GitHub built from main, verified"
 ask "read and verify the ingest image for $(git rev-parse --short HEAD)?"
 gcloud auth configure-docker "$R-docker.pkg.dev" --quiet >/dev/null 2>&1
-IMG=$(docs/ingestion/verified-ingest-image.sh "$REPO") || IMG=""
+IMG=$(scripts/verified-ingest-image.sh "$REPO") || IMG=""
 [[ "$IMG" =~ ^"$REPO"@sha256:[0-9a-f]{64}$ ]] \
   || die "no verified image for $(git rev-parse --short HEAD) yet. GitHub builds it after ci passes on main
       (about 25 min after a merge): check https://github.com/$GH/actions/workflows/deploy.yml
