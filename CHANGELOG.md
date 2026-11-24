@@ -261,6 +261,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- **unrivaledcoffee.com's seed platform is `shopify?`, not `other`.** An audit of the 71 generic stores that failed on
+  2026-11-16 (each store's robots.txt and home page, read once under robots.txt, through the probe's own markers)
+  found it now serves Shopify's robots.txt and theme. `shopify?` still maps to the generic connector, so no product's
+  output changes; the other 70 seed rows already matched what the probe's markers say.
+
 - **A crawl ends `deadline` only when its deadline stopped work.** `crawl` and `crawl-retry` said `deadline` for any
   partial catalog, so WooCommerce and generic reported it on every pass while using about a fifth of their window
   with no store skipped: their partials were a count that differs from `X-WP-Total`, or a failed product page or

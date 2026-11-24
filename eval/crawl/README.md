@@ -25,6 +25,7 @@ decision to waive it.
 | Each price's currency stored (raw 1.6.0); public tables USD prices and US roasters only; 7 non-US roasters corrected in the registry (2026-11-04) | 34 now; more at the first crawl with raw 1.6.0 (unknown) | Steps 2–7 waived by the owner (2026-11-04, #107); 21 hand-checked, 13 in other fields' sealed test sets (count only); below |
 | WooCommerce null size prices traced to the old lookup cap and measured at the first uncapped crawl (2026-11-20): tests and a measurement only | 0 | Measured below; no crawl or dbt code changes |
 | A WooCommerce store that caps `per_page` (a short first page while every count header it sends says there is more) is read at its own page size (2026-11-23) | 34 (estimate: one store, 10 of 44 read each week) | A fetch fix, not a rule; unit tests (`tests/test_woo_capped_per_page.py`); confirmed by the owner's one-store Test crawl after deploy (below) |
+| unrivaledcoffee.com's seed platform `other` -> `shopify?` (2026-11-24): the probe's marker answer for its Shopify storefront; its connector stays generic | 0 | Hand-checked (the PR lists the 71 audited stores); no product's output changes |
 
 ## 2026-11-02: every data cap removed
 
