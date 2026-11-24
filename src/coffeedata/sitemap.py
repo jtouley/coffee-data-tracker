@@ -17,6 +17,7 @@ from .http import (
     block_status,
     challenged,
     is_challenge,
+    wrapped_message,
 )
 from .netguard import on_site
 
@@ -77,7 +78,7 @@ def _get(client: PoliteClient, url: str):
     except httpx.HTTPStatusError as e:  # a 429/430/5xx the client's retries didn't get past
         raise FetchError(f"HTTP {e.response.status_code} {url}", status=e.response.status_code) from e
     except httpx.HTTPError as e:
-        raise FetchError(f"{type(e).__name__} {url}") from e
+        raise FetchError(wrapped_message(e, url)) from e
 
 
 def _refusal(e: BaseException | None, r: httpx.Response | None = None) -> bool:

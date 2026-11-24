@@ -245,7 +245,11 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.
+    description: 'The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog. A failed
+      fetch''s starts with why, as `[kind] ` (rows written by code with http.failure_kind; older rows never do): dns, connection_refused,
+      connection_reset, tls, connect_timeout, read_timeout, proxy_nat or another transport_errors phase; challenge_<status>;
+      block_<status> (429, 430, 503); http_<status>; too_large; none when no kind fits. Count with regexp_extract(error,
+      ''^\[([a-z0-9_]+)\] '', 1).'
   - name: products
     logicalType: integer
     physicalType: int32
@@ -430,9 +434,9 @@ schema:
         physicalType: string
     required: false
     description: 'Each request that got no HTTP response (the first 20): host, path, whether it was robots.txt, the phase
-      it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, connect, read_timeout, read, protocol...),
-      the exception''s class and its innermost cause''s, its message (200 characters) and the egress IP; null when none,
-      and before raw 1.7.0.'
+      it failed in (dns, connect_timeout, connection_refused, connection_reset, tls, proxy_nat, connect, read_timeout, read,
+      protocol...), the exception''s class and its innermost cause''s, its message (200 characters) and the egress IP; null
+      when none, and before raw 1.7.0.'
   - name: robots
     logicalType: array
     physicalType: 'list<item: struct<host: string, source: string, fetched_at: timestamp[s, tz=UTC], age_s: double, status:
@@ -632,4 +636,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 3437ab2505ea2ba8
 - property: docsFingerprint
-  value: feb9c37dd6c3b540
+  value: 5737c95acd77ba70

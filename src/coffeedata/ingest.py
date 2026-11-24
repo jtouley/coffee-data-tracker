@@ -43,6 +43,7 @@ from .http import (
     causes,
     challenged,
     egress_ip,
+    failure_kind,
     server_pause,
     store_wait,
 )
@@ -153,6 +154,9 @@ class Result:
     fetched_at: datetime
     items: list[CatalogItem] = field(default_factory=list)
     error: str | None = None
+    # why it failed, as one token (http.failure_kind: dns, tls, connect_timeout, challenge_202, block_429...), written
+    # in front of fetches.error as `[kind] ` by rows_for; None when the failure says none (or it didn't fail)
+    kind: str | None = None
     stats: RequestStats = field(default_factory=RequestStats)
     duration_s: float | None = None
     deferrable: bool = False
@@ -211,13 +215,16 @@ def ingest_one(
                     res.resume_at = {"page": e.page, "items": res.items}
             else:  # nothing read: an error, never an empty catalog
                 res.error = f"{type(e.__cause__ or e).__name__}: {e}"[:300]
+                res.kind = failure_kind(e)
         except PageBlocked as e:
             res.error = f"{type(e).__name__}: {e}"[:300]
+            res.kind = failure_kind(e)
             res.items = []  # never a partial catalog in the lake: the pages so far wait in `progress`
             res.blocked = True
             res.progress = {"page": e.page, "items": e.items, "wait": e.wait, "host": e.host}
         except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
             res.error = f"{type(e).__name__}: {e}"[:300]
+            res.kind = failure_kind(e)
             res.items = []
             res.deferrable = deferrable(e)
             res.wait = block_wait(e) if res.deferrable else None
@@ -495,6 +502,15 @@ def manifest_rows(
     ]
 
 
+def stored_error(res: Result) -> str | None:
+    """fetches.error for a result: a failure's message, led by its kind (`[tls] FetchError: ...`) when it has one,
+    so a query can count failures by kind (regexp_extract(error, '^\\[([a-z0-9_]+)\\] ', 1)); a partial ok fetch's
+    reason; else None. At most 300 characters, as before."""
+    if res.error:
+        return (f"[{res.kind}] {res.error}" if res.kind and res.status == "error" else res.error)[:300]
+    return res.partial_reason if res.status == "ok" else None
+
+
 def rows_for(
     results: list[Result],
     run_date: date,
@@ -516,8 +532,9 @@ def rows_for(
                 "roaster_id": r.roaster_id,
                 "adapter": r.adapter,
                 "status": res.status,
-                # a partial ok fetch says why (how far it got), so the lake shows where a catalog stopped
-                "error": res.error or (res.partial_reason if res.status == "ok" else None),
+                # a partial ok fetch says why (how far it got), so the lake shows where a catalog stopped; a failed
+                # one starts with why, as one token (`[dns] `, `[challenge_202] `: Result.kind), so it can be counted
+                "error": stored_error(res),
                 "products": len(res.items),
                 "coffees": None,
                 "pages": res.stats.pages,
