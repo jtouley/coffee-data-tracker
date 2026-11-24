@@ -273,7 +273,8 @@ _DNS_TEXT = ("name or service not known", "temporary failure in name resolution"
 
 def transport_phase(e: BaseException) -> str:
     """Where a request that got no HTTP response failed: dns, connect_timeout, connection_refused, connection_reset,
-    tls, proxy_nat (our own way out: a proxy's error, or no source port left for the connection), connect (another
+    tls, local_address (no local address or port for the connection: EADDRNOTAVAIL, which netguard's last address
+    tried can give, an IPv6 one from a container without IPv6, as well as a NAT out of ports), connect (another
     connect failure), read_timeout, write_timeout, pool_timeout (our own pool), read, write, protocol (the server
     broke HTTP), or other. Read from the exception and the ones behind it (_chain); the text of the message decides
     only when no exception type does."""
@@ -288,8 +289,6 @@ def transport_phase(e: BaseException) -> str:
         return "off_site_redirect"
     if too_slow(e):
         return "total_timeout"  # netguard.MAX_REQUEST_S
-    if any(isinstance(c, httpx.ProxyError) for c in chain):
-        return "proxy_nat"
     for kind, phase in (
         (httpx.ConnectTimeout, "connect_timeout"),
         (httpx.ReadTimeout, "read_timeout"),
@@ -302,7 +301,7 @@ def transport_phase(e: BaseException) -> str:
         if isinstance(c, socket.gaierror):
             return "dns"
         if isinstance(c, OSError) and c.errno == errno.EADDRNOTAVAIL:
-            return "proxy_nat"  # "Cannot assign requested address": the NAT (or this host) ran out of ports
+            return "local_address"  # "Cannot assign requested address": not necessarily the NAT
         if isinstance(c, ssl.SSLError | ssl.CertificateError):
             return "tls"
         if isinstance(c, ConnectionRefusedError):
@@ -319,7 +318,7 @@ def transport_phase(e: BaseException) -> str:
     if "reset by peer" in text or "errno 104" in text or "connection reset" in text:
         return "connection_reset"
     if "cannot assign requested address" in text or "errno 99" in text:
-        return "proxy_nat"
+        return "local_address"
     for other, phase in (
         (httpx.ConnectError, "connect"),
         (httpx.ReadError, "read"),
@@ -351,26 +350,34 @@ def transport_record(url: str, e: BaseException, robots_request: bool) -> dict:
 
 
 def failure_kind(e: BaseException) -> str | None:
-    """Why a fetch failed, as one short token for fetches.error (ingest.rows_for writes it as `[kind] ` in front):
-    robots.txt's own kind (RobotsUnavailable.kind) when robots.txt didn't answer; else challenge_<status> (an edge's
-    challenge), block_<status> (429, 430, 503), a transport phase (transport_phase: dns, connection_refused,
-    connection_reset, tls, connect_timeout, read_timeout, proxy_nat...), too_large, or http_<status> (any other
-    non-200). None when the chain says none of these (abstain: the message still says what happened)."""
+    """Why a fetch failed, as one short token for fetches.error (ingest.stored_error writes it as `[kind] ` in front),
+    the first that fits: robots.txt's own kind (RobotsUnavailable.kind) when robots.txt didn't answer; deadline (the
+    run's deadline stopped it: DeadlineReached); too_large (a body over the cap, whatever its status: checked before
+    the status, as on robots.txt); challenge_<status> (an edge's challenge); block_<status> (429, 430, 503);
+    disallowed (robots.txt disallows the URL: Blocked); a transport phase (transport_phase: dns, connection_refused,
+    connection_reset, tls, connect_timeout, read_timeout, local_address...); or http_<status> (any other non-200).
+    None when the chain says none of these (abstain: no prefix, and the message still says what happened). A
+    diagnostic for people reading fetches, never read by the crawler. Its words differ from importers.FETCH_KINDS on
+    purpose: the transport phases are finer than the importers' connect/timeout/network."""
     chain = list(causes(e))
     for c in chain:
         if isinstance(c, RobotsUnavailable) and c.kind:
             return c.kind
+    if any(isinstance(c, DeadlineReached) for c in chain):
+        return "deadline"
+    if any(isinstance(c, ResponseTooLarge) for c in chain):
+        return "too_large"
     if challenged(e):
         code = next((s for c in chain if (s := _status_of(c)) is not None), None)
         return f"challenge_{code}" if code is not None else "challenge"
     if (code := block_status(e)) is not None:
         return f"block_{code}"
+    if any(isinstance(c, Blocked) and not isinstance(c, ScheduleOnlyHost) for c in chain):
+        return "disallowed"
     for c in chain:
         if isinstance(c, httpx.TransportError):
             phase = transport_phase(c)
             return None if phase == "other" else phase
-    if any(isinstance(c, ResponseTooLarge) for c in chain):
-        return "too_large"
     code = next((s for c in chain if (s := _status_of(c)) is not None), None)
     return f"http_{code}" if code is not None else None
 

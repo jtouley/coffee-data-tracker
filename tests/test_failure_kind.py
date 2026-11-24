@@ -4,8 +4,7 @@ Run 2026-11-16: about 30 stores failed with `FetchError: RobotsUnavailable <url>
 DNS failure, a refused connection, a TLS error and a timeout all read the same. Each kind here comes from the real
 httpx/httpcore code: the crawler's own transport (netguard.guarded_transport, httpx's HTTPTransport and httpcore's
 SyncBackend) with only the operating system's answer faked (the resolver, or socket.create_connection handing back a
-loopback socket). The proxy case, which httpcore raises only behind a proxy the crawler never uses, comes from a
-MockTransport. Nothing is sent anywhere but to a socket this test opened on 127.0.0.1.
+loopback socket). The proxy case, which can't happen in the crawl (no proxy), comes from a MockTransport. Nothing is sent anywhere but to a socket this test opened on 127.0.0.1.
 """
 
 from __future__ import annotations
@@ -165,20 +164,49 @@ def test_read_timeout(monkeypatch, lake, loopback):
     assert _stored(res, lake)["error"].startswith("[read_timeout] FetchError: RobotsUnavailable")
 
 
-def test_nat_out_of_ports(monkeypatch, lake):
+def test_no_local_address_is_local_address_not_the_nat(monkeypatch, lake):
     _connect_with(monkeypatch, OSError(errno.EADDRNOTAVAIL, "Cannot assign requested address"))
     with _real_client() as c:
         res = ingest.ingest_one(c, STORE)
-    assert _stored(res, lake)["error"].startswith("[proxy_nat] ")
+    assert _stored(res, lake)["error"].startswith("[local_address] ")
 
 
-def test_proxy_error(lake):
+def test_ipv4_refused_then_ipv6_unassignable_ends_as_local_address(monkeypatch):
+    """The review's case: netguard tries each resolved address and re-raises the last error, so a store whose IPv4
+    address refused and whose IPv6 one can't be tried (no IPv6 source address) reads local_address, which is why the
+    kind doesn't name the NAT."""
+    monkeypatch.setattr(
+        netguard,
+        "_getaddrinfo",
+        lambda host, port, **kw: [
+            (socket.AF_INET, socket.SOCK_STREAM, 6, "", ("8.8.8.8", port)),
+            (socket.AF_INET6, socket.SOCK_STREAM, 6, "", ("2001:4860:4860::8888", port, 0, 0)),
+        ],
+    )
+    tried = []
+
+    def fake(address, timeout=None, source_address=None, **kw):
+        tried.append(address[0])
+        if ":" in address[0]:
+            raise OSError(errno.EADDRNOTAVAIL, "Cannot assign requested address")
+        raise ConnectionRefusedError(errno.ECONNREFUSED, "Connection refused")
+
+    monkeypatch.setattr(socket, "create_connection", fake)
+    with _real_client() as c:
+        res = ingest.ingest_one(c, STORE)
+    assert tried == ["8.8.8.8", "2001:4860:4860::8888"] and res.kind == "local_address"
+
+
+def test_a_proxy_error_gets_no_kind():
+    """The crawl never goes through a proxy (trust_env=False, netguard's transport), so a ProxyError has no kind of
+    its own: no prefix, the message says it."""
+
     def handler(request):
         raise httpx.ProxyError("502 Bad Gateway from the proxy", request=request)
 
     with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0, retries=1) as c:
         res = ingest.ingest_one(c, STORE)
-    assert _stored(res, lake)["error"].startswith("[proxy_nat] ")
+    assert res.kind is None and ingest.stored_error(res).startswith("FetchError: RobotsUnavailable")
 
 
 # --- answers that aren't robots.txt's rules, and the catalog's own failures ------------------------------------------
@@ -284,3 +312,51 @@ def test_the_kind_is_countable_with_one_regexp(lake):
         "('[block_429] FetchError: b'), ('FetchError: [Errno 111] c'), (null)) t(error) order by all"
     ).fetchall()
     assert [k for (k,) in got] == ["", "block_429", "dns", None]
+
+
+# --- review fixes: deadline, disallowed, too_large first, and recording never decides --------------------------------
+
+
+def test_a_deadline_stop_with_nothing_read_is_deadline():
+    with PoliteClient(
+        transport=httpx.MockTransport(lambda r: httpx.Response(200)), min_interval=0, deadline_s=-1
+    ) as c:
+        res = ingest.ingest_one(c, SHOP)
+    assert res.status == "error" and res.deadline and res.kind == "deadline"
+
+
+def test_a_robots_disallow_is_disallowed():
+    def handler(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nDisallow: /products.json\n")
+        return httpx.Response(200, json={"products": []})
+
+    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0, retries=1) as c:
+        res = ingest.ingest_one(c, SHOP)
+    assert res.status == "error" and res.kind == "disallowed"
+    assert ingest.stored_error(res).startswith("[disallowed] ")
+
+
+def test_an_oversized_503_is_too_large():
+    e = http.ResponseTooLarge("response over 32 MiB: https://shop.example/products.json", status=503)
+    assert http.failure_kind(http.FetchError("x")) is None
+    assert http.failure_kind(e) == "too_large"
+
+
+def test_a_failure_kind_that_raises_changes_nothing_but_the_kind(monkeypatch):
+    """Recording only: the kind is set after every flag that decides, and a kind that can't be read is None."""
+
+    def handler(request):
+        return httpx.Response(429, headers={"retry-after": "5"}, text="slow down")
+
+    def boom(e):
+        raise RuntimeError("unreadable chain")
+
+    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0, retries=1) as c:
+        before = ingest.ingest_one(c, STORE)
+    monkeypatch.setattr(ingest, "failure_kind", boom)
+    with PoliteClient(transport=httpx.MockTransport(handler), min_interval=0, retries=1) as c:
+        after = ingest.ingest_one(c, STORE)
+    assert before.kind == "block_429" and after.kind is None
+    flags = ("error", "deferrable", "wait", "blocked", "unavailable", "deadline")
+    assert [getattr(after, f) for f in flags] == [getattr(before, f) for f in flags]

@@ -195,6 +195,16 @@ def stopped_by_deadline(e: BaseException) -> bool:
     return any(isinstance(c, DeadlineReached) for c in causes(e))
 
 
+def recorded_kind(e: BaseException) -> str | None:
+    """http.failure_kind for the stored row, never raising: recording why can't change what the crawler does (it is
+    set after every flag that decides), and a chain it can't read is no kind (None), not a failed store."""
+    try:
+        return failure_kind(e)
+    except Exception:  # noqa: BLE001 - a label, never worth a store's fetch
+        log.warning("failure_kind couldn't read %s", type(e).__name__, exc_info=True)
+        return None
+
+
 def ingest_one(
     client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
 ) -> Result:
@@ -215,22 +225,22 @@ def ingest_one(
                     res.resume_at = {"page": e.page, "items": res.items}
             else:  # nothing read: an error, never an empty catalog
                 res.error = f"{type(e.__cause__ or e).__name__}: {e}"[:300]
-                res.kind = failure_kind(e)
+                res.kind = recorded_kind(e)
         except PageBlocked as e:
             res.error = f"{type(e).__name__}: {e}"[:300]
-            res.kind = failure_kind(e)
             res.items = []  # never a partial catalog in the lake: the pages so far wait in `progress`
             res.blocked = True
             res.progress = {"page": e.page, "items": e.items, "wait": e.wait, "host": e.host}
+            res.kind = recorded_kind(e)  # last: recording only
         except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
             res.error = f"{type(e).__name__}: {e}"[:300]
-            res.kind = failure_kind(e)
             res.items = []
             res.deferrable = deferrable(e)
             res.wait = block_wait(e) if res.deferrable else None
             res.blocked = blocked(e)
             res.unavailable = any(isinstance(c, Unavailable) for c in causes(e))
             res.deadline = stopped_by_deadline(e)
+            res.kind = recorded_kind(e)  # last: recording only
     res.duration_s = round(time.monotonic() - start, 3)
     return res
 

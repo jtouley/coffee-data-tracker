@@ -265,10 +265,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   `FetchError: RobotsUnavailable <url>`: the catalog call wrapped robots.txt's own message ("robots.txt for X failed
   (ConnectError: ...)") down to its class. `fetches.error` now keeps the wrapped message and starts with the failure's
   kind, `[kind] ` (`http.failure_kind`): dns, connection_refused, connection_reset, tls, connect_timeout,
-  read_timeout, proxy_nat, challenge_<status>, block_<status>, http_<status> or too_large, none when no kind fits.
+  read_timeout, local_address, deadline, disallowed, too_large, challenge_<status>, block_<status> or
+  http_<status>; no prefix when no kind fits.
   A host remembered as down keeps its kind for the fetches that fail fast on it. `transport_errors` phases gain
-  proxy_nat (an httpx ProxyError, or "Cannot assign requested address"). Recording only: retries, pacing, robots.txt
-  handling and when to stop are unchanged. No raw column or contract version changes.
+  local_address ("Cannot assign requested address": no local address or port, which is not necessarily the NAT).
+  Recording only: retries, pacing, robots.txt handling and when to stop are unchanged. Raw contract 1.8.0: the same
+  columns as 1.7.0 (interface unchanged); what `fetches.error` holds changed.
 - **A crawl ends `deadline` only when its deadline stopped work.** `crawl` and `crawl-retry` said `deadline` for any
   partial catalog, so WooCommerce and generic reported it on every pass while using about a fifth of their window
   with no store skipped: their partials were a count that differs from `X-WP-Total`, or a failed product page or
