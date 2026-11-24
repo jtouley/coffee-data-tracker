@@ -488,33 +488,105 @@ def test_roast_level(title, tags, body, want):
     [
         ("Ethiopia Guji Natural", (), "", "natural"),
         ("X", (), "Process: Dry Processed", "natural"),
-        ("Sumatra Semi-Washed", (), "", "honey"),
-        ("Sumatra wet-hulled", (), "", "honey"),
+        # eval/process/GUIDE.md: Indonesia's semi-washed is wet-hulled (other); elsewhere semi-washed is honey
+        ("Sumatra Semi-Washed", (), "", "other"),
+        ("Costa Rica", (), "Processing: Honey (semi-washed)", "honey"),
+        ("Brazil Semi-Washed", (), "", "honey"),
+        ("Sumatra wet-hulled", (), "", "other"),
+        ("X", (), "Process: Wet-hulled, sun-dried", "other"),
         ("Brazil Pulped Natural", (), "", "honey"),
         ("Carbonic Maceration Geisha", (), "", "anaerobic"),
-        ("Co-ferment Lychee", (), "", "anaerobic"),
+        # a named fermentation with no method is other; with a method, the method
+        ("Co-ferment Lychee", (), "", "other"),
+        (
+            "La Esmeralda 72 hr Double Fermentation",
+            (),
+            "PROCESSING METHOD : 72 HOUR DOUBLE FERMENTATION NATURAL",
+            "natural",
+        ),
+        ("X", (), "Process: Cherry, Panela, and Molasses Co-Fermented Natural | Origin: Huila", "natural"),
+        ("X", (), "Region: Acatenango Process: Champagne Yeast Notes: Peach", "other"),
         ("X", (), "Processing - Fully Washed", "washed"),
         ("X", (), "Process: wet process", "washed"),
-        # precedence within one text: anaerobic > honey > natural > washed
+        # anaerobic wins over the one method it is paired with
         ("Colombia Anaerobic Natural", (), "", "anaerobic"),
-        ("X Honey Washed", (), "", "honey"),
-        ("X Natural Washed", (), "", "natural"),
-        # precedence across sources: the process tag, then the title, then a labelled "Process:" in the body
+        (
+            "X",
+            (),
+            "PROCESS: 96-hour anaerobic fermentation\nProcess: Extended Fermentation Washed",
+            "anaerobic",
+        ),
+        # two methods are no answer, and the sources after them aren't read
+        ("X Honey Washed", (), "", None),
+        ("X Natural Washed", (), "", None),
+        ("Amor (Washed & Natural)", (), "Process: Washed", None),
+        ("X", (), "Process: Natural & Washed\nThis washed coffee", None),
+        ("X", (), "Process: Natural or pulped natural", None),
+        # precedence across sources: the process tag, then the title, then a labelled "Process:" in the body, then a
+        # tag that is only a process, then the description's prose
         ("X Natural", ("process:washed",), "", "washed"),
         ("X Natural", (), "Process: Washed", "natural"),
-        ("X", (), "this natural coffee", None),  # an unlabelled body mention isn't read
+        ("X", ("Washed",), "Process: Natural", "natural"),
+        ("X", ("Washed", "mango"), "", "washed"),
+        ("X", ("Honey",), "", None),  # a bare "Honey" tag is as likely a tasting note
+        # labelled fields as stores write them
+        ("X", (), "Varietal(s): HeirloomProcess: Washed, Dried on Raised BedsElevation: 1,800", "washed"),
+        ("X", (), "ELEVATION:\n1,700 - 2,101 masl\nPROCESS:\nWashed", "washed"),
+        ("X", (), "REGION Nariño PROCESS Washed, sugarcane process ALTITUDE 1700", "washed"),
+        ("X", (), "PROCESSING METHOD: Washed ALTITUDE:1800", "washed"),
+        ("X", (), "ELEVATION: 1850 MASL PROC METHOD: Washed", "washed"),
+        ("X", (), "Process: Washed & Sun-Dried", "washed"),
+        ("X", (), "Process: Sun-dried", "natural"),
+        # decaffeination is not the process
+        ("X Decaf", (), "Process: Swiss Water Process", None),
+        ("X Decaf", (), "Process: Washed, EA Decaf", "washed"),
+        ("X Decaf", (), "ABOUT THE PROCESS The sugarcane decaf process uses a natural compound", None),
+        ("X Decaf", (), "This is a natural method to extract the caffeine from the bean.", None),
+        ("X Decaf", (), "A very high-quality natural process decaffeinated coffee.", None),
+        # prose: only a sentence that says how this coffee was processed (round-2 candidate, not yet sealed-tested)
+        ("X", (), "this natural coffee", None),
+        ("X", (), "with natural sweetness and notes of honey", None),
+        (
+            "X",
+            (),
+            "Following harvest, the coffee is processed using Kenya's traditional washed method.",
+            "washed",
+        ),
+        ("X", (), "it has been processed using carbonic maceration.", "anaerobic"),
+        ("X", (), "Utilising natural and washed processed coffees", None),
+        ("X", (), "While the washed lot is gone, the natural lot just landed.", None),
+        ("X", (), "Our Guatemala is enhanced by the natural processed Ethiopia.", None),
+        ("X", (), "What does washed coffee taste like", None),
+        ("X Flavored", (), "This flavored coffee is sweetened with golden honey.", None),
+        ("X Blend", (), "This blend's base is a fully washed Colombia.", None),
+        ("X", (), "Region djimma Varietal heirloom Process natural Elevation 1900 m", "natural"),
+        ("X Decaf", (), "The sugarcane decaf process uses a natural compound.", None),
+        ("X", (), "Process washed & natural Elevation 1100", None),
+        ("X", ("process:White Honeyed and Sun Dried",), "", "honey"),
+        # round 3 (train3 labels)
+        ("X", (), "Process / Washed\nVariety / Field Blend", "washed"),
+        ("X", (), "PURE HEIRLOOM ARABICA\nWASHED & SUN DRIED\nTasting Notes: Molasses", "washed"),
+        ("X", (), "Walnut, Malt, Honey\nHoney\nMedium Roast", None),  # a bare "Honey" line is a note
+        ("X", (), "This Natural Process coffee is dried whole, while giving it time to develop.", "natural"),
+        ("X", (), "This lot is a fully washed field blend of SL28 and SL34.", "washed"),
+        ("X", (), "This Washed Guatemalan blend is a harmonious symphony.", "washed"),
+        ("X", (), "Process: Natural Carbonic (without added CO2)", "natural"),
+        ("Enigma | Extended Natural Carbonic Macerated Process", (), "", "anaerobic"),
+        ("X", (), "A very fruity colombian that could fool you as a bit of an anaerobic type.", None),
+        ("India Malabar", (), "Monsooned coffee is laid out in open-sided warehouses.", "other"),
+        (
+            "Grape Crush Co-Ferment (Experimental Blend)",
+            (),
+            "",
+            None,
+        ),  # a blend's fermentation is not "other"
     ],
 )
 def test_process(title, tags, body, want):
     assert extract.rules(item(title, tags=tags, body=body)).process == want
 
 
-@pytest.mark.xfail(
-    strict=True,
-    raises=AssertionError,
-    reason="possible bug: tag_values turns '-' into ' ', so a 'process:sun-dried' tag reads 'sun dried', which "
-    "_PROCESS's 'sun-?dried' doesn't match; today process is None",
-)
+# tag_values turns '-' into ' ', so a 'process:sun-dried' tag reads 'sun dried' (fixed with the process rules).
 def test_a_sun_dried_process_tag_is_natural():
     assert extract.rules(item("X", tags=["process:sun-dried"])).process == "natural"
 
